@@ -73,8 +73,12 @@ def fetch_jobright() -> list[Job]:
     out = []
     for url in JOBRIGHT_URLS:
         md = get_text(url)
+        prev_company = ""
         for m in _JR_ROW.finditer(md):
             company, title, link, loc, model, date_s = (g.strip() for g in m.groups())
+            if company in {"↳", "&#8627;"}:  # continuation row: same employer as above
+                company = prev_company
+            prev_company = company
             posted = _md_date_to_epoch(date_s)
             if posted and time.time() - posted > MAX_AGE_S:
                 continue

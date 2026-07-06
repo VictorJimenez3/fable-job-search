@@ -94,3 +94,17 @@ def test_dashboard_and_rss_render():
     assert "Tempus" in md and "| 88" in md
     rss = render_rss([{**JOB, "alerted_at": int(time.time())}])
     assert "<rss" in rss and "Tempus" in rss and JOB["id"] in rss
+
+
+def test_strategist_memo_builds(tmp_state, monkeypatch):
+    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    now = int(time.time())
+    state.save("jobs.json", {JOB["id"]: {**JOB, "first_seen": now}})
+    state.save("alert_history.json", [{**JOB, "alerted_at": now - 3600}])
+    state.save("applied.json", [{"id": "b" * 16, "company": "Notion", "title": "SWE New Grad",
+                                 "applied_at": now - 6 * 86400, "notion_synced": True}])
+    from radar.strategist import build_memo
+    memo = build_memo()
+    assert "Pipeline" in memo and "1 alerts" in memo and "1 applications" in memo
+    assert "Follow up" in memo and "Notion" in memo          # 6-day-old application nudged
+    assert "Tempus" in memo                                   # top open target listed

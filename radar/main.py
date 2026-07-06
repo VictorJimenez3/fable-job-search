@@ -219,7 +219,7 @@ def notion_backfill() -> int:
 
 def main() -> None:
     ap = argparse.ArgumentParser(prog="radar")
-    ap.add_argument("command", choices=["crawl", "applied-sync", "seed", "notion-backfill"])
+    ap.add_argument("command", choices=["crawl", "applied-sync", "seed", "notion-backfill", "strategist"])
     args = ap.parse_args()
     if args.command == "crawl":
         sys.exit(crawl())
@@ -229,6 +229,10 @@ def main() -> None:
         sys.exit(seed_cmd())
     elif args.command == "notion-backfill":
         sys.exit(notion_backfill())
+    elif args.command == "strategist":
+        from .strategist import post_memo
+        url = post_memo()
+        print(f"strategist: memo posted → {url}" if url else "strategist: printed (no GITHUB_TOKEN)")
 
 
 if __name__ == "__main__":
