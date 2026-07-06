@@ -1,0 +1,100 @@
+# Curated seed registry. Tokens are validated by a live probe on first run;
+# anything that 404s is marked invalid and never fetched again, so an
+# imperfect guess here is harmless. The registry auto-expands at runtime by
+# harvesting ATS tokens out of every job URL the aggregators surface — this
+# file is just the starting point, not the ceiling.
+#
+# ats: greenhouse | lever | ashby | smartrecruiters | recruitee | workday
+# workday entries need extra: {host: wd5, site: SiteName}
+
+companies:
+  # ---- healthtech ----
+  - {name: Flatiron Health,   ats: greenhouse, token: flatironhealth,  sector: healthtech}
+  - {name: Tempus,            ats: greenhouse, token: tempus,          sector: healthtech}
+  - {name: Komodo Health,     ats: greenhouse, token: komodohealth,    sector: healthtech}
+  - {name: Oscar Health,      ats: greenhouse, token: oscar,           sector: healthtech}
+  - {name: Cedar,             ats: greenhouse, token: cedar,           sector: healthtech}
+  - {name: Zocdoc,            ats: greenhouse, token: zocdoc,          sector: healthtech}
+  - {name: Ro,                ats: greenhouse, token: ro,              sector: healthtech}
+  - {name: Hinge Health,      ats: lever,      token: hingehealth,     sector: healthtech}
+  - {name: Included Health,   ats: greenhouse, token: includedhealth,  sector: healthtech}
+  - {name: Omada Health,      ats: greenhouse, token: omadahealth,     sector: healthtech}
+  - {name: Color Health,      ats: greenhouse, token: color,           sector: healthtech}
+  - {name: Abridge,           ats: ashby,      token: abridge,         sector: healthtech}
+  - {name: OpenEvidence,      ats: ashby,      token: openevidence,    sector: healthtech}
+  - {name: Commure,           ats: greenhouse, token: commure,         sector: healthtech}
+  - {name: Redox,             ats: greenhouse, token: redox,           sector: healthtech}
+  - {name: Medallion,         ats: greenhouse, token: medallion,       sector: healthtech}
+  - {name: Turquoise Health,  ats: greenhouse, token: turquoisehealth, sector: healthtech}
+  - {name: Datavant,          ats: greenhouse, token: datavant,        sector: healthtech}
+  - {name: PathAI,            ats: greenhouse, token: pathai,          sector: healthtech}
+  - {name: Paige,             ats: greenhouse, token: paige,           sector: healthtech}
+  - {name: Viz.ai,            ats: greenhouse, token: vizai,           sector: healthtech}
+  - {name: Aidoc,             ats: greenhouse, token: aidoc,           sector: healthtech}
+  - {name: Rad AI,            ats: lever,      token: radai,           sector: healthtech}
+  - {name: Qventus,           ats: lever,      token: qventus,         sector: healthtech}
+  - {name: LeanTaaS,          ats: lever,      token: leantaas,        sector: healthtech}
+  - {name: Doximity,          ats: greenhouse, token: doximity,        sector: healthtech}
+  - {name: GoodRx,            ats: greenhouse, token: goodrx,          sector: healthtech}
+  - {name: Headway,           ats: greenhouse, token: headway,         sector: healthtech}
+  - {name: Grow Therapy,      ats: greenhouse, token: growtherapy,     sector: healthtech}
+  - {name: Lyra Health,       ats: lever,      token: lyrahealth,      sector: healthtech}
+  - {name: Spring Health,     ats: greenhouse, token: springhealth,    sector: healthtech}
+  - {name: Charlie Health,    ats: greenhouse, token: charliehealth,   sector: healthtech}
+  - {name: Verily,            ats: greenhouse, token: verily,          sector: healthtech}
+  - {name: Neuralink,         ats: greenhouse, token: neuralink,       sector: healthtech}
+  - {name: Sword Health,      ats: lever,      token: swordhealth,     sector: healthtech}
+  - {name: Carbon Health,     ats: greenhouse, token: carbonhealth,    sector: healthtech}
+  - {name: Elation Health,    ats: lever,      token: elationhealth,   sector: healthtech}
+  - {name: Particle Health,   ats: greenhouse, token: particlehealth,  sector: healthtech}
+  - {name: Truveta,           ats: greenhouse, token: truveta,         sector: healthtech}
+  - {name: Innovaccer,        ats: greenhouse, token: innovaccer,      sector: healthtech}
+  - {name: H1,                ats: lever,      token: h1,              sector: healthtech}
+  - {name: Cadence,           ats: ashby,      token: cadence,         sector: healthtech}
+  - {name: Memora Health,     ats: greenhouse, token: memorahealth,    sector: healthtech}
+  - {name: SmarterDx,         ats: ashby,      token: smarterdx,       sector: healthtech}
+  - {name: Regard,            ats: greenhouse, token: regard,          sector: healthtech}
+
+  # ---- AI-native labs / infra ----
+  - {name: Anthropic,         ats: greenhouse, token: anthropic,       sector: ai_lab}
+  - {name: OpenAI,            ats: ashby,      token: openai,          sector: ai_lab}
+  - {name: Scale AI,          ats: greenhouse, token: scaleai,         sector: ai_lab}
+  - {name: Databricks,        ats: greenhouse, token: databricks,      sector: ai_lab}
+  - {name: Perplexity,        ats: ashby,      token: perplexity-ai,   sector: ai_lab}
+  - {name: Cohere,            ats: ashby,      token: cohere,          sector: ai_lab}
+  - {name: Together AI,       ats: greenhouse, token: togetherai,      sector: ai_lab}
+  - {name: Runway,            ats: greenhouse, token: runwayml,        sector: ai_lab}
+  - {name: ElevenLabs,        ats: ashby,      token: elevenlabs,      sector: ai_lab}
+  - {name: Anysphere (Cursor), ats: ashby,     token: cursor,          sector: ai_lab}
+  - {name: xAI,               ats: greenhouse, token: xai,             sector: ai_lab}
+  - {name: Google DeepMind,   ats: greenhouse, token: deepmind,        sector: ai_lab}
+  - {name: Mistral AI,        ats: lever,      token: mistral,         sector: ai_lab}
+  - {name: Hugging Face,      ats: greenhouse, token: huggingface,     sector: ai_lab}
+
+  # ---- big tech / large product cos with public ATS boards ----
+  - {name: Stripe,            ats: greenhouse, token: stripe,          sector: big_tech}
+  - {name: Airbnb,            ats: greenhouse, token: airbnb,          sector: big_tech}
+  - {name: Pinterest,         ats: greenhouse, token: pinterest,       sector: big_tech}
+  - {name: Robinhood,         ats: greenhouse, token: robinhood,       sector: fintech}
+  - {name: Coinbase,          ats: greenhouse, token: coinbase,        sector: fintech}
+  - {name: Datadog,           ats: greenhouse, token: datadog,         sector: big_tech}
+  - {name: Figma,             ats: greenhouse, token: figma,           sector: big_tech}
+  - {name: Notion,            ats: greenhouse, token: notion,          sector: big_tech}
+  - {name: Plaid,             ats: lever,      token: plaid,           sector: fintech}
+  - {name: Ramp,              ats: ashby,      token: ramp,            sector: fintech}
+  - {name: Roblox,            ats: greenhouse, token: roblox,          sector: big_tech}
+  - {name: Palantir,          ats: lever,      token: palantir,        sector: big_tech}
+  - {name: Cloudflare,        ats: greenhouse, token: cloudflare,      sector: big_tech}
+  - {name: MongoDB,           ats: greenhouse, token: mongodb,         sector: big_tech}
+  - {name: Twilio,            ats: greenhouse, token: twilio,          sector: big_tech}
+  - {name: Reddit,            ats: greenhouse, token: reddit,          sector: big_tech}
+  - {name: Discord,           ats: greenhouse, token: discord,         sector: big_tech}
+  - {name: Anduril,           ats: greenhouse, token: andurilindustries, sector: big_tech}
+  - {name: SpaceX,            ats: greenhouse, token: spacex,          sector: big_tech}
+  - {name: Snowflake,         ats: greenhouse, token: snowflakecomputing, sector: big_tech}
+
+  # ---- edtech ----
+  - {name: Duolingo,          ats: greenhouse, token: duolingo,        sector: edtech}
+  - {name: Khan Academy,      ats: greenhouse, token: khanacademy,     sector: edtech}
+  - {name: Coursera,          ats: greenhouse, token: coursera,        sector: edtech}
+  - {name: Quizlet,           ats: greenhouse, token: quizlet,         sector: edtech}

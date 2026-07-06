@@ -1,0 +1,57 @@
+name: applied-sync
+
+on:
+  issues:
+    types: [edited]
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: applied-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    # only react to humans, and only on radar alert issues / their comments
+    if: >-
+      !endsWith(github.actor, '[bot]') &&
+      (github.event_name == 'issue_comment' ||
+       contains(join(github.event.issue.labels.*.name, ','), 'radar-alerts'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Process event
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+        run: python -m radar.main applied-sync
+
+      - name: Commit state
+        run: |
+          git config user.name "job-radar[bot]"
+          git config user.email "radar@users.noreply.github.com"
+          git add state
+          if git diff --cached --quiet; then
+            echo "no changes"; exit 0
+          fi
+          git commit -m "radar: applied-sync $(date -u +'%Y-%m-%d %H:%M')"
+          for i in 1 2 3 4; do
+            git push && exit 0
+            git pull --rebase --autostash || true
+            sleep $((i * 2))
+          done
+          git push

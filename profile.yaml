@@ -1,0 +1,73 @@
+# JobRadar candidate profile — edit freely; the ranker reads this on every run.
+# Nothing here is code. Weights are additive points on a 0-100 score.
+
+candidate:
+  name: Victor Jimenez
+  github: VictorJimenez3
+  grad_year: 2026
+  level: new_grad          # gates out senior/staff/manager/intern automatically
+  narrative: >
+    Graduating senior targeting full-time new-grad roles in AI/ML engineering,
+    software engineering, and data science. Strongest interest in healthcare /
+    health tech, then big tech and AI-native companies; genuinely open to
+    edtech, fintech, and startups. Has interned/applied across big tech and
+    financial services (Amazon, NVIDIA, Microsoft, Google, Capital One, BNY,
+    Mastercard, Adobe, Pinterest, OpenAI, Commure, IXL). Values working on
+    products with real-world impact and modern ML stacks.
+
+roles:
+  # max one bucket counts (the best match). points: title-keyword buckets
+  ai_ml: 26
+  data_science: 22
+  data_eng: 18
+  swe: 20
+  # titles must match at least one bucket to be considered a tech role at all
+
+sectors:
+  healthtech: 16
+  ai_lab: 11
+  big_tech: 10
+  edtech: 8
+  fintech: 5
+  other: 0
+
+bonuses:
+  explicit_new_grad_title: 8   # "new grad" / "university grad" / "2026" in title
+  fresh_24h: 12
+  fresh_72h: 6
+  fresh_7d: 2
+  remote: 2
+  feedback_company_max: 8      # learned from what you actually apply to
+  feedback_tokens_max: 6
+
+locations:
+  countries: [US]              # non-US-only postings are gated out
+  remote_ok: true
+
+thresholds:
+  alert: 66        # >= this and new-grad-eligible → GitHub issue alert (checkbox row)
+  dashboard: 45    # >= this → appears on the dashboard
+  max_posting_age_days: 10   # older than this when first seen → never alerted (stale)
+
+llm:
+  # If the ANTHROPIC_API_KEY secret is set on the repo, jobs scoring within
+  # `rerank_band` of the alert threshold get semantically re-ranked by Claude,
+  # and every alerted job gets a one-line "angle" note in the alert.
+  enabled_if_key_present: true
+  model: claude-haiku-4-5
+  rerank_band: 14
+
+workday_queries:             # search terms used against Workday tenants
+  - new grad
+  - university graduate
+  - early career
+
+notion:
+  database_id: 2205d6f42cab8139a20af375dc2923e6   # your "Applications" DB
+  stage_applied: Applied
+  position_map:              # role bucket -> existing options in your Position multi-select
+    ai_ml: AI/ML Software Engineer
+    ml_eng: Machine Learning Enginner   # (sic — matches the existing option in your DB)
+    data_science: Data Science
+    data_eng: Data Engineer
+    swe: Software Engineer

@@ -1,0 +1,128 @@
+"""Self-expanding company discovery.
+
+Every job URL that flows through the pipeline (from any aggregator) is mined
+for ATS identifiers. New identifiers become registry candidates; a live probe
+promotes them to active. The registry therefore grows continuously with zero
+manual curation — every company any aggregator has ever linked to becomes a
+company we poll directly (and faster than the aggregator) from then on.
+"""
+from __future__ import annotations
+
+import re
+import time
+
+from .models import norm
+from .sources.ats import probe
+
+PATTERNS: list[tuple[str, re.Pattern]] = [
+    ("greenhouse_eu", re.compile(r"(?:job-boards|boards)\.eu\.greenhouse\.io/([A-Za-z0-9_-]+)")),
+    ("greenhouse", re.compile(r"(?:job-boards|boards)\.greenhouse\.io/(?:embed/job_app\?for=)?([A-Za-z0-9_-]+)")),
+    ("greenhouse", re.compile(r"greenhouse\.io/embed/job_board\?for=([A-Za-z0-9_-]+)")),
+    ("lever", re.compile(r"jobs\.(?:eu\.)?lever\.co/([A-Za-z0-9_-]+)")),
+    ("ashby", re.compile(r"jobs\.ashbyhq\.com/([A-Za-z0-9_.%-]+)")),
+    ("smartrecruiters", re.compile(r"jobs\.smartrecruiters\.com/([A-Za-z0-9_-]+)/")),
+    ("recruitee", re.compile(r"https?://([a-z0-9-]+)\.recruitee\.com")),
+    ("workday", re.compile(r"https?://([a-z0-9-]+)\.(wd\d+)\.myworkdayjobs\.com/(?:([a-z]{2}-[A-Z]{2})/)?([A-Za-z0-9_-]+)(?:/job/|/details/|$)")),
+]
+
+BAD_TOKENS = {"embed", "job", "jobs", "wday", "en-us", "external", "www", "api"}
+
+
+def extract(url: str) -> tuple[str, str, dict] | None:
+    """URL → (ats, token, extra) or None."""
+    if not url:
+        return None
+    for ats, pat in PATTERNS:
+        m = pat.search(url)
+        if not m:
+            continue
+        if ats == "workday":
+            tenant, host, _lang, site = m.groups()
+            if tenant.lower() in BAD_TOKENS or site.lower() in BAD_TOKENS:
+                continue
+            return "workday", tenant.lower(), {"host": host, "site": site}
+        token = m.group(1)
+        if token.lower() in BAD_TOKENS:
+            continue
+        if ats == "greenhouse_eu":
+            return "greenhouse", token, {"eu": True}
+        return ats, token, {}
+    return None
+
+
+def key(ats: str, token: str, extra: dict | None = None) -> str:
+    if ats == "workday" and extra:
+        return f"workday:{token}:{extra.get('site', '')}"
+    return f"{ats}:{token}"
+
+
+def seed_registry(registry: dict, seeds: list[dict]) -> int:
+    added = 0
+    for s in seeds:
+        k = key(s["ats"], s["token"], s.get("extra"))
+        if k not in registry:
+            registry[k] = {
+                "name": s["name"], "ats": s["ats"], "token": s["token"],
+                "extra": s.get("extra", {}), "sector": s.get("sector", ""),
+                "status": "new", "origin": "seed",
+                "first_seen": int(time.time()), "failures": 0, "last_ok": 0,
+            }
+            added += 1
+    return added
+
+
+def harvest(registry: dict, jobs: list, max_new: int = 200) -> int:
+    """Mine ATS identifiers from job URLs; add unseen ones as candidates."""
+    added = 0
+    for job in jobs:
+        found = extract(job.url)
+        if not found:
+            continue
+        ats, token, extra = found
+        k = key(ats, token, extra)
+        if k in registry:
+            continue
+        registry[k] = {
+            "name": job.company or token, "ats": ats, "token": token,
+            "extra": extra, "sector": "",
+            "status": "new", "origin": f"harvest:{job.source}",
+            "first_seen": int(time.time()), "failures": 0, "last_ok": 0,
+        }
+        added += 1
+        if added >= max_new:
+            break
+    return added
+
+
+def probe_new(registry: dict, budget: int = 30) -> tuple[int, int]:
+    """Validate up to `budget` candidates. Returns (activated, invalidated)."""
+    ok = bad = 0
+    candidates = [e for e in registry.values() if e["status"] == "new"]
+    candidates.sort(key=lambda e: e["first_seen"])
+    for e in candidates[:budget]:
+        if probe(e):
+            e["status"] = "active"
+            e["last_ok"] = int(time.time())
+            ok += 1
+        else:
+            e["status"] = "invalid"
+            bad += 1
+    return ok, bad
+
+
+def record_result(entry: dict, success: bool, deactivate_after: int = 5) -> None:
+    if success:
+        entry["failures"] = 0
+        entry["last_ok"] = int(time.time())
+    else:
+        entry["failures"] = entry.get("failures", 0) + 1
+        if entry["failures"] >= deactivate_after:
+            entry["status"] = "dead"
+
+
+def dedupe_name(registry: dict, company: str) -> dict | None:
+    n = norm(company)
+    for e in registry.values():
+        if norm(e["name"]) == n:
+            return e
+    return None
