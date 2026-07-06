@@ -55,6 +55,21 @@ companies:
   - {name: SmarterDx,         ats: ashby,      token: smarterdx,       sector: healthtech}
   - {name: Regard,            ats: greenhouse, token: regard,          sector: healthtech}
 
+  # alternate-token retries for boards whose first-guess token 404'd;
+  # the probe keeps whichever variant is real and marks the rest invalid
+  - {name: Tempus,            ats: greenhouse, token: tempuslabs,      sector: healthtech}
+  - {name: Rad AI,            ats: greenhouse, token: radai,           sector: healthtech}
+  - {name: Hinge Health,      ats: greenhouse, token: hingehealth,     sector: healthtech}
+  - {name: Datavant,          ats: lever,      token: datavant,        sector: healthtech}
+  - {name: Commure,           ats: ashby,      token: commure,         sector: healthtech}
+  - {name: GoodRx,            ats: lever,      token: goodrx,          sector: healthtech}
+  - {name: Included Health,   ats: lever,      token: includedhealth,  sector: healthtech}
+  - {name: Cedar,             ats: lever,      token: cedar,           sector: healthtech}
+  - {name: Headway,           ats: ashby,      token: headway,         sector: healthtech}
+  - {name: Spring Health,     ats: lever,      token: springhealth,    sector: healthtech}
+  - {name: Color Health,      ats: lever,      token: color,           sector: healthtech}
+  - {name: Viz.ai,            ats: lever,      token: vizai,           sector: healthtech}
+
   # ---- AI-native labs / infra ----
   - {name: Anthropic,         ats: greenhouse, token: anthropic,       sector: ai_lab}
   - {name: OpenAI,            ats: ashby,      token: openai,          sector: ai_lab}

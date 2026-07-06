@@ -6,7 +6,8 @@ big tech second, open to everything good).
 
 **[→ Live dashboard](docs/DASHBOARD.md)** ·
 **[→ Alert issues](../../issues?q=is%3Aissue+label%3Aradar-alerts)** ·
-**[→ RSS feed](docs/feed.xml)** (`https://raw.githubusercontent.com/VictorJimenez3/fable-job-search/main/docs/feed.xml` — replace `main` with the default branch name)
+**[→ RSS feed](docs/feed.xml)** — subscribe to
+`https://raw.githubusercontent.com/VictorJimenez3/fable-job-search/claude/newgrad-job-search-system-9gbj9k/docs/feed.xml`
 
 ## How it works
 

@@ -21,7 +21,7 @@ from .score import update_feedback_from_applied
 
 CHECKED = re.compile(r"^- \[[xX]\] .*?<!--radar:([a-f0-9]{16})-->", re.M)
 CMD_APPLIED = re.compile(r"^applied\s+(\S+)", re.I | re.M)
-CMD_SKIP = re.compile(r"^skip\s+([a-f0-9]{16})", re.I | re.M)
+CMD_SKIP = re.compile(r"^skip\s+(.+?)\s*$", re.I | re.M)
 CMD_TRACK = re.compile(r"^track\s+(\w+)\s+(\S+)(?:\s+(.+))?", re.I | re.M)
 
 
@@ -74,11 +74,11 @@ def handle_event(event_path: str) -> None:
                        "locations": [], "score": None, "source": "manual"}
             changed += _record_applied(job, applied, fb, via="comment")
         for m in CMD_SKIP.finditer(body):
-            job = jobs.get(m.group(1))
-            if job:
-                comp = norm(job["company"])
-                if comp not in fb["negative_companies"]:
-                    fb["negative_companies"].append(comp)
+            ref = m.group(1).strip()
+            job = jobs.get(ref) if re.fullmatch(r"[a-f0-9]{16}", ref) else None
+            comp = norm(job["company"]) if job else norm(ref)
+            if comp and comp not in fb["negative_companies"]:
+                fb["negative_companies"].append(comp)
                 changed += 1
         for m in CMD_TRACK.finditer(body):
             ats, token, name = m.group(1).lower(), m.group(2), (m.group(3) or m.group(2)).strip()

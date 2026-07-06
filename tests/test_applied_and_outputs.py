@@ -64,11 +64,13 @@ def test_skip_comment_downranks(tmp_state, tmp_path, monkeypatch):
     state.save("jobs.json", {JOB["id"]: JOB})
     event = {"sender": {"login": "VictorJimenez3"},
              "issue": {"number": 1},
-             "comment": {"body": f"skip {JOB['id']}"}}
+             "comment": {"body": f"skip {JOB['id']}\nskip DV Trading"}}
     ev = tmp_path / "event.json"
     ev.write_text(json.dumps(event))
     handle_event(str(ev))
-    assert "tempus" in state.feedback()["negative_companies"]
+    fb = state.feedback()
+    assert "tempus" in fb["negative_companies"]          # by job id
+    assert "dv trading" in fb["negative_companies"]      # by company name
 
 
 def test_notion_payload_matches_tracker_schema():
