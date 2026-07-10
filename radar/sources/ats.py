@@ -138,6 +138,122 @@ def fetch_workday(entry: dict, queries: list[str] | None = None) -> list[Job]:
     return out
 
 
+# ---------------- Eightfold (Netflix and others) ----------------
+
+def fetch_eightfold(entry: dict) -> list[Job]:
+    host = entry["extra"].get("host") or f"https://{entry['token']}"
+    domain = entry["extra"].get("domain") or f"{entry['token']}.com"
+    out = []
+    for start in (0, 10, 20):
+        data = get_json(f"{host}/api/apply/v2/jobs?domain={domain}&num=10&start={start}"
+                        "&sort_by=timestamp")
+        positions = data.get("positions") or []
+        for j in positions:
+            loc = j.get("location") or ""
+            locs = [loc] + (j.get("locations") or [])
+            posted = j.get("t_create") or j.get("t_update")
+            out.append(Job(
+                company=entry["name"], title=j.get("name", ""),
+                url=j.get("canonicalPositionUrl") or f"{host}/careers/job/{j.get('id')}",
+                source="eightfold", ats="eightfold",
+                locations=[l for l in dict.fromkeys(locs) if l],
+                posted_at=int(posted) if posted else None,
+                remote="remote" in loc.lower(),
+            ))
+        if len(positions) < 10:
+            break
+    return out
+
+
+# ---------------- iCIMS ----------------
+
+def fetch_icims(entry: dict) -> list[Job]:
+    data = get_json(f"https://{entry['token']}.icims.com/jobs/search?ss=1&format=json",
+                    headers={"Accept": "application/json"})
+    out = []
+    for j in (data.get("jobs") or []):
+        # iCIMS nests fields under idOnly/portal-specific keys; be permissive
+        title = j.get("jobTitle") or j.get("title") or ""
+        jid = j.get("jobId") or j.get("id") or ""
+        loc = j.get("jobLocation") or j.get("location") or ""
+        url = j.get("jobUrl") or (f"https://{entry['token']}.icims.com/jobs/{jid}/job" if jid else "")
+        if not title:
+            continue
+        out.append(Job(
+            company=entry["name"], title=title, url=url,
+            source="icims", ats="icims",
+            locations=[loc] if loc else [],
+            posted_at=None,  # iCIMS search JSON rarely exposes post dates
+            remote="remote" in str(loc).lower(),
+        ))
+    return out
+
+
+# ---------------- Oracle Cloud Recruiting (ORC) ----------------
+
+def fetch_oracle_orc(entry: dict) -> list[Job]:
+    host, site = entry["extra"]["host"], entry["extra"].get("site", "CX_1")
+    api = (f"https://{host}/hcmRestApi/resources/latest/recruitingCEJobRequisitions"
+           f"?onlyData=true&expand=requisitionList.secondaryLocations"
+           f"&finder=findReqs;siteNumber={site},limit=50,sortBy=POSTING_DATES_DESC")
+    data = get_json(api, headers={"Accept": "application/json"})
+    out = []
+    items = (data.get("items") or [{}])[0].get("requisitionList") or []
+    for j in items:
+        loc = j.get("PrimaryLocation") or ""
+        posted = _iso_epoch(j.get("PostedDate"))
+        rid = j.get("Id")
+        out.append(Job(
+            company=entry["name"], title=j.get("Title", ""),
+            url=f"https://{host}/hcmUI/CandidateExperience/en/sites/{site}/job/{rid}",
+            source="oracle_orc", ats="oracle_orc",
+            locations=[loc] if loc else [],
+            posted_at=posted,
+            remote="remote" in loc.lower(),
+        ))
+    return out
+
+
+# ---------------- Phenom (J&J, Merck, most big pharma) ----------------
+
+def fetch_phenom(entry: dict, queries: list[str] | None = None) -> list[Job]:
+    """Phenom sites expose the same search API their own frontend calls:
+    POST {host}/widgets with a refineSearch payload. Needs per-site extra:
+    {host, refnum, ddo? } — seed-only, validated by probe."""
+    host = entry["extra"]["host"].rstrip("/")
+    refnum = entry["extra"]["refnum"]
+    out, seen = [], set()
+    for q in (queries or ["new grad", "early career", "entry level"]):
+        payload = {
+            "lang": "en_us", "deviceType": "desktop", "country": "us",
+            "pageName": "search-results", "ddoKey": "refineSearch",
+            "sortBy": "Most recent", "subsearch": "", "from": 0, "jobs": True,
+            "counts": True, "all_fields": ["category", "country", "state", "city"],
+            "size": 20, "clearAll": False, "jdsource": "facets", "isSliderEnable": False,
+            "pageId": "page20", "siteType": "external", "keywords": q, "global": True,
+            "selected_fields": {}, "locationData": {}, "s": "1",
+        }
+        data = post_json(f"{host}/widgets", payload,
+                         headers={"Accept": "application/json"})
+        jobs = ((data.get("refineSearch") or {}).get("data") or {}).get("jobs") or []
+        for j in jobs:
+            slug = j.get("jobSeqNo") or j.get("reqId") or ""
+            if not slug or slug in seen:
+                continue
+            seen.add(slug)
+            loc = j.get("cityStateCountry") or j.get("location") or ""
+            out.append(Job(
+                company=entry["name"], title=j.get("title", ""),
+                url=j.get("applyUrl") or f"{host}/job/{slug}",
+                source="phenom", ats="phenom",
+                locations=[loc] if loc else [],
+                posted_at=_iso_epoch(j.get("postedDate")),
+                remote="remote" in str(loc).lower() or bool(j.get("isRemote")),
+            ))
+    _ = refnum  # part of the seed contract; some tenants require it in payload
+    return out
+
+
 # ---------------- SmartRecruiters ----------------
 
 def fetch_smartrecruiters(entry: dict) -> list[Job]:
@@ -178,6 +294,8 @@ def fetch_recruitee(entry: dict) -> list[Job]:
     return out
 
 
+from .bigco import BIGCO_FETCHERS  # noqa: E402  (pseudo-ATS entries, same contract)
+
 FETCHERS = {
     "greenhouse": fetch_greenhouse,
     "lever": fetch_lever,
@@ -185,6 +303,11 @@ FETCHERS = {
     "workday": fetch_workday,
     "smartrecruiters": fetch_smartrecruiters,
     "recruitee": fetch_recruitee,
+    "eightfold": fetch_eightfold,
+    "icims": fetch_icims,
+    "oracle_orc": fetch_oracle_orc,
+    "phenom": fetch_phenom,
+    **BIGCO_FETCHERS,
 }
 
 
@@ -208,6 +331,25 @@ def probe(entry: dict) -> bool:
             get_json(f"https://api.smartrecruiters.com/v1/companies/{entry['token']}/postings?limit=1")
         elif ats == "recruitee":
             get_json(f"https://{entry['token']}.recruitee.com/api/offers/")
+        elif ats == "eightfold":
+            host = entry["extra"].get("host") or f"https://{entry['token']}"
+            domain = entry["extra"].get("domain") or f"{entry['token']}.com"
+            data = get_json(f"{host}/api/apply/v2/jobs?domain={domain}&num=1&start=0")
+            if "positions" not in data:
+                return False
+        elif ats == "icims":
+            data = get_json(f"https://{entry['token']}.icims.com/jobs/search?ss=1&format=json",
+                            headers={"Accept": "application/json"})
+            if "jobs" not in data:
+                return False
+        elif ats == "oracle_orc":
+            host, site = entry["extra"]["host"], entry["extra"].get("site", "CX_1")
+            get_json(f"https://{host}/hcmRestApi/resources/latest/recruitingCEJobRequisitions"
+                     f"?onlyData=true&finder=findReqs;siteNumber={site},limit=1",
+                     headers={"Accept": "application/json"})
+        elif ats in {"phenom", "tesla", "amazon", "microsoft", "apple", "google"}:
+            # bespoke/hybrid endpoints: the cheapest reliable check IS a fetch
+            return bool(FETCHERS[ats](entry))
         else:
             return False
         return True

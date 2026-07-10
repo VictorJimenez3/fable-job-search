@@ -50,11 +50,15 @@ thresholds:
   max_posting_age_days: 10   # older than this when first seen → never alerted (stale)
 
 llm:
-  # If the ANTHROPIC_API_KEY secret is set on the repo, jobs scoring within
-  # `rerank_band` of the alert threshold get semantically re-ranked by Claude,
-  # and every alerted job gets a one-line "angle" note in the alert.
+  # Provider resolution (radar/llm.py): ANTHROPIC_API_KEY -> Claude;
+  # else LLM_BASE_URL (OpenAI-compatible: Ollama on your Mac at
+  # http://localhost:11434/v1, or a free Gemini key via Google AI Studio's
+  # compat endpoint); else heuristics-only. Jobs scoring within `rerank_band`
+  # of the alert threshold get semantically re-ranked, and every alerted job
+  # gets a one-line "angle" note.
   enabled_if_key_present: true
-  model: claude-haiku-4-5
+  model: claude-haiku-4-5        # used when ANTHROPIC_API_KEY is set
+  local_model: qwen3:14b         # used via LLM_BASE_URL (M1 Max 64GB: qwen3:32b also runs well)
   rerank_band: 14
 
 workday_queries:             # search terms used against Workday tenants

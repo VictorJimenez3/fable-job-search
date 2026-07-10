@@ -108,6 +108,45 @@ companies:
   - {name: SpaceX,            ats: greenhouse, token: spacex,          sector: big_tech}
   - {name: Snowflake,         ats: greenhouse, token: snowflakecomputing, sector: big_tech}
 
+  # ---- big pharma / med device (user priority: healthtech) ----
+  # workday tokens are best-effort guesses; the probe validates each one
+  - {name: Johnson & Johnson,  ats: phenom,  token: jnj,   sector: healthtech,
+     extra: {host: "https://www.careers.jnj.com", refnum: jnjjnj}}
+  - {name: Merck,             ats: phenom,  token: merck, sector: healthtech,
+     extra: {host: "https://jobs.merck.com", refnum: merckmerck}}
+  - {name: Pfizer,            ats: workday, token: pfizer, sector: healthtech,
+     extra: {host: wd1, site: PfizerCareers}}
+  - {name: Eli Lilly,         ats: workday, token: lilly, sector: healthtech,
+     extra: {host: wd5, site: LLY}}
+  - {name: AbbVie,            ats: workday, token: abbvie, sector: healthtech,
+     extra: {host: wd5, site: External}}
+  - {name: Bristol Myers Squibb, ats: workday, token: bristolmyerssquibb, sector: healthtech,
+     extra: {host: wd5, site: BMS}}
+  - {name: Novartis,          ats: workday, token: novartis, sector: healthtech,
+     extra: {host: wd3, site: Novartis_Careers}}
+  - {name: Gilead,            ats: workday, token: gilead, sector: healthtech,
+     extra: {host: wd1, site: gileadcareers}}
+  - {name: Amgen,             ats: workday, token: amgen, sector: healthtech,
+     extra: {host: wd1, site: Careers}}
+  - {name: Regeneron,         ats: workday, token: regeneron, sector: healthtech,
+     extra: {host: wd1, site: REGN}}
+  - {name: GSK,               ats: workday, token: gsk, sector: healthtech,
+     extra: {host: wd5, site: GSKCareers}}
+  - {name: Moderna,           ats: greenhouse, token: modernatx, sector: healthtech}
+  - {name: Medtronic,         ats: workday, token: medtronic, sector: healthtech,
+     extra: {host: wd1, site: MedtronicCareers}}
+  - {name: Stryker,           ats: workday, token: stryker, sector: healthtech,
+     extra: {host: wd1, site: StrykerCareers}}
+
+  # ---- bespoke big-co career APIs (pseudo-ATS adapters in sources/bigco.py) ----
+  - {name: Tesla,             ats: tesla,     token: tesla,     sector: big_tech}
+  - {name: Amazon,            ats: amazon,    token: amazon,    sector: big_tech}
+  - {name: Microsoft,         ats: microsoft, token: microsoft, sector: big_tech}
+  - {name: Apple,             ats: apple,     token: apple,     sector: big_tech}
+  - {name: Google,            ats: google,    token: google,    sector: big_tech}
+  - {name: Netflix,           ats: eightfold, token: netflix,   sector: big_tech,
+     extra: {host: "https://explore.jobs.netflix.net", domain: netflix.com}}
+
   # ---- edtech ----
   - {name: Duolingo,          ats: greenhouse, token: duolingo,        sector: edtech}
   - {name: Khan Academy,      ats: greenhouse, token: khanacademy,     sector: edtech}

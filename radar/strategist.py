@@ -14,7 +14,7 @@ from datetime import datetime, timezone
 import requests
 
 from . import state
-from .brief import _call
+from .llm import complete as llm_complete
 from .config import env, github_owner, github_repo
 
 API = "https://api.github.com"
@@ -78,7 +78,7 @@ def build_memo() -> str:
 
     memo = "\n".join(lines)
 
-    narrative = _call(
+    narrative = llm_complete(
         "You are a sharp, encouraging job-search strategist for a graduating CS senior "
         "targeting new-grad AI/SWE/DS roles (healthtech first, big tech second). "
         "Based on this week's pipeline report, write a punchy 120-word coach's note: "

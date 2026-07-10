@@ -1,38 +1,19 @@
-"""Optional Claude layer: semantic re-rank of borderline jobs + one-line
-application angle for alerted jobs. Activates only when ANTHROPIC_API_KEY is
-set; every failure degrades silently to heuristic-only behavior.
+"""Optional LLM layer: semantic re-rank of borderline jobs + one-line
+application angle for alerted jobs. Activates when any LLM provider is
+configured (Anthropic key, local Ollama, or an OpenAI-compatible endpoint —
+see radar/llm.py); every failure degrades silently to heuristic-only behavior.
 """
 from __future__ import annotations
 
 import json
 
-import requests
-
-from .config import env, profile
-
-API = "https://api.anthropic.com/v1/messages"
-
-
-def _call(prompt: str, max_tokens: int = 2000) -> str | None:
-    key = env("ANTHROPIC_API_KEY")
-    if not key:
-        return None
-    try:
-        r = requests.post(API, timeout=90, json={
-            "model": profile()["llm"]["model"],
-            "max_tokens": max_tokens,
-            "messages": [{"role": "user", "content": prompt}],
-        }, headers={"x-api-key": key, "anthropic-version": "2023-06-01"})
-        r.raise_for_status()
-        return "".join(b.get("text", "") for b in r.json().get("content", []))
-    except Exception as e:
-        print(f"brief: LLM call failed, continuing heuristic-only: {e}")
-        return None
+from . import llm
+from .config import profile
 
 
 def rerank(jobs: list) -> None:
     """Adjust scores of borderline jobs in place; annotate with an angle note."""
-    if not env("ANTHROPIC_API_KEY") or not jobs:
+    if not llm.available() or not jobs:
         return
     p = profile()
     batch = jobs[:30]
@@ -47,7 +28,7 @@ def rerank(jobs: list) -> None:
         "new-grad suitability, and growth. Also a <=12 word 'angle' for their application.\n"
         f"Postings:\n{json.dumps(rows, ensure_ascii=False)}\n\n"
         'Reply with ONLY a JSON array: [{"id": "...", "fit": 7, "angle": "..."}]')
-    text = _call(prompt)
+    text = llm.complete(prompt)
     if not text:
         return
     try:
@@ -66,7 +47,7 @@ def rerank(jobs: list) -> None:
             continue
         if adj:
             j.score = max(0, min(100, j.score + adj))
-            j.score_reasons.append(f"claude rerank {'+' if adj > 0 else ''}{adj}")
+            j.score_reasons.append(f"llm rerank {'+' if adj > 0 else ''}{adj}")
         angle = (r.get("angle") or "").strip()
         if angle:
             j.llm_note = angle[:120]

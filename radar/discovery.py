@@ -23,6 +23,9 @@ PATTERNS: list[tuple[str, re.Pattern]] = [
     ("smartrecruiters", re.compile(r"jobs\.smartrecruiters\.com/([A-Za-z0-9_-]+)/")),
     ("recruitee", re.compile(r"https?://([a-z0-9-]+)\.recruitee\.com")),
     ("workday", re.compile(r"https?://([a-z0-9-]+)\.(wd\d+)\.myworkdayjobs\.com/(?:([a-z]{2}-[A-Z]{2})/)?([A-Za-z0-9_-]+)(?:/job/|/details/|$)")),
+    ("icims", re.compile(r"https?://(?:careers-)?([a-z0-9-]+)\.icims\.com/jobs/")),
+    ("oracle_orc", re.compile(r"https?://([a-z0-9.-]+\.oraclecloud\.com)/hcmUI/CandidateExperience/[a-z_]+/sites/([A-Za-z0-9_]+)/")),
+    ("eightfold", re.compile(r"https?://((?:[a-z0-9-]+\.)?(?:jobs|careers|explore\.jobs)\.[a-z0-9-]+\.(?:com|net))/(?:careers|pcsx)[^\s\"]*domain=([a-z0-9.-]+)")),
 ]
 
 BAD_TOKENS = {"embed", "job", "jobs", "wday", "en-us", "external", "www", "api"}
@@ -41,6 +44,19 @@ def extract(url: str) -> tuple[str, str, dict] | None:
             if tenant.lower() in BAD_TOKENS or site.lower() in BAD_TOKENS:
                 continue
             return "workday", tenant.lower(), {"host": host, "site": site}
+        if ats == "icims":
+            tenant = m.group(1)
+            if tenant.lower() in BAD_TOKENS:
+                continue
+            # iCIMS career subdomains are commonly "careers-{tenant}"
+            prefix = "careers-" if "careers-" in url else ""
+            return "icims", f"{prefix}{tenant}", {}
+        if ats == "oracle_orc":
+            host, site = m.groups()
+            return "oracle_orc", host.split(".")[0], {"host": host, "site": site}
+        if ats == "eightfold":
+            host, domain = m.groups()
+            return "eightfold", domain.split(".")[0], {"host": f"https://{host}", "domain": domain}
         token = m.group(1)
         if token.lower() in BAD_TOKENS:
             continue
@@ -53,6 +69,8 @@ def extract(url: str) -> tuple[str, str, dict] | None:
 def key(ats: str, token: str, extra: dict | None = None) -> str:
     if ats == "workday" and extra:
         return f"workday:{token}:{extra.get('site', '')}"
+    if ats == "oracle_orc" and extra:
+        return f"oracle_orc:{token}:{extra.get('site', '')}"
     return f"{ats}:{token}"
 
 
