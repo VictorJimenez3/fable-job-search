@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-10 06:33 UTC** · companies polled directly: **560** (registry 704) · jobs tracked: **6211** · new this run: **30** · alerts this run: **0**_
+_Last run: **2026-07-10 06:47 UTC** · companies polled directly: **564** (registry 706) · jobs tracked: **6216** · new this run: **5** · alerts this run: **1**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -30,7 +30,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 91 🔥 | 1d | OpenAI | [AI Deployment Engineer, Cyber](https://jobs.ashbyhq.com/openai/29f15e50-1611-4256-afad-03b7df0b7aa7) | Singapore | ai_lab | ashby |
 | 91 🔥 | 2d | Otter.ai | [Software Engineer New Grad - Backend](https://otter.ai/careers?gh_jid=7798264003) | Mountain View, CA | ai_lab | simplify |
 | 91 🔥 | 2d | OpenAI | [Research Engineer / Research Scientist - Personal AGI, Personality and](https://jobs.ashbyhq.com/openai/a86d9477-0277-498c-9647-02a257747607) | San Francisco | ai_lab | ashby |
-| 90 🔥 | 6h | Uber Technologies, Inc. | [Software Engineer I](https://jobs.uber.com/en/jobs/160017/?_csid=BOBcQVO6jwRuNsBKbjoAZA&effect=&sm_flow_id=92Yhskrz&state=xlA80FxvL-2272sFxrCsxXWLk7KQR60tJLE43FsTxHI%3D) | Seattle, Washington | big_tech | vansh |
+| 90 🔥 | 7h | Uber Technologies, Inc. | [Software Engineer I](https://jobs.uber.com/en/jobs/160017/?_csid=BOBcQVO6jwRuNsBKbjoAZA&effect=&sm_flow_id=92Yhskrz&state=xlA80FxvL-2272sFxrCsxXWLk7KQR60tJLE43FsTxHI%3D) | Seattle, Washington | big_tech | vansh |
 | 90 🔥 | 8h | Generate Biomedicines | [Data Scientist 1](https://generatebiomedicines.com/open-positions?gh_jid=4695495006) | Cambridge, MA | healthtech | simplify |
 | 90 🔥 | 8h | CVS Health | [Analyst,Patient Relations](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/CT---New-Britain/Analyst-Patient-Relations_R0970454-1) | CT - New Britain | healthtech | workday |
 | 90 🔥 | 8h | CVS Health | [Merchandising Analyst (Candy)](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/RI---Woonsocket/Merchandising-Analyst--Candy-_R0949228) | RI - Woonsocket | healthtech | workday |
@@ -66,7 +66,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 89 🔥 | 2d | OpenAI | [Network Operations Engineer, AI Networking](https://jobs.ashbyhq.com/openai/bbad4315-1f13-4b2f-b595-cf1287274f2f) | San Francisco | ai_lab | ashby |
 | 89 🔥 | 3d | Together AI | [Research Engineer, Post-Training Inference](https://job-boards.greenhouse.io/togetherai/jobs/5179372007) | San Francisco | ai_lab | greenhouse |
 | 88 🔥 | <1h | GSK | [Manufacturing Systems Integration Data Engineer](https://gsk.wd5.myworkdayjobs.com/en-US/GSKCareers/job/Poznan-Pastelowa/Manufacturing-Systems-Integration-Data-Engineer_444283-1) | 2 Locations | healthtech | workday |
-| 88 🔥 | 6h | Adobe | [Software Development Engineer, AI Features – Photoshop Web](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Jose/Software-Development-Engineer--AI-Features---Photoshop-Web_R170182) | 4 Locations | big_tech | workday |
+| 88 🔥 | 7h | Adobe | [Software Development Engineer, AI Features – Photoshop Web](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Jose/Software-Development-Engineer--AI-Features---Photoshop-Web_R170182) | 4 Locations | big_tech | workday |
 | 88 🔥 | 13h | Salesforce | [AI Builder, Emerging Talent](https://salesforce.wd12.myworkdayjobs.com/en-US/futureforce_newgradroles/job/California---San-Francisco/AI-Builder--Emerging-Talent_JR341276) | 4 Locations | big_tech | workday |
 | 88 🔥 | 19h | Astreya | [AI/ML Engineer I](https://astreya.wd5.myworkdayjobs.com/en-US/life-at-astreya-opportunities/job/Remote-India/AI-ML-Engineer-I_R0016200) | Remote, India | other | workday |
 | 88 🔥 | 1d | Salesforce | [Software Engineering MTS - Full-Stack/Agentic AI Engineer](https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/California---San-Francisco/Software-Engineering-MTS---Full-Stack-Agentic-AI-Engineer_JR350332) | 2 Locations | big_tech | workday |
@@ -127,7 +127,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 85 🔥 | 3d | EverBank | [Associate Software Engineer](https://jobright.ai/jobs/info/6a4d4d82c643fd23fed3c7ab?utm_campaign=Software%20Engineering&utm_source=1103) | Lewisville, TX, United States | fintech | jobright |
 | 85 🔥 | 3d | Otter.ai | [Software Engineer, Backend (New Grad)](https://jobright.ai/jobs/info/6a4d93f4d27b2c4dda9b812e?utm_campaign=Software%20Engineering&utm_source=1103) | Mountain View, CA, United States | ai_lab | jobright |
 | 85 🔥 | 15d | Shield AI | [Associate Inventory Admin (R5269)](https://jobs.lever.co/shieldai/7a10ef4b-3fdc-4b36-a3ac-8176dc7aade3) | Dallas, Texas | ai_lab | lever |
-| 84 ⭐ | 5h | Anduril | [Operations Analyst, Quality Control](https://boards.greenhouse.io/andurilindustries/jobs/5025986007?gh_jid=5025986007) | Costa Mesa, California, United States | big_tech | greenhouse |
+| 84 ⭐ | 6h | Anduril | [Operations Analyst, Quality Control](https://boards.greenhouse.io/andurilindustries/jobs/5025986007?gh_jid=5025986007) | Costa Mesa, California, United States | big_tech | greenhouse |
 | 84 ⭐ | 12h | Hire Hangar | [Junior Data Analyst](https://jobs.ashbyhq.com/hirehangar/3c708fbc-3ef1-437f-b45b-7277ed2e3adf) | South Africa - Cape Town | other | ashby |
 | 84 ⭐ | 20h | Lendable | [Junior QA Analyst - Customer Operations](https://jobs.ashbyhq.com/lendable/503942c8-92ad-44b3-8df9-65d804e760c0) | London | other | ashby |
 | 84 ⭐ | 1d | Tesla | [Energy Analyst - Residential Energy](https://www.tesla.com/careers/search/job/276044) | Henderson, NV | big_tech | simplify |
