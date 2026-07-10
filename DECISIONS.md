@@ -96,3 +96,48 @@ Salesforce, Adobe, …) ARE polled directly.
 - GitHub cron jitter means worst-case ~1h detection. Acceptable vs 24h target.
 - First CI run bootstraps the whole state; its alert issue is capped at the
   top 25 to avoid a notification bomb.
+
+## 10. Checkbox = shortlist, not applied; email confirmation is ground truth
+Originally the alert-issue checkbox directly logged "Applied" to Notion.
+That's wrong on reflection: ticking a box only records intent, and the user
+correctly pointed out they'd checked boxes to save jobs for later, not
+because they'd submitted anything. Fixed by splitting the concepts:
+- Checkbox → `state/shortlist.json` ("I'm interested"), small ranking boost,
+  **no Notion write**.
+- A confirmation email landing in the inbox → `email_watch.py` matches the
+  sender/subject against the shortlist (or, failing that, anything the radar
+  has ever seen) and *that* promotes the entry to `state/applied.json` +
+  Notion. This is strictly more truthful: the company itself is the one
+  asserting an application exists.
+- `applied <url>` comment command still exists as an explicit, immediate
+  override for cases email detection can't catch (jobs found outside the
+  radar entirely, unusual confirmation wording).
+- One-time migration (`migrate-checkbox-applied`): the 11 entries logged
+  under the old (wrong) semantics were moved back to the shortlist and their
+  Notion pages archived (soft-deleted, recoverable from Notion's trash) via
+  the GitHub Actions bot's own `NOTION_TOKEN` — not via the interactive
+  Claude↔Notion connector, which is a separate, session-scoped credential
+  that isn't available to unattended CI runs.
+
+## 11. Email monitoring needs its own credential, same pattern as Notion
+The Gmail/Notion connectors available inside an interactive Claude Code
+session are OAuth grants tied to *that session* — they don't exist for the
+unattended GitHub Actions runner, which needs its own way in. Two realistic
+options: Gmail API OAuth (requires the user to run a one-time consent flow
+and mint a refresh token — multi-step, needs a Google Cloud project) vs. IMAP
+with an App Password (2 minutes: enable 2-Step Verification, generate a
+16-character app password, done). Chose IMAP for setup simplicity, gated on
+confirming NJIT actually runs Google Workspace/Gmail (it does, per
+ist.njit.edu) rather than Microsoft 365 — if it were Microsoft, IMAP basic
+auth wouldn't work at all (Microsoft deprecated it in 2022) and OAuth would
+be the only option. Real residual risk: some Workspace-for-Education admins
+disable app passwords entirely as a policy matter; `email-verify` surfaces
+that immediately with a specific error rather than a silent hang, and the
+README documents a forwarding-to-personal-Gmail fallback.
+
+Company matching from an email is inherently fuzzy (sender display name,
+domain, or subject-line parsing, scored by normalized token overlap against
+known company names) — deliberately biased toward the shortlist first (the
+user already flagged interest in that exact posting) before falling back to
+anything else the radar has ever seen, and returns no-match rather than a
+low-confidence guess when nothing clears a 50% token-overlap bar.

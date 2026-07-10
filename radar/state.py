@@ -50,3 +50,10 @@ def feedback() -> dict:
 
 def applied() -> list:
     return load("applied.json", [])
+
+
+def shortlist() -> list:
+    """Jobs the user checked as 'save for later' — not confirmed applications.
+    Promoted to applied.json by email_watch.py when a confirmation email is
+    matched, or manually via the `applied <url>` comment command."""
+    return load("shortlist.json", [])

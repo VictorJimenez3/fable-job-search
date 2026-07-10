@@ -170,11 +170,23 @@ def score(job: Job, feedback: dict, now: int | None = None) -> None:
     job.score_reasons = reasons
 
 
-def update_feedback_from_applied(fb: dict, company: str, title: str) -> dict:
+def _bump_feedback(fb: dict, company: str, title: str, company_delta: int, token_delta: int) -> dict:
     comp = norm(company)
     fb.setdefault("company_boosts", {})
     fb.setdefault("token_boosts", {})
-    fb["company_boosts"][comp] = min(fb["company_boosts"].get(comp, 0) + 2, 8)
-    for tok in _title_tokens(title):
-        fb["token_boosts"][tok] = min(fb["token_boosts"].get(tok, 0) + 1, 4)
+    if company_delta:
+        fb["company_boosts"][comp] = min(fb["company_boosts"].get(comp, 0) + company_delta, 8)
+    if token_delta:
+        for tok in _title_tokens(title):
+            fb["token_boosts"][tok] = min(fb["token_boosts"].get(tok, 0) + token_delta, 4)
     return fb
+
+
+def update_feedback_from_applied(fb: dict, company: str, title: str) -> dict:
+    """Strong signal: a confirmed application (email-detected or explicit)."""
+    return _bump_feedback(fb, company, title, company_delta=2, token_delta=1)
+
+
+def update_feedback_from_shortlist(fb: dict, company: str, title: str) -> dict:
+    """Weak signal: the user saved this for later, not necessarily applied."""
+    return _bump_feedback(fb, company, title, company_delta=1, token_delta=0)

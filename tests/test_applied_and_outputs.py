@@ -33,7 +33,10 @@ def test_format_line_roundtrips_job_id():
     assert "🔥" in line  # score 88
 
 
-def test_checkbox_event_records_applied(tmp_state, tmp_path, monkeypatch):
+def test_checkbox_event_records_shortlist_not_applied(tmp_state, tmp_path, monkeypatch):
+    # a checkbox tick means "save for later" -- it must NOT create an applied
+    # entry or touch Notion; only email_watch (or an explicit `applied` comment)
+    # should ever do that.
     monkeypatch.delenv("NOTION_TOKEN", raising=False)
     state.save("jobs.json", {JOB["id"]: JOB})
     body = format_line(JOB).replace("- [ ]", "- [x]")
@@ -42,12 +45,28 @@ def test_checkbox_event_records_applied(tmp_state, tmp_path, monkeypatch):
     ev = tmp_path / "event.json"
     ev.write_text(json.dumps(event))
     handle_event(str(ev))
-    applied = state.applied()
-    assert len(applied) == 1
-    assert applied[0]["company"] == "Tempus"
-    assert applied[0]["notion_synced"] is False  # queued until NOTION_TOKEN exists
+    assert state.applied() == []
+    shortlist = state.shortlist()
+    assert len(shortlist) == 1
+    assert shortlist[0]["company"] == "Tempus"
     fb = state.feedback()
     assert fb["company_boosts"].get("tempus")
+
+
+def test_applied_comment_clears_from_shortlist(tmp_state, tmp_path, monkeypatch):
+    monkeypatch.delenv("NOTION_TOKEN", raising=False)
+    state.save("jobs.json", {JOB["id"]: JOB})
+    state.save("shortlist.json", [{"id": JOB["id"], "company": "Tempus", "title": JOB["title"],
+                                   "url": JOB["url"], "locations": JOB["locations"],
+                                   "score": JOB["score"], "source": JOB["source"],
+                                   "shortlisted_at": int(time.time())}])
+    event = {"sender": {"login": "VictorJimenez3"}, "issue": {"number": 1},
+             "comment": {"body": f"applied {JOB['url']}"}}
+    ev = tmp_path / "event.json"
+    ev.write_text(json.dumps(event))
+    handle_event(str(ev))
+    assert len(state.applied()) == 1
+    assert state.shortlist() == []  # promoted out of the shortlist
 
 
 def test_bot_events_ignored(tmp_state, tmp_path):
@@ -59,6 +78,7 @@ def test_bot_events_ignored(tmp_state, tmp_path):
     ev.write_text(json.dumps(event))
     handle_event(str(ev))
     assert state.applied() == []
+    assert state.shortlist() == []
 
 
 def test_skip_comment_downranks(tmp_state, tmp_path, monkeypatch):
@@ -156,3 +176,10 @@ def test_strategist_memo_builds(tmp_state, monkeypatch):
     assert "Pipeline" in memo and "1 alerts" in memo and "1 applications" in memo
     assert "Follow up" in memo and "Notion" in memo          # 6-day-old application nudged
     assert "Tempus" in memo                                   # top open target listed
+
+
+def test_page_id_from_url_extracts_and_dashes():
+    from radar.notion_sync import page_id_from_url
+    url = "https://app.notion.com/p/Uber-Technologies-Inc-3995d6f42cab81b79291edce7b1639b2"
+    assert page_id_from_url(url) == "3995d6f4-2cab-81b7-9291-edce7b1639b2"
+    assert page_id_from_url("not a url") is None

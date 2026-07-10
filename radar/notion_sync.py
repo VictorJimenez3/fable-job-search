@@ -19,6 +19,7 @@ state/applied.json with notion_synced=false and sync on a later run.
 """
 from __future__ import annotations
 
+import re
 import time
 from datetime import datetime, timezone
 
@@ -151,6 +152,24 @@ def verify_connection() -> None:
     if optional_missing:
         print(f"    skipping (not in this database): {', '.join(optional_missing)}")
     print("Applied-logging is armed.")
+
+
+def archive_page(token: str, page_id: str) -> None:
+    """Archive (soft-delete, reversible from Notion's trash) a page by ID."""
+    r = requests.patch(f"https://api.notion.com/v1/pages/{page_id}",
+                       headers=_headers(token), json={"archived": True}, timeout=20)
+    r.raise_for_status()
+
+
+PAGE_ID_RE = re.compile(r"([0-9a-f]{32})\s*$", re.I)
+
+
+def page_id_from_url(url: str) -> str | None:
+    m = PAGE_ID_RE.search(url or "")
+    if not m:
+        return None
+    h = m.group(1)
+    return f"{h[0:8]}-{h[8:12]}-{h[12:16]}-{h[16:20]}-{h[20:32]}"
 
 
 def sync_applied(applied: list) -> int:

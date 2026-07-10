@@ -2,9 +2,10 @@
 
 Why issues: assigning an issue to you triggers GitHub's native notification
 pipeline (mobile push + email) with zero extra credentials, and the issue body
-doubles as the applied-logging UI — check a job's box after you apply and the
-applied workflow logs it to Notion. One issue per ISO week keeps noise down;
-each run appends a timestamped section.
+doubles as a shortlisting UI — check a job's box to save it for later (this
+does NOT log it as applied; email_watch.py detects real applications from
+confirmation emails and logs those to Notion automatically). One issue per
+ISO week keeps noise down; each run appends a timestamped section.
 """
 from __future__ import annotations
 
@@ -43,10 +44,12 @@ def format_line(j: dict) -> str:
 
 HEADER = (
     "New high-scoring roles appear below as they're detected (every ~30 min).\n\n"
-    "**✅ Check a job's box after you apply** — it will be logged to your Notion "
-    "Applications tracker automatically (and boosts similar roles in ranking).\n"
-    "Comment `skip <id>` to downrank similar roles, or `applied <url>` for jobs "
-    "found elsewhere.\n")
+    "**☑️ Check a box to save a job for later** — this is a shortlist, *not* "
+    "an applied marker (nothing is sent to Notion yet). Once you actually apply, "
+    "the system watches your email for the confirmation and logs it to Notion "
+    "automatically — no action needed. If email detection ever misses one, "
+    "comment `applied <url>` to log it immediately.\n"
+    "Comment `skip <company>` to downrank similar roles.\n")
 
 
 def post_alerts(new_alerts: list[dict]) -> str | None:

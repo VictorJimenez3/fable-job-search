@@ -217,10 +217,47 @@ def notion_backfill() -> int:
     return 0
 
 
+def migrate_checkbox_applied() -> int:
+    """One-time fix: checkbox ticks used to mean 'applied' and got synced to
+    Notion as such. They actually meant 'shortlisted'. Archive those Notion
+    pages and move the entries into shortlist.json instead. Idempotent: only
+    touches entries still tagged via='issue-checkbox' in applied.json."""
+    from .notion_sync import archive_page, page_id_from_url
+    token = env("NOTION_TOKEN")
+    applied = state.applied()
+    shortlist = state.shortlist()
+    keep, moved, archive_failed = [], 0, []
+    for entry in applied:
+        if entry.get("via") != "issue-checkbox":
+            keep.append(entry)
+            continue
+        page_id = page_id_from_url(entry.get("notion_page", ""))
+        if page_id and token:
+            try:
+                archive_page(token, page_id)
+            except Exception as e:
+                archive_failed.append(entry["company"])
+                print(f"migrate: could not archive Notion page for {entry['company']}: {e}")
+        shortlist.append({
+            "id": entry["id"], "company": entry["company"], "title": entry["title"],
+            "url": entry.get("url", ""), "locations": entry.get("locations", []),
+            "score": entry.get("score"), "source": entry.get("source"),
+            "shortlisted_at": entry.get("applied_at", int(time.time())),
+        })
+        moved += 1
+    state.save("applied.json", keep)
+    state.save("shortlist.json", shortlist)
+    print(f"migrate: moved {moved} checkbox-applied entries back to shortlist"
+         + (f" ({len(archive_failed)} Notion pages could not be archived: {archive_failed})"
+            if archive_failed else " (all Notion pages archived)"))
+    return 0
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(prog="radar")
     ap.add_argument("command", choices=["crawl", "applied-sync", "seed", "notion-backfill",
-                                        "strategist", "notion-verify"])
+                                        "strategist", "notion-verify", "email-watch", "email-verify",
+                                        "migrate-checkbox-applied"])
     args = ap.parse_args()
     if args.command == "crawl":
         sys.exit(crawl())
@@ -237,6 +274,14 @@ def main() -> None:
     elif args.command == "notion-verify":
         from .notion_sync import verify_connection
         verify_connection()
+    elif args.command == "email-watch":
+        from .email_watch import run
+        run()
+    elif args.command == "email-verify":
+        from .email_watch import verify_connection as email_verify
+        email_verify()
+    elif args.command == "migrate-checkbox-applied":
+        sys.exit(migrate_checkbox_applied())
 
 
 if __name__ == "__main__":

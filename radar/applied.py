@@ -1,10 +1,14 @@
-"""Applied-logging: react to GitHub issue events.
+"""Shortlist + applied-logging: react to GitHub issue events.
 
-- Checking a checkbox on an alert issue (`- [x] ... <!--radar:ID-->`) marks
-  that job applied.
-- Comment commands:
-    applied <url or id>   log a job found elsewhere
-    skip <id>             negative feedback (downranks similar roles)
+- Checking a checkbox on an alert issue (`- [x] ... <!--radar:ID-->`) means
+  "save this for later" — it does NOT mean applied. It's recorded to
+  state/shortlist.json, gives a small ranking boost, and nothing is written
+  to Notion yet.
+- Actual applications are detected automatically by email_watch.py (matches
+  confirmation emails against the shortlist and promotes them to
+  state/applied.json + Notion), or logged explicitly via comment commands:
+    applied <url or id>   log a confirmed application immediately
+    skip <company or id>  negative feedback (downranks similar roles)
     track <ats> <token> [Company Name]   manually add a company to the registry
 """
 from __future__ import annotations
@@ -17,7 +21,7 @@ from . import state
 from .config import env
 from .models import norm
 from .notion_sync import sync_applied
-from .score import update_feedback_from_applied
+from .score import update_feedback_from_applied, update_feedback_from_shortlist
 
 CHECKED = re.compile(r"^- \[[xX]\] .*?<!--radar:([a-f0-9]{16})-->", re.M)
 CMD_APPLIED = re.compile(r"^applied\s+(\S+)", re.I | re.M)
@@ -25,7 +29,20 @@ CMD_SKIP = re.compile(r"^skip\s+(.+?)\s*$", re.I | re.M)
 CMD_TRACK = re.compile(r"^track\s+(\w+)\s+(\S+)(?:\s+(.+))?", re.I | re.M)
 
 
-def _record_applied(job: dict, applied: list, fb: dict, via: str) -> bool:
+def _record_shortlist(job: dict, shortlist: list, fb: dict) -> bool:
+    if any(s["id"] == job["id"] for s in shortlist):
+        return False
+    shortlist.append({
+        "id": job["id"], "company": job["company"], "title": job["title"],
+        "url": job.get("url", ""), "locations": job.get("locations", []),
+        "score": job.get("score"), "source": job.get("source"),
+        "shortlisted_at": int(time.time()),
+    })
+    update_feedback_from_shortlist(fb, job["company"], job["title"])
+    return True
+
+
+def record_applied(job: dict, applied: list, fb: dict, via: str) -> bool:
     if any(a["id"] == job["id"] for a in applied):
         return False
     applied.append({
@@ -49,6 +66,7 @@ def handle_event(event_path: str) -> None:
 
     jobs = state.jobs()
     applied = state.applied()
+    shortlist = state.shortlist()
     fb = state.feedback()
     changed = 0
 
@@ -72,7 +90,9 @@ def handle_event(event_path: str) -> None:
                        "company": ref.split("/")[2] if ref.startswith("http") else ref,
                        "title": "Manually logged application", "url": ref if ref.startswith("http") else "",
                        "locations": [], "score": None, "source": "manual"}
-            changed += _record_applied(job, applied, fb, via="comment")
+            changed += record_applied(job, applied, fb, via="comment")
+            # if this was previously shortlisted, remove it — it's confirmed now
+            shortlist[:] = [s for s in shortlist if s["id"] != job["id"]]
         for m in CMD_SKIP.finditer(body):
             ref = m.group(1).strip()
             job = jobs.get(ref) if re.fullmatch(r"[a-f0-9]{16}", ref) else None
@@ -94,11 +114,14 @@ def handle_event(event_path: str) -> None:
         for jid in CHECKED.findall(body):
             job = jobs.get(jid)
             if job:
-                changed += _record_applied(job, applied, fb, via="issue-checkbox")
+                changed += _record_shortlist(job, shortlist, fb)
 
+    # sync_applied only ever pushes confirmed applications (state/applied.json)
+    # to Notion — shortlisting never writes to Notion.
     synced = sync_applied(applied)
     if changed or synced:
         state.save("applied.json", applied)
+        state.save("shortlist.json", shortlist)
         state.save("feedback.json", fb)
         print(f"applied: recorded {changed} change(s), synced {synced} to Notion")
     else:

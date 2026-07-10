@@ -37,31 +37,61 @@ every ~30 min (GitHub Actions cron)
       · docs/feed.xml — RSS for instant notifications in any feed reader
 ```
 
-### Applied logging (the Notion loop)
+### Shortlisting vs. applied — how logging actually works
 
-You apply manually — tracking is automatic:
+A checkbox can only record intent, not truth — you can tick a box without
+ever hitting submit. So the two are deliberately separate:
 
-1. Open the week's alert issue, apply to a job, **check its checkbox**.
-2. The `applied-sync` workflow logs it to `state/applied.json`, boosts similar
-   roles in future ranking, and creates a page in your Notion **Applications**
-   database (Company, Position, Stage=Applied, Job URL, Location, Apply date).
+1. **Check a box on an alert issue** = "save this for later." It records a
+   shortlist entry and gives ranking a small nudge. **Nothing is sent to
+   Notion at this point.**
+2. **When you actually apply and the company's confirmation email lands**
+   (e.g. "Thank you for applying to..."), the `email-watch` workflow detects
+   it, matches the company against your shortlist (or anything the radar has
+   ever seen), and *that's* what gets logged to Notion as Stage=Applied — no
+   further action from you.
+3. If email detection ever misses one (unusual confirmation wording, or a job
+   you found outside the radar entirely), comment `applied <url>` on any
+   issue to log it immediately.
 
-Comment commands on any issue: `applied <url>` (log a job found elsewhere),
-`skip <job-id>` (downrank similar), `track <ats> <token> [Name]` (force-add a company).
+Other comment commands: `skip <company>` (downrank similar roles),
+`track <ats> <token> [Name]` (force-add a company to the crawl registry).
 
-## Setup (one-time, ~3 min)
+## Setup (one-time, ~5 min total)
 
-Everything works out of the box **except the Notion write**, which needs a
-credential only you can create:
+Two independent credentials, each createable only by you. Everything else
+works with zero setup.
 
+**1. Notion write access (~2 min)**
 1. Go to [notion.so/my-integrations](https://www.notion.so/my-integrations) → *New integration*
    (internal), any name, your workspace. Copy the secret.
-2. In Notion, open **Job Hunt Tracker → Applications** database → ⋯ menu →
-   *Connections* → add your integration.
+2. In Notion, open your Applications database → ⋯ menu → *Connections* →
+   add your integration. (The database is found automatically by title
+   search — rename or recreate it anytime, nothing else needs to change.)
 3. In this repo: *Settings → Secrets and variables → Actions → New repository
    secret*: name `NOTION_TOKEN`, value = the secret.
-   Any applications you logged before adding the token sync automatically on
-   the next run (or run the `radar` workflow manually).
+
+Verify anytime without creating test data: *Actions → notion-verify → Run workflow*.
+
+**2. Email-based applied-detection (~3 min)**
+NJIT uses Google Workspace/Gmail, so this uses IMAP with an App Password
+(Google's supported way to let a non-browser client log in — this is not
+your NJIT password and can be revoked anytime independent of it):
+1. On the `vmj@njit.edu` Google account, enable **2-Step Verification** at
+   [myaccount.google.com/security](https://myaccount.google.com/security) if not already on
+   (required before Google will issue app passwords).
+2. Generate one at [myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords)
+   — name it "Job Radar", copy the 16-character password.
+3. Add two repo secrets: `EMAIL_ADDRESS` = `vmj@njit.edu`, `EMAIL_APP_PASSWORD` = the 16-char password.
+
+Verify anytime (read-only, marks nothing as read): *Actions → email-verify → Run workflow*.
+
+*If NJIT's Workspace admin has disabled app passwords* (some university IT
+policies do), `email-verify` will fail with a clear "login rejected" message
+instead of hanging. Fallback: set up a Gmail filter on the njit.edu account
+to auto-forward application-confirmation emails to a personal Gmail you
+control, then point `EMAIL_ADDRESS`/`EMAIL_APP_PASSWORD` at that account instead
+— same setup, one extra forwarding rule.
 
 Optional upgrades:
 - `ANTHROPIC_API_KEY` secret → Claude semantically re-ranks borderline jobs and
@@ -100,3 +130,6 @@ python -m radar.main crawl         # full cycle (respects RADAR_* env vars)
 
 Useful env vars: `RADAR_DISABLE_SOURCES=ats,hn`, `RADAR_PROBE_BUDGET`,
 `RADAR_MAX_COMPANIES`, `RADAR_MAX_ALERTS`, `RADAR_WORKERS`.
+
+Other one-off CLI commands: `notion-verify`, `email-verify` (connectivity checks,
+create nothing), `email-watch` (run one detection cycle manually).
