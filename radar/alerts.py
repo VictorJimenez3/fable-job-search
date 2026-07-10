@@ -32,13 +32,18 @@ def _week_title() -> str:
     return f"🎯 Job Radar alerts — week {now.strftime('%G-W%V')}"
 
 
-def format_line(j: dict) -> str:
+def format_line(j: dict, culture_map: dict | None = None) -> str:
     loc = (j.get("locations") or ["?"])[0][:40]
     fire = "🔥 " if j["score"] >= 85 else ""
     note = f" — _{j['llm_note']}_" if j.get("llm_note") else ""
     salary = f" · {j['salary']}" if j.get("salary") else ""
+    ctag = ""
+    if culture_map is not None:
+        from .culture import alert_tag
+        t = alert_tag(j["company"], culture_map)
+        ctag = f" {t}" if t else ""
     return (f"- [ ] {fire}**{j['company']}** — [{j['title'][:80]}]({j['url']}) · "
-            f"{loc}{salary} · `{j['score']}` `{j.get('sector') or 'tech'}`{note} "
+            f"{loc}{salary} · `{j['score']}` `{j.get('sector') or 'tech'}`{ctag}{note} "
             f"<!--radar:{j['id']}-->")
 
 
@@ -69,9 +74,11 @@ def post_alerts(new_alerts: list[dict]) -> str | None:
     r.raise_for_status()
     issue = next((i for i in r.json() if i["title"] == title), None)
 
+    from .culture import load as culture_load
+    culture_map = culture_load()
     ts = datetime.now(timezone.utc).strftime("%a %b %d, %H:%M UTC")
     section = [f"\n### {ts} — {len(new_alerts)} new", ""]
-    section += [format_line(j) for j in new_alerts]
+    section += [format_line(j, culture_map) for j in new_alerts]
     section_md = "\n".join(section) + "\n"
 
     if issue is None:

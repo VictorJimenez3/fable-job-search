@@ -113,11 +113,16 @@ def harvest(registry: dict, jobs: list, max_new: int = 200) -> int:
 
 
 def probe_new(registry: dict, budget: int = 30) -> tuple[int, int]:
-    """Validate up to `budget` candidates. Returns (activated, invalidated)."""
+    """Validate up to `budget` candidates. Returns (activated, invalidated).
+    Leftover budget re-probes 'invalid' entries up to 3 total attempts —
+    endpoints get fixed, WAFs relent, and code improves between runs."""
     ok = bad = 0
     candidates = [e for e in registry.values() if e["status"] == "new"]
     candidates.sort(key=lambda e: e["first_seen"])
-    for e in candidates[:budget]:
+    retries = [e for e in registry.values()
+               if e["status"] == "invalid" and e.get("probe_attempts", 1) < 3]
+    for e in (candidates + retries)[:budget]:
+        e["probe_attempts"] = e.get("probe_attempts", 0) + 1
         if probe(e):
             e["status"] = "active"
             e["last_ok"] = int(time.time())

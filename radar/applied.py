@@ -27,6 +27,46 @@ CHECKED = re.compile(r"^- \[[xX]\] .*?<!--radar:([a-f0-9]{16})-->", re.M)
 CMD_APPLIED = re.compile(r"^applied\s+(\S+)", re.I | re.M)
 CMD_SKIP = re.compile(r"^skip\s+(.+?)\s*$", re.I | re.M)
 CMD_TRACK = re.compile(r"^track\s+(\w+)\s+(\S+)(?:\s+(.+))?", re.I | re.M)
+CMD_CULTURE = re.compile(r"^culture\s+(.+?)\s*$", re.I | re.M)
+
+
+def _reply(event: dict, body: str) -> None:
+    """Post a comment reply on the issue this event belongs to."""
+    import requests
+    from .config import github_repo
+    token = env("GITHUB_TOKEN")
+    number = (event.get("issue") or {}).get("number")
+    if not token or not number:
+        print(f"reply (not posted):\n{body[:400]}")
+        return
+    requests.post(f"https://api.github.com/repos/{github_repo()}/issues/{number}/comments",
+                  headers={"Authorization": f"Bearer {token}",
+                           "Accept": "application/vnd.github+json"},
+                  json={"body": body}, timeout=20).raise_for_status()
+
+
+def culture_generate_one(name: str, dossiers: dict) -> bool:
+    """On-demand dossier for the `culture` command; no-op without an LLM."""
+    import json as _json
+
+    from . import culture, llm
+    from .config import profile
+    if not llm.available():
+        return False
+    text = llm.complete(culture._GEN_PROMPT.format(
+        criteria=profile().get("culture_criteria", ""), company=name), max_tokens=500)
+    if not text:
+        return False
+    try:
+        row = _json.loads(text[text.index("{"):text.rindex("}") + 1])
+    except (ValueError, _json.JSONDecodeError):
+        return False
+    d = {f: row.get(f, "") for f in culture.FIELDS}
+    d.update(name=name, source="est.", generated_at=int(time.time()))
+    d["fit"] = culture.fit_score(d)
+    dossiers[norm(name)] = d
+    culture.save(dossiers)
+    return True
 
 
 def _record_shortlist(job: dict, shortlist: list, fb: dict) -> bool:
@@ -100,6 +140,17 @@ def handle_event(event_path: str) -> None:
             if comp and comp not in fb["negative_companies"]:
                 fb["negative_companies"].append(comp)
                 changed += 1
+        for m in CMD_CULTURE.finditer(body):
+            from . import culture
+            name = m.group(1).strip()
+            dossiers = culture.load()
+            culture.sync_seed(dossiers)
+            d = culture.dossier_for(name, dossiers)
+            if d is None and culture_generate_one(name, dossiers):
+                d = culture.dossier_for(name, dossiers)
+            _reply(event, culture.render_dossier_reply(d) if d else
+                   f"No dossier for **{name}** yet — it'll be generated on the next "
+                   "enrichment pass (needs an LLM provider configured).")
         for m in CMD_TRACK.finditer(body):
             ats, token, name = m.group(1).lower(), m.group(2), (m.group(3) or m.group(2)).strip()
             registry = state.companies()

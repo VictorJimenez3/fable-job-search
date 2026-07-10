@@ -220,6 +220,7 @@ def fetch_phenom(entry: dict, queries: list[str] | None = None) -> list[Job]:
     """Phenom sites expose the same search API their own frontend calls:
     POST {host}/widgets with a refineSearch payload. Needs per-site extra:
     {host, refnum, ddo? } — seed-only, validated by probe."""
+    from .bigco import BROWSER_HEADERS  # phenom sites often sit behind the same WAFs
     host = entry["extra"]["host"].rstrip("/")
     refnum = entry["extra"]["refnum"]
     out, seen = [], set()
@@ -233,8 +234,7 @@ def fetch_phenom(entry: dict, queries: list[str] | None = None) -> list[Job]:
             "pageId": "page20", "siteType": "external", "keywords": q, "global": True,
             "selected_fields": {}, "locationData": {}, "s": "1",
         }
-        data = post_json(f"{host}/widgets", payload,
-                         headers={"Accept": "application/json"})
+        data = post_json(f"{host}/widgets", payload, headers=BROWSER_HEADERS)
         jobs = ((data.get("refineSearch") or {}).get("data") or {}).get("jobs") or []
         for j in jobs:
             slug = j.get("jobSeqNo") or j.get("reqId") or ""

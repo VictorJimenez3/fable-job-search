@@ -141,3 +141,41 @@ known company names) — deliberately biased toward the shortlist first (the
 user already flagged interest in that exact posting) before falling back to
 anything else the radar has ever seen, and returns no-match rather than a
 low-confidence guess when nothing clears a 50% token-overlap bar.
+
+## 12. Local LLM: the Mac is an enrichment worker, not a server
+A laptop can't serve GitHub Actions (asleep, NAT'd), and Actions can't wait on
+it. So the architecture is two-tier: Actions stays the always-on heuristic
+layer; a launchd agent on the M1 Max runs `radar enrich` every 2h whenever the
+machine is on — pull repo, run Ollama locally, push enriched state back. The
+cloud never blocks on the Mac; the Mac upgrades whatever it finds when awake.
+Provider abstraction (radar/llm.py) means the same code accepts an Anthropic
+key, Ollama, or a free Gemini key via any OpenAI-compatible endpoint. Model
+default `qwen3:14b` (fast, JSON-disciplined on M1 Max); `qwen3:32b` documented
+as the quality upgrade 64GB handles.
+
+## 13. LinkedIn: search the public web about LinkedIn, never scrape LinkedIn
+Logged-in scraping risks the user's own account (bans are common and sticky)
+and breaches ToS. Instead, Google Programmable Search (free tier) surfaces
+public `linkedin.com/posts` hiring posts into the Monday memo as *leads*, not
+scored jobs. 80% of the value, none of the account risk.
+
+## 14. Culture data honesty
+Culture claims are the easiest place to hallucinate confidently. Rules: the
+~40 core dossiers are human-curated (source: `seed`); anything LLM-generated
+is permanently labeled `est.` and never silently mixed with curated rows; the
+fit score is a deterministic, printed rubric (prestige 25 / wlb 25 / pace 20 /
+shutdowns 10 / comp 20, burnout penalty −15 when wlb ≤ 2) rather than LLM
+vibes, so a ranking can always be audited. The burnout penalty exists because
+"avoid toxic/high-burnout" is a stated *guardrail*, not a preference — Meta
+prestige must not be able to buy back a 2/5 WLB.
+
+## 15. Big-co bespoke endpoints: expect drift, design for it
+Amazon/Netflix(Eightfold)/Merck(Phenom) verified live on first CI run;
+Apple/Google/Microsoft/Tesla/J&J failed initially (WAF/UA/CSRF quirks) —
+fixes: browser UA for bespoke endpoints, Apple CSRF handshake, alternate
+Phenom hosts. Invalid entries now auto-retry up to 3 probes so fixes take
+effect without manual state surgery. Whatever still fails stays a visible
+`invalid` in the registry, not a silent gap — and aggregators still cover
+those companies. First run with the new harvest patterns grew the registry
+457 → 704 companies (Goldman, Amex, Ford, TI, JPMC, plus a wave of hospital
+systems via Oracle/iCIMS).

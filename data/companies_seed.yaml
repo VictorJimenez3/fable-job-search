@@ -112,6 +112,8 @@ companies:
   # workday tokens are best-effort guesses; the probe validates each one
   - {name: Johnson & Johnson,  ats: phenom,  token: jnj,   sector: healthtech,
      extra: {host: "https://www.careers.jnj.com", refnum: jnjjnj}}
+  - {name: Johnson & Johnson,  ats: phenom,  token: jnj-jobs, sector: healthtech,
+     extra: {host: "https://jobs.jnj.com", refnum: jnjjnj}}
   - {name: Merck,             ats: phenom,  token: merck, sector: healthtech,
      extra: {host: "https://jobs.merck.com", refnum: merckmerck}}
   - {name: Pfizer,            ats: workday, token: pfizer, sector: healthtech,

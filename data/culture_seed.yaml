@@ -1,0 +1,166 @@
+# Culture Compass seed dossiers — handwritten, no LLM required.
+# Fields: industry, prestige (S/A/B/C — AI/DS brand value on a new-grad resume),
+# pace (fast/moderate/deliberate), wlb (1-5, 5 = genuinely sane hours),
+# vibe (<=8 words), pto (days or "unlimited"), shutdowns (e.g. "Y: winter week"),
+# new_grad_tc (US$ total comp, approximate — labeled estimate where uncertain),
+# rotational (program name or N), fit_notes (vs the user's criteria: prestige+pay
+# + fast innovative culture + real WLB + mission + growth, no burnout).
+# source: seed = human-curated here; LLM-generated dossiers are labeled est.
+
+companies:
+  - {name: Google,        industry: big tech,        prestige: S, pace: moderate,  wlb: 4,
+     vibe: "smart, process-heavy, comfortable",      pto: "20+",  shutdowns: "Y: winter slowdown",
+     new_grad_tc: "$190k", rotational: "N (Eng Residency ended)",
+     fit_notes: "Elite brand + pay + WLB; pace slower than startups — bureaucracy is the tradeoff"}
+  - {name: Meta,          industry: big tech,        prestige: S, pace: fast,      wlb: 2,
+     vibe: "move fast, perf-review pressure cooker", pto: "21",   shutdowns: "Y: winter break",
+     new_grad_tc: "$195k", rotational: "N",
+     fit_notes: "Top pay + speed, but PSC culture = real burnout risk — fails your WLB bar"}
+  - {name: Apple,         industry: big tech,        prestige: S, pace: moderate,  wlb: 3,
+     vibe: "secretive, craft-obsessed, siloed",      pto: "17+",  shutdowns: "Y: Thanksgiving + winter",
+     new_grad_tc: "$165k", rotational: "N",
+     fit_notes: "Prestige high; org-dependent hours; hardware deadlines can crunch"}
+  - {name: Amazon,        industry: big tech,        prestige: A, pace: fast,      wlb: 2,
+     vibe: "ownership, frugal, oncall-heavy",        pto: "15+",  shutdowns: "N",
+     new_grad_tc: "$178k", rotational: "N",
+     fit_notes: "Great learning velocity, but oncall + PIP culture = burnout risk you flagged"}
+  - {name: Microsoft,     industry: big tech,        prestige: A, pace: moderate,  wlb: 4,
+     vibe: "collaborative, stable, big-ship energy", pto: "15+ (discretionary)", shutdowns: "N (quiet holidays)",
+     new_grad_tc: "$160k", rotational: "N (Aspire onboarding)",
+     fit_notes: "Best WLB of the giants; pace varies by org — Azure AI teams move fast"}
+  - {name: Netflix,       industry: big tech,        prestige: S, pace: fast,      wlb: 3,
+     vibe: "high talent density, adult culture",     pto: "unlimited", shutdowns: "N",
+     new_grad_tc: "$220k (new-grad program is new)", rotational: "N",
+     fit_notes: "Elite pay + freedom; 'keeper test' pressure is real — thrives on self-drivers"}
+  - {name: NVIDIA,        industry: big tech / AI,   prestige: S, pace: fast,      wlb: 3,
+     vibe: "mission-critical AI infra, intense",     pto: "flexible", shutdowns: "Y: winter week",
+     new_grad_tc: "$172k + high-growth equity", rotational: "N",
+     fit_notes: "THE AI hardware brand; hours can run long but equity + learning are elite"}
+  - {name: Anthropic,     industry: ai_lab,          prestige: S, pace: fast,      wlb: 3,
+     vibe: "mission-driven, thoughtful, intense",    pto: "unlimited", shutdowns: "N",
+     new_grad_tc: "$300k+ (est.)", rotational: "N",
+     fit_notes: "Mission + frontier prestige + top pay; startup hours — WLB is self-managed"}
+  - {name: OpenAI,        industry: ai_lab,          prestige: S, pace: fast,      wlb: 2,
+     vibe: "frontier sprint, all-in",                pto: "unlimited", shutdowns: "N",
+     new_grad_tc: "$300k+ (est.)", rotational: "N (Residency exists)",
+     fit_notes: "Max prestige/pay; famously long hours — weigh against your burnout guardrail"}
+  - {name: Databricks,    industry: ai infra,        prestige: A, pace: fast,      wlb: 3,
+     vibe: "hyper-growth, sales-driven eng org",     pto: "unlimited", shutdowns: "N",
+     new_grad_tc: "$200k (est.)", rotational: "N",
+     fit_notes: "Strong AI brand + pay; growth pace = periodic crunch"}
+  - {name: Capital One,   industry: fintech/bank,    prestige: B, pace: moderate,  wlb: 4,
+     vibe: "tech-forward bank, structured, kind",    pto: "21+",  shutdowns: "Y: floating holidays",
+     new_grad_tc: "$135k", rotational: "TDP (Technology Development Program) / ADA for analysts",
+     fit_notes: "You've engaged before; real rotational programs + sane hours; less elite AI brand"}
+  - {name: JPMorgan Chase, industry: bank,           prestige: B, pace: moderate,  wlb: 3,
+     vibe: "scale, legacy+modern mix, hierarchical", pto: "22+",  shutdowns: "N",
+     new_grad_tc: "$125k", rotational: "SEP (Software Engineer Program)",
+     fit_notes: "Stable + structured SEP; slower tech culture than you want"}
+  - {name: Johnson & Johnson, industry: pharma/med,  prestige: B, pace: deliberate, wlb: 5,
+     vibe: "credo-driven, patient-first, corporate", pto: "20+",  shutdowns: "Y: winter shutdown (most sites)",
+     new_grad_tc: "$110k (est.)", rotational: "TLDP (Technology Leadership Development Program)",
+     fit_notes: "Mission + WLB + a real tech rotational (TLDP) — pace/prestige below your bar, healthcare impact above it"}
+  - {name: Merck,         industry: pharma,          prestige: B, pace: deliberate, wlb: 5,
+     vibe: "science-first, methodical, stable",      pto: "20+",  shutdowns: "Y: year-end shutdown",
+     new_grad_tc: "$105k (est.)", rotational: "ITEDP-style rotational (IT emerging talent)",
+     fit_notes: "Guaranteed shutdowns + mission; big-pharma pace — trade speed for sanity"}
+  - {name: Pfizer,        industry: pharma,          prestige: B, pace: deliberate, wlb: 4,
+     vibe: "post-COVID prestige, digital push",      pto: "20+",  shutdowns: "Y: holiday shutdown",
+     new_grad_tc: "$105k (est.)", rotational: "Digital Rotational Program",
+     fit_notes: "Investing hard in AI/digital; still pharma-speed"}
+  - {name: Eli Lilly,     industry: pharma,          prestige: B, pace: moderate,  wlb: 4,
+     vibe: "hottest pharma, GLP-1 boom, investing",  pto: "20+",  shutdowns: "Y: year-end",
+     new_grad_tc: "$115k (est.)", rotational: "Tech@Lilly rotational",
+     fit_notes: "Best-performing pharma; genuinely growing tech org — sleeper pick for AI-in-health"}
+  - {name: Tesla,         industry: auto/AI,         prestige: A, pace: fast,      wlb: 1,
+     vibe: "hardcore, mission-or-nothing",           pto: "15 (accrued)", shutdowns: "N",
+     new_grad_tc: "$140k", rotational: "N",
+     fit_notes: "AI prestige real (Autopilot/Optimus), but hours are notoriously brutal — directly fails your WLB bar"}
+  - {name: Neuralink,     industry: healthtech/BCI,  prestige: A, pace: fast,      wlb: 1,
+     vibe: "moonshot, all-consuming",                pto: "unlimited (unused)", shutdowns: "N",
+     new_grad_tc: "$150k + equity", rotational: "N",
+     fit_notes: "Peak mission + frontier; Musk-company hours — eyes open"}
+  - {name: Stripe,        industry: fintech,         prestige: A, pace: fast,      wlb: 3,
+     vibe: "craft, writing culture, high bar",       pto: "unlimited", shutdowns: "N",
+     new_grad_tc: "$200k (est.)", rotational: "N",
+     fit_notes: "Elite eng culture + pay; intense but not toxic — strong overall fit"}
+  - {name: Salesforce,    industry: big tech,        prestige: B, pace: moderate,  wlb: 4,
+     vibe: "ohana branding, mature SaaS",            pto: "unlimited", shutdowns: "Y: company-wide wellness days",
+     new_grad_tc: "$150k", rotational: "Futureforce new-grad program",
+     fit_notes: "Good WLB + structured new-grad entry; AI (Agentforce) push is real"}
+  - {name: Pinterest,     industry: big tech,        prestige: B, pace: moderate,  wlb: 4,
+     vibe: "kind, design-led, calmer FAANG-adjacent", pto: "flexible", shutdowns: "Y: refresh weeks",
+     new_grad_tc: "$170k", rotational: "N",
+     fit_notes: "You've engaged before; unusually humane for its pay band — strong fit"}
+  - {name: Duolingo,      industry: edtech,          prestige: A, pace: fast,      wlb: 4,
+     vibe: "playful, metrics-obsessed, AI-forward",  pto: "20+",  shutdowns: "N",
+     new_grad_tc: "$160k", rotational: "N",
+     fit_notes: "Rare combo: fast + fun + sane; edtech mission; Pittsburgh HQ"}
+  - {name: Oscar Health,  industry: healthtech,      prestige: B, pace: moderate,  wlb: 4,
+     vibe: "insurtech, mission-y, NY energy",        pto: "unlimited", shutdowns: "N",
+     new_grad_tc: "$130k (est.)", rotational: "N",
+     fit_notes: "Healthtech at scale with real ML; middle of your prestige range"}
+  - {name: Tempus,        industry: healthtech,      prestige: A, pace: fast,      wlb: 3,
+     vibe: "precision medicine, data-hungry, driven", pto: "unlimited", shutdowns: "N",
+     new_grad_tc: "$125k (est.)", rotational: "N",
+     fit_notes: "Your S-tier: AI-on-clinical-data at scale; Chicago; pace is startup-real"}
+  - {name: Abridge,       industry: healthtech,      prestige: A, pace: fast,      wlb: 3,
+     vibe: "generational health-AI startup",         pto: "unlimited", shutdowns: "N",
+     new_grad_tc: "$160k + meaningful equity (est.)", rotational: "N",
+     fit_notes: "The healthtech-AI rocket; startup hours but mission-dense"}
+  - {name: OpenEvidence,  industry: healthtech,      prestige: A, pace: fast,      wlb: 3,
+     vibe: "medical answers engine, small+elite",    pto: "unlimited", shutdowns: "N",
+     new_grad_tc: "$180k + equity (est.)", rotational: "N",
+     fit_notes: "Physician-adopted AI product; small team = huge learning surface"}
+  - {name: Medtronic,     industry: med device,      prestige: B, pace: deliberate, wlb: 5,
+     vibe: "regulated, patient-safety culture",      pto: "20+",  shutdowns: "Y: holiday shutdown",
+     new_grad_tc: "$95k (est.)", rotational: "N (function-specific programs)",
+     fit_notes: "Max WLB + mission; pay and pace trail your targets"}
+  - {name: Verily,        industry: healthtech,      prestige: A, pace: moderate,  wlb: 4,
+     vibe: "Alphabet life-sciences, researchy",      pto: "20+",  shutdowns: "Y: follows Alphabet winter",
+     new_grad_tc: "$165k (est.)", rotational: "N",
+     fit_notes: "Alphabet resources + health mission — near-ideal on paper; org churn is the risk"}
+  - {name: Palantir,      industry: big tech / gov,  prestige: A, pace: fast,      wlb: 2,
+     vibe: "deployed, ownership, mission-polarizing", pto: "unlimited", shutdowns: "N",
+     new_grad_tc: "$180k", rotational: "N",
+     fit_notes: "Fast + prestigious; travel-heavy FDE roles burn people — pick core SWE if pursued"}
+  - {name: Snowflake,     industry: data infra,      prestige: A, pace: fast,      wlb: 3,
+     vibe: "execution machine, sales-led",           pto: "unlimited", shutdowns: "N",
+     new_grad_tc: "$190k (est.)", rotational: "N",
+     fit_notes: "AI-research new-grad tracks already alerted at 84 — strong pay/brand"}
+  - {name: Scale AI,      industry: ai_lab,          prestige: A, pace: fast,      wlb: 2,
+     vibe: "grind-forward, young, sharp elbows",     pto: "unlimited", shutdowns: "N",
+     new_grad_tc: "$190k (est.)", rotational: "N",
+     fit_notes: "Fast offers + AI brand; burnout reports are consistent — flagged"}
+  - {name: Ramp,          industry: fintech,         prestige: A, pace: fast,      wlb: 3,
+     vibe: "velocity cult (positive), meritocratic", pto: "unlimited", shutdowns: "N",
+     new_grad_tc: "$185k (est.)", rotational: "N",
+     fit_notes: "Best-in-class eng velocity; intense but celebrated, not toxic"}
+  - {name: Adobe,         industry: big tech,        prestige: B, pace: moderate,  wlb: 4,
+     vibe: "design-craft, stable, Firefly AI push",  pto: "flexible", shutdowns: "Y: company-wide winter + summer breaks",
+     new_grad_tc: "$155k", rotational: "N",
+     fit_notes: "Guaranteed shutdowns (rare!) + solid pay — quietly matches your criteria well"}
+  - {name: Intuit,        industry: fintech,         prestige: B, pace: moderate,  wlb: 4,
+     vibe: "customer-obsessed, AI-retooling, humane", pto: "unlimited", shutdowns: "Y: July + winter recharge weeks",
+     new_grad_tc: "$150k", rotational: "RDP (Rotational Development Program)",
+     fit_notes: "On your shortlist already; recharge shutdowns + rotational = criteria bullseye"}
+  - {name: LinkedIn,      industry: big tech,        prestige: B, pace: moderate,  wlb: 5,
+     vibe: "famously chill for pay band",            pto: "unlimited (discretionary)", shutdowns: "Y: LiftUp shutdown days",
+     new_grad_tc: "$170k", rotational: "N",
+     fit_notes: "Possibly the best WLB-per-dollar in tech — high on your fit index"}
+  - {name: Uber,          industry: big tech,        prestige: B, pace: fast,      wlb: 3,
+     vibe: "ops-intense, matured post-2020",         pto: "unlimited", shutdowns: "N",
+     new_grad_tc: "$170k", rotational: "N",
+     fit_notes: "On your shortlist; solid brand/pay, moderate burnout risk by team"}
+  - {name: Cadence,       industry: semiconductors,  prestige: B, pace: moderate,  wlb: 4,
+     vibe: "EDA workhorse, stable engineering",      pto: "15+",  shutdowns: "Y: winter shutdown",
+     new_grad_tc: "$120k (est.)", rotational: "N",
+     fit_notes: "On your shortlist; steady + shutdowns; lower ceiling on AI prestige"}
+  - {name: RTX,           industry: defense,         prestige: C, pace: deliberate, wlb: 4,
+     vibe: "cleared-world, process-bound",           pto: "15+",  shutdowns: "Y: holiday shutdown",
+     new_grad_tc: "$85-95k", rotational: "Y: multiple (e.g. digital/engineering LDPs)",
+     fit_notes: "On your shortlist; stability + shutdowns, but pay/pace/prestige all trail your bar"}
+  - {name: Intuitive (Surgical), industry: med device/robotics, prestige: A, pace: moderate, wlb: 4,
+     vibe: "surgical robotics, engineering-proud",   pto: "flexible", shutdowns: "Y: winter",
+     new_grad_tc: "$140k (est.)", rotational: "N",
+     fit_notes: "Robotics + healthcare + sane culture — belongs on your radar"}

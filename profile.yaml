@@ -15,6 +15,16 @@ candidate:
     Mastercard, Adobe, Pinterest, OpenAI, Commure, IXL). Values working on
     products with real-world impact and modern ML stacks.
 
+# Used by the Culture Compass (radar/culture.py) to judge company fit —
+# LLM dossiers are generated against this, and fit feeds ranking (±6 pts).
+culture_criteria: >
+  A top-tier AI or data science role that balances elite prestige and high
+  new-grad pay with a fast, innovative tech culture rather than slow
+  bureaucracy. A mission-driven company that actually respects work-life
+  balance through sane hours and guaranteed shutdowns, avoiding toxic or
+  high-burnout environments. A place that accelerates technical learning and
+  career growth without sacrificing personal time.
+
 roles:
   # max one bucket counts (the best match). points: title-keyword buckets
   ai_ml: 26

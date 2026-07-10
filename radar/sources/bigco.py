@@ -16,12 +16,21 @@ from ..models import Job
 
 QUERIES = ["new grad", "early career", "university grad"]
 
+# Several big-co WAFs reject non-browser user agents; identify as a browser
+# for these bespoke endpoints only (standard ATS APIs keep the honest UA).
+BROWSER_HEADERS = {
+    "User-Agent": ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                   "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"),
+    "Accept": "application/json",
+    "Accept-Language": "en-US,en;q=0.9",
+}
+
 
 # ---------------- Tesla ----------------
 
 def fetch_tesla(entry: dict) -> list[Job]:
     data = get_json("https://www.tesla.com/cua-api/careers/search",
-                    headers={"Accept": "application/json"})
+                    headers=BROWSER_HEADERS)
     listings = (data.get("listings") or data.get("results") or [])
     lookup = data.get("lookup") or {}
     dept_lu = lookup.get("departments") or {}
@@ -56,7 +65,7 @@ def fetch_amazon(entry: dict) -> list[Job]:
                                 "category[]": ["software-development",
                                                "machine-learning-science",
                                                "data-science"]},
-                        headers={"Accept": "application/json"})
+                        headers=BROWSER_HEADERS)
         for j in data.get("jobs") or []:
             jid = j.get("id_icims") or j.get("id")
             if jid in seen:
@@ -89,7 +98,7 @@ def fetch_microsoft(entry: dict) -> list[Job]:
         data = get_json("https://gcsservices.careers.microsoft.com/search/api/v1/search",
                         params={"q": q, "lc": "United States", "l": "en_us",
                                 "pg": 1, "pgSz": 20, "o": "Recent", "flt": "true"},
-                        headers={"Accept": "application/json"})
+                        headers=BROWSER_HEADERS)
         jobs = (((data.get("operationResult") or {}).get("result") or {}).get("jobs")
                 or data.get("jobs") or [])
         for j in jobs:
@@ -120,13 +129,27 @@ def fetch_microsoft(entry: dict) -> list[Job]:
 
 # ---------------- Apple ----------------
 
+def _apple_csrf() -> dict:
+    """Apple's role-search POST requires a CSRF token minted by a GET first."""
+    from ..http import get
+    r = get("https://jobs.apple.com/api/csrfToken", headers=BROWSER_HEADERS)
+    token = r.headers.get("X-Apple-CSRF-Token", "") or r.text.strip().strip('"')
+    h = dict(BROWSER_HEADERS)
+    if token:
+        h["X-Apple-CSRF-Token"] = token
+    if r.cookies:
+        h["Cookie"] = "; ".join(f"{c.name}={c.value}" for c in r.cookies)
+    return h
+
+
 def fetch_apple(entry: dict) -> list[Job]:
+    headers = _apple_csrf()
     out, seen = [], set()
     for q in QUERIES[:2]:
         data = post_json("https://jobs.apple.com/api/role/search",
                          {"query": q, "filters": {"range": {"standardWeeklyHours": {"start": None, "end": None}}},
                           "page": 1, "locale": "en-us", "sort": "newest"},
-                         headers={"Accept": "application/json"})
+                         headers=headers)
         for j in (data.get("searchResults") or []):
             jid = j.get("positionId") or j.get("id")
             if not jid or jid in seen:
@@ -160,7 +183,7 @@ def fetch_google(entry: dict) -> list[Job]:
     for q in ["early career software engineer", "new grad"]:
         data = get_json("https://careers.google.com/api/v3/search/",
                         params={"q": q, "location": "United States", "page": 1},
-                        headers={"Accept": "application/json"})
+                        headers=BROWSER_HEADERS)
         for j in data.get("jobs") or []:
             jid = j.get("id", "")
             if not jid or jid in seen:

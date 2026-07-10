@@ -5,7 +5,10 @@ speed (apply within 24h of posting) and personalized ranking (healthtech first,
 big tech second, open to everything good).
 
 **[→ Live dashboard](docs/DASHBOARD.md)** ·
+**[→ Culture Compass](docs/CULTURE.md)** ·
+**[→ SHPE 2026 plan](docs/SHPE.md)** ·
 **[→ Alert issues](../../issues?q=is%3Aissue+label%3Aradar-alerts)** ·
+**[→ Roadmap](ROADMAP.md)** ·
 **[→ RSS feed](docs/feed.xml)** — subscribe to
 `https://raw.githubusercontent.com/VictorJimenez3/fable-job-search/claude/newgrad-job-search-system-9gbj9k/docs/feed.xml`
 
@@ -93,12 +96,43 @@ to auto-forward application-confirmation emails to a personal Gmail you
 control, then point `EMAIL_ADDRESS`/`EMAIL_APP_PASSWORD` at that account instead
 — same setup, one extra forwarding rule.
 
+**3. Free local AI on your MacBook (~5 min, recommended)**
+No API key needed — your M1 Max runs the intelligence layer via Ollama.
+One command on the Mac:
+```bash
+curl -fsSL https://raw.githubusercontent.com/VictorJimenez3/fable-job-search/claude/newgrad-job-search-system-9gbj9k/scripts/mac-companion/install.sh | bash
+```
+This installs Ollama + `qwen3:14b` (swap for `qwen3:32b` with
+`JOBRADAR_MODEL=qwen3:32b` — your 64GB machine runs it comfortably) and a
+launchd agent that, **whenever the laptop is on**, every 2 hours: pulls the
+repo, generates culture dossiers + rerank passes locally, and pushes the
+enriched state back. The cloud crawler never depends on the Mac — the Mac
+just upgrades whatever it finds when awake. Requires `git push` auth on the
+Mac (`brew install gh && gh auth login`). Logs: `~/.jobradar/logs/enrich.log`.
+
 Optional upgrades:
-- `ANTHROPIC_API_KEY` secret → Claude semantically re-ranks borderline jobs and
-  writes a one-line application angle into each alert.
+- `ANTHROPIC_API_KEY` secret → Claude does the enrichment in the cloud too
+  (works alongside or instead of the Mac). Free-tier alternative: a Google AI
+  Studio key via `LLM_BASE_URL`/`LLM_API_KEY`/`LLM_MODEL` secrets pointed at
+  Gemini's OpenAI-compatible endpoint.
+- `GOOGLE_CSE_KEY` + `GOOGLE_CSE_ID` (free: [programmablesearchengine.google.com](https://programmablesearchengine.google.com)
+  → create engine searching `linkedin.com/posts`, then get an API key at
+  [developers.google.com/custom-search](https://developers.google.com/custom-search/v1/introduction))
+  → Monday memos gain a "Heard on LinkedIn" section of public hiring posts.
 - **Watch the repo** (Watch → All activity) and install the GitHub mobile app
   for instant pushes; issues are also assigned to you, which notifies by default.
 - Subscribe to `docs/feed.xml` in a feed reader (raw URL above) for sub-minute alerts.
+
+## Culture Compass
+
+Every alert is checked against your stated criteria (prestige + pay + fast
+culture + real WLB/shutdowns + mission, no burnout): companies get a 0–100
+**fit score** (deterministic rubric, burnout-penalized) shown as `fit NN` on
+alert lines, feeding ranking (±6), and tabulated in
+[docs/CULTURE.md](docs/CULTURE.md) — prestige tier, pace, WLB, PTO,
+shutdowns, new-grad TC, rotational programs. ~40 dossiers are human-curated;
+the rest are LLM-generated on your Mac and labeled `est.`. Ask about any
+company by commenting `culture <company>` on an alert issue.
 
 ## Tuning
 

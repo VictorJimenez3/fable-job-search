@@ -93,7 +93,8 @@ def test_apple_parses_search_results():
         {"positionId": "200591234", "postingTitle": "Software Engineer - Early Career",
          "transformedPostingTitle": "software-engineer", "postingDate": "2026-07-08",
          "locations": [{"name": "Cupertino"}], "homeOffice": False}]}
-    with patch.object(bigco, "post_json", return_value=payload):
+    with patch.object(bigco, "post_json", return_value=payload), \
+         patch.object(bigco, "_apple_csrf", return_value=dict(bigco.BROWSER_HEADERS)):
         jobs = bigco.fetch_apple({})
     assert len(jobs) == 1
     assert "200591234" in jobs[0].url

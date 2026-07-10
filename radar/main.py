@@ -99,6 +99,9 @@ def crawl() -> int:
     fb = state.feedback()
     seed_sectors = {norm(s["name"]): s.get("sector", "other") for s in seeds()}
 
+    from . import culture
+    culture.write_outputs()  # sync curated dossiers before scoring reads them
+
     agg_jobs, agg_stats = _fetch_aggregators(disabled)
     print(f"aggregators: {agg_stats}")
 
@@ -217,6 +220,53 @@ def notion_backfill() -> int:
     return 0
 
 
+def enrich() -> int:
+    """LLM enrichment pass — designed for the Mac companion (Ollama via
+    LLM_BASE_URL) but runs identically with any provider. Idempotent:
+    1. generate culture dossiers for recently-alerted companies lacking one
+    2. re-score recent jobs so new culture data reorders the dashboard
+    3. rewrite docs (dashboard + culture table)
+    """
+    from . import culture, llm
+    from .digest import write_outputs as digest_write
+    if not llm.available():
+        print("enrich: no LLM provider configured (set ANTHROPIC_API_KEY or "
+              "LLM_BASE_URL, e.g. http://localhost:11434/v1 for Ollama) — nothing to do")
+        return 0
+    made = culture.enrich_missing(limit=int(env("RADAR_ENRICH_LIMIT", "10")))
+    print(f"enrich: generated {made} culture dossier(s) via {llm.provider()}")
+
+    # re-score recent jobs with the enriched culture data
+    import radar.score as score_mod
+    score_mod._CULTURE_CACHE = None  # force reload
+    jobs_state = state.jobs()
+    fb = state.feedback()
+    now = int(time.time())
+    rescored = 0
+    for rec in jobs_state.values():
+        if now - rec.get("first_seen", 0) > 14 * 86400:
+            continue
+        j = Job(company=rec["company"], title=rec["title"], url=rec["url"],
+                source=rec["source"], locations=rec.get("locations", []),
+                posted_at=rec.get("posted_at"), salary=rec.get("salary", ""),
+                remote=rec.get("remote", False), ats=rec.get("ats", ""),
+                sector=rec.get("sector", ""))
+        old = rec.get("score", 0)
+        score(j, fb, now)
+        if j.score != old:
+            rec["score"] = j.score
+            rec["score_reasons"] = j.score_reasons
+            rescored += 1
+    state.save("jobs.json", jobs_state)
+    registry = state.companies()
+    runs = state.load("runs.json", [])
+    alert_history = state.load("alert_history.json", [])
+    digest_write(jobs_state, registry, runs, alert_history)
+    culture.write_outputs()
+    print(f"enrich: re-scored {rescored} recent job(s), docs refreshed")
+    return 0
+
+
 def migrate_checkbox_applied() -> int:
     """One-time fix: checkbox ticks used to mean 'applied' and got synced to
     Notion as such. They actually meant 'shortlisted'. Archive those Notion
@@ -257,7 +307,7 @@ def main() -> None:
     ap = argparse.ArgumentParser(prog="radar")
     ap.add_argument("command", choices=["crawl", "applied-sync", "seed", "notion-backfill",
                                         "strategist", "notion-verify", "email-watch", "email-verify",
-                                        "migrate-checkbox-applied"])
+                                        "migrate-checkbox-applied", "enrich"])
     args = ap.parse_args()
     if args.command == "crawl":
         sys.exit(crawl())
@@ -282,6 +332,8 @@ def main() -> None:
         email_verify()
     elif args.command == "migrate-checkbox-applied":
         sys.exit(migrate_checkbox_applied())
+    elif args.command == "enrich":
+        sys.exit(enrich())
 
 
 if __name__ == "__main__":

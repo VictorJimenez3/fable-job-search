@@ -76,6 +76,12 @@ def build_memo() -> str:
         lines += [f"- `{j['score']}` **{j['company']}** — [{j['title'][:70]}]({j['url']})"
                   for j in live]
 
+    from .sources.linkedin_posts import memo_section
+    try:
+        lines += memo_section()
+    except Exception as e:
+        print(f"strategist: linkedin section skipped: {e}")
+
     memo = "\n".join(lines)
 
     narrative = llm_complete(

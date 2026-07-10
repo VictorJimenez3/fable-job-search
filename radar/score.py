@@ -108,6 +108,34 @@ def gates(job: Job) -> tuple[bool, bool, list[str]]:
 
 # ---------- scoring ----------
 
+_CULTURE_CACHE: dict | None = None
+_SHPE_CACHE: set | None = None
+
+
+def _shpe_companies() -> set:
+    global _SHPE_CACHE
+    if _SHPE_CACHE is None:
+        try:
+            import yaml
+
+            from .config import DATA_DIR
+            with open(DATA_DIR / "conference_shpe.yaml") as f:
+                rows = yaml.safe_load(f)["companies"]
+            _SHPE_CACHE = {norm(r["name"]) for r in rows}
+        except Exception:
+            _SHPE_CACHE = set()
+    return _SHPE_CACHE
+
+
+def _culture_cache() -> dict:
+    """Load culture dossiers once per process (score() runs per-job in a loop)."""
+    global _CULTURE_CACHE
+    if _CULTURE_CACHE is None:
+        from . import culture as _culture
+        _CULTURE_CACHE = _culture.load()
+    return _CULTURE_CACHE
+
+
 def _title_tokens(title: str) -> set[str]:
     stop = {"engineer", "software", "the", "and", "of", "for", "a", "an", "i", "ii", "new", "grad"}
     return {w for w in norm(title).split() if len(w) > 2 and w not in stop}
@@ -165,6 +193,20 @@ def score(job: Job, feedback: dict, now: int | None = None) -> None:
     if tb:
         pts += tb
         reasons.append(f"title matches your history {'+' if tb > 0 else ''}{tb}")
+
+    # culture fit (±6) when a dossier exists for this company
+    from . import culture as _culture
+    d = _culture.dossier_for(job.company, _culture_cache())
+    if d and d.get("fit") is not None:
+        cf = round((d["fit"] - 50) / 50 * 6)
+        if cf:
+            pts += cf
+            reasons.append(f"culture fit {d['fit']}/100 {'+' if cf > 0 else ''}{cf}")
+
+    # SHPE 2026 exhibitor: the posting doubles as a warm booth intro (Oct 28-31)
+    if norm(job.company) in _shpe_companies():
+        pts += 4
+        reasons.append("SHPE 2026 exhibitor +4")
 
     job.score = max(0, min(100, round(pts)))
     job.score_reasons = reasons
