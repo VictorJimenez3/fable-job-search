@@ -63,7 +63,11 @@ workday_queries:             # search terms used against Workday tenants
   - early career
 
 notion:
-  database_id: 2205d6f42cab8139a20af375dc2923e6   # your "Applications" DB
+  # database_id is no longer used for lookup — the Applications database is
+  # found automatically by searching for a title containing "application"
+  # among whatever's shared with the Job Radar integration (see
+  # radar/notion_sync.py:resolve_database). Rename or recreate the tracker
+  # freely; nothing here needs to change.
   stage_applied: Applied
   position_map:              # role bucket -> existing options in your Position multi-select
     ai_ml: AI/ML Software Engineer

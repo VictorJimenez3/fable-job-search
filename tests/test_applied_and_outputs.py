@@ -1,8 +1,10 @@
 import json
 import time
+from unittest.mock import patch
 
 import pytest
 
+from radar import notion_sync as ns
 from radar import state
 from radar.alerts import format_line
 from radar.applied import handle_event
@@ -73,9 +75,15 @@ def test_skip_comment_downranks(tmp_state, tmp_path, monkeypatch):
     assert "dv trading" in fb["negative_companies"]      # by company name
 
 
-def test_notion_payload_matches_tracker_schema():
-    p = build_payload(JOB)
-    assert p["parent"]["database_id"] == "2205d6f42cab8139a20af375dc2923e6"
+FULL_SCHEMA = {"id": "db-full-id", "title": "2026 Applications", "properties": {
+    "Company": "title", "Stage": "status", "Position": "multi_select",
+    "Apply date": "date", "Text": "rich_text", "Job URL": "url", "Location": "rich_text",
+}}
+
+
+def test_notion_payload_matches_full_schema():
+    p = build_payload(JOB, FULL_SCHEMA)
+    assert p["parent"]["database_id"] == "db-full-id"
     props = p["properties"]
     assert props["Company"]["title"][0]["text"]["content"] == "Tempus"
     assert props["Stage"]["status"]["name"] == "Applied"
@@ -84,6 +92,46 @@ def test_notion_payload_matches_tracker_schema():
         "AI/ML Software Engineer", "Machine Learning Enginner", "Software Engineer"}
     assert props["Job URL"]["url"].startswith("https://")
     assert "Apply date" in props
+
+
+def test_notion_payload_degrades_on_minimal_schema():
+    # a "fresh slate" database might only have the two essentials — nothing
+    # should crash, and fields absent from the schema are simply skipped
+    minimal = {"id": "db-min", "title": "Fresh Slate",
+               "properties": {"Company": "title", "Status": "status"}}
+    p = build_payload(JOB, minimal)
+    props = p["properties"]
+    assert props["Status"]["status"]["name"] == "Applied"
+    assert set(props) == {"Company", "Status"}
+
+
+def test_resolve_database_finds_by_title_and_prefers_most_recent(tmp_state):
+    search_result = {"results": [
+        {"id": "old-id", "title": [{"plain_text": "Applications"}],
+         "last_edited_time": "2025-01-01T00:00:00Z", "object": "database"},
+        {"id": "new-id", "title": [{"plain_text": "2026 Applications"}],
+         "last_edited_time": "2026-07-01T00:00:00Z", "object": "database"},
+    ]}
+    with patch.object(ns.requests, "post") as mock_post:
+        mock_post.return_value.raise_for_status = lambda: None
+        mock_post.return_value.json = lambda: search_result
+        schema = ns.resolve_database("tok")
+    assert schema["id"] == "new-id"
+    assert state.load("notion_db.json", {})["id"] == "new-id"
+
+
+def test_resolve_database_self_heals_when_cached_id_dies(tmp_state):
+    state.save("notion_db.json", {"id": "dead-id", "title": "old"})
+    search_result = {"results": [
+        {"id": "fresh-id", "title": [{"plain_text": "2026 Applications"}],
+         "last_edited_time": "2026-07-01T00:00:00Z", "object": "database"},
+    ]}
+    with patch.object(ns.requests, "get") as mock_get, patch.object(ns.requests, "post") as mock_post:
+        mock_get.return_value.status_code = 404
+        mock_post.return_value.raise_for_status = lambda: None
+        mock_post.return_value.json = lambda: search_result
+        schema = ns.resolve_database("tok")
+    assert schema["id"] == "fresh-id"
 
 
 def test_dashboard_and_rss_render():
