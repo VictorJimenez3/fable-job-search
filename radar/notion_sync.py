@@ -46,6 +46,33 @@ def build_payload(entry: dict) -> dict:
     return {"parent": {"database_id": n["database_id"]}, "properties": props}
 
 
+def verify_connection() -> None:
+    """Read-only check: does NOTION_TOKEN exist and can it see the Applications
+    database? Prints a clear diagnosis and exits nonzero on failure. Creates
+    nothing — safe to run anytime."""
+    token = env("NOTION_TOKEN")
+    if not token:
+        print("FAIL: NOTION_TOKEN secret is not set on this repo.")
+        raise SystemExit(1)
+    db_id = profile()["notion"]["database_id"]
+    headers = {"Authorization": f"Bearer {token}", "Notion-Version": "2022-06-28"}
+    r = requests.get(f"https://api.notion.com/v1/databases/{db_id}", headers=headers, timeout=20)
+    if r.status_code == 200:
+        title = "".join(t.get("plain_text", "") for t in r.json().get("title", []))
+        print(f"OK: token is valid and can see database '{title}'. Applied-logging is armed.")
+        return
+    if r.status_code == 404:
+        print("FAIL: token is valid but the integration is not connected to the "
+              "Applications database. Fix: open the database in Notion -> '...' menu "
+              "-> Connections -> connect 'Job Radar'.")
+    elif r.status_code == 401:
+        print("FAIL: token is invalid or was revoked. Fix: generate a new secret at "
+              "notion.so/my-integrations and update the NOTION_TOKEN repo secret.")
+    else:
+        print(f"FAIL: unexpected response {r.status_code}: {r.text[:300]}")
+    raise SystemExit(1)
+
+
 def sync_applied(applied: list) -> int:
     """Push all unsynced applied entries to Notion. Returns count synced."""
     token = env("NOTION_TOKEN")
