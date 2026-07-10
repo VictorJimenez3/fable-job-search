@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-10 06:26 UTC** · companies polled directly: **539** (registry 591) · jobs tracked: **6181** · new this run: **19** · alerts this run: **11**_
+_Last run: **2026-07-10 06:33 UTC** · companies polled directly: **560** (registry 704) · jobs tracked: **6211** · new this run: **30** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -20,6 +20,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 96 🔥 | 3d | Notion | [Software Engineer – Early Career - AI](https://jobs.ashbyhq.com/notion/85947779-6b87-466a-98bc-30a640448c28/application) | SF | big_tech | simplify |
 | 96 🔥 | 4d | UST HealthProof | [Junior Full Stack Developer (Data CoE)](https://jobright.ai/jobs/info/6a426efbff87fd527f984439?utm_campaign=Software%20Engineering&utm_source=1103) | Bellevue, WA | healthtech | jobright |
 | 96 🔥 | 4d | PM Pediatric Care | [AI & Analytics Engineer](https://pmpediatrics.wd5.myworkdayjobs.com/PMPeds/job/Remote---United-States/AI---Analytics-Engineer_2026-R0988-3) | Remote in USA | healthtech | simplify |
+| 95 🔥 | 1d | Bristol Myers Squibb | [Full Stack AI Engineer](https://bristolmyerssquibb.wd5.myworkdayjobs.com/en-US/BMS/job/Princeton---NJ---US/Full-Stack-AI-Engineer_R1604278-1) | Princeton - NJ - US | healthtech | workday |
 | 94 🔥 | 2d | Trinity Health | [Associate Data Scientist](https://jobright.ai/jobs/info/6a4eb19ffc327f422fef3d17?utm_campaign=Data%20Analysis&utm_source=1103) | Clive, IA, United States | healthtech | jobright |
 | 92 🔥 | 3d | Leica Biosystems | [Data Analyst, Global Trade Compliance](https://jobright.ai/jobs/info/6a4d52040209ea6fd6851c6f?utm_campaign=Data%20Analysis&utm_source=1103) | Washington, DC, United States | healthtech | jobright |
 | 91 🔥 | 1d | OpenAI | [AI Deployment Engineer, Enterprise](https://jobs.ashbyhq.com/openai/01091aed-427d-4e10-8cdb-fb500cf55bb9) | San Francisco | ai_lab | ashby |
@@ -64,6 +65,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 89 🔥 | 2d | OpenAI | [AI Success Engineer - EDU](https://jobs.ashbyhq.com/openai/7cd8205b-fd73-4af1-9103-1b1fed3b0c22) | San Francisco | ai_lab | ashby |
 | 89 🔥 | 2d | OpenAI | [Network Operations Engineer, AI Networking](https://jobs.ashbyhq.com/openai/bbad4315-1f13-4b2f-b595-cf1287274f2f) | San Francisco | ai_lab | ashby |
 | 89 🔥 | 3d | Together AI | [Research Engineer, Post-Training Inference](https://job-boards.greenhouse.io/togetherai/jobs/5179372007) | San Francisco | ai_lab | greenhouse |
+| 88 🔥 | <1h | GSK | [Manufacturing Systems Integration Data Engineer](https://gsk.wd5.myworkdayjobs.com/en-US/GSKCareers/job/Poznan-Pastelowa/Manufacturing-Systems-Integration-Data-Engineer_444283-1) | 2 Locations | healthtech | workday |
 | 88 🔥 | 6h | Adobe | [Software Development Engineer, AI Features – Photoshop Web](https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Jose/Software-Development-Engineer--AI-Features---Photoshop-Web_R170182) | 4 Locations | big_tech | workday |
 | 88 🔥 | 13h | Salesforce | [AI Builder, Emerging Talent](https://salesforce.wd12.myworkdayjobs.com/en-US/futureforce_newgradroles/job/California---San-Francisco/AI-Builder--Emerging-Talent_JR341276) | 4 Locations | big_tech | workday |
 | 88 🔥 | 19h | Astreya | [AI/ML Engineer I](https://astreya.wd5.myworkdayjobs.com/en-US/life-at-astreya-opportunities/job/Remote-India/AI-ML-Engineer-I_R0016200) | Remote, India | other | workday |
@@ -92,6 +94,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 86 🔥 | 2h | Discord | [Oracle ERP Fusion Functional Analyst](https://job-boards.greenhouse.io/discord/jobs/8627166002) | San Francisco Bay Area | big_tech | greenhouse |
 | 86 🔥 | 8h | Strada Education Foundation | [Associate Client Data Engineer](https://jobs.lever.co/stradaeducation/dca47da4-85fc-481f-8aa5-fa664a9d37bc/apply) | Washington, DC | edtech | simplify |
 | 86 🔥 | 13h | Ciena | [AI-Enabled Software Test Engineer - New Grad](https://ciena.wd5.myworkdayjobs.com/en-US/Careers/job/Ottawa/AI-Enabled-Software-Test-Engineer-II_R030842) | Ottawa | other | workday |
+| 86 🔥 | 1d | UW Health | [Compliance Analyst](https://eimy.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/49234) | Middleton, WI, United States | healthtech | oracle_orc |
 | 86 🔥 | 1d | Innodata | [Generative AI Associate](https://job-boards.greenhouse.io/innodatainc/jobs/4307428009) | Rhode Island | other | simplify |
 | 86 🔥 | 1d | Innodata | [Generative AI Associate](https://job-boards.greenhouse.io/innodatainc/jobs/4307423009) | Delaware | other | simplify |
 | 86 🔥 | 1d | Innodata | [Generative AI Associate](https://job-boards.greenhouse.io/innodatainc/jobs/4307427009) | Massachusetts | other | simplify |
@@ -101,7 +104,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 86 🔥 | 3d | NewsBreak | [Newsbreak Venture New Grad - AI Growth Intelligence Engineer](https://job-boards.greenhouse.io/newsbreak/jobs/4694899006) | Mountain View, CA | other | simplify |
 | 86 🔥 | 3d | NewsBreak | [NewsBreak Venture, AI Growth Intelligence Engineer (New Grad）](https://job-boards.greenhouse.io/newsbreak/jobs/4694899006) | Mountain View, California, United States | other | greenhouse |
 | 86 🔥 | 3d | Schweitzer Engineering Laboratories | [Associate Software Engineer - Artificial Intelligence / Machine Learni](https://selinc.wd1.myworkdayjobs.com/SEL/job/Washington---Pullman/Associate-Software-Engineer---AI-ML_2026-21421) | Moscow, ID | other | simplify |
-| 86 🔥 | 3d | Celonis | [Associate Value Engineer - AI-Driven Data Science & Analytics - Orbit ](https://job-boards.greenhouse.io/celonis/jobs/7725788003?gh_jid=7725788003) | NYC | other | simplify |
+| 86 🔥 | 4d | Celonis | [Associate Value Engineer - AI-Driven Data Science & Analytics - Orbit ](https://job-boards.greenhouse.io/celonis/jobs/7725788003?gh_jid=7725788003) | NYC | other | simplify |
 | 86 🔥 | 4d | CVS Health | [Analyst, Proposals](https://jobright.ai/jobs/info/6a4c176a6189f64e437f117d?utm_campaign=Data%20Analysis&utm_source=1103) | Remote, Georgia, United States of Americ | healthtech | jobright |
 | 86 🔥 | 8d | OPEN Healthcare | [Junior Full-Stack Web Developer](https://jobright.ai/jobs/info/6a46958f971cd25b06f8f506?utm_campaign=Software%20Engineering&utm_source=1103) | Gardena, CA | healthtech | jobright |
 | 86 🔥 | 8d | Medtronic | [Software Quality Engineer I](https://jobright.ai/jobs/info/6a4697834f64ba41dcb54116?utm_campaign=Software%20Engineering&utm_source=1103) | Mounds View, Minnesota, United States of | healthtech | jobright |
@@ -112,7 +115,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 85 🔥 | 8h | OpenAI | [Software Engineer, GPU Infrastructure- ChatGPT Engineering](https://jobs.ashbyhq.com/openai/f8b84ae5-743b-41c9-8432-02dff9993d6b) | London, UK | ai_lab | ashby |
 | 85 🔥 | 8h | OpenAI | [Software Engineer, ChatGPT Shopping](https://jobs.ashbyhq.com/openai/ca54cd23-2bcc-4327-bcb6-46d81ed414a8) | San Francisco | ai_lab | ashby |
 | 85 🔥 | 12h | Serve Robotics | [Full-Stack Software Engineer, Internal Services](https://jobs.ashbyhq.com/serverobotics/d562a0f5-d276-4f53-99ae-a04cdca53c43) | USA (remote) | ai_lab | ashby |
-| 85 🔥 | 13h | OpenAI | [Software Engineer, ChatGPT Lifestyle](https://jobs.ashbyhq.com/openai/ca54cd23-2bcc-4327-bcb6-46d81ed414a8) | San Francisco | ai_lab | ashby |
+| 85 🔥 | 14h | OpenAI | [Software Engineer, ChatGPT Lifestyle](https://jobs.ashbyhq.com/openai/ca54cd23-2bcc-4327-bcb6-46d81ed414a8) | San Francisco | ai_lab | ashby |
 | 85 🔥 | 1d | Shield AI | [Ground Support & Payload Analyst (R5297)](https://jobs.lever.co/shieldai/1b81535e-fdb0-4cbc-91f5-75a9d49a5fe6) | Dallas, Texas | ai_lab | lever |
 | 85 🔥 | 1d | Shield AI | [Fleet Analyst (R5296)](https://jobs.lever.co/shieldai/56f5da35-2c1f-4229-9afd-5231418f50fa) | Dallas, Texas | ai_lab | lever |
 | 85 🔥 | 1d | First Insurance Company of Hawaii | [Software Engineer I- Bala Cynwyd, PA](https://jobright.ai/jobs/info/6a5009aa397d8d353c28dac9?utm_campaign=Software%20Engineering&utm_source=1103) | Bala Cynwyd, PA, United States | fintech | jobright |
@@ -125,7 +128,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 85 🔥 | 3d | Otter.ai | [Software Engineer, Backend (New Grad)](https://jobright.ai/jobs/info/6a4d93f4d27b2c4dda9b812e?utm_campaign=Software%20Engineering&utm_source=1103) | Mountain View, CA, United States | ai_lab | jobright |
 | 85 🔥 | 15d | Shield AI | [Associate Inventory Admin (R5269)](https://jobs.lever.co/shieldai/7a10ef4b-3fdc-4b36-a3ac-8176dc7aade3) | Dallas, Texas | ai_lab | lever |
 | 84 ⭐ | 5h | Anduril | [Operations Analyst, Quality Control](https://boards.greenhouse.io/andurilindustries/jobs/5025986007?gh_jid=5025986007) | Costa Mesa, California, United States | big_tech | greenhouse |
-| 84 ⭐ | 11h | Hire Hangar | [Junior Data Analyst](https://jobs.ashbyhq.com/hirehangar/3c708fbc-3ef1-437f-b45b-7277ed2e3adf) | South Africa - Cape Town | other | ashby |
+| 84 ⭐ | 12h | Hire Hangar | [Junior Data Analyst](https://jobs.ashbyhq.com/hirehangar/3c708fbc-3ef1-437f-b45b-7277ed2e3adf) | South Africa - Cape Town | other | ashby |
 | 84 ⭐ | 20h | Lendable | [Junior QA Analyst - Customer Operations](https://jobs.ashbyhq.com/lendable/503942c8-92ad-44b3-8df9-65d804e760c0) | London | other | ashby |
 | 84 ⭐ | 1d | Tesla | [Energy Analyst - Residential Energy](https://www.tesla.com/careers/search/job/276044) | Henderson, NV | big_tech | simplify |
 | 84 ⭐ | 1d | Amazon | [Data & Reporting Analyst , Relay Operations Center Tech & Ops integrat](https://jobright.ai/jobs/info/6a32e5b4649fdf16292ef4f4?utm_campaign=Data%20Analysis&utm_source=1103) | Nashville, TN, United States | big_tech | jobright |
@@ -153,8 +156,5 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 84 ⭐ | 16d | LinkedIn | [AI Governance and Advisory Associate](https://jobs.smartrecruiters.com/LinkedIn3/744000133706629) | SF | big_tech | simplify |
 | 84 ⭐ | 16d | LinkedIn | [AI Governance and Advisory Associate](https://jobs.smartrecruiters.com/LinkedIn3/744000133706629) | San Francisco, CA | big_tech | smartrecruiters |
 | 84 ⭐ | 22d | Sword Health | [Deal Operations](https://jobs.lever.co/swordhealth/1b50011d-68e4-4c78-8f1c-ff287d43a1d3) | Porto | healthtech | lever |
-| 84 ⭐ | 23d | Snowflake | [AI Research Scientist New Grad - Agents & Reinforcement Learning](https://jobs.ashbyhq.com/snowflake/1bad12df-f443-426f-9d09-e96fc780d698/application) | Bellevue, WA | big_tech | simplify |
-| 84 ⭐ | 23d | Snowflake | [AI Research Scientist, New Grad – Agents & Reinforcement Learning](https://jobs.ashbyhq.com/snowflake/1bad12df-f443-426f-9d09-e96fc780d698) | US-WA-Bellevue | big_tech | ashby |
-| 84 ⭐ | 28d | NVIDIA | [Research Scientist, Efficient Deep Learning - New College Grad 2026](https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/Research-Scientist--Efficient-Deep-Learning---New-College-Grad-2026_JR2019729-1) | US, CA, Santa Clara | big_tech | workday |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
