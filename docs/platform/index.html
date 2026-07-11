@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Job Radar — Platform</title>
+<style>
+  :root {
+    --paper:#FAFBF9; --ink:#1C2430; --muted:#5A6B7A; --accent:#2E7D5B;
+    --accent-ink:#24634A; --amber:#9A6A1F; --line:#DDE4E0; --card:#F1F5F2;
+    --code:#E9EFEA; --danger:#A33A2E;
+  }
+  :root[data-theme="dark"] {
+    --paper:#131A21; --ink:#D9E2E8; --muted:#8FA1AE; --accent:#4CAF8A;
+    --accent-ink:#5FBF9A; --amber:#D2A24C; --line:#2A343D; --card:#1A232C;
+    --code:#1F2A33; --danger:#E07862;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:#131A21; --ink:#D9E2E8; --muted:#8FA1AE; --accent:#4CAF8A;
+      --accent-ink:#5FBF9A; --amber:#D2A24C; --line:#2A343D; --card:#1A232C;
+      --code:#1F2A33; --danger:#E07862;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink);
+         font-family: Charter,"Bitstream Charter","Iowan Old Style",Georgia,serif;
+         font-size:16px; line-height:1.5; }
+  .mono, button, input, select, textarea, .chip, th, .tag {
+    font-family: ui-monospace,"SF Mono",Menlo,Consolas,monospace; }
+  header { display:flex; align-items:center; gap:0.9rem; padding:0.7rem 1rem;
+           border-bottom:2px solid var(--ink); flex-wrap:wrap; position:sticky; top:0;
+           background:var(--paper); z-index:30; }
+  header h1 { font-size:1.05rem; margin:0; white-space:nowrap; }
+  nav { display:flex; gap:0.25rem; flex-wrap:wrap; }
+  nav button { background:none; border:1px solid transparent; color:var(--muted);
+               padding:0.3rem 0.65rem; border-radius:5px; cursor:pointer; font-size:0.8rem; }
+  nav button.on { color:var(--accent-ink); border-color:var(--accent-ink); }
+  nav button:hover { color:var(--ink); }
+  #stats { margin-left:auto; font-size:0.72rem; color:var(--muted); display:flex; gap:0.9rem; }
+  #stats b { color:var(--ink); font-size:0.95rem; display:block; text-align:right; }
+  main { max-width:72rem; margin:0 auto; padding:1rem; }
+  .bar { display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.9rem; align-items:center; }
+  input, select, textarea { background:var(--card); color:var(--ink);
+    border:1px solid var(--line); border-radius:5px; padding:0.4rem 0.55rem; font-size:0.8rem; }
+  input[type=search] { flex:1; min-width:12rem; }
+  button.act { background:var(--card); border:1px solid var(--line); color:var(--ink);
+    border-radius:5px; padding:0.3rem 0.6rem; cursor:pointer; font-size:0.75rem; }
+  button.act:hover { border-color:var(--accent); color:var(--accent-ink); }
+  button.primary { background:var(--accent); border-color:var(--accent); color:#fff; }
+  button.primary:hover { color:#fff; opacity:0.9; }
+  button:focus-visible, input:focus-visible { outline:2px solid var(--accent); outline-offset:1px; }
+  .job { display:flex; gap:0.7rem; padding:0.55rem 0.4rem; border-bottom:1px solid var(--line);
+         align-items:baseline; flex-wrap:wrap; }
+  .job:hover { background:var(--card); }
+  .score { min-width:2.2rem; text-align:center; font-weight:700; font-size:0.85rem;
+           border-radius:5px; padding:0.1rem 0.2rem; background:var(--code); }
+  .score.hot { color:var(--accent-ink); border:1px solid var(--accent-ink); background:none; }
+  .job .body { flex:1; min-width:14rem; }
+  .job .co { font-weight:700; }
+  .job a { color:var(--accent-ink); text-decoration-thickness:1px; }
+  .sub { font-size:0.78rem; color:var(--muted); }
+  .chip { font-size:0.65rem; border:1px solid var(--line); color:var(--muted);
+          border-radius:999px; padding:0.05rem 0.45rem; white-space:nowrap; }
+  .chip.marquee { color:var(--amber); border-color:var(--amber); }
+  .chip.saved { color:var(--amber); border-color:var(--amber); }
+  .chip.applied { color:var(--accent-ink); border-color:var(--accent-ink); }
+  .chip.maybe { color:var(--muted); }
+  .acts { display:flex; gap:0.3rem; }
+  .lanes { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:0.9rem; }
+  .lane { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:0.7rem; }
+  .lane h3 { margin:0 0 0.6rem; font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase;
+             font-family:ui-monospace,Menlo,monospace; color:var(--muted); }
+  .card { background:var(--paper); border:1px solid var(--line); border-radius:6px;
+          padding:0.5rem 0.6rem; margin-bottom:0.5rem; cursor:pointer; }
+  .card:hover { border-color:var(--accent); }
+  .card .co { font-weight:700; font-size:0.9rem; }
+  .card .t { font-size:0.8rem; }
+  /* workspace drawer */
+  #ws { position:fixed; inset:0; background:rgba(0,0,0,0.45); z-index:50; display:none; }
+  #ws.open { display:block; }
+  #wsp { position:absolute; right:0; top:0; bottom:0; width:min(560px,100%);
+         background:var(--paper); border-left:2px solid var(--ink); overflow-y:auto; padding:1.1rem; }
+  #wsp h2 { margin:0 0 0.2rem; font-size:1.15rem; }
+  .sect { margin-top:1.1rem; }
+  .sect h4 { margin:0 0 0.4rem; font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase;
+             color:var(--accent-ink); font-family:ui-monospace,Menlo,monospace; }
+  .kv { display:grid; grid-template-columns:auto 1fr; gap:0.15rem 0.8rem; font-size:0.82rem; }
+  .kv .k { color:var(--muted); font-family:ui-monospace,Menlo,monospace; font-size:0.7rem; }
+  textarea { width:100%; min-height:5.5rem; font-size:0.82rem; }
+  .tpl { background:var(--code); border-radius:6px; padding:0.6rem; font-size:0.78rem;
+         white-space:pre-wrap; margin-bottom:0.4rem; }
+  ul.plain { list-style:none; padding:0; margin:0.3rem 0; }
+  ul.plain li { display:flex; gap:0.4rem; align-items:center; padding:0.15rem 0; font-size:0.82rem; }
+  table { border-collapse:collapse; width:100%; font-size:0.82rem; }
+  th { text-align:left; font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase;
+       color:var(--muted); border-bottom:1.5px solid var(--ink); padding:0.3rem 0.6rem 0.3rem 0; }
+  td { border-bottom:1px solid var(--line); padding:0.4rem 0.6rem 0.4rem 0; }
+  .wrap { overflow-x:auto; }
+  .note { background:var(--card); border-left:3px solid var(--amber); padding:0.6rem 0.8rem;
+          border-radius:0 5px 5px 0; font-size:0.85rem; margin-bottom:0.9rem; }
+  .toast { position:fixed; bottom:1rem; left:50%; transform:translateX(-50%);
+           background:var(--ink); color:var(--paper); padding:0.5rem 1rem; border-radius:6px;
+           font-size:0.8rem; z-index:99; }
+  a { color:var(--accent-ink); }
+  .rlinks a { display:inline-block; margin:0 0.6rem 0.3rem 0; font-size:0.8rem; }
+  @media (prefers-reduced-motion: no-preference) { .card, button.act { transition: border-color .12s; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>🎯 Job Radar</h1>
+  <nav id="nav"></nav>
+  <div id="stats"></div>
+  <button class="act" id="themeBtn" title="theme">◐</button>
+</header>
+<main id="main">Loading the radar state…</main>
+<div id="ws"><div id="wsp"></div></div>
+
+<script>
+"use strict";
+const REPO = "VictorJimenez3/fable-job-search";
+const BRANCH = "claude/newgrad-job-search-system-9gbj9k";
+const RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/`;
+const API = "https://api.github.com";
+
+const S = {           // app state
+  jobs:{}, applied:[], culture:{}, companies:{}, runs:[], scout:{}, web:null,
+  tab:"jobs", filter:{q:"", min:66, sector:"", alert:true, lane:""}, shown:250,
+  marquee:new Set(["meta","apple","amazon","netflix","google","microsoft","nvidia",
+    "anthropic","openai","deepmind","genentech","moderna","regeneron",
+    "vertex pharmaceuticals","eli lilly","medtronic","intuitive surgical","stryker"]),
+};
+const norm = s => (s||"").toLowerCase().replace(/[^a-z0-9 ]/g," ").replace(/\s+/g," ").trim();
+const token = () => localStorage.getItem("jr_pat") || "";
+const $ = sel => document.querySelector(sel);
+const esc = s => (s??"").toString().replace(/[&<>"]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const toast = m => { const t=document.createElement("div"); t.className="toast"; t.textContent=m;
+  document.body.appendChild(t); setTimeout(()=>t.remove(), 3200); };
+
+/* ---------- theme ---------- */
+$("#themeBtn").onclick = () => {
+  const cur = document.documentElement.dataset.theme ||
+    (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  document.documentElement.dataset.theme = cur === "dark" ? "light" : "dark";
+};
+
+/* ---------- data ---------- */
+async function fetchJSON(path, fallback) {
+  try { const r = await fetch(RAW + path, {cache:"no-cache"});
+        if (!r.ok) return fallback; return await r.json(); }
+  catch { return fallback; }
+}
+async function boot() {
+  const [jobs, applied, culture, companies, runs, scout, web] = await Promise.all([
+    fetchJSON("state/jobs.json", {}), fetchJSON("state/applied.json", []),
+    fetchJSON("state/culture.json", {}), fetchJSON("state/companies.json", {}),
+    fetchJSON("state/runs.json", []), fetchJSON("state/scout.json", {}),
+    fetchJSON("state/web_state.json", null),
+  ]);
+  Object.assign(S, {jobs, applied, culture, companies, runs, scout});
+  S.web = web || JSON.parse(localStorage.getItem("jr_web") || '{"maybe":[],"jobs":{}}');
+  S.web.maybe = S.web.maybe || []; S.web.jobs = S.web.jobs || {};
+  render();
+}
+
+/* ---------- write paths ---------- */
+async function gh(path, opts={}) {
+  const r = await fetch(API + path, {...opts, headers: {
+    "Authorization": `Bearer ${token()}`, "Accept": "application/vnd.github+json",
+    ...(opts.headers||{}) }});
+  if (!r.ok && r.status !== 409) throw new Error(`${r.status} ${await r.text()}`);
+  return r;
+}
+async function dispatch(action, job) {
+  if (!token()) { toast("Add a GitHub token in Settings first"); S.tab="settings"; render(); return false; }
+  await gh(`/repos/${REPO}/dispatches`, {method:"POST",
+    body: JSON.stringify({event_type:"radar-web",
+      client_payload:{action, id: job.id, url: job.url, company: job.company}})});
+  return true;
+}
+let saveTimer=null;
+function saveWeb() {                       // debounce web_state commits
+  localStorage.setItem("jr_web", JSON.stringify(S.web));   // instant local mirror
+  if (!token()) return;
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(async () => {
+    try {
+      let sha;
+      const cur = await fetch(`${API}/repos/${REPO}/contents/state/web_state.json?ref=${BRANCH}`,
+        {headers:{Authorization:`Bearer ${token()}`}});
+      if (cur.ok) sha = (await cur.json()).sha;
+      const content = btoa(unescape(encodeURIComponent(JSON.stringify(S.web, null, 1))));
+      await gh(`/repos/${REPO}/contents/state/web_state.json`, {method:"PUT",
+        body: JSON.stringify({message:"platform: workspace update", content, sha, branch:BRANCH})});
+    } catch(e) { toast("Cloud save failed (kept locally): " + e.message.slice(0,80)); }
+  }, 1500);
+}
+
+/* ---------- derived ---------- */
+const appliedById = () => Object.fromEntries(S.applied.map(a=>[a.id,a]));
+function laneOf(id, byId) {
+  const a = byId[id];
+  if (a) return (a.stage||"applied")==="applied" ? "applied" : "saved";
+  return S.web.maybe.includes(id) ? "maybe" : "";
+}
+function jobList() {
+  const byId = appliedById(); const f = S.filter; const q = norm(f.q);
+  let rows = Object.values(S.jobs);
+  if (f.alert) rows = rows.filter(j=>j.alert_ok);
+  rows = rows.filter(j=>(j.score||0) >= f.min);
+  if (f.sector) rows = rows.filter(j=>j.sector===f.sector);
+  if (q) rows = rows.filter(j=>norm(j.company+" "+j.title).includes(q));
+  if (f.lane) rows = rows.filter(j=>laneOf(j.id,byId)===f.lane);
+  rows.sort((a,b)=>(b.score||0)-(a.score||0) || (b.first_seen||0)-(a.first_seen||0));
+  return rows;
+}
+
+/* ---------- actions ---------- */
+async function actMaybe(j) {
+  const i = S.web.maybe.indexOf(j.id);
+  if (i>=0) S.web.maybe.splice(i,1); else S.web.maybe.push(j.id);
+  saveWeb(); render();
+}
+async function actTrack(j) {
+  try { if (await dispatch("track", j)) {
+    S.applied.push({id:j.id, company:j.company, title:j.title, url:j.url, stage:"saved", via:"platform"});
+    S.web.maybe = S.web.maybe.filter(x=>x!==j.id); saveWeb();
+    toast("Tracking → lands in Notion in ~1 min"); render(); } }
+  catch(e){ toast("Failed: "+e.message.slice(0,90)); }
+}
+async function actApplied(j) {
+  try { if (await dispatch("applied", j)) {
+    const a = appliedById()[j.id];
+    if (a) a.stage = "applied";
+    else S.applied.push({id:j.id, company:j.company, title:j.title, url:j.url, stage:"applied", via:"platform"});
+    S.web.maybe = S.web.maybe.filter(x=>x!==j.id); saveWeb();
+    toast("Marked applied → Notion status updates in ~1 min"); render(); } }
+  catch(e){ toast("Failed: "+e.message.slice(0,90)); }
+}
+
+/* ---------- render ---------- */
+const TABS = [["jobs","Jobs"],["pipeline","Pipeline"],["companies","Companies"],
+              ["ai","AI"],["settings","Settings"]];
+function render() {
+  $("#nav").innerHTML = TABS.map(([k,l]) =>
+    `<button class="${S.tab===k?'on':''}" onclick="S.tab='${k}';render()">${l}</button>`).join("") +
+    `<button onclick="window.open('https://github.com/${REPO}/issues','_blank')">Issues ↗</button>`;
+  const byId = appliedById();
+  const saved = S.applied.filter(a=>(a.stage||"applied")==="saved");
+  const done  = S.applied.filter(a=>(a.stage||"applied")==="applied");
+  $("#stats").innerHTML =
+    `<span><b>${Object.keys(S.jobs).length}</b>jobs seen</span>` +
+    `<span><b>${S.web.maybe.length}</b>maybe</span>` +
+    `<span><b>${saved.length}</b>to apply</span>` +
+    `<span><b>${done.length}</b>applied</span>`;
+  ({jobs:rJobs, pipeline:rPipe, companies:rCos, ai:rAI, settings:rSet})[S.tab]();
+}
+
+function rowHTML(j, byId) {
+  const lane = laneOf(j.id, byId);
+  const mq = S.marquee.has(norm(j.company));
+  const c = S.culture[norm(j.company)];
+  return `<div class="job">
+    <span class="score ${j.score>=85?'hot':''}">${j.score??"–"}</span>
+    <div class="body">
+      <span class="co">${esc(j.company)}</span> —
+      <a href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a>
+      <div class="sub">${esc((j.locations||[])[0]||"?")}${j.salary?" · "+esc(j.salary):""}
+        · ${esc(j.sector||"tech")}${c?` · ${esc(c.industry)} (${esc(c.prestige)})`:""}
+        ${j.llm_note?` · <i>${esc(j.llm_note)}</i>`:""}</div>
+    </div>
+    ${mq?'<span class="chip marquee">marquee</span>':""}
+    ${lane?`<span class="chip ${lane}">${lane==="saved"?"to apply":lane}</span>`:""}
+    <div class="acts">
+      <button class="act" onclick='actMaybe(S.jobs["${j.id}"])'>${lane==="maybe"?"un-maybe":"maybe"}</button>
+      <button class="act" onclick='actTrack(S.jobs["${j.id}"])'>track</button>
+      <button class="act" onclick='actApplied(S.jobs["${j.id}"])'>applied</button>
+      <button class="act" onclick='openWS("${j.id}")'>open ▸</button>
+    </div></div>`;
+}
+
+function rJobs() {
+  const byId = appliedById();
+  const rows = jobList();
+  const sectors = [...new Set(Object.values(S.jobs).map(j=>j.sector).filter(Boolean))].sort();
+  $("#main").innerHTML = `
+    <div class="bar">
+      <input type="search" placeholder="search ${rows.length} roles…" value="${esc(S.filter.q)}"
+        oninput="S.filter.q=this.value;S.shown=250;render()">
+      <label class="sub">min <input type="number" style="width:4.2rem" value="${S.filter.min}"
+        onchange="S.filter.min=+this.value;render()"></label>
+      <select onchange="S.filter.sector=this.value;render()">
+        <option value="">all sectors</option>
+        ${sectors.map(s=>`<option ${s===S.filter.sector?"selected":""}>${s}</option>`).join("")}</select>
+      <label class="sub"><input type="checkbox" ${S.filter.alert?"checked":""}
+        onchange="S.filter.alert=this.checked;render()"> alert-worthy only</label>
+      <select onchange="S.filter.lane=this.value;render()">
+        <option value="">any status</option><option value="maybe">maybe</option>
+        <option value="saved">to apply</option><option value="applied">applied</option></select>
+    </div>
+    ${token()?"":`<div class="note">Read-only mode. Add a GitHub token in <b>Settings</b> to
+      track jobs to Notion and save workspace notes to the repo.</div>`}
+    <div>${rows.slice(0,S.shown).map(j=>rowHTML(j,byId)).join("")}</div>
+    ${rows.length>S.shown?`<p><button class="act" onclick="S.shown+=250;render()">
+      show more (${rows.length-S.shown} left)</button></p>`:""}`;
+}
+
+function cardHTML(x) {
+  return `<div class="card" onclick='openWS("${x.id}")'>
+    <div class="co">${esc(x.company)}</div><div class="t">${esc(x.title)}</div></div>`;
+}
+function rPipe() {
+  const byId = appliedById();
+  const maybe = S.web.maybe.map(id=>S.jobs[id]).filter(Boolean);
+  const saved = S.applied.filter(a=>(a.stage||"applied")==="saved");
+  const done  = S.applied.filter(a=>(a.stage||"applied")==="applied");
+  $("#main").innerHTML = `<div class="lanes">
+    <div class="lane"><h3>🤔 Maybe (${maybe.length})</h3>${maybe.map(cardHTML).join("")||'<span class="sub">Park jobs here from the Jobs tab.</span>'}</div>
+    <div class="lane"><h3>📝 To apply (${saved.length})</h3>${saved.map(cardHTML).join("")}</div>
+    <div class="lane"><h3>✅ Applied (${done.length})</h3>${done.map(cardHTML).join("")}</div>
+  </div>
+  <p class="sub">"To apply" and "Applied" mirror Notion (checkbox or platform buttons).
+  Flip statuses in Notion anytime — the radar treats you as the source of truth.</p>`;
+}
+
+function researchLinks(co) {
+  const q = encodeURIComponent(co);
+  return `<div class="rlinks">
+    <a target="_blank" rel="noopener" href="https://www.linkedin.com/search/results/people/?keywords=${q}%20recruiter%20university">🔎 recruiters</a>
+    <a target="_blank" rel="noopener" href="https://www.linkedin.com/search/results/people/?keywords=${q}%20software%20engineer%20NJIT">🎓 NJIT alumni there</a>
+    <a target="_blank" rel="noopener" href="https://www.levels.fyi/companies/${q.toLowerCase().replace(/%20/g,"-")}">💰 levels.fyi</a>
+    <a target="_blank" rel="noopener" href="https://www.google.com/search?q=${q}+engineering+blog">📝 eng blog</a>
+    <a target="_blank" rel="noopener" href="https://www.google.com/search?q=${q}+new+grad+interview+process">🧭 interview intel</a>
+  </div>`;
+}
+function templates(j) {
+  const first = t => t.split(",")[0];
+  return [
+["Recruiter DM", `Hi {name} — I'm Victor, a CS senior at NJIT graduating this spring. I just saw the ${j.title} opening at ${j.company} and applied — it's squarely what I've been building toward (${j.sector==="healthtech"?"my clinical-data pipeline project maps right onto it":"my ML/data projects map right onto it"}). Would you be open to a quick chat, or could you point me to the right recruiter for university hiring? Thank you!`],
+["Referral ask (alum)", `Hey {name} — fellow NJIT ${""}Highlander here (CS '26). I'm applying to the ${j.title} role at ${j.company} and it genuinely fits what I've been working on. If you feel comfortable, would you be open to referring me or sharing a bit about the team? Happy to send my resume + a short blurb to make it zero-effort. Either way, congrats on ${first(j.company)} — the work looks awesome.`],
+["Follow-up (1 week)", `Hi {name} — following up on the ${j.title} role at ${j.company} I applied to on {date}. Still very interested; since applying I ${"{recent win, e.g. shipped X}"}. If there's anything else useful I can send over, happy to. Thanks for your time!`]];
+}
+function openWS(id) {
+  const j = S.jobs[id] || S.applied.find(a=>a.id===id);
+  if (!j) return;
+  const w = S.web.jobs[id] = S.web.jobs[id] || {notes:"", links:[], contacts:[]};
+  const c = S.culture[norm(j.company)];
+  const a = appliedById()[id];
+  $("#ws").classList.add("open");
+  $("#wsp").innerHTML = `
+    <button class="act" style="float:right" onclick="closeWS()">✕ close</button>
+    <h2>${esc(j.company)}</h2>
+    <div class="sub">${esc(j.title)} · <a href="${esc(j.url)}" target="_blank" rel="noopener">posting ↗</a>
+      ${a?`· <span class="chip ${a.stage==="applied"?"applied":"saved"}">${a.stage==="applied"?"applied":"to apply"}</span>`:""}
+      ${a&&a.notion_page?`· <a href="${esc(a.notion_page)}" target="_blank" rel="noopener">Notion ↗</a>`:""}</div>
+    <div class="sect"><h4>Why it scored ${j.score??"?"}</h4>
+      <div class="sub">${(j.score_reasons||[]).map(esc).join(" · ")||"–"}</div>
+      ${j.llm_note?`<p class="sub">🤖 angle: <i>${esc(j.llm_note)}</i></p>`:""}</div>
+    ${c?`<div class="sect"><h4>Culture — ${esc(c.industry)} ${c.source==="est."?"(AI-estimated)":"(curated)"}</h4>
+      <div class="kv">
+        <span class="k">prestige</span><span>${esc(c.prestige)} · fit ${c.fit}/100</span>
+        <span class="k">wlb</span><span>${c.wlb}/5 · pace ${esc(c.pace)}</span>
+        <span class="k">new-grad TC</span><span>${esc(c.new_grad_tc)}</span>
+        <span class="k">vibe</span><span>${esc(c.vibe)} — ${esc(c.fit_notes)}</span>
+      </div></div>`:""}
+    <div class="sect"><h4>Company research</h4>${researchLinks(j.company)}</div>
+    <div class="sect"><h4>Outreach — conversations & contacts</h4>
+      <ul class="plain" id="wsLinks">${w.links.map((l,i)=>
+        `<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label||l.url)}</a>
+         <button class="act" onclick="rmLink('${id}',${i})">✕</button></li>`).join("")}</ul>
+      <div class="bar"><input id="lkLabel" placeholder="label (e.g. Sarah DM)" style="width:10rem">
+        <input id="lkUrl" placeholder="https:// convo / profile / thread">
+        <button class="act" onclick="addLink('${id}')">add</button></div></div>
+    <div class="sect"><h4>Outreach templates (copy, fill {name})</h4>
+      ${templates(j).map(([t,body])=>`<div class="tpl"><b>${t}</b>
+        <button class="act" style="float:right" onclick='navigator.clipboard.writeText(${JSON.stringify(body)});toast("Copied")'>copy</button>
+        <br>${esc(body)}</div>`).join("")}</div>
+    <div class="sect"><h4>Notes (resume tailoring, referrals, interview intel)</h4>
+      <textarea onchange='S.web.jobs["${id}"].notes=this.value;saveWeb();toast("Saved")'>${esc(w.notes)}</textarea></div>
+    <div class="sect acts">
+      <button class="act" onclick='actMaybe(S.jobs["${id}"]||{id:"${id}"})'>maybe</button>
+      <button class="act primary" onclick='actTrack(S.jobs["${id}"])'>track → Notion</button>
+      <button class="act" onclick='actApplied(S.jobs["${id}"])'>mark applied</button>
+    </div>`;
+}
+function closeWS(){ $("#ws").classList.remove("open"); render(); }
+$("#ws").addEventListener("click", e=>{ if(e.target.id==="ws") closeWS(); });
+function addLink(id){ const w=S.web.jobs[id];
+  const url=$("#lkUrl").value.trim(); if(!url) return;
+  w.links.push({label:$("#lkLabel").value.trim(), url}); saveWeb(); openWS(id); }
+function rmLink(id,i){ S.web.jobs[id].links.splice(i,1); saveWeb(); openWS(id); }
+
+function rCos() {
+  const counts = {};
+  for (const j of Object.values(S.jobs)) {
+    const k = norm(j.company);
+    counts[k] = counts[k]||{name:j.company, open:0, best:0};
+    counts[k].open++; counts[k].best = Math.max(counts[k].best, j.score||0);
+  }
+  const q = norm(S.filter.q);
+  let rows = Object.entries(counts).map(([k,v])=>({k, ...v, c:S.culture[k]}));
+  if (q) rows = rows.filter(r=>r.k.includes(q));
+  rows.sort((a,b)=>(b.c?.fit||0)-(a.c?.fit||0) || b.best-a.best);
+  $("#main").innerHTML = `
+    <div class="bar"><input type="search" placeholder="search ${rows.length} companies…"
+      value="${esc(S.filter.q)}" oninput="S.filter.q=this.value;render()"></div>
+    <div class="wrap"><table><tr><th>company</th><th>industry</th><th>prestige</th>
+      <th>fit</th><th>wlb</th><th>new-grad tc</th><th>roles</th><th>research</th></tr>
+    ${rows.slice(0,200).map(r=>`<tr>
+      <td><b>${esc(r.name)}</b>${S.marquee.has(r.k)?' <span class="chip marquee">marquee</span>':""}</td>
+      <td>${esc(r.c?.industry||"–")}</td><td>${esc(r.c?.prestige||"–")}</td>
+      <td>${r.c?`${r.c.fit}/100${r.c.source==="est."?" <span class='sub'>est.</span>":""}`:"–"}</td>
+      <td>${r.c?r.c.wlb+"/5":"–"}</td><td>${esc(r.c?.new_grad_tc||"–")}</td>
+      <td>${r.open} (top ${r.best})</td><td>${researchLinks(r.name)}</td></tr>`).join("")}
+    </table></div>`;
+}
+
+function rAI() {
+  const jobs = Object.values(S.jobs);
+  const withNote = jobs.filter(j=>j.llm_note).length;
+  const doss = Object.values(S.culture);
+  const lastRun = S.runs[S.runs.length-1];
+  const scoutAgo = S.scout.last_run ? Math.round((Date.now()/1000-S.scout.last_run)/86400) : null;
+  const scouts = Object.values(S.companies).filter(c=>c.origin==="scout");
+  $("#main").innerHTML = `
+    <div class="note">The cloud scores deterministically (auditable rubric, no AI needed).
+      Your M1 Max runs <b>qwen3:30b</b> locally every 2h while awake — private, free — to add
+      angles, culture dossiers, and re-ranks. Nothing here costs anything.</div>
+    <div class="lanes">
+      <div class="lane"><h3>Enrichment</h3>
+        <div class="kv">
+          <span class="k">jobs with AI angle</span><span>${withNote} / ${jobs.length}</span>
+          <span class="k">culture dossiers</span><span>${doss.length}
+            (${doss.filter(d=>d.source==="seed").length} curated,
+             ${doss.filter(d=>d.source==="est.").length} AI-estimated)</span>
+          <span class="k">last crawl</span><span>${lastRun?new Date(lastRun.ts*1000).toLocaleString():"–"}
+            · ${lastRun?lastRun.new_jobs:0} new · ${lastRun?lastRun.alerts:0} alerts</span>
+        </div></div>
+      <div class="lane"><h3>Company scout (weekly)</h3>
+        <div class="kv"><span class="k">last research pass</span>
+          <span>${scoutAgo===null?"not yet run":scoutAgo+"d ago"}</span>
+          <span class="k">scouted candidates</span><span>${scouts.length}</span></div>
+        <ul class="plain">${scouts.slice(0,12).map(c=>`<li>${esc(c.name)}
+          <span class="chip">${esc(c.status)}</span></li>`).join("")}</ul></div>
+      <div class="lane"><h3>Registry</h3>
+        <div class="kv">
+          <span class="k">companies polled</span><span>${Object.values(S.companies).filter(c=>c.status==="active").length}</span>
+          <span class="k">total registry</span><span>${Object.keys(S.companies).length}</span>
+        </div></div>
+    </div>`;
+}
+
+function rSet() {
+  $("#main").innerHTML = `
+    <div class="sect"><h4>GitHub token (enables writes)</h4>
+      <p class="sub" style="max-width:44rem">Reads are public. To <b>track jobs to Notion</b> and
+      <b>save workspace notes</b> from this site, paste a fine-grained personal access token for
+      the <span class="mono">${REPO}</span> repo with <b>Contents: read/write</b> — create one at
+      <a target="_blank" rel="noopener" href="https://github.com/settings/personal-access-tokens/new">github.com/settings/personal-access-tokens/new</a>.
+      It stays in this browser only.</p>
+      <div class="bar"><input id="pat" type="password" placeholder="github_pat_…" style="min-width:20rem"
+        value="${esc(token())}">
+        <button class="act primary" onclick='localStorage.setItem("jr_pat",$("#pat").value.trim());testPAT()'>save & test</button>
+        <button class="act" onclick='localStorage.removeItem("jr_pat");toast("Token removed");render()'>remove</button></div>
+      <p id="patRes" class="sub"></p></div>
+    <div class="note">⚠️ Heads up: this repo is <b>public</b>, and workspace notes/links you save
+      here are committed to it (state/web_state.json). Don't paste anything you wouldn't want
+      visible; ask Claude to take the repo private if you'd rather trade the public site URL for
+      privacy.</div>
+    <div class="sect"><h4>How writes work</h4>
+      <p class="sub" style="max-width:44rem">"track" / "applied" buttons fire a GitHub
+      repository_dispatch → the <span class="mono">web-actions</span> workflow records it and
+      syncs Notion (~1 min). Notes and links commit straight to
+      <span class="mono">state/web_state.json</span>. GitHub checkboxes keep working exactly as
+      before — both doors lead to the same place.</p></div>`;
+}
+async function testPAT() {
+  try { const r = await gh(`/repos/${REPO}`); const d = await r.json();
+    $("#patRes").textContent = `✓ token works (repo: ${d.full_name}, push: ${d.permissions?.push})`;
+    toast("Token saved"); }
+  catch(e){ $("#patRes").textContent = "✗ " + e.message.slice(0,120); }
+}
+
+window.S = S; window.render = render; window.openWS = openWS; window.closeWS = closeWS;
+window.actMaybe = actMaybe; window.actTrack = actTrack; window.actApplied = actApplied;
+window.addLink = addLink; window.rmLink = rmLink; window.testPAT = testPAT; window.$ = $;
+boot();
+</script>
+</body>
+</html>

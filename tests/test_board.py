@@ -57,3 +57,20 @@ def test_checkbox_in_board_page_comment_tracks_job(tmp_state, tmp_path, monkeypa
     handle_event(str(ev))
     assert len(state.applied()) == 1
     assert state.applied()[0]["stage"] == "saved"
+
+
+def test_web_action_track_records_saved(tmp_state, tmp_path, monkeypatch):
+    from radar.main import web_action
+    monkeypatch.delenv("NOTION_TOKEN", raising=False)
+    state.save("jobs.json", {JOB["id"]: JOB})
+    ev = tmp_path / "dispatch.json"
+    ev.write_text(json.dumps({"client_payload": {"action": "track", "id": JOB["id"]}}))
+    monkeypatch.setenv("GITHUB_EVENT_PATH", str(ev))
+    assert web_action() == 0
+    assert state.applied()[0]["stage"] == "saved"
+    assert state.applied()[0]["via"] == "platform"
+    # the same job marked applied from the site promotes in place
+    ev.write_text(json.dumps({"client_payload": {"action": "applied", "id": JOB["id"]}}))
+    assert web_action() == 0
+    assert len(state.applied()) == 1
+    assert state.applied()[0]["stage"] == "applied"

@@ -385,13 +385,51 @@ def marquee_backfill() -> int:
     return 0
 
 
+def web_action() -> int:
+    """Handle a platform repository_dispatch: the website's track/applied
+    buttons fire {action, id, url, company} and land here (~1 min later the
+    job is in Notion). Same record path as checkboxes — one source of truth."""
+    import json as _json
+    path = env("GITHUB_EVENT_PATH")
+    if not path:
+        print("web-action: GITHUB_EVENT_PATH not set")
+        return 1
+    with open(path) as f:
+        payload = _json.load(f).get("client_payload") or {}
+    action = payload.get("action")
+    if action not in {"track", "applied"}:
+        print(f"web-action: unknown action {action!r}")
+        return 0
+    jobs = state.jobs()
+    hist = {a["id"]: a for a in state.load("alert_history.json", [])}
+    job = jobs.get(payload.get("id")) or hist.get(payload.get("id")) \
+        or next((j for j in jobs.values() if j.get("url") == payload.get("url")), None)
+    if job is None:
+        print(f"web-action: job {payload.get('id')!r} not found")
+        return 0
+    applied = state.applied()
+    shortlist = state.shortlist()
+    fb = state.feedback()
+    changed = applied_mod.record_applied(
+        job, applied, fb, via="platform",
+        stage="saved" if action == "track" else "applied")
+    from .notion_sync import sync_applied
+    synced = sync_applied(applied)
+    shortlist[:] = [s for s in shortlist if s["id"] != job["id"]]
+    state.save("applied.json", applied)
+    state.save("shortlist.json", shortlist)
+    state.save("feedback.json", fb)
+    print(f"web-action: {action} {job['company']} — changed={changed}, notion synced={synced}")
+    return 0
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(prog="radar")
     ap.add_argument("command", choices=["crawl", "applied-sync", "seed", "notion-backfill",
                                         "strategist", "notion-verify", "email-watch", "email-verify",
                                         "migrate-checkbox-applied", "promote-shortlist",
                                         "marquee-backfill", "reconcile-checkboxes",
-                                        "daily-best", "master-board", "enrich"])
+                                        "daily-best", "master-board", "web-action", "enrich"])
     args = ap.parse_args()
     if args.command == "crawl":
         sys.exit(crawl())
@@ -431,6 +469,8 @@ def main() -> None:
         from .board import update_master_board
         url = update_master_board(state.jobs(), state.applied())
         print(f"master-board: {url or 'not updated'}")
+    elif args.command == "web-action":
+        sys.exit(web_action())
     elif args.command == "enrich":
         sys.exit(enrich())
 
