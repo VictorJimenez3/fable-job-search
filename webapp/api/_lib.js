@@ -5,11 +5,14 @@
 // owner's session is allowed to write.
 const crypto = require("crypto");
 
+// env values arrive via dashboard paste — strip stray whitespace/newlines
+const envv = (k) => (process.env[k] || "").trim();
+
 const OWNER = "VictorJimenez3";
 const REPO = "VictorJimenez3/fable-job-search";
 const BRANCH = "claude/newgrad-job-search-system-9gbj9k";
 
-const key = () => crypto.createHash("sha256").update(process.env.SESSION_SECRET || "").digest();
+const key = () => crypto.createHash("sha256").update(envv("SESSION_SECRET")).digest();
 
 function seal(obj) {
   const iv = crypto.randomBytes(12);
@@ -34,7 +37,7 @@ function session(req) {
 
 function needSetup(res) {
   const missing = ["GH_CLIENT_ID", "GH_CLIENT_SECRET", "SESSION_SECRET"]
-    .filter((k) => !process.env[k]);
+    .filter((k) => !envv(k));
   if (missing.length) {
     res.status(503).json({ error: "setup needed", missing });
     return true;
@@ -55,4 +58,4 @@ async function gh(path, token, opts = {}) {
   return r;
 }
 
-module.exports = { OWNER, REPO, BRANCH, seal, unseal, session, needSetup, gh };
+module.exports = { OWNER, REPO, BRANCH, envv, seal, unseal, session, needSetup, gh };

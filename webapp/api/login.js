@@ -1,4 +1,4 @@
-const { seal, needSetup } = require("./_lib");
+const { envv, seal, needSetup } = require("./_lib");
 
 module.exports = (req, res) => {
   if (needSetup(res)) return;
@@ -8,7 +8,7 @@ module.exports = (req, res) => {
     `jr_o=${state}; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=600`);
   res.writeHead(302, {
     Location: "https://github.com/login/oauth/authorize" +
-      `?client_id=${process.env.GH_CLIENT_ID}` +
+      `?client_id=${envv("GH_CLIENT_ID")}` +
       `&redirect_uri=${encodeURIComponent(redirect)}` +
       `&scope=public_repo&state=${state}`,
   });

@@ -1,4 +1,4 @@
-const { seal, unseal, needSetup } = require("./_lib");
+const { envv, seal, unseal, needSetup } = require("./_lib");
 
 module.exports = async (req, res) => {
   if (needSetup(res)) return;
@@ -13,8 +13,8 @@ module.exports = async (req, res) => {
     method: "POST",
     headers: { "Content-Type": "application/json", Accept: "application/json" },
     body: JSON.stringify({
-      client_id: process.env.GH_CLIENT_ID,
-      client_secret: process.env.GH_CLIENT_SECRET,
+      client_id: envv("GH_CLIENT_ID"),
+      client_secret: envv("GH_CLIENT_SECRET"),
       code,
     }),
   });
