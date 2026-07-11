@@ -4,6 +4,7 @@ A self-expanding, always-on radar for **new-grad AI / SWE / DS roles**, tuned fo
 speed (apply within 24h of posting) and personalized ranking (healthtech first,
 big tech second, open to everything good).
 
+**[→ 🖥️ The Platform](https://victorjimenez3.github.io/fable-job-search/platform/)** ·
 **[→ User guide / tutorial](docs/TUTORIAL.md)** ·
 **[→ Live dashboard](docs/DASHBOARD.md)** ·
 **[→ Culture Compass](docs/CULTURE.md)** ·

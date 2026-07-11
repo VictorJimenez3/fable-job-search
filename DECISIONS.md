@@ -265,3 +265,21 @@ no new credentials:
   Weekly, the Mac's local model proposes companies + ATS-token guesses,
   which enter the registry as `origin: scout` candidates for the normal live
   probe — wrong guesses die in the probe, so hallucination risk is contained.
+
+## 22. The platform: a static single-file app, the repo stays the backend (2026-07-11)
+
+Victor asked for "the dream system" — a website with every job ever seen,
+pipeline lanes (maybe / to-apply / applied), a per-job workspace for
+recruiter outreach and company research, and a second door into Notion
+besides GitHub checkboxes. Architecture keeps DECISIONS #1 intact: no
+servers. `docs/platform/index.html` is one self-contained page on GitHub
+Pages; it reads the committed `state/*.json` from raw.githubusercontent
+(public, no auth) so every crawl auto-refreshes the site. Writes use two
+paths: track/applied buttons fire a `repository_dispatch` handled by the
+`web-actions` workflow (the same `record_applied` path as checkboxes, so
+Notion stays consistent), and workspace data (notes, outreach links,
+maybe-lane) commits to `state/web_state.json` through the contents API with
+a fine-grained PAT the user pastes once (localStorage; read-only without
+it, with a localStorage fallback so nothing is lost). Trade-off noted in
+the app: the repo is public, so workspace notes are public — flip the repo
+private (losing free Pages) if that ever outweighs convenience.

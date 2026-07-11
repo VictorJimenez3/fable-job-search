@@ -14,7 +14,28 @@ to Applied in Notion when you actually apply. Your MacBook, when awake, runs a
 local AI every 2 hours to enrich what the cloud found. No servers, no fees —
 the repo itself is the database.
 
-## The four places you look
+## 🖥️ The Platform (start here)
+
+**https://victorjimenez3.github.io/fable-job-search/platform/** — the whole
+system as a website, refreshed automatically by every crawl:
+
+- **Jobs**: every role the radar has ever seen, searchable and filterable,
+  with score, salary, culture prestige, and the AI angle inline.
+- **Pipeline**: Maybe → To apply → Applied lanes. "To apply"/"Applied" mirror
+  Notion exactly; "Maybe" is a scratch lane that lives on the platform only.
+- **Per-job workspace** (open ▸): why it scored, culture dossier, recruiter /
+  NJIT-alumni / levels.fyi research links, outreach message templates
+  pre-filled with the role, a place to save conversation links and notes.
+- **Companies**: the whole registry with culture data and research links.
+- **AI**: what the local model has enriched, scout status, registry stats.
+
+Reading needs nothing. To make the buttons write (track → Notion, notes →
+repo), paste a fine-grained GitHub token once under **Settings** (Contents:
+read/write on this repo — create at github.com/settings/personal-access-tokens/new).
+GitHub checkboxes keep working exactly as before; both doors lead to the
+same tracker.
+
+## The places you look
 
 | Where | What you see | When to look |
 |---|---|---|
