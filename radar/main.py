@@ -327,11 +327,53 @@ def promote_shortlist_applications() -> int:
     return 0
 
 
+def marquee_backfill() -> int:
+    """One-time correction after adopting the Shams rule (DECISIONS #19).
+
+    Marquee-company jobs already in state were held back by the new-grad-
+    evidence alert gate (alert_ok=False, dashboard only). Flip them to
+    alert-eligible under the new policy and post the strongest recent ones to
+    the weekly alert issue so they aren't silently skipped.
+    """
+    from .alerts import post_alerts
+    from .score import is_marquee
+    thr = profile()["thresholds"]
+    jobs_state = state.jobs()
+    alert_history = state.load("alert_history.json", [])
+    already = {a["id"] for a in alert_history}
+    now = int(time.time())
+    flipped, candidates = 0, []
+    for rec in jobs_state.values():
+        if rec.get("alert_ok") or not is_marquee(rec["company"]):
+            continue
+        rec["alert_ok"] = True
+        rec["score_reasons"] = rec.get("score_reasons", []) + ["marquee company (auto-alert)"]
+        flipped += 1
+        if (rec.get("score", 0) >= thr["alert"] and rec["id"] not in already
+                and now - rec.get("first_seen", 0) <= 14 * 86400):
+            candidates.append(rec)
+    candidates.sort(key=lambda r: -r.get("score", 0))
+    alerts = candidates[:int(env("RADAR_MAX_ALERTS", "25"))]
+    for rec in alerts:
+        alert_history.append(rec | {"alerted_at": now})
+    state.save("jobs.json", jobs_state)
+    state.save("alert_history.json", alert_history[-500:])
+    url = None
+    try:
+        url = post_alerts(alerts)
+    except Exception as e:
+        print(f"alerts: failed to post issue: {e}")
+    print(f"marquee-backfill: {flipped} jobs now alert-eligible, "
+          f"{len(alerts)} posted to the alert issue" + (f" → {url}" if url else ""))
+    return 0
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(prog="radar")
     ap.add_argument("command", choices=["crawl", "applied-sync", "seed", "notion-backfill",
                                         "strategist", "notion-verify", "email-watch", "email-verify",
-                                        "migrate-checkbox-applied", "promote-shortlist", "enrich"])
+                                        "migrate-checkbox-applied", "promote-shortlist",
+                                        "marquee-backfill", "enrich"])
     args = ap.parse_args()
     if args.command == "crawl":
         sys.exit(crawl())
@@ -358,6 +400,8 @@ def main() -> None:
         sys.exit(migrate_checkbox_applied())
     elif args.command == "promote-shortlist":
         sys.exit(promote_shortlist_applications())
+    elif args.command == "marquee-backfill":
+        sys.exit(marquee_backfill())
     elif args.command == "enrich":
         sys.exit(enrich())
 

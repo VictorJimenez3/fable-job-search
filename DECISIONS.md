@@ -217,3 +217,27 @@ effect without manual state surgery. Whatever still fails stays a visible
 those companies. First run with the new harvest patterns grew the registry
 457 → 704 companies (Goldman, Amex, Ford, TI, JPMC, plus a wave of hospital
 systems via Oracle/iCIMS).
+
+## 19. The Shams rule: blockbusters always get announced (2026-07-11)
+
+Victor was (rightly) furious that 71 Anthropic jobs sat on the dashboard
+unalerted: the precision-first gate required explicit new-grad wording, which
+direct-ATS postings at elite companies rarely carry. His framing: like Shams
+with NBA trades, a blockbuster is news regardless — role-players only when
+they fit. So `marquee_companies` in profile.yaml (MANGA + big AI labs +
+cracked pharma/medtech, user-editable) bypass the new-grad-evidence
+requirement, as does any posting whose salary clears `thresholds.pay_bank`
+($150k). Hard gates (senior/intern/PhD/clearance/3+yrs/non-US) and the score
+threshold still apply to everyone. The one-time `marquee-backfill` workflow
+alerts the strongest recent marquee jobs that the old gate held back.
+
+## 20. Local thinking models must be forced into JSON mode
+
+qwen3:30b (the current Ollama build is a thinking-capable MoE) spends the
+entire token budget on reasoning prose — `think: false` is accepted but
+ignored, and `/no_think` no longer works — so every dossier parse failed
+silently ("generated 0 culture dossiers" while 330 companies lacked one).
+Fix: `llm.complete(..., json_mode=True)` sets Ollama's `format: "json"`,
+which constrains decoding to valid JSON regardless of the model's thinking
+habits. Verified live on the M1 Max. Callers that parse JSON (culture
+dossiers, rerank) use it; prose callers (strategist memo) don't.

@@ -28,7 +28,7 @@ def rerank(jobs: list) -> None:
         "new-grad suitability, and growth. Also a <=12 word 'angle' for their application.\n"
         f"Postings:\n{json.dumps(rows, ensure_ascii=False)}\n\n"
         'Reply with ONLY a JSON array: [{"id": "...", "fit": 7, "angle": "..."}]')
-    text = llm.complete(prompt)
+    text = llm.complete(prompt, json_mode=True)
     if not text:
         return
     try:

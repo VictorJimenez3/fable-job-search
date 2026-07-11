@@ -55,9 +55,16 @@ def _ollama_api_url(base: str) -> str | None:
     return None
 
 
-def complete(prompt: str, max_tokens: int = 2000, timeout: int = 180) -> str | None:
+def complete(prompt: str, max_tokens: int = 2000, timeout: int = 180,
+             json_mode: bool = False) -> str | None:
     """Run a single-turn completion. Returns text, or None on any failure —
-    callers must always have a heuristic fallback."""
+    callers must always have a heuristic fallback.
+
+    json_mode constrains local Ollama decoding to valid JSON (format:"json").
+    Thinking models like qwen3:30b otherwise spend the whole token budget on
+    reasoning prose and never reach the JSON — Ollama 0.31 ignores
+    think:false for thinking-only builds. Other providers ignore the flag
+    (their prompts must still ask for JSON explicitly)."""
     p = provider()
     try:
         if p == "anthropic":
@@ -74,14 +81,17 @@ def complete(prompt: str, max_tokens: int = 2000, timeout: int = 180) -> str | N
             model = env("LLM_MODEL") or profile()["llm"].get("local_model", "qwen3:14b")
             ollama_url = _ollama_api_url(base)
             if ollama_url:
-                r = requests.post(ollama_url, timeout=timeout, json={
+                payload = {
                     "model": model,
                     "messages": [{"role": "user", "content": prompt}],
                     "stream": False,
                     "think": False,
                     "keep_alive": 0,
                     "options": {"num_predict": max_tokens},
-                })
+                }
+                if json_mode:
+                    payload["format"] = "json"
+                r = requests.post(ollama_url, timeout=timeout, json=payload)
                 r.raise_for_status()
                 return _strip_thinking((r.json().get("message") or {}).get("content") or "") or None
             headers = {"Content-Type": "application/json"}

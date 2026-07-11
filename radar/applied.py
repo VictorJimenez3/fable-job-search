@@ -55,7 +55,8 @@ def culture_generate_one(name: str, dossiers: dict) -> bool:
     if not llm.available():
         return False
     text = llm.complete(culture._GEN_PROMPT.format(
-        criteria=profile().get("culture_criteria", ""), company=name), max_tokens=500)
+        criteria=profile().get("culture_criteria", ""), company=name),
+        max_tokens=500, json_mode=True)
     if not text:
         return False
     try:

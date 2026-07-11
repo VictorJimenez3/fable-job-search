@@ -35,6 +35,9 @@ every ~30 min (GitHub Actions cron)
 │       days before they show up anywhere else
 │
 ├─ 4. RANK: hard gates (no senior/intern/PhD/non-US/3+ yrs) then a scored,
+│     Shams rule: marquee companies (MANGA, big AI labs, elite pharma/medtech
+│     — profile.yaml marquee_companies) and $150k+ postings alert without
+│     needing explicit new-grad wording; everyone else needs entry evidence.
 │     auditable rubric: role fit + sector fit + freshness + learned taste.
 │     Optional Claude re-rank + per-job application angle (add ANTHROPIC_API_KEY).
 │

@@ -41,6 +41,39 @@ def test_gates_direct_ats_needs_entry_signal():
     assert keep and alert_ok
 
 
+def test_gates_marquee_company_alerts_without_entry_signal():
+    # The Shams rule: an Anthropic (or any marquee) posting from a direct ATS
+    # alerts even with zero new-grad wording...
+    keep, alert_ok, reasons = gates(mk("Research Engineer, Interpretability",
+                                       company="Anthropic", source="greenhouse"))
+    assert keep and alert_ok
+    assert "marquee company (auto-alert)" in reasons
+    # ...but the hard gates still silence marquee senior/intern roles
+    assert gates(mk("Senior Research Engineer", company="Anthropic", source="greenhouse"))[0] is False
+    assert gates(mk("Research Intern", company="OpenAI", source="greenhouse"))[0] is False
+
+
+def test_gates_pays_bank_alerts_without_entry_signal():
+    keep, alert_ok, reasons = gates(mk("Software Engineer", source="greenhouse",
+                                       salary="$160,000 - $210,000"))
+    assert keep and alert_ok
+    assert "pays bank (auto-alert)" in reasons
+    # below the bar: dashboard only, as before
+    keep, alert_ok, _ = gates(mk("Software Engineer", source="greenhouse",
+                                 salary="$95,000 - $120,000"))
+    assert keep is True and alert_ok is False
+
+
+def test_pays_bank_parses_salary_shapes():
+    from radar.score import pays_bank
+    assert pays_bank("$150k+")
+    assert pays_bank("up to 175K")
+    assert pays_bank("$140,000 - $185,000")
+    assert not pays_bank("$60/hr")
+    assert not pays_bank("$120k")
+    assert not pays_bank("")
+
+
 def test_gates_reject_years_requirement():
     keep, _, _ = gates(mk("Software Engineer", source="greenhouse",
                           desc="Requires 5+ years of production experience."))

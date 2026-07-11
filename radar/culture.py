@@ -141,7 +141,7 @@ def enrich_missing(limit: int = 8) -> int:
     made = 0
     for company in queue:
         text = llm.complete(_GEN_PROMPT.format(criteria=criteria, company=company),
-                            max_tokens=500)
+                            max_tokens=500, json_mode=True)
         if not text:
             continue
         try:

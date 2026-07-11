@@ -58,6 +58,35 @@ thresholds:
   alert: 66        # >= this and new-grad-eligible → GitHub issue alert (checkbox row)
   dashboard: 45    # >= this → appears on the dashboard
   max_posting_age_days: 10   # older than this when first seen → never alerted (stale)
+  pay_bank: 150000 # salary at/above this + a passing score → alert even without new-grad wording
+
+# The Shams rule: a blockbuster gets announced no matter what. Roles at these
+# marquee employers alert whenever they pass the hard gates (senior / intern /
+# clearance / 3+ yrs / non-US still never alert) and clear the score
+# threshold — explicit new-grad wording is NOT required for them. Everyone
+# else needs new-grad evidence, an aggregator listing, or a pays-bank salary.
+marquee_companies:
+  # big tech / MANGA
+  - Meta
+  - Apple
+  - Amazon
+  - Netflix
+  - Google
+  - Microsoft
+  - NVIDIA
+  # massive AI labs
+  - Anthropic
+  - OpenAI
+  - DeepMind
+  # cracked pharma / medtech
+  - Genentech
+  - Moderna
+  - Regeneron
+  - Vertex Pharmaceuticals
+  - Eli Lilly
+  - Medtronic
+  - Intuitive Surgical
+  - Stryker
 
 llm:
   # Provider resolution (radar/llm.py): ANTHROPIC_API_KEY -> Claude;

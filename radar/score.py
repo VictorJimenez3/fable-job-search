@@ -101,9 +101,50 @@ def gates(job: Job) -> tuple[bool, bool, list[str]]:
 
     aggregator = job.source in {"simplify", "vansh", "jobright", "speedyapply"}
     explicit = bool(NEW_GRAD_RE.search(text) or ENTRY_YEARS_RE.search(text))
+    reasons = []
     alert_eligible = aggregator or explicit
-    reasons = [] if alert_eligible else ["seniority unclear (dashboard only)"]
+    # The Shams rule: blockbusters get announced regardless of new-grad
+    # wording (hard gates above still apply). Likewise a pays-bank salary.
+    if not alert_eligible and is_marquee(job.company):
+        alert_eligible = True
+        reasons.append("marquee company (auto-alert)")
+    if not alert_eligible and pays_bank(job.salary):
+        alert_eligible = True
+        reasons.append("pays bank (auto-alert)")
+    if not alert_eligible:
+        reasons.append("seniority unclear (dashboard only)")
     return True, alert_eligible, reasons
+
+
+_MARQUEE_CACHE: set | None = None
+
+
+def is_marquee(company: str) -> bool:
+    """Blockbuster employer per profile.yaml marquee_companies."""
+    global _MARQUEE_CACHE
+    if _MARQUEE_CACHE is None:
+        _MARQUEE_CACHE = {norm(c) for c in profile().get("marquee_companies", [])}
+    return norm(company) in _MARQUEE_CACHE
+
+
+_MONEY_RE = re.compile(r"(\d[\d,]*(?:\.\d+)?)\s*([kK])?")
+
+
+def pays_bank(salary: str) -> bool:
+    """True when the posting's salary text reaches the pay_bank threshold."""
+    if not salary:
+        return False
+    floor = int(profile()["thresholds"].get("pay_bank", 150000))
+    best = 0.0
+    for num, k in _MONEY_RE.findall(salary):
+        try:
+            v = float(num.replace(",", ""))
+        except ValueError:
+            continue
+        if k:
+            v *= 1000
+        best = max(best, v)
+    return best >= floor
 
 
 # ---------- scoring ----------
