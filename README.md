@@ -9,7 +9,10 @@ big tech second, open to everything good).
 **[→ SHPE 2026 plan](docs/SHPE.md)** ·
 **[→ Alert issues](../../issues?q=is%3Aissue+label%3Aradar-alerts)** ·
 **[→ Roadmap](ROADMAP.md)** ·
-**[→ RSS feed](docs/feed.xml)** — subscribe to
+**[→ RSS feed](docs/feed.xml)** ·
+**[→ Cross-CLI handoff notes](docs/CLI_HANDOFF.md)**
+
+Subscribe to the RSS feed at:
 `https://raw.githubusercontent.com/VictorJimenez3/fable-job-search/claude/newgrad-job-search-system-9gbj9k/docs/feed.xml`
 
 ## How it works
@@ -102,13 +105,16 @@ One command on the Mac:
 ```bash
 curl -fsSL https://raw.githubusercontent.com/VictorJimenez3/fable-job-search/claude/newgrad-job-search-system-9gbj9k/scripts/mac-companion/install.sh | bash
 ```
-This installs Ollama + `qwen3:14b` (swap for `qwen3:32b` with
-`JOBRADAR_MODEL=qwen3:32b` — your 64GB machine runs it comfortably) and a
+This installs Ollama + `qwen3:30b` (a 19GB mixture-of-experts model that is a
+strong fit for your M1 Max with 64GB unified memory; override with
+`JOBRADAR_MODEL=<name>` if you want to experiment) and a
 launchd agent that, **whenever the laptop is on**, every 2 hours: pulls the
 repo, generates culture dossiers + rerank passes locally, and pushes the
 enriched state back. The cloud crawler never depends on the Mac — the Mac
 just upgrades whatever it finds when awake. Requires `git push` auth on the
 Mac (`brew install gh && gh auth login`). Logs: `~/.jobradar/logs/enrich.log`.
+The companion releases the model from memory after every request; confirm with
+`ollama ps` (it should show no loaded model between enrichment cycles).
 
 Optional upgrades:
 - `ANTHROPIC_API_KEY` secret → Claude does the enrichment in the cloud too

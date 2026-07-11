@@ -68,7 +68,7 @@ llm:
   # gets a one-line "angle" note.
   enabled_if_key_present: true
   model: claude-haiku-4-5        # used when ANTHROPIC_API_KEY is set
-  local_model: qwen3:14b         # used via LLM_BASE_URL (M1 Max 64GB: qwen3:32b also runs well)
+  local_model: qwen3:30b         # 19GB MoE: strongest fit for the M1 Max 64GB companion
   rerank_band: 14
 
 workday_queries:             # search terms used against Workday tenants

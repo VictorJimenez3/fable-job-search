@@ -6,14 +6,25 @@ set -euo pipefail
 RADAR_DIR="${RADAR_DIR:-$HOME/.jobradar/fable-job-search}"
 BRANCH="claude/newgrad-job-search-system-9gbj9k"
 export LLM_BASE_URL="${LLM_BASE_URL:-http://localhost:11434/v1}"
+MODEL="${LLM_MODEL:-qwen3:30b}"
+VENV_DIR="${JOBRADAR_VENV:-$HOME/.jobradar/venv}"
+OLLAMA_BIN="${OLLAMA_BIN:-$(command -v ollama || true)}"
+if [ -z "$OLLAMA_BIN" ] && [ -x "/Applications/Ollama.app/Contents/Resources/ollama" ]; then
+  OLLAMA_BIN="/Applications/Ollama.app/Contents/Resources/ollama"
+fi
 
 log() { echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*"; }
 
+# A loaded model is the expensive part (~19GB for qwen3:30b), not Ollama's
+# small local server. Always release it even when this cycle fails midway.
+cleanup() { [ -n "$OLLAMA_BIN" ] && "$OLLAMA_BIN" stop "$MODEL" >/dev/null 2>&1 || true; }
+trap cleanup EXIT
+
 # 0. Ollama must be up (Ollama.app serves the API when running; `ollama serve` otherwise)
 if ! curl -sf "${LLM_BASE_URL%/v1}/api/tags" >/dev/null 2>&1; then
-  if command -v ollama >/dev/null 2>&1; then
+  if [ -n "$OLLAMA_BIN" ]; then
     log "starting ollama..."
-    (ollama serve >/dev/null 2>&1 &)
+    ("$OLLAMA_BIN" serve >/dev/null 2>&1 &)
     sleep 4
   fi
 fi
@@ -28,11 +39,14 @@ git fetch -q origin "$BRANCH"
 git checkout -q "$BRANCH"
 git reset -q --hard "origin/$BRANCH"   # companion never has local edits; state is authoritative upstream
 
-# 2. deps (cheap when cached)
-python3 -m pip install -q -r requirements.txt
+# 2. isolated dependencies (created once; avoids modifying macOS Python)
+if [ ! -x "$VENV_DIR/bin/python" ]; then
+  python3 -m venv "$VENV_DIR"
+fi
+"$VENV_DIR/bin/python" -m pip install -q -r requirements.txt
 
 # 3. enrich
-python3 -m radar.main enrich
+LLM_MODEL="$MODEL" "$VENV_DIR/bin/python" -m radar.main enrich
 
 # 4. push state back (retry loop, same pattern as CI)
 git add state docs

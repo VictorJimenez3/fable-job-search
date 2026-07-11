@@ -9,7 +9,7 @@ REPO="VictorJimenez3/fable-job-search"
 BRANCH="claude/newgrad-job-search-system-9gbj9k"
 BASE="$HOME/.jobradar"
 RADAR_DIR="$BASE/fable-job-search"
-MODEL="${JOBRADAR_MODEL:-qwen3:14b}"
+MODEL="${JOBRADAR_MODEL:-qwen3:30b}"
 PLIST="$HOME/Library/LaunchAgents/com.jobradar.enrich.plist"
 
 echo "== Job Radar Mac companion =="
@@ -32,18 +32,20 @@ fi
 
 # 3. ollama + model
 if ! command -v ollama >/dev/null 2>&1; then
-  if command -v brew >/dev/null 2>&1; then
-    echo "installing ollama via homebrew..."
-    brew install ollama
-  else
-    echo "❌ ollama not found and homebrew unavailable."
-    echo "   Install from https://ollama.com/download then re-run this script."
-    exit 1
-  fi
+  echo "installing Ollama from ollama.com..."
+  curl -fsSL https://ollama.com/install.sh | sh
 fi
-(ollama serve >/dev/null 2>&1 &) ; sleep 3 || true
+OLLAMA_BIN="$(command -v ollama || true)"
+if [ -z "$OLLAMA_BIN" ] && [ -x "/Applications/Ollama.app/Contents/Resources/ollama" ]; then
+  OLLAMA_BIN="/Applications/Ollama.app/Contents/Resources/ollama"
+fi
+if [ -z "$OLLAMA_BIN" ]; then
+  echo "❌ Ollama installed but its CLI could not be found. Open Ollama.app once, then re-run this script."
+  exit 1
+fi
+("$OLLAMA_BIN" serve >/dev/null 2>&1 &) ; sleep 3 || true
 echo "pulling model $MODEL (one-time, a few GB)..."
-ollama pull "$MODEL"
+"$OLLAMA_BIN" pull "$MODEL"
 
 # 4. launchd agent
 mkdir -p "$HOME/Library/LaunchAgents" "$BASE/logs"

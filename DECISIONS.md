@@ -97,6 +97,18 @@ Salesforce, Adobe, …) ARE polled directly.
 - First CI run bootstraps the whole state; its alert issue is capped at the
   top 25 to avoid a notification bomb.
 
+## 10. Local AI: Ollama companion, on-demand model memory
+
+The cloud crawl must remain useful when Victor's laptop is asleep, so it
+continues to use deterministic ranking and queues enrichment naturally in the
+committed state. The Mac companion pulls that state and performs optional LLM
+enrichment every two hours while awake. Its default is `qwen3:30b`, a 19GB
+mixture-of-experts model that fits comfortably on Victor's M1 Max with 64GB
+unified memory. Calls use Ollama's native `keep_alive: 0` option and the
+companion additionally issues `ollama stop` on exit, so model weights do not
+remain resident between tasks. The lightweight local Ollama service may remain
+available for the next on-demand request.
+
 ## 10. Checkbox = shortlist, not applied; email confirmation is ground truth
 Originally the alert-issue checkbox directly logged "Applied" to Notion.
 That's wrong on reflection: ticking a box only records intent, and the user

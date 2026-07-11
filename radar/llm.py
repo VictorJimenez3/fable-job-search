@@ -35,6 +35,26 @@ def available() -> bool:
     return provider() is not None
 
 
+def _strip_thinking(text: str) -> str:
+    """Remove reasoning wrappers emitted by some local models."""
+    if "</think>" in text:
+        text = text.split("</think>")[-1]
+    return text.strip()
+
+
+def _ollama_api_url(base: str) -> str | None:
+    """Return Ollama's native chat endpoint for a local OpenAI-compatible URL.
+
+    The native endpoint supports ``keep_alive: 0``. That matters on a laptop:
+    the server may stay available, but the (large) model is released from
+    unified memory immediately after each enrichment request.
+    """
+    url = base.rstrip("/")
+    if url in {"http://localhost:11434/v1", "http://127.0.0.1:11434/v1"}:
+        return url[:-3] + "/api/chat"
+    return None
+
+
 def complete(prompt: str, max_tokens: int = 2000, timeout: int = 180) -> str | None:
     """Run a single-turn completion. Returns text, or None on any failure —
     callers must always have a heuristic fallback."""
@@ -52,6 +72,18 @@ def complete(prompt: str, max_tokens: int = 2000, timeout: int = 180) -> str | N
         if p == "openai-compatible":
             base = env("LLM_BASE_URL").rstrip("/")
             model = env("LLM_MODEL") or profile()["llm"].get("local_model", "qwen3:14b")
+            ollama_url = _ollama_api_url(base)
+            if ollama_url:
+                r = requests.post(ollama_url, timeout=timeout, json={
+                    "model": model,
+                    "messages": [{"role": "user", "content": prompt}],
+                    "stream": False,
+                    "think": False,
+                    "keep_alive": 0,
+                    "options": {"num_predict": max_tokens},
+                })
+                r.raise_for_status()
+                return _strip_thinking((r.json().get("message") or {}).get("content") or "") or None
             headers = {"Content-Type": "application/json"}
             if env("LLM_API_KEY"):
                 headers["Authorization"] = f"Bearer {env('LLM_API_KEY')}"
@@ -65,10 +97,7 @@ def complete(prompt: str, max_tokens: int = 2000, timeout: int = 180) -> str | N
             if not choices:
                 return None
             text = (choices[0].get("message") or {}).get("content") or ""
-            # some local models wrap reasoning in <think> blocks; strip them
-            if "</think>" in text:
-                text = text.split("</think>")[-1]
-            return text.strip() or None
+            return _strip_thinking(text) or None
     except Exception as e:
         print(f"llm: {p} call failed, continuing heuristic-only: {e}")
     return None
