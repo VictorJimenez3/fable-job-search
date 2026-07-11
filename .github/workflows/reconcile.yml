@@ -1,45 +1,32 @@
-name: applied-sync
+name: reconcile-checkboxes
 
 on:
-  issues:
-    types: [edited]
-  issue_comment:
-    types: [created, edited]   # edited: checkbox ticks in master-board page comments
+  schedule:
+    - cron: "45 4,16 * * *"   # twice daily: catch any checkbox tick a webhook missed
+  workflow_dispatch: {}
 
 permissions:
   contents: write
-  issues: write
-
-concurrency:
-  group: applied-sync
-  cancel-in-progress: false
+  issues: read
 
 jobs:
-  sync:
-    # only react to humans, and only on radar alert issues / their comments
-    if: >-
-      !endsWith(github.actor, '[bot]') &&
-      (github.event_name == 'issue_comment' ||
-       contains(join(github.event.issue.labels.*.name, ','), 'radar-alerts'))
+  reconcile:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.repository.default_branch }}
-
+          ref: claude/newgrad-job-search-system-9gbj9k
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: pip
-
       - run: pip install -r requirements.txt
-
-      - name: Process event
+      - name: Sweep all radar issues for checked boxes
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-        run: python -m radar.main applied-sync
-
+        run: python -m radar.main reconcile-checkboxes
       - name: Commit state
         run: |
           git config user.name "job-radar[bot]"
@@ -48,7 +35,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "no changes"; exit 0
           fi
-          git commit -m "radar: applied-sync $(date -u +'%Y-%m-%d %H:%M')"
+          git commit -m "radar: checkbox reconcile $(date -u +'%Y-%m-%d %H:%M')"
           for i in 1 2 3 4; do
             git push && exit 0
             git pull --rebase --autostash || true

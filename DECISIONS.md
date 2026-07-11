@@ -241,3 +241,27 @@ Fix: `llm.complete(..., json_mode=True)` sets Ollama's `format: "json"`,
 which constrains decoding to valid JSON regardless of the model's thinking
 habits. Verified live on the M1 Max. Callers that parse JSON (culture
 dossiers, rerank) use it; prose callers (strategist memo) don't.
+
+## 21. One board, a daily best-of, a reconcile sweep, and an LLM scout (2026-07-11)
+
+Four asks from Victor, one design thread — GitHub issues stay the only UI, so
+no new credentials:
+- **Master board**: weekly alert issues hit GitHub's ~64KB body cap and made
+  him bounce between issues. One stable `radar-master` issue now holds every
+  open alert-worthy role (≤30 days, best first), body + bot comments as
+  pages, rewritten in place each crawl. Checkboxes use the same
+  `<!--radar:ID-->` markers; already-tracked jobs render pre-checked;
+  applied-sync now also listens to issue_comment *edited* events for ticks on
+  the comment pages.
+- **Daily best**: a `🏆 Best of <date>` issue (top 10 of the last 24h) posted
+  each evening; GitHub's assignment notification is the daily email — zero
+  mail credentials. Yesterday's daily issue is auto-closed.
+- **Reconcile sweep**: event-driven checkbox sync can drop ticks (deploys,
+  outages, the two semantics migrations). A twice-daily idempotent sweep
+  parses every radar issue (bodies and comments) and tracks anything checked
+  that isn't in applied.json/Notion. Nothing Victor checks is ever lost.
+- **LLM scout**: aggregators miss random-but-great healthcare/wearables
+  employers (WHOOP was the trigger; it and ~16 peers are now also seeded).
+  Weekly, the Mac's local model proposes companies + ATS-token guesses,
+  which enter the registry as `origin: scout` candidates for the normal live
+  probe — wrong guesses die in the probe, so hallucination risk is contained.

@@ -149,3 +149,54 @@ def dedupe_name(registry: dict, company: str) -> dict | None:
         if norm(e["name"]) == n:
             return e
     return None
+
+
+SCOUT_PROMPT = (
+    "You are researching employers for a graduating CS senior (US, new-grad "
+    "SWE / AI-ML / data science). List up to 15 companies that are strong "
+    "employers but easy for job aggregators to miss — especially healthcare, "
+    "wearables, health devices, biotech-adjacent tech, and applied-AI "
+    "companies (think WHOOP, Oura, Function Health caliber), plus any elite "
+    "smaller labs. For each, give your best guess of its careers ATS.\n"
+    'Reply with ONLY JSON: {"companies": [{"name": "WHOOP", '
+    '"ats": "greenhouse|lever|ashby|smartrecruiters|recruitee", '
+    '"token": "board token guess, e.g. whoop", "sector": "healthtech"}]}')
+
+
+def llm_scout(registry: dict, limit: int = 10) -> int:
+    """Weekly research pass: ask the local LLM for employers the aggregators
+    may never surface (healthcare/wearables can be random — WHOOP was missed),
+    guess their ATS tokens, and queue them for the normal live probe. A wrong
+    guess is harmless: the probe marks it invalid and never fetches it again.
+    """
+    import json as _json
+
+    from . import llm
+    if not llm.available():
+        return 0
+    text = llm.complete(SCOUT_PROMPT, max_tokens=900, json_mode=True)
+    if not text:
+        return 0
+    try:
+        rows = _json.loads(text[text.index("{"):text.rindex("}") + 1]).get("companies", [])
+    except (ValueError, _json.JSONDecodeError, AttributeError):
+        return 0
+    added = 0
+    for row in rows:
+        ats = str(row.get("ats", "")).lower().strip()
+        token = re.sub(r"[^a-z0-9_-]", "", str(row.get("token", "")).lower())
+        name = str(row.get("name", "")).strip()
+        if ats not in {"greenhouse", "lever", "ashby", "smartrecruiters", "recruitee"} \
+                or not token or not name or token in BAD_TOKENS:
+            continue
+        k = key(ats, token, None)
+        if k in registry or dedupe_name(registry, name):
+            continue
+        registry[k] = {"name": name, "ats": ats, "token": token, "extra": {},
+                       "sector": row.get("sector", ""), "status": "new",
+                       "origin": "scout", "first_seen": int(time.time()),
+                       "failures": 0, "last_ok": 0}
+        added += 1
+        if added >= limit:
+            break
+    return added

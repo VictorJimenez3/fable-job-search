@@ -107,12 +107,21 @@ def handle_event(event_path: str) -> None:
     fb = state.feedback()
     changed = 0
 
+    labels = [l["name"] for l in (event.get("issue") or {}).get("labels", [])]
     body = ""
     if "comment" in event:
         body = event["comment"].get("body", "") or ""
+        # master-board pages live in bot comments; a checkbox ticked there
+        # arrives as an issue_comment edit — track it like a body checkbox
+        if "radar-alerts" in labels:
+            for jid in CHECKED.findall(body):
+                job = jobs.get(jid)
+                if job:
+                    changed += record_applied(job, applied, fb,
+                                              via="issue-checkbox", stage="saved")
+                    shortlist[:] = [s for s in shortlist if s["id"] != job["id"]]
     elif "issue" in event:
         # only trust checkbox state on our own alert issues
-        labels = [l["name"] for l in event["issue"].get("labels", [])]
         if "radar-alerts" in labels:
             body = event["issue"].get("body", "") or ""
 
@@ -173,6 +182,63 @@ def handle_event(event_path: str) -> None:
         print(f"applied: recorded {changed} change(s), synced {synced} to Notion")
     else:
         print("applied: nothing new")
+
+
+def reconcile_checkboxes() -> int:
+    """Sweep every radar issue (weekly, daily, master — bodies and comments)
+    for checked boxes and make sure each one is tracked in applied.json and
+    Notion. Event-driven sync can miss ticks (deploys, outages, the semantics
+    changes); this idempotent sweep guarantees nothing Victor checked is ever
+    silently lost. Runs on a schedule and on demand."""
+    import requests
+    from .config import github_repo
+    token = env("GITHUB_TOKEN")
+    if not token:
+        print("reconcile: GITHUB_TOKEN not set")
+        return 1
+    headers = {"Authorization": f"Bearer {token}",
+               "Accept": "application/vnd.github+json"}
+    jobs = state.jobs()
+    hist = {a["id"]: a for a in state.load("alert_history.json", [])}
+    applied = state.applied()
+    shortlist = state.shortlist()
+    fb = state.feedback()
+
+    checked: set[str] = set()
+    page = 1
+    while True:
+        r = requests.get(f"https://api.github.com/repos/{github_repo()}/issues",
+                         params={"labels": "radar-alerts", "state": "all",
+                                 "per_page": 100, "page": page},
+                         headers=headers, timeout=30)
+        r.raise_for_status()
+        issues = r.json()
+        if not issues:
+            break
+        for issue in issues:
+            checked |= set(CHECKED.findall(issue.get("body") or ""))
+            if issue.get("comments"):
+                cr = requests.get(issue["comments_url"], params={"per_page": 100},
+                                  headers=headers, timeout=30)
+                cr.raise_for_status()
+                for c in cr.json():
+                    checked |= set(CHECKED.findall(c.get("body") or ""))
+        page += 1
+
+    changed = 0
+    for jid in checked:
+        job = jobs.get(jid) or hist.get(jid)
+        if job:
+            changed += record_applied(job, applied, fb, via="reconcile", stage="saved")
+            shortlist[:] = [s for s in shortlist if s["id"] != jid]
+    synced = sync_applied(applied)
+    if changed or synced:
+        state.save("applied.json", applied)
+        state.save("shortlist.json", shortlist)
+        state.save("feedback.json", fb)
+    print(f"reconcile: {len(checked)} checked boxes across all issues, "
+          f"{changed} newly tracked, {synced} synced to Notion")
+    return 0
 
 
 def main() -> None:

@@ -43,6 +43,10 @@ every ~30 min (GitHub Actions cron)
 │
 └─ 5. DELIVER
       · GitHub issue "Job Radar alerts — week N" (assigned to you → push/email)
+      · 📌 master board issue — every open alert-worthy role in ONE place
+        (body + comment pages; rewritten each crawl; checkboxes work there too)
+      · 🏆 "Best of <date>" issue each evening — the daily top-10, emailed to
+        you via GitHub's own notification
       · docs/DASHBOARD.md — everything decent, sorted
       · docs/feed.xml — RSS for instant notifications in any feed reader
 ```
@@ -59,6 +63,8 @@ every ~30 min (GitHub Actions cron)
    up; when active it promotes the existing entry rather than duplicating it.)
 3. For a job found outside the radar, comment `applied <url>` on any issue to
    log it as Applied immediately.
+4. A twice-daily reconcile sweep re-reads every radar issue and tracks any
+   checked box the event pipeline missed — a tick is never lost.
 
 Each alert now includes a plain-language company category and a short
 description of what the company does (for example, **defense & aerospace —

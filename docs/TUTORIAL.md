@@ -18,7 +18,9 @@ the repo itself is the database.
 
 | Where | What you see | When to look |
 |---|---|---|
-| GitHub issue **"🎯 Job Radar alerts — week N"** ([Issues tab](https://github.com/VictorJimenez3/fable-job-search/issues)) | New high-scoring roles as checkboxes, with salary, score, and what the company does | When your phone buzzes (GitHub app push / email) |
+| **"📌 Master board"** issue ([Issues tab](https://github.com/VictorJimenez3/fable-job-search/issues)) | Every open alert-worthy role in ONE place, best first — no bouncing between issues. Extra pages are in its comments; checkboxes work everywhere, and already-tracked jobs show pre-checked | When you sit down to browse/check jobs |
+| GitHub issue **"🎯 Job Radar alerts — week N"** | New high-scoring roles as they're found | When your phone buzzes (GitHub app push / email) |
+| **"🏆 Best of \<date\>"** issue | The day's top 10, posted each evening — GitHub emails it to you | Evening email |
 | **Notion "2026 Applications"** | Every job you checked, plus your real pipeline | When applying / updating statuses |
 | [docs/DASHBOARD.md](DASHBOARD.md) | Everything decent the radar has seen, ranked — not just alert-worthy | Browsing for more options |
 | [docs/feed.xml](feed.xml) | Same alerts as RSS | Only if you use a feed reader |
@@ -38,6 +40,11 @@ follow-up nudges for week-old applications, and LinkedIn hiring-post leads.
    yourself** (Applied, etc.). The radar never guesses whether you applied.
 5. Not interested in a company? Comment `skip Acme Corp` on the issue —
    similar roles get downranked.
+6. Marquee employers (MANGA, big AI labs, elite pharma/medtech — the
+   `marquee_companies` list in profile.yaml) and $150k+ postings always
+   alert; add or remove names in that list anytime. A twice-daily sweep
+   re-reads every issue so no checked box is ever missed, and once a week
+   the local AI scouts new healthcare/wearables employers to track.
 
 ## Comment commands (on any radar issue)
 

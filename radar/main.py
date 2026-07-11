@@ -187,6 +187,11 @@ def crawl() -> int:
         url = post_alerts([j.to_record() | {"llm_note": j.llm_note} for j in alerts])
     except Exception as e:
         print(f"alerts: failed to post issue: {e}")
+    try:
+        from .board import update_master_board
+        update_master_board(jobs_state, state.applied())
+    except Exception as e:
+        print(f"board: failed to update master board: {e}")
     print(f"crawl done in {time.time() - t0:.1f}s: {len(new_jobs)} new jobs "
           f"({dropped} gated out), {len(alerts)} alerts"
           + (f" → {url}" if url else ""))
@@ -264,6 +269,18 @@ def enrich() -> int:
     digest_write(jobs_state, registry, runs, alert_history)
     culture.write_outputs()
     print(f"enrich: re-scored {rescored} recent job(s), docs refreshed")
+
+    # weekly research pass: healthcare/wearables employers are easy for
+    # aggregators to miss (WHOOP was), so the local model scouts candidates
+    # for the crawl's live probe to validate
+    scout = state.load("scout.json", {"last_run": 0})
+    if now - scout.get("last_run", 0) >= 7 * 86400:
+        from . import discovery as disc
+        registry = state.companies()
+        found = disc.llm_scout(registry)
+        state.save("companies.json", registry)
+        state.save("scout.json", {"last_run": now})
+        print(f"enrich: scout queued {found} company candidate(s) for probing")
     return 0
 
 
@@ -373,7 +390,8 @@ def main() -> None:
     ap.add_argument("command", choices=["crawl", "applied-sync", "seed", "notion-backfill",
                                         "strategist", "notion-verify", "email-watch", "email-verify",
                                         "migrate-checkbox-applied", "promote-shortlist",
-                                        "marquee-backfill", "enrich"])
+                                        "marquee-backfill", "reconcile-checkboxes",
+                                        "daily-best", "master-board", "enrich"])
     args = ap.parse_args()
     if args.command == "crawl":
         sys.exit(crawl())
@@ -402,6 +420,17 @@ def main() -> None:
         sys.exit(promote_shortlist_applications())
     elif args.command == "marquee-backfill":
         sys.exit(marquee_backfill())
+    elif args.command == "reconcile-checkboxes":
+        from .applied import reconcile_checkboxes
+        sys.exit(reconcile_checkboxes())
+    elif args.command == "daily-best":
+        from .board import post_daily_best
+        url = post_daily_best(state.jobs())
+        print(f"daily-best: {url or 'nothing posted'}")
+    elif args.command == "master-board":
+        from .board import update_master_board
+        url = update_master_board(state.jobs(), state.applied())
+        print(f"master-board: {url or 'not updated'}")
     elif args.command == "enrich":
         sys.exit(enrich())
 

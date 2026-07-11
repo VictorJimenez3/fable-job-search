@@ -1,0 +1,28 @@
+name: daily-best
+
+on:
+  schedule:
+    - cron: "0 23 * * *"   # ~7pm ET: the day's top-10 digest issue (GitHub emails it)
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: claude/newgrad-job-search-system-9gbj9k
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Post today's best-of issue
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -m radar.main daily-best
