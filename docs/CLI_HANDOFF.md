@@ -62,3 +62,11 @@ At the end of any material change, state:
 
 Preserve unrelated working-tree changes. Do not assume a secret exists merely
 because the code references it.
+
+## Platform frontend/back end (added 2026-07-11)
+
+- `webapp/index.html` is the canonical platform page; `docs/platform/index.html`
+  must stay a byte-for-byte copy (`cp webapp/index.html docs/platform/index.html`)
+  — Pages serves the copy, Vercel serves webapp/ plus its `api/` functions.
+- Never put credentials in the frontend or repo. Auth = GitHub OAuth via the
+  Vercel backend (owner-only), or the tokenless prefilled-issue flow on Pages.

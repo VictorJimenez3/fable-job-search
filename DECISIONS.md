@@ -303,3 +303,22 @@ web_state.json-is-public trade-off documented in the app's Settings.
 Checkbox toggling was already safe: GitHub requires write access to edit a
 bot-authored issue body, and the reconcile sweep only trusts labeled issues
 (strangers can't apply labels).
+
+## 24. Automatic writes without frontend secrets: GitHub OAuth via a Vercel micro-backend
+
+Victor wants one-click automatic writes but zero tokens in the frontend or
+his browser's hands. Resolution: a six-function Vercel backend (webapp/)
+serves the same platform page and adds "Sign in with GitHub" — the OAuth
+code flow runs server-side, the user's GitHub token is sealed into an
+httpOnly AES-256-GCM cookie (page JS can never read it), and the only
+secrets (OAuth client id/secret + session key) live in Vercel's encrypted
+env store, never in git. Writes go through /api/action → repository_dispatch
+with the signed-in user's own token; the backend and the radar both enforce
+owner-only, and non-owner sign-ins get a read-only view — GitHub would
+refuse their tokens anyway (public_repo scope on a repo they can't push to).
+The GitHub Pages copy of the same file self-detects the missing backend and
+falls back to the tokenless prefilled-issue flow. webapp/index.html is the
+canonical frontend; docs/platform/index.html is a straight copy — edit the
+former, `cp` to the latter. Deploy is via the Claude↔Vercel connector once
+Victor grants it project-create access; setup needs three env vars and a
+GitHub OAuth app only he can create.
