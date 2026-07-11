@@ -40,6 +40,7 @@ jobs:
       - name: Process event
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # close command issues, post replies
         run: python -m radar.main applied-sync
 
       - name: Commit state
