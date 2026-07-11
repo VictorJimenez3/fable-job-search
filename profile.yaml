@@ -114,9 +114,11 @@ notion:
   stage_applied: Applied
   # status a checkbox-tracked (not yet applied) job gets. Must be an existing
   # option of your Stage status column — the Notion API cannot create status
-  # options. If it doesn't exist, the property is omitted and Notion applies
-  # the database's default status instead.
-  stage_saved: Not started
+  # options. Verified live 2026-07-11: your to-do group's only option is
+  # "Waiting for a referral", so that's the explicit choice (it was already
+  # landing there as the database default). If you add a cleaner option in
+  # Notion (e.g. "To apply"), change this to match.
+  stage_saved: Waiting for a referral
   position_map:              # role bucket -> existing options in your Position multi-select
     ai_ml: AI/ML Software Engineer
     ml_eng: Machine Learning Enginner   # (sic — matches the existing option in your DB)
