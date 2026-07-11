@@ -1,12 +1,10 @@
-"""Shortlist + applied-logging: react to GitHub issue events.
+"""Applied-logging: react to GitHub issue events.
 
 - Checking a checkbox on an alert issue (`- [x] ... <!--radar:ID-->`) means
-  "save this for later" — it does NOT mean applied. It's recorded to
-  state/shortlist.json, gives a small ranking boost, and nothing is written
-  to Notion yet.
-- Actual applications are detected automatically by email_watch.py (matches
-  confirmation emails against the shortlist and promotes them to
-  state/applied.json + Notion), or logged explicitly via comment commands:
+  Victor confirms he applied. It is immediately recorded to applied.json and
+  synced to Notion. Email detection remains a fallback for applications that
+  were not checked, and is deduplicated by job ID.
+- Comment commands:
     applied <url or id>   log a confirmed application immediately
     skip <company or id>  negative feedback (downranks similar roles)
     track <ats> <token> [Company Name]   manually add a company to the registry
@@ -21,7 +19,7 @@ from . import state
 from .config import env
 from .models import norm
 from .notion_sync import sync_applied
-from .score import update_feedback_from_applied, update_feedback_from_shortlist
+from .score import update_feedback_from_applied
 
 CHECKED = re.compile(r"^- \[[xX]\] .*?<!--radar:([a-f0-9]{16})-->", re.M)
 CMD_APPLIED = re.compile(r"^applied\s+(\S+)", re.I | re.M)
@@ -66,19 +64,6 @@ def culture_generate_one(name: str, dossiers: dict) -> bool:
     d["fit"] = culture.fit_score(d)
     dossiers[norm(name)] = d
     culture.save(dossiers)
-    return True
-
-
-def _record_shortlist(job: dict, shortlist: list, fb: dict) -> bool:
-    if any(s["id"] == job["id"] for s in shortlist):
-        return False
-    shortlist.append({
-        "id": job["id"], "company": job["company"], "title": job["title"],
-        "url": job.get("url", ""), "locations": job.get("locations", []),
-        "score": job.get("score"), "source": job.get("source"),
-        "shortlisted_at": int(time.time()),
-    })
-    update_feedback_from_shortlist(fb, job["company"], job["title"])
     return True
 
 
@@ -131,7 +116,7 @@ def handle_event(event_path: str) -> None:
                        "title": "Manually logged application", "url": ref if ref.startswith("http") else "",
                        "locations": [], "score": None, "source": "manual"}
             changed += record_applied(job, applied, fb, via="comment")
-            # if this was previously shortlisted, remove it — it's confirmed now
+            # Clear any old shortlist entry for this now-confirmed application.
             shortlist[:] = [s for s in shortlist if s["id"] != job["id"]]
         for m in CMD_SKIP.finditer(body):
             ref = m.group(1).strip()
@@ -165,10 +150,9 @@ def handle_event(event_path: str) -> None:
         for jid in CHECKED.findall(body):
             job = jobs.get(jid)
             if job:
-                changed += _record_shortlist(job, shortlist, fb)
+                changed += record_applied(job, applied, fb, via="issue-checkbox")
+                shortlist[:] = [s for s in shortlist if s["id"] != job["id"]]
 
-    # sync_applied only ever pushes confirmed applications (state/applied.json)
-    # to Notion — shortlisting never writes to Notion.
     synced = sync_applied(applied)
     if changed or synced:
         state.save("applied.json", applied)

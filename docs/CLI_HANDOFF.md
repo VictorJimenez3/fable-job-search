@@ -33,10 +33,10 @@ Before changing the radar, read these in order:
   Python is currently 3.9 and does not have the project dependencies installed.
 - The radar runs every ~30–60 minutes, with a Monday strategy memo. Its state
   is committed by CI.
-- `NOTION_TOKEN` enables confirmed-application writes. A checked alert item is
-  a shortlist, not an application; application confirmation email detection or
-  `applied <url>` creates the Notion entry. Run the read-only `notion-verify`
-  GitHub workflow when diagnosing the connection.
+- `NOTION_TOKEN` enables application writes. A checked alert item means Victor
+  confirms he applied and creates the Notion entry; email confirmation
+  detection is only a backup. Run the read-only `notion-verify` GitHub workflow
+  when diagnosing the connection.
 - `ANTHROPIC_API_KEY` is optional. The Mac companion uses Ollama locally and
   runs enrichment every two hours while the laptop is awake; it should release
   the model from memory when each task finishes.

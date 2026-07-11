@@ -303,11 +303,33 @@ def migrate_checkbox_applied() -> int:
     return 0
 
 
+def promote_shortlist_applications() -> int:
+    """One-time correction for the shortlisting detour.
+
+    Victor defines a checked alert as a confirmed application. Promote every
+    existing shortlist entry to applied, queue it for Notion, then remove it
+    from the now-unused shortlist. Idempotent through ``record_applied``.
+    """
+    applied = state.applied()
+    shortlist = state.shortlist()
+    fb = state.feedback()
+    moved = 0
+    for entry in shortlist:
+        moved += applied_mod.record_applied(entry, applied, fb, via="checkbox-migration")
+    from .notion_sync import sync_applied
+    synced = sync_applied(applied)
+    state.save("applied.json", applied)
+    state.save("shortlist.json", [])
+    state.save("feedback.json", fb)
+    print(f"promote-shortlist: moved {moved} checkbox selection(s), synced {synced} to Notion")
+    return 0
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(prog="radar")
     ap.add_argument("command", choices=["crawl", "applied-sync", "seed", "notion-backfill",
                                         "strategist", "notion-verify", "email-watch", "email-verify",
-                                        "migrate-checkbox-applied", "enrich"])
+                                        "migrate-checkbox-applied", "promote-shortlist", "enrich"])
     args = ap.parse_args()
     if args.command == "crawl":
         sys.exit(crawl())
@@ -332,6 +354,8 @@ def main() -> None:
         email_verify()
     elif args.command == "migrate-checkbox-applied":
         sys.exit(migrate_checkbox_applied())
+    elif args.command == "promote-shortlist":
+        sys.exit(promote_shortlist_applications())
     elif args.command == "enrich":
         sys.exit(enrich())
 

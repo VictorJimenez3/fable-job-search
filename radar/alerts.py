@@ -2,10 +2,9 @@
 
 Why issues: assigning an issue to you triggers GitHub's native notification
 pipeline (mobile push + email) with zero extra credentials, and the issue body
-doubles as a shortlisting UI — check a job's box to save it for later (this
-does NOT log it as applied; email_watch.py detects real applications from
-confirmation emails and logs those to Notion automatically). One issue per
-ISO week keeps noise down; each run appends a timestamped section.
+doubles as the applied-job UI — checking a job means Victor confirms he
+applied, and it is written to Notion immediately. One issue per ISO week keeps
+noise down; each run appends a timestamped section.
 """
 from __future__ import annotations
 
@@ -42,18 +41,19 @@ def format_line(j: dict, culture_map: dict | None = None) -> str:
         from .culture import alert_tag
         t = alert_tag(j["company"], culture_map)
         ctag = f" {t}" if t else ""
+    from .company_info import context
+    industry, what = context(j["company"], j.get("sector") or "", culture_map)
     return (f"- [ ] {fire}**{j['company']}** — [{j['title'][:80]}]({j['url']}) · "
-            f"{loc}{salary} · `{j['score']}` `{j.get('sector') or 'tech'}`{ctag}{note} "
+            f"{loc}{salary} · `{j['score']}` · **{industry}** — {what}{ctag}{note} "
             f"<!--radar:{j['id']}-->")
 
 
 HEADER = (
     "New high-scoring roles appear below as they're detected (every ~30 min).\n\n"
-    "**☑️ Check a box to save a job for later** — this is a shortlist, *not* "
-    "an applied marker (nothing is sent to Notion yet). Once you actually apply, "
-    "the system watches your email for the confirmation and logs it to Notion "
-    "automatically — no action needed. If email detection ever misses one, "
-    "comment `applied <url>` to log it immediately.\n"
+    "**✅ Check a box after you apply** — it is logged to your Notion "
+    "Applications database automatically. Email detection also catches any "
+    "application you forget to check. Comment `applied <url>` for jobs found "
+    "outside the radar.\n"
     "Comment `skip <company>` to downrank similar roles.\n")
 
 

@@ -43,22 +43,20 @@ every ~30 min (GitHub Actions cron)
       · docs/feed.xml — RSS for instant notifications in any feed reader
 ```
 
-### Shortlisting vs. applied — how logging actually works
+### Applied logging
 
-A checkbox can only record intent, not truth — you can tick a box without
-ever hitting submit. So the two are deliberately separate:
+1. **Check a box on an alert issue after applying.** That records the job in
+   `state/applied.json`, improves future ranking, and creates an entry in your
+   Notion Applications database.
+2. Email confirmation detection is an optional backup for applications you
+   forget to check; it does not duplicate a job already recorded from a
+   checkbox.
+3. For a job found outside the radar, comment `applied <url>` on any issue to
+   log it immediately.
 
-1. **Check a box on an alert issue** = "save this for later." It records a
-   shortlist entry and gives ranking a small nudge. **Nothing is sent to
-   Notion at this point.**
-2. **When you actually apply and the company's confirmation email lands**
-   (e.g. "Thank you for applying to..."), the `email-watch` workflow detects
-   it, matches the company against your shortlist (or anything the radar has
-   ever seen), and *that's* what gets logged to Notion as Stage=Applied — no
-   further action from you.
-3. If email detection ever misses one (unusual confirmation wording, or a job
-   you found outside the radar entirely), comment `applied <url>` on any
-   issue to log it immediately.
+Each alert now includes a plain-language company category and a short
+description of what the company does (for example, **defense & aerospace —
+defense and space systems**) so unfamiliar employers are easier to assess.
 
 Other comment commands: `skip <company>` (downrank similar roles),
 `track <ats> <token> [Name]` (force-add a company to the crawl registry).
@@ -79,7 +77,7 @@ works with zero setup.
 
 Verify anytime without creating test data: *Actions → notion-verify → Run workflow*.
 
-**2. Email-based applied-detection (~3 min)**
+**2. Optional email-based applied-detection (~3 min)**
 NJIT uses Google Workspace/Gmail, so this uses IMAP with an App Password
 (Google's supported way to let a non-browser client log in — this is not
 your NJIT password and can be revoked anytime independent of it):

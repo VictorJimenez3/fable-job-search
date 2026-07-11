@@ -225,10 +225,5 @@ def _bump_feedback(fb: dict, company: str, title: str, company_delta: int, token
 
 
 def update_feedback_from_applied(fb: dict, company: str, title: str) -> dict:
-    """Strong signal: a confirmed application (email-detected or explicit)."""
+    """Strong signal: a confirmed application (checkbox, email, or explicit)."""
     return _bump_feedback(fb, company, title, company_delta=2, token_delta=1)
-
-
-def update_feedback_from_shortlist(fb: dict, company: str, title: str) -> dict:
-    """Weak signal: the user saved this for later, not necessarily applied."""
-    return _bump_feedback(fb, company, title, company_delta=1, token_delta=0)

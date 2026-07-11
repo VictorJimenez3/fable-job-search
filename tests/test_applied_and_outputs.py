@@ -8,6 +8,7 @@ from radar import notion_sync as ns
 from radar import state
 from radar.alerts import format_line
 from radar.applied import handle_event
+from radar.main import promote_shortlist_applications
 from radar.digest import render_dashboard, render_rss
 from radar.notion_sync import build_payload
 
@@ -33,10 +34,7 @@ def test_format_line_roundtrips_job_id():
     assert "🔥" in line  # score 88
 
 
-def test_checkbox_event_records_shortlist_not_applied(tmp_state, tmp_path, monkeypatch):
-    # a checkbox tick means "save for later" -- it must NOT create an applied
-    # entry or touch Notion; only email_watch (or an explicit `applied` comment)
-    # should ever do that.
+def test_checkbox_event_records_applied(tmp_state, tmp_path, monkeypatch):
     monkeypatch.delenv("NOTION_TOKEN", raising=False)
     state.save("jobs.json", {JOB["id"]: JOB})
     body = format_line(JOB).replace("- [ ]", "- [x]")
@@ -45,10 +43,10 @@ def test_checkbox_event_records_shortlist_not_applied(tmp_state, tmp_path, monke
     ev = tmp_path / "event.json"
     ev.write_text(json.dumps(event))
     handle_event(str(ev))
-    assert state.applied() == []
-    shortlist = state.shortlist()
-    assert len(shortlist) == 1
-    assert shortlist[0]["company"] == "Tempus"
+    assert len(state.applied()) == 1
+    assert state.applied()[0]["company"] == "Tempus"
+    assert state.applied()[0]["via"] == "issue-checkbox"
+    assert state.shortlist() == []
     fb = state.feedback()
     assert fb["company_boosts"].get("tempus")
 
@@ -67,6 +65,17 @@ def test_applied_comment_clears_from_shortlist(tmp_state, tmp_path, monkeypatch)
     handle_event(str(ev))
     assert len(state.applied()) == 1
     assert state.shortlist() == []  # promoted out of the shortlist
+
+
+def test_promote_shortlist_migrates_old_checkbox_selections(tmp_state, monkeypatch):
+    state.save("shortlist.json", [{"id": JOB["id"], "company": JOB["company"],
+                                   "title": JOB["title"], "url": JOB["url"],
+                                   "locations": JOB["locations"], "score": JOB["score"],
+                                   "source": JOB["source"]}])
+    monkeypatch.setattr(ns, "sync_applied", lambda applied: 0)
+    assert promote_shortlist_applications() == 0
+    assert state.shortlist() == []
+    assert state.applied()[0]["via"] == "checkbox-migration"
 
 
 def test_bot_events_ignored(tmp_state, tmp_path):

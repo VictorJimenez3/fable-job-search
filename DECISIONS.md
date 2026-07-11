@@ -109,7 +109,7 @@ companion additionally issues `ollama stop` on exit, so model weights do not
 remain resident between tasks. The lightweight local Ollama service may remain
 available for the next on-demand request.
 
-## 10. Checkbox = shortlist, not applied; email confirmation is ground truth
+## 11. Superseded: checkbox = shortlist, not applied; email confirmation is ground truth
 Originally the alert-issue checkbox directly logged "Applied" to Notion.
 That's wrong on reflection: ticking a box only records intent, and the user
 correctly pointed out they'd checked boxes to save jobs for later, not
@@ -131,7 +131,7 @@ because they'd submitted anything. Fixed by splitting the concepts:
   Claude↔Notion connector, which is a separate, session-scoped credential
   that isn't available to unattended CI runs.
 
-## 11. Email monitoring needs its own credential, same pattern as Notion
+## 12. Email monitoring needs its own credential, same pattern as Notion
 The Gmail/Notion connectors available inside an interactive Claude Code
 session are OAuth grants tied to *that session* — they don't exist for the
 unattended GitHub Actions runner, which needs its own way in. Two realistic
@@ -154,7 +154,26 @@ user already flagged interest in that exact posting) before falling back to
 anything else the radar has ever seen, and returns no-match rather than a
 low-confidence guess when nothing clears a 50% token-overlap bar.
 
-## 12. Local LLM: the Mac is an enrichment worker, not a server
+## 13. Checkbox means applied, by Victor's explicit definition
+
+Victor clarified that he is the authority confirming an application: a checked
+alert must be written to Notion immediately. The shortlisting semantics above
+were therefore reversed. Email confirmation detection remains as a
+best-effort backup for applications he forgets to check; `record_applied`
+deduplicates by job ID. The one-time `promote-shortlist-applications` workflow
+promotes the 47 existing selections into `applied.json` and Notion.
+
+## 14. Alerts explain the employer, not just the role
+
+Sector scoring remains intentionally coarse because it expresses candidate
+preference, but alert display is more specific. A small, auditable context map
+labels known employers (such as defense & aerospace, health insurance, medical
+devices, semiconductors, or financial services) and says what they do. Culture
+Compass industry data fills further gaps; unknown companies are called
+"general technology," never the unhelpful "other." This presentation metadata
+does not affect ranking.
+
+## 15. Local LLM: the Mac is an enrichment worker, not a server
 A laptop can't serve GitHub Actions (asleep, NAT'd), and Actions can't wait on
 it. So the architecture is two-tier: Actions stays the always-on heuristic
 layer; a launchd agent on the M1 Max runs `radar enrich` every 2h whenever the
@@ -165,13 +184,13 @@ key, Ollama, or a free Gemini key via any OpenAI-compatible endpoint. Model
 default `qwen3:14b` (fast, JSON-disciplined on M1 Max); `qwen3:32b` documented
 as the quality upgrade 64GB handles.
 
-## 13. LinkedIn: search the public web about LinkedIn, never scrape LinkedIn
+## 16. LinkedIn: search the public web about LinkedIn, never scrape LinkedIn
 Logged-in scraping risks the user's own account (bans are common and sticky)
 and breaches ToS. Instead, Google Programmable Search (free tier) surfaces
 public `linkedin.com/posts` hiring posts into the Monday memo as *leads*, not
 scored jobs. 80% of the value, none of the account risk.
 
-## 14. Culture data honesty
+## 17. Culture data honesty
 Culture claims are the easiest place to hallucinate confidently. Rules: the
 ~40 core dossiers are human-curated (source: `seed`); anything LLM-generated
 is permanently labeled `est.` and never silently mixed with curated rows; the
@@ -181,7 +200,7 @@ vibes, so a ranking can always be audited. The burnout penalty exists because
 "avoid toxic/high-burnout" is a stated *guardrail*, not a preference — Meta
 prestige must not be able to buy back a 2/5 WLB.
 
-## 15. Big-co bespoke endpoints: expect drift, design for it
+## 18. Big-co bespoke endpoints: expect drift, design for it
 Amazon/Netflix(Eightfold)/Merck(Phenom) verified live on first CI run;
 Apple/Google/Microsoft/Tesla/J&J failed initially (WAF/UA/CSRF quirks) —
 fixes: browser UA for bespoke endpoints, Apple CSRF handshake, alternate
