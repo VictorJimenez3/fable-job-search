@@ -92,13 +92,13 @@ def post_alerts(new_alerts: list[dict]) -> str | None:
 
     body = issue["body"] or ""
     if len(body) + len(section_md) > BODY_LIMIT:
-        # start a continuation issue for the rest of the week
-        r = requests.post(f"{API}/repos/{repo}/issues", headers=_headers(), timeout=20,
-                          json={"title": title + f" (cont. {int(time.time()) % 1000})",
-                                "body": HEADER + section_md, "labels": [LABEL],
-                                "assignees": [github_owner()]})
+        # body is full: post the section as a comment on the same issue.
+        # Comments notify subscribers (body edits don't), checkbox ticks in
+        # comments are tracked, and it avoids continuation-issue clutter.
+        r = requests.post(f"{API}/repos/{repo}/issues/{issue['number']}/comments",
+                          headers=_headers(), timeout=20, json={"body": section_md})
         r.raise_for_status()
-        return r.json()["html_url"]
+        return issue["html_url"]
 
     r = requests.patch(f"{API}/repos/{repo}/issues/{issue['number']}",
                        headers=_headers(), timeout=20, json={"body": body + section_md})
