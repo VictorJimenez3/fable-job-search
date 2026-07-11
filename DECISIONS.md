@@ -283,3 +283,23 @@ a fine-grained PAT the user pastes once (localStorage; read-only without
 it, with a localStorage fallback so nothing is lost). Trade-off noted in
 the app: the repo is public, so workspace notes are public — flip the repo
 private (losing free Pages) if that ever outweighs convenience.
+
+## 23. Public repo ⇒ zero secrets in the frontend; GitHub login is the auth
+
+Victor (correctly) refused to paste a token into a site backed by a public
+repo. Two changes. First, the write path is now tokenless by default: the
+platform's track/applied buttons open a prefilled GitHub issue
+(`save <id>` / `applied <url>`) that he submits while logged into GitHub —
+identity comes from GitHub itself, the applied-sync workflow processes it
+and auto-closes the issue. Second, and independently overdue: the event
+handler and workflow now obey **only the repo owner** (`github.actor ==
+github.repository_owner` plus a sender check in code). Before this, any
+GitHub account could comment `applied <url>` / `track <ats> <token>` on the
+public repo and the radar would have obeyed — sharing the site URL is now
+safe by construction; strangers get a read-only view. The optional PAT path
+remains for instant one-click writes and cross-device notes (fine-grained,
+single-repo, Contents-only, localStorage), with its blast radius and the
+web_state.json-is-public trade-off documented in the app's Settings.
+Checkbox toggling was already safe: GitHub requires write access to edit a
+bot-authored issue body, and the reconcile sweep only trusts labeled issues
+(strangers can't apply labels).

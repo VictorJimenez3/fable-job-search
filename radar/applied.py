@@ -25,6 +25,7 @@ from .notion_sync import sync_applied
 from .score import update_feedback_from_applied
 
 CHECKED = re.compile(r"^- \[[xX]\] .*?<!--radar:([a-f0-9]{16})-->", re.M)
+CMD_SAVE = re.compile(r"^save\s+(\S+)", re.I | re.M)
 CMD_APPLIED = re.compile(r"^applied\s+(\S+)", re.I | re.M)
 CMD_SKIP = re.compile(r"^skip\s+(.+?)\s*$", re.I | re.M)
 CMD_TRACK = re.compile(r"^track\s+(\w+)\s+(\S+)(?:\s+(.+))?", re.I | re.M)
@@ -100,6 +101,12 @@ def handle_event(event_path: str) -> None:
     if sender.endswith("[bot]"):
         print("applied: bot event, ignoring")
         return
+    # This repo is public: anyone on GitHub can comment or open issues.
+    # Only the repo owner may drive the tracker — GitHub's login is the auth.
+    from .config import github_owner
+    if sender.lower() != github_owner().lower():
+        print(f"applied: event from {sender!r} is not the repo owner — ignoring")
+        return
 
     jobs = state.jobs()
     applied = state.applied()
@@ -108,6 +115,10 @@ def handle_event(event_path: str) -> None:
     changed = 0
 
     labels = [l["name"] for l in (event.get("issue") or {}).get("labels", [])]
+    # tokenless platform path: a freshly opened issue whose body carries
+    # commands (save <id>, applied <url>, skip <company>). The owner check
+    # above is the gate; the issue is auto-closed when processed.
+    opened_cmd = "comment" not in event and event.get("action") == "opened"
     body = ""
     if "comment" in event:
         body = event["comment"].get("body", "") or ""
@@ -120,12 +131,20 @@ def handle_event(event_path: str) -> None:
                     changed += record_applied(job, applied, fb,
                                               via="issue-checkbox", stage="saved")
                     shortlist[:] = [s for s in shortlist if s["id"] != job["id"]]
+    elif opened_cmd:
+        body = (event.get("issue") or {}).get("body", "") or ""
     elif "issue" in event:
         # only trust checkbox state on our own alert issues
         if "radar-alerts" in labels:
             body = event["issue"].get("body", "") or ""
 
-    if "comment" in event:
+    if "comment" in event or opened_cmd:
+        for m in CMD_SAVE.finditer(body):
+            ref = m.group(1).strip()
+            job = jobs.get(ref) or next((j for j in jobs.values() if j.get("url") == ref), None)
+            if job:
+                changed += record_applied(job, applied, fb, via="issue-command", stage="saved")
+                shortlist[:] = [s for s in shortlist if s["id"] != job["id"]]
         for m in CMD_APPLIED.finditer(body):
             ref = m.group(1).strip()
             job = jobs.get(ref)
@@ -182,6 +201,26 @@ def handle_event(event_path: str) -> None:
         print(f"applied: recorded {changed} change(s), synced {synced} to Notion")
     else:
         print("applied: nothing new")
+    if opened_cmd:
+        _close_command_issue(event)
+
+
+def _close_command_issue(event: dict) -> None:
+    """Tidy up a processed tokenless command issue (best-effort)."""
+    import requests
+    from .config import github_repo
+    token = env("GITHUB_TOKEN")
+    number = (event.get("issue") or {}).get("number")
+    if not token or not number:
+        return
+    try:
+        requests.patch(f"https://api.github.com/repos/{github_repo()}/issues/{number}",
+                       headers={"Authorization": f"Bearer {token}",
+                                "Accept": "application/vnd.github+json"},
+                       json={"state": "closed", "state_reason": "completed"},
+                       timeout=20).raise_for_status()
+    except Exception as e:
+        print(f"applied: could not close command issue: {e}")
 
 
 def reconcile_checkboxes() -> int:

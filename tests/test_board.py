@@ -74,3 +74,32 @@ def test_web_action_track_records_saved(tmp_state, tmp_path, monkeypatch):
     assert web_action() == 0
     assert len(state.applied()) == 1
     assert state.applied()[0]["stage"] == "applied"
+
+
+def test_events_from_strangers_are_ignored(tmp_state, tmp_path, monkeypatch):
+    # public repo: anyone can comment `applied <url>` — only the owner counts
+    monkeypatch.delenv("NOTION_TOKEN", raising=False)
+    state.save("jobs.json", {JOB["id"]: JOB})
+    event = {"sender": {"login": "random-stranger"},
+             "issue": {"number": 9, "labels": [{"name": "radar-alerts"}]},
+             "comment": {"body": f"applied {JOB['url']}\nskip Tempus"}}
+    ev = tmp_path / "event.json"
+    ev.write_text(json.dumps(event))
+    handle_event(str(ev))
+    assert state.applied() == []
+    assert state.feedback().get("negative_companies", []) == []
+
+
+def test_opened_issue_save_command_tracks_job(tmp_state, tmp_path, monkeypatch):
+    # tokenless platform path: owner opens a prefilled issue "save <id>"
+    monkeypatch.delenv("NOTION_TOKEN", raising=False)
+    monkeypatch.delenv("GITHUB_TOKEN", raising=False)
+    state.save("jobs.json", {JOB["id"]: JOB})
+    event = {"sender": {"login": "VictorJimenez3"}, "action": "opened",
+             "issue": {"number": 10, "labels": [], "body": f"save {JOB['id']}"}}
+    ev = tmp_path / "event.json"
+    ev.write_text(json.dumps(event))
+    handle_event(str(ev))
+    assert len(state.applied()) == 1
+    assert state.applied()[0]["stage"] == "saved"
+    assert state.applied()[0]["via"] == "issue-command"

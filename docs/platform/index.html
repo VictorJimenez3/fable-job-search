@@ -173,11 +173,21 @@ async function gh(path, opts={}) {
   return r;
 }
 async function dispatch(action, job) {
-  if (!token()) { toast("Add a GitHub token in Settings first"); S.tab="settings"; render(); return false; }
   await gh(`/repos/${REPO}/dispatches`, {method:"POST",
     body: JSON.stringify({event_type:"radar-web",
       client_payload:{action, id: job.id, url: job.url, company: job.company}})});
   return true;
+}
+// Tokenless write path: open a prefilled GitHub issue — your GitHub login is
+// the auth. The radar only obeys the repo owner and auto-closes the issue.
+function issueCmd(cmd, job) {
+  const ref = cmd === "applied" ? (job.url || job.id) : job.id;
+  const u = `https://github.com/${REPO}/issues/new?title=${
+    encodeURIComponent(`radar: ${cmd} ${job.company}`)}&body=${
+    encodeURIComponent(`${cmd} ${ref}`)}`;
+  window.open(u, "_blank");
+  toast("Hit 'Create' on GitHub — it processes & auto-closes in ~1 min");
+  return false;
 }
 let saveTimer=null;
 function saveWeb() {                       // debounce web_state commits
@@ -223,6 +233,7 @@ async function actMaybe(j) {
   saveWeb(); render();
 }
 async function actTrack(j) {
+  if (!token()) return issueCmd("save", j);
   try { if (await dispatch("track", j)) {
     S.applied.push({id:j.id, company:j.company, title:j.title, url:j.url, stage:"saved", via:"platform"});
     S.web.maybe = S.web.maybe.filter(x=>x!==j.id); saveWeb();
@@ -230,6 +241,7 @@ async function actTrack(j) {
   catch(e){ toast("Failed: "+e.message.slice(0,90)); }
 }
 async function actApplied(j) {
+  if (!token()) return issueCmd("applied", j);
   try { if (await dispatch("applied", j)) {
     const a = appliedById()[j.id];
     if (a) a.stage = "applied";
@@ -299,8 +311,9 @@ function rJobs() {
         <option value="">any status</option><option value="maybe">maybe</option>
         <option value="saved">to apply</option><option value="applied">applied</option></select>
     </div>
-    ${token()?"":`<div class="note">Read-only mode. Add a GitHub token in <b>Settings</b> to
-      track jobs to Notion and save workspace notes to the repo.</div>`}
+    ${token()?"":`<div class="note">No token needed: <b>track / applied</b> open a one-click
+      prefilled GitHub issue (your GitHub login is the auth — only the repo owner is obeyed).
+      Notes &amp; links stay private in this browser.</div>`}
     <div>${rows.slice(0,S.shown).map(j=>rowHTML(j,byId)).join("")}</div>
     ${rows.length>S.shown?`<p><button class="act" onclick="S.shown+=250;render()">
       show more (${rows.length-S.shown} left)</button></p>`:""}`;
@@ -453,27 +466,29 @@ function rAI() {
 
 function rSet() {
   $("#main").innerHTML = `
-    <div class="sect"><h4>GitHub token (enables writes)</h4>
-      <p class="sub" style="max-width:44rem">Reads are public. To <b>track jobs to Notion</b> and
-      <b>save workspace notes</b> from this site, paste a fine-grained personal access token for
-      the <span class="mono">${REPO}</span> repo with <b>Contents: read/write</b> — create one at
-      <a target="_blank" rel="noopener" href="https://github.com/settings/personal-access-tokens/new">github.com/settings/personal-access-tokens/new</a>.
-      It stays in this browser only.</p>
-      <div class="bar"><input id="pat" type="password" placeholder="github_pat_…" style="min-width:20rem"
+    <div class="sect"><h4>How auth works (no secrets on this site)</h4>
+      <p class="sub" style="max-width:44rem">This is a static page on a <b>public</b> repo, so it
+      holds no secrets — anything embedded here would belong to the whole internet. Instead,
+      <b>track / applied</b> open a prefilled GitHub issue that you submit while logged into
+      GitHub; the radar's backend <b>only obeys the repo owner</b> and ignores everyone else, then
+      auto-closes the issue. Share this URL freely — a friend gets a read-only view and their
+      clicks are ignored by design. Without a token, notes &amp; links live only in this browser
+      (private, but not synced between devices).</p></div>
+    <div class="sect"><h4>Optional: a token for instant writes + cross-device notes</h4>
+      <p class="sub" style="max-width:44rem">Only if you want one-click writes without the GitHub
+      hop: a <b>fine-grained</b> token scoped to <span class="mono">${REPO}</span> only, with
+      <b>Contents: read/write</b> only (<a target="_blank" rel="noopener"
+      href="https://github.com/settings/personal-access-tokens/new">create here</a>). It is stored
+      in this browser's localStorage — never in the repo or the page — so don't do this on a
+      shared computer, and revoke it anytime at github.com/settings/tokens. Worst case if this
+      browser is compromised: this one repo, nothing else on your account. Note: with a token,
+      notes sync via <span class="mono">state/web_state.json</span>, which is public — keep
+      anything sensitive out or skip the token.</p>
+      <div class="bar"><input id="pat" type="password" placeholder="github_pat_… (optional)" style="min-width:20rem"
         value="${esc(token())}">
         <button class="act primary" onclick='localStorage.setItem("jr_pat",$("#pat").value.trim());testPAT()'>save & test</button>
         <button class="act" onclick='localStorage.removeItem("jr_pat");toast("Token removed");render()'>remove</button></div>
-      <p id="patRes" class="sub"></p></div>
-    <div class="note">⚠️ Heads up: this repo is <b>public</b>, and workspace notes/links you save
-      here are committed to it (state/web_state.json). Don't paste anything you wouldn't want
-      visible; ask Claude to take the repo private if you'd rather trade the public site URL for
-      privacy.</div>
-    <div class="sect"><h4>How writes work</h4>
-      <p class="sub" style="max-width:44rem">"track" / "applied" buttons fire a GitHub
-      repository_dispatch → the <span class="mono">web-actions</span> workflow records it and
-      syncs Notion (~1 min). Notes and links commit straight to
-      <span class="mono">state/web_state.json</span>. GitHub checkboxes keep working exactly as
-      before — both doors lead to the same place.</p></div>`;
+      <p id="patRes" class="sub"></p></div>`;
 }
 async function testPAT() {
   try { const r = await gh(`/repos/${REPO}`); const d = await r.json();

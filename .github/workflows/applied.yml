@@ -2,7 +2,7 @@ name: applied-sync
 
 on:
   issues:
-    types: [edited]
+    types: [opened, edited]    # opened: tokenless command issues from the platform
   issue_comment:
     types: [created, edited]   # edited: checkbox ticks in master-board page comments
 
@@ -16,10 +16,12 @@ concurrency:
 
 jobs:
   sync:
-    # only react to humans, and only on radar alert issues / their comments
+    # only react to the repo owner (public repo — strangers can comment/open
+    # issues), and only on radar issues, their comments, or command issues
     if: >-
-      !endsWith(github.actor, '[bot]') &&
+      github.actor == github.repository_owner &&
       (github.event_name == 'issue_comment' ||
+       github.event.action == 'opened' ||
        contains(join(github.event.issue.labels.*.name, ','), 'radar-alerts'))
     runs-on: ubuntu-latest
     timeout-minutes: 10
