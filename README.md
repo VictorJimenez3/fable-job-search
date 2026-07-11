@@ -4,6 +4,7 @@ A self-expanding, always-on radar for **new-grad AI / SWE / DS roles**, tuned fo
 speed (apply within 24h of posting) and personalized ranking (healthtech first,
 big tech second, open to everything good).
 
+**[→ User guide / tutorial](docs/TUTORIAL.md)** ·
 **[→ Live dashboard](docs/DASHBOARD.md)** ·
 **[→ Culture Compass](docs/CULTURE.md)** ·
 **[→ SHPE 2026 plan](docs/SHPE.md)** ·
@@ -43,16 +44,18 @@ every ~30 min (GitHub Actions cron)
       · docs/feed.xml — RSS for instant notifications in any feed reader
 ```
 
-### Applied logging
+### Tracking and applied logging
 
-1. **Check a box on an alert issue after applying.** That records the job in
-   `state/applied.json`, improves future ranking, and creates an entry in your
-   Notion Applications database.
-2. Email confirmation detection is an optional backup for applications you
-   forget to check; it does not duplicate a job already recorded from a
-   checkbox.
+1. **Check a box on an alert issue to track a job.** It appears in your Notion
+   Applications database immediately with the not-yet-applied status
+   (`stage_saved` in profile.yaml, default "Not started") and improves future
+   ranking.
+2. **When you apply, change that entry's status in Notion yourself** — you are
+   the source of truth for applications. (Email confirmation detection can
+   automate this flip later, but it's shelved until its credentials are set
+   up; when active it promotes the existing entry rather than duplicating it.)
 3. For a job found outside the radar, comment `applied <url>` on any issue to
-   log it immediately.
+   log it as Applied immediately.
 
 Each alert now includes a plain-language company category and a short
 description of what the company does (for example, **defense & aerospace —

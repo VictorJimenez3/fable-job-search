@@ -154,14 +154,21 @@ user already flagged interest in that exact posting) before falling back to
 anything else the radar has ever seen, and returns no-match rather than a
 low-confidence guess when nothing clears a 50% token-overlap bar.
 
-## 13. Checkbox means applied, by Victor's explicit definition
+## 13. Checkbox = track in Notion now; Victor flips the status when he applies
 
-Victor clarified that he is the authority confirming an application: a checked
-alert must be written to Notion immediately. The shortlisting semantics above
-were therefore reversed. Email confirmation detection remains as a
-best-effort backup for applications he forgets to check; `record_applied`
-deduplicates by job ID. The one-time `promote-shortlist-applications` workflow
-promotes the 47 existing selections into `applied.json` and Notion.
+Victor's actual workflow (2026-07-10, refining the reversal Codex made the
+same day): checking an alert box must create the Notion entry *immediately*,
+but with a not-yet-applied status — he then advances the status inside Notion
+when he actually applies. So every tracked entry in `state/applied.json`
+carries a `stage`: `saved` (checkbox) or `applied` (`applied <url>` comment,
+or email detection once its credentials exist — currently shelved). An
+applied signal for an already-saved job promotes the entry and patches its
+existing Notion page's status rather than creating a duplicate. Notion status
+options can't be created via API, so the saved status (`stage_saved`, default
+"Not started") is validated against the live schema and omitted — letting the
+database default apply — if it doesn't exist. The one-time
+`promote-shortlist-applications` workflow moves the 47 existing checkbox
+selections into Notion as saved entries.
 
 ## 14. Alerts explain the employer, not just the role
 

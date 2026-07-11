@@ -2,8 +2,9 @@
 
 Why issues: assigning an issue to you triggers GitHub's native notification
 pipeline (mobile push + email) with zero extra credentials, and the issue body
-doubles as the applied-job UI — checking a job means Victor confirms he
-applied, and it is written to Notion immediately. One issue per ISO week keeps
+doubles as the tracking UI — checking a job adds it to Victor's Notion
+Applications database right away with the not-yet-applied status; he flips it
+to Applied in Notion when he actually applies. One issue per ISO week keeps
 noise down; each run appends a timestamped section.
 """
 from __future__ import annotations
@@ -50,10 +51,10 @@ def format_line(j: dict, culture_map: dict | None = None) -> str:
 
 HEADER = (
     "New high-scoring roles appear below as they're detected (every ~30 min).\n\n"
-    "**✅ Check a box after you apply** — it is logged to your Notion "
-    "Applications database automatically. Email detection also catches any "
-    "application you forget to check. Comment `applied <url>` for jobs found "
-    "outside the radar.\n"
+    "**☑️ Check a box to track a job** — it appears in your Notion "
+    "Applications database immediately (status: not applied yet). When you "
+    "actually apply, change its status in Notion. Comment `applied <url>` to "
+    "log an application directly, including jobs found outside the radar.\n"
     "Comment `skip <company>` to downrank similar roles.\n")
 
 

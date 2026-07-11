@@ -8,7 +8,9 @@ truth.
 
 Before changing the radar, read these in order:
 
-1. [`README.md`](../README.md) for the system's purpose and operational flow.
+1. [`README.md`](../README.md) for the system's purpose and operational flow
+   (and [`TUTORIAL.md`](TUTORIAL.md) for how Victor actually uses it — keep it
+   current when user-facing behavior changes).
 2. [`DECISIONS.md`](../DECISIONS.md) for the deliberate architecture and trade-offs.
 3. [`profile.yaml`](../profile.yaml) for Victor's active search preferences and ranking thresholds.
 4. The relevant module and test under `radar/` and `tests/`.
@@ -29,14 +31,17 @@ Before changing the radar, read these in order:
 
 ## Current operational facts (2026-07-10)
 
-- GitHub Actions is the production runtime; it uses Python 3.12. Local macOS
-  Python is currently 3.9 and does not have the project dependencies installed.
+- GitHub Actions is the production runtime; it uses Python 3.12. On Victor's
+  Mac, system Python is 3.9 but the repo's `.venv` has the dependencies —
+  run tests with `.venv/bin/python -m pytest tests/`.
 - The radar runs every ~30–60 minutes, with a Monday strategy memo. Its state
   is committed by CI.
-- `NOTION_TOKEN` enables application writes. A checked alert item means Victor
-  confirms he applied and creates the Notion entry; email confirmation
-  detection is only a backup. Run the read-only `notion-verify` GitHub workflow
-  when diagnosing the connection.
+- `NOTION_TOKEN` enables application writes. A checked alert item creates a
+  Notion entry immediately with the not-yet-applied status; Victor flips the
+  status to Applied in Notion himself when he applies. Email confirmation
+  detection would automate that flip but is shelved until its credentials are
+  set up. Run the read-only `notion-verify` GitHub workflow when diagnosing
+  the connection.
 - `ANTHROPIC_API_KEY` is optional. The Mac companion uses Ollama locally and
   runs enrichment every two hours while the laptop is awake; it should release
   the model from memory when each task finishes.

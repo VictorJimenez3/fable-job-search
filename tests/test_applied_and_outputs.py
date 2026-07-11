@@ -34,7 +34,9 @@ def test_format_line_roundtrips_job_id():
     assert "🔥" in line  # score 88
 
 
-def test_checkbox_event_records_applied(tmp_state, tmp_path, monkeypatch):
+def test_checkbox_event_tracks_job_as_saved(tmp_state, tmp_path, monkeypatch):
+    # a checked box means "track this in Notion now, status = not applied yet";
+    # Victor flips the status in Notion himself when he actually applies.
     monkeypatch.delenv("NOTION_TOKEN", raising=False)
     state.save("jobs.json", {JOB["id"]: JOB})
     body = format_line(JOB).replace("- [ ]", "- [x]")
@@ -46,9 +48,22 @@ def test_checkbox_event_records_applied(tmp_state, tmp_path, monkeypatch):
     assert len(state.applied()) == 1
     assert state.applied()[0]["company"] == "Tempus"
     assert state.applied()[0]["via"] == "issue-checkbox"
+    assert state.applied()[0]["stage"] == "saved"
     assert state.shortlist() == []
     fb = state.feedback()
     assert fb["company_boosts"].get("tempus")
+
+
+def test_applied_signal_promotes_saved_entry(tmp_state):
+    from radar.applied import record_applied
+    applied, fb = [], {"company_boosts": {}, "token_boosts": {}}
+    assert record_applied(JOB, applied, fb, via="issue-checkbox", stage="saved")
+    # same saved signal again is a dupe...
+    assert not record_applied(JOB, applied, fb, via="issue-checkbox", stage="saved")
+    # ...but an applied signal upgrades the entry in place
+    assert record_applied(JOB, applied, fb, via="comment")
+    assert len(applied) == 1 and applied[0]["stage"] == "applied"
+    assert not record_applied(JOB, applied, fb, via="comment")
 
 
 def test_applied_comment_clears_from_shortlist(tmp_state, tmp_path, monkeypatch):
@@ -76,6 +91,7 @@ def test_promote_shortlist_migrates_old_checkbox_selections(tmp_state, monkeypat
     assert promote_shortlist_applications() == 0
     assert state.shortlist() == []
     assert state.applied()[0]["via"] == "checkbox-migration"
+    assert state.applied()[0]["stage"] == "saved"  # Victor applies in Notion, not here
 
 
 def test_bot_events_ignored(tmp_state, tmp_path):
@@ -121,6 +137,34 @@ def test_notion_payload_matches_full_schema():
         "AI/ML Software Engineer", "Machine Learning Enginner", "Software Engineer"}
     assert props["Job URL"]["url"].startswith("https://")
     assert "Apply date" in props
+
+
+def test_notion_payload_saved_stage():
+    saved = {**JOB, "stage": "saved"}
+    # database whose Stage options include the configured saved status
+    schema = {**FULL_SCHEMA, "status_options": {"Stage": ["Not started", "Applied", "Interview"]}}
+    p = build_payload(saved, schema)
+    assert p["properties"]["Stage"]["status"]["name"] == "Not started"
+    assert "Apply date" not in p["properties"]  # no apply date until applied
+    # database without that option: omit Stage so Notion applies its default
+    schema = {**FULL_SCHEMA, "status_options": {"Stage": ["Applied", "Interview"]}}
+    p = build_payload(saved, schema)
+    assert "Stage" not in p["properties"]
+
+
+def test_sync_patches_stage_when_saved_entry_becomes_applied(tmp_state, monkeypatch):
+    monkeypatch.setenv("NOTION_TOKEN", "tok")
+    entry = {"id": JOB["id"], "company": "Tempus", "title": JOB["title"], "url": JOB["url"],
+             "stage": "applied", "notion_synced": True, "notion_stage": "saved",
+             "notion_page": "https://app.notion.com/p/Tempus-3995d6f42cab81b79291edce7b1639b2"}
+    with patch.object(ns, "resolve_database", return_value=FULL_SCHEMA), \
+         patch.object(ns.requests, "patch") as mock_patch:
+        mock_patch.return_value.raise_for_status = lambda: None
+        assert ns.sync_applied([entry]) == 1
+    assert entry["notion_stage"] == "applied"
+    sent = mock_patch.call_args.kwargs["json"]["properties"]
+    assert sent["Stage"]["status"]["name"] == "Applied"
+    assert "Apply date" in sent
 
 
 def test_notion_payload_degrades_on_minimal_schema():

@@ -1,9 +1,12 @@
-"""Applied-logging: react to GitHub issue events.
+"""Application tracking: react to GitHub issue events.
 
-- Checking a checkbox on an alert issue (`- [x] ... <!--radar:ID-->`) means
-  Victor confirms he applied. It is immediately recorded to applied.json and
-  synced to Notion. Email detection remains a fallback for applications that
-  were not checked, and is deduplicated by job ID.
+- Checking a checkbox on an alert issue (`- [x] ... <!--radar:ID-->`) tracks
+  the job: it is recorded to applied.json with stage="saved" and a Notion page
+  is created immediately with the not-yet-applied status. Victor flips the
+  status to Applied in Notion himself when he actually applies.
+- An `applied <url>` comment (or, once credentials exist, email confirmation
+  detection) records stage="applied" — promoting an already-saved entry and
+  patching its Notion page rather than duplicating it.
 - Comment commands:
     applied <url or id>   log a confirmed application immediately
     skip <company or id>  negative feedback (downranks similar roles)
@@ -67,14 +70,22 @@ def culture_generate_one(name: str, dossiers: dict) -> bool:
     return True
 
 
-def record_applied(job: dict, applied: list, fb: dict, via: str) -> bool:
-    if any(a["id"] == job["id"] for a in applied):
+def record_applied(job: dict, applied: list, fb: dict, via: str, stage: str = "applied") -> bool:
+    existing = next((a for a in applied if a["id"] == job["id"]), None)
+    if existing:
+        # An applied signal promotes a saved entry; anything else is a dupe.
+        if stage == "applied" and existing.get("stage", "applied") != "applied":
+            existing["stage"] = "applied"
+            existing["via"] = via
+            existing["applied_at"] = int(time.time())
+            return True
         return False
     applied.append({
         "id": job["id"], "company": job["company"], "title": job["title"],
         "url": job.get("url", ""), "locations": job.get("locations", []),
         "score": job.get("score"), "source": job.get("source"),
-        "applied_at": int(time.time()), "via": via, "notion_synced": False,
+        "applied_at": int(time.time()), "via": via, "stage": stage,
+        "notion_synced": False,
     })
     update_feedback_from_applied(fb, job["company"], job["title"])
     return True
@@ -150,7 +161,7 @@ def handle_event(event_path: str) -> None:
         for jid in CHECKED.findall(body):
             job = jobs.get(jid)
             if job:
-                changed += record_applied(job, applied, fb, via="issue-checkbox")
+                changed += record_applied(job, applied, fb, via="issue-checkbox", stage="saved")
                 shortlist[:] = [s for s in shortlist if s["id"] != job["id"]]
 
     synced = sync_applied(applied)

@@ -306,16 +306,18 @@ def migrate_checkbox_applied() -> int:
 def promote_shortlist_applications() -> int:
     """One-time correction for the shortlisting detour.
 
-    Victor defines a checked alert as a confirmed application. Promote every
-    existing shortlist entry to applied, queue it for Notion, then remove it
-    from the now-unused shortlist. Idempotent through ``record_applied``.
+    Every existing checkbox selection becomes a tracked entry: a Notion page
+    is created with the not-yet-applied status, and Victor advances the ones
+    he actually applied to inside Notion. Idempotent through
+    ``record_applied``.
     """
     applied = state.applied()
     shortlist = state.shortlist()
     fb = state.feedback()
     moved = 0
     for entry in shortlist:
-        moved += applied_mod.record_applied(entry, applied, fb, via="checkbox-migration")
+        moved += applied_mod.record_applied(entry, applied, fb,
+                                            via="checkbox-migration", stage="saved")
     from .notion_sync import sync_applied
     synced = sync_applied(applied)
     state.save("applied.json", applied)

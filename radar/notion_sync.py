@@ -1,4 +1,11 @@
-"""Write applied jobs into the user's Notion Applications database.
+"""Write tracked jobs into the user's Notion Applications database.
+
+Every entry in state/applied.json carries a stage: "saved" (checkbox on an
+alert — Victor is tracking it, hasn't applied yet) or "applied" (an explicit
+`applied` comment or, later, email confirmation). Saved entries get a Notion
+page immediately with the not-yet-applied status; Victor flips the status in
+Notion when he applies. If the radar itself later learns an entry was applied,
+sync patches the existing page's status instead of creating a duplicate.
 
 The database is resolved by *search*, not a hardcoded ID: Notion's search API
 only returns objects actually shared with the integration, so whichever
@@ -46,7 +53,13 @@ def _db_title(db_json: dict) -> str:
 def _parse_db(db_json: dict) -> dict:
     props = db_json.get("properties", {})
     return {"id": db_json["id"], "title": _db_title(db_json),
-            "properties": {name: meta["type"] for name, meta in props.items()}}
+            "properties": {name: meta["type"] for name, meta in props.items()},
+            # status options can't be created via the API, so record what the
+            # live database actually offers and validate against it
+            "status_options": {name: [o.get("name", "") for o in
+                                      meta.get("status", {}).get("options", [])]
+                               for name, meta in props.items()
+                               if meta.get("type") == "status"}}
 
 
 def resolve_database(token: str, name_hint: str = "application") -> dict:
@@ -83,21 +96,39 @@ def _position_options(title: str) -> list[dict]:
     return [{"name": name}]
 
 
+def _stage_property(schema: dict) -> str | None:
+    for name in ("Stage", "Status"):
+        if schema["properties"].get(name) == "status":
+            return name
+    return None
+
+
+def _stage_option(entry: dict, schema: dict, prop: str) -> str | None:
+    """Status name for this entry, or None to omit the property (the database
+    then applies its own default status, typically 'Not started')."""
+    n = profile()["notion"]
+    if entry.get("stage", "applied") == "applied":
+        return n["stage_applied"]
+    want = n.get("stage_saved", "Not started")
+    options = schema.get("status_options", {}).get(prop)
+    return want if options is None or want in options else None
+
+
 def build_payload(entry: dict, schema: dict) -> dict:
     """Only populate properties that actually exist in the target database."""
-    n = profile()["notion"]
     props = schema["properties"]
     payload_props: dict = {}
 
     if props.get("Company") == "title":
         payload_props["Company"] = {"title": [{"text": {"content": entry["company"][:200]}}]}
-    if props.get("Stage") == "status":
-        payload_props["Stage"] = {"status": {"name": n["stage_applied"]}}
-    elif props.get("Status") == "status":
-        payload_props["Status"] = {"status": {"name": n["stage_applied"]}}
+    stage_prop = _stage_property(schema)
+    if stage_prop:
+        name = _stage_option(entry, schema, stage_prop)
+        if name:
+            payload_props[stage_prop] = {"status": {"name": name}}
     if props.get("Position") == "multi_select":
         payload_props["Position"] = {"multi_select": _position_options(entry["title"])}
-    if props.get("Apply date") == "date":
+    if props.get("Apply date") == "date" and entry.get("stage", "applied") == "applied":
         payload_props["Apply date"] = {"date": {"start": datetime.now(timezone.utc).strftime("%Y-%m-%d")}}
     if props.get("Text") == "rich_text":
         payload_props["Text"] = {"rich_text": [{"text": {"content":
@@ -172,16 +203,24 @@ def page_id_from_url(url: str) -> str | None:
     return f"{h[0:8]}-{h[8:12]}-{h[12:16]}-{h[16:20]}-{h[20:32]}"
 
 
+def _needs_stage_patch(entry: dict) -> bool:
+    """A synced page whose recorded stage has since advanced to applied."""
+    return (bool(entry.get("notion_synced"))
+            and entry.get("stage", "applied") == "applied"
+            and entry.get("notion_stage", "applied") != "applied")
+
+
 def sync_applied(applied: list) -> int:
-    """Push all unsynced applied entries to Notion. Returns count synced."""
+    """Push unsynced entries to Notion (and patch stage changes). Returns count."""
     token = env("NOTION_TOKEN")
     if not token:
         pending = sum(1 for a in applied if not a.get("notion_synced"))
         if pending:
-            print(f"notion: NOTION_TOKEN not set — {pending} applied entries queued locally")
+            print(f"notion: NOTION_TOKEN not set — {pending} tracked entries queued locally")
         return 0
     pending = [a for a in applied if not a.get("notion_synced")]
-    if not pending:
+    promotions = [a for a in applied if _needs_stage_patch(a)]
+    if not pending and not promotions:
         return 0
     try:
         schema = resolve_database(token)
@@ -196,8 +235,26 @@ def sync_applied(applied: list) -> int:
             r = requests.post(PAGES_API, headers=headers, json=build_payload(entry, schema), timeout=20)
             r.raise_for_status()
             entry["notion_synced"] = True
+            entry["notion_stage"] = entry.get("stage", "applied")
             entry["notion_page"] = r.json().get("url", "")
             synced += 1
         except Exception as e:
             print(f"notion: failed to sync {entry.get('company')}: {e}")
+
+    stage_prop = _stage_property(schema)
+    for entry in promotions:
+        page_id = page_id_from_url(entry.get("notion_page", ""))
+        if not page_id or not stage_prop:
+            continue
+        props: dict = {stage_prop: {"status": {"name": profile()["notion"]["stage_applied"]}}}
+        if schema["properties"].get("Apply date") == "date":
+            props["Apply date"] = {"date": {"start": datetime.now(timezone.utc).strftime("%Y-%m-%d")}}
+        try:
+            r = requests.patch(f"{PAGES_API}/{page_id}", headers=headers,
+                               json={"properties": props}, timeout=20)
+            r.raise_for_status()
+            entry["notion_stage"] = "applied"
+            synced += 1
+        except Exception as e:
+            print(f"notion: failed to mark {entry.get('company')} applied: {e}")
     return synced

@@ -83,6 +83,11 @@ notion:
   # radar/notion_sync.py:resolve_database). Rename or recreate the tracker
   # freely; nothing here needs to change.
   stage_applied: Applied
+  # status a checkbox-tracked (not yet applied) job gets. Must be an existing
+  # option of your Stage status column — the Notion API cannot create status
+  # options. If it doesn't exist, the property is omitted and Notion applies
+  # the database's default status instead.
+  stage_saved: Not started
   position_map:              # role bucket -> existing options in your Position multi-select
     ai_ml: AI/ML Software Engineer
     ml_eng: Machine Learning Enginner   # (sic — matches the existing option in your DB)
