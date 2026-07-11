@@ -140,11 +140,13 @@ def test_notion_payload_matches_full_schema():
 
 
 def test_notion_payload_saved_stage():
+    from radar.config import profile
+    want = profile()["notion"]["stage_saved"]  # "Waiting for a referral" per live schema
     saved = {**JOB, "stage": "saved"}
     # database whose Stage options include the configured saved status
-    schema = {**FULL_SCHEMA, "status_options": {"Stage": ["Not started", "Applied", "Interview"]}}
+    schema = {**FULL_SCHEMA, "status_options": {"Stage": [want, "Applied", "Interview"]}}
     p = build_payload(saved, schema)
-    assert p["properties"]["Stage"]["status"]["name"] == "Not started"
+    assert p["properties"]["Stage"]["status"]["name"] == want
     assert "Apply date" not in p["properties"]  # no apply date until applied
     # database without that option: omit Stage so Notion applies its default
     schema = {**FULL_SCHEMA, "status_options": {"Stage": ["Applied", "Interview"]}}
