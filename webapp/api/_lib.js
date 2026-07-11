@@ -5,8 +5,9 @@
 // owner's session is allowed to write.
 const crypto = require("crypto");
 
-// env values arrive via dashboard paste — strip stray whitespace/newlines
-const envv = (k) => (process.env[k] || "").trim();
+// env values arrive via dashboard paste — strip anything non-printable
+// (newlines, zero-width unicode from rich-text copies, spaces)
+const envv = (k) => (process.env[k] || "").replace(/[^\x21-\x7E]/g, "");
 
 const OWNER = "VictorJimenez3";
 const REPO = "VictorJimenez3/fable-job-search";
