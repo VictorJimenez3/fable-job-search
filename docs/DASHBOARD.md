@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-12 11:55 UTC** · companies polled directly: **636** (registry 755) · jobs tracked: **6845** · new this run: **3** · alerts this run: **3**_
+_Last run: **2026-07-12 13:06 UTC** · companies polled directly: **636** (registry 755) · jobs tracked: **6849** · new this run: **4** · alerts this run: **2**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -43,8 +43,8 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 94 🔥 | 17d | OpenAI | [Research Engineer / Research Scientist -Personal AGI, Proactivity ](https://jobs.ashbyhq.com/openai/e57d196b-4fa0-4463-bd33-d8189f0d3541) | San Francisco | ai_lab | ashby |
 | 94 🔥 | 17d | OpenAI | [Research Engineer/Research Scientist - Personal AGI, North Stars](https://jobs.ashbyhq.com/openai/171ebca6-de53-4d6e-a312-30332f353957) | San Francisco | ai_lab | ashby |
 | 94 🔥 | 26d | OpenAI | [People Research Data Scientist, AI Fairness & Bias](https://jobs.ashbyhq.com/openai/cadb7c24-2aea-4b98-a793-65ae9388b5d6) | San Francisco | ai_lab | ashby |
-| 93 🔥 | 14h | Amigo AI | [Applied AI Engineer (Pre-Sale)](https://jobs.ashbyhq.com/amigo/5e5c043a-3f4e-494e-9238-bec36c212845) | San Francisco | ai_lab | ashby |
-| 93 🔥 | 15h | Amigo AI | [Applied AI Engineer (Pre-Sale)](https://jobs.ashbyhq.com/amigo/6fb793e3-c758-421c-aba3-ed14b619aa41) | New York City | ai_lab | ashby |
+| 93 🔥 | 16h | Amigo AI | [Applied AI Engineer (Pre-Sale)](https://jobs.ashbyhq.com/amigo/5e5c043a-3f4e-494e-9238-bec36c212845) | San Francisco | ai_lab | ashby |
+| 93 🔥 | 16h | Amigo AI | [Applied AI Engineer (Pre-Sale)](https://jobs.ashbyhq.com/amigo/6fb793e3-c758-421c-aba3-ed14b619aa41) | New York City | ai_lab | ashby |
 | 93 🔥 | 1d | Neuralink | [Software Engineer, BCI Applications](https://jobright.ai/jobs/info/6a52e53a8ef95364ead904ac?utm_campaign=Software%20Engineering&utm_source=1103) | Austin, Texas, United States | healthtech | jobright |
 | 93 🔥 | 3d | OpenAI | [AI Deployment Engineer, Digital Natives](https://jobs.ashbyhq.com/openai/3254f6a7-6353-4a77-beec-f37b832c99ae) | New York City | ai_lab | ashby |
 | 93 🔥 | 3d | OpenAI | [AI Deployment Engineer, Digital Natives](https://jobs.ashbyhq.com/openai/5c3a17db-62f1-4145-93b0-2f207d4d4af8) | San Francisco | ai_lab | ashby |
@@ -76,7 +76,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 92 🔥 | 25d | Snowflake | [AI Research Scientist New Grad - Agents & Reinforcement Learning](https://jobs.ashbyhq.com/snowflake/1bad12df-f443-426f-9d09-e96fc780d698/application) | Bellevue, WA | big_tech | simplify |
 | 92 🔥 | 25d | Snowflake | [AI Research Scientist, New Grad – Agents & Reinforcement Learning](https://jobs.ashbyhq.com/snowflake/1bad12df-f443-426f-9d09-e96fc780d698) | US-WA-Bellevue | big_tech | ashby |
 | 92 🔥 | 26d | Oura | [Junior Data Scientist](https://job-boards.greenhouse.io/oura/jobs/4287026009) | Hybrid - Helsinki, Uusimaa; Hybrid - Oul | healthtech | greenhouse |
-| 91 🔥 | 11h | Primefocus Health | [Software Engineer - Solutions](https://jobright.ai/jobs/info/6a534faa8576ec69c014f5a3?utm_campaign=Software%20Engineering&utm_source=1103) | Huntington, WV | healthtech | jobright |
+| 91 🔥 | 13h | Primefocus Health | [Software Engineer - Solutions](https://jobright.ai/jobs/info/6a534faa8576ec69c014f5a3?utm_campaign=Software%20Engineering&utm_source=1103) | Huntington, WV | healthtech | jobright |
 | 91 🔥 | 1d | Anthropic | [Safeguards Enforcement Analyst, Radiological & Nuclear Harms](https://job-boards.greenhouse.io/anthropic/jobs/5319702008) | Remote-Friendly, United States; San Fran | ai_lab | greenhouse |
 | 91 🔥 | 1d | Anthropic | [Safeguards Enforcement Analyst, Bio Harms](https://job-boards.greenhouse.io/anthropic/jobs/5319696008) | Remote-Friendly, United States; San Fran | ai_lab | greenhouse |
 | 91 🔥 | 1d | Anthropic | [Safeguards Enforcement Analyst, Chem & Explosives Harms](https://job-boards.greenhouse.io/anthropic/jobs/5319700008) | Remote-Friendly, United States; San Fran | ai_lab | greenhouse |
