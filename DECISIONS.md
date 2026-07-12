@@ -322,3 +322,25 @@ canonical frontend; docs/platform/index.html is a straight copy — edit the
 former, `cp` to the latter. Deploy is via the Claude↔Vercel connector once
 Victor grants it project-create access; setup needs three env vars and a
 GitHub OAuth app only he can create.
+
+## 25. Multi-user = fork-per-person, never shared tenancy (2026-07-11)
+
+Victor asked that other people's tracking never touch his Notion. It already
+can't — his token lives only in his repo secrets/Vercel env, and every write
+path (workflow condition, Python handler, Vercel backend) obeys only the repo
+owner; visitors are read-only. So multi-user support is fork-per-person: a
+fork gets its own Actions crawler, state, secrets, Pages site, and (only if
+its owner connects one) its own Notion — zero shared state by construction.
+Made the code fork-portable: the frontend derives owner/repo from the
+<you>.github.io/<repo> URL (and default branch from the GitHub API), the
+Vercel backend reads RADAR_OWNER/RADAR_REPO/RADAR_BRANCH/CANON_HOST env
+overrides plus a new /api/config endpoint, personal outreach-template info
+collapsed to a one-line ME constant, and docs/FORKING.md walks a friend
+through the whole setup. Victor's live Vercel deployment predates this patch
+(identical behavior for his instance; next webapp deploy syncs it).
+
+The full signed-in flow was verified live this session: OAuth sign-in as
+@VictorJimenez3 (GitHub's authorize form rejects synthetic clicks — automation
+must submit the form with the authorize button's name/value), passkey
+confirmation by Victor, then a one-click track from the platform → 202 →
+repository_dispatch → web-actions workflow.

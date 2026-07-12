@@ -3,7 +3,7 @@ const { envv, seal, needSetup } = require("./_lib");
 // The app answers on several vercel.app aliases, but a GitHub OAuth app
 // accepts exactly one callback URL — so login always runs on the canonical
 // host (hop there first if needed; cookies are host-scoped).
-const CANON = "job-radar-vmj-8946s-projects.vercel.app";
+const CANON = require("./_lib").envv("CANON_HOST") || "job-radar-vmj-8946s-projects.vercel.app";
 
 module.exports = (req, res) => {
   if (needSetup(res)) return;

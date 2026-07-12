@@ -9,7 +9,7 @@ module.exports = async (req, res) => {
   const s = session(req);
   if (!s) { res.status(401).json({ error: "sign in first" }); return; }
   if (s.u !== OWNER) {
-    res.status(403).json({ error: `read-only view: this radar belongs to ${OWNER}` });
+    res.status(403).json({ error: `read-only view: this radar belongs to ${OWNER} — fork the repo to run your own (docs/FORKING.md)` });
     return;
   }
   const { action, id, url, company } = req.body || {};

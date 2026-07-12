@@ -119,9 +119,15 @@
 
 <script>
 "use strict";
-const REPO = "VictorJimenez3/fable-job-search";
-const BRANCH = "claude/newgrad-job-search-system-9gbj9k";
-const RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/`;
+// ---- fork-portable config ------------------------------------------------
+// Forks: the app self-configures. On <you>.github.io/<repo>/ the repo is
+// derived from the URL; a Vercel backend supplies /api/config. Only edit ME
+// (used to fill outreach templates) and, if self-hosting on Vercel, the env
+// vars documented in docs/FORKING.md.
+const ME = { name: "Victor", school: "NJIT", grad: "CS '26" };
+let REPO = "VictorJimenez3/fable-job-search";
+let BRANCH = "claude/newgrad-job-search-system-9gbj9k";
+let RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/`;
 const API = "https://api.github.com";
 
 const S = {           // app state
@@ -160,6 +166,21 @@ async function boot() {
     S.backend = r.status !== 404;
     if (r.ok) S.auth = await r.json();
   } catch { S.backend = false; }
+  // fork-portable repo resolution (see docs/FORKING.md)
+  try {
+    const ghHost = location.hostname.match(/^([a-z0-9-]+)\.github\.io$/i);
+    const seg = location.pathname.split("/").filter(Boolean)[0];
+    if (ghHost && seg) REPO = `${ghHost[1]}/${seg}`;
+    if (S.backend) {
+      const c = await (await fetch("/api/config")).json();
+      if (c.repo) REPO = c.repo;
+      if (c.branch) BRANCH = c.branch;
+    } else if (ghHost && seg) {
+      const d = await (await fetch(`${API}/repos/${REPO}`)).json();
+      if (d.default_branch) BRANCH = d.default_branch;
+    }
+  } catch {}
+  RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/`;
   const [jobs, applied, culture, companies, runs, scout, web] = await Promise.all([
     fetchJSON("state/jobs.json", {}), fetchJSON("state/applied.json", []),
     fetchJSON("state/culture.json", {}), fetchJSON("state/companies.json", {}),
@@ -378,7 +399,7 @@ function researchLinks(co) {
   const q = encodeURIComponent(co);
   return `<div class="rlinks">
     <a target="_blank" rel="noopener" href="https://www.linkedin.com/search/results/people/?keywords=${q}%20recruiter%20university">🔎 recruiters</a>
-    <a target="_blank" rel="noopener" href="https://www.linkedin.com/search/results/people/?keywords=${q}%20software%20engineer%20NJIT">🎓 NJIT alumni there</a>
+    <a target="_blank" rel="noopener" href="https://www.linkedin.com/search/results/people/?keywords=${q}%20software%20engineer%20${ME.school}">🎓 ${ME.school} alumni there</a>
     <a target="_blank" rel="noopener" href="https://www.levels.fyi/companies/${q.toLowerCase().replace(/%20/g,"-")}">💰 levels.fyi</a>
     <a target="_blank" rel="noopener" href="https://www.google.com/search?q=${q}+engineering+blog">📝 eng blog</a>
     <a target="_blank" rel="noopener" href="https://www.google.com/search?q=${q}+new+grad+interview+process">🧭 interview intel</a>
@@ -387,7 +408,7 @@ function researchLinks(co) {
 function templates(j) {
   const first = t => t.split(",")[0];
   return [
-["Recruiter DM", `Hi {name} — I'm Victor, a CS senior at NJIT graduating this spring. I just saw the ${j.title} opening at ${j.company} and applied — it's squarely what I've been building toward (${j.sector==="healthtech"?"my clinical-data pipeline project maps right onto it":"my ML/data projects map right onto it"}). Would you be open to a quick chat, or could you point me to the right recruiter for university hiring? Thank you!`],
+["Recruiter DM", `Hi {name} — I'm ${ME.name}, a CS senior at ${ME.school} graduating this spring. I just saw the ${j.title} opening at ${j.company} and applied — it's squarely what I've been building toward (${j.sector==="healthtech"?"my clinical-data pipeline project maps right onto it":"my ML/data projects map right onto it"}). Would you be open to a quick chat, or could you point me to the right recruiter for university hiring? Thank you!`],
 ["Referral ask (alum)", `Hey {name} — fellow NJIT ${""}Highlander here (CS '26). I'm applying to the ${j.title} role at ${j.company} and it genuinely fits what I've been working on. If you feel comfortable, would you be open to referring me or sharing a bit about the team? Happy to send my resume + a short blurb to make it zero-effort. Either way, congrats on ${first(j.company)} — the work looks awesome.`],
 ["Follow-up (1 week)", `Hi {name} — following up on the ${j.title} role at ${j.company} I applied to on {date}. Still very interested; since applying I ${"{recent win, e.g. shipped X}"}. If there's anything else useful I can send over, happy to. Thanks for your time!`]];
 }
