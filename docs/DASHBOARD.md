@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-12 06:16 UTC** · companies polled directly: **635** (registry 754) · jobs tracked: **6827** · new this run: **18** · alerts this run: **18**_
+_Last run: **2026-07-12 07:26 UTC** · companies polled directly: **635** (registry 754) · jobs tracked: **6835** · new this run: **8** · alerts this run: **8**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -43,8 +43,8 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 94 🔥 | 17d | OpenAI | [Research Engineer / Research Scientist -Personal AGI, Proactivity ](https://jobs.ashbyhq.com/openai/e57d196b-4fa0-4463-bd33-d8189f0d3541) | San Francisco | ai_lab | ashby |
 | 94 🔥 | 17d | OpenAI | [Research Engineer/Research Scientist - Personal AGI, North Stars](https://jobs.ashbyhq.com/openai/171ebca6-de53-4d6e-a312-30332f353957) | San Francisco | ai_lab | ashby |
 | 94 🔥 | 26d | OpenAI | [People Research Data Scientist, AI Fairness & Bias](https://jobs.ashbyhq.com/openai/cadb7c24-2aea-4b98-a793-65ae9388b5d6) | San Francisco | ai_lab | ashby |
-| 93 🔥 | 9h | Amigo AI | [Applied AI Engineer (Pre-Sale)](https://jobs.ashbyhq.com/amigo/5e5c043a-3f4e-494e-9238-bec36c212845) | San Francisco | ai_lab | ashby |
-| 93 🔥 | 9h | Amigo AI | [Applied AI Engineer (Pre-Sale)](https://jobs.ashbyhq.com/amigo/6fb793e3-c758-421c-aba3-ed14b619aa41) | New York City | ai_lab | ashby |
+| 93 🔥 | 10h | Amigo AI | [Applied AI Engineer (Pre-Sale)](https://jobs.ashbyhq.com/amigo/5e5c043a-3f4e-494e-9238-bec36c212845) | San Francisco | ai_lab | ashby |
+| 93 🔥 | 10h | Amigo AI | [Applied AI Engineer (Pre-Sale)](https://jobs.ashbyhq.com/amigo/6fb793e3-c758-421c-aba3-ed14b619aa41) | New York City | ai_lab | ashby |
 | 93 🔥 | 1d | Neuralink | [Software Engineer, BCI Applications](https://jobright.ai/jobs/info/6a52e53a8ef95364ead904ac?utm_campaign=Software%20Engineering&utm_source=1103) | Austin, Texas, United States | healthtech | jobright |
 | 93 🔥 | 3d | OpenAI | [AI Deployment Engineer, Digital Natives](https://jobs.ashbyhq.com/openai/3254f6a7-6353-4a77-beec-f37b832c99ae) | New York City | ai_lab | ashby |
 | 93 🔥 | 3d | OpenAI | [AI Deployment Engineer, Digital Natives](https://jobs.ashbyhq.com/openai/5c3a17db-62f1-4145-93b0-2f207d4d4af8) | San Francisco | ai_lab | ashby |
@@ -85,7 +85,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 91 🔥 | 1d | Anthropic | [Safeguards Enforcement Analyst, Integrity & Authenticity ](https://job-boards.greenhouse.io/anthropic/jobs/5311149008) | Remote-Friendly, United States; San Fran | ai_lab | greenhouse |
 | 91 🔥 | 2d | Ultra Intelligence and Communications | [Software Engineer Associate](https://ultra.wd3.myworkdayjobs.com/uiccareers/job/Huntsville-USA/Associate-Software-Engineer_REQ-12218) | Austin, TX | ai_lab | simplify |
 | 91 🔥 | 2d | Amazon | [Software I&T Engineer - Amazon Leo for Government](https://www.amazon.jobs/jobs/10469381/apply) | Northridge, CA | big_tech | speedyapply |
-| 91 🔥 | 2d | Bristol Myers Squibb | [Full Stack AI Engineer](https://bristolmyerssquibb.wd5.myworkdayjobs.com/en-US/BMS/job/Princeton---NJ---US/Full-Stack-AI-Engineer_R1604278-1) | Princeton - NJ - US | healthtech | workday |
+| 91 🔥 | 3d | Bristol Myers Squibb | [Full Stack AI Engineer](https://bristolmyerssquibb.wd5.myworkdayjobs.com/en-US/BMS/job/Princeton---NJ---US/Full-Stack-AI-Engineer_R1604278-1) | Princeton - NJ - US | healthtech | workday |
 | 91 🔥 | 3d | OpenAI | [AI Deployment Engineer, Enterprise](https://jobs.ashbyhq.com/openai/01091aed-427d-4e10-8cdb-fb500cf55bb9) | San Francisco | ai_lab | ashby |
 | 91 🔥 | 3d | OpenAI | [AI Deployment Engineer, Cyber](https://jobs.ashbyhq.com/openai/7ad26793-3f0d-4336-91e8-1aaf800cfdae) | Dublin, Ireland | ai_lab | ashby |
 | 91 🔥 | 3d | OpenAI | [AI Deployment Engineer, Cyber](https://jobs.ashbyhq.com/openai/29f15e50-1611-4256-afad-03b7df0b7aa7) | Singapore | ai_lab | ashby |
