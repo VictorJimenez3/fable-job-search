@@ -6,105 +6,195 @@
 <title>Job Radar — Platform</title>
 <style>
   :root {
-    --paper:#FAFBF9; --ink:#1C2430; --muted:#5A6B7A; --accent:#2E7D5B;
-    --accent-ink:#24634A; --amber:#9A6A1F; --line:#DDE4E0; --card:#F1F5F2;
-    --code:#E9EFEA; --danger:#A33A2E;
+    color-scheme: light;
+    --paper:#F5F6F5; --surface:#FFFFFF; --ink:#1A2129; --muted:#68737E;
+    --accent:#1E7A54; --accent-ink:#166446; --amber:#946417; --line:#E3E7E4;
+    --code:#EDF0ED; --danger:#B0392C; --scrim:rgba(21,28,36,0.42);
+    --shadow-sm:0 1px 2px rgba(21,28,36,0.05);
+    --shadow-md:0 4px 16px rgba(21,28,36,0.08), 0 1px 3px rgba(21,28,36,0.05);
+    --shadow-lg:-24px 0 60px rgba(21,28,36,0.22);
+    --header-bg:rgba(245,246,245,0.8);
+    --ease-out:cubic-bezier(0.23,1,0.32,1);       /* strong ease-out for UI */
+    --ease-drawer:cubic-bezier(0.32,0.72,0,1);    /* iOS sheet curve */
   }
   :root[data-theme="dark"] {
-    --paper:#131A21; --ink:#D9E2E8; --muted:#8FA1AE; --accent:#4CAF8A;
-    --accent-ink:#5FBF9A; --amber:#D2A24C; --line:#2A343D; --card:#1A232C;
-    --code:#1F2A33; --danger:#E07862;
+    color-scheme: dark;
+    --paper:#11161C; --surface:#191F27; --ink:#DEE5EB; --muted:#8E9DAA;
+    --accent:#3EB287; --accent-ink:#5AC69B; --amber:#D5A651; --line:#272F38;
+    --code:#202832; --danger:#E07862; --scrim:rgba(0,0,0,0.55);
+    --shadow-sm:0 1px 2px rgba(0,0,0,0.25);
+    --shadow-md:0 4px 16px rgba(0,0,0,0.35), 0 1px 3px rgba(0,0,0,0.3);
+    --shadow-lg:-24px 0 60px rgba(0,0,0,0.5);
+    --header-bg:rgba(17,22,28,0.75);
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --paper:#131A21; --ink:#D9E2E8; --muted:#8FA1AE; --accent:#4CAF8A;
-      --accent-ink:#5FBF9A; --amber:#D2A24C; --line:#2A343D; --card:#1A232C;
-      --code:#1F2A33; --danger:#E07862;
+      color-scheme: dark;
+      --paper:#11161C; --surface:#191F27; --ink:#DEE5EB; --muted:#8E9DAA;
+      --accent:#3EB287; --accent-ink:#5AC69B; --amber:#D5A651; --line:#272F38;
+      --code:#202832; --danger:#E07862; --scrim:rgba(0,0,0,0.55);
+      --shadow-sm:0 1px 2px rgba(0,0,0,0.25);
+      --shadow-md:0 4px 16px rgba(0,0,0,0.35), 0 1px 3px rgba(0,0,0,0.3);
+      --shadow-lg:-24px 0 60px rgba(0,0,0,0.5);
+      --header-bg:rgba(17,22,28,0.75);
     }
   }
   * { box-sizing: border-box; }
   body { margin:0; background:var(--paper); color:var(--ink);
-         font-family: Charter,"Bitstream Charter","Iowan Old Style",Georgia,serif;
-         font-size:16px; line-height:1.5; }
-  .mono, button, input, select, textarea, .chip, th, .tag {
-    font-family: ui-monospace,"SF Mono",Menlo,Consolas,monospace; }
-  header { display:flex; align-items:center; gap:0.9rem; padding:0.7rem 1rem;
-           border-bottom:2px solid var(--ink); flex-wrap:wrap; position:sticky; top:0;
-           background:var(--paper); z-index:30; }
-  header h1 { font-size:1.05rem; margin:0; white-space:nowrap; }
-  nav { display:flex; gap:0.25rem; flex-wrap:wrap; }
-  nav button { background:none; border:1px solid transparent; color:var(--muted);
-               padding:0.3rem 0.65rem; border-radius:5px; cursor:pointer; font-size:0.8rem; }
-  nav button.on { color:var(--accent-ink); border-color:var(--accent-ink); }
-  nav button:hover { color:var(--ink); }
-  #stats { margin-left:auto; font-size:0.72rem; color:var(--muted); display:flex; gap:0.9rem; }
-  #stats b { color:var(--ink); font-size:0.95rem; display:block; text-align:right; }
-  main { max-width:72rem; margin:0 auto; padding:1rem; }
+         font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+         font-size:16px; line-height:1.55;
+         -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+  .mono, .chip, th, .tag { font-family: ui-monospace,"SF Mono",Menlo,Consolas,monospace; }
+  button, input, select, textarea { font-family:inherit; }
+
+  /* smooth the dark↔light jump: toggled briefly from JS on theme change */
+  .theme-fade, .theme-fade * {
+    transition: background-color .3s ease, color .3s ease, border-color .3s ease !important; }
+
+  header { display:flex; align-items:center; gap:0.9rem; padding:0.65rem 1.1rem;
+           flex-wrap:wrap; position:sticky; top:0; z-index:30;
+           background:var(--header-bg);
+           -webkit-backdrop-filter:blur(16px) saturate(1.8);
+           backdrop-filter:blur(16px) saturate(1.8);
+           border-bottom:1px solid var(--line); }
+  header h1 { font-size:1rem; font-weight:650; letter-spacing:-0.01em; margin:0; white-space:nowrap; }
+  nav { display:flex; gap:0.2rem; flex-wrap:wrap; }
+  nav button { background:none; border:none; color:var(--muted); font-size:0.8rem;
+               font-weight:500; padding:0.35rem 0.7rem; border-radius:7px; cursor:pointer;
+               transition: color .15s ease, background-color .15s ease, transform .16s var(--ease-out); }
+  nav button.on { color:var(--accent-ink);
+                  background:color-mix(in srgb, var(--accent) 12%, transparent); }
+  nav button:active { transform:scale(0.96); }
+  #stats { margin-left:auto; font-size:0.7rem; color:var(--muted); display:flex; gap:1rem; }
+  #stats b { color:var(--ink); font-size:0.95rem; font-weight:650; display:block;
+             text-align:right; font-variant-numeric:tabular-nums; letter-spacing:-0.01em; }
+  main { max-width:72rem; margin:0 auto; padding:1.1rem 1rem 3rem; }
+  @keyframes rise { from { opacity:0; transform:translateY(6px); } }
+  main.boot { animation: rise .35s var(--ease-out); }
+
   .bar { display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.9rem; align-items:center; }
-  input, select, textarea { background:var(--card); color:var(--ink);
-    border:1px solid var(--line); border-radius:5px; padding:0.4rem 0.55rem; font-size:0.8rem; }
+  input, select, textarea { background:var(--surface); color:var(--ink);
+    border:1px solid var(--line); border-radius:7px; padding:0.45rem 0.6rem; font-size:0.8rem;
+    transition: border-color .15s ease, box-shadow .15s ease; }
   input[type=search] { flex:1; min-width:12rem; }
-  button.act { background:var(--card); border:1px solid var(--line); color:var(--ink);
-    border-radius:5px; padding:0.3rem 0.6rem; cursor:pointer; font-size:0.75rem; }
-  button.act:hover { border-color:var(--accent); color:var(--accent-ink); }
+  input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline:none; border-color:var(--accent);
+    box-shadow:0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent); }
+  button:focus-visible, a:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+
+  button.act { background:var(--surface); border:1px solid var(--line); color:var(--ink);
+    border-radius:7px; padding:0.32rem 0.65rem; cursor:pointer; font-size:0.75rem;
+    font-weight:500; box-shadow:var(--shadow-sm);
+    transition: transform .16s var(--ease-out), border-color .15s ease,
+                color .15s ease, background-color .15s ease, filter .15s ease; }
+  button.act:active { transform:scale(0.97); }
   button.primary { background:var(--accent); border-color:var(--accent); color:#fff; }
-  button.primary:hover { color:#fff; opacity:0.9; }
-  button:focus-visible, input:focus-visible { outline:2px solid var(--accent); outline-offset:1px; }
-  .job { display:flex; gap:0.7rem; padding:0.55rem 0.4rem; border-bottom:1px solid var(--line);
-         align-items:baseline; flex-wrap:wrap; }
-  .job:hover { background:var(--card); }
-  .score { min-width:2.2rem; text-align:center; font-weight:700; font-size:0.85rem;
-           border-radius:5px; padding:0.1rem 0.2rem; background:var(--code); }
-  .score.hot { color:var(--accent-ink); border:1px solid var(--accent-ink); background:none; }
+
+  .job { display:flex; gap:0.7rem; padding:0.6rem 0.5rem; border-bottom:1px solid var(--line);
+         align-items:baseline; flex-wrap:wrap; border-radius:8px;
+         transition: background-color .12s ease; }
+  .score { min-width:2.3rem; text-align:center; font-weight:650; font-size:0.8rem;
+           border-radius:6px; padding:0.14rem 0.25rem; background:var(--code);
+           color:var(--muted); font-variant-numeric:tabular-nums;
+           font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace; }
+  .score.hot { color:var(--accent-ink);
+               background:color-mix(in srgb, var(--accent) 14%, transparent); }
   .job .body { flex:1; min-width:14rem; }
-  .job .co { font-weight:700; }
-  .job a { color:var(--accent-ink); text-decoration-thickness:1px; }
+  .job .co { font-weight:650; }
+  a { color:var(--accent-ink); text-decoration-thickness:1px; text-underline-offset:2px;
+      text-decoration-color:color-mix(in srgb, var(--accent-ink) 40%, transparent);
+      transition: text-decoration-color .15s ease; }
   .sub { font-size:0.78rem; color:var(--muted); }
   .chip { font-size:0.65rem; border:1px solid var(--line); color:var(--muted);
-          border-radius:999px; padding:0.05rem 0.45rem; white-space:nowrap; }
-  .chip.marquee { color:var(--amber); border-color:var(--amber); }
-  .chip.saved { color:var(--amber); border-color:var(--amber); }
-  .chip.applied { color:var(--accent-ink); border-color:var(--accent-ink); }
+          background:var(--surface); border-radius:999px; padding:0.1rem 0.5rem;
+          white-space:nowrap; }
+  .chip.marquee, .chip.saved { color:var(--amber);
+    border-color:color-mix(in srgb, var(--amber) 40%, var(--line));
+    background:color-mix(in srgb, var(--amber) 8%, transparent); }
+  .chip.applied { color:var(--accent-ink);
+    border-color:color-mix(in srgb, var(--accent) 40%, var(--line));
+    background:color-mix(in srgb, var(--accent) 10%, transparent); }
   .chip.maybe { color:var(--muted); }
   .acts { display:flex; gap:0.3rem; }
+
   .lanes { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:0.9rem; }
-  .lane { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:0.7rem; }
-  .lane h3 { margin:0 0 0.6rem; font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase;
-             font-family:ui-monospace,Menlo,monospace; color:var(--muted); }
-  .card { background:var(--paper); border:1px solid var(--line); border-radius:6px;
-          padding:0.5rem 0.6rem; margin-bottom:0.5rem; cursor:pointer; }
-  .card:hover { border-color:var(--accent); }
-  .card .co { font-weight:700; font-size:0.9rem; }
-  .card .t { font-size:0.8rem; }
-  /* workspace drawer */
-  #ws { position:fixed; inset:0; background:rgba(0,0,0,0.45); z-index:50; display:none; }
-  #ws.open { display:block; }
+  .lane { background:var(--surface); border:1px solid var(--line); border-radius:12px;
+          padding:0.8rem; box-shadow:var(--shadow-sm); }
+  .lane h3 { margin:0 0 0.6rem; font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase;
+             font-family:ui-monospace,"SF Mono",Menlo,monospace; color:var(--muted); font-weight:600; }
+  .card { background:var(--paper); border:1px solid var(--line); border-radius:8px;
+          padding:0.5rem 0.6rem; margin-bottom:0.5rem; cursor:pointer;
+          transition: transform .16s var(--ease-out), border-color .15s ease, box-shadow .15s ease; }
+  .card:active { transform:scale(0.98); }
+  .card .co { font-weight:650; font-size:0.9rem; }
+  .card .t { font-size:0.8rem; color:var(--muted); }
+
+  /* workspace drawer — always mounted; slides on the iOS sheet curve, dismisses
+     along the same edge it entered from, and stays interruptible (transitions,
+     not keyframes, so reopening mid-close retargets smoothly) */
+  #ws { position:fixed; inset:0; z-index:50; background:transparent; visibility:hidden;
+        transition: background-color .4s var(--ease-drawer), visibility 0s .4s; }
+  #ws.open { visibility:visible; background:var(--scrim);
+             transition: background-color .4s var(--ease-drawer); }
   #wsp { position:absolute; right:0; top:0; bottom:0; width:min(560px,100%);
-         background:var(--paper); border-left:2px solid var(--ink); overflow-y:auto; padding:1.1rem; }
-  #wsp h2 { margin:0 0 0.2rem; font-size:1.15rem; }
-  .sect { margin-top:1.1rem; }
-  .sect h4 { margin:0 0 0.4rem; font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase;
-             color:var(--accent-ink); font-family:ui-monospace,Menlo,monospace; }
+         background:var(--paper); border-left:1px solid var(--line);
+         box-shadow:var(--shadow-lg); overflow-y:auto; padding:1.25rem;
+         transform:translateX(100%); transition: transform .45s var(--ease-drawer); }
+  #ws.open #wsp { transform:none; }
+  #wsp h2 { margin:0 0 0.2rem; font-size:1.3rem; font-weight:650; letter-spacing:-0.015em; }
+  .sect { margin-top:1.2rem; }
+  .sect h4 { margin:0 0 0.4rem; font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase;
+             color:var(--accent-ink); font-family:ui-monospace,"SF Mono",Menlo,monospace;
+             font-weight:600; }
   .kv { display:grid; grid-template-columns:auto 1fr; gap:0.15rem 0.8rem; font-size:0.82rem; }
-  .kv .k { color:var(--muted); font-family:ui-monospace,Menlo,monospace; font-size:0.7rem; }
-  textarea { width:100%; min-height:5.5rem; font-size:0.82rem; }
-  .tpl { background:var(--code); border-radius:6px; padding:0.6rem; font-size:0.78rem;
+  .kv .k { color:var(--muted); font-family:ui-monospace,"SF Mono",Menlo,monospace; font-size:0.7rem; }
+  textarea { width:100%; min-height:5.5rem; font-size:0.82rem; line-height:1.5; }
+  .tpl { background:var(--code); border-radius:8px; padding:0.65rem 0.75rem; font-size:0.78rem;
          white-space:pre-wrap; margin-bottom:0.4rem; }
   ul.plain { list-style:none; padding:0; margin:0.3rem 0; }
   ul.plain li { display:flex; gap:0.4rem; align-items:center; padding:0.15rem 0; font-size:0.82rem; }
   table { border-collapse:collapse; width:100%; font-size:0.82rem; }
   th { text-align:left; font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase;
-       color:var(--muted); border-bottom:1.5px solid var(--ink); padding:0.3rem 0.6rem 0.3rem 0; }
-  td { border-bottom:1px solid var(--line); padding:0.4rem 0.6rem 0.4rem 0; }
+       color:var(--muted); font-weight:600; border-bottom:1px solid var(--line);
+       padding:0.3rem 0.6rem 0.3rem 0; }
+  td { border-bottom:1px solid var(--line); padding:0.45rem 0.6rem 0.45rem 0; }
   .wrap { overflow-x:auto; }
-  .note { background:var(--card); border-left:3px solid var(--amber); padding:0.6rem 0.8rem;
-          border-radius:0 5px 5px 0; font-size:0.85rem; margin-bottom:0.9rem; }
-  .toast { position:fixed; bottom:1rem; left:50%; transform:translateX(-50%);
-           background:var(--ink); color:var(--paper); padding:0.5rem 1rem; border-radius:6px;
-           font-size:0.8rem; z-index:99; }
-  a { color:var(--accent-ink); }
+  .note { background:color-mix(in srgb, var(--amber) 7%, var(--surface));
+          border:1px solid color-mix(in srgb, var(--amber) 25%, var(--line));
+          border-radius:10px; padding:0.65rem 0.85rem; font-size:0.85rem; margin-bottom:0.9rem; }
+  .toast { position:fixed; bottom:1rem; left:50%; transform:translate(-50%,0);
+           background:var(--ink); color:var(--paper); padding:0.5rem 1rem; border-radius:10px;
+           font-size:0.8rem; z-index:99; box-shadow:var(--shadow-md);
+           transition: transform .35s var(--ease-out), opacity .35s var(--ease-out); }
+  @starting-style { .toast { transform:translate(-50%,12px); opacity:0; } }
+  .toast.out { transform:translate(-50%,12px); opacity:0; transition-duration:.25s; }
   .rlinks a { display:inline-block; margin:0 0.6rem 0.3rem 0; font-size:0.8rem; }
-  @media (prefers-reduced-motion: no-preference) { .card, button.act { transition: border-color .12s; } }
+
+  /* hover feedback only where a real pointer exists — taps shouldn't stick */
+  @media (hover: hover) and (pointer: fine) {
+    nav button:hover { color:var(--ink); background:color-mix(in srgb, var(--ink) 6%, transparent); }
+    nav button.on:hover { color:var(--accent-ink);
+      background:color-mix(in srgb, var(--accent) 16%, transparent); }
+    button.act:hover { border-color:color-mix(in srgb, var(--accent) 45%, var(--line));
+      color:var(--accent-ink); }
+    button.primary:hover { color:#fff; filter:brightness(1.06); }
+    .job:hover { background:var(--surface); }
+    .card:hover { border-color:color-mix(in srgb, var(--accent) 45%, var(--line));
+      box-shadow:var(--shadow-md); transform:translateY(-1px); }
+    a:hover { text-decoration-color:currentColor; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    main.boot { animation:none; }
+    nav button:active, button.act:active, .card:active { transform:none; }
+    .card, .card:hover { transform:none; }
+    #wsp { transform:none; opacity:0; transition:opacity .2s ease; }
+    #ws.open #wsp { opacity:1; }
+    .toast { transform:translate(-50%,0) !important; transition:opacity .2s ease; }
+  }
+  @media (prefers-reduced-transparency: reduce) {
+    header { background:var(--paper); backdrop-filter:none; -webkit-backdrop-filter:none; }
+  }
 </style>
 </head>
 <body>
@@ -143,13 +233,18 @@ const token = () => localStorage.getItem("jr_pat") || "";
 const $ = sel => document.querySelector(sel);
 const esc = s => (s??"").toString().replace(/[&<>"]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const toast = m => { const t=document.createElement("div"); t.className="toast"; t.textContent=m;
-  document.body.appendChild(t); setTimeout(()=>t.remove(), 3200); };
+  document.body.appendChild(t);
+  setTimeout(()=>t.classList.add("out"), 2900);   // exits the way it entered
+  setTimeout(()=>t.remove(), 3250); };
 
 /* ---------- theme ---------- */
 $("#themeBtn").onclick = () => {
-  const cur = document.documentElement.dataset.theme ||
+  const root = document.documentElement;
+  root.classList.add("theme-fade");               // ease the brightness jump
+  const cur = root.dataset.theme ||
     (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-  document.documentElement.dataset.theme = cur === "dark" ? "light" : "dark";
+  root.dataset.theme = cur === "dark" ? "light" : "dark";
+  setTimeout(()=>root.classList.remove("theme-fade"), 350);
 };
 
 /* ---------- data ---------- */
@@ -307,6 +402,7 @@ async function actApplied(j) {
 const TABS = [["jobs","Jobs"],["pipeline","Pipeline"],["companies","Companies"],
               ["ai","AI"],["settings","Settings"]];
 function render() {
+  if (!render.did) { render.did = 1; $("#main").classList.add("boot"); } // one-time entrance only
   $("#nav").innerHTML = TABS.map(([k,l]) =>
     `<button class="${S.tab===k?'on':''}" onclick="S.tab='${k}';render()">${l}</button>`).join("") +
     `<button onclick="window.open('https://github.com/${REPO}/issues','_blank')">Issues ↗</button>` +
