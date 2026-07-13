@@ -169,6 +169,38 @@ def test_sync_patches_stage_when_saved_entry_becomes_applied(tmp_state, monkeypa
     assert "Apply date" in sent
 
 
+def test_sync_patches_rejection_stage_with_response_date(tmp_state, monkeypatch):
+    monkeypatch.setenv("NOTION_TOKEN", "tok")
+    schema = {**FULL_SCHEMA, "properties": {**FULL_SCHEMA["properties"], "Response date": "date"},
+              "status_options": {"Stage": ["Applied", "Interview", "OA", "Rejected", "CLOSED"]}}
+    entry = {"id": JOB["id"], "company": "Stripe", "title": "SWE", "url": "u",
+             "stage": "rejected", "notion_synced": True, "notion_stage": "applied",
+             "responded_at": 1783000000,
+             "notion_page": "https://app.notion.com/p/Stripe-3995d6f42cab81b79291edce7b1639b2"}
+    with patch.object(ns, "resolve_database", return_value=schema), \
+         patch.object(ns.requests, "patch") as mock_patch:
+        mock_patch.return_value.raise_for_status = lambda: None
+        assert ns.sync_applied([entry]) == 1
+    assert entry["notion_stage"] == "rejected"
+    sent = mock_patch.call_args.kwargs["json"]["properties"]
+    assert sent["Stage"]["status"]["name"] == "Rejected"
+    assert "Response date" in sent and "Apply date" not in sent
+
+
+def test_sync_skips_stage_not_in_schema_options(tmp_state, monkeypatch):
+    monkeypatch.setenv("NOTION_TOKEN", "tok")
+    # a database lacking the "OA" option must not receive an invalid patch
+    schema = {**FULL_SCHEMA, "status_options": {"Stage": ["Applied", "Rejected"]}}
+    entry = {"id": JOB["id"], "company": "Stripe", "title": "SWE", "url": "u",
+             "stage": "oa", "notion_synced": True, "notion_stage": "applied",
+             "notion_page": "https://app.notion.com/p/Stripe-3995d6f42cab81b79291edce7b1639b2"}
+    with patch.object(ns, "resolve_database", return_value=schema), \
+         patch.object(ns.requests, "patch") as mock_patch:
+        assert ns.sync_applied([entry]) == 0
+        mock_patch.assert_not_called()
+    assert entry["notion_stage"] == "applied"  # unchanged
+
+
 def test_notion_payload_degrades_on_minimal_schema():
     # a "fresh slate" database might only have the two essentials — nothing
     # should crash, and fields absent from the schema are simply skipped

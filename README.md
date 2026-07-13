@@ -58,14 +58,26 @@ every ~30 min (GitHub Actions cron)
    Applications database immediately with the not-yet-applied status
    (`stage_saved` in profile.yaml, default "Not started") and improves future
    ranking.
-2. **When you apply, change that entry's status in Notion yourself** — you are
-   the source of truth for applications. (Email confirmation detection can
-   automate this flip later, but it's shelved until its credentials are set
-   up; when active it promotes the existing entry rather than duplicating it.)
+2. **When you apply, the inbox becomes the source of truth.** With the email
+   credentials set up (below), the watcher reads application-lifecycle emails
+   and drives the Notion **Stage** for you, end to end — no manual updates:
+   - "Thank you for applying…" → promotes the tracked entry to **Applied**
+   - online-assessment / coding-challenge invite → **OA**
+   - interview / "schedule a call" / "next steps" → **Interview**
+   - "unfortunately… other candidates" → **Rejected** (+ Response date)
+   - applied with no reply for `autoclose_days` (default 45) → **CLOSED**
+
+   It only ever moves a job *forward*, so a stray late email can't undo a
+   later stage. You can still change anything in Notion by hand.
 3. For a job found outside the radar, comment `applied <url>` on any issue to
    log it as Applied immediately.
 4. A twice-daily reconcile sweep re-reads every radar issue and tracks any
    checked box the event pipeline missed — a tick is never lost.
+
+The weekly strategy memo now includes an **auto-tracked funnel** (applied → OA
+→ interview → rejected → auto-closed) and your response rate, overall and by
+sector — built entirely from what the watcher reads, so you can see which
+sectors actually reply.
 
 Each alert now includes a plain-language company category and a short
 description of what the company does (for example, **defense & aerospace —

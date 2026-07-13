@@ -344,3 +344,30 @@ The full signed-in flow was verified live this session: OAuth sign-in as
 must submit the form with the authorize button's name/value), passkey
 confirmation by Victor, then a one-click track from the platform → 202 →
 repository_dispatch → web-actions workflow.
+
+## 16. Email autopilot: high-precision patterns, forward-only, inbox is truth
+The tracker now maintains its own Notion Stage from the inbox: the email
+watcher classifies each application-lifecycle email (confirmation / OA /
+interview / rejection) and patches the matching entry's stage, plus a
+dead-application auto-close after N days of silence. Design guardrails:
+- **Precision over recall.** Only unambiguous language transitions a stage
+  (e.g. rejection requires "unfortunately", "move forward with other
+  candidates", "regret to inform" — not the mere word "application"). A
+  missed email costs nothing (the next run or a manual edit catches it); a
+  false Rejected in Notion is expensive. Order matters: a post-interview
+  rejection is a rejection, and OA is checked before the generic word
+  "interview".
+- **Forward-only.** STAGE_ORDER ranks stages; a transition only applies if it
+  moves strictly forward, so a late "interview" email after a "rejected" is
+  ignored. No regressions, ever.
+- **Responses match against applied, not the shortlist.** An OA/interview/
+  rejection is a reply to something already submitted, so it's matched only
+  against `applied` entries (reusing the same token-overlap matcher, ≥0.5).
+- **Notion stays authoritative-compatible.** Every target status is validated
+  against the live Stage options before patching (the API can't create
+  options); an unknown option is skipped with a log line, never a failed
+  write. Response-bearing stages also stamp the existing "Response date"
+  property. All verified against the live "2026 Applications" schema.
+- **Auto-close is conservative.** Default 45 days (configurable), and only for
+  entries still at "applied" with no recorded response — anything that got an
+  OA/interview/rejection already has a real outcome and is never touched.

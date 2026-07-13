@@ -119,6 +119,15 @@ notion:
   # landing there as the database default). If you add a cleaner option in
   # Notion (e.g. "To apply"), change this to match.
   stage_saved: Waiting for a referral
+  # Lifecycle stages the email watcher drives automatically when it detects a
+  # rejection / interview invite / online-assessment / long silence. Each must
+  # be an existing Stage option (verified live against "2026 Applications"
+  # 2026-07-12). The watcher only ever advances a stage, never regresses it.
+  stage_oa: OA
+  stage_interview: Interview
+  stage_rejected: Rejected
+  stage_closed: CLOSED
+  autoclose_days: 45     # applied with no response after this long -> CLOSED
   position_map:              # role bucket -> existing options in your Position multi-select
     ai_ml: AI/ML Software Engineer
     ml_eng: Machine Learning Enginner   # (sic — matches the existing option in your DB)

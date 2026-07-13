@@ -203,11 +203,29 @@ def page_id_from_url(url: str) -> str | None:
     return f"{h[0:8]}-{h[8:12]}-{h[12:16]}-{h[16:20]}-{h[20:32]}"
 
 
+def stage_status_name(stage_key: str) -> str | None:
+    """Notion Stage option name for an internal stage key, or None if unmapped."""
+    n = profile()["notion"]
+    return {
+        "saved": n.get("stage_saved"),
+        "applied": n.get("stage_applied"),
+        "oa": n.get("stage_oa", "OA"),
+        "interview": n.get("stage_interview", "Interview"),
+        "rejected": n.get("stage_rejected", "Rejected"),
+        "closed": n.get("stage_closed", "CLOSED"),
+    }.get(stage_key)
+
+
+# response-bearing stages record a Response date; only "applied" sets Apply date
+_RESPONSE_STAGES = {"oa", "interview", "rejected", "closed"}
+
+
 def _needs_stage_patch(entry: dict) -> bool:
-    """A synced page whose recorded stage has since advanced to applied."""
+    """A synced page whose Notion stage no longer matches the entry's stage."""
     return (bool(entry.get("notion_synced"))
-            and entry.get("stage", "applied") == "applied"
-            and entry.get("notion_stage", "applied") != "applied")
+            and entry.get("stage") is not None
+            and entry.get("stage") != entry.get("notion_stage")
+            and stage_status_name(entry.get("stage")) is not None)
 
 
 def sync_applied(applied: list) -> int:
@@ -242,19 +260,32 @@ def sync_applied(applied: list) -> int:
             print(f"notion: failed to sync {entry.get('company')}: {e}")
 
     stage_prop = _stage_property(schema)
+    options = schema.get("status_options", {}).get(stage_prop) if stage_prop else None
     for entry in promotions:
         page_id = page_id_from_url(entry.get("notion_page", ""))
-        if not page_id or not stage_prop:
+        target = entry.get("stage")
+        name = stage_status_name(target)
+        if not page_id or not stage_prop or not name:
             continue
-        props: dict = {stage_prop: {"status": {"name": profile()["notion"]["stage_applied"]}}}
-        if schema["properties"].get("Apply date") == "date":
-            props["Apply date"] = {"date": {"start": datetime.now(timezone.utc).strftime("%Y-%m-%d")}}
+        if options is not None and name not in options:
+            print(f"notion: '{name}' not an option in your Stage column; skipping "
+                  f"{entry.get('company')}")
+            continue
+        props: dict = {stage_prop: {"status": {"name": name}}}
+        today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        if target == "applied" and schema["properties"].get("Apply date") == "date":
+            props["Apply date"] = {"date": {"start": today}}
+        if target in _RESPONSE_STAGES and schema["properties"].get("Response date") == "date":
+            resp = entry.get("responded_at")
+            when = (datetime.fromtimestamp(resp, timezone.utc).strftime("%Y-%m-%d")
+                    if resp else today)
+            props["Response date"] = {"date": {"start": when}}
         try:
             r = requests.patch(f"{PAGES_API}/{page_id}", headers=headers,
                                json={"properties": props}, timeout=20)
             r.raise_for_status()
-            entry["notion_stage"] = "applied"
+            entry["notion_stage"] = target
             synced += 1
         except Exception as e:
-            print(f"notion: failed to mark {entry.get('company')} applied: {e}")
+            print(f"notion: failed to set {entry.get('company')} -> {name}: {e}")
     return synced

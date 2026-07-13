@@ -63,6 +63,33 @@ def build_memo() -> str:
         ok_runs = sum(1 for r in runs if now - r["ts"] <= WEEK)
         lines.append(f"- Radar health: {ok_runs} crawls this week, "
                      f"{runs[-1].get('registry_size', '?')} companies in registry")
+    # Funnel: where do the applications the email watcher tracks actually stand?
+    real = [a for a in applied if a.get("stage") in
+            {"applied", "oa", "interview", "rejected", "closed"}]
+    if real:
+        stages = Counter(a.get("stage") for a in real)
+        responded = stages["oa"] + stages["interview"] + stages["rejected"]
+        total_appl = len(real)
+        resp_rate = f"{round(100 * responded / total_appl)}%" if total_appl else "—"
+        lines += [
+            "", "## 🔻 Funnel (auto-tracked from your inbox)",
+            f"- **{total_appl}** applied · **{stages['oa']}** OA · "
+            f"**{stages['interview']}** interview · **{stages['rejected']}** rejected · "
+            f"**{stages['closed']}** auto-closed",
+            f"- Response rate: **{resp_rate}** · still advancing: "
+            f"**{stages['oa'] + stages['interview']}**",
+        ]
+        sec_tot, sec_resp = Counter(), Counter()
+        for a in real:
+            sec = (jobs.get(a["id"], {}) or {}).get("sector") or "other"
+            sec_tot[sec] += 1
+            if a.get("stage") in {"oa", "interview", "rejected"}:
+                sec_resp[sec] += 1
+        by_sec = [f"{s} {round(100 * sec_resp[s] / sec_tot[s])}%"
+                  for s, _ in sec_tot.most_common() if sec_tot[s] >= 3]
+        if by_sec:
+            lines.append("- Response rate by sector: " + " · ".join(by_sec))
+
     if stale:
         lines += ["", "## ⏰ Follow up (applied 5–21 days ago, no marked response)"]
         lines += [f"- **{a['company']}** — {a['title'][:70]} "

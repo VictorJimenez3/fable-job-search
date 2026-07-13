@@ -145,3 +145,101 @@ def test_run_skips_without_credentials(tmp_state, monkeypatch):
     monkeypatch.delenv("EMAIL_APP_PASSWORD", raising=False)
     result = ew.run()
     assert result == {"checked": 0, "matched": 0, "synced": 0}
+
+
+# ---- lifecycle autopilot: classification, transitions, auto-close ----
+
+def test_classify_lifecycle_events():
+    assert ew.classify("Thank you for applying to Software Engineer") == "confirmation"
+    assert ew.classify("Unfortunately, we've decided to move forward with other candidates") == "rejected"
+    assert ew.classify("Please complete your online assessment on HackerRank") == "oa"
+    assert ew.classify("We'd love to schedule a call for a first-round interview") == "interview"
+    # a post-interview rejection is a rejection, not an interview
+    assert ew.classify("Thanks for interviewing. Unfortunately we won't be moving forward.") == "rejected"
+    assert ew.classify("Our weekly product newsletter") is None
+
+
+def test_can_advance_is_forward_only():
+    assert ew.can_advance("applied", "interview")
+    assert ew.can_advance("applied", "rejected")
+    assert ew.can_advance("interview", "rejected")
+    assert not ew.can_advance("rejected", "interview")   # no regression
+    assert not ew.can_advance("interview", "applied")
+    assert not ew.can_advance("interview", "interview")
+
+
+def _raw_body(from_hdr, subject, body, msg_id):
+    return (f"From: {from_hdr}\r\nSubject: {subject}\r\nMessage-ID: {msg_id}\r\n"
+            f"Content-Type: text/plain\r\n\r\n{body}\r\n").encode()
+
+
+def _full_imap(messages):
+    """FakeIMAP whose fetch returns full bodies (BODY.PEEK[])."""
+    class F(_FakeIMAP):
+        def fetch(self, uid, spec):
+            raw = self._messages.get(uid)
+            return ("OK", [(b"1 (BODY[])", raw)]) if raw else ("NO", [None])
+    return F(messages)
+
+
+def test_rejection_email_advances_applied_entry_to_rejected(tmp_state, monkeypatch):
+    monkeypatch.setenv("EMAIL_ADDRESS", "vmj@njit.edu")
+    monkeypatch.setenv("EMAIL_APP_PASSWORD", "fake")
+    monkeypatch.delenv("NOTION_TOKEN", raising=False)
+    state.save("jobs.json", {})
+    state.save("applied.json", [{"id": "j1", "company": "Stripe", "title": "SWE",
+                                 "url": "u", "stage": "applied", "applied_at": int(time.time()) - 3 * 86400,
+                                 "notion_synced": True, "notion_stage": "applied"}])
+    msgs = {b"1": _raw_body("Stripe Recruiting <no-reply@stripe.com>",
+                            "Update on your application",
+                            "Unfortunately, we have decided to move forward with other candidates.",
+                            "<r1@stripe.com>")}
+    monkeypatch.setattr(ew.imaplib, "IMAP4_SSL", lambda host, port: _full_imap(msgs))
+    result = ew.run(lookback_days=5)
+    assert result["rejected"] == 1
+    e = state.applied()[0]
+    assert e["stage"] == "rejected" and e["status"] == "rejected"
+    assert e["responded_at"]
+
+
+def test_interview_email_advances_and_no_regression(tmp_state, monkeypatch):
+    monkeypatch.setenv("EMAIL_ADDRESS", "vmj@njit.edu")
+    monkeypatch.setenv("EMAIL_APP_PASSWORD", "fake")
+    monkeypatch.delenv("NOTION_TOKEN", raising=False)
+    state.save("jobs.json", {})
+    # already rejected — an interview email must NOT move it back
+    state.save("applied.json", [{"id": "j1", "company": "Databricks", "title": "MLE",
+                                 "url": "u", "stage": "rejected", "applied_at": int(time.time()) - 5 * 86400,
+                                 "notion_synced": True, "notion_stage": "rejected", "responded_at": 1}])
+    msgs = {b"1": _raw_body("Databricks <talent@databricks.com>",
+                            "Next steps — interview",
+                            "We'd like to schedule a call for your first interview.",
+                            "<i1@databricks.com>")}
+    monkeypatch.setattr(ew.imaplib, "IMAP4_SSL", lambda host, port: _full_imap(msgs))
+    result = ew.run(lookback_days=5)
+    assert result["interview"] == 0
+    assert state.applied()[0]["stage"] == "rejected"   # unchanged
+
+
+def test_autoclose_stale_applications(tmp_state, monkeypatch):
+    monkeypatch.setenv("EMAIL_ADDRESS", "vmj@njit.edu")
+    monkeypatch.setenv("EMAIL_APP_PASSWORD", "fake")
+    monkeypatch.delenv("NOTION_TOKEN", raising=False)
+    state.save("jobs.json", {})
+    now = int(time.time())
+    state.save("applied.json", [
+        {"id": "old", "company": "OldCo", "title": "SWE", "url": "u", "stage": "applied",
+         "applied_at": now - 60 * 86400, "notion_synced": True, "notion_stage": "applied"},
+        {"id": "new", "company": "NewCo", "title": "SWE", "url": "u", "stage": "applied",
+         "applied_at": now - 5 * 86400, "notion_synced": True, "notion_stage": "applied"},
+        {"id": "resp", "company": "RespCo", "title": "SWE", "url": "u", "stage": "interview",
+         "applied_at": now - 60 * 86400, "responded_at": now - 40 * 86400,
+         "notion_synced": True, "notion_stage": "interview"},
+    ])
+    monkeypatch.setattr(ew.imaplib, "IMAP4_SSL", lambda host, port: _full_imap({}))
+    result = ew.run(lookback_days=5)
+    assert result["closed"] == 1
+    by_id = {e["id"]: e for e in state.applied()}
+    assert by_id["old"]["stage"] == "closed"       # 60d silent → closed
+    assert by_id["new"]["stage"] == "applied"       # 5d → untouched
+    assert by_id["resp"]["stage"] == "interview"    # had a response → never auto-closed

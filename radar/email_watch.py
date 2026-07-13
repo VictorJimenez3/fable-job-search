@@ -48,6 +48,57 @@ CONFIRMATION_RE = re.compile(
     r"application confirmation|"
     r"successfully applied", re.I)
 
+REJECTION_RE = re.compile(
+    r"unfortunately|we regret to inform|regret to inform you|"
+    r"not (?:be )?(?:moving|move|proceeding|proceed) forward|"
+    r"decided (?:not )?to (?:move forward|proceed|pursue|advance)|"
+    r"(?:pursue|move forward with) other (?:candidates|applicant)|"
+    r"no longer (?:be )?(?:under consideration|considering|moving forward)|"
+    r"will not be (?:moving|proceeding|advancing)|"
+    r"(?:position|role|req(?:uisition)?) (?:has been|is) (?:filled|closed)|"
+    r"not (?:be )?(?:selected|selecting you|a match at this time)|"
+    r"after (?:careful|thorough) (?:consideration|review)|"
+    r"chosen to move forward with other", re.I)
+
+OA_RE = re.compile(
+    r"online assessment|coding (?:challenge|assessment|test|exercise)|"
+    r"hackerrank|codesignal|codility|karat|hirevue|"
+    r"take[- ]?home (?:assignment|assessment|challenge)|"
+    r"technical (?:assessment|screen(?:ing)?)|assessment (?:invitation|link)|"
+    r"complete (?:the|your|a) (?:assessment|challenge)", re.I)
+
+INTERVIEW_RE = re.compile(
+    r"interview|schedule (?:a |your |some )?(?:time|call|chat|conversation)|"
+    r"phone screen|next steps|(?:like|love) to (?:meet|speak|chat|connect) with|"
+    r"hiring manager|video call|availability (?:for|to)|book (?:a |your )?time|"
+    r"set up (?:a |some )?time|move(?:d)? (?:you )?(?:to|forward to|onto) the", re.I)
+
+
+def classify(text: str) -> str | None:
+    """Which application-lifecycle event does this email represent?
+    Order matters: a post-interview rejection contains 'interview' too, so a
+    strong rejection signal wins; OA is checked before generic 'interview'."""
+    if REJECTION_RE.search(text):
+        return "rejected"
+    if OA_RE.search(text):
+        return "oa"
+    if INTERVIEW_RE.search(text):
+        return "interview"
+    if CONFIRMATION_RE.search(text):
+        return "confirmation"
+    return None
+
+
+# Forward-only pipeline ordering. A late email can never move a job backward
+# (e.g. a stray "interview" note after a rejection is ignored). Terminal
+# stages sit at the top so any real response can reach them.
+STAGE_ORDER = {"saved": 0, "applied": 1, "oa": 2, "interview": 3,
+               "offered": 8, "signed": 9, "rejected": 9, "closed": 9}
+
+
+def can_advance(current: str | None, target: str) -> bool:
+    return STAGE_ORDER.get(target, 0) > STAGE_ORDER.get(current or "applied", 1)
+
 NOISE_WORDS = {
     "careers", "career", "recruiting", "recruitment", "talent", "talentacquisition",
     "hr", "humanresources", "jobs", "hiring", "hiringteam", "team", "noreply",
@@ -83,7 +134,7 @@ def guess_company_candidates(msg: email.message.Message) -> list[str]:
     if domain and domain not in ATS_DOMAINS and domain_root not in {"gmail", "outlook", "yahoo"}:
         candidates.append(domain_root.replace("-", " ").title())
 
-    subject = msg.get("Subject", "") or ""
+    subject = str(msg.get("Subject", "") or "")
     m = re.search(r"(?:at|to|with|from)\s+([A-Z][\w&.,' -]{1,40}?)(?:[!.]|\s+[-|]|\s*$)", subject)
     if m:
         candidates.append(m.group(1).strip())
@@ -137,13 +188,18 @@ def _synthetic_job(company: str) -> dict:
 
 def _search_candidate_uids(conn: imaplib.IMAP4_SSL, host: str, lookback_days: int) -> list[bytes]:
     if "gmail" in host.lower():
+        # bare terms (no subject:) search the whole message, so rejection /
+        # interview / assessment language in the body is caught too.
         query = (
             f'newer_than:{lookback_days}d ('
             'subject:"thank you for applying" OR subject:"thanks for applying" OR '
-            'subject:"application received" OR subject:"we received your application" OR '
-            'subject:"your application" OR subject:"application confirmation" OR '
-            'subject:"applying to" OR subject:"application to" OR '
-            'subject:"successfully applied")'
+            'subject:"application received" OR subject:"your application" OR '
+            'subject:"application confirmation" OR subject:"applying to" OR '
+            'subject:"update on your" OR subject:"regarding your application" OR '
+            'subject:interview OR subject:assessment OR subject:"next steps" OR '
+            '"successfully applied" OR "unfortunately" OR "move forward with other" OR '
+            '"regret to inform" OR "online assessment" OR "coding challenge" OR '
+            '"schedule a" OR "we received your application")'
         )
         typ, data = conn.search(None, "X-GM-RAW", f'"{query}"')
     else:
@@ -159,6 +215,49 @@ def _fetch_headers(conn: imaplib.IMAP4_SSL, uid: bytes) -> email.message.Message
     if typ != "OK" or not data or not isinstance(data[0], tuple):
         return None
     return email.message_from_bytes(data[0][1])
+
+
+def _fetch_full(conn: imaplib.IMAP4_SSL, uid: bytes) -> email.message.Message | None:
+    typ, data = conn.fetch(uid, "(BODY.PEEK[])")
+    if typ != "OK" or not data or not isinstance(data[0], tuple):
+        return None
+    return email.message_from_bytes(data[0][1])
+
+
+def _body_text(msg: email.message.Message, limit: int = 4000) -> str:
+    """Plain-text body (first text/plain part, else stripped text/html)."""
+    def _decode(part) -> str:
+        try:
+            payload = part.get_payload(decode=True)
+            if payload is None:
+                return ""
+            return payload.decode(part.get_content_charset() or "utf-8", "replace")
+        except Exception:
+            return ""
+
+    plain, html = "", ""
+    if msg.is_multipart():
+        for part in msg.walk():
+            ct = part.get_content_type()
+            if ct == "text/plain" and not plain:
+                plain = _decode(part)
+            elif ct == "text/html" and not html:
+                html = _decode(part)
+    else:
+        if msg.get_content_type() == "text/html":
+            html = _decode(msg)
+        else:
+            plain = _decode(msg)
+    text = plain or re.sub(r"<[^>]+>", " ", html)
+    return re.sub(r"\s+", " ", text).strip()[:limit]
+
+
+def _msg_epoch(msg: email.message.Message) -> int | None:
+    try:
+        dt = email.utils.parsedate_to_datetime(msg.get("Date", ""))
+        return int(dt.timestamp()) if dt else None
+    except Exception:
+        return None
 
 
 def _connect() -> imaplib.IMAP4_SSL:
@@ -206,6 +305,32 @@ def verify_connection() -> None:
             pass
 
 
+def _advance(entry: dict, target: str, when: int | None) -> bool:
+    """Move an applied entry to a later pipeline stage (never backward).
+    Sets .stage (drives Notion) + .status + .responded_at. Returns True if it
+    actually changed."""
+    if not can_advance(entry.get("stage"), target):
+        return False
+    entry["stage"] = target
+    entry["status"] = target
+    entry["responded_at"] = when or int(time.time())
+    return True
+
+
+def _autoclose(applied: list, now: int, days: int) -> int:
+    """Applications sitting at 'applied' with no response for `days` → CLOSED."""
+    cutoff = now - days * 86400
+    closed = 0
+    for e in applied:
+        if (e.get("stage") == "applied" and not e.get("responded_at")
+                and e.get("applied_at", now) < cutoff):
+            e["stage"] = "closed"
+            e["status"] = "closed"
+            e["auto_closed"] = True
+            closed += 1
+    return closed
+
+
 def run(lookback_days: int = DEFAULT_LOOKBACK_DAYS) -> dict:
     address = env("EMAIL_ADDRESS")
     app_password = env("EMAIL_APP_PASSWORD")
@@ -214,6 +339,7 @@ def run(lookback_days: int = DEFAULT_LOOKBACK_DAYS) -> dict:
               "(applications must be logged manually via `applied <url>` for now)")
         return {"checked": 0, "matched": 0, "synced": 0}
 
+    from .config import profile
     host = env("EMAIL_IMAP_HOST", DEFAULT_HOST)
     seen = state.load("email_watch.json", {"seen_message_ids": [], "last_checked_at": 0})
     seen_ids = set(seen.get("seen_message_ids", []))
@@ -227,10 +353,10 @@ def run(lookback_days: int = DEFAULT_LOOKBACK_DAYS) -> dict:
         jobs = state.jobs()
         applied = state.applied()
         fb = state.feedback()
-        matched = 0
+        counts = {"confirmation": 0, "oa": 0, "interview": 0, "rejected": 0}
 
         for uid in uids:
-            msg = _fetch_headers(conn, uid)
+            msg = _fetch_full(conn, uid) or _fetch_headers(conn, uid)
             if msg is None:
                 continue
             msg_id = msg.get("Message-ID") or f"uid-{uid.decode() if isinstance(uid, bytes) else uid}"
@@ -239,17 +365,28 @@ def run(lookback_days: int = DEFAULT_LOOKBACK_DAYS) -> dict:
             seen_ids.add(msg_id)
 
             subject = msg.get("Subject", "") or ""
-            if not CONFIRMATION_RE.search(subject):
+            kind = classify(f"{subject}\n{_body_text(msg)}")
+            if kind is None:
                 continue
 
             candidates = guess_company_candidates(msg)
             if not candidates:
                 continue
 
-            job = match_company(candidates, shortlist, jobs) or _synthetic_job(candidates[0])
-            if record_applied(job, applied, fb, via="email"):
-                matched += 1
-                shortlist[:] = [s for s in shortlist if s["id"] != job["id"]]
+            if kind == "confirmation":
+                job = match_company(candidates, shortlist, jobs) or _synthetic_job(candidates[0])
+                if record_applied(job, applied, fb, via="email"):
+                    counts["confirmation"] += 1
+                    shortlist[:] = [s for s in shortlist if s["id"] != job["id"]]
+            else:
+                # a response (oa/interview/rejection) only makes sense for a job
+                # already in the pipeline — match against applied, not shortlist
+                mscore, match = _best_match(candidates, applied) if applied else (0.0, None)
+                if match and mscore >= 0.5 and _advance(match, kind, _msg_epoch(msg)):
+                    counts[kind] += 1
+
+        closed = _autoclose(applied, int(time.time()),
+                            int(profile()["notion"].get("autoclose_days", 45)))
 
         synced = sync_applied(applied)
         state.save("applied.json", applied)
@@ -258,9 +395,13 @@ def run(lookback_days: int = DEFAULT_LOOKBACK_DAYS) -> dict:
         seen_ids_list = list(seen_ids)[-MAX_SEEN_IDS:]
         state.save("email_watch.json", {"seen_message_ids": seen_ids_list,
                                         "last_checked_at": int(time.time())})
-        print(f"email_watch: checked {len(uids)} candidate email(s), matched {matched} "
-              f"application(s), synced {synced} to Notion")
-        return {"checked": len(uids), "matched": matched, "synced": synced}
+        matched = sum(counts.values())
+        print(f"email_watch: checked {len(uids)} email(s) — "
+              f"{counts['confirmation']} applied, {counts['interview']} interview, "
+              f"{counts['oa']} OA, {counts['rejected']} rejected, {closed} auto-closed; "
+              f"synced {synced} to Notion")
+        return {"checked": len(uids), "matched": matched, "closed": closed,
+                "synced": synced, **counts}
     finally:
         try:
             conn.logout()
