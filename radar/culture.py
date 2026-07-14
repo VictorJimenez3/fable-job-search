@@ -124,7 +124,7 @@ Use conservative estimates and mark uncertain numbers with (est.)."""
 
 def enrich_missing(limit: int = 8) -> int:
     """Generate dossiers for recently-alerted companies that lack one."""
-    if not llm.available():
+    if not llm.available() or limit <= 0:
         return 0
     dossiers = load()
     alert_history = state.load("alert_history.json", [])

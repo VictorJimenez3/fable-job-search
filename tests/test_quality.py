@@ -132,6 +132,30 @@ def test_garbage_llm_output_never_crashes(monkeypatch):
     assert rec["quality"]["new_grad"] == "unclear"
 
 
+def test_one_to_two_years_demotes_but_never_hides(monkeypatch):
+    # the house rule is 3+ yrs = out; an LLM "no" at 1-2 yrs only re-ranks
+    monkeypatch.setattr(quality.http, "get",
+                        lambda *a, **k: FakeResp(200, _posting("1-2 years of experience preferred.")))
+    monkeypatch.setattr(quality.llm, "complete", lambda *a, **k:
+                        '{"years_required": 1, "new_grad": "no", "role_family": "swe", "reason": "1+ yrs"}')
+    monkeypatch.setattr(quality, "is_marquee", lambda c: False)
+    rec = _rec()
+    assert quality.verify(rec)
+    assert rec["alert_ok"] is True
+    assert rec["score"] == 80 - quality._PENALTY_SOME_EXPERIENCE
+
+
+def test_limit_budgets_attempts_not_successes(monkeypatch):
+    # unreadable pages must consume the budget — no unbounded fetch sprees
+    monkeypatch.setattr(quality.http, "get", lambda *a, **k: FakeResp(200, "<html>tiny</html>"))
+    monkeypatch.setattr(quality.time, "sleep", lambda s: None)
+    jobs = {f"j{i}": _rec(id=f"j{i}", url=f"https://x.example/{i}") for i in range(10)}
+    reapplied, verified = quality.run(jobs, limit=4)
+    assert verified == 0
+    touched = sum(1 for r in jobs.values() if r.get("quality", {}).get("attempts"))
+    assert touched == 4
+
+
 def test_run_respects_limit_and_reapplies(monkeypatch):
     monkeypatch.setattr(quality.http, "get", lambda *a, **k: FakeResp(404))
     monkeypatch.setattr(quality, "is_marquee", lambda c: False)

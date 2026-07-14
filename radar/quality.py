@@ -47,6 +47,7 @@ DEAD_PHRASES = (
 _MAX_ATTEMPTS = 2          # LLM/fetch tries per job before marking unclear
 _PENALTY_NOT_NEW_GRAD = 20
 _PENALTY_WRONG_ROLE = 25
+_PENALTY_SOME_EXPERIENCE = 10
 
 PROMPT = """You screen job postings for a computer-science new grad (class of 2026, US).
 Job: {title} — {company}
@@ -107,9 +108,17 @@ def _effects(q: dict) -> list[tuple[str, int, bool]]:
     out = []
     if q.get("new_grad") == "no":
         yrs = q.get("years_required")
-        out.append((f"quality: not new-grad ({f'{yrs}+ yrs' if yrs else 'senior'}"
-                    f" — LLM-verified) -{_PENALTY_NOT_NEW_GRAD}",
-                    _PENALTY_NOT_NEW_GRAD, True))
+        if yrs is not None and 0 < yrs < 3:
+            # the LLM is stricter than the house rule (hard gate is 3+ yrs):
+            # 1-2 yrs postings are still worth a new grad's application —
+            # rank them lower, but never hide them
+            out.append((f"quality: wants {yrs}+ yrs (LLM-verified) "
+                        f"-{_PENALTY_SOME_EXPERIENCE}",
+                        _PENALTY_SOME_EXPERIENCE, False))
+        else:
+            out.append((f"quality: not new-grad ({f'{yrs}+ yrs' if yrs else 'senior'}"
+                        f" — LLM-verified) -{_PENALTY_NOT_NEW_GRAD}",
+                        _PENALTY_NOT_NEW_GRAD, True))
     if q.get("role_family") == "non-technical":
         out.append((f"quality: non-technical role ({(q.get('reason') or '')[:40]}"
                     f" — LLM-verified) -{_PENALTY_WRONG_ROLE}",
@@ -212,20 +221,25 @@ def run(jobs_state: dict, limit: int | None = None) -> tuple[int, int]:
     `limit` unverified jobs. Returns (reapplied, newly_verified)."""
     if env("RADAR_QUALITY_DISABLE"):
         return 0, 0
-    limit = int(env("RADAR_QUALITY_LIMIT", "15")) if limit is None else limit
+    limit = int(env("RADAR_QUALITY_LIMIT", "25")) if limit is None else limit
     now = int(time.time())
     reapplied = 0
     for rec in jobs_state.values():
         if rec.get("quality", {}).get("checked_at"):
             reapply(rec)
             reapplied += 1
-    verified = 0
+    # `limit` budgets ATTEMPTS (fetch+LLM work, i.e. cycle time), not
+    # successes — an unlucky stretch of unreadable pages must not turn into
+    # an unbounded fetch spree (first live cycle: 131 fetches for 15
+    # verdicts before this cap).
+    tried = verified = 0
     for rec in _candidates(jobs_state, now):
-        if verified >= limit:
+        if tried >= limit:
             break
         q = rec.get("quality") or {}
         if q.get("checked_at") or q.get("attempts", 0) >= _MAX_ATTEMPTS:
             continue
+        tried += 1
         if verify(rec):
             verified += 1
         time.sleep(0.4)   # politeness between posting fetches

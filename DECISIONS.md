@@ -439,3 +439,19 @@ posting (`years_required` / `new_grad` / `role_family`). Guardrails:
 - **"Unclear" never suppresses.** A page we can't read or a verdict we
   can't parse leaves the job exactly as the rubric scored it.
 
+Amended after the first live cycle (2026-07-14), which found 3 dead
+postings and a mislabeled-senior Netflix role but exposed three gaps:
+- **The budget caps attempts, not successes** — unreadable pages had let
+  the loop run 131 fetches to land 15 verdicts. Default is now 25 attempts.
+- **The house rule outranks the LLM's strictness too**: a verified
+  1–2-years posting takes −10 and stays visible (the hard gate is 3+ yrs;
+  a new grad should still see those), instead of being alert-suppressed.
+- **Push races resolve by cache-merge, not git merge.** An enrich cycle
+  takes minutes, a CI crawl lands mid-cycle, and both sides regenerate
+  jobs.json + docs wholesale — `git pull --rebase` conflicts and used to
+  wedge the clone mid-rebase. run.sh now self-heals on entry (abort any
+  in-progress rebase) and recovers from a rejected push by copying only the
+  LLM caches (quality verdicts, culture dossiers — dict-additive) onto a
+  fresh `reset --hard`, then re-running a zero-limit enrich to rebuild
+  effects and docs without new LLM calls (`scripts/mac-companion/merge_state.py`).
+
