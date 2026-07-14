@@ -26,6 +26,44 @@ def _headers() -> dict:
             "Accept": "application/vnd.github+json"}
 
 
+def response_rates(applied: list, jobs: dict) -> dict:
+    """Calculate per-sector and per-source response rates from applied entries.
+
+    A "response" is any stage that indicates the company has acted on the application:
+    OA (online assessment), interview, or rejection. The "applied" stage means
+    nothing has happened yet - no response.
+    """
+    now = int(time.time())
+    three_weeks_ago = now - 3 * 7 * 86400  # last 3 weeks
+
+    # Include all applications in the window, regardless of current stage
+    window = [a for a in applied if a.get("applied_at", 0) >= three_weeks_ago]
+
+    sector_stats: dict[str, dict] = {}
+    source_stats: dict[str, dict] = {}
+
+    for entry in window:
+        job_info = jobs.get(entry["id"], {})
+        sector = (job_info.get("sector") or "other")
+        source = (job_info.get("source") or "unknown")
+
+        # Count as applied
+        if sector not in sector_stats:
+            sector_stats[sector] = {"applied": 0, "responded": 0}
+        sector_stats[sector]["applied"] += 1
+
+        if source not in source_stats:
+            source_stats[source] = {"applied": 0, "responded": 0}
+        source_stats[source]["applied"] += 1
+
+        # Count as responded: OA, interview, or rejection (not "applied" or "saved")
+        if entry.get("stage") in {"oa", "interview", "rejected"}:
+            sector_stats[sector]["responded"] += 1
+            source_stats[source]["responded"] += 1
+
+    return {"by_sector": sector_stats, "by_source": source_stats}
+
+
 def build_memo() -> str:
     now = int(time.time())
     jobs = state.jobs()
@@ -38,6 +76,9 @@ def build_memo() -> str:
     fresh = [j for j in jobs.values() if j.get("posted_at") and now - j["posted_at"] <= WEEK]
     ht_hiring = Counter(j["company"] for j in fresh if j.get("sector") == "healthtech")
     sector_heat = Counter(j.get("sector") or "other" for j in fresh)
+
+    # Response rate analytics (last 3 weeks)
+    rates = response_rates(applied, jobs)
 
     # follow-up nudges: applied 5-21 days ago
     stale = [a for a in applied if 5 * 86400 <= now - a.get("applied_at", 0) <= 21 * 86400]
@@ -79,16 +120,22 @@ def build_memo() -> str:
             f"- Response rate: **{resp_rate}** · still advancing: "
             f"**{stages['oa'] + stages['interview']}**",
         ]
-        sec_tot, sec_resp = Counter(), Counter()
-        for a in real:
-            sec = (jobs.get(a["id"], {}) or {}).get("sector") or "other"
-            sec_tot[sec] += 1
-            if a.get("stage") in {"oa", "interview", "rejected"}:
-                sec_resp[sec] += 1
-        by_sec = [f"{s} {round(100 * sec_resp[s] / sec_tot[s])}%"
-                  for s, _ in sec_tot.most_common() if sec_tot[s] >= 3]
+
+    # Response rate breakdowns by sector/source (3-week window, min sample 3
+    # per bucket to avoid noisy single-application percentages)
+    MIN_SAMPLE = 3
+    by_sec = [f"{s} {round(100 * st['responded'] / st['applied'])}%"
+              for s, st in sorted(rates["by_sector"].items(), key=lambda x: -x[1]["applied"])
+              if st["applied"] >= MIN_SAMPLE]
+    by_src = [f"{s} {round(100 * st['responded'] / st['applied'])}%"
+              for s, st in sorted(rates["by_source"].items(), key=lambda x: -x[1]["applied"])
+              if st["applied"] >= MIN_SAMPLE]
+    if by_sec or by_src:
+        lines += ["", "## 📈 Response rates by sector/source (last 3 weeks)"]
         if by_sec:
-            lines.append("- Response rate by sector: " + " · ".join(by_sec))
+            lines.append("- By sector: " + " · ".join(by_sec))
+        if by_src:
+            lines.append("- By source: " + " · ".join(by_src))
 
     if stale:
         lines += ["", "## ⏰ Follow up (applied 5–21 days ago, no marked response)"]

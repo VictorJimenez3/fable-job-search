@@ -54,9 +54,11 @@ the CV is local-only, this feature runs exclusively on the Mac companion —
 never in Actions.
 
 ## Pipeline intelligence
-- **Response-rate analytics** — per-sector/per-source conversion rates in the
-  strategist memo: "healthtech replies 3× more than big tech for you — shift
-  volume." Becomes meaningful after ~30 tracked applications.
+- **Response-rate analytics** — ✅ SHIPPED 2026-07-14 (DECISIONS #31). Monday
+  memo now has a "📈 Response rates by sector/source (last 3 weeks)" section,
+  gated at 3+ applications per bucket. Still thin on real signal until ~30
+  tracked applications accumulate — the plumbing is done, the insight
+  sharpens with volume.
 - **Interview-loop dossiers** — when Stage hits Interview, auto-generate the
   company's known loop structure, question themes, and prep checklist
   (local-LLM job, so it's free on the Mac).

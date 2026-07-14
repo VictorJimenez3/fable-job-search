@@ -455,3 +455,26 @@ postings and a mislabeled-senior Netflix role but exposed three gaps:
   fresh `reset --hard`, then re-running a zero-limit enrich to rebuild
   effects and docs without new LLM calls (`scripts/mac-companion/merge_state.py`).
 
+## 31. Response-rate analytics: one canonical breakdown, not two (2026-07-14)
+
+Roadmap ask: "healthtech replies 3× more than big tech for you — shift
+volume," per-sector/per-source, becomes meaningful after ~30 tracked apps.
+`radar/strategist.py:response_rates()` computes it from `applied.json` +
+`jobs.json`: a "response" is any stage the company actively produced (OA,
+interview, rejected) — the `applied`/`saved` stages mean silence, not
+absence. Windowed to the last 3 weeks (recent signal, not lifetime average)
+and gated at `MIN_SAMPLE = 3` per bucket so a single early reply/rejection
+can't print a misleading 100%/0%. Per-source was added alongside per-sector
+in the same pass since the underlying data (job.source: greenhouse/ashby/
+workday/…) was already sitting right next to sector — same computation,
+same guardrail, doubles the signal for one function.
+
+The memo previously had *two* separate per-sector response-rate
+computations living in different places (an inline all-time one inside the
+Funnel section, plus this new 3-week one) — that would have printed two
+different-looking "response rate by sector" numbers in the same memo with
+no explanation of why they differ. Consolidated into the single 3-week,
+min-sample-3 breakdown; the Funnel section keeps its own all-time raw stage
+counts (a different, complementary metric — total funnel volume, not a
+rate) but no longer computes its own sector split.
+
