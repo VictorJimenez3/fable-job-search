@@ -133,10 +133,10 @@ const API = "https://api.github.com";
 const S = {           // app state
   jobs:{}, applied:[], culture:{}, companies:{}, runs:[], scout:{}, web:null,
   auth:null, backend:false,
-  tab:"jobs", filter:{q:"", min:66, sector:"", alert:true, lane:""}, shown:250,
+  tab:"jobs", filter:{q:"", min:66, sector:"", alert:true, lane:"", sort:"best"}, shown:250,
   marquee:new Set(["meta","apple","amazon","netflix","google","microsoft","nvidia",
     "anthropic","openai","deepmind","genentech","moderna","regeneron",
-    "vertex pharmaceuticals","eli lilly","medtronic","intuitive surgical","stryker"]),
+    "vertex pharmaceuticals","eli lilly","merck","medtronic","intuitive surgical","stryker"]),
 };
 const norm = s => (s||"").toLowerCase().replace(/[^a-z0-9 ]/g," ").replace(/\s+/g," ").trim();
 const token = () => localStorage.getItem("jr_pat") || "";
@@ -261,8 +261,19 @@ function jobList() {
   if (f.sector) rows = rows.filter(j=>j.sector===f.sector);
   if (q) rows = rows.filter(j=>norm(j.company+" "+j.title).includes(q));
   if (f.lane) rows = rows.filter(j=>laneOf(j.id,byId)===f.lane);
-  rows.sort((a,b)=>(b.score||0)-(a.score||0) || (b.first_seen||0)-(a.first_seen||0));
+  if (f.sort === "new")
+    rows.sort((a,b)=>postedTs(b)-postedTs(a) || (b.score||0)-(a.score||0));
+  else
+    rows.sort((a,b)=>(b.score||0)-(a.score||0) || postedTs(b)-postedTs(a));
   return rows;
+}
+function postedTs(j){ return j.posted_at || j.first_seen || 0; }
+function ago(ts){
+  if (!ts) return "";
+  const d = (Date.now()/1000 - ts) / 86400;
+  if (d < 1)  return Math.max(1, Math.round(d*24)) + "h";
+  if (d < 60) return Math.round(d) + "d";
+  return Math.round(d/30) + "mo";
 }
 
 /* ---------- actions ---------- */
@@ -333,7 +344,7 @@ function rowHTML(j, byId) {
     <div class="body">
       <span class="co">${esc(j.company)}</span> —
       <a href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a>
-      <div class="sub">${esc((j.locations||[])[0]||"?")}${j.salary?" · "+esc(j.salary):""}
+      <div class="sub">${ago(postedTs(j))?`<b title="${j.posted_at?"posted":"first seen"} ${new Date(postedTs(j)*1000).toLocaleDateString()}">${ago(postedTs(j))}</b> · `:""}${esc((j.locations||[])[0]||"?")}${j.salary?" · "+esc(j.salary):""}
         · ${esc(j.sector||"tech")}${c?` · ${esc(c.industry)} (${esc(c.prestige)})`:""}
         ${j.llm_note?` · <i>${esc(j.llm_note)}</i>`:""}</div>
     </div>
@@ -365,6 +376,9 @@ function rJobs() {
       <select onchange="S.filter.lane=this.value;render()">
         <option value="">any status</option><option value="maybe">maybe</option>
         <option value="saved">to apply</option><option value="applied">applied</option></select>
+      <select onchange="S.filter.sort=this.value;render()" title="sort order">
+        <option value="best" ${S.filter.sort!=="new"?"selected":""}>best match</option>
+        <option value="new" ${S.filter.sort==="new"?"selected":""}>newest first</option></select>
     </div>
     ${canWrite()?"":(S.backend
       ?`<div class="note"><b>Sign in with GitHub</b> (top right) once — every click is automatic

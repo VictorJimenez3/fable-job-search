@@ -345,7 +345,7 @@ must submit the form with the authorize button's name/value), passkey
 confirmation by Victor, then a one-click track from the platform → 202 →
 repository_dispatch → web-actions workflow.
 
-## 16. Email autopilot: high-precision patterns, forward-only, inbox is truth
+## 26. Email autopilot: high-precision patterns, forward-only, inbox is truth (2026-07-13)
 The tracker now maintains its own Notion Stage from the inbox: the email
 watcher classifies each application-lifecycle email (confirmation / OA /
 interview / rejection) and patches the matching entry's stage, plus a
@@ -371,3 +371,44 @@ dead-application auto-close after N days of silence. Design guardrails:
 - **Auto-close is conservative.** Default 45 days (configurable), and only for
   entries still at "applied" with no recorded response — anything that got an
   OA/interview/rejection already has a real outcome and is never touched.
+
+## 27. Two doors, both permanent: Pages and Vercel co-exist (2026-07-13)
+
+The platform deliberately has two live URLs and both stay:
+
+- **GitHub Pages** (`victorjimenez3.github.io/fable-job-search/platform/`) —
+  free forever, zero infrastructure, works for every fork automatically the
+  moment they enable Pages. Writes fall back to the tokenless
+  prefilled-issue flow. This is the *universal* door and the fork default.
+- **Vercel** (`job-radar-vmj-8946s-projects.vercel.app`) — same
+  `webapp/index.html` plus the `api/` OAuth backend. Sign in with GitHub
+  once → every click writes instantly with zero prompts. This is the
+  *daily-driver* door for the owner ("log in, then seamless").
+
+They are byte-identical frontends (`docs/platform/index.html` is a copy of
+`webapp/index.html`); the page detects at runtime whether a backend exists
+(`/api/me` → 401 = backend, 404 = Pages) and picks the best write path. So
+there is nothing to keep consistent beyond the `cp`. README lists Vercel
+first for daily use, Pages as the no-setup fallback. Killing either would
+lose something real: killing Pages breaks forks-for-free; killing Vercel
+breaks seamless writes.
+
+## 28. Job list ordering: speed is a first-class axis (2026-07-13)
+
+Every job now shows its posting age, and the Jobs tab has a "newest first"
+sort next to "best match". `posted_at` (ATS/aggregator-reported, 99.7%
+coverage) is preferred over `first_seen` (crawler discovery time) — the label
+tooltip says which one you're seeing. Rationale: the whole system is built on
+apply-within-24h; a sort that buries a 3-hour-old 70-score role under a
+9-day-old 90-score role hides exactly the roles where speed still matters.
+
+## 29. Personal documents never enter the public repo: `CV/` is local-only (2026-07-13)
+
+Victor keeps his CV sources (`CV/*.tex`, PDFs, templates) inside the working
+tree for the future auto-tailoring feature, but the repo is public — so
+`CV/` is gitignored, permanently. Resume tailoring will therefore run where
+the files are: on the Mac companion (local Ollama), writing draft picks into
+a local review file. Nothing derived from the CV (bullets, tailored output,
+even filenames) should ever be committed. If any CV-derived state must sync
+across machines someday, it goes through Notion or a private gist — never
+this repo.

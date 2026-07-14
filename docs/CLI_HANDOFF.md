@@ -29,27 +29,50 @@ Before changing the radar, read these in order:
   `docs/DASHBOARD.md`, or `docs/feed.xml`) except for a deliberate repair with
   its reason documented in the commit/message. Crawls generate them.
 
-## Current operational facts (2026-07-10)
+## Current operational facts (2026-07-13)
 
 - GitHub Actions is the production runtime; it uses Python 3.12. On Victor's
   Mac, system Python is 3.9 but the repo's `.venv` has the dependencies —
-  run tests with `.venv/bin/python -m pytest tests/`.
-- The radar runs every ~30–60 minutes, with a Monday strategy memo. Its state
-  is committed by CI.
-- `NOTION_TOKEN` enables application writes. A checked alert item creates a
-  Notion entry immediately with the not-yet-applied status; Victor flips the
-  status to Applied in Notion himself when he applies. Email confirmation
-  detection would automate that flip but is shelved until its credentials are
-  set up. Run the read-only `notion-verify` GitHub workflow when diagnosing
-  the connection.
-- `ANTHROPIC_API_KEY` is optional. The Mac companion uses Ollama locally and
-  runs enrichment every two hours while the laptop is awake; it should release
-  the model from memory when each task finishes.
-- Ranking quality is the highest-priority improvement: reduce false alerts by
-  requiring clearer entry-level evidence, improving US-only location handling,
-  and distinguishing technical data roles from business/operations analyst
-  positions. Re-score or retire stale state if the policy changes so generated
-  outputs reflect it promptly.
+  run tests with `.venv/bin/python -m pytest tests/`. CI commits state every
+  ~30 min, so always `git pull --rebase` before pushing.
+- **Delivery surfaces, all live:** weekly alert issue (checkbox = track to
+  Notion as not-yet-applied), 📌 master board issue (every open alert-worthy
+  role, rewritten each crawl), 🏆 daily best-of issue, docs/DASHBOARD.md,
+  RSS, and the platform website. Twice-daily reconcile sweep guarantees no
+  checked box is ever lost.
+- **The platform has two permanent doors** (DECISIONS #27): Vercel
+  (job-radar-vmj-8946s-projects.vercel.app — GitHub OAuth, instant writes,
+  Victor's daily driver) and GitHub Pages
+  (victorjimenez3.github.io/fable-job-search/platform/ — tokenless, what
+  forks get). `webapp/index.html` is canonical; `docs/platform/index.html`
+  is a byte copy. Jobs tab shows posting age and sorts by best-match or
+  newest-first.
+- **Notion:** `NOTION_TOKEN` is set and working. Checkbox → entry with the
+  `stage_saved` status ("Waiting for a referral" in his DB); Victor promotes
+  manually, OR the **email autopilot** (DECISIONS #26, shipped 2026-07-13 by
+  an Opus session) advances Stage from lifecycle emails (applied/OA/
+  interview/rejected, forward-only, auto-close after 45 d silence) — that
+  path is coded and tested but **awaits the `EMAIL_ADDRESS` /
+  `EMAIL_APP_PASSWORD` secrets** (Gmail app password, see README §2).
+- **Scoring:** hard gates + Shams rule — `marquee_companies` in profile.yaml
+  (MANGA, AI labs, elite pharma/medtech incl. Merck) always alert; $150k+
+  (`pay_bank`) also bypasses new-grad-wording requirements. The marquee list
+  is duplicated in `webapp/index.html` (`S.marquee`) — keep both in sync.
+- **Local AI:** Mac companion installed (`~/.jobradar`, launchd
+  `com.jobradar.enrich`, every 2 h while awake) running Ollama `qwen3:30b`
+  with `format:"json"` forced (DECISIONS #20 — thinking models otherwise
+  burn the token budget). It writes culture dossiers, re-scores recent jobs,
+  and runs the weekly LLM company scout, then pushes state back.
+- **Multi-user = fork-per-person** (DECISIONS #25, docs/FORKING.md). Owner
+  gates exist in three layers: workflow condition, Python handler, Vercel
+  backend. Known gap: `scripts/mac-companion/install.sh` still hardcodes
+  Victor's repo/branch.
+- **`CV/` is local-only and gitignored** (DECISIONS #29) — never commit it
+  or anything derived from it; CV auto-tailoring is a Mac-companion feature.
+- **Next up** (see ROADMAP.md, brainstormed 2026-07-13): the job-quality LLM
+  pass — link liveness revalidation, LLM new-grad verification, role-fit
+  cleanup (adjust scores with logged reasons, never silently delete), and
+  the jobright `"↳"` company-name repair.
 
 ## Safe handoff practice
 
