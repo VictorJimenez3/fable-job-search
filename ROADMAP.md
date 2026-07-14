@@ -24,36 +24,23 @@ Accepted asymmetry: the original owner's instance may always have extra
 functionality (Mac companion, tuned taste model, email autopilot). That's
 fine — the bar for everyone else is "log in, then seamless", not parity.
 
-## Job-quality LLM pass (next up — brainstormed 2026-07-13)
+## Job-quality LLM pass — ✅ SHIPPED 2026-07-13 (radar/quality.py, DECISIONS #30)
 
-The scoring rubric is deterministic and cheap, which means it has known
-failure modes: links that died since crawl, "new grad" boards listing roles
-that actually want 3+ years, and roles at well-matched companies that are
-the wrong *role* (sales engineer at a great healthtech ≠ SWE). A layered
-cleanup pass, cheapest layer first:
+Layers 0–2 run inside the Mac companion's 2-hour enrich cycle: HTTP link
+liveness (dead → `closed_at`, off every board), LLM new-grad verification
+and role-fit cleanup (one JSON verdict per posting, cached on the job,
+score/alert adjusted with logged reasons — never silently deleted; marquee
+companies are never alert-suppressed by a verdict). ~15 jobs verified per
+cycle, aggregator links first. Still open from this cluster:
 
-- **Layer 0 — link liveness (no LLM).** Revalidate open alert-worthy jobs on
-  a cadence: registry/ATS jobs are already confirmed each poll (a job gone
-  from the API = closed); aggregator/jobright links need an HTTP check.
-  Dead → drop from master board/dashboard, mark `closed_at`. Politeness:
-  only jobs currently displayed anywhere, batched, with per-host limits.
-- **Layer 1 — new-grad verification (LLM).** Fetch the posting text and ask
-  one JSON question: `{years_required, new_grad: yes/no/unclear, visa_flags}`.
-  Runs where inference is free: Mac Ollama first (`format:"json"` per
-  DECISIONS #20), a free-tier API (e.g. Gemini via the existing
-  `LLM_BASE_URL` path) as the cloud fallback, heuristics when neither
-  exists. Verified-not-new-grad → suppress alert + score penalty, with the
-  reason logged in `score_reasons` so it's auditable.
-- **Layer 2 — role-fit cleanup (LLM).** Same fetch, second question: is this
-  the *role* Victor does (SWE/AI/DS) or an adjacent-title trap (solutions
-  engineer, IT support, analyst-in-name-only)? Company fit stays; role
-  mismatch demotes below alert threshold instead of hard-deleting.
+- **SPA-host coverage** — Workday/Eightfold/Oracle postings are JS shells a
+  plain GET can't read; they're skipped today (their liveness is re-confirmed
+  by the ATS poll anyway). Fetching their posting text via the ATS JSON APIs
+  would let the LLM verdict cover them too.
+- **Free cloud fallback** — a Gemini free-tier key via `LLM_BASE_URL` would
+  run the same pass when the Mac is asleep for days.
 - **Data hygiene (no LLM).** Some jobright rows come in with company `"↳"`
   (a scraped continuation glyph). Parse fix + one-time state repair.
-
-Design rule for all layers: LLM verdicts *adjust* scores with logged
-reasons; they never silently delete. Precision-first, same philosophy as
-the email autopilot (DECISIONS #26).
 
 ## CV auto-tailoring (committed direction, blocked on the full CV)
 

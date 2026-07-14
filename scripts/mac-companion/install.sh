@@ -1,14 +1,21 @@
 #!/bin/bash
 # Job Radar Mac companion installer — run ONCE on the MacBook:
 #   curl -fsSL https://raw.githubusercontent.com/VictorJimenez3/fable-job-search/claude/newgrad-job-search-system-9gbj9k/scripts/mac-companion/install.sh | bash
+# Forks: point it at your fork (branch is auto-detected from the repo):
+#   JOBRADAR_REPO="<you>/<repo>" bash install.sh
 # What it does: clones the repo to ~/.jobradar, ensures Ollama + the model,
 # installs a launchd agent that runs an enrichment cycle at login + every 2h.
 set -euo pipefail
 
-REPO="VictorJimenez3/fable-job-search"
-BRANCH="claude/newgrad-job-search-system-9gbj9k"
+REPO="${JOBRADAR_REPO:-VictorJimenez3/fable-job-search}"
+BRANCH="${JOBRADAR_BRANCH:-}"
+if [ -z "$BRANCH" ]; then
+  BRANCH="$(curl -fsSL "https://api.github.com/repos/$REPO" 2>/dev/null \
+    | sed -n 's/.*"default_branch": *"\([^"]*\)".*/\1/p')"
+fi
+BRANCH="${BRANCH:-claude/newgrad-job-search-system-9gbj9k}"
 BASE="$HOME/.jobradar"
-RADAR_DIR="$BASE/fable-job-search"
+RADAR_DIR="$BASE/$(basename "$REPO")"
 MODEL="${JOBRADAR_MODEL:-qwen3:30b}"
 PLIST="$HOME/Library/LaunchAgents/com.jobradar.enrich.plist"
 

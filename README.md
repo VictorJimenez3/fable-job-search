@@ -135,8 +135,12 @@ This installs Ollama + `qwen3:30b` (a 19GB mixture-of-experts model that is a
 strong fit for your M1 Max with 64GB unified memory; override with
 `JOBRADAR_MODEL=<name>` if you want to experiment) and a
 launchd agent that, **whenever the laptop is on**, every 2 hours: pulls the
-repo, generates culture dossiers + rerank passes locally, and pushes the
-enriched state back. The cloud crawler never depends on the Mac — the Mac
+repo, then locally (free, private) generates culture dossiers, re-ranks
+recent jobs, runs the weekly company scout, and runs the **quality pass** —
+re-checks alert-worthy postings' links (dead → closed everywhere) and has
+the LLM verify each is really new-grad and really a technical role
+(verified-bad → demoted with the reason logged; marquee companies are never
+alert-suppressed by a verdict) — then pushes the enriched state back. The cloud crawler never depends on the Mac — the Mac
 just upgrades whatever it finds when awake. Requires `git push` auth on the
 Mac (`brew install gh && gh auth login`). Logs: `~/.jobradar/logs/enrich.log`.
 The companion releases the model from memory after every request; confirm with

@@ -60,6 +60,29 @@ Deploy the `webapp/` directory to your own Vercel project, then set env vars:
 Then "Sign in with GitHub" on your Vercel URL gives you instant writes; the
 backend only obeys `RADAR_OWNER`.
 
+## 6. Optional: free local AI (any Mac with ≥32GB, ~10 min)
+
+The radar works without any AI — deterministic scoring, auditable reasons.
+A local model adds culture dossiers, an LLM company scout, and the quality
+pass (dead-link pruning + verifying postings are really new-grad). On your
+Mac:
+
+```bash
+JOBRADAR_REPO="<you>/<repo>" bash -c \
+  "$(curl -fsSL https://raw.githubusercontent.com/<you>/<repo>/<branch>/scripts/mac-companion/install.sh)"
+```
+
+It installs Ollama + a local model (default `qwen3:30b`, ~19GB — override
+with `JOBRADAR_MODEL=` for smaller machines, e.g. `qwen3:8b`) and a launchd
+agent that enriches every 2 hours while the laptop is awake, pushing state
+back to **your** fork. Requires `git push` auth on the machine
+(`brew install gh && gh auth login`). The branch is auto-detected from your
+fork's default branch. No Mac? Set an `ANTHROPIC_API_KEY` secret or point
+`LLM_BASE_URL`/`LLM_API_KEY`/`LLM_MODEL` secrets at any OpenAI-compatible
+endpoint (a free Google AI Studio key works) and the nightly `enrich`
+workflow does the same in the cloud (it no-ops in seconds when no LLM is
+configured).
+
 ## Isolation guarantees
 
 - Secrets (`NOTION_TOKEN`, OAuth) live per-fork/per-Vercel-project; forks

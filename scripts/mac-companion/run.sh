@@ -4,7 +4,9 @@
 set -euo pipefail
 
 RADAR_DIR="${RADAR_DIR:-$HOME/.jobradar/fable-job-search}"
-BRANCH="claude/newgrad-job-search-system-9gbj9k"
+# the branch is whatever the clone is on (install.sh checked out the right
+# one) — no hardcoding, so forks work unchanged
+BRANCH="${RADAR_BRANCH:-$(git -C "$RADAR_DIR" rev-parse --abbrev-ref HEAD)}"
 export LLM_BASE_URL="${LLM_BASE_URL:-http://localhost:11434/v1}"
 MODEL="${LLM_MODEL:-qwen3:30b}"
 VENV_DIR="${JOBRADAR_VENV:-$HOME/.jobradar/venv}"

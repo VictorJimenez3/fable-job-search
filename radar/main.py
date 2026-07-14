@@ -262,6 +262,13 @@ def enrich() -> int:
             rec["score"] = j.score
             rec["score_reasons"] = j.score_reasons
             rescored += 1
+
+    # quality pass: link liveness + new-grad/role-fit verification (cached
+    # verdicts re-applied first, since score() above rebuilds from scratch)
+    from . import quality
+    reapplied, verified = quality.run(jobs_state)
+    print(f"enrich: quality pass re-applied {reapplied} verdict(s), "
+          f"verified {verified} new job(s)")
     state.save("jobs.json", jobs_state)
     registry = state.companies()
     runs = state.load("runs.json", [])

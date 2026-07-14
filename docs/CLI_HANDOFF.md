@@ -61,18 +61,22 @@ Before changing the radar, read these in order:
 - **Local AI:** Mac companion installed (`~/.jobradar`, launchd
   `com.jobradar.enrich`, every 2 h while awake) running Ollama `qwen3:30b`
   with `format:"json"` forced (DECISIONS #20 — thinking models otherwise
-  burn the token budget). It writes culture dossiers, re-scores recent jobs,
-  and runs the weekly LLM company scout, then pushes state back.
+  burn the token budget). Each cycle: culture dossiers, re-score recent
+  jobs, weekly LLM company scout, and the **quality pass**
+  (`radar/quality.py`, DECISIONS #30): link liveness + LLM new-grad/role-fit
+  verification, ~15 jobs/cycle, aggregator links first, verdicts cached on
+  the job record and re-applied after every re-score. Knobs:
+  `RADAR_QUALITY_LIMIT`, `RADAR_QUALITY_DISABLE`.
 - **Multi-user = fork-per-person** (DECISIONS #25, docs/FORKING.md). Owner
   gates exist in three layers: workflow condition, Python handler, Vercel
-  backend. Known gap: `scripts/mac-companion/install.sh` still hardcodes
-  Victor's repo/branch.
+  backend. The Mac companion is fork-portable too: `JOBRADAR_REPO=<you>/<repo>`
+  on install.sh; run.sh derives the branch from the clone.
 - **`CV/` is local-only and gitignored** (DECISIONS #29) — never commit it
   or anything derived from it; CV auto-tailoring is a Mac-companion feature.
-- **Next up** (see ROADMAP.md, brainstormed 2026-07-13): the job-quality LLM
-  pass — link liveness revalidation, LLM new-grad verification, role-fit
-  cleanup (adjust scores with logged reasons, never silently delete), and
-  the jobright `"↳"` company-name repair.
+- **Next up** (see ROADMAP.md): SPA-host posting text via ATS JSON APIs so
+  the quality pass covers Workday/Eightfold/Oracle; the jobright `"↳"`
+  company-name repair; email autopilot secrets; CV auto-tailor once
+  `CV/cv_full.tex` is fleshed out.
 
 ## Safe handoff practice
 

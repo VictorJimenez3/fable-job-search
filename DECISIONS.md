@@ -412,3 +412,30 @@ a local review file. Nothing derived from the CV (bullets, tailored output,
 even filenames) should ever be committed. If any CV-derived state must sync
 across machines someday, it goes through Notion or a private gist — never
 this repo.
+
+## 30. Quality pass: the LLM adjusts, never deletes; the Shams rule outranks the LLM (2026-07-13)
+
+`radar/quality.py` (runs in enrich, i.e. on the Mac's free local model)
+revalidates the jobs Victor actually sees: HTTP liveness first (404/410 or
+"no longer accepting applications" → `closed_at` + `alert_ok=False`, which
+removes it from every surface at once), then one strict-JSON LLM verdict per
+posting (`years_required` / `new_grad` / `role_family`). Guardrails:
+
+- **Adjust, don't delete.** A verified not-new-grad or non-technical role
+  gets a score penalty and loses alert eligibility, with the reason appended
+  to `score_reasons` — the record and the audit trail stay.
+- **The Shams rule outranks the LLM.** A marquee company's role is never
+  alert-suppressed by a verdict (the verdict is stored as information, and
+  the penalty still informs ranking). One missed Anthropic alert costs more
+  than ten stale ones.
+- **Verdicts are cached and re-applied.** Each job costs at most 2
+  fetch+LLM attempts ever (`rec["quality"]`); `reapply()` restores the
+  penalty after every re-score, keyed to the reason line so it can't
+  compound on jobs the re-score didn't touch.
+- **Budgeted and targeted.** ~15 verifications per 2-hour cycle, aggregator
+  links (jobright/simplify) first — their labels are least reliable and
+  their links go stale, while direct-ATS jobs are re-confirmed alive every
+  poll. JS-shell hosts (Workday/Eightfold/Oracle) are skipped, not burned.
+- **"Unclear" never suppresses.** A page we can't read or a verdict we
+  can't parse leaves the job exactly as the rubric scored it.
+
