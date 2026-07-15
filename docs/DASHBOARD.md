@@ -1,19 +1,20 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-15 11:10 UTC** · companies polled directly: **694** (registry 819) · jobs tracked: **7758** · new this run: **23** · alerts this run: **3**_
+_Last run: **2026-07-15 12:51 UTC** · companies polled directly: **694** (registry 819) · jobs tracked: **7770** · new this run: **12** · alerts this run: **3**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
 | Score | Age | Company | Role | Location | Sector | Src |
 |---|---|---|---|---|---|---|
-| 100 🔥 | 10h | Anthropic | [Safeguards Enforcement Analyst, Violence & Extremism](https://job-boards.greenhouse.io/anthropic/jobs/5343907008) | Remote-Friendly, United States; San Fran | ai_lab | greenhouse |
-| 100 🔥 | 14h | OpenAI | [AI Deployment Engineer, Ecosystem - Plugins](https://jobs.ashbyhq.com/openai/ca9e0aeb-6df1-4b73-8ec0-2e9e124712f1) | San Francisco | ai_lab | ashby |
-| 100 🔥 | 15h | AbbVie | [AI Business Systems Analyst](https://jobs.smartrecruiters.com/AbbVie/3743990014091116) | North Chicago, IL | healthtech | smartrecruiters |
-| 100 🔥 | 16h | OpenAI | [Research Engineer, Privacy](https://jobs.ashbyhq.com/openai/cc434f5b-dc0b-42fd-97ec-e0171545c6e9) | San Francisco | ai_lab | ashby |
-| 100 🔥 | 16h | AbbVie | [Business and System Analyst, GSOC Program](https://jobs.smartrecruiters.com/AbbVie/3743990014087407) | North Chicago, IL | healthtech | smartrecruiters |
-| 100 🔥 | 19h | OpenAI | [Quantitative Intelligence Analyst](https://jobs.ashbyhq.com/openai/5834b531-bb89-4471-9253-8c30bc0b26a8) | San Francisco | ai_lab | ashby |
-| 100 🔥 | 20h | Notion | [Software Engineer, AI Platform](https://jobs.ashbyhq.com/notion/a9d4a192-d31c-48d2-8156-e2a75d98eec1) | San Francisco, California | big_tech | ashby |
-| 100 🔥 | 21h | AbbVie | [AI Product Owner](https://jobs.smartrecruiters.com/AbbVie/3743990014075349) | North Chicago, IL | healthtech | smartrecruiters |
+| 100 🔥 | <1h | Johnson & Johnson | [SFE & BI Analyst (m/f/d) -  Surgery MSM](https://jj.wd5.myworkdayjobs.com/en-US/JJ/job/Amersfoort-Utrecht-Netherlands/SFE---BI-Analyst--m-f-d-----Surgery-MSM_R-078691) | 2 Locations | healthtech | workday |
+| 100 🔥 | 12h | Anthropic | [Safeguards Enforcement Analyst, Violence & Extremism](https://job-boards.greenhouse.io/anthropic/jobs/5343907008) | Remote-Friendly, United States; San Fran | ai_lab | greenhouse |
+| 100 🔥 | 16h | OpenAI | [AI Deployment Engineer, Ecosystem - Plugins](https://jobs.ashbyhq.com/openai/ca9e0aeb-6df1-4b73-8ec0-2e9e124712f1) | San Francisco | ai_lab | ashby |
+| 100 🔥 | 16h | AbbVie | [AI Business Systems Analyst](https://jobs.smartrecruiters.com/AbbVie/3743990014091116) | North Chicago, IL | healthtech | smartrecruiters |
+| 100 🔥 | 18h | OpenAI | [Research Engineer, Privacy](https://jobs.ashbyhq.com/openai/cc434f5b-dc0b-42fd-97ec-e0171545c6e9) | San Francisco | ai_lab | ashby |
+| 100 🔥 | 18h | AbbVie | [Business and System Analyst, GSOC Program](https://jobs.smartrecruiters.com/AbbVie/3743990014087407) | North Chicago, IL | healthtech | smartrecruiters |
+| 100 🔥 | 21h | OpenAI | [Quantitative Intelligence Analyst](https://jobs.ashbyhq.com/openai/5834b531-bb89-4471-9253-8c30bc0b26a8) | San Francisco | ai_lab | ashby |
+| 100 🔥 | 22h | Notion | [Software Engineer, AI Platform](https://jobs.ashbyhq.com/notion/a9d4a192-d31c-48d2-8156-e2a75d98eec1) | San Francisco, California | big_tech | ashby |
+| 100 🔥 | 23h | AbbVie | [AI Product Owner](https://jobs.smartrecruiters.com/AbbVie/3743990014075349) | North Chicago, IL | healthtech | smartrecruiters |
 | 100 🔥 | 1d | NVIDIA | [System Software Engineer, Dynamo-Triton Inference Server - New College](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/System-Software-Engineer--Dynamo-Triton-Inference-Server---New-College-Grad-2026_JR2020767) | 2 Locations | big_tech | workday |
 | 100 🔥 | 1d | NVIDIA | [Compiler Engineer, AI Inference- New College Grad 2026](https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/Compiler-Engineer--AI-Inference--New-College-Grad-2026_JR2021230) | US, CA, Santa Clara | big_tech | workday |
 | 100 🔥 | 1d | NVIDIA | [Backend Compiler Engineer - New College Grad 2026](https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/Backend-Compiler-Engineer---New-College-Grad-2026_JR2021242) | US, CA, Santa Clara | big_tech | workday |
@@ -29,10 +30,10 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 100 🔥 | 8d | NVIDIA | [Software Quality Assurance Engineer - 2026 New College Grad](https://jobright.ai/jobs/info/6a30399fafabbe533fb89dd8?utm_campaign=Software%20Engineering&utm_source=1103) | Santa Clara, CA, US | big_tech | jobright |
 | 100 🔥 | 8d | Notion | [Software Engineer, Early Career (AI)](https://jobs.ashbyhq.com/notion/85947779-6b87-466a-98bc-30a640448c28) | San Francisco, California | big_tech | ashby |
 | 100 🔥 | 28d | NVIDIA | [Software Quality Assurance Engineer - 2026 New College Grad](https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/Software-Quality-Assurance-Engineer---2026-New-College-Grad_JR2019924-1) | US, CA, Santa Clara | big_tech | speedyapply |
-| 99 🔥 | 8h | Shield AI | [Associate Compliance Analyst (R5432)](https://jobs.lever.co/shieldai/d3f3a93f-674b-4326-91d7-05840a049719) | United States | ai_lab | lever |
+| 99 🔥 | 9h | Shield AI | [Associate Compliance Analyst (R5432)](https://jobs.lever.co/shieldai/d3f3a93f-674b-4326-91d7-05840a049719) | United States | ai_lab | lever |
 | 99 🔥 | 1d | Anthropic | [Research Engineer, Chip Design RL (Reinforcement Learning)](https://job-boards.greenhouse.io/anthropic/jobs/5231612008) | San Francisco, CA | New York City, NY | ai_lab | greenhouse |
 | 99 🔥 | 13d | Medtronic | [Software Quality Engineer I](https://jobright.ai/jobs/info/6a4697834f64ba41dcb54116?utm_campaign=Software%20Engineering&utm_source=1103) | Mounds View, Minnesota, United States of | healthtech | jobright |
-| 98 🔥 | 16h | AbbVie | [Analyst, Field Force Effectiveness](https://jobs.smartrecruiters.com/AbbVie/3743990014088166) | Madison, NJ | healthtech | smartrecruiters |
+| 98 🔥 | 18h | AbbVie | [Analyst, Field Force Effectiveness](https://jobs.smartrecruiters.com/AbbVie/3743990014088166) | Madison, NJ | healthtech | smartrecruiters |
 | 98 🔥 | 1d | Dr. J SkinClinic | [Junior Data Analyst](https://jobright.ai/jobs/info/6a568bb1f7517b519ad566ee?utm_campaign=Data%20Analysis&utm_source=1103) | La Palma, CA, United States | healthtech | jobright |
 | 98 🔥 | 1d | AbbVie | [Modeling and Simulation Module Developer - Data & AI Acceleration (Hyb](https://jobs.smartrecruiters.com/AbbVie/3743990014064756) | Florham Park, NJ | healthtech | smartrecruiters |
 | 98 🔥 | 1d | AbbVie | [Modeling and Simulation Module Developer - Data & AI Acceleration (Hyb](https://jobs.smartrecruiters.com/AbbVie/3743990014064716) | North Chicago, IL | healthtech | smartrecruiters |
@@ -44,10 +45,10 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 98 🔥 | 28d | Bristol Myers Squibb | [Associate Engineer - Analytical AI Engineering](https://bristolmyerssquibb.wd5.myworkdayjobs.com/bms/job/Princeton---NJ---US/Associate-Engineer--Analytical-AI-Engineering_R1603317-1) | Princeton, NJ | healthtech | simplify |
 | 97 🔥 | 1d | Anthropic | [Safeguards Enforcement Analyst, Access Controls & Identity](https://job-boards.greenhouse.io/anthropic/jobs/5319626008) | Remote-Friendly, United States; San Fran | ai_lab | greenhouse |
 | 97 🔥 | 6d | Cadence | [Software Engineer, New College Grad 2026 (Undergrads)](https://jobright.ai/jobs/info/6a4fe38f4649561ec08af67a?utm_campaign=Software%20Engineering&utm_source=1103) | Burlington, MA, United States | healthtech | jobright |
-| 96 🔥 | 13h | Google | [Business Intelligence Developer 1 - Google Cloud](https://www.google.com/about/careers/applications/jobs/results/112117687143801542) | Austin, TX | big_tech | simplify |
-| 96 🔥 | 17h | Five Rings Capital | [Campus Full Time 2027 - Quantitative Trader](https://job-boards.greenhouse.io/fiveringsllc/jobs/5255334008) | New York | fintech | greenhouse |
-| 96 🔥 | 20h | Cincinnati Children’s Hospital and Med | [Student II - AI/ML Governance](https://cincinnatichildrens.wd5.myworkdayjobs.com/en-US/careersatcincinnatichildrens/job/Remote/Student-II---AI-ML-Governance_JR223360) | Remote | healthtech | workday |
-| 96 🔥 | 20h | Jefferson Health | [Analyst, Operations Performance - Jefferson Health Plan](https://jeffersonhealth.wd5.myworkdayjobs.com/en-US/ThomasJeffersonExternal/job/Philadelphia-PA/Analyst--Operations-Performance---Jefferson-Health-Plan_REQ-0031023-1) | Philadelphia, PA | healthtech | workday |
+| 96 🔥 | 14h | Google | [Business Intelligence Developer 1 - Google Cloud](https://www.google.com/about/careers/applications/jobs/results/112117687143801542) | Austin, TX | big_tech | simplify |
+| 96 🔥 | 18h | Five Rings Capital | [Campus Full Time 2027 - Quantitative Trader](https://job-boards.greenhouse.io/fiveringsllc/jobs/5255334008) | New York | fintech | greenhouse |
+| 96 🔥 | 22h | Cincinnati Children’s Hospital and Med | [Student II - AI/ML Governance](https://cincinnatichildrens.wd5.myworkdayjobs.com/en-US/careersatcincinnatichildrens/job/Remote/Student-II---AI-ML-Governance_JR223360) | Remote | healthtech | workday |
+| 96 🔥 | 22h | Jefferson Health | [Analyst, Operations Performance - Jefferson Health Plan](https://jeffersonhealth.wd5.myworkdayjobs.com/en-US/ThomasJeffersonExternal/job/Philadelphia-PA/Analyst--Operations-Performance---Jefferson-Health-Plan_REQ-0031023-1) | Philadelphia, PA | healthtech | workday |
 | 96 🔥 | 1d | Johnson & Johnson | [Digital Analyst](https://jj.wd5.myworkdayjobs.com/JJ/job/New-Brunswick-New-Jersey-United-States-of-America/Digital-Analyst_R-084505-2) | West Chester, PA | healthtech | simplify |
 | 96 🔥 | 1d | Amazon | [Data Analyst, IAG1 - AR](https://jobright.ai/jobs/info/6a1e1e50b524ae49285aab95?utm_campaign=Data%20Analysis&utm_source=1103) | Niagara Falls, NY, United States | big_tech | jobright |
 | 96 🔥 | 1d | Johnson & Johnson | [Digital Analyst](https://jobright.ai/jobs/info/6a56a1a4f7517b519ad571f1?utm_campaign=Data%20Analysis&utm_source=1103) | New Brunswick, New Jersey, United States | healthtech | jobright |
@@ -60,8 +61,8 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 95 🔥 | 1d | Anthropic | [Safeguards Enforcement Analyst, Ban Evasion & Recidivism](https://job-boards.greenhouse.io/anthropic/jobs/5319592008) | Remote-Friendly, United States; San Fran | ai_lab | greenhouse |
 | 95 🔥 | 1d | Anthropic | [Safeguards Enforcement Analyst, Account Takeover & Credential Abuse](https://job-boards.greenhouse.io/anthropic/jobs/5319624008) | Remote-Friendly, United States; San Fran | ai_lab | greenhouse |
 | 95 🔥 | 6d | Anthropic | [Strategy & Operations, Applied AI - AMER](https://job-boards.greenhouse.io/anthropic/jobs/5284500008) | San Francisco, CA | New York City, NY | ai_lab | greenhouse |
-| 94 🔥 | 12h | Five Rings Capital | [Campus Full Time - Software Developer](https://job-boards.greenhouse.io/fiveringsllc/jobs/5349839008) | NYC | fintech | simplify |
-| 94 🔥 | 17h | Five Rings Capital | [Campus Full Time 2027 - Software Developer](https://job-boards.greenhouse.io/fiveringsllc/jobs/5349839008) | New York | fintech | greenhouse |
+| 94 🔥 | 14h | Five Rings Capital | [Campus Full Time - Software Developer](https://job-boards.greenhouse.io/fiveringsllc/jobs/5349839008) | NYC | fintech | simplify |
+| 94 🔥 | 18h | Five Rings Capital | [Campus Full Time 2027 - Software Developer](https://job-boards.greenhouse.io/fiveringsllc/jobs/5349839008) | New York | fintech | greenhouse |
 | 94 🔥 | 1d | Amazon | [Software Development Engineer – Amazon Leo (US)](https://jobright.ai/jobs/info/6a52db4b9fbdab22fe13d4a7?utm_campaign=Software%20Engineering&utm_source=1103) | Sunnyvale, CA, United States | big_tech | jobright |
 | 94 🔥 | 1d | Flatiron Health | [Applied AI Data Scientist - Product AI Team](https://flatiron.com/careers/open-positions/job?gh_jid=8010590) | NY office | healthtech | greenhouse |
 | 94 🔥 | 1d | AbbVie | [Business Analyst/System Administrator – Business Continuity](https://jobs.smartrecruiters.com/AbbVie/3743990014063367) | North Chicago, IL | healthtech | smartrecruiters |
@@ -121,8 +122,8 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 92 🔥 | 26d | Clinical Architecture | [Product Analyst (Entry Level)](https://job-boards.greenhouse.io/clinicalarchitecture/jobs/5168369007) | Indianapolis, Indiana, United States | healthtech | greenhouse |
 | 92 🔥 | 28d | Snowflake | [AI Research Scientist New Grad - Agents & Reinforcement Learning](https://jobs.ashbyhq.com/snowflake/1bad12df-f443-426f-9d09-e96fc780d698/application) | Bellevue, WA | big_tech | simplify |
 | 92 🔥 | 28d | Snowflake | [AI Research Scientist, New Grad – Agents & Reinforcement Learning](https://jobs.ashbyhq.com/snowflake/1bad12df-f443-426f-9d09-e96fc780d698) | US-WA-Bellevue | big_tech | ashby |
-| 91 🔥 | 1h | Faros AI | [Software Engineer New Grad](https://jobs.ashbyhq.com/faros-ai/622e1f1e-4a39-4e7c-8526-1189ca588066/application?embed=true) | San Mateo, CA | ai_lab | simplify |
-| 91 🔥 | 23h | Cincinnati Children’s Hospital and Med | [Student II - Software Engineering](https://cincinnatichildrens.wd5.myworkdayjobs.com/en-US/careersatcincinnatichildrens/job/Remote/Student-II---Software-Engineering_JR223357) | Remote | healthtech | workday |
+| 91 🔥 | 3h | Faros AI | [Software Engineer New Grad](https://jobs.ashbyhq.com/faros-ai/622e1f1e-4a39-4e7c-8526-1189ca588066/application?embed=true) | San Mateo, CA | ai_lab | simplify |
+| 91 🔥 | 1d | Cincinnati Children’s Hospital and Med | [Student II - Software Engineering](https://cincinnatichildrens.wd5.myworkdayjobs.com/en-US/careersatcincinnatichildrens/job/Remote/Student-II---Software-Engineering_JR223357) | Remote | healthtech | workday |
 | 91 🔥 | 1d | OpenAI | [Software Engineer, Codex — User Activation](https://jobs.ashbyhq.com/openai/d1c6cb87-a44d-4d04-92a8-dc40eccd090e) | San Francisco | ai_lab | ashby |
 | 91 🔥 | 2d | Salesforce | [Software Engineering Backend + AI  LMTS](https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/India---Bangalore/SMTS-LMTS---AI-ML-Engineers_JR340537) | 2 Locations | big_tech | workday |
 | 91 🔥 | 2d | RTX | [2026 Raytheon Full Time - Software Engineer I - McKinney, TX (Onsite)](https://jobright.ai/jobs/info/6a5505a02084cd792b475897?utm_campaign=Software%20Engineering&utm_source=1103) | US-TX-MCKINNEY-513WD ~ 2501 W University | other | jobright |
@@ -141,10 +142,10 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 91 🔥 | 15d | Medpace | [Junior Software Engineer](https://jobright.ai/jobs/info/6a2a715e2cde2824469c1cdf?utm_campaign=Software%20Engineering&utm_source=1103) | Denver, CO | healthtech | jobright |
 | 91 🔥 | 20d | Anthropic | [Research Engineer, Rule of Law](https://job-boards.greenhouse.io/anthropic/jobs/5278065008) | San Francisco, CA | ai_lab | greenhouse |
 | 91 🔥 | 25d | Anthropic | [Research Engineer, Domain Scaling](https://job-boards.greenhouse.io/anthropic/jobs/5271380008) | San Francisco, CA | New York City, NY |  | ai_lab | greenhouse |
-| 90 🔥 | 12h | Intuit | [Software Engineer 1](https://jobs.intuit.com/job/charlotte/software-engineer-i-credit-karma/27595/97793819216) | Charlotte, NC | big_tech | simplify |
-| 90 🔥 | 13h | SpaceX | [Regulatory Compliance Analyst](https://boards.greenhouse.io/spacex/jobs/8633279002?gh_jid=8633279002) | Bastrop, TX | big_tech | greenhouse |
-| 90 🔥 | 13h | SpaceX | [Regulatory Compliance Analyst](https://boards.greenhouse.io/spacex/jobs/8633271002?gh_jid=8633271002) | Washington, DC | big_tech | greenhouse |
-| 90 🔥 | 21h | Snowflake | [Software Engineer - Platform Services ](https://jobs.ashbyhq.com/snowflake/a502b27e-79de-418a-9cce-8f9150afebdd) | PL-Warsaw | big_tech | ashby |
+| 90 🔥 | 14h | Intuit | [Software Engineer 1](https://jobs.intuit.com/job/charlotte/software-engineer-i-credit-karma/27595/97793819216) | Charlotte, NC | big_tech | simplify |
+| 90 🔥 | 14h | SpaceX | [Regulatory Compliance Analyst](https://boards.greenhouse.io/spacex/jobs/8633279002?gh_jid=8633279002) | Bastrop, TX | big_tech | greenhouse |
+| 90 🔥 | 14h | SpaceX | [Regulatory Compliance Analyst](https://boards.greenhouse.io/spacex/jobs/8633271002?gh_jid=8633271002) | Washington, DC | big_tech | greenhouse |
+| 90 🔥 | 23h | Snowflake | [Software Engineer - Platform Services ](https://jobs.ashbyhq.com/snowflake/a502b27e-79de-418a-9cce-8f9150afebdd) | PL-Warsaw | big_tech | ashby |
 | 90 🔥 | 1d | RTX | [2027 Conversion-Software Engineer I (Onsite)](https://jobright.ai/jobs/info/6a56709521f64463ad35495c?utm_campaign=Software%20Engineering&utm_source=1103) | US-TX-RICHARDSON-C17 ~ 1717 Cityline Dr  | other | jobright |
 | 90 🔥 | 1d | Akuna Capital University | [Junior Quantitative Developer & Strategist](https://www.akunacapital.com/careers/job/8016687/?gh_jid=8016687) | Chicago, IL | fintech | simplify |
 | 90 🔥 | 1d | Jefferson Health | [Retirement Benefits Analyst - Jefferson Health Enterprise](https://jeffersonhealth.wd5.myworkdayjobs.com/en-US/ThomasJeffersonExternal/job/Philadelphia-PA/Retirement-Benefits-Analyst---Jefferson-Health-Enterprise_REQ-0033036) | Philadelphia, PA | healthtech | workday |
@@ -155,6 +156,5 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 90 🔥 | 2d | UCSF Health | [Data Scientist](https://jobright.ai/jobs/info/6a556274268af95237beb5ff?utm_campaign=Data%20Analysis&utm_source=1103) | San Francisco, CA, United States | healthtech | jobright |
 | 90 🔥 | 4d | Johnson & Johnson | [Pricing Analyst](https://jj.wd5.myworkdayjobs.com/en-US/JJ/job/Warsaw-Masovian-Poland/Pricing-Analyst_R-087502) | 4 Locations | healthtech | workday |
 | 90 🔥 | 5d | Generate Biomedicines | [Data Scientist 1](https://generatebiomedicines.com/open-positions?gh_jid=4695495006) | Cambridge, MA | healthtech | simplify |
-| 90 🔥 | 5d | Amazon | [Software I&T Engineer - Amazon Leo for Government](https://www.amazon.jobs/jobs/10469381/apply) | Northridge, CA | big_tech | speedyapply |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
