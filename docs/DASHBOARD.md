@@ -1,21 +1,21 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-16 17:10 UTC** · companies polled directly: **733** (registry 859) · jobs tracked: **8223** · new this run: **39** · alerts this run: **12**_
+_Last run: **2026-07-16 18:40 UTC** · companies polled directly: **733** (registry 859) · jobs tracked: **8254** · new this run: **31** · alerts this run: **12**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
 | Score | Age | Company | Role | Location | Sector | Src |
 |---|---|---|---|---|---|---|
-| 100 🔥 | <1h | CVS Health | [Analyst,Patient Relations](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/AZ---Phoenix/Analyst-Patient-Relations_R0976906) | AZ - Phoenix | healthtech | workday |
-| 100 🔥 | <1h | AbbVie | [Business Systems Analyst](https://jobs.smartrecruiters.com/AbbVie/3743990014129201) | Austin, TX | healthtech | smartrecruiters |
-| 100 🔥 | 3h | CVS Health | [IT Operations Analyst (OhioRISE)](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/OH---Work-from-hom/IT-Operations-Analyst--OhioRISE-_R0954602) | OH - Work from hom | healthtech | workday |
-| 100 🔥 | 7h | Johnson & Johnson | [Pricing Analyst](https://jj.wd5.myworkdayjobs.com/en-US/JJ/job/Prague-Czechia/Pricing-Analyst_R-087500) | 3 Locations | healthtech | workday |
-| 100 🔥 | 11h | CVS Health | [Analyst,Patient Relations](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/VA---Richmond/Analyst-Patient-Relations_R0917393) | VA - Richmond | healthtech | workday |
-| 100 🔥 | 16h | OpenAI | [AI Success Engineer - EDU](https://jobs.ashbyhq.com/openai/376a6ab7-7209-4aef-bbdd-f3e40a048714) | Singapore | ai_lab | ashby |
-| 100 🔥 | 18h | Vytalize Health | [Associate Data Engineer](https://jobs.ashbyhq.com/Vytalize%20Health/3576b087-709e-4bf0-a016-6cc1c24b802c/application?embed=true) | Remote in USA | healthtech | simplify |
-| 100 🔥 | 20h | AbbVie | [SAP FI-OTC Integration Business Analyst](https://jobs.smartrecruiters.com/AbbVie/3743990014116385) | Waukegan, IL | healthtech | smartrecruiters |
-| 100 🔥 | 21h | OpenAI | [Founding Data Scientist, Pricing & Monetization](https://jobs.ashbyhq.com/openai/e5e1a914-79b6-4cf5-929a-01671d8ec4cd) | San Francisco | ai_lab | ashby |
-| 100 🔥 | 22h | AbbVie | [BTS Associate Software Engineer II - AI](https://jobs.smartrecruiters.com/AbbVie/3743990014111376) | North Chicago, IL | healthtech | smartrecruiters |
+| 100 🔥 | 1h | CVS Health | [Analyst,Patient Relations](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/AZ---Phoenix/Analyst-Patient-Relations_R0976906) | AZ - Phoenix | healthtech | workday |
+| 100 🔥 | 2h | AbbVie | [Business Systems Analyst](https://jobs.smartrecruiters.com/AbbVie/3743990014129201) | Austin, TX | healthtech | smartrecruiters |
+| 100 🔥 | 4h | CVS Health | [IT Operations Analyst (OhioRISE)](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/OH---Work-from-hom/IT-Operations-Analyst--OhioRISE-_R0954602) | OH - Work from hom | healthtech | workday |
+| 100 🔥 | 8h | Johnson & Johnson | [Pricing Analyst](https://jj.wd5.myworkdayjobs.com/en-US/JJ/job/Prague-Czechia/Pricing-Analyst_R-087500) | 3 Locations | healthtech | workday |
+| 100 🔥 | 13h | CVS Health | [Analyst,Patient Relations](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/VA---Richmond/Analyst-Patient-Relations_R0917393) | VA - Richmond | healthtech | workday |
+| 100 🔥 | 17h | OpenAI | [AI Success Engineer - EDU](https://jobs.ashbyhq.com/openai/376a6ab7-7209-4aef-bbdd-f3e40a048714) | Singapore | ai_lab | ashby |
+| 100 🔥 | 20h | Vytalize Health | [Associate Data Engineer](https://jobs.ashbyhq.com/Vytalize%20Health/3576b087-709e-4bf0-a016-6cc1c24b802c/application?embed=true) | Remote in USA | healthtech | simplify |
+| 100 🔥 | 22h | AbbVie | [SAP FI-OTC Integration Business Analyst](https://jobs.smartrecruiters.com/AbbVie/3743990014116385) | Waukegan, IL | healthtech | smartrecruiters |
+| 100 🔥 | 22h | OpenAI | [Founding Data Scientist, Pricing & Monetization](https://jobs.ashbyhq.com/openai/e5e1a914-79b6-4cf5-929a-01671d8ec4cd) | San Francisco | ai_lab | ashby |
+| 100 🔥 | 1d | AbbVie | [BTS Associate Software Engineer II - AI](https://jobs.smartrecruiters.com/AbbVie/3743990014111376) | North Chicago, IL | healthtech | smartrecruiters |
 | 100 🔥 | 1d | Johnson & Johnson | [SFE & BI Analyst (m/f/d) -  Surgery MSM](https://jj.wd5.myworkdayjobs.com/en-US/JJ/job/Amersfoort-Utrecht-Netherlands/SFE---BI-Analyst--m-f-d-----Surgery-MSM_R-078691) | 2 Locations | healthtech | workday |
 | 100 🔥 | 1d | Anthropic | [Safeguards Enforcement Analyst, Violence & Extremism](https://job-boards.greenhouse.io/anthropic/jobs/5343907008) | Remote-Friendly, United States; San Fran | ai_lab | greenhouse |
 | 100 🔥 | 1d | DaVita Kidney Care | [Associate Analyst, Business (ROPS)](https://jobright.ai/jobs/info/6a5783f4f7517b519ad5aae0?utm_campaign=Data%20Analysis&utm_source=1103) | 09514 - California Remote, United States | healthtech | jobright |
@@ -23,7 +23,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 100 🔥 | 1d | OpenAI | [AI Deployment Engineer, Ecosystem - Plugins](https://jobs.ashbyhq.com/openai/ca9e0aeb-6df1-4b73-8ec0-2e9e124712f1) | San Francisco | ai_lab | ashby |
 | 100 🔥 | 1d | AbbVie | [AI Business Systems Analyst](https://jobs.smartrecruiters.com/AbbVie/3743990014091116) | North Chicago, IL | healthtech | smartrecruiters |
 | 100 🔥 | 1d | OpenAI | [Research Engineer, Privacy](https://jobs.ashbyhq.com/openai/cc434f5b-dc0b-42fd-97ec-e0171545c6e9) | San Francisco | ai_lab | ashby |
-| 100 🔥 | 1d | AbbVie | [Business and System Analyst, GSOC Program](https://jobs.smartrecruiters.com/AbbVie/3743990014087407) | North Chicago, IL | healthtech | smartrecruiters |
+| 100 🔥 | 2d | AbbVie | [Business and System Analyst, GSOC Program](https://jobs.smartrecruiters.com/AbbVie/3743990014087407) | North Chicago, IL | healthtech | smartrecruiters |
 | 100 🔥 | 2d | OpenAI | [Quantitative Intelligence Analyst](https://jobs.ashbyhq.com/openai/5834b531-bb89-4471-9253-8c30bc0b26a8) | San Francisco | ai_lab | ashby |
 | 100 🔥 | 2d | Notion | [Software Engineer, AI Platform](https://jobs.ashbyhq.com/notion/a9d4a192-d31c-48d2-8156-e2a75d98eec1) | San Francisco, California | big_tech | ashby |
 | 100 🔥 | 2d | AbbVie | [AI Product Owner](https://jobs.smartrecruiters.com/AbbVie/3743990014075349) | North Chicago, IL | healthtech | smartrecruiters |
@@ -40,12 +40,12 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 100 🔥 | 6d | NVIDIA | [Systems Software Engineer New Grad - Autonomous Systems Mapping](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Systems-Software-Engineer--Autonomous-Systems-Mapping---New-College-Graduate-2026_JR2020838) | Santa Clara, CA | big_tech | simplify |
 | 100 🔥 | 7d | Medtronic | [Cloud Software Engineer I - Neuro - Rice Creek/Fridley, MN](https://jobright.ai/jobs/info/6a4fce7df57ed168c3416cbc?utm_campaign=Software%20Engineering&utm_source=1103) | Fridley, Minnesota, United States of Ame | healthtech | jobright |
 | 100 🔥 | 9d | NVIDIA | [Software Quality Assurance Engineer - 2026 New College Grad](https://jobright.ai/jobs/info/6a30399fafabbe533fb89dd8?utm_campaign=Software%20Engineering&utm_source=1103) | Santa Clara, CA, US | big_tech | jobright |
-| 100 🔥 | 9d | Notion | [Software Engineer, Early Career (AI)](https://jobs.ashbyhq.com/notion/85947779-6b87-466a-98bc-30a640448c28) | San Francisco, California | big_tech | ashby |
+| 100 🔥 | 10d | Notion | [Software Engineer, Early Career (AI)](https://jobs.ashbyhq.com/notion/85947779-6b87-466a-98bc-30a640448c28) | San Francisco, California | big_tech | ashby |
 | 100 🔥 | 29d | NVIDIA | [Software Quality Assurance Engineer - 2026 New College Grad](https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/Software-Quality-Assurance-Engineer---2026-New-College-Grad_JR2019924-1) | US, CA, Santa Clara | big_tech | speedyapply |
 | 99 🔥 | 1d | Shield AI | [Associate Compliance Analyst (R5432)](https://jobs.lever.co/shieldai/d3f3a93f-674b-4326-91d7-05840a049719) | United States | ai_lab | lever |
 | 99 🔥 | 2d | Anthropic | [Research Engineer, Chip Design RL (Reinforcement Learning)](https://job-boards.greenhouse.io/anthropic/jobs/5231612008) | San Francisco, CA | New York City, NY | ai_lab | greenhouse |
 | 99 🔥 | 14d | Medtronic | [Software Quality Engineer I](https://jobright.ai/jobs/info/6a4697834f64ba41dcb54116?utm_campaign=Software%20Engineering&utm_source=1103) | Mounds View, Minnesota, United States of | healthtech | jobright |
-| 98 🔥 | 2h | OpenAI | [Data Center Compute Infrastructure](https://jobs.ashbyhq.com/openai/3d4ac845-ec9c-43e0-bd79-9fdf5b87da69) | San Francisco | ai_lab | ashby |
+| 98 🔥 | 3h | OpenAI | [Data Center Compute Infrastructure](https://jobs.ashbyhq.com/openai/3d4ac845-ec9c-43e0-bd79-9fdf5b87da69) | San Francisco | ai_lab | ashby |
 | 98 🔥 | 1d | Net Health | [Business Intelligence Analyst I - REMOTE](https://jobright.ai/jobs/info/6a57ba1c10c4d945d86509b8?utm_campaign=Data%20Analysis&utm_source=1103) | Pittsburgh, PA, United States | healthtech | jobright |
 | 98 🔥 | 1d | Amazon Web Services (AWS) | [ADC Engineer I, Amazon Dedicated Cloud Engineering - Support Engineeri](https://jobright.ai/jobs/info/6a3aca29649fdf1629305b06?utm_campaign=Software%20Engineering&utm_source=1103) | Denver, CO, United States | big_tech | jobright |
 | 98 🔥 | 1d | AbbVie | [Analyst, Field Force Effectiveness](https://jobs.smartrecruiters.com/AbbVie/3743990014088166) | Madison, NJ | healthtech | smartrecruiters |
@@ -54,12 +54,12 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 98 🔥 | 2d | AbbVie | [Modeling and Simulation Module Developer - Data & AI Acceleration (Hyb](https://jobs.smartrecruiters.com/AbbVie/3743990014064716) | North Chicago, IL | healthtech | smartrecruiters |
 | 98 🔥 | 2d | AbbVie | [Modeling and Simulation Module Developer - Data & AI Acceleration (Hyb](https://jobs.smartrecruiters.com/AbbVie/3743990014064686) | Irvine, CA | healthtech | smartrecruiters |
 | 98 🔥 | 2d | AbbVie | [Modeling and Simulation Module Developer - Data & AI Acceleration (Hyb](https://jobs.smartrecruiters.com/AbbVie/3743990014064636) | South San Francisco, CA | healthtech | smartrecruiters |
-| 98 🔥 | 2d | Abridge | [Software Engineer - Early Career](https://jobs.ashbyhq.com/abridge/7d6ae2be-cd53-466c-8151-2dae2e87aace) | SF Office | healthtech | ashby |
+| 98 🔥 | 3d | Abridge | [Software Engineer - Early Career](https://jobs.ashbyhq.com/abridge/7d6ae2be-cd53-466c-8151-2dae2e87aace) | SF Office | healthtech | ashby |
 | 98 🔥 | 3d | Amazon Web Services (AWS) | [DFT Design Engineer I, AWS Machine Learning Acceleration](https://jobright.ai/jobs/info/695496685bb7de448ef78f90?utm_campaign=Software%20Engineering&utm_source=1103) | Austin, TX, United States | big_tech | jobright |
 | 98 🔥 | 9d | Notion | [Software Engineer – Early Career - AI](https://jobs.ashbyhq.com/notion/85947779-6b87-466a-98bc-30a640448c28/application) | SF | big_tech | simplify |
 | 98 🔥 | 29d | Bristol Myers Squibb | [Associate Engineer - Analytical AI Engineering](https://bristolmyerssquibb.wd5.myworkdayjobs.com/bms/job/Princeton---NJ---US/Associate-Engineer--Analytical-AI-Engineering_R1603317-1) | Princeton, NJ | healthtech | simplify |
-| 97 🔥 | 14h | Oura | [Full Stack Software Engineer](https://job-boards.greenhouse.io/oura/jobs/4287386009) | Hybrid - San Francisco, California; Remo | healthtech | greenhouse |
-| 97 🔥 | 17h | Beth Israel Lahey Health | [Biostatistician I (Epidemiology & Data Science Section)](https://jobright.ai/jobs/info/6a58e190856af468ab0005b6?utm_campaign=Data%20Analysis&utm_source=1103) | United States | healthtech | jobright |
+| 97 🔥 | 16h | Oura | [Full Stack Software Engineer](https://job-boards.greenhouse.io/oura/jobs/4287386009) | Hybrid - San Francisco, California; Remo | healthtech | greenhouse |
+| 97 🔥 | 18h | Beth Israel Lahey Health | [Biostatistician I (Epidemiology & Data Science Section)](https://jobright.ai/jobs/info/6a58e190856af468ab0005b6?utm_campaign=Data%20Analysis&utm_source=1103) | United States | healthtech | jobright |
 | 97 🔥 | 1d | RTX | [2026 Raytheon Full Time - Software Engineer I - McKinney, TX (Onsite)](https://jobright.ai/jobs/info/6a57ae1d21f64463ad35aed7?utm_campaign=Software%20Engineering&utm_source=1103) | McKinney, TX, United States | other | jobright |
 | 97 🔥 | 2d | Anthropic | [Safeguards Enforcement Analyst, Access Controls & Identity](https://job-boards.greenhouse.io/anthropic/jobs/5319626008) | Remote-Friendly, United States; San Fran | ai_lab | greenhouse |
 | 97 🔥 | 7d | Cadence | [Software Engineer, New College Grad 2026 (Undergrads)](https://jobright.ai/jobs/info/6a4fe38f4649561ec08af67a?utm_campaign=Software%20Engineering&utm_source=1103) | Burlington, MA, United States | healthtech | jobright |
@@ -73,7 +73,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 96 🔥 | 1d | Essen Health Care | [Healthcare Analyst](https://jobright.ai/jobs/info/6a57afa1efb06a45240dc511?utm_campaign=Data%20Analysis&utm_source=1103) | Bronx, NY, United States | healthtech | jobright |
 | 96 🔥 | 1d | Flatiron Health | [Data Analyst - Evidence Solutions](https://jobright.ai/jobs/info/6a57e31a8f51964c0404568e?utm_campaign=Data%20Analysis&utm_source=1103) | Durham, United States | healthtech | jobright |
 | 96 🔥 | 1d | Google | [Business Intelligence Developer 1 - Google Cloud](https://www.google.com/about/careers/applications/jobs/results/112117687143801542) | Austin, TX | big_tech | simplify |
-| 96 🔥 | 1d | Five Rings Capital | [Campus Full Time 2027 - Quantitative Trader](https://job-boards.greenhouse.io/fiveringsllc/jobs/5255334008) | New York | fintech | greenhouse |
+| 96 🔥 | 2d | Five Rings Capital | [Campus Full Time 2027 - Quantitative Trader](https://job-boards.greenhouse.io/fiveringsllc/jobs/5255334008) | New York | fintech | greenhouse |
 | 96 🔥 | 2d | Cincinnati Children’s Hospital and Med | [Student II - AI/ML Governance](https://cincinnatichildrens.wd5.myworkdayjobs.com/en-US/careersatcincinnatichildrens/job/Remote/Student-II---AI-ML-Governance_JR223360) | Remote | healthtech | workday |
 | 96 🔥 | 2d | Jefferson Health | [Analyst, Operations Performance - Jefferson Health Plan](https://jeffersonhealth.wd5.myworkdayjobs.com/en-US/ThomasJeffersonExternal/job/Philadelphia-PA/Analyst--Operations-Performance---Jefferson-Health-Plan_REQ-0031023-1) | Philadelphia, PA | healthtech | workday |
 | 96 🔥 | 2d | Johnson & Johnson | [Digital Analyst](https://jj.wd5.myworkdayjobs.com/JJ/job/New-Brunswick-New-Jersey-United-States-of-America/Digital-Analyst_R-084505-2) | West Chester, PA | healthtech | simplify |
@@ -84,28 +84,30 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 96 🔥 | 7d | OpenAI | [AI Deployment Engineer, Digital Natives](https://jobs.ashbyhq.com/openai/5c3a17db-62f1-4145-93b0-2f207d4d4af8) | San Francisco | ai_lab | ashby |
 | 96 🔥 | 8d | Trinity Health | [Associate Data Scientist](https://jobright.ai/jobs/info/6a4eb19ffc327f422fef3d17?utm_campaign=Data%20Analysis&utm_source=1103) | Clive, IA, United States | healthtech | jobright |
 | 96 🔥 | 14d | Amazon | [Software Dev Engineer I - Compiler - Graviton Software - Annapurna Lab](https://www.amazon.jobs/jobs/10464104/apply) | Austin, TX | big_tech | speedyapply |
-| 95 🔥 | 17h | Beth Israel Lahey Health | [Biostatistician 1 - Epidemiology & Data Science Section](https://bilh.wd1.myworkdayjobs.com/External/job/Beth-Israel-Deaconess-Medical-Center/Biostatistician-I--Epidemiology---Data-Science-Section-_JR99657) | Boston, MA | healthtech | simplify |
+| 95 🔥 | 18h | Beth Israel Lahey Health | [Biostatistician 1 - Epidemiology & Data Science Section](https://bilh.wd1.myworkdayjobs.com/External/job/Beth-Israel-Deaconess-Medical-Center/Biostatistician-I--Epidemiology---Data-Science-Section-_JR99657) | Boston, MA | healthtech | simplify |
 | 95 🔥 | 1d | OpenAI | [Software Engineer, Privacy Engineering](https://jobs.ashbyhq.com/openai/07153f7c-7e8b-4283-a879-cb07a224e083) | San Francisco | ai_lab | ashby |
 | 95 🔥 | 1d | RTX | [Software Engineer I - APNT (Onsite)](https://jobright.ai/jobs/info/6a57bcc821f64463ad35bb68?utm_campaign=Software%20Engineering&utm_source=1103) | Cedar Rapids, IA, United States | other | jobright |
 | 95 🔥 | 2d | Anthropic | [Safeguards Enforcement Analyst, Fraud & Scams](https://job-boards.greenhouse.io/anthropic/jobs/5319554008) | Remote-Friendly, United States; San Fran | ai_lab | greenhouse |
 | 95 🔥 | 2d | Anthropic | [Safeguards Enforcement Analyst, Ban Evasion & Recidivism](https://job-boards.greenhouse.io/anthropic/jobs/5319592008) | Remote-Friendly, United States; San Fran | ai_lab | greenhouse |
 | 95 🔥 | 2d | Anthropic | [Safeguards Enforcement Analyst, Account Takeover & Credential Abuse](https://job-boards.greenhouse.io/anthropic/jobs/5319624008) | Remote-Friendly, United States; San Fran | ai_lab | greenhouse |
 | 95 🔥 | 8d | Anthropic | [Strategy & Operations, Applied AI - AMER](https://job-boards.greenhouse.io/anthropic/jobs/5284500008) | San Francisco, CA | New York City, NY | ai_lab | greenhouse |
-| 94 🔥 | 1h | Jefferson Health | [Epic Business Intelligence Developer (EPIC Certifications Required)](https://jeffersonhealth.wd5.myworkdayjobs.com/en-US/ThomasJeffersonExternal/job/Philadelphia-PA/Epic-Business-Intelligence-Developer_REQ-0021665-1) | Philadelphia, PA | healthtech | workday |
-| 94 🔥 | 18h | Ensono | [Associate Machine Learning AI Engineer](https://ensono.com/company/careers/jobs-board/?gh_jid=4711789005) | Remote in USA | other | simplify |
-| 94 🔥 | 18h | UT Southwestern Medical Center | [Application Analyst 1](https://utsw.taleo.net/careersection/2/jobdetail.ftl?job=958075) | Dallas, TX | healthtech | simplify |
-| 94 🔥 | 20h | Jefferson Health | [Revenue Integrity Analyst II](https://jeffersonhealth.wd5.myworkdayjobs.com/en-US/ThomasJeffersonExternal/job/Camden-County-NJ/Revenue-Integrity-Analyst-II_REQ-0031910) | Camden County, NJ | healthtech | workday |
-| 94 🔥 | 23h | Cincinnati Children’s Hospital and Med | [Application Analyst I](https://cincinnatichildrens.wd5.myworkdayjobs.com/en-US/careersatcincinnatichildrens/job/Burnet-Campus/Application-Analyst-I_JR223045) | Burnet Campus | healthtech | workday |
-| 94 🔥 | 23h | Jefferson Health | [Revenue Cycle Analyst](https://jeffersonhealth.wd5.myworkdayjobs.com/en-US/ThomasJeffersonExternal/job/Philadelphia-PA/Revenue-Cycle-Analyst_REQ-0033826) | Philadelphia, PA | healthtech | workday |
+| 94 🔥 | <1h | ServiceNow | [Machine Learning Engineer, GAI Search Relevance - Moveworks](https://jobs.smartrecruiters.com/ServiceNow/744000138178124) | Mountain View, CALIFORNIA | big_tech | smartrecruiters |
+| 94 🔥 | <1h | ServiceNow | [Machine Learning Engineer, GAI Search Platform - Moveworks](https://jobs.smartrecruiters.com/ServiceNow/744000138174539) | Mountain View, CALIFORNIA | big_tech | smartrecruiters |
+| 94 🔥 | 2h | Jefferson Health | [Epic Business Intelligence Developer (EPIC Certifications Required)](https://jeffersonhealth.wd5.myworkdayjobs.com/en-US/ThomasJeffersonExternal/job/Philadelphia-PA/Epic-Business-Intelligence-Developer_REQ-0021665-1) | Philadelphia, PA | healthtech | workday |
+| 94 🔥 | 20h | Ensono | [Associate Machine Learning AI Engineer](https://ensono.com/company/careers/jobs-board/?gh_jid=4711789005) | Remote in USA | other | simplify |
+| 94 🔥 | 20h | UT Southwestern Medical Center | [Application Analyst 1](https://utsw.taleo.net/careersection/2/jobdetail.ftl?job=958075) | Dallas, TX | healthtech | simplify |
+| 94 🔥 | 22h | Jefferson Health | [Revenue Integrity Analyst II](https://jeffersonhealth.wd5.myworkdayjobs.com/en-US/ThomasJeffersonExternal/job/Camden-County-NJ/Revenue-Integrity-Analyst-II_REQ-0031910) | Camden County, NJ | healthtech | workday |
+| 94 🔥 | 1d | Cincinnati Children’s Hospital and Med | [Application Analyst I](https://cincinnatichildrens.wd5.myworkdayjobs.com/en-US/careersatcincinnatichildrens/job/Burnet-Campus/Application-Analyst-I_JR223045) | Burnet Campus | healthtech | workday |
+| 94 🔥 | 1d | Jefferson Health | [Revenue Cycle Analyst](https://jeffersonhealth.wd5.myworkdayjobs.com/en-US/ThomasJeffersonExternal/job/Philadelphia-PA/Revenue-Cycle-Analyst_REQ-0033826) | Philadelphia, PA | healthtech | workday |
 | 94 🔥 | 1d | Four Winds Hospital | [Chart Analyst](https://jobright.ai/jobs/info/6a57f0509838a11e5d835c89?utm_campaign=Data%20Analysis&utm_source=1103) | Katonah, NY, United States | healthtech | jobright |
 | 94 🔥 | 1d | Trinity Health | [Analyst, Charge - RIO (Remote)](https://jobright.ai/jobs/info/6a57f7fb9f1f56462cf67c9c?utm_campaign=Data%20Analysis&utm_source=1103) | Livonia, MI, United States | healthtech | jobright |
 | 94 🔥 | 1d | Cincinnati Children’s Hospital and Med | [Application Analyst 1](https://cincinnatichildrens.wd5.myworkdayjobs.com/careersatcincinnatichildrens/job/Burnet-Campus/Application-Analyst-I_JR223045) | Cincinnati, OH | healthtech | simplify |
 | 94 🔥 | 1d | Five Rings Capital | [Campus Full Time - Software Developer](https://job-boards.greenhouse.io/fiveringsllc/jobs/5349839008) | NYC | fintech | simplify |
-| 94 🔥 | 1d | Five Rings Capital | [Campus Full Time 2027 - Software Developer](https://job-boards.greenhouse.io/fiveringsllc/jobs/5349839008) | New York | fintech | greenhouse |
+| 94 🔥 | 2d | Five Rings Capital | [Campus Full Time 2027 - Software Developer](https://job-boards.greenhouse.io/fiveringsllc/jobs/5349839008) | New York | fintech | greenhouse |
 | 94 🔥 | 2d | Amazon | [Software Development Engineer – Amazon Leo (US)](https://jobright.ai/jobs/info/6a52db4b9fbdab22fe13d4a7?utm_campaign=Software%20Engineering&utm_source=1103) | Sunnyvale, CA, United States | big_tech | jobright |
 | 94 🔥 | 2d | Flatiron Health | [Applied AI Data Scientist - Product AI Team](https://flatiron.com/careers/open-positions/job?gh_jid=8010590) | NY office | healthtech | greenhouse |
-| 94 🔥 | 2d | AbbVie | [Business Analyst/System Administrator – Business Continuity](https://jobs.smartrecruiters.com/AbbVie/3743990014063367) | North Chicago, IL | healthtech | smartrecruiters |
-| 94 🔥 | 2d | AbbVie | [Analyst, Business Data](https://jobs.smartrecruiters.com/AbbVie/3743990014062447) | Worcester, MA | healthtech | smartrecruiters |
+| 94 🔥 | 3d | AbbVie | [Business Analyst/System Administrator – Business Continuity](https://jobs.smartrecruiters.com/AbbVie/3743990014063367) | North Chicago, IL | healthtech | smartrecruiters |
+| 94 🔥 | 3d | AbbVie | [Analyst, Business Data](https://jobs.smartrecruiters.com/AbbVie/3743990014062447) | Worcester, MA | healthtech | smartrecruiters |
 | 94 🔥 | 3d | CVS Health | [Software Development Engineer](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/TX---Dallas/Software-Development-Engineer_R0907448) | TX - Dallas | healthtech | workday |
 | 94 🔥 | 3d | NVIDIA AI | [Backend Compiler Engineer - New College Grad 2026](https://jobright.ai/jobs/info/6a55d93505c65f7c8f4c8a73?utm_campaign=Software%20Engineering&utm_source=1103) | Santa Clara, CA, United States | big_tech | jobright |
 | 94 🔥 | 6d | Highmark Health | [Associate Data Solutions Analyst](https://highmarkhealth.wd1.myworkdayjobs.com/highmark/job/PA-Working-at-Home---Pennsylvania/Associate-Data-Solutions-Analyst_J284073) | New Mexico | healthtech | simplify |
@@ -118,8 +120,8 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 94 🔥 | 21d | OpenAI | [Research Engineer / Research Scientist -Personal AGI, Proactivity ](https://jobs.ashbyhq.com/openai/e57d196b-4fa0-4463-bd33-d8189f0d3541) | San Francisco | ai_lab | ashby |
 | 94 🔥 | 21d | OpenAI | [Research Engineer/Research Scientist - Personal AGI, North Stars](https://jobs.ashbyhq.com/openai/171ebca6-de53-4d6e-a312-30332f353957) | San Francisco | ai_lab | ashby |
 | 94 🔥 | 29d | OpenAI | [AI Deployment Engineer, Startups](https://jobs.ashbyhq.com/openai/b76848b3-d545-40cc-b8b4-585501f09760) | Stockholm, Sweden | ai_lab | ashby |
-| 93 🔥 | 3h | Robert Bosch Venture Capital | [Associate Vehicle Data Analyst](https://jobs.smartrecruiters.com/BoschGroup/744000138113085) | Owatonna, MN | fintech | smartrecruiters |
-| 93 🔥 | 17h | Jump Trading | [Campus Quantitative Trader (Full-Time)](https://jobright.ai/jobs/info/6a4ec9b39469c0662034cabe?utm_campaign=Data%20Analysis&utm_source=1103) | Chicago | fintech | jobright |
+| 93 🔥 | 5h | Robert Bosch Venture Capital | [Associate Vehicle Data Analyst](https://jobs.smartrecruiters.com/BoschGroup/744000138113085) | Owatonna, MN | fintech | smartrecruiters |
+| 93 🔥 | 18h | Jump Trading | [Campus Quantitative Trader (Full-Time)](https://jobright.ai/jobs/info/6a4ec9b39469c0662034cabe?utm_campaign=Data%20Analysis&utm_source=1103) | Chicago | fintech | jobright |
 | 93 🔥 | 1d | Anysphere (Cursor) | [Full Stack Analyst, GTM](https://jobs.ashbyhq.com/cursor/7bc441a4-9bb6-45cb-a9e0-5ae1b9c7ac5b) | San Francisco | ai_lab | ashby |
 | 93 🔥 | 1d | iCapital Network | [Business Process Analyst, UiPath Developer - Associate/ Assistant Vice](https://job-boards.greenhouse.io/icapitalnetwork/jobs/8631123002) | Greenwich,  Connecticut, United States | fintech | greenhouse |
 | 93 🔥 | 1d | iCapital Network | [Business Process Analyst, UiPath Developer - Associate/ Assistant Vice](https://job-boards.greenhouse.io/icapitalnetwork/jobs/8634720002) | New York, New York, United States | fintech | greenhouse |
@@ -128,14 +130,15 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 93 🔥 | 7d | CVS Health | [Bilingual Case Management Analyst - Field in Miami-Dade County FL - Ne](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/FL---Miami/Bilingual-Case-Management-Analyst---Field-in-Miami-Dade-County-FL---New-Hire-Bonus-Available_R0949222) | FL - Miami | healthtech | workday |
 | 93 🔥 | 14d | Amazon | [Software Dev Engineer I - Annapurna Labs](https://www.amazon.jobs/jobs/10464104/apply) | Austin, TX | big_tech | speedyapply |
 | 93 🔥 | 27d | OpenAI | [Recruiter, AI/ML Research EMEA](https://jobs.ashbyhq.com/openai/49111f4e-eac8-438a-aca3-6b8896ae4287) | London, UK | ai_lab | ashby |
-| 92 🔥 | 17h | Qualcomm | [Software Product Application Engineer](https://jobright.ai/jobs/info/6a50aad95165966a1161aba2?utm_campaign=Software%20Engineering&utm_source=1103) | San Diego, CA, United States | big_tech | jobright |
-| 92 🔥 | 17h | Goldman Sachs | [Global Banking & Markets, Equities Flow Vol Strats, Analyst/Associate,](https://hdpc.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/LateralHiring/job/179463) | Hong Kong | other | oracle_orc |
+| 92 🔥 | 18h | Qualcomm | [Software Product Application Engineer](https://jobright.ai/jobs/info/6a50aad95165966a1161aba2?utm_campaign=Software%20Engineering&utm_source=1103) | San Diego, CA, United States | big_tech | jobright |
+| 92 🔥 | 18h | Goldman Sachs | [Global Banking & Markets, Equities Flow Vol Strats, Analyst/Associate,](https://hdpc.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/LateralHiring/job/179463) | Hong Kong | other | oracle_orc |
+| 92 🔥 | 18h | MANTECH | [Junior Software Developer](https://jobright.ai/jobs/info/6a58ee534da96a42cfd8e0f0?utm_campaign=Software%20Engineering&utm_source=1103) | Saint Inigoes, MD, United States | other | jobright |
 | 92 🔥 | 1d | Qualcomm | [Data Networking Software](https://jobright.ai/jobs/info/6a4354d7e09ecb4959644255?utm_campaign=Software%20Engineering&utm_source=1103) | San Diego, California, United States of  | big_tech | jobright |
 | 92 🔥 | 2d | AbbVie | [Analyst, Archive Records](https://jobs.smartrecruiters.com/AbbVie/3743990014065576) | North Chicago, IL | healthtech | smartrecruiters |
 | 92 🔥 | 5d | Anthropic | [Safeguards Enforcement Analyst, Child Safety](https://job-boards.greenhouse.io/anthropic/jobs/5311237008) | Remote-Friendly, United States; San Fran | ai_lab | greenhouse |
 | 92 🔥 | 5d | CVS Health | [Pharmacy Technician - Full Time Back End](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/WI---Milwaukee/Pharmacy-Technician---Full-Time-Back-End_R0962823-1) | WI - Milwaukee | healthtech | workday |
-| 92 🔥 | 5d | CVS Health | [Advanced Pharmacy Technician, Back End Full Time](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/GA---Conyers/Advanced-Pharmacy-Technician--Back-End-Full-Time_R0967701) | GA - Conyers | healthtech | workday |
-| 92 🔥 | 5d | CVS Health | [Analyst,Patient Relations](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/TN---Memphis/Analyst-Patient-Relations_R0957967) | TN - Memphis | healthtech | workday |
+| 92 🔥 | 6d | CVS Health | [Advanced Pharmacy Technician, Back End Full Time](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/GA---Conyers/Advanced-Pharmacy-Technician--Back-End-Full-Time_R0967701) | GA - Conyers | healthtech | workday |
+| 92 🔥 | 6d | CVS Health | [Analyst,Patient Relations](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/TN---Memphis/Analyst-Patient-Relations_R0957967) | TN - Memphis | healthtech | workday |
 | 92 🔥 | 6d | CVS Health | [Analyst,Patient Relations](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/CT---New-Britain/Analyst-Patient-Relations_R0970454-1) | CT - New Britain | healthtech | workday |
 | 92 🔥 | 6d | CVS Health | [Merchandising Analyst (Candy)](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/RI---Woonsocket/Merchandising-Analyst--Candy-_R0949228) | RI - Woonsocket | healthtech | workday |
 | 92 🔥 | 7d | CVS Health | [Patient Relations Analyst](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/IL---Waukegan/Patient-Relations-Analyst_R0950858) | IL - Waukegan | healthtech | workday |
@@ -153,8 +156,5 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 92 🔥 | 9d | Northwell Health | [Associate Business Intelligence Analyst - Onsite](https://jobright.ai/jobs/info/6a4d272ed27b2c4dda9b6672?utm_campaign=Data%20Analysis&utm_source=1103) | 475 Seaview Avenue, Staten Island, NY, 1 | healthtech | jobright |
 | 92 🔥 | 9d | Notion | [Software Engineer – Early Career](https://jobs.ashbyhq.com/notion/297b4ece-765f-4eea-b1b8-46057cb6501f/application) | SF | big_tech | simplify |
 | 92 🔥 | 10d | Capital One | [Data Analyst Associate](https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/McLean-VA/Data-Analyst-Associate---2027_R244316-1) | McLean, VA | fintech | simplify |
-| 92 🔥 | 10d | CVS Health | [Analyst, Proposals](https://jobright.ai/jobs/info/6a4c176a6189f64e437f117d?utm_campaign=Data%20Analysis&utm_source=1103) | Remote, Georgia, United States of Americ | healthtech | jobright |
-| 92 🔥 | 10d | Capital One | [Data Analyst Associate - 2027](https://jobright.ai/jobs/info/6a4ba0f75d7b097d2df3da78?utm_campaign=Data%20Analysis&utm_source=1103) | McLean, VA, United States of America | fintech | jobright |
-| 92 🔥 | 10d | CVS Health | [Analyst, Proposals](https://jobright.ai/jobs/info/6a4c176a6189f64e437f117d?utm_campaign=Data%20Analysis&utm_source=1103) | GA - Work from home, United States of Am | healthtech | jobright |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
