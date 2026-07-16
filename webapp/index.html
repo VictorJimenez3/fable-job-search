@@ -359,13 +359,12 @@ function rowHTML(j, byId) {
 }
 
 function rJobs() {
-  const byId = appliedById();
-  const rows = jobList();
   const sectors = [...new Set(Object.values(S.jobs).map(j=>j.sector).filter(Boolean))].sort();
+  // toolbar renders once; typing re-renders only #jobsList so the input keeps focus
   $("#main").innerHTML = `
     <div class="bar">
-      <input type="search" placeholder="search ${rows.length} roles…" value="${esc(S.filter.q)}"
-        oninput="S.filter.q=this.value;S.shown=250;render()">
+      <input type="search" placeholder="search roles…" value="${esc(S.filter.q)}"
+        oninput="S.filter.q=this.value;S.shown=250;renderJobsList()">
       <label class="sub">min <input type="number" style="width:4.2rem" value="${S.filter.min}"
         onchange="S.filter.min=+this.value;render()"></label>
       <select onchange="S.filter.sector=this.value;render()">
@@ -379,6 +378,7 @@ function rJobs() {
       <select onchange="S.filter.sort=this.value;render()" title="sort order">
         <option value="best" ${S.filter.sort!=="new"?"selected":""}>best match</option>
         <option value="new" ${S.filter.sort==="new"?"selected":""}>newest first</option></select>
+      <span class="sub" id="jobsCount"></span>
     </div>
     ${canWrite()?"":(S.backend
       ?`<div class="note"><b>Sign in with GitHub</b> (top right) once — every click is automatic
@@ -386,9 +386,17 @@ function rJobs() {
       :`<div class="note">No token needed: <b>track / applied</b> open a one-click
       prefilled GitHub issue (your GitHub login is the auth — only the repo owner is obeyed).
       Notes &amp; links stay private in this browser.</div>`)}
-    <div>${rows.slice(0,S.shown).map(j=>rowHTML(j,byId)).join("")}</div>
-    ${rows.length>S.shown?`<p><button class="act" onclick="S.shown+=250;render()">
-      show more (${rows.length-S.shown} left)</button></p>`:""}`;
+    <div id="jobsList"></div>`;
+  renderJobsList();
+}
+function renderJobsList() {
+  const el = $("#jobsList"); if (!el) return;
+  const byId = appliedById();
+  const rows = jobList();
+  const n = $("#jobsCount"); if (n) n.textContent = `${rows.length} roles`;
+  el.innerHTML = rows.slice(0,S.shown).map(j=>rowHTML(j,byId)).join("")
+    + (rows.length>S.shown?`<p><button class="act" onclick="S.shown+=250;renderJobsList()">
+      show more (${rows.length-S.shown} left)</button></p>`:"");
 }
 
 function cardHTML(x) {
@@ -477,6 +485,16 @@ function addLink(id){ const w=S.web.jobs[id];
 function rmLink(id,i){ S.web.jobs[id].links.splice(i,1); saveWeb(); openWS(id); }
 
 function rCos() {
+  // toolbar renders once; typing re-renders only #cosList so the input keeps focus
+  $("#main").innerHTML = `
+    <div class="bar"><input type="search" placeholder="search companies…"
+      value="${esc(S.filter.q)}" oninput="S.filter.q=this.value;renderCosList()">
+      <span class="sub" id="cosCount"></span></div>
+    <div id="cosList"></div>`;
+  renderCosList();
+}
+function renderCosList() {
+  const el = $("#cosList"); if (!el) return;
   const counts = {};
   for (const j of Object.values(S.jobs)) {
     const k = norm(j.company);
@@ -487,9 +505,8 @@ function rCos() {
   let rows = Object.entries(counts).map(([k,v])=>({k, ...v, c:S.culture[k]}));
   if (q) rows = rows.filter(r=>r.k.includes(q));
   rows.sort((a,b)=>(b.c?.fit||0)-(a.c?.fit||0) || b.best-a.best);
-  $("#main").innerHTML = `
-    <div class="bar"><input type="search" placeholder="search ${rows.length} companies…"
-      value="${esc(S.filter.q)}" oninput="S.filter.q=this.value;render()"></div>
+  const n = $("#cosCount"); if (n) n.textContent = `${rows.length} companies`;
+  el.innerHTML = `
     <div class="wrap"><table><tr><th>company</th><th>industry</th><th>prestige</th>
       <th>fit</th><th>wlb</th><th>new-grad tc</th><th>roles</th><th>research</th></tr>
     ${rows.slice(0,200).map(r=>`<tr>
@@ -580,6 +597,7 @@ async function testPAT() {
 }
 
 window.S = S; window.render = render; window.openWS = openWS; window.closeWS = closeWS;
+window.renderJobsList = renderJobsList; window.renderCosList = renderCosList;
 window.actMaybe = actMaybe; window.actTrack = actTrack; window.actApplied = actApplied;
 window.addLink = addLink; window.rmLink = rmLink; window.testPAT = testPAT; window.$ = $;
 boot();
