@@ -325,8 +325,22 @@ def enrich() -> int:
         registry = state.companies()
         found = disc.llm_scout(registry)
         state.save("companies.json", registry)
-        state.save("scout.json", {"last_run": now})
+        scout["last_run"] = now
+        state.save("scout.json", scout)
         print(f"enrich: scout queued {found} company candidate(s) for probing")
+
+    # monthly registry hygiene: retry dead boards, prune stale invalids,
+    # park duplicate employer entries (no LLM involved)
+    if now - scout.get("last_hygiene", 0) >= 30 * 86400:
+        from . import discovery as disc
+        registry = state.companies()
+        stats = disc.hygiene(registry, now)
+        state.save("companies.json", registry)
+        scout["last_hygiene"] = now
+        state.save("scout.json", scout)
+        print(f"enrich: registry hygiene — {stats['dead_retried']} dead retried, "
+              f"{stats['invalid_pruned']} stale invalids pruned, "
+              f"{stats['dups_parked']} duplicate entries parked")
     return 0
 
 

@@ -356,6 +356,7 @@ function rowHTML(j, byId) {
         · ${esc(j.sector||"tech")}${c?` · ${esc(c.industry)} (${esc(c.prestige)})`:""}
         ${j.llm_note?` · <i>${esc(j.llm_note)}</i>`:""}</div>
     </div>
+    ${j.explicit_new_grad?'<span class="chip applied">new grad</span>':""}
     ${mq?'<span class="chip marquee">marquee</span>':""}
     ${lane?`<span class="chip ${lane}">${lane==="saved"?"to apply":lane}</span>`:""}
     <div class="acts">

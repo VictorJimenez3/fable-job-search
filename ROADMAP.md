@@ -105,5 +105,8 @@ never in Actions.
 ## Ops
 - **Calendar sync** — interview emails → Google Calendar holds.
 - **Weekly Notion rollup** — mirror the Monday memo into Job Search HQ.
-- **Registry hygiene job** — monthly: retry long-dead boards, prune 90-day
-  invalids, dedupe companies that appear under two ATSs.
+- **Registry hygiene job** — ✅ SHIPPED 2026-07-16 (`discovery.hygiene`,
+  monthly inside enrich): dead boards get a fresh probe cycle every 30 d,
+  non-seed 90-day invalids are pruned, and duplicate employer entries that
+  stopped producing while a sibling still does are parked as `dup`
+  (producers are never touched).
