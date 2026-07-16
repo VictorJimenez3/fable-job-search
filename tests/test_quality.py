@@ -141,6 +141,42 @@ def test_one_to_two_years_demotes_but_never_hides(monkeypatch):
     assert rec["score"] == 80 - quality._PENALTY_SOME_EXPERIENCE
 
 
+def test_verify_pasted_grades_and_is_idempotent(monkeypatch):
+    calls = {"n": 0}
+    def fake_llm(*a, **k):
+        calls["n"] += 1
+        return '{"years_required": null, "new_grad": "yes", "role_family": "swe", "reason": "entry role"}'
+    monkeypatch.setattr(quality.llm, "complete", fake_llm)
+    rec = _rec()
+    jd = "We are hiring a software engineer to join our platform team. " * 5
+    assert quality.verify_pasted(rec, jd) is True
+    assert rec["quality"]["source"] == "pasted"
+    assert rec["quality"]["new_grad"] == "yes"
+    assert rec["quality"]["jd_sha"]
+    # same paste again: no new LLM call
+    assert quality.verify_pasted(rec, jd) is False
+    assert calls["n"] == 1
+    # an edited paste is re-judged
+    assert quality.verify_pasted(rec, jd + " Requires 6 years.") is True
+    assert calls["n"] == 2
+
+
+def test_verify_pasted_rejects_garbage_and_short_text(monkeypatch):
+    monkeypatch.setattr(quality.llm, "complete", lambda *a, **k: "not json")
+    rec = _rec()
+    assert quality.verify_pasted(rec, "too short") is False
+    assert quality.verify_pasted(rec, "long enough text " * 20) is False
+    assert "checked_at" not in rec.get("quality", {})
+
+
+def test_verify_pasted_suppresses_senior_posting(monkeypatch):
+    monkeypatch.setattr(quality.llm, "complete", lambda *a, **k:
+                        '{"years_required": 5, "new_grad": "no", "role_family": "swe", "reason": "5 yrs"}')
+    rec = _rec(company="Anthropic")   # marquee no longer shields (DECISIONS #31)
+    assert quality.verify_pasted(rec, "Requires five years of experience. " * 10)
+    assert rec["alert_ok"] is False
+
+
 def test_limit_budgets_attempts_not_successes(monkeypatch):
     # unreadable pages must consume the budget — no unbounded fetch sprees
     monkeypatch.setattr(quality.http, "get", lambda *a, **k: FakeResp(200, "<html>tiny</html>"))

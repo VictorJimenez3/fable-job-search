@@ -274,6 +274,21 @@ def enrich() -> int:
     reapplied, verified = quality.run(jobs_state)
     print(f"enrich: quality pass re-applied {reapplied} verdict(s), "
           f"verified {verified} new job(s)")
+
+    # JDs pasted into the platform's Role-fit tab (read-only here — the
+    # webapp owns web_state.json). jd_sha idempotency means unchanged pastes
+    # cost nothing on later cycles.
+    web = state.load("web_state.json", {})
+    pasted = 0
+    pasted_limit = int(env("RADAR_PASTED_LIMIT", "10"))
+    for jid, w in (web.get("jobs") or {}).items():
+        if pasted >= pasted_limit:
+            break
+        rec = jobs_state.get(jid)
+        if rec and (w.get("jd") or "").strip():
+            pasted += quality.verify_pasted(rec, w["jd"])
+    if pasted:
+        print(f"enrich: graded {pasted} pasted JD(s) from the platform")
     state.save("jobs.json", jobs_state)
     registry = state.companies()
     runs = state.load("runs.json", [])

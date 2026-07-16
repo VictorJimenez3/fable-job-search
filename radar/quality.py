@@ -189,6 +189,40 @@ def verify(rec: dict) -> bool:
     return True
 
 
+def verify_pasted(rec: dict, jd_text: str) -> bool:
+    """Judge a job from a user-pasted description (the platform's JD box in
+    state/web_state.json) — for postings the fetch layer can't read (SPA
+    hosts, bot walls). Idempotent per paste: the text's hash is stored as
+    quality.jd_sha, so an unchanged paste never burns another LLM call. A
+    pasted verdict overwrites a fetched one (fresher, human-supplied text;
+    logged via source="pasted"). Returns True when a verdict was recorded."""
+    import hashlib
+    jd_text = (jd_text or "").strip()
+    if len(jd_text) < 100:                 # too short to judge
+        return False
+    sha = hashlib.sha1(jd_text.encode()).hexdigest()[:12]
+    q = rec.setdefault("quality", {})
+    if q.get("jd_sha") == sha:
+        return False
+    raw = llm.complete(
+        PROMPT.format(title=rec.get("title", ""), company=rec.get("company", ""),
+                      text=jd_text[:6000]),
+        max_tokens=300, timeout=120, json_mode=True)
+    v = _parse_verdict(raw)
+    if v is None:
+        return False
+    q.update({
+        "checked_at": int(time.time()), "live": True,
+        "jd_sha": sha, "source": "pasted",
+        "new_grad": v.get("new_grad"),
+        "years_required": v.get("years_required"),
+        "role_family": v.get("role_family"),
+        "reason": (v.get("reason") or "")[:120],
+    })
+    reapply(rec)
+    return True
+
+
 # JS-shell hosts a plain GET can't read (SPA renders client-side) — fetching
 # them wastes the budget, and these are ATS-polled jobs whose liveness the
 # crawl re-confirms every ~30 min anyway.
