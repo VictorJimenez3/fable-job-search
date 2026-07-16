@@ -11,12 +11,12 @@ Layered, cheapest first — ROADMAP "Job-quality LLM pass":
   Layer 2  Role-fit: right company, wrong role (sales/support/analyst-in-
            name-only) is demoted below the alert bar.
 
-Design rules (DECISIONS #30):
+Design rules (DECISIONS #30, amended by #31):
 - Verdicts adjust alert_ok/score with a reason logged in score_reasons —
   nothing is ever silently deleted from state.
-- Marquee companies (the Shams rule) are never alert-suppressed by an LLM
-  verdict; the verdict is stored as information only. A dead link closes
-  them like anyone else.
+- Marquee companies are suppressed by verdicts like everyone else since
+  DECISIONS #31: the Shams rule bypasses only the new-grad-wording
+  requirement, not field fit or verified seniority.
 - The verdict is cached on the job record (rec["quality"]) so each job costs
   at most `_MAX_ATTEMPTS` fetch+LLM calls, and `reapply()` re-applies stored
   verdicts after every re-score (score() rebuilds from scratch).
@@ -29,7 +29,6 @@ import time
 
 from . import http, llm
 from .config import env
-from .score import is_marquee
 
 # phrases that mean the posting is gone even when the page returns 200
 DEAD_PHRASES = (
@@ -135,7 +134,6 @@ def reapply(rec: dict) -> None:
     q = rec.get("quality")
     if not q:
         return
-    marquee = is_marquee(rec.get("company", ""))
     if q.get("live") is False:
         rec["alert_ok"] = False
         rec.setdefault("closed_at", q.get("checked_at", int(time.time())))
@@ -149,7 +147,7 @@ def reapply(rec: dict) -> None:
         if line not in reasons:
             reasons.append(line)
             rec["score"] = max(0, rec.get("score", 0) - penalty)
-        if suppress and not marquee:
+        if suppress:
             rec["alert_ok"] = False
 
 

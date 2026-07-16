@@ -18,7 +18,7 @@ from .brief import rerank
 from .config import env, profile, seeds
 from .digest import write_outputs
 from .models import Job, norm
-from .score import gates, score
+from .score import RULES_VERSION, explicit_new_grad, gates, regate, score
 from .sector import infer
 from .sources import aggregators, hn
 from .sources.ats import FETCHERS
@@ -96,6 +96,9 @@ def crawl() -> int:
     registry = state.companies()
     discovery.seed_registry(registry, seeds())
     jobs_state = state.jobs()
+    n_regated = regate(jobs_state)
+    if n_regated:
+        print(f"re-gate: rules v{RULES_VERSION} flipped alert_ok on {n_regated} stored job(s)")
     fb = state.feedback()
     seed_sectors = {norm(s["name"]): s.get("sector", "other") for s in seeds()}
 
@@ -125,12 +128,12 @@ def crawl() -> int:
         if jid in seen_this_run or jid in jobs_state:
             continue
         seen_this_run.add(jid)
+        if not j.sector:
+            j.sector = infer(j.company, seed_sectors)  # before gates: priority-sector path
         keep, alert_eligible, reasons = gates(j)
         if not keep:
             dropped += 1
             continue
-        if not j.sector:
-            j.sector = infer(j.company, seed_sectors)
         j.alert_ok = alert_eligible
         score(j, fb, now)
         j.score_reasons += reasons
@@ -156,6 +159,8 @@ def crawl() -> int:
     for j in new_jobs:
         rec = j.to_record()
         rec["first_seen"] = now
+        rec["rules_v"] = RULES_VERSION
+        rec["explicit_new_grad"] = explicit_new_grad(j.title)
         jobs_state[j.id] = rec
     cutoff = now - 120 * 86400
     jobs_state = {k: v for k, v in jobs_state.items() if v.get("first_seen", now) >= cutoff}
@@ -392,6 +397,44 @@ def marquee_backfill() -> int:
     return 0
 
 
+def regate_cmd() -> int:
+    """Apply the current gate rules (score.RULES_VERSION) to stored jobs.
+
+    The scheduled crawl does this automatically; the command exists for
+    local dry runs (point RADAR_STATE_DIR at a scratch copy) and manual
+    repairs. Rewrites jobs.json and the generated docs.
+    """
+    jobs_state = state.jobs()
+    flipped = regate(jobs_state)
+    state.save("jobs.json", jobs_state)
+    registry = state.companies()
+    runs = state.load("runs.json", [])
+    alert_history = state.load("alert_history.json", [])
+    write_outputs(jobs_state, registry, runs, alert_history)
+    demoted = sum(1 for r in jobs_state.values()
+                  if any(f"re-gate v{RULES_VERSION}" in s and "dashboard only" in s
+                         for s in r.get("score_reasons", [])))
+    print(f"regate: rules v{RULES_VERSION} flipped {flipped} job(s) "
+          f"({demoted} demoted to dashboard), docs refreshed")
+    return 0
+
+
+def repair_feedback() -> int:
+    """One-time repair: drop learned token boosts that FEEDBACK_STOPWORDS now
+    filters at read time (business/marketing/product/... plus location noise).
+    Documented repair per CLI_HANDOFF — feedback.json is otherwise generated."""
+    from .score import FEEDBACK_STOPWORDS
+    fb = state.feedback()
+    tokens = fb.get("token_boosts", {})
+    removed = sorted(t for t in tokens if t in FEEDBACK_STOPWORDS)
+    for t in removed:
+        del tokens[t]
+    state.save("feedback.json", fb)
+    print(f"repair-feedback: removed {len(removed)} stopworded token boost(s)"
+          + (f": {', '.join(removed)}" if removed else ""))
+    return 0
+
+
 def web_action() -> int:
     """Handle a platform repository_dispatch: the website's track/applied
     buttons fire {action, id, url, company} and land here (~1 min later the
@@ -436,7 +479,8 @@ def main() -> None:
                                         "strategist", "notion-verify", "email-watch", "email-verify",
                                         "migrate-checkbox-applied", "promote-shortlist",
                                         "marquee-backfill", "reconcile-checkboxes",
-                                        "daily-best", "master-board", "web-action", "enrich"])
+                                        "daily-best", "master-board", "web-action", "enrich",
+                                        "regate", "repair-feedback"])
     args = ap.parse_args()
     if args.command == "crawl":
         sys.exit(crawl())
@@ -480,6 +524,10 @@ def main() -> None:
         sys.exit(web_action())
     elif args.command == "enrich":
         sys.exit(enrich())
+    elif args.command == "regate":
+        sys.exit(regate_cmd())
+    elif args.command == "repair-feedback":
+        sys.exit(repair_feedback())
 
 
 if __name__ == "__main__":

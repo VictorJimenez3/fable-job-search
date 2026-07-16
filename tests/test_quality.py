@@ -52,7 +52,6 @@ def test_llm_not_new_grad_suppresses_and_penalizes(monkeypatch):
                         lambda *a, **k: FakeResp(200, _posting("Requires 5 years of experience building services.")))
     monkeypatch.setattr(quality.llm, "complete", lambda *a, **k:
                         '{"years_required": 5, "new_grad": "no", "role_family": "swe", "reason": "wants 5 years"}')
-    monkeypatch.setattr(quality, "is_marquee", lambda c: False)
     rec = _rec()
     assert quality.verify(rec)
     assert rec["alert_ok"] is False
@@ -61,17 +60,18 @@ def test_llm_not_new_grad_suppresses_and_penalizes(monkeypatch):
     assert rec["quality"]["new_grad"] == "no"
 
 
-def test_marquee_keeps_alert_but_records_verdict(monkeypatch):
+def test_marquee_now_suppressed_by_verdict(monkeypatch):
+    # DECISIONS #31: the Shams rule no longer outranks a verified-seniority
+    # verdict — a marquee posting that wants 4 yrs is demoted like anyone else
     monkeypatch.setattr(quality.http, "get",
                         lambda *a, **k: FakeResp(200, _posting("Minimum 4 years experience.")))
     monkeypatch.setattr(quality.llm, "complete", lambda *a, **k:
                         '{"years_required": 4, "new_grad": "no", "role_family": "swe", "reason": "4 yrs"}')
-    monkeypatch.setattr(quality, "is_marquee", lambda c: True)
     rec = _rec(company="Anthropic")
     assert quality.verify(rec)
-    assert rec["alert_ok"] is True          # the Shams rule outranks the LLM
+    assert rec["alert_ok"] is False
     assert rec["quality"]["new_grad"] == "no"
-    assert rec["score"] < 80                # penalty still informs ranking
+    assert rec["score"] == 80 - quality._PENALTY_NOT_NEW_GRAD
 
 
 def test_non_technical_role_demoted(monkeypatch):
@@ -79,7 +79,6 @@ def test_non_technical_role_demoted(monkeypatch):
                         lambda *a, **k: FakeResp(200, _posting("You will manage the sales pipeline.")))
     monkeypatch.setattr(quality.llm, "complete", lambda *a, **k:
                         '{"years_required": null, "new_grad": "yes", "role_family": "non-technical", "reason": "sales role"}')
-    monkeypatch.setattr(quality, "is_marquee", lambda c: False)
     rec = _rec(title="Solutions Engineer")
     assert quality.verify(rec)
     assert rec["alert_ok"] is False
@@ -87,7 +86,6 @@ def test_non_technical_role_demoted(monkeypatch):
 
 
 def test_reapply_is_idempotent_without_rescore(monkeypatch):
-    monkeypatch.setattr(quality, "is_marquee", lambda c: False)
     rec = _rec(quality={"checked_at": NOW, "live": True, "new_grad": "no",
                         "years_required": 3, "role_family": "swe", "reason": "x"})
     quality.reapply(rec)
@@ -99,7 +97,6 @@ def test_reapply_is_idempotent_without_rescore(monkeypatch):
 
 
 def test_reapply_restores_after_rescore(monkeypatch):
-    monkeypatch.setattr(quality, "is_marquee", lambda c: False)
     rec = _rec(quality={"checked_at": NOW, "live": True, "new_grad": "no",
                         "years_required": 3, "role_family": "swe", "reason": "x"})
     quality.reapply(rec)
@@ -138,7 +135,6 @@ def test_one_to_two_years_demotes_but_never_hides(monkeypatch):
                         lambda *a, **k: FakeResp(200, _posting("1-2 years of experience preferred.")))
     monkeypatch.setattr(quality.llm, "complete", lambda *a, **k:
                         '{"years_required": 1, "new_grad": "no", "role_family": "swe", "reason": "1+ yrs"}')
-    monkeypatch.setattr(quality, "is_marquee", lambda c: False)
     rec = _rec()
     assert quality.verify(rec)
     assert rec["alert_ok"] is True
@@ -158,7 +154,6 @@ def test_limit_budgets_attempts_not_successes(monkeypatch):
 
 def test_run_respects_limit_and_reapplies(monkeypatch):
     monkeypatch.setattr(quality.http, "get", lambda *a, **k: FakeResp(404))
-    monkeypatch.setattr(quality, "is_marquee", lambda c: False)
     monkeypatch.setattr(quality.time, "sleep", lambda s: None)
     jobs = {f"j{i}": _rec(id=f"j{i}", url=f"https://x.example/{i}") for i in range(5)}
     jobs["old"] = _rec(id="old", first_seen=NOW - 90 * 86400)

@@ -136,7 +136,8 @@ const S = {           // app state
   tab:"jobs", filter:{q:"", min:66, sector:"", alert:true, lane:"", sort:"best"}, shown:250,
   marquee:new Set(["meta","apple","amazon","netflix","google","microsoft","nvidia",
     "anthropic","openai","deepmind","genentech","moderna","regeneron",
-    "vertex pharmaceuticals","eli lilly","merck","medtronic","intuitive surgical","stryker"]),
+    "vertex pharmaceuticals","eli lilly","merck","medtronic","intuitive surgical","stryker",
+    "whoop","oura","dexcom","abbott"]),  // mirror of profile.yaml marquee_companies
 };
 const norm = s => (s||"").toLowerCase().replace(/[^a-z0-9 ]/g," ").replace(/\s+/g," ").trim();
 const token = () => localStorage.getItem("jr_pat") || "";
