@@ -36,13 +36,30 @@ cycle, aggregator links first. Still open from this cluster:
 - **SPA-host coverage** — Workday/Eightfold/Oracle postings are JS shells a
   plain GET can't read; they're skipped today (their liveness is re-confirmed
   by the ATS poll anyway). Fetching their posting text via the ATS JSON APIs
-  would let the LLM verdict cover them too.
-- **Free cloud fallback** — a Gemini free-tier key via `LLM_BASE_URL` would
-  run the same pass when the Mac is asleep for days.
+  would let the LLM verdict cover them too. *Partial workaround shipped
+  2026-07-16:* the platform's Role-fit tab takes a pasted JD and the enrich
+  cycle grades it (`quality.verify_pasted`, DECISIONS #33).
+- **Free cloud fallback** — ✅ documented + hardened 2026-07-16: any
+  OpenAI-compatible free tier (NVIDIA NIM, Google AI Studio) works via the
+  `LLM_BASE_URL`/`LLM_API_KEY`/`LLM_MODEL` secrets that enrich.yml already
+  wires, and `llm.complete()` now retries 429/500/503 with Retry-After.
+  Remaining human step: Victor creates a free key and adds the three repo
+  secrets (see docs/CLI_HANDOFF.md "Needs a human").
 - **Data hygiene (no LLM).** Some jobright rows come in with company `"↳"`
   (a scraped continuation glyph). Parse fix + one-time state repair.
 
-## CV auto-tailoring (committed direction, blocked on the full CV)
+## Ranking v2 + platform research tabs — ✅ SHIPPED 2026-07-16 (DECISIONS #31-33)
+
+Field fit and seniority now outrank the Shams rule (off-field/mid-level
+title demotions, LLM verdicts may suppress marquee, numeric-level hard
+gates); `priority_sectors: [healthtech]` alerts strong engineering titles
+without new-grad wording (the WHOOP fix); `regate()` re-applies rule bumps
+to stored jobs. The platform drawer leads with a Company tab (what they
+do), adds a Role-fit tab with the LLM posting verdict + paste-in JD
+grading, and builds LinkedIn search links with entry-level/date filters in
+the URL (links only — #16 stands). Search boxes keep focus while typing.
+
+## CV auto-tailoring — ⏸️ ON HOLD (Victor's call, 2026-07-16; direction unchanged)
 
 `CV/` now exists locally (gitignored — DECISIONS #29: personal documents
 never enter this public repo). Victor will flesh out `cv_full.tex` as the

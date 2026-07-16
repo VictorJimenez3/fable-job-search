@@ -455,3 +455,70 @@ postings and a mislabeled-senior Netflix role but exposed three gaps:
   fresh `reset --hard`, then re-running a zero-limit enrich to rebuild
   effects and docs without new LLM calls (`scripts/mac-companion/merge_state.py`).
 
+
+## 31. Field fit and seniority outrank the Shams rule (2026-07-16)
+
+The Shams rule (#19) let any marquee posting alert once it passed the thin
+hard gates — and the board flooded with roles Victor can't use: 25 Anthropic
+Safeguards/policy roles, OpenAI Trust & Safety and Legal engineering, Netflix
+L5s, "Software Engineer 3"s (only roman III/IV were gated). Meanwhile his
+inbox trust eroded — the cried-wolf effect meant real fits sat unopened.
+
+Rules v2 (`radar/score.py`), all title-scoped because ATS descriptions are
+blank in state, all demote-don't-delete:
+
+- **`OFF_FIELD_RE`** — safeguards / trust & safety / policy / sales /
+  marketing / PM / support / recruiting / etc. titles lose alert
+  eligibility on *every* path, marquee included. Dashboard only, reason
+  logged ("off-field title (dashboard only)").
+- **`MIDLEVEL_RE`** — II / L4 / "Engineer 2" / mid-level → dashboard only.
+  `SENIOR_RE` now hard-gates numeric levels (Engineer 3+, L5+, Level 3+)
+  and "Leader" alongside senior/staff/III/IV.
+- **`quality.reapply()` may suppress marquee alerts** — the `not marquee`
+  guard is gone. The Shams rule now bypasses exactly one thing: the
+  new-grad-wording requirement. Amends #19 and #30; the reasoning that "one
+  missed Anthropic alert costs more than ten stale ones" broke down when the
+  stale ones hit dozens per week and were verifiably off-field or senior.
+- **`FEEDBACK_STOPWORDS`** — the taste model was learning off-field tokens
+  from tracked applications (business:3, product:4, marketing:2 in
+  state/feedback.json) and boosting exactly the roles being demoted.
+  Filtered symmetrically in `_title_tokens`, so learning stops AND stale
+  entries go inert at read time; `repair-feedback` cleans the file
+  cosmetically (documented repair).
+
+## 32. Priority sectors + re-gate on rules bump (2026-07-16)
+
+**The WHOOP lesson:** WHOOP — sensors, medtech, squarely Victor's field —
+was seeded and polled from day one, yet never alerted: not marquee, and
+Greenhouse postings carry no description, so new-grad evidence could never
+appear. Precision-first gating silently starved the best-fit companies.
+
+- **`priority_sectors: [healthtech]`** (profile.yaml): a strong engineering
+  title (role bucket, excluding bare "<anything> Analyst" — measured: it
+  admits Patient Relations / Retirement Benefits Analysts) at a
+  priority-sector company is alert-eligible without new-grad wording.
+  Off-field/mid-level demotions and LLM verdicts still apply on top.
+- **marquee_companies += WHOOP, Oura, Dexcom, Abbott** — safe now that
+  marquee no longer bypasses field fit. Keep `S.marquee` in
+  webapp/index.html (both copies) in sync, as ever.
+- **`regate()`** (`radar/score.py`, runs at the top of every crawl): stored
+  jobs whose `rules_v` predates `score.RULES_VERSION` are re-gated in place
+  — alert_ok flips both ways, reason appended ("re-gate v2: …"), closed
+  jobs never resurrected, cached quality verdicts re-applied last so LLM
+  suppressions always win. Rules changes now reach the ~3,100 already-open
+  alert records instead of only future crawls; the first post-bump crawl
+  commits a large one-time diff (every record gains `rules_v` /
+  `explicit_new_grad`). Measured on 2026-07-16 state: 261 demoted, 95
+  promoted, 0 closed re-opened.
+
+## 33. Pasted-JD verdicts: the human supplies what the fetcher can't (2026-07-16)
+
+SPA hosts (Workday/Eightfold/Oracle) and bot-walled postings can't be
+fetched, so their quality verdicts never happen. The platform's Role-fit tab
+now has a paste box: the JD lands in `state/web_state.json` via the existing
+web-state path (truncated to 6 KB; the UI states plainly that the repo is
+public), and the next enrich cycle grades it with `quality.verify_pasted()`
+— same prompt, verdict stored with `source: "pasted"` plus a `jd_sha` hash
+so an unchanged paste never costs a second LLM call. A pasted verdict
+overwrites a fetched one (fresher, human-supplied text). Enrich reads
+web_state.json but never writes it — the webapp owns that file.
