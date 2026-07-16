@@ -87,6 +87,88 @@ def fetch_posting(url: str) -> tuple[bool | None, str]:
     return True, text
 
 
+_WD_URL = re.compile(
+    r"^https://(?P<tenant>[^.]+)\.(?P<wd>wd\d+)\.myworkdayjobs\.com/"
+    r"(?:[a-z]{2}-[A-Z]{2}/)?(?P<site>[^/]+)(?P<path>/job/[^?#]+)")
+_ORC_URL = re.compile(
+    r"^https://(?P<host>[^/]+)/hcmUI/CandidateExperience/[^/]+/sites/"
+    r"(?P<site>[^/]+)/(?:job|requisitions/preview)/(?P<rid>\d+)")
+
+
+def spa_kind(rec: dict) -> str | None:
+    """Which JSON-API strategy covers this JS-shell posting, if any."""
+    url = rec.get("url") or ""
+    if ".myworkdayjobs.com" in url:
+        return "workday"
+    if "oraclecloud.com" in url and "/hcmUI/" in url:
+        return "oracle"
+    if (rec.get("ats") == "eightfold" or rec.get("source") == "eightfold"
+            or ".eightfold.ai" in url):
+        return "eightfold"
+    return None
+
+
+def fetch_posting_spa(rec: dict, domains: dict | None = None) -> tuple[bool | None, str]:
+    """Posting text for SPA hosts (Workday/Oracle ORC/Eightfold) via the same
+    JSON APIs their frontends call — a plain GET only returns the JS shell.
+    Same contract as fetch_posting: (alive, text), alive=None = can't tell."""
+    url = (rec.get("url") or "").split("?")[0].split("#")[0]
+    kind = spa_kind(rec)
+    try:
+        if kind == "workday":
+            m = _WD_URL.match(url)
+            if not m:
+                return None, ""
+            api = (f"https://{m['tenant']}.{m['wd']}.myworkdayjobs.com"
+                   f"/wday/cxs/{m['tenant']}/{m['site']}{m['path']}")
+            r = http.get(api, timeout=15, headers={"Accept": "application/json"})
+            if r.status_code in (404, 410):
+                return False, ""
+            if r.status_code >= 400:
+                return None, ""
+            info = r.json().get("jobPostingInfo") or {}
+            return True, _strip_html(info.get("jobDescription") or "")[:7000]
+        if kind == "oracle":
+            m = _ORC_URL.match(url)
+            if not m:
+                return None, ""
+            api = (f"https://{m['host']}/hcmRestApi/resources/latest/"
+                   f"recruitingCEJobRequisitionDetails?expand=all&onlyData=true"
+                   f"&finder=ById;siteNumber={m['site']},Id=%22{m['rid']}%22")
+            r = http.get(api, timeout=15, headers={"Accept": "application/json"})
+            if r.status_code in (404, 410):
+                return False, ""
+            if r.status_code >= 400:
+                return None, ""
+            items = r.json().get("items") or []
+            if not items:
+                return False, ""    # requisition no longer served = closed
+            text = " ".join(_strip_html(items[0].get(k) or "") for k in
+                            ("ExternalDescriptionStr", "ExternalQualificationsStr",
+                             "ExternalResponsibilitiesStr", "CorporateDescriptionStr"))
+            return True, text.strip()[:7000]
+        if kind == "eightfold":
+            from urllib.parse import urlsplit
+            parts = urlsplit(url)
+            pid = parts.path.rstrip("/").rsplit("/", 1)[-1]
+            if not pid.isdigit():
+                return None, ""
+            from .models import norm
+            domain = (domains or {}).get(norm(rec.get("company", "")))
+            api = f"{parts.scheme}://{parts.netloc}/api/apply/v2/jobs/{pid}"
+            if domain:
+                api += f"?domain={domain}"
+            r = http.get(api, timeout=15, headers={"Accept": "application/json"})
+            if r.status_code in (404, 410):
+                return False, ""
+            if r.status_code >= 400:
+                return None, ""
+            return True, _strip_html(r.json().get("job_description") or "")[:7000]
+    except Exception:
+        return None, ""
+    return None, ""
+
+
 def _parse_verdict(raw: str | None) -> dict | None:
     if not raw:
         return None
@@ -151,13 +233,16 @@ def reapply(rec: dict) -> None:
             rec["alert_ok"] = False
 
 
-def verify(rec: dict) -> bool:
+def verify(rec: dict, domains: dict | None = None) -> bool:
     """Fetch + judge one job. Stores the verdict in rec["quality"] and applies
     it. Returns True if a verdict (even 'unclear') was recorded."""
     now = int(time.time())
     q = rec.setdefault("quality", {})
     q["attempts"] = q.get("attempts", 0) + 1
-    alive, text = fetch_posting(rec.get("url", ""))
+    if spa_kind(rec):
+        alive, text = fetch_posting_spa(rec, domains)
+    else:
+        alive, text = fetch_posting(rec.get("url", ""))
     if alive is False:
         q.update({"checked_at": now, "live": False})
         reapply(rec)
@@ -223,11 +308,6 @@ def verify_pasted(rec: dict, jd_text: str) -> bool:
     return True
 
 
-# JS-shell hosts a plain GET can't read (SPA renders client-side) — fetching
-# them wastes the budget, and these are ATS-polled jobs whose liveness the
-# crawl re-confirms every ~30 min anyway.
-SPA_HOSTS = ("myworkdayjobs.com", "eightfold.ai", "oraclecloud.com")
-
 # aggregator listings are where verification pays: their links go stale and
 # their "new grad" labels are the least reliable. Direct-ATS jobs are
 # re-confirmed alive every poll and usually say "new grad" in the title.
@@ -237,20 +317,23 @@ AGGREGATOR_SOURCES = ("jobright", "simplify", "speedyapply", "vansh", "hn")
 def _candidates(jobs_state: dict, now: int) -> list[dict]:
     """Alert-worthy recent jobs, most visible + least trustworthy first —
     these are the ones on the master board / alerts, where a bad entry costs
-    real application time."""
+    real application time. SPA hosts (Workday/Oracle/Eightfold) are included
+    since 2026-07-16 — fetch_posting_spa reads them via their JSON APIs."""
     rows = [r for r in jobs_state.values()
             if r.get("alert_ok")
             and not r.get("closed_at")
-            and now - r.get("first_seen", 0) <= 30 * 86400
-            and not any(h in (r.get("url") or "") for h in SPA_HOSTS)]
+            and now - r.get("first_seen", 0) <= 30 * 86400]
     rows.sort(key=lambda r: (r.get("source") not in AGGREGATOR_SOURCES,
                              -r.get("score", 0), -(r.get("posted_at") or 0)))
     return rows
 
 
-def run(jobs_state: dict, limit: int | None = None) -> tuple[int, int]:
+def run(jobs_state: dict, limit: int | None = None,
+        domains: dict | None = None) -> tuple[int, int]:
     """One quality cycle: re-apply all stored verdicts, then verify up to
-    `limit` unverified jobs. Returns (reapplied, newly_verified)."""
+    `limit` unverified jobs. `domains` maps norm(company) → careers domain
+    (Eightfold's detail API wants it; built from the registry in enrich).
+    Returns (reapplied, newly_verified)."""
     if env("RADAR_QUALITY_DISABLE"):
         return 0, 0
     limit = int(env("RADAR_QUALITY_LIMIT", "25")) if limit is None else limit
@@ -272,7 +355,7 @@ def run(jobs_state: dict, limit: int | None = None) -> tuple[int, int]:
         if q.get("checked_at") or q.get("attempts", 0) >= _MAX_ATTEMPTS:
             continue
         tried += 1
-        if verify(rec):
+        if verify(rec, domains):
             verified += 1
         time.sleep(0.4)   # politeness between posting fetches
     return reapplied, verified

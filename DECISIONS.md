@@ -522,3 +522,27 @@ public), and the next enrich cycle grades it with `quality.verify_pasted()`
 so an unchanged paste never costs a second LLM call. A pasted verdict
 overwrites a fetched one (fresher, human-supplied text). Enrich reads
 web_state.json but never writes it — the webapp owns that file.
+
+## 34. SPA postings read via their JSON APIs; glyph records scrubbed (2026-07-16)
+
+Workday/Oracle/Eightfold postings are JS shells — a plain GET returns no
+text, so the quality pass skipped them, which exempted ~480 alert-worthy
+jobs (109 direct-Workday alerts plus every simplify link pointing at a
+Workday tenant) from new-grad/role-fit verification. `fetch_posting_spa()`
+(radar/quality.py) now calls the same JSON endpoints their own frontends
+use: Workday `wday/cxs/{tenant}/{site}/job/...`, Oracle ORC
+`recruitingCEJobRequisitionDetails` (empty `items` = requisition gone =
+closed), Eightfold `api/apply/v2/jobs/{id}` with the careers domain looked
+up from the registry. Failure modes stay conservative: any error is
+`alive=None` ("can't tell", never closes anything), capped at the usual 2
+attempts before "unclear" (which never suppresses). Built in a sandbox
+that couldn't reach ATS hosts — the first live cycle (Mac companion or CI
+enrich) is the real validation; the paste-in box (#33) remains the manual
+fallback.
+
+Also: jobright's parser now drops continuation rows it can't resolve to an
+employer, and `scrub_glyph_companies()` runs every crawl — the 101 stored
+records with company `"↳"` (pre-continuation-fix parses, all alert_ok,
+unidentifiable, and duplicated under their real employers by later crawls)
+are removed rather than demoted. The adjust-don't-delete rule (#30) is for
+jobs Victor might act on; a record whose employer is a glyph isn't one.

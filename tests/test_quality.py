@@ -177,6 +177,81 @@ def test_verify_pasted_suppresses_senior_posting(monkeypatch):
     assert rec["alert_ok"] is False
 
 
+class SpaResp:
+    def __init__(self, status=200, payload=None):
+        self.status_code = status
+        self._payload = payload or {}
+
+    def json(self):
+        return self._payload
+
+
+def test_spa_workday_fetches_cxs_json(monkeypatch):
+    seen = {}
+    def get(url, **kw):
+        seen["url"] = url
+        return SpaResp(200, {"jobPostingInfo": {"jobDescription":
+            "<p>Entry level role. 0-2 years experience.</p>"}})
+    monkeypatch.setattr(quality.http, "get", get)
+    rec = _rec(url="https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite"
+                   "/job/US-CA-Santa-Clara/Software-Engineer_JR123")
+    alive, text = quality.fetch_posting_spa(rec)
+    assert seen["url"] == ("https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/"
+                           "nvidiaexternalcareersite/job/US-CA-Santa-Clara/Software-Engineer_JR123")
+    assert alive is True and "Entry level role" in text
+    # locale-less URLs (vansh links) parse too
+    rec2 = _rec(url="https://usbank.wd1.myworkdayjobs.com/US_Bank_Careers/job/Earth-City-MO/SWE_2026")
+    quality.fetch_posting_spa(rec2)
+    assert seen["url"] == ("https://usbank.wd1.myworkdayjobs.com/wday/cxs/usbank/"
+                           "US_Bank_Careers/job/Earth-City-MO/SWE_2026")
+    # 404 = posting gone
+    monkeypatch.setattr(quality.http, "get", lambda *a, **k: SpaResp(404))
+    assert quality.fetch_posting_spa(rec) == (False, "")
+
+
+def test_spa_oracle_fetches_requisition_details(monkeypatch):
+    seen = {}
+    def get(url, **kw):
+        seen["url"] = url
+        return SpaResp(200, {"items": [{"ExternalDescriptionStr": "<b>Analyst program</b>",
+                                        "ExternalQualificationsStr": "BS in CS"}]})
+    monkeypatch.setattr(quality.http, "get", get)
+    rec = _rec(url="https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210743637")
+    alive, text = quality.fetch_posting_spa(rec)
+    assert "recruitingCEJobRequisitionDetails" in seen["url"]
+    assert 'siteNumber=CX_1001,Id=%22210743637%22' in seen["url"]
+    assert alive is True and "Analyst program" in text and "BS in CS" in text
+    # an empty items list means the requisition is no longer served
+    monkeypatch.setattr(quality.http, "get", lambda *a, **k: SpaResp(200, {"items": []}))
+    assert quality.fetch_posting_spa(rec) == (False, "")
+
+
+def test_spa_eightfold_uses_domain_map(monkeypatch):
+    seen = {}
+    def get(url, **kw):
+        seen["url"] = url
+        return SpaResp(200, {"job_description": "<p>Build streaming infra.</p>"})
+    monkeypatch.setattr(quality.http, "get", get)
+    rec = _rec(company="Netflix", source="eightfold",
+               url="https://explore.jobs.netflix.net/careers/job/790317054101")
+    alive, text = quality.fetch_posting_spa(rec, {"netflix": "netflix.com"})
+    assert seen["url"] == ("https://explore.jobs.netflix.net/api/apply/v2/jobs/"
+                           "790317054101?domain=netflix.com")
+    assert alive is True and "streaming infra" in text
+
+
+def test_verify_routes_spa_urls_through_json_api(monkeypatch):
+    monkeypatch.setattr(quality, "fetch_posting_spa",
+                        lambda rec, domains=None: (True, "New grad role, 0-1 years. " * 20))
+    monkeypatch.setattr(quality, "fetch_posting",
+                        lambda url: (_ for _ in ()).throw(AssertionError("plain fetch used for SPA url")))
+    monkeypatch.setattr(quality.llm, "complete", lambda *a, **k:
+                        '{"years_required": 0, "new_grad": "yes", "role_family": "swe", "reason": "entry"}')
+    rec = _rec(url="https://x.wd5.myworkdayjobs.com/en-US/site/job/loc/Role_1")
+    assert quality.verify(rec)
+    assert rec["quality"]["new_grad"] == "yes"
+
+
 def test_limit_budgets_attempts_not_successes(monkeypatch):
     # unreadable pages must consume the budget — no unbounded fetch sprees
     monkeypatch.setattr(quality.http, "get", lambda *a, **k: FakeResp(200, "<html>tiny</html>"))

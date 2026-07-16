@@ -97,10 +97,12 @@ Before changing the radar, read these in order:
 - **`CV/` is local-only and gitignored** (DECISIONS #29) — never commit it
   or anything derived from it; CV auto-tailoring is a Mac-companion feature.
 - **Next up — doable from any CLI/cloud session** (see ROADMAP.md):
-  SPA-host posting text via ATS JSON APIs so the quality pass covers
-  Workday/Eightfold/Oracle without pasting; the jobright `"↳"` company-name
-  repair; run `python -m radar.main repair-feedback` once (cosmetic — the
-  stopwords already neutralize stale boosts at read time).
+  run `python -m radar.main repair-feedback` once (cosmetic — the stopwords
+  already neutralize stale boosts at read time; do it in a checkout where
+  CI isn't racing you, i.e. right after a merge). Watch the first Mac/CI
+  enrich cycle after 2026-07-16 for the SPA-host quality pass
+  (`fetch_posting_spa` — built where ATS egress was blocked, so its first
+  live contact is that cycle; failures degrade to "unclear").
 - **Next up — needs Victor / the Mac:** email autopilot secrets
   (`EMAIL_ADDRESS`/`EMAIL_APP_PASSWORD`); free-LLM fallback secrets
   (`LLM_BASE_URL`/`LLM_API_KEY`/`LLM_MODEL`, see above); CV auto-tailoring

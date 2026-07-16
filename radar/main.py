@@ -87,6 +87,18 @@ def _fetch_ats(registry: dict, disabled: set[str]) -> tuple[list[Job], dict]:
     return jobs, {"companies_polled": len(entries), "ok": ok, "failed": fail}
 
 
+def scrub_glyph_companies(jobs_state: dict) -> int:
+    """Drop records whose employer is a scraped continuation glyph ("↳",
+    pre-2026-07 jobright parses) — unidentifiable, and their re-crawled twins
+    exist under the real company name (different id). Runs every crawl;
+    idempotent and cheap once the backlog is gone."""
+    corrupt = [k for k, r in jobs_state.items()
+               if r.get("company", "").strip() in {"↳", "&#8627;", "&#x21B3;", ""}]
+    for k in corrupt:
+        del jobs_state[k]
+    return len(corrupt)
+
+
 def crawl() -> int:
     t0 = time.time()
     now = int(t0)
@@ -96,6 +108,9 @@ def crawl() -> int:
     registry = state.companies()
     discovery.seed_registry(registry, seeds())
     jobs_state = state.jobs()
+    dropped_glyphs = scrub_glyph_companies(jobs_state)
+    if dropped_glyphs:
+        print(f"hygiene: dropped {dropped_glyphs} glyph-company record(s)")
     n_regated = regate(jobs_state)
     if n_regated:
         print(f"re-gate: rules v{RULES_VERSION} flipped alert_ok on {n_regated} stored job(s)")
@@ -271,7 +286,11 @@ def enrich() -> int:
     # quality pass: link liveness + new-grad/role-fit verification (cached
     # verdicts re-applied first, since score() above rebuilds from scratch)
     from . import quality
-    reapplied, verified = quality.run(jobs_state)
+    registry = state.companies()
+    eightfold_domains = {norm(e.get("name", "")): (e.get("extra") or {}).get("domain")
+                         for e in registry.values()
+                         if e.get("ats") == "eightfold" and (e.get("extra") or {}).get("domain")}
+    reapplied, verified = quality.run(jobs_state, domains=eightfold_domains)
     print(f"enrich: quality pass re-applied {reapplied} verdict(s), "
           f"verified {verified} new job(s)")
 

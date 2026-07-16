@@ -33,20 +33,25 @@ score/alert adjusted with logged reasons — never silently deleted; marquee
 companies are never alert-suppressed by a verdict). ~15 jobs verified per
 cycle, aggregator links first. Still open from this cluster:
 
-- **SPA-host coverage** — Workday/Eightfold/Oracle postings are JS shells a
-  plain GET can't read; they're skipped today (their liveness is re-confirmed
-  by the ATS poll anyway). Fetching their posting text via the ATS JSON APIs
-  would let the LLM verdict cover them too. *Partial workaround shipped
-  2026-07-16:* the platform's Role-fit tab takes a pasted JD and the enrich
-  cycle grades it (`quality.verify_pasted`, DECISIONS #33).
+- **SPA-host coverage** — ✅ SHIPPED 2026-07-16 (`quality.fetch_posting_spa`,
+  DECISIONS #34): Workday (wday/cxs job JSON), Oracle ORC (requisition
+  details REST), and Eightfold (apply/v2 API, careers domain from the
+  registry) posting text now feeds the LLM verdict instead of being
+  skipped — ~480 alert-worthy jobs gained coverage. The paste-in JD box
+  (DECISIONS #33) remains the fallback for anything else. First live cycle
+  runs on the Mac companion / CI (this was built in a sandbox whose egress
+  can't reach ATS hosts) — if a shape drifted, jobs degrade to "unclear"
+  (never suppressed) at the usual 2-attempt cap.
 - **Free cloud fallback** — ✅ documented + hardened 2026-07-16: any
   OpenAI-compatible free tier (NVIDIA NIM, Google AI Studio) works via the
   `LLM_BASE_URL`/`LLM_API_KEY`/`LLM_MODEL` secrets that enrich.yml already
   wires, and `llm.complete()` now retries 429/500/503 with Retry-After.
   Remaining human step: Victor creates a free key and adds the three repo
   secrets (see docs/CLI_HANDOFF.md "Needs a human").
-- **Data hygiene (no LLM).** Some jobright rows come in with company `"↳"`
-  (a scraped continuation glyph). Parse fix + one-time state repair.
+- **Data hygiene (no LLM)** — ✅ SHIPPED 2026-07-16: jobright parser drops
+  unresolvable continuation rows, and every crawl scrubs glyph-company
+  records from state (`scrub_glyph_companies` — 101 in the backlog, all
+  alert_ok, gone on the next crawl).
 
 ## Ranking v2 + platform research tabs — ✅ SHIPPED 2026-07-16 (DECISIONS #31-33)
 
