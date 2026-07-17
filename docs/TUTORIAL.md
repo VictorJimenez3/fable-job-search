@@ -20,12 +20,17 @@ the repo itself is the database.
 system as a website, refreshed automatically by every crawl:
 
 - **Jobs**: every role the radar has ever seen, searchable and filterable,
-  with score, salary, culture prestige, and the AI angle inline.
+  with score, salary, culture prestige, and the AI angle inline — plus
+  LinkedIn saved-search links with the entry-level + date filters already
+  in the URL.
 - **Pipeline**: Maybe → To apply → Applied lanes. "To apply"/"Applied" mirror
   Notion exactly; "Maybe" is a scratch lane that lives on the platform only.
-- **Per-job workspace** (open ▸): why it scored, culture dossier, recruiter /
-  NJIT-alumni / levels.fyi research links, outreach message templates
-  pre-filled with the role, a place to save conversation links and notes.
+- **Per-job workspace** (open ▸), four tabs: **Company** (what they do —
+  culture dossier, sector, research links) opens first; **Role fit** (why it
+  scored, the LLM posting verdict, and a paste box for job descriptions the
+  radar can't scrape — graded on the next enrich cycle); **Outreach**
+  (recruiter/alumni links, message templates pre-filled with the role,
+  saved conversations); **Notes**.
 - **Companies**: the whole registry with culture data and research links.
 - **AI**: what the local model has enriched, scout status, registry stats.
 

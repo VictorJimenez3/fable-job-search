@@ -129,8 +129,52 @@ def probe_new(registry: dict, budget: int = 30) -> tuple[int, int]:
             ok += 1
         else:
             e["status"] = "invalid"
+            e.setdefault("invalidated_at", int(time.time()))
             bad += 1
     return ok, bad
+
+
+def hygiene(registry: dict, now: int | None = None) -> dict:
+    """Monthly registry maintenance (ROADMAP "Registry hygiene job"):
+
+    - dead boards (5+ consecutive poll failures) get one fresh probe cycle
+      every 30 days — ATS migrations resolve and WAFs relent
+    - non-seed entries invalid for 90+ days are dropped: scout/harvest
+      guesses that never validated (seeds are curated and stay; entries
+      predating the invalidated_at stamp start their clock now)
+    - duplicate employers: when the same company is active under several
+      registry entries (e.g. migrated Greenhouse → Workday), siblings that
+      returned nothing for 30+ days while another produced are parked as
+      status="dup" — reclaims polling budget, never touches producers
+    """
+    now = now or int(time.time())
+    stats = {"dead_retried": 0, "invalid_pruned": 0, "dups_parked": 0}
+    for e in registry.values():
+        if e["status"] == "dead" and now - e.get("hygiene_retry_at", 0) >= 30 * 86400:
+            e.update(status="new", failures=0, probe_attempts=0, hygiene_retry_at=now)
+            stats["dead_retried"] += 1
+    for k in [k for k, e in registry.items() if e["status"] == "invalid"]:
+        e = registry[k]
+        if e.get("origin") == "seed":
+            continue
+        if not e.get("invalidated_at"):
+            e["invalidated_at"] = now
+        elif now - e["invalidated_at"] >= 90 * 86400:
+            del registry[k]
+            stats["invalid_pruned"] += 1
+    by_name: dict[str, list[dict]] = {}
+    for e in registry.values():
+        if e["status"] == "active":
+            by_name.setdefault(norm(e["name"]), []).append(e)
+    for entries in by_name.values():
+        fresh = [e for e in entries if now - e.get("last_ok", 0) <= 30 * 86400]
+        if len(entries) < 2 or not fresh or len(fresh) == len(entries):
+            continue
+        for e in entries:
+            if e not in fresh:
+                e["status"] = "dup"
+                stats["dups_parked"] += 1
+    return stats
 
 
 def record_result(entry: dict, success: bool, deactivate_after: int = 5) -> None:

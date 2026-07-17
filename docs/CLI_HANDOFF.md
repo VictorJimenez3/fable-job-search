@@ -54,29 +54,73 @@ Before changing the radar, read these in order:
   interview/rejected, forward-only, auto-close after 45 d silence) — that
   path is coded and tested but **awaits the `EMAIL_ADDRESS` /
   `EMAIL_APP_PASSWORD` secrets** (Gmail app password, see README §2).
-- **Scoring:** hard gates + Shams rule — `marquee_companies` in profile.yaml
-  (MANGA, AI labs, elite pharma/medtech incl. Merck) always alert; $150k+
-  (`pay_bank`) also bypasses new-grad-wording requirements. The marquee list
-  is duplicated in `webapp/index.html` (`S.marquee`) — keep both in sync.
+- **Scoring (rules v2, 2026-07-16, DECISIONS #31-32):** hard gates (now incl.
+  numeric levels: Engineer 3+/L5+/Level 3+/"Leader") + alert-eligibility
+  paths: aggregator listing, explicit new-grad wording, marquee
+  (`marquee_companies` incl. WHOOP/Oura/Dexcom/Abbott), $150k+ `pay_bank`,
+  or `priority_sectors` (healthtech + strong engineering title). Then
+  demotions that outrank ALL of those: `OFF_FIELD_RE` (safeguards/policy/
+  sales/PM/support/...) and `MIDLEVEL_RE` (II/L4/Engineer 2) → dashboard
+  only. LLM quality verdicts may suppress marquee alerts now. `regate()`
+  runs at the top of every crawl and re-applies rule bumps
+  (`score.RULES_VERSION`, records carry `rules_v` + `explicit_new_grad`)
+  to stored jobs; manual commands: `python -m radar.main regate` /
+  `repair-feedback`. The taste model filters `FEEDBACK_STOPWORDS`. The
+  marquee list is duplicated in `webapp/index.html` (`S.marquee`) — keep
+  both copies in sync.
+- **Posting scraping (DECISIONS #35, 2026-07-17):** every crawl runs
+  `posting.scrape_pass` — Greenhouse (`content=true`)/Ashby/Lever text is
+  analyzed inline, and up to `RADAR_SCRAPE_LIMIT` (20) postings/run are
+  fetched (SPA hosts via their JSON APIs) for new + stored alert-worthy
+  jobs. Extracted facts live in `rec["posting"]` (sponsorship / years_min /
+  intern_counts + matched phrases): 3+ scraped yrs → dashboard-only;
+  `candidate.needs_sponsorship: true` (profile.yaml, default false) also
+  demotes no-sponsorship postings. `RADAR_SCRAPE_DISABLE=1` kills the pass.
+  No LLM or secret involved.
 - **Local AI:** Mac companion installed (`~/.jobradar`, launchd
   `com.jobradar.enrich`, every 2 h while awake) running Ollama `qwen3:30b`
   with `format:"json"` forced (DECISIONS #20 — thinking models otherwise
   burn the token budget). Each cycle: culture dossiers, re-score recent
-  jobs, weekly LLM company scout, and the **quality pass**
+  jobs, weekly LLM company scout, the **quality pass**
   (`radar/quality.py`, DECISIONS #30): link liveness + LLM new-grad/role-fit
   verification, ~15 jobs/cycle, aggregator links first, verdicts cached on
-  the job record and re-applied after every re-score. Knobs:
-  `RADAR_QUALITY_LIMIT`, `RADAR_QUALITY_DISABLE`.
+  the job record and re-applied after every re-score — and **pasted-JD
+  grading** (DECISIONS #33): JDs pasted into the platform's Role-fit tab
+  land in `state/web_state.json` and get a verdict next cycle. Knobs:
+  `RADAR_QUALITY_LIMIT`, `RADAR_QUALITY_DISABLE`, `RADAR_PASTED_LIMIT`.
+- **Free cloud LLM fallback (when the Mac sleeps):** `enrich.yml` (nightly)
+  already wires `LLM_BASE_URL` / `LLM_API_KEY` / `LLM_MODEL` secrets, and
+  `llm.complete()` retries 429/500/503 with Retry-After, so free
+  rate-limited tiers are safe. Two known-good configs:
+  NVIDIA NIM — `LLM_BASE_URL=https://integrate.api.nvidia.com/v1`,
+  `LLM_API_KEY=nvapi-…`, `LLM_MODEL=` any hosted instruct model (e.g.
+  `meta/llama-3.3-70b-instruct`); Google AI Studio —
+  `LLM_BASE_URL=https://generativelanguage.googleapis.com/v1beta/openai`,
+  `LLM_API_KEY=<AI Studio key>`, `LLM_MODEL=gemini-2.5-flash`. **Needs a
+  human:** only Victor can create a key and add the three repo secrets;
+  optionally bump enrich.yml's cron from nightly to every 6 h after that.
 - **Multi-user = fork-per-person** (DECISIONS #25, docs/FORKING.md). Owner
   gates exist in three layers: workflow condition, Python handler, Vercel
   backend. The Mac companion is fork-portable too: `JOBRADAR_REPO=<you>/<repo>`
   on install.sh; run.sh derives the branch from the clone.
 - **`CV/` is local-only and gitignored** (DECISIONS #29) — never commit it
   or anything derived from it; CV auto-tailoring is a Mac-companion feature.
-- **Next up** (see ROADMAP.md): SPA-host posting text via ATS JSON APIs so
-  the quality pass covers Workday/Eightfold/Oracle; the jobright `"↳"`
-  company-name repair; email autopilot secrets; CV auto-tailor once
-  `CV/cv_full.tex` is fleshed out.
+- **Next up — doable from any CLI/cloud session** (see ROADMAP.md):
+  run `python -m radar.main repair-feedback` once (cosmetic — the stopwords
+  already neutralize stale boosts at read time; do it in a checkout where
+  CI isn't racing you, i.e. right after a merge). Watch the first Mac/CI
+  enrich cycle after 2026-07-16 for the SPA-host quality pass
+  (`fetch_posting_spa` — built where ATS egress was blocked, so its first
+  live contact is that cycle; failures degrade to "unclear").
+- **Next up — needs Victor / the Mac:** email autopilot secrets
+  (`EMAIL_ADDRESS`/`EMAIL_APP_PASSWORD`); free-LLM fallback secrets
+  (`LLM_BASE_URL`/`LLM_API_KEY`/`LLM_MODEL`, see above) — **verified
+  2026-07-17 that no LLM secret is active in Actions** (0 of 8,392 records
+  ever got an llm_note; quality verdicts only appear when the Mac is
+  awake, newest was 47h stale), so cloud AI is fully OFF until a key is
+  added; CV auto-tailoring is **ON HOLD** (Victor's call, 2026-07-16)
+  until `CV/cv_full.tex` is fleshed out — Mac-only when it resumes
+  (DECISIONS #29).
 
 ## Safe handoff practice
 

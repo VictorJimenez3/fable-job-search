@@ -69,6 +69,9 @@ def _md_date_to_epoch(s: str) -> int | None:
         return None
 
 
+_CONTINUATION_GLYPHS = {"↳", "&#8627;", "&#x21B3;"}
+
+
 def fetch_jobright() -> list[Job]:
     out = []
     for url in JOBRIGHT_URLS:
@@ -76,8 +79,10 @@ def fetch_jobright() -> list[Job]:
         prev_company = ""
         for m in _JR_ROW.finditer(md):
             company, title, link, loc, model, date_s = (g.strip() for g in m.groups())
-            if company in {"↳", "&#8627;"}:  # continuation row: same employer as above
+            if company in _CONTINUATION_GLYPHS:  # continuation row: same employer as above
                 company = prev_company
+            if not company or company in _CONTINUATION_GLYPHS:
+                continue  # unresolvable (e.g. table truncated above a continuation)
             prev_company = company
             posted = _md_date_to_epoch(date_s)
             if posted and time.time() - posted > MAX_AGE_S:

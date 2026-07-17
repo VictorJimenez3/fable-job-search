@@ -41,6 +41,33 @@ def test_jobright_markdown_table():
     assert j.company and "|" not in j.company
 
 
+def test_jobright_continuation_rows_resolve_or_drop():
+    md = (FIXTURES / "jobright_sample.md").read_text()
+    with patch.object(aggregators, "get_text", return_value=md):
+        jobs = aggregators.fetch_jobright()
+    assert not any(j.company in aggregators._CONTINUATION_GLYPHS for j in jobs)
+    assert any(j.company == "Roblox" and "User Sharing" in j.title for j in jobs)
+    # a table that STARTS with a continuation row can't be resolved → dropped
+    orphan = ("| Company | Job Title | Location | Work Model | Date Posted |\n"
+              "| --- | --- | --- | --- | --- |\n"
+              "| ↳ | **[Ghost Role](https://x.test/1)** | NYC | On Site | Jul 05 |\n")
+    with patch.object(aggregators, "get_text", return_value=orphan):
+        jobs = aggregators.fetch_jobright()
+    assert jobs == []
+
+
+def test_scrub_glyph_companies_removes_corrupt_records():
+    from radar.main import scrub_glyph_companies
+    jobs = {
+        "a": {"company": "↳", "title": "Software Engineer I", "alert_ok": True},
+        "b": {"company": "&#8627;", "title": "Analyst"},
+        "c": {"company": "Stripe", "title": "Software Engineer"},
+    }
+    assert scrub_glyph_companies(jobs) == 2
+    assert list(jobs) == ["c"]
+    assert scrub_glyph_companies(jobs) == 0   # idempotent
+
+
 def test_speedyapply_markdown_table():
     md = (FIXTURES / "speedy_sample.md").read_text()
     with patch.object(aggregators, "get_text", return_value=md):

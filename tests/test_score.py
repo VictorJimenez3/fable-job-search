@@ -1,7 +1,8 @@
 import time
 
 from radar.models import Job
-from radar.score import gates, score, update_feedback_from_applied
+from radar.score import (RULES_VERSION, gates, regate, score,
+                         update_feedback_from_applied)
 
 NOW = int(time.time())
 FB = {"company_boosts": {}, "token_boosts": {}, "negative_companies": []}
@@ -51,6 +52,69 @@ def test_gates_marquee_company_alerts_without_entry_signal():
     # ...but the hard gates still silence marquee senior/intern roles
     assert gates(mk("Senior Research Engineer", company="Anthropic", source="greenhouse"))[0] is False
     assert gates(mk("Research Intern", company="OpenAI", source="greenhouse"))[0] is False
+
+
+def test_gates_reject_numeric_levels():
+    # rules v2: numeric levels are as disqualifying as roman ones
+    assert gates(mk("Software Engineer 3"))[0] is False
+    assert gates(mk("Software Engineer L5"))[0] is False
+    assert gates(mk("Machine Learning Engineer, Level 4"))[0] is False
+
+
+def test_gates_demote_midlevel_but_keep_visible():
+    # "II"/"L4"-class titles are typically 1-3 yrs: dashboard yes, alert no
+    for title in ["Software Engineer II", "Software Engineer, L4", "Mid-Level Backend Engineer"]:
+        keep, alert_ok, reasons = gates(mk(title, company="Anthropic", source="greenhouse"))
+        assert keep is True and alert_ok is False, title
+        assert any("mid-level title" in r for r in reasons), title
+
+
+def test_gates_off_field_beats_marquee():
+    # DECISIONS #31: field fit outranks the Shams rule — a marquee Safeguards/
+    # policy/sales title never alerts, but stays on the dashboard
+    for title, company in [("Research Engineer, Safeguards", "Anthropic"),
+                           ("Trust & Safety Operations Analyst", "OpenAI"),
+                           ("Solutions Engineer, Machine Learning", "Google")]:
+        keep, alert_ok, reasons = gates(mk(title, company=company, source="greenhouse"))
+        assert keep is True and alert_ok is False, title
+        assert any("off-field title" in r for r in reasons), title
+    # on-field marquee titles still auto-alert
+    keep, alert_ok, _ = gates(mk("Research Engineer, Interpretability",
+                                 company="Anthropic", source="greenhouse"))
+    assert keep and alert_ok
+
+
+def test_gates_off_field_beats_explicit_new_grad():
+    keep, alert_ok, reasons = gates(mk("New Grad Software Engineer, Customer Success"))
+    assert keep is True and alert_ok is False
+    assert any("off-field title" in r for r in reasons)
+
+
+def test_gates_off_field_false_positive_guards():
+    # narrow by construction: technical titles containing risky words survive
+    keep, alert_ok, _ = gates(mk("Security Engineer, New Grad"))
+    assert keep and alert_ok
+    keep, _, reasons = gates(mk("Embedded Software Engineer, New Grad"))
+    assert keep
+    assert not any("off-field" in r for r in reasons)
+
+
+def test_gates_priority_sector_alerts_on_strong_title():
+    # the WHOOP lesson: healthtech + a real engineering title alerts without
+    # new-grad wording (ATS postings carry no description to prove it).
+    # Non-marquee company on purpose: WHOOP itself now alerts via marquee.
+    keep, alert_ok, reasons = gates(mk("Software Engineer", company="Eight Sleep",
+                                       source="greenhouse", sector="healthtech"))
+    assert keep and alert_ok
+    assert any("priority sector" in r for r in reasons)
+    # same title outside a priority sector: dashboard only
+    keep, alert_ok, _ = gates(mk("Software Engineer", company="Stripe",
+                                 source="greenhouse", sector="fintech"))
+    assert keep is True and alert_ok is False
+    # a bare "<anything> Analyst" title is too weak even in a priority sector
+    keep, alert_ok, _ = gates(mk("Patient Relations Analyst", company="CVS Health",
+                                 source="greenhouse", sector="healthtech"))
+    assert keep is True and alert_ok is False
 
 
 def test_gates_pays_bank_alerts_without_entry_signal():
@@ -111,3 +175,62 @@ def test_negative_feedback_penalizes():
     score(j, fb, NOW)
     score(j2, FB, NOW)
     assert j.score == j2.score - 10
+
+
+def test_feedback_stopwords_never_learned_and_inert():
+    # learning: off-field/generic tokens are never written...
+    fb = {"company_boosts": {}, "token_boosts": {}, "negative_companies": []}
+    update_feedback_from_applied(fb, "Acme", "Full-Time Product Solutions Analyst")
+    assert "product" not in fb["token_boosts"]
+    assert "solutions" not in fb["token_boosts"]
+    assert "full" not in fb["token_boosts"]
+    assert "analyst" in fb["token_boosts"]   # field-relevant tokens still learn
+    # ...and stale entries already in feedback.json stop scoring
+    stale = {"company_boosts": {}, "negative_companies": [],
+             "token_boosts": {"business": 4, "marketing": 3}}
+    j = mk("Business Marketing Engineer, New Grad")
+    j2 = mk("Business Marketing Engineer, New Grad")
+    score(j, stale, NOW)
+    score(j2, FB, NOW)
+    assert j.score == j2.score
+
+
+def _stored(title, company="Anthropic", **over):
+    rec = {"id": title, "company": company, "title": title, "url": "https://x.com/j",
+           "source": "greenhouse", "locations": ["New York, NY"], "salary": "",
+           "remote": False, "sector": "", "score": 80,
+           "score_reasons": ["base 40"], "alert_ok": True}
+    rec.update(over)
+    return rec
+
+
+def test_regate_applies_current_rules_to_stored_jobs():
+    jobs = {
+        # stale marquee off-field alert from rules v1 → demoted
+        "a": _stored("Research Engineer, Safeguards"),
+        # closed job → untouched entirely
+        "b": _stored("Software Engineer", closed_at=NOW, rules_v=1),
+        # already re-gated → untouched
+        "c": _stored("Trust & Safety Analyst", rules_v=RULES_VERSION),
+        # quality-suppressed job stays suppressed even if gates would promote
+        "d": _stored("Machine Learning Engineer", company="WHOOP",
+                     sector="healthtech", alert_ok=False,
+                     quality={"checked_at": NOW, "live": True, "new_grad": "no",
+                              "years_required": 5, "role_family": "ml", "reason": "x"}),
+    }
+    flipped = regate(jobs)
+    assert jobs["a"]["alert_ok"] is False
+    assert any(f"re-gate v{RULES_VERSION}" in r for r in jobs["a"]["score_reasons"])
+    assert jobs["a"]["rules_v"] == RULES_VERSION
+    assert jobs["b"]["alert_ok"] is True and jobs["b"]["rules_v"] == 1  # never re-opened/touched
+    assert jobs["c"]["alert_ok"] is True                                 # version stamp respected
+    assert jobs["d"]["alert_ok"] is False                                # verdict re-applied last
+    assert flipped == 2  # a demoted; d flipped up by gates then re-suppressed
+
+
+def test_regate_promotes_priority_sector_jobs():
+    jobs = {"w": _stored("Software Engineer", company="WHOOP",
+                         sector="healthtech", alert_ok=False)}
+    assert regate(jobs) == 1
+    assert jobs["w"]["alert_ok"] is True
+    assert jobs["w"]["explicit_new_grad"] is False

@@ -43,9 +43,12 @@ def format_line(j: dict, culture_map: dict | None = None) -> str:
         t = alert_tag(j["company"], culture_map)
         ctag = f" {t}" if t else ""
     from .company_info import context
+    from .posting import summary_tags
     industry, what = context(j["company"], j.get("sector") or "", culture_map)
+    ptags = summary_tags(j.get("posting"))
+    ptags = f" · {ptags}" if ptags else ""
     return (f"- [ ] {fire}**{j['company']}** — [{j['title'][:80]}]({j['url']}) · "
-            f"{loc}{salary} · `{j['score']}` · **{industry}** — {what}{ctag}{note} "
+            f"{loc}{salary} · `{j['score']}`{ptags} · **{industry}** — {what}{ctag}{note} "
             f"<!--radar:{j['id']}-->")
 
 
