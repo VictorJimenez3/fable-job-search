@@ -112,15 +112,16 @@ Before changing the radar, read these in order:
   enrich cycle after 2026-07-16 for the SPA-host quality pass
   (`fetch_posting_spa` — built where ATS egress was blocked, so its first
   live contact is that cycle; failures degrade to "unclear").
-- **Next up — needs Victor / the Mac:** email autopilot secrets
-  (`EMAIL_ADDRESS`/`EMAIL_APP_PASSWORD`); free-LLM fallback secrets
-  (`LLM_BASE_URL`/`LLM_API_KEY`/`LLM_MODEL`, see above) — **verified
-  2026-07-17 that no LLM secret is active in Actions** (0 of 8,392 records
-  ever got an llm_note; quality verdicts only appear when the Mac is
-  awake, newest was 47h stale), so cloud AI is fully OFF until a key is
-  added; CV auto-tailoring is **ON HOLD** (Victor's call, 2026-07-16)
-  until `CV/cv_full.tex` is fleshed out — Mac-only when it resumes
-  (DECISIONS #29).
+- **Next up — needs Victor / the Mac:** **enable the AI layer — full
+  runbook in [`docs/AI_SETUP.md`](AI_SETUP.md)** (verified 2026-07-17:
+  no LLM secret is active in Actions — 0 records ever got an llm_note;
+  quality verdicts only appear when the Mac is awake — so cloud AI is
+  fully OFF until Victor creates one free key and adds the secrets; the
+  runbook also lists the queued AI work for the local session, incl. the
+  parked RAG plan). Email autopilot secrets
+  (`EMAIL_ADDRESS`/`EMAIL_APP_PASSWORD`) still pending. CV auto-tailoring
+  is **ON HOLD** (Victor's call, 2026-07-16) until `CV/cv_full.tex` is
+  fleshed out — Mac-only when it resumes (DECISIONS #29).
 
 ## Safe handoff practice
 

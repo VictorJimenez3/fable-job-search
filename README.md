@@ -158,7 +158,8 @@ Optional upgrades:
   the client retries with Retry-After): NVIDIA NIM
   (`https://integrate.api.nvidia.com/v1` + an `nvapi-…` key) or Google AI
   Studio (`https://generativelanguage.googleapis.com/v1beta/openai` + a free
-  key). Exact configs: docs/CLI_HANDOFF.md "Free cloud LLM fallback".
+  key). **Step-by-step runbook: [docs/AI_SETUP.md](docs/AI_SETUP.md)** —
+  the AI layer is currently OFF in the cloud until one of these is added.
 - `GOOGLE_CSE_KEY` + `GOOGLE_CSE_ID` (free: [programmablesearchengine.google.com](https://programmablesearchengine.google.com)
   → create engine searching `linkedin.com/posts`, then get an API key at
   [developers.google.com/custom-search](https://developers.google.com/custom-search/v1/introduction))
