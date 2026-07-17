@@ -154,6 +154,16 @@ def crawl() -> int:
         j.score_reasons += reasons
         new_jobs.append(j)
 
+    # ---- posting scrape: real description text, no LLM needed ----
+    from .posting import scrape_pass
+    eightfold_domains = {norm(e.get("name", "")): (e.get("extra") or {}).get("domain")
+                         for e in registry.values()
+                         if e.get("ats") == "eightfold" and (e.get("extra") or {}).get("domain")}
+    pstats = scrape_pass(new_jobs, jobs_state, eightfold_domains, now)
+    if pstats:
+        print(f"posting scrape: {pstats['inline']} inline, {pstats['fetched']} fetched, "
+              f"{pstats['demoted']} demoted, {pstats['closed']} closed")
+
     # ---- optional LLM pass on borderline/alert candidates ----
     thr = p["thresholds"]
     band = p["llm"]["rerank_band"]

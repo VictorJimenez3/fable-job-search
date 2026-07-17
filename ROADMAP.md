@@ -53,6 +53,26 @@ cycle, aggregator links first. Still open from this cluster:
   records from state (`scrub_glyph_companies` — 101 in the backlog, all
   alert_ok, gone on the next crawl).
 
+## Posting scraping + deterministic facts — ✅ SHIPPED 2026-07-17 (DECISIONS #35)
+
+Every crawl now reads real posting text (Greenhouse/Ashby text comes free
+in the list call; a budgeted fetch covers the rest incl. SPA hosts) and
+extracts, with zero LLM/keys: visa **sponsorship** (yes/no/unknown + the
+phrase), **years of experience** required (internships-count detection
+included), dead links closed crawl-side. Shown as row tags, a drawer
+"Posting facts" card, and in alert-issue lines; `candidate.needs_sponsorship`
+in profile.yaml turns no-sponsorship postings into dashboard-only.
+
+## Posting ↔ profile RAG (to-do, parked — Victor 2026-07-17: "to do list that for sure")
+
+Embed posting text and Victor's profile/CV bullets, use similarity as a
+ranking signal ("how related is this role to what I've actually done").
+Local-first: Ollama embedding models on the Mac are free (e.g.
+nomic-embed-text), store vectors next to the quality cache, keep the score
+deterministic-auditable by logging the similarity as a reason line. Needs
+the scraped posting text (now shipping) + `CV/` content (Mac-only,
+DECISIONS #29). Park until the scrape pass has filled a few weeks of text.
+
 ## Ranking v2 + platform research tabs — ✅ SHIPPED 2026-07-16 (DECISIONS #31-33)
 
 Field fit and seniority now outrank the Shams rule (off-field/mid-level

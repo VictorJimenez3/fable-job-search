@@ -546,3 +546,37 @@ records with company `"↳"` (pre-continuation-fix parses, all alert_ok,
 unidentifiable, and duplicated under their real employers by later crawls)
 are removed rather than demoted. The adjust-don't-delete rule (#30) is for
 jobs Victor might act on; a record whose employer is a glyph isn't one.
+
+## 35. The crawl scrapes posting text; facts are extracted without an LLM (2026-07-17)
+
+Two days of live evidence (llm_note count: 0 across 8,392 records; newest
+quality verdict 47h stale) confirmed the LLM layer only runs when the Mac
+happens to be awake — no ANTHROPIC_API_KEY or LLM_* secrets exist in
+Actions. Everything the LLM was trusted with was therefore mostly not
+happening, while Victor manually opened postings to answer two questions
+the radar should answer: *does it sponsor visas* and *how many years does
+it really want*. Fix: stop gating the basics on an LLM.
+
+- **Descriptions at the source:** Greenhouse is fetched with `content=true`
+  and Ashby's `descriptionPlain/HTML` is kept (Lever already had text), so
+  the description hard gates (3+ yrs, clearance) fire at intake again.
+- **`radar/posting.py`** — regex-only extraction of `sponsorship`
+  (yes/no/unknown + the matched phrase), `years_min` (digit and word
+  numbers, ranges take the floor, first-match-wins ordered by signal
+  strength) and `intern_counts`. Stored as `rec["posting"]`, shown in the
+  platform (row tags + a "Posting facts" card) and in alert-issue lines.
+- **`scrape_pass()` runs inside every crawl** (cloud, ~30 min, zero keys):
+  free inline analysis for ATS-provided text, then a budgeted fetch
+  (`RADAR_SCRAPE_LIMIT`, default 20/run ≈ 960/day; `RADAR_SCRAPE_DISABLE`
+  to kill) for new alert-eligible jobs and the stored alert-worthy backlog,
+  using the same fetchers as the quality pass (JSON APIs for SPA hosts).
+  Dead links close the job, crawl-side now, not just at enrich.
+- **Effects are demote-only** and survive re-scores/re-gates via
+  `posting.reapply` (mirrors quality.reapply): scraped `years_min >= 3` →
+  dashboard only; `sponsorship == "no"` demotes **only when**
+  `candidate.needs_sponsorship: true` in profile.yaml (default false —
+  informational either way).
+- The LLM quality pass still layers judgment on top when a provider
+  exists, and now stores these deterministic facts from its fetched or
+  pasted text too — so a Mac cycle or future cloud key enriches, but
+  nothing depends on it.

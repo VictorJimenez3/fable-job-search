@@ -253,6 +253,10 @@ def verify(rec: dict, domains: dict | None = None) -> bool:
             q.update({"checked_at": now, "new_grad": "unclear"})
             return True
         return False
+    # deterministic facts first — they need no LLM and stick even when the
+    # verdict below fails (no provider / rate limit / garbage output)
+    from . import posting as posting_mod
+    posting_mod.apply_record(rec, posting_mod.analyze(text), fetched=True, now=now)
     raw = llm.complete(
         PROMPT.format(title=rec.get("title", ""), company=rec.get("company", ""),
                       text=text[:6000]),
@@ -289,6 +293,8 @@ def verify_pasted(rec: dict, jd_text: str) -> bool:
     q = rec.setdefault("quality", {})
     if q.get("jd_sha") == sha:
         return False
+    from . import posting as posting_mod
+    posting_mod.apply_record(rec, posting_mod.analyze(jd_text), fetched=False)
     raw = llm.complete(
         PROMPT.format(title=rec.get("title", ""), company=rec.get("company", ""),
                       text=jd_text[:6000]),

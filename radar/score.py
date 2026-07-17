@@ -362,10 +362,11 @@ def regate(jobs_state: dict) -> int:
 
     Title/salary/location only — descriptions are blanked in state. Flips
     alert_ok in place (demote or promote), never deletes a record and never
-    re-opens a closed one. Stored LLM quality verdicts are re-applied after
-    gating so their suppressions still win. Returns how many records flipped.
+    re-opens a closed one. Stored LLM quality verdicts and posting-analysis
+    effects are re-applied after gating so their suppressions still win.
+    Returns how many records flipped.
     """
-    from . import quality  # late import: quality imports is_marquee from here
+    from . import posting, quality  # late imports: both import from here
     flipped = 0
     for rec in jobs_state.values():
         if rec.get("rules_v", 1) >= RULES_VERSION or rec.get("closed_at"):
@@ -386,4 +387,6 @@ def regate(jobs_state: dict) -> int:
             flipped += 1
         if rec.get("quality"):
             quality.reapply(rec)
+        if rec.get("posting"):
+            posting.reapply(rec)
     return flipped

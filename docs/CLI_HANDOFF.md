@@ -68,6 +68,15 @@ Before changing the radar, read these in order:
   `repair-feedback`. The taste model filters `FEEDBACK_STOPWORDS`. The
   marquee list is duplicated in `webapp/index.html` (`S.marquee`) — keep
   both copies in sync.
+- **Posting scraping (DECISIONS #35, 2026-07-17):** every crawl runs
+  `posting.scrape_pass` — Greenhouse (`content=true`)/Ashby/Lever text is
+  analyzed inline, and up to `RADAR_SCRAPE_LIMIT` (20) postings/run are
+  fetched (SPA hosts via their JSON APIs) for new + stored alert-worthy
+  jobs. Extracted facts live in `rec["posting"]` (sponsorship / years_min /
+  intern_counts + matched phrases): 3+ scraped yrs → dashboard-only;
+  `candidate.needs_sponsorship: true` (profile.yaml, default false) also
+  demotes no-sponsorship postings. `RADAR_SCRAPE_DISABLE=1` kills the pass.
+  No LLM or secret involved.
 - **Local AI:** Mac companion installed (`~/.jobradar`, launchd
   `com.jobradar.enrich`, every 2 h while awake) running Ollama `qwen3:30b`
   with `format:"json"` forced (DECISIONS #20 — thinking models otherwise
@@ -105,9 +114,13 @@ Before changing the radar, read these in order:
   live contact is that cycle; failures degrade to "unclear").
 - **Next up — needs Victor / the Mac:** email autopilot secrets
   (`EMAIL_ADDRESS`/`EMAIL_APP_PASSWORD`); free-LLM fallback secrets
-  (`LLM_BASE_URL`/`LLM_API_KEY`/`LLM_MODEL`, see above); CV auto-tailoring
-  is **ON HOLD** (Victor's call, 2026-07-16) until `CV/cv_full.tex` is
-  fleshed out — Mac-only when it resumes (DECISIONS #29).
+  (`LLM_BASE_URL`/`LLM_API_KEY`/`LLM_MODEL`, see above) — **verified
+  2026-07-17 that no LLM secret is active in Actions** (0 of 8,392 records
+  ever got an llm_note; quality verdicts only appear when the Mac is
+  awake, newest was 47h stale), so cloud AI is fully OFF until a key is
+  added; CV auto-tailoring is **ON HOLD** (Victor's call, 2026-07-16)
+  until `CV/cv_full.tex` is fleshed out — Mac-only when it resumes
+  (DECISIONS #29).
 
 ## Safe handoff practice
 

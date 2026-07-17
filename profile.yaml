@@ -6,6 +6,10 @@ candidate:
   github: VictorJimenez3
   grad_year: 2026
   level: new_grad          # gates out senior/staff/manager/intern automatically
+  # Set true if you need visa sponsorship: postings whose scraped text says
+  # "no sponsorship / citizens only" then drop off alerts (dashboard keeps
+  # them, with the reason). Either way the flag is shown per job.
+  needs_sponsorship: false
   narrative: >
     Graduating senior targeting full-time new-grad roles in AI/ML engineering,
     software engineering, and data science. Strongest interest in healthcare /
