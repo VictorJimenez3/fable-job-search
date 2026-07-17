@@ -8,6 +8,8 @@ truth.
 
 Before changing the radar, read these in order:
 
+0. [`CLAUDE.md`](../CLAUDE.md) — auto-loaded every session; the doc-update
+   mandate and house rules live there. Docs are part of every change.
 1. [`README.md`](../README.md) for the system's purpose and operational flow
    (and [`TUTORIAL.md`](TUTORIAL.md) for how Victor actually uses it — keep it
    current when user-facing behavior changes).
