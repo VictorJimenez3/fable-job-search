@@ -315,8 +315,10 @@ const ROLE_LABELS = {
   data_science:"Data science", data_eng:"Data engineering",
   analytics:"Analytics / BI", other:"Adjacent / unclassified",
 };
+const OFF_FIELD_TITLE = /\b(safeguards?|trust\s*(and|&)\s*safety|policy|counsel|legal|paralegal|compliance|recruit(er|ing)|talent|people\s+(ops|operations)|human\s+resources|sales|account\s+(executive|manager)|business\s+(development|operations|analyst)|go[- ]to[- ]market|gtm|partnerships?|marketing|brand|communications?|public\s+relations|finance|financial\s+analyst|accounting|payroll|procurement|revenue|solutions?\s+(engineer|architect|consultant)|field\s+engineer|customer\s+(success|support|experience)|technical\s+support|support\s+(engineer|specialist)|help\s?desk|success\s+engineer|ai\s+governance|governance\s+and\s+advisory|(ux|ui|visual|graphic|product)\s+design(er)?|(product|program|project)\s+manager|product\s+(owner|marketing)|chief\s+of\s+staff|executive\s+assistant|administrative|workplace|facilities)\b/i;
 function roleFamily(j) {
   const t = norm(j.title);
+  if (OFF_FIELD_TITLE.test(t)) return "other";
   if (/\b(machine learning|ml engineer|ml|artificial intelligence|ai engineer|ai|applied scientist|research engineer|research scientist|deep learning|llm|gen ai|generative ai|nlp|computer vision|perception)\b/.test(t)) return "ai_ml";
   if (/\b(data engineer|data platform|data infrastructure|etl|analytics engineer)\b/.test(t)) return "data_eng";
   if (/\b(data scientist|decision scientist|statistic|quantitative)\b/.test(t)) return "data_science";
