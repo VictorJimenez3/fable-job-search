@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-18 23:15 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
+_Last run: **2026-07-18 23:17 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -30,7 +30,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 100 🔥 | 16d | Amazon | [Software Dev Engineer I - Compiler - Graviton Software - Annapurna Lab](https://www.amazon.jobs/jobs/10464104/apply) | Austin, TX | big_tech | speedyapply |
 | 100 🔥 | 16d | Medtronic | [Software Quality Engineer I](https://jobright.ai/jobs/info/6a4697834f64ba41dcb54116?utm_campaign=Software%20Engineering&utm_source=1103) | Mounds View, Minnesota, United States of | healthtech | jobright |
 | 99 🔥 | 9d | Cadence | [Software Engineer, New College Grad 2026 (Undergrads)](https://jobright.ai/jobs/info/6a4fe38f4649561ec08af67a?utm_campaign=Software%20Engineering&utm_source=1103) | Burlington, MA, United States | healthtech | jobright |
-| 99 🔥 | 9d | Anthropic | [Research Associate, Biology](https://job-boards.greenhouse.io/anthropic/jobs/5285248008) | San Francisco, CA | ai_lab | greenhouse |
+| 99 🔥 | 10d | Anthropic | [Research Associate, Biology](https://job-boards.greenhouse.io/anthropic/jobs/5285248008) | San Francisco, CA | ai_lab | greenhouse |
 | 99 🔥 | 26d | Neuralink | [Associate General Counsel, Privacy & Compliance](https://boards.greenhouse.io/neuralink/jobs/7780172003?gh_jid=7780172003) | Austin, Texas, United States; South San  | healthtech | greenhouse |
 | 98 🔥 | 2d | UTHealth Houston | [Accountant-Associate](https://fa-eomf-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1002/job/7363) | San Antonio, TX, United States | healthtech | oracle_orc |
 | 98 🔥 | 3d | Highmark Health | [Associate Data Solutions Analyst](https://jobright.ai/jobs/info/6a57bcbca791c6211bf00bfa?utm_campaign=Data%20Analysis&utm_source=1103) | PA, United States | healthtech | jobright |
@@ -62,7 +62,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 95 🔥 | 4d | Ronco | [Associate Enterprise Solutions Engineer (Pre-Sales Engineering)](https://jobright.ai/jobs/info/69fb1b4c38179b6f1ae754cd?utm_campaign=Software%20Engineering&utm_source=1103) | Albany, NY, United States | healthtech | jobright |
 | 95 🔥 | 5d | Anthropic | [Research Engineer, Chip Design RL (Reinforcement Learning)](https://job-boards.greenhouse.io/anthropic/jobs/5231612008) | San Francisco, CA | New York City, NY | ai_lab | greenhouse |
 | 95 🔥 | 18d | Medpace | [Junior Software Engineer](https://jobright.ai/jobs/info/6a2a715e2cde2824469c1cdf?utm_campaign=Software%20Engineering&utm_source=1103) | Denver, CO | healthtech | jobright |
-| 94 🔥 | 23h | Ensemble Health Partners | [Financial Operations Analyst](https://ensemblehp.wd5.myworkdayjobs.com/en-US/ensemblehealthpartnerscareers/job/Remote---Nationwide/Financial-Operations-Analyst_R048163) | Remote - Nationwide | healthtech | workday |
 | 94 🔥 | 1d | CVS Health | [Patient Relations Analyst](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/NY---Brooklyn/Patient-Relations-Analyst_R0927559) | NY - Brooklyn | healthtech | workday |
 | 94 🔥 | 1d | OpenAI | [Systems Generalist, GPT Infrastructure](https://jobs.ashbyhq.com/openai/78c2a68b-cc77-4c62-8891-96afb603650a) | San Francisco | ai_lab | ashby |
 | 94 🔥 | 1d | LinkedIn | [Sales Strategy and Operations Associate](https://jobs.smartrecruiters.com/LinkedIn3/744000138373219) | New York, NY | big_tech | smartrecruiters |
@@ -94,7 +93,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 94 🔥 | 10d | OpenAI | [AI Deployment Engineer, Digital Natives](https://jobs.ashbyhq.com/openai/3254f6a7-6353-4a77-beec-f37b832c99ae) | New York City | ai_lab | ashby |
 | 94 🔥 | 10d | OpenAI | [AI Deployment Engineer, Digital Natives](https://jobs.ashbyhq.com/openai/5c3a17db-62f1-4145-93b0-2f207d4d4af8) | San Francisco | ai_lab | ashby |
 | 94 🔥 | 10d | Molina Healthcare | [Associate Analyst, Provider Configuration (Remote)](https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2038241) | United States | healthtech | oracle_orc |
-| 94 🔥 | 10d | OpenAI | [Research Engineer / Research Scientist - Personal AGI, Personality and](https://jobs.ashbyhq.com/openai/a86d9477-0277-498c-9647-02a257747607) | San Francisco | ai_lab | ashby |
+| 94 🔥 | 11d | OpenAI | [Research Engineer / Research Scientist - Personal AGI, Personality and](https://jobs.ashbyhq.com/openai/a86d9477-0277-498c-9647-02a257747607) | San Francisco | ai_lab | ashby |
 | 94 🔥 | 11d | Capital One | [Business Analyst Associate - August 2027](https://capitalone.wd12.myworkdayjobs.com/en-US/Capital_One/job/McLean-VA/Business-Analyst-Associate---August-2027_R245108-1) | 5 Locations | fintech | workday |
 | 94 🔥 | 12d | UST HealthProof | [Junior Full Stack Developer (Data CoE)](https://jobright.ai/jobs/info/6a426efbff87fd527f984439?utm_campaign=Software%20Engineering&utm_source=1103) | Bellevue, WA | healthtech | jobright |
 | 94 🔥 | 16d | Oscar Health | [Associate, Member and Provider Optimization](http://www.hioscar.com/careers/8044682?gh_jid=8044682) | Dallas, Texas, United States | healthtech | greenhouse |
@@ -156,5 +155,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 92 🔥 | 23d | Capricor Therapeutics | [Quality Compliance Associate I/II](https://jobs.lever.co/capricor/cd7aa0bb-5c25-4b3a-81c1-a9b103851188) | San Diego - SD3 | healthtech | lever |
 | 92 🔥 | 24d | OpenAI | [AI Deployment Engineer](https://jobs.ashbyhq.com/openai/6bacc51d-6580-4089-93ca-7df3bce4b635) | New York City | ai_lab | ashby |
 | 92 🔥 | 25d | OpenAI | [AI Deployment Engineer, Cyber](https://jobs.ashbyhq.com/openai/b46ffd99-f9f2-440c-ac13-448eb7911ad6) | San Francisco | ai_lab | ashby |
+| 92 🔥 | 25d | OpenAI | [AI Deployment Engineer, Messenger Integrations](https://jobs.ashbyhq.com/openai/f827e381-91a0-40b7-8ae9-b56540642a74) | San Francisco | ai_lab | ashby |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
