@@ -32017,10 +32017,14 @@
   ],
   "posted_at": 1784246400,
   "posting": {
-   "analyzed_at": 1784346631,
+   "analyzed_at": 1784404899,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "ai_deferred_at": 1784404899,
+   "attempts": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -36722,6 +36726,15 @@
    "New York"
   ],
   "posted_at": 1784160000,
+  "posting": {
+   "analyzed_at": 1784404904,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784404904,
+   "attempts": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -58426,7 +58439,7 @@
   ],
   "posted_at": 1784073600,
   "posting": {
-   "analyzed_at": 1784404784,
+   "analyzed_at": 1784404834,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -58435,7 +58448,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784404784,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784404834,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, 0+ years exp",
+   "role_family": "data",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -74499,8 +74518,9 @@
   "url": "https://wisconsin.wd1.myworkdayjobs.com/en-US/UW_Comprehensives/job/Platteville-WI/Administrative-Specialist_JR10011080"
  },
  "317ced125ab7cdda": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784404897,
   "company": "City of Santa Fe Springs",
   "description": "",
   "explicit_new_grad": false,
@@ -74511,6 +74531,11 @@
    "Boston, MA, United States"
   ],
   "posted_at": 1783987200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784404897,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -74519,7 +74544,8 @@
    "base 40",
    "role:data_science +22",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -76143,9 +76169,13 @@
   ],
   "posted_at": 1784246400,
   "posting": {
-   "analyzed_at": 1784379716,
+   "analyzed_at": 1784404900,
    "fetched": true,
    "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784404900,
+   "attempts": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -90588,13 +90618,19 @@
   ],
   "posted_at": 1784073600,
   "posting": {
-   "analyzed_at": 1784404785,
+   "analyzed_at": 1784404841,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784404785,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784404841,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "entry-level new grad program",
+   "role_family": "data",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -92427,13 +92463,19 @@
   ],
   "posted_at": 1784073600,
   "posting": {
-   "analyzed_at": 1784404786,
+   "analyzed_at": 1784404849,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784404786,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784404849,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, no experience required",
+   "role_family": "data",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -92610,6 +92652,15 @@
    "NYC"
   ],
   "posted_at": 1784160000,
+  "posting": {
+   "analyzed_at": 1784404904,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784404904,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -108670,7 +108721,7 @@
   "url": "https://jobs.ashbyhq.com/openai/b76848b3-d545-40cc-b8b4-585501f09760"
  },
  "48aa1f82e42d8c00": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Instituto de Recursos Mundiales México (WRI México)",
   "description": "",
@@ -108683,23 +108734,30 @@
   ],
   "posted_at": 1784073600,
   "posting": {
-   "analyzed_at": 1784404787,
+   "analyzed_at": 1784404856,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784404787,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784404856,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, no experience required",
+   "role_family": "non-technical",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 70,
+  "score": 45,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: non-technical role (Entry level, no experience required — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "jobright",
@@ -151182,8 +151240,9 @@
   "url": "https://jobright.ai/jobs/info/6a4fcf879469c0662034ef84?utm_campaign=Software%20Engineering&utm_source=1103"
  },
  "64b9dba4ff3f3d58": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784404903,
   "company": "Carrier",
   "description": "",
   "explicit_new_grad": false,
@@ -151194,6 +151253,11 @@
    "CAGAO: Carrier-Home Georgia Remote Location, Remote City, GA, 30303 USA, United States of America"
   ],
   "posted_at": 1784073600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784404903,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -151203,7 +151267,8 @@
    "role:swe +20",
    "posted <7d +2",
    "remote +2",
-   "title matches your history +5"
+   "title matches your history +5",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -152109,24 +152174,31 @@
   ],
   "posted_at": 1784073600,
   "posting": {
-   "analyzed_at": 1784404788,
+   "analyzed_at": 1784404863,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784404788,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784404863,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "data",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 70,
+  "score": 60,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -179602,7 +179674,7 @@
   "url": "https://job-boards.greenhouse.io/virtu/jobs/8453259002"
  },
  "7828732427b30148": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "OMD",
   "description": "",
@@ -179615,24 +179687,32 @@
   ],
   "posted_at": 1784073600,
   "posting": {
-   "analyzed_at": 1784404789,
+   "analyzed_at": 1784404871,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784404789,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784404871,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "non-technical",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 70,
+  "score": 35,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10",
+   "quality: non-technical role (1+ years exp required — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "jobright",
@@ -193879,7 +193959,7 @@
   ],
   "posted_at": 1784073600,
   "posting": {
-   "analyzed_at": 1784404790,
+   "analyzed_at": 1784404879,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship",
@@ -193888,7 +193968,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784404790,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784404879,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0+ years exp",
+   "role_family": "data",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -260104,14 +260190,20 @@
   ],
   "posted_at": 1784073600,
   "posting": {
-   "analyzed_at": 1784404791,
+   "analyzed_at": 1784404886,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
    "ai_deferred_at": 1784404791,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784404886,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, US Citizen Only, new grad role.",
+   "role_family": "data",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -264725,8 +264817,9 @@
   "url": "https://jobs.lever.co/field-ai/ec9469b7-eebe-476d-8929-b72603be5a85"
  },
  "b09422b842cede8a": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784404898,
   "company": "The University of North Carolina at Chapel Hill",
   "description": "",
   "explicit_new_grad": false,
@@ -264737,6 +264830,11 @@
    "North Carolina, United States"
   ],
   "posted_at": 1783987200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784404898,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -264745,7 +264843,8 @@
    "base 40",
    "role:data_science +22",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -273317,6 +273416,18 @@
    "Bloomington, MN, United States"
   ],
   "posted_at": 1784160000,
+  "posting": {
+   "analyzed_at": 1784404901,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 1,
+   "years_note": "1 year of relevant experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784404901,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -275394,8 +275505,9 @@
   "url": "https://jobright.ai/jobs/info/6a4d0d033122a76a8fd53f04?utm_campaign=Software%20Engineering&utm_source=1103"
  },
  "b74fe48184941c4d": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784404902,
   "company": "General Dynamics Mission Systems",
   "description": "",
   "explicit_new_grad": false,
@@ -275406,6 +275518,11 @@
    "Bloomington, MN, United States"
   ],
   "posted_at": 1784160000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784404902,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -275414,7 +275531,8 @@
    "base 40",
    "role:swe +20",
    "posted <72h +6",
-   "title matches your history +3"
+   "title matches your history +3",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -314312,14 +314430,14 @@
   ],
   "posted_at": 1784073600,
   "posting": {
-   "analyzed_at": 1784404791,
+   "analyzed_at": 1784404894,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 0,
    "years_note": "0 - 2 years"
   },
   "quality": {
-   "ai_deferred_at": 1784404791,
+   "ai_deferred_at": 1784404894,
    "attempts": 0
   },
   "remote": false,
@@ -339018,7 +339136,7 @@
   ],
   "posted_at": 1784160000,
   "posting": {
-   "analyzed_at": 1784404780,
+   "analyzed_at": 1784404802,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -339027,7 +339145,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784404780,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784404802,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, 0+ years exp, new grad role",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -342676,7 +342800,7 @@
   "url": "https://jobright.ai/jobs/info/6a4b4d456189f64e437eeacc?utm_campaign=Software%20Engineering&utm_source=1103"
  },
  "e58bc98d66e19733": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Nuro",
   "description": "",
@@ -342689,7 +342813,7 @@
   ],
   "posted_at": 1784160000,
   "posting": {
-   "analyzed_at": 1784404782,
+   "analyzed_at": 1784404810,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship",
@@ -342698,17 +342822,25 @@
   },
   "quality": {
    "ai_deferred_at": 1784404782,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784404810,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 1-3 years exp, not entry-level new grad.",
+   "role_family": "non-technical",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 70,
+  "score": 35,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "posted <72h +6",
-   "you've engaged with Nuro +4"
+   "you've engaged with Nuro +4",
+   "quality: wants 1+ yrs (LLM-verified) -10",
+   "quality: non-technical role (Requires 1-3 years exp, not entry-level  — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "jobright",
@@ -345301,7 +345433,7 @@
   "url": "https://globalhr.wd5.myworkdayjobs.com/en-US/rec_rtx_ext_gateway/job/US-AL-HUNTSVILLE-315--315-Bob-Heath-Dr--BOB-HEATH/LTAMDS-Technical-Manual-Developer---P3_01844267"
  },
  "e735d240658e9d48": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Wilmington Trust",
   "description": "",
@@ -345319,6 +345451,17 @@
    "Baltimore, MD"
   ],
   "posted_at": 1784073600,
+  "posting": {
+   "analyzed_at": 1784404895,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 4,
+   "years_note": "minimum of 4 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784404895,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -345327,7 +345470,8 @@
    "base 40",
    "role:data_science +22",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "posting: wants 4+ yrs (dashboard only)"
   ],
   "sector": "other",
   "source": "simplify",
@@ -352597,11 +352741,15 @@
   ],
   "posted_at": 1780611026,
   "posting": {
-   "analyzed_at": 1784375544,
+   "analyzed_at": 1784404898,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 0,
    "years_note": "0–3 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784404898,
+   "attempts": 0
   },
   "remote": true,
   "rules_v": 3,
@@ -356069,8 +356217,9 @@
   "url": "https://jobs.lever.co/palantir/a753a9e7-a361-426b-9c25-3cf2488c1730"
  },
  "ee7c1797b8ecac96": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784404896,
   "company": "University of Michigan",
   "description": "",
   "explicit_new_grad": false,
@@ -356081,6 +356230,11 @@
    "Dearborn, MI, USA"
   ],
   "posted_at": 1784073600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784404896,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -356089,7 +356243,8 @@
    "base 40",
    "role:data_science +22",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -379301,24 +379456,31 @@
   ],
   "posted_at": 1784160000,
   "posting": {
-   "analyzed_at": 1784404782,
+   "analyzed_at": 1784404818,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784404782,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784404818,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years experience required",
+   "role_family": "other-technical",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 70,
+  "score": 60,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "posted <72h +6",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -379562,7 +379724,7 @@
   ],
   "posted_at": 1784160000,
   "posting": {
-   "analyzed_at": 1784404783,
+   "analyzed_at": 1784404826,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -379571,7 +379733,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784404783,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784404826,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0+ years exp, new grad focus",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
