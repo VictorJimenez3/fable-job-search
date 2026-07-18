@@ -167,7 +167,8 @@ def crawl() -> int:
     pstats = scrape_pass(new_jobs, jobs_state, eightfold_domains, now)
     if pstats:
         print(f"posting scrape: {pstats['inline']} inline, {pstats['fetched']} fetched, "
-              f"{pstats['demoted']} demoted, {pstats['closed']} closed")
+              f"{pstats['demoted']} demoted, {pstats['closed']} closed, "
+              f"{pstats.get('research_sources', 0)} research sources")
 
     # ---- optional LLM pass on borderline/alert candidates ----
     thr = p["thresholds"]

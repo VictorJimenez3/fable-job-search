@@ -374,9 +374,15 @@ function clearFilters() {
   S.filter = {...DEFAULT_FILTER}; S.shown = 250;
   localStorage.removeItem("jr_filters"); render();
 }
+function isOpenRelevant(j) {
+  if (j.closed_at) return false;
+  const hardReject = /^(senior\+ title|PhD-targeted title|restricted to another school|requires clearance|non-US location|not an internship\/co-op|requires \d+\+ years|off-field internship|not a chemical\/process engineering role)$/i;
+  return !(j.score_reasons||[]).some(reason =>
+    hardReject.test(String(reason).replace(/^re-gate v\d+:\s*/i,"")));
+}
 function jobList() {
   const byId = appliedById(); const f = S.filter; const q = norm(f.q);
-  let rows = Object.values(S.jobs).filter(isChemeVisible);
+  let rows = Object.values(S.jobs).filter(j=>isChemeVisible(j) && isOpenRelevant(j));
   if (f.alert) rows = rows.filter(j=>j.alert_ok);
   rows = rows.filter(j=>(j.score||0) >= f.min);
   if (f.sector) rows = rows.filter(j=>j.sector===f.sector);
