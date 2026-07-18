@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-18 22:27 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
+_Last run: **2026-07-18 22:29 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -120,7 +120,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 93 🔥 | 22d | Oscar Health | [Associate, Network Contracting](http://www.hioscar.com/careers/8027526?gh_jid=8027526) | New York, New York, United States | healthtech | greenhouse |
 | 93 🔥 | 22d | Oscar Health | [Associate, Network Contracting](http://www.hioscar.com/careers/8030641?gh_jid=8030641) | Tempe, Arizona, United States | healthtech | greenhouse |
 | 92 🔥 | 22h | SpaceX | [Property Tax Analyst](https://boards.greenhouse.io/spacex/jobs/8639546002?gh_jid=8639546002) | Hawthorne, CA | big_tech | greenhouse |
-| 92 🔥 | 23h | Magnatech | [Associate Developer](https://magnatech.io/technology-careers/?gh_jid=4716011005) | Remote in USA | other | simplify |
+| 92 🔥 | 1d | Magnatech | [Associate Developer](https://magnatech.io/technology-careers/?gh_jid=4716011005) | Remote in USA | other | simplify |
 | 92 🔥 | 1d | AbbVie | [Technology Engineer II – Platform & Full Stack Engineering](https://jobs.smartrecruiters.com/AbbVie/3743990014160896) | North Chicago, IL | healthtech | smartrecruiters |
 | 92 🔥 | 1d | SpaceX | [Power Electronics Engineer, AI Satellites (Starmind)](https://boards.greenhouse.io/spacex/jobs/8639268002?gh_jid=8639268002) | Bastrop, TX | big_tech | greenhouse |
 | 92 🔥 | 1d | MongoDB | [Associate Technical Services Engineer II](https://www.mongodb.com/careers/job/?gh_jid=8044218) | Austin | big_tech | greenhouse |
