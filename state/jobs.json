@@ -47592,13 +47592,19 @@
   ],
   "posted_at": 1781209334,
   "posting": {
-   "analyzed_at": 1784416978,
+   "analyzed_at": 1784417010,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784416978,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784417010,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "PhD completion expected for 2026 class",
+   "role_family": "ml",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -60289,7 +60295,9 @@
   ],
   "posted_at": 1780777333,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784417054,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -71830,13 +71838,19 @@
   ],
   "posted_at": 1780777333,
   "posting": {
-   "analyzed_at": 1784416984,
+   "analyzed_at": 1784417055,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784416984,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784417055,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for 2026 class.",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -74259,13 +74273,19 @@
   ],
   "posted_at": 1784000637,
   "posting": {
-   "analyzed_at": 1784416976,
+   "analyzed_at": 1784416995,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784416976,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784416995,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New college grad 2026",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -76698,7 +76718,7 @@
   "url": "https://careers.datadoghq.com/detail/8029969/?gh_jid=8029969"
  },
  "2fc9b01b5d0e8bb2": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "greenhouse",
   "company": "Anthropic",
   "description": "",
@@ -76711,15 +76731,24 @@
   ],
   "posted_at": 1776954936,
   "posting": {
-   "analyzed_at": 1784322816,
+   "analyzed_at": 1784417078,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "We do sponsor"
   },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784417078,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 3+ years experience, not for new grads",
+   "role_family": "swe",
+   "years_required": 3
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 95,
+  "score": 75,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
@@ -76727,7 +76756,8 @@
    "remote +2",
    "you've engaged with Anthropic +6",
    "title matches your history +6",
-   "culture fit 80/100 +4"
+   "culture fit 80/100 +4",
+   "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "ai_lab",
   "source": "greenhouse",
@@ -97585,6 +97615,9 @@
    "San Francisco"
   ],
   "posted_at": 1784060683,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -117305,12 +117338,16 @@
   ],
   "posted_at": 1781788987,
   "posting": {
-   "analyzed_at": 1784361739,
+   "analyzed_at": 1784417092,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "without sponsorship",
    "years_min": 1,
    "years_note": "1 to 2 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784417092,
+   "attempts": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -155882,6 +155919,9 @@
    "San Francisco"
   ],
   "posted_at": 1784054643,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -178599,10 +178639,14 @@
   ],
   "posted_at": 1752874001,
   "posting": {
-   "analyzed_at": 1784326349,
+   "analyzed_at": 1784417086,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "We do sponsor"
+  },
+  "quality": {
+   "ai_deferred_at": 1784417086,
+   "attempts": 0
   },
   "remote": true,
   "rules_v": 3,
@@ -186969,7 +187013,7 @@
   "url": "https://job-boards.greenhouse.io/scaleai/jobs/4625341005"
  },
  "76d200e30975a3a1": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "greenhouse",
   "company": "Anthropic",
   "description": "",
@@ -186982,15 +187026,24 @@
   ],
   "posted_at": 1783981152,
   "posting": {
-   "analyzed_at": 1784286216,
+   "analyzed_at": 1784417070,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "We do sponsor"
   },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784417070,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires chip design expertise and taped out chips.",
+   "role_family": "other-technical",
+   "years_required": 3
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 95,
+  "score": 75,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
@@ -186998,7 +187051,8 @@
    "posted <7d +2",
    "you've engaged with Anthropic +6",
    "title matches your history +6",
-   "culture fit 80/100 +4"
+   "culture fit 80/100 +4",
+   "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "ai_lab",
   "source": "greenhouse",
@@ -238170,13 +238224,19 @@
   ],
   "posted_at": 1780777335,
   "posting": {
-   "analyzed_at": 1784416979,
+   "analyzed_at": 1784417017,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784416979,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784417017,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "PhD required, new grad 2026",
+   "role_family": "ml",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -241142,13 +241202,19 @@
   ],
   "posted_at": 1780777335,
   "posting": {
-   "analyzed_at": 1784416980,
+   "analyzed_at": 1784417024,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784416980,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784417024,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for 2026 class, ML focus in description.",
+   "role_family": "ml",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -259944,14 +260010,23 @@
   ],
   "posted_at": 1780777337,
   "posting": {
-   "analyzed_at": 1784308012,
+   "analyzed_at": 1784417063,
    "fetched": true,
    "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784417063,
+   "live": true,
+   "new_grad": "no",
+   "reason": "2+ years experience required",
+   "role_family": "ml",
+   "years_required": 2
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 96,
+  "score": 86,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
@@ -259959,7 +260034,8 @@
    "you've engaged with NVIDIA +8",
    "title matches your history +4",
    "culture fit 83/100 +4",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "quality: wants 2+ yrs (LLM-verified) -10"
   ],
   "sector": "big_tech",
   "source": "workday",
@@ -284093,13 +284169,19 @@
   ],
   "posted_at": 1783981552,
   "posting": {
-   "analyzed_at": 1784416977,
+   "analyzed_at": 1784417002,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784416977,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784417002,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role with no experience required",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -296114,6 +296196,9 @@
    "San Francisco"
   ],
   "posted_at": 1782361449,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -303308,9 +303393,13 @@
   ],
   "posted_at": 1688055404,
   "posting": {
-   "analyzed_at": 1784354390,
+   "analyzed_at": 1784417086,
    "fetched": true,
    "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784417086,
+   "attempts": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -320629,13 +320718,19 @@
   ],
   "posted_at": 1780777335,
   "posting": {
-   "analyzed_at": 1784416981,
+   "analyzed_at": 1784417031,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784416981,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784417031,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for 2026 class, no experience required.",
+   "role_family": "other-technical",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -356989,11 +357084,15 @@
   ],
   "posted_at": 1784059380,
   "posting": {
-   "analyzed_at": 1784279115,
+   "analyzed_at": 1784417088,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 2,
    "years_note": "2 years experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784417088,
+   "attempts": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -361724,6 +361823,9 @@
    "San Francisco"
   ],
   "posted_at": 1783466251,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -370783,13 +370885,19 @@
   ],
   "posted_at": 1780777335,
   "posting": {
-   "analyzed_at": 1784416982,
+   "analyzed_at": 1784417039,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784416982,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784417039,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New college grad 2026, MS/PhD required, no experience stated.",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -382314,6 +382422,9 @@
    "Washington, DC"
   ],
   "posted_at": 1781539899,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -384468,13 +384579,19 @@
   ],
   "posted_at": 1780777334,
   "posting": {
-   "analyzed_at": 1784416982,
+   "analyzed_at": 1784417047,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784416982,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784417047,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for 2025 class.",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -386579,6 +386696,9 @@
    "San Francisco"
   ],
   "posted_at": 1782365153,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -389548,9 +389668,13 @@
   ],
   "posted_at": 1775781030,
   "posting": {
-   "analyzed_at": 1784354390,
+   "analyzed_at": 1784417085,
    "fetched": true,
    "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784417085,
+   "attempts": 0
   },
   "remote": true,
   "rules_v": 3,
@@ -392130,6 +392254,9 @@
    "US-WA-Bellevue"
   ],
   "posted_at": 1781648097,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
