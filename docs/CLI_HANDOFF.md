@@ -51,6 +51,14 @@ Before changing the radar, read these in order:
   forks get). `webapp/index.html` is canonical; `docs/platform/index.html`
   is a byte copy. Jobs tab shows posting age and sorts by best-match or
   newest-first.
+- **The ChemE profile is a separate production board** at
+  `job-radar-cheme.vercel.app`, backed by `claude/cheme-intern-radar` and
+  `RADAR_PROFILE=cheme`. The default production branch owns the three
+  `cheme-*` scheduled orchestrator workflows because GitHub schedules only
+  default-branch workflow files. Dispatches and checkbox/comment events route
+  to the correct branch via the profile payload or `radar-cheme` label. Both
+  profiles deliberately share the repository `NOTION_TOKEN`; do not create a
+  second Notion database or token for ChemE.
 - **Notion:** `NOTION_TOKEN` is set and working. Checkbox → entry with the
   `stage_saved` status ("Waiting for a referral" in his DB); Victor promotes
   manually, OR the **email autopilot** (DECISIONS #26, shipped 2026-07-13 by

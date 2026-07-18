@@ -2,7 +2,7 @@
 // Auth: the sealed session cookie. Only the repo owner may write; GitHub
 // would refuse anyone else anyway (their OAuth token lacks repo write), but
 // we reject early for a clear error.
-const { OWNER, REPO, session, gh } = require("./_lib");
+const { OWNER, REPO, PROFILE, session, gh } = require("./_lib");
 
 module.exports = async (req, res) => {
   if (req.method !== "POST") { res.status(405).end(); return; }
@@ -21,7 +21,7 @@ module.exports = async (req, res) => {
     method: "POST",
     body: JSON.stringify({
       event_type: "radar-web",
-      client_payload: { action, id, url, company },
+      client_payload: { action, id, url, company, profile: PROFILE },
     }),
   });
   if (r.status === 204) res.status(202).json({ ok: true });

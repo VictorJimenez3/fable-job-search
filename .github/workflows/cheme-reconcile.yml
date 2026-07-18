@@ -1,34 +1,37 @@
-name: web-actions
+name: cheme-reconcile-checkboxes
 
 on:
-  repository_dispatch:
-    types: [radar-web]
+  schedule:
+    - cron: "55 5,17 * * *"
+  workflow_dispatch: {}
 
 permissions:
   contents: write
+  issues: read
 
 concurrency:
-  group: applied-sync   # same state files as applied-sync; don't race it
+  group: cheme-radar
   cancel-in-progress: false
 
 jobs:
-  act:
+  reconcile:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.client_payload.profile == 'cheme' && 'claude/cheme-intern-radar' || 'claude/newgrad-job-search-system-9gbj9k' }}
+          ref: claude/cheme-intern-radar
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
-      - name: Apply platform action (track / applied → Notion)
+      - name: Reconcile ChemE checkboxes into the shared Notion database
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-        run: python -m radar.main web-action
-      - name: Commit state
+        run: python -m radar.main reconcile-checkboxes
+      - name: Commit ChemE tracking state
         run: |
           git config user.name "job-radar[bot]"
           git config user.email "radar@users.noreply.github.com"
@@ -36,7 +39,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "no changes"; exit 0
           fi
-          git commit -m "radar: web-action $(date -u +'%Y-%m-%d %H:%M')"
+          git commit -m "radar(cheme): checkbox reconcile $(date -u +'%Y-%m-%d %H:%M')"
           for i in 1 2 3 4; do
             git push && exit 0
             git pull --rebase --autostash || true

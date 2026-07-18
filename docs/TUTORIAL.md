@@ -44,6 +44,11 @@ the optional Settings token enables instant writes and cross-device notes.
 GitHub checkboxes keep working exactly as before; both doors lead to the
 same tracker.
 
+The separate [ChemE internship board](https://job-radar-cheme.vercel.app)
+uses its own jobs, scoring profile, pipeline state, and labeled GitHub issues.
+It shares this repository's Notion integration, so tracked ChemE roles enter
+the same Applications database instead of creating a second Notion system.
+
 ## The places you look
 
 | Where | What you see | When to look |

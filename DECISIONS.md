@@ -617,3 +617,31 @@ Measured against production state before release: rules v3 reduced 3,250
 current alert records to about 2,600, demoting roughly 650 false positives.
 The normal `regate()` migration applies this on the next crawl; generated
 state is not edited by hand.
+
+## 37. ChemE is a separate internship-first profile, not a filter on the tech board (2026-07-18)
+
+Chemical Engineering internships have different eligibility evidence, role
+families, employers, search terms, and scoring weights from new-grad software
+roles. Treating ChemE as another UI filter would mix discovery state and taste
+feedback and make both boards harder to trust. The dedicated
+`claude/cheme-intern-radar` branch therefore owns its profile, generated job
+state, feedback, dashboard, and profile-tagged culture data. It retains the
+same tested engine and historical state migrations, but a ChemE crawl re-gates
+open records under internship-first rules instead of hand-rewriting generated
+files.
+
+## 38. Two production boards, one repository and one Notion tracker (2026-07-18)
+
+The existing new-grad board remains the primary Vercel project and production
+branch. ChemE is deployed independently at `job-radar-cheme.vercel.app`, reads
+`claude/cheme-intern-radar`, and uses a `cheme` profile marker plus dedicated
+GitHub labels so actions, issue edits, and comments reach the correct branch.
+This avoids one site's deployment or pipeline state overwriting the other.
+
+GitHub scheduled workflows are loaded only from the repository's default
+branch, so that branch contains small `cheme-*` orchestrators which check out
+and commit back to the ChemE branch. The ChemE board starts in tokenless/PAT
+mode because the existing GitHub OAuth app has one callback URL; it can receive
+its own OAuth app later without changing the architecture. Both boards use the
+same repository-level `NOTION_TOKEN` and the same Applications database by
+design. Separate board state does not mean duplicate Notion state.

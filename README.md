@@ -6,6 +6,8 @@ big tech second, open to everything good).
 
 **[→ 🖥️ The Platform](https://job-radar-vmj-8946s-projects.vercel.app)**
 (sign in with GitHub once → every click writes instantly) ·
+**[→ 🧪 ChemE internship board](https://job-radar-cheme.vercel.app)**
+(independent jobs and pipeline; same Notion Applications database) ·
 **[→ Pages mirror](https://victorjimenez3.github.io/fable-job-search/platform/)**
 (same app, zero backend — writes via prefilled issues; what forks get for free) ·
 **[→ User guide / tutorial](docs/TUTORIAL.md)** ·
@@ -20,6 +22,12 @@ big tech second, open to everything good).
 The platform is now decision-first: filter by role family, sponsorship, and
 required experience; see honest eligibility facts before opening a posting;
 then use one primary apply link with explicit To apply/Applied tracking.
+
+The ChemE internship board is intentionally separate from this new-grad
+AI/SWE/DS board. It reads the `claude/cheme-intern-radar` branch and keeps its
+own generated state and GitHub board labels, while both profiles use the one
+repository-level `NOTION_TOKEN` and therefore the same Notion Applications
+database.
 
 Subscribe to the RSS feed at:
 `https://raw.githubusercontent.com/VictorJimenez3/fable-job-search/claude/newgrad-job-search-system-9gbj9k/docs/feed.xml`

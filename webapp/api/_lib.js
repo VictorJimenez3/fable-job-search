@@ -14,6 +14,8 @@ const envv = (k) => (process.env[k] || "").replace(/[^\x21-\x7E]/g, "");
 const OWNER = envv("RADAR_OWNER") || "VictorJimenez3";
 const REPO = envv("RADAR_REPO") || "VictorJimenez3/fable-job-search";
 const BRANCH = envv("RADAR_BRANCH") || "claude/newgrad-job-search-system-9gbj9k";
+const PROFILE = envv("RADAR_PROFILE") || "default";
+const AUTH_MODE = envv("AUTH_MODE") || "oauth";
 
 const key = () => crypto.createHash("sha256").update(envv("SESSION_SECRET")).digest();
 
@@ -61,4 +63,5 @@ async function gh(path, token, opts = {}) {
   return r;
 }
 
-module.exports = { OWNER, REPO, BRANCH, envv, seal, unseal, session, needSetup, gh };
+module.exports = { OWNER, REPO, BRANCH, PROFILE, AUTH_MODE, envv, seal, unseal,
+                   session, needSetup, gh };
