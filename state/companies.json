@@ -7329,11 +7329,12 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 0,
+  "last_ok": 1784355052,
   "name": "The University of Edinburgh",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "active",
   "token": "elxw"
  },
  "oracle_orc:emcm:WMCareers": {
@@ -7501,11 +7502,12 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 0,
+  "last_ok": 1784355053,
   "name": "SCOR",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "active",
   "token": "fa-errt-saasfaprod1"
  },
  "oracle_orc:fa-esgu-saasfaprod1:CX_1": {
@@ -7564,11 +7566,12 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 0,
+  "last_ok": 1784355054,
   "name": "Navy Federal",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "active",
   "token": "fa-etbx-saasfaprod1"
  },
  "oracle_orc:fa-etvl-saasfaprod1:CX_1": {
@@ -7656,11 +7659,12 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 0,
+  "last_ok": 1784355054,
   "name": "Duracell",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "active",
   "token": "fa-ewub-saasfaprod1"
  },
  "oracle_orc:fa-exew-saasfaprod1:CX_1": {
@@ -7751,11 +7755,12 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 0,
+  "last_ok": 1784355055,
   "name": "American Bureau of Shipping",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "active",
   "token": "hbbq"
  },
  "oracle_orc:hcal:CX_1001": {
@@ -8176,11 +8181,12 @@
   "extra": {},
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 0,
+  "last_ok": 1784355056,
   "name": "Atria Group",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "active",
   "token": "AtriaGroupLLC"
  },
  "smartrecruiters:BoschGroup": {
@@ -8310,11 +8316,12 @@
   "extra": {},
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 0,
+  "last_ok": 1784355056,
   "name": "Intuitive Surgical",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "active",
   "token": "Intuitive"
  },
  "smartrecruiters:JobsForHumanity": {
@@ -8334,11 +8341,12 @@
   "extra": {},
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 0,
+  "last_ok": 1784355056,
   "name": "Kanshe Infotech",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "active",
   "token": "KansheInfotech"
  },
  "smartrecruiters:KrgTechnologyInc": {
@@ -8529,11 +8537,12 @@
   "extra": {},
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 0,
+  "last_ok": 1784355057,
   "name": "Smiths Detection Group",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "active",
   "token": "SmithsGroup2"
  },
  "smartrecruiters:Sportradar": {
@@ -8601,11 +8610,12 @@
   "extra": {},
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 0,
+  "last_ok": 1784355057,
   "name": "The Wonderful Company",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "active",
   "token": "TheWonderfulCompany"
  },
  "smartrecruiters:UnitedFranchiseGroup": {
@@ -8737,7 +8747,7 @@
    "host": "wd1",
    "site": "Search"
   },
-  "failures": 2,
+  "failures": 3,
   "first_seen": 1784354642,
   "last_ok": 1784354673,
   "name": "3M",
@@ -8924,11 +8934,13 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
+  "invalidated_at": 1784355057,
   "last_ok": 0,
   "name": "Alberta Investment Management Corporation",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "invalid",
   "token": "aimco"
  },
  "workday:airliquidehr:AirLiquideExternalCareer": {
@@ -8968,7 +8980,7 @@
    "host": "wd5",
    "site": "External"
   },
-  "failures": 3,
+  "failures": 4,
   "first_seen": 1784354642,
   "last_ok": 1784354645,
   "name": "Albemarle",
@@ -9050,11 +9062,13 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
+  "invalidated_at": 1784355058,
   "last_ok": 0,
   "name": "Altasciences",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "invalid",
   "token": "altasciences"
  },
  "workday:altera:altera": {
@@ -9080,11 +9094,13 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
+  "invalidated_at": 1784355058,
   "last_ok": 0,
   "name": "Analytical Mechanics Associates",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "invalid",
   "token": "amainc"
  },
  "workday:amat:External": {
@@ -9093,7 +9109,7 @@
    "host": "wd1",
    "site": "External"
   },
-  "failures": 2,
+  "failures": 3,
   "first_seen": 1784354642,
   "last_ok": 1784354675,
   "name": "Applied Materials",
@@ -9111,11 +9127,13 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
+  "invalidated_at": 1784355058,
   "last_ok": 0,
   "name": "American University",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "invalid",
   "token": "american"
  },
  "workday:amgen:Careers": {
@@ -9262,11 +9280,13 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
+  "invalidated_at": 1784355059,
   "last_ok": 0,
   "name": "Arrowstreet Capital",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "invalid",
   "token": "arrowstreetcapital"
  },
  "workday:asml:asmlext1": {
@@ -9339,11 +9359,13 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
+  "invalidated_at": 1784355059,
   "last_ok": 0,
   "name": "Arizona State University",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "invalid",
   "token": "asuep"
  },
  "workday:att:ATTGeneral": {
@@ -9369,11 +9391,13 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
+  "invalidated_at": 1784355059,
   "last_ok": 0,
   "name": "City of Aurora",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "invalid",
   "token": "auroragov"
  },
  "workday:autodesk:uni": {
@@ -9384,11 +9408,13 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
+  "invalidated_at": 1784355060,
   "last_ok": 0,
   "name": "Autodesk",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "invalid",
   "token": "autodesk"
  },
  "workday:avav:avav": {
@@ -9553,11 +9579,13 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
+  "invalidated_at": 1784355062,
   "last_ok": 0,
   "name": "BDO Canada",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "invalid",
   "token": "bdo"
  },
  "workday:bdx:EXTERNAL_CAREER_SITE_USA": {
@@ -9598,11 +9626,13 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
+  "invalidated_at": 1784355062,
   "last_ok": 0,
   "name": "BlackRock",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "invalid",
   "token": "blackrock"
  },
  "workday:blackrock:BlackRock_Professional": {
@@ -9628,11 +9658,13 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
+  "invalidated_at": 1784355062,
   "last_ok": 0,
   "name": "Blackstone",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "invalid",
   "token": "blackstone"
  },
  "workday:bmo:Campus": {
@@ -9643,11 +9675,13 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
+  "invalidated_at": 1784355062,
   "last_ok": 0,
   "name": "Bank of Montreal",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "invalid",
   "token": "bmo"
  },
  "workday:bnl:externa": {
@@ -9886,11 +9920,13 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
+  "invalidated_at": 1784355063,
   "last_ok": 0,
   "name": "Cadence Design Systems",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "invalid",
   "token": "cadence"
  },
  "workday:cadence:University_Talent_NCG": {
@@ -9946,11 +9982,13 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
+  "invalidated_at": 1784355063,
   "last_ok": 0,
   "name": "Protech Automotive Solutions",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "invalid",
   "token": "calibercollision"
  },
  "workday:cambridgeassociates:Cambridge_Associates": {
@@ -10099,11 +10137,13 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
+  "invalidated_at": 1784355063,
   "last_ok": 0,
   "name": "City of Charlotte",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "invalid",
   "token": "charlottenc"
  },
  "workday:chevron:University": {
@@ -10128,7 +10168,7 @@
    "host": "wd5",
    "site": "jobs"
   },
-  "failures": 2,
+  "failures": 3,
   "first_seen": 1784354642,
   "last_ok": 1784354661,
   "name": "Chevron",
@@ -10222,11 +10262,13 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
+  "invalidated_at": 1784355064,
   "last_ok": 0,
   "name": "Clio",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "invalid",
   "token": "clio"
  },
  "workday:cni:CNI": {
@@ -10267,11 +10309,13 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
+  "invalidated_at": 1784355064,
   "last_ok": 0,
   "name": "Compassion International",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "invalid",
   "token": "compassion"
  },
  "workday:copart:copart": {
@@ -10282,11 +10326,13 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
+  "invalidated_at": 1784355064,
   "last_ok": 0,
   "name": "Copart",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "invalid",
   "token": "copart"
  },
  "workday:cornell:cornellpositions": {
@@ -10479,11 +10525,13 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
+  "invalidated_at": 1784355064,
   "last_ok": 0,
   "name": "DataRobot",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "invalid",
   "token": "datarobot"
  },
  "workday:datasite:datasite": {
@@ -10494,11 +10542,13 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
+  "invalidated_at": 1784355065,
   "last_ok": 0,
   "name": "Datasite",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "invalid",
   "token": "datasite"
  },
  "workday:daveandbusters:dave_and_busters_careers": {
@@ -10598,7 +10648,7 @@
    "host": "wd1",
    "site": "ExternalCareers"
   },
-  "failures": 2,
+  "failures": 3,
   "first_seen": 1784354642,
   "last_ok": 1784354668,
   "name": "Dow",
@@ -10691,7 +10741,7 @@
    "host": "wd1",
    "site": "Ecolab_External"
   },
-  "failures": 2,
+  "failures": 3,
   "first_seen": 1784354642,
   "last_ok": 1784354663,
   "name": "Ecolab",
@@ -10802,11 +10852,13 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
+  "invalidated_at": 1784355065,
   "last_ok": 0,
   "name": "Evonik",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "invalid",
   "token": "evonik"
  },
  "workday:exactsciences:Exact_Sciences": {
@@ -11170,11 +11222,13 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
+  "invalidated_at": 1784355065,
   "last_ok": 0,
   "name": "Global Infrastructure",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "invalid",
   "token": "gi"
  },
  "workday:gilead:gileadcareers": {
@@ -11198,7 +11252,7 @@
    "host": "wd1",
    "site": "External"
   },
-  "failures": 2,
+  "failures": 3,
   "first_seen": 1784354642,
   "last_ok": 1784354667,
   "name": "GlobalFoundries",
@@ -11370,11 +11424,13 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
+  "invalidated_at": 1784355065,
   "last_ok": 0,
   "name": "Hendrick Motorsports",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "invalid",
   "token": "hendrick"
  },
  "workday:highmarkhealth:highmark": {
@@ -11677,11 +11733,13 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
+  "invalidated_at": 1784355066,
   "last_ok": 0,
   "name": "Interac",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "invalid",
   "token": "interac"
  },
  "workday:ironmountain:iron-mountain-jobs": {
@@ -12044,11 +12102,13 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
+  "invalidated_at": 1784355066,
   "last_ok": 0,
   "name": "Signify",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "invalid",
   "token": "lighting"
  },
  "workday:lilly:LLY": {
@@ -12135,11 +12195,13 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
+  "invalidated_at": 1784355067,
   "last_ok": 0,
   "name": "Lumentum",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "invalid",
   "token": "lumentum"
  },
  "workday:madixinc:Madix": {
@@ -12180,11 +12242,13 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
+  "invalidated_at": 1784355067,
   "last_ok": 0,
   "name": "Manulife Financial",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "invalid",
   "token": "manulife"
  },
  "workday:manulife:MFCJH_adminJobs": {
@@ -12226,11 +12290,13 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
+  "invalidated_at": 1784355067,
   "last_ok": 0,
   "name": "Marvell",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "invalid",
   "token": "marvell"
  },
  "workday:masco:Masco": {
@@ -12317,11 +12383,13 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
+  "invalidated_at": 1784355068,
   "last_ok": 0,
   "name": "McKesson",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "invalid",
   "token": "mckesson"
  },
  "workday:mcw:ExternalCareers": {
@@ -12454,7 +12522,7 @@
    "host": "wd1",
    "site": "External"
   },
-  "failures": 2,
+  "failures": 3,
   "first_seen": 1784354642,
   "last_ok": 1784354664,
   "name": "Micron",
@@ -12609,11 +12677,13 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
+  "invalidated_at": 1784355068,
   "last_ok": 0,
   "name": "M&T Bank",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "invalid",
   "token": "mtb"
  },
  "workday:mtb:MTB": {
@@ -13845,7 +13915,7 @@
    "host": "wd3",
    "site": "ShellCareers"
   },
-  "failures": 2,
+  "failures": 3,
   "first_seen": 1784354642,
   "last_ok": 1784354670,
   "name": "Shell",

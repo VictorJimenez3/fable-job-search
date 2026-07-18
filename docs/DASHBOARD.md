@@ -1,17 +1,15 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-18 06:09 UTC** · companies polled directly: **9** (ChemE registry 9) · jobs tracked: **38 shown / 11076 stored** · new this run: **0** · alerts this run: **0**_
+_Last run: **2026-07-18 06:11 UTC** · companies polled directly: **9** (ChemE registry 9) · jobs tracked: **36 shown / 11076 stored** · new this run: **0** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
 | Score | Age | Company | Role | Location | Sector | Src |
 |---|---|---|---|---|---|---|
-| 93 🔥 | 18d | Applied Materials | [2026 Fall Process Engineer Co-op - Adv Degree Gloucester, MA](https://amat.wd1.myworkdayjobs.com/en-US/External/job/GloucesterMA/XMLNAME-2026-Fall-Process-Engineer-Co-op---Adv-Degree-Gloucester--MA_R2611502) | Gloucester,MA | semiconductors | workday |
 | 87 🔥 | 7h | Neuralink | [R&D Materials Engineer Intern](https://boards.greenhouse.io/neuralink/jobs/7808233003) | San Bruno, CA | other | simplify |
 | 82 ⭐ | 2d | Solar Turbines | [Gas Turbine Products Engineering Intern](https://cat.wd5.myworkdayjobs.com/en-US/solarturbines/job/San-Diego-California/XMLNAME-2027--Gas-Turbine-Product-Engineering-Internship_R0000382293) | San Diego, CA | energy | simplify |
 | 82 ⭐ | 7d | 3M | [Product Development Engineering Intern*](https://3m.wd1.myworkdayjobs.com/en-US/Search/job/CA-Ontario-Brockville/Product-Development-Engineering-Intern-_R01167138) | CA, Ontario, Brockville | chemicals_materials | workday |
 | 76 ⭐ | 24d | Heron Power | [Electronics Design Engineer Intern](http://jobs.ashbyhq.com/heron-power/28af5d2d-bd93-4681-9422-05d17c3437eb/application) | Santa Cruz, CA | energy | simplify |
-| 75 ⭐ | 4d | Procter & Gamble (P&G) | [R&D Engineer Co-op](https://pg.wd5.myworkdayjobs.com/1000/job/BOSTON-GO--TECH-CENTER/Northeastern-University-R-D-Engineer-Co-op--Northeastern-Students-Graduating-in-2028-2029-ONLY_R000155302) | Boston, MA | consumer_manufacturing | simplify |
 | 75 ⭐ | 5d | City of Aurora | [Water GIS Intern](https://auroragov.wd1.myworkdayjobs.com/careers/job/Daniel-P-Mikesell-Building-Southeast-Area-Maintenance-Facility--SEAM/Water-GIS-Intern_JR109039) | Aurora, CO | other | simplify |
 | 75 ⭐ | 9d | Microchip Technology | [Applications Engineering Intern](https://wd5.myworkdaysite.com/recruiting/microchiphr/External/job/CA---Roseville/Intern---Applications-Engineering_R2542-26) | Roseville, CA | semiconductors | simplify |
 | 73  | 16d | Tesla | [Firmware Engineer Intern - Power Electronics Firmware Engineer - Energ](https://www.tesla.com/careers/search/job/275689) | Palo Alto, CA | consumer_manufacturing | simplify |
@@ -27,7 +25,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 66  | 4d | Papa John's | [Engineering Co-op](https://papajohns.wd1.myworkdayjobs.com/papajohnscareers/job/HQ_Louisville/Co-Op_R26_0000001989) | Louisville, KY | other | simplify |
 | 66  | 5d | GE Aerospace | [Unison Engineer Intern](https://geaerospace.wd5.myworkdayjobs.com/ge_externalsite/job/Jacksonville/Unison-Engineering-Intern---Fall-2027_R5037092-1) | Dayton, OH | other | simplify |
 | 66  | 5d | GE Aerospace | [Engineer Intern](https://geaerospace.wd5.myworkdayjobs.com/ge_externalsite/job/Jacksonville/Unison-Engineering-Intern---Spring-2027_R5037093-1) | Dayton, OH | other | simplify |
-| 66  | 6d | DiDi Global | [Motion Planning Engineer Intern](https://job-boards.greenhouse.io/didi/jobs/8056492) | San Jose, CA | other | simplify |
+| 66  | 7d | DiDi Global | [Motion Planning Engineer Intern](https://job-boards.greenhouse.io/didi/jobs/8056492) | San Jose, CA | other | simplify |
 | 64  | 9d | Jump Trading | [FPGA Engineer Intern](https://boards.greenhouse.io/embed/job_app?token=8003013) | Chicago, IL | other | simplify |
 | 64  | 11d | Astranis | [Radiation Effects Engineer Intern](https://job-boards.greenhouse.io/astranis/jobs/4694853006) | SF | other | simplify |
 | 64  | 13d | Verne Robotics | [Engineering Intern](https://jobs.ashbyhq.com/Verne%20Robotics/bb78cdd4-449b-49f0-bd10-2c62fc85f83b/application) | San Bruno, CA | other | simplify |
@@ -45,4 +43,4 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 64  | 23d | Hiverge | [Research Engineer Intern](https://jobs.ashbyhq.com/hiverge/ea6edea4-5216-4cdc-b368-909ba91c78a3/application) | Cambridge, UK | other | simplify |
 | 64  | 29d | Formlabs | [Hardware R&D Engineer Intern](https://careers.formlabs.com/job/7890746/apply/?gh_jid=7890746) | Cambridge, MA | other | simplify |
 
-_38 roles shown (score ≥ 42, posted ≤30d)._
+_36 roles shown (score ≥ 42, posted ≤30d)._
