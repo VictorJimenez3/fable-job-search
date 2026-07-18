@@ -3886,6 +3886,9 @@
    "San Francisco"
   ],
   "posted_at": 1775868907,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -21188,6 +21191,9 @@
    "San Francisco"
   ],
   "posted_at": 1783437256,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -28058,7 +28064,7 @@
   "url": "https://jobs.smartrecruiters.com/AristaNetworks/744000136210390"
  },
  "115a2169052ebf49": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "lever",
   "company": "Lyra Health",
   "description": "",
@@ -28070,16 +28076,34 @@
    "United States"
   ],
   "posted_at": 1779847313,
+  "posting": {
+   "analyzed_at": 1784417704,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1+ year of experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784417704,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires clinical license & experience",
+   "role_family": "non-technical",
+   "years_required": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 88,
+  "score": 53,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "sector:healthtech +16",
    "remote +2",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: wants 1+ yrs (LLM-verified) -10",
+   "quality: non-technical role (Requires clinical license & experience — LLM-verified) -25"
   ],
   "sector": "healthtech",
   "source": "lever",
@@ -29038,7 +29062,7 @@
   "url": "https://jobright.ai/jobs/info/6a56cd0953b3962b910b2abc?utm_campaign=Software%20Engineering&utm_source=1103"
  },
  "11e95639c032cb2b": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "workday",
   "company": "CVS Health",
   "description": "",
@@ -29050,16 +29074,32 @@
    "GA - Conyers"
   ],
   "posted_at": 1783703809,
+  "posting": {
+   "analyzed_at": 1784417749,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784417749,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires pharmacy tech license & experience",
+   "role_family": "non-technical",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 87,
+  "score": 42,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:healthtech +16",
    "you've engaged with CVS Health +8",
-   "title matches your history +3"
+   "title matches your history +3",
+   "quality: not new-grad (senior — LLM-verified) -20",
+   "quality: non-technical role (Requires pharmacy tech license & experie — LLM-verified) -25"
   ],
   "sector": "healthtech",
   "source": "workday",
@@ -36118,6 +36158,9 @@
    "San Francisco"
   ],
   "posted_at": 1768968072,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -39892,7 +39935,7 @@
   "url": "https://job-boards.greenhouse.io/drweng/jobs/7597655"
  },
  "18c07d5b96fdf585": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "greenhouse",
   "company": "Truveta",
   "description": "",
@@ -39904,16 +39947,35 @@
    "Seattle, WA"
   ],
   "posted_at": 1748905537,
+  "posting": {
+   "analyzed_at": 1784417738,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "unable to sponsor",
+   "years_min": 6,
+   "years_note": "6+ years of experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784417738,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 6+ years experience.",
+   "role_family": "ml",
+   "years_required": 6
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 88,
+  "score": 68,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "sector:healthtech +16",
    "title matches your history +6",
-   "re-gate v2: priority sector: healthtech (auto-alert)"
+   "re-gate v2: priority sector: healthtech (auto-alert)",
+   "posting: wants 6+ yrs (dashboard only)",
+   "quality: not new-grad (6+ yrs — LLM-verified) -20"
   ],
   "sector": "healthtech",
   "source": "greenhouse",
@@ -42991,6 +43053,9 @@
    "3 Locations"
   ],
   "posted_at": 1783727694,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -52382,7 +52447,9 @@
   ],
   "posted_at": 1780341503,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784417703,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
@@ -69631,7 +69698,9 @@
   ],
   "posted_at": 1780962160,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784417703,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
@@ -109812,7 +109881,9 @@
   ],
   "posted_at": 1782231015,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784417703,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
@@ -118967,6 +119038,9 @@
    "San Francisco"
   ],
   "posted_at": 1737993220,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -148755,16 +148829,33 @@
    "Greece"
   ],
   "posted_at": 1774450857,
+  "posting": {
+   "analyzed_at": 1784417722,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 2,
+   "years_note": "2-6 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784417722,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 2-6 years experience, not new grad.",
+   "role_family": "other-technical",
+   "years_required": 2
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 88,
+  "score": 78,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "sector:healthtech +16",
    "remote +2",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: wants 2+ yrs (LLM-verified) -10"
   ],
   "sector": "healthtech",
   "source": "lever",
@@ -180821,6 +180912,9 @@
    "San Francisco"
   ],
   "posted_at": 1773702507,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -185844,6 +185938,9 @@
    "San Francisco"
   ],
   "posted_at": 1771912658,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -211301,7 +211398,7 @@
   "url": "https://jobs.smartrecruiters.com/AGTechnologies1/108734797"
  },
  "85dd89a9f3aa1fb6": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "greenhouse",
   "company": "Anthropic",
   "description": "",
@@ -211313,17 +211410,36 @@
    "San Francisco, CA | New York City, NY | Seattle, WA"
   ],
   "posted_at": 1783446650,
+  "posting": {
+   "analyzed_at": 1784417757,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "We do sponsor",
+   "years_min": 5,
+   "years_note": "5+ years of experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784417757,
+   "live": true,
+   "new_grad": "no",
+   "reason": "5+ years required in preferred qual.",
+   "role_family": "security",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 87,
+  "score": 67,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:ai_lab +11",
    "you've engaged with Anthropic +6",
    "title matches your history +6",
-   "culture fit 80/100 +4"
+   "culture fit 80/100 +4",
+   "posting: wants 5+ yrs (dashboard only)",
+   "quality: not new-grad (senior — LLM-verified) -20"
   ],
   "sector": "ai_lab",
   "source": "greenhouse",
@@ -241016,6 +241132,9 @@
    "San Francisco"
   ],
   "posted_at": 1783970833,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -245700,6 +245819,9 @@
    "San Francisco"
   ],
   "posted_at": 1783970831,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -251713,7 +251835,7 @@
   "url": "https://job-boards.greenhouse.io/bgeinc/jobs/5287299008"
  },
  "9fa26c86863cfea9": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "greenhouse",
   "company": "Neuralink",
   "description": "",
@@ -251725,10 +251847,24 @@
    "South San Francisco, California, United States"
   ],
   "posted_at": 1777517688,
+  "posting": {
+   "analyzed_at": 1784417712,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784417712,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 3+ years experience, HPC, data center expertise",
+   "role_family": "other-technical",
+   "years_required": 3
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 88,
+  "score": 68,
   "score_reasons": [
    "base 40",
    "role:swe +20",
@@ -251736,7 +251872,8 @@
    "you've engaged with Neuralink +8",
    "title matches your history +5",
    "culture fit 38/100 -1",
-   "re-gate v2: priority sector: healthtech (auto-alert)"
+   "re-gate v2: priority sector: healthtech (auto-alert)",
+   "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "healthtech",
   "source": "greenhouse",
@@ -300103,6 +300240,9 @@
    "Mountain View"
   ],
   "posted_at": 1778179868,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -303371,7 +303511,9 @@
   ],
   "posted_at": 1779125104,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784417701,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
@@ -304308,6 +304450,9 @@
    "London, UK"
   ],
   "posted_at": 1783635400,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -306942,6 +307087,20 @@
    "Boston, MA (Hybrid)"
   ],
   "posted_at": 1773775865,
+  "posting": {
+   "analyzed_at": 1784417729,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784417729,
+   "live": true,
+   "new_grad": "unclear",
+   "reason": "No experience specified, but role is software engineering.",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -320859,6 +321018,9 @@
    "San Francisco"
   ],
   "posted_at": 1776634769,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -355216,7 +355378,9 @@
   ],
   "posted_at": 1742227828,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784417702,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
@@ -375171,6 +375335,9 @@
    "San Francisco"
   ],
   "posted_at": 1759260806,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
