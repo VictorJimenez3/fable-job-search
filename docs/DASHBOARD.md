@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-18 20:24 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
+_Last run: **2026-07-18 20:26 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -82,8 +82,8 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 94 🔥 | 2d | Medtronic | [Sales Representative Endoscopy (m/w/d)](https://medtronic.wd1.myworkdayjobs.com/en-US/MedtronicCareers/job/Luzern-Luzern-Switzerland/Sales-Representative-Endoscopy--m-w-d-_R70257-1) | 3 Locations | healthtech | workday |
 | 94 🔥 | 2d | CVS Health | [Analyst,Patient Relations](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/VA---Richmond/Analyst-Patient-Relations_R0917393) | VA - Richmond | healthtech | workday |
 | 94 🔥 | 2d | OpenAI | [AI Success Engineer - EDU](https://jobs.ashbyhq.com/openai/376a6ab7-7209-4aef-bbdd-f3e40a048714) | Singapore | ai_lab | ashby |
-| 94 🔥 | 3d | OpenAI | [AI Deployment Engineer, Ecosystem - Plugins](https://jobs.ashbyhq.com/openai/ca9e0aeb-6df1-4b73-8ec0-2e9e124712f1) | San Francisco | ai_lab | ashby |
-| 94 🔥 | 3d | OpenAI | [AI Deployment Engineer, Plugins](https://jobs.ashbyhq.com/openai/ca9e0aeb-6df1-4b73-8ec0-2e9e124712f1) | San Francisco | ai_lab | ashby |
+| 94 🔥 | 4d | OpenAI | [AI Deployment Engineer, Ecosystem - Plugins](https://jobs.ashbyhq.com/openai/ca9e0aeb-6df1-4b73-8ec0-2e9e124712f1) | San Francisco | ai_lab | ashby |
+| 94 🔥 | 4d | OpenAI | [AI Deployment Engineer, Plugins](https://jobs.ashbyhq.com/openai/ca9e0aeb-6df1-4b73-8ec0-2e9e124712f1) | San Francisco | ai_lab | ashby |
 | 94 🔥 | 4d | AbbVie | [AI Business Systems Analyst](https://jobs.smartrecruiters.com/AbbVie/3743990014091116) | North Chicago, IL | healthtech | smartrecruiters |
 | 94 🔥 | 4d | OpenAI | [Research Engineer, Privacy](https://jobs.ashbyhq.com/openai/cc434f5b-dc0b-42fd-97ec-e0171545c6e9) | San Francisco | ai_lab | ashby |
 | 94 🔥 | 5d | AbbVie | [Modeling and Simulation Module Developer - Data & AI Acceleration (Hyb](https://jobs.smartrecruiters.com/AbbVie/3743990014064756) | Florham Park, NJ | healthtech | smartrecruiters |
