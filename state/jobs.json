@@ -4954,6 +4954,18 @@
    "Long Beach, CA"
   ],
   "posted_at": 1783814400,
+  "posting": {
+   "analyzed_at": 1784410582,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 0,
+   "years_note": "0 to 2 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784410582,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -11224,13 +11236,19 @@
   ],
   "posted_at": 1783980772,
   "posting": {
-   "analyzed_at": 1784410473,
+   "analyzed_at": 1784410510,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784410473,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784410510,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "new grad role, data focus",
+   "role_family": "data",
+   "years_required": null
   },
   "remote": true,
   "rules_v": 3,
@@ -11897,6 +11915,18 @@
    "San Jose, CA, United States"
   ],
   "posted_at": 1783641600,
+  "posting": {
+   "analyzed_at": 1784410586,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 1,
+   "years_note": "1+ years of experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784410586,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -19792,7 +19822,7 @@
   ],
   "posted_at": 1783900800,
   "posting": {
-   "analyzed_at": 1784410475,
+   "analyzed_at": 1784410518,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -19801,7 +19831,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784410475,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784410518,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role with 0+ years exp",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -28338,7 +28374,7 @@
   ],
   "posted_at": 1783987200,
   "posting": {
-   "analyzed_at": 1784410470,
+   "analyzed_at": 1784410495,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -28347,17 +28383,24 @@
   },
   "quality": {
    "ai_deferred_at": 1784410470,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784410495,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 1-3 years exp, not new grad",
+   "role_family": "swe",
+   "years_required": 2
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 74,
+  "score": 64,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "posted <7d +2"
+   "posted <7d +2",
+   "quality: wants 2+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -33320,7 +33363,9 @@
   ],
   "posted_at": 1779930577,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784410487,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -54391,14 +54436,20 @@
   ],
   "posted_at": 1783900800,
   "posting": {
-   "analyzed_at": 1784410477,
+   "analyzed_at": 1784410526,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784410477,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784410526,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, 0+ years exp",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -66187,8 +66238,9 @@
   "url": "https://job-boards.greenhouse.io/garnerhealth/jobs/6006458004"
  },
  "2b04a19684f58dd5": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784410534,
   "company": "Albertsons Companies",
   "description": "",
   "explicit_new_grad": true,
@@ -66199,6 +66251,11 @@
    "Everett, WA, United States"
   ],
   "posted_at": 1783900800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410534,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -66207,7 +66264,8 @@
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "posted <7d +2"
+   "posted <7d +2",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -81868,7 +81926,9 @@
   ],
   "posted_at": 1783980688,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784410517,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -126152,6 +126212,21 @@
    "CA - Santa Rosa - Westwind, United States of America"
   ],
   "posted_at": 1783900800,
+  "posting": {
+   "analyzed_at": 1784410534,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410534,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0+ years exp",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -144015,6 +144090,18 @@
    "Remote in USA"
   ],
   "posted_at": 1783641600,
+  "posting": {
+   "analyzed_at": 1784410587,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "unable to sponsor",
+   "years_min": 2,
+   "years_note": "2 to 5 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784410587,
+   "attempts": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -182273,6 +182360,9 @@
    "NYC"
   ],
   "posted_at": 1783721501,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -218770,6 +218860,16 @@
    "Lakewood, OH, United States"
   ],
   "posted_at": 1783814400,
+  "posting": {
+   "analyzed_at": 1784410583,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "ai_deferred_at": 1784410583,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -231492,6 +231592,21 @@
    "East Lansing, MI, United States"
   ],
   "posted_at": 1783900800,
+  "posting": {
+   "analyzed_at": 1784410542,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410542,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, No Experience Required",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -232051,15 +232166,31 @@
    "Long Beach, California, United States"
   ],
   "posted_at": 1783900800,
+  "posting": {
+   "analyzed_at": 1784410549,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410549,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 74,
+  "score": 64,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +8",
-   "posted <72h +6"
+   "posted <72h +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -239019,7 +239150,7 @@
   ],
   "posted_at": 1783987200,
   "posting": {
-   "analyzed_at": 1784410471,
+   "analyzed_at": 1784410502,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -239028,17 +239159,24 @@
   },
   "quality": {
    "ai_deferred_at": 1784410471,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784410502,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 74,
+  "score": 64,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "posted <7d +2"
+   "posted <7d +2",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -257514,8 +257652,9 @@
   "url": "https://boards.greenhouse.io/accenturefederalservices/jobs/4677515006?gh_jid=4677515006"
  },
  "a8b951132400b4b3": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784410557,
   "company": "Albertsons Companies",
   "description": "",
   "explicit_new_grad": true,
@@ -257526,6 +257665,11 @@
    "Bethesda, MD, United States"
   ],
   "posted_at": 1783900800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410557,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -257534,7 +257678,8 @@
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "posted <7d +2"
+   "posted <7d +2",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -278847,6 +278992,9 @@
    "NYC"
   ],
   "posted_at": 1783900800,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -280804,6 +280952,21 @@
    "Seattle, WA, United States"
   ],
   "posted_at": 1783900800,
+  "posting": {
+   "analyzed_at": 1784410558,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410558,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role for 2026 grad",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -289675,13 +289838,19 @@
   ],
   "posted_at": 1784096632,
   "posting": {
-   "analyzed_at": 1784410467,
+   "analyzed_at": 1784410488,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784410467,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784410488,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for 2026 class.",
+   "role_family": "ml",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -342462,6 +342631,20 @@
    "New York, NY, United States"
   ],
   "posted_at": 1783900800,
+  "posting": {
+   "analyzed_at": 1784410566,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410566,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New Grad position for 2026 class.",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -342777,6 +342960,21 @@
    "Brookfield, WI"
   ],
   "posted_at": 1783900800,
+  "posting": {
+   "analyzed_at": 1784410574,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "Sponsorship is not available"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410574,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role, ML focus",
+   "role_family": "ml",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -352482,7 +352680,9 @@
   ],
   "posted_at": 1783980747,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784410517,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -370749,6 +370949,17 @@
    "Seattle, Washington, United States"
   ],
   "posted_at": 1783814400,
+  "posting": {
+   "analyzed_at": 1784410584,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1 to 5 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784410584,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -383332,8 +383543,9 @@
   "url": "https://jobs.ashbyhq.com/openai/3fc46cbc-7e5a-4edc-96dc-ca433e76d181"
  },
  "faa378729db3e781": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784410584,
   "company": "General Dynamics",
   "description": "",
   "explicit_new_grad": true,
@@ -383344,6 +383556,11 @@
    "Scottsdale, AZ, United States"
   ],
   "posted_at": 1783814400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410584,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -383352,7 +383569,8 @@
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "posted <7d +2"
+   "posted <7d +2",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
