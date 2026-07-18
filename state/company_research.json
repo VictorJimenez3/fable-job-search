@@ -1424,7 +1424,10 @@
  },
  "medpace": {
   "aliases": [],
+  "attempts": 1,
+  "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "30c7e309099c8ee4",
+  "last_attempt_at": 1784403141,
   "last_evidence_at": 1784389818,
   "name": "Medpace",
   "schema_v": 1,
@@ -2882,13 +2885,66 @@
  },
  "quantifind": {
   "aliases": [],
-  "attempts": 1,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "4309be9cd8"
+   ],
+   "value": "Data science technology company"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "b9cc6332ebbb7838",
-  "last_attempt_at": 1784403065,
+  "generated_at": 1784403141,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "4309be9cd8"
+   ],
+   "value": "Mission-driven company with a focus on innovative solutions for financial crimes, balancing technical learning with work-life balance (hybrid work model, no explicit burnout culture mentioned in posting)."
+  },
+  "last_attempt_at": 1784403141,
   "last_evidence_at": 1784397120,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "4309be9cd8"
+   ],
+   "value": "Palo Alto, CA"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "4309be9cd8"
+   ],
+   "value": "Combating financial crimes through innovative solutions"
+  },
   "name": "Quantifind",
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789587141,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "4309be9cd8"
+   ],
+   "value": "51-200 employees"
+  },
   "sources": [
    {
     "content_sha": "f9b805ea6373d515",
@@ -2901,7 +2957,34 @@
     "url": "https://jobright.ai/jobs/info/6a52beaf9fbdab22fe13cc87?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "4309be9cd8"
+   ],
+   "value": "H1B Sponsorship"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "4309be9cd8"
+   ],
+   "value": "Quantifind is a data science technology company founded in 2009, focused on combating financial crimes through innovative solutions. It is a small-scale company with 51-200 employees, offering a hybrid work model and H1B sponsorship."
+  },
+  "synthesized_evidence_sha": "b9cc6332ebbb7838",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "4309be9cd8"
+   ],
+   "value": "A top-tier AI or data science role with competitive pay ($100K-$130K/yr) in a fast, innovative tech culture (51-200 employees, hybrid work) that avoids slow bureaucracy, with a mission-driven focus on combating financial crimes."
+  }
  },
  "silna health": {
   "aliases": [],
@@ -3642,10 +3725,70 @@
  },
  "uber technologies inc": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "dd4510407d"
+   ],
+   "value": "Commission-based platform connecting riders, drivers, and restaurants through a mobile app."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "dd4510407d"
+   ],
+   "value": "Riders, drivers, restaurants, and businesses using Uber's transportation and delivery services."
+  },
+  "error": "",
   "evidence_sha": "e98ff28d4b47781b",
+  "generated_at": 1784403141,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "dd4510407d"
+   ],
+   "value": "Technical skills, problem-solving, and cultural fit for a fast-paced, innovative environment focused on AI and data science."
+  },
+  "last_attempt_at": 1784403141,
   "last_evidence_at": 1784393439,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "dd4510407d"
+   ],
+   "value": "Global presence with offices in major cities worldwide, including San Francisco, New York, London, and others."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "dd4510407d"
+   ],
+   "value": "To create economic opportunities for everyone by moving people and goods more efficiently and sustainably."
+  },
   "name": "Uber Technologies, Inc.",
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "dd4510407d"
+   ],
+   "value": "Ride-hailing (UberX, Uber Black), food delivery (Uber Eats), freight (Uber Freight), and other mobility solutions."
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789587141,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "dd4510407d"
+   ],
+   "value": "Public company with over 20,000 employees (as of 2023)."
+  },
   "sources": [
    {
     "content_sha": "69d6a4173cbee356",
@@ -3658,7 +3801,36 @@
     "url": "https://jobs.uber.com/en/jobs/160017/?_csid=BOBcQVO6jwRuNsBKbjoAZA&effect=&sm_flow_id=92Yhskrz&state=xlA80FxvL-2272sFxrCsxXWLk7KQR60tJLE43FsTxHI%3D"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "dd4510407d"
+   ],
+   "value": "Offers immigration sponsorship for eligible candidates, including H-1B visas."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "dd4510407d"
+   ],
+   "value": "Uber Technologies, Inc. is a global technology company focused on transportation and food delivery services, with a strong emphasis on innovation and engineering."
+  },
+  "synthesized_evidence_sha": "e98ff28d4b47781b",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "dd4510407d"
+   ],
+   "value": "Engineering and software development focused on scalable, real-time systems for ride-hailing, food delivery, and AI-driven features."
+  },
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "dd4510407d"
+   ],
+   "value": "A top-tier AI or data science role at Uber balances elite prestige with high new-grad pay in a fast-paced, innovative tech culture, avoiding slow bureaucracy. The company emphasizes mission-driven work with respect for work-life balance through sane hours and guaranteed shutdowns, avoiding toxic burnout environments."
+  }
  },
  "vytalize health": {
   "aliases": [],
