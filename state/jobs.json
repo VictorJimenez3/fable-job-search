@@ -20139,7 +20139,7 @@
   "url": "https://egup.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/20276021"
  },
  "0caeeca0567c3405": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "UBS",
   "description": "",
@@ -20151,14 +20151,29 @@
    "Raleigh, NC"
   ],
   "posted_at": 1781947197,
+  "posting": {
+   "analyzed_at": 1784414087,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414087,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 3+ years experience",
+   "role_family": "other-technical",
+   "years_required": 3
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 66,
+  "score": 46,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "other",
   "source": "simplify",
@@ -29637,7 +29652,7 @@
   "url": "https://job-boards.greenhouse.io/leolabsinc/jobs/4205913009"
  },
  "129c94a67b49973e": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Metropolitan Transportation Authority",
   "description": "",
@@ -29649,14 +29664,31 @@
    "Queens, NY"
   ],
   "posted_at": 1782338984,
+  "posting": {
+   "analyzed_at": 1784414072,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "minimum of 1 year"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414072,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 3+ years experience for Level 2.",
+   "role_family": "swe",
+   "years_required": 3
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 66,
+  "score": 46,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "other",
   "source": "simplify",
@@ -48621,6 +48653,20 @@
    "Worcester, MA"
   ],
   "posted_at": 1781820095,
+  "posting": {
+   "analyzed_at": 1784414097,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414097,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "new grad role with no experience req.",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -53423,8 +53469,9 @@
   "url": "https://boards.greenhouse.io/spacex/jobs/8502939002?gh_jid=8502939002"
  },
  "2251bb4a03b4459f": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784414105,
   "company": "Shaw Industries Group",
   "description": "",
   "explicit_new_grad": false,
@@ -53435,6 +53482,11 @@
    "Calhoun, GA"
   ],
   "posted_at": 1781359493,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414105,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -53442,7 +53494,8 @@
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "simplify",
@@ -78086,6 +78139,9 @@
    "Hampton, VA"
   ],
   "posted_at": 1781733868,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -110065,8 +110121,9 @@
   "url": "https://boards.greenhouse.io/spacex/jobs/8589995002?gh_jid=8589995002"
  },
  "469ca2024b0a3bc8": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784414028,
   "company": "BAE Systems",
   "description": "",
   "explicit_new_grad": false,
@@ -110077,6 +110134,11 @@
    "Sterling Heights, Michigan"
   ],
   "posted_at": 1782864000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414028,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -110084,7 +110146,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -159240,7 +159303,9 @@
   ],
   "posted_at": 1783030587,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784414005,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -180246,8 +180311,9 @@
   "url": "https://jobright.ai/jobs/info/6a4c6564971cd25b06f9a716?utm_campaign=Software%20Engineering&utm_source=1103"
  },
  "741c1223b2f465f4": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784414029,
   "company": "IAB Tech Lab",
   "description": "",
   "explicit_new_grad": false,
@@ -180258,6 +180324,11 @@
    "New York, NY, US"
   ],
   "posted_at": 1782864000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414029,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -180265,7 +180336,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -183685,13 +183757,19 @@
   ],
   "posted_at": 1782944838,
   "posting": {
-   "analyzed_at": 1784413994,
+   "analyzed_at": 1784414021,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784413994,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414021,
+   "live": true,
+   "new_grad": "unclear",
+   "reason": "No clear role or experience stated",
+   "role_family": "other-technical",
+   "years_required": null
   },
   "remote": true,
   "rules_v": 3,
@@ -203096,8 +203174,7 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <7d +2",
-   "title matches your history +4",
+   "title matches your history +6",
    "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
@@ -207329,8 +207406,9 @@
   "url": "https://www.mongodb.com/careers/job/?gh_jid=7919314"
  },
  "8592b77c220c8d22": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784414030,
   "company": "KLA",
   "description": "",
   "explicit_new_grad": false,
@@ -207341,6 +207419,11 @@
    "Ann Arbor, MI, US"
   ],
   "posted_at": 1782864000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414030,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -207348,7 +207431,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -216186,8 +216270,9 @@
   "url": "https://jobs.ashbyhq.com/beaconai/891a8500-3b1a-455b-a5d8-6261cd39a1a3"
  },
  "8bca0aabe17d26af": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784414032,
   "company": "Paul Logistics",
   "description": "",
   "explicit_new_grad": false,
@@ -216198,6 +216283,11 @@
    "Tulsa, OK, US"
   ],
   "posted_at": 1782777600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414032,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -216205,7 +216295,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -219741,6 +219832,15 @@
    "Columbia, MO"
   ],
   "posted_at": 1781302994,
+  "posting": {
+   "analyzed_at": 1784414106,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414106,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -224494,8 +224594,9 @@
   "url": "https://jobs.lever.co/weloglobal/e2f42ff3-3d00-468c-8be4-e00b33e3eccd"
  },
  "90ce8f04d2fc80b6": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784414071,
   "company": "Manulife Financial",
   "description": "",
   "explicit_new_grad": false,
@@ -224506,13 +224607,19 @@
    "Boston, MA"
   ],
   "posted_at": 1782425116,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414071,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
   "score": 66,
   "score_reasons": [
    "base 40",
-   "role:ai_ml +26"
+   "role:ai_ml +26",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "simplify",
@@ -259735,6 +259842,15 @@
    "California"
   ],
   "posted_at": 1781639060,
+  "posting": {
+   "analyzed_at": 1784414105,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414105,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -265854,13 +265970,19 @@
   ],
   "posted_at": 1782950400,
   "posting": {
-   "analyzed_at": 1784413992,
+   "analyzed_at": 1784414006,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784413992,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414006,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role, no experience required",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": true,
   "rules_v": 3,
@@ -273577,6 +273699,21 @@
    "Herndon, VA, US, 20171"
   ],
   "posted_at": 1782691200,
+  "posting": {
+   "analyzed_at": 1784414032,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414032,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, new grad role",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -278645,15 +278782,31 @@
    "Home,Indiana,United States"
   ],
   "posted_at": 1782691200,
+  "posting": {
+   "analyzed_at": 1784414040,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414040,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 2 years exp, not new grad",
+   "role_family": "swe",
+   "years_required": 2
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 66,
+  "score": 56,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "remote +2",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: wants 2+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -289025,8 +289178,9 @@
   "url": "https://boards.greenhouse.io/robinhood/jobs/7943204?t=gh_src=&gh_jid=7943204"
  },
  "b904173d6662988d": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784414031,
   "company": "Nokia",
   "description": "",
   "explicit_new_grad": false,
@@ -289037,6 +289191,11 @@
    "600 March Road, Ottawa, Ontario, K2K 2T6, CA"
   ],
   "posted_at": 1782864000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414031,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -289044,7 +289203,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -305454,7 +305614,7 @@
   ],
   "posted_at": 1782950400,
   "posting": {
-   "analyzed_at": 1784413993,
+   "analyzed_at": 1784414014,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship",
@@ -305463,7 +305623,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784413993,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414014,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, no experience required",
+   "role_family": "data",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -305680,6 +305846,22 @@
    "Grand Rapids, Michigan, United States of America"
   ],
   "posted_at": 1782691200,
+  "posting": {
+   "analyzed_at": 1784414048,
+   "fetched": true,
+   "intern_counts": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414048,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, new grad role.",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -307575,6 +307757,15 @@
    "Remote in USA"
   ],
   "posted_at": 1781215635,
+  "posting": {
+   "analyzed_at": 1784414107,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414107,
+   "attempts": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -308168,6 +308359,20 @@
    "Cambridge, MA"
   ],
   "posted_at": 1782223398,
+  "posting": {
+   "analyzed_at": 1784414079,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414079,
+   "live": true,
+   "new_grad": "unclear",
+   "reason": "No experience requirement stated.",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -330667,6 +330872,21 @@
    "Grand Rapids, MI"
   ],
   "posted_at": 1782691200,
+  "posting": {
+   "analyzed_at": 1784414055,
+   "fetched": true,
+   "intern_counts": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414055,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, new grad",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -341428,7 +341648,7 @@
   "url": "https://gevernova.wd5.myworkdayjobs.com/en-US/only_confidential_executive_recruiting/job/Remote/Aero-Services-Risk---Productivity-Finance_R5044128-1"
  },
  "dc50395f966a9efd": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Babel Street",
   "description": "",
@@ -341443,6 +341663,22 @@
    "Solon, OH"
   ],
   "posted_at": 1782511399,
+  "posting": {
+   "analyzed_at": 1784414063,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 18,
+   "years_note": "at least 18 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414063,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level position for new grad",
+   "role_family": "data",
+   "years_required": null
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -341451,7 +341687,8 @@
    "base 40",
    "role:swe +20",
    "remote +2",
-   "title matches your history +4"
+   "title matches your history +4",
+   "posting: wants 18+ yrs (dashboard only)"
   ],
   "sector": "other",
   "source": "simplify",
@@ -383614,6 +383851,9 @@
    "Pine Bluff, AR"
   ],
   "posted_at": 1781820301,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
