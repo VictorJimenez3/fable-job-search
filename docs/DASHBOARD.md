@@ -1,12 +1,12 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-18 15:14 UTC** · companies polled directly: **7** (ChemE registry 9) · jobs tracked: **38 shown / 11078 stored** · new this run: **0** · alerts this run: **0**_
+_Last run: **2026-07-18 15:36 UTC** · companies polled directly: **7** (ChemE registry 9) · jobs tracked: **38 shown / 11078 stored** · new this run: **0** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
 | Score | Age | Company | Role | Location | Sector | Src |
 |---|---|---|---|---|---|---|
-| 87 🔥 | 16h | Neuralink | [R&D Materials Engineer Intern](https://boards.greenhouse.io/neuralink/jobs/7808233003) | San Bruno, CA | other | simplify |
+| 87 🔥 | 17h | Neuralink | [R&D Materials Engineer Intern](https://boards.greenhouse.io/neuralink/jobs/7808233003) | San Bruno, CA | other | simplify |
 | 82 ⭐ | 2d | Solar Turbines | [Gas Turbine Products Engineering Intern](https://cat.wd5.myworkdayjobs.com/en-US/solarturbines/job/San-Diego-California/XMLNAME-2027--Gas-Turbine-Product-Engineering-Internship_R0000382293) | San Diego, CA | energy | simplify |
 | 82 ⭐ | 7d | 3M | [Product Development Engineering Intern*](https://3m.wd1.myworkdayjobs.com/en-US/Search/job/CA-Ontario-Brockville/Product-Development-Engineering-Intern-_R01167138) | CA, Ontario, Brockville | chemicals_materials | workday |
 | 76 ⭐ | 24d | Heron Power | [Electronics Design Engineer Intern](http://jobs.ashbyhq.com/heron-power/28af5d2d-bd93-4681-9422-05d17c3437eb/application) | Santa Cruz, CA | energy | simplify |
