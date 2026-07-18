@@ -11055,8 +11055,9 @@
   "url": "https://jobs.ashbyhq.com/elevenlabs/687394d7-fbf8-49ed-822e-c0690191330c"
  },
  "079fce73f6bf1e33": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784411261,
   "company": "CSAA Insurance Group, a AAA Insurer",
   "description": "",
   "explicit_new_grad": false,
@@ -11067,6 +11068,11 @@
    "United States"
   ],
   "posted_at": 1784073600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411261,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -11077,7 +11083,8 @@
    "sector:fintech +5",
    "posted <7d +2",
    "remote +2",
-   "title matches your history +2"
+   "title matches your history +2",
+   "quality: posting gone (link checked)"
   ],
   "sector": "fintech",
   "source": "jobright",
@@ -27192,6 +27199,9 @@
    "Fulton, MD"
   ],
   "posted_at": 1783555200,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -34677,8 +34687,9 @@
   "url": "https://jobright.ai/jobs/info/6a4bef555d7b097d2df3ecb9?utm_campaign=Software%20Engineering&utm_source=1103"
  },
  "162c301d5819969a": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784411260,
   "company": "General Dynamics Mission Systems",
   "description": "",
   "explicit_new_grad": true,
@@ -34689,6 +34700,11 @@
    "Pittsfield, MA"
   ],
   "posted_at": 1779844077,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411260,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -34696,7 +34712,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "new-grad title +12"
+   "new-grad title +12",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "simplify",
@@ -80959,6 +80976,9 @@
    "SF"
   ],
   "posted_at": 1781082372,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -89756,6 +89776,9 @@
    "Mountain View, CA"
   ],
   "posted_at": 1780967347,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -109916,6 +109939,17 @@
    "Cincinnati, OH"
   ],
   "posted_at": 1783375911,
+  "posting": {
+   "analyzed_at": 1784411269,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 2,
+   "years_note": "two years of related experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411269,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -115686,13 +115720,13 @@
   ],
   "posted_at": 1782108324,
   "posting": {
-   "analyzed_at": 1784411228,
+   "analyzed_at": 1784411251,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "citizenship is required"
   },
   "quality": {
-   "ai_deferred_at": 1784411228,
+   "ai_deferred_at": 1784411251,
    "attempts": 0
   },
   "remote": false,
@@ -129327,6 +129361,15 @@
    "NYC"
   ],
   "posted_at": 1783606005,
+  "posting": {
+   "analyzed_at": 1784411262,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411262,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -134849,12 +134892,12 @@
   ],
   "posted_at": 1782137101,
   "posting": {
-   "analyzed_at": 1784411217,
+   "analyzed_at": 1784411240,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
-   "ai_deferred_at": 1784411217,
+   "ai_deferred_at": 1784411240,
    "attempts": 0
   },
   "remote": false,
@@ -142966,6 +143009,9 @@
    "Richardson, TX"
   ],
   "posted_at": 1783548792,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -170847,6 +170893,9 @@
    "San Diego, CA"
   ],
   "posted_at": 1783555200,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -178551,6 +178600,15 @@
    "Birmingham, AL, United States"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784411267,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411267,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -188324,6 +188382,9 @@
    "Newport Beach, CA"
   ],
   "posted_at": 1783549307,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -188468,7 +188529,9 @@
   ],
   "posted_at": 1782770925,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784411239,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -204816,12 +204879,12 @@
   ],
   "posted_at": 1782137098,
   "posting": {
-   "analyzed_at": 1784411227,
+   "analyzed_at": 1784411251,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
-   "ai_deferred_at": 1784411227,
+   "ai_deferred_at": 1784411251,
    "attempts": 0
   },
   "remote": false,
@@ -207138,7 +207201,9 @@
   ],
   "posted_at": 1782482890,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784411240,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -228757,7 +228822,9 @@
   ],
   "posted_at": 1781831350,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784411252,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -231471,6 +231538,15 @@
    "White Plains, NY"
   ],
   "posted_at": 1783462473,
+  "posting": {
+   "analyzed_at": 1784411268,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411268,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -274746,6 +274822,9 @@
    "Anaheim, CA"
   ],
   "posted_at": 1783375974,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -278774,6 +278853,15 @@
    "NYC"
   ],
   "posted_at": 1780912784,
+  "posting": {
+   "analyzed_at": 1784411256,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411256,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -295076,7 +295164,9 @@
   ],
   "posted_at": 1781676499,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784411253,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -303809,6 +303899,15 @@
    "Milwaukee, WI"
   ],
   "posted_at": 1780610833,
+  "posting": {
+   "analyzed_at": 1784411259,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411259,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -337400,7 +337499,7 @@
   "url": "https://job-boards.greenhouse.io/diligentcorporation/jobs/6115509004"
  },
  "dca22009dd638b17": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "University of Maryland - College Park",
   "description": "",
@@ -337412,6 +337511,17 @@
    "Hyattsville, MD"
   ],
   "posted_at": 1781360162,
+  "posting": {
+   "analyzed_at": 1784411254,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 3,
+   "years_note": "3+ years of experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411254,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -337419,7 +337529,8 @@
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
-   "title matches your history +6"
+   "title matches your history +6",
+   "posting: wants 3+ yrs (dashboard only)"
   ],
   "sector": "other",
   "source": "simplify",
@@ -361744,8 +361855,9 @@
   "url": "https://boards.greenhouse.io/spacex/jobs/8597945002?gh_jid=8597945002"
  },
  "ec0a725dccc7d822": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784411253,
   "company": "General Dynamics Mission Systems",
   "description": "",
   "explicit_new_grad": true,
@@ -361756,6 +361868,11 @@
    "Manassas, VA"
   ],
   "posted_at": 1781647458,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411253,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -361763,7 +361880,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "new-grad title +12"
+   "new-grad title +12",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "simplify",
@@ -368384,6 +368502,9 @@
    "Ann Arbor, MI"
   ],
   "posted_at": 1781140141,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
