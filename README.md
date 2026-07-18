@@ -124,15 +124,19 @@ works with zero setup.
 Verify anytime without creating test data: *Actions → notion-verify → Run workflow*.
 
 **2. Optional email-based applied-detection (~3 min)**
-NJIT uses Google Workspace/Gmail, so this uses IMAP with an App Password
+The ChemE candidate uses NJIT Google Workspace/Gmail, so this uses IMAP with an App Password
 (Google's supported way to let a non-browser client log in — this is not
 your NJIT password and can be revoked anytime independent of it):
-1. On the `vmj@njit.edu` Google account, enable **2-Step Verification** at
+1. On the `ak2943@njit.edu` Google account, enable **2-Step Verification** at
    [myaccount.google.com/security](https://myaccount.google.com/security) if not already on
    (required before Google will issue app passwords).
 2. Generate one at [myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords)
    — name it "Job Radar", copy the 16-character password.
-3. Add two repo secrets: `EMAIL_ADDRESS` = `vmj@njit.edu`, `EMAIL_APP_PASSWORD` = the 16-char password.
+3. Add two repo secrets: `EMAIL_ADDRESS` = `ak2943@njit.edu`, `EMAIL_APP_PASSWORD` = the 16-char password.
+
+This connector reads her inbox for application lifecycle messages; it is not
+the outbound alert channel. ChemE GitHub issues mention `@ak2943` for board
+notifications without granting repository access.
 
 Verify anytime (read-only, marks nothing as read): *Actions → email-verify → Run workflow*.
 
