@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-18 21:26 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
+_Last run: **2026-07-18 21:28 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -109,7 +109,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 94 🔥 | 24d | LinkedIn | [AI Governance and Advisory Associate](https://jobs.smartrecruiters.com/LinkedIn3/744000133706629) | San Francisco, CA | big_tech | smartrecruiters |
 | 93 🔥 | 18h | Anthropic | [Finance & Strategy, GTM - Post Sales ](https://job-boards.greenhouse.io/anthropic/jobs/5163060008) | San Francisco, CA | ai_lab | greenhouse |
 | 93 🔥 | 1d | OpenAI | [Safety Transparency Editor, Safety Systems](https://jobs.ashbyhq.com/openai/a6a421a5-0d3d-4f2f-9767-7c25b6e7d2fc) | San Francisco | ai_lab | ashby |
-| 93 🔥 | 1d | Anthropic | [Research Scientist, Life Sciences (Computational)](https://job-boards.greenhouse.io/anthropic/jobs/5357739008) | San Francisco, CA | ai_lab | greenhouse |
+| 93 🔥 | 2d | Anthropic | [Research Scientist, Life Sciences (Computational)](https://job-boards.greenhouse.io/anthropic/jobs/5357739008) | San Francisco, CA | ai_lab | greenhouse |
 | 93 🔥 | 9d | Salesforce | [Business Development Associate](https://salesforce.wd12.myworkdayjobs.com/en-US/futureforce_newgradroles/job/Illinois---Chicago/Business-Development-Associate_JR347430) | Illinois - Chicago | big_tech | workday |
 | 93 🔥 | 13d | Pinterest | [Software Engineer I, Backend](https://jobright.ai/jobs/info/6a28a89b1dbd8437bebcc98f?utm_campaign=Software%20Engineering&utm_source=1103) | San Francisco, CA | big_tech | jobright |
 | 93 🔥 | 15d | Salesforce | [Associate Technical Project Analyst](https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/Washington---Seattle/Associate-Technical-Project-Analyst_JR350307-1) | Washington - Seattle | big_tech | workday |
