@@ -1,0 +1,83 @@
+{
+ "events": [
+  {
+   "at": "2026-07-18T15:39:53+00:00",
+   "completion_tokens": 39,
+   "detail": "",
+   "endpoint": "nvidia:glm",
+   "latency_ms": 6668,
+   "max_tokens": 240,
+   "model": "z-ai/glm-5.2",
+   "prompt_chars": 6919,
+   "prompt_tokens": 1332,
+   "status": "ok",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-18T15:40:03+00:00",
+   "completion_tokens": 46,
+   "detail": "",
+   "endpoint": "nvidia:glm",
+   "latency_ms": 8574,
+   "max_tokens": 240,
+   "model": "z-ai/glm-5.2",
+   "prompt_chars": 6911,
+   "prompt_tokens": 1331,
+   "status": "ok",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-18T15:40:11+00:00",
+   "completion_tokens": 41,
+   "detail": "",
+   "endpoint": "nvidia:glm",
+   "latency_ms": 7785,
+   "max_tokens": 240,
+   "model": "z-ai/glm-5.2",
+   "prompt_chars": 6836,
+   "prompt_tokens": 1387,
+   "status": "ok",
+   "task": "quality"
+  }
+ ],
+ "generated_at": 1784389212,
+ "history": [
+  {
+   "generated_at": 1784389212,
+   "logical_calls": 3,
+   "models": {
+    "nvidia:glm": {
+     "errors": 0,
+     "model": "z-ai/glm-5.2",
+     "ok": 3,
+     "requests": 3,
+     "tokens": 4176
+    }
+   },
+   "provider": "nvidia-router",
+   "requests": 3,
+   "task_calls": {
+    "quality": 3
+   }
+  }
+ ],
+ "limits": {
+  "logical_calls": 8,
+  "requests": 12
+ },
+ "logical_calls": 3,
+ "models": {
+  "nvidia:glm": {
+   "errors": 0,
+   "model": "z-ai/glm-5.2",
+   "ok": 3,
+   "requests": 3,
+   "tokens": 4176
+  }
+ },
+ "provider": "nvidia-router",
+ "requests": 3,
+ "task_calls": {
+  "quality": 3
+ }
+}
