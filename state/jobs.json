@@ -60632,6 +60632,16 @@
    "US-MI-East Lansing"
   ],
   "posted_at": 1784160000,
+  "posting": {
+   "analyzed_at": 1784403822,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "ai_deferred_at": 1784403822,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -78289,25 +78299,32 @@
   ],
   "posted_at": 1784160000,
   "posting": {
-   "analyzed_at": 1784403703,
+   "analyzed_at": 1784403723,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784403703,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784403723,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 82,
+  "score": 72,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
    "posted <72h +6",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -78356,7 +78373,7 @@
   ],
   "posted_at": 1784160000,
   "posting": {
-   "analyzed_at": 1784403704,
+   "analyzed_at": 1784403731,
    "fetched": true,
    "intern_counts": true,
    "sponsorship": "yes",
@@ -78366,7 +78383,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784403704,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784403731,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0-2 years exp, new grad eligible.",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -80637,16 +80660,33 @@
    "Bellevue, WA, United States"
   ],
   "posted_at": 1784073600,
+  "posting": {
+   "analyzed_at": 1784403806,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1–3 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784403806,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 80,
+  "score": 70,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -98877,7 +98917,7 @@
   "url": "https://careers.datadoghq.com/detail/8045678/?gh_jid=8045678"
  },
  "425c3a28052e68f2": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Blueprint Technologies",
   "description": "",
@@ -98890,23 +98930,30 @@
   ],
   "posted_at": 1784326129,
   "posting": {
-   "analyzed_at": 1784403711,
+   "analyzed_at": 1784403782,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784403711,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784403782,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Non-technical evaluation role",
+   "role_family": "non-technical",
+   "years_required": null
   },
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 80,
+  "score": 55,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "posted <24h +12",
-   "remote +2"
+   "remote +2",
+   "quality: non-technical role (Non-technical evaluation role — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "simplify",
@@ -99866,7 +99913,7 @@
   ],
   "posted_at": 1784073600,
   "posting": {
-   "analyzed_at": 1784403707,
+   "analyzed_at": 1784403754,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -99875,18 +99922,25 @@
   },
   "quality": {
    "ai_deferred_at": 1784403707,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784403754,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "data",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 82,
+  "score": 72,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "new-grad title +12",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -113646,6 +113700,15 @@
    "Reston, VA"
   ],
   "posted_at": 1784073600,
+  "posting": {
+   "analyzed_at": 1784403813,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784403813,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -123274,7 +123337,7 @@
   ],
   "posted_at": 1784160000,
   "posting": {
-   "analyzed_at": 1784403705,
+   "analyzed_at": 1784403738,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 0,
@@ -123282,7 +123345,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784403705,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784403738,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0+ years exp",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -180097,8 +180166,9 @@
   "url": "https://jobright.ai/jobs/info/6a443d6d105260150b7215ec?utm_campaign=Data%20Analysis&utm_source=1103"
  },
  "78e1dd204966f3f0": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784403823,
   "company": "Albertsons Companies",
   "description": "",
   "explicit_new_grad": true,
@@ -180109,6 +180179,11 @@
    "106 W Manson RD, CHELAN, WA, 98816, US"
   ],
   "posted_at": 1784160000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784403823,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -180117,7 +180192,8 @@
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "posted <72h +6"
+   "posted <72h +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -200566,9 +200642,13 @@
   ],
   "posted_at": 1784325843,
   "posting": {
-   "analyzed_at": 1784330126,
+   "analyzed_at": 1784403817,
    "fetched": true,
    "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784403817,
+   "attempts": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -207183,7 +207263,9 @@
   ],
   "posted_at": 1784164199,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784403798,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -212619,6 +212701,18 @@
    "Arlington, VA, United States"
   ],
   "posted_at": 1784073600,
+  "posting": {
+   "analyzed_at": 1784403814,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 1,
+   "years_note": "1–3 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784403814,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -231954,9 +232048,13 @@
   ],
   "posted_at": 1783728000,
   "posting": {
-   "analyzed_at": 1784354390,
+   "analyzed_at": 1784403816,
    "fetched": true,
    "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784403816,
+   "attempts": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -244258,6 +244356,16 @@
    "San Diego, CA, United States"
   ],
   "posted_at": 1784160000,
+  "posting": {
+   "analyzed_at": 1784403817,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "ai_deferred_at": 1784403817,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -247067,7 +247175,7 @@
   ],
   "posted_at": 1784073600,
   "posting": {
-   "analyzed_at": 1784403708,
+   "analyzed_at": 1784403761,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -247076,19 +247184,26 @@
   },
   "quality": {
    "ai_deferred_at": 1784403708,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784403761,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 82,
+  "score": 72,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
    "posted <7d +2",
    "title matches your history +4",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -267800,6 +267915,18 @@
    "Arlington, VA, United States"
   ],
   "posted_at": 1784073600,
+  "posting": {
+   "analyzed_at": 1784403815,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 1,
+   "years_note": "1–3 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784403815,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -289736,6 +289863,21 @@
    "New York, NY"
   ],
   "posted_at": 1784160000,
+  "posting": {
+   "analyzed_at": 1784403799,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784403799,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role for 2026 new grad",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -297533,7 +297675,7 @@
   ],
   "posted_at": 1784246400,
   "posting": {
-   "analyzed_at": 1784403711,
+   "analyzed_at": 1784403789,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -297542,7 +297684,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784403711,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784403789,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level, 0-2 years, no senior requirements.",
+   "role_family": "other-technical",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -332691,9 +332839,13 @@
   ],
   "posted_at": 1784160000,
   "posting": {
-   "analyzed_at": 1784286216,
+   "analyzed_at": 1784403823,
    "fetched": true,
    "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784403823,
+   "attempts": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -338969,6 +339121,15 @@
    "US-TN-Pulaski"
   ],
   "posted_at": 1784160000,
+  "posting": {
+   "analyzed_at": 1784403824,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784403824,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -353341,7 +353502,7 @@
   ],
   "posted_at": 1784073600,
   "posting": {
-   "analyzed_at": 1784403709,
+   "analyzed_at": 1784403768,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -353350,19 +353511,26 @@
   },
   "quality": {
    "ai_deferred_at": 1784403709,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784403768,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1-2 years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 82,
+  "score": 72,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
    "posted <7d +2",
    "remote +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -357013,7 +357181,9 @@
   ],
   "posted_at": 1784182197,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784403797,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -360876,13 +361046,19 @@
   ],
   "posted_at": 1784038224,
   "posting": {
-   "analyzed_at": 1784403710,
+   "analyzed_at": 1784403775,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784403710,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784403775,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Data Analytics Focus, new grad role",
+   "role_family": "data",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -364009,7 +364185,7 @@
   ],
   "posted_at": 1784160000,
   "posting": {
-   "analyzed_at": 1784403706,
+   "analyzed_at": 1784403746,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 0,
@@ -364017,7 +364193,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784403706,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784403746,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0+ years exp",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -381314,6 +381496,15 @@
    "Sunnyvale, CA"
   ],
   "posted_at": 1784239729,
+  "posting": {
+   "analyzed_at": 1784403821,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784403821,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
