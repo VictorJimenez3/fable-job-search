@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='52' font-size='52'%3E🎯%3C/text%3E%3C/svg%3E">
 <title>Job Radar — Platform</title>
 <style>
   :root {
@@ -312,7 +313,7 @@ function laneOf(id, byId) {
 const ROLE_LABELS = {
   ai_ml:"AI / machine learning", swe:"Software engineering",
   data_science:"Data science", data_eng:"Data engineering",
-  analytics:"Analytics / BI", other:"Other technical",
+  analytics:"Analytics / BI", other:"Adjacent / unclassified",
 };
 function roleFamily(j) {
   const t = norm(j.title);
@@ -366,10 +367,13 @@ function isOpenRelevant(j) {
 function jobList() {
   const byId = appliedById(); const f = S.filter; const q = norm(f.q);
   let rows = Object.values(S.jobs).filter(isOpenRelevant);
+  rows = rows.filter(j=>byId[j.id] || S.web.maybe.includes(j.id) || S.web.jobs[j.id]
+    || !postedTs(j) || Date.now()/1000-postedTs(j) <= 45*86400);
   if (f.alert) rows = rows.filter(j=>j.alert_ok);
   rows = rows.filter(j=>(j.score||0) >= f.min);
   if (f.sector) rows = rows.filter(j=>j.sector===f.sector);
   if (f.role) rows = rows.filter(j=>roleFamily(j)===f.role);
+  else rows = rows.filter(j=>roleFamily(j)!=="other");
   if (f.sponsorship) rows = rows.filter(j=>sponsorStatus(j)===f.sponsorship);
   if (f.experience === "entryfit") rows = rows.filter(j=>experienceStatus(j)!=="experienced");
   else if (f.experience) rows = rows.filter(j=>experienceStatus(j)===f.experience);
@@ -513,7 +517,7 @@ function rJobs() {
       <label class="sub">min <input type="number" style="width:4.2rem" value="${S.filter.min}"
         onchange="setFilter('min',+this.value)"></label>
       <select aria-label="Role family" onchange="setFilter('role',this.value)">
-        <option value="">all target roles</option>
+        <option value="">all core roles</option>
         ${Object.entries(ROLE_LABELS).map(([k,l])=>`<option value="${k}" ${k===S.filter.role?"selected":""}>${l}</option>`).join("")}
       </select>
       <select aria-label="Sector" onchange="setFilter('sector',this.value)">
