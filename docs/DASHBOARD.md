@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-18 23:06 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
+_Last run: **2026-07-18 23:08 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -91,7 +91,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 94 🔥 | 5d | NVIDIA AI | [Backend Compiler Engineer - New College Grad 2026](https://jobright.ai/jobs/info/6a55d93505c65f7c8f4c8a73?utm_campaign=Software%20Engineering&utm_source=1103) | Santa Clara, CA, United States | big_tech | jobright |
 | 94 🔥 | 8d | Highmark Health | [Associate Data Solutions Analyst](https://highmarkhealth.wd1.myworkdayjobs.com/highmark/job/PA-Working-at-Home---Pennsylvania/Associate-Data-Solutions-Analyst_J284073) | New Mexico | healthtech | simplify |
 | 94 🔥 | 9d | Ochsner Health | [Epic Analyst or Associate - Cadence - Authorization & Referrals](https://ochsner.wd1.myworkdayjobs.com/ochsner/job/New-Orleans---New-Orleans-Region---Louisiana/IS-Epic-Analyst-or-Associate--Cadence--Authorization---Referrals-_REQ_00246907) | New Orleans, LA | healthtech | simplify |
-| 94 🔥 | 9d | OpenAI | [AI Deployment Engineer, Digital Natives](https://jobs.ashbyhq.com/openai/3254f6a7-6353-4a77-beec-f37b832c99ae) | New York City | ai_lab | ashby |
+| 94 🔥 | 10d | OpenAI | [AI Deployment Engineer, Digital Natives](https://jobs.ashbyhq.com/openai/3254f6a7-6353-4a77-beec-f37b832c99ae) | New York City | ai_lab | ashby |
 | 94 🔥 | 10d | OpenAI | [AI Deployment Engineer, Digital Natives](https://jobs.ashbyhq.com/openai/5c3a17db-62f1-4145-93b0-2f207d4d4af8) | San Francisco | ai_lab | ashby |
 | 94 🔥 | 10d | Molina Healthcare | [Associate Analyst, Provider Configuration (Remote)](https://hckd.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2038241) | United States | healthtech | oracle_orc |
 | 94 🔥 | 10d | OpenAI | [Research Engineer / Research Scientist - Personal AGI, Personality and](https://jobs.ashbyhq.com/openai/a86d9477-0277-498c-9647-02a257747607) | San Francisco | ai_lab | ashby |
@@ -137,7 +137,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 92 🔥 | 3d | OpenAI | [Founding Data Scientist, Pricing & Monetization](https://jobs.ashbyhq.com/openai/e5e1a914-79b6-4cf5-929a-01671d8ec4cd) | San Francisco | ai_lab | ashby |
 | 92 🔥 | 4d | OpenAI | [Quantitative Intelligence Analyst](https://jobs.ashbyhq.com/openai/5834b531-bb89-4471-9253-8c30bc0b26a8) | San Francisco | ai_lab | ashby |
 | 92 🔥 | 5d | Abridge | [Software Engineer - Early Career](https://jobs.ashbyhq.com/abridge/7d6ae2be-cd53-466c-8151-2dae2e87aace) | SF Office | healthtech | ashby |
-| 92 🔥 | 9d | OpenAI | [AI Deployment Engineer, Enterprise](https://jobs.ashbyhq.com/openai/01091aed-427d-4e10-8cdb-fb500cf55bb9) | San Francisco | ai_lab | ashby |
+| 92 🔥 | 10d | OpenAI | [AI Deployment Engineer, Enterprise](https://jobs.ashbyhq.com/openai/01091aed-427d-4e10-8cdb-fb500cf55bb9) | San Francisco | ai_lab | ashby |
 | 92 🔥 | 10d | OpenAI | [AI Deployment Engineer, Cyber](https://jobs.ashbyhq.com/openai/7ad26793-3f0d-4336-91e8-1aaf800cfdae) | Dublin, Ireland | ai_lab | ashby |
 | 92 🔥 | 10d | OpenAI | [AI Deployment Engineer, Cyber](https://jobs.ashbyhq.com/openai/29f15e50-1611-4256-afad-03b7df0b7aa7) | Singapore | ai_lab | ashby |
 | 92 🔥 | 10d | CVS Health | [Data Scientist - Specialty Operations](https://jobright.ai/jobs/info/6a4eb9c615b4965afd5847c8?utm_campaign=Data%20Analysis&utm_source=1103) | NY - New York, United States of America | healthtech | jobright |
