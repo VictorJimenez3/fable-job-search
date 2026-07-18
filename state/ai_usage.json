@@ -1,20 +1,163 @@
 {
  "events": [
   {
-   "at": "2026-07-18T19:23:40+00:00",
-   "completion_tokens": 23,
-   "detail": "task schema validation failed",
+   "at": "2026-07-18T19:24:36+00:00",
+   "completion_tokens": 589,
+   "detail": "",
    "endpoint": "local",
-   "latency_ms": 5635,
+   "latency_ms": 15285,
    "max_tokens": 900,
    "model": "qwen3:30b",
    "prompt_chars": 2033,
    "prompt_tokens": 452,
-   "status": "invalid",
+   "status": "ok",
    "task": "company_research"
   },
   {
-   "at": "2026-07-18T19:23:49+00:00",
+   "at": "2026-07-18T19:24:52+00:00",
+   "completion_tokens": 513,
+   "detail": "",
+   "endpoint": "local",
+   "latency_ms": 16720,
+   "max_tokens": 900,
+   "model": "qwen3:30b",
+   "prompt_chars": 2148,
+   "prompt_tokens": 508,
+   "status": "ok",
+   "task": "company_research"
+  },
+  {
+   "at": "2026-07-18T19:25:11+00:00",
+   "completion_tokens": 575,
+   "detail": "",
+   "endpoint": "local",
+   "latency_ms": 18522,
+   "max_tokens": 900,
+   "model": "qwen3:30b",
+   "prompt_chars": 2120,
+   "prompt_tokens": 503,
+   "status": "ok",
+   "task": "company_research"
+  },
+  {
+   "at": "2026-07-18T19:25:23+00:00",
+   "completion_tokens": 34,
+   "detail": "",
+   "endpoint": "local",
+   "latency_ms": 10845,
+   "max_tokens": 240,
+   "model": "qwen3:30b",
+   "prompt_chars": 5487,
+   "prompt_tokens": 1178,
+   "status": "ok",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-18T19:25:31+00:00",
+   "completion_tokens": 33,
+   "detail": "",
+   "endpoint": "local",
+   "latency_ms": 6596,
+   "max_tokens": 240,
+   "model": "qwen3:30b",
+   "prompt_chars": 4775,
+   "prompt_tokens": 1052,
+   "status": "ok",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-18T19:25:38+00:00",
+   "completion_tokens": 38,
+   "detail": "",
+   "endpoint": "local",
+   "latency_ms": 6579,
+   "max_tokens": 240,
+   "model": "qwen3:30b",
+   "prompt_chars": 6004,
+   "prompt_tokens": 1138,
+   "status": "ok",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-18T19:25:46+00:00",
+   "completion_tokens": 38,
+   "detail": "",
+   "endpoint": "local",
+   "latency_ms": 6937,
+   "max_tokens": 240,
+   "model": "qwen3:30b",
+   "prompt_chars": 6695,
+   "prompt_tokens": 1233,
+   "status": "ok",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-18T19:25:54+00:00",
+   "completion_tokens": 33,
+   "detail": "",
+   "endpoint": "local",
+   "latency_ms": 6598,
+   "max_tokens": 240,
+   "model": "qwen3:30b",
+   "prompt_chars": 5306,
+   "prompt_tokens": 1043,
+   "status": "ok",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-18T19:26:01+00:00",
+   "completion_tokens": 38,
+   "detail": "",
+   "endpoint": "local",
+   "latency_ms": 6662,
+   "max_tokens": 240,
+   "model": "qwen3:30b",
+   "prompt_chars": 5306,
+   "prompt_tokens": 1043,
+   "status": "ok",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-18T19:26:09+00:00",
+   "completion_tokens": 46,
+   "detail": "",
+   "endpoint": "local",
+   "latency_ms": 6736,
+   "max_tokens": 240,
+   "model": "qwen3:30b",
+   "prompt_chars": 6683,
+   "prompt_tokens": 1322,
+   "status": "ok",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-18T19:26:17+00:00",
+   "completion_tokens": 48,
+   "detail": "",
+   "endpoint": "local",
+   "latency_ms": 7140,
+   "max_tokens": 240,
+   "model": "qwen3:30b",
+   "prompt_chars": 6553,
+   "prompt_tokens": 1392,
+   "status": "ok",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-18T19:26:24+00:00",
+   "completion_tokens": 33,
+   "detail": "",
+   "endpoint": "local",
+   "latency_ms": 6213,
+   "max_tokens": 240,
+   "model": "qwen3:30b",
+   "prompt_chars": 4197,
+   "prompt_tokens": 946,
+   "status": "ok",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-18T19:26:25+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -27,7 +170,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T19:23:50+00:00",
+   "at": "2026-07-18T19:26:25+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -40,7 +183,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T19:23:51+00:00",
+   "at": "2026-07-18T19:26:26+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -53,7 +196,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T19:23:52+00:00",
+   "at": "2026-07-18T19:26:27+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -66,7 +209,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T19:23:53+00:00",
+   "at": "2026-07-18T19:26:28+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -79,7 +222,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T19:23:54+00:00",
+   "at": "2026-07-18T19:26:29+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -92,7 +235,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T19:23:54+00:00",
+   "at": "2026-07-18T19:26:30+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -105,7 +248,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T19:23:55+00:00",
+   "at": "2026-07-18T19:26:31+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -118,7 +261,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T19:23:56+00:00",
+   "at": "2026-07-18T19:26:32+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -131,7 +274,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T19:24:05+00:00",
+   "at": "2026-07-18T19:26:32+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -144,7 +287,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T19:24:06+00:00",
+   "at": "2026-07-18T19:26:33+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -157,7 +300,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T19:24:07+00:00",
+   "at": "2026-07-18T19:26:34+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -170,7 +313,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T19:24:08+00:00",
+   "at": "2026-07-18T19:26:35+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -183,7 +326,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T19:24:09+00:00",
+   "at": "2026-07-18T19:26:36+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -196,7 +339,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T19:24:10+00:00",
+   "at": "2026-07-18T19:26:37+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -209,7 +352,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T19:24:11+00:00",
+   "at": "2026-07-18T19:26:38+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -222,7 +365,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T19:24:12+00:00",
+   "at": "2026-07-18T19:26:39+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -235,7 +378,7 @@
    "task": "discovery"
   }
  ],
- "generated_at": 1784402652,
+ "generated_at": 1784402799,
  "history": [
   {
    "generated_at": 1784389350,
@@ -607,6 +750,25 @@
     "company_research": 3,
     "quality": 9
    }
+  },
+  {
+   "generated_at": 1784402799,
+   "logical_calls": 12,
+   "models": {
+    "local": {
+     "errors": 0,
+     "model": "qwen3:30b",
+     "ok": 12,
+     "requests": 12,
+     "tokens": 13828
+    }
+   },
+   "provider": "local",
+   "requests": 12,
+   "task_calls": {
+    "company_research": 3,
+    "quality": 9
+   }
   }
  ],
  "limits": {
@@ -616,15 +778,15 @@
  "logical_calls": 12,
  "models": {
   "local": {
-   "errors": 1,
+   "errors": 0,
    "model": "qwen3:30b",
-   "ok": 0,
-   "requests": 1,
-   "tokens": 475
+   "ok": 12,
+   "requests": 12,
+   "tokens": 13828
   }
  },
  "provider": "local",
- "requests": 1,
+ "requests": 12,
  "task_calls": {
   "company_research": 3,
   "quality": 9

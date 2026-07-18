@@ -131,13 +131,62 @@
  },
  "amazon web services aws": {
   "aliases": [],
-  "attempts": 5,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 6,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "41b6d5fba9872cda",
-  "last_attempt_at": 1784402614,
+  "generated_at": 1784402660,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "c454ca38dc"
+   ],
+   "value": "Technical learning and career growth without sacrificing personal time, as emphasized by the innovative tech culture and fast-paced environment."
+  },
+  "last_attempt_at": 1784402660,
   "last_evidence_at": 1784389818,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "c454ca38dc"
+   ],
+   "value": "Austin, TX (onsite)"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Amazon Web Services (AWS)",
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789586660,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "c454ca38dc"
+   ],
+   "value": "10001+ employees"
+  },
   "sources": [
    {
     "content_sha": "9fa76f0d7e2d7fd3",
@@ -150,7 +199,36 @@
     "url": "https://jobright.ai/jobs/info/695496685bb7de448ef78f90?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "c454ca38dc"
+   ],
+   "value": "H1B Sponsorship available"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c454ca38dc"
+   ],
+   "value": "AWS is a leading cloud platform innovating in silicon and software solutions, founded in 2002 in Seattle, Washington, with over 10,000 employees."
+  },
+  "synthesized_evidence_sha": "41b6d5fba9872cda",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "c454ca38dc"
+   ],
+   "value": "Silicon and software solutions for machine learning acceleration"
+  },
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "c454ca38dc"
+   ],
+   "value": "A top-tier AI or data science role with high new-grad pay ($104K-$185K/yr) in a fast, innovative tech culture, avoiding slow bureaucracy; mission-driven with respect for work-life balance through sane hours and guaranteed shutdowns, avoiding toxic environments."
+  }
  },
  "amigo ai": {
   "aliases": [],
@@ -1413,13 +1491,68 @@
  },
  "nuro": {
   "aliases": [],
-  "attempts": 4,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 5,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "1eee46d8e1"
+   ],
+   "value": "Self-driving technology company providing autonomy solutions for delivery and transportation services."
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "e25cb740e67fffa6",
-  "last_attempt_at": 1784402614,
+  "generated_at": 1784402660,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "1eee46d8e1"
+   ],
+   "value": "Candidates should prepare for a role in autonomy visualization software engineering, emphasizing technical skills and innovation in self-driving systems."
+  },
+  "last_attempt_at": 1784402660,
   "last_evidence_at": 1784400836,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "1eee46d8e1"
+   ],
+   "value": "Mountain View, CA (onsite)"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "1eee46d8e1"
+   ],
+   "value": "Making autonomy accessible"
+  },
   "name": "Nuro",
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "1eee46d8e1"
+   ],
+   "value": "Autonomy software for self-driving vehicles, specifically targeting delivery and transportation services."
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789586660,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "1eee46d8e1"
+   ],
+   "value": "501-1000 employees"
+  },
   "sources": [
    {
     "content_sha": "df1aff351e2cfe22",
@@ -1432,7 +1565,36 @@
     "url": "https://jobright.ai/jobs/info/6a0711404a0a6a7e7d822e62?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "1eee46d8e1"
+   ],
+   "value": "H1B Sponsorship offered; track record of sponsorship, but not guaranteed for this role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1eee46d8e1"
+   ],
+   "value": "Nuro is a self-driving technology company founded in 2016, focused on making autonomy accessible with a mission to transform urban delivery and transportation."
+  },
+  "synthesized_evidence_sha": "e25cb740e67fffa6",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "1eee46d8e1"
+   ],
+   "value": "Autonomy visualization software engineering, focusing on self-driving vehicle systems."
+  },
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "1eee46d8e1"
+   ],
+   "value": "Nuro offers a top-tier AI/data science role with high new-grad pay ($160K-$241K) in a fast, innovative tech culture, avoiding slow bureaucracy. The company emphasizes mission-driven work with a focus on work-life balance and technical growth without burnout."
+  }
  },
  "nvidia": {
   "aliases": [],
@@ -1701,13 +1863,70 @@
  },
  "oura": {
   "aliases": [],
-  "attempts": 5,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 6,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "48c78afa07"
+   ],
+   "value": "Selling wearable health technology (Oura Ring) directly to consumers, with a focus on health and wellness data insights."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "48c78afa07"
+   ],
+   "value": "Individual consumers seeking health and wellness insights through wearable technology."
+  },
+  "error": "",
   "evidence_sha": "afd7fed4a89dd750",
-  "last_attempt_at": 1784402614,
+  "generated_at": 1784402660,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "48c78afa07"
+   ],
+   "value": "Focus on advancing physiological feature pipeline and data science for health insights, with emphasis on innovation and work-life balance."
+  },
+  "last_attempt_at": 1784402660,
   "last_evidence_at": 1784389818,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "48c78afa07"
+   ],
+   "value": "Hybrid locations in Helsinki, Uusimaa; Oulu, North Ostrobothnia"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "48c78afa07"
+   ],
+   "value": "To empower every person to own their inner potential."
+  },
   "name": "Oura",
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "48c78afa07"
+   ],
+   "value": "Oura Ring, a wearable ring that tracks physiological data to provide health insights."
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789586660,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "48c78afa07"
+   ],
+   "value": "Quickly growing company"
+  },
   "sources": [
    {
     "content_sha": "ce23c6dcf9fc5020",
@@ -1720,7 +1939,34 @@
     "url": "https://job-boards.greenhouse.io/oura/jobs/4287026009"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "48c78afa07"
+   ],
+   "value": "Oura is a rapidly growing health technology company focused on empowering individuals to optimize their health and well-being through wearable technology and data-driven insights."
+  },
+  "synthesized_evidence_sha": "afd7fed4a89dd750",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "48c78afa07"
+   ],
+   "value": "Advancing physiological feature pipeline for product science team, focusing on data-driven health insights."
+  },
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "48c78afa07"
+   ],
+   "value": "A top-tier AI/data science role at a rapidly growing health tech company with a mission-driven focus, offering high new-grad pay and a fast, innovative culture. The company emphasizes work-life balance through 'sanity' in hours and guaranteed shutdowns, avoiding burnout."
+  }
  },
  "palantir technologies": {
   "aliases": [],
