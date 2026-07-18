@@ -131,7 +131,10 @@
  },
  "amazon web services aws": {
   "aliases": [],
+  "attempts": 1,
+  "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "41b6d5fba9872cda",
+  "last_attempt_at": 1784402442,
   "last_evidence_at": 1784389818,
   "name": "Amazon Web Services (AWS)",
   "schema_v": 1,
@@ -1695,7 +1698,10 @@
  },
  "oura": {
   "aliases": [],
+  "attempts": 1,
+  "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "afd7fed4a89dd750",
+  "last_attempt_at": 1784402442,
   "last_evidence_at": 1784389818,
   "name": "Oura",
   "schema_v": 1,
@@ -2020,10 +2026,60 @@
  },
  "primefocus health": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "13aa9c7ef0aab249",
+  "generated_at": 1784402442,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784402442,
   "last_evidence_at": 1784397120,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "bda83135f6"
+   ],
+   "value": "Huntington, WV (hybrid), San Francisco headquarters"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Primefocus Health",
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789586442,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "bda83135f6"
+   ],
+   "value": "Seed-stage startup"
+  },
   "sources": [
    {
     "content_sha": "2ed85536b52a1fc8",
@@ -2036,7 +2092,32 @@
     "url": "https://jobright.ai/jobs/info/6a534faa8576ec69c014f5a3?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "bda83135f6"
+   ],
+   "value": "Primefocus Health is a seed-stage healthtech startup headquartered in San Francisco, focused on creating innovative technology platforms for healthcare providers. They are seeking a Software Engineer - Solutions with 1+ years of experience for a hybrid role in Huntington, WV, with a salary range of $60K-$90K/yr."
+  },
+  "synthesized_evidence_sha": "13aa9c7ef0aab249",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "bda83135f6"
+   ],
+   "value": "Creating innovative technology platforms for healthcare providers"
+  },
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  }
  },
  "qualcomm": {
   "aliases": [],
