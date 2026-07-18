@@ -1,10 +1,60 @@
 {
  "amazon": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "36cb5d3ae3602bc7",
+  "generated_at": 1784389789,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784389789,
   "last_evidence_at": 1784389660,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "6605717d52"
+   ],
+   "value": "Sunnyvale, CA (plus 3 more unspecified locations)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "6605717d52"
+   ],
+   "value": "Focused on customer obsession and innovation."
+  },
   "name": "Amazon",
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789573789,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "16e9ef6e20b3ff6d",
@@ -17,7 +67,32 @@
     "url": "https://jobright.ai/jobs/info/6a52db4b9fbdab22fe13d4a7?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "6605717d52"
+   ],
+   "value": "Amazon is a leading technology company focused on customer obsession and innovation."
+  },
+  "synthesized_evidence_sha": "36cb5d3ae3602bc7",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "6605717d52"
+   ],
+   "value": "Software development engineering roles (e.g., Amazon Leo team)."
+  },
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  }
  },
  "amazon web services aws": {
   "aliases": [],
@@ -151,10 +226,62 @@
  },
  "neuralink": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "ad7e445bd495003c",
+  "generated_at": 1784389789,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784389789,
   "last_evidence_at": 1784389660,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "9a50d36e49"
+   ],
+   "value": "Fremont, California, USA."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Neuralink",
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "9a50d36e49"
+   ],
+   "value": "Brain-computer interface (BCI) applications."
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789573789,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "9a50d36e49"
+   ],
+   "value": "201-500 employees."
+  },
   "sources": [
    {
     "content_sha": "c0e8732970094ec3",
@@ -167,14 +294,98 @@
     "url": "https://jobright.ai/jobs/info/6a52e53a8ef95364ead904ac?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "9a50d36e49"
+   ],
+   "value": "The company has a track record of offering H1B sponsorships, though this is not guaranteed for specific roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "9a50d36e49"
+   ],
+   "value": "Neuralink is a company founded in 2016, developing brain-computer interface applications."
+  },
+  "synthesized_evidence_sha": "ad7e445bd495003c",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "9a50d36e49"
+   ],
+   "value": "Software engineering roles involve full-stack development, native desktop, Android, and iOS development, alongside operating system knowledge."
+  },
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  }
  },
  "nvidia": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "e3f7b0e21dc9cc1f",
+  "generated_at": 1784389789,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "8dc7139b1a",
+    "29d0533621"
+   ],
+   "value": "Probe details on safety culture, work-life balance, relocation expectations, and whether technical work includes plant pilots, manufacturing labs, scale-up sustainability, and process engineering aspects aligned with chemical engineering priorities."
+  },
+  "last_attempt_at": 1784389789,
   "last_evidence_at": 1784389660,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "29d0533621",
+    "8dc7139b1a"
+   ],
+   "value": "Santa Clara, California, USA."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "NVIDIA",
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "8dc7139b1a",
+    "29d0533621"
+   ],
+   "value": "GPUs, hardware/software co-design, datacenter-scale AI workload deployments, and tools powered by artificial intelligence."
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789573789,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "29d0533621"
+   ],
+   "value": "Founded in 1993, headquartered in Santa Clara, California, with 10001+ employees."
+  },
   "sources": [
    {
     "content_sha": "2c7c3d54feae3d96",
@@ -207,7 +418,39 @@
     "url": "https://jobright.ai/jobs/info/6a30399fafabbe533fb89dd8?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "29d0533621"
+   ],
+   "value": "NVIDIA has a track record of offering H1B sponsorships, though this does not guarantee sponsorship for specific roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "29d0533621",
+    "8dc7139b1a"
+   ],
+   "value": "NVIDIA is a computing platform company operating at the intersection of graphics, HPC, and AI, increasingly known as 'the AI computing company'."
+  },
+  "synthesized_evidence_sha": "e3f7b0e21dc9cc1f",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "8dc7139b1a",
+    "29d0533621"
+   ],
+   "value": "Hands-on development focusing on kernel generation, computational graph optimizations, hardware/software co-design, datacenter advancement, and AI tool development."
+  },
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "8dc7139b1a",
+    "51550e8a8a"
+   ],
+   "value": "Role offers hands-on technical development in AI hardware/software co-design, partnering with leading experts across research, software, and hardware divisions—supporting your goal for meaningful technical work, accessible mentorship, and exposure to real technical processes."
+  }
  },
  "polymarket": {
   "aliases": [],
