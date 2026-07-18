@@ -1861,7 +1861,7 @@
   "url": "https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/IL---Waukegan/Patient-Relations-Analyst_R0950858"
  },
  "01598feaf54bf1f0": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Adtran",
   "description": "",
@@ -1874,22 +1874,29 @@
   ],
   "posted_at": 1784160000,
   "posting": {
-   "analyzed_at": 1784405014,
+   "analyzed_at": 1784405073,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784405014,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784405073,
+   "live": true,
+   "new_grad": "no",
+   "reason": "3+ years experience required",
+   "role_family": "swe",
+   "years_required": 3
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 66,
+  "score": 46,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <72h +6"
+   "posted <72h +6",
+   "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "other",
   "source": "simplify",
@@ -9529,14 +9536,20 @@
   ],
   "posted_at": 1784246400,
   "posting": {
-   "analyzed_at": 1784405010,
+   "analyzed_at": 1784405043,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784405010,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784405043,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role, C++ required",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -26918,7 +26931,7 @@
   ],
   "posted_at": 1784246400,
   "posting": {
-   "analyzed_at": 1784405011,
+   "analyzed_at": 1784405051,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship",
@@ -26927,16 +26940,23 @@
   },
   "quality": {
    "ai_deferred_at": 1784405011,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784405051,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1-3 years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 66,
+  "score": 56,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <72h +6"
+   "posted <72h +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -28903,11 +28923,15 @@
   ],
   "posted_at": 1783987200,
   "posting": {
-   "analyzed_at": 1784292069,
+   "analyzed_at": 1784405124,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 2,
    "years_note": "2-4 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784405124,
+   "attempts": 0
   },
   "remote": true,
   "rules_v": 3,
@@ -31574,9 +31598,18 @@
   ],
   "posted_at": 1782972129,
   "posting": {
-   "analyzed_at": 1784385202,
+   "analyzed_at": 1784405113,
    "fetched": true,
    "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784405113,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role with internship experience required.",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -32449,7 +32482,7 @@
   ],
   "posted_at": 1784246400,
   "posting": {
-   "analyzed_at": 1784405012,
+   "analyzed_at": 1784405058,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 1,
@@ -32457,16 +32490,23 @@
   },
   "quality": {
    "ai_deferred_at": 1784405012,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784405058,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 66,
+  "score": 56,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <72h +6"
+   "posted <72h +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -49987,6 +50027,9 @@
    "Miami, FL +1"
   ],
   "posted_at": 1784130042,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "$338k/yr",
@@ -55593,12 +55636,12 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 100,
+  "score": 94,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:healthtech +16",
-   "posted <24h +12",
+   "posted <72h +6",
    "you've engaged with CVS Health +8",
    "title matches your history +4"
   ],
@@ -71689,14 +71732,20 @@
   ],
   "posted_at": 1784160000,
   "posting": {
-   "analyzed_at": 1784405015,
+   "analyzed_at": 1784405081,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784405015,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784405081,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New Grad, Entry Level",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -72296,6 +72345,18 @@
    "Colorado Springs, CO, United States"
   ],
   "posted_at": 1784073600,
+  "posting": {
+   "analyzed_at": 1784405126,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 1,
+   "years_note": "Minimum 1 year"
+  },
+  "quality": {
+   "ai_deferred_at": 1784405126,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -79342,6 +79403,18 @@
    "El Segundo, California, United States"
   ],
   "posted_at": 1784073600,
+  "posting": {
+   "analyzed_at": 1784405127,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 1,
+   "years_note": "At least one year"
+  },
+  "quality": {
+   "ai_deferred_at": 1784405127,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -80229,11 +80302,11 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 80,
+  "score": 74,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <24h +12",
+   "posted <72h +6",
    "title matches your history +4",
    "SHPE 2026 exhibitor +4"
   ],
@@ -86933,6 +87006,18 @@
    "Chicago, Illinois, United States"
   ],
   "posted_at": 1784073600,
+  "posting": {
+   "analyzed_at": 1784405122,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 1,
+   "years_note": "One to three years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784405122,
+   "attempts": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -102303,11 +102388,11 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 76,
+  "score": 70,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <24h +12",
+   "posted <72h +6",
    "title matches your history +4"
   ],
   "sector": "other",
@@ -113155,14 +113240,20 @@
   ],
   "posted_at": 1784160000,
   "posting": {
-   "analyzed_at": 1784405017,
+   "analyzed_at": 1784405089,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
    "ai_deferred_at": 1784405017,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784405089,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "SWE 0: No experience required",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -128956,7 +129047,7 @@
   ],
   "posted_at": 1784160000,
   "posting": {
-   "analyzed_at": 1784405009,
+   "analyzed_at": 1784405035,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "unable to sponsor",
@@ -128965,7 +129056,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784405009,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784405035,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role with no experience req.",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -129031,8 +129128,9 @@
   "url": "https://jobright.ai/jobs/info/6a55634d377f983ce8a99db8?utm_campaign=Software%20Engineering&utm_source=1103"
  },
  "564eb24c2f7581ab": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784405112,
   "company": "CrossLink Professional Tax Solutions",
   "description": "",
   "explicit_new_grad": false,
@@ -129043,6 +129141,11 @@
    "Orlando, FL, United States"
   ],
   "posted_at": 1784073600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784405112,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -129051,7 +129154,8 @@
    "base 40",
    "role:swe +20",
    "posted <7d +2",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -132856,11 +132960,11 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 76,
+  "score": 70,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <24h +12",
+   "posted <72h +6",
    "title matches your history +4"
   ],
   "sector": "other",
@@ -132944,13 +133048,19 @@
   ],
   "posted_at": 1784246400,
   "posting": {
-   "analyzed_at": 1784405008,
+   "analyzed_at": 1784405027,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784405008,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784405027,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad position for 2026 class",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -160119,6 +160229,9 @@
    "Houston, TX +2"
   ],
   "posted_at": 1784130042,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "$338k/yr",
@@ -167051,6 +167164,16 @@
    "Somerville, MA"
   ],
   "posted_at": 1784073600,
+  "posting": {
+   "analyzed_at": 1784405127,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "ai_deferred_at": 1784405127,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -174668,6 +174791,15 @@
    "Louisville, KY"
   ],
   "posted_at": 1780740248,
+  "posting": {
+   "analyzed_at": 1784405123,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784405123,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -226188,7 +226320,9 @@
   ],
   "posted_at": 1784250692,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784405043,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -271973,7 +272107,7 @@
   ],
   "posted_at": 1784246400,
   "posting": {
-   "analyzed_at": 1784405013,
+   "analyzed_at": 1784405066,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 0,
@@ -271981,7 +272115,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784405013,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784405066,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role with 0-3 years",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -290098,11 +290238,15 @@
   ],
   "posted_at": 1781361769,
   "posting": {
-   "analyzed_at": 1784279115,
+   "analyzed_at": 1784405121,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 2,
    "years_note": "2 years of experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784405121,
+   "attempts": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -290929,6 +291073,15 @@
    "New York City, NY, United States"
   ],
   "posted_at": 1784073600,
+  "posting": {
+   "analyzed_at": 1784405128,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784405128,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -322940,14 +323093,31 @@
    "Guelph, ON, CA"
   ],
   "posted_at": 1784160000,
+  "posting": {
+   "analyzed_at": 1784405097,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1–3 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784405097,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 66,
+  "score": 56,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <72h +6"
+   "posted <72h +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -332130,19 +332300,29 @@
   ],
   "posted_at": 1784160000,
   "posting": {
-   "analyzed_at": 1784270134,
+   "analyzed_at": 1784405104,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "not able to sponsor"
   },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784405104,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ year experience required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 66,
+  "score": 56,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <72h +6"
+   "posted <72h +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "simplify",
@@ -370033,6 +370213,15 @@
    "Nashville, TN"
   ],
   "posted_at": 1781906909,
+  "posting": {
+   "analyzed_at": 1784405125,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784405125,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
