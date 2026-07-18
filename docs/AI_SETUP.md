@@ -1,107 +1,95 @@
-# AI setup runbook — turn the radar's LLM layer ON
+# AI setup and operating policy
 
-**For: Victor + any local coding-agent session on the Mac.** Written 2026-07-17
-and operationally rechecked 2026-07-18. Everything
-deterministic already runs without AI (gates, scoring, posting scraping,
-sponsorship/years extraction, alerts). This doc is the checklist to light up
-the AI layer, which is currently **fully OFF in the cloud** — verified from
-live workflow env + state: `ANTHROPIC_API_KEY` is empty in Actions, 0 of
-the 11,010 records have an `llm_note`, and quality verdicts currently come from
-the Mac companion rather than Actions.
+The cloud AI layer is configured. It is optional: crawling, gates, scoring,
+posting facts, alerts, and tracking all keep working when every model is down.
 
-## What turns on when a provider exists
+## Live model registry
 
-| Feature | Where it runs | What you get |
+Repository **secrets**:
+
+- `NVIDIA_GLM_52_API_KEY`
+- `NVIDIA_DEEPSEEK_V4_PRO_API_KEY`
+- `NVIDIA_NEMOTRON_3_ULTRA_550B_A55B_API_KEY`
+- `NVIDIA_KIMI_K2_6_API_KEY`
+
+Repository **variables**:
+
+- `NVIDIA_API_BASE_URL=https://integrate.api.nvidia.com/v1`
+- `NVIDIA_GLM_52_MODEL=z-ai/glm-5.2`
+- `NVIDIA_DEEPSEEK_V4_PRO_MODEL=deepseek-ai/deepseek-v4-pro`
+- `NVIDIA_NEMOTRON_3_ULTRA_550B_A55B_MODEL=nvidia/nemotron-3-ultra-550b-a55b`
+- `NVIDIA_KIMI_K2_6_MODEL=moonshotai/kimi-k2.6`
+
+The model strings and base URL are variables because they are not credentials;
+keys are secrets. A ChatGPT Pro subscription does not include OpenAI API
+credits, and this radar does not need an OpenAI key.
+
+## Routing and limits
+
+`radar/llm.py` makes one logical request and tries at most two healthy
+providers. It retries a transient response once, honors `Retry-After` (capped),
+then falls through. 401/403/404, rate limits, empty answers, and invalid schemas
+open task-local cooldowns instead of being hammered repeatedly.
+
+| Task | Preferred order | Default output cap |
 |---|---|---|
-| Re-rank + application angle (`brief.rerank`) | every crawl (needs `ANTHROPIC_API_KEY`) | borderline jobs re-ordered semantically; each alert gets a one-line "angle" note |
-| Quality verdicts (`quality.verify`) | `enrich` (nightly CI or Mac 2h cycle) | LLM confirms new-grad / role-family from real posting text; wrong roles demoted |
-| Pasted-JD grading (`quality.verify_pasted`) | `enrich` | JDs pasted into the platform's Role-fit tab get a verdict |
-| Culture dossiers (`culture.enrich_missing`) | `enrich` | industry/prestige/wlb/vibe/fit per company |
-| Company scout (`discovery.llm_scout`) | `enrich`, weekly | employers aggregators miss (the WHOOP class) |
+| Job quality / pasted JD | GLM → DeepSeek → Nemotron → Kimi | 240 tokens |
+| Grounded company research | Nemotron → GLM → DeepSeek → Kimi | 900 tokens |
+| Batch re-rank | GLM → DeepSeek → Nemotron → Kimi | 1,200 tokens |
+| Scout | Nemotron → GLM → DeepSeek → Kimi | 600 tokens |
+| Strategy note | Nemotron → GLM → DeepSeek → Kimi | 300 tokens |
 
-Provider resolution (`radar/llm.py`): `ANTHROPIC_API_KEY` → Anthropic
-(model `claude-haiku-4-5` from profile.yaml); else `LLM_BASE_URL` → any
-OpenAI-compatible endpoint (`LLM_API_KEY`, `LLM_MODEL`); else heuristics
-only. Free-tier rate limits are handled — `llm.complete()` retries
-429/500/503 honoring `Retry-After`.
+Kimi is deliberately last because its key now authenticates but the NIM model
+endpoint has returned intermittent `404 model unavailable`. It stays configured
+as a canary/fallback rather than consuming every fourth request.
 
-## Step 1 — create ONE free key (Victor, ~3 minutes)
+Cloud budgets:
 
-Pick one:
+- main nightly enrich: 12 logical calls, 18 provider requests, 6 quality jobs,
+  3 company briefs;
+- ChemE nightly enrich: 8 logical calls, 12 provider requests, 3 quality jobs,
+  3 company briefs;
+- explicit pasted JDs and tracked roles are processed ahead of cold backlog;
+- the four keys are not exposed to the 30-minute crawl, so usage cannot scale
+  with the number of postings found.
 
-**Option A · NVIDIA NIM (free, hosted open models)**
-1. Sign in at https://build.nvidia.com → Get API Key → copy the `nvapi-…` key.
-2. Secrets to add:
-   - `LLM_BASE_URL` = `https://integrate.api.nvidia.com/v1`
-   - `LLM_API_KEY` = `nvapi-…`
-   - `LLM_MODEL` = `meta/llama-3.3-70b-instruct` (any hosted instruct model works)
+Override knobs are `RADAR_AI_MAX_CALLS`, `RADAR_AI_MAX_REQUESTS`,
+`RADAR_AI_PROVIDER_ATTEMPTS`, `RADAR_AI_TASK_<TASK>_LIMIT`,
+`RADAR_QUALITY_LIMIT`, and `RADAR_COMPANY_RESEARCH_LIMIT`.
 
-**Option B · Google AI Studio (free Gemini tier)**
-1. https://aistudio.google.com/apikey → Create API key.
-2. Secrets:
-   - `LLM_BASE_URL` = `https://generativelanguage.googleapis.com/v1beta/openai`
-   - `LLM_API_KEY` = the AI Studio key
-   - `LLM_MODEL` = `gemini-2.5-flash`
+## Verify and observe
 
-**Option C · Anthropic (paid, best quality, also enables crawl-time rerank)**
-- Single secret: `ANTHROPIC_API_KEY`. (A/B only power `enrich`; the crawl's
-  rerank path currently reads only the Anthropic key.)
+Run **Actions → nvidia-verify → Run workflow**. It tests all four models even
+when one fails and writes a matrix to the workflow summary. Authentication or
+configuration failures fail the workflow; 404/429/5xx are reported as endpoint
+availability warnings as long as another model is healthy.
 
-## Step 2 — add the secrets
+Run **enrich** for the main board or **cheme-enrich** for ChemE. The platform's
+AI tab reads `state/ai_usage.json` and shows task counts, model successes/errors,
+reported tokens, and the hard budget. Telemetry never stores prompts or keys.
 
-GitHub → repo **Settings → Secrets and variables → Actions → New repository
-secret**. `enrich.yml` already wires all four names — no workflow edits
-needed.
+## Grounding rules
 
-## Step 3 — verify (Victor or a local coding agent)
+- Model memory is not a source. Company briefs use only source blocks captured
+  from official postings and every displayed factual claim cites a source ID.
+- Unsupported claims become **Not confirmed**. Posting marketing copy cannot
+  prove WLB, compensation, size, or sponsorship unless it states the fact.
+- Legacy `source: est.` Culture Compass entries remain visibly labeled but do
+  not move ranking. Only the human-curated seed can affect culture score.
+- AI can demote/annotate through audited reasons; deterministic gates remain
+  authoritative and every caller has a heuristic fallback.
 
-1. Actions → **enrich** → Run workflow (branch: the default radar branch).
-2. In the run log expect: `enrich: generated N culture dossier(s) via
-   openai-compatible` (or `anthropic`), `quality pass … verified N new
-   job(s)` — and NOT "no LLM provider configured".
-3. Next day, `state/jobs.json` should show fresh `quality.checked_at`
-   timestamps and (option C) `llm_note` strings appearing after crawls.
-4. Optional once verified: bump `enrich.yml` cron from nightly
-   (`20 7 * * *`) to every 6 h.
+## Local Ollama lane
 
-## Mac companion health check (the free local path)
-
-The Mac does the same enrich cycle with Ollama whenever it's awake — no key
-needed. It produced a successful enrichment commit on 2026-07-18; use these
-checks if it stops advancing state:
+The Mac companion still runs Ollama every two hours while awake. A local
+OpenAI-compatible URL is preferred automatically when present, and Ollama's
+native endpoint unloads the model after each call. Company-research and AI
+usage caches are included in the companion's push-race merge.
 
 ```bash
-launchctl list | grep jobradar          # com.jobradar.enrich loaded?
-tail -20 ~/.jobradar/logs/enrich.log    # last cycle + errors
-ollama ps                               # should be EMPTY between cycles
+launchctl list | grep jobradar
+tail -30 ~/.jobradar/logs/enrich.log
+ollama ps                 # normally empty between calls
 ```
 
-If the launchd job is gone, re-run `scripts/mac-companion/install.sh`.
-Cloud key and Mac coexist fine — verdicts are cached per job (`jd_sha` /
-attempt caps mean no double spend), and `merge_state.py` reconciles pushes.
-
-## For a local coding-agent session — read first, then next steps
-
-Read order: `AGENTS.md` → `CLAUDE.md` (legacy name, shared rules) →
-`README.md` → `DECISIONS.md` (#30–#35 are the current era) →
-`docs/CLI_HANDOFF.md` → `profile.yaml`. House rules that bind you:
-deterministic scoring with reasons strings; LLM adjusts, never deletes;
-demote-don't-delete; never scrape LinkedIn; `docs/platform/index.html`
-stays a byte copy of `webapp/index.html`; `git pull --rebase` before every
-push (CI commits every ~30 min).
-
-After the key works, the queued AI work in priority order:
-1. **Watch one enrich cycle end-to-end** — marquee suppression now applies
-   (DECISIONS #31), so expect some Anthropic/OpenAI demotions; sanity-check
-   a few verdicts against the actual postings.
-2. **Pasted-JD flow** — paste one JD in the platform's Role-fit tab, run
-   enrich, confirm the verdict lands with `source: "pasted"`.
-3. **CV auto-tailoring** — ON HOLD until Victor fleshes out
-   `CV/cv_full.tex` (Mac-only, never committed — DECISIONS #29).
-4. **Posting ↔ profile RAG** (ROADMAP, parked): embedding similarity
-   between scraped posting text (now accumulating in the quality pass) and
-   CV/profile bullets as a ranking signal — local-first via Ollama
-   embeddings (e.g. `nomic-embed-text`), similarity logged as a reason
-   line to stay auditable. Wait until a few weeks of scraped text exists.
-5. Cosmetic: `python -m radar.main repair-feedback` once (stopworded taste
-   tokens are already inert at read time; this just cleans the file).
+CV-aware work and semantic/vector/RAG work remain intentionally deferred.

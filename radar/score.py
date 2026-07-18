@@ -333,7 +333,10 @@ def score(job: Job, feedback: dict, now: int | None = None) -> None:
     # culture fit (±6) when a dossier exists for this company
     from . import culture as _culture
     d = _culture.dossier_for(job.company, _culture_cache())
-    if d and d.get("fit") is not None:
+    # Legacy AI culture estimates were generated without evidence. They stay
+    # visible as clearly-labeled guesses but never move ranking; only the
+    # human-curated seed is trusted for this subjective score adjustment.
+    if d and d.get("source") == "seed" and d.get("fit") is not None:
         cf = round((d["fit"] - 50) / 50 * 6)
         if cf:
             pts += cf

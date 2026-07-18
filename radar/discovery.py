@@ -218,7 +218,7 @@ def llm_scout(registry: dict, limit: int = 10) -> int:
     from . import llm
     if not llm.available():
         return 0
-    text = llm.complete(SCOUT_PROMPT, max_tokens=900, json_mode=True)
+    text = llm.complete(SCOUT_PROMPT, max_tokens=600, json_mode=True, task="discovery")
     if not text:
         return 0
     try:

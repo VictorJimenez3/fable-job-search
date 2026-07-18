@@ -21,7 +21,7 @@ import time
 from . import state
 from .config import env
 from .models import norm
-from .notion_sync import sync_applied
+from .notion_sync import sync_applied, sync_from_notion
 from .score import update_feedback_from_applied
 
 CHECKED = re.compile(r"^- \[[xX]\] .*?<!--radar:([a-f0-9]{16})-->", re.M)
@@ -57,7 +57,7 @@ def culture_generate_one(name: str, dossiers: dict) -> bool:
         return False
     text = llm.complete(culture._GEN_PROMPT.format(
         criteria=profile().get("culture_criteria", ""), company=name),
-        max_tokens=500, json_mode=True)
+        max_tokens=350, json_mode=True, task="company_research")
     if not text:
         return False
     try:
@@ -193,12 +193,14 @@ def handle_event(event_path: str) -> None:
                 changed += record_applied(job, applied, fb, via="issue-checkbox", stage="saved")
                 shortlist[:] = [s for s in shortlist if s["id"] != job["id"]]
 
+    pulled = sync_from_notion(applied)
     synced = sync_applied(applied)
-    if changed or synced:
+    if changed or pulled or synced:
         state.save("applied.json", applied)
         state.save("shortlist.json", shortlist)
         state.save("feedback.json", fb)
-        print(f"applied: recorded {changed} change(s), synced {synced} to Notion")
+        print(f"applied: recorded {changed} change(s), pulled {pulled}, "
+              f"synced {synced} to Notion")
     else:
         print("applied: nothing new")
     if opened_cmd:
@@ -270,13 +272,15 @@ def reconcile_checkboxes() -> int:
         if job:
             changed += record_applied(job, applied, fb, via="reconcile", stage="saved")
             shortlist[:] = [s for s in shortlist if s["id"] != jid]
+    pulled = sync_from_notion(applied)
     synced = sync_applied(applied)
-    if changed or synced:
+    if changed or pulled or synced:
         state.save("applied.json", applied)
         state.save("shortlist.json", shortlist)
         state.save("feedback.json", fb)
     print(f"reconcile: {len(checked)} checked boxes across all issues, "
-          f"{changed} newly tracked, {synced} synced to Notion")
+          f"{changed} newly tracked, {pulled} stage change(s) pulled, "
+          f"{synced} synced to Notion")
     return 0
 
 

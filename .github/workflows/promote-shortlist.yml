@@ -22,6 +22,12 @@ jobs:
       - name: Promote every existing checkbox selection and write it to Notion
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          TRACKER_BACKEND: ${{ vars.TRACKER_BACKEND }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+          GOOGLE_SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
+          GOOGLE_SHEET_TAB: ${{ vars.GOOGLE_SHEET_TAB }}
         run: python -m radar.main promote-shortlist
       - name: Commit state
         run: |

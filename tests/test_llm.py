@@ -84,3 +84,59 @@ def test_persistent_429_still_degrades_to_none(monkeypatch):
     monkeypatch.setattr(llm.time, "sleep", lambda s: None)
     assert llm.complete("grade this") is None
     assert srv.calls == 1 + llm._MAX_RETRIES  # bounded, no spin
+
+
+def _named_env(monkeypatch):
+    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    monkeypatch.delenv("LLM_BASE_URL", raising=False)
+    monkeypatch.setenv("NVIDIA_API_BASE_URL", "https://integrate.api.nvidia.com/v1")
+    monkeypatch.setenv("NVIDIA_GLM_52_API_KEY", "glm-secret")
+    monkeypatch.setenv("NVIDIA_GLM_52_MODEL", "z-ai/glm-5.2")
+    monkeypatch.setenv("NVIDIA_DEEPSEEK_V4_PRO_API_KEY", "deep-secret")
+    monkeypatch.setenv("NVIDIA_DEEPSEEK_V4_PRO_MODEL", "deepseek-ai/deepseek-v4-pro")
+
+
+def test_named_router_falls_back_after_unavailable_model(monkeypatch):
+    _named_env(monkeypatch)
+    seen = []
+
+    def post(url, **kwargs):
+        model = kwargs["json"]["model"]
+        seen.append(model)
+        return _Resp(404 if model.startswith("z-ai/") else 200)
+
+    monkeypatch.setattr(llm.requests, "post", post)
+    assert llm.complete("grade", task="quality") == "graded"
+    assert seen == ["z-ai/glm-5.2", "deepseek-ai/deepseek-v4-pro"]
+    report = llm.usage_report()
+    assert report["requests"] == 2 and report["models"]["nvidia:deepseek"]["ok"] == 1
+
+
+def test_budget_is_hard_and_telemetry_never_contains_keys(monkeypatch):
+    _named_env(monkeypatch)
+    monkeypatch.setenv("RADAR_AI_MAX_CALLS", "1")
+    monkeypatch.setattr(llm.requests, "post", lambda *a, **k: _Resp(200))
+    assert llm.complete("first", task="quality") == "graded"
+    assert llm.complete("second", task="quality") is None
+    report = llm.usage_report()
+    assert report["logical_calls"] == 1
+    assert report["events"][-1]["status"] == "budget_skipped"
+    serialized = str(report)
+    assert "glm-secret" not in serialized and "deep-secret" not in serialized
+
+
+def test_schema_failure_falls_through_within_one_logical_call(monkeypatch):
+    _named_env(monkeypatch)
+    responses = iter([
+        _Resp(200),
+        _Resp(200),
+    ])
+    monkeypatch.setattr(llm.requests, "post", lambda *a, **k: next(responses))
+    seen = {"n": 0}
+
+    def valid(text):
+        seen["n"] += 1
+        return seen["n"] == 2
+
+    assert llm.complete("json", task="quality", validator=valid) == "graded"
+    assert llm.usage_report()["logical_calls"] == 1

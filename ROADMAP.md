@@ -3,42 +3,44 @@
 The dream-system backlog. Each item is scoped enough to build on request;
 none block anything currently running.
 
-## Active backlog — ordered priority (2026-07-18)
+## 2026-07-18 AI/QoL release status
 
-These are the next product decisions, in order. They are intentionally written
-as a pause point so future implementation starts from the same priorities.
+1. **AI functionality foundation / knowledge layer — ✅ SHIPPED.** Four named
+   NVIDIA models are task-routed behind per-run/task budgets, bounded retries,
+   cross-model fallback, health cooldowns, schema validation, and secret-free
+   usage telemetry. Local Ollama stays the bulk lane; deterministic gates stay
+   authoritative. Main gets 12 logical calls/18 provider attempts nightly;
+   ChemE gets 8/12 through its default-branch orchestrator. Kimi remains the
+   final canary until its endpoint is consistently available.
+2. **Company research overhaul — ✅ V1 SHIPPED.** The crawler captures bounded
+   excerpts from official postings it already reads. `company_research.json`
+   stores evidence hashes, source dates/links, claim-level citations,
+   confidence, TTLs, and explicit unknowns. The Companies/drawer UI now explains
+   products, customers, mission, business, technical work, locations, visa
+   context, candidate relevance, and interview focus. Unsupported legacy
+   culture estimates remain labeled and no longer affect ranking.
+3. **Google collaboration and pluggable tracking — ✅ CODE SHIPPED / AUTH
+   PENDING.** `TRACKER_BACKEND=notion|google_sheets` selects a first-class
+   tracker with stable-ID upsert and stage readback. Notion now reads manual
+   status changes back too. Google activation needs the one-time OAuth values
+   in `docs/GOOGLE_SHEETS_SETUP.md`; Notion remains active until then.
+4. **Interview workspace — ✅ V1 SHIPPED.** OA/Interview applications now have
+   their own workspace with cited company context, likely focus, and a prep
+   checklist. A manual company-name packet and independent interview-process
+   sources remain later enhancements.
 
-1. **AI functionality foundation / knowledge layer.** Move beyond the current
-   mostly deterministic radar: define the AI service boundary, provider/model
-   configuration, grounded retrieval, citations, structured outputs, caching,
-   evaluation cases, and privacy rules. The AI must know the candidate profile,
-   job evidence, company sources, and prior decisions instead of producing
-   unsupported summaries.
-2. **Company research overhaul.** Replace thin one-line company descriptions
-   with useful, source-backed dossiers: what the company makes, who it serves,
-   industry context, products, mission, business model, size/stage, technical
-   work, location context, sponsorship history, and why the company may matter
-   to this candidate. Show source dates/links and clearly label estimates.
-3. **Google collaboration and pluggable tracking.** Add Google account OAuth
-   and a setup choice between Notion and Google Sheets as the tracking backend.
-   Sheets should be a first-class, template-backed option for people already
-   living in Google Workspace; the application model must remain backend-
-   neutral so users can switch without duplicating entries.
-4. **RAG and vector search.** Embed job descriptions, company dossiers,
+## Deliberately deferred by Victor
+
+1. **RAG and vector search.** Embed job descriptions, company dossiers,
    candidate profile/CV material, and saved decisions; support semantic search
    and similarity-based ranking with explainable evidence. Keep deterministic
    gates authoritative and log retrieval/similarity reasons. This supersedes
    the currently parked posting↔profile RAG spike below.
-5. **CV-aware target-role toggle.** When a CV is available, add a `CV` option
+2. **CV-aware target-role toggle.** When a CV is available, add a `CV` option
    to the existing “all target roles” dropdown. It should show roles that can
    be meaningfully tailored to the selected CV, then offer a local, review-only
    tailored draft. Personal CV content stays local and never enters public
    state.
-6. **Interview workspace (far future).** Add an Interview tab that accepts a
-   company name and builds a grounded preparation packet: company mission,
-   products, current context, role-specific expectations, likely interview
-   stages, question themes, and candidate questions. This depends on the AI
-   knowledge layer and company-research overhaul.
 
 ## North star: a platform anyone can log into (direction, 2026-07-13)
 

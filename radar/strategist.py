@@ -116,7 +116,7 @@ def build_memo() -> str:
         "targeting new-grad AI/SWE/DS roles (healthtech first, big tech second). "
         "Based on this week's pipeline report, write a punchy 120-word coach's note: "
         "one observation, one priority for next week, one tactical tip. No preamble.\n\n" + memo,
-        max_tokens=400)
+        max_tokens=300, task="strategy")
     if narrative:
         memo = f"> 🧭 **Coach's note**\n> {narrative.strip()}\n\n" + memo
     return memo

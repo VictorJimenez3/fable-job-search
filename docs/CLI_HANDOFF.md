@@ -101,31 +101,25 @@ Before changing the radar, read these in order:
   the employer link is a separate primary action. Authenticated `open
   application` also saves a new role to To apply, but Applied remains explicit.
   Track/applied writes are idempotent.
-- **Local AI:** Mac companion installed (`~/.jobradar`, launchd
-  `com.jobradar.enrich`, every 2 h while awake) running Ollama `qwen3:30b`
-  with `format:"json"` forced (DECISIONS #20 — thinking models otherwise
-  burn the token budget). Each cycle: culture dossiers, re-score recent
-  jobs, weekly LLM company scout, the **quality pass**
-  (`radar/quality.py`, DECISIONS #30): link liveness + LLM new-grad/role-fit
-  verification, ~15 jobs/cycle, aggregator links first, verdicts cached on
-  the job record and re-applied after every re-score — and **pasted-JD
-  grading** (DECISIONS #33): JDs pasted into the platform's Role-fit tab
-  land in `state/web_state.json` and get a verdict next cycle. Knobs:
-  `RADAR_QUALITY_LIMIT`, `RADAR_QUALITY_DISABLE`, `RADAR_PASTED_LIMIT`.
-  The companion was active again on 2026-07-18; the fetched production state
-  contained 181 cached quality verdicts and 2,655 deterministic posting-fact
-  analyses.
-- **Free cloud LLM fallback (when the Mac sleeps):** `enrich.yml` (nightly)
-  already wires `LLM_BASE_URL` / `LLM_API_KEY` / `LLM_MODEL` secrets, and
-  `llm.complete()` retries 429/500/503 with Retry-After, so free
-  rate-limited tiers are safe. Two known-good configs:
-  NVIDIA NIM — `LLM_BASE_URL=https://integrate.api.nvidia.com/v1`,
-  `LLM_API_KEY=nvapi-…`, `LLM_MODEL=` any hosted instruct model (e.g.
-  `meta/llama-3.3-70b-instruct`); Google AI Studio —
-  `LLM_BASE_URL=https://generativelanguage.googleapis.com/v1beta/openai`,
-  `LLM_API_KEY=<AI Studio key>`, `LLM_MODEL=gemini-2.5-flash`. **Needs a
-  human:** only Victor can create a key and add the three repo secrets;
-  optionally bump enrich.yml's cron from nightly to every 6 h after that.
+- **AI foundation + company research (DECISIONS #39):** `radar/llm.py`
+  task-routes the four named NVIDIA NIM keys with hard logical/request budgets,
+  two-provider fallback, transient retry, cooldown, output validation, and
+  secret-free `state/ai_usage.json`. Main nightly budget is 12/18; ChemE has a
+  default-branch `cheme-enrich.yml` orchestrator at 8/12. Explicit pasted JDs,
+  tracked roles, and fresh high-score work outrank cold backlog. Kimi is final
+  fallback because its authenticated endpoint has been intermittently 404.
+  The 30-minute crawls never receive the named keys.
+- **Evidence-first dossiers:** `posting.scrape_pass` retains only bounded
+  relevant excerpts from official postings in `state/company_research.json`.
+  `company_research.py` uses evidence hashes/TTL and accepts only claim-level
+  cited synthesis; unsupported facts become `Not confirmed`. Legacy
+  `culture.json` estimates stay visible but only `source: seed` affects score.
+  The UI shows sources/freshness, fixes company→registry lookup, and includes
+  an Interview v1 workspace. Mac push-race merging preserves research/usage.
+- **Tracker selection/readback (DECISIONS #40):** Notion now pulls manual stage
+  changes by owned page ID. `TRACKER_BACKEND=google_sheets` selects the
+  OAuth-refresh-token Sheets adapter (stable ID upsert + stage readback); setup
+  is [`GOOGLE_SHEETS_SETUP.md`](GOOGLE_SHEETS_SETUP.md). Default stays Notion.
 - **Multi-user = fork-per-person** (DECISIONS #25, docs/FORKING.md). Owner
   gates exist in three layers: workflow condition, Python handler, Vercel
   backend. The Mac companion is fork-portable too: `JOBRADAR_REPO=<you>/<repo>`
@@ -137,22 +131,9 @@ Before changing the radar, read these in order:
   checklist is in [`AGENTS.md`](../AGENTS.md).
 - **`CV/` is local-only and gitignored** (DECISIONS #29) — never commit it
   or anything derived from it; CV auto-tailoring is a Mac-companion feature.
-- **Next up — doable from any CLI/cloud session** (see ROADMAP.md):
-  run `python -m radar.main repair-feedback` once (cosmetic — the stopwords
-  already neutralize stale boosts at read time; do it in a checkout where
-  CI isn't racing you, i.e. right after a merge). The first live SPA-host
-  quality cycles have now completed and cached verdicts; continue sampling
-  verdict accuracy rather than treating successful execution as semantic QA.
-- **Next up — needs Victor / the Mac:** **enable the AI layer — full
-  runbook in [`docs/AI_SETUP.md`](AI_SETUP.md)** (verified 2026-07-18:
-  no LLM secret is active in Actions — 0 records ever got an llm_note;
-  quality verdicts currently come from the Mac — so cloud AI is
-  fully OFF until Victor creates one free key and adds the secrets; the
-  runbook also lists the queued AI work for the local session, incl. the
-  parked RAG plan). Email autopilot secrets
-  (`EMAIL_ADDRESS`/`EMAIL_APP_PASSWORD`) still pending. CV auto-tailoring
-  is **ON HOLD** (Victor's call, 2026-07-16) until `CV/cv_full.tex` is
-  fleshed out — Mac-only when it resumes (DECISIONS #29).
+- **Deliberately deferred:** CV tailoring/CV role toggle and semantic/vector
+  RAG. The only user steps for shipped code are optional Google OAuth
+  activation and the already-documented ChemE email app password.
 
 ## Safe handoff practice
 

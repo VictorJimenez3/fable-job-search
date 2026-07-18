@@ -201,6 +201,27 @@ def test_sync_skips_stage_not_in_schema_options(tmp_state, monkeypatch):
     assert entry["notion_stage"] == "applied"  # unchanged
 
 
+def test_notion_readback_updates_only_matching_owned_page(tmp_state, monkeypatch):
+    monkeypatch.setenv("NOTION_TOKEN", "tok")
+    page_hex = "3995d6f42cab81b79291edce7b1639b2"
+    entry = {"id": JOB["id"], "company": "Tempus", "title": JOB["title"],
+             "stage": "applied", "notion_stage": "applied",
+             "notion_page": f"https://app.notion.com/p/Tempus-{page_hex}"}
+    payload = {"results": [
+        {"id": "3995d6f4-2cab-81b7-9291-edce7b1639b2",
+         "properties": {"Stage": {"status": {"name": "Interview"}}}},
+        {"id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+         "properties": {"Stage": {"status": {"name": "Rejected"}}}},
+    ], "has_more": False}
+    with patch.object(ns, "resolve_database", return_value=FULL_SCHEMA), \
+         patch.object(ns.requests, "post") as mock_post:
+        mock_post.return_value.raise_for_status = lambda: None
+        mock_post.return_value.json = lambda: payload
+        assert ns.sync_from_notion([entry]) == 1
+    assert entry["stage"] == "interview" and entry["notion_stage"] == "interview"
+    assert entry["responded_at"]
+
+
 def test_notion_payload_degrades_on_minimal_schema():
     # a "fresh slate" database might only have the two essentials — nothing
     # should crash, and fields absent from the schema are simply skipped

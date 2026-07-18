@@ -7,6 +7,7 @@ label while keeping claims concise and auditable.
 from __future__ import annotations
 
 from .culture import dossier_for
+from .company_research import claim_text, dossier_for as research_for
 from .models import norm
 
 
@@ -46,6 +47,15 @@ def context(company: str, sector: str = "", dossiers: dict | None = None) -> tup
     key = norm(company)
     if key in KNOWN:
         return KNOWN[key]
+
+    research = research_for(company)
+    if research and research.get("status") == "ready":
+        summary = claim_text(research, "summary")
+        if summary != "Not confirmed":
+            industry = claim_text(research, "business_model")
+            if industry == "Not confirmed":
+                industry = SECTOR_LABELS.get(sector, "technology")
+            return industry, summary
 
     dossier = dossier_for(company, dossiers)
     if dossier and dossier.get("industry"):

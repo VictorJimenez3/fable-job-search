@@ -73,13 +73,24 @@ for i in 1 2 3; do
   TMPD="$(mktemp -d)"
   cp state/jobs.json "$TMPD/jobs.json"
   cp state/culture.json "$TMPD/culture.json"
+  RESEARCH_CACHE=""; AI_USAGE_CACHE=""
+  if [ -f state/company_research.json ]; then
+    cp state/company_research.json "$TMPD/company_research.json"
+    RESEARCH_CACHE="$TMPD/company_research.json"
+  fi
+  if [ -f state/ai_usage.json ]; then
+    cp state/ai_usage.json "$TMPD/ai_usage.json"
+    AI_USAGE_CACHE="$TMPD/ai_usage.json"
+  fi
   git fetch -q origin "$BRANCH"
   git rebase --abort >/dev/null 2>&1 || true
   git reset -q --hard "origin/$BRANCH"
   MERGE_JOBS="$TMPD/jobs.json" MERGE_CULTURE="$TMPD/culture.json" \
+    MERGE_RESEARCH="$RESEARCH_CACHE" MERGE_AI_USAGE="$AI_USAGE_CACHE" \
     "$VENV_DIR/bin/python" scripts/mac-companion/merge_state.py
   rm -rf "$TMPD"
-  RADAR_ENRICH_LIMIT=0 RADAR_QUALITY_LIMIT=0 LLM_MODEL="$MODEL" \
+  RADAR_ENRICH_LIMIT=0 RADAR_QUALITY_LIMIT=0 RADAR_COMPANY_RESEARCH_LIMIT=0 \
+    RADAR_PASTED_LIMIT=0 LLM_MODEL="$MODEL" \
     "$VENV_DIR/bin/python" -m radar.main enrich
   commit_state || { log "upstream already had everything"; exit 0; }
   sleep $((i * 2))

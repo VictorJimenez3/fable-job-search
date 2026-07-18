@@ -9,10 +9,9 @@ Every ~30 minutes, GitHub Actions crawls ~700 company job boards and the big
 new-grad aggregators, scores each posting against your preferences
 (profile.yaml), and delivers anything high-scoring as a checkbox line on a
 weekly GitHub issue that pushes to your phone. Checking a box puts the job in
-your Notion Applications tracker instantly (status "Not started"); you flip it
-to Applied in Notion when you actually apply. Your MacBook, when awake, runs a
-local AI every 2 hours to enrich what the cloud found. No servers, no fees —
-the repo itself is the database.
+your selected tracker (Notion by default; Google Sheets optional). Your MacBook
+handles local bulk AI when awake, while a tightly budgeted NVIDIA cloud pass
+handles time-sensitive enrichment nightly. The repo itself is the database.
 
 ## 🖥️ The Platform (start here)
 
@@ -25,18 +24,24 @@ system as a website, refreshed automatically by every crawl:
   stated" and "not analyzed"—plus score, salary, culture, and age. The
   **apply ↗** button opens the employer posting; when you are signed in it also
   saves a new role to **To apply** without pretending you submitted it.
-- **Pipeline**: Maybe → To apply → Applied lanes. "To apply"/"Applied" mirror
-  Notion exactly; "Maybe" is a scratch lane that lives on the platform only.
+- **Pipeline**: separate Maybe, To apply, Applied, OA, Interview, Rejected, and
+  Closed lanes. The selected tracker is read back twice daily; "Maybe" remains
+  a platform-only scratch lane.
 - **Per-job workspace** (click the title or details ▸), four tabs: **Fit &
   eligibility** opens first with role family, sponsorship, required years,
   location, salary, posting age, score reasons, and the LLM verdict; it also
   has a paste box for descriptions the radar cannot scrape (graded on the next
-  enrich cycle). **Company** has the culture dossier, sector, and research
+  enrich cycle). **Company** has a claim-level cited employer brief, its
+  official evidence, a separately labeled culture card, and external research
   links; **Outreach** has recruiter/alumni links, message templates pre-filled
   with the role, and saved conversations; **Notes** holds your working notes
   (keep them non-sensitive because synced web state is public).
-- **Companies**: the whole registry with culture data and research links.
-- **AI**: what the local model has enriched, scout status, registry stats.
+- **Companies**: open-role employers, prioritized by actionable role score,
+  with sourced summaries, research freshness, culture signals, and coverage.
+- **Interview**: OA/interview applications with cited company context and a
+  role-prep checklist.
+- **AI**: per-run budget, task mix, provider/model health, grounded-research
+  coverage, scout status, and registry stats.
 
 Reading needs nothing. On Vercel, sign in with GitHub once for instant owner
 writes. On the Pages mirror, buttons use prefilled GitHub issues by default;
@@ -95,16 +100,17 @@ follow-up nudges for week-old applications, and LinkedIn hiring-post leads.
 - **Scoring is deterministic, not AI.** Gates (no senior/intern/clearance/3+yrs
   roles, US-only) then an auditable point rubric — every score has printed
   reasons. This runs in the cloud with zero API keys and is always on.
-- **Your MacBook is the AI worker.** A background job (launchd, every 2 hours
+- **Your MacBook is the bulk AI worker.** A background job (launchd, every 2 hours
   while the laptop is awake) pulls the latest state, runs **qwen3:30b through
   Ollama locally** (free, private, ~19 GB on disk), and pushes back:
   - a one-line *angle* per alert ("emphasize your clinical-data project"),
-  - culture dossiers for unknown companies (always labeled `est.`),
+  - source-grounded company briefs when official evidence exists,
   - re-ranking of borderline jobs.
-  The cloud never waits on the Mac; enrichment upgrades alerts when it lands.
+  The cloud never waits on the Mac; a nightly NVIDIA router also processes a
+  small priority queue with hard call/request limits and cross-model fallback.
   Model memory is released after each run (`keep_alive: 0` + `ollama stop`).
-- **Optional:** an `ANTHROPIC_API_KEY` repo secret would let the cloud do LLM
-  re-ranking itself; not required.
+- **Observable and bounded:** the AI tab shows task/model successes, errors,
+  reported tokens, and the run cap. Prompts/keys are never stored.
 - **Shelved:** Gmail confirmation detection (auto-flip to Applied) — needs an
   email App Password secret; see README §Setup.
 

@@ -50,9 +50,9 @@ def test_alert_tag_and_render(tmp_state):
     assert "culture fit" in reply and "Rotational" in reply
 
 
-def test_culture_feeds_ranking(monkeypatch):
+def test_only_curated_culture_feeds_ranking(monkeypatch):
     from radar import score as score_mod
-    dossier = {"name": "GreatCo", "fit": 100}
+    dossier = {"name": "GreatCo", "fit": 100, "source": "seed"}
     monkeypatch.setattr(score_mod, "_CULTURE_CACHE", {"greatco": dossier})
     fb = {"company_boosts": {}, "token_boosts": {}, "negative_companies": []}
     j1 = Job(company="GreatCo", title="Software Engineer, New Grad",
@@ -63,6 +63,14 @@ def test_culture_feeds_ranking(monkeypatch):
     score(j2, fb)
     assert j1.score == j2.score + 6
     assert any("culture fit" in r for r in j1.score_reasons)
+
+    # Model-memory estimates remain visible but cannot silently move ranking.
+    monkeypatch.setattr(score_mod, "_CULTURE_CACHE",
+                        {"greatco": {**dossier, "source": "est."}})
+    j3 = Job(company="GreatCo", title="Software Engineer, New Grad",
+             url="u", source="simplify", locations=["Remote"])
+    score(j3, fb)
+    assert j3.score == j2.score
 
 
 def test_enrich_missing_generates_via_llm(tmp_state, monkeypatch):

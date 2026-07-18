@@ -1,21 +1,18 @@
-name: enrich
+name: cheme-enrich
 
-# Cloud twin of the Mac companion's enrichment cycle (culture dossiers,
-# re-score, weekly scout, quality pass). No-ops in seconds unless an LLM is
-# configured. Named NVIDIA NIM keys are task-routed with hard budgets and
-# model fallback; generic OpenAI-compatible and Anthropic settings remain
-# backwards compatible.
-
+# Scheduled workflows only load from the default branch, so this orchestrator
+# checks out and enriches the independent ChemE board without duplicating its
+# Notion database or exposing AI keys to the 30-minute crawl.
 on:
   schedule:
-    - cron: "20 7 * * *"   # nightly, offset from the crawl's */30
+    - cron: "50 7 * * *"
   workflow_dispatch: {}
 
 permissions:
   contents: write
 
 concurrency:
-  group: radar          # never overlap a crawl's state commit
+  group: cheme-radar
   cancel-in-progress: false
 
 jobs:
@@ -25,21 +22,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref_name }}
-
+          ref: claude/cheme-intern-radar
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: pip
-
       - run: pip install -r requirements.txt
-
-      - name: Enrich
+      - name: Enrich ChemE roles and company research
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
-          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
-          LLM_MODEL: ${{ secrets.LLM_MODEL }}
           NVIDIA_API_BASE_URL: ${{ vars.NVIDIA_API_BASE_URL }}
           NVIDIA_GLM_52_API_KEY: ${{ secrets.NVIDIA_GLM_52_API_KEY }}
           NVIDIA_GLM_52_MODEL: ${{ vars.NVIDIA_GLM_52_MODEL }}
@@ -49,15 +39,14 @@ jobs:
           NVIDIA_NEMOTRON_3_ULTRA_550B_A55B_MODEL: ${{ vars.NVIDIA_NEMOTRON_3_ULTRA_550B_A55B_MODEL }}
           NVIDIA_KIMI_K2_6_API_KEY: ${{ secrets.NVIDIA_KIMI_K2_6_API_KEY }}
           NVIDIA_KIMI_K2_6_MODEL: ${{ vars.NVIDIA_KIMI_K2_6_MODEL }}
-          RADAR_AI_MAX_CALLS: "12"
-          RADAR_AI_MAX_REQUESTS: "18"
+          RADAR_AI_MAX_CALLS: "8"
+          RADAR_AI_MAX_REQUESTS: "12"
           RADAR_AI_PROVIDER_ATTEMPTS: "2"
-          RADAR_QUALITY_LIMIT: "6"
+          RADAR_QUALITY_LIMIT: "3"
           RADAR_COMPANY_RESEARCH_LIMIT: "3"
           RADAR_ENRICH_LIMIT: "0"
         run: python -m radar.main enrich
-
-      - name: Commit state + docs
+      - name: Commit ChemE state and generated docs
         run: |
           git config user.name "job-radar[bot]"
           git config user.email "radar@users.noreply.github.com"
@@ -65,7 +54,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "no changes"; exit 0
           fi
-          git commit -m "radar: cloud enrich $(date -u +'%Y-%m-%d %H:%M')"
+          git commit -m "radar(cheme): cloud enrich $(date -u +'%Y-%m-%d %H:%M')"
           for i in 1 2 3 4; do
             git push && exit 0
             git pull --rebase --autostash || true

@@ -24,7 +24,7 @@ jobs:
           KIMI_MODEL: ${{ vars.NVIDIA_KIMI_K2_6_MODEL }}
         run: |
           python - <<'PY'
-          import json, os, urllib.request
+          import json, os, time, urllib.error, urllib.request
           models = [
               ("GLM", os.environ["GLM_KEY"], os.environ["GLM_MODEL"]),
               ("DeepSeek", os.environ["DEEPSEEK_KEY"], os.environ["DEEPSEEK_MODEL"]),
@@ -32,23 +32,53 @@ jobs:
               ("Kimi", os.environ["KIMI_KEY"], os.environ["KIMI_MODEL"]),
           ]
           url = os.environ["NVIDIA_BASE_URL"].rstrip("/") + "/chat/completions"
+          results = []
           for label, key, model in models:
               if not key or not model:
-                  raise SystemExit(f"{label}: missing secret or variable")
+                  results.append((label, model or "—", "CONFIG FAIL", "missing secret or variable"))
+                  continue
               req = urllib.request.Request(url, data=json.dumps({
                   "model": model,
                   "messages": [{"role": "user", "content": "Reply with OK."}],
                   "max_tokens": 8,
-                  "temperature": 0,
               }).encode(), headers={
                   "Authorization": f"Bearer {key}",
                   "Content-Type": "application/json",
               })
-              try:
-                  with urllib.request.urlopen(req, timeout=90) as res:
-                      data = json.load(res)
-                  content = ((data.get("choices") or [{}])[0].get("message") or {}).get("content", "")
-                  print(f"{label}: OK ({model}); response_chars={len(content)}")
-              except Exception as exc:
-                  raise SystemExit(f"{label}: FAILED ({model}): {type(exc).__name__}: {exc}")
+              result = None
+              for attempt in range(2):
+                  try:
+                      with urllib.request.urlopen(req, timeout=90) as res:
+                          data = json.load(res)
+                      content = ((data.get("choices") or [{}])[0].get("message") or {}).get("content", "")
+                      result = (label, model, "OK", f"response_chars={len(content)}")
+                      break
+                  except urllib.error.HTTPError as exc:
+                      code = exc.code
+                      if code in {500, 502, 503, 504} and attempt == 0:
+                          time.sleep(3)
+                          continue
+                      status = ("AUTH FAIL" if code in {401, 403} else
+                                "UNAVAILABLE" if code == 404 else
+                                "RATE LIMITED" if code == 429 else
+                                "TRANSIENT" if code >= 500 else "FAILED")
+                      result = (label, model, status, f"HTTP {code}")
+                      break
+                  except Exception as exc:
+                      result = (label, model, "NETWORK", type(exc).__name__)
+                      break
+              results.append(result)
+
+          print("\nNVIDIA endpoint matrix")
+          for row in results:
+              print(f"{row[0]:10} {row[2]:13} {row[1]} ({row[3]})")
+          summary = os.environ.get("GITHUB_STEP_SUMMARY")
+          if summary:
+              with open(summary, "a") as f:
+                  f.write("## NVIDIA endpoint matrix\n\n| Model | Result | Slug | Detail |\n|---|---|---|---|\n")
+                  for label, model, status, detail in results:
+                      f.write(f"| {label} | {status} | `{model}` | {detail} |\n")
+          fatal = [r for r in results if r[2] in {"CONFIG FAIL", "AUTH FAIL", "FAILED"}]
+          if fatal or not any(r[2] == "OK" for r in results):
+              raise SystemExit("verification failed: fix configuration/auth, or no model is currently healthy")
           PY

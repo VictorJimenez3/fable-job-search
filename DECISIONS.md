@@ -645,3 +645,41 @@ mode because the existing GitHub OAuth app has one callback URL; it can receive
 its own OAuth app later without changing the architecture. Both boards use the
 same repository-level `NOTION_TOKEN` and the same Applications database by
 design. Separate board state does not mean duplicate Notion state.
+
+## 39. AI is a bounded evidence processor, not an always-on judge (2026-07-18)
+
+Four free NVIDIA endpoints are useful capacity, but their quotas are unknown
+and live probes showed real endpoint instability (Kimi auth succeeded then its
+model returned 404; DeepSeek later returned a transient 500). Blind
+round-robin would both waste quota and make output quality random. The shared
+LLM entrypoint therefore routes by task, tries at most two healthy providers,
+retries a transient response once, cools unhealthy endpoints, validates task
+schemas before accepting an answer, and records only secret-free operational
+telemetry. Main and ChemE have separate conservative nightly budgets; named
+keys never enter the 30-minute crawl. Explicit user input and actionable jobs
+outrank background backlog. Local Ollama remains the bulk lane.
+
+The same evidence boundary applies to company research. Model memory is not a
+source: the crawler captures short relevant excerpts from official postings it
+already fetches, synthesis must cite valid source IDs, unchanged evidence is
+cached, and missing facts remain `Not confirmed`. The old `source: est.` culture
+rows are still visible for continuity but cannot affect score; only the
+human-curated seed can move ranking. AI failure always degrades to the existing
+deterministic system.
+
+## 40. Tracker stages flow both ways; Google Sheets is a selectable backend (2026-07-18)
+
+Calling Notion the source of truth while only pushing to it was misleading:
+manual status changes never reached the platform, and the UI collapsed every
+advanced stage into To apply. Reconciliation now reads statuses back by the
+already-owned Notion page ID (never fuzzy company/title matching), and the UI
+has separate Applied/OA/Interview/Rejected/Closed states plus an Interview
+workspace.
+
+Tracking is selected with `TRACKER_BACKEND`, default `notion`. The
+`google_sheets` adapter uses stable Job Radar IDs for upsert/readback so people
+in Google Workspace can use a normal Sheet without a Notion account. GitHub
+Actions requires an OAuth refresh token for unattended access, so code ships
+ready while activation remains an explicit user authorization step. Main and
+ChemE may share one tracker without cross-board corruption because both Notion
+and Sheets updates match stable IDs, not company names.

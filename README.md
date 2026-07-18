@@ -75,13 +75,13 @@ every ~30 min (GitHub Actions cron)
 
 ### Tracking and applied logging
 
-1. **Check a box on an alert issue to track a job.** It appears in your Notion
-   Applications database immediately with the not-yet-applied status
+1. **Check a box on an alert issue to track a job.** It appears in your selected
+   tracker (Notion by default; Google Sheets is also supported) immediately with the not-yet-applied status
    (`stage_saved` in profile.yaml, default "Not started") and improves future
    ranking.
 2. **When you apply, the inbox becomes the source of truth.** With the email
    credentials set up (below), the watcher reads application-lifecycle emails
-   and drives the Notion **Stage** for you, end to end — no manual updates:
+   and drives the tracker **Stage** for you, end to end — no manual updates:
    - "Thank you for applying…" → promotes the tracked entry to **Applied**
    - online-assessment / coding-challenge invite → **OA**
    - interview / "schedule a call" / "next steps" → **Interview**
@@ -89,7 +89,8 @@ every ~30 min (GitHub Actions cron)
    - applied with no reply for `autoclose_days` (default 45) → **CLOSED**
 
    It only ever moves a job *forward*, so a stray late email can't undo a
-   later stage. You can still change anything in Notion by hand.
+   later stage. You can still change anything in Notion/Sheets by hand; the
+   twice-daily readback now brings those stage edits into the radar.
 3. For a job found outside the radar, comment `applied <url>` on any issue to
    log it as Applied immediately.
 4. A twice-daily reconcile sweep re-reads every radar issue and tracks any
@@ -100,9 +101,10 @@ The weekly strategy memo now includes an **auto-tracked funnel** (applied → OA
 sector — built entirely from what the watcher reads, so you can see which
 sectors actually reply.
 
-Each alert now includes a plain-language company category and a short
-description of what the company does (for example, **defense & aerospace —
-defense and space systems**) so unfamiliar employers are easier to assess.
+The platform now builds evidence-first company briefs from bounded excerpts of
+official postings the crawler already reads. Products, customers, mission,
+business context, technical work, locations, visa context, candidate relevance,
+and interview focus carry source links/dates; absent facts say **Not confirmed**.
 
 Other comment commands: `skip <company>` (downrank similar roles),
 `track <ats> <token> [Name]` (force-add a company to the crawl registry).
@@ -170,14 +172,14 @@ The companion releases the model from memory after every request; confirm with
 `ollama ps` (it should show no loaded model between enrichment cycles).
 
 Optional upgrades:
-- `ANTHROPIC_API_KEY` secret → Claude does the enrichment in the cloud too
-  (works alongside or instead of the Mac). Free-tier alternatives via the
-  `LLM_BASE_URL`/`LLM_API_KEY`/`LLM_MODEL` secrets (rate limits are handled —
-  the client retries with Retry-After): NVIDIA NIM
-  (`https://integrate.api.nvidia.com/v1` + an `nvapi-…` key) or Google AI
-  Studio (`https://generativelanguage.googleapis.com/v1beta/openai` + a free
-  key). **Step-by-step runbook: [docs/AI_SETUP.md](docs/AI_SETUP.md)** —
-  the AI layer is currently OFF in the cloud until one of these is added.
+- The four NVIDIA NIM keys are now wired into a task-aware, budgeted cloud
+  router with fallback, cooldowns, schema validation, and usage telemetry.
+  Main and ChemE enrich nightly; they are deliberately not exposed to every
+  30-minute crawl. Configuration and operating policy:
+  [docs/AI_SETUP.md](docs/AI_SETUP.md).
+- Prefer Google Workspace to Notion? The Google Sheets tracker adapter is
+  complete; its one-time OAuth activation is documented in
+  [docs/GOOGLE_SHEETS_SETUP.md](docs/GOOGLE_SHEETS_SETUP.md).
 - `GOOGLE_CSE_KEY` + `GOOGLE_CSE_ID` (free: [programmablesearchengine.google.com](https://programmablesearchengine.google.com)
   → create engine searching `linkedin.com/posts`, then get an API key at
   [developers.google.com/custom-search](https://developers.google.com/custom-search/v1/introduction))
@@ -191,10 +193,11 @@ Optional upgrades:
 Every alert is checked against your stated criteria (prestige + pay + fast
 culture + real WLB/shutdowns + mission, no burnout): companies get a 0–100
 **fit score** (deterministic rubric, burnout-penalized) shown as `fit NN` on
-alert lines, feeding ranking (±6), and tabulated in
+alert lines and tabulated in
 [docs/CULTURE.md](docs/CULTURE.md) — prestige tier, pace, WLB, PTO,
-shutdowns, new-grad TC, rotational programs. ~40 dossiers are human-curated;
-the rest are LLM-generated on your Mac and labeled `est.`. Ask about any
+shutdowns, new-grad TC, rotational programs. ~40 dossiers are human-curated
+and may affect ranking (±6); older model-memory dossiers are labeled `est.` and
+are display-only because they have no evidence. Ask about any
 company by commenting `culture <company>` on an alert issue.
 
 ## Tuning

@@ -247,36 +247,62 @@ def seed_cmd() -> int:
 
 
 def notion_backfill() -> int:
-    from .notion_sync import sync_applied
+    from .notion_sync import sync_applied, sync_from_notion
     applied = state.applied()
+    pulled = sync_from_notion(applied)
     n = sync_applied(applied)
     state.save("applied.json", applied)
-    print(f"notion-backfill: synced {n}")
+    print(f"notion-backfill: pulled {pulled} stage change(s), pushed {n}")
     return 0
 
 
 def enrich() -> int:
-    """LLM enrichment pass — designed for the Mac companion (Ollama via
-    LLM_BASE_URL) but runs identically with any provider. Idempotent:
-    1. generate culture dossiers for recently-alerted companies lacking one
-    2. re-score recent jobs so new culture data reorders the dashboard
-    3. rewrite docs (dashboard + culture table)
+    """Bounded AI enrichment, ordered by user value and safe to re-run.
+
+    Pasted JDs and tracked roles go first, then a small batch of grounded
+    company research and fresh job-quality checks. Legacy ungrounded culture
+    generation is off by default. Deterministic scoring/output always remains
+    authoritative.
     """
-    from . import culture, llm
+    from . import company_research, culture, llm, quality
     from .digest import write_outputs as digest_write
     if not llm.available():
         print("enrich: no LLM provider configured (set ANTHROPIC_API_KEY or "
               "LLM_BASE_URL, e.g. http://localhost:11434/v1 for Ollama) — nothing to do")
         return 0
-    made = culture.enrich_missing(limit=int(env("RADAR_ENRICH_LIMIT", "10")))
-    print(f"enrich: generated {made} culture dossier(s) via {llm.provider()}")
+    jobs_state = state.jobs()
+    applied = state.applied()
+    web = state.load("web_state.json", {})
+    now = int(time.time())
+
+    # Explicit user input gets the first reserved calls. Unchanged paste hashes
+    # cost nothing on later cycles.
+    pasted = 0
+    pasted_limit = int(env("RADAR_PASTED_LIMIT", "4"))
+    for jid, workspace in (web.get("jobs") or {}).items():
+        if pasted >= pasted_limit:
+            break
+        rec = jobs_state.get(jid)
+        if rec and (workspace.get("jd") or "").strip():
+            pasted += quality.verify_pasted(rec, workspace["jd"])
+    if pasted:
+        print(f"enrich: graded {pasted} pasted JD(s) from the platform")
+
+    researched = company_research.enrich(jobs_state, applied, web)
+    print(f"enrich: synthesized {researched} source-grounded company brief(s) via "
+          f"{llm.provider()}")
+
+    # Stop creating new model-memory culture guesses. Existing estimates stay
+    # visible but no longer affect ranking; an explicit nonzero env value is a
+    # backwards-compatibility escape hatch.
+    made = culture.enrich_missing(limit=int(env("RADAR_ENRICH_LIMIT", "0")))
+    if made:
+        print(f"enrich: generated {made} legacy culture estimate(s)")
 
     # re-score recent jobs with the enriched culture data
     import radar.score as score_mod
     score_mod._CULTURE_CACHE = None  # force reload
-    jobs_state = state.jobs()
     fb = state.feedback()
-    now = int(time.time())
     rescored = 0
     for rec in jobs_state.values():
         if now - rec.get("first_seen", 0) > 14 * 86400:
@@ -295,29 +321,20 @@ def enrich() -> int:
 
     # quality pass: link liveness + new-grad/role-fit verification (cached
     # verdicts re-applied first, since score() above rebuilds from scratch)
-    from . import quality
     registry = state.companies()
     eightfold_domains = {norm(e.get("name", "")): (e.get("extra") or {}).get("domain")
                          for e in registry.values()
                          if e.get("ats") == "eightfold" and (e.get("extra") or {}).get("domain")}
-    reapplied, verified = quality.run(jobs_state, domains=eightfold_domains)
+    priority_ids = {a.get("id") for a in applied if a.get("id")}
+    priority_ids |= set(web.get("jobs") or {})
+    default_quality_limit = "25" if llm.provider() == "local" else "6"
+    quality_limit = int(env("RADAR_QUALITY_LIMIT", default_quality_limit))
+    reapplied, verified = quality.run(jobs_state, limit=quality_limit,
+                                      domains=eightfold_domains,
+                                      priority_ids=priority_ids)
     print(f"enrich: quality pass re-applied {reapplied} verdict(s), "
           f"verified {verified} new job(s)")
 
-    # JDs pasted into the platform's Role-fit tab (read-only here — the
-    # webapp owns web_state.json). jd_sha idempotency means unchanged pastes
-    # cost nothing on later cycles.
-    web = state.load("web_state.json", {})
-    pasted = 0
-    pasted_limit = int(env("RADAR_PASTED_LIMIT", "10"))
-    for jid, w in (web.get("jobs") or {}).items():
-        if pasted >= pasted_limit:
-            break
-        rec = jobs_state.get(jid)
-        if rec and (w.get("jd") or "").strip():
-            pasted += quality.verify_pasted(rec, w["jd"])
-    if pasted:
-        print(f"enrich: graded {pasted} pasted JD(s) from the platform")
     state.save("jobs.json", jobs_state)
     registry = state.companies()
     runs = state.load("runs.json", [])
@@ -335,7 +352,9 @@ def enrich() -> int:
         registry = state.companies()
         found = disc.llm_scout(registry)
         state.save("companies.json", registry)
-        scout["last_run"] = now
+        scout["last_attempt"] = now
+        if found:
+            scout["last_run"] = now
         state.save("scout.json", scout)
         print(f"enrich: scout queued {found} company candidate(s) for probing")
 
@@ -351,6 +370,9 @@ def enrich() -> int:
         print(f"enrich: registry hygiene — {stats['dead_retried']} dead retried, "
               f"{stats['invalid_pruned']} stale invalids pruned, "
               f"{stats['dups_parked']} duplicate entries parked")
+    usage = llm.save_usage()
+    print(f"enrich: AI budget used {usage['logical_calls']}/{usage['limits']['logical_calls']} "
+          f"logical calls, {usage['requests']}/{usage['limits']['requests']} provider requests")
     return 0
 
 

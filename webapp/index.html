@@ -178,7 +178,8 @@ function storedFilter() {
   catch { return {}; }
 }
 const S = {           // app state
-  jobs:{}, applied:[], culture:{}, companies:{}, runs:[], scout:{}, web:null,
+  jobs:{}, applied:[], culture:{}, research:{}, aiUsage:{}, companies:{},
+  registryByCompany:{}, runs:[], scout:{}, web:null,
   auth:null, backend:false,
   tab:"jobs", filter:{...DEFAULT_FILTER, ...storedFilter()}, shown:250,
   wsTab:"fit",
@@ -230,13 +231,18 @@ async function boot() {
     }
   } catch {}
   RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/`;
-  const [jobs, applied, culture, companies, runs, scout, web] = await Promise.all([
+  const [jobs, applied, culture, research, aiUsage, companies, runs, scout, web] = await Promise.all([
     fetchJSON("state/jobs.json", {}), fetchJSON("state/applied.json", []),
-    fetchJSON("state/culture.json", {}), fetchJSON("state/companies.json", {}),
+    fetchJSON("state/culture.json", {}), fetchJSON("state/company_research.json", {}),
+    fetchJSON("state/ai_usage.json", {}), fetchJSON("state/companies.json", {}),
     fetchJSON("state/runs.json", []), fetchJSON("state/scout.json", {}),
     fetchJSON("state/web_state.json", null),
   ]);
-  Object.assign(S, {jobs, applied, culture, companies, runs, scout});
+  Object.assign(S, {jobs, applied, culture, research, aiUsage, companies, runs, scout});
+  for (const entry of Object.values(companies)) {
+    const key = norm(entry.name);
+    if (!S.registryByCompany[key] || entry.status === "active") S.registryByCompany[key] = entry;
+  }
   S.web = web || JSON.parse(localStorage.getItem("jr_web") || '{"maybe":[],"jobs":{}}');
   S.web.maybe = S.web.maybe || []; S.web.jobs = S.web.jobs || {};
   render();
@@ -300,7 +306,7 @@ function saveWeb() {                       // debounce web_state commits
 const appliedById = () => Object.fromEntries(S.applied.map(a=>[a.id,a]));
 function laneOf(id, byId) {
   const a = byId[id];
-  if (a) return (a.stage||"applied")==="applied" ? "applied" : "saved";
+  if (a) return a.stage || "applied";
   return S.web.maybe.includes(id) ? "maybe" : "";
 }
 const ROLE_LABELS = {
@@ -445,7 +451,7 @@ function startApply(j) {
 
 /* ---------- render ---------- */
 const TABS = [["jobs","Jobs"],["pipeline","Pipeline"],["companies","Companies"],
-              ["ai","AI"],["settings","Settings"]];
+              ["interview","Interview"],["ai","AI"],["settings","Settings"]];
 function render() {
   $("#nav").innerHTML = TABS.map(([k,l]) =>
     `<button class="${S.tab===k?'on':''}" onclick="S.tab='${k}';render()">${l}</button>`).join("") +
@@ -455,13 +461,14 @@ function render() {
       : `<button class="on" onclick="location.href='/api/login'">Sign in with GitHub</button>`) : "");
   const byId = appliedById();
   const saved = S.applied.filter(a=>(a.stage||"applied")==="saved");
-  const done  = S.applied.filter(a=>(a.stage||"applied")==="applied");
+  const done  = S.applied.filter(a=>(a.stage||"applied")!=="saved");
   $("#stats").innerHTML =
     `<span><b>${Object.keys(S.jobs).length}</b>jobs seen</span>` +
     `<span><b>${S.web.maybe.length}</b>maybe</span>` +
     `<span><b>${saved.length}</b>to apply</span>` +
     `<span><b>${done.length}</b>applied</span>`;
-  ({jobs:rJobs, pipeline:rPipe, companies:rCos, ai:rAI, settings:rSet})[S.tab]();
+  ({jobs:rJobs, pipeline:rPipe, companies:rCos, interview:rInterview,
+    ai:rAI, settings:rSet})[S.tab]();
 }
 
 function rowHTML(j, byId) {
@@ -482,7 +489,7 @@ function rowHTML(j, byId) {
     ${mq?'<span class="chip marquee">marquee</span>':""}
     ${lane?`<span class="chip ${lane}">${lane==="saved"?"to apply":lane}</span>`:""}
     <div class="acts">
-      ${lane==="saved"||lane==="applied" ? "" : `<button class="act" onclick='actMaybe(S.jobs["${j.id}"])'>${lane==="maybe"?"un-maybe":"maybe"}</button>`}
+      ${lane && lane!=="maybe" ? "" : `<button class="act" onclick='actMaybe(S.jobs["${j.id}"])'>${lane==="maybe"?"un-maybe":"maybe"}</button>`}
       ${lane ? "" : `<button class="act" onclick='actTrack(S.jobs["${j.id}"])'>save</button>`}
       <button class="act primary" onclick='startApply(S.jobs["${j.id}"])'>apply ↗</button>
       <button class="act" onclick='openWS("${j.id}")'>details ▸</button>
@@ -524,13 +531,17 @@ function rJobs() {
         <option value="unknown" ${S.filter.experience==="unknown"?"selected":""}>experience not stated</option>
         <option value="unread" ${S.filter.experience==="unread"?"selected":""}>experience not analyzed</option>
       </select>
-      <label class="sub" title="Off by default: show all ChemE-fit roles, including strong dashboard-only matches"><input type="checkbox" ${S.filter.alert?"checked":""}
+      <label class="sub" title="Off by default: show all matching roles, including strong dashboard-only matches"><input type="checkbox" ${S.filter.alert?"checked":""}
         onchange="setFilter('alert',this.checked)"> alert-worthy only</label>
       <select aria-label="Pipeline status" onchange="setFilter('lane',this.value)">
         <option value="">any status</option>
         <option value="maybe" ${S.filter.lane==="maybe"?"selected":""}>maybe</option>
         <option value="saved" ${S.filter.lane==="saved"?"selected":""}>to apply</option>
-        <option value="applied" ${S.filter.lane==="applied"?"selected":""}>applied</option></select>
+        <option value="applied" ${S.filter.lane==="applied"?"selected":""}>applied</option>
+        <option value="oa" ${S.filter.lane==="oa"?"selected":""}>online assessment</option>
+        <option value="interview" ${S.filter.lane==="interview"?"selected":""}>interview</option>
+        <option value="rejected" ${S.filter.lane==="rejected"?"selected":""}>rejected</option>
+        <option value="closed" ${S.filter.lane==="closed"?"selected":""}>closed</option></select>
       <select onchange="setFilter('sort',this.value)" title="sort order">
         <option value="best" ${S.filter.sort!=="new"?"selected":""}>best match</option>
         <option value="new" ${S.filter.sort==="new"?"selected":""}>newest first</option></select>
@@ -562,17 +573,17 @@ function cardHTML(x) {
     <div class="co">${esc(x.company)}</div><div class="t">${esc(x.title)}</div></div>`;
 }
 function rPipe() {
-  const byId = appliedById();
   const maybe = S.web.maybe.map(id=>S.jobs[id]).filter(Boolean);
-  const saved = S.applied.filter(a=>(a.stage||"applied")==="saved");
-  const done  = S.applied.filter(a=>(a.stage||"applied")==="applied");
+  const stages = [
+    ["saved","📝 To apply"],["applied","✅ Applied"],["oa","🧪 OA"],
+    ["interview","🗣 Interview"],["rejected","↩ Rejected"],["closed","⏸ Closed"]];
   $("#main").innerHTML = `<div class="lanes">
     <div class="lane"><h3>🤔 Maybe (${maybe.length})</h3>${maybe.map(cardHTML).join("")||'<span class="sub">Park jobs here from the Jobs tab.</span>'}</div>
-    <div class="lane"><h3>📝 To apply (${saved.length})</h3>${saved.map(cardHTML).join("")}</div>
-    <div class="lane"><h3>✅ Applied (${done.length})</h3>${done.map(cardHTML).join("")}</div>
+    ${stages.map(([key,label])=>{ const rows=S.applied.filter(a=>(a.stage||"applied")===key);
+      return `<div class="lane"><h3>${label} (${rows.length})</h3>${rows.map(cardHTML).join("")||'<span class="sub">Nothing here yet.</span>'}</div>`; }).join("")}
   </div>
-  <p class="sub">"To apply" and "Applied" mirror Notion (checkbox or platform buttons).
-  Flip statuses in Notion anytime — the radar treats you as the source of truth.</p>`;
+  <p class="sub">Stages reflect the radar pipeline and are pushed to Notion. The scheduled
+  readback pass keeps changes made directly in Notion in sync too.</p>`;
 }
 
 // LinkedIn jobs search with the filters encoded in the URL — no scraping
@@ -604,6 +615,28 @@ function researchLinks(co) {
     <a target="_blank" rel="noopener" href="https://www.google.com/search?q=${q}+new+grad+interview+process">🧭 interview intel</a>
   </div>`;
 }
+function claimHTML(d, field, label) {
+  const claim = d?.[field];
+  if (!claim || !claim.value || claim.value === "Not confirmed")
+    return `<span class="k">${esc(label)}</span><span class="sub">Not confirmed</span>`;
+  const indexes = Object.fromEntries((d.sources||[]).map((s,i)=>[s.id,i+1]));
+  const cites = (claim.source_ids||[]).map(id=>indexes[id])
+    .filter(Boolean).map(n=>`<a href="#src-${n}" class="chip">${n}</a>`).join(" ");
+  return `<span class="k">${esc(label)}</span><span>${esc(claim.value)} ${cites}
+    <span class="chip unknown">${esc(claim.confidence||"low")} confidence</span></span>`;
+}
+function researchFreshness(d) {
+  if (!d?.generated_at) return "official evidence captured · synthesis queued";
+  const days = Math.max(0,Math.floor((Date.now()/1000-d.generated_at)/86400));
+  return `${days===0?"researched today":days+"d since research"} · ${d.status||"evidence limited"}`;
+}
+function sourceList(d) {
+  if (!d?.sources?.length) return `<p class="sub">No official source excerpt captured yet.</p>`;
+  return `<ol class="sub">${d.sources.map((s,i)=>`<li id="src-${i+1}">
+    <a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>
+    · retrieved ${new Date((s.retrieved_at||0)*1000).toLocaleDateString()}
+    <br>${esc(s.excerpt)}</li>`).join("")}</ol>`;
+}
 function templates(j) {
   const first = t => t.split(",")[0];
   return [
@@ -629,7 +662,7 @@ function openWS(id) {
     <h2>${esc(j.company)}</h2>
     <div class="sub">${esc(j.title)}
       ${j.explicit_new_grad?'· <span class="chip applied">new grad</span>':""}
-      ${a?`· <span class="chip ${a.stage==="applied"?"applied":"saved"}">${a.stage==="applied"?"applied":"to apply"}</span>`:""}
+      ${a?`· <span class="chip ${esc(a.stage||"applied")}">${a.stage==="saved"?"to apply":esc(a.stage||"applied")}</span>`:""}
       ${a&&a.notion_page?`· <a href="${esc(a.notion_page)}" target="_blank" rel="noopener">Notion ↗</a>`:""}</div>
     <div class="decision">
       <b>Quick decision</b>
@@ -647,28 +680,40 @@ function openWS(id) {
     <div class="sect acts drawer-actions">
       ${a?"":`<button class="act" onclick='actMaybe(jobById("${id}"))'>${laneOf(id, appliedById())==="maybe"?"remove maybe":"maybe"}</button>`}
       ${a?"":`<button class="act" onclick='actTrack(jobById("${id}"))'>save → To apply</button>`}
-      ${a&&(a.stage||"applied")==="applied"?"":`<button class="act" onclick='actApplied(jobById("${id}"))'>mark applied</button>`}
+      ${a&&(a.stage||"applied")!=="saved"?"":`<button class="act" onclick='actApplied(jobById("${id}"))'>mark applied</button>`}
       <button class="act primary" onclick='startApply(jobById("${id}"))'>open application ↗</button>
     </div>`;
 }
 
 function wsCompany(j, w, c, id) {
-  const reg = S.companies[norm(j.company)];
+  const d = S.research[norm(j.company)];
+  const reg = S.registryByCompany[norm(j.company)];
   return `
-    ${c?`<div class="sect"><h4>What they do — ${esc(c.industry)} ${c.source==="est."?"(AI-estimated)":"(curated)"}</h4>
+    ${d?`<div class="sect"><h4>Company brief · ${esc(researchFreshness(d))}</h4>
       <div class="kv">
-        <span class="k">vibe</span><span>${esc(c.vibe)} — ${esc(c.fit_notes)}</span>
-        <span class="k">prestige</span><span>${esc(c.prestige)} · fit ${c.fit}/100</span>
-        <span class="k">wlb</span><span>${c.wlb}/5 · pace ${esc(c.pace)}</span>
-        <span class="k">new-grad TC</span><span>${esc(c.new_grad_tc)}</span>
-        ${j.sector?`<span class="k">sector</span><span>${esc(j.sector)}</span>`:""}
-        ${reg?`<span class="k">radar</span><span>polls their ${esc(reg.ats||"?")} board (${esc(reg.status||"?")})</span>`:""}
+        ${claimHTML(d,"summary","what they do")}
+        ${claimHTML(d,"products","products")}
+        ${claimHTML(d,"customers","who uses it")}
+        ${claimHTML(d,"mission","mission")}
+        ${claimHTML(d,"business_model","business / stage")}
+        ${claimHTML(d,"technical_work","technical work")}
+        ${claimHTML(d,"locations","locations")}
+        ${claimHTML(d,"sponsorship_context","visa context")}
+        ${claimHTML(d,"why_it_matters","why it may matter")}
       </div></div>`
-    :`<div class="sect"><h4>What they do</h4>
-      <p class="sub">No dossier yet — the enrich cycle (Mac or cloud LLM) profiles alert
-      companies automatically${j.sector?`; the radar tags them <b>${esc(j.sector)}</b>`:""}.
-      The links below answer it fastest in the meantime.</p></div>`}
-    <div class="sect"><h4>Research</h4>${researchLinks(j.company)}</div>`;
+    :`<div class="sect"><h4>Company brief</h4>
+      <p class="sub">No official evidence captured yet. The radar queues active, saved, and
+      high-fit companies first${j.sector?`; current sector: <b>${esc(j.sector)}</b>`:""}.</p></div>`}
+    ${c?`<div class="sect"><h4>Culture signals · ${c.source==="est."?"legacy AI estimate — not used in ranking":"human-curated"}</h4>
+      <div class="kv"><span class="k">vibe</span><span>${esc(c.vibe)} — ${esc(c.fit_notes)}</span>
+      <span class="k">fit</span><span>${c.fit}/100 · WLB ${c.wlb}/5 · pace ${esc(c.pace)}</span>
+      <span class="k">new-grad TC</span><span>${esc(c.new_grad_tc)}</span></div></div>`:""}
+    <div class="sect"><h4>Radar coverage</h4><div class="kv">
+      <span class="k">sector</span><span>${esc(j.sector||"not classified")}</span>
+      <span class="k">ATS</span><span>${reg?`polling ${esc(reg.ats||"?")} · ${esc(reg.status||"?")}`:"not in direct-board registry"}</span>
+    </div></div>
+    <div class="sect"><h4>Evidence used</h4>${sourceList(d)}</div>
+    <div class="sect"><h4>Explore elsewhere · not dossier evidence</h4>${researchLinks(j.company)}</div>`;
 }
 
 function wsFit(j, w, c, id) {
@@ -757,25 +802,47 @@ function renderCosList() {
   const el = $("#cosList"); if (!el) return;
   const counts = {};
   for (const j of Object.values(S.jobs)) {
+    if (j.closed_at) continue;
     const k = norm(j.company);
-    counts[k] = counts[k]||{name:j.company, open:0, best:0};
-    counts[k].open++; counts[k].best = Math.max(counts[k].best, j.score||0);
+    counts[k] = counts[k]||{name:j.company, open:0, best:0, bestId:j.id};
+    counts[k].open++;
+    if ((j.score||0) >= counts[k].best) { counts[k].best=j.score||0; counts[k].bestId=j.id; }
   }
   const q = norm(S.filter.q);
-  let rows = Object.entries(counts).map(([k,v])=>({k, ...v, c:S.culture[k]}));
+  let rows = Object.entries(counts).map(([k,v])=>({k, ...v, c:S.culture[k], d:S.research[k]}));
   if (q) rows = rows.filter(r=>r.k.includes(q));
-  rows.sort((a,b)=>(b.c?.fit||0)-(a.c?.fit||0) || b.best-a.best);
+  rows.sort((a,b)=>(b.d?.status==="ready")-(a.d?.status==="ready") || b.best-a.best);
   const n = $("#cosCount"); if (n) n.textContent = `${rows.length} companies`;
   el.innerHTML = `
-    <div class="wrap"><table><tr><th>company</th><th>industry</th><th>prestige</th>
-      <th>fit</th><th>wlb</th><th>new-grad tc</th><th>roles</th><th>research</th></tr>
+    <div class="wrap"><table><tr><th>company</th><th>what they do</th><th>research</th>
+      <th>culture</th><th>open roles</th></tr>
     ${rows.slice(0,200).map(r=>`<tr>
-      <td><b>${esc(r.name)}</b>${S.marquee.has(r.k)?' <span class="chip marquee">marquee</span>':""}</td>
-      <td>${esc(r.c?.industry||"–")}</td><td>${esc(r.c?.prestige||"–")}</td>
-      <td>${r.c?`${r.c.fit}/100${r.c.source==="est."?" <span class='sub'>est.</span>":""}`:"–"}</td>
-      <td>${r.c?r.c.wlb+"/5":"–"}</td><td>${esc(r.c?.new_grad_tc||"–")}</td>
-      <td>${r.open} (top ${r.best})</td><td>${researchLinks(r.name)}</td></tr>`).join("")}
+      <td><button class="jobtitle" onclick='openWS("${r.bestId}")'><b>${esc(r.name)}</b></button>
+        ${S.marquee.has(r.k)?' <span class="chip marquee">marquee</span>':""}</td>
+      <td>${esc(r.d?.summary?.value||"Official evidence not captured yet")}</td>
+      <td><span class="chip ${r.d?.status==="ready"?"good":"unknown"}">${esc(r.d?researchFreshness(r.d):"queued")}</span></td>
+      <td>${r.c?`${r.c.fit}/100 · WLB ${r.c.wlb}/5${r.c.source==="est."?" <span class='sub'>legacy estimate</span>":""}`:"–"}</td>
+      <td>${r.open} · top ${r.best}</td></tr>`).join("")}
     </table></div>`;
+}
+
+function rInterview() {
+  const active = S.applied.filter(a=>["oa","interview"].includes(a.stage));
+  $("#main").innerHTML = `
+    <div class="note"><b>Interview workspace v1:</b> grounded company context plus a practical
+      prep checklist. Exact leaked-question claims are intentionally excluded unless a source is captured.</div>
+    ${active.length?`<div class="lanes">${active.map(a=>{ const d=S.research[norm(a.company)];
+      return `<div class="lane"><h3>${a.stage==="oa"?"🧪 Online assessment":"🗣 Interview"}</h3>
+        <button class="jobtitle" onclick='openWS("${a.id}")'><b>${esc(a.company)}</b> — ${esc(a.title)}</button>
+        <p class="sub">${esc(d?.summary?.value||"Company evidence is queued for the next enrich cycle.")}</p>
+        ${d?`<p><b>Likely prep focus:</b> ${esc(d.interview_focus?.value||"Not confirmed")}</p>`:""}
+        <ul class="sub"><li>Map 3 role requirements to one concrete project story each.</li>
+          <li>Prepare a 60-second “why this company” using the cited Company brief.</li>
+          <li>Write 3 questions about the team, product, and first 90 days.</li>
+          <li>Confirm format, time zone, interviewer names, and any assessment deadline.</li></ul>
+        <button class="act" onclick='openWS("${a.id}");S.wsTab="company";openWS("${a.id}")'>open cited brief ▸</button>
+      </div>`;}).join("")}</div>`:
+      `<p class="sub">Move an application to OA or Interview in Notion/email tracking and its prep card appears here.</p>`}`;
 }
 
 function rAI() {
@@ -785,17 +852,30 @@ function rAI() {
   const lastRun = S.runs[S.runs.length-1];
   const scoutAgo = S.scout.last_run ? Math.round((Date.now()/1000-S.scout.last_run)/86400) : null;
   const scouts = Object.values(S.companies).filter(c=>c.origin==="scout");
+  const usage = S.aiUsage||{};
+  const models = Object.entries(usage.models||{});
   $("#main").innerHTML = `
-    <div class="note">The cloud scores deterministically (auditable rubric, no AI needed).
-      Your M1 Max runs <b>qwen3:30b</b> locally every 2h while awake — private, free — to add
-      angles, culture dossiers, and re-ranks. Nothing here costs anything.</div>
+    <div class="note">Core scoring stays deterministic. AI is a bounded enrichment layer:
+      local Ollama handles bulk work when the Mac is awake; free NVIDIA endpoints handle a small
+      time-sensitive cloud queue with fallback and cooldown. No billing method is assumed.</div>
     <div class="lanes">
-      <div class="lane"><h3>Enrichment</h3>
+      <div class="lane"><h3>Latest AI budget</h3>
+        <div class="kv"><span class="k">router</span><span>${esc(usage.provider||"not run")}</span>
+          <span class="k">logical calls</span><span>${usage.logical_calls||0} / ${usage.limits?.logical_calls||"–"}</span>
+          <span class="k">provider requests</span><span>${usage.requests||0} / ${usage.limits?.requests||"–"}</span>
+          <span class="k">task mix</span><span>${esc(Object.entries(usage.task_calls||{}).map(([k,v])=>`${k}: ${v}`).join(" · ")||"none")}</span>
+          <span class="k">last enrich</span><span>${usage.generated_at?new Date(usage.generated_at*1000).toLocaleString():"–"}</span></div></div>
+      <div class="lane"><h3>Model health · latest run</h3>
+        <div class="kv">${models.length?models.map(([name,m])=>
+          `<span class="k">${esc(name)}</span><span>${m.ok||0}/${m.requests||0} OK · ${m.errors||0} errors · ${m.tokens||0} reported tokens</span>`).join(""):
+          '<span class="sub">No hosted/local requests recorded yet.</span>'}</div></div>
+      <div class="lane"><h3>Enrichment coverage</h3>
         <div class="kv">
           <span class="k">jobs with AI angle</span><span>${withNote} / ${jobs.length}</span>
           <span class="k">culture dossiers</span><span>${doss.length}
             (${doss.filter(d=>d.source==="seed").length} curated,
-             ${doss.filter(d=>d.source==="est.").length} AI-estimated)</span>
+             ${doss.filter(d=>d.source==="est.").length} legacy estimates)</span>
+          <span class="k">grounded company briefs</span><span>${Object.values(S.research).filter(d=>d.status==="ready").length} ready · ${Object.keys(S.research).length} with evidence</span>
           <span class="k">last crawl</span><span>${lastRun?new Date(lastRun.ts*1000).toLocaleString():"–"}
             · ${lastRun?lastRun.new_jobs:0} new · ${lastRun?lastRun.alerts:0} alerts</span>
         </div></div>
