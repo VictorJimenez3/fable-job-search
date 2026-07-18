@@ -649,10 +649,10 @@
  },
  "brunswick corporation": {
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "a4762f72bffa4d38",
-  "last_attempt_at": 1784403221,
+  "last_attempt_at": 1784403262,
   "last_evidence_at": 1784400836,
   "name": "Brunswick Corporation",
   "schema_v": 1,
@@ -1103,10 +1103,10 @@
  },
  "havocai": {
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "d56437593ab5341e",
-  "last_attempt_at": 1784403221,
+  "last_attempt_at": 1784403262,
   "last_evidence_at": 1784400836,
   "name": "HavocAI",
   "schema_v": 1,
@@ -1430,13 +1430,60 @@
  },
  "medpace": {
   "aliases": [],
-  "attempts": 2,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 3,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "30c7e309099c8ee4",
-  "last_attempt_at": 1784403221,
+  "generated_at": 1784403262,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "38250e1755"
+   ],
+   "value": "The job posting emphasizes engineering and development trends, suggesting a focus on technical skills and innovation in the hiring process."
+  },
+  "last_attempt_at": 1784403262,
   "last_evidence_at": 1784389818,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Medpace",
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789587262,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "38250e1755"
+   ],
+   "value": "Public Company"
+  },
   "sources": [
    {
     "content_sha": "562718505913114f",
@@ -1449,7 +1496,36 @@
     "url": "https://jobright.ai/jobs/info/6a2a715e2cde2824469c1cdf?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "38250e1755"
+   ],
+   "value": "Sponsorship for this specific role is not guaranteed. Engineering and Development roles receive 100% of sponsorships (2026: 2, 2025: 29, 2024: 21, 2023: 19, 2022: 22, 2021: 22, 2020: 16)."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "38250e1755"
+   ],
+   "value": "Medpace is a public company in the healthcare technology sector, focused on clinical trial operations. The company operates in a fast-paced environment with a mission-driven approach to healthcare innovation."
+  },
+  "synthesized_evidence_sha": "30c7e309099c8ee4",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "38250e1755"
+   ],
+   "value": "Software engineering for clinical trial operations, with a focus on engineering and development trends."
+  },
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "38250e1755"
+   ],
+   "value": "Medpace offers a public company environment with engineering and development roles that have strong sponsorship trends, indicating a focus on technical talent acquisition and retention."
+  }
  },
  "merck": {
   "aliases": [],
