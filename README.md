@@ -101,10 +101,13 @@ No connector is required for discovery or ranking.
   on writes.
 - `EMAIL_ADDRESS` + `EMAIL_APP_PASSWORD`: reads application lifecycle email
   and advances stages. Run `email-verify`; it is read-only.
-- `ANTHROPIC_API_KEY`, or `LLM_BASE_URL` + `LLM_API_KEY` + `LLM_MODEL`:
-  optional quality review, employer dossiers, and company scouting. See
-  [AI setup](docs/AI_SETUP.md). A ChatGPT Pro subscription does not include
-  OpenAI API credits; API billing and keys are separate.
+- Four named NVIDIA NIM keys power the bounded nightly ChemE enrichment pass;
+  local Ollama remains supported for bulk work. Routing, limits, and exact
+  names are in [AI setup](docs/AI_SETUP.md). A ChatGPT Pro subscription does
+  not include OpenAI API credits, and none are required here.
+- Prefer Google Workspace? Set up the optional first-class Sheets tracker using
+  [the Google Sheets runbook](docs/GOOGLE_SHEETS_SETUP.md), then set
+  `TRACKER_BACKEND=google_sheets`. Notion remains the default.
 - `GOOGLE_CSE_KEY` + `GOOGLE_CSE_ID`: optional public LinkedIn-post discovery.
   The project never logs in to or scrapes LinkedIn.
 - GitHub OAuth variables for owner-only Vercel writes are listed in

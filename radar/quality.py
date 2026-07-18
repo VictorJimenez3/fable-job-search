@@ -183,6 +183,17 @@ def _parse_verdict(raw: str | None) -> dict | None:
         return None
     if v.get("new_grad") not in ("yes", "no", "unclear"):
         return None
+    if v.get("role_family") not in (
+        "chemical-process", "bioprocess-pharma", "manufacturing-operations",
+        "materials-semiconductor", "environmental-safety", "quality-validation",
+        "other-engineering", "non-technical"):
+        return None
+    years = v.get("years_required")
+    if years is not None and (not isinstance(years, int) or isinstance(years, bool)
+                              or not 0 <= years <= 50):
+        return None
+    if not isinstance(v.get("reason", ""), str):
+        return None
     return v
 
 
@@ -262,9 +273,14 @@ def verify(rec: dict, domains: dict | None = None) -> bool:
     raw = llm.complete(
         PROMPT.format(title=rec.get("title", ""), company=rec.get("company", ""),
                       text=text[:6000]),
-        max_tokens=300, timeout=120, json_mode=True)
+        max_tokens=240, timeout=120, json_mode=True, task="quality",
+        validator=lambda text: _parse_verdict(text) is not None)
     v = _parse_verdict(raw)
     if v is None:
+        if raw is None:
+            q["attempts"] = max(0, q.get("attempts", 1) - 1)
+            q["ai_deferred_at"] = now
+            return False
         if q["attempts"] >= _MAX_ATTEMPTS:
             q.update({"checked_at": now, "new_grad": "unclear"})
             return True
@@ -300,7 +316,8 @@ def verify_pasted(rec: dict, jd_text: str) -> bool:
     raw = llm.complete(
         PROMPT.format(title=rec.get("title", ""), company=rec.get("company", ""),
                       text=jd_text[:6000]),
-        max_tokens=300, timeout=120, json_mode=True)
+        max_tokens=240, timeout=120, json_mode=True, task="pasted_jd",
+        validator=lambda text: _parse_verdict(text) is not None)
     v = _parse_verdict(raw)
     if v is None:
         return False
@@ -322,22 +339,32 @@ def verify_pasted(rec: dict, jd_text: str) -> bool:
 AGGREGATOR_SOURCES = ("jobright", "simplify", "speedyapply", "vansh", "hn")
 
 
-def _candidates(jobs_state: dict, now: int) -> list[dict]:
+def _candidates(jobs_state: dict, now: int,
+                priority_ids: set[str] | None = None) -> list[dict]:
     """Alert-worthy recent jobs, most visible + least trustworthy first —
     these are the ones on the master board / alerts, where a bad entry costs
     real application time. SPA hosts (Workday/Oracle/Eightfold) are included
     since 2026-07-16 — fetch_posting_spa reads them via their JSON APIs."""
+    priority_ids = priority_ids or set()
+    minimum = int(env("RADAR_QUALITY_MIN_SCORE", "55"))
     rows = [r for r in jobs_state.values()
             if r.get("alert_ok")
+            and r.get("score", 0) >= minimum
             and not r.get("closed_at")
             and now - r.get("first_seen", 0) <= 30 * 86400]
-    rows.sort(key=lambda r: (r.get("source") not in AGGREGATOR_SOURCES,
-                             -r.get("score", 0), -(r.get("posted_at") or 0)))
+    rows.sort(key=lambda r: (
+        r.get("id") not in priority_ids,
+        now - r.get("first_seen", 0) > 72 * 3600,
+        r.get("source") not in AGGREGATOR_SOURCES,
+        -r.get("score", 0),
+        -(r.get("posted_at") or r.get("first_seen") or 0),
+    ))
     return rows
 
 
 def run(jobs_state: dict, limit: int | None = None,
-        domains: dict | None = None) -> tuple[int, int]:
+        domains: dict | None = None,
+        priority_ids: set[str] | None = None) -> tuple[int, int]:
     """One quality cycle: re-apply all stored verdicts, then verify up to
     `limit` unverified jobs. `domains` maps norm(company) → careers domain
     (Eightfold's detail API wants it; built from the registry in enrich).
@@ -356,7 +383,7 @@ def run(jobs_state: dict, limit: int | None = None,
     # an unbounded fetch spree (first live cycle: 131 fetches for 15
     # verdicts before this cap).
     tried = verified = 0
-    for rec in _candidates(jobs_state, now):
+    for rec in _candidates(jobs_state, now, priority_ids):
         if tried >= limit:
             break
         q = rec.get("quality") or {}

@@ -157,13 +157,17 @@ def scrape_pass(new_jobs: list, jobs_state: dict, domains: dict,
     A dead link found while fetching closes the job (same semantics as the
     quality pass). Budget counts fetches, not successes.
     """
-    from . import quality  # late import: quality also imports this module
+    from . import company_research, quality  # late imports avoid cycles
     if env("RADAR_SCRAPE_DISABLE"):
         return {}
     budget = int(env("RADAR_SCRAPE_LIMIT", "20")) if budget is None else budget
-    stats = {"inline": 0, "fetched": 0, "closed": 0, "demoted": 0}
+    stats = {"inline": 0, "fetched": 0, "closed": 0, "demoted": 0,
+             "research_sources": 0}
+    research = company_research.load()
+    research_changed = False
 
     def _fetch_and_apply(target, url_rec, is_job: bool) -> None:
+        nonlocal research_changed
         if quality.spa_kind(url_rec):
             alive, text = quality.fetch_posting_spa(url_rec, domains)
         else:
@@ -180,6 +184,13 @@ def scrape_pass(new_jobs: list, jobs_state: dict, domains: dict,
                 if "posting gone (link checked)" not in target.get("score_reasons", []):
                     target.setdefault("score_reasons", []).append("posting gone (link checked)")
             return
+        company = target.company if is_job else target.get("company", "")
+        title = target.title if is_job else target.get("title", "")
+        url = target.url if is_job else target.get("url", "")
+        if company_research.capture_into(research, company=company, title=title,
+                                         url=url, text=text, retrieved_at=now):
+            research_changed = True
+            stats["research_sources"] += 1
         a = analyze(text)
         if not a:
             return
@@ -201,6 +212,11 @@ def scrape_pass(new_jobs: list, jobs_state: dict, domains: dict,
     # A: free inline analysis for jobs that came with text
     for j in new_jobs:
         if j.description and not j.posting:
+            if company_research.capture_into(research, company=j.company, title=j.title,
+                                             url=j.url, text=j.description,
+                                             retrieved_at=now):
+                research_changed = True
+                stats["research_sources"] += 1
             a = analyze(j.description)
             if a:
                 rec = {"alert_ok": j.alert_ok, "score_reasons": j.score_reasons}
@@ -232,6 +248,8 @@ def scrape_pass(new_jobs: list, jobs_state: dict, domains: dict,
             if stats["fetched"] >= budget:
                 break
             _fetch_and_apply(rec, rec, is_job=False)
+    if research_changed:
+        company_research.save(research)
     return stats
 
 

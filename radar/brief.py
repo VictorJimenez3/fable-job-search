@@ -30,7 +30,7 @@ def rerank(jobs: list) -> None:
         "hands-on learning, and growth. Also a <=12 word 'angle' for their application.\n"
         f"Postings:\n{json.dumps(rows, ensure_ascii=False)}\n\n"
         'Reply with ONLY a JSON array: [{"id": "...", "fit": 7, "angle": "..."}]')
-    text = llm.complete(prompt, json_mode=True)
+    text = llm.complete(prompt, max_tokens=1200, json_mode=True, task="rerank")
     if not text:
         return
     try:
@@ -44,7 +44,8 @@ def rerank(jobs: list) -> None:
         if not r:
             continue
         try:
-            adj = round((float(r.get("fit", 5)) - 5) * 3)
+            fit = max(0, min(10, float(r.get("fit", 5))))
+            adj = max(-6, min(6, round((fit - 5) * 1.2)))
         except (TypeError, ValueError):
             continue
         if adj:

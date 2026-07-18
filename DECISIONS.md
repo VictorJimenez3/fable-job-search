@@ -669,3 +669,26 @@ is retained when it also has a recognizable US option; a genuinely unknown
 location is still not silently treated as foreign. The rule-version bump
 re-gates stored jobs on the next crawl and removes the false alerts from the
 master board without deleting audit history.
+
+## 40. ChemE AI uses the shared bounded router and official evidence (2026-07-18)
+
+The branch receives a nightly 8-logical-call/12-provider-request budget through
+the default branch's `cheme-enrich` orchestrator. Explicit pasted descriptions,
+tracked roles, and fresh high-fit internships outrank background work. GLM,
+DeepSeek, and Nemotron are task-routed with retry/fallback/cooldown; Kimi is a
+last fallback while its NIM endpoint remains intermittently unavailable. The
+30-minute ChemE crawl never receives the keys.
+
+Company facts come only from bounded official-posting excerpts already fetched
+by the crawler. Synthesis must cite valid source IDs and missing facts remain
+`Not confirmed`. Uncited legacy culture estimates are display-only; only this
+profile's human-curated seed can move ranking.
+
+## 41. Advanced stages and tracker edits flow back into ChemE (2026-07-18)
+
+Notion stage changes are pulled by owned page ID, so the shared database cannot
+cross-update the main/ChemE boards by fuzzy company matching. The platform now
+keeps Applied/OA/Interview/Rejected/Closed distinct and gives OA/Interview roles
+a grounded prep workspace. `TRACKER_BACKEND=google_sheets` is an optional
+stable-ID Sheets replacement once the candidate authorizes Google OAuth; Notion
+remains the default and no second tracker is created automatically.

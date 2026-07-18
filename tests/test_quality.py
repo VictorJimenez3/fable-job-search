@@ -51,7 +51,7 @@ def test_llm_not_new_grad_suppresses_and_penalizes(monkeypatch):
     monkeypatch.setattr(quality.http, "get",
                         lambda *a, **k: FakeResp(200, _posting("Requires 5 years of experience building services.")))
     monkeypatch.setattr(quality.llm, "complete", lambda *a, **k:
-                        '{"years_required": 5, "new_grad": "no", "role_family": "swe", "reason": "wants 5 years"}')
+                        '{"years_required": 5, "new_grad": "no", "role_family": "chemical-process", "reason": "wants 5 years"}')
     rec = _rec()
     assert quality.verify(rec)
     assert rec["alert_ok"] is False
@@ -66,7 +66,7 @@ def test_marquee_now_suppressed_by_verdict(monkeypatch):
     monkeypatch.setattr(quality.http, "get",
                         lambda *a, **k: FakeResp(200, _posting("Minimum 4 years experience.")))
     monkeypatch.setattr(quality.llm, "complete", lambda *a, **k:
-                        '{"years_required": 4, "new_grad": "no", "role_family": "swe", "reason": "4 yrs"}')
+                        '{"years_required": 4, "new_grad": "no", "role_family": "chemical-process", "reason": "4 yrs"}')
     rec = _rec(company="Anthropic")
     assert quality.verify(rec)
     assert rec["alert_ok"] is False
@@ -87,7 +87,7 @@ def test_non_technical_role_demoted(monkeypatch):
 
 def test_reapply_is_idempotent_without_rescore(monkeypatch):
     rec = _rec(quality={"checked_at": NOW, "live": True, "new_grad": "no",
-                        "years_required": 3, "role_family": "swe", "reason": "x"})
+                        "years_required": 3, "role_family": "chemical-process", "reason": "x"})
     quality.reapply(rec)
     once = rec["score"]
     quality.reapply(rec)
@@ -98,7 +98,7 @@ def test_reapply_is_idempotent_without_rescore(monkeypatch):
 
 def test_reapply_restores_after_rescore(monkeypatch):
     rec = _rec(quality={"checked_at": NOW, "live": True, "new_grad": "no",
-                        "years_required": 3, "role_family": "swe", "reason": "x"})
+                        "years_required": 3, "role_family": "chemical-process", "reason": "x"})
     quality.reapply(rec)
     # simulate enrich re-score: score() rebuilds score + reasons from scratch
     rec["score"] = 80
@@ -134,7 +134,7 @@ def test_one_to_two_years_demotes_but_never_hides(monkeypatch):
     monkeypatch.setattr(quality.http, "get",
                         lambda *a, **k: FakeResp(200, _posting("1-2 years of experience preferred.")))
     monkeypatch.setattr(quality.llm, "complete", lambda *a, **k:
-                        '{"years_required": 1, "new_grad": "no", "role_family": "swe", "reason": "1+ yrs"}')
+                        '{"years_required": 1, "new_grad": "no", "role_family": "chemical-process", "reason": "1+ yrs"}')
     rec = _rec()
     assert quality.verify(rec)
     assert rec["alert_ok"] is True
@@ -145,7 +145,7 @@ def test_verify_pasted_grades_and_is_idempotent(monkeypatch):
     calls = {"n": 0}
     def fake_llm(*a, **k):
         calls["n"] += 1
-        return '{"years_required": null, "new_grad": "yes", "role_family": "swe", "reason": "entry role"}'
+        return '{"years_required": null, "new_grad": "yes", "role_family": "chemical-process", "reason": "entry role"}'
     monkeypatch.setattr(quality.llm, "complete", fake_llm)
     rec = _rec()
     jd = "We are hiring a software engineer to join our platform team. " * 5
@@ -171,7 +171,7 @@ def test_verify_pasted_rejects_garbage_and_short_text(monkeypatch):
 
 def test_verify_pasted_suppresses_senior_posting(monkeypatch):
     monkeypatch.setattr(quality.llm, "complete", lambda *a, **k:
-                        '{"years_required": 5, "new_grad": "no", "role_family": "swe", "reason": "5 yrs"}')
+                        '{"years_required": 5, "new_grad": "no", "role_family": "chemical-process", "reason": "5 yrs"}')
     rec = _rec(company="Anthropic")   # marquee no longer shields (DECISIONS #31)
     assert quality.verify_pasted(rec, "Requires five years of experience. " * 10)
     assert rec["alert_ok"] is False
@@ -246,7 +246,7 @@ def test_verify_routes_spa_urls_through_json_api(monkeypatch):
     monkeypatch.setattr(quality, "fetch_posting",
                         lambda url: (_ for _ in ()).throw(AssertionError("plain fetch used for SPA url")))
     monkeypatch.setattr(quality.llm, "complete", lambda *a, **k:
-                        '{"years_required": 0, "new_grad": "yes", "role_family": "swe", "reason": "entry"}')
+                        '{"years_required": 0, "new_grad": "yes", "role_family": "chemical-process", "reason": "entry"}')
     rec = _rec(url="https://x.wd5.myworkdayjobs.com/en-US/site/job/loc/Role_1")
     assert quality.verify(rec)
     assert rec["quality"]["new_grad"] == "yes"

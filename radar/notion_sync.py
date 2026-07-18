@@ -1,9 +1,9 @@
 """Write tracked jobs into the user's Notion Applications database.
 
 Every entry in state/applied.json carries a stage: "saved" (checkbox on an
-alert — the candidate is tracking it, hasn't applied yet) or "applied" (an explicit
+alert — Victor is tracking it, hasn't applied yet) or "applied" (an explicit
 `applied` comment or, later, email confirmation). Saved entries get a Notion
-page immediately with the not-yet-applied status; the candidate flips the status in
+page immediately with the not-yet-applied status; Victor flips the status in
 Notion when he applies. If the radar itself later learns an entry was applied,
 sync patches the existing page's status instead of creating a duplicate.
 
@@ -39,6 +39,7 @@ from .score import role_bucket
 PAGES_API = "https://api.notion.com/v1/pages"
 SEARCH_API = "https://api.notion.com/v1/search"
 DB_API = "https://api.notion.com/v1/databases/{}"
+QUERY_API = "https://api.notion.com/v1/databases/{}/query"
 
 
 def _headers(token: str) -> dict:
@@ -216,6 +217,86 @@ def stage_status_name(stage_key: str) -> str | None:
     }.get(stage_key)
 
 
+def _stage_key_from_status(status_name: str) -> str | None:
+    """Internal stage for a live Notion status label."""
+    wanted = (status_name or "").strip().casefold()
+    for key in ("saved", "applied", "oa", "interview", "rejected", "closed"):
+        label = stage_status_name(key)
+        if label and label.strip().casefold() == wanted:
+            return key
+    # Tolerate the common labels when a profile omitted optional mappings.
+    return {"oa": "oa", "online assessment": "oa", "interview": "interview",
+            "rejected": "rejected", "closed": "closed"}.get(wanted)
+
+
+def sync_from_notion(applied: list) -> int:
+    """Pull stage changes for pages already owned by this board.
+
+    The main and ChemE boards share one database, so identity is the Notion
+    page ID already stored on each local entry—not company/title guessing.
+    Unknown statuses and pages from the other board are ignored.
+    """
+    backend = env("TRACKER_BACKEND", "notion").strip().lower()
+    if backend == "google_sheets":
+        from .google_sheets import sync_from_sheet
+        return sync_from_sheet(applied)
+    token = env("NOTION_TOKEN")
+    if not token or not applied:
+        return 0
+    by_page = {}
+    for entry in applied:
+        page_id = page_id_from_url(entry.get("notion_page", ""))
+        if page_id:
+            by_page[page_id.replace("-", "").lower()] = entry
+    if not by_page:
+        return 0
+    try:
+        schema = resolve_database(token)
+        stage_prop = _stage_property(schema)
+        if not stage_prop:
+            return 0
+        pages, cursor = [], None
+        while True:
+            payload = {"page_size": 100}
+            if cursor:
+                payload["start_cursor"] = cursor
+            response = requests.post(QUERY_API.format(schema["id"]),
+                                     headers=_headers(token), json=payload, timeout=30)
+            response.raise_for_status()
+            body = response.json()
+            pages.extend(body.get("results") or [])
+            if not body.get("has_more"):
+                break
+            cursor = body.get("next_cursor")
+            if not cursor:
+                break
+    except Exception as exc:
+        print(f"notion: readback failed; local stages left unchanged: {exc}")
+        return 0
+
+    changed = 0
+    now = int(time.time())
+    for page in pages:
+        entry = by_page.get(str(page.get("id", "")).replace("-", "").lower())
+        if not entry:
+            continue
+        prop = (page.get("properties") or {}).get(stage_prop) or {}
+        status = (prop.get("status") or {}).get("name")
+        stage = _stage_key_from_status(status or "")
+        if not stage:
+            continue
+        old = entry.get("stage", "applied")
+        entry["notion_stage"] = stage
+        entry["notion_read_at"] = now
+        if stage != old:
+            entry["stage"] = stage
+            entry["status"] = stage
+            if stage in _RESPONSE_STAGES and not entry.get("responded_at"):
+                entry["responded_at"] = now
+            changed += 1
+    return changed
+
+
 # response-bearing stages record a Response date; only "applied" sets Apply date
 _RESPONSE_STAGES = {"oa", "interview", "rejected", "closed"}
 
@@ -228,7 +309,7 @@ def _needs_stage_patch(entry: dict) -> bool:
             and stage_status_name(entry.get("stage")) is not None)
 
 
-def sync_applied(applied: list) -> int:
+def _sync_applied_notion(applied: list) -> int:
     """Push unsynced entries to Notion (and patch stage changes). Returns count."""
     token = env("NOTION_TOKEN")
     if not token:
@@ -289,3 +370,14 @@ def sync_applied(applied: list) -> int:
         except Exception as e:
             print(f"notion: failed to set {entry.get('company')} -> {name}: {e}")
     return synced
+
+
+def sync_applied(applied: list) -> int:
+    """Sync to the selected tracker backend; Notion remains the default."""
+    backend = env("TRACKER_BACKEND", "notion").strip().lower()
+    if backend == "google_sheets":
+        from .google_sheets import sync_applied as sync_sheet
+        return sync_sheet(applied)
+    if backend not in {"notion", ""}:
+        print(f"tracker: unknown TRACKER_BACKEND={backend!r}; using Notion")
+    return _sync_applied_notion(applied)
