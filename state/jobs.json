@@ -9288,6 +9288,20 @@
    "Plano, TX"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784407765,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407765,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, no experience required",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -9918,7 +9932,7 @@
   ],
   "posted_at": 1783641600,
   "posting": {
-   "analyzed_at": 1784407681,
+   "analyzed_at": 1784407711,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 1,
@@ -9926,17 +9940,24 @@
   },
   "quality": {
    "ai_deferred_at": 1784407681,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407711,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "data",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 80,
+  "score": 70,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -15183,6 +15204,21 @@
    "Austin, Texas"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784407773,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407773,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, new grad role",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -53065,14 +53101,20 @@
   ],
   "posted_at": 1783728000,
   "posting": {
-   "analyzed_at": 1784407679,
+   "analyzed_at": 1784407703,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784407679,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407703,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for 2026 class with required skills in math, Python, R for quantitative research.",
+   "role_family": "data",
+   "years_required": null
   },
   "remote": true,
   "rules_v": 3,
@@ -64948,7 +64990,9 @@
   ],
   "posted_at": 1783900800,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784407694,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -78626,7 +78670,7 @@
   "url": "https://ebhu.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/6444"
  },
  "33fe0f7f728f5475": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "The Home Depot",
   "description": "",
@@ -78639,23 +78683,30 @@
   ],
   "posted_at": 1783641600,
   "posting": {
-   "analyzed_at": 1784407683,
+   "analyzed_at": 1784407718,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784407683,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407718,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 3+ years experience",
+   "role_family": "data",
+   "years_required": 3
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 80,
+  "score": 60,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "other",
   "source": "simplify",
@@ -94033,11 +94084,11 @@
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 74,
+  "score": 68,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <24h +12",
+   "posted <72h +6",
    "remote +2"
   ],
   "sector": "other",
@@ -117357,7 +117408,9 @@
   ],
   "posted_at": 1783641600,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784407726,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
@@ -120193,15 +120246,33 @@
    "Chicago, Illinois"
   ],
   "posted_at": 1783555200,
+  "posting": {
+   "analyzed_at": 1784407735,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 1,
+   "years_note": "One year of experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407735,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "data",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 80,
+  "score": 70,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -125892,6 +125963,23 @@
    "7635 Plantation Rd, Roanoke, VA 24019, USA"
   ],
   "posted_at": 1783641600,
+  "posting": {
+   "analyzed_at": 1784407727,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 0,
+   "years_note": "0-2 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407727,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, 0+ years exp",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -142171,11 +142259,11 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 66,
+  "score": 62,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <72h +6"
+   "posted <7d +2"
   ],
   "sector": "other",
   "source": "ashby",
@@ -157190,8 +157278,9 @@
   "url": "https://job-boards.greenhouse.io/nationallifeinsurancecompany/jobs/4057456009"
  },
  "680cd761f0fe7a42": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784407743,
   "company": "Morgan Business Consulting",
   "description": "",
   "explicit_new_grad": true,
@@ -157202,6 +157291,11 @@
    "Arlington, VA, United States"
   ],
   "posted_at": 1783555200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407743,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -157210,7 +157304,8 @@
    "base 40",
    "role:data_science +22",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -159770,6 +159865,20 @@
    "Charlotte, NC"
   ],
   "posted_at": 1783549731,
+  "posting": {
+   "analyzed_at": 1784407744,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407744,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for 2026 class",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -176918,6 +177027,18 @@
    "Minneapolis, MN"
   ],
   "posted_at": 1783462203,
+  "posting": {
+   "analyzed_at": 1784407792,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "sponsorship is not offered",
+   "years_min": 1,
+   "years_note": "Minimum 1 year"
+  },
+  "quality": {
+   "ai_deferred_at": 1784407792,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -180606,8 +180727,9 @@
   "url": "https://job-boards.greenhouse.io/usconec/jobs/4242672009"
  },
  "77baab2b4f89fcf1": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784407796,
   "company": "KLA",
   "description": "",
   "explicit_new_grad": true,
@@ -180618,6 +180740,11 @@
    "Milpitas, CA, United States"
   ],
   "posted_at": 1783382400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407796,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -180626,7 +180753,8 @@
    "base 40",
    "role:data_science +22",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -198276,8 +198404,9 @@
   "url": "http://www.hioscar.com/careers/7594414?gh_jid=7594414"
  },
  "83b875ceece90e33": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784407734,
   "company": "Epic for Kids",
   "description": "",
   "explicit_new_grad": true,
@@ -198288,6 +198417,11 @@
    "United States"
   ],
   "posted_at": 1783641600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407734,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -198297,7 +198431,8 @@
    "role:swe +20",
    "new-grad title +12",
    "remote +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -202153,8 +202288,9 @@
   "url": "https://jobs.ashbyhq.com/elevenlabs/29491158-3020-45b0-9bbb-789a55e87beb"
  },
  "865cfbe6988b610e": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784407781,
   "company": "Northrop Grumman Australia",
   "description": "",
   "explicit_new_grad": true,
@@ -202165,6 +202301,11 @@
    "United States-California-Palmdale, United States of America"
   ],
   "posted_at": 1783468800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407781,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -202173,7 +202314,8 @@
    "base 40",
    "role:data_science +22",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -219427,7 +219569,7 @@
   "url": "https://job-boards.greenhouse.io/icapitalnetwork/jobs/8634720002"
  },
  "91b96e0bc9c9d884": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Mortenson",
   "description": "",
@@ -219439,6 +219581,18 @@
    "Minneapolis, MN, United States"
   ],
   "posted_at": 1783382400,
+  "posting": {
+   "analyzed_at": 1784407796,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 5,
+   "years_note": "Minimum of 5 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784407796,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -219447,7 +219601,8 @@
    "base 40",
    "role:data_science +22",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "posting: wants 5+ yrs (dashboard only)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -239163,6 +239318,17 @@
    "West Athens, CA"
   ],
   "posted_at": 1783386844,
+  "posting": {
+   "analyzed_at": 1784407795,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 2,
+   "years_note": "2+ years of professional experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784407795,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -243440,6 +243606,21 @@
    "Chantilly, VA"
   ],
   "posted_at": 1783549093,
+  "posting": {
+   "analyzed_at": 1784407750,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "Citizenship is required"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407750,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role, security focus",
+   "role_family": "security",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -245299,6 +245480,21 @@
    "Chicago, IL"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784407781,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407781,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, new grad role",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -248238,6 +248434,17 @@
    "CA, United States"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784407790,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1+ years of experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784407790,
+   "attempts": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -271469,8 +271676,9 @@
   "url": "https://jobs.lever.co/voltus/f13d367c-97c1-4af3-8e8b-06827017fee2/apply"
  },
  "b2d5968536453787": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784407791,
   "company": "Northrop Grumman",
   "description": "",
   "explicit_new_grad": true,
@@ -271481,6 +271689,11 @@
    "United States-Utah-Roy"
   ],
   "posted_at": 1783468800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407791,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -271490,7 +271703,8 @@
    "role:swe +20",
    "new-grad title +12",
    "title matches your history +4",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -281044,6 +281258,17 @@
    "NYC"
   ],
   "posted_at": 1783461830,
+  "posting": {
+   "analyzed_at": 1784407794,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0-2 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784407794,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -295552,6 +295777,15 @@
    "Little Rock, AR"
   ],
   "posted_at": 1783461954,
+  "posting": {
+   "analyzed_at": 1784407793,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784407793,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -346431,6 +346665,20 @@
    "Arlington, VA"
   ],
   "posted_at": 1783548754,
+  "posting": {
+   "analyzed_at": 1784407758,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407758,
+   "live": true,
+   "new_grad": "unclear",
+   "reason": "No explicit reqs, but role is technical.",
+   "role_family": "other-technical",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -378826,13 +379074,19 @@
   ],
   "posted_at": 1783814400,
   "posting": {
-   "analyzed_at": 1784407677,
+   "analyzed_at": 1784407695,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784407677,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407695,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, new grad role",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": true,
   "rules_v": 3,
