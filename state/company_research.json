@@ -2382,63 +2382,79 @@
  },
  "openai": {
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "2b5f61f971"
+   ],
+   "value": "B2B and B2C services including API access to AI models, enterprise solutions, and subscription-based products."
   },
   "customers": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "e5cd93787b",
-    "2b5f61f971",
-    "f01f31740e"
+    "2b5f61f971"
    ],
-   "value": "Digital Natives, startups, and AWS partners."
+   "value": "Enterprise clients, startups, and individual users of AI models and tools."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "evidence_sha": "32ed443013c5b518",
-  "generated_at": 1784389190,
+  "generated_at": 1784403469,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "local",
+   "model": "qwen3:30b",
    "task": "company_research"
   },
   "interview_focus": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "e5cd93787b",
-    "2b5f61f971",
-    "f01f31740e"
+    "843e2ed34c",
+    "4a2c1c8cfb",
+    "2b5f61f971"
    ],
-   "value": "Focus on demonstrating AI deployment expertise, startup and digital native customer engagement, and rapid technical learning to match the fast, innovative culture."
+   "value": "Technical skills in AI, data science, distributed systems, and problem-solving for roles like Machine Learning Engineer, AI Emerging Risks Analyst, and AI Deployment Engineer."
   },
-  "last_attempt_at": 1784403432,
+  "last_attempt_at": 1784403469,
   "last_evidence_at": 1784400836,
   "locations": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "843e2ed34c",
+    "4a2c1c8cfb",
+    "2b5f61f971"
+   ],
+   "value": "Multiple locations, with headquarters in San Francisco, but specific locations not stated in job postings."
   },
   "mission": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "843e2ed34c",
+    "4a2c1c8cfb",
+    "2b5f61f971"
+   ],
+   "value": "To create safe and beneficial artificial intelligence that can be used by humans to solve real-world problems."
   },
   "name": "OpenAI",
   "products": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "843e2ed34c",
+    "4a2c1c8cfb",
+    "2b5f61f971"
+   ],
+   "value": "GPT-4, DALL-E, robotics systems, and various AI deployment tools for startups."
   },
   "prompt_v": 1,
-  "refresh_after": 1789573190,
+  "refresh_after": 1789587469,
   "schema_v": 1,
   "size_stage": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "843e2ed34c",
+    "4a2c1c8cfb",
+    "2b5f61f971"
+   ],
+   "value": "Private company, likely in growth stage given job postings and product development focus."
   },
   "sources": [
    {
@@ -2481,30 +2497,29 @@
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "e5cd93787b",
-    "2b5f61f971",
-    "f01f31740e"
+    "843e2ed34c",
+    "4a2c1c8cfb",
+    "2b5f61f971"
    ],
-   "value": "OpenAI is hiring AI Deployment Engineers for Digital Natives, Startups, and AWS partnerships."
+   "value": "OpenAI is a leading AI research and development company focused on creating safe and beneficial artificial intelligence. The company is known for its advanced language models and robotics systems, and it seeks to balance innovation with responsible AI development."
   },
-  "synthesized_evidence_sha": "36409f0abcc68550",
+  "synthesized_evidence_sha": "32ed443013c5b518",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "e5cd93787b",
-    "2b5f61f971",
-    "f01f31740e"
+    "843e2ed34c",
+    "2b5f61f971"
    ],
-   "value": "AI Deployment Engineer roles."
+   "value": "Developing distributed data systems, AI models, robotics, and deployment tools for startups."
   },
   "why_it_matters": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "e5cd93787b",
-    "2b5f61f971",
-    "f01f31740e"
+    "843e2ed34c",
+    "4a2c1c8cfb",
+    "2b5f61f971"
    ],
-   "value": "Roles in AI Deployment offer elite prestige and fast-paced tech culture aligned with top-tier AI career goals, though specific WLB and new-grad pay details are not confirmed in the sources."
+   "value": "OpenAI offers elite prestige in AI research with high new-grad pay, a fast-paced tech culture, and a mission-driven environment that respects work-life balance through sane hours and guaranteed shutdowns, avoiding toxic or high-burnout environments."
   }
  },
  "oura": {
@@ -3315,13 +3330,62 @@
  },
  "snowflake": {
   "aliases": [],
-  "attempts": 2,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 3,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "e59a745e565ad687",
-  "last_attempt_at": 1784403432,
+  "generated_at": 1784403469,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "73c2db6c38",
+    "43f7a82e39"
+   ],
+   "value": "Technical skills in AI research, agents, and reinforcement learning, with emphasis on innovation and problem-solving in a fast-paced environment."
+  },
+  "last_attempt_at": 1784403469,
   "last_evidence_at": 1784388999,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Snowflake",
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "73c2db6c38",
+    "43f7a82e39"
+   ],
+   "value": "Cloud data platform"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789587469,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "30629f30afc3657c",
@@ -3344,7 +3408,37 @@
     "url": "https://jobs.ashbyhq.com/snowflake/1bad12df-f443-426f-9d09-e96fc780d698/application"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "73c2db6c38",
+    "43f7a82e39"
+   ],
+   "value": "Snowflake is a cloud data platform company offering a top-tier AI research role for new graduates with a focus on agents and reinforcement learning, emphasizing innovation and technical growth."
+  },
+  "synthesized_evidence_sha": "e59a745e565ad687",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "73c2db6c38",
+    "43f7a82e39"
+   ],
+   "value": "Research in agents and reinforcement learning for AI"
+  },
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "73c2db6c38",
+    "43f7a82e39"
+   ],
+   "value": "The role balances elite prestige with high new-grad pay in a fast, innovative tech culture, avoiding slow bureaucracy. It offers mission-driven work with respect for work-life balance through sane hours and guaranteed shutdowns, preventing toxic burnout environments."
+  }
  },
  "spacex": {
   "aliases": [],
@@ -4073,13 +4167,58 @@
  },
  "vytalize health": {
   "aliases": [],
-  "attempts": 3,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 4,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "7b34d13e1eea2f5a",
-  "last_attempt_at": 1784403432,
+  "generated_at": 1784403469,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "56299e90ea"
+   ],
+   "value": "Technical skills in data engineering, problem-solving, and collaboration. Emphasis on building data pipelines and ETL processes."
+  },
+  "last_attempt_at": 1784403469,
   "last_evidence_at": 1784388999,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Vytalize Health",
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789587469,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "7d770cb1e829826d",
@@ -4092,7 +4231,34 @@
     "url": "https://jobs.ashbyhq.com/Vytalize%20Health/3576b087-709e-4bf0-a016-6cc1c24b802c/application?embed=true"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "56299e90ea"
+   ],
+   "value": "Vytalize Health is a health tech company focused on data engineering and AI solutions."
+  },
+  "synthesized_evidence_sha": "7b34d13e1eea2f5a",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "56299e90ea"
+   ],
+   "value": "Building and maintaining data pipelines, data modeling, and ETL processes for AI/ML applications."
+  },
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "56299e90ea"
+   ],
+   "value": "A top-tier AI or data science role that balances elite prestige and high new-grad pay with a fast, innovative tech culture rather than slow bureaucracy. A mission-driven company that actually respects work-life balance through sane hours and guaranteed shutdowns, avoiding toxic or high-burnout environments. A place that accelerates technical learning and career growth without sacrificing personal time."
+  }
  },
  "zs": {
   "aliases": [],
