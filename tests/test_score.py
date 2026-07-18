@@ -32,6 +32,13 @@ def test_gates_accept_new_grad_us():
     assert keep and alert_ok
 
 
+def test_gates_keep_temporary_focus_exclusions_on_dashboard_only():
+    for title in ("Full-Stack Software Engineer, New Grad", "Systems Engineer, New Grad"):
+        keep, alert_ok, reasons = gates(mk(title))
+        assert keep is True and alert_ok is False
+        assert any("temporary focus" in reason for reason in reasons)
+
+
 def test_gates_direct_ats_needs_entry_signal():
     # direct ATS posting without any new-grad language: kept, but not alertable
     keep, alert_ok, _ = gates(mk("Software Engineer", source="greenhouse"))

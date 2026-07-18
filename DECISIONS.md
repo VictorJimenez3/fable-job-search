@@ -1,5 +1,37 @@
 # Decision log
 
+## 41. Bounded two-hour AI drain and temporary alert focus (2026-07-18)
+
+The four free NVIDIA keys are now used by the main enrichment workflow every
+two hours, with the existing hard cap of 12 logical calls / 18 provider
+requests per run. The router rotates the first-choice key by two-hour slot and
+still falls back on errors or rate limits. This increases useful AI coverage
+without putting provider calls on every 30-minute crawl or assuming a quota
+that the repository cannot inspect. Full-stack and systems-engineering titles
+are temporarily dashboard-only so Victor's email/digest stream stays focused
+on AI/ML, data science, and AI-leaning software roles; records remain auditable
+and recoverable.
+
+## 43. Match model strength to task risk (2026-07-18)
+
+Local/small models are explicitly allowed to handle orientation, documentation,
+mechanical edits, focused deterministic fixes, tests, and validation. Stronger
+models are reserved for ranking policy, AI routing, auth/deployment, migrations,
+RAG/CV work, multi-user architecture, and ambiguous product decisions. This
+keeps hosted quota for high-judgment work while making the repository safe for
+Qwen CLI or proxy-backed Claude Code contributors.
+
+## 42. NVIDIA quota is measured conservatively (2026-07-18)
+
+The account UI reports “Up to 40 RPM,” but does not define whether that is per
+account, key, model, or burst window. A one-time 40-request burst (ten
+four-model verification runs) produced a GLM 429, DeepSeek timeouts, healthy
+Nemotron responses, and repeatable Kimi 404s. GLM and Nemotron recovered after
+70 seconds; DeepSeek remained unreliable and Kimi remained unavailable. The
+system therefore documents 40 RPM as an unknown provider/account ceiling and
+keeps the smaller per-run hard budgets, provider rotation, cooldowns, and
+fallbacks. No further quota stress testing is part of normal operation.
+
 Decisions made autonomously during the build, with reasoning. (You asked for
 the ambitious-but-real version and said to make judgment calls — here they are.)
 

@@ -33,6 +33,24 @@ Before changing the radar, read these in order:
   `docs/DASHBOARD.md`, or `docs/feed.xml`) except for a deliberate repair with
   its reason documented in the commit/message. Crawls generate them.
 
+## Model selection for future CLIs
+
+Use the smallest model that can safely complete the task. Local Qwen/Ollama or
+Qwen CLI is appropriate for repository orientation, docs/TODO maintenance,
+mechanical edits, focused parser/UI fixes, test additions, and validation. A
+Claude Code session using a proxy is also fine for bounded implementation when
+the acceptance criteria already exist.
+
+Use a stronger model for scoring/gate policy, AI routing/prompts/quotas,
+authentication or owner checks, Actions/Vercel/deployment, state migrations,
+tracker/concurrency changes, RAG/vector search, CV tailoring, multi-user
+onboarding, or ambiguous product decisions. Those tasks need explicit tests,
+an auditable decision entry, and updates to the owning docs.
+
+Never let a small model invent ranking policy, touch secrets or `CV/`, hand-edit
+generated state, or broaden scope. Human approval remains required for provider
+secret changes, OAuth activation, CV content, and production pushes.
+
 ## Current operational facts (verified 2026-07-18)
 
 - GitHub Actions is the production runtime; it uses Python 3.12. On Victor's
@@ -51,6 +69,17 @@ Before changing the radar, read these in order:
   forks get). `webapp/index.html` is canonical; `docs/platform/index.html`
   is a byte copy. Jobs tab shows posting age and sorts by best-match or
   newest-first.
+- **Current scope:** focus active work on the CS/SWE board. ChemE is paused
+  and should not be expanded until Victor explicitly revives it.
+- **Always-on local lane (verified 2026-07-18):** Ollama is reachable at
+  `127.0.0.1:11434` and `com.jobradar.enrich` is loaded via launchd with
+  `qwen3:30b` every two hours. Local enrichment can run alongside cloud
+  enrichment; keep local cycles serialized because they commit through the
+  same companion clone. The model is released between requests to avoid
+  monopolizing Mac memory.
+- **Phase ordering:** finish Victor's personal board first. Only after the
+  main board is high-quality, efficient, and low-slop should the app be
+  generalized for other users.
 - **The ChemE profile is a separate production board** at
   `job-radar-cheme.vercel.app`, backed by `claude/cheme-intern-radar` and
   `RADAR_PROFILE=cheme`. The default production branch owns the three
@@ -104,10 +133,25 @@ Before changing the radar, read these in order:
 - **AI foundation + company research (DECISIONS #39):** `radar/llm.py`
   task-routes the four named NVIDIA NIM keys with hard logical/request budgets,
   two-provider fallback, transient retry, cooldown, output validation, and
-  secret-free `state/ai_usage.json`. Main nightly budget is 12/18; ChemE has a
-  default-branch `cheme-enrich.yml` orchestrator at 8/12. Explicit pasted JDs,
-  tracked roles, and fresh high-score work outrank cold backlog. Kimi is final
-  fallback because its authenticated endpoint has been intermittently 404.
+  secret-free `state/ai_usage.json`. Main cloud enrichment now runs every two
+  hours (still capped at 12 logical / 18 provider requests per run; up to 10
+  quality checks and 2 company briefs) and rotates
+  the first-choice NVIDIA key by slot; ChemE has a default-branch
+  `cheme-enrich.yml` orchestrator at 8/12. Explicit pasted JDs, tracked roles,
+  and fresh high-score work outrank cold backlog. Kimi is final fallback
+  because its authenticated endpoint has been intermittently 404.
+- **NVIDIA quota evidence (2026-07-18):** the account UI says “Up to 40 RPM,”
+  but does not identify the scope. A 40-request burst (10 × 4-model probes)
+  produced one GLM 429, DeepSeek timeouts, healthy Nemotron responses, and
+  Kimi 404s; GLM/Nemotron recovered after a 70-second wait. Treat 40 RPM as an
+  unknown provider/account ceiling, not as a guaranteed per-model allowance.
+  Do not repeat the stress test; rely on cooldowns, rotation, and
+  `state/ai_usage.json` telemetry.
+- **Current alert focus (rules v4):** full-stack and systems-engineering titles
+  remain on the dashboard for recall but are temporarily excluded from alert
+  issues/digests. The active alert stream is AI/ML, data science, and other
+  software roles that are not explicitly full-stack/systems; this is a focused
+  personal-search preference, not a permanent deletion gate.
   The 30-minute crawls never receive the named keys.
 - **Evidence-first dossiers:** `posting.scrape_pass` retains only bounded
   relevant excerpts from official postings in `state/company_research.json`.
@@ -131,9 +175,16 @@ Before changing the radar, read these in order:
   checklist is in [`AGENTS.md`](../AGENTS.md).
 - **`CV/` is local-only and gitignored** (DECISIONS #29) — never commit it
   or anything derived from it; CV auto-tailoring is a Mac-companion feature.
-- **Deliberately deferred:** CV tailoring/CV role toggle and semantic/vector
-  RAG. The only user steps for shipped code are optional Google OAuth
-  activation and the already-documented ChemE email app password.
+- **Deliberately deferred:** CV tailoring/CV role toggle, semantic/vector
+  RAG, and the multi-user onboarding flow. The current build is personal-first
+  for Victor, and non-owners should eventually be routed into a generic
+  onboarding path that collects their own preferences and credentials.
+  The only user steps for shipped code are optional Google OAuth activation
+  and the already-documented ChemE email app password.
+- **Multi-user end state:** when Victor's board is finished, the app should
+  transition into a generic onboarding flow for other users. That future flow
+  should let them set their own major, board style, tracker, and AI
+  credentials, but it is intentionally not the current priority.
 
 ## Safe handoff practice
 

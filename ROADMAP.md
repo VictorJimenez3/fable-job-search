@@ -3,6 +3,54 @@
 The dream-system backlog. Each item is scoped enough to build on request;
 none block anything currently running.
 
+## CLI/model handoff policy (2026-07-18)
+
+Use the smallest trustworthy model for the task. The repository is the shared
+context; every CLI should read `AGENTS.md`, `CLAUDE.md`, `README.md`,
+`DECISIONS.md`, `docs/CLI_HANDOFF.md`, and the relevant module/tests before
+changing behavior. Do not spend a hosted/strong model on a task that is only
+documentation, inspection, or a mechanical edit.
+
+### Safe local/small-model work (Qwen/Ollama, Qwen CLI, or Claude Code through a proxy)
+
+- read-only repository audits, status checks, branch/history inspection, and
+  explaining existing behavior;
+- documentation maintenance that preserves the existing contract, TODO order,
+  handoff facts, and decision-log style;
+- formatting, typo fixes, link repairs, and generated-file consistency checks;
+- small deterministic parser/regex/UI copy fixes with focused regression tests;
+- running the prescribed test/compile/copy checks and reporting failures;
+- updating a clearly scoped test fixture or adding a straightforward unit test.
+
+Small models must not invent product policy, edit secrets/CV material, hand-edit
+generated state, or make broad scoring changes just because a task looks easy.
+
+### Stronger model recommended
+
+- ranking/gate policy, alert-threshold changes, or anything affecting recall vs.
+  precision;
+- AI router/provider changes, prompt/schema changes, quota strategy, or model
+  evaluation;
+- auth/OAuth/owner checks, public write paths, GitHub Actions permissions, or
+  deployment/Vercel changes;
+- state-shape migrations, concurrency/push-race handling, tracker adapters, or
+  changes spanning multiple modules;
+- RAG/vector search, CV tailoring, multi-user onboarding, or any new major
+  product architecture;
+- ambiguous UX work where the intended behavior is not already documented.
+
+These tasks require a stronger reasoning pass, explicit tests, and updates to
+`DECISIONS.md` plus the owning operational docs. A local model may implement a
+mechanical subtask after the design and acceptance criteria are written by a
+stronger model.
+
+### Human step still required
+
+Only Victor should add/rotate provider secrets, authorize Google/Notion OAuth,
+provide CV content, approve production pushes/deployments, or decide a change
+that materially alters personal ranking preferences. Never ask a model to print
+or copy a secret into the repository.
+
 ## 2026-07-18 AI/QoL release status
 
 1. **AI functionality foundation / knowledge layer — ✅ SHIPPED.** Four named
@@ -29,6 +77,28 @@ none block anything currently running.
    checklist. A manual company-name packet and independent interview-process
    sources remain later enhancements.
 
+## Active scope for the main board
+
+- The active product is the CS/SWE job radar. ChemE is paused for now and
+  should be treated as a separate follow-up pass, not part of the current
+  delivery scope.
+- Phase order matters: first finish Victor's personal board until it is
+  high-quality, efficient, and low-slop; only after that should the app be
+  generalized for other users.
+- The deployment should stay personalized for Victor by default, but a
+  non-owner who signs in should see a generic onboarding path rather than a
+  hard reject. That onboarding should collect role interests, target major,
+  resume/CV choice, tracker choice, and whether the user wants advanced AI
+  features or a manual/basic flow.
+- AI usage should remain user-scoped and opt-in for non-owners. Victor's
+  deployment should never spend someone else's API keys, and future onboarding
+  should require the user to supply their own provider credentials if they want
+  cloud AI.
+- For the first multi-user version, the fallback product should behave like a
+  broad CS internship/new-grad board when the user has not provided a major or
+  specialized profile. Later, the same onboarding can branch into major-specific
+  boards and trackers.
+
 ## Deliberately deferred by Victor
 
 1. **RAG and vector search.** Embed job descriptions, company dossiers,
@@ -41,6 +111,14 @@ none block anything currently running.
    be meaningfully tailored to the selected CV, then offer a local, review-only
    tailored draft. Personal CV content stays local and never enters public
    state.
+
+3. **Multi-user onboarding and generic fallback.** Add a sign-in flow for
+   non-owners that creates a generic onboarding profile, lets the user pick a
+   target major or keep the broad CS/SWE default, choose tracker and AI
+   settings, and then routes them into a per-user radar configuration. This is
+   the path that eventually makes the platform usable for any major without
+   reusing Victor's personal assumptions. This is explicitly second-phase work
+   and should not interfere with finishing Victor's board first.
 
 ## North star: a platform anyone can log into (direction, 2026-07-13)
 

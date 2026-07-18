@@ -175,6 +175,16 @@ def _endpoints(task: str) -> list[Endpoint]:
         if marker not in seen:
             unique.append(ep)
             seen.add(marker)
+
+    # Free NIM keys are independent quotas. When enabled by the scheduled
+    # enrichment workflow, rotate the first-choice model every two-hour slot;
+    # normal fallback/cooldown behavior remains unchanged within a slot.
+    if env("RADAR_AI_ROTATE_PROVIDERS").lower() in {"1", "true", "yes"}:
+        nvidia = [ep for ep in unique if ep.name.startswith("nvidia:")]
+        others = [ep for ep in unique if not ep.name.startswith("nvidia:")]
+        if nvidia:
+            offset = int(time.time() // 7200) % len(nvidia)
+            unique = nvidia[offset:] + nvidia[:offset] + others
     return unique
 
 

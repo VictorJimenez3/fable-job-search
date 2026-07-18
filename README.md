@@ -2,7 +2,8 @@
 
 A self-expanding, always-on radar for **new-grad AI / SWE / DS roles**, tuned for
 speed (apply within 24h of posting) and personalized ranking (healthtech first,
-big tech second, open to everything good).
+big tech second, open to everything good). This is the active CS/SWE board; the
+ChemE board exists separately and is currently paused for later work.
 
 **[→ 🖥️ The Platform](https://job-radar-vmj-8946s-projects.vercel.app)**
 (sign in with GitHub once → every click writes instantly) ·
@@ -27,7 +28,14 @@ The ChemE internship board is intentionally separate from this new-grad
 AI/SWE/DS board. It reads the `claude/cheme-intern-radar` branch and keeps its
 own generated state and GitHub board labels, while both profiles use the one
 repository-level `NOTION_TOKEN` and therefore the same Notion Applications
-database.
+database. It is not the active priority right now.
+
+The long-term direction is still multi-user, but not as shared tenancy. The
+current design is personal-first: Victor's deployment stays tailored to Victor,
+and a non-owner should eventually enter a generic onboarding flow that collects
+their major, tracker choice, resume/CV choice, and whether they want advanced AI
+or a basic/manual setup. That later onboarding can branch into broad CS/SWE
+mode or major-specific mode without reusing Victor's assumptions.
 
 Subscribe to the RSS feed at:
 `https://raw.githubusercontent.com/VictorJimenez3/fable-job-search/claude/newgrad-job-search-system-9gbj9k/docs/feed.xml`
@@ -173,9 +181,10 @@ The companion releases the model from memory after every request; confirm with
 
 Optional upgrades:
 - The four NVIDIA NIM keys are now wired into a task-aware, budgeted cloud
-  router with fallback, cooldowns, schema validation, and usage telemetry.
-  Main and ChemE enrich nightly; they are deliberately not exposed to every
-  30-minute crawl. Configuration and operating policy:
+  router with fallback, cooldowns, schema validation, provider rotation, and
+  usage telemetry. Main enrichment runs every two hours with a hard cap of 12
+  logical calls / 18 provider requests per run; the keys are deliberately not
+  exposed to every 30-minute crawl. Configuration and operating policy:
   [docs/AI_SETUP.md](docs/AI_SETUP.md).
 - Prefer Google Workspace to Notion? The Google Sheets tracker adapter is
   complete; its one-time OAuth activation is documented in

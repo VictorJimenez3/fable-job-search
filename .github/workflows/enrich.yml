@@ -8,7 +8,7 @@ name: enrich
 
 on:
   schedule:
-    - cron: "20 7 * * *"   # nightly, offset from the crawl's */30
+    - cron: "20 */2 * * *"   # every 2h; bounded calls drain the AI queue while free keys rotate
   workflow_dispatch: {}
 
 permissions:
@@ -52,8 +52,9 @@ jobs:
           RADAR_AI_MAX_CALLS: "12"
           RADAR_AI_MAX_REQUESTS: "18"
           RADAR_AI_PROVIDER_ATTEMPTS: "2"
-          RADAR_QUALITY_LIMIT: "6"
-          RADAR_COMPANY_RESEARCH_LIMIT: "3"
+          RADAR_AI_ROTATE_PROVIDERS: "1"
+          RADAR_QUALITY_LIMIT: "10"
+          RADAR_COMPANY_RESEARCH_LIMIT: "2"
           RADAR_ENRICH_LIMIT: "0"
         run: python -m radar.main enrich
 

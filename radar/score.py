@@ -15,7 +15,7 @@ from .models import Job, norm
 
 # Bumped whenever gate rules change; regate() re-applies the current rules to
 # every stored job whose rules_v is older (demote/promote alert_ok in place).
-RULES_VERSION = 3
+RULES_VERSION = 4
 
 SENIOR_RE = re.compile(
     r"\b(senior|staff|principal|lead(er)?|director|manager|head of|sr\.?|vp|chief|"
@@ -41,6 +41,12 @@ OFF_FIELD_RE = re.compile(
     r"(product|program|project)\s+manager|product\s+(owner|marketing)|"
     r"chief\s+of\s+staff|executive\s+assistant|administrative|"
     r"workplace|facilities)\b", re.I)
+# Temporary focus filter for Victor's alert stream. These remain searchable on
+# the dashboard, but are not emailed while the active search is AI/ML, DS, and
+# AI-leaning software roles. Keep this narrower than OFF_FIELD_RE so the
+# preference can be relaxed without redefining technical eligibility.
+ALERT_FOCUS_EXCLUDED_RE = re.compile(
+    r"\bfull[- ]?stack\b|\bsystems? engineer(?:ing)?\b", re.I)
 INTERN_RE = re.compile(r"\b(intern(ship)?|co-?op|apprentice|fellowship|part[- ]?time|contract(or)?)\b", re.I)
 PHD_RE = re.compile(r"\bph\.?d\b|postdoc", re.I)
 CLEARANCE_RE = re.compile(r"\b(security clearance|ts/sci|polygraph|top secret)\b", re.I)
@@ -134,6 +140,9 @@ def gates(job: Job) -> tuple[bool, bool, list[str]]:
         if re.search(r"\banalyst\b", t, re.I):
             return True, False, ["generic analyst title (dashboard only)"]
         return False, False, ["not an AI/SWE/DS role"]
+
+    if ALERT_FOCUS_EXCLUDED_RE.search(t):
+        return True, False, ["temporary focus: full-stack/systems (dashboard only)"]
 
     aggregator = job.source in {"simplify", "vansh", "jobright", "speedyapply"}
     explicit = bool(NEW_GRAD_RE.search(text) or ENTRY_YEARS_RE.search(text))

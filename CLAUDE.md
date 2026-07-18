@@ -32,6 +32,32 @@ Topic-specific runbooks that already exist — extend these, don't fork them:
 and `state/*.json` are **generated** — never hand-edit except a documented
 repair.
 
+## Cross-CLI continuity contract (MANDATORY)
+
+The repository, not the conversation, is the source of truth. Every CLI or
+model session must leave enough written context for the next one to continue
+without scrolling through chat:
+
+1. Before work, fetch/rebase as appropriate, read the required docs above, and
+   inspect the current branch/status. Treat existing edits and CI-generated
+   state as potentially belonging to another CLI.
+2. During work, update the owning document as soon as a decision, scope change,
+   operational fact, TODO reprioritization, or user-facing behavior becomes
+   real. Do not keep a new requirement only in a chat message.
+3. Before handoff, update `docs/CLI_HANDOFF.md` with the verified current
+   state, what changed, what remains, blockers/human steps, and the next
+   concrete task. Add a dated numbered entry to `DECISIONS.md` for non-obvious
+   tradeoffs; update `ROADMAP.md` for backlog/order changes.
+4. End the session with a compact handoff: files changed, validation run and
+   result, deployment/commit status, and any secrets or GitHub-side actions
+   still required. If nothing changed, record that the audit was read-only.
+
+Small/local models may handle documentation, audits, tests, and mechanical
+edits when the acceptance criteria are already explicit. They must not invent
+ranking policy, alter secrets/CV material, hand-edit generated state, or leave
+architecture decisions undocumented. Stronger-model and human-approval lanes
+are defined in `ROADMAP.md` and `docs/CLI_HANDOFF.md`.
+
 ## House rules (from DECISIONS — violate none)
 - Scoring is deterministic and auditable: every point/demotion appends a
   reason string. The LLM only *adjusts*; it never deletes. Demote to the
