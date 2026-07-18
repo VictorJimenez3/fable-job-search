@@ -301,7 +301,7 @@
   "url": "https://jobs.ashbyhq.com/headway/4e826c00-570b-4349-956c-c9ac35c2a637"
  },
  "0040a3fe11277aed": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "workday",
   "company": "Ensemble Health Partners",
   "description": "",
@@ -314,23 +314,30 @@
   ],
   "posted_at": 1782429344,
   "posting": {
-   "analyzed_at": 1784406126,
+   "analyzed_at": 1784406195,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784406126,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784406195,
+   "live": true,
+   "new_grad": "no",
+   "reason": "5+ years experience required",
+   "role_family": "data",
+   "years_required": 5
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 82,
+  "score": 62,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "sector:healthtech +16",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: not new-grad (5+ yrs — LLM-verified) -20"
   ],
   "sector": "healthtech",
   "source": "workday",
@@ -31511,12 +31518,12 @@
   ],
   "posted_at": 1780448907,
   "posting": {
-   "analyzed_at": 1784406134,
+   "analyzed_at": 1784406258,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
-   "ai_deferred_at": 1784406134,
+   "ai_deferred_at": 1784406258,
    "attempts": 0
   },
   "remote": false,
@@ -49933,16 +49940,15 @@
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 94,
+  "score": 88,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:ai_lab +11",
-   "posted <24h +12",
+   "posted <72h +6",
    "remote +2",
    "you've engaged with OpenAI +8",
-   "culture fit 60/100 +1",
-   "off-field title (dashboard only)"
+   "culture fit 60/100 +1"
   ],
   "sector": "ai_lab",
   "source": "ashby",
@@ -57324,24 +57330,31 @@
   ],
   "posted_at": 1781711747,
   "posting": {
-   "analyzed_at": 1784406131,
+   "analyzed_at": 1784406242,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "not sponsor"
   },
   "quality": {
    "ai_deferred_at": 1784406131,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784406242,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1-3+ years experience required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 78,
+  "score": 68,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "workday",
@@ -62791,13 +62804,13 @@
   ],
   "posted_at": 1783728000,
   "posting": {
-   "analyzed_at": 1784406152,
+   "analyzed_at": 1784406276,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
-   "ai_deferred_at": 1784406152,
+   "ai_deferred_at": 1784406276,
    "attempts": 1
   },
   "remote": false,
@@ -74993,24 +75006,31 @@
   ],
   "posted_at": 1781798147,
   "posting": {
-   "analyzed_at": 1784406131,
+   "analyzed_at": 1784406234,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "not sponsor"
   },
   "quality": {
    "ai_deferred_at": 1784406131,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784406234,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 1-3+ years experience",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 78,
+  "score": 68,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "workday",
@@ -152981,13 +153001,13 @@
   ],
   "posted_at": 1783900800,
   "posting": {
-   "analyzed_at": 1784406147,
+   "analyzed_at": 1784406273,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
-   "ai_deferred_at": 1784406147,
+   "ai_deferred_at": 1784406273,
    "attempts": 1
   },
   "remote": false,
@@ -179192,12 +179212,12 @@
   ],
   "posted_at": 1783415561,
   "posting": {
-   "analyzed_at": 1784406143,
+   "analyzed_at": 1784406268,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
-   "ai_deferred_at": 1784406143,
+   "ai_deferred_at": 1784406268,
    "attempts": 0
   },
   "remote": false,
@@ -193115,13 +193135,19 @@
   ],
   "posted_at": 1784138635,
   "posting": {
-   "analyzed_at": 1784406112,
+   "analyzed_at": 1784406164,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784406112,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784406164,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Recent grad, GenAI focus",
+   "role_family": "ml",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -197377,14 +197403,20 @@
   ],
   "posted_at": 1782431658,
   "posting": {
-   "analyzed_at": 1784406127,
+   "analyzed_at": 1784406203,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "no sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784406127,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784406203,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role for new grad",
+   "role_family": "security",
+   "years_required": 0
   },
   "remote": true,
   "rules_v": 3,
@@ -223167,7 +223199,7 @@
   "url": "https://mastercard.wd1.myworkdayjobs.com/en-US/CorporateCareers/job/Arlington-Virginia/Software-Engineer-II---Backend-Platform-Agentic-AI_R-279643-1"
  },
  "95384663c8bc5a72": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "workday",
   "company": "Adtran",
   "description": "",
@@ -223180,23 +223212,30 @@
   ],
   "posted_at": 1784235661,
   "posting": {
-   "analyzed_at": 1784406129,
+   "analyzed_at": 1784406226,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784406129,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784406226,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 3+ years experience",
+   "role_family": "swe",
+   "years_required": 3
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 78,
+  "score": 58,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "posted <72h +6"
+   "posted <72h +6",
+   "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "other",
   "source": "workday",
@@ -245310,12 +245349,12 @@
   ],
   "posted_at": 1783382400,
   "posting": {
-   "analyzed_at": 1784406133,
+   "analyzed_at": 1784406257,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
-   "ai_deferred_at": 1784406133,
+   "ai_deferred_at": 1784406257,
    "attempts": 1
   },
   "remote": false,
@@ -249532,7 +249571,7 @@
   ],
   "posted_at": 1783319362,
   "posting": {
-   "analyzed_at": 1784406147,
+   "analyzed_at": 1784406272,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "sponsorship is not offered",
@@ -249540,7 +249579,7 @@
    "years_note": "1-3 years"
   },
   "quality": {
-   "ai_deferred_at": 1784406147,
+   "ai_deferred_at": 1784406272,
    "attempts": 0
   },
   "remote": false,
@@ -269527,12 +269566,12 @@
   ],
   "posted_at": 1783519971,
   "posting": {
-   "analyzed_at": 1784406153,
+   "analyzed_at": 1784406278,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
-   "ai_deferred_at": 1784406153,
+   "ai_deferred_at": 1784406278,
    "attempts": 0
   },
   "remote": true,
@@ -283777,24 +283816,31 @@
   ],
   "posted_at": 1784270143,
   "posting": {
-   "analyzed_at": 1784406128,
+   "analyzed_at": 1784406210,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "not able to sponsor"
   },
   "quality": {
    "ai_deferred_at": 1784406128,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784406210,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ year experience required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 78,
+  "score": 68,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "posted <72h +6"
+   "posted <72h +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "workday",
@@ -300936,13 +300982,13 @@
   ],
   "posted_at": 1783728000,
   "posting": {
-   "analyzed_at": 1784406152,
+   "analyzed_at": 1784406277,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
-   "ai_deferred_at": 1784406152,
+   "ai_deferred_at": 1784406277,
    "attempts": 1
   },
   "remote": false,
@@ -301274,13 +301320,13 @@
   ],
   "posted_at": 1783900800,
   "posting": {
-   "analyzed_at": 1784406148,
+   "analyzed_at": 1784406274,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
-   "ai_deferred_at": 1784406148,
+   "ai_deferred_at": 1784406274,
    "attempts": 1
   },
   "remote": false,
@@ -302763,12 +302809,12 @@
   ],
   "posted_at": 1783473071,
   "posting": {
-   "analyzed_at": 1784406154,
+   "analyzed_at": 1784406279,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
-   "ai_deferred_at": 1784406154,
+   "ai_deferred_at": 1784406279,
    "attempts": 0
   },
   "remote": false,
@@ -302985,14 +303031,20 @@
   ],
   "posted_at": 1783814400,
   "posting": {
-   "analyzed_at": 1784406132,
+   "analyzed_at": 1784406249,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
    "ai_deferred_at": 1784406132,
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784406249,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, new grad role",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -321753,7 +321805,7 @@
   ],
   "posted_at": 1778608144,
   "posting": {
-   "analyzed_at": 1784406123,
+   "analyzed_at": 1784406172,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 1,
@@ -321761,19 +321813,26 @@
   },
   "quality": {
    "ai_deferred_at": 1784406123,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784406172,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1-3 years experience required.",
+   "role_family": "data",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 84,
+  "score": 74,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "sector:healthtech +16",
    "title matches your history +6",
    "seniority unclear (dashboard only)",
-   "re-gate v2: priority sector: healthtech (auto-alert)"
+   "re-gate v2: priority sector: healthtech (auto-alert)",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "healthtech",
   "source": "greenhouse",
@@ -329693,13 +329752,19 @@
   ],
   "posted_at": 1784287802,
   "posting": {
-   "analyzed_at": 1784406124,
+   "analyzed_at": 1784406180,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784406124,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784406180,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "entry-level junior role",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -330588,13 +330653,13 @@
   ],
   "posted_at": 1783900800,
   "posting": {
-   "analyzed_at": 1784406149,
+   "analyzed_at": 1784406274,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
-   "ai_deferred_at": 1784406149,
+   "ai_deferred_at": 1784406274,
    "attempts": 1
   },
   "remote": false,
@@ -335535,12 +335600,12 @@
   ],
   "posted_at": 1780438068,
   "posting": {
-   "analyzed_at": 1784406139,
+   "analyzed_at": 1784406265,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
-   "ai_deferred_at": 1784406139,
+   "ai_deferred_at": 1784406265,
    "attempts": 0
   },
   "remote": false,
@@ -349858,13 +349923,19 @@
   ],
   "posted_at": 1784246400,
   "posting": {
-   "analyzed_at": 1784406125,
+   "analyzed_at": 1784406188,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784406125,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784406188,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role with no experience required",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -354416,7 +354487,7 @@
   ],
   "posted_at": 1784246400,
   "posting": {
-   "analyzed_at": 1784406128,
+   "analyzed_at": 1784406218,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 0,
@@ -354424,7 +354495,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784406128,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784406218,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0-2 years, new grad role",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -382926,14 +383003,14 @@
   ],
   "posted_at": 1783900800,
   "posting": {
-   "analyzed_at": 1784406150,
+   "analyzed_at": 1784406275,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 2,
    "years_note": "2–5 years"
   },
   "quality": {
-   "ai_deferred_at": 1784406150,
+   "ai_deferred_at": 1784406275,
    "attempts": 0
   },
   "remote": false,
