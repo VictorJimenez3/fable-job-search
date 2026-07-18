@@ -1,5 +1,31 @@
 # Chemical Engineering Internship Radar roadmap
 
+## Active backlog — ordered priority (2026-07-18)
+
+1. **AI functionality foundation / knowledge layer.** Define grounded AI
+   services, provider/model configuration, citations, structured outputs,
+   caching, evaluation cases, and privacy rules so the assistant knows the
+   candidate profile, job evidence, company sources, and prior decisions.
+2. **Company research overhaul.** Replace thin descriptions with source-backed
+   dossiers covering what a company makes, who it serves, industry context,
+   products, mission, business model, size/stage, technical work, location,
+   sponsorship history, and why it matters to this candidate. Show dates/links
+   and label estimates clearly.
+3. **Google collaboration and pluggable tracking.** Add Google account OAuth
+   and a setup choice between Notion and Google Sheets. Sheets should be a
+   first-class template-backed option while keeping the application model
+   backend-neutral and migration-safe.
+4. **RAG and vector search.** Embed postings, company dossiers, candidate
+   profile/CV material, and saved decisions for semantic search and explainable
+   similarity ranking. Deterministic gates remain authoritative.
+5. **CV-aware target-role toggle.** When a CV exists, add a `CV` option to the
+   existing “all target roles” dropdown and offer local review-only tailoring.
+   CV content remains private and never enters public state.
+6. **Interview workspace (far future).** Add an Interview tab that accepts a
+   company name and builds a grounded packet with mission, products, current
+   context, role expectations, likely stages, question themes, and prep prompts.
+   This depends on the AI and company-research work above.
+
 ## Shipped on this branch (2026-07-18)
 
 - ✅ **ChemE internship profile and rules v3** — seven role families, ChemE
