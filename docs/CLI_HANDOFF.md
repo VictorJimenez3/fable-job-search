@@ -8,9 +8,12 @@ Claude Code, and local development.
 - Active worktree/branch: `claude/cheme-intern-radar`.
 - The branch was stale and contained no ChemE implementation. It was merged
   with the current production branch before the ChemE conversion.
-- Rules are now v6 and internship-first. Stored jobs remain intact; after each
+- Rules are now v7 and internship-first. Stored jobs remain intact; after each
   rules-version bump, the next crawl re-gates old open records and prevents
   tech/new-grad records from continuing as alerts.
+- The scorer and platform both evaluate location evidence directly. Foreign
+  ISO codes/country names override ambiguous city/state tokens such as
+  `Cambridge, UK` and `CA, Ontario`; separate explicit US options remain valid.
 - `profile.yaml` has a generic Chemical Engineering candidate and intentionally
   sets `needs_sponsorship: true`. Identity and Notion option names require a
   human review before account connection.

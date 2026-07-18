@@ -692,3 +692,16 @@ keeps Applied/OA/Interview/Rejected/Closed distinct and gives OA/Interview roles
 a grounded prep workspace. `TRACKER_BACKEND=google_sheets` is an optional
 stable-ID Sheets replacement once the candidate authorizes Google OAuth; Notion
 remains the default and no second tracker is created automatically.
+
+## 42. Foreign evidence outranks ambiguous US place tokens (2026-07-18)
+
+The first browser verification after rules v6 found a subtler location leak:
+`Cambridge, UK` matched the US-city hint for Cambridge, and
+`CA, Ontario, Brockville` matched California's abbreviation. Rules v7 evaluates
+each ATS location option independently. Within one option, explicit foreign
+country/city/ISO evidence wins unless that same option explicitly says United
+States; a separate recognizable US option still preserves a multi-location
+posting. Unknown locations remain visible for recall. The platform applies the
+same check directly instead of depending on historical re-gate reason strings,
+so inherited records disappear immediately even when their old alert status was
+already false and therefore never received a new reason line.

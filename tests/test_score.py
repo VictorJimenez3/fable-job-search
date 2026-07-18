@@ -64,9 +64,15 @@ def test_rejects_senior_phd_and_non_us():
     assert gates(mk("Process Engineering Intern", locations=["Seneffe (BEL)"]))[0] is False
     assert gates(mk("Process Engineering Intern", locations=["Stade-DEU"]))[0] is False
     assert gates(mk("Process Engineering Intern", locations=["SGP - Woodlands"]))[0] is False
+    assert gates(mk("Process Engineering Intern", locations=["Cambridge, UK"]))[0] is False
+    assert gates(mk("Process Engineering Intern", locations=["CA, Ontario, Brockville"]))[0] is False
     assert gates(mk("Process Engineering Intern", locations=["Maracaibo, Zulia, Venezuela"]))[0] is False
     assert gates(mk("Process Engineering Intern", locations=["Bintulu"]))[0] is False
+    assert gates(mk("Process Engineering Intern", locations=["Remote - Canada"], remote=True))[0] is False
     assert gates(mk("Process Engineering Intern", locations=["Singapore", "Austin, TX"]))[0] is True
+    assert gates(mk("Process Engineering Intern", locations=["Singapore / Austin, TX"]))[0] is True
+    assert gates(mk("Process Engineering Intern", locations=["Ontario, CA, United States"]))[0] is True
+    assert gates(mk("Process Engineering Intern", locations=["London, UK / Boston, MA, U.S."]))[0] is True
 
 
 def test_rejects_school_specific_only_role_from_url():

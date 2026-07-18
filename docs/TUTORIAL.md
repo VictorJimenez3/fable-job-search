@@ -32,6 +32,8 @@ unknown value means the parser did not find a trustworthy requirement.
    **Bioprocess / Pharma**.
 2. Review sponsorship, experience, location, freshness, and score before
    opening the posting.
+   The board hides explicit non-US locations, including ambiguous ATS labels
+   such as `CA, Ontario`; unknown locations remain visible for manual review.
 3. Open **Details** for score reasons and the source evidence.
 4. Click **Apply**, tailor the resume yourself, and submit on the employer site.
    The radar never auto-submits applications.

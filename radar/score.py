@@ -15,7 +15,7 @@ from .models import Job, norm
 
 # Bumped whenever gate rules change; regate() re-applies the current rules to
 # every stored job whose rules_v is older (demote/promote alert_ok in place).
-RULES_VERSION = 6
+RULES_VERSION = 7
 
 SENIOR_RE = re.compile(
     r"\b(senior|staff|principal|lead(er)?|director|manager|head of|sr\.?|vp|chief|"
@@ -91,14 +91,14 @@ FOREIGN_HINTS = re.compile(
     r"brazil|sao paulo|mexico city|poland|warsaw|krakow|israel|tel aviv|spain|madrid|barcelona|"
     r"portugal|lisbon|switzerland|zurich|sweden|stockholm|estonia|romania|dubai|uae|philippines|"
     r"manila|vietnam|korea|seoul|taiwan|taipei|nigeria|kenya|south africa|argentina|colombia|chile|"
-    r"panam[aá]|bangladesh|pakistan|malaysia|bintulu|venezuela)\b", re.I)
+    r"panam[aá]|bangladesh|pakistan|malaysia|bintulu|venezuela|ontario|quebec|brockville)\b", re.I)
 FOREIGN_ISO3_RE = re.compile(
     r"\b(AFG|ALB|DZA|ARG|ARM|AUS|AUT|AZE|BHR|BGD|BLR|BEL|BOL|BIH|BWA|BRA|BGR|"
     r"KHM|CMR|CAN|CHL|CHN|COL|CRI|HRV|CYP|CZE|DNK|ECU|EGY|EST|ETH|FIN|FRA|"
     r"GEO|DEU|GHA|GRC|HKG|HUN|ISL|IND|IDN|IRL|ISR|ITA|JPN|JOR|KEN|KOR|KWT|"
     r"LVA|LTU|LUX|MYS|MEX|MAR|NLD|NZL|NGA|NOR|PAK|PAN|PER|PHL|POL|PRT|QAT|"
     r"ROU|RUS|SAU|SGP|SVK|SVN|ZAF|ESP|LKA|SWE|CHE|TWN|THA|TUR|UKR|ARE|GBR|"
-    r"URY|VEN|VNM)\b")
+    r"URY|VEN|VNM)\b", re.I)
 US_HINTS = re.compile(
     r"\b(us|usa|u\.s\.|united states|remote)\b|"
     r"\b(al|ak|az|ar|ca|co|ct|de|fl|ga|hi|id|il|in|ia|ks|ky|la|me|md|ma|mi|mn|ms|mo|mt|ne|nv|nh|nj|"
@@ -107,6 +107,10 @@ US_HINTS = re.compile(
     r"palo alto|mountain view|sunnyvale|redmond|bellevue|cambridge|philadelphia|miami|dallas|"
     r"houston|phoenix|portland|salt lake|pittsburgh|raleigh|durham|nashville|minneapolis|detroit|"
     r"washington|arlington|reston|mclean|santa clara|menlo park|cupertino|irvine|san diego|boulder", re.I)
+EXPLICIT_US_COUNTRY_RE = re.compile(
+    r"(?:\busa\b|\bu\.s\.a\.?(?=\W|$)|\bu\.s\.?(?=\W|$)|"
+    r"\bunited states(?: of america)?\b)", re.I)
+LOCATION_SPLIT_RE = re.compile(r"\s*(?:\||;|•|\s/\s)\s*")
 
 
 def role_bucket(title: str, description: str = "") -> str | None:
@@ -130,17 +134,28 @@ def role_bucket(title: str, description: str = "") -> str | None:
 
 
 def location_ok(job: Job) -> bool:
-    if job.remote:
-        return True
     if not job.locations:
         return True  # unknown — don't drop, scorer just won't reward it
-    blob = " | ".join(job.locations)
-    if FOREIGN_HINTS.search(blob) or FOREIGN_ISO3_RE.search(blob):
-        # A posting may list several locations. Keep it when at least one is
-        # recognizably US; otherwise explicit country names and ISO-3 codes
-        # from Workday are stronger evidence than an unknown city name.
-        return bool(US_HINTS.search(blob))
-    return True
+    saw_foreign = False
+    for raw in job.locations:
+        # ATSs return either a list of locations or one delimiter-separated
+        # string. Evaluate each option independently so "Cambridge, UK" cannot
+        # pass merely because Cambridge is also a Massachusetts city, and
+        # "CA, Ontario" cannot pass because CA is also California.
+        for chunk in LOCATION_SPLIT_RE.split(raw):
+            foreign = bool(FOREIGN_HINTS.search(chunk) or FOREIGN_ISO3_RE.search(chunk))
+            if foreign:
+                saw_foreign = True
+                # Only an explicit country label can override foreign evidence
+                # inside the same chunk (for example "Ontario, CA, United States").
+                if EXPLICIT_US_COUNTRY_RE.search(chunk):
+                    return True
+                continue
+            if US_HINTS.search(chunk):
+                return True
+    # Preserve unknown locations for recall, but reject an explicitly foreign
+    # set unless a separate recognizable US option was found above.
+    return not saw_foreign
 
 
 def gates(job: Job) -> tuple[bool, bool, list[str]]:

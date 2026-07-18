@@ -341,6 +341,23 @@ function isChemeVisible(j) {
   return /\b(intern(ship)?|co-?op|summer student)\b/.test(t) &&
     !unrelated.test(t) && roleFamily(j)!=="other";
 }
+function isUSLocation(j) {
+  const locations = j.locations || [];
+  if (!locations.length) return true;
+  const foreign = /\b(canada|toronto|vancouver|london|uk\b|united kingdom|ireland|dublin|belgium|germany|berlin|munich|france|paris|netherlands|amsterdam|india|bangalore|bengaluru|hyderabad|pune|chennai|gurgaon|noida|mumbai|singapore|japan|tokyo|china|beijing|shanghai|shenzhen|australia|sydney|melbourne|brazil|sao paulo|mexico city|poland|warsaw|krakow|israel|tel aviv|spain|madrid|barcelona|portugal|lisbon|switzerland|zurich|sweden|stockholm|estonia|romania|dubai|uae|philippines|manila|vietnam|korea|seoul|taiwan|taipei|nigeria|kenya|south africa|argentina|colombia|chile|panam[aá]|bangladesh|pakistan|malaysia|bintulu|venezuela|ontario|quebec|brockville)\b|\b(AFG|ALB|DZA|ARG|ARM|AUS|AUT|AZE|BHR|BGD|BLR|BEL|BOL|BIH|BWA|BRA|BGR|KHM|CMR|CAN|CHL|CHN|COL|CRI|HRV|CYP|CZE|DNK|ECU|EGY|EST|ETH|FIN|FRA|GEO|DEU|GHA|GRC|HKG|HUN|ISL|IND|IDN|IRL|ISR|ITA|JPN|JOR|KEN|KOR|KWT|LVA|LTU|LUX|MYS|MEX|MAR|NLD|NZL|NGA|NOR|PAK|PAN|PER|PHL|POL|PRT|QAT|ROU|RUS|SAU|SGP|SVK|SVN|ZAF|ESP|LKA|SWE|CHE|TWN|THA|TUR|UKR|ARE|GBR|URY|VEN|VNM)\b/i;
+  const explicitUS = /(?:\busa\b|\bu\.s\.a\.?(?=\W|$)|\bu\.s\.?(?=\W|$)|\bunited states(?: of america)?\b)/i;
+  const us = /\b(us|usa|u\.s\.|united states|remote)\b|\b(al|ak|az|ar|ca|co|ct|de|fl|ga|hi|id|il|in|ia|ks|ky|la|me|md|ma|mi|mn|ms|mo|mt|ne|nv|nh|nj|nm|ny|nc|nd|oh|ok|or|pa|ri|sc|sd|tn|tx|ut|vt|va|wa|wv|wi|wy|dc)\b|new york|san francisco|seattle|austin|boston|chicago|denver|atlanta|los angeles|san jose|palo alto|mountain view|sunnyvale|redmond|bellevue|cambridge|philadelphia|miami|dallas|houston|phoenix|portland|salt lake|pittsburgh|raleigh|durham|nashville|minneapolis|detroit|washington|arlington|reston|mclean|santa clara|menlo park|cupertino|irvine|san diego|boulder/i;
+  let sawForeign = false;
+  for (const raw of locations) {
+    for (const chunk of String(raw).split(/\s*(?:\||;|•|\s\/\s)\s*/)) {
+      if (foreign.test(chunk)) {
+        sawForeign = true;
+        if (explicitUS.test(chunk)) return true;
+      } else if (us.test(chunk)) return true;
+    }
+  }
+  return !sawForeign;
+}
 function sponsorStatus(j) {
   return j.posting ? (j.posting.sponsorship || "unknown") : "unread";
 }
@@ -376,7 +393,7 @@ function clearFilters() {
   localStorage.removeItem("jr_filters"); render();
 }
 function isOpenRelevant(j) {
-  if (j.closed_at) return false;
+  if (j.closed_at || !isUSLocation(j)) return false;
   const hardReject = /^(senior\+ title|PhD-targeted title|restricted to another school|requires clearance|non-US location|not an internship\/co-op|requires \d+\+ years|off-field internship|not a chemical\/process engineering role)$/i;
   return !(j.score_reasons||[]).some(reason =>
     hardReject.test(String(reason).replace(/^re-gate v\d+:\s*/i,"")));

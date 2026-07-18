@@ -28,3 +28,11 @@ def test_platform_does_not_classify_every_title_as_general_engineering():
     html = (ROOT / "webapp/index.html").read_text()
     assert 'return "other";' in html
     assert 'Object.values(S.jobs).filter(isChemeVisible)' in html
+
+
+def test_platform_filters_explicit_foreign_locations_directly():
+    html = (ROOT / "webapp/index.html").read_text()
+    assert "function isUSLocation(j)" in html
+    assert "j.closed_at || !isUSLocation(j)" in html
+    for evidence in ("ontario", "brockville", "SGP", "GBR"):
+        assert evidence in html
