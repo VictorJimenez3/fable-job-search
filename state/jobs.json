@@ -824,7 +824,6 @@
    "you've engaged with Anthropic +6",
    "title matches your history +4",
    "culture fit 80/100 +4",
-   "posting: wants 5+ yrs (dashboard only)",
    "quality: not new-grad (5+ yrs — LLM-verified) -20"
   ],
   "sector": "ai_lab",
@@ -3383,7 +3382,7 @@
   "url": "https://job-boards.greenhouse.io/realchemistry/jobs/5362446008"
  },
  "02751c78ba0646ec": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "greenhouse",
   "company": "Anthropic",
   "description": "",
@@ -3395,17 +3394,36 @@
    "San Francisco, CA"
   ],
   "posted_at": 1762554929,
+  "posting": {
+   "analyzed_at": 1784417511,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "We do sponsor",
+   "years_min": 5,
+   "years_note": "5-10+ years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784417511,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 5-10+ years experience",
+   "role_family": "swe",
+   "years_required": 5
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 91,
+  "score": 71,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "sector:ai_lab +11",
    "you've engaged with Anthropic +6",
    "title matches your history +4",
-   "culture fit 80/100 +4"
+   "culture fit 80/100 +4",
+   "posting: wants 5+ yrs (dashboard only)",
+   "quality: not new-grad (5+ yrs — LLM-verified) -20"
   ],
   "sector": "ai_lab",
   "source": "greenhouse",
@@ -5007,6 +5025,9 @@
    "San Francisco"
   ],
   "posted_at": 1772053928,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -10667,6 +10688,9 @@
    "London, UK"
   ],
   "posted_at": 1772747954,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -30713,6 +30737,9 @@
    "New York City"
   ],
   "posted_at": 1772236405,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -66970,6 +66997,9 @@
    "San Francisco"
   ],
   "posted_at": 1768328887,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -150203,6 +150233,9 @@
    "San Francisco"
   ],
   "posted_at": 1780680604,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -155209,6 +155242,23 @@
    "US-IN-FT WAYNE-150A ~ 1010 Production Rd ~ BLDG 150A"
   ],
   "posted_at": 1783445535,
+  "posting": {
+   "analyzed_at": 1784417558,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "citizenship is required",
+   "years_min": 0,
+   "years_note": "00 years of experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784417558,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level EW engineer role",
+   "role_family": "other-technical",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -163451,6 +163501,9 @@
    "New York City"
   ],
   "posted_at": 1772747951,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -185429,6 +185482,9 @@
    "San Francisco"
   ],
   "posted_at": 1744565142,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -194608,7 +194664,7 @@
   "url": "https://jobs.ashbyhq.com/corvus-robotics/bcdadda2-d374-4a5f-afd3-73b868dc9c84"
  },
  "7baf80d403898f91": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "greenhouse",
   "company": "Together AI",
   "description": "",
@@ -194620,16 +194676,35 @@
    "San Francisco"
   ],
   "posted_at": 1780428943,
+  "posting": {
+   "analyzed_at": 1784417581,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 3,
+   "years_note": "3+ years of experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784417581,
+   "live": true,
+   "new_grad": "no",
+   "reason": "3+ years experience required",
+   "role_family": "non-technical",
+   "years_required": 3
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 89,
+  "score": 44,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:ai_lab +11",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "posting: wants 3+ yrs (dashboard only)",
+   "quality: not new-grad (3+ yrs — LLM-verified) -20",
+   "quality: non-technical role (3+ years experience required — LLM-verified) -25"
   ],
   "sector": "ai_lab",
   "source": "greenhouse",
@@ -203036,7 +203111,9 @@
   ],
   "posted_at": 1710970400,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784417509,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -245451,6 +245528,9 @@
    "San Francisco"
   ],
   "posted_at": 1758663521,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -254406,6 +254486,23 @@
    "US-IN-FT WAYNE-150A ~ 1010 Production Rd ~ BLDG 150A"
   ],
   "posted_at": 1783445535,
+  "posting": {
+   "analyzed_at": 1784417566,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "citizenship is required",
+   "years_min": 0,
+   "years_note": "00 years of experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784417566,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "new grad role with security clearance requirements",
+   "role_family": "other-technical",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -255368,6 +255465,9 @@
    "Seattle"
   ],
   "posted_at": 1778694360,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -259529,7 +259629,7 @@
   "url": "https://jobs.ashbyhq.com/notion/e5d316fa-0857-4e4b-96ca-1f2710a96c95"
  },
  "a4ddb8b23e5fc956": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "greenhouse",
   "company": "Anthropic",
   "description": "",
@@ -259541,17 +259641,33 @@
    "San Francisco, CA"
   ],
   "posted_at": 1759264548,
+  "posting": {
+   "analyzed_at": 1784417519,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "We do sponsor"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784417519,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 3+ years experience",
+   "role_family": "ml",
+   "years_required": 3
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 91,
+  "score": 71,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "sector:ai_lab +11",
    "you've engaged with Anthropic +6",
    "title matches your history +4",
-   "culture fit 80/100 +4"
+   "culture fit 80/100 +4",
+   "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "ai_lab",
   "source": "greenhouse",
@@ -264962,7 +265078,7 @@
   "url": "https://job-boards.greenhouse.io/alarmcom/jobs/8567189002"
  },
  "a7ca11615c694247": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "greenhouse",
   "company": "Anthropic",
   "description": "",
@@ -264974,17 +265090,33 @@
    "San Francisco, CA | New York City, NY | Seattle, WA"
   ],
   "posted_at": 1743550866,
+  "posting": {
+   "analyzed_at": 1784417527,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "We do sponsor"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784417527,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Senior role, 3+ years required",
+   "role_family": "ml",
+   "years_required": 3
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 91,
+  "score": 71,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "sector:ai_lab +11",
    "you've engaged with Anthropic +6",
    "title matches your history +4",
-   "culture fit 80/100 +4"
+   "culture fit 80/100 +4",
+   "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "ai_lab",
   "source": "greenhouse",
@@ -269623,6 +269755,9 @@
    "San Francisco"
   ],
   "posted_at": 1779482212,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -279615,8 +279750,9 @@
   "url": "https://jobs.lever.co/zoox/50dcb67f-cb53-43ec-8ac4-fbd9d435fb59"
  },
  "b0720e6b79ef4dab": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "workday",
+  "closed_at": 1784417542,
   "company": "CVS Health",
   "description": "",
   "explicit_new_grad": false,
@@ -279627,6 +279763,11 @@
    "TX - Dallas"
   ],
   "posted_at": 1783952293,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784417542,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -279637,7 +279778,8 @@
    "sector:healthtech +16",
    "posted <7d +2",
    "you've engaged with CVS Health +8",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "healthtech",
   "source": "workday",
@@ -298949,6 +299091,9 @@
    "London, UK"
   ],
   "posted_at": 1778888210,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -300067,7 +300212,7 @@
   "url": "https://jobs.lever.co/veeva/ef37b1cb-51a1-415c-8a96-21a522a76143"
  },
  "bd1f84d142be8df8": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "greenhouse",
   "company": "Anthropic",
   "description": "",
@@ -300079,17 +300224,36 @@
    "San Francisco, CA"
   ],
   "posted_at": 1770919904,
+  "posting": {
+   "analyzed_at": 1784417548,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "We do sponsor",
+   "years_min": 7,
+   "years_note": "7+ years of experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784417548,
+   "live": true,
+   "new_grad": "no",
+   "reason": "7+ years experience required",
+   "role_family": "other-technical",
+   "years_required": 7
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 90,
+  "score": 70,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "sector:ai_lab +11",
    "you've engaged with Anthropic +6",
    "title matches your history +3",
-   "culture fit 80/100 +4"
+   "culture fit 80/100 +4",
+   "posting: wants 7+ yrs (dashboard only)",
+   "quality: not new-grad (7+ yrs — LLM-verified) -20"
   ],
   "sector": "ai_lab",
   "source": "greenhouse",
@@ -313854,7 +314018,9 @@
   ],
   "posted_at": 1776124238,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784417510,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
@@ -319545,6 +319711,9 @@
    "US-AZ-TUCSON-805 ~ 1151 E Hermans Rd ~ BLDG 805"
   ],
   "posted_at": 1783533586,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -323737,7 +323906,7 @@
   "url": "https://allstate.wd5.myworkdayjobs.com/en-US/allstate_careers/job/New-Brunswick-Office/Allstate-Sales-Agent_R32044"
  },
  "ccf4103a23aff9c0": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "greenhouse",
   "company": "Anthropic",
   "description": "",
@@ -323749,10 +323918,25 @@
    "Boston, MA; New York City, NY; Remote-Friendly (Travel-Required) |  Washington, DC"
   ],
   "posted_at": 1781293814,
+  "posting": {
+   "analyzed_at": 1784417574,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "We do sponsor"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784417574,
+   "live": true,
+   "new_grad": "no",
+   "reason": "8+ years required",
+   "role_family": "other-technical",
+   "years_required": 8
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 89,
+  "score": 69,
   "score_reasons": [
    "base 40",
    "role:swe +20",
@@ -323760,7 +323944,8 @@
    "remote +2",
    "you've engaged with Anthropic +6",
    "title matches your history +6",
-   "culture fit 80/100 +4"
+   "culture fit 80/100 +4",
+   "quality: not new-grad (8+ yrs — LLM-verified) -20"
   ],
   "sector": "ai_lab",
   "source": "greenhouse",
@@ -359180,6 +359365,9 @@
    "New York City"
   ],
   "posted_at": 1778888197,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -363070,16 +363258,33 @@
    "NY office"
   ],
   "posted_at": 1783975436,
+  "posting": {
+   "analyzed_at": 1784417534,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1-3 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784417534,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1-3 years experience required",
+   "role_family": "data",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 90,
+  "score": 80,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "sector:healthtech +16",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "healthtech",
   "source": "greenhouse",
