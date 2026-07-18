@@ -1628,6 +1628,22 @@
    "United States"
   ],
   "posted_at": 1781638680,
+  "posting": {
+   "analyzed_at": 1784409257,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0–2 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784409257,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level, 0-2 years",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -2940,15 +2956,33 @@
    "Dayton, OH"
   ],
   "posted_at": 1780610995,
+  "posting": {
+   "analyzed_at": 1784409265,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "US Citizens Only",
+   "years_min": 2,
+   "years_note": "2 years experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784409265,
+   "live": true,
+   "new_grad": "no",
+   "reason": "2 years experience required",
+   "role_family": "swe",
+   "years_required": 2
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 78,
+  "score": 68,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 2+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "simplify",
@@ -12840,6 +12874,20 @@
    "NYC"
   ],
   "posted_at": 1781639067,
+  "posting": {
+   "analyzed_at": 1784409249,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784409249,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role with quant focus",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -15348,6 +15396,15 @@
    "Chicago, United States"
   ],
   "posted_at": 1783900800,
+  "posting": {
+   "analyzed_at": 1784409286,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784409286,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -20237,8 +20294,9 @@
   "url": "https://jobs.smartrecruiters.com/KrgTechnologyInc/743999657807405"
  },
  "0d03cd5c163ab01a": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784409287,
   "company": "TRISTAR Insurance Group",
   "description": "",
   "explicit_new_grad": false,
@@ -20249,6 +20307,11 @@
    "Signal Hill Office - Signal Hill, CA 90755"
   ],
   "posted_at": 1783900800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784409287,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -20259,7 +20322,8 @@
    "sector:fintech +5",
    "posted <7d +2",
    "remote +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "fintech",
   "source": "jobright",
@@ -44455,13 +44519,19 @@
   ],
   "posted_at": 1782228168,
   "posting": {
-   "analyzed_at": 1784409161,
+   "analyzed_at": 1784409196,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784409161,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784409196,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Junior title, no experience req",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -64144,6 +64214,21 @@
    "Ann Arbor, MI"
   ],
   "posted_at": 1781734264,
+  "posting": {
+   "analyzed_at": 1784409228,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "unable to sponsor"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784409228,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role for new grad",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -69666,6 +69751,21 @@
    "Pittsfield, MA"
   ],
   "posted_at": 1780583006,
+  "posting": {
+   "analyzed_at": 1784409273,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "citizenship is required"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784409273,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, no experience required",
+   "role_family": "other-technical",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -79242,8 +79342,9 @@
   "url": "https://boards.greenhouse.io/andurilindustries/jobs/4263030007?gh_jid=4263030007"
  },
  "3410fb02bb403594": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784409265,
   "company": "Google",
   "description": "",
   "explicit_new_grad": false,
@@ -79254,6 +79355,11 @@
    "Seattle, WA"
   ],
   "posted_at": 1780927520,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784409265,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -79263,7 +79369,8 @@
    "role:swe +20",
    "sector:big_tech +10",
    "culture fit 82/100 +4",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "big_tech",
   "source": "simplify",
@@ -82556,8 +82663,9 @@
   "url": "https://job-boards.greenhouse.io/skildai-careers/jobs/4136353008"
  },
  "3665af165f84d9da": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784409288,
   "company": "Microsoft",
   "description": "",
   "explicit_new_grad": false,
@@ -82568,6 +82676,11 @@
    "Redmond, WA, United States"
   ],
   "posted_at": 1783900800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784409288,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -82578,7 +82691,8 @@
    "sector:big_tech +10",
    "posted <7d +2",
    "culture fit 62/100 +1",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "big_tech",
   "source": "jobright",
@@ -86399,7 +86513,9 @@
   ],
   "posted_at": 1781820248,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784409227,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -157758,6 +157874,15 @@
    "Remote in UK"
   ],
   "posted_at": 1780304990,
+  "posting": {
+   "analyzed_at": 1784409281,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784409281,
+   "attempts": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -186617,8 +186742,9 @@
   "url": "https://job-boards.greenhouse.io/bgeinc/jobs/5206499008"
  },
  "7b76e53bdbdaca9a": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784409283,
   "company": "Microsoft",
   "description": "",
   "explicit_new_grad": false,
@@ -186629,6 +186755,11 @@
    "United States, Virginia, Reston"
   ],
   "posted_at": 1783987200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784409283,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -186639,7 +186770,8 @@
    "sector:big_tech +10",
    "posted <7d +2",
    "culture fit 62/100 +1",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "big_tech",
   "source": "jobright",
@@ -211237,6 +211369,15 @@
    "Raleigh, NC"
   ],
   "posted_at": 1780104219,
+  "posting": {
+   "analyzed_at": 1784409282,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784409282,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -227693,7 +227834,13 @@
    "Chicago, IL"
   ],
   "posted_at": 1783981824,
+  "posting": {
+   "analyzed_at": 1784409285,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
   "quality": {
+   "ai_deferred_at": 1784409285,
    "attempts": 1
   },
   "remote": false,
@@ -293683,14 +293830,20 @@
   ],
   "posted_at": 1782691200,
   "posting": {
-   "analyzed_at": 1784409158,
+   "analyzed_at": 1784409173,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784409158,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784409173,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "new grad role for 2026 start",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -328482,6 +328635,15 @@
    "Chicago, IL"
   ],
   "posted_at": 1780438196,
+  "posting": {
+   "analyzed_at": 1784409281,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784409281,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -331252,7 +331414,7 @@
   ],
   "posted_at": 1781821287,
   "posting": {
-   "analyzed_at": 1784409162,
+   "analyzed_at": 1784409203,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 2,
@@ -331260,17 +331422,24 @@
   },
   "quality": {
    "ai_deferred_at": 1784409162,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784409203,
+   "live": true,
+   "new_grad": "no",
+   "reason": "2+ years experience required",
+   "role_family": "data",
+   "years_required": 2
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 78,
+  "score": 68,
   "score_reasons": [
    "base 40",
    "role:data_eng +18",
    "sector:healthtech +16",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: wants 2+ yrs (LLM-verified) -10"
   ],
   "sector": "healthtech",
   "source": "simplify",
@@ -336732,6 +336901,21 @@
    "Ann Arbor, MI"
   ],
   "posted_at": 1781734256,
+  "posting": {
+   "analyzed_at": 1784409235,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "unable to sponsor"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784409235,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role for new grad",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -345055,6 +345239,21 @@
    "Ann Arbor, MI"
   ],
   "posted_at": 1781734256,
+  "posting": {
+   "analyzed_at": 1784409242,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "unable to sponsor"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784409242,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role for new grad",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -359680,7 +359879,7 @@
   ],
   "posted_at": 1782691200,
   "posting": {
-   "analyzed_at": 1784409159,
+   "analyzed_at": 1784409181,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 0,
@@ -359688,7 +359887,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784409159,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784409181,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0-3 years exp.",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -362999,6 +363204,15 @@
    "Charlotte, NC"
   ],
   "posted_at": 1779834223,
+  "posting": {
+   "analyzed_at": 1784409283,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784409283,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -367302,7 +367516,7 @@
   ],
   "posted_at": 1782691200,
   "posting": {
-   "analyzed_at": 1784409160,
+   "analyzed_at": 1784409189,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -367311,17 +367525,24 @@
   },
   "quality": {
    "ai_deferred_at": 1784409160,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784409189,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 78,
+  "score": 68,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -384257,6 +384478,9 @@
    "Kingwood, Houston, TX"
   ],
   "posted_at": 1779930288,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -386398,6 +386622,16 @@
    "United States"
   ],
   "posted_at": 1783728000,
+  "posting": {
+   "analyzed_at": 1784409289,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "ai_deferred_at": 1784409289,
+   "attempts": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
