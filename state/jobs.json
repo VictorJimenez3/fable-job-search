@@ -3207,8 +3207,9 @@
   "url": "https://job-boards.greenhouse.io/canonical/jobs/6633605"
  },
  "026dae3606ce3d4e": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784414741,
   "company": "X, The Moonshot Factory",
   "description": "",
   "explicit_new_grad": false,
@@ -3219,6 +3220,11 @@
    "Mountain View, CA"
   ],
   "posted_at": 1783382400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414741,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -3226,7 +3232,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -9480,11 +9487,11 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 66,
+  "score": 62,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <72h +6"
+   "posted <7d +2"
   ],
   "sector": "other",
   "source": "greenhouse",
@@ -16692,6 +16699,9 @@
    "NYC"
   ],
   "posted_at": 1783318138,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -31326,14 +31336,20 @@
   ],
   "posted_at": 1783468800,
   "posting": {
-   "analyzed_at": 1784414630,
+   "analyzed_at": 1784414660,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784414630,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414660,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, 0+ years exp",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -44061,8 +44077,9 @@
   "url": "https://jobs.lever.co/veeva/9c944dee-fd9e-4923-acca-367f0ee6dbf2"
  },
  "1bf95b83a4308d63": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784414742,
   "company": "Connected Logistics",
   "description": "",
   "explicit_new_grad": false,
@@ -44073,6 +44090,11 @@
    "Mechanicsburg, PA, United States"
   ],
   "posted_at": 1783382400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414742,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -44080,7 +44102,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -54957,6 +54980,15 @@
    "NYC"
   ],
   "posted_at": 1783462029,
+  "posting": {
+   "analyzed_at": 1784414740,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414740,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -57936,14 +57968,20 @@
   ],
   "posted_at": 1783468800,
   "posting": {
-   "analyzed_at": 1784414631,
+   "analyzed_at": 1784414667,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784414631,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414667,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, no experience required",
+   "role_family": "other-technical",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -58001,14 +58039,20 @@
   ],
   "posted_at": 1783468800,
   "posting": {
-   "analyzed_at": 1784414632,
+   "analyzed_at": 1784414675,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784414632,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414675,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role with <1 year exp, no senior reqs.",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -63858,6 +63902,18 @@
    "Hanover Maryland"
   ],
   "posted_at": 1783382400,
+  "posting": {
+   "analyzed_at": 1784414743,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 2,
+   "years_note": "2 years of professional experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414743,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -80686,7 +80742,7 @@
   ],
   "posted_at": 1783468800,
   "posting": {
-   "analyzed_at": 1784414633,
+   "analyzed_at": 1784414682,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -80695,16 +80751,23 @@
   },
   "quality": {
    "ai_deferred_at": 1784414633,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414682,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 64,
+  "score": 54,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -88653,7 +88716,9 @@
   ],
   "posted_at": 1783549092,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784414651,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -143796,6 +143861,20 @@
    "SD Metro Area"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784414690,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414690,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, no experience required",
+   "role_family": "other-technical",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -186473,6 +186552,20 @@
    "Irvine, CA, United States"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784414697,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414697,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, 0+ years exp",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -201650,6 +201743,24 @@
    "Gaithersburg, MD, United States"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784414705,
+   "fetched": true,
+   "intern_counts": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 0,
+   "years_note": "0-1 year"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414705,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0+ years exp",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -204027,8 +204138,9 @@
   "url": "https://jobs.smartrecruiters.com/SGS/744000137913369"
  },
  "8321ba376402c428": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784414745,
   "company": "FormFactor Inc.",
   "description": "",
   "explicit_new_grad": false,
@@ -204039,6 +204151,11 @@
    "Livermore, CA, United States of America"
   ],
   "posted_at": 1783296000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414745,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -204046,7 +204163,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -266070,14 +266188,29 @@
    "Carmel, IN, United States"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784414712,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414712,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 64,
+  "score": 54,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -269065,6 +269198,18 @@
    "NYC"
   ],
   "posted_at": 1783462030,
+  "posting": {
+   "analyzed_at": 1784414739,
+   "fetched": true,
+   "intern_counts": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1 year of experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414739,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -282407,6 +282552,21 @@
    "Daly City, CA, United States"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784414719,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414719,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, new grad role.",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -285547,13 +285707,19 @@
   ],
   "posted_at": 1783548241,
   "posting": {
-   "analyzed_at": 1784414629,
+   "analyzed_at": 1784414652,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784414629,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414652,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role with 6+ months experience requirement.",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -315642,13 +315808,19 @@
   ],
   "posted_at": 1783555200,
   "posting": {
-   "analyzed_at": 1784414624,
+   "analyzed_at": 1784414643,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784414624,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414643,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New Grad, Entry Level, .NET Developer",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -316706,8 +316878,9 @@
   "url": "https://job-boards.greenhouse.io/axon/jobs/6308840003"
  },
  "caf9a1a0c12b4bd4": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784414727,
   "company": "Falmouth Exeter Plus",
   "description": "",
   "explicit_new_grad": false,
@@ -316718,6 +316891,11 @@
    "Penryn Campus"
   ],
   "posted_at": 1783468800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414727,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -316725,7 +316903,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -323643,7 +323822,7 @@
   "url": "https://jobright.ai/jobs/info/6a4bdb2e4f64ba41dcb5d7b9?utm_campaign=Data%20Analysis&utm_source=1103"
  },
  "cf59e3cdd5bac545": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Northrop Grumman",
   "description": "",
@@ -323655,6 +323834,23 @@
    "United States-Colorado-Aurora"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784414728,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 4,
+   "years_note": "4 years of experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414728,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0 years required, new grad role",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -323662,7 +323858,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "posting: wants 4+ yrs (dashboard only)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -325911,6 +326108,15 @@
    "New York, NY"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784414736,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414736,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -335816,6 +336022,16 @@
    "Palo Alto, CA, United States"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784414738,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414738,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -361808,6 +362024,16 @@
    "West Bethesda, MD, United States"
   ],
   "posted_at": 1783382400,
+  "posting": {
+   "analyzed_at": 1784414744,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414744,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -379278,6 +379504,18 @@
    "Remote in USA"
   ],
   "posted_at": 1783462596,
+  "posting": {
+   "analyzed_at": 1784414738,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "unable to sponsor",
+   "years_min": 1,
+   "years_note": "At least 1 year"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414738,
+   "attempts": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
