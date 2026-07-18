@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='52' font-size='52'%3E🧪%3C/text%3E%3C/svg%3E">
 <title>ChemE Internship Radar</title>
 <style>
   :root {
@@ -383,6 +384,8 @@ function isOpenRelevant(j) {
 function jobList() {
   const byId = appliedById(); const f = S.filter; const q = norm(f.q);
   let rows = Object.values(S.jobs).filter(j=>isChemeVisible(j) && isOpenRelevant(j));
+  rows = rows.filter(j=>byId[j.id] || S.web.maybe.includes(j.id) || S.web.jobs[j.id]
+    || !postedTs(j) || Date.now()/1000-postedTs(j) <= 45*86400);
   if (f.alert) rows = rows.filter(j=>j.alert_ok);
   rows = rows.filter(j=>(j.score||0) >= f.min);
   if (f.sector) rows = rows.filter(j=>j.sector===f.sector);
