@@ -2261,6 +2261,9 @@
    "San Francisco"
   ],
   "posted_at": 1768951050,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -11930,6 +11933,9 @@
    "San Francisco"
   ],
   "posted_at": 1753217274,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -13448,7 +13454,9 @@
   ],
   "posted_at": 1779738292,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784418425,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -76273,6 +76281,9 @@
    "San Francisco"
   ],
   "posted_at": 1776273887,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -82971,6 +82982,9 @@
    "London, UK"
   ],
   "posted_at": 1771442768,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -83183,7 +83197,9 @@
   ],
   "posted_at": 1777494975,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784418429,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -89730,7 +89746,9 @@
   ],
   "posted_at": 1778278726,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784418428,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
@@ -90730,8 +90748,6 @@
    "role:data_science +22",
    "sector:healthtech +16",
    "title matches your history +6",
-   "re-gate v2: priority sector: healthtech (auto-alert)",
-   "posting: wants 3+ yrs (dashboard only)",
    "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "healthtech",
@@ -96398,7 +96414,9 @@
   ],
   "posted_at": 1779470030,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784418426,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -124126,6 +124144,9 @@
    "San Francisco"
   ],
   "posted_at": 1759956690,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -130850,6 +130871,9 @@
    "Seattle"
   ],
   "posted_at": 1772406332,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -138896,7 +138920,7 @@
   "url": "https://ngc.wd1.myworkdayjobs.com/en-US/Northrop_Grumman_External_Site/job/United-States-California-Redondo-Beach/DevOps-Engineer---Level-3-4_R10238835"
  },
  "576ebed585e5b88e": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "lever",
   "company": "Woven",
   "description": "",
@@ -138908,16 +138932,35 @@
    "Palo Alto, CA"
   ],
   "posted_at": 1773773216,
+  "posting": {
+   "analyzed_at": 1784418465,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 5,
+   "years_note": "5+ years of professional experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784418465,
+   "live": true,
+   "new_grad": "no",
+   "reason": "5+ years experience required",
+   "role_family": "non-technical",
+   "years_required": 5
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 84,
+  "score": 39,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "new-grad title +12",
    "remote +2",
-   "title matches your history +4"
+   "title matches your history +4",
+   "posting: wants 5+ yrs (dashboard only)",
+   "quality: not new-grad (5+ yrs — LLM-verified) -20",
+   "quality: non-technical role (5+ years experience required — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "lever",
@@ -155436,15 +155479,33 @@
    "California"
   ],
   "posted_at": 1776840091,
+  "posting": {
+   "analyzed_at": 1784418438,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "no visa sponsorship",
+   "years_min": 1,
+   "years_note": "1–2 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784418438,
+   "live": true,
+   "new_grad": "no",
+   "reason": "2+ years experience required",
+   "role_family": "data",
+   "years_required": 2
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 84,
+  "score": 74,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 2+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "lever",
@@ -172587,6 +172648,9 @@
    "San Francisco"
   ],
   "posted_at": 1758237275,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -246989,7 +247053,9 @@
   ],
   "posted_at": 1779390216,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784418426,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -251894,7 +251960,9 @@
   ],
   "posted_at": 1778434439,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784418427,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -254509,6 +254577,9 @@
    "San Francisco"
   ],
   "posted_at": 1776370774,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -258093,15 +258164,33 @@
    "California"
   ],
   "posted_at": 1776891062,
+  "posting": {
+   "analyzed_at": 1784418430,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "no visa sponsorship",
+   "years_min": 1,
+   "years_note": "1–2 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784418430,
+   "live": true,
+   "new_grad": "no",
+   "reason": "2+ years relevant experience required",
+   "role_family": "data",
+   "years_required": 2
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 84,
+  "score": 74,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 2+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "lever",
@@ -293586,6 +293675,9 @@
    "San Francisco"
   ],
   "posted_at": 1776445482,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -296667,7 +296759,9 @@
   ],
   "posted_at": 1779304808,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784418427,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
@@ -299787,6 +299881,9 @@
    "San Francisco"
   ],
   "posted_at": 1770656693,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -300708,6 +300805,20 @@
    "Palo Alto, CA"
   ],
   "posted_at": 1755596738,
+  "posting": {
+   "analyzed_at": 1784418477,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784418477,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New Grad role for 2026 class",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -302756,6 +302867,9 @@
    "Remote - US"
   ],
   "posted_at": 1776272082,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -370676,6 +370790,20 @@
    "New York City, NY; Remote-Friendly (Travel-Required) | San Francisco, CA | Washington, DC; San Francisco, CA | New York City, NY"
   ],
   "posted_at": 1776828706,
+  "posting": {
+   "analyzed_at": 1784418446,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784418446,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role in security",
+   "role_family": "security",
+   "years_required": null
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -381188,6 +381316,9 @@
    "Seattle"
   ],
   "posted_at": 1772406367,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -387997,7 +388128,9 @@
   ],
   "posted_at": 1777316722,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784418429,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
