@@ -6639,16 +6639,34 @@
    "Bastrop, TX"
   ],
   "posted_at": 1781831744,
+  "posting": {
+   "analyzed_at": 1784407532,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "must be a U.S. citizen",
+   "years_min": 2,
+   "years_note": "2+ years of professional experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407532,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 2+ years experience or degree",
+   "role_family": "swe",
+   "years_required": 2
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 81,
+  "score": 71,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:big_tech +10",
    "you've engaged with SpaceX +6",
-   "title matches your history +5"
+   "title matches your history +5",
+   "quality: wants 2+ yrs (LLM-verified) -10"
   ],
   "sector": "big_tech",
   "source": "simplify",
@@ -16538,13 +16556,19 @@
   ],
   "posted_at": 1782742023,
   "posting": {
-   "analyzed_at": 1784407454,
+   "analyzed_at": 1784407517,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784407454,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407517,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role for new grad",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -18890,8 +18914,9 @@
   "url": "https://mmc.wd1.myworkdayjobs.com/en-US/mmc/job/Belfast---Clarendon/Graduate-Actuarial-Analyst_R_351131-1"
  },
  "0c5ec19ae42b5928": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784407540,
   "company": "UST",
   "description": "",
   "explicit_new_grad": true,
@@ -18902,6 +18927,11 @@
    "Atlanta, GA, United States"
   ],
   "posted_at": 1783987200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407540,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -18911,7 +18941,8 @@
    "role:swe +20",
    "new-grad title +8",
    "posted <72h +6",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -34247,7 +34278,9 @@
   ],
   "posted_at": 1782972444,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784407497,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -44276,7 +44309,7 @@
   ],
   "posted_at": 1782950400,
   "posting": {
-   "analyzed_at": 1784407452,
+   "analyzed_at": 1784407502,
    "fetched": true,
    "intern_counts": true,
    "sponsorship": "no",
@@ -44286,18 +44319,25 @@
   },
   "quality": {
    "ai_deferred_at": 1784407452,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407502,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 81,
+  "score": 71,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
    "you've engaged with MANTECH +3",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -67893,6 +67933,23 @@
    "US-VA-Dahlgren, United States of America"
   ],
   "posted_at": 1783987200,
+  "posting": {
+   "analyzed_at": 1784407541,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 0,
+   "years_note": "0-5 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407541,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, 0+ years exp",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -77143,8 +77200,9 @@
   "url": "https://ebxs.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/309520"
  },
  "32f0a9be521fd9b5": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784407548,
   "company": "Northrop Grumman Australia",
   "description": "",
   "explicit_new_grad": true,
@@ -77155,6 +77213,11 @@
    "Redondo Beach, CA, United States"
   ],
   "posted_at": 1783987200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407548,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -77164,7 +77227,8 @@
    "role:swe +20",
    "new-grad title +12",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -78174,6 +78238,22 @@
    "Brooklyn, NY, United States"
   ],
   "posted_at": 1783987200,
+  "posting": {
+   "analyzed_at": 1784407549,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0-2 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407549,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0+ years exp",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -82972,7 +83052,9 @@
   ],
   "posted_at": 1783980751,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784407571,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -103621,6 +103703,22 @@
    "Frisco, TX, United States"
   ],
   "posted_at": 1783987200,
+  "posting": {
+   "analyzed_at": 1784407556,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0-3 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407556,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0+ years exp, 2026 grad.",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -111475,7 +111573,7 @@
   ],
   "posted_at": 1782864000,
   "posting": {
-   "analyzed_at": 1784407453,
+   "analyzed_at": 1784407509,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -111484,18 +111582,25 @@
   },
   "quality": {
    "ai_deferred_at": 1784407453,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407509,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 81,
+  "score": 71,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
    "you've engaged with MANTECH +3",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -151630,7 +151735,7 @@
   ],
   "posted_at": 1783123200,
   "posting": {
-   "analyzed_at": 1784407444,
+   "analyzed_at": 1784407474,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -151639,18 +151744,25 @@
   },
   "quality": {
    "ai_deferred_at": 1784407444,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407474,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 1+ years exp, not new grad.",
+   "role_family": "other-technical",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 81,
+  "score": 71,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:big_tech +10",
    "you've engaged with SpaceX +6",
-   "title matches your history +5"
+   "title matches your history +5",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "big_tech",
   "source": "jobright",
@@ -171487,8 +171599,9 @@
   "url": "https://jobs.lever.co/lumotive/869becb2-aeb0-47fd-8fcf-576003d9a012"
  },
  "71dd1cd29e8b00b0": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784407565,
   "company": "Raytheon",
   "description": "",
   "explicit_new_grad": true,
@@ -171499,6 +171612,11 @@
    "McKinney, TX, United States"
   ],
   "posted_at": 1783987200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407565,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -171508,7 +171626,8 @@
    "role:swe +20",
    "new-grad title +8",
    "posted <72h +6",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -178345,7 +178464,7 @@
   ],
   "posted_at": 1783386976,
   "posting": {
-   "analyzed_at": 1784407443,
+   "analyzed_at": 1784407466,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 2,
@@ -178353,7 +178472,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784407443,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407466,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for class of 2026",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -217116,7 +217241,7 @@
   ],
   "posted_at": 1783123200,
   "posting": {
-   "analyzed_at": 1784407445,
+   "analyzed_at": 1784407482,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -217125,7 +217250,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784407445,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407482,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 1+ years exp",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
@@ -236588,6 +236719,17 @@
    "Atlanta, GA, United States"
   ],
   "posted_at": 1783987200,
+  "posting": {
+   "analyzed_at": 1784407565,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0-3 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784407565,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -245558,6 +245700,16 @@
    "Dedham, MA, United States"
   ],
   "posted_at": 1783987200,
+  "posting": {
+   "analyzed_at": 1784407566,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "ai_deferred_at": 1784407566,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -268996,7 +269148,7 @@
   ],
   "posted_at": 1783029885,
   "posting": {
-   "analyzed_at": 1784407446,
+   "analyzed_at": 1784407490,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 0,
@@ -269004,7 +269156,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784407446,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407490,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0-3 years, new grad encouraged",
+   "role_family": "data",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -277700,8 +277858,9 @@
   "url": "https://ngc.wd1.myworkdayjobs.com/en-US/Northrop_Grumman_External_Site/job/United-States-Maryland-Annapolis/Acoustic-Analyst-level-2-3_R10238373"
  },
  "b74d1855f99a93db": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784407539,
   "company": "Intuit",
   "description": "",
   "explicit_new_grad": false,
@@ -277713,7 +277872,9 @@
   ],
   "posted_at": 1784067142,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784407539,
+   "live": false
   },
   "remote": false,
   "rules_v": 3,
@@ -277725,7 +277886,8 @@
    "sector:big_tech +10",
    "posted <7d +2",
    "you've engaged with Intuit +7",
-   "culture fit 62/100 +1"
+   "culture fit 62/100 +1",
+   "quality: posting gone (link checked)"
   ],
   "sector": "big_tech",
   "source": "simplify",
@@ -282911,7 +283073,9 @@
   ],
   "posted_at": 1782963451,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784407502,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -294001,8 +294165,9 @@
   "url": "https://www.coinbase.com/careers/positions/7952032?gh_jid=7952032"
  },
  "c2ab35b3dd081a34": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784407567,
   "company": "UST",
   "description": "",
   "explicit_new_grad": true,
@@ -294013,6 +294178,11 @@
    "Frisco, TX, United States"
   ],
   "posted_at": 1783987200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407567,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -294022,7 +294192,8 @@
    "role:swe +20",
    "new-grad title +8",
    "posted <72h +6",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -294405,8 +294576,9 @@
   "url": "https://jobs.smartrecruiters.com/Idexcel3/101085542"
  },
  "c2f2f46281afc025": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784407568,
   "company": "CGI",
   "description": "",
   "explicit_new_grad": true,
@@ -294417,6 +294589,11 @@
    "Washington, DC, USA"
   ],
   "posted_at": 1783987200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407568,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -294426,7 +294603,8 @@
    "role:swe +20",
    "new-grad title +8",
    "posted <72h +6",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -297903,11 +298081,11 @@
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 68,
+  "score": 64,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <72h +6",
+   "posted <7d +2",
    "remote +2"
   ],
   "sector": "other",
@@ -329945,6 +330123,17 @@
    "Orlando, FL"
   ],
   "posted_at": 1783987200,
+  "posting": {
+   "analyzed_at": 1784407569,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0-2 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784407569,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -346524,14 +346713,20 @@
   ],
   "posted_at": 1782691200,
   "posting": {
-   "analyzed_at": 1784407455,
+   "analyzed_at": 1784407524,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784407455,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407524,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for 2026 class",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -361281,6 +361476,16 @@
    "Chicago, IL, United States"
   ],
   "posted_at": 1783987200,
+  "posting": {
+   "analyzed_at": 1784407570,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "ai_deferred_at": 1784407570,
+   "attempts": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
