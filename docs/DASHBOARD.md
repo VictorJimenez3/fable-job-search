@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-18 20:01 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
+_Last run: **2026-07-18 20:03 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -8,7 +8,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 |---|---|---|---|---|---|---|
 | 100 🔥 | 10h | CVS Health | [Analyst, Patient Relations](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/CT---New-Haven/Analyst--Patient-Relations_R0978633) | CT - New Haven | healthtech | workday |
 | 100 🔥 | 14h | CVS Health | [Inside Sales Development Associate (Cincinnati, OH)](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/OH---Cincinnati/Inside-Sales-Development-Associate--Cincinnati--OH-_R0979563) | OH - Cincinnati | healthtech | workday |
-| 100 🔥 | 23h | CVS Health | [Patient Relations Analyst](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/NY---Brooklyn/Patient-Relations-Analyst_R0927559) | NY - Brooklyn | healthtech | workday |
+| 100 🔥 | 1d | CVS Health | [Patient Relations Analyst](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/NY---Brooklyn/Patient-Relations-Analyst_R0927559) | NY - Brooklyn | healthtech | workday |
 | 100 🔥 | 1d | Oscar Health | [Associate, Actuarial](http://www.hioscar.com/careers/8069495?gh_jid=8069495) | Remote | healthtech | greenhouse |
 | 100 🔥 | 1d | NVIDIA | [Systems Software Engineer New Grad - Accelerated Kubernetes Performanc](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Systems-Software-Engineer--Accelerated-Kubernetes-Performance-and-Scale---New-College-Grad-2026_JR2020957) | Seattle, WA | big_tech | simplify |
 | 100 🔥 | 2d | Merck | [Associate Specialist, Customer Support](https://msd.wd5.myworkdayjobs.com/en-US/SearchJobs/job/USA---REMOTE---REMOTE/Associate-Specialist--Customer-Support_R406095-1/apply) | REMOTE, REMOTE, United States of America | healthtech | phenom |
@@ -86,7 +86,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 94 🔥 | 2d | OpenAI | [AI Success Engineer - EDU](https://jobs.ashbyhq.com/openai/376a6ab7-7209-4aef-bbdd-f3e40a048714) | Singapore | ai_lab | ashby |
 | 94 🔥 | 3d | OpenAI | [AI Deployment Engineer, Ecosystem - Plugins](https://jobs.ashbyhq.com/openai/ca9e0aeb-6df1-4b73-8ec0-2e9e124712f1) | San Francisco | ai_lab | ashby |
 | 94 🔥 | 3d | OpenAI | [AI Deployment Engineer, Plugins](https://jobs.ashbyhq.com/openai/ca9e0aeb-6df1-4b73-8ec0-2e9e124712f1) | San Francisco | ai_lab | ashby |
-| 94 🔥 | 3d | AbbVie | [AI Business Systems Analyst](https://jobs.smartrecruiters.com/AbbVie/3743990014091116) | North Chicago, IL | healthtech | smartrecruiters |
+| 94 🔥 | 4d | AbbVie | [AI Business Systems Analyst](https://jobs.smartrecruiters.com/AbbVie/3743990014091116) | North Chicago, IL | healthtech | smartrecruiters |
 | 94 🔥 | 4d | OpenAI | [Research Engineer, Privacy](https://jobs.ashbyhq.com/openai/cc434f5b-dc0b-42fd-97ec-e0171545c6e9) | San Francisco | ai_lab | ashby |
 | 94 🔥 | 5d | AbbVie | [Modeling and Simulation Module Developer - Data & AI Acceleration (Hyb](https://jobs.smartrecruiters.com/AbbVie/3743990014064756) | Florham Park, NJ | healthtech | smartrecruiters |
 | 94 🔥 | 5d | AbbVie | [Modeling and Simulation Module Developer - Data & AI Acceleration (Hyb](https://jobs.smartrecruiters.com/AbbVie/3743990014064716) | North Chicago, IL | healthtech | smartrecruiters |
