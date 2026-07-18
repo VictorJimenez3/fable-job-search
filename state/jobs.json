@@ -14028,6 +14028,21 @@
    "Augusta, GA"
   ],
   "posted_at": 1783209600,
+  "posting": {
+   "analyzed_at": 1784413938,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784413938,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level role for new grad",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -37316,8 +37331,9 @@
   "url": "https://boards.greenhouse.io/spacex/jobs/8441008002?gh_jid=8441008002"
  },
  "1787635f76fde1e2": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784413983,
   "company": "Coherent Corp.",
   "description": "",
   "explicit_new_grad": false,
@@ -37328,6 +37344,11 @@
    "48800 Milmont Drive, Fremont, CA, 94538, US"
   ],
   "posted_at": 1782950400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784413983,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -37335,7 +37356,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -50712,6 +50734,22 @@
    "New York, NY, US"
   ],
   "posted_at": 1783036800,
+  "posting": {
+   "analyzed_at": 1784413960,
+   "fetched": true,
+   "intern_counts": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784413960,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, no experience required",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -138871,15 +138909,31 @@
    "El Segundo, CA"
   ],
   "posted_at": 1782957191,
+  "posting": {
+   "analyzed_at": 1784413975,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "Citizenship is required"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784413975,
+   "live": true,
+   "new_grad": "no",
+   "reason": "2 years experience required for entry level role",
+   "role_family": "swe",
+   "years_required": 2
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 66,
+  "score": 56,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "title matches your history +2",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "quality: wants 2+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "simplify",
@@ -152384,14 +152438,20 @@
   ],
   "posted_at": 1783296000,
   "posting": {
-   "analyzed_at": 1784413883,
+   "analyzed_at": 1784413898,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
    "ai_deferred_at": 1784413883,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784413898,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New Grad, Entry Level",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -159179,6 +159239,9 @@
    "Huntsville, AL"
   ],
   "posted_at": 1783030587,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -179797,7 +179860,9 @@
   ],
   "posted_at": 1783375884,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784413896,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -183619,6 +183684,15 @@
    "Remote in USA"
   ],
   "posted_at": 1782944838,
+  "posting": {
+   "analyzed_at": 1784413994,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784413994,
+   "attempts": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -191592,6 +191666,20 @@
    "Ardmore, PA"
   ],
   "posted_at": 1783029963,
+  "posting": {
+   "analyzed_at": 1784413968,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784413968,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "PhD graduating 2026, new grad role",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -193594,8 +193682,9 @@
   "url": "https://jobs.lever.co/includedhealth/80cba879-823c-426e-ab58-0a77b6b236e4"
  },
  "7cdb17e0f0eea716": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784413945,
   "company": "Volvo Group",
   "description": "",
   "explicit_new_grad": false,
@@ -193606,6 +193695,11 @@
    "Joliet, IL, US, 60431"
   ],
   "posted_at": 1783209600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784413945,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -193613,7 +193707,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -202978,7 +203073,7 @@
   ],
   "posted_at": 1783296000,
   "posting": {
-   "analyzed_at": 1784413884,
+   "analyzed_at": 1784413906,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 1,
@@ -202986,17 +203081,24 @@
   },
   "quality": {
    "ai_deferred_at": 1784413884,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784413906,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "other-technical",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 66,
+  "score": 56,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "posted <7d +2",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -216478,6 +216580,20 @@
    "Main Campus (Washington, DC), United States of America"
   ],
   "posted_at": 1783209600,
+  "posting": {
+   "analyzed_at": 1784413945,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784413945,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad student position.",
+   "role_family": "data",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -240555,14 +240671,32 @@
    "Penn State University Park, United States"
   ],
   "posted_at": 1782950400,
+  "posting": {
+   "analyzed_at": 1784413984,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 2,
+   "years_note": "2+ years of relevant experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784413984,
+   "live": true,
+   "new_grad": "no",
+   "reason": "2+ years exp required",
+   "role_family": "swe",
+   "years_required": 2
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 66,
+  "score": 56,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 2+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -259689,8 +259823,9 @@
   "url": "https://jobs.lever.co/getwingapp/3819aa66-c0d7-4fbb-b13d-d50232f50943"
  },
  "a741972c2370459b": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784413992,
   "company": "Metropolitan Transportation Authority",
   "description": "",
   "explicit_new_grad": false,
@@ -259701,6 +259836,11 @@
    "Jamaica, NY"
   ],
   "posted_at": 1782950400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784413992,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -259708,7 +259848,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -265712,6 +265853,15 @@
    "United Kingdom"
   ],
   "posted_at": 1782950400,
+  "posting": {
+   "analyzed_at": 1784413992,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784413992,
+   "attempts": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -271786,7 +271936,7 @@
   ],
   "posted_at": 1783296000,
   "posting": {
-   "analyzed_at": 1784413885,
+   "analyzed_at": 1784413913,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -271795,7 +271945,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784413885,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784413913,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0+ years exp",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -283456,7 +283612,7 @@
   ],
   "posted_at": 1783296000,
   "posting": {
-   "analyzed_at": 1784413886,
+   "analyzed_at": 1784413921,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -283465,16 +283621,23 @@
   },
   "quality": {
    "ai_deferred_at": 1784413886,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784413921,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 66,
+  "score": 56,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -296953,7 +297116,9 @@
   ],
   "posted_at": 1783318265,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784413897,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -302398,7 +302563,9 @@
   ],
   "posted_at": 1783318132,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784413898,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -303936,8 +304103,9 @@
   "url": "https://jobs.lever.co/erg/8fbd157f-aabd-44ba-926f-db233304378a/apply"
  },
  "c3152d15e82e51b2": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784413928,
   "company": "AgileGrid Solutions",
   "description": "",
   "explicit_new_grad": false,
@@ -303948,6 +304116,11 @@
    "United States"
   ],
   "posted_at": 1783296000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784413928,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -303956,7 +304129,8 @@
    "base 40",
    "role:swe +20",
    "remote +2",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -304513,6 +304687,21 @@
    "McLean, Virginia, 22107"
   ],
   "posted_at": 1783209600,
+  "posting": {
+   "analyzed_at": 1784413952,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784413952,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, no experience required",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -305264,6 +305453,18 @@
    "600 Colonial Center Parkway, Lake Mary, FL, 32746, US"
   ],
   "posted_at": 1782950400,
+  "posting": {
+   "analyzed_at": 1784413993,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 0,
+   "years_note": "0-2 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784413993,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -319080,7 +319281,9 @@
   ],
   "posted_at": 1783318263,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784413897,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -344136,8 +344339,9 @@
   "url": "https://jobright.ai/jobs/info/6a580f263330ca6f993c3194?utm_campaign=Software%20Engineering&utm_source=1103"
  },
  "de3db51a142959cb": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784413929,
   "company": "Accenture",
   "description": "",
   "explicit_new_grad": false,
@@ -344148,6 +344352,11 @@
    "Walnut Creek, 1255 Treat Blvd, Corp, United States of America"
   ],
   "posted_at": 1783296000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784413929,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -344156,7 +344365,8 @@
    "base 40",
    "role:swe +20",
    "remote +2",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -359083,6 +359293,20 @@
    "Moscow Rd, London W2, UK"
   ],
   "posted_at": 1783296000,
+  "posting": {
+   "analyzed_at": 1784413930,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784413930,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, no experience required",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
