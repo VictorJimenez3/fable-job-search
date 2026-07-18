@@ -26627,12 +26627,12 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 76,
+  "score": 72,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:big_tech +10",
-   "posted <72h +6"
+   "posted <7d +2"
   ],
   "sector": "big_tech",
   "source": "greenhouse",
@@ -65340,8 +65340,19 @@
    "San Jose, CA"
   ],
   "posted_at": 1782956262,
+  "posting": {
+   "analyzed_at": 1784406465,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784406465,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "PhD candidate, 2026 start",
+   "role_family": "ml",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -80091,15 +80102,33 @@
    "Beth Israel Deaconess Medical Center, United States of America"
   ],
   "posted_at": 1783296000,
+  "posting": {
+   "analyzed_at": 1784406449,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 1,
+   "years_note": "1-3 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784406449,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "data",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 84,
+  "score": 74,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "sector:healthtech +16",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "healthtech",
   "source": "jobright",
@@ -82384,8 +82413,9 @@
   "url": "https://hdpc.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/LateralHiring/job/168978"
  },
  "36dc41145d3aef33": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784406445,
   "company": "Boston Consulting Group (BCG)",
   "description": "",
   "explicit_new_grad": true,
@@ -82396,6 +82426,11 @@
    "Boston, Massachusetts, United States"
   ],
   "posted_at": 1783468800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784406445,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -82404,7 +82439,8 @@
    "base 40",
    "role:ai_ml +26",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -90242,6 +90278,20 @@
    "Oakland, CA"
   ],
   "posted_at": 1783030289,
+  "posting": {
+   "analyzed_at": 1784406457,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784406457,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role with ML focus",
+   "role_family": "ml",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -113042,8 +113092,9 @@
   "url": "https://jobs.lever.co/veeva/50551141-40ef-4920-8622-0a10a401f030"
  },
  "4b345cf2748086f4": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784406446,
   "company": "Massachusetts General Hospital",
   "description": "",
   "explicit_new_grad": false,
@@ -113055,7 +113106,9 @@
   ],
   "posted_at": 1783468800,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784406446,
+   "live": false
   },
   "remote": false,
   "rules_v": 3,
@@ -113065,7 +113118,8 @@
    "base 40",
    "role:data_science +22",
    "sector:healthtech +16",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "healthtech",
   "source": "jobright",
@@ -120613,6 +120667,21 @@
    "New York, NY"
   ],
   "posted_at": 1782691200,
+  "posting": {
+   "analyzed_at": 1784406498,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784406498,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New Grad position with required skills for entry-level engineering",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -160245,8 +160314,9 @@
   "url": "https://jobs.lever.co/palantir/3c788579-eec7-4897-b446-4afc944e79be"
  },
  "6a93f2c82f8632a2": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784406446,
   "company": "Northrop Grumman",
   "description": "",
   "explicit_new_grad": true,
@@ -160257,6 +160327,11 @@
    "United States-California-Palmdale"
   ],
   "posted_at": 1783468800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784406446,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -160266,7 +160341,8 @@
    "role:data_science +22",
    "new-grad title +12",
    "title matches your history +6",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -160639,6 +160715,15 @@
    "NYC"
   ],
   "posted_at": 1781733745,
+  "posting": {
+   "analyzed_at": 1784406514,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784406514,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -199333,8 +199418,9 @@
   "url": "https://job-boards.greenhouse.io/trueanomalyinc/jobs/5000652007"
  },
  "853ea1b5fabe9b14": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784406447,
   "company": "UnitedHealthcare",
   "description": "",
   "explicit_new_grad": false,
@@ -199346,7 +199432,9 @@
   ],
   "posted_at": 1783468800,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784406447,
+   "live": false
   },
   "remote": false,
   "rules_v": 3,
@@ -199356,7 +199444,8 @@
    "base 40",
    "role:data_science +22",
    "sector:healthtech +16",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "healthtech",
   "source": "jobright",
@@ -213043,8 +213132,9 @@
   "url": "https://jobs.ashbyhq.com/clera/00167254-63e1-4367-ac04-4c5538a9470f"
  },
  "8e9791013417a717": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784406515,
   "company": "Tauck",
   "description": "",
   "explicit_new_grad": true,
@@ -213055,6 +213145,11 @@
    "United States"
   ],
   "posted_at": 1781676272,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784406515,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -213063,7 +213158,8 @@
    "base 40",
    "role:ai_ml +26",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "simplify",
@@ -216636,6 +216732,20 @@
    "Washington, DC"
   ],
   "posted_at": 1782770697,
+  "posting": {
+   "analyzed_at": 1784406490,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784406490,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New Grad position for Software Engineer",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -219452,7 +219562,7 @@
   ],
   "posted_at": 1782777600,
   "posting": {
-   "analyzed_at": 1784406397,
+   "analyzed_at": 1784406428,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship",
@@ -219461,19 +219571,26 @@
   },
   "quality": {
    "ai_deferred_at": 1784406397,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784406428,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "other-technical",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 85,
+  "score": 75,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:healthtech +16",
    "you've engaged with Neuralink +8",
    "title matches your history +2",
-   "culture fit 38/100 -1"
+   "culture fit 38/100 -1",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "healthtech",
   "source": "jobright",
@@ -232462,7 +232579,13 @@
    "San Jose, CA"
   ],
   "posted_at": 1781503935,
+  "posting": {
+   "analyzed_at": 1784406516,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
   "quality": {
+   "ai_deferred_at": 1784406516,
    "attempts": 1
   },
   "remote": false,
@@ -240358,7 +240481,7 @@
   ],
   "posted_at": 1783900800,
   "posting": {
-   "analyzed_at": 1784406401,
+   "analyzed_at": 1784406436,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 0,
@@ -240366,7 +240489,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784406401,
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784406436,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0+ years exp",
+   "role_family": "data",
+   "years_required": 0
   },
   "remote": true,
   "rules_v": 3,
@@ -241734,6 +241863,22 @@
    "Atlanta, GA"
   ],
   "posted_at": 1782955958,
+  "posting": {
+   "analyzed_at": 1784406474,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1-3 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784406474,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0 years required, new grad role",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -267955,8 +268100,9 @@
   "url": "https://jobs.smartrecruiters.com/JobsForHumanity/744000136904268"
  },
  "b1db01a6dfd3cd1e": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784406444,
   "company": "Brown University Health",
   "description": "",
   "explicit_new_grad": false,
@@ -267968,7 +268114,9 @@
   ],
   "posted_at": 1783555200,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784406444,
+   "live": false
   },
   "remote": false,
   "rules_v": 3,
@@ -267978,7 +268126,8 @@
    "base 40",
    "role:data_science +22",
    "sector:healthtech +16",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "healthtech",
   "source": "jobright",
@@ -284459,6 +284608,9 @@
    "Moscow, ID"
   ],
   "posted_at": 1783376277,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -290840,8 +290992,9 @@
   "url": "https://job-boards.greenhouse.io/graphcore/jobs/8614013002"
  },
  "c1530362a21db0a6": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784406456,
   "company": "California Correctional Health Care Services",
   "description": "",
   "explicit_new_grad": false,
@@ -290852,6 +291005,11 @@
    "Sacramento County"
   ],
   "posted_at": 1783296000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784406456,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -290860,7 +291018,8 @@
    "base 40",
    "role:data_science +22",
    "sector:healthtech +16",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "healthtech",
   "source": "jobright",
@@ -292037,6 +292196,22 @@
    "Atlanta, GA"
   ],
   "posted_at": 1782955835,
+  "posting": {
+   "analyzed_at": 1784406482,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0 years of experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784406482,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0 years required, new grad eligible",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -302914,13 +303089,19 @@
   ],
   "posted_at": 1783473071,
   "posting": {
-   "analyzed_at": 1784406392,
+   "analyzed_at": 1784406413,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784406392,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784406413,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for backend engineer",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -308917,7 +309098,9 @@
   ],
   "posted_at": 1783577549,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784406443,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -310395,7 +310578,7 @@
   ],
   "posted_at": 1782950400,
   "posting": {
-   "analyzed_at": 1784406397,
+   "analyzed_at": 1784406420,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 1,
@@ -310403,18 +310586,25 @@
   },
   "quality": {
    "ai_deferred_at": 1784406397,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784406420,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "data",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 85,
+  "score": 75,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "sector:fintech +5",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "fintech",
   "source": "jobright",
@@ -318115,7 +318305,13 @@
    "San Jose, CA"
   ],
   "posted_at": 1781503926,
+  "posting": {
+   "analyzed_at": 1784406519,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
   "quality": {
+   "ai_deferred_at": 1784406519,
    "attempts": 1
   },
   "remote": false,
@@ -324958,11 +325154,11 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 66,
+  "score": 62,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <72h +6"
+   "posted <7d +2"
   ],
   "sector": "other",
   "source": "greenhouse",
@@ -341928,8 +342124,9 @@
   "url": "https://jobs.lever.co/field-ai/94897802-d3d0-4d3f-b5bb-5b2869663605"
  },
  "e48ccdd7350ccf2e": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784406489,
   "company": "California Correctional Health Care Services",
   "description": "",
   "explicit_new_grad": false,
@@ -341940,6 +342137,11 @@
    "Sacramento County"
   ],
   "posted_at": 1782950400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784406489,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -341948,7 +342150,8 @@
    "base 40",
    "role:data_science +22",
    "sector:healthtech +16",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "healthtech",
   "source": "jobright",
@@ -348616,6 +348819,21 @@
    "Palo Alto, CA"
   ],
   "posted_at": 1782691200,
+  "posting": {
+   "analyzed_at": 1784406506,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784406506,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New Grad role for 2026 class",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
