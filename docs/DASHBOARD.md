@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-18 18:44 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12761** · new this run: **0** · alerts this run: **0**_
+_Last run: **2026-07-18 18:53 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12761** · new this run: **0** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -89,10 +89,10 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 94 🔥 | 3d | OpenAI | [AI Deployment Engineer, Plugins](https://jobs.ashbyhq.com/openai/ca9e0aeb-6df1-4b73-8ec0-2e9e124712f1) | San Francisco | ai_lab | ashby |
 | 94 🔥 | 3d | AbbVie | [AI Business Systems Analyst](https://jobs.smartrecruiters.com/AbbVie/3743990014091116) | North Chicago, IL | healthtech | smartrecruiters |
 | 94 🔥 | 4d | OpenAI | [Research Engineer, Privacy](https://jobs.ashbyhq.com/openai/cc434f5b-dc0b-42fd-97ec-e0171545c6e9) | San Francisco | ai_lab | ashby |
-| 94 🔥 | 4d | AbbVie | [Modeling and Simulation Module Developer - Data & AI Acceleration (Hyb](https://jobs.smartrecruiters.com/AbbVie/3743990014064756) | Florham Park, NJ | healthtech | smartrecruiters |
-| 94 🔥 | 4d | AbbVie | [Modeling and Simulation Module Developer - Data & AI Acceleration (Hyb](https://jobs.smartrecruiters.com/AbbVie/3743990014064716) | North Chicago, IL | healthtech | smartrecruiters |
-| 94 🔥 | 4d | AbbVie | [Modeling and Simulation Module Developer - Data & AI Acceleration (Hyb](https://jobs.smartrecruiters.com/AbbVie/3743990014064686) | Irvine, CA | healthtech | smartrecruiters |
-| 94 🔥 | 4d | AbbVie | [Modeling and Simulation Module Developer - Data & AI Acceleration (Hyb](https://jobs.smartrecruiters.com/AbbVie/3743990014064636) | South San Francisco, CA | healthtech | smartrecruiters |
+| 94 🔥 | 5d | AbbVie | [Modeling and Simulation Module Developer - Data & AI Acceleration (Hyb](https://jobs.smartrecruiters.com/AbbVie/3743990014064756) | Florham Park, NJ | healthtech | smartrecruiters |
+| 94 🔥 | 5d | AbbVie | [Modeling and Simulation Module Developer - Data & AI Acceleration (Hyb](https://jobs.smartrecruiters.com/AbbVie/3743990014064716) | North Chicago, IL | healthtech | smartrecruiters |
+| 94 🔥 | 5d | AbbVie | [Modeling and Simulation Module Developer - Data & AI Acceleration (Hyb](https://jobs.smartrecruiters.com/AbbVie/3743990014064686) | Irvine, CA | healthtech | smartrecruiters |
+| 94 🔥 | 5d | AbbVie | [Modeling and Simulation Module Developer - Data & AI Acceleration (Hyb](https://jobs.smartrecruiters.com/AbbVie/3743990014064636) | South San Francisco, CA | healthtech | smartrecruiters |
 | 94 🔥 | 5d | Zocdoc | [Associate, Marketing Events](https://job-boards.greenhouse.io/zocdoc/jobs/8053391) | New York, NY | healthtech | greenhouse |
 | 94 🔥 | 5d | NVIDIA AI | [Backend Compiler Engineer - New College Grad 2026](https://jobright.ai/jobs/info/6a55d93505c65f7c8f4c8a73?utm_campaign=Software%20Engineering&utm_source=1103) | Santa Clara, CA, United States | big_tech | jobright |
 | 94 🔥 | 8d | Highmark Health | [Associate Data Solutions Analyst](https://highmarkhealth.wd1.myworkdayjobs.com/highmark/job/PA-Working-at-Home---Pennsylvania/Associate-Data-Solutions-Analyst_J284073) | New Mexico | healthtech | simplify |
@@ -136,7 +136,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 92 🔥 | 1d | Johnson & Johnson | [Outbound Transportation Analyst](https://jj.wd5.myworkdayjobs.com/en-US/JJ/job/Diegem-Flemish-Brabant-Belgium/Outbound-Transportation-Analyst_R-089164) | 4 Locations | healthtech | workday |
 | 92 🔥 | 1d | OpenAI | [Backend Software Engineer, API Enterprise Controls](https://jobs.ashbyhq.com/openai/d0956b18-4f80-4c67-b94b-313181a16be6) | San Francisco | ai_lab | ashby |
 | 92 🔥 | 1d | Chamber Cardio | [Data Analyst](https://jobs.ashbyhq.com/chambercardio/eb5a8d6e-def9-4ea6-a76f-b64995ad5711/application?embed=true) | Remote in USA | healthtech | simplify |
-| 92 🔥 | 1d | AbbVie | [System Design Analyst II - HYBRID](https://jobs.smartrecruiters.com/AbbVie/3743990014134426) | Florham Park, NJ | healthtech | smartrecruiters |
+| 92 🔥 | 2d | AbbVie | [System Design Analyst II - HYBRID](https://jobs.smartrecruiters.com/AbbVie/3743990014134426) | Florham Park, NJ | healthtech | smartrecruiters |
 | 92 🔥 | 2d | Anduril | [Division Operations Associate, TRS](https://boards.greenhouse.io/andurilindustries/jobs/5187826007?gh_jid=5187826007) | Costa Mesa, California, United States | big_tech | greenhouse |
 | 92 🔥 | 2d | AbbVie | [Business Systems Analyst](https://jobs.smartrecruiters.com/AbbVie/3743990014129201) | Austin, TX | healthtech | smartrecruiters |
 | 92 🔥 | 2d | OpenAI | [Data Center Compute Infrastructure](https://jobs.ashbyhq.com/openai/3d4ac845-ec9c-43e0-bd79-9fdf5b87da69) | San Francisco | ai_lab | ashby |

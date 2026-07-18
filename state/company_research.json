@@ -414,13 +414,68 @@
  },
  "celonis": {
   "aliases": [],
-  "attempts": 1,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "d898530833"
+   ],
+   "value": "Enterprise SaaS (Software as a Service)."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "d898530833"
+   ],
+   "value": "Customers are enterprises where proof projects are executed to align Celonis technology with their strategy, business initiatives, and challenges."
+  },
+  "error": "",
   "evidence_sha": "4a0ce00f981dda85",
-  "last_attempt_at": 1784400204,
+  "generated_at": 1784400697,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "d898530833"
+   ],
+   "value": "Candidates should probe the specific product technology (PQL, data models) and the company's scale-up culture to verify claims of work-life balance, sane hours, and absence of bureaucracy."
+  },
+  "last_attempt_at": 1784400697,
   "last_evidence_at": 1784393439,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "d898530833"
+   ],
+   "value": "To make processes work for people, companies, and the planet."
+  },
   "name": "Celonis",
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "d898530833"
+   ],
+   "value": "Celonis offers a Process Intelligence platform. The role involves developing and modifying Celonis data models and proprietary PQL analyses to build prototypes demonstrating customer value."
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789584697,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "d898530833"
+   ],
+   "value": "Described as one of the world's fastest-growing enterprise SaaS companies, implying a scaling/growth stage."
+  },
   "sources": [
    {
     "content_sha": "81e373c0bb6a156b",
@@ -433,7 +488,34 @@
     "url": "https://job-boards.greenhouse.io/celonis/jobs/7725788003?gh_jid=7725788003"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "d898530833"
+   ],
+   "value": "Celonis is a fast-growing enterprise SaaS company focused on Process Intelligence technology."
+  },
+  "synthesized_evidence_sha": "4a0ce00f981dda85",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "d898530833"
+   ],
+   "value": "Execute proof projects for AI-driven data science and analytics; develop and modify models using SQL and PQL to create prototypes solving customer pain points."
+  },
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "d898530833"
+   ],
+   "value": "This role is positioned in a fast-growing innovative SaaS company, potentially aligning with the need for a fast tech culture and elite prestige. The description does not provide evidence regarding work-life balance, sane hours, or compensation."
+  }
  },
  "cvs health": {
   "aliases": [],
@@ -1403,10 +1485,64 @@
  },
  "pinterest": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "e8dc7ff14a"
+   ],
+   "value": "Millions of users seeking creative ideas and inspiration."
+  },
+  "error": "",
   "evidence_sha": "0fe133aed9ff444e",
+  "generated_at": 1784400697,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "e8dc7ff14a"
+   ],
+   "value": "Candidates should inquire how the advertised culture and benefits translate into guaranteed shutdowns, sane hours, and fast technical learning opportunities for entry-level engineers."
+  },
+  "last_attempt_at": 1784400697,
   "last_evidence_at": 1784397120,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "e8dc7ff14a"
+   ],
+   "value": "Seattle, WA (hybrid work model mentioned for this role)."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Pinterest",
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "e8dc7ff14a"
+   ],
+   "value": "A visual bookmarking tool for saving and discovering creative ideas."
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789584697,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "abec7ba09658bbb4",
@@ -1419,7 +1555,34 @@
     "url": "https://jobright.ai/jobs/info/6a32fe06649fdf16292f01c0?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "e8dc7ff14a"
+   ],
+   "value": "Pinterest is a visual discovery platform where millions of users find creative ideas and inspiration."
+  },
+  "synthesized_evidence_sha": "0fe133aed9ff444e",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "e8dc7ff14a"
+   ],
+   "value": "Backend software engineering for the Pinterest platform."
+  },
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "e8dc7ff14a"
+   ],
+   "value": "Pinterest offers a hybrid Backend Engineer I role in Seattle with a salary range of $121K-$211K/yr, combining high new-grad pay with a platform used by millions. The posting references available information on culture and benefits, suggesting an environment that communicates its values upfront, though specifics on work-life balance or bureaucracy are not detailed in this source."
+  }
  },
  "primefocus health": {
   "aliases": [],
@@ -1568,10 +1731,10 @@
  },
  "silna health": {
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "73ed1497681aaf1b",
-  "last_attempt_at": 1784400204,
+  "last_attempt_at": 1784400697,
   "last_evidence_at": 1784393439,
   "name": "Silna Health",
   "schema_v": 1,
