@@ -32541,8 +32541,9 @@
   "url": "https://jobs.ashbyhq.com/ibotta/74328696-51b4-4041-b9fc-2db93364932e"
  },
  "14128e55806002d8": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784416398,
   "company": "Cape",
   "description": "",
   "explicit_new_grad": false,
@@ -32553,13 +32554,19 @@
    "New York, NY"
   ],
   "posted_at": 1783296000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416398,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
   "score": 60,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -38671,13 +38678,19 @@
   ],
   "posted_at": 1783382400,
   "posting": {
-   "analyzed_at": 1784416311,
+   "analyzed_at": 1784416342,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784416311,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784416342,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level role for new grad",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -40620,7 +40633,7 @@
   ],
   "posted_at": 1783382400,
   "posting": {
-   "analyzed_at": 1784416313,
+   "analyzed_at": 1784416350,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -40629,15 +40642,22 @@
   },
   "quality": {
    "ai_deferred_at": 1784416313,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784416350,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 60,
+  "score": 50,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -57177,8 +57197,9 @@
   "url": "https://job-boards.greenhouse.io/figureai/jobs/4573670006"
  },
  "23f88f82873f7982": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784416399,
   "company": "Arete",
   "description": "",
   "explicit_new_grad": false,
@@ -57189,13 +57210,19 @@
    "Northridge, CA"
   ],
   "posted_at": 1783296000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416399,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
   "score": 60,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -96911,6 +96938,17 @@
    "Coppell, TX"
   ],
   "posted_at": 1783209600,
+  "posting": {
+   "analyzed_at": 1784416424,
+   "fetched": true,
+   "intern_counts": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "ai_deferred_at": 1784416424,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -111452,7 +111490,7 @@
   ],
   "posted_at": 1783382400,
   "posting": {
-   "analyzed_at": 1784416314,
+   "analyzed_at": 1784416358,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -111461,7 +111499,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784416314,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784416358,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "entry-level, TS clearance, defense focus",
+   "role_family": "security",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -118535,7 +118579,7 @@
   "url": "https://jobright.ai/jobs/info/6a4ef1b09469c0662034d146?utm_campaign=Data%20Analysis&utm_source=1103"
  },
  "4b356568d919511d": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Sumitomo Electric Wiring Systems",
   "description": "",
@@ -118548,21 +118592,28 @@
   ],
   "posted_at": 1783386622,
   "posting": {
-   "analyzed_at": 1784416310,
+   "analyzed_at": 1784416335,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784416310,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784416335,
+   "live": true,
+   "new_grad": "unclear",
+   "reason": "No engineering roles listed",
+   "role_family": "non-technical",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 60,
+  "score": 35,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: non-technical role (No engineering roles listed — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "simplify",
@@ -130865,7 +130916,7 @@
   "url": "https://jobs.ashbyhq.com/openai/71c4dd25-bfff-419b-913f-5ff81d8aede3"
  },
  "532773314464711b": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Spectris",
   "description": "",
@@ -130878,22 +130929,29 @@
   ],
   "posted_at": 1783382400,
   "posting": {
-   "analyzed_at": 1784416315,
+   "analyzed_at": 1784416365,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
    "ai_deferred_at": 1784416315,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784416365,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Mid Level, 3+ years req'd",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 60,
+  "score": 40,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: not new-grad (senior — LLM-verified) -20"
   ],
   "sector": "other",
   "source": "jobright",
@@ -140053,6 +140111,9 @@
    "San Diego, CA"
   ],
   "posted_at": 1783376300,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -145941,13 +146002,31 @@
    "New York, New York"
   ],
   "posted_at": 1783296000,
+  "posting": {
+   "analyzed_at": 1784416399,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 1,
+   "years_note": "Minimum 1 year"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416399,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 60,
+  "score": 50,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -148336,8 +148415,9 @@
   "url": "https://job-boards.greenhouse.io/nationallifeinsurancecompany/jobs/4281695009"
  },
  "5e84b2c15a1664de": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784416372,
   "company": "North Star Imaging",
   "description": "",
   "explicit_new_grad": false,
@@ -148348,13 +148428,19 @@
    "Rogers, MN, United States"
   ],
   "posted_at": 1783382400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416372,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
   "score": 60,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -165351,13 +165437,31 @@
    "Edison, NJ, United States"
   ],
   "posted_at": 1783296000,
+  "posting": {
+   "analyzed_at": 1784416407,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 1,
+   "years_note": "One year of experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416407,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 60,
+  "score": 50,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -205740,8 +205844,9 @@
   "url": "https://egup.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/20275898"
  },
  "83378bd708c06a77": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784416425,
   "company": "OpenEye",
   "description": "",
   "explicit_new_grad": false,
@@ -205752,13 +205857,19 @@
    "Liberty Lake, Washington"
   ],
   "posted_at": 1783209600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416425,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
   "score": 60,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -210736,8 +210847,9 @@
   "url": "https://boards.greenhouse.io/andurilindustries/jobs/4672848007?gh_jid=4672848007"
  },
  "867f8666e2deaf12": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784416414,
   "company": "Beam",
   "description": "",
   "explicit_new_grad": false,
@@ -210748,13 +210860,19 @@
    "New York, NY, US"
   ],
   "posted_at": 1783296000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416414,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
   "score": 60,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -219284,13 +219402,31 @@
    "State College, PA, United States"
   ],
   "posted_at": 1783296000,
+  "posting": {
+   "analyzed_at": 1784416415,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 2,
+   "years_note": "2+ years of relevant experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416415,
+   "live": true,
+   "new_grad": "no",
+   "reason": "2+ years experience required",
+   "role_family": "swe",
+   "years_required": 2
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 60,
+  "score": 50,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: wants 2+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -254914,8 +255050,9 @@
   "url": "https://boards.greenhouse.io/andurilindustries/jobs/5187833007?gh_jid=5187833007"
  },
  "a2f5726f815fb77f": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784416426,
   "company": "Lam Research",
   "description": "",
   "explicit_new_grad": false,
@@ -254926,13 +255063,19 @@
    "Fremont, CA, US"
   ],
   "posted_at": 1783209600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416426,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
   "score": 60,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -278751,8 +278894,9 @@
   "url": "https://jobright.ai/jobs/info/6a3660f6a0f3e56e86d6b219?utm_campaign=Software%20Engineering&utm_source=1103"
  },
  "b0c851e0d817984b": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784416373,
   "company": "Vibrint",
   "description": "",
   "explicit_new_grad": false,
@@ -278763,13 +278907,19 @@
    "Annapolis Junction, MD, USA, 21076"
   ],
   "posted_at": 1783382400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416373,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
   "score": 60,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -294635,7 +294785,9 @@
   ],
   "posted_at": 1783462292,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784416325,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -296635,8 +296787,9 @@
   "url": "https://job-boards.greenhouse.io/galaxydigitalservices/jobs/6114560004"
  },
  "bbe748af203b281f": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784416374,
   "company": "Philips",
   "description": "",
   "explicit_new_grad": false,
@@ -296647,13 +296800,19 @@
    "Orange, Ohio, United States"
   ],
   "posted_at": 1783382400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416374,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
   "score": 60,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -301375,6 +301534,20 @@
    "Bloomington, IL, United States"
   ],
   "posted_at": 1783382400,
+  "posting": {
+   "analyzed_at": 1784416375,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416375,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level role for new grad",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -307173,6 +307346,16 @@
    "New York, United States"
   ],
   "posted_at": 1783296000,
+  "posting": {
+   "analyzed_at": 1784416423,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "ai_deferred_at": 1784416423,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -310340,6 +310523,20 @@
    "Centennial, CO"
   ],
   "posted_at": 1783375777,
+  "posting": {
+   "analyzed_at": 1784416390,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416390,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for 2026 class",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -322577,13 +322774,19 @@
   ],
   "posted_at": 1783462266,
   "posting": {
-   "analyzed_at": 1784416309,
+   "analyzed_at": 1784416325,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784416309,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784416325,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad posting, no experience req.",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -328841,6 +329044,21 @@
    "Annapolis Junction, MD, United States"
   ],
   "posted_at": 1783382400,
+  "posting": {
+   "analyzed_at": 1784416382,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416382,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, no experience required.",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -342429,6 +342647,18 @@
    "Costa Mesa, California, United States"
   ],
   "posted_at": 1783296000,
+  "posting": {
+   "analyzed_at": 1784416423,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 1,
+   "years_note": "1–4 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784416423,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
