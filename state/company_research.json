@@ -750,13 +750,56 @@
  },
  "jane street": {
   "aliases": [],
-  "attempts": 2,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 3,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "26163ad790ab1845",
-  "last_attempt_at": 1784401958,
+  "generated_at": 1784402008,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784402008,
   "last_evidence_at": 1784400836,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Jane Street",
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789586008,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "759ec82778ce7790",
@@ -769,7 +812,32 @@
     "url": "https://www.janestreet.com/join-jane-street/position/8594541002"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "99092c9f75"
+   ],
+   "value": "Jane Street is a quantitative trading firm that hires new graduates for software engineering roles, emphasizing functional programming with OCaml and solving problems across trading, infrastructure, and risk models."
+  },
+  "synthesized_evidence_sha": "26163ad790ab1845",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "99092c9f75"
+   ],
+   "value": "Solving real problems in critical areas ranging from trading desks to accounting team, building foundational infrastructure like network monitoring or risk models using OCaml (functional programming)."
+  },
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  }
  },
  "lightfield": {
   "aliases": [],
@@ -1568,10 +1636,10 @@
  },
  "palantir technologies": {
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "04155dc2886ba929",
-  "last_attempt_at": 1784401958,
+  "last_attempt_at": 1784402008,
   "last_evidence_at": 1784397120,
   "name": "Palantir Technologies",
   "schema_v": 1,
@@ -1857,10 +1925,10 @@
  },
  "silna health": {
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "73ed1497681aaf1b",
-  "last_attempt_at": 1784401958,
+  "last_attempt_at": 1784402008,
   "last_evidence_at": 1784393439,
   "name": "Silna Health",
   "schema_v": 1,
