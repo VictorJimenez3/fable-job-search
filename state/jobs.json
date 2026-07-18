@@ -16102,7 +16102,7 @@
   ],
   "posted_at": 1783555200,
   "posting": {
-   "analyzed_at": 1784412317,
+   "analyzed_at": 1784412344,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship",
@@ -16111,16 +16111,23 @@
   },
   "quality": {
    "ai_deferred_at": 1784412317,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784412344,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "data",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 68,
+  "score": 58,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -30018,7 +30025,7 @@
   "url": "https://jobs.smartrecruiters.com/LinkedIn3/744000137699350"
  },
  "12e5025149911002": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Ascendant Program Services, LLC",
   "description": "",
@@ -30031,7 +30038,7 @@
   ],
   "posted_at": 1783555200,
   "posting": {
-   "analyzed_at": 1784412318,
+   "analyzed_at": 1784412352,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -30040,16 +30047,24 @@
   },
   "quality": {
    "ai_deferred_at": 1784412318,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784412352,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1-3 years exp required",
+   "role_family": "non-technical",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 68,
+  "score": 33,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10",
+   "quality: non-technical role (1-3 years exp required — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "jobright",
@@ -38207,6 +38222,9 @@
    "Remote in USA"
   ],
   "posted_at": 1783548704,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -45146,6 +45164,9 @@
    "Milpitas, CA"
   ],
   "posted_at": 1783462342,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -61813,12 +61834,12 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 88,
+  "score": 84,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "new-grad title +12",
-   "posted <72h +6",
+   "posted <7d +2",
    "title matches your history +4"
   ],
   "sector": "other",
@@ -93851,6 +93872,20 @@
    "Phoenix, AZ"
   ],
   "posted_at": 1783548255,
+  "posting": {
+   "analyzed_at": 1784412394,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412394,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Data Analyst role for new grad",
+   "role_family": "data",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -158714,7 +158749,9 @@
   ],
   "posted_at": 1783548984,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784412375,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -166554,6 +166591,23 @@
    "USA FL Hurlburt Field - Hurlburt Fld (FLC017)"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784412410,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 0,
+   "years_note": "0+ years of related experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412410,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0+ exp, new grad role",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -168369,7 +168423,9 @@
   ],
   "posted_at": 1783555200,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784412359,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -173167,11 +173223,11 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 72,
+  "score": 68,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
-   "posted <72h +6"
+   "posted <7d +2"
   ],
   "sector": "other",
   "source": "simplify",
@@ -174475,8 +174531,9 @@
   "url": "https://jobs.smartrecruiters.com/Randstad4/743999655851224"
  },
  "7106f7f695b4c3c4": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784412418,
   "company": "Scalence L.L.C.",
   "description": "",
   "explicit_new_grad": false,
@@ -174487,6 +174544,11 @@
    "Westbrook, ME, United States"
   ],
   "posted_at": 1783468800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412418,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -174494,7 +174556,8 @@
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -184374,6 +184437,9 @@
    "Ithaca, NY"
   ],
   "posted_at": 1783461677,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -194432,6 +194498,20 @@
    "Tampa, FL"
   ],
   "posted_at": 1783548168,
+  "posting": {
+   "analyzed_at": 1784412402,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412402,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role, no experience required.",
+   "role_family": "data",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -194447,8 +194527,9 @@
   "url": "https://careers-apexservicepartners.icims.com/jobs/22843/job?mobile=true&needsRedirect=false"
  },
  "7e4118440fb270e2": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784412393,
   "company": "Wood",
   "description": "",
   "explicit_new_grad": false,
@@ -194459,6 +194540,11 @@
    "Parkersburg, WV"
   ],
   "posted_at": 1783548561,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412393,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -194466,7 +194552,8 @@
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "simplify",
@@ -207645,11 +207732,11 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 78,
+  "score": 72,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <24h +12",
+   "posted <72h +6",
    "title matches your history +6"
   ],
   "sector": "other",
@@ -215857,12 +215944,12 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 92,
+  "score": 86,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "new-grad title +12",
-   "posted <24h +12",
+   "posted <72h +6",
    "title matches your history +6"
   ],
   "sector": "other",
@@ -217448,6 +217535,9 @@
    "Boca Raton, FL"
   ],
   "posted_at": 1783548129,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -235008,11 +235098,11 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 77,
+  "score": 71,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "posted <24h +12",
+   "posted <72h +6",
    "title matches your history +3"
   ],
   "sector": "other",
@@ -237548,8 +237638,9 @@
   "url": "https://jobs.ashbyhq.com/hadrian-automation/3b930865-9d75-4099-a40d-cfb88b5794ff"
  },
  "9a3f73ccc789701b": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784412419,
   "company": "Mass General Brigham",
   "description": "",
   "explicit_new_grad": false,
@@ -237560,6 +237651,11 @@
    "Boston, MA, United States"
   ],
   "posted_at": 1783468800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412419,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -237567,7 +237663,8 @@
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -256737,8 +256834,9 @@
   "url": "https://jobs.ashbyhq.com/openai/02ee1352-9c8f-4efc-8127-d8f4eaed4474"
  },
  "a6a51b93ed3718ec": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784412420,
   "company": "Gartner",
   "description": "",
   "explicit_new_grad": false,
@@ -256749,6 +256847,11 @@
    "Stamford, CT, United States"
   ],
   "posted_at": 1783468800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412420,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -256756,7 +256859,8 @@
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -263578,6 +263682,20 @@
    "Cambridge, MA"
   ],
   "posted_at": 1783548758,
+  "posting": {
+   "analyzed_at": 1784412376,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412376,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "PhD within 2 years or MS +2 years, but new grad class of 2026 fits.",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -267474,6 +267592,9 @@
    "Hackensack, NJ"
   ],
   "posted_at": 1783468800,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -289064,13 +289185,12 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 82,
+  "score": 76,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:big_tech +10",
-   "posted <24h +12",
-   "seniority unclear (dashboard only)"
+   "posted <72h +6"
   ],
   "sector": "big_tech",
   "source": "greenhouse",
@@ -309085,14 +309205,31 @@
    "Los Angeles, California, United States"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784412421,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1-2 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412421,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "data",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 68,
+  "score": 58,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -317829,6 +317966,23 @@
    "Hurlburt Field, FL"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784412428,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 0,
+   "years_note": "0+ years of related experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412428,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad, no experience required",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -319448,6 +319602,9 @@
    "Newport News, VA"
   ],
   "posted_at": 1783548370,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -334818,14 +334975,31 @@
    "Waukesha, WI"
   ],
   "posted_at": 1783548749,
+  "posting": {
+   "analyzed_at": 1784412384,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1 year work experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412384,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1 year experience required",
+   "role_family": "data",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 68,
+  "score": 58,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "simplify",
@@ -359919,7 +360093,7 @@
   ],
   "posted_at": 1783641600,
   "posting": {
-   "analyzed_at": 1784412316,
+   "analyzed_at": 1784412337,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 1,
@@ -359927,16 +360101,23 @@
   },
   "quality": {
    "ai_deferred_at": 1784412316,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784412337,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "data",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 68,
+  "score": 58,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -363561,6 +363742,9 @@
    "SF"
   ],
   "posted_at": 1783548965,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -364254,13 +364438,19 @@
   ],
   "posted_at": 1783555200,
   "posting": {
-   "analyzed_at": 1784412325,
+   "analyzed_at": 1784412360,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784412325,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784412360,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for 2026",
+   "role_family": "data",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -374406,13 +374596,19 @@
   ],
   "posted_at": 1783549072,
   "posting": {
-   "analyzed_at": 1784412325,
+   "analyzed_at": 1784412368,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784412325,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784412368,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0-2 years, new grad role",
+   "role_family": "data",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
