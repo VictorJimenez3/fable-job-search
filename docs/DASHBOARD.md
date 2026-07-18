@@ -1,12 +1,12 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-18 13:48 UTC** · companies polled directly: **7** (ChemE registry 9) · jobs tracked: **38 shown / 11078 stored** · new this run: **1** · alerts this run: **0**_
+_Last run: **2026-07-18 15:14 UTC** · companies polled directly: **7** (ChemE registry 9) · jobs tracked: **38 shown / 11078 stored** · new this run: **0** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
 | Score | Age | Company | Role | Location | Sector | Src |
 |---|---|---|---|---|---|---|
-| 87 🔥 | 15h | Neuralink | [R&D Materials Engineer Intern](https://boards.greenhouse.io/neuralink/jobs/7808233003) | San Bruno, CA | other | simplify |
+| 87 🔥 | 16h | Neuralink | [R&D Materials Engineer Intern](https://boards.greenhouse.io/neuralink/jobs/7808233003) | San Bruno, CA | other | simplify |
 | 82 ⭐ | 2d | Solar Turbines | [Gas Turbine Products Engineering Intern](https://cat.wd5.myworkdayjobs.com/en-US/solarturbines/job/San-Diego-California/XMLNAME-2027--Gas-Turbine-Product-Engineering-Internship_R0000382293) | San Diego, CA | energy | simplify |
 | 82 ⭐ | 7d | 3M | [Product Development Engineering Intern*](https://3m.wd1.myworkdayjobs.com/en-US/Search/job/CA-Ontario-Brockville/Product-Development-Engineering-Intern-_R01167138) | CA, Ontario, Brockville | chemicals_materials | workday |
 | 76 ⭐ | 24d | Heron Power | [Electronics Design Engineer Intern](http://jobs.ashbyhq.com/heron-power/28af5d2d-bd93-4681-9422-05d17c3437eb/application) | Santa Cruz, CA | energy | simplify |
@@ -29,7 +29,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 66  | 7d | DiDi Global | [Motion Planning Engineer Intern](https://job-boards.greenhouse.io/didi/jobs/8056492) | San Jose, CA | other | simplify |
 | 64  | 9d | Jump Trading | [FPGA Engineer Intern](https://boards.greenhouse.io/embed/job_app?token=8003013) | Chicago, IL | other | simplify |
 | 64  | 11d | Astranis | [Radiation Effects Engineer Intern](https://job-boards.greenhouse.io/astranis/jobs/4694853006) | SF | other | simplify |
-| 64  | 13d | Verne Robotics | [Engineering Intern](https://jobs.ashbyhq.com/Verne%20Robotics/bb78cdd4-449b-49f0-bd10-2c62fc85f83b/application) | San Bruno, CA | other | simplify |
+| 64  | 14d | Verne Robotics | [Engineering Intern](https://jobs.ashbyhq.com/Verne%20Robotics/bb78cdd4-449b-49f0-bd10-2c62fc85f83b/application) | San Bruno, CA | other | simplify |
 | 64  | 15d | Arlington County VA | [Utility Engineering Intern](https://fa-exkk-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/1624) | Arlington, VA | other | simplify |
 | 64  | 15d | Bot Auto | [Deep Learning Engineer Intern](https://job-boards.greenhouse.io/botauto/jobs/5289440008) | Houston, TX | other | simplify |
 | 64  | 16d | NVIDIA | [Java Engineer Intern](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Java-Engineering-Intern---Fall-2026_JR2019769) | Santa Clara, CA | other | simplify |
@@ -39,10 +39,10 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 64  | 17d | Citadel Securities | [Quantitative Research Engineer Intern](https://www.citadelsecurities.com/careers/details/quantitative-research-engineer-phd-intern-us/) | Miami, FL | other | simplify |
 | 64  | 18d | Torc Robotics | [System Triage Engineer Intern](https://job-boards.greenhouse.io/torcrobotics/jobs/8597138002) | Blacksburg, VA | other | simplify |
 | 64  | 18d | Palantir | [Privacy and Civil Liberties Software Engineer Intern](https://jobs.lever.co/palantir/09846827-b931-4a9f-bd64-c3bb8860187b/apply) | NYC | other | simplify |
-| 64  | 21d | Clera | [Founding Engineer Intern](https://jobs.ashbyhq.com/clera/d3c69268-3324-4a84-b911-7a4303672767/application) | SF | other | simplify |
+| 64  | 22d | Clera | [Founding Engineer Intern](https://jobs.ashbyhq.com/clera/d3c69268-3324-4a84-b911-7a4303672767/application) | SF | other | simplify |
 | 64  | 22d | Lila Sciences | [Next Gen Engineering Co-Op](https://job-boards.greenhouse.io/lilasciences/jobs/4289960009) | Cambridge, MA | other | simplify |
 | 64  | 22d | Cadence Design Systems | [Product Engineering Intern - Simulation and Verification](https://cadence.wd1.myworkdayjobs.com/University_Talent/job/Burlington-MA/Product-Engineering-Internship--Simulation-and-Verification--Fall-2026-_R53475) | Burlington, MA | other | simplify |
-| 64  | 23d | Hiverge | [Research Engineer Intern](https://jobs.ashbyhq.com/hiverge/ea6edea4-5216-4cdc-b368-909ba91c78a3/application) | Cambridge, UK | other | simplify |
+| 64  | 24d | Hiverge | [Research Engineer Intern](https://jobs.ashbyhq.com/hiverge/ea6edea4-5216-4cdc-b368-909ba91c78a3/application) | Cambridge, UK | other | simplify |
 | 64  | 29d | Formlabs | [Hardware R&D Engineer Intern](https://careers.formlabs.com/job/7890746/apply/?gh_jid=7890746) | Cambridge, MA | other | simplify |
 
 _38 roles shown (score ≥ 42, posted ≤30d)._
