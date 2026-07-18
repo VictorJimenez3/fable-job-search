@@ -72,6 +72,10 @@ same Applications database. The ChemE Vercel board starts in tokenless/PAT
 mode; adding instant OAuth writes later requires a second GitHub OAuth app with
 the ChemE URL as its callback, not a second Notion integration.
 
+ChemE alert and board issues mention GitHub user `ak2943`, so GitHub can deliver
+notifications to her account/email without granting repository write access.
+The GitHub repository owner still controls issue commands and writes.
+
 ## Personalize before connecting accounts
 
 The branch deliberately does not guess the student's identity or Notion

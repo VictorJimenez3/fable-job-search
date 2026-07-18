@@ -146,7 +146,7 @@ const S = {           // app state
   jobs:{}, applied:[], culture:{}, companies:{}, runs:[], scout:{}, web:null,
   auth:null, backend:false,
   tab:"jobs", filter:{q:"", min:64, sector:"", role:"", sponsorship:"",
-    experience:"", alert:true, lane:"", sort:"best"}, shown:250,
+    experience:"", alert:false, lane:"", sort:"best"}, shown:250,
   wsTab:"fit",
   marquee:new Set(["dow","3m","chevron","shell","ecolab","albemarle",
     "johnson johnson","merck","pfizer","eli lilly","bristol myers squibb",
@@ -209,7 +209,15 @@ async function boot() {
   const currentCulture = Object.fromEntries(Object.entries(culture)
     .filter(([,d])=>d.profile_mode===CULTURE_MODE));
   Object.assign(S, {jobs, applied, culture:currentCulture, companies, runs, scout});
-  try { Object.assign(S.filter, JSON.parse(localStorage.getItem("jr_filters")||"{}")); }
+  try {
+    const savedFilters = JSON.parse(localStorage.getItem("jr_filters")||"{}");
+    Object.assign(S.filter, savedFilters);
+    if (savedFilters._alertFilterVersion !== 2) {
+      S.filter.alert = false;
+      S.filter._alertFilterVersion = 2;
+      localStorage.setItem("jr_filters", JSON.stringify(S.filter));
+    }
+  }
   catch {}
   S.web = web || JSON.parse(localStorage.getItem("jr_web") || '{"maybe":[],"jobs":{}}');
   S.web.maybe = S.web.maybe || []; S.web.jobs = S.web.jobs || {};
@@ -478,7 +486,7 @@ function rJobs() {
         <option value="unknown" ${S.filter.experience==="unknown"?"selected":""}>not stated</option>
         <option value="unread" ${S.filter.experience==="unread"?"selected":""}>not analyzed</option>
       </select>
-      <label class="sub"><input type="checkbox" ${S.filter.alert?"checked":""}
+      <label class="sub" title="Off by default: show all ChemE-fit roles, including strong dashboard-only matches"><input type="checkbox" ${S.filter.alert?"checked":""}
         onchange="S.filter.alert=this.checked;render()"> alert-worthy only</label>
       <select onchange="S.filter.lane=this.value;render()">
         <option value="" ${!S.filter.lane?"selected":""}>any status</option>

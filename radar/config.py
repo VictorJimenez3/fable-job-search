@@ -37,3 +37,8 @@ def github_repo() -> str:
 
 def github_owner() -> str:
     return github_repo().split("/")[0]
+
+
+def github_assignee() -> str:
+    """Issue notification recipient; defaults to the repository owner."""
+    return env("RADAR_ALERT_ASSIGNEE", github_owner())

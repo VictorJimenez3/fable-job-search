@@ -18,7 +18,7 @@ from datetime import datetime, timezone
 import requests
 
 from .alerts import API, LABEL, PROFILE_LABEL, _headers, format_line
-from .config import env, github_owner, github_repo, profile
+from .config import env, github_assignee, github_repo, profile
 
 MASTER_TITLE = "🧪 ChemE Job Radar — master board"
 MASTER_LABEL = "radar-cheme-master"
@@ -28,7 +28,7 @@ PAGE_LIMIT = 55000  # per body/comment, under GitHub's 65536 cap
 MASTER_HEADER = (
     "Every alert-worthy open role the radar currently knows, best first — "
     "**{count} roles**, refreshed {stamp}. Extra pages live in the comments "
-    "below.\n\n"
+    "below. ChemE notifications: @ak2943\n\n"
     "☑️ Checking a box here works exactly like the weekly issues: the job "
     "lands in your Notion tracker as not-applied; flip its status in Notion "
     "when you apply. Already-tracked jobs show up pre-checked.\n")
@@ -91,7 +91,7 @@ def update_master_board(jobs_state: dict, applied: list) -> str | None:
         r = requests.post(f"{API}/repos/{repo}/issues", headers=_headers(), timeout=20,
                           json={"title": MASTER_TITLE, "body": body,
                                 "labels": [LABEL, PROFILE_LABEL, MASTER_LABEL],
-                                "assignees": [github_owner()]})
+                                "assignees": [github_assignee()]})
         r.raise_for_status()
         issue = r.json()
 
@@ -157,6 +157,6 @@ def post_daily_best(jobs_state: dict, top_n: int = 10) -> str | None:
     r = requests.post(f"{API}/repos/{repo}/issues", headers=_headers(), timeout=20,
                       json={"title": title, "body": body,
                             "labels": [LABEL, PROFILE_LABEL, DAILY_LABEL],
-                            "assignees": [github_owner()]})
+                            "assignees": [github_assignee()]})
     r.raise_for_status()
     return r.json()["html_url"]

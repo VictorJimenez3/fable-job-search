@@ -15,7 +15,7 @@ import requests
 
 from . import state
 from .llm import complete as llm_complete
-from .config import env, github_owner, github_repo, profile
+from .config import env, github_assignee, github_owner, github_repo, profile
 
 API = "https://api.github.com"
 WEEK = 7 * 86400
@@ -180,6 +180,6 @@ def post_memo() -> str | None:
     title = f"🧭 Weekly strategy — {datetime.now(timezone.utc).strftime('%b %d, %Y')}"
     r = requests.post(f"{API}/repos/{github_repo()}/issues", headers=_headers(), timeout=20,
                       json={"title": title, "body": memo, "labels": ["radar-strategy"],
-                            "assignees": [github_owner()]})
+                            "assignees": [github_assignee()]})
     r.raise_for_status()
     return r.json()["html_url"]

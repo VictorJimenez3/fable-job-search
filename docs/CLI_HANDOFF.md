@@ -46,6 +46,11 @@ Vercel is a separate `job-radar-cheme` project configured with
 `AUTH_MODE=tokenless`. A second GitHub OAuth app can enable instant owner-only
 writes later. It does not need a second Notion token or database.
 
+ChemE alert, master-board, daily-best, and strategy issues mention GitHub user
+`ak2943` so GitHub can deliver notifications to her account/email without
+granting repository access. The repository owner remains the only authorized
+command sender.
+
 No connector was assumed to be configured. Verify rather than infer:
 
 - `notion-verify` after adding `NOTION_TOKEN` and sharing the database;

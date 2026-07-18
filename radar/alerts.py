@@ -14,7 +14,7 @@ from datetime import datetime, timezone
 
 import requests
 
-from .config import env, github_owner, github_repo
+from .config import env, github_assignee, github_repo
 
 API = "https://api.github.com"
 LABEL = "radar-alerts"
@@ -55,6 +55,7 @@ def format_line(j: dict, culture_map: dict | None = None) -> str:
 
 HEADER = (
     "New high-scoring roles appear below as they're detected (every ~30 min).\n\n"
+    "ChemE notifications: @ak2943\n\n"
     "**☑️ Check a box to track a job** — it appears in your Notion "
     "Applications database immediately (status: not applied yet). When you "
     "actually apply, change its status in Notion. Comment `applied <url>` to "
@@ -91,7 +92,7 @@ def post_alerts(new_alerts: list[dict]) -> str | None:
         r = requests.post(f"{API}/repos/{repo}/issues", headers=_headers(), timeout=20,
                           json={"title": title, "body": body,
                                 "labels": [LABEL, PROFILE_LABEL],
-                                "assignees": [github_owner()]})
+                                "assignees": [github_assignee()]})
         r.raise_for_status()
         return r.json()["html_url"]
 
