@@ -1,11 +1,11 @@
 {
  "events": [
   {
-   "at": "2026-07-18T20:10:50+00:00",
-   "completion_tokens": 38,
+   "at": "2026-07-18T20:11:43+00:00",
+   "completion_tokens": 240,
    "detail": "task schema validation failed",
    "endpoint": "local",
-   "latency_ms": 7305,
+   "latency_ms": 10813,
    "max_tokens": 240,
    "model": "qwen3:30b",
    "prompt_chars": 6694,
@@ -14,7 +14,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:11:02+00:00",
+   "at": "2026-07-18T20:11:58+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -27,7 +27,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:11:06+00:00",
+   "at": "2026-07-18T20:12:04+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -40,7 +40,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:11:10+00:00",
+   "at": "2026-07-18T20:12:07+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -53,7 +53,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:11:13+00:00",
+   "at": "2026-07-18T20:12:10+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -66,7 +66,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:11:14+00:00",
+   "at": "2026-07-18T20:12:10+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -79,7 +79,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:11:16+00:00",
+   "at": "2026-07-18T20:12:11+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -92,7 +92,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:11:17+00:00",
+   "at": "2026-07-18T20:12:12+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -105,7 +105,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:11:18+00:00",
+   "at": "2026-07-18T20:12:13+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -118,7 +118,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:11:21+00:00",
+   "at": "2026-07-18T20:12:14+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -131,7 +131,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:11:21+00:00",
+   "at": "2026-07-18T20:12:14+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -144,7 +144,20 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:11:22+00:00",
+   "at": "2026-07-18T20:12:15+00:00",
+   "completion_tokens": 0,
+   "detail": "per-run AI budget reached",
+   "endpoint": "none",
+   "latency_ms": 0,
+   "max_tokens": 240,
+   "model": "",
+   "prompt_chars": 5430,
+   "prompt_tokens": 0,
+   "status": "budget_skipped",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-18T20:12:18+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -157,27 +170,8 @@
    "task": "discovery"
   }
  ],
- "generated_at": 1784405482,
+ "generated_at": 1784405538,
  "history": [
-  {
-   "generated_at": 1784403383,
-   "logical_calls": 12,
-   "models": {
-    "local": {
-     "errors": 1,
-     "model": "qwen3:30b",
-     "ok": 2,
-     "requests": 3,
-     "tokens": 2608
-    }
-   },
-   "provider": "local",
-   "requests": 3,
-   "task_calls": {
-    "company_research": 3,
-    "quality": 9
-   }
-  },
   {
    "generated_at": 1784403424,
    "logical_calls": 12,
@@ -703,6 +697,24 @@
    "task_calls": {
     "quality": 12
    }
+  },
+  {
+   "generated_at": 1784405538,
+   "logical_calls": 12,
+   "models": {
+    "local": {
+     "errors": 1,
+     "model": "qwen3:30b",
+     "ok": 0,
+     "requests": 1,
+     "tokens": 1689
+    }
+   },
+   "provider": "local",
+   "requests": 1,
+   "task_calls": {
+    "quality": 12
+   }
   }
  ],
  "limits": {
@@ -716,7 +728,7 @@
    "model": "qwen3:30b",
    "ok": 0,
    "requests": 1,
-   "tokens": 1487
+   "tokens": 1689
   }
  },
  "provider": "local",
