@@ -7466,8 +7466,9 @@
   "url": "https://globalhr.wd5.myworkdayjobs.com/fr-CA/Private_Posting_No_TMP/job/US-TX-RICHARDSON-C17--1717-Cityline-Dr--CITYLINE-C17/XMLNAME-2027-Conversion-Software-Engineer-I--Onsite-_01858534"
  },
  "0538d4e19291cce6": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784415799,
   "company": "Peraton",
   "description": "",
   "explicit_new_grad": false,
@@ -7478,6 +7479,11 @@
    "Remote in USA"
   ],
   "posted_at": 1782857084,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415799,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -7485,7 +7491,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "remote +2"
+   "remote +2",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "simplify",
@@ -11201,8 +11208,9 @@
   "url": "https://jobs.ashbyhq.com/sewer-ai/6e2ce43b-de4d-43ad-81dc-0b7d0d10a50d"
  },
  "078bf7cb7b0e13c3": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784415800,
   "company": "Alteryx",
   "description": "",
   "explicit_new_grad": false,
@@ -11213,6 +11221,11 @@
    "United States"
   ],
   "posted_at": 1782777600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415800,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -11220,7 +11233,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "remote +2"
+   "remote +2",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -19269,14 +19283,31 @@
    "San Mateo, CA"
   ],
   "posted_at": 1782864000,
+  "posting": {
+   "analyzed_at": 1784415785,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1–3+ years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415785,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 62,
+  "score": 52,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +2"
+   "title matches your history +2",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -22537,13 +22568,19 @@
   ],
   "posted_at": 1783030512,
   "posting": {
-   "analyzed_at": 1784415745,
+   "analyzed_at": 1784415769,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784415745,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784415769,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role with required programming skills, no experience mentioned.",
+   "role_family": "other-technical",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -35968,6 +36005,17 @@
    "Austin, TX"
   ],
   "posted_at": 1781226410,
+  "posting": {
+   "analyzed_at": 1784415849,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 2,
+   "years_note": "at least 2 year"
+  },
+  "quality": {
+   "ai_deferred_at": 1784415849,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -61234,14 +61282,20 @@
   ],
   "posted_at": 1783036800,
   "posting": {
-   "analyzed_at": 1784415741,
+   "analyzed_at": 1784415761,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784415741,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784415761,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry, Mid Level, new grad role",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": true,
   "rules_v": 3,
@@ -62591,6 +62645,21 @@
    "NYC"
   ],
   "posted_at": 1782770788,
+  "posting": {
+   "analyzed_at": 1784415802,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "Visa sponsorship is available"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415802,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for 2026 graduation.",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -65691,6 +65760,21 @@
    "Ardmore, PA"
   ],
   "posted_at": 1782770788,
+  "posting": {
+   "analyzed_at": 1784415809,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "Visa sponsorship is available"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415809,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Master's 2027, new grad role",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -72491,7 +72575,7 @@
   "url": "https://job-boards.greenhouse.io/canonical/jobs/7528952"
  },
  "2d9f592c42f939ec": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Peraton",
   "description": "",
@@ -72503,6 +72587,23 @@
    "Remote, US"
   ],
   "posted_at": 1782864000,
+  "posting": {
+   "analyzed_at": 1784415792,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 4,
+   "years_note": "4 years of experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415792,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0+ years exp",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -72510,7 +72611,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "remote +2"
+   "remote +2",
+   "posting: wants 4+ yrs (dashboard only)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -84510,6 +84612,9 @@
    "San Francisco, CA"
   ],
   "posted_at": 1781590639,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -164416,8 +164521,9 @@
   "url": "https://boards.greenhouse.io/andurilindustries/jobs/5186476007?gh_jid=5186476007"
  },
  "68b32e3bce4d628e": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784415801,
   "company": "Alteryx",
   "description": "",
   "explicit_new_grad": false,
@@ -164428,6 +164534,11 @@
    "US - Remote"
   ],
   "posted_at": 1782777600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415801,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -164435,7 +164546,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "remote +2"
+   "remote +2",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -195475,6 +195587,15 @@
    "Irving, TX"
   ],
   "posted_at": 1782338726,
+  "posting": {
+   "analyzed_at": 1784415846,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784415846,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -197098,8 +197219,9 @@
   "url": "https://boards.greenhouse.io/andurilindustries/jobs/5151134007?gh_jid=5151134007"
  },
  "7e2983e084f0fe7f": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784415845,
   "company": "Aledade",
   "description": "",
   "explicit_new_grad": false,
@@ -197110,6 +197232,11 @@
    "Remote in USA"
   ],
   "posted_at": 1782338893,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415845,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -197117,7 +197244,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "remote +2"
+   "remote +2",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "simplify",
@@ -201960,6 +202088,15 @@
    "Austin, TX"
   ],
   "posted_at": 1780697193,
+  "posting": {
+   "analyzed_at": 1784415851,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784415851,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -234339,7 +234476,7 @@
   "url": "https://jobs.ashbyhq.com/Lightfield/fc93a467-773d-4805-b342-bf470950732d/application?embed=true"
  },
  "95ee883f9f874bdd": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Transcend",
   "description": "",
@@ -234352,22 +234489,29 @@
   ],
   "posted_at": 1783118387,
   "posting": {
-   "analyzed_at": 1784415738,
+   "analyzed_at": 1784415755,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784415738,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784415755,
+   "live": true,
+   "new_grad": "unclear",
+   "reason": "Not engineering role",
+   "role_family": "non-technical",
+   "years_required": null
   },
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 62,
+  "score": 37,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "remote +2"
+   "remote +2",
+   "quality: non-technical role (Not engineering role — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "simplify",
@@ -245296,6 +245440,18 @@
    "Illinois"
   ],
   "posted_at": 1781168793,
+  "posting": {
+   "analyzed_at": 1784415850,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "not eligible for sponsorship",
+   "years_min": 1,
+   "years_note": "1+ years of experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784415850,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -287628,6 +287784,21 @@
    "Ardmore, PA"
   ],
   "posted_at": 1782770788,
+  "posting": {
+   "analyzed_at": 1784415816,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "Visa sponsorship is available"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415816,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for 2026 PhDs.",
+   "role_family": "other-technical",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -292429,6 +292600,21 @@
    "NYC"
   ],
   "posted_at": 1782770787,
+  "posting": {
+   "analyzed_at": 1784415823,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "Visa sponsorship is available"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415823,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role, data-focused models",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -295893,6 +296079,9 @@
    "North Carolina"
   ],
   "posted_at": 1780351704,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -315385,6 +315574,15 @@
    "Phoenix, AZ"
   ],
   "posted_at": 1781658603,
+  "posting": {
+   "analyzed_at": 1784415847,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784415847,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -351512,6 +351710,9 @@
    "NYC"
   ],
   "posted_at": 1782889199,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -352828,14 +353029,29 @@
    "SF"
   ],
   "posted_at": 1782513658,
+  "posting": {
+   "analyzed_at": 1784415837,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415837,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years experience required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 62,
+  "score": 52,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "you've engaged with Twitch +2"
+   "you've engaged with Twitch +2",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "simplify",
@@ -380155,6 +380371,22 @@
    "Burlington, MA"
   ],
   "posted_at": 1782956396,
+  "posting": {
+   "analyzed_at": 1784415776,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0–2 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415776,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "entry-level role for new grad",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -386974,6 +387206,9 @@
    "Atlanta, GA"
   ],
   "posted_at": 1782137632,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -388431,14 +388666,31 @@
    "United States"
   ],
   "posted_at": 1782691200,
+  "posting": {
+   "analyzed_at": 1784415830,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1+ year of experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415830,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 62,
+  "score": 52,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "remote +2"
+   "remote +2",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
