@@ -827,8 +827,12 @@ function rCos() {
 function renderCosList() {
   const el = $("#cosList"); if (!el) return;
   const counts = {};
+  const byId = appliedById();
   for (const j of Object.values(S.jobs).filter(isChemeVisible)) {
-    if (j.closed_at) continue;
+    const tracked = byId[j.id] || S.web.maybe.includes(j.id) || S.web.jobs[j.id];
+    if (!isOpenRelevant(j)
+        || (!tracked && postedTs(j) && Date.now()/1000-postedTs(j) > 45*86400)
+        || (!tracked && (j.score||0) < DEFAULT_FILTER.min)) continue;
     const k = norm(j.company);
     counts[k] = counts[k]||{name:j.company, open:0, best:0, bestId:j.id};
     counts[k].open++;
