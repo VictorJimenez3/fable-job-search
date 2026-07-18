@@ -10629,6 +10629,22 @@
    "Golden, CO"
   ],
   "posted_at": 1783980652,
+  "posting": {
+   "analyzed_at": 1784412082,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0-2 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412082,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0-2 years experience, new grad role",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -44421,8 +44437,9 @@
   "url": "https://stripe.com/jobs/search?gh_jid=8047129"
  },
  "1c99207397b9d4db": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784412089,
   "company": "Teradyne",
   "description": "",
   "explicit_new_grad": false,
@@ -44433,6 +44450,11 @@
    "USA-California-Agoura Hills"
   ],
   "posted_at": 1783900800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412089,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -44441,7 +44463,8 @@
    "base 40",
    "role:swe +20",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -49769,7 +49792,7 @@
   "url": "https://jobright.ai/jobs/info/6a4307b76faf756060968d72?utm_campaign=Data%20Analysis&utm_source=1103"
  },
  "205bf95fe2c429c2": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Anchor General Insurance Agency",
   "description": "",
@@ -49781,16 +49804,32 @@
    "Headquarters - San Diego, CA 92131, United States"
   ],
   "posted_at": 1783900800,
+  "posting": {
+   "analyzed_at": 1784412090,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412090,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, no experience required",
+   "role_family": "non-technical",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 68,
+  "score": 43,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:fintech +5",
    "posted <7d +2",
-   "title matches your history +1"
+   "title matches your history +1",
+   "quality: non-technical role (Entry level, no experience required — LLM-verified) -25"
   ],
   "sector": "fintech",
   "source": "jobright",
@@ -55921,16 +55960,32 @@
    "Huntsville, AL"
   ],
   "posted_at": 1783987200,
+  "posting": {
+   "analyzed_at": 1784412048,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "must be a US Citizen"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412048,
+   "live": true,
+   "new_grad": "no",
+   "reason": "2+ years experience required",
+   "role_family": "other-technical",
+   "years_required": 2
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 68,
+  "score": 58,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "posted <7d +2",
    "you've engaged with Leidos +3",
-   "title matches your history +3"
+   "title matches your history +3",
+   "quality: wants 2+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "simplify",
@@ -65086,8 +65141,9 @@
   "url": "https://ironmountain.wd5.myworkdayjobs.com/en-US/iron-mountain-jobs/job/AUS--Geebung--319-Bilsen-Rd/Customer-Success-Management_J0101589"
  },
  "29eb76e253a11b57": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784412098,
   "company": "Glimmer",
   "description": "",
   "explicit_new_grad": false,
@@ -65098,6 +65154,11 @@
    "Austin, TX, United States"
   ],
   "posted_at": 1783900800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412098,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -65106,7 +65167,8 @@
    "base 40",
    "role:swe +20",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -74513,6 +74575,21 @@
    "Chantilly, VA"
   ],
   "posted_at": 1783987200,
+  "posting": {
+   "analyzed_at": 1784412056,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412056,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad entry level role",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -114644,6 +114721,17 @@
    "Columbus, GA, United States"
   ],
   "posted_at": 1783814400,
+  "posting": {
+   "analyzed_at": 1784412103,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "one to two years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784412103,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -123408,8 +123496,9 @@
   "url": "https://jobs.ashbyhq.com/Lynk/4f150bb6-824f-4257-9e4e-3200a6987835"
  },
  "4fe9fe92378741b5": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784412063,
   "company": "Chevron",
   "description": "",
   "explicit_new_grad": false,
@@ -123420,6 +123509,11 @@
    "Houston, Texas, United States of America"
   ],
   "posted_at": 1783987200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412063,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -123428,7 +123522,8 @@
    "base 40",
    "role:swe +20",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -124148,7 +124243,7 @@
   ],
   "posted_at": 1783641600,
   "posting": {
-   "analyzed_at": 1784411986,
+   "analyzed_at": 1784412032,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship",
@@ -124157,7 +124252,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784411986,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784412032,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, no experience required",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -126983,8 +127084,9 @@
   "url": "https://job-boards.greenhouse.io/nisc/jobs/7871742"
  },
  "527ea30fb470bc7e": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784412098,
   "company": "Teradyne",
   "description": "",
   "explicit_new_grad": false,
@@ -126995,6 +127097,11 @@
    "Agoura Hills, CA, USA"
   ],
   "posted_at": 1783900800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412098,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -127003,7 +127110,8 @@
    "base 40",
    "role:swe +20",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -131397,6 +131505,16 @@
    "Austin, TX, United States"
   ],
   "posted_at": 1783900800,
+  "posting": {
+   "analyzed_at": 1784412099,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "ai_deferred_at": 1784412099,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -136019,8 +136137,9 @@
   "url": "https://fox.wd1.myworkdayjobs.com/en-US/Domestic/job/Los-Angeles-California-USA/Vice-President--AI-Production-Support_R50030918"
  },
  "583a5a8e0b117ac7": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784412047,
   "company": "United Parcel Service (UPS)",
   "description": "",
   "explicit_new_grad": false,
@@ -136031,6 +136150,11 @@
    "Indiana"
   ],
   "posted_at": 1784073600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412047,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -136039,7 +136163,8 @@
    "base 40",
    "role:swe +20",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "simplify",
@@ -142457,13 +142582,19 @@
   ],
   "posted_at": 1784068199,
   "posting": {
-   "analyzed_at": 1784411982,
+   "analyzed_at": 1784412008,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784411982,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784412008,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role, no experience req.",
+   "role_family": "other-technical",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -142868,16 +142999,34 @@
    "United States"
   ],
   "posted_at": 1783987200,
+  "posting": {
+   "analyzed_at": 1784412064,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 1,
+   "years_note": "Minimum of 1 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412064,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 68,
+  "score": 58,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "posted <7d +2",
    "remote +2",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -153153,7 +153302,7 @@
   ],
   "posted_at": 1783728000,
   "posting": {
-   "analyzed_at": 1784411985,
+   "analyzed_at": 1784412025,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship",
@@ -153162,7 +153311,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784411985,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784412025,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0+ years exp",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -162956,8 +163111,9 @@
   "url": "https://jobright.ai/jobs/info/6a4248521cc9cc2b12feb528?utm_campaign=Software%20Engineering&utm_source=1103"
  },
  "6979c9ededb27052": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784412072,
   "company": "UST",
   "description": "",
   "explicit_new_grad": false,
@@ -162968,6 +163124,11 @@
    "Bellevue, WA, United States"
   ],
   "posted_at": 1783987200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412072,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -162976,7 +163137,8 @@
    "base 40",
    "role:swe +20",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -182733,7 +182895,7 @@
   ],
   "posted_at": 1783987200,
   "posting": {
-   "analyzed_at": 1784411983,
+   "analyzed_at": 1784412016,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 2,
@@ -182741,7 +182903,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784411983,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784412016,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad eligible with 0-2 years exp.",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -213239,11 +213407,11 @@
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 76,
+  "score": 72,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "posted <72h +6",
+   "posted <7d +2",
    "remote +2",
    "title matches your history +6"
   ],
@@ -219699,6 +219867,15 @@
    "Orlando, FL, United States"
   ],
   "posted_at": 1783900800,
+  "posting": {
+   "analyzed_at": 1784412100,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784412100,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -243426,7 +243603,9 @@
   ],
   "posted_at": 1782292242,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784412047,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -282855,6 +283034,9 @@
    "Raleigh, NC"
   ],
   "posted_at": 1783900800,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -289139,7 +289321,7 @@
   ],
   "posted_at": 1782691200,
   "posting": {
-   "analyzed_at": 1784411989,
+   "analyzed_at": 1784412039,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 1,
@@ -289147,17 +289329,24 @@
   },
   "quality": {
    "ai_deferred_at": 1784411989,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784412039,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "data",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 69,
+  "score": 59,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "title matches your history +5",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -356260,8 +356449,9 @@
   "url": "https://vfc.wd5.myworkdayjobs.com/en-US/vfc_careers/job/USCA--USA--New-Hampshire--Stratham-Domain-Dr-HQ---TBL/Timberland--Senior-Analyst--Long-Range-Planning--Americas-_R-20260330-0027-1"
  },
  "e78c22c7b079872d": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784412102,
   "company": "University of Illinois Chicago",
   "description": "",
   "explicit_new_grad": false,
@@ -356272,6 +356462,11 @@
    "Chicago, IL, United States"
   ],
   "posted_at": 1783900800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412102,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -356280,7 +356475,8 @@
    "base 40",
    "role:swe +20",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -357494,8 +357690,9 @@
   "url": "https://boards.greenhouse.io/andurilindustries/jobs/5043498007?gh_jid=5043498007"
  },
  "e84b27f630222b27": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784412073,
   "company": "Noblis",
   "description": "",
   "explicit_new_grad": false,
@@ -357506,6 +357703,11 @@
    "Remote, USA"
   ],
   "posted_at": 1783987200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412073,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -357515,7 +357717,8 @@
    "role:swe +20",
    "posted <7d +2",
    "remote +2",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -370998,22 +371201,29 @@
   ],
   "posted_at": 1780880783,
   "posting": {
-   "analyzed_at": 1784411981,
+   "analyzed_at": 1784412000,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784411981,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784412000,
+   "live": true,
+   "new_grad": "no",
+   "reason": "2+ years experience required",
+   "role_family": "other-technical",
+   "years_required": 2
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 70,
+  "score": 60,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: wants 2+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "simplify",
@@ -391056,6 +391266,22 @@
    "Bellevue, WA, United States"
   ],
   "posted_at": 1783987200,
+  "posting": {
+   "analyzed_at": 1784412074,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0-3 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412074,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0+ years exp, 2026 grad",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
