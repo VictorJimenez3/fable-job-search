@@ -2893,8 +2893,9 @@
   "url": "https://citi.wd5.myworkdayjobs.com/en-US/2/job/Kuala-Lumpur-Selangor-Malaysia/MYS-CTSM---Officer---Custody-Asset-Servicing-Analyst---Hybrid-_25859571"
  },
  "022e24ff3c70624d": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784411764,
   "company": "Brown & Brown",
   "description": "",
   "explicit_new_grad": false,
@@ -2905,6 +2906,11 @@
    "Remote - USA, United States of America"
   ],
   "posted_at": 1783296000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411764,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -2913,7 +2919,8 @@
    "base 40",
    "role:data_science +22",
    "remote +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -6142,15 +6149,31 @@
    "Salt Lake City, UT, United States"
   ],
   "posted_at": 1783382400,
+  "posting": {
+   "analyzed_at": 1784411738,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411738,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 70,
+  "score": 60,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:fintech +5",
-   "title matches your history +5"
+   "title matches your history +5",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "fintech",
   "source": "jobright",
@@ -26322,6 +26345,22 @@
    "Indianapolis, IN"
   ],
   "posted_at": 1783462650,
+  "posting": {
+   "analyzed_at": 1784411731,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1-3 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411731,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "1-3 years experience, new grad eligible.",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -30994,7 +31033,7 @@
   ],
   "posted_at": 1783814400,
   "posting": {
-   "analyzed_at": 1784411653,
+   "analyzed_at": 1784411683,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship",
@@ -31003,7 +31042,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784411653,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784411683,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0-1 year exp",
+   "role_family": "data",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -32457,6 +32502,22 @@
    "Remote in USA"
   ],
   "posted_at": 1783550087,
+  "posting": {
+   "analyzed_at": 1784411715,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0–2 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411715,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0-2 years, recent grad",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -42710,15 +42771,30 @@
    "NYC"
   ],
   "posted_at": 1783463145,
+  "posting": {
+   "analyzed_at": 1784411723,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411723,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years experience required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 70,
+  "score": 60,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:fintech +5",
-   "title matches your history +5"
+   "title matches your history +5",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "fintech",
   "source": "simplify",
@@ -56002,15 +56078,31 @@
    "New York, NY, United States"
   ],
   "posted_at": 1783382400,
+  "posting": {
+   "analyzed_at": 1784411745,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411745,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 70,
+  "score": 60,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:fintech +5",
-   "title matches your history +5"
+   "title matches your history +5",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "fintech",
   "source": "jobright",
@@ -63302,15 +63394,32 @@
    "Keystone, IN, United States"
   ],
   "posted_at": 1783382400,
+  "posting": {
+   "analyzed_at": 1784411753,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1-3 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411753,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required.",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 70,
+  "score": 60,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:fintech +5",
-   "title matches your history +5"
+   "title matches your history +5",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "fintech",
   "source": "jobright",
@@ -73257,6 +73366,17 @@
    "United States"
   ],
   "posted_at": 1783209600,
+  "posting": {
+   "analyzed_at": 1784411768,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "one year of relevant experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411768,
+   "attempts": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -83455,6 +83575,9 @@
    "NYC"
   ],
   "posted_at": 1783318152,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -85780,8 +85903,9 @@
   "url": "https://boards.greenhouse.io/andurilindustries/jobs/5171330007?gh_jid=5171330007"
  },
  "379c4fe012328213": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784411713,
   "company": "Bending Spoons",
   "description": "",
   "explicit_new_grad": false,
@@ -85792,6 +85916,11 @@
    "United Kingdom"
   ],
   "posted_at": 1783555200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411713,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -85800,7 +85929,8 @@
    "base 40",
    "role:data_science +22",
    "remote +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -88656,8 +88786,9 @@
   "url": "https://boards.greenhouse.io/neuralink/jobs/7637700003?gh_jid=7637700003"
  },
  "39620bf57695c1ed": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784411714,
   "company": "McGraw Hill",
   "description": "",
   "explicit_new_grad": false,
@@ -88668,6 +88799,11 @@
    "United States"
   ],
   "posted_at": 1783555200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411714,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -88676,7 +88812,8 @@
    "base 40",
    "role:data_science +22",
    "remote +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -145563,7 +145700,7 @@
   "url": "https://jobs.smartrecruiters.com/Collabera2/743999656298483"
  },
  "5ed161594c983f12": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "GiveWell",
   "description": "",
@@ -145576,7 +145713,7 @@
   ],
   "posted_at": 1783728000,
   "posting": {
-   "analyzed_at": 1784411655,
+   "analyzed_at": 1784411698,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 1,
@@ -145584,17 +145721,25 @@
   },
   "quality": {
    "ai_deferred_at": 1784411655,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784411698,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "non-technical",
+   "years_required": 1
   },
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 70,
+  "score": 35,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "remote +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10",
+   "quality: non-technical role (1+ years exp required — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "jobright",
@@ -169713,8 +169858,9 @@
   "url": "https://job-boards.greenhouse.io/torcrobotics/jobs/8596533002"
  },
  "6e34fac8f2677ec6": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784411764,
   "company": "MPHI",
   "description": "",
   "explicit_new_grad": false,
@@ -169725,6 +169871,11 @@
    "Michigan, United States"
   ],
   "posted_at": 1783296000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411764,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -169733,7 +169884,8 @@
    "base 40",
    "role:data_science +22",
    "remote +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -192179,7 +192331,7 @@
   ],
   "posted_at": 1783814400,
   "posting": {
-   "analyzed_at": 1784411654,
+   "analyzed_at": 1784411691,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship",
@@ -192188,17 +192340,24 @@
   },
   "quality": {
    "ai_deferred_at": 1784411654,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784411691,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1-3 years exp required",
+   "role_family": "data",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 70,
+  "score": 60,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -227024,7 +227183,7 @@
   "url": "https://jobs.ashbyhq.com/quantcast/5a7a93da-502e-4ff7-81bb-88a163ff4e90"
  },
  "94100b819eea5577": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Daily Management Resorts",
   "description": "",
@@ -227037,23 +227196,30 @@
   ],
   "posted_at": 1783728000,
   "posting": {
-   "analyzed_at": 1784411656,
+   "analyzed_at": 1784411706,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784411656,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784411706,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, data entry tasks",
+   "role_family": "non-technical",
+   "years_required": 0
   },
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 70,
+  "score": 45,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "remote +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: non-technical role (Entry level, data entry tasks — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "jobright",
@@ -272688,7 +272854,7 @@
   ],
   "posted_at": 1783900800,
   "posting": {
-   "analyzed_at": 1784411650,
+   "analyzed_at": 1784411668,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -272697,18 +272863,25 @@
   },
   "quality": {
    "ai_deferred_at": 1784411650,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784411668,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 70,
+  "score": 60,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "posted <7d +2",
    "title matches your history +4",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -273191,7 +273364,7 @@
   ],
   "posted_at": 1783900800,
   "posting": {
-   "analyzed_at": 1784411651,
+   "analyzed_at": 1784411676,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 1,
@@ -273199,18 +273372,25 @@
   },
   "quality": {
    "ai_deferred_at": 1784411651,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784411676,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "other-technical",
+   "years_required": 1
   },
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 70,
+  "score": 60,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "posted <7d +2",
    "remote +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -285479,8 +285659,9 @@
   "url": "https://job-boards.greenhouse.io/everlaw/jobs/4691814006"
  },
  "b8d79f652d25ac46": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784411760,
   "company": "ConnectiveRx",
   "description": "",
   "explicit_new_grad": false,
@@ -285491,6 +285672,11 @@
    "Whippany, NJ, United States"
   ],
   "posted_at": 1783382400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411760,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -285499,7 +285685,8 @@
    "base 40",
    "role:data_science +22",
    "remote +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -288262,6 +288449,17 @@
    "IN - Indianapolis - Keystone Crossing, United States"
   ],
   "posted_at": 1783382400,
+  "posting": {
+   "analyzed_at": 1784411761,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1-3 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411761,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -317107,8 +317305,9 @@
   "url": "https://jobs.ashbyhq.com/elevenlabs/c7d59014-b918-4c15-ae33-79f5c9f2cf9f"
  },
  "ce7254f45a7ad742": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784411714,
   "company": "SPINS",
   "description": "",
   "explicit_new_grad": false,
@@ -317119,6 +317318,11 @@
    "Chicago, IL, United States"
   ],
   "posted_at": 1783555200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411714,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -317127,7 +317331,8 @@
    "base 40",
    "role:data_science +22",
    "remote +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -318770,8 +318975,9 @@
   "url": "https://jobs.ashbyhq.com/hadrian-automation/a15a7eb7-1b0f-4b61-93db-fbfa22430efb"
  },
  "cf566a2cc8a052de": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784411765,
   "company": "MPHI",
   "description": "",
   "explicit_new_grad": false,
@@ -318782,6 +318988,11 @@
    "Remote, Michigan"
   ],
   "posted_at": 1783296000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411765,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -318790,7 +319001,8 @@
    "base 40",
    "role:data_science +22",
    "remote +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -330209,11 +330421,11 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 72,
+  "score": 68,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
-   "posted <72h +6"
+   "posted <7d +2"
   ],
   "sector": "other",
   "source": "workday",
@@ -358731,6 +358943,16 @@
    "New York, NY"
   ],
   "posted_at": 1783296000,
+  "posting": {
+   "analyzed_at": 1784411766,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411766,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -365929,6 +366151,17 @@
    "United States"
   ],
   "posted_at": 1783382400,
+  "posting": {
+   "analyzed_at": 1784411762,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1–3 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411762,
+   "attempts": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -385566,6 +385799,16 @@
    "Washington, D.C."
   ],
   "posted_at": 1783296000,
+  "posting": {
+   "analyzed_at": 1784411767,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411767,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
