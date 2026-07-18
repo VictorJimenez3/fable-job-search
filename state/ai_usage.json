@@ -1,11 +1,11 @@
 {
  "events": [
   {
-   "at": "2026-07-18T20:57:56+00:00",
+   "at": "2026-07-18T20:58:38+00:00",
    "completion_tokens": 240,
    "detail": "task schema validation failed",
    "endpoint": "local",
-   "latency_ms": 10834,
+   "latency_ms": 10836,
    "max_tokens": 240,
    "model": "qwen3:30b",
    "prompt_chars": 6707,
@@ -14,7 +14,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:58:05+00:00",
+   "at": "2026-07-18T20:58:47+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -27,7 +27,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:58:06+00:00",
+   "at": "2026-07-18T20:58:48+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -40,7 +40,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:58:07+00:00",
+   "at": "2026-07-18T20:58:49+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -53,7 +53,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:58:08+00:00",
+   "at": "2026-07-18T20:58:50+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -66,7 +66,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:58:09+00:00",
+   "at": "2026-07-18T20:58:51+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -79,7 +79,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:58:10+00:00",
+   "at": "2026-07-18T20:58:52+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -92,7 +92,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:58:11+00:00",
+   "at": "2026-07-18T20:58:53+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -105,7 +105,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:58:11+00:00",
+   "at": "2026-07-18T20:58:54+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -118,7 +118,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:58:12+00:00",
+   "at": "2026-07-18T20:58:55+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -131,7 +131,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:58:14+00:00",
+   "at": "2026-07-18T20:58:56+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -144,7 +144,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:58:15+00:00",
+   "at": "2026-07-18T20:58:57+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -157,7 +157,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:58:16+00:00",
+   "at": "2026-07-18T20:58:58+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -170,7 +170,20 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:58:17+00:00",
+   "at": "2026-07-18T20:58:59+00:00",
+   "completion_tokens": 0,
+   "detail": "per-run AI budget reached",
+   "endpoint": "none",
+   "latency_ms": 0,
+   "max_tokens": 240,
+   "model": "",
+   "prompt_chars": 6678,
+   "prompt_tokens": 0,
+   "status": "budget_skipped",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-18T20:58:59+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -183,26 +196,8 @@
    "task": "discovery"
   }
  ],
- "generated_at": 1784408297,
+ "generated_at": 1784408339,
  "history": [
-  {
-   "generated_at": 1784405797,
-   "logical_calls": 12,
-   "models": {
-    "local": {
-     "errors": 1,
-     "model": "qwen3:30b",
-     "ok": 0,
-     "requests": 1,
-     "tokens": 1689
-    }
-   },
-   "provider": "local",
-   "requests": 1,
-   "task_calls": {
-    "quality": 12
-   }
-  },
   {
    "generated_at": 1784405851,
    "logical_calls": 12,
@@ -709,6 +704,24 @@
   },
   {
    "generated_at": 1784408297,
+   "logical_calls": 12,
+   "models": {
+    "local": {
+     "errors": 1,
+     "model": "qwen3:30b",
+     "ok": 0,
+     "requests": 1,
+     "tokens": 1708
+    }
+   },
+   "provider": "local",
+   "requests": 1,
+   "task_calls": {
+    "quality": 12
+   }
+  },
+  {
+   "generated_at": 1784408339,
    "logical_calls": 12,
    "models": {
     "local": {
