@@ -553,7 +553,7 @@
   "url": "https://job-boards.greenhouse.io/sharpelectronics/jobs/4304144009"
  },
  "005f1a7de11cbbbe": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Innodata",
   "description": "",
@@ -566,23 +566,31 @@
   ],
   "posted_at": 1781169536,
   "posting": {
-   "analyzed_at": 1784407096,
+   "analyzed_at": 1784407188,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784407096,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407188,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires BA in humanities, not CS new grad role.",
+   "role_family": "non-technical",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 82,
+  "score": 37,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "new-grad title +12",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: not new-grad (senior — LLM-verified) -20",
+   "quality: non-technical role (Requires BA in humanities, not CS new gr — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "simplify",
@@ -18382,6 +18390,9 @@
    "Orlando, FL"
   ],
   "posted_at": 1780844293,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -26736,7 +26747,7 @@
   "url": "https://boards.greenhouse.io/andurilindustries/jobs/5187843007?gh_jid=5187843007"
  },
  "118bc3241793d559": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Innodata",
   "description": "",
@@ -26749,23 +26760,30 @@
   ],
   "posted_at": 1781169537,
   "posting": {
-   "analyzed_at": 1784407090,
+   "analyzed_at": 1784407107,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784407090,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407107,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role for new grad",
+   "role_family": "non-technical",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 82,
+  "score": 57,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "new-grad title +12",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: non-technical role (Entry-level role for new grad — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "simplify",
@@ -32815,7 +32833,7 @@
   "url": "https://jobs.lever.co/weloglobal/6f93cdd1-60c0-4ab2-bfd0-e3a45267152f"
  },
  "159f0c47ce37cd49": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Innodata",
   "description": "",
@@ -32828,23 +32846,31 @@
   ],
   "posted_at": 1781169536,
   "posting": {
-   "analyzed_at": 1784407097,
+   "analyzed_at": 1784407196,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784407097,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407196,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires degree in humanities, not CS role.",
+   "role_family": "non-technical",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 82,
+  "score": 37,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "new-grad title +12",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: not new-grad (senior — LLM-verified) -20",
+   "quality: non-technical role (Requires degree in humanities, not CS ro — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "simplify",
@@ -50249,6 +50275,15 @@
    "Kentucky"
   ],
   "posted_at": 1781169536,
+  "posting": {
+   "analyzed_at": 1784407203,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784407203,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -56144,6 +56179,15 @@
    "Tennessee"
   ],
   "posted_at": 1781169536,
+  "posting": {
+   "analyzed_at": 1784407204,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784407204,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -60582,6 +60626,15 @@
    "San Jose, CA"
   ],
   "posted_at": 1780466890,
+  "posting": {
+   "analyzed_at": 1784407221,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784407221,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -63754,6 +63807,15 @@
    "Wyoming"
   ],
   "posted_at": 1781169536,
+  "posting": {
+   "analyzed_at": 1784407205,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784407205,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -82068,7 +82130,7 @@
   "url": "https://jobright.ai/jobs/info/6a471f418204a812e98cb047?utm_campaign=Software%20Engineering&utm_source=1103"
  },
  "3687c1602201fa90": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Innodata",
   "description": "",
@@ -82081,23 +82143,30 @@
   ],
   "posted_at": 1781169537,
   "posting": {
-   "analyzed_at": 1784407091,
+   "analyzed_at": 1784407115,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784407091,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407115,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "No experience requirement, non-technical tasks",
+   "role_family": "non-technical",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 82,
+  "score": 57,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "new-grad title +12",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: non-technical role (No experience requirement, non-technical — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "simplify",
@@ -85847,6 +85916,15 @@
    "El Segundo, CA"
   ],
   "posted_at": 1781053789,
+  "posting": {
+   "analyzed_at": 1784407208,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784407208,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -113518,7 +113596,7 @@
   "url": "https://yale.wd1.myworkdayjobs.com/en-US/terminated_layoff_external_career_site/job/Church-St-195/Statistician-Entry_136584WD-1"
  },
  "4b4194d7c5963258": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Innodata",
   "description": "",
@@ -113531,23 +113609,30 @@
   ],
   "posted_at": 1781169537,
   "posting": {
-   "analyzed_at": 1784407092,
+   "analyzed_at": 1784407123,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784407092,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407123,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "No experience required, entry-level role.",
+   "role_family": "non-technical",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 82,
+  "score": 57,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "new-grad title +12",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: non-technical role (No experience required, entry-level role — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "simplify",
@@ -130298,7 +130383,7 @@
   "url": "https://jobright.ai/jobs/info/6a4e920915b4965afd583cd2?utm_campaign=Software%20Engineering&utm_source=1103"
  },
  "56b6db3b5cfc4809": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Innodata",
   "description": "",
@@ -130311,23 +130396,30 @@
   ],
   "posted_at": 1781169537,
   "posting": {
-   "analyzed_at": 1784407092,
+   "analyzed_at": 1784407131,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784407092,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407131,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "No experience required, non-technical tasks.",
+   "role_family": "non-technical",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 82,
+  "score": 57,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "new-grad title +12",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: non-technical role (No experience required, non-technical ta — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "simplify",
@@ -136949,6 +137041,15 @@
    "San Jose, CA"
   ],
   "posted_at": 1780466897,
+  "posting": {
+   "analyzed_at": 1784407215,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784407215,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -182605,6 +182706,15 @@
    "Utah"
   ],
   "posted_at": 1781169536,
+  "posting": {
+   "analyzed_at": 1784407205,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784407205,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -204285,7 +204395,7 @@
   "url": "https://ivytech.wd1.myworkdayjobs.com/en-US/ivy_tech_careers/job/Indianapolis-IN/Finance-Business-Analyst_JR0000108865"
  },
  "886cdd2da0a80325": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Innodata",
   "description": "",
@@ -204298,23 +204408,30 @@
   ],
   "posted_at": 1781169537,
   "posting": {
-   "analyzed_at": 1784407093,
+   "analyzed_at": 1784407138,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784407093,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407138,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "No experience required, entry-level role",
+   "role_family": "non-technical",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 82,
+  "score": 57,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "new-grad title +12",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: non-technical role (No experience required, entry-level role — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "simplify",
@@ -216393,6 +216510,15 @@
    "Ohio"
   ],
   "posted_at": 1781169536,
+  "posting": {
+   "analyzed_at": 1784407206,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784407206,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -247262,7 +247388,7 @@
   "url": "https://job-boards.greenhouse.io/anthropic/jobs/4938432008"
  },
  "a4e3aea99134b073": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Innodata",
   "description": "",
@@ -247275,23 +247401,31 @@
   ],
   "posted_at": 1781169537,
   "posting": {
-   "analyzed_at": 1784407093,
+   "analyzed_at": 1784407146,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784407093,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407146,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires BA in humanities, not CS role.",
+   "role_family": "non-technical",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 82,
+  "score": 37,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "new-grad title +12",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: not new-grad (senior — LLM-verified) -20",
+   "quality: non-technical role (Requires BA in humanities, not CS role. — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "simplify",
@@ -253655,13 +253789,19 @@
   ],
   "posted_at": 1781169537,
   "posting": {
-   "analyzed_at": 1784407094,
+   "analyzed_at": 1784407154,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784407094,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407154,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Generative AI Associate, entry-level role with no experience requirement mentioned.",
+   "role_family": "ml",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -255667,6 +255807,15 @@
    "Arkansas"
   ],
   "posted_at": 1781169536,
+  "posting": {
+   "analyzed_at": 1784407207,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784407207,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -264307,7 +264456,7 @@
   "url": "https://job-boards.greenhouse.io/fiveringsllc/jobs/4515001008"
  },
  "af4b8dc7ed601d20": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Innodata",
   "description": "",
@@ -264320,23 +264469,30 @@
   ],
   "posted_at": 1781169537,
   "posting": {
-   "analyzed_at": 1784407094,
+   "analyzed_at": 1784407164,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784407094,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407164,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "No experience required, non-technical tasks.",
+   "role_family": "non-technical",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 82,
+  "score": 57,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "new-grad title +12",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: non-technical role (No experience required, non-technical ta — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "simplify",
@@ -267250,11 +267406,11 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 72,
+  "score": 66,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <24h +12"
+   "posted <72h +6"
   ],
   "sector": "other",
   "source": "greenhouse",
@@ -276192,7 +276348,7 @@
   "url": "https://careers-sig.icims.com/jobs/11019/job?mobile=true&needsRedirect=false"
  },
  "b666981af6f8d09b": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Innodata",
   "description": "",
@@ -276205,23 +276361,30 @@
   ],
   "posted_at": 1781169537,
   "posting": {
-   "analyzed_at": 1784407095,
+   "analyzed_at": 1784407172,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784407095,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407172,
+   "live": true,
+   "new_grad": "unclear",
+   "reason": "Humanities degree required, non-engineering tasks",
+   "role_family": "non-technical",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 82,
+  "score": 57,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "new-grad title +12",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: non-technical role (Humanities degree required, non-engineer — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "simplify",
@@ -291284,7 +291447,7 @@
   "url": "https://jobright.ai/jobs/info/6a432e92e09ecb495964263a?utm_campaign=Software%20Engineering&utm_source=1103"
  },
  "c0eb0bb78b81d5da": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Innodata",
   "description": "",
@@ -291297,23 +291460,30 @@
   ],
   "posted_at": 1781169537,
   "posting": {
-   "analyzed_at": 1784407096,
+   "analyzed_at": 1784407180,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784407096,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407180,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "No experience required",
+   "role_family": "non-technical",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 82,
+  "score": 57,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "new-grad title +12",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: non-technical role (No experience required — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "simplify",
@@ -292938,12 +293108,12 @@
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 92,
+  "score": 88,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:ai_lab +11",
-   "posted <72h +6",
+   "posted <7d +2",
    "remote +2",
    "you've engaged with OpenAI +8",
    "title matches your history +4",
@@ -294508,6 +294678,15 @@
    "Michigan"
   ],
   "posted_at": 1781169536,
+  "posting": {
+   "analyzed_at": 1784407207,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784407207,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -298891,6 +299070,15 @@
    "Seattle, WA"
   ],
   "posted_at": 1780466893,
+  "posting": {
+   "analyzed_at": 1784407218,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784407218,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -339487,6 +339675,15 @@
    "San Jose, CA"
   ],
   "posted_at": 1780466902,
+  "posting": {
+   "analyzed_at": 1784407209,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784407209,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
