@@ -1,12 +1,11 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-18 06:07 UTC** · companies polled directly: **9** (ChemE registry 9) · jobs tracked: **39 shown / 11076 stored** · new this run: **1** · alerts this run: **0**_
+_Last run: **2026-07-18 06:09 UTC** · companies polled directly: **9** (ChemE registry 9) · jobs tracked: **38 shown / 11076 stored** · new this run: **0** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
 | Score | Age | Company | Role | Location | Sector | Src |
 |---|---|---|---|---|---|---|
-| 94 🔥 | 24d | Shell | [Intern – Chemical & Process Engineering](https://shell.wd3.myworkdayjobs.com/en-US/ShellCareers/job/Bintulu/Intern---Chemical---Process-Engineering_R197544) | Bintulu | energy | workday |
 | 93 🔥 | 18d | Applied Materials | [2026 Fall Process Engineer Co-op - Adv Degree Gloucester, MA](https://amat.wd1.myworkdayjobs.com/en-US/External/job/GloucesterMA/XMLNAME-2026-Fall-Process-Engineer-Co-op---Adv-Degree-Gloucester--MA_R2611502) | Gloucester,MA | semiconductors | workday |
 | 87 🔥 | 7h | Neuralink | [R&D Materials Engineer Intern](https://boards.greenhouse.io/neuralink/jobs/7808233003) | San Bruno, CA | other | simplify |
 | 82 ⭐ | 2d | Solar Turbines | [Gas Turbine Products Engineering Intern](https://cat.wd5.myworkdayjobs.com/en-US/solarturbines/job/San-Diego-California/XMLNAME-2027--Gas-Turbine-Product-Engineering-Internship_R0000382293) | San Diego, CA | energy | simplify |
@@ -46,4 +45,4 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 64  | 23d | Hiverge | [Research Engineer Intern](https://jobs.ashbyhq.com/hiverge/ea6edea4-5216-4cdc-b368-909ba91c78a3/application) | Cambridge, UK | other | simplify |
 | 64  | 29d | Formlabs | [Hardware R&D Engineer Intern](https://careers.formlabs.com/job/7890746/apply/?gh_jid=7890746) | Cambridge, MA | other | simplify |
 
-_39 roles shown (score ≥ 42, posted ≤30d)._
+_38 roles shown (score ≥ 42, posted ≤30d)._
