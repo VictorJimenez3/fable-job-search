@@ -51693,7 +51693,7 @@
   ],
   "posted_at": 1784327342,
   "posting": {
-   "analyzed_at": 1784404085,
+   "analyzed_at": 1784404172,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 1,
@@ -51701,16 +51701,23 @@
   },
   "quality": {
    "ai_deferred_at": 1784404085,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784404172,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years experience required.",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 72,
+  "score": 62,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <24h +12"
+   "posted <24h +12",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "simplify",
@@ -91940,14 +91947,20 @@
   ],
   "posted_at": 1784073600,
   "posting": {
-   "analyzed_at": 1784404083,
+   "analyzed_at": 1784404156,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "citizenship is required"
   },
   "quality": {
    "ai_deferred_at": 1784404083,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784404156,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role with security clearance requirement",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -110849,12 +110862,16 @@
   ],
   "posted_at": 1784246400,
   "posting": {
-   "analyzed_at": 1784346631,
+   "analyzed_at": 1784404192,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
    "years_min": 0,
    "years_note": "0 to 5 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784404192,
+   "attempts": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -115069,8 +115086,9 @@
   "url": "https://jobs.lever.co/veeva/32ae55c2-b5a3-4c99-96b5-d57af223628d"
  },
  "4cf69156527fab99": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784404190,
   "company": "Cherry Hill Programs",
   "description": "",
   "explicit_new_grad": false,
@@ -115081,6 +115099,11 @@
    "United States"
   ],
   "posted_at": 1784073600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784404190,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -115090,7 +115113,8 @@
    "role:data_science +22",
    "posted <7d +2",
    "remote +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -128960,7 +128984,9 @@
   ],
   "posted_at": 1784073600,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784404164,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -167474,6 +167500,15 @@
    "NYC"
   ],
   "posted_at": 1784153104,
+  "posting": {
+   "analyzed_at": 1784404189,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784404189,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -172906,7 +172941,7 @@
   ],
   "posted_at": 1784246400,
   "posting": {
-   "analyzed_at": 1784404086,
+   "analyzed_at": 1784404180,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -172915,17 +172950,24 @@
   },
   "quality": {
    "ai_deferred_at": 1784404086,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784404180,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 72,
+  "score": 62,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "posted <72h +6",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -173341,7 +173383,7 @@
   ],
   "posted_at": 1784160000,
   "posting": {
-   "analyzed_at": 1784404080,
+   "analyzed_at": 1784404141,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 0,
@@ -173349,7 +173391,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784404080,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784404141,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0+ years exp",
+   "role_family": "other-technical",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -174840,12 +174888,16 @@
   ],
   "posted_at": 1784246400,
   "posting": {
-   "analyzed_at": 1784379716,
+   "analyzed_at": 1784404193,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
    "years_min": 1,
    "years_note": "1–3 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784404193,
+   "attempts": 0
   },
   "remote": true,
   "rules_v": 3,
@@ -180834,7 +180886,7 @@
   ],
   "posted_at": 1784160000,
   "posting": {
-   "analyzed_at": 1784404081,
+   "analyzed_at": 1784404149,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -180843,18 +180895,25 @@
   },
   "quality": {
    "ai_deferred_at": 1784404081,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784404149,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 73,
+  "score": 63,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "posted <72h +6",
    "you've engaged with MANTECH +3",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -190865,13 +190924,19 @@
   ],
   "posted_at": 1784160000,
   "posting": {
-   "analyzed_at": 1784404075,
+   "analyzed_at": 1784404096,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784404075,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784404096,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for 2025 graduates",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": true,
   "rules_v": 3,
@@ -191943,7 +192008,7 @@
   ],
   "posted_at": 1784160000,
   "posting": {
-   "analyzed_at": 1784404076,
+   "analyzed_at": 1784404104,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -191952,18 +192017,25 @@
   },
   "quality": {
    "ai_deferred_at": 1784404076,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784404104,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 74,
+  "score": 64,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "posted <72h +6",
    "remote +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -205478,7 +205550,7 @@
   "url": "https://job-boards.greenhouse.io/yesenergy/jobs/5344484008"
  },
  "8a0b294cd2094681": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Marsh",
   "description": "",
@@ -205490,6 +205562,17 @@
    "NYC"
   ],
   "posted_at": 1784160000,
+  "posting": {
+   "analyzed_at": 1784404189,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 5,
+   "years_note": "5–10 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784404189,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -205498,7 +205581,8 @@
    "base 40",
    "role:swe +20",
    "posted <72h +6",
-   "title matches your history +6"
+   "title matches your history +6",
+   "posting: wants 5+ yrs (dashboard only)"
   ],
   "sector": "other",
   "source": "simplify",
@@ -208769,7 +208853,7 @@
   "url": "https://boards.greenhouse.io/andurilindustries/jobs/5111193007?gh_jid=5111193007"
  },
  "8c7712f3b1e4e16f": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Harris Beach Murtha",
   "description": "",
@@ -208782,7 +208866,7 @@
   ],
   "posted_at": 1784160000,
   "posting": {
-   "analyzed_at": 1784404077,
+   "analyzed_at": 1784404111,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 1,
@@ -208790,17 +208874,25 @@
   },
   "quality": {
    "ai_deferred_at": 1784404077,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784404111,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "non-technical",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 74,
+  "score": 39,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "posted <72h +6",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10",
+   "quality: non-technical role (1+ years exp required — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "jobright",
@@ -214843,11 +214935,15 @@
   ],
   "posted_at": 1784246400,
   "posting": {
-   "analyzed_at": 1784346631,
+   "analyzed_at": 1784404195,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 0,
    "years_note": "0-2 Years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784404195,
+   "attempts": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -240002,11 +240098,15 @@
   ],
   "posted_at": 1784246400,
   "posting": {
-   "analyzed_at": 1784330126,
+   "analyzed_at": 1784404187,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 0,
    "years_note": "0-2 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784404187,
+   "attempts": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -246581,12 +246681,16 @@
   ],
   "posted_at": 1784246400,
   "posting": {
-   "analyzed_at": 1784379716,
+   "analyzed_at": 1784404196,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship",
    "years_min": 1,
    "years_note": "Minimum of 1 year"
+  },
+  "quality": {
+   "ai_deferred_at": 1784404196,
+   "attempts": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -258506,6 +258610,15 @@
    "Oakland, CA"
   ],
   "posted_at": 1784239406,
+  "posting": {
+   "analyzed_at": 1784404188,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784404188,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -303960,7 +304073,7 @@
   ],
   "posted_at": 1784160000,
   "posting": {
-   "analyzed_at": 1784404078,
+   "analyzed_at": 1784404119,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 1,
@@ -303968,17 +304081,24 @@
   },
   "quality": {
    "ai_deferred_at": 1784404078,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784404119,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "data",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 74,
+  "score": 64,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "posted <72h +6",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -318603,7 +318723,7 @@
   "url": "https://hdpc.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/LateralHiring/job/178378"
  },
  "d59056740fefa25f": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Sentry Insurance",
   "description": "",
@@ -318616,24 +318736,31 @@
   ],
   "posted_at": 1784073600,
   "posting": {
-   "analyzed_at": 1784404084,
+   "analyzed_at": 1784404165,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784404084,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784404165,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role, no experience required.",
+   "role_family": "non-technical",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 73,
+  "score": 48,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "sector:fintech +5",
    "posted <7d +2",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: non-technical role (Entry-level role, no experience required — LLM-verified) -25"
   ],
   "sector": "fintech",
   "source": "simplify",
@@ -320936,9 +321063,13 @@
   ],
   "posted_at": 1784246400,
   "posting": {
-   "analyzed_at": 1784330126,
+   "analyzed_at": 1784404197,
    "fetched": true,
    "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784404197,
+   "attempts": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -330678,14 +330809,20 @@
   ],
   "posted_at": 1784073600,
   "posting": {
-   "analyzed_at": 1784404079,
+   "analyzed_at": 1784404126,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
    "ai_deferred_at": 1784404079,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784404126,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, no experience required",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -333853,8 +333990,9 @@
   "url": "https://bakerhughes.wd5.myworkdayjobs.com/en-US/BakerHughes/job/VN-HO-CHI-MINH-285-CACH-MANG-THANG-TAM-STREET/Engineer-2--Customer-Order-Engineering---Embedded-Software_R164249"
  },
  "e0873a01d87e26cc": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784404194,
   "company": "CSAA Insurance Group, a AAA Insurer",
   "description": "",
   "explicit_new_grad": false,
@@ -333865,6 +334003,11 @@
    "Arizona, United States"
   ],
   "posted_at": 1784073600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784404194,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -333875,7 +334018,8 @@
    "sector:fintech +5",
    "posted <7d +2",
    "remote +2",
-   "title matches your history +2"
+   "title matches your history +2",
+   "quality: posting gone (link checked)"
   ],
   "sector": "fintech",
   "source": "jobright",
@@ -343758,6 +343902,18 @@
    "El Segundo, CA"
   ],
   "posted_at": 1781215848,
+  "posting": {
+   "analyzed_at": 1784404195,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "citizenship is required",
+   "years_min": 0,
+   "years_note": "00 years of experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784404195,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -344593,14 +344749,20 @@
   ],
   "posted_at": 1784073600,
   "posting": {
-   "analyzed_at": 1784404080,
+   "analyzed_at": 1784404134,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
    "ai_deferred_at": 1784404080,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784404134,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level new grad role",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -365526,12 +365688,12 @@
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 96,
+  "score": 92,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "sector:ai_lab +11",
-   "posted <72h +6",
+   "posted <7d +2",
    "remote +2",
    "you've engaged with OpenAI +8",
    "title matches your history +6",
