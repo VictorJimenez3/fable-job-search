@@ -6,12 +6,22 @@ list[Job]. A probe() variant makes the cheapest possible validity check.
 """
 from __future__ import annotations
 
+import html as _html
 import re
 import time
 from datetime import datetime, timezone
 
 from ..http import get_json, post_json
 from ..models import Job
+
+
+def _plain(html_text: str | None) -> str:
+    """HTML (possibly entity-escaped, à la Greenhouse `content`) → plain text."""
+    if not html_text:
+        return ""
+    text = _html.unescape(html_text)
+    text = re.sub(r"(?s)<[^>]+>", " ", text)
+    return re.sub(r"\s+", " ", text).strip()
 
 
 def _iso_epoch(s: str | None) -> int | None:
@@ -31,7 +41,10 @@ def _gh_base(entry: dict) -> str:
 
 
 def fetch_greenhouse(entry: dict) -> list[Job]:
-    data = get_json(f"{_gh_base(entry)}/v1/boards/{entry['token']}/jobs?content=false")
+    # content=true costs one bigger response but delivers every posting's
+    # text — the description gates and posting analysis (DECISIONS #35)
+    # are blind without it
+    data = get_json(f"{_gh_base(entry)}/v1/boards/{entry['token']}/jobs?content=true")
     out = []
     for j in data.get("jobs", []):
         loc = (j.get("location") or {}).get("name", "") or ""
@@ -40,6 +53,7 @@ def fetch_greenhouse(entry: dict) -> list[Job]:
             source="greenhouse", ats="greenhouse",
             locations=[loc] if loc else [],
             posted_at=_iso_epoch(j.get("first_published") or j.get("updated_at")),
+            description=_plain(j.get("content"))[:4000],
             remote="remote" in loc.lower(),
         ))
     return out
@@ -86,6 +100,7 @@ def fetch_ashby(entry: dict) -> list[Job]:
             source="ashby", ats="ashby",
             locations=locs,
             posted_at=_iso_epoch(j.get("publishedAt")),
+            description=(j.get("descriptionPlain") or _plain(j.get("descriptionHtml")))[:4000],
             remote=bool(j.get("isRemote")) or any("remote" in l.lower() for l in locs),
         ))
     return out

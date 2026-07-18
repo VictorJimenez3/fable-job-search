@@ -14,6 +14,7 @@ _Scored 0–100 against your criteria: elite AI/DS prestige + new-grad pay + fas
 | **78** | Akuna Capital University | quant | A | fast | 4/5 | collaborative, innovative, mission-driven | unlimited | Y: summer | $150k (est.) | N | est. |
 | **78** | DV Trading LLC | quant | A | fast | 4/5 | cutting-edge, collaborative, focused | unlimited | Y: summer | $150k (est.) | N | est. |
 | **78** | Five Rings Capital | quant | A | fast | 4/5 | data-driven, collaborative, fast-paced | unlimited | Y: Q4 | $150k (est.) | N | est. |
+| **78** | IMP | AI/DS | A | fast | 4/5 | Innovative, collaborative, mission-driven | unlimited | Y: quarterly | $150k (est.) | N | est. |
 | **78** | Katalyst Space Technologies | AI/Space | A | fast | 4/5 | Innovative, collaborative, mission-driven | unlimited | Y: mandatory holiday shutdowns | $150k (est.) | N | est. |
 | **78** | MANTECH | AI/ML | A | fast | 4/5 | Innovative, collaborative, growth-focused | unlimited | Y: annual | $150k (est.) | N | est. |
 | **78** | Nightwing | AI/DS | A | fast | 4/5 | Innovative, collaborative, growth-focused | unlimited | Y: Holiday | $150k (est.) | N | est. |
@@ -21,8 +22,13 @@ _Scored 0–100 against your criteria: elite AI/DS prestige + new-grad pay + fas
 | **78** | Tatari | AI/DS | A | fast | 4/5 | Innovative, collaborative, growth-focused | unlimited | Y: Summer | $150k (est.) | N | est. |
 | **78** | The Giant Bullseye | AI/DS | A | fast | 4/5 | innovative, collaborative, growth-focused | unlimited | Y: summer | $150k (est.) | N | est. |
 | **78** | TikTok | social media | A | fast | 4/5 | innovative, collaborative, fast-paced | unlimited | Y: holiday shutdowns | $150k (est.) | N | est. |
+| **77** | AHEAD | AI/DS | A | fast | 4/5 | Innovative, collaborative, growth-focused | unlimited | Y: company-wide | $145k (est.) | N | est. |
 | **77** | ArcheSys Inc | AI/ML | A | fast | 4/5 | Innovative, collaborative, growth-focused | 25 | Y: Summer | $145k (est.) | N | est. |
 | **77** | Arista Networks | networking | A | fast | 4/5 | Innovative, collaborative, results-driven | unlimited | Y: Q4 | $145k (est.) | N | est. |
+| **77** | Blueprint Technologies | AI/ML | A | fast | 4/5 | Innovative, collaborative, growth-focused | unlimited | Y: Summer & Holiday | $145k (est.) | N | est. |
+| **77** | Bot Auto | AI/ML | A | fast | 4/5 | Innovative, collaborative, growth-focused | 25 | Y: Q4 | $140k (est.) | N | est. |
+| **77** | Chenega MIOS SBU | AI/DS | A | fast | 4/5 | Innovative, collaborative, mission-driven | unlimited | Y: Summer & Winter | $145k (est.) | N | est. |
+| **77** | DataDome | AI/ML | A | fast | 4/5 | innovative, collaborative, transparent | unlimited | Y: company-wide | $140k (est.) | N | est. |
 | **77** | Fuze Health | health tech | A | fast | 4/5 | collaborative, mission-driven | unlimited | Y: summer | $145k (est.) | N | est. |
 | **77** | GLORY | AI/DS | A | fast | 4/5 | Innovative, collaborative, mission-driven | unlimited | Y: Summer | $145k (est.) | N | est. |
 | **77** | HII | AI/ML | A | fast | 4/5 | Innovative, collaborative, mission-driven | unlimited | Y: Summer | $140k (est.) | N | est. |
@@ -30,16 +36,19 @@ _Scored 0–100 against your criteria: elite AI/DS prestige + new-grad pay + fas
 | **77** | Kemper | AI/ML | A | fast | 4/5 | Innovative, collaborative, mission-driven | unlimited | Y: Annual | $145k (est.) | N | est. |
 | **77** | Kindling. | AI/ML | A | fast | 4/5 | Innovative, collaborative, mission-driven | unlimited | Y: Summer | $145k (est.) | N | est. |
 | **77** | Knowesis Inc. | AI-DS | A | fast | 4/5 | Innovative, collaborative, respectful | unlimited | Y: Summer | $140k (est.) | N | est. |
+| **77** | Magnatech | AI/DS | A | fast | 4/5 | Innovative, collaborative, growth-focused | unlimited | Y: Q4 | $140k (est.) | N | est. |
 | **77** | Mapjects | AI/ML | A | fast | 4/5 | Collaborative, innovative, mission-driven | unlimited | Y: Summer | $140k (est.) | N | est. |
 | **77** | Neuberger | AI/DS | A | fast | 4/5 | Innovative, collaborative, growth-focused | 25 | Y: Summer | $145k (est.) | N | est. |
 | **77** | Notability | AI/ML | A | fast | 4/5 | Innovative, collaborative, mission-driven | unlimited | Y: Summer | $145k (est.) | N | est. |
 | **77** | Old Mission | AI-DS | A | fast | 4/5 | Innovative, collaborative, growth-focused | 25 | Y: Summer | $145k (est.) | N | est. |
 | **77** | OneRail | AI/ML | A | fast | 4/5 | Innovative, collaborative, growth-focused | unlimited | Y: Summer | $145k (est.) | N | est. |
+| **77** | QTS | AI/DS | A | fast | 4/5 | Innovative, collaborative, mission-driven | unlimited | Y: company-wide | $145k (est.) | N | est. |
 | **77** | Quantifind | AI/ML | A | fast | 4/5 | Innovative, collaborative, mission-driven | unlimited | Y: company-wide | $145k (est.) | N | est. |
 | **77** | R1 RCM | Healthcare Tech | A | fast | 4/5 | Collaborative, innovative, mission-driven | unlimited | Y: Summer | $145k (est.) | N | est. |
 | **77** | Spatial Front, Inc | AI/ML | A | fast | 4/5 | Innovative, collaborative, growth-focused | unlimited | Y: Summer | $145k (est.) | N | est. |
 | **77** | Versant Health | Healthtech | A | fast | 4/5 | Collaborative, mission-driven, innovative | 25 | Y: Summer | $145k (est.) | N | est. |
 | **77** | WR Systems | AI/ML | A | fast | 4/5 | Innovative, collaborative, growth-focused | unlimited | Y: Summer | $140k (est.) | N | est. |
+| **77** | ZS | healthcare tech | A | fast | 4/5 | collaborative, mission-driven | unlimited | Y: summer | $140k (est.) | N | est. |
 | **75** | CyberProof | cybersecurity | A | fast | 4/5 | innovative, collaborative, mission-driven | unlimited | Y: company-wide | $130k (est.) | N | est. |
 | **75** | Nuro | AI/autonomous vehicles | A | fast | 4/5 | Innovative, collaborative, mission-driven | unlimited | Y: Q4 | $130k (est.) | N | est. |
 | **74** | Apple | big tech | S | moderate | 3/5 | secretive, craft-obsessed, siloed | 17+ | Y: Thanksgiving + winter | $165k | N | seed |
@@ -49,16 +58,19 @@ _Scored 0–100 against your criteria: elite AI/DS prestige + new-grad pay + fas
 | **70** | Duolingo | edtech | A | fast | 4/5 | playful, metrics-obsessed, AI-forward | 20+ | N | $160k | N | seed |
 | **70** | LinkedIn | big tech | B | moderate | 5/5 | famously chill for pay band | unlimited (discretionary) | Y: LiftUp shutdown days | $170k | N | seed |
 | **69** | Adventure Technology Services | AI-DS | B | fast | 4/5 | Innovative, collaborative, growth-focused | unlimited | Y: Summer | $140k (est.) | N | est. |
+| **69** | Ensemble Health Partners | healthcare tech | B | fast | 4/5 | collaborative, mission-driven | unlimited | Y: summer | $140k (est.) | N | est. |
 | **69** | Epic for Kids | healthcare software | B | fast | 4/5 | collaborative, mission-focused | unlimited | Y: holiday shutdowns | $140k (est.) | N | est. |
 | **69** | HistoSonics, Inc. | healthtech | B | fast | 4/5 | innovative, collaborative, mission-driven | unlimited | Y: Q4 | $140k (est.) | N | est. |
 | **69** | Intuitive (Surgical) | med device/robotics | A | moderate | 4/5 | surgical robotics, engineering-proud | flexible | Y: winter | $140k (est.) | N | seed |
 | **69** | Mesh Optical Technologies | AI/ML | B | fast | 4/5 | Innovative, collaborative, focused | 25 | Y: Summer | $140k (est.) | N | est. |
 | **69** | Narmi | fintech | B | fast | 4/5 | collaborative, innovative, growth-focused | unlimited | Y: summer shutdown | $140k (est.) | N | est. |
 | **69** | Ramp | fintech | A | fast | 3/5 | velocity cult (positive), meritocratic | unlimited | N | $185k (est.) | N | seed |
+| **69** | Rocket Companies | financial tech | B | fast | 4/5 | collaborative, innovative, fast-paced | unlimited | Y: holiday shutdowns | $140k (est.) | N | est. |
 | **69** | Snowflake | data infra | A | fast | 3/5 | execution machine, sales-led | unlimited | N | $190k (est.) | N | seed |
 | **69** | Teradyne | semiconductor | B | fast | 4/5 | innovative, collaborative, focused | 25 | Y: holiday | $140k (est.) | N | est. |
 | **69** | Yugabyte | database | B | fast | 4/5 | innovative, collaborative, focused | unlimited | Y: summer | $140k (est.) | N | est. |
 | **68** | OpenEvidence | healthtech | A | fast | 3/5 | medical answers engine, small+elite | unlimited | N | $180k + equity (est.) | N | seed |
+| **67** | Commure | Healthcare Tech | B | fast | 4/5 | Innovative, mission-driven, collaborative | 25 | Y: Summer | $130k (est.) | N | est. |
 | **67** | Fred Hutch | healthcare | A | moderate | 4/5 | Mission-driven, collaborative, low burnout | 25 | Y: Summer | $130k (est.) | N | est. |
 | **67** | Hudl | Sports Tech | B | fast | 4/5 | Collaborative, innovative, team-focused | unlimited | Y: Holiday shutdowns | $130k (est.) | N | est. |
 | **67** | Mark Anthony Brands Inc. | AI/ML | A | fast | 4/5 | Innovative, collaborative, growth-focused | 25 | N | $140k (est.) | N | est. |
@@ -66,6 +78,7 @@ _Scored 0–100 against your criteria: elite AI/DS prestige + new-grad pay + fas
 | **67** | ZEDEDA | edge computing | B | fast | 4/5 | collaborative, fast-paced | unlimited | Y: summer | $130k (est.) | N | est. |
 | **66** | Absolute Security | cybersecurity | B | fast | 4/5 | collaborative, innovative, mission-driven | unlimited | Y: summer | $120k (est.) | N | est. |
 | **66** | Entertainment Partners | entertainment | B | fast | 4/5 | innovative, collaborative, mission-driven | unlimited | Y: summer | $120k (est.) | N | est. |
+| **66** | Field Nation | Marketplace | B | fast | 4/5 | Collaborative, mission-driven | unlimited | Y: Holiday | $120k (est.) | N | est. |
 | **66** | LetsGetChecked | healthtech | B | fast | 4/5 | innovative, mission-driven | unlimited | Y: summer | $120k (est.) | N | est. |
 | **66** | Meta | big tech | S | fast | 2/5 | move fast, perf-review pressure cooker | 21 | Y: winter break | $195k | N | seed |
 | **66** | MyTelemedicine | healthtech | B | fast | 4/5 | collaborative, mission-driven | unlimited | Y: seasonal | $125k (est.) | N | est. |
@@ -80,10 +93,13 @@ _Scored 0–100 against your criteria: elite AI/DS prestige + new-grad pay + fas
 | **60** | Capital One | fintech/bank | B | moderate | 4/5 | tech-forward bank, structured, kind | 21+ | Y: floating holidays | $135k | TDP (Technology Development Program) / ADA for analysts | seed |
 | **60** | OpenAI | ai_lab | S | fast | 2/5 | frontier sprint, all-in | unlimited | N | $300k+ (est.) | N (Residency exists) | seed |
 | **60** | Susquehanna International Group | finance | A | fast | 3/5 | high-pressure, competitive | unlimited | N | $130k (est.) | N | est. |
+| **59** | SpaceX | aerospace | A | fast | 3/5 | high-pressure, mission-critical | unlimited | N | $120k (est.) | N | est. |
 | **59** | Tempus | healthtech | A | fast | 3/5 | precision medicine, data-hungry, driven | unlimited | N | $125k (est.) | N | seed |
 | **58** | Cadence | semiconductors | B | moderate | 4/5 | EDA workhorse, stable engineering | 15+ | Y: winter shutdown | $120k (est.) | N | seed |
 | **58** | Uber | big tech | B | fast | 3/5 | ops-intense, matured post-2020 | unlimited | N | $170k | N | seed |
 | **57** | Eli Lilly | pharma | B | moderate | 4/5 | hottest pharma, GLP-1 boom, investing | 20+ | Y: year-end | $115k (est.) | Tech@Lilly rotational | seed |
+| **56** | 3RedPartners | AI/DS | B | fast | 4/5 | Innovative, collaborative, growth-focused | unlimited | N | $120k (est.) | N | est. |
+| **56** | Helix Electric | energy | B | fast | 4/5 | collaborative, innovative | unlimited | N | $120k (est.) | N | est. |
 | **56** | Hello Fresh | food tech | B | fast | 4/5 | collaborative, growth-focused | 25 | N | $120k (est.) | N | est. |
 | **56** | Motorola Solutions | AI/DS | B | fast | 4/5 | Innovative, collaborative, mission-driven | 25 | N | $120k (est.) | N | est. |
 | **53** | Johnson & Johnson | pharma/med | B | deliberate | 5/5 | credo-driven, patient-first, corporate | 20+ | Y: winter shutdown (most sites) | $110k (est.) | TLDP (Technology Leadership Development Program) | seed |
@@ -99,13 +115,18 @@ _Scored 0–100 against your criteria: elite AI/DS prestige + new-grad pay + fas
 | **49** | Oscar Health | healthtech | B | moderate | 4/5 | insurtech, mission-y, NY energy | unlimited | N | $130k (est.) | N | seed |
 | **49** | Scale AI | ai_lab | A | fast | 2/5 | grind-forward, young, sharp elbows | unlimited | N | $190k (est.) | N | seed |
 | **48** | Amazon | big tech | A | fast | 2/5 | ownership, frugal, oncall-heavy | 15+ | N | $178k | N | seed |
+| **48** | Garmin | IoT/Consumer Electronics | B | moderate | 4/5 | Innovative, collaborative, balanced | 25 | N | $120k (est.) | N | est. |
 | **48** | Palantir | big tech / gov | A | fast | 2/5 | deployed, ownership, mission-polarizing | unlimited | N | $180k | N | seed |
 | **48** | Whatnot | e-commerce | B | fast | 3/5 | collaborative, fast-paced | 25 | N | $100k (est.) | N | est. |
 | **47** | Pfizer | pharma | B | deliberate | 4/5 | post-COVID prestige, digital push | 20+ | Y: holiday shutdown | $105k (est.) | Digital Rotational Program | seed |
 | **46** | Morgan Stanley | finance | A | deliberate | 3/5 | slow, bureaucratic, high-pressure | 25 | N | $140k (est.) | N | est. |
 | **46** | Schweitzer Engineering Laboratories (SEL) | industrial automation | B | moderate | 4/5 | collaborative, focused on reliability | 25 | N | $110k (est.) | N | est. |
+| **45** | Comcast | telecom | B | moderate | 3/5 | corporate, slow-moving | unlimited | N | $135k (est.) | N | est. |
+| **45** | Western Union | fintech | B | moderate | 3/5 | collaborative, process-driven | 25 days | N | $135k (est.) | N | est. |
+| **44** | CVS Health | healthcare | B | moderate | 3/5 | slow, bureaucratic, work-heavy | unlimited | N | $130k (est.) | N | est. |
 | **44** | Dassault Systèmes | CAD/CAM/PLM | B | moderate | 3/5 | Collaborative, structured, focused | unlimited | N | $130k (est.) | N | est. |
 | **43** | CooperVision | healthcare tech | B | moderate | 3/5 | collaborative, mission-driven | 25 | N | $120k (est.) | N | est. |
+| **43** | Esri | GIS | B | moderate | 3/5 | Collaborative, mission-driven | 25 | N | $120k (est.) | N | est. |
 | **43** | Humana | healthcare | B | moderate | 3/5 | collaborative, mission-driven | unlimited | N | $120k (est.) | N | est. |
 | **43** | JPMorgan Chase | bank | B | moderate | 3/5 | scale, legacy+modern mix, hierarchical | 22+ | N | $125k | SEP (Software Engineer Program) | seed |
 | **43** | McKinsey & Company | consulting | B | moderate | 3/5 | fast-paced but bureaucratic | unlimited | N | $120k (est.) | N | est. |
@@ -124,17 +145,26 @@ _Scored 0–100 against your criteria: elite AI/DS prestige + new-grad pay + fas
 | **35** | General Dynamics Information Technology | defense | B | deliberate | 3/5 | bureaucratic, slow-moving | unlimited | N | $120k (est.) | N | est. |
 | **35** | Peraton | defense | B | deliberate | 3/5 | Bureaucratic, slow-moving | unlimited | N | $120k (est.) | N | est. |
 | **35** | Procter & Gamble | CPG | B | deliberate | 3/5 | Slow, process-heavy, team-oriented | 25 | N | $120k (est.) | N | est. |
+| **35** | Prudential Financial | Finance | B | deliberate | 3/5 | Conservative, process-driven | 25 | N | $125k (est.) | N | est. |
+| **35** | Royal Bank of Canada | banking | B | deliberate | 3/5 | slow, process-driven | 25 | N | $125k (est.) | N | est. |
 | **33** | Anchor General Insurance Agency | Insurance | C | moderate | 3/5 | Slow-paced, bureaucratic | 25 | N | $100k (est.) | N | est. |
 | **33** | Edelman | PR/Marketing | C | moderate | 3/5 | Collaborative but corporate | unlimited | N | $100k (est.) | N | est. |
 | **33** | Lockheed Martin | defense | B | deliberate | 3/5 | bureaucratic, slow-moving | 25 | N | $110k (est.) | N | est. |
 | **33** | Milwaukee Tool | hardware | C | moderate | 3/5 | slow-paced engineering, minimal AI/DS focus | 25 | N | $100k (est.) | N | est. |
+| **33** | Nidec | industrial automation | C | moderate | 3/5 | Engineering-focused, collaborative | 25 | N | $100k (est.) | N | est. |
 | **33** | State Farm | insurance | B | deliberate | 3/5 | Conservative, process-driven | 25 | N | $110k (est.) | N | est. |
 | **32** | Northrop Grumman Australia | defense | B | deliberate | 3/5 | Bureaucratic, slow-paced | 20 | N | $105k (est.) | N | est. |
+| **26** | Arbella Insurance Group | Insurance | C | deliberate | 3/5 | Bureaucratic, slow-moving | 25 | N | $110k (est.) | N | est. |
 | **26** | Chevron | energy | C | deliberate | 3/5 | slow, bureaucratic, risk-averse | 25 | N | $110k (est.) | N | est. |
+| **25** | BlueCross BlueShield of South Carolina | healthcare | C | deliberate | 3/5 | regulatory, process-heavy | 25 | N | $100k (est.) | N | est. |
+| **25** | Lincoln Financial | insurance | C | deliberate | 3/5 | slow, bureaucratic, risk-averse | 25 | N | $100k (est.) | N | est. |
 | **24** | Isuzu North America | automotive | C | deliberate | 3/5 | slow-moving, traditional | 25 | N | $95k (est.) | N | est. |
+| **24** | S&C Electric Company | energy | C | deliberate | 3/5 | slow, legacy infrastructure focus | 20 | N | $95k (est.) | N | est. |
 | **23** | Aspen Skiing Company | tourism | C | deliberate | 3/5 | slow-paced, seasonal work | unlimited | N | $75k (est.) | N | est. |
 | **23** | City of Philadelphia | government | C | deliberate | 3/5 | slow-moving, bureaucratic | 20 | N | $75k (est.) | N | est. |
 | **23** | North Carolina Department of Agriculture and Consumer Services | government | C | deliberate | 3/5 | bureaucratic, slow-moving | 20 | N | $70k (est.) | N | est. |
+| **23** | Texas A&M University - College Station | education | C | deliberate | 3/5 | academic, structured, collaborative | unlimited | N | $85k (est.) | N | est. |
+| **23** | Texas A&M University System | education | C | deliberate | 3/5 | academia, slow-paced, research-focused | 20 | N | $90k (est.) | N | est. |
 | **23** | University of Rochester Advancement | education | C | deliberate | 3/5 | slow, bureaucratic, not innovative | 20 | N | $70k (est.) | N | est. |
 | **5** | Westinghouse Electric Company | nuclear energy | C | deliberate | 2/5 | regulatory compliance focus | unlimited | N | $100k (est.) | N | est. |
 | **5** | Wilson Elser | insurance | C | deliberate | 2/5 | regulatory compliance focus | unlimited | N | $100k (est.) | N | est. |
@@ -142,4 +172,4 @@ _Scored 0–100 against your criteria: elite AI/DS prestige + new-grad pay + fas
 | **3** | Dollar Tree Distribution, Inc. | retail | C | deliberate | 2/5 | slow, bureaucratic, low innovation | 20 | N | $85k (est.) | N | est. |
 | **3** | Newport News Shipbuilding, A Division of HII | shipbuilding | C | deliberate | 2/5 | slow, bureaucratic, risk-averse | 25 | N | $85k (est.) | N | est. |
 
-_137 dossiers. Ask for any company with a `culture <company>` comment on an alert issue._
+_167 dossiers. Ask for any company with a `culture <company>` comment on an alert issue._

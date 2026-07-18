@@ -38,11 +38,15 @@ every ~30 min (GitHub Actions cron)
 │     → catches postings minutes-to-hours after they go live,
 │       days before they show up anywhere else
 │
-├─ 4. RANK: hard gates (no senior/intern/PhD/non-US/3+ yrs) then a scored,
-│     Shams rule: marquee companies (MANGA, big AI labs, elite pharma/medtech
-│     — profile.yaml marquee_companies) and $150k+ postings alert without
-│     needing explicit new-grad wording; everyone else needs entry evidence.
-│     auditable rubric: role fit + sector fit + freshness + learned taste.
+├─ 4. RANK: hard gates (no senior/intern/PhD/non-US/3+ yrs/numeric levels)
+│     then a scored, auditable rubric: role fit + sector fit + freshness +
+│     learned taste. Shams rule v2: marquee companies (MANGA, big AI labs,
+│     elite pharma/medtech/wearables — profile.yaml marquee_companies),
+│     $150k+ postings, and priority-sector engineering roles (healthtech)
+│     alert without explicit new-grad wording — but FIELD FIT outranks all
+│     of it: off-field titles (safeguards/policy/sales/PM/...) and
+│     mid-level titles (II/L4) go dashboard-only, never alerts. Rule bumps
+│     re-gate the stored jobs automatically (score.RULES_VERSION).
 │     Optional Claude re-rank + per-job application angle (add ANTHROPIC_API_KEY).
 │
 └─ 5. DELIVER
@@ -139,8 +143,9 @@ repo, then locally (free, private) generates culture dossiers, re-ranks
 recent jobs, runs the weekly company scout, and runs the **quality pass** —
 re-checks alert-worthy postings' links (dead → closed everywhere) and has
 the LLM verify each is really new-grad and really a technical role
-(verified-bad → demoted with the reason logged; marquee companies are never
-alert-suppressed by a verdict) — then pushes the enriched state back. The cloud crawler never depends on the Mac — the Mac
+(verified-bad → demoted with the reason logged, marquee included since
+DECISIONS #31), grades any job descriptions you pasted into the platform's
+Role-fit tab — then pushes the enriched state back. The cloud crawler never depends on the Mac — the Mac
 just upgrades whatever it finds when awake. Requires `git push` auth on the
 Mac (`brew install gh && gh auth login`). Logs: `~/.jobradar/logs/enrich.log`.
 The companion releases the model from memory after every request; confirm with
@@ -148,9 +153,13 @@ The companion releases the model from memory after every request; confirm with
 
 Optional upgrades:
 - `ANTHROPIC_API_KEY` secret → Claude does the enrichment in the cloud too
-  (works alongside or instead of the Mac). Free-tier alternative: a Google AI
-  Studio key via `LLM_BASE_URL`/`LLM_API_KEY`/`LLM_MODEL` secrets pointed at
-  Gemini's OpenAI-compatible endpoint.
+  (works alongside or instead of the Mac). Free-tier alternatives via the
+  `LLM_BASE_URL`/`LLM_API_KEY`/`LLM_MODEL` secrets (rate limits are handled —
+  the client retries with Retry-After): NVIDIA NIM
+  (`https://integrate.api.nvidia.com/v1` + an `nvapi-…` key) or Google AI
+  Studio (`https://generativelanguage.googleapis.com/v1beta/openai` + a free
+  key). **Step-by-step runbook: [docs/AI_SETUP.md](docs/AI_SETUP.md)** —
+  the AI layer is currently OFF in the cloud until one of these is added.
 - `GOOGLE_CSE_KEY` + `GOOGLE_CSE_ID` (free: [programmablesearchengine.google.com](https://programmablesearchengine.google.com)
   → create engine searching `linkedin.com/posts`, then get an API key at
   [developers.google.com/custom-search](https://developers.google.com/custom-search/v1/introduction))

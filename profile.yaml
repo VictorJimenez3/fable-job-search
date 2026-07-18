@@ -6,6 +6,10 @@ candidate:
   github: VictorJimenez3
   grad_year: 2026
   level: new_grad          # gates out senior/staff/manager/intern automatically
+  # Set true if you need visa sponsorship: postings whose scraped text says
+  # "no sponsorship / citizens only" then drop off alerts (dashboard keeps
+  # them, with the reason). Either way the flag is shown per job.
+  needs_sponsorship: false
   narrative: >
     Graduating senior targeting full-time new-grad roles in AI/ML engineering,
     software engineering, and data science. Strongest interest in healthcare /
@@ -42,7 +46,7 @@ sectors:
   other: 0
 
 bonuses:
-  explicit_new_grad_title: 8   # "new grad" / "university grad" / "2026" in title
+  explicit_new_grad_title: 12  # "new grad" / "university grad" / "2026" in title — the top of the board belongs to these
   fresh_24h: 12
   fresh_72h: 6
   fresh_7d: 2
@@ -60,11 +64,21 @@ thresholds:
   max_posting_age_days: 10   # older than this when first seen → never alerted (stale)
   pay_bank: 150000 # salary at/above this + a passing score → alert even without new-grad wording
 
-# The Shams rule: a blockbuster gets announced no matter what. Roles at these
-# marquee employers alert whenever they pass the hard gates (senior / intern /
-# clearance / 3+ yrs / non-US still never alert) and clear the score
-# threshold — explicit new-grad wording is NOT required for them. Everyone
-# else needs new-grad evidence, an aggregator listing, or a pays-bank salary.
+# Priority sectors (DECISIONS #32): a role-fit title (matches a roles bucket)
+# at a company in one of these sectors is alert-eligible even without explicit
+# new-grad wording — most ATS postings carry no description to prove it, which
+# is how WHOOP's roles kept missing the alert issue. Off-field / mid-level
+# title demotions and LLM quality verdicts still apply on top.
+priority_sectors:
+  - healthtech
+
+# The Shams rule (v2, DECISIONS #31): a blockbuster skips the new-grad-wording
+# requirement — but no longer skips field fit. Roles at these marquee
+# employers alert when they pass the hard gates (senior / intern / clearance /
+# 3+ yrs / non-US), aren't off-field or mid-level titles, and clear the score
+# threshold. Everyone else needs new-grad evidence, an aggregator listing, a
+# pays-bank salary, or a priority-sector fit.
+# Keep in sync with S.marquee in webapp/index.html (and its docs/platform copy).
 marquee_companies:
   # big tech / MANGA
   - Meta
@@ -88,6 +102,12 @@ marquee_companies:
   - Medtronic
   - Intuitive Surgical
   - Stryker
+  # sensors / wearables / med devices — Victor's sweet spot (added 2026-07-16;
+  # safe now that marquee no longer bypasses field fit)
+  - WHOOP
+  - Oura
+  - Dexcom
+  - Abbott
 
 llm:
   # Provider resolution (radar/llm.py): ANTHROPIC_API_KEY -> Claude;

@@ -18,7 +18,7 @@ from .brief import rerank
 from .config import env, profile, seeds
 from .digest import write_outputs
 from .models import Job, norm
-from .score import gates, score
+from .score import RULES_VERSION, explicit_new_grad, gates, regate, score
 from .sector import infer
 from .sources import aggregators, hn
 from .sources.ats import FETCHERS
@@ -87,6 +87,18 @@ def _fetch_ats(registry: dict, disabled: set[str]) -> tuple[list[Job], dict]:
     return jobs, {"companies_polled": len(entries), "ok": ok, "failed": fail}
 
 
+def scrub_glyph_companies(jobs_state: dict) -> int:
+    """Drop records whose employer is a scraped continuation glyph ("↳",
+    pre-2026-07 jobright parses) — unidentifiable, and their re-crawled twins
+    exist under the real company name (different id). Runs every crawl;
+    idempotent and cheap once the backlog is gone."""
+    corrupt = [k for k, r in jobs_state.items()
+               if r.get("company", "").strip() in {"↳", "&#8627;", "&#x21B3;", ""}]
+    for k in corrupt:
+        del jobs_state[k]
+    return len(corrupt)
+
+
 def crawl() -> int:
     t0 = time.time()
     now = int(t0)
@@ -96,6 +108,12 @@ def crawl() -> int:
     registry = state.companies()
     discovery.seed_registry(registry, seeds())
     jobs_state = state.jobs()
+    dropped_glyphs = scrub_glyph_companies(jobs_state)
+    if dropped_glyphs:
+        print(f"hygiene: dropped {dropped_glyphs} glyph-company record(s)")
+    n_regated = regate(jobs_state)
+    if n_regated:
+        print(f"re-gate: rules v{RULES_VERSION} flipped alert_ok on {n_regated} stored job(s)")
     fb = state.feedback()
     seed_sectors = {norm(s["name"]): s.get("sector", "other") for s in seeds()}
 
@@ -125,16 +143,26 @@ def crawl() -> int:
         if jid in seen_this_run or jid in jobs_state:
             continue
         seen_this_run.add(jid)
+        if not j.sector:
+            j.sector = infer(j.company, seed_sectors)  # before gates: priority-sector path
         keep, alert_eligible, reasons = gates(j)
         if not keep:
             dropped += 1
             continue
-        if not j.sector:
-            j.sector = infer(j.company, seed_sectors)
         j.alert_ok = alert_eligible
         score(j, fb, now)
         j.score_reasons += reasons
         new_jobs.append(j)
+
+    # ---- posting scrape: real description text, no LLM needed ----
+    from .posting import scrape_pass
+    eightfold_domains = {norm(e.get("name", "")): (e.get("extra") or {}).get("domain")
+                         for e in registry.values()
+                         if e.get("ats") == "eightfold" and (e.get("extra") or {}).get("domain")}
+    pstats = scrape_pass(new_jobs, jobs_state, eightfold_domains, now)
+    if pstats:
+        print(f"posting scrape: {pstats['inline']} inline, {pstats['fetched']} fetched, "
+              f"{pstats['demoted']} demoted, {pstats['closed']} closed")
 
     # ---- optional LLM pass on borderline/alert candidates ----
     thr = p["thresholds"]
@@ -156,6 +184,8 @@ def crawl() -> int:
     for j in new_jobs:
         rec = j.to_record()
         rec["first_seen"] = now
+        rec["rules_v"] = RULES_VERSION
+        rec["explicit_new_grad"] = explicit_new_grad(j.title)
         jobs_state[j.id] = rec
     cutoff = now - 120 * 86400
     jobs_state = {k: v for k, v in jobs_state.items() if v.get("first_seen", now) >= cutoff}
@@ -266,9 +296,28 @@ def enrich() -> int:
     # quality pass: link liveness + new-grad/role-fit verification (cached
     # verdicts re-applied first, since score() above rebuilds from scratch)
     from . import quality
-    reapplied, verified = quality.run(jobs_state)
+    registry = state.companies()
+    eightfold_domains = {norm(e.get("name", "")): (e.get("extra") or {}).get("domain")
+                         for e in registry.values()
+                         if e.get("ats") == "eightfold" and (e.get("extra") or {}).get("domain")}
+    reapplied, verified = quality.run(jobs_state, domains=eightfold_domains)
     print(f"enrich: quality pass re-applied {reapplied} verdict(s), "
           f"verified {verified} new job(s)")
+
+    # JDs pasted into the platform's Role-fit tab (read-only here — the
+    # webapp owns web_state.json). jd_sha idempotency means unchanged pastes
+    # cost nothing on later cycles.
+    web = state.load("web_state.json", {})
+    pasted = 0
+    pasted_limit = int(env("RADAR_PASTED_LIMIT", "10"))
+    for jid, w in (web.get("jobs") or {}).items():
+        if pasted >= pasted_limit:
+            break
+        rec = jobs_state.get(jid)
+        if rec and (w.get("jd") or "").strip():
+            pasted += quality.verify_pasted(rec, w["jd"])
+    if pasted:
+        print(f"enrich: graded {pasted} pasted JD(s) from the platform")
     state.save("jobs.json", jobs_state)
     registry = state.companies()
     runs = state.load("runs.json", [])
@@ -286,8 +335,22 @@ def enrich() -> int:
         registry = state.companies()
         found = disc.llm_scout(registry)
         state.save("companies.json", registry)
-        state.save("scout.json", {"last_run": now})
+        scout["last_run"] = now
+        state.save("scout.json", scout)
         print(f"enrich: scout queued {found} company candidate(s) for probing")
+
+    # monthly registry hygiene: retry dead boards, prune stale invalids,
+    # park duplicate employer entries (no LLM involved)
+    if now - scout.get("last_hygiene", 0) >= 30 * 86400:
+        from . import discovery as disc
+        registry = state.companies()
+        stats = disc.hygiene(registry, now)
+        state.save("companies.json", registry)
+        scout["last_hygiene"] = now
+        state.save("scout.json", scout)
+        print(f"enrich: registry hygiene — {stats['dead_retried']} dead retried, "
+              f"{stats['invalid_pruned']} stale invalids pruned, "
+              f"{stats['dups_parked']} duplicate entries parked")
     return 0
 
 
@@ -392,6 +455,44 @@ def marquee_backfill() -> int:
     return 0
 
 
+def regate_cmd() -> int:
+    """Apply the current gate rules (score.RULES_VERSION) to stored jobs.
+
+    The scheduled crawl does this automatically; the command exists for
+    local dry runs (point RADAR_STATE_DIR at a scratch copy) and manual
+    repairs. Rewrites jobs.json and the generated docs.
+    """
+    jobs_state = state.jobs()
+    flipped = regate(jobs_state)
+    state.save("jobs.json", jobs_state)
+    registry = state.companies()
+    runs = state.load("runs.json", [])
+    alert_history = state.load("alert_history.json", [])
+    write_outputs(jobs_state, registry, runs, alert_history)
+    demoted = sum(1 for r in jobs_state.values()
+                  if any(f"re-gate v{RULES_VERSION}" in s and "dashboard only" in s
+                         for s in r.get("score_reasons", [])))
+    print(f"regate: rules v{RULES_VERSION} flipped {flipped} job(s) "
+          f"({demoted} demoted to dashboard), docs refreshed")
+    return 0
+
+
+def repair_feedback() -> int:
+    """One-time repair: drop learned token boosts that FEEDBACK_STOPWORDS now
+    filters at read time (business/marketing/product/... plus location noise).
+    Documented repair per CLI_HANDOFF — feedback.json is otherwise generated."""
+    from .score import FEEDBACK_STOPWORDS
+    fb = state.feedback()
+    tokens = fb.get("token_boosts", {})
+    removed = sorted(t for t in tokens if t in FEEDBACK_STOPWORDS)
+    for t in removed:
+        del tokens[t]
+    state.save("feedback.json", fb)
+    print(f"repair-feedback: removed {len(removed)} stopworded token boost(s)"
+          + (f": {', '.join(removed)}" if removed else ""))
+    return 0
+
+
 def web_action() -> int:
     """Handle a platform repository_dispatch: the website's track/applied
     buttons fire {action, id, url, company} and land here (~1 min later the
@@ -436,7 +537,8 @@ def main() -> None:
                                         "strategist", "notion-verify", "email-watch", "email-verify",
                                         "migrate-checkbox-applied", "promote-shortlist",
                                         "marquee-backfill", "reconcile-checkboxes",
-                                        "daily-best", "master-board", "web-action", "enrich"])
+                                        "daily-best", "master-board", "web-action", "enrich",
+                                        "regate", "repair-feedback"])
     args = ap.parse_args()
     if args.command == "crawl":
         sys.exit(crawl())
@@ -480,6 +582,10 @@ def main() -> None:
         sys.exit(web_action())
     elif args.command == "enrich":
         sys.exit(enrich())
+    elif args.command == "regate":
+        sys.exit(regate_cmd())
+    elif args.command == "repair-feedback":
+        sys.exit(repair_feedback())
 
 
 if __name__ == "__main__":

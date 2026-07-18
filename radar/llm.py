@@ -16,11 +16,34 @@ or not at all — without any caller caring which.
 """
 from __future__ import annotations
 
+import time
+
 import requests
 
 from .config import env, profile
 
 ANTHROPIC_API = "https://api.anthropic.com/v1/messages"
+
+_RETRY_STATUSES = {429, 500, 503}
+_MAX_RETRIES = 2
+
+
+def _post_with_retry(url: str, *, timeout: int, json: dict, headers: dict | None = None):
+    """POST with Retry-After-aware backoff on 429/500/503 — free tiers
+    (NVIDIA NIM, Google AI Studio) rate-limit per minute, and the quality
+    pass makes up to 25 sequential calls; without this a single 429 burns
+    one of a job's two verification attempts permanently."""
+    r = requests.post(url, timeout=timeout, json=json, headers=headers)
+    for _ in range(_MAX_RETRIES):
+        if r.status_code not in _RETRY_STATUSES:
+            break
+        try:
+            wait = min(30, int(float(r.headers.get("Retry-After") or 5)))
+        except ValueError:
+            wait = 5
+        time.sleep(max(1, wait))
+        r = requests.post(url, timeout=timeout, json=json, headers=headers)
+    return r
 
 
 def provider() -> str | None:
@@ -68,7 +91,7 @@ def complete(prompt: str, max_tokens: int = 2000, timeout: int = 180,
     p = provider()
     try:
         if p == "anthropic":
-            r = requests.post(ANTHROPIC_API, timeout=timeout, json={
+            r = _post_with_retry(ANTHROPIC_API, timeout=timeout, json={
                 "model": profile()["llm"]["model"],
                 "max_tokens": max_tokens,
                 "messages": [{"role": "user", "content": prompt}],
@@ -91,13 +114,13 @@ def complete(prompt: str, max_tokens: int = 2000, timeout: int = 180,
                 }
                 if json_mode:
                     payload["format"] = "json"
-                r = requests.post(ollama_url, timeout=timeout, json=payload)
+                r = requests.post(ollama_url, timeout=timeout, json=payload)  # local: no retry needed
                 r.raise_for_status()
                 return _strip_thinking((r.json().get("message") or {}).get("content") or "") or None
             headers = {"Content-Type": "application/json"}
             if env("LLM_API_KEY"):
                 headers["Authorization"] = f"Bearer {env('LLM_API_KEY')}"
-            r = requests.post(f"{base}/chat/completions", timeout=timeout, json={
+            r = _post_with_retry(f"{base}/chat/completions", timeout=timeout, json={
                 "model": model,
                 "max_tokens": max_tokens,
                 "messages": [{"role": "user", "content": prompt}],

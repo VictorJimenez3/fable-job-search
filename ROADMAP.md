@@ -33,16 +33,58 @@ score/alert adjusted with logged reasons — never silently deleted; marquee
 companies are never alert-suppressed by a verdict). ~15 jobs verified per
 cycle, aggregator links first. Still open from this cluster:
 
-- **SPA-host coverage** — Workday/Eightfold/Oracle postings are JS shells a
-  plain GET can't read; they're skipped today (their liveness is re-confirmed
-  by the ATS poll anyway). Fetching their posting text via the ATS JSON APIs
-  would let the LLM verdict cover them too.
-- **Free cloud fallback** — a Gemini free-tier key via `LLM_BASE_URL` would
-  run the same pass when the Mac is asleep for days.
-- **Data hygiene (no LLM).** Some jobright rows come in with company `"↳"`
-  (a scraped continuation glyph). Parse fix + one-time state repair.
+- **SPA-host coverage** — ✅ SHIPPED 2026-07-16 (`quality.fetch_posting_spa`,
+  DECISIONS #34): Workday (wday/cxs job JSON), Oracle ORC (requisition
+  details REST), and Eightfold (apply/v2 API, careers domain from the
+  registry) posting text now feeds the LLM verdict instead of being
+  skipped — ~480 alert-worthy jobs gained coverage. The paste-in JD box
+  (DECISIONS #33) remains the fallback for anything else. First live cycle
+  runs on the Mac companion / CI (this was built in a sandbox whose egress
+  can't reach ATS hosts) — if a shape drifted, jobs degrade to "unclear"
+  (never suppressed) at the usual 2-attempt cap.
+- **Free cloud fallback** — ✅ documented + hardened 2026-07-16: any
+  OpenAI-compatible free tier (NVIDIA NIM, Google AI Studio) works via the
+  `LLM_BASE_URL`/`LLM_API_KEY`/`LLM_MODEL` secrets that enrich.yml already
+  wires, and `llm.complete()` now retries 429/500/503 with Retry-After.
+  Remaining human step: Victor creates a free key and adds the three repo
+  secrets (see docs/CLI_HANDOFF.md "Needs a human").
+- **Data hygiene (no LLM)** — ✅ SHIPPED 2026-07-16: jobright parser drops
+  unresolvable continuation rows, and every crawl scrubs glyph-company
+  records from state (`scrub_glyph_companies` — 101 in the backlog, all
+  alert_ok, gone on the next crawl).
 
-## CV auto-tailoring (committed direction, blocked on the full CV)
+## Posting scraping + deterministic facts — ✅ SHIPPED 2026-07-17 (DECISIONS #35)
+
+Every crawl now reads real posting text (Greenhouse/Ashby text comes free
+in the list call; a budgeted fetch covers the rest incl. SPA hosts) and
+extracts, with zero LLM/keys: visa **sponsorship** (yes/no/unknown + the
+phrase), **years of experience** required (internships-count detection
+included), dead links closed crawl-side. Shown as row tags, a drawer
+"Posting facts" card, and in alert-issue lines; `candidate.needs_sponsorship`
+in profile.yaml turns no-sponsorship postings into dashboard-only.
+
+## Posting ↔ profile RAG (to-do, parked — Victor 2026-07-17: "to do list that for sure")
+
+Embed posting text and Victor's profile/CV bullets, use similarity as a
+ranking signal ("how related is this role to what I've actually done").
+Local-first: Ollama embedding models on the Mac are free (e.g.
+nomic-embed-text), store vectors next to the quality cache, keep the score
+deterministic-auditable by logging the similarity as a reason line. Needs
+the scraped posting text (now shipping) + `CV/` content (Mac-only,
+DECISIONS #29). Park until the scrape pass has filled a few weeks of text.
+
+## Ranking v2 + platform research tabs — ✅ SHIPPED 2026-07-16 (DECISIONS #31-33)
+
+Field fit and seniority now outrank the Shams rule (off-field/mid-level
+title demotions, LLM verdicts may suppress marquee, numeric-level hard
+gates); `priority_sectors: [healthtech]` alerts strong engineering titles
+without new-grad wording (the WHOOP fix); `regate()` re-applies rule bumps
+to stored jobs. The platform drawer leads with a Company tab (what they
+do), adds a Role-fit tab with the LLM posting verdict + paste-in JD
+grading, and builds LinkedIn search links with entry-level/date filters in
+the URL (links only — #16 stands). Search boxes keep focus while typing.
+
+## CV auto-tailoring — ⏸️ ON HOLD (Victor's call, 2026-07-16; direction unchanged)
 
 `CV/` now exists locally (gitignored — DECISIONS #29: personal documents
 never enter this public repo). Victor will flesh out `cv_full.tex` as the
@@ -85,5 +127,8 @@ never in Actions.
 ## Ops
 - **Calendar sync** — interview emails → Google Calendar holds.
 - **Weekly Notion rollup** — mirror the Monday memo into Job Search HQ.
-- **Registry hygiene job** — monthly: retry long-dead boards, prune 90-day
-  invalids, dedupe companies that appear under two ATSs.
+- **Registry hygiene job** — ✅ SHIPPED 2026-07-16 (`discovery.hygiene`,
+  monthly inside enrich): dead boards get a fresh probe cycle every 30 d,
+  non-seed 90-day invalids are pruned, and duplicate employer entries that
+  stopped producing while a sibling still does are parked as `dup`
+  (producers are never touched).
