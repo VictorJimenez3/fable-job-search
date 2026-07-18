@@ -3441,14 +3441,20 @@
   ],
   "posted_at": 1783549629,
   "posting": {
-   "analyzed_at": 1784408578,
+   "analyzed_at": 1784408599,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "we sponsor"
   },
   "quality": {
    "ai_deferred_at": 1784408578,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784408599,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Campus role for new grad",
+   "role_family": "other-technical",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -8082,8 +8088,9 @@
   "url": "https://jobs.lever.co/getwingapp/e21ef574-32f9-414d-bd43-fdceb5393bec"
  },
  "05e9058c150fcf9e": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784408702,
   "company": "Franklin Templeton",
   "description": "",
   "explicit_new_grad": true,
@@ -8094,6 +8101,11 @@
    "New York, New York, United States of America"
   ],
   "posted_at": 1783555200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784408702,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -8102,7 +8114,8 @@
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -14645,14 +14658,20 @@
   ],
   "posted_at": 1783900800,
   "posting": {
-   "analyzed_at": 1784408585,
+   "analyzed_at": 1784408652,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784408585,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784408652,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "2027 Graduate Program",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -21288,6 +21307,18 @@
    "United States-Utah-Roy, United States of America"
   ],
   "posted_at": 1783641600,
+  "posting": {
+   "analyzed_at": 1784408697,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 1,
+   "years_note": "minimum 1 year"
+  },
+  "quality": {
+   "ai_deferred_at": 1784408697,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -22653,8 +22684,9 @@
   "url": "https://boards.greenhouse.io/andurilindustries/jobs/5165026007?gh_jid=5165026007"
  },
  "0e8b5ff86c37d88d": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784408703,
   "company": "AMEWAS",
   "description": "",
   "explicit_new_grad": true,
@@ -22665,6 +22697,11 @@
    "Patuxent River, MD, United States"
   ],
   "posted_at": 1783555200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784408703,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -22673,7 +22710,8 @@
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -35126,12 +35164,12 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 75,
+  "score": 71,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:fintech +5",
-   "posted <72h +6",
+   "posted <7d +2",
    "title matches your history +4"
   ],
   "sector": "fintech",
@@ -63889,23 +63927,30 @@
   ],
   "posted_at": 1780351646,
   "posting": {
-   "analyzed_at": 1784408582,
+   "analyzed_at": 1784408622,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784408582,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784408622,
+   "live": true,
+   "new_grad": "no",
+   "reason": "2+ years experience required",
+   "role_family": "data",
+   "years_required": 2
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 79,
+  "score": 69,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "new-grad title +12",
-   "title matches your history +5"
+   "title matches your history +5",
+   "quality: wants 2+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "simplify",
@@ -63953,6 +63998,18 @@
    "Redmond, Washington"
   ],
   "posted_at": 1783641600,
+  "posting": {
+   "analyzed_at": 1784408698,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 0,
+   "years_note": "0–2 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784408698,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -74451,6 +74508,19 @@
    "7750 Wisconsin Ave, Bethesda, MD, 20814, US"
   ],
   "posted_at": 1783641600,
+  "posting": {
+   "analyzed_at": 1784408699,
+   "fetched": true,
+   "intern_counts": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 0,
+   "years_note": "0 – 3 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784408699,
+   "attempts": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -74668,6 +74738,18 @@
    "New York, New York, United States"
   ],
   "posted_at": 1783641600,
+  "posting": {
+   "analyzed_at": 1784408699,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 1,
+   "years_note": "1–3 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784408699,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -90162,14 +90244,20 @@
   ],
   "posted_at": 1783814400,
   "posting": {
-   "analyzed_at": 1784408587,
+   "analyzed_at": 1784408676,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784408587,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784408676,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, no experience required",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -131447,7 +131535,7 @@
   ],
   "posted_at": 1783728000,
   "posting": {
-   "analyzed_at": 1784408589,
+   "analyzed_at": 1784408692,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -131455,7 +131543,7 @@
    "years_note": "1+ years of experience"
   },
   "quality": {
-   "ai_deferred_at": 1784408589,
+   "ai_deferred_at": 1784408692,
    "attempts": 0
   },
   "remote": false,
@@ -142068,14 +142156,20 @@
   ],
   "posted_at": 1783900800,
   "posting": {
-   "analyzed_at": 1784408586,
+   "analyzed_at": 1784408659,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784408586,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784408659,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, 1+ years exp but new grad candidate can apply.",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
@@ -186225,14 +186319,20 @@
   ],
   "posted_at": 1783900800,
   "posting": {
-   "analyzed_at": 1784408586,
+   "analyzed_at": 1784408668,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784408586,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784408668,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for 2026",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -229880,6 +229980,16 @@
    "Arlington, USA"
   ],
   "posted_at": 1783728000,
+  "posting": {
+   "analyzed_at": 1784408693,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "ai_deferred_at": 1784408693,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -231054,14 +231164,20 @@
   ],
   "posted_at": 1783468800,
   "posting": {
-   "analyzed_at": 1784408579,
+   "analyzed_at": 1784408607,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784408579,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784408607,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "new grad role, no experience required",
+   "role_family": "other-technical",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -240456,6 +240572,15 @@
    "Philadelphia, PA"
   ],
   "posted_at": 1783728000,
+  "posting": {
+   "analyzed_at": 1784408694,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784408694,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -253358,6 +253483,9 @@
    "Huntsville, AL"
   ],
   "posted_at": 1783641600,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -278679,6 +278807,16 @@
    "Chula Vista, CA"
   ],
   "posted_at": 1783721276,
+  "posting": {
+   "analyzed_at": 1784408696,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "citizenship is required"
+  },
+  "quality": {
+   "ai_deferred_at": 1784408696,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -307760,7 +307898,7 @@
   ],
   "posted_at": 1783987200,
   "posting": {
-   "analyzed_at": 1784408583,
+   "analyzed_at": 1784408637,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship",
@@ -307769,18 +307907,25 @@
   },
   "quality": {
    "ai_deferred_at": 1784408583,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784408637,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required.",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 78,
+  "score": 68,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +8",
    "posted <72h +6",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -314450,13 +314595,19 @@
   ],
   "posted_at": 1783987200,
   "posting": {
-   "analyzed_at": 1784408584,
+   "analyzed_at": 1784408645,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784408584,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784408645,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -350655,7 +350806,7 @@
   ],
   "posted_at": 1784073600,
   "posting": {
-   "analyzed_at": 1784408582,
+   "analyzed_at": 1784408630,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 0,
@@ -350663,7 +350814,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784408582,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784408630,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0+ years exp.",
+   "role_family": "other-technical",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -352935,6 +353092,15 @@
    "1234 Market St, Philadelphia, PA 19107, USA"
   ],
   "posted_at": 1783728000,
+  "posting": {
+   "analyzed_at": 1784408695,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784408695,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -361744,7 +361910,7 @@
   ],
   "posted_at": 1782864000,
   "posting": {
-   "analyzed_at": 1784408581,
+   "analyzed_at": 1784408614,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -361753,18 +361919,25 @@
   },
   "quality": {
    "ai_deferred_at": 1784408581,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784408614,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 79,
+  "score": 69,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:big_tech +10",
    "you've engaged with SpaceX +6",
-   "title matches your history +3"
+   "title matches your history +3",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "big_tech",
   "source": "jobright",
@@ -370032,14 +370205,20 @@
   ],
   "posted_at": 1783814400,
   "posting": {
-   "analyzed_at": 1784408588,
+   "analyzed_at": 1784408684,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
    "ai_deferred_at": 1784408588,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784408684,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, 0+ years exp",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -381516,6 +381695,16 @@
    "San Jose, CA"
   ],
   "posted_at": 1783641600,
+  "posting": {
+   "analyzed_at": 1784408701,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "ai_deferred_at": 1784408701,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
