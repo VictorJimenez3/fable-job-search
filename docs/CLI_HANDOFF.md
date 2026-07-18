@@ -1,146 +1,79 @@
-# CLI handoff notes
+# CLI handoff — Chemical Engineering branch
 
-This repository is maintained across more than one coding CLI (including Claude
-and Codex). Keep the repository—not a chat transcript—as the shared source of
-truth.
+The repository, not chat history, is the shared source of truth across Codex,
+Claude Code, and local development.
 
-## Read first
+## Current state (2026-07-18)
 
-Before changing the radar, read these in order:
+- Active worktree/branch: `claude/cheme-intern-radar`.
+- The branch was stale and contained no ChemE implementation. It was merged
+  with the current production branch before the ChemE conversion.
+- Rules are now v3 and internship-first. Stored jobs remain intact; the first
+  crawl re-gates old open records and prevents tech/new-grad records from
+  continuing as alerts.
+- `profile.yaml` has a generic Chemical Engineering candidate and intentionally
+  sets `needs_sponsorship: true`. Identity and Notion option names require a
+  human review before account connection.
+- Aggregation uses the live Simplify Summer 2026 internship JSON feed. A stale
+  Summer 2027 community feed is defined for compatibility but disabled in the
+  profile. Direct polling is filtered to ChemE sectors and starts from the
+  curated seed file.
+- Workday endpoints in the seed were live-probed on 2026-07-18. Failed guessed
+  endpoints were not added.
+- The platform is ChemE/eligibility-first. `webapp/index.html` is canonical;
+  `docs/platform/index.html` must remain a byte-for-byte copy.
+- Learned taste is stored separately in `state/feedback_cheme.json`, so old
+  software-search clicks cannot boost ChemE results.
+- Generated state and docs still show the last production crawl until this
+  branch is activated and crawled. Do not hand-edit them to make screenshots
+  look current.
 
-0. [`CLAUDE.md`](../CLAUDE.md) — auto-loaded every session; the doc-update
-   mandate and house rules live there. Docs are part of every change.
-1. [`README.md`](../README.md) for the system's purpose and operational flow
-   (and [`TUTORIAL.md`](TUTORIAL.md) for how Victor actually uses it — keep it
-   current when user-facing behavior changes).
-2. [`DECISIONS.md`](../DECISIONS.md) for the deliberate architecture and trade-offs.
-3. [`profile.yaml`](../profile.yaml) for Victor's active search preferences and ranking thresholds.
-4. The relevant module and test under `radar/` and `tests/`.
+## Required activation outside the code
 
-## Keep these current
+GitHub schedules only the default branch. Make this branch the default or merge
+it into the default, enable Actions, run `tests`, and then run `radar` manually.
+For Vercel, set `RADAR_BRANCH=claude/cheme-intern-radar` unless deploying a
+merged default branch. For Pages, publish `/docs` from the active branch.
 
-- Update `README.md` when user-facing setup, commands, sources, delivery
-  channels, or operating behavior changes.
-- Add a dated entry to `DECISIONS.md` when making a non-obvious product or
-  architecture choice, especially one that trades recall for precision.
-- Update `profile.yaml` only for candidate preferences and ranking policy—not
-  implementation behavior.
-- Add or update tests for scoring gates, source parsing, state migration, or
-  output behavior that changes.
-- Do not hand-edit generated runtime outputs (`state/*.json`,
-  `docs/DASHBOARD.md`, or `docs/feed.xml`) except for a deliberate repair with
-  its reason documented in the commit/message. Crawls generate them.
+No connector was assumed to be configured. Verify rather than infer:
 
-## Current operational facts (2026-07-13)
+- `notion-verify` after adding `NOTION_TOKEN` and sharing the database;
+- `email-verify` after adding `EMAIL_ADDRESS`/`EMAIL_APP_PASSWORD`;
+- `enrich` after adding an LLM provider.
 
-- GitHub Actions is the production runtime; it uses Python 3.12. On Victor's
-  Mac, system Python is 3.9 but the repo's `.venv` has the dependencies —
-  run tests with `.venv/bin/python -m pytest tests/`. CI commits state every
-  ~30 min, so always `git pull --rebase` before pushing.
-- **Delivery surfaces, all live:** weekly alert issue (checkbox = track to
-  Notion as not-yet-applied), 📌 master board issue (every open alert-worthy
-  role, rewritten each crawl), 🏆 daily best-of issue, docs/DASHBOARD.md,
-  RSS, and the platform website. Twice-daily reconcile sweep guarantees no
-  checked box is ever lost.
-- **The platform has two permanent doors** (DECISIONS #27): Vercel
-  (job-radar-vmj-8946s-projects.vercel.app — GitHub OAuth, instant writes,
-  Victor's daily driver) and GitHub Pages
-  (victorjimenez3.github.io/fable-job-search/platform/ — tokenless, what
-  forks get). `webapp/index.html` is canonical; `docs/platform/index.html`
-  is a byte copy. Jobs tab shows posting age and sorts by best-match or
-  newest-first.
-- **Notion:** `NOTION_TOKEN` is set and working. Checkbox → entry with the
-  `stage_saved` status ("Waiting for a referral" in his DB); Victor promotes
-  manually, OR the **email autopilot** (DECISIONS #26, shipped 2026-07-13 by
-  an Opus session) advances Stage from lifecycle emails (applied/OA/
-  interview/rejected, forward-only, auto-close after 45 d silence) — that
-  path is coded and tested but **awaits the `EMAIL_ADDRESS` /
-  `EMAIL_APP_PASSWORD` secrets** (Gmail app password, see README §2).
-- **Scoring (rules v2, 2026-07-16, DECISIONS #31-32):** hard gates (now incl.
-  numeric levels: Engineer 3+/L5+/Level 3+/"Leader") + alert-eligibility
-  paths: aggregator listing, explicit new-grad wording, marquee
-  (`marquee_companies` incl. WHOOP/Oura/Dexcom/Abbott), $150k+ `pay_bank`,
-  or `priority_sectors` (healthtech + strong engineering title). Then
-  demotions that outrank ALL of those: `OFF_FIELD_RE` (safeguards/policy/
-  sales/PM/support/...) and `MIDLEVEL_RE` (II/L4/Engineer 2) → dashboard
-  only. LLM quality verdicts may suppress marquee alerts now. `regate()`
-  runs at the top of every crawl and re-applies rule bumps
-  (`score.RULES_VERSION`, records carry `rules_v` + `explicit_new_grad`)
-  to stored jobs; manual commands: `python -m radar.main regate` /
-  `repair-feedback`. The taste model filters `FEEDBACK_STOPWORDS`. The
-  marquee list is duplicated in `webapp/index.html` (`S.marquee`) — keep
-  both copies in sync.
-- **Posting scraping (DECISIONS #35, 2026-07-17):** every crawl runs
-  `posting.scrape_pass` — Greenhouse (`content=true`)/Ashby/Lever text is
-  analyzed inline, and up to `RADAR_SCRAPE_LIMIT` (20) postings/run are
-  fetched (SPA hosts via their JSON APIs) for new + stored alert-worthy
-  jobs. Extracted facts live in `rec["posting"]` (sponsorship / years_min /
-  intern_counts + matched phrases): 3+ scraped yrs → dashboard-only;
-  `candidate.needs_sponsorship: true` (profile.yaml, default false) also
-  demotes no-sponsorship postings. `RADAR_SCRAPE_DISABLE=1` kills the pass.
-  No LLM or secret involved.
-- **Local AI:** Mac companion installed (`~/.jobradar`, launchd
-  `com.jobradar.enrich`, every 2 h while awake) running Ollama `qwen3:30b`
-  with `format:"json"` forced (DECISIONS #20 — thinking models otherwise
-  burn the token budget). Each cycle: culture dossiers, re-score recent
-  jobs, weekly LLM company scout, the **quality pass**
-  (`radar/quality.py`, DECISIONS #30): link liveness + LLM new-grad/role-fit
-  verification, ~15 jobs/cycle, aggregator links first, verdicts cached on
-  the job record and re-applied after every re-score — and **pasted-JD
-  grading** (DECISIONS #33): JDs pasted into the platform's Role-fit tab
-  land in `state/web_state.json` and get a verdict next cycle. Knobs:
-  `RADAR_QUALITY_LIMIT`, `RADAR_QUALITY_DISABLE`, `RADAR_PASTED_LIMIT`.
-- **Free cloud LLM fallback (when the Mac sleeps):** `enrich.yml` (nightly)
-  already wires `LLM_BASE_URL` / `LLM_API_KEY` / `LLM_MODEL` secrets, and
-  `llm.complete()` retries 429/500/503 with Retry-After, so free
-  rate-limited tiers are safe. Two known-good configs:
-  NVIDIA NIM — `LLM_BASE_URL=https://integrate.api.nvidia.com/v1`,
-  `LLM_API_KEY=nvapi-…`, `LLM_MODEL=` any hosted instruct model (e.g.
-  `meta/llama-3.3-70b-instruct`); Google AI Studio —
-  `LLM_BASE_URL=https://generativelanguage.googleapis.com/v1beta/openai`,
-  `LLM_API_KEY=<AI Studio key>`, `LLM_MODEL=gemini-2.5-flash`. **Needs a
-  human:** only Victor can create a key and add the three repo secrets;
-  optionally bump enrich.yml's cron from nightly to every 6 h after that.
-- **Multi-user = fork-per-person** (DECISIONS #25, docs/FORKING.md). Owner
-  gates exist in three layers: workflow condition, Python handler, Vercel
-  backend. The Mac companion is fork-portable too: `JOBRADAR_REPO=<you>/<repo>`
-  on install.sh; run.sh derives the branch from the clone.
-- **`CV/` is local-only and gitignored** (DECISIONS #29) — never commit it
-  or anything derived from it; CV auto-tailoring is a Mac-companion feature.
-- **Next up — doable from any CLI/cloud session** (see ROADMAP.md):
-  run `python -m radar.main repair-feedback` once (cosmetic — the stopwords
-  already neutralize stale boosts at read time; do it in a checkout where
-  CI isn't racing you, i.e. right after a merge). Watch the first Mac/CI
-  enrich cycle after 2026-07-16 for the SPA-host quality pass
-  (`fetch_posting_spa` — built where ATS egress was blocked, so its first
-  live contact is that cycle; failures degrade to "unclear").
-- **Next up — needs Victor / the Mac:** **enable the AI layer — full
-  runbook in [`docs/AI_SETUP.md`](AI_SETUP.md)** (verified 2026-07-17:
-  no LLM secret is active in Actions — 0 records ever got an llm_note;
-  quality verdicts only appear when the Mac is awake — so cloud AI is
-  fully OFF until Victor creates one free key and adds the secrets; the
-  runbook also lists the queued AI work for the local session, incl. the
-  parked RAG plan). Email autopilot secrets
-  (`EMAIL_ADDRESS`/`EMAIL_APP_PASSWORD`) still pending. CV auto-tailoring
-  is **ON HOLD** (Victor's call, 2026-07-16) until `CV/cv_full.tex` is
-  fleshed out — Mac-only when it resumes (DECISIONS #29).
+## Implementation map
 
-## Safe handoff practice
+- `radar/score.py`: ChemE gates, role buckets, rules-v3 re-gating.
+- `radar/sector.py`: ChemE sector classification.
+- `radar/main.py`: source selection and registry-sector filtering.
+- `radar/posting.py`: deterministic sponsorship/experience facts.
+- `radar/quality.py`: optional LLM internship/role-family verification.
+- `radar/sources/aggregators.py`: internship feeds.
+- `radar/sources/ats.py`: internship-mode ATS behavior.
+- `profile.yaml`: candidate/ranking policy.
+- `data/companies_seed.yaml`: direct-employer starting registry.
+- `webapp/index.html`: platform UI; mirror after every edit.
 
-At the end of any material change, state:
+Internal keys such as `explicit_new_grad` and `quality.new_grad` remain only for
+backward-compatible state reads. New records also carry
+`explicit_internship`; user-facing language must say internship.
 
-1. What changed and why.
-2. Files changed.
-3. Validation run and its result (or why it could not run).
-4. Any configuration/secrets or GitHub-side action still required.
+## Non-negotiable maintenance rules
 
-Preserve unrelated working-tree changes. Do not assume a secret exists merely
-because the code references it.
+- Preserve deterministic reasons and demote uncertain-but-possibly-useful jobs
+  rather than silently deleting them.
+- Never infer sponsorship from silence.
+- Never scrape logged-in LinkedIn.
+- Never commit secrets or personal resume/application data.
+- Never hand-edit generated `state/*.json`, `docs/DASHBOARD.md`,
+  `docs/CULTURE.md`, or `docs/feed.xml`.
+- Run the full test suite before handoff.
+- Preserve unrelated working-tree changes and use a separate worktree when
+  branches have concurrent work.
 
-## Platform frontend/back end (added 2026-07-11)
+## Next work
 
-- `webapp/index.html` is the canonical platform page; `docs/platform/index.html`
-  must stay a byte-for-byte copy (`cp webapp/index.html docs/platform/index.html`)
-  — Pages serves the copy, Vercel serves webapp/ plus its `api/` functions.
-- Never put credentials in the frontend or repo. Auth = GitHub OAuth via the
-  Vercel backend (owner-only), or the tokenless prefilled-issue flow on Pages.
+The code branch is feature-complete for first activation. Remaining work is the
+human configuration/activation checklist plus the prioritized product backlog
+in `ROADMAP.md`, led by an official employer sponsorship-history evidence layer
+and academic-term/enrollment filters.

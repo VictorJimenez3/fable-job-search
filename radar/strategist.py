@@ -15,7 +15,7 @@ import requests
 
 from . import state
 from .llm import complete as llm_complete
-from .config import env, github_owner, github_repo
+from .config import env, github_owner, github_repo, profile
 
 API = "https://api.github.com"
 WEEK = 7 * 86400
@@ -74,7 +74,9 @@ def build_memo() -> str:
     week_alerts = [a for a in alert_history if now - a.get("alerted_at", 0) <= WEEK]
     week_applied = [a for a in applied if now - a.get("applied_at", 0) <= WEEK]
     fresh = [j for j in jobs.values() if j.get("posted_at") and now - j["posted_at"] <= WEEK]
-    ht_hiring = Counter(j["company"] for j in fresh if j.get("sector") == "healthtech")
+    weights = profile().get("sectors", {})
+    top_sector = max((s for s in weights if s != "other"), key=weights.get, default="other")
+    priority_hiring = Counter(j["company"] for j in fresh if j.get("sector") == top_sector)
     sector_heat = Counter(j.get("sector") or "other" for j in fresh)
 
     # Response rate analytics (last 3 weeks)
@@ -142,9 +144,9 @@ def build_memo() -> str:
         lines += [f"- **{a['company']}** — {a['title'][:70]} "
                   f"(applied {datetime.fromtimestamp(a['applied_at'], timezone.utc).strftime('%b %d')})"
                   for a in stale[:10]]
-    if ht_hiring:
-        lines += ["", "## 🏥 Healthtech hiring right now",
-                  ", ".join(f"**{c}** ({n})" for c, n in ht_hiring.most_common(10))]
+    if priority_hiring:
+        lines += ["", f"## 🧪 {top_sector.replace('_', ' ').title()} hiring right now",
+                  ", ".join(f"**{c}** ({n})" for c, n in priority_hiring.most_common(10))]
     if live:
         lines += ["", "## 🎯 Top open targets you haven't applied to"]
         lines += [f"- `{j['score']}` **{j['company']}** — [{j['title'][:70]}]({j['url']})"
@@ -159,8 +161,8 @@ def build_memo() -> str:
     memo = "\n".join(lines)
 
     narrative = llm_complete(
-        "You are a sharp, encouraging job-search strategist for a graduating CS senior "
-        "targeting new-grad AI/SWE/DS roles (healthtech first, big tech second). "
+        "You are a sharp, encouraging internship-search strategist for an undergraduate "
+        "chemical engineering student targeting US internships and co-ops. "
         "Based on this week's pipeline report, write a punchy 120-word coach's note: "
         "one observation, one priority for next week, one tactical tip. No preamble.\n\n" + memo,
         max_tokens=400)

@@ -1,134 +1,79 @@
-# Job Radar — user guide
+# Chemical Engineering Radar — user guide
 
-This is the manual for *using* the radar day to day. For how it's built, read
-[README.md](../README.md); for why it's built that way, [DECISIONS.md](../DECISIONS.md).
+The radar finds US internships and co-ops, ranks them for an undergraduate
+Chemical Engineering profile, and explains why each role is or is not a fit.
+It is designed to reduce opening ten tabs just to discover that a role wants
+three years of experience or explicitly refuses sponsorship.
 
-## What it is, in one paragraph
+## Start in the platform
 
-Every ~30 minutes, GitHub Actions crawls ~700 company job boards and the big
-new-grad aggregators, scores each posting against your preferences
-(profile.yaml), and delivers anything high-scoring as a checkbox line on a
-weekly GitHub issue that pushes to your phone. Checking a box puts the job in
-your Notion Applications tracker instantly (status "Not started"); you flip it
-to Applied in Notion when you actually apply. Your MacBook, when awake, runs a
-local AI every 2 hours to enrich what the cloud found. No servers, no fees —
-the repo itself is the database.
+The **Jobs** page is the daily workspace:
 
-## 🖥️ The Platform (start here)
+- filter by ChemE role family, sponsorship signal, minimum-experience signal,
+  status, sector, source, and score;
+- click a job title or **Details** to open fit and eligibility information;
+- use **Apply** to open the employer posting and track the application intent;
+- use **Save** when the role is interesting but not ready to apply;
+- search unfamiliar employers and find recruiter/alumni outreach links from
+  the job workspace.
 
-**https://victorjimenez3.github.io/fable-job-search/platform/** — the whole
-system as a website, refreshed automatically by every crawl:
+Sponsorship has three honest values:
 
-- **Jobs**: every role the radar has ever seen, searchable and filterable,
-  with score, salary, culture prestige, and the AI angle inline — plus
-  LinkedIn saved-search links with the entry-level + date filters already
-  in the URL.
-- **Pipeline**: Maybe → To apply → Applied lanes. "To apply"/"Applied" mirror
-  Notion exactly; "Maybe" is a scratch lane that lives on the platform only.
-- **Per-job workspace** (open ▸), four tabs: **Company** (what they do —
-  culture dossier, sector, research links) opens first; **Role fit** (why it
-  scored, the LLM posting verdict, and a paste box for job descriptions the
-  radar can't scrape — graded on the next enrich cycle); **Outreach**
-  (recruiter/alumni links, message templates pre-filled with the role,
-  saved conversations); **Notes**.
-- **Companies**: the whole registry with culture data and research links.
-- **AI**: what the local model has enriched, scout status, registry stats.
+- **sponsors**: the posting contains positive sponsorship/CPT/OPT language;
+- **no sponsorship**: the posting explicitly rules it out;
+- **unknown**: no reliable statement was found. Unknown is not treated as yes.
 
-Reading needs nothing. To make the buttons write (track → Notion, notes →
-repo), paste a fine-grained GitHub token once under **Settings** (Contents:
-read/write on this repo — create at github.com/settings/personal-access-tokens/new).
-GitHub checkboxes keep working exactly as before; both doors lead to the
-same tracker.
+Experience works the same way. A visible number comes from posting text; an
+unknown value means the parser did not find a trustworthy requirement.
 
-## The places you look
+## A practical application loop
 
-| Where | What you see | When to look |
-|---|---|---|
-| **"📌 Master board"** issue ([Issues tab](https://github.com/VictorJimenez3/fable-job-search/issues)) | Every open alert-worthy role in ONE place, best first — no bouncing between issues. Extra pages are in its comments; checkboxes work everywhere, and already-tracked jobs show pre-checked | When you sit down to browse/check jobs |
-| GitHub issue **"🎯 Job Radar alerts — week N"** | New high-scoring roles as they're found | When your phone buzzes (GitHub app push / email) |
-| **"🏆 Best of \<date\>"** issue | The day's top 10, posted each evening — GitHub emails it to you | Evening email |
-| **Notion "2026 Applications"** | Every job you checked, plus your real pipeline | When applying / updating statuses |
-| [docs/DASHBOARD.md](DASHBOARD.md) | Everything decent the radar has seen, ranked — not just alert-worthy | Browsing for more options |
-| [docs/feed.xml](feed.xml) | Same alerts as RSS | Only if you use a feed reader |
+1. Filter to a role family such as **Chemical / Process** or
+   **Bioprocess / Pharma**.
+2. Review sponsorship, experience, location, freshness, and score before
+   opening the posting.
+3. Open **Details** for score reasons and the source evidence.
+4. Click **Apply**, tailor the resume yourself, and submit on the employer site.
+   The radar never auto-submits applications.
+5. Mark the job Applied in the platform or Notion. Notes and outreach remain
+   attached to the job record.
 
-Plus a **Monday strategy memo** (its own GitHub issue): pipeline stats,
-follow-up nudges for week-old applications, and LinkedIn hiring-post leads.
+The GitHub issue surfaces remain available: weekly alerts, the master board,
+and daily best-of. Checking a box tracks the role. A twice-daily reconciliation
+workflow catches checkbox events that webhooks miss.
 
-## The core loop
+## Why a good-looking job may not alert
 
-1. Phone buzzes → open the week's alert issue.
-2. A line looks like:
-   > ☐ 🔥 **Tempus** — [ML Engineer, New Grad](…) · Chicago, IL · `88` · **health technology** — precision-medicine data platform
-3. Interested? **Tap the checkbox.** Within a minute a GitHub Action fires and
-   the job appears in your Notion Applications database with status
-   **Not started**. (It also teaches the ranker you like companies like this.)
-4. When you actually apply, open the entry in Notion and **change its status
-   yourself** (Applied, etc.). The radar never guesses whether you applied.
-5. Not interested in a company? Comment `skip Acme Corp` on the issue —
-   similar roles get downranked.
-6. Marquee employers (MANGA, big AI labs, elite pharma/medtech — the
-   `marquee_companies` list in profile.yaml) and $150k+ postings always
-   alert; add or remove names in that list anytime. A twice-daily sweep
-   re-reads every issue so no checked box is ever missed, and once a week
-   the local AI scouts new healthcare/wearables employers to track.
+The dashboard has higher recall than alerts. A job may remain visible but be
+demoted when it:
 
-## Comment commands (on any radar issue)
+- lacks internship/co-op evidence;
+- is clearly another discipline (for example software or civil engineering);
+- asks for 3+ years, a PhD, clearance, or non-US work;
+- explicitly offers no sponsorship while the profile says sponsorship is
+  required;
+- is a generic engineering internship outside a priority ChemE sector.
 
-| Command | Effect |
-|---|---|
-| `applied <url>` | Log an application immediately as Applied — works for jobs the radar never saw. If you'd checkbox-saved it, the same Notion page is updated, not duplicated. |
-| `skip <company or job id>` | Downrank this company's roles in future scoring |
-| `culture <company>` | Get a reply with the company's culture dossier (WLB, pace, prestige, fit score) |
-| `track <ats> <token> [Name]` | Force a company into the crawl registry, e.g. `track greenhouse stripe Stripe` |
+Every score and demotion is recorded as a reason. Edit `profile.yaml` to change
+candidate preferences; edit code/tests only when changing system behavior.
 
-## The AI layer (what's "smart" and what isn't)
+## Connectors
 
-- **Scoring is deterministic, not AI.** Gates (no senior/intern/clearance/3+yrs
-  roles, US-only) then an auditable point rubric — every score has printed
-  reasons. This runs in the cloud with zero API keys and is always on.
-- **Your MacBook is the AI worker.** A background job (launchd, every 2 hours
-  while the laptop is awake) pulls the latest state, runs **qwen3:30b through
-  Ollama locally** (free, private, ~19 GB on disk), and pushes back:
-  - a one-line *angle* per alert ("emphasize your clinical-data project"),
-  - culture dossiers for unknown companies (always labeled `est.`),
-  - re-ranking of borderline jobs.
-  The cloud never waits on the Mac; enrichment upgrades alerts when it lands.
-  Model memory is released after each run (`keep_alive: 0` + `ollama stop`).
-- **Optional:** an `ANTHROPIC_API_KEY` repo secret would let the cloud do LLM
-  re-ranking itself; not required.
-- **Shelved:** Gmail confirmation detection (auto-flip to Applied) — needs an
-  email App Password secret; see README §Setup.
+- **Notion:** add `NOTION_TOKEN`, share the Applications database with the
+  integration, align the status option names in `profile.yaml`, and run the
+  `notion-verify` workflow.
+- **Email:** add `EMAIL_ADDRESS` and a revocable Gmail App Password as
+  `EMAIL_APP_PASSWORD`, then run `email-verify`.
+- **Optional AI:** follow [AI_SETUP.md](AI_SETUP.md). Deterministic discovery,
+  scoring, sponsorship, and experience extraction work without it.
 
-## Running things manually
+## Run it now
 
-**In the cloud (github.com → Actions tab → pick a workflow → "Run workflow"):**
+In GitHub Actions, manually run:
 
-| Workflow | What it does |
-|---|---|
-| `radar` | Full crawl + alert cycle now (also runs on its own every ~30 min) |
-| `notion-verify` | Read-only check that the Notion connection works |
-| `promote-shortlist-applications` | One-time: move the ~47 boxes you checked under the old semantics into Notion as "Not started" |
-| `strategist` | Build the Monday memo now |
-| `tests` | Run the test suite |
+- `tests` after changing code or configuration;
+- `radar` for a full crawl;
+- `enrich` for optional AI quality/dossier work;
+- `notion-verify` or `email-verify` before trusting a connector.
 
-**On the Mac (from the repo, for development):**
-
-```bash
-.venv/bin/python -m pytest tests/          # run the test suite
-tail -f ~/.jobradar/logs/enrich.log        # watch the AI companion work
-launchctl kickstart -k gui/$(id -u)/com.jobradar.enrich   # force an enrichment cycle now
-```
-
-## 5-minute demo
-
-1. **Alerts:** open the [Issues tab](https://github.com/VictorJimenez3/fable-job-search/issues)
-   → open this week's "🎯 Job Radar alerts" issue. Read a few lines — note the
-   score, salary, and the bolded industry + company description.
-2. **Track:** tick one checkbox on a job you might actually want.
-3. **Notion:** open your 2026 Applications database → the job is there within
-   ~1 minute, status "Not started", with position, link, and location filled.
-4. **Feedback:** comment `skip <some company you dislike>` on the issue.
-5. **Culture:** comment `culture Anduril` and wait for the bot's reply.
-6. **Dashboard:** open [docs/DASHBOARD.md](DASHBOARD.md) for the long tail.
-7. **AI (Mac):** `tail -f ~/.jobradar/logs/enrich.log` while forcing a cycle
-   (command above) — watch it annotate jobs with the local model.
+Scheduled runs require this code to be on the repository's default branch.

@@ -42,6 +42,14 @@ def test_harvest_and_seed_registry():
     assert reg["lever:plaid"]["status"] == "new"
 
 
+def test_harvest_zero_budget_adds_nothing():
+    reg = {}
+    jobs = [Job(company="Dow", title="Engineering Intern",
+                url="https://jobs.lever.co/dow/example", source="simplify")]
+    assert harvest(reg, jobs, max_new=0) == 0
+    assert reg == {}
+
+
 def test_hygiene_retries_prunes_and_parks():
     from radar.discovery import hygiene
     NOW = 10_000_000_000
@@ -83,3 +91,16 @@ def test_hygiene_retries_prunes_and_parks():
     # idempotent within the month: dead retry doesn't loop
     stats2 = hygiene(registry, NOW)
     assert stats2 == {"dead_retried": 0, "invalid_pruned": 0, "dups_parked": 0}
+
+
+def test_cheme_registry_selection_skips_inherited_tech_sectors():
+    from radar.main import _select_companies
+    registry = {
+        "dow": {"name": "Dow", "status": "active", "origin": "seed",
+                "sector": "chemicals_materials", "last_ok": 1},
+        "openai": {"name": "OpenAI", "status": "active", "origin": "seed",
+                   "sector": "ai_lab", "last_ok": 2},
+        "gilead": {"name": "Gilead", "status": "active", "origin": "seed",
+                   "sector": "pharma_biotech", "last_ok": 3},
+    }
+    assert [e["name"] for e in _select_companies(registry, 10)] == ["Dow", "Gilead"]

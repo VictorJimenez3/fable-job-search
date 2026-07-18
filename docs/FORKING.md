@@ -64,7 +64,7 @@ backend only obeys `RADAR_OWNER`.
 
 The radar works without any AI — deterministic scoring, auditable reasons.
 A local model adds culture dossiers, an LLM company scout, and the quality
-pass (dead-link pruning + verifying postings are really new-grad). On your
+pass (dead-link pruning + verifying postings are really internships). On your
 Mac:
 
 ```bash

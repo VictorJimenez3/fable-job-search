@@ -7,6 +7,8 @@ from datetime import datetime, timezone
 from xml.sax.saxutils import escape
 
 from .config import DOCS_DIR, github_repo, profile
+from .models import Job
+from .score import gates
 
 
 def _age(posted_at, now) -> str:
@@ -24,17 +26,32 @@ def _fire(score: int) -> str:
     return "🔥" if score >= 85 else ("⭐" if score >= 75 else "")
 
 
+def _visible_for_profile(rec: dict) -> bool:
+    """Hide inherited off-profile history from ChemE-generated surfaces."""
+    job = Job(company=rec.get("company", ""), title=rec.get("title", ""),
+              url=rec.get("url", ""), source=rec.get("source", ""),
+              locations=rec.get("locations", []), remote=bool(rec.get("remote")),
+              salary=rec.get("salary", ""), sector=rec.get("sector", ""))
+    keep, _, _ = gates(job)
+    return keep
+
+
 def render_dashboard(jobs: dict, registry: dict, runs: list) -> str:
     now = int(time.time())
     p = profile()
     cutoff = now - 30 * 86400
     rows = [j for j in jobs.values()
             if j["score"] >= p["thresholds"]["dashboard"]
+            and _visible_for_profile(j)
             and (j.get("posted_at") or j.get("first_seen", now)) >= cutoff]
     rows.sort(key=lambda j: (-j["score"], -(j.get("posted_at") or 0)))
     rows = rows[:150]
 
-    active = sum(1 for e in registry.values() if e["status"] == "active")
+    allowed = set(p.get("registry_sectors") or [])
+    relevant_registry = [e for e in registry.values()
+                         if not allowed or e.get("sector") in allowed]
+    active = sum(1 for e in registry.values() if e["status"] == "active"
+                 and (not allowed or e.get("sector") in allowed))
     last = runs[-1] if runs else {}
     ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
@@ -42,7 +59,7 @@ def render_dashboard(jobs: dict, registry: dict, runs: list) -> str:
         "# 🎯 Job Radar — live dashboard",
         "",
         f"_Last run: **{ts}** · companies polled directly: **{active}** "
-        f"(registry {len(registry)}) · jobs tracked: **{len(jobs)}** · "
+        f"(ChemE registry {len(relevant_registry)}) · jobs tracked: **{len(rows)} shown / {len(jobs)} stored** · "
         f"new this run: **{last.get('new_jobs', 0)}** · alerts this run: **{last.get('alerts', 0)}**_",
         "",
         "Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) "
@@ -64,11 +81,11 @@ def render_dashboard(jobs: dict, registry: dict, runs: list) -> str:
 def render_rss(alert_history: list) -> str:
     repo = github_repo()
     items = []
-    for a in alert_history[-100:][::-1]:
+    for a in [row for row in alert_history if _visible_for_profile(row)][-100:][::-1]:
         pub = datetime.fromtimestamp(a.get("alerted_at", 0), timezone.utc).strftime("%a, %d %b %Y %H:%M:%S GMT")
         title = "[{}] {} — {}".format(a["score"], a["company"], a["title"])
         loc = (a.get("locations") or ["?"])[0]
-        desc = "{} · {} · via {}".format(a.get("sector") or "tech", loc, a["source"])
+        desc = "{} · {} · via {}".format(a.get("sector") or "engineering", loc, a["source"])
         items.append(
             "<item>"
             f"<title>{escape(title)}</title>"
@@ -80,9 +97,9 @@ def render_rss(alert_history: list) -> str:
     return (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<rss version="2.0"><channel>'
-        f"<title>Job Radar — new grad alerts</title>"
+        f"<title>Job Radar — chemical engineering internship alerts</title>"
         f"<link>https://github.com/{repo}</link>"
-        f"<description>High-scoring new-grad AI/SWE/DS roles, minutes after posting.</description>"
+        f"<description>High-scoring US chemical engineering internships and co-ops.</description>"
         + "".join(items) + "</channel></rss>\n")
 
 

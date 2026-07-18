@@ -1,7 +1,7 @@
 """Deterministic posting-text analysis — no LLM, no keys (DECISIONS #35).
 
 The crawl scrapes real posting text in the cloud every ~30 minutes and
-extracts the facts Victor kept having to check by hand: does the role
+extracts the facts candidates otherwise have to check by hand: does the role
 sponsor visas / take international students, and how many years of
 experience it actually wants (and whether internships count). Regex-only,
 so it runs identically on CI, the Mac, and forks with zero credentials —

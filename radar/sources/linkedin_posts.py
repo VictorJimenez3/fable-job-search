@@ -3,7 +3,7 @@
 Logged-in LinkedIn scraping risks the user's account and breaches ToS
 (deliberately out of scope, see DECISIONS §13). Instead we use Google's
 Programmable Search JSON API (free tier: 100 queries/day) to find public
-`linkedin.com/posts` URLs mentioning new-grad hiring. These are *leads*
+`linkedin.com/posts` URLs mentioning chemical-engineering internship hiring. These are *leads*
 (a human said "we're hiring"), not postings — they surface in the weekly
 strategist memo, never as scored jobs.
 
@@ -20,8 +20,8 @@ from ..http import get_json
 API = "https://www.googleapis.com/customsearch/v1"
 
 QUERIES = [
-    'site:linkedin.com/posts "new grad" (hiring OR "open role") 2026 (AI OR "machine learning" OR "software engineer" OR "data scien")',
-    'site:linkedin.com/posts "entry level" hiring ("health tech" OR healthcare) engineer',
+    'site:linkedin.com/posts (internship OR "co-op") hiring ("chemical engineering" OR "process engineering")',
+    'site:linkedin.com/posts internship hiring (bioprocess OR manufacturing OR materials OR semiconductor) engineer',
 ]
 
 

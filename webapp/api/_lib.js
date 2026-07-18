@@ -10,10 +10,10 @@ const crypto = require("crypto");
 const envv = (k) => (process.env[k] || "").replace(/[^\x21-\x7E]/g, "");
 
 // Forks self-hosting this backend set RADAR_OWNER / RADAR_REPO /
-// RADAR_BRANCH in their Vercel env; these defaults are Victor's instance.
+// RADAR_BRANCH in their Vercel env; these defaults target this branch.
 const OWNER = envv("RADAR_OWNER") || "VictorJimenez3";
 const REPO = envv("RADAR_REPO") || "VictorJimenez3/fable-job-search";
-const BRANCH = envv("RADAR_BRANCH") || "claude/newgrad-job-search-system-9gbj9k";
+const BRANCH = envv("RADAR_BRANCH") || "claude/cheme-intern-radar";
 
 const key = () => crypto.createHash("sha256").update(envv("SESSION_SECRET")).digest();
 

@@ -11,6 +11,7 @@ from __future__ import annotations
 import re
 import time
 
+from .config import profile
 from .models import norm
 from .sources.ats import probe
 
@@ -91,6 +92,8 @@ def seed_registry(registry: dict, seeds: list[dict]) -> int:
 
 def harvest(registry: dict, jobs: list, max_new: int = 200) -> int:
     """Mine ATS identifiers from job URLs; add unseen ones as candidates."""
+    if max_new <= 0:
+        return 0
     added = 0
     for job in jobs:
         found = extract(job.url)
@@ -196,20 +199,19 @@ def dedupe_name(registry: dict, company: str) -> dict | None:
 
 
 SCOUT_PROMPT = (
-    "You are researching employers for a graduating CS senior (US, new-grad "
-    "SWE / AI-ML / data science). List up to 15 companies that are strong "
-    "employers but easy for job aggregators to miss — especially healthcare, "
-    "wearables, health devices, biotech-adjacent tech, and applied-AI "
-    "companies (think WHOOP, Oura, Function Health caliber), plus any elite "
-    "smaller labs. For each, give your best guess of its careers ATS.\n"
-    'Reply with ONLY JSON: {"companies": [{"name": "WHOOP", '
+    "You are researching US employers for an undergraduate chemical engineering "
+    "student seeking internships and co-ops. List up to 15 employers that job "
+    "aggregators may miss, especially chemicals/materials, pharma/biotech, energy, "
+    "semiconductors, consumer manufacturing, environmental engineering, and "
+    "engineering consulting. For each, give your best guess of its careers ATS.\n"
+    'Reply with ONLY JSON: {"companies": [{"name": "Example Chemicals", '
     '"ats": "greenhouse|lever|ashby|smartrecruiters|recruitee", '
-    '"token": "board token guess, e.g. whoop", "sector": "healthtech"}]}')
+    '"token": "board token guess", "sector": "chemicals_materials|pharma_biotech|energy|semiconductors|consumer_manufacturing|environmental|engineering_consulting"}]}')
 
 
 def llm_scout(registry: dict, limit: int = 10) -> int:
     """Weekly research pass: ask the local LLM for employers the aggregators
-    may never surface (healthcare/wearables can be random — WHOOP was missed),
+    may never surface (plant and lab employers often use fragmented career sites),
     guess their ATS tokens, and queue them for the normal live probe. A wrong
     guess is harmless: the probe marks it invalid and never fetches it again.
     """
@@ -226,18 +228,21 @@ def llm_scout(registry: dict, limit: int = 10) -> int:
     except (ValueError, _json.JSONDecodeError, AttributeError):
         return 0
     added = 0
+    allowed_sectors = set(profile().get("registry_sectors") or [])
     for row in rows:
         ats = str(row.get("ats", "")).lower().strip()
         token = re.sub(r"[^a-z0-9_-]", "", str(row.get("token", "")).lower())
         name = str(row.get("name", "")).strip()
+        sector = str(row.get("sector", "")).strip()
         if ats not in {"greenhouse", "lever", "ashby", "smartrecruiters", "recruitee"} \
-                or not token or not name or token in BAD_TOKENS:
+                or not token or not name or token in BAD_TOKENS \
+                or (allowed_sectors and sector not in allowed_sectors):
             continue
         k = key(ats, token, None)
         if k in registry or dedupe_name(registry, name):
             continue
         registry[k] = {"name": name, "ats": ats, "token": token, "extra": {},
-                       "sector": row.get("sector", ""), "status": "new",
+                       "sector": sector, "status": "new",
                        "origin": "scout", "first_seen": int(time.time()),
                        "failures": 0, "last_ok": 0}
         added += 1

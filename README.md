@@ -1,214 +1,123 @@
-# 🎯 Job Radar
+# Chemical Engineering Internship Radar
 
-A self-expanding, always-on radar for **new-grad AI / SWE / DS roles**, tuned for
-speed (apply within 24h of posting) and personalized ranking (healthtech first,
-big tech second, open to everything good).
+An always-on US internship and co-op search for undergraduate Chemical
+Engineering candidates. It favors chemical/process engineering,
+manufacturing and operations, bioprocess/pharma, materials/semiconductors,
+environmental/safety, and quality/validation work.
 
-**[→ 🖥️ The Platform](https://job-radar-vmj-8946s-projects.vercel.app)**
-(sign in with GitHub once → every click writes instantly) ·
-**[→ Pages mirror](https://victorjimenez3.github.io/fable-job-search/platform/)**
-(same app, zero backend — writes via prefilled issues; what forks get for free) ·
-**[→ User guide / tutorial](docs/TUTORIAL.md)** ·
-**[→ Live dashboard](docs/DASHBOARD.md)** ·
-**[→ Culture Compass](docs/CULTURE.md)** ·
-**[→ SHPE 2026 plan](docs/SHPE.md)** ·
-**[→ Alert issues](../../issues?q=is%3Aissue+label%3Aradar-alerts)** ·
-**[→ Roadmap](ROADMAP.md)** ·
-**[→ RSS feed](docs/feed.xml)** ·
-**[→ Cross-CLI handoff notes](docs/CLI_HANDOFF.md)**
+This is the `claude/cheme-intern-radar` profile of the broader Job Radar
+project. Scoring is deterministic and auditable; AI is optional.
 
-Subscribe to the RSS feed at:
-`https://raw.githubusercontent.com/VictorJimenez3/fable-job-search/claude/newgrad-job-search-system-9gbj9k/docs/feed.xml`
+- [Platform](docs/platform/index.html)
+- [User guide](docs/TUTORIAL.md)
+- [Live generated dashboard](docs/DASHBOARD.md)
+- [Roadmap](ROADMAP.md)
+- [AI setup](docs/AI_SETUP.md)
+- [Maintainer handoff](docs/CLI_HANDOFF.md)
 
-## How it works
+## What is complete
 
-```
-every ~30 min (GitHub Actions cron)
-│
-├─ 1. BREADTH: pull 5 aggregators
-│     SimplifyJobs · vanshb03 · jobright-ai (SWE + Data) · speedyapply · HN Who-is-Hiring
-│
-├─ 2. DISCOVERY: mine every job URL for ATS tokens
-│     (Greenhouse / Lever / Ashby / Workday / SmartRecruiters / Recruitee)
-│     new tokens → probed live → join the company registry FOREVER
-│     registry starts from data/companies_seed.yaml (~85 curated healthtech /
-│     AI-lab / big-tech / edtech companies) and grows on its own
-│
-├─ 3. SPEED: poll every active registry company's ATS API directly
-│     → catches postings minutes-to-hours after they go live,
-│       days before they show up anywhere else
-│
-├─ 4. RANK: hard gates (no senior/intern/PhD/non-US/3+ yrs/numeric levels)
-│     then a scored, auditable rubric: role fit + sector fit + freshness +
-│     learned taste. Shams rule v2: marquee companies (MANGA, big AI labs,
-│     elite pharma/medtech/wearables — profile.yaml marquee_companies),
-│     $150k+ postings, and priority-sector engineering roles (healthtech)
-│     alert without explicit new-grad wording — but FIELD FIT outranks all
-│     of it: off-field titles (safeguards/policy/sales/PM/...) and
-│     mid-level titles (II/L4) go dashboard-only, never alerts. Rule bumps
-│     re-gate the stored jobs automatically (score.RULES_VERSION).
-│     Optional Claude re-rank + per-job application angle (add ANTHROPIC_API_KEY).
-│
-└─ 5. DELIVER
-      · GitHub issue "Job Radar alerts — week N" (assigned to you → push/email)
-      · 📌 master board issue — every open alert-worthy role in ONE place
-        (body + comment pages; rewritten each crawl; checkboxes work there too)
-      · 🏆 "Best of <date>" issue each evening — the daily top-10, emailed to
-        you via GitHub's own notification
-      · docs/DASHBOARD.md — everything decent, sorted
-      · docs/feed.xml — RSS for instant notifications in any feed reader
+- The source mix is internship-first. The Simplify Summer 2026 internship
+  JSON feed was live-checked on 2026-07-18, and direct ATS polling starts
+  from 22 ChemE-relevant employers. Workday searches use ChemE internship
+  and co-op queries rather than software/new-grad terms.
+- Rules v3 require internship/co-op evidence for alerts, classify seven ChemE
+  role families, reject senior/PhD/clearance/non-US/3+ year roles, keep nearby
+  engineering disciplines dashboard-only, and reject unrelated internship noise.
+- Posting text is analyzed for minimum experience and sponsorship language.
+  With `candidate.needs_sponsorship: true`, an explicit no-sponsorship posting
+  is visible but cannot become an alert. Unknown remains unknown; the app does
+  not pretend silence means sponsorship.
+- The platform has ChemE role filters, sponsorship and experience filters,
+  visible posting facts, a direct Apply action, role-specific research links,
+  and outreach templates. Opening a role leads with fit and eligibility.
+- Old tech-oriented registry and culture state is preserved for audit but
+  excluded from ChemE polling/scoring. The first ChemE crawl re-gates inherited
+  open jobs under rules v3 without deleting history.
+
+## Pipeline
+
+```text
+GitHub Actions (about every 30–60 minutes when this is the default branch)
+  ├─ internship aggregator feed
+  ├─ direct employer ATS searches (Workday, Greenhouse, Lever, Ashby, …)
+  ├─ ATS discovery and live validation
+  ├─ ChemE gates + role/sector/freshness scoring
+  ├─ posting-text sponsorship and experience analysis
+  └─ platform, dashboard, RSS, GitHub alerts, and optional Notion sync
 ```
 
-### Tracking and applied logging
+The crawler works with no AI key. A failed source is isolated and logged; it
+does not fail the whole run.
 
-1. **Check a box on an alert issue to track a job.** It appears in your Notion
-   Applications database immediately with the not-yet-applied status
-   (`stage_saved` in profile.yaml, default "Not started") and improves future
-   ranking.
-2. **When you apply, the inbox becomes the source of truth.** With the email
-   credentials set up (below), the watcher reads application-lifecycle emails
-   and drives the Notion **Stage** for you, end to end — no manual updates:
-   - "Thank you for applying…" → promotes the tracked entry to **Applied**
-   - online-assessment / coding-challenge invite → **OA**
-   - interview / "schedule a call" / "next steps" → **Interview**
-   - "unfortunately… other candidates" → **Rejected** (+ Response date)
-   - applied with no reply for `autoclose_days` (default 45) → **CLOSED**
+## Activate this branch
 
-   It only ever moves a job *forward*, so a stray late email can't undo a
-   later stage. You can still change anything in Notion by hand.
-3. For a job found outside the radar, comment `applied <url>` on any issue to
-   log it as Applied immediately.
-4. A twice-daily reconcile sweep re-reads every radar issue and tracks any
-   checked box the event pipeline missed — a tick is never lost.
+GitHub runs scheduled workflows only from a repository's default branch. To
+make this radar autonomous, merge this branch and make that result the default,
+or set `claude/cheme-intern-radar` as the default branch. Then:
 
-The weekly strategy memo now includes an **auto-tracked funnel** (applied → OA
-→ interview → rejected → auto-closed) and your response rate, overall and by
-sector — built entirely from what the watcher reads, so you can see which
-sectors actually reply.
+1. Open GitHub **Actions**, enable workflows, and manually run `tests`.
+2. Run `radar` once. Expect a one-time rules-v3 re-gate of inherited records.
+3. For a Vercel deployment, set `RADAR_BRANCH=claude/cheme-intern-radar`
+   (the checked-in backend default already uses it).
+4. For GitHub Pages, publish `/docs` from the active branch.
 
-Each alert now includes a plain-language company category and a short
-description of what the company does (for example, **defense & aerospace —
-defense and space systems**) so unfamiliar employers are easier to assess.
+The three workflows that must target a named branch (`daily-best`,
+`reconcile-checkboxes`, and `web-actions`) already point to this branch.
 
-Other comment commands: `skip <company>` (downrank similar roles),
-`track <ats> <token> [Name]` (force-add a company to the crawl registry).
+## Personalize before connecting accounts
 
-## Setup (one-time, ~5 min total)
+The branch deliberately does not guess the student's identity or Notion
+schema.
 
-Two independent credentials, each createable only by you. Everything else
-works with zero setup.
+1. Edit `profile.yaml`:
+   - candidate name and graduation year;
+   - `needs_sponsorship` (safe default is `true`);
+   - role/sector weights, locations, thresholds, and Notion stage names.
+2. Edit `ME` near the top of `webapp/index.html` for outreach templates, then
+   copy it to the Pages mirror:
+   `cp webapp/index.html docs/platform/index.html`.
+3. Optionally add verified employers to `data/companies_seed.yaml`.
 
-**1. Notion write access (~2 min)**
-1. Go to [notion.so/my-integrations](https://www.notion.so/my-integrations) → *New integration*
-   (internal), any name, your workspace. Copy the secret.
-2. In Notion, open your Applications database → ⋯ menu → *Connections* →
-   add your integration. (The database is found automatically by title
-   search — rename or recreate it anytime, nothing else needs to change.)
-3. In this repo: *Settings → Secrets and variables → Actions → New repository
-   secret*: name `NOTION_TOKEN`, value = the secret.
+## Optional connectors
 
-Verify anytime without creating test data: *Actions → notion-verify → Run workflow*.
+No connector is required for discovery or ranking.
 
-**2. Optional email-based applied-detection (~3 min)**
-NJIT uses Google Workspace/Gmail, so this uses IMAP with an App Password
-(Google's supported way to let a non-browser client log in — this is not
-your NJIT password and can be revoked anytime independent of it):
-1. On the `vmj@njit.edu` Google account, enable **2-Step Verification** at
-   [myaccount.google.com/security](https://myaccount.google.com/security) if not already on
-   (required before Google will issue app passwords).
-2. Generate one at [myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords)
-   — name it "Job Radar", copy the 16-character password.
-3. Add two repo secrets: `EMAIL_ADDRESS` = `vmj@njit.edu`, `EMAIL_APP_PASSWORD` = the 16-char password.
+- `NOTION_TOKEN`: tracks saved/applied jobs in a Notion Applications database.
+  Share the database with the integration and make `profile.yaml` stage values
+  exactly match its select/status options. Run `notion-verify` before relying
+  on writes.
+- `EMAIL_ADDRESS` + `EMAIL_APP_PASSWORD`: reads application lifecycle email
+  and advances stages. Run `email-verify`; it is read-only.
+- `ANTHROPIC_API_KEY`, or `LLM_BASE_URL` + `LLM_API_KEY` + `LLM_MODEL`:
+  optional quality review, employer dossiers, and company scouting. See
+  [AI setup](docs/AI_SETUP.md). A ChatGPT Pro subscription does not include
+  OpenAI API credits; API billing and keys are separate.
+- `GOOGLE_CSE_KEY` + `GOOGLE_CSE_ID`: optional public LinkedIn-post discovery.
+  The project never logs in to or scrapes LinkedIn.
+- GitHub OAuth variables for owner-only Vercel writes are listed in
+  [the forking guide](docs/FORKING.md). Pages works without them through
+  prefilled GitHub issues.
 
-Verify anytime (read-only, marks nothing as read): *Actions → email-verify → Run workflow*.
+Secrets belong in GitHub Actions or Vercel settings, never in this repository.
 
-*If NJIT's Workspace admin has disabled app passwords* (some university IT
-policies do), `email-verify` will fail with a clear "login rejected" message
-instead of hanging. Fallback: set up a Gmail filter on the njit.edu account
-to auto-forward application-confirmation emails to a personal Gmail you
-control, then point `EMAIL_ADDRESS`/`EMAIL_APP_PASSWORD` at that account instead
-— same setup, one extra forwarding rule.
-
-**3. Free local AI on your MacBook (~5 min, recommended)**
-No API key needed — your M1 Max runs the intelligence layer via Ollama.
-One command on the Mac:
-```bash
-curl -fsSL https://raw.githubusercontent.com/VictorJimenez3/fable-job-search/claude/newgrad-job-search-system-9gbj9k/scripts/mac-companion/install.sh | bash
-```
-This installs Ollama + `qwen3:30b` (a 19GB mixture-of-experts model that is a
-strong fit for your M1 Max with 64GB unified memory; override with
-`JOBRADAR_MODEL=<name>` if you want to experiment) and a
-launchd agent that, **whenever the laptop is on**, every 2 hours: pulls the
-repo, then locally (free, private) generates culture dossiers, re-ranks
-recent jobs, runs the weekly company scout, and runs the **quality pass** —
-re-checks alert-worthy postings' links (dead → closed everywhere) and has
-the LLM verify each is really new-grad and really a technical role
-(verified-bad → demoted with the reason logged, marquee included since
-DECISIONS #31), grades any job descriptions you pasted into the platform's
-Role-fit tab — then pushes the enriched state back. The cloud crawler never depends on the Mac — the Mac
-just upgrades whatever it finds when awake. Requires `git push` auth on the
-Mac (`brew install gh && gh auth login`). Logs: `~/.jobradar/logs/enrich.log`.
-The companion releases the model from memory after every request; confirm with
-`ollama ps` (it should show no loaded model between enrichment cycles).
-
-Optional upgrades:
-- `ANTHROPIC_API_KEY` secret → Claude does the enrichment in the cloud too
-  (works alongside or instead of the Mac). Free-tier alternatives via the
-  `LLM_BASE_URL`/`LLM_API_KEY`/`LLM_MODEL` secrets (rate limits are handled —
-  the client retries with Retry-After): NVIDIA NIM
-  (`https://integrate.api.nvidia.com/v1` + an `nvapi-…` key) or Google AI
-  Studio (`https://generativelanguage.googleapis.com/v1beta/openai` + a free
-  key). **Step-by-step runbook: [docs/AI_SETUP.md](docs/AI_SETUP.md)** —
-  the AI layer is currently OFF in the cloud until one of these is added.
-- `GOOGLE_CSE_KEY` + `GOOGLE_CSE_ID` (free: [programmablesearchengine.google.com](https://programmablesearchengine.google.com)
-  → create engine searching `linkedin.com/posts`, then get an API key at
-  [developers.google.com/custom-search](https://developers.google.com/custom-search/v1/introduction))
-  → Monday memos gain a "Heard on LinkedIn" section of public hiring posts.
-- **Watch the repo** (Watch → All activity) and install the GitHub mobile app
-  for instant pushes; issues are also assigned to you, which notifies by default.
-- Subscribe to `docs/feed.xml` in a feed reader (raw URL above) for sub-minute alerts.
-
-## Culture Compass
-
-Every alert is checked against your stated criteria (prestige + pay + fast
-culture + real WLB/shutdowns + mission, no burnout): companies get a 0–100
-**fit score** (deterministic rubric, burnout-penalized) shown as `fit NN` on
-alert lines, feeding ranking (±6), and tabulated in
-[docs/CULTURE.md](docs/CULTURE.md) — prestige tier, pace, WLB, PTO,
-shutdowns, new-grad TC, rotational programs. ~40 dossiers are human-curated;
-the rest are LLM-generated on your Mac and labeled `est.`. Ask about any
-company by commenting `culture <company>` on an alert issue.
-
-## Tuning
-
-Everything subjective lives in [`profile.yaml`](profile.yaml): sector weights,
-role weights, alert threshold, freshness bonuses, location policy, the
-narrative Claude uses. Edit and push — next run picks it up. Seed companies:
-[`data/companies_seed.yaml`](data/companies_seed.yaml).
-
-## Operating notes
-
-- **State** (`state/*.json`) is committed back by CI after each run: seen jobs,
-  the company registry, learned taste, applied log, run stats.
-- GitHub cron is best-effort: `*/30` in practice fires every 30–60 min.
-- Scheduled workflows pause after 60 days without repo activity; any commit
-  (including CI's own) resets the clock, so this is only relevant if the radar
-  is disabled. GitHub also emails you before pausing.
-- A source failing (site down, format change) never kills a run — it's logged
-  in `state/runs.json` and skipped. Companies failing 5 consecutive polls are
-  marked dead and stop being polled.
-
-## Development
+## Local development
 
 ```bash
-pip install -r requirements.txt pytest
-python -m pytest tests/            # unit tests (real captured fixtures)
-python -m radar.main seed          # initialize registry + taste priors
-python -m radar.main crawl         # full cycle (respects RADAR_* env vars)
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt pytest
+.venv/bin/python -m pytest tests/
+.venv/bin/python -m radar.main seed
+.venv/bin/python -m radar.main crawl
 ```
 
-Useful env vars: `RADAR_DISABLE_SOURCES=ats,hn`, `RADAR_PROBE_BUDGET`,
-`RADAR_MAX_COMPANIES`, `RADAR_MAX_ALERTS`, `RADAR_WORKERS`.
+Useful commands: `regate`, `enrich`, `notion-verify`, `email-verify`,
+`strategist`, `daily-best`, and `master-board`.
 
-Other one-off CLI commands: `notion-verify`, `email-verify` (connectivity checks,
-create nothing), `email-watch` (run one detection cycle manually).
+Useful controls: `RADAR_DISABLE_SOURCES`, `RADAR_PROBE_BUDGET`,
+`RADAR_MAX_COMPANIES`, `RADAR_MAX_ALERTS`, `RADAR_WORKERS`,
+`RADAR_SCRAPE_LIMIT`, and `RADAR_SCRAPE_DISABLE`.
+
+Runtime files under `state/` and generated outputs (`docs/DASHBOARD.md`,
+`docs/CULTURE.md`, `docs/feed.xml`) are written by the pipeline. Do not edit
+them by hand.

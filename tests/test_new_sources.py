@@ -56,6 +56,32 @@ def test_phenom_parses_widgets_response():
     assert jobs[0].posted_at is not None
 
 
+def test_internship_profile_keeps_lever_internships():
+    payload = [{
+        "text": "Chemical Engineering Intern",
+        "hostedUrl": "https://jobs.lever.co/acme/1",
+        "createdAt": 1783300000000,
+        "categories": {"commitment": "Internship", "location": "Newark, NJ"},
+        "descriptionPlain": "Support process scale-up and unit operations.",
+    }]
+    entry = {"name": "Acme", "ats": "lever", "token": "acme", "extra": {}}
+    with patch.object(ats, "get_json", return_value=payload):
+        jobs = ats.fetch_lever(entry)
+    assert [j.title for j in jobs] == ["Chemical Engineering Intern"]
+
+
+def test_internship_profile_keeps_ashby_internships():
+    payload = {"jobs": [{
+        "title": "Bioprocess Intern", "jobUrl": "https://jobs.ashbyhq.com/acme/1",
+        "isListed": True, "employmentType": "Intern", "location": "Boston, MA",
+        "descriptionPlain": "Support fermentation and downstream processing.",
+    }]}
+    entry = {"name": "Acme", "ats": "ashby", "token": "acme", "extra": {}}
+    with patch.object(ats, "get_json", return_value=payload):
+        jobs = ats.fetch_ashby(entry)
+    assert [j.title for j in jobs] == ["Bioprocess Intern"]
+
+
 def test_tesla_filters_departments():
     payload = {"listings": [
         {"id": 1, "t": "Software Engineer, Autopilot", "dp": "3", "l": "7"},

@@ -1,12 +1,12 @@
-"""Job-quality pass: link liveness + LLM new-grad / role-fit verification.
+"""Job-quality pass: link liveness + LLM internship / role-fit verification.
 
 Runs inside `enrich` (the Mac companion, or any configured LLM provider).
 Layered, cheapest first — ROADMAP "Job-quality LLM pass":
 
   Layer 0  HTTP liveness: a posting that 404s or says "no longer accepting
            applications" is closed (closed_at stamped, alert_ok dropped).
-  Layer 1  New-grad verification: one JSON question against the posting
-           text — a "new grad" board listing that actually wants 3+ years
+  Layer 1  Internship verification: one JSON question against the posting
+           text — an internship listing that is actually full-time/senior
            loses alert eligibility.
   Layer 2  Role-fit: right company, wrong role (sales/support/analyst-in-
            name-only) is demoted below the alert bar.
@@ -15,7 +15,7 @@ Design rules (DECISIONS #30, amended by #31):
 - Verdicts adjust alert_ok/score with a reason logged in score_reasons —
   nothing is ever silently deleted from state.
 - Marquee companies are suppressed by verdicts like everyone else since
-  DECISIONS #31: the Shams rule bypasses only the new-grad-wording
+  DECISIONS #31: the original override bypassed only the level-wording
   requirement, not field fit or verified seniority.
 - The verdict is cached on the job record (rec["quality"]) so each job costs
   at most `_MAX_ATTEMPTS` fetch+LLM calls, and `reapply()` re-applies stored
@@ -44,22 +44,24 @@ DEAD_PHRASES = (
 )
 
 _MAX_ATTEMPTS = 2          # LLM/fetch tries per job before marking unclear
-_PENALTY_NOT_NEW_GRAD = 20
+_PENALTY_WRONG_LEVEL = 20
+_PENALTY_NOT_NEW_GRAD = _PENALTY_WRONG_LEVEL  # legacy tests/state terminology
 _PENALTY_WRONG_ROLE = 25
 _PENALTY_SOME_EXPERIENCE = 10
 
-PROMPT = """You screen job postings for a computer-science new grad (class of 2026, US).
+PROMPT = """You screen job postings for a US-based undergraduate chemical engineering student seeking internships/co-ops.
 Job: {title} — {company}
 Posting text (may be truncated or noisy):
 ---
 {text}
 ---
 Answer STRICT JSON only, no other text:
-{{"years_required": <integer or null>, "new_grad": "yes"|"no"|"unclear", "role_family": "swe"|"data"|"ml"|"security"|"other-technical"|"non-technical", "reason": "<15 words max>"}}
-Rules: new_grad="no" ONLY if the text clearly requires 3+ years of professional
-experience or is explicitly senior/staff/lead. Internships are new_grad="no".
-role_family="non-technical" means sales, support, recruiting, marketing,
-project coordination — not an engineering/data/science role."""
+{{"years_required": <integer or null>, "new_grad": "yes"|"no"|"unclear", "role_family": "chemical-process"|"bioprocess-pharma"|"manufacturing-operations"|"materials-semiconductor"|"environmental-safety"|"quality-validation"|"other-engineering"|"non-technical", "reason": "<15 words max>"}}
+Compatibility note: the JSON field is named new_grad in stored state, but here
+new_grad="yes" means this IS an undergraduate internship/co-op; new_grad="no"
+means it is full-time, senior, graduate-degree-only, or requires 3+ years.
+role_family="non-technical" includes business, sales, software/data-only,
+recruiting, marketing, and project coordination outside chemical engineering."""
 
 
 def _strip_html(html: str) -> str:
@@ -191,15 +193,15 @@ def _effects(q: dict) -> list[tuple[str, int, bool]]:
         yrs = q.get("years_required")
         if yrs is not None and 0 < yrs < 3:
             # the LLM is stricter than the house rule (hard gate is 3+ yrs):
-            # 1-2 yrs postings are still worth a new grad's application —
+            # 1-2 yrs postings can still be worth an intern candidate's look —
             # rank them lower, but never hide them
             out.append((f"quality: wants {yrs}+ yrs (LLM-verified) "
                         f"-{_PENALTY_SOME_EXPERIENCE}",
                         _PENALTY_SOME_EXPERIENCE, False))
         else:
-            out.append((f"quality: not new-grad ({f'{yrs}+ yrs' if yrs else 'senior'}"
-                        f" — LLM-verified) -{_PENALTY_NOT_NEW_GRAD}",
-                        _PENALTY_NOT_NEW_GRAD, True))
+            out.append((f"quality: not internship-level ({f'{yrs}+ yrs' if yrs else 'wrong level'}"
+                        f" — LLM-verified) -{_PENALTY_WRONG_LEVEL}",
+                        _PENALTY_WRONG_LEVEL, True))
     if q.get("role_family") == "non-technical":
         out.append((f"quality: non-technical role ({(q.get('reason') or '')[:40]}"
                     f" — LLM-verified) -{_PENALTY_WRONG_ROLE}",
@@ -315,8 +317,8 @@ def verify_pasted(rec: dict, jd_text: str) -> bool:
 
 
 # aggregator listings are where verification pays: their links go stale and
-# their "new grad" labels are the least reliable. Direct-ATS jobs are
-# re-confirmed alive every poll and usually say "new grad" in the title.
+# aggregator internship labels can be unreliable. Direct-ATS jobs are
+# re-confirmed alive every poll and often say "intern" in the title.
 AGGREGATOR_SOURCES = ("jobright", "simplify", "speedyapply", "vansh", "hn")
 
 

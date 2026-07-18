@@ -2,7 +2,7 @@
 
 - Checking a checkbox on an alert issue (`- [x] ... <!--radar:ID-->`) tracks
   the job: it is recorded to applied.json with stage="saved" and a Notion page
-  is created immediately with the not-yet-applied status. Victor flips the
+  is created immediately with the not-yet-applied status. The candidate flips the
   status to Applied in Notion himself when he actually applies.
 - An `applied <url>` comment (or, once credentials exist, email confirmation
   detection) records stage="applied" — promoting an already-saved entry and
@@ -197,7 +197,7 @@ def handle_event(event_path: str) -> None:
     if changed or synced:
         state.save("applied.json", applied)
         state.save("shortlist.json", shortlist)
-        state.save("feedback.json", fb)
+        state.save_feedback(fb)
         print(f"applied: recorded {changed} change(s), synced {synced} to Notion")
     else:
         print("applied: nothing new")
@@ -227,7 +227,7 @@ def reconcile_checkboxes() -> int:
     """Sweep every radar issue (weekly, daily, master — bodies and comments)
     for checked boxes and make sure each one is tracked in applied.json and
     Notion. Event-driven sync can miss ticks (deploys, outages, the semantics
-    changes); this idempotent sweep guarantees nothing Victor checked is ever
+    changes); this idempotent sweep guarantees nothing the owner checked is ever
     silently lost. Runs on a schedule and on demand."""
     import requests
     from .config import github_repo
@@ -274,7 +274,7 @@ def reconcile_checkboxes() -> int:
     if changed or synced:
         state.save("applied.json", applied)
         state.save("shortlist.json", shortlist)
-        state.save("feedback.json", fb)
+        state.save_feedback(fb)
     print(f"reconcile: {len(checked)} checked boxes across all issues, "
           f"{changed} newly tracked, {synced} synced to Notion")
     return 0

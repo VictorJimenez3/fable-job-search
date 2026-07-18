@@ -35,8 +35,10 @@ AGG_SOURCES = {
 
 def _fetch_aggregators(disabled: set[str]) -> tuple[list[Job], dict]:
     jobs, stats = [], {}
+    enabled = set(profile().get("aggregator_sources") or AGG_SOURCES)
     with ThreadPoolExecutor(max_workers=5) as ex:
-        futs = {ex.submit(fn): name for name, fn in AGG_SOURCES.items() if name not in disabled}
+        futs = {ex.submit(fn): name for name, fn in AGG_SOURCES.items()
+                if name in enabled and name not in disabled}
         for fut in as_completed(futs):
             name = futs[fut]
             try:
@@ -49,8 +51,11 @@ def _fetch_aggregators(disabled: set[str]) -> tuple[list[Job], dict]:
 
 
 def _select_companies(registry: dict, cap: int) -> list[dict]:
-    active = [e for e in registry.values() if e["status"] == "active"]
-    sector_rank = {"healthtech": 0, "ai_lab": 1, "big_tech": 2, "edtech": 3, "fintech": 4}
+    allowed = set(profile().get("registry_sectors") or [])
+    active = [e for e in registry.values() if e["status"] == "active"
+              and (not allowed or e.get("sector") in allowed)]
+    weighted = sorted(profile().get("sectors", {}).items(), key=lambda x: -x[1])
+    sector_rank = {name: i for i, (name, _) in enumerate(weighted)}
     active.sort(key=lambda e: (0 if e["origin"] == "seed" else 1,
                                sector_rank.get(e.get("sector", ""), 5),
                                -e.get("last_ok", 0)))
@@ -67,7 +72,7 @@ def _fetch_ats(registry: dict, disabled: set[str]) -> tuple[list[Job], dict]:
 
     def one(entry: dict) -> list[Job]:
         fn = FETCHERS[entry["ats"]]
-        return fn(entry, wd_queries) if entry["ats"] == "workday" else fn(entry)
+        return fn(entry, wd_queries) if entry["ats"] in {"workday", "phenom"} else fn(entry)
 
     with ThreadPoolExecutor(max_workers=int(env("RADAR_WORKERS", "12"))) as ex:
         futs = {ex.submit(one, e): e for e in entries}
@@ -185,7 +190,8 @@ def crawl() -> int:
         rec = j.to_record()
         rec["first_seen"] = now
         rec["rules_v"] = RULES_VERSION
-        rec["explicit_new_grad"] = explicit_new_grad(j.title)
+        rec["explicit_internship"] = explicit_new_grad(j.title)
+        rec["explicit_new_grad"] = rec["explicit_internship"]  # legacy UI/state compatibility
         jobs_state[j.id] = rec
     cutoff = now - 120 * 86400
     jobs_state = {k: v for k, v in jobs_state.items() if v.get("first_seen", now) >= cutoff}
@@ -233,16 +239,7 @@ def seed_cmd() -> int:
     added = discovery.seed_registry(registry, seeds())
     state.save("companies.json", registry)
 
-    # Taste seed: companies from the user's real Notion application history.
-    history = ["amazon", "nvidia", "bank of america", "oracle", "pinterest",
-               "capital one", "verizon", "bny", "adobe", "ixl", "microsoft",
-               "commure", "google", "adp", "dv trading", "mastercard",
-               "openai", "chase"]
-    fb = state.feedback()
-    for comp in history:
-        fb["company_boosts"][comp] = max(fb["company_boosts"].get(comp, 0), 4)
-    state.save("feedback.json", fb)
-    print(f"seeded {added} companies, {len(history)} taste priors")
+    print(f"seeded {added} companies; ChemE taste starts neutral and learns from saves")
     return 0
 
 
@@ -293,7 +290,7 @@ def enrich() -> int:
             rec["score_reasons"] = j.score_reasons
             rescored += 1
 
-    # quality pass: link liveness + new-grad/role-fit verification (cached
+    # quality pass: link liveness + internship/role-fit verification (cached
     # verdicts re-applied first, since score() above rebuilds from scratch)
     from . import quality
     registry = state.companies()
@@ -326,8 +323,8 @@ def enrich() -> int:
     culture.write_outputs()
     print(f"enrich: re-scored {rescored} recent job(s), docs refreshed")
 
-    # weekly research pass: healthcare/wearables employers are easy for
-    # aggregators to miss (WHOOP was), so the local model scouts candidates
+    # weekly research pass: plant/lab employers can be easy for aggregators to
+    # miss, so the local model scouts candidates
     # for the crawl's live probe to validate
     scout = state.load("scout.json", {"last_run": 0})
     if now - scout.get("last_run", 0) >= 7 * 86400:
@@ -394,8 +391,8 @@ def promote_shortlist_applications() -> int:
     """One-time correction for the shortlisting detour.
 
     Every existing checkbox selection becomes a tracked entry: a Notion page
-    is created with the not-yet-applied status, and Victor advances the ones
-    he actually applied to inside Notion. Idempotent through
+    is created with the not-yet-applied status, and the candidate advances the
+    ones actually submitted inside Notion. Idempotent through
     ``record_applied``.
     """
     applied = state.applied()
@@ -409,50 +406,15 @@ def promote_shortlist_applications() -> int:
     synced = sync_applied(applied)
     state.save("applied.json", applied)
     state.save("shortlist.json", [])
-    state.save("feedback.json", fb)
+    state.save_feedback(fb)
     print(f"promote-shortlist: moved {moved} checkbox selection(s), synced {synced} to Notion")
     return 0
 
 
 def marquee_backfill() -> int:
-    """One-time correction after adopting the Shams rule (DECISIONS #19).
-
-    Marquee-company jobs already in state were held back by the new-grad-
-    evidence alert gate (alert_ok=False, dashboard only). Flip them to
-    alert-eligible under the new policy and post the strongest recent ones to
-    the weekly alert issue so they aren't silently skipped.
-    """
-    from .alerts import post_alerts
-    from .score import is_marquee
-    thr = profile()["thresholds"]
-    jobs_state = state.jobs()
-    alert_history = state.load("alert_history.json", [])
-    already = {a["id"] for a in alert_history}
-    now = int(time.time())
-    flipped, candidates = 0, []
-    for rec in jobs_state.values():
-        if rec.get("alert_ok") or not is_marquee(rec["company"]):
-            continue
-        rec["alert_ok"] = True
-        rec["score_reasons"] = rec.get("score_reasons", []) + ["marquee company (auto-alert)"]
-        flipped += 1
-        if (rec.get("score", 0) >= thr["alert"] and rec["id"] not in already
-                and now - rec.get("first_seen", 0) <= 14 * 86400):
-            candidates.append(rec)
-    candidates.sort(key=lambda r: -r.get("score", 0))
-    alerts = candidates[:int(env("RADAR_MAX_ALERTS", "25"))]
-    for rec in alerts:
-        alert_history.append(rec | {"alerted_at": now})
-    state.save("jobs.json", jobs_state)
-    state.save("alert_history.json", alert_history[-500:])
-    url = None
-    try:
-        url = post_alerts(alerts)
-    except Exception as e:
-        print(f"alerts: failed to post issue: {e}")
-    print(f"marquee-backfill: {flipped} jobs now alert-eligible, "
-          f"{len(alerts)} posted to the alert issue" + (f" → {url}" if url else ""))
-    return 0
+    """Retired compatibility command; rules v3 must not bypass field gates."""
+    print("marquee-backfill: retired on the ChemE branch; applying rules-v3 re-gate")
+    return regate_cmd()
 
 
 def regate_cmd() -> int:
@@ -480,14 +442,14 @@ def regate_cmd() -> int:
 def repair_feedback() -> int:
     """One-time repair: drop learned token boosts that FEEDBACK_STOPWORDS now
     filters at read time (business/marketing/product/... plus location noise).
-    Documented repair per CLI_HANDOFF — feedback.json is otherwise generated."""
+    Documented repair per CLI_HANDOFF — feedback_cheme.json is otherwise generated."""
     from .score import FEEDBACK_STOPWORDS
     fb = state.feedback()
     tokens = fb.get("token_boosts", {})
     removed = sorted(t for t in tokens if t in FEEDBACK_STOPWORDS)
     for t in removed:
         del tokens[t]
-    state.save("feedback.json", fb)
+    state.save_feedback(fb)
     print(f"repair-feedback: removed {len(removed)} stopworded token boost(s)"
           + (f": {', '.join(removed)}" if removed else ""))
     return 0
@@ -526,7 +488,7 @@ def web_action() -> int:
     shortlist[:] = [s for s in shortlist if s["id"] != job["id"]]
     state.save("applied.json", applied)
     state.save("shortlist.json", shortlist)
-    state.save("feedback.json", fb)
+    state.save_feedback(fb)
     print(f"web-action: {action} {job['company']} — changed={changed}, notion synced={synced}")
     return 0
 

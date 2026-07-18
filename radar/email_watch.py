@@ -323,7 +323,7 @@ def _autoclose(applied: list, now: int, days: int) -> int:
     closed = 0
     for e in applied:
         if (e.get("stage") == "applied" and not e.get("responded_at")
-                and e.get("applied_at", now) < cutoff):
+                and e.get("applied_at", now) <= cutoff):
             e["stage"] = "closed"
             e["status"] = "closed"
             e["auto_closed"] = True
@@ -391,7 +391,7 @@ def run(lookback_days: int = DEFAULT_LOOKBACK_DAYS) -> dict:
         synced = sync_applied(applied)
         state.save("applied.json", applied)
         state.save("shortlist.json", shortlist)
-        state.save("feedback.json", fb)
+        state.save_feedback(fb)
         seen_ids_list = list(seen_ids)[-MAX_SEEN_IDS:]
         state.save("email_watch.json", {"seen_message_ids": seen_ids_list,
                                         "last_checked_at": int(time.time())})

@@ -15,7 +15,7 @@ from .models import Job, norm
 
 # Bumped whenever gate rules change; regate() re-applies the current rules to
 # every stored job whose rules_v is older (demote/promote alert_ok in place).
-RULES_VERSION = 2
+RULES_VERSION = 3
 
 SENIOR_RE = re.compile(
     r"\b(senior|staff|principal|lead(er)?|director|manager|head of|sr\.?|vp|chief|"
@@ -23,44 +23,61 @@ SENIOR_RE = re.compile(
     r"engineer\s+[3-9]|l[5-9]|level\s+[3-9])\b", re.I)
 # Typically 1-3 yrs experience: worth seeing on the dashboard, never an alert.
 MIDLEVEL_RE = re.compile(r"\b(ii|l4|engineer\s+2|level\s+2|mid([- ]level)?)\b", re.I)
-# Roles outside Victor's field. Title-only, demote-only (alert_ok=False, job
+# Roles outside this branch's field. Title-only, demote-only (alert_ok=False, job
 # stays on the dashboard) and outranks every auto-alert path incl. marquee.
 # Deliberately narrow: "Product Engineer" / "Security Engineer" must NOT match.
 OFF_FIELD_RE = re.compile(
-    r"\b(safeguards?|trust\s*(&|and)\s*safety|policy|counsel|legal|paralegal|compliance|"
+    r"\b(software|frontend|backend|full[- ]?stack|data\s+(scien|engineer(?:ing)?)|machine\s+learning|\bai\b|"
+    r"firmware|computer\s+vision|network\s+engineer|reinforcement\s+learning|"
+    r"digital\s+verification|radio\s+frequency|hardware\s+(design|engineer)|electronic\s+design|"
+    r"electrical|electronics|mechanical|civil|aerospace|computer\s+engineering|cyber|"
+    r"policy|counsel|legal|paralegal|compliance|"
     r"recruit(er|ing)|talent|people\s+(ops|operations)|human\s+resources|hr|"
     r"sales|account\s+(executive|manager)|business\s+(development|operations|analyst)|"
     r"go[- ]to[- ]market|gtm|partnerships?|"
     r"marketing|brand|communications?|comms|public\s+relations|editorial|"
     r"finance|financial\s+analyst|accounting|accountant|payroll|procurement|revenue|"
-    r"solutions?\s+(engineer|architect|consultant)|sales\s+engineer|field\s+engineer|"
+    r"solutions?\s+(engineer|architect|consultant)|sales\s+engineer|"
     r"customer\s+(success|support|experience)|technical\s+support|"
     r"support\s+(engineer|specialist)|help\s?desk|"
     r"(ux|ui|visual|graphic|product)\s+design(er)?|"
     r"(product|program|project)\s+manager|product\s+(owner|marketing)|"
     r"chief\s+of\s+staff|executive\s+assistant|administrative|"
     r"workplace|facilities)\b", re.I)
-INTERN_RE = re.compile(r"\b(intern(ship)?|co-?op|apprentice|fellowship|part[- ]?time|contract(or)?)\b", re.I)
+ADJACENT_ENGINEERING_RE = re.compile(
+    r"\b(electrical|electronics|mechanical|civil|aerospace|industrial)\b", re.I)
+GENERIC_ALERT_RE = re.compile(
+    r"^(engineering (intern(ship)?|co-?op)|engineer co-?op|r&d (engineer )?(intern|co-?op)|"
+    r"research (and|&) development intern|laboratory intern|lab intern|technical intern)\b", re.I)
+INTERNSHIP_RE = re.compile(r"\b(intern(ship)?|co-?op|student program|summer student)\b", re.I)
+FULL_TIME_RE = re.compile(r"\b(full[- ]?time|new ?grad|university grad|entry[- ]level)\b", re.I)
 PHD_RE = re.compile(r"\bph\.?d\b|postdoc", re.I)
 CLEARANCE_RE = re.compile(r"\b(security clearance|ts/sci|polygraph|top secret)\b", re.I)
 YEARS_RE = re.compile(r"(?:minimum|at least|requires?)\s+(\d+)\+?\s+years", re.I)
 
-NEW_GRAD_RE = re.compile(
-    r"\b(new ?grad|university grad|recent(ly)? grad|early[- ]career|entry[- ]level|"
-    r"campus|college grad|20(25|26|27) grad|class of 20(25|26|27)|junior|associate|"
-    r"engineer i\b|graduate (software|engineer|program|scheme))\b", re.I)
-ENTRY_YEARS_RE = re.compile(r"\b0\s*[-–to ]+\s*[123]\s+years\b", re.I)
-
 ROLE_BUCKETS: dict[str, re.Pattern] = {
-    "ai_ml": re.compile(
-        r"machine learning|ml engineer|\bml\b|\bai\b|artificial intelligence|applied scientist|"
-        r"research engineer|deep learning|\bllm\b|gen ?ai|generative|nlp|computer vision|perception", re.I),
-    "data_science": re.compile(r"data scien|analytics engineer|\banalyst\b|statistic|quantitative", re.I),
-    "data_eng": re.compile(r"data engineer|data platform|data infrastructure|etl\b", re.I),
-    "swe": re.compile(
-        r"software|swe\b|backend|back[- ]end|full[- ]?stack|front[- ]?end|platform engineer|"
-        r"infrastructure|site reliability|devops|mobile|\bios\b|android|\bdeveloper\b|systems engineer|"
-        r"security engineer|cloud engineer|embedded", re.I),
+    "chemical_process": re.compile(
+        r"chemical engineer|process (engineer|engineering|development|design|technology|safety)|"
+        r"process intern|intern.{0,30}\bprocess\b|reaction engineering|separations|"
+        r"unit operations|scale[- ]?up", re.I),
+    "bioprocess_pharma": re.compile(
+        r"bioprocess|biomanufactur|biochemical|fermentation|upstream|downstream|"
+        r"process sciences|drug product|drug substance|msat|pharmaceutical", re.I),
+    "manufacturing_ops": re.compile(
+        r"manufacturing engineer|manufacturing intern|operations engineer|production engineer|"
+        r"plant engineer|process improvement|continuous improvement|industrial engineer", re.I),
+    "materials_semiconductor": re.compile(
+        r"materials? (engineer|engineering|science|intern)|polymer|coatings?|battery|electrochem|"
+        r"semiconductor process|wafer|fabrication|thin film|metallurg", re.I),
+    "environmental_safety": re.compile(
+        r"environmental engineer|environmental engineering|environmental.{0,25}intern|"
+        r"water|wastewater|sustainability engineer|ehs\b|hse\b|process safety", re.I),
+    "quality_validation": re.compile(
+        r"quality engineer|quality engineering|validation engineer|validation intern|"
+        r"process validation|quality control|quality assurance", re.I),
+    "general_engineering": re.compile(
+        r"\b(engineering intern|engineer intern|engineering co-?op|engineer co-?op|"
+        r"r&d intern|research (and|&) development intern|laboratory intern|lab intern|technical intern)\b", re.I),
 }
 
 FOREIGN_HINTS = re.compile(
@@ -82,13 +99,22 @@ US_HINTS = re.compile(
 
 
 def role_bucket(title: str, description: str = "") -> str | None:
-    for bucket in ("ai_ml", "data_science", "data_eng", "swe"):
+    for bucket in ("bioprocess_pharma", "chemical_process", "manufacturing_ops",
+                   "materials_semiconductor", "environmental_safety",
+                   "quality_validation"):
         if ROLE_BUCKETS[bucket].search(title):
             return bucket
-    if description:
-        for bucket in ("ai_ml", "data_science", "swe"):
+    # Description fallback is intentionally limited to generic engineering
+    # internship titles. Company/JD boilerplate must not promote unrelated jobs.
+    if description and ROLE_BUCKETS["general_engineering"].search(title):
+        for bucket in ("bioprocess_pharma", "chemical_process", "manufacturing_ops",
+                       "materials_semiconductor", "environmental_safety",
+                       "quality_validation"):
             if ROLE_BUCKETS[bucket].search(description[:600]):
                 return bucket
+        return "general_engineering"
+    if ROLE_BUCKETS["general_engineering"].search(title):
+        return "general_engineering"
     return None
 
 
@@ -108,8 +134,6 @@ def gates(job: Job) -> tuple[bool, bool, list[str]]:
     """Returns (keep_at_all, alert_eligible, reasons)."""
     t = job.title
     text = f"{t}\n{job.description[:1500]}"
-    if INTERN_RE.search(t):
-        return False, False, ["intern/co-op/contract"]
     if SENIOR_RE.search(t):
         return False, False, ["senior+ title"]
     if PHD_RE.search(t):
@@ -118,60 +142,45 @@ def gates(job: Job) -> tuple[bool, bool, list[str]]:
         return False, False, ["requires clearance"]
     if not location_ok(job):
         return False, False, ["non-US location"]
+    if not INTERNSHIP_RE.search(text):
+        return False, False, ["not an internship/co-op"]
     m = YEARS_RE.search(job.description)
     if m and int(m.group(1)) >= 3:
         return False, False, [f"requires {m.group(1)}+ years"]
-    if role_bucket(t, job.description) is None:
-        return False, False, ["not an AI/SWE/DS role"]
+    bucket = role_bucket(t, job.description)
+    # Keep nearby engineering disciplines as optional dashboard exploration,
+    # but do not persist clearly unrelated software/business internship noise.
+    if OFF_FIELD_RE.search(t) and not ADJACENT_ENGINEERING_RE.search(t):
+        return False, False, ["off-field internship"]
+    if bucket is None:
+        if ADJACENT_ENGINEERING_RE.search(t):
+            return True, False, ["off-field internship (dashboard only)"]
+        return False, False, ["not a chemical/process engineering role"]
 
-    aggregator = job.source in {"simplify", "vansh", "jobright", "speedyapply"}
-    explicit = bool(NEW_GRAD_RE.search(text) or ENTRY_YEARS_RE.search(text))
-    reasons = []
-    alert_eligible = aggregator or explicit
-    # The Shams rule, v2: blockbusters skip the new-grad-wording requirement
-    # (hard gates above still apply). Likewise a pays-bank salary. Field fit
-    # and seniority now outrank these bypasses — see the demotions below.
-    if not alert_eligible and is_marquee(job.company):
-        alert_eligible = True
-        reasons.append("marquee company (auto-alert)")
-    if not alert_eligible and pays_bank(job.salary):
-        alert_eligible = True
-        reasons.append("pays bank (auto-alert)")
-    # Priority sectors: a role-fit title at a priority-sector company alerts
-    # without explicit new-grad wording — most ATS postings carry no
-    # description to prove it (the WHOOP lesson).
-    if (not alert_eligible and job.sector in priority_sectors()
-            and _strong_role_title(t)):
-        alert_eligible = True
-        reasons.append(f"priority sector: {job.sector} (auto-alert)")
-    # Demotions outrank every auto-alert path above, marquee included:
-    # dashboard-only, never deleted.
-    if alert_eligible and OFF_FIELD_RE.search(t):
+    reasons = ["internship/co-op title"]
+    alert_eligible = True
+    if OFF_FIELD_RE.search(t):
         alert_eligible = False
-        reasons.append("off-field title (dashboard only)")
-    if alert_eligible and MIDLEVEL_RE.search(t):
+        reasons.append("off-field discipline (dashboard only)")
+    if bucket == "general_engineering" and job.sector not in priority_sectors():
         alert_eligible = False
-        reasons.append("mid-level title (dashboard only)")
+        reasons.append("generic engineering internship outside target sectors (dashboard only)")
+    elif bucket == "general_engineering" and not GENERIC_ALERT_RE.search(t):
+        alert_eligible = False
+        reasons.append("generic/adjacent engineering title needs review (dashboard only)")
     if not alert_eligible and not reasons:
-        reasons.append("seniority unclear (dashboard only)")
+        reasons.append("internship fit unclear (dashboard only)")
     return True, alert_eligible, reasons
 
 
 def explicit_new_grad(title: str) -> bool:
-    """True when the title itself carries new-grad evidence (ranking/UI flag)."""
-    return bool(NEW_GRAD_RE.search(title))
+    """Compatibility name: True when the title explicitly says intern/co-op."""
+    return bool(INTERNSHIP_RE.search(title))
 
 
 def _strong_role_title(t: str) -> bool:
-    """Stricter than role_bucket for the priority-sector auto-alert: a bare
-    "<anything> Analyst" title (the data_science bucket's loosest match) is
-    too weak to alert on by itself — require a data-flavored analyst title."""
-    b = role_bucket(t)
-    if b in ("ai_ml", "data_eng", "swe"):
-        return True
-    if b == "data_science":
-        return bool(re.search(r"data|analytics|statistic|quantitative", t, re.I))
-    return False
+    """True for a discipline-specific ChemE title, not generic engineering."""
+    return role_bucket(t) not in (None, "general_engineering")
 
 
 _MARQUEE_CACHE: set | None = None
@@ -246,23 +255,23 @@ def _culture_cache() -> dict:
 
 # Tokens the taste model must never learn or reward: employment-shape noise,
 # leaked location words, and off-field families (boosting "business" or
-# "marketing" floods the board with roles outside Victor's field). Filtered
+# "marketing" floods the board with roles outside the candidate's field). Filtered
 # symmetrically in _title_tokens, so stale entries already sitting in
-# state/feedback.json become inert without touching the file.
+# inherited feedback files remain inert because this profile has its own state.
 FEEDBACK_STOPWORDS = {
     "full", "time", "onsite", "hybrid", "remote", "multiple", "positions",
     "available", "united", "states", "level", "mid", "amer", "early", "career",
     "san", "francisco", "nyc", "york", "creek", "fridley", "obispo", "luis",
-    "business", "product", "products", "marketing", "solutions", "services",
-    "operations", "program", "recruiter", "support", "success", "strategy",
+    "business", "marketing", "solutions", "services",
+    "program", "recruiter", "support", "success", "strategy",
     "partner", "client", "enterprise", "gov", "government", "monetization",
-    "planning", "inbound", "shopping", "sharing", "value", "quality", "assurance",
+    "planning", "inbound", "shopping", "sharing", "value",
 }
 
 
 def _title_tokens(title: str) -> set[str]:
-    stop = {"engineer", "software", "the", "and", "of", "for", "a", "an", "i", "ii",
-            "new", "grad"} | FEEDBACK_STOPWORDS
+    stop = {"engineer", "engineering", "intern", "internship", "coop", "co", "op",
+            "the", "and", "of", "for", "a", "an", "i", "ii"} | FEEDBACK_STOPWORDS
     return {w for w in norm(title).split() if len(w) > 2 and w not in stop}
 
 
@@ -273,7 +282,7 @@ def score(job: Job, feedback: dict, now: int | None = None) -> None:
     pts = 40
     reasons = ["base 40"]
 
-    bucket = role_bucket(job.title, job.description) or "swe"
+    bucket = role_bucket(job.title, job.description) or "general_engineering"
     role_pts = p["roles"].get(bucket, 10)
     pts += role_pts
     reasons.append(f"role:{bucket} +{role_pts}")
@@ -284,9 +293,10 @@ def score(job: Job, feedback: dict, now: int | None = None) -> None:
         reasons.append(f"sector:{job.sector} +{sector_pts}")
 
     b = p["bonuses"]
-    if NEW_GRAD_RE.search(job.title):
-        pts += b["explicit_new_grad_title"]
-        reasons.append(f"new-grad title +{b['explicit_new_grad_title']}")
+    if INTERNSHIP_RE.search(job.title):
+        bonus = b.get("explicit_internship_title", b.get("explicit_new_grad_title", 0))
+        pts += bonus
+        reasons.append(f"internship title +{bonus}")
 
     if job.posted_at:
         age_h = (now - job.posted_at) / 3600
@@ -328,8 +338,8 @@ def score(job: Job, feedback: dict, now: int | None = None) -> None:
             pts += cf
             reasons.append(f"culture fit {d['fit']}/100 {'+' if cf > 0 else ''}{cf}")
 
-    # SHPE 2026 exhibitor: the posting doubles as a warm booth intro (Oct 28-31)
-    if norm(job.company) in _shpe_companies():
+    # Optional conference boost; off by default for this generic candidate.
+    if p.get("conference_boost_enabled") and norm(job.company) in _shpe_companies():
         pts += 4
         reasons.append("SHPE 2026 exhibitor +4")
 
@@ -377,7 +387,8 @@ def regate(jobs_state: dict) -> int:
                   remote=bool(rec.get("remote")), sector=rec.get("sector", ""))
         keep, alert_eligible, reasons = gates(job)
         new_alert = keep and alert_eligible
-        rec["explicit_new_grad"] = explicit_new_grad(job.title)
+        rec["explicit_internship"] = explicit_new_grad(job.title)
+        rec["explicit_new_grad"] = rec["explicit_internship"]
         rec["rules_v"] = RULES_VERSION
         if bool(rec.get("alert_ok")) != new_alert:
             rec["alert_ok"] = new_alert

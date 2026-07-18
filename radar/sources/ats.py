@@ -15,6 +15,11 @@ from ..http import get_json, post_json
 from ..models import Job
 
 
+def _internship_mode() -> bool:
+    from ..config import profile
+    return profile().get("candidate", {}).get("level") == "internship"
+
+
 def _plain(html_text: str | None) -> str:
     """HTML (possibly entity-escaped, à la Greenhouse `content`) → plain text."""
     if not html_text:
@@ -66,7 +71,8 @@ def fetch_lever(entry: dict) -> list[Job]:
     out = []
     for j in data:
         cats = j.get("categories") or {}
-        if (cats.get("commitment") or "").lower().startswith(("intern", "part")):
+        if (not _internship_mode()
+                and (cats.get("commitment") or "").lower().startswith(("intern", "part"))):
             continue
         loc = cats.get("location") or ""
         all_locs = [loc] + (j.get("additionalPlainLocations") or [])
@@ -89,7 +95,9 @@ def fetch_ashby(entry: dict) -> list[Job]:
     for j in data.get("jobs", []):
         if not j.get("isListed", True):
             continue
-        if (j.get("employmentType") or "").lower() in {"intern", "internship", "parttime", "contract"}:
+        if (not _internship_mode()
+                and (j.get("employmentType") or "").lower()
+                in {"intern", "internship", "parttime", "contract"}):
             continue
         locs = [j.get("location") or ""]
         locs += [s.get("location", "") for s in (j.get("secondaryLocations") or [])]
@@ -130,7 +138,7 @@ def fetch_workday(entry: dict, queries: list[str] | None = None) -> list[Job]:
     base = f"https://{tenant}.{host}.myworkdayjobs.com"
     api = f"{base}/wday/cxs/{tenant}/{site}/jobs"
     seen, out = set(), []
-    for q in (queries or ["new grad", "early career"]):
+    for q in (queries or ["engineering intern", "engineering co-op"]):
         for offset in (0, 20, 40):
             data = post_json(api, {"appliedFacets": {}, "limit": 20, "offset": offset, "searchText": q})
             postings = data.get("jobPostings") or []
@@ -239,7 +247,10 @@ def fetch_phenom(entry: dict, queries: list[str] | None = None) -> list[Job]:
     host = entry["extra"]["host"].rstrip("/")
     refnum = entry["extra"]["refnum"]
     out, seen = [], set()
-    for q in (queries or ["new grad", "early career", "entry level"]):
+    if queries is None:
+        from ..config import profile
+        queries = profile().get("workday_queries") or ["engineering intern", "engineering co-op"]
+    for q in queries:
         payload = {
             "lang": "en_us", "deviceType": "desktop", "country": "us",
             "pageName": "search-results", "ddoKey": "refineSearch",

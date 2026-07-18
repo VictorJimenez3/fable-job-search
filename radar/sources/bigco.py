@@ -14,7 +14,7 @@ import time
 from ..http import get_json, post_json
 from ..models import Job
 
-QUERIES = ["new grad", "early career", "university grad"]
+QUERIES = ["chemical engineering intern", "process engineering intern", "engineering co-op"]
 
 # Several big-co WAFs reject non-browser user agents; identify as a browser
 # for these bespoke endpoints only (standard ATS APIs keep the honest UA).
@@ -180,7 +180,7 @@ def fetch_apple(entry: dict) -> list[Job]:
 def fetch_google(entry: dict) -> list[Job]:
     """Best-effort: careers.google.com's SPA API. Allowed to die gracefully."""
     out, seen = [], set()
-    for q in ["early career software engineer", "new grad"]:
+    for q in ["chemical engineering intern", "process engineering intern"]:
         data = get_json("https://careers.google.com/api/v3/search/",
                         params={"q": q, "location": "United States", "page": 1},
                         headers=BROWSER_HEADERS)

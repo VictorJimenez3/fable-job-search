@@ -2,7 +2,7 @@
 
 Why issues: assigning an issue to you triggers GitHub's native notification
 pipeline (mobile push + email) with zero extra credentials, and the issue body
-doubles as the tracking UI — checking a job adds it to Victor's Notion
+doubles as the tracking UI — checking a job adds it to the owner's Notion
 Applications database right away with the not-yet-applied status; he flips it
 to Applied in Notion when he actually applies. One issue per ISO week keeps
 noise down; each run appends a timestamped section.

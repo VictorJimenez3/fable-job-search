@@ -1,105 +1,82 @@
-# AI setup runbook — turn the radar's LLM layer ON
+# Optional AI setup
 
-**For: Victor + a local Claude Code session on the Mac.** Written 2026-07-17
-by the cloud session that shipped rules v2 + posting scraping. Everything
-deterministic already runs without AI (gates, scoring, posting scraping,
-sponsorship/years extraction, alerts). This doc is the checklist to light up
-the AI layer, which is currently **fully OFF in the cloud** — verified from
-live workflow env + state: `ANTHROPIC_API_KEY` is empty in Actions, 0 of
-10,705 records ever received an `llm_note`, and quality verdicts only appear
-when the Mac happens to be awake.
+The radar does not need AI for discovery, ChemE scoring, sponsorship parsing,
+experience parsing, alerts, or the platform. AI adds a second-pass internship
+verdict, employer dossiers, application angles, and a weekly employer scout.
 
-## What turns on when a provider exists
+## Important account distinction
 
-| Feature | Where it runs | What you get |
-|---|---|---|
-| Re-rank + application angle (`brief.rerank`) | every crawl (needs `ANTHROPIC_API_KEY`) | borderline jobs re-ordered semantically; each alert gets a one-line "angle" note |
-| Quality verdicts (`quality.verify`) | `enrich` (nightly CI or Mac 2h cycle) | LLM confirms new-grad / role-family from real posting text; wrong roles demoted |
-| Pasted-JD grading (`quality.verify_pasted`) | `enrich` | JDs pasted into the platform's Role-fit tab get a verdict |
-| Culture dossiers (`culture.enrich_missing`) | `enrich` | industry/prestige/wlb/vibe/fit per company |
-| Company scout (`discovery.llm_scout`) | `enrich`, weekly | employers aggregators miss (the WHOOP class) |
+A ChatGPT Pro subscription and OpenAI API usage are separate products. A
+ChatGPT login/API-looking token should not be placed in this repo. To use the
+OpenAI API, create a Platform project key and enable API billing separately,
+then use the OpenAI-compatible configuration below. Keep all keys in GitHub
+Actions/Vercel secrets or a local environment, never committed files.
 
-Provider resolution (`radar/llm.py`): `ANTHROPIC_API_KEY` → Anthropic
-(model `claude-haiku-4-5` from profile.yaml); else `LLM_BASE_URL` → any
-OpenAI-compatible endpoint (`LLM_API_KEY`, `LLM_MODEL`); else heuristics
-only. Free-tier rate limits are handled — `llm.complete()` retries
-429/500/503 honoring `Retry-After`.
+## Provider choices
 
-## Step 1 — create ONE free key (Victor, ~3 minutes)
+Provider resolution in `radar/llm.py` is:
 
-Pick one:
+1. `ANTHROPIC_API_KEY` → Anthropic using the profile model;
+2. `LLM_BASE_URL` → an OpenAI-compatible endpoint using `LLM_API_KEY` and
+   `LLM_MODEL`;
+3. no provider → deterministic features only.
 
-**Option A · NVIDIA NIM (free, hosted open models)**
-1. Sign in at https://build.nvidia.com → Get API Key → copy the `nvapi-…` key.
-2. Secrets to add:
-   - `LLM_BASE_URL` = `https://integrate.api.nvidia.com/v1`
-   - `LLM_API_KEY` = `nvapi-…`
-   - `LLM_MODEL` = `meta/llama-3.3-70b-instruct` (any hosted instruct model works)
+Examples:
 
-**Option B · Google AI Studio (free Gemini tier)**
-1. https://aistudio.google.com/apikey → Create API key.
-2. Secrets:
-   - `LLM_BASE_URL` = `https://generativelanguage.googleapis.com/v1beta/openai`
-   - `LLM_API_KEY` = the AI Studio key
-   - `LLM_MODEL` = `gemini-2.5-flash`
+```text
+# OpenAI API
+LLM_BASE_URL=https://api.openai.com/v1
+LLM_API_KEY=<platform project key>
+LLM_MODEL=<model available to that project>
 
-**Option C · Anthropic (paid, best quality, also enables crawl-time rerank)**
-- Single secret: `ANTHROPIC_API_KEY`. (A/B only power `enrich`; the crawl's
-  rerank path currently reads only the Anthropic key.)
-
-## Step 2 — add the secrets
-
-GitHub → repo **Settings → Secrets and variables → Actions → New repository
-secret**. `enrich.yml` already wires all four names — no workflow edits
-needed.
-
-## Step 3 — verify (Victor or the local Claude)
-
-1. Actions → **enrich** → Run workflow (branch: the default radar branch).
-2. In the run log expect: `enrich: generated N culture dossier(s) via
-   openai-compatible` (or `anthropic`), `quality pass … verified N new
-   job(s)` — and NOT "no LLM provider configured".
-3. Next day, `state/jobs.json` should show fresh `quality.checked_at`
-   timestamps and (option C) `llm_note` strings appearing after crawls.
-4. Optional once verified: bump `enrich.yml` cron from nightly
-   (`20 7 * * *`) to every 6 h.
-
-## Mac companion health check (the free local path)
-
-The Mac does the same enrich cycle with Ollama whenever it's awake — no key
-needed. It has been asleep since ~Jul 15; to check/revive:
-
-```bash
-launchctl list | grep jobradar          # com.jobradar.enrich loaded?
-tail -20 ~/.jobradar/logs/enrich.log    # last cycle + errors
-ollama ps                               # should be EMPTY between cycles
+# Local Ollama
+LLM_BASE_URL=http://127.0.0.1:11434/v1
+LLM_API_KEY=ollama
+LLM_MODEL=qwen3:30b
 ```
 
-If the launchd job is gone, re-run `scripts/mac-companion/install.sh`.
-Cloud key and Mac coexist fine — verdicts are cached per job (`jd_sha` /
-attempt caps mean no double spend), and `merge_state.py` reconciles pushes.
+Model availability and pricing change, so choose a currently available model
+in the provider dashboard rather than treating a model name in this document
+as permanent.
 
-## For the local Claude session — read first, then next steps
+## Cloud setup
 
-Read order: `README.md` → `DECISIONS.md` (#30–#35 are the current era) →
-`docs/CLI_HANDOFF.md` → `profile.yaml`. House rules that bind you:
-deterministic scoring with reasons strings; LLM adjusts, never deletes;
-demote-don't-delete; never scrape LinkedIn; `docs/platform/index.html`
-stays a byte copy of `webapp/index.html`; `git pull --rebase` before every
-push (CI commits every ~30 min).
+Add `LLM_BASE_URL`, `LLM_API_KEY`, and `LLM_MODEL` under GitHub **Settings →
+Secrets and variables → Actions**. The nightly `enrich` workflow already
+wires them. Alternatively, add only `ANTHROPIC_API_KEY`.
 
-After the key works, the queued AI work in priority order:
-1. **Watch one enrich cycle end-to-end** — marquee suppression now applies
-   (DECISIONS #31), so expect some Anthropic/OpenAI demotions; sanity-check
-   a few verdicts against the actual postings.
-2. **Pasted-JD flow** — paste one JD in the platform's Role-fit tab, run
-   enrich, confirm the verdict lands with `source: "pasted"`.
-3. **CV auto-tailoring** — ON HOLD until Victor fleshes out
-   `CV/cv_full.tex` (Mac-only, never committed — DECISIONS #29).
-4. **Posting ↔ profile RAG** (ROADMAP, parked): embedding similarity
-   between scraped posting text (now accumulating in the quality pass) and
-   CV/profile bullets as a ranking signal — local-first via Ollama
-   embeddings (e.g. `nomic-embed-text`), similarity logged as a reason
-   line to stay auditable. Wait until a few weeks of scraped text exists.
-5. Cosmetic: `python -m radar.main repair-feedback` once (stopworded taste
-   tokens are already inert at read time; this just cleans the file).
+Then run **Actions → enrich → Run workflow** on the active ChemE branch.
+The log should identify a provider and report dossier/quality counts rather
+than `no LLM provider configured`.
+
+## Free local setup
+
+The Mac companion uses Ollama and runs enrichment every two hours while the
+machine is awake:
+
+```bash
+JOBRADAR_BRANCH=claude/cheme-intern-radar \
+  bash scripts/mac-companion/install.sh
+```
+
+It requires authenticated Git push access because enrichment updates state.
+Useful checks:
+
+```bash
+launchctl list | grep jobradar
+tail -20 ~/.jobradar/logs/enrich.log
+ollama ps
+```
+
+Local and cloud providers may coexist. Verdicts are cached by job-description
+hash so unchanged content is not repeatedly charged.
+
+## What to validate
+
+- A clearly relevant Chemical Engineering internship receives a relevant role
+  family, not a software/new-grad verdict.
+- A non-internship or unrelated-discipline role is demoted, not deleted.
+- Sponsorship remains based on posting evidence; the LLM must not convert
+  `unknown` to `yes` without text evidence.
+- Generated employer dossiers say `est.` and report internship pay rather than
+  annual new-grad compensation.

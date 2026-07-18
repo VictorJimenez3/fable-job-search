@@ -56,7 +56,7 @@ def test_llm_not_new_grad_suppresses_and_penalizes(monkeypatch):
     assert quality.verify(rec)
     assert rec["alert_ok"] is False
     assert rec["score"] == 80 - quality._PENALTY_NOT_NEW_GRAD
-    assert any("not new-grad" in r for r in rec["score_reasons"])
+    assert any("not internship-level" in r for r in rec["score_reasons"])
     assert rec["quality"]["new_grad"] == "no"
 
 
@@ -93,7 +93,7 @@ def test_reapply_is_idempotent_without_rescore(monkeypatch):
     quality.reapply(rec)
     quality.reapply(rec)
     assert rec["score"] == once             # no compounding
-    assert sum("not new-grad" in r for r in rec["score_reasons"]) == 1
+    assert sum("not internship-level" in r for r in rec["score_reasons"]) == 1
 
 
 def test_reapply_restores_after_rescore(monkeypatch):

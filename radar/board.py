@@ -1,12 +1,12 @@
 """Consolidated views: the master-board issue and the daily-best issue.
 
 Why: weekly alert issues fill up (GitHub caps an issue body at ~64KB) and
-Victor shouldn't bounce between them to check boxes. The master board is ONE
+The candidate shouldn't bounce between them to check boxes. The master board is ONE
 stable issue holding every open, alert-worthy role — body plus bot comments
 as extra pages, rewritten in place each crawl. Its checkboxes carry the same
 ``<!--radar:ID-->`` markers, so the existing applied-sync workflow tracks
 them to Notion (comment-checkbox edits included). The daily-best issue is a
-fresh top-10 each evening; because it's assigned to Victor, GitHub's own
+fresh top-10 each evening; because it's assigned to the repository owner, GitHub's own
 notification email doubles as the requested daily "best of" email with zero
 mail credentials.
 """

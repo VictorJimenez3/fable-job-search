@@ -46,7 +46,7 @@ class Job:
     sector: str = ""                 # filled by sector inference
     score: int = 0
     score_reasons: list[str] = field(default_factory=list)
-    alert_ok: bool = False           # passed gates AND new-grad-eligible
+    alert_ok: bool = False           # passed gates AND internship-eligible
     llm_note: str = ""
     posting: dict = field(default_factory=dict)  # scraped-text analysis (radar/posting.py)
 

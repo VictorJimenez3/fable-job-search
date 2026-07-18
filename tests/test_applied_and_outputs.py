@@ -19,10 +19,10 @@ def tmp_state(tmp_path, monkeypatch):
     return tmp_path
 
 
-JOB = {"id": "a" * 16, "company": "Tempus", "title": "ML Engineer, New Grad",
+JOB = {"id": "a" * 16, "company": "Tempus", "title": "Process Engineering Intern",
        "url": "https://boards.greenhouse.io/tempus/jobs/1", "source": "greenhouse",
        "locations": ["Chicago, IL"], "posted_at": int(time.time()) - 3600,
-       "score": 88, "sector": "healthtech", "alert_ok": True,
+       "score": 88, "sector": "pharma_biotech", "alert_ok": True,
        "score_reasons": [], "salary": "", "remote": False, "ats": "greenhouse",
        "description": "", "llm_note": ""}
 
@@ -132,9 +132,7 @@ def test_notion_payload_matches_full_schema():
     props = p["properties"]
     assert props["Company"]["title"][0]["text"]["content"] == "Tempus"
     assert props["Stage"]["status"]["name"] == "Applied"
-    # ML title must map onto the existing multi-select option (with its typo)
-    assert props["Position"]["multi_select"][0]["name"] in {
-        "AI/ML Software Engineer", "Machine Learning Enginner", "Software Engineer"}
+    assert props["Position"]["multi_select"][0]["name"] == "Chemical / Process Engineering"
     assert props["Job URL"]["url"].startswith("https://")
     assert "Apply date" in props
 
@@ -249,6 +247,17 @@ def test_dashboard_and_rss_render():
     assert "Tempus" in md and "| 88" in md
     rss = render_rss([{**JOB, "alerted_at": int(time.time())}])
     assert "<rss" in rss and "Tempus" in rss and JOB["id"] in rss
+
+
+def test_generated_surfaces_hide_inherited_tech_history():
+    old = {**JOB, "id": "b" * 16, "company": "Legacy Tech",
+           "title": "Software Engineer, New Grad", "sector": "big_tech"}
+    md = render_dashboard({JOB["id"]: {**JOB, "first_seen": int(time.time())},
+                           old["id"]: {**old, "first_seen": int(time.time())}}, {}, [])
+    rss = render_rss([{**old, "alerted_at": int(time.time())},
+                      {**JOB, "alerted_at": int(time.time())}])
+    assert "Tempus" in md and "Legacy Tech" not in md
+    assert "Tempus" in rss and "Legacy Tech" not in rss
 
 
 def test_strategist_memo_builds(tmp_state, monkeypatch):

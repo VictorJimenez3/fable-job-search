@@ -2,7 +2,7 @@
 
 jobs.json      {job_id: record}                — everything ever seen, with score
 companies.json {ats:token: registry entry}     — the self-expanding company registry
-feedback.json  {company_boosts, token_boosts, negative} — learned taste
+feedback_cheme.json  {company_boosts, token_boosts, negative} — ChemE taste
 applied.json   [{id, company, title, url, applied_at, notion_synced, ...}]
 runs.json      [{ts, new_jobs, alerts, sources: {...}}]  — last 200 run summaries
 """
@@ -45,7 +45,13 @@ def companies() -> dict:
 
 
 def feedback() -> dict:
-    return load("feedback.json", {"company_boosts": {}, "token_boosts": {}, "negative_companies": []})
+    # This profile intentionally uses its own taste file so inherited software-
+    # search clicks cannot bias Chemical Engineering internship ranking.
+    return load("feedback_cheme.json", {"company_boosts": {}, "token_boosts": {}, "negative_companies": []})
+
+
+def save_feedback(value: dict) -> None:
+    save("feedback_cheme.json", value)
 
 
 def applied() -> list:

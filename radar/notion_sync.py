@@ -1,9 +1,9 @@
 """Write tracked jobs into the user's Notion Applications database.
 
 Every entry in state/applied.json carries a stage: "saved" (checkbox on an
-alert — Victor is tracking it, hasn't applied yet) or "applied" (an explicit
+alert — the candidate is tracking it, hasn't applied yet) or "applied" (an explicit
 `applied` comment or, later, email confirmation). Saved entries get a Notion
-page immediately with the not-yet-applied status; Victor flips the status in
+page immediately with the not-yet-applied status; the candidate flips the status in
 Notion when he applies. If the radar itself later learns an entry was applied,
 sync patches the existing page's status instead of creating a duplicate.
 
@@ -91,8 +91,8 @@ def resolve_database(token: str, name_hint: str = "application") -> dict:
 
 def _position_options(title: str) -> list[dict]:
     pmap = profile()["notion"]["position_map"]
-    bucket = role_bucket(title) or "swe"
-    name = pmap.get(bucket) or pmap["swe"]
+    bucket = role_bucket(title) or "default"
+    name = pmap.get(bucket) or pmap.get("default") or "Engineering Internship"
     return [{"name": name}]
 
 

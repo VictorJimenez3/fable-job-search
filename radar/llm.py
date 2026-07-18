@@ -10,9 +10,8 @@ Provider resolution, in order:
                                      llm.local_model).
   3. neither                      -> None; callers degrade to heuristics.
 
-This is what lets the same enrichment code run on GitHub Actions (with a paid
-key), on the user's M1 Max via Ollama (free, automatic when the laptop is on),
-or not at all — without any caller caring which.
+This lets the same enrichment code run on GitHub Actions (with a hosted key),
+on a local machine via Ollama, or not at all — without callers caring which.
 """
 from __future__ import annotations
 

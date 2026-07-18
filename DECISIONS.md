@@ -600,3 +600,42 @@ living in different places (an inline all-time one inside the Funnel section,
 plus this new 3-week one). Consolidated into the single 3-week,
 min-sample-3 breakdown; the Funnel keeps all-time raw stage counts, a
 complementary volume metric rather than a conflicting rate.
+
+## 37. The Cheme branch is internship-first and isolates inherited tech state (2026-07-18)
+
+The named `claude/cheme-intern-radar` branch existed but had never received a
+Chemical Engineering implementation and was 65 commits behind the active
+system. It was first merged forward so the candidate keeps posting scraping,
+eligibility facts, response analytics, and platform improvements; then the
+search policy was converted rather than rebuilt as a disconnected project.
+
+- **Eligibility is explicit.** Rules v3 require internship/co-op evidence for
+  alerts. Chemical/process, bioprocess/pharma, manufacturing/operations,
+  materials/semiconductor, environmental/safety, quality/validation, and
+  general engineering are separate weighted families. Adjacent disciplines
+  such as mechanical/electrical are dashboard-only; software/business
+  internships and unrelated jobs are rejected.
+- **Sponsorship defaults conservatively.** This generic profile sets
+  `needs_sponsorship: true`: explicit no-sponsorship text suppresses an alert,
+  but absent text remains `unknown`, never an inferred yes or no.
+- **Sources match the candidate.** Only profile-enabled internship aggregators
+  run; the live Simplify Summer 2026 JSON feed is enabled and a stale community
+  feed is disabled. Direct ATS polling is restricted to ChemE sectors and
+  uses ChemE internship/co-op queries. Employer career endpoints were probed
+  before entering the seed instead of committing guessed URLs.
+- **History is retained but cannot bleed into ranking.** The inherited registry
+  and jobs are not destructively reset. Registry-sector filtering prevents old
+  tech employers from consuming polling budget, rules-v3 re-gating demotes old
+  alerts, ChemE feedback has its own `feedback_cheme.json`, and profile-tagged
+  culture dossiers prevent tech career estimates from affecting ChemE scores
+  or output.
+- **Generated state remains generated.** The branch does not hand-rewrite the
+  old dashboard/state to look converted. Its first activated crawl performs
+  the auditable transition. Because GitHub schedules only the default branch,
+  changing/merging the default branch is an explicit activation step rather
+  than something source code can safely do.
+
+Backward-compatible state keys (`explicit_new_grad`, `quality.new_grad`, and
+`new_grad_tc`) remain readable so existing records and migrations do not
+break; new UI and documentation call them internship evidence, internship
+fit, and intern pay.

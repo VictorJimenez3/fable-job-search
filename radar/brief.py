@@ -20,12 +20,14 @@ def rerank(jobs: list) -> None:
     rows = [{"id": j.id, "company": j.company, "title": j.title,
              "location": j.primary_location, "sector": j.sector,
              "desc": j.description[:400]} for j in batch]
+    priorities = " > ".join(k for k, _ in sorted(
+        p.get("sectors", {}).items(), key=lambda x: -x[1]) if k != "other")
     prompt = (
         "You are ranking job postings for this candidate:\n"
         f"{p['candidate']['narrative']}\n\n"
         "For each posting, return fit 0-10 (10 = apply immediately) considering "
-        "role type, sector priority (healthtech > big tech/AI labs > edtech > other), "
-        "new-grad suitability, and growth. Also a <=12 word 'angle' for their application.\n"
+        f"role type, sector priority ({priorities}), internship/co-op suitability, "
+        "hands-on learning, and growth. Also a <=12 word 'angle' for their application.\n"
         f"Postings:\n{json.dumps(rows, ensure_ascii=False)}\n\n"
         'Reply with ONLY a JSON array: [{"id": "...", "fit": 7, "angle": "..."}]')
     text = llm.complete(prompt, json_mode=True)

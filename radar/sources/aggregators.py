@@ -1,5 +1,5 @@
-"""GitHub-hosted new-grad aggregators. These are the breadth layer: community/
-company-maintained lists refreshed hourly-to-daily, all fetchable as raw files.
+"""GitHub-hosted internship aggregators. These are a breadth layer; ChemE
+precision comes from the role gates and direct polling of the curated employers.
 """
 from __future__ import annotations
 
@@ -10,8 +10,8 @@ from datetime import datetime, timezone
 from ..http import get_json, get_text
 from ..models import Job
 
-SIMPLIFY_URL = "https://raw.githubusercontent.com/SimplifyJobs/New-Grad-Positions/dev/.github/scripts/listings.json"
-VANSH_URL = "https://raw.githubusercontent.com/vanshb03/New-Grad-2026/dev/.github/scripts/listings.json"
+SIMPLIFY_URL = "https://raw.githubusercontent.com/SimplifyJobs/Summer2026-Internships/dev/.github/scripts/listings.json"
+VANSH_URL = "https://raw.githubusercontent.com/vanshb03/Summer2027-Internships/main/.github/scripts/listings.json"
 JOBRIGHT_URLS = [
     "https://raw.githubusercontent.com/jobright-ai/2026-Software-Engineer-New-Grad/master/README.md",
     "https://raw.githubusercontent.com/jobright-ai/2026-Data-Analysis-New-Grad/master/README.md",

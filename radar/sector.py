@@ -3,31 +3,49 @@ from __future__ import annotations
 
 from .models import norm
 
-BIG_TECH = {
-    "google", "alphabet", "meta", "apple", "amazon", "aws", "microsoft", "netflix",
-    "nvidia", "adobe", "salesforce", "oracle", "ibm", "intel", "amd", "qualcomm",
-    "uber", "lyft", "airbnb", "stripe", "linkedin", "tiktok", "bytedance", "snap",
-    "pinterest", "roblox", "datadog", "cloudflare", "mongodb", "snowflake", "twilio",
-    "reddit", "discord", "figma", "atlassian", "dropbox", "block", "square", "paypal",
-    "tesla", "spacex", "palantir", "servicenow", "workday", "intuit", "ebay", "shopify",
+KNOWN_SECTORS = {
+    "dow": "chemicals_materials", "dupont": "chemicals_materials",
+    "3m": "chemicals_materials", "basf": "chemicals_materials",
+    "ecolab": "chemicals_materials", "albemarle": "chemicals_materials",
+    "covestro": "chemicals_materials", "air products": "chemicals_materials",
+    "chevron": "energy", "shell": "energy", "exxonmobil": "energy",
+    "bp": "energy", "baker hughes": "energy", "halliburton": "energy",
+    "johnson johnson": "pharma_biotech", "merck": "pharma_biotech",
+    "pfizer": "pharma_biotech", "eli lilly": "pharma_biotech",
+    "bristol myers squibb": "pharma_biotech", "gilead": "pharma_biotech",
+    "amgen": "pharma_biotech", "gsk": "pharma_biotech",
+    "novartis": "pharma_biotech", "moderna": "pharma_biotech",
+    "thermo fisher scientific": "pharma_biotech",
+    "micron": "semiconductors", "micron technology": "semiconductors",
+    "applied materials": "semiconductors", "globalfoundries": "semiconductors",
+    "intel": "semiconductors", "kla": "semiconductors", "asml": "semiconductors",
+    "tesla": "consumer_manufacturing", "procter gamble": "consumer_manufacturing",
+    "colgate palmolive": "consumer_manufacturing", "unilever": "consumer_manufacturing",
+    "veolia": "environmental", "suez": "environmental",
+    "jacobs": "engineering_consulting", "aecom": "engineering_consulting",
 }
 
 LEXICONS: dict[str, list[str]] = {
-    "healthtech": [
-        "health", "med", "bio", "care", "clinic", "pharma", "patient", "dental",
-        "genom", "thera", "onco", "vet", "nurse", "hospital", "diagnost", "surgic",
-        "cardio", "derm", "radiol", "epidem", "vaccin", " rx", "wellness", "fitness",
+    "chemicals_materials": [
+        "chemical", "chem", "material", "polymer", "coating", "resin", "specialty",
+        "industrial gas", "minerals", "lithium", "carbon",
     ],
-    "edtech": ["edu", "learn", "academy", "school", "tutor", "class", "student", "course"],
-    "fintech": [
-        "bank", "fintech", "pay", "capital", "invest", "trading", "finance",
-        "credit", "insur", "wealth", "asset", "ledger", "treasury",
+    "pharma_biotech": [
+        "pharma", "biotech", "bio", "therapeut", "life sciences", "medic", "health",
+        "genom", "vaccine", "diagnostic",
     ],
-    "ai_lab": ["ai", "ml", "intelligence", "neural", "deep", "cognit", "robot"],
+    "energy": ["energy", "petroleum", "oil", "gas", "refining", "power", "solar"],
+    "semiconductors": ["semiconductor", "microelectronics", "wafer", "chip"],
+    "consumer_manufacturing": [
+        "manufacturing", "foods", "food", "beverage", "consumer", "automotive", "motors",
+    ],
+    "environmental": ["environment", "water", "waste", "sustainab", "ecology"],
+    "engineering_consulting": ["engineering group", "engineering services", "consulting"],
 }
 
-# lexicon order matters: healthtech wins ties (user priority)
-_ORDER = ["healthtech", "edtech", "fintech", "ai_lab"]
+# Lexicon order follows the profile's ChemE sector priorities.
+_ORDER = ["chemicals_materials", "pharma_biotech", "energy", "semiconductors",
+          "consumer_manufacturing", "environmental", "engineering_consulting"]
 
 
 def infer(company: str, seed_sectors: dict[str, str]) -> str:
@@ -37,9 +55,9 @@ def infer(company: str, seed_sectors: dict[str, str]) -> str:
     if n in seed_sectors:
         return seed_sectors[n]
     compact = n.replace(" ", "")
-    for bt in BIG_TECH:
-        if n == bt or n.startswith(bt + " ") or compact == bt:
-            return "big_tech"
+    for company, sector in KNOWN_SECTORS.items():
+        if n == company or n.startswith(company + " ") or compact == company.replace(" ", ""):
+            return sector
     words = n.split()
     padded = f" {n} "
     deny = {"media", "medium", "comedy", "academic"}  # false-positive stems

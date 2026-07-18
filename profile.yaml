@@ -1,157 +1,151 @@
-# JobRadar candidate profile — edit freely; the ranker reads this on every run.
-# Nothing here is code. Weights are additive points on a 0-100 score.
+# Chemical Engineering Internship Radar profile.
+# This branch is intentionally generic: fill in the candidate identity and
+# Notion option names before connecting personal accounts.
 
 candidate:
-  name: Victor Jimenez
-  github: VictorJimenez3
-  grad_year: 2026
-  level: new_grad          # gates out senior/staff/manager/intern automatically
-  # Set true if you need visa sponsorship: postings whose scraped text says
-  # "no sponsorship / citizens only" then drop off alerts (dashboard keeps
-  # them, with the reason). Either way the flag is shown per job.
-  needs_sponsorship: false
+  name: Chemical Engineering Candidate
+  github: ""
+  grad_year: null
+  level: internship
+  discipline: chemical_engineering
+  # International-student-safe default. Set false if sponsorship is not needed.
+  needs_sponsorship: true
   narrative: >
-    Graduating senior targeting full-time new-grad roles in AI/ML engineering,
-    software engineering, and data science. Strongest interest in healthcare /
-    health tech, then big tech and AI-native companies; genuinely open to
-    edtech, fintech, and startups. Has interned/applied across big tech and
-    financial services (Amazon, NVIDIA, Microsoft, Google, Capital One, BNY,
-    Mastercard, Adobe, Pinterest, OpenAI, Commure, IXL). Values working on
-    products with real-world impact and modern ML stacks.
+    Undergraduate chemical engineering student seeking United States internships
+    and co-ops in chemical/process engineering, manufacturing and operations,
+    bioprocess and pharmaceutical manufacturing, materials and semiconductors,
+    environmental engineering, and quality/process safety. Prioritize roles with
+    hands-on plant, lab, scale-up, process improvement, or production experience.
 
-# Used by the Culture Compass (radar/culture.py) to judge company fit —
-# LLM dossiers are generated against this, and fit feeds ranking (±6 pts).
 culture_criteria: >
-  A top-tier AI or data science role that balances elite prestige and high
-  new-grad pay with a fast, innovative tech culture rather than slow
-  bureaucracy. A mission-driven company that actually respects work-life
-  balance through sane hours and guaranteed shutdowns, avoiding toxic or
-  high-burnout environments. A place that accelerates technical learning and
-  career growth without sacrificing personal time.
+  A supportive chemical engineering internship with meaningful technical work,
+  strong safety culture, accessible mentorship, and exposure to real processes,
+  plants, labs, scale-up, manufacturing, or sustainability. Prefer employers
+  that develop interns, respect work-life balance, and clearly explain work
+  authorization and relocation expectations.
 
 roles:
-  # max one bucket counts (the best match). points: title-keyword buckets
-  ai_ml: 26
-  data_science: 22
-  data_eng: 18
-  swe: 20
-  # titles must match at least one bucket to be considered a tech role at all
+  chemical_process: 28
+  bioprocess_pharma: 25
+  manufacturing_ops: 23
+  materials_semiconductor: 21
+  environmental_safety: 19
+  quality_validation: 17
+  general_engineering: 10
 
 sectors:
-  healthtech: 16
-  ai_lab: 11
-  big_tech: 10
-  edtech: 8
-  fintech: 5
+  chemicals_materials: 16
+  pharma_biotech: 15
+  energy: 12
+  semiconductors: 11
+  consumer_manufacturing: 9
+  environmental: 8
+  engineering_consulting: 6
   other: 0
 
 bonuses:
-  explicit_new_grad_title: 12  # "new grad" / "university grad" / "2026" in title — the top of the board belongs to these
+  explicit_internship_title: 14
   fresh_24h: 12
   fresh_72h: 6
   fresh_7d: 2
-  remote: 2
-  feedback_company_max: 8      # learned from what you actually apply to
+  remote: 0                 # most useful Cheme internships are site/lab based
+  feedback_company_max: 8
   feedback_tokens_max: 6
 
 locations:
-  countries: [US]              # non-US-only postings are gated out
+  countries: [US]
   remote_ok: true
 
 thresholds:
-  alert: 66        # >= this and new-grad-eligible → GitHub issue alert (checkbox row)
-  dashboard: 45    # >= this → appears on the dashboard
-  max_posting_age_days: 10   # older than this when first seen → never alerted (stale)
-  pay_bank: 150000 # salary at/above this + a passing score → alert even without new-grad wording
+  alert: 64
+  dashboard: 42
+  max_posting_age_days: 21  # internship recruiting often has longer lead times
+  pay_bank: 999999          # disabled for internships; kept for schema compatibility
 
-# Priority sectors (DECISIONS #32): a role-fit title (matches a roles bucket)
-# at a company in one of these sectors is alert-eligible even without explicit
-# new-grad wording — most ATS postings carry no description to prove it, which
-# is how WHOOP's roles kept missing the alert issue. Off-field / mid-level
-# title demotions and LLM quality verdicts still apply on top.
+# Generic "Engineering Intern" titles are only alertable in these sectors.
 priority_sectors:
-  - healthtech
+  - chemicals_materials
+  - pharma_biotech
+  - energy
+  - semiconductors
+  - consumer_manufacturing
+  - environmental
 
-# The Shams rule (v2, DECISIONS #31): a blockbuster skips the new-grad-wording
-# requirement — but no longer skips field fit. Roles at these marquee
-# employers alert when they pass the hard gates (senior / intern / clearance /
-# 3+ yrs / non-US), aren't off-field or mid-level titles, and clear the score
-# threshold. Everyone else needs new-grad evidence, an aggregator listing, a
-# pays-bank salary, or a priority-sector fit.
-# Keep in sync with S.marquee in webapp/index.html (and its docs/platform copy).
+# Only these registry sectors are polled on this branch. This prevents the
+# inherited tech registry from consuming the direct-ATS budget.
+registry_sectors:
+  - chemicals_materials
+  - pharma_biotech
+  - energy
+  - semiconductors
+  - consumer_manufacturing
+  - environmental
+  - engineering_consulting
+
+# Simplify's Summer 2026 feed was live-checked on 2026-07-18. The similarly
+# named Summer 2027 community feed is intentionally disabled because its rows
+# were stale enough to be rejected by the freshness gate.
+aggregator_sources: [simplify]
+
+# The inherited SHPE exhibitor list belongs to the original candidate. Turn on
+# only if this student is attending and the file has been reviewed for ChemE.
+conference_boost_enabled: false
+
 marquee_companies:
-  # big tech / MANGA
-  - Meta
-  - Apple
-  - Amazon
-  - Netflix
-  - Google
-  - Microsoft
-  - NVIDIA
-  # massive AI labs
-  - Anthropic
-  - OpenAI
-  - DeepMind
-  # cracked pharma / medtech
-  - Genentech
-  - Moderna
-  - Regeneron
-  - Vertex Pharmaceuticals
-  - Eli Lilly
+  - Dow
+  - 3M
+  - Chevron
+  - Shell
+  - Ecolab
+  - Albemarle
+  - Johnson & Johnson
   - Merck
+  - Pfizer
+  - Eli Lilly
+  - Bristol Myers Squibb
+  - Gilead
+  - Amgen
+  - Regeneron
+  - GSK
+  - Novartis
+  - Moderna
+  - Thermo Fisher Scientific
+  - Micron
+  - Applied Materials
+  - GlobalFoundries
   - Medtronic
-  - Intuitive Surgical
   - Stryker
-  # sensors / wearables / med devices — Victor's sweet spot (added 2026-07-16;
-  # safe now that marquee no longer bypasses field fit)
-  - WHOOP
-  - Oura
-  - Dexcom
-  - Abbott
+  - Tesla
 
 llm:
-  # Provider resolution (radar/llm.py): ANTHROPIC_API_KEY -> Claude;
-  # else LLM_BASE_URL (OpenAI-compatible: Ollama on your Mac at
-  # http://localhost:11434/v1, or a free Gemini key via Google AI Studio's
-  # compat endpoint); else heuristics-only. Jobs scoring within `rerank_band`
-  # of the alert threshold get semantically re-ranked, and every alerted job
-  # gets a one-line "angle" note.
   enabled_if_key_present: true
-  model: claude-haiku-4-5        # used when ANTHROPIC_API_KEY is set
-  local_model: qwen3:30b         # 19GB MoE: strongest fit for the M1 Max 64GB companion
+  model: claude-haiku-4-5
+  local_model: qwen3:30b
   rerank_band: 14
 
-workday_queries:             # search terms used against Workday tenants
-  - new grad
-  - university graduate
-  - early career
+workday_queries:
+  - chemical engineering intern
+  - process engineering intern
+  - manufacturing engineering intern
+  - bioprocess intern
+  - materials engineering intern
+  - environmental engineering intern
+  - engineering co-op
 
 notion:
-  # database_id is no longer used for lookup — the Applications database is
-  # found automatically by searching for a title containing "application"
-  # among whatever's shared with the Job Radar integration (see
-  # radar/notion_sync.py:resolve_database). Rename or recreate the tracker
-  # freely; nothing here needs to change.
   stage_applied: Applied
-  # status a checkbox-tracked (not yet applied) job gets. Must be an existing
-  # option of your Stage status column — the Notion API cannot create status
-  # options. Verified live 2026-07-11: your to-do group's only option is
-  # "Waiting for a referral", so that's the explicit choice (it was already
-  # landing there as the database default). If you add a cleaner option in
-  # Notion (e.g. "To apply"), change this to match.
-  stage_saved: Waiting for a referral
-  # Lifecycle stages the email watcher drives automatically when it detects a
-  # rejection / interview invite / online-assessment / long silence. Each must
-  # be an existing Stage option (verified live against "2026 Applications"
-  # 2026-07-12). The watcher only ever advances a stage, never regresses it.
+  stage_saved: Not started
   stage_oa: OA
   stage_interview: Interview
   stage_rejected: Rejected
   stage_closed: CLOSED
-  autoclose_days: 45     # applied with no response after this long -> CLOSED
-  position_map:              # role bucket -> existing options in your Position multi-select
-    ai_ml: AI/ML Software Engineer
-    ml_eng: Machine Learning Enginner   # (sic — matches the existing option in your DB)
-    data_science: Data Science
-    data_eng: Data Engineer
-    swe: Software Engineer
+  autoclose_days: 60
+  position_map:
+    chemical_process: Chemical / Process Engineering
+    bioprocess_pharma: Bioprocess / Pharma
+    manufacturing_ops: Manufacturing / Operations
+    materials_semiconductor: Materials / Semiconductor
+    environmental_safety: Environmental / Safety
+    quality_validation: Quality / Validation
+    general_engineering: Engineering Internship
+    default: Engineering Internship

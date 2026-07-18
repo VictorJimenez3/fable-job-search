@@ -24,6 +24,7 @@ from .models import norm
 
 FIELDS = ("industry", "prestige", "pace", "wlb", "vibe", "pto", "shutdowns",
           "new_grad_tc", "rotational", "fit_notes")
+PROFILE_MODE = "chemical_engineering_internship"
 
 _PRESTIGE_PTS = {"S": 25, "A": 19, "B": 11, "C": 4}
 _PACE_PTS = {"fast": 20, "moderate": 12, "deliberate": 4}
@@ -44,13 +45,10 @@ def sync_seed(dossiers: dict) -> int:
     added = 0
     for row in rows:
         k = norm(row["name"])
-        existing = dossiers.get(k, {})
-        if existing.get("source") == "seed" and existing == {**row, "source": "seed",
-                                                             "fit": existing.get("fit")}:
-            continue
         d = {field: row.get(field, "") for field in FIELDS}
         d["name"] = row["name"]
         d["source"] = "seed"
+        d["profile_mode"] = PROFILE_MODE
         d["fit"] = fit_score(d)
         if dossiers.get(k) != d:
             dossiers[k] = d
@@ -61,6 +59,16 @@ def sync_seed(dossiers: dict) -> int:
 def _tc_dollars(tc: str) -> int | None:
     m = re.search(r"\$?\s*(\d{2,3})\s*k", str(tc), re.I)
     return int(m.group(1)) * 1000 if m else None
+
+
+def _comp_points(value: str) -> int:
+    """Score either legacy annual compensation or internship hourly pay."""
+    hourly = re.search(r"\$?\s*(\d{2}(?:\.\d+)?)\s*(?:/|per\s*)h(?:r|our)",
+                       str(value), re.I)
+    if hourly:
+        return max(0, min(20, round((float(hourly.group(1)) - 15) / 1.25)))
+    annual = _tc_dollars(value)
+    return max(0, min(20, round((annual - 90000) / 6500))) if annual else 0
 
 
 def fit_score(d: dict) -> int:
@@ -80,20 +88,20 @@ def fit_score(d: dict) -> int:
     pts += _PACE_PTS.get(str(d.get("pace", "")).strip().lower(), 8)
     if str(d.get("shutdowns", "")).strip().upper().startswith("Y"):
         pts += 10
-    tc = _tc_dollars(d.get("new_grad_tc", ""))
-    if tc:
-        pts += max(0, min(20, round((tc - 90000) / 6500)))
+    pts += _comp_points(d.get("new_grad_tc", ""))
     return max(0, min(100, pts))
 
 
 def dossier_for(company: str, dossiers: dict | None = None) -> dict | None:
     dossiers = dossiers if dossiers is not None else load()
     k = norm(company)
-    if k in dossiers:
+    if k in dossiers and dossiers[k].get("profile_mode") == PROFILE_MODE:
         return dossiers[k]
     # loose match: token overlap on multi-word names ("Uber Technologies, Inc." -> "Uber")
     words = set(k.split())
     for dk, d in dossiers.items():
+        if d.get("profile_mode") != PROFILE_MODE:
+            continue
         if set(dk.split()) & words and (dk in k or k in dk or dk.split()[0] == k.split()[0]):
             return d
     return None
@@ -108,18 +116,20 @@ def alert_tag(company: str, dossiers: dict | None = None) -> str:
 
 # ---------- LLM enrichment (runs on the Mac companion or with any provider) ----------
 
-_GEN_PROMPT = """You are building a factual culture dossier for a graduating CS senior
-evaluating employers. Their criteria: {criteria}
+_GEN_PROMPT = """You are building a factual employer dossier for an undergraduate
+chemical engineering student evaluating a US internship or co-op. Their criteria:
+{criteria}
 
 Company: {company}
 
 Reply with ONLY a JSON object with exactly these keys:
-industry (short), prestige (one of S/A/B/C for AI-DS resume value),
+industry (short), prestige (one of S/A/B/C for chemical-engineering resume value),
 pace (fast/moderate/deliberate), wlb (integer 1-5), vibe (<=8 words),
 pto (days or 'unlimited'), shutdowns ('Y: <type>' or 'N'),
-new_grad_tc (like '$150k (est.)'), rotational (program name or 'N'),
+new_grad_tc (intern hourly pay/range, like '$25/hr (est.)'), rotational (intern/co-op or development program name, or 'N'),
 fit_notes (<=25 words, honest, referencing their criteria).
-Use conservative estimates and mark uncertain numbers with (est.)."""
+Do not assume sponsorship. Use conservative estimates and mark uncertain facts
+with (est.)."""
 
 
 def enrich_missing(limit: int = 8) -> int:
@@ -152,6 +162,7 @@ def enrich_missing(limit: int = 8) -> int:
         d = {field: row.get(field, "") for field in FIELDS}
         d["name"] = company
         d["source"] = "est."
+        d["profile_mode"] = PROFILE_MODE
         d["generated_at"] = int(time.time())
         d["fit"] = fit_score(d)
         dossiers[norm(company)] = d
@@ -164,17 +175,18 @@ def enrich_missing(limit: int = 8) -> int:
 # ---------- rendering ----------
 
 def render_md(dossiers: dict) -> str:
-    rows = sorted(dossiers.values(), key=lambda d: -(d.get("fit") or 0))
+    rows = sorted((d for d in dossiers.values()
+                   if d.get("profile_mode") == PROFILE_MODE),
+                  key=lambda d: -(d.get("fit") or 0))
     lines = [
         "# 🧭 Culture Compass",
         "",
-        "_Scored 0–100 against your criteria: elite AI/DS prestige + new-grad pay + "
-        "fast innovative culture + real work-life balance (sane hours, shutdowns) + "
-        "mission + growth, no burnout. `seed` = human-curated · `est.` = "
-        "LLM-generated estimate._",
+        "_Scored 0–100 for chemical-engineering internship fit: technical exposure, "
+        "mentorship, safety culture, intern pay, work-life balance, and development. "
+        "`seed` = human-verified · `est.` = LLM-generated estimate._",
         "",
         "| Fit | Company | Industry | Prestige | Pace | WLB | Culture vibe | PTO | "
-        "Shutdowns | New-grad TC | Rotational | Src |",
+        "Shutdowns | Intern pay | Intern/co-op program | Src |",
         "|---|---|---|---|---|---|---|---|---|---|---|---|",
     ]
     for d in rows:
@@ -192,14 +204,14 @@ def render_dossier_reply(d: dict) -> str:
     return (f"### 🧭 {d.get('name')} — culture fit **{d.get('fit', '?')}/100** ({d.get('source')})\n\n"
             f"| | |\n|---|---|\n"
             f"| Industry | {d.get('industry', '—')} |\n"
-            f"| AI/DS prestige | {d.get('prestige', '—')} |\n"
+            f"| ChemE resume value | {d.get('prestige', '—')} |\n"
             f"| Pace | {d.get('pace', '—')} |\n"
             f"| Work-life balance | {d.get('wlb', '—')}/5 |\n"
             f"| Vibe | {d.get('vibe', '—')} |\n"
             f"| PTO | {d.get('pto', '—')} |\n"
             f"| Shutdowns | {d.get('shutdowns', '—')} |\n"
-            f"| New-grad TC | {d.get('new_grad_tc', '—')} |\n"
-            f"| Rotational program | {d.get('rotational', '—')} |\n\n"
+            f"| Intern pay | {d.get('new_grad_tc', '—')} |\n"
+            f"| Intern/co-op program | {d.get('rotational', '—')} |\n\n"
             f"**Fit notes:** {d.get('fit_notes', '—')}")
 
 

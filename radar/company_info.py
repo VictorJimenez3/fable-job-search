@@ -11,6 +11,15 @@ from .models import norm
 
 
 KNOWN: dict[str, tuple[str, str]] = {
+    "dow": ("chemicals & materials", "specialty chemicals, materials, and industrial processes"),
+    "3m": ("materials & manufacturing", "industrial, consumer, and advanced-material products"),
+    "albemarle": ("specialty chemicals", "lithium and specialty chemical production"),
+    "chevron": ("energy", "energy production, refining, and lower-carbon technologies"),
+    "shell": ("energy", "energy production, chemicals, refining, and transition projects"),
+    "micron": ("semiconductors", "memory-chip fabrication and advanced manufacturing"),
+    "applied materials": ("semiconductor equipment", "equipment and materials engineering for chip fabrication"),
+    "globalfoundries": ("semiconductors", "semiconductor process development and fabrication"),
+    "ecolab": ("water & process technology", "industrial water, hygiene, and process solutions"),
     "anduril": ("defense technology", "autonomous defense systems"),
     "lockheed martin": ("defense & aerospace", "defense and space systems"),
     "mantech": ("defense contractor", "technology services for U.S. government"),
@@ -33,11 +42,13 @@ KNOWN: dict[str, tuple[str, str]] = {
 }
 
 SECTOR_LABELS = {
-    "healthtech": "health technology",
-    "ai_lab": "AI / ML",
-    "big_tech": "technology",
-    "edtech": "education technology",
-    "fintech": "financial technology",
+    "chemicals_materials": "chemicals & materials",
+    "pharma_biotech": "pharma & biotechnology",
+    "energy": "energy & industrial processes",
+    "semiconductors": "semiconductors",
+    "consumer_manufacturing": "consumer & advanced manufacturing",
+    "environmental": "environmental & water",
+    "engineering_consulting": "engineering consulting",
 }
 
 
@@ -54,8 +65,8 @@ def context(company: str, sector: str = "", dossiers: dict | None = None) -> tup
     words = set(key.split())
     if words & {"defense", "aerospace", "aircraft", "missile", "space"}:
         return "defense & aerospace", "defense, aerospace, or space technology"
-    if words & {"health", "medical", "hospital", "care", "clinic"}:
-        return "healthcare", "healthcare products or services"
-    if words & {"bank", "capital", "finance", "financial", "insurance"}:
-        return "financial services", "financial products or services"
-    return SECTOR_LABELS.get(sector, "general technology"), "industry context not yet profiled"
+    if words & {"pharma", "biotech", "therapeutics", "medical"}:
+        return "pharma / biotech", "medicines, bioprocesses, or life-science products"
+    if words & {"chemical", "materials", "polymer", "energy", "water"}:
+        return "process industries", "chemical, material, energy, or environmental processes"
+    return SECTOR_LABELS.get(sector, "industrial engineering"), "industry context not yet profiled"

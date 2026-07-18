@@ -7,9 +7,9 @@ and do not create a new doc when an existing one owns the topic.
 
 ## Read before changing anything
 1. `README.md` — purpose + operating flow
-2. `DECISIONS.md` — every deliberate choice, newest era is #30–#35
+2. `DECISIONS.md` — every deliberate choice, newest entry is #37
 3. `docs/CLI_HANDOFF.md` — operational facts, current state, "next up"
-4. `profile.yaml` — Victor's search preferences and thresholds
+4. `profile.yaml` — the active ChemE candidate preferences and thresholds
 5. the specific `radar/` module + its `tests/` file
 
 ## Docs are part of the change, not an afterthought (MANDATORY)
@@ -20,7 +20,7 @@ are. Match the change to the doc that owns it:
 | You changed… | Update… |
 |---|---|
 | a non-obvious product/architecture choice, or a recall↔precision trade | **`DECISIONS.md`** — a new dated, numbered entry (append-only; amend by adding, never rewrite old entries) |
-| user-facing setup, commands, sources, delivery, or behavior | `README.md` and, if it changes how Victor *uses* the platform, `docs/TUTORIAL.md` |
+| user-facing setup, commands, sources, delivery, or behavior | `README.md` and, if it changes how the candidate *uses* the platform, `docs/TUTORIAL.md` |
 | shipped or reprioritized a roadmap item | `ROADMAP.md` (mark ✅ SHIPPED with the DECISIONS #, or ⏸️ ON HOLD / parked with a reason) |
 | operational facts, new env knobs/commands, or the "next up" queue | `docs/CLI_HANDOFF.md` |
 | candidate preferences or ranking policy only | `profile.yaml` (never implementation behavior) |
@@ -35,7 +35,7 @@ repair.
 ## House rules (from DECISIONS — violate none)
 - Scoring is deterministic and auditable: every point/demotion appends a
   reason string. The LLM only *adjusts*; it never deletes. Demote to the
-  dashboard, never drop, for anything Victor might still act on.
+  dashboard, never drop, for anything the candidate might still act on.
 - No servers, no required secrets: GitHub Actions cron is the runtime; the
   crawl and all deterministic analysis (gates, scoring, posting scraping in
   `radar/posting.py`) run with zero keys. AI is optional (`docs/AI_SETUP.md`).

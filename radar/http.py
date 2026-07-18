@@ -5,7 +5,7 @@ import time
 
 import requests
 
-UA = "JobRadar/1.0 (personal new-grad job monitor; github.com/VictorJimenez3/fable-job-search)"
+UA = "JobRadar/1.0 (personal chemical-engineering internship monitor; github.com/VictorJimenez3/fable-job-search)"
 TIMEOUT = 20
 
 _session = requests.Session()

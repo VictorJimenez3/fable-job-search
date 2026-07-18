@@ -1,8 +1,8 @@
 import time
 
 from radar.models import Job
-from radar.score import (RULES_VERSION, gates, regate, score,
-                         update_feedback_from_applied)
+from radar.score import (RULES_VERSION, explicit_new_grad, gates, regate,
+                         role_bucket, score, update_feedback_from_applied)
 
 NOW = int(time.time())
 FB = {"company_boosts": {}, "token_boosts": {}, "negative_companies": []}
@@ -13,224 +13,179 @@ def mk(title, company="Acme", locations=None, source="simplify", desc="", **kw):
                locations=locations or ["New York, NY"], description=desc, **kw)
 
 
-def test_gates_reject_senior_and_intern():
-    assert gates(mk("Senior Software Engineer"))[0] is False
-    assert gates(mk("Staff ML Engineer"))[0] is False
-    assert gates(mk("Software Engineering Intern"))[0] is False
-    assert gates(mk("Software Engineer III"))[0] is False
+def test_accepts_core_chemical_engineering_internships():
+    for title in [
+        "Chemical Engineering Intern",
+        "Process Engineering Intern",
+        "Process Development Co-op",
+        "Manufacturing Engineering Intern",
+        "Bioprocess Intern",
+        "Materials Engineering Intern",
+        "Environmental Engineering Intern",
+        "Quality Engineering Intern",
+    ]:
+        keep, alert_ok, reasons = gates(mk(title))
+        assert keep and alert_ok, title
+        assert "internship/co-op title" in reasons
 
 
-def test_gates_reject_non_us():
-    keep, _, _ = gates(mk("Software Engineer, New Grad", locations=["Bangalore, India"]))
-    assert keep is False
-    keep, _, _ = gates(mk("Software Engineer, New Grad", locations=["Toronto, Canada"]))
-    assert keep is False
+def test_role_bucket_covers_cheme_families():
+    expected = {
+        "Chemical Engineering Intern": "chemical_process",
+        "Upstream Bioprocess Intern": "bioprocess_pharma",
+        "Manufacturing Engineering Co-op": "manufacturing_ops",
+        "Polymer Materials Intern": "materials_semiconductor",
+        "Wastewater Engineering Intern": "environmental_safety",
+        "Process Validation Intern": "quality_validation",
+        "Engineering Intern": "general_engineering",
+    }
+    for title, bucket in expected.items():
+        assert role_bucket(title) == bucket, title
 
 
-def test_gates_accept_new_grad_us():
-    keep, alert_ok, _ = gates(mk("Software Engineer, New Grad", locations=["Remote"]))
-    assert keep and alert_ok
+def test_generic_engineering_uses_description_for_specific_family():
+    assert role_bucket("Engineering Intern", "Support fermentation and downstream processing") == \
+        "bioprocess_pharma"
 
 
-def test_gates_direct_ats_needs_entry_signal():
-    # direct ATS posting without any new-grad language: kept, but not alertable
-    keep, alert_ok, _ = gates(mk("Software Engineer", source="greenhouse"))
-    assert keep is True and alert_ok is False
-    # ...unless the description signals entry level
-    keep, alert_ok, _ = gates(mk("Software Engineer", source="greenhouse",
-                                 desc="We welcome new grad applicants with 0-2 years experience."))
-    assert keep and alert_ok
+def test_requires_internship_or_coop_evidence():
+    keep, alert_ok, reasons = gates(mk("Process Engineer"))
+    assert keep is False and alert_ok is False
+    assert reasons == ["not an internship/co-op"]
 
 
-def test_gates_marquee_company_alerts_without_entry_signal():
-    # The Shams rule: an Anthropic (or any marquee) posting from a direct ATS
-    # alerts even with zero new-grad wording...
-    keep, alert_ok, reasons = gates(mk("Research Engineer, Interpretability",
-                                       company="Anthropic", source="greenhouse"))
-    assert keep and alert_ok
-    assert "marquee company (auto-alert)" in reasons
-    # ...but the hard gates still silence marquee senior/intern roles
-    assert gates(mk("Senior Research Engineer", company="Anthropic", source="greenhouse"))[0] is False
-    assert gates(mk("Research Intern", company="OpenAI", source="greenhouse"))[0] is False
+def test_rejects_senior_phd_and_non_us():
+    assert gates(mk("Senior Process Engineering Intern"))[0] is False
+    assert gates(mk("PhD Chemical Engineering Intern"))[0] is False
+    assert gates(mk("Process Engineering Intern", locations=["Toronto, Canada"]))[0] is False
+    assert gates(mk("Process Engineering Intern", locations=["Bangalore, India"]))[0] is False
 
 
-def test_gates_reject_numeric_levels():
-    # rules v2: numeric levels are as disqualifying as roman ones
-    assert gates(mk("Software Engineer 3"))[0] is False
-    assert gates(mk("Software Engineer L5"))[0] is False
-    assert gates(mk("Machine Learning Engineer, Level 4"))[0] is False
+def test_rejects_clearance_and_large_experience_requirement():
+    assert gates(mk("Process Engineering Intern", desc="Active TS/SCI clearance required."))[0] is False
+    assert gates(mk("Process Engineering Intern",
+                    desc="Requires 5+ years of professional experience."))[0] is False
 
 
-def test_gates_demote_midlevel_but_keep_visible():
-    # "II"/"L4"-class titles are typically 1-3 yrs: dashboard yes, alert no
-    for title in ["Software Engineer II", "Software Engineer, L4", "Mid-Level Backend Engineer"]:
-        keep, alert_ok, reasons = gates(mk(title, company="Anthropic", source="greenhouse"))
+def test_adjacent_engineering_internships_are_dashboard_only():
+    for title in ["Mechanical Engineering Intern", "Electrical Engineering Intern"]:
+        keep, alert_ok, reasons = gates(mk(title, sector="chemicals_materials"))
         assert keep is True and alert_ok is False, title
-        assert any("mid-level title" in r for r in reasons), title
+        assert any("off-field" in r for r in reasons), title
 
 
-def test_gates_off_field_beats_marquee():
-    # DECISIONS #31: field fit outranks the Shams rule — a marquee Safeguards/
-    # policy/sales title never alerts, but stays on the dashboard
-    for title, company in [("Research Engineer, Safeguards", "Anthropic"),
-                           ("Trust & Safety Operations Analyst", "OpenAI"),
-                           ("Solutions Engineer, Machine Learning", "Google")]:
-        keep, alert_ok, reasons = gates(mk(title, company=company, source="greenhouse"))
-        assert keep is True and alert_ok is False, title
-        assert any("off-field title" in r for r in reasons), title
-    # on-field marquee titles still auto-alert
-    keep, alert_ok, _ = gates(mk("Research Engineer, Interpretability",
-                                 company="Anthropic", source="greenhouse"))
+def test_unrelated_internships_are_rejected():
+    for title in ["Software Process Engineering Intern", "AI Engineering Intern",
+                  "Sales Engineering Intern", "Marketing Intern"]:
+        keep, alert_ok, reasons = gates(mk(
+            title, company="Dow",
+            desc="Dow builds chemical processes and advanced materials."))
+        assert keep is False and alert_ok is False
+        assert any("off-field internship" in r for r in reasons)
+
+
+def test_generic_engineering_requires_target_sector_for_alert():
+    keep, alert_ok, _ = gates(mk("Engineering Intern", sector="chemicals_materials"))
     assert keep and alert_ok
+    keep, alert_ok, reasons = gates(mk("Engineering Intern", sector="other"))
+    assert keep and alert_ok is False
+    assert any("generic engineering" in r for r in reasons)
 
 
-def test_gates_off_field_beats_explicit_new_grad():
-    keep, alert_ok, reasons = gates(mk("New Grad Software Engineer, Customer Success"))
-    assert keep is True and alert_ok is False
-    assert any("off-field title" in r for r in reasons)
+def test_generic_fallback_does_not_auto_alert_named_other_disciplines():
+    keep, alert_ok, reasons = gates(mk(
+        "Failure Analysis Engineer Intern", sector="consumer_manufacturing"))
+    assert keep and alert_ok is False
+    assert any("needs review" in r for r in reasons)
+
+    keep, alert_ok, _ = gates(mk("Data Engineering Intern", sector="pharma_biotech"))
+    assert keep is False and alert_ok is False
 
 
-def test_gates_off_field_false_positive_guards():
-    # narrow by construction: technical titles containing risky words survive
-    keep, alert_ok, _ = gates(mk("Security Engineer, New Grad"))
-    assert keep and alert_ok
-    keep, _, reasons = gates(mk("Embedded Software Engineer, New Grad"))
-    assert keep
-    assert not any("off-field" in r for r in reasons)
+def test_explicit_compatibility_flag_means_internship_on_this_branch():
+    assert explicit_new_grad("Chemical Engineering Intern") is True
+    assert explicit_new_grad("Process Engineer") is False
 
 
-def test_gates_priority_sector_alerts_on_strong_title():
-    # the WHOOP lesson: healthtech + a real engineering title alerts without
-    # new-grad wording (ATS postings carry no description to prove it).
-    # Non-marquee company on purpose: WHOOP itself now alerts via marquee.
-    keep, alert_ok, reasons = gates(mk("Software Engineer", company="Eight Sleep",
-                                       source="greenhouse", sector="healthtech"))
-    assert keep and alert_ok
-    assert any("priority sector" in r for r in reasons)
-    # same title outside a priority sector: dashboard only
-    keep, alert_ok, _ = gates(mk("Software Engineer", company="Stripe",
-                                 source="greenhouse", sector="fintech"))
-    assert keep is True and alert_ok is False
-    # a bare "<anything> Analyst" title is too weak even in a priority sector
-    keep, alert_ok, _ = gates(mk("Patient Relations Analyst", company="CVS Health",
-                                 source="greenhouse", sector="healthtech"))
-    assert keep is True and alert_ok is False
+def test_score_prefers_process_role_in_priority_sector():
+    target = mk("Chemical Engineering Intern", company="Dow")
+    target.sector = "chemicals_materials"
+    target.posted_at = NOW - 3600
+    score(target, FB, NOW)
 
-
-def test_gates_pays_bank_alerts_without_entry_signal():
-    keep, alert_ok, reasons = gates(mk("Software Engineer", source="greenhouse",
-                                       salary="$160,000 - $210,000"))
-    assert keep and alert_ok
-    assert "pays bank (auto-alert)" in reasons
-    # below the bar: dashboard only, as before
-    keep, alert_ok, _ = gates(mk("Software Engineer", source="greenhouse",
-                                 salary="$95,000 - $120,000"))
-    assert keep is True and alert_ok is False
-
-
-def test_pays_bank_parses_salary_shapes():
-    from radar.score import pays_bank
-    assert pays_bank("$150k+")
-    assert pays_bank("up to 175K")
-    assert pays_bank("$140,000 - $185,000")
-    assert not pays_bank("$60/hr")
-    assert not pays_bank("$120k")
-    assert not pays_bank("")
-
-
-def test_gates_reject_years_requirement():
-    keep, _, _ = gates(mk("Software Engineer", source="greenhouse",
-                          desc="Requires 5+ years of production experience."))
-    assert keep is False
-
-
-def test_score_prefers_healthtech_ai_over_generic_swe():
-    ai_health = mk("Machine Learning Engineer, New Grad", company="Tempus")
-    ai_health.sector = "healthtech"
-    ai_health.posted_at = NOW - 3600
-    score(ai_health, FB, NOW)
-
-    generic = mk("Software Engineer, New Grad", company="RandomCo")
+    generic = mk("Engineering Intern", company="RandomCo")
     generic.sector = "other"
     generic.posted_at = NOW - 6 * 86400
     score(generic, FB, NOW)
 
-    assert ai_health.score > generic.score + 15
-    assert any("healthtech" in r for r in ai_health.score_reasons)
+    assert target.score > generic.score + 20
+    assert any("role:chemical_process" in r for r in target.score_reasons)
+    assert any("sector:chemicals_materials" in r for r in target.score_reasons)
+    assert any("internship title" in r for r in target.score_reasons)
+
+
+def test_score_prefers_bioprocess_to_generic_engineering():
+    bio = mk("Bioprocess Engineering Intern")
+    generic = mk("Engineering Intern")
+    score(bio, FB, NOW)
+    score(generic, FB, NOW)
+    assert bio.score > generic.score
 
 
 def test_feedback_boosts_applied_companies():
     fb = {"company_boosts": {}, "token_boosts": {}, "negative_companies": []}
-    update_feedback_from_applied(fb, "Commure", "Machine Learning Engineer")
-    j = mk("Machine Learning Engineer, New Grad", company="Commure")
-    j.sector = "healthtech"
+    update_feedback_from_applied(fb, "Dow", "Process Engineering Intern")
+    j = mk("Process Engineering Intern", company="Dow")
     score(j, fb, NOW)
     assert any("engaged with" in r for r in j.score_reasons)
 
 
 def test_negative_feedback_penalizes():
     fb = {"company_boosts": {}, "token_boosts": {}, "negative_companies": ["acme"]}
-    j = mk("Software Engineer, New Grad")
-    j2 = mk("Software Engineer, New Grad")
+    j = mk("Process Engineering Intern")
+    j2 = mk("Process Engineering Intern")
     score(j, fb, NOW)
     score(j2, FB, NOW)
     assert j.score == j2.score - 10
 
 
-def test_feedback_stopwords_never_learned_and_inert():
-    # learning: off-field/generic tokens are never written...
+def test_cheme_feedback_tokens_are_learnable():
     fb = {"company_boosts": {}, "token_boosts": {}, "negative_companies": []}
-    update_feedback_from_applied(fb, "Acme", "Full-Time Product Solutions Analyst")
-    assert "product" not in fb["token_boosts"]
-    assert "solutions" not in fb["token_boosts"]
-    assert "full" not in fb["token_boosts"]
-    assert "analyst" in fb["token_boosts"]   # field-relevant tokens still learn
-    # ...and stale entries already in feedback.json stop scoring
-    stale = {"company_boosts": {}, "negative_companies": [],
-             "token_boosts": {"business": 4, "marketing": 3}}
-    j = mk("Business Marketing Engineer, New Grad")
-    j2 = mk("Business Marketing Engineer, New Grad")
-    score(j, stale, NOW)
-    score(j2, FB, NOW)
-    assert j.score == j2.score
+    update_feedback_from_applied(fb, "Acme", "Quality Operations Intern")
+    assert "quality" in fb["token_boosts"]
+    assert "operations" in fb["token_boosts"]
 
 
-def _stored(title, company="Anthropic", **over):
+def _stored(title, company="Dow", **over):
     rec = {"id": title, "company": company, "title": title, "url": "https://x.com/j",
            "source": "greenhouse", "locations": ["New York, NY"], "salary": "",
-           "remote": False, "sector": "", "score": 80,
+           "remote": False, "sector": "chemicals_materials", "score": 80,
            "score_reasons": ["base 40"], "alert_ok": True}
     rec.update(over)
     return rec
 
 
-def test_regate_applies_current_rules_to_stored_jobs():
+def test_regate_demotes_inherited_tech_alerts_and_promotes_cheme():
     jobs = {
-        # stale marquee off-field alert from rules v1 → demoted
-        "a": _stored("Research Engineer, Safeguards"),
-        # closed job → untouched entirely
-        "b": _stored("Software Engineer", closed_at=NOW, rules_v=1),
-        # already re-gated → untouched
-        "c": _stored("Trust & Safety Analyst", rules_v=RULES_VERSION),
-        # quality-suppressed job stays suppressed even if gates would promote
-        "d": _stored("Machine Learning Engineer", company="WHOOP",
-                     sector="healthtech", alert_ok=False,
-                     quality={"checked_at": NOW, "live": True, "new_grad": "no",
-                              "years_required": 5, "role_family": "ml", "reason": "x"}),
+        "old": _stored("Software Engineer, New Grad", company="OpenAI", sector="ai_lab"),
+        "target": _stored("Chemical Engineering Intern", alert_ok=False),
+        "closed": _stored("Process Engineering Intern", closed_at=NOW, rules_v=1),
+        "current": _stored("Process Engineering Intern", rules_v=RULES_VERSION),
     }
     flipped = regate(jobs)
-    assert jobs["a"]["alert_ok"] is False
-    assert any(f"re-gate v{RULES_VERSION}" in r for r in jobs["a"]["score_reasons"])
-    assert jobs["a"]["rules_v"] == RULES_VERSION
-    assert jobs["b"]["alert_ok"] is True and jobs["b"]["rules_v"] == 1  # never re-opened/touched
-    assert jobs["c"]["alert_ok"] is True                                 # version stamp respected
-    assert jobs["d"]["alert_ok"] is False                                # verdict re-applied last
-    assert flipped == 2  # a demoted; d flipped up by gates then re-suppressed
+    assert jobs["old"]["alert_ok"] is False
+    assert jobs["target"]["alert_ok"] is True
+    assert jobs["target"]["explicit_internship"] is True
+    assert jobs["closed"]["rules_v"] == 1
+    assert jobs["current"]["alert_ok"] is True
+    assert flipped == 2
 
 
-def test_regate_promotes_priority_sector_jobs():
-    jobs = {"w": _stored("Software Engineer", company="WHOOP",
-                         sector="healthtech", alert_ok=False)}
-    assert regate(jobs) == 1
-    assert jobs["w"]["alert_ok"] is True
-    assert jobs["w"]["explicit_new_grad"] is False
+def test_regate_reapplies_quality_suppression():
+    jobs = {"q": _stored(
+        "Process Engineering Intern", alert_ok=False,
+        quality={"checked_at": NOW, "live": True, "new_grad": "no",
+                 "years_required": 5, "role_family": "chemical-process", "reason": "x"})}
+    regate(jobs)
+    assert jobs["q"]["alert_ok"] is False
+    assert any("not internship-level" in r for r in jobs["q"]["score_reasons"])
