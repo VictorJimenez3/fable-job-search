@@ -29470,7 +29470,9 @@
   ],
   "posted_at": 1783058951,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784407920,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -34263,6 +34265,15 @@
    "New York City, NY"
   ],
   "posted_at": 1784126632,
+  "posting": {
+   "analyzed_at": 1784408021,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784408021,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "$381k/yr",
@@ -43619,6 +43630,20 @@
    "San Jose, CA"
   ],
   "posted_at": 1781503905,
+  "posting": {
+   "analyzed_at": 1784407992,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407992,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for 2026 class",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -62785,6 +62810,20 @@
    "Raleigh, NC"
   ],
   "posted_at": 1781906579,
+  "posting": {
+   "analyzed_at": 1784407969,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407969,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level, new grad role",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -68853,7 +68892,9 @@
   ],
   "posted_at": 1782956282,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784407921,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -70212,6 +70253,15 @@
    "Des Moines, IA"
   ],
   "posted_at": 1780495470,
+  "posting": {
+   "analyzed_at": 1784408016,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784408016,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -115375,6 +115425,15 @@
    "Remote in USA"
   ],
   "posted_at": 1780006165,
+  "posting": {
+   "analyzed_at": 1784408018,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784408018,
+   "attempts": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -136422,6 +136481,17 @@
    "Boston, MA"
   ],
   "posted_at": 1784126224,
+  "posting": {
+   "analyzed_at": 1784408021,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0-2 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784408021,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -159443,6 +159513,15 @@
    "Chicago, IL"
   ],
   "posted_at": 1784038940,
+  "posting": {
+   "analyzed_at": 1784408022,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784408022,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "$191k/yr",
@@ -173506,6 +173585,22 @@
    "United States"
   ],
   "posted_at": 1780956559,
+  "posting": {
+   "analyzed_at": 1784408009,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0-2 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784408009,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0-2 years, new grad",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -191817,7 +191912,7 @@
   ],
   "posted_at": 1782777600,
   "posting": {
-   "analyzed_at": 1784407910,
+   "analyzed_at": 1784407929,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship",
@@ -191826,17 +191921,24 @@
   },
   "quality": {
    "ai_deferred_at": 1784407910,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407929,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "data",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 80,
+  "score": 70,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -197051,6 +197153,17 @@
    "El Paso, TX"
   ],
   "posted_at": 1780006126,
+  "posting": {
+   "analyzed_at": 1784408019,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1 year of work experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784408019,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -198436,13 +198549,19 @@
   ],
   "posted_at": 1782858521,
   "posting": {
-   "analyzed_at": 1784407909,
+   "analyzed_at": 1784407922,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784407909,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407922,
+   "live": true,
+   "new_grad": "unclear",
+   "reason": "No experience details provided",
+   "role_family": "other-technical",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -209309,6 +209428,15 @@
    "Mountain View, CA"
   ],
   "posted_at": 1780467668,
+  "posting": {
+   "analyzed_at": 1784408017,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784408017,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -218804,8 +218932,9 @@
   "url": "https://ebwb.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/12011"
  },
  "91385f5ef5653e49": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784407937,
   "company": "PLATEAU GRP",
   "description": "",
   "explicit_new_grad": true,
@@ -218816,6 +218945,11 @@
    "Virginia Beach,VA,US"
   ],
   "posted_at": 1782777600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407937,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -218824,7 +218958,8 @@
    "base 40",
    "role:data_science +22",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -223131,6 +223266,21 @@
    "Jacksonville, FL"
   ],
   "posted_at": 1782511683,
+  "posting": {
+   "analyzed_at": 1784407962,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "US Citizens only"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407962,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role with no experience required",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -242651,16 +242801,33 @@
    "West Athens, CA"
   ],
   "posted_at": 1781053721,
+  "posting": {
+   "analyzed_at": 1784408001,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 2,
+   "years_note": "2+ years of professional experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784408001,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years experience required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 80,
+  "score": 70,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:big_tech +10",
    "you've engaged with SpaceX +6",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "big_tech",
   "source": "simplify",
@@ -248934,6 +249101,22 @@
    "US"
   ],
   "posted_at": 1782777600,
+  "posting": {
+   "analyzed_at": 1784407938,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0–3 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407938,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, 0+ years exp, new grad role.",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -263731,6 +263914,23 @@
    "Remote in USA"
   ],
   "posted_at": 1781733956,
+  "posting": {
+   "analyzed_at": 1784407984,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "unable to offer sponsor",
+   "years_min": 0,
+   "years_note": "0–2 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407984,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Junior role, 0-2 years experience",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -295466,8 +295666,9 @@
   "url": "https://jobs.smartrecruiters.com/CityAndCountyOfSanFrancisco1/3743990013452026"
  },
  "c30f869ccaef16ee": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784408001,
   "company": "UL Solutions",
   "description": "",
   "explicit_new_grad": true,
@@ -295478,6 +295679,11 @@
    "Northbrook, IL"
   ],
   "posted_at": 1781082140,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784408001,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -295486,7 +295692,8 @@
    "base 40",
    "role:data_science +22",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "simplify",
@@ -315808,6 +316015,15 @@
    "Mountain View, CA"
   ],
   "posted_at": 1780005957,
+  "posting": {
+   "analyzed_at": 1784408020,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784408020,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -330512,12 +330728,12 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 71,
+  "score": 67,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:fintech +5",
-   "posted <72h +6"
+   "posted <7d +2"
   ],
   "sector": "fintech",
   "source": "greenhouse",
@@ -354753,6 +354969,21 @@
    "Boston, MA, USA, US"
   ],
   "posted_at": 1782777600,
+  "posting": {
+   "analyzed_at": 1784407945,
+   "fetched": true,
+   "intern_counts": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407945,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, New Grad",
+   "role_family": "data",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -360245,8 +360476,9 @@
   "url": "https://boards.greenhouse.io/andurilindustries/jobs/5145310007?gh_jid=5145310007"
  },
  "ee93c9f8e5e64a58": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784407953,
   "company": "Miller Kaplan",
   "description": "",
   "explicit_new_grad": true,
@@ -360257,6 +360489,11 @@
    "Burbank, CA 91505, USA"
   ],
   "posted_at": 1782691200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407953,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -360265,7 +360502,8 @@
    "base 40",
    "role:data_science +22",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -374280,7 +374518,7 @@
   "url": "https://jobs.smartrecruiters.com/NBCUniversal3/744000136886407"
  },
  "f789b9554c1a32d9": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "The Home Depot",
   "description": "",
@@ -374292,15 +374530,30 @@
    "Atlanta, GA"
   ],
   "posted_at": 1781831410,
+  "posting": {
+   "analyzed_at": 1784407977,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407977,
+   "live": true,
+   "new_grad": "no",
+   "reason": "3+ years experience required",
+   "role_family": "data",
+   "years_required": 3
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 80,
+  "score": 60,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "other",
   "source": "simplify",
@@ -374501,15 +374754,33 @@
    "US - Sunnyvale, United States"
   ],
   "posted_at": 1782691200,
+  "posting": {
+   "analyzed_at": 1784407954,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 1,
+   "years_note": "1 year of experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407954,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "data",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 80,
+  "score": 70,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -376401,7 +376672,6 @@
    "role:data_science +22",
    "new-grad title +12",
    "title matches your history +6",
-   "posting: wants 5+ yrs (dashboard only)",
    "quality: not new-grad (5+ yrs — LLM-verified) -20"
   ],
   "sector": "other",
