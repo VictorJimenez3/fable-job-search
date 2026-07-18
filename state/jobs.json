@@ -20131,6 +20131,15 @@
    "Lexington, KY, United States"
   ],
   "posted_at": 1783987200,
+  "posting": {
+   "analyzed_at": 1784415406,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784415406,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -21979,7 +21988,7 @@
   "url": "https://jobs.ashbyhq.com/clera/b6903ea8-9e4e-4874-8a7d-cb17ee9335d2"
  },
  "0d9472381e199172": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Akina, Inc",
   "description": "",
@@ -21991,14 +22000,30 @@
    "Annapolis Junction, MD, United States"
   ],
   "posted_at": 1784073600,
+  "posting": {
+   "analyzed_at": 1784415381,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415381,
+   "live": true,
+   "new_grad": "no",
+   "reason": "4 years experience required",
+   "role_family": "swe",
+   "years_required": 4
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 62,
+  "score": 42,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <7d +2"
+   "posted <7d +2",
+   "quality: not new-grad (4+ yrs — LLM-verified) -20"
   ],
   "sector": "other",
   "source": "jobright",
@@ -28637,6 +28662,16 @@
    "Fort Meade, MD, United States"
   ],
   "posted_at": 1783987200,
+  "posting": {
+   "analyzed_at": 1784415407,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "ai_deferred_at": 1784415407,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -37833,6 +37868,15 @@
    "Santa Rosa, California, United States"
   ],
   "posted_at": 1783987200,
+  "posting": {
+   "analyzed_at": 1784415408,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784415408,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -50347,6 +50391,15 @@
    "Cleveland, OH, United States"
   ],
   "posted_at": 1783987200,
+  "posting": {
+   "analyzed_at": 1784415409,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784415409,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -55376,23 +55429,30 @@
   ],
   "posted_at": 1782777600,
   "posting": {
-   "analyzed_at": 1784415298,
+   "analyzed_at": 1784415350,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784415298,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784415350,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 63,
+  "score": 53,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +3"
+   "title matches your history +3",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -100550,6 +100610,18 @@
    "LA"
   ],
   "posted_at": 1783987200,
+  "posting": {
+   "analyzed_at": 1784415409,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen ONLY",
+   "years_min": 1,
+   "years_note": "Minimum 1 year"
+  },
+  "quality": {
+   "ai_deferred_at": 1784415409,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -104431,7 +104503,9 @@
   ],
   "posted_at": 1783555200,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784415311,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -115894,6 +115968,18 @@
    "Sunnyvale"
   ],
   "posted_at": 1783987200,
+  "posting": {
+   "analyzed_at": 1784415410,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 1,
+   "years_note": "1+ years of experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784415410,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -118909,6 +118995,21 @@
    "Patterson, OH"
   ],
   "posted_at": 1784073600,
+  "posting": {
+   "analyzed_at": 1784415388,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415388,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, new grad role",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -138657,7 +138758,7 @@
   ],
   "posted_at": 1782864000,
   "posting": {
-   "analyzed_at": 1784415297,
+   "analyzed_at": 1784415343,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -138666,16 +138767,23 @@
   },
   "quality": {
    "ai_deferred_at": 1784415297,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784415343,
+   "live": true,
+   "new_grad": "no",
+   "reason": "2+ years exp required",
+   "role_family": "swe",
+   "years_required": 2
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 63,
+  "score": 53,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +3"
+   "title matches your history +3",
+   "quality: wants 2+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -189479,6 +189587,22 @@
    "NYC"
   ],
   "posted_at": 1784068258,
+  "posting": {
+   "analyzed_at": 1784415396,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0–1 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415396,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0-1 years experience, new grad role",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -194866,6 +194990,18 @@
    "Fort Meade, MD, United States"
   ],
   "posted_at": 1783987200,
+  "posting": {
+   "analyzed_at": 1784415412,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 0,
+   "years_note": "0-6 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784415412,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -203705,6 +203841,18 @@
    "Los Angeles, CA, United States"
   ],
   "posted_at": 1783987200,
+  "posting": {
+   "analyzed_at": 1784415412,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 1,
+   "years_note": "Minimum 1 year"
+  },
+  "quality": {
+   "ai_deferred_at": 1784415412,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -210494,6 +210642,9 @@
    "SF"
   ],
   "posted_at": 1784124772,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -230755,14 +230906,20 @@
   ],
   "posted_at": 1782950400,
   "posting": {
-   "analyzed_at": 1784415295,
+   "analyzed_at": 1784415328,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
    "ai_deferred_at": 1784415295,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784415328,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level position, clear new grad target",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -262965,14 +263122,20 @@
   ],
   "posted_at": 1783036800,
   "posting": {
-   "analyzed_at": 1784415293,
+   "analyzed_at": 1784415311,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
    "ai_deferred_at": 1784415293,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784415311,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role with no experience required.",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -277248,6 +277411,15 @@
    "Newport News, VA"
   ],
   "posted_at": 1784009157,
+  "posting": {
+   "analyzed_at": 1784415405,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784415405,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -296663,14 +296835,20 @@
   ],
   "posted_at": 1781346475,
   "posting": {
-   "analyzed_at": 1784415299,
+   "analyzed_at": 1784415366,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "sponsorship is not available"
   },
   "quality": {
    "ai_deferred_at": 1784415299,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784415366,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level embedded C++ role",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -326848,6 +327026,21 @@
    "Oshkosh, WI"
   ],
   "posted_at": 1780697384,
+  "posting": {
+   "analyzed_at": 1784415373,
+   "fetched": true,
+   "intern_counts": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415373,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level position for new grad",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -327117,11 +327310,11 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 70,
+  "score": 66,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <72h +6",
+   "posted <7d +2",
    "title matches your history +4"
   ],
   "sector": "other",
@@ -356232,14 +356425,20 @@
   ],
   "posted_at": 1782691200,
   "posting": {
-   "analyzed_at": 1784415299,
+   "analyzed_at": 1784415358,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
    "ai_deferred_at": 1784415299,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784415358,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level position for new grad",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -372296,6 +372495,16 @@
    "Broomfield, CO"
   ],
   "posted_at": 1784039318,
+  "posting": {
+   "analyzed_at": 1784415405,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "must be a U.S. citizen"
+  },
+  "quality": {
+   "ai_deferred_at": 1784415405,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -377851,13 +378060,19 @@
   ],
   "posted_at": 1782956444,
   "posting": {
-   "analyzed_at": 1784415294,
+   "analyzed_at": 1784415320,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784415294,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784415320,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level, <2 yrs exp, Java/Python/JS skills",
+   "role_family": "swe",
+   "years_required": 2
   },
   "remote": false,
   "rules_v": 3,
@@ -394637,14 +394852,20 @@
   ],
   "posted_at": 1782950400,
   "posting": {
-   "analyzed_at": 1784415295,
+   "analyzed_at": 1784415335,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "Visa sponsorship is available"
   },
   "quality": {
    "ai_deferred_at": 1784415295,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784415335,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Master's 2026 new grad role",
+   "role_family": "data",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -397692,6 +397913,18 @@
    "Groton, CT"
   ],
   "posted_at": 1784067032,
+  "posting": {
+   "analyzed_at": 1784415404,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "citizenship is required",
+   "years_min": 1,
+   "years_note": "1 year of relevant experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784415404,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
