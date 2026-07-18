@@ -61,7 +61,7 @@ NVIDIA's remaining account allowance is not exposed to the repository; the
 NVIDIA Build dashboard is the authority for remaining quota. `state/ai_usage.json`
 records actual requests and failures without storing prompts or secrets.
 
-### Measured NVIDIA quota behavior (2026-07-18)
+### Measured NVIDIA quota behavior (2026-07-18) (DECISIONS #42)
 
 The NVIDIA account UI reported **“Up to 40 RPM.”** That is the only explicit
 quota number available to this repository; it does not say whether the number

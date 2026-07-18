@@ -7,7 +7,7 @@ and do not create a new doc when an existing one owns the topic.
 
 ## Read before changing anything
 1. `README.md` — purpose + operating flow
-2. `DECISIONS.md` — every deliberate choice, newest era is #30–#35
+2. `DECISIONS.md` — every deliberate choice, newest era is #30–#43
 3. `docs/CLI_HANDOFF.md` — operational facts, current state, "next up"
 4. `profile.yaml` — Victor's search preferences and thresholds
 5. the specific `radar/` module + its `tests/` file

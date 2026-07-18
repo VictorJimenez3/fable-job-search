@@ -39,7 +39,7 @@ Use the smallest model that can safely complete the task. Local Qwen/Ollama or
 Qwen CLI is appropriate for repository orientation, docs/TODO maintenance,
 mechanical edits, focused parser/UI fixes, test additions, and validation. A
 Claude Code session using a proxy is also fine for bounded implementation when
-the acceptance criteria already exist.
+the acceptance criteria already exist. A local model may implement a mechanical subtask after the design and acceptance criteria are written by a stronger model. (DECISIONS #43)
 
 Use a stronger model for scoring/gate policy, AI routing/prompts/quotas,
 authentication or owner checks, Actions/Vercel/deployment, state migrations,
@@ -140,14 +140,14 @@ secret changes, OAuth activation, CV content, and production pushes.
   `cheme-enrich.yml` orchestrator at 8/12. Explicit pasted JDs, tracked roles,
   and fresh high-score work outrank cold backlog. Kimi is final fallback
   because its authenticated endpoint has been intermittently 404.
-- **NVIDIA quota evidence (2026-07-18):** the account UI says “Up to 40 RPM,”
+- **NVIDIA quota evidence (2026-07-18, DECISIONS #42):** the account UI says “Up to 40 RPM,”
   but does not identify the scope. A 40-request burst (10 × 4-model probes)
   produced one GLM 429, DeepSeek timeouts, healthy Nemotron responses, and
   Kimi 404s; GLM/Nemotron recovered after a 70-second wait. Treat 40 RPM as an
   unknown provider/account ceiling, not as a guaranteed per-model allowance.
   Do not repeat the stress test; rely on cooldowns, rotation, and
   `state/ai_usage.json` telemetry.
-- **Current alert focus (rules v4):** full-stack and systems-engineering titles
+- **Current alert focus (rules v4, DECISIONS #41):** full-stack and systems-engineering titles
   remain on the dashboard for recall but are temporarily excluded from alert
   issues/digests. The active alert stream is AI/ML, data science, and other
   software roles that are not explicitly full-stack/systems; this is a focused
