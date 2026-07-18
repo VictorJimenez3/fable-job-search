@@ -25,4 +25,5 @@ jobs:
       - name: Post the ChemE daily best-of issue
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RADAR_ALERT_ASSIGNEE: ak2943
         run: python -m radar.main daily-best

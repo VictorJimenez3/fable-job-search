@@ -164,9 +164,17 @@ let RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/`;
 const API = "https://api.github.com";
 
 const DEFAULT_FILTER = {q:"", min:66, sector:"", role:"", sponsorship:"",
-  experience:"", alert:true, lane:"", sort:"best"};
+  experience:"", alert:false, lane:"", sort:"best"};
 function storedFilter() {
-  try { return JSON.parse(localStorage.getItem("jr_filters") || "{}"); }
+  try {
+    const f = JSON.parse(localStorage.getItem("jr_filters") || "{}");
+    if (f._alertFilterVersion !== 2) {
+      f.alert = false;
+      f._alertFilterVersion = 2;
+      localStorage.setItem("jr_filters", JSON.stringify(f));
+    }
+    return f;
+  }
   catch { return {}; }
 }
 const S = {           // app state
@@ -516,7 +524,7 @@ function rJobs() {
         <option value="unknown" ${S.filter.experience==="unknown"?"selected":""}>experience not stated</option>
         <option value="unread" ${S.filter.experience==="unread"?"selected":""}>experience not analyzed</option>
       </select>
-      <label class="sub"><input type="checkbox" ${S.filter.alert?"checked":""}
+      <label class="sub" title="Off by default: show all ChemE-fit roles, including strong dashboard-only matches"><input type="checkbox" ${S.filter.alert?"checked":""}
         onchange="setFilter('alert',this.checked)"> alert-worthy only</label>
       <select aria-label="Pipeline status" onchange="setFilter('lane',this.value)">
         <option value="">any status</option>
