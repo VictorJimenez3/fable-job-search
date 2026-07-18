@@ -69,7 +69,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 95 🔥 | 4d | Anthropic | [Research Engineer, Chip Design RL (Reinforcement Learning)](https://job-boards.greenhouse.io/anthropic/jobs/5231612008) | San Francisco, CA | New York City, NY | ai_lab | greenhouse |
 | 95 🔥 | 18d | Medpace | [Junior Software Engineer](https://jobright.ai/jobs/info/6a2a715e2cde2824469c1cdf?utm_campaign=Software%20Engineering&utm_source=1103) | Denver, CO | healthtech | jobright |
 | 94 🔥 | 20h | Ensemble Health Partners | [Financial Operations Analyst](https://ensemblehp.wd5.myworkdayjobs.com/en-US/ensemblehealthpartnerscareers/job/Remote---Nationwide/Financial-Operations-Analyst_R048163) | Remote - Nationwide | healthtech | workday |
-| 94 🔥 | 22h | OpenAI | [Compensation Business Partner, GTM ](https://jobs.ashbyhq.com/openai/f4720507-3c44-4162-af21-206ac3a78007) | San Francisco | ai_lab | ashby |
+| 94 🔥 | 23h | OpenAI | [Compensation Business Partner, GTM ](https://jobs.ashbyhq.com/openai/f4720507-3c44-4162-af21-206ac3a78007) | San Francisco | ai_lab | ashby |
 | 94 🔥 | 1d | OpenAI | [Systems Generalist, GPT Infrastructure](https://jobs.ashbyhq.com/openai/78c2a68b-cc77-4c62-8891-96afb603650a) | San Francisco | ai_lab | ashby |
 | 94 🔥 | 1d | LinkedIn | [Sales Strategy and Operations Associate](https://jobs.smartrecruiters.com/LinkedIn3/744000138373219) | New York, NY | big_tech | smartrecruiters |
 | 94 🔥 | 1d | Medtronic | [Sales Representative II (Surgical)](https://medtronic.wd1.myworkdayjobs.com/en-US/MedtronicCareers/job/Jakarta-Jakarta-Indonesia/Sales-Representative-II--Surgical-_R69070-1) | Jakarta, Jakarta, Indonesia | healthtech | workday |
