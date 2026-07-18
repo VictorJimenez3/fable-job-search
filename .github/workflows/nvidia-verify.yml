@@ -1,0 +1,54 @@
+name: nvidia-verify
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Probe each configured NVIDIA model without exposing keys
+        env:
+          NVIDIA_BASE_URL: ${{ vars.NVIDIA_API_BASE_URL }}
+          GLM_KEY: ${{ secrets.NVIDIA_GLM_52_API_KEY }}
+          GLM_MODEL: ${{ vars.NVIDIA_GLM_52_MODEL }}
+          DEEPSEEK_KEY: ${{ secrets.NVIDIA_DEEPSEEK_V4_PRO_API_KEY }}
+          DEEPSEEK_MODEL: ${{ vars.NVIDIA_DEEPSEEK_V4_PRO_MODEL }}
+          NEMOTRON_KEY: ${{ secrets.NVIDIA_NEMOTRON_3_ULTRA_550B_A55B_API_KEY }}
+          NEMOTRON_MODEL: ${{ vars.NVIDIA_NEMOTRON_3_ULTRA_550B_A55B_MODEL }}
+          KIMI_KEY: ${{ secrets.NVIDIA_KIMI_K2_6_API_KEY }}
+          KIMI_MODEL: ${{ vars.NVIDIA_KIMI_K2_6_MODEL }}
+        run: |
+          python - <<'PY'
+          import json, os, urllib.request
+          models = [
+              ("GLM", os.environ["GLM_KEY"], os.environ["GLM_MODEL"]),
+              ("DeepSeek", os.environ["DEEPSEEK_KEY"], os.environ["DEEPSEEK_MODEL"]),
+              ("Nemotron", os.environ["NEMOTRON_KEY"], os.environ["NEMOTRON_MODEL"]),
+              ("Kimi", os.environ["KIMI_KEY"], os.environ["KIMI_MODEL"]),
+          ]
+          url = os.environ["NVIDIA_BASE_URL"].rstrip("/") + "/chat/completions"
+          for label, key, model in models:
+              if not key or not model:
+                  raise SystemExit(f"{label}: missing secret or variable")
+              req = urllib.request.Request(url, data=json.dumps({
+                  "model": model,
+                  "messages": [{"role": "user", "content": "Reply with OK."}],
+                  "max_tokens": 8,
+                  "temperature": 0,
+              }).encode(), headers={
+                  "Authorization": f"Bearer {key}",
+                  "Content-Type": "application/json",
+              })
+              try:
+                  with urllib.request.urlopen(req, timeout=90) as res:
+                      data = json.load(res)
+                  content = ((data.get("choices") or [{}])[0].get("message") or {}).get("content", "")
+                  print(f"{label}: OK ({model}); response_chars={len(content)}")
+              except Exception as exc:
+                  raise SystemExit(f"{label}: FAILED ({model}): {type(exc).__name__}: {exc}")
+          PY
