@@ -10212,8 +10212,9 @@
   "url": "https://jobs.ashbyhq.com/openai/6c88bfaa-7f1b-4175-82f1-6d484a516ca8"
  },
  "06fc00e48d7911b3": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784415739,
   "company": "Ascensus",
   "description": "",
   "explicit_new_grad": false,
@@ -10224,6 +10225,11 @@
    "Nashville, TN, US"
   ],
   "posted_at": 1783036800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415739,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -10231,7 +10237,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "remote +2"
+   "remote +2",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -18391,7 +18398,9 @@
   ],
   "posted_at": 1783433425,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784415705,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -22527,6 +22536,15 @@
    "Chicago, IL"
   ],
   "posted_at": 1783030512,
+  "posting": {
+   "analyzed_at": 1784415745,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784415745,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -25546,8 +25564,9 @@
   "url": "https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-California-Palmdale/Software-Engineer---Simulation--Palmdale-_R10239890"
  },
  "0ff35085a4032029": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784415740,
   "company": "Ascensus",
   "description": "",
   "explicit_new_grad": false,
@@ -25558,6 +25577,11 @@
    "Atlanta, GA, US"
   ],
   "posted_at": 1783036800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415740,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -25565,7 +25589,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "remote +2"
+   "remote +2",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -44126,7 +44151,7 @@
   ],
   "posted_at": 1783555200,
   "posting": {
-   "analyzed_at": 1784415628,
+   "analyzed_at": 1784415681,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 1,
@@ -44134,16 +44159,23 @@
   },
   "quality": {
    "ai_deferred_at": 1784415628,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784415681,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 62,
+  "score": 52,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +2"
+   "title matches your history +2",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -44716,7 +44748,9 @@
   ],
   "posted_at": 1783386445,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784415706,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -56811,13 +56845,19 @@
   ],
   "posted_at": 1783463958,
   "posting": {
-   "analyzed_at": 1784415631,
+   "analyzed_at": 1784415696,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784415631,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784415696,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role, no experience required.",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -61193,6 +61233,16 @@
    "Remote - New York"
   ],
   "posted_at": 1783036800,
+  "posting": {
+   "analyzed_at": 1784415741,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "ai_deferred_at": 1784415741,
+   "attempts": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -75900,13 +75950,19 @@
   ],
   "posted_at": 1783728000,
   "posting": {
-   "analyzed_at": 1784415626,
+   "analyzed_at": 1784415666,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784415626,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784415666,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, remote, no experience required.",
+   "role_family": "other-technical",
+   "years_required": null
   },
   "remote": true,
   "rules_v": 3,
@@ -165893,8 +165949,9 @@
   "url": "https://jobs.ashbyhq.com/openai/4762783e-61e1-4d36-af1d-8dee3c5f70e2"
  },
  "6995812f9265962f": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784415742,
   "company": "Ascensus",
   "description": "",
   "explicit_new_grad": false,
@@ -165905,6 +165962,11 @@
    "Newton, MA, US"
   ],
   "posted_at": 1783036800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415742,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -165912,7 +165974,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "remote +2"
+   "remote +2",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -208827,7 +208890,7 @@
   "url": "https://jobs.ashbyhq.com/saronic/be69a6b7-53d9-49dd-9294-1362c603006c"
  },
  "859eba3cc2a183ff": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "York Space Systems",
   "description": "",
@@ -208840,22 +208903,30 @@
   ],
   "posted_at": 1783728000,
   "posting": {
-   "analyzed_at": 1784415627,
+   "analyzed_at": 1784415674,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784415627,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784415674,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Not CS job, medical manufacturing role.",
+   "role_family": "non-technical",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 62,
+  "score": 17,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +2"
+   "title matches your history +2",
+   "quality: not new-grad (senior — LLM-verified) -20",
+   "quality: non-technical role (Not CS job, medical manufacturing role. — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "jobright",
@@ -213070,14 +213141,29 @@
    "Waterloo, Ontario"
   ],
   "posted_at": 1783209600,
+  "posting": {
+   "analyzed_at": 1784415715,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415715,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 62,
+  "score": 52,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +2"
+   "title matches your history +2",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -218078,14 +218164,20 @@
   ],
   "posted_at": 1783814400,
   "posting": {
-   "analyzed_at": 1784415623,
+   "analyzed_at": 1784415643,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
    "ai_deferred_at": 1784415623,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784415643,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry, Mid Level, no experience requirement specified for new grad.",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -234259,6 +234351,15 @@
    "Remote in USA"
   ],
   "posted_at": 1783118387,
+  "posting": {
+   "analyzed_at": 1784415738,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784415738,
+   "attempts": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -247696,22 +247797,29 @@
   ],
   "posted_at": 1783814400,
   "posting": {
-   "analyzed_at": 1784415624,
+   "analyzed_at": 1784415651,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784415624,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784415651,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp, mid-level",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 62,
+  "score": 52,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <7d +2"
+   "posted <7d +2",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -253809,14 +253917,30 @@
    "Mountain View, CA"
   ],
   "posted_at": 1783382400,
+  "posting": {
+   "analyzed_at": 1784415707,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415707,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 62,
+  "score": 52,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +2"
+   "title matches your history +2",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -261865,14 +261989,20 @@
   ],
   "posted_at": 1783814400,
   "posting": {
-   "analyzed_at": 1784415625,
+   "analyzed_at": 1784415659,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
    "ai_deferred_at": 1784415625,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784415659,
+   "live": true,
+   "new_grad": "unclear",
+   "reason": "No explicit experience requirement for new grad.",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -280202,7 +280332,9 @@
   ],
   "posted_at": 1783555200,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784415689,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -291452,13 +291584,19 @@
   ],
   "posted_at": 1783472888,
   "posting": {
-   "analyzed_at": 1784415629,
+   "analyzed_at": 1784415690,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784415629,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784415690,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role for new grad",
+   "role_family": "data",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -326622,8 +326760,9 @@
   "url": "https://jobs.lever.co/rws/1c836aa1-dd7f-414d-aea2-8044a6525ab8"
  },
  "d03d2e52ff8fd16b": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784415742,
   "company": "Ascensus",
   "description": "",
   "explicit_new_grad": false,
@@ -326634,6 +326773,11 @@
    "Orlando, FL, US"
   ],
   "posted_at": 1783036800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415742,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -326641,7 +326785,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "remote +2"
+   "remote +2",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -329343,6 +329488,23 @@
    "New York, NY"
   ],
   "posted_at": 1783123200,
+  "posting": {
+   "analyzed_at": 1784415730,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 0,
+   "years_note": "0-2 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415730,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0+ years exp, new grad role",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -341960,8 +342122,9 @@
   "url": "https://ebxs.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/309083"
  },
  "da5ef8aba8961d65": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784415743,
   "company": "Ascensus",
   "description": "",
   "explicit_new_grad": false,
@@ -341972,6 +342135,11 @@
    "Lake Mary, FL, US"
   ],
   "posted_at": 1783036800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415743,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -341979,7 +342147,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "remote +2"
+   "remote +2",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -344641,14 +344810,32 @@
    "Hampton, Virginia, 23661"
   ],
   "posted_at": 1783209600,
+  "posting": {
+   "analyzed_at": 1784415723,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 1,
+   "years_note": "1 years of experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415723,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 1 year exp.",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 62,
+  "score": 52,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +2"
+   "title matches your history +2",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -371170,8 +371357,9 @@
   "url": "https://jobs.lever.co/hatchit/faa6828c-f1f7-4acb-b8ea-4cf76e9cd0a0"
  },
  "ed00fa45b80c3653": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784415744,
   "company": "Ascensus",
   "description": "",
   "explicit_new_grad": false,
@@ -371182,6 +371370,11 @@
    "Philadelphia, PA, US"
   ],
   "posted_at": 1783036800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415744,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -371189,7 +371382,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "remote +2"
+   "remote +2",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -395705,8 +395899,9 @@
   "url": "https://jobs.ashbyhq.com/blitzy/2758c2f4-b90c-43de-8de8-7b8bcc4ff15e"
  },
  "fc3047416b26235f": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784415714,
   "company": "Known",
   "description": "",
   "explicit_new_grad": false,
@@ -395717,6 +395912,11 @@
    "United States"
   ],
   "posted_at": 1783382400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415714,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -395724,7 +395924,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "remote +2"
+   "remote +2",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
