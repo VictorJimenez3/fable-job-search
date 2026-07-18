@@ -1,31 +1,20 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-18 06:04 UTC** · companies polled directly: **9** (ChemE registry 9) · jobs tracked: **49 shown / 11075 stored** · new this run: **65** · alerts this run: **10**_
+_Last run: **2026-07-18 06:07 UTC** · companies polled directly: **9** (ChemE registry 9) · jobs tracked: **39 shown / 11076 stored** · new this run: **1** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
 | Score | Age | Company | Role | Location | Sector | Src |
 |---|---|---|---|---|---|---|
-| 100 🔥 | <1h | Dow | [Campus Internship 2025 - 2026 – Textile Durable Oil & Water Repellent ](https://dow.wd1.myworkdayjobs.com/en-US/ExternalCareers/job/Seneffe-BEL/Campus-Internship-2025---2026---Textile-Durable-Oil---Water-Repellent-Application-Development--R-D-_R2067303) | Seneffe (BEL) | chemicals_materials | workday |
-| 98 🔥 | 17d | Dow | [Campus Internship 2025 - 2026 – Process Automation](https://dow.wd1.myworkdayjobs.com/en-US/ExternalCareers/job/Stade-DEU/Campus-Internship-2025---2026---Process-Automation_R2066903) | Stade (DEU) | chemicals_materials | workday |
 | 94 🔥 | 24d | Shell | [Intern – Chemical & Process Engineering](https://shell.wd3.myworkdayjobs.com/en-US/ShellCareers/job/Bintulu/Intern---Chemical---Process-Engineering_R197544) | Bintulu | energy | workday |
-| 93 🔥 | 18d | GlobalFoundries | [Associate Process Engineer Intern, Lithography (Diploma)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/SGP---Woodlands/Associate-Process-Engineer-Intern--Lithography--Diploma-_JR-2502702) | SGP - Woodlands | semiconductors | workday |
-| 93 🔥 | 18d | GlobalFoundries | [Associate Process Engineer Intern, Metrology Recipe Automation (Diplom](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/SGP---Woodlands/Associate-Process-Engineer-Intern--Metrology-Recipe-Automation--Diploma-_JR-2502698) | SGP - Woodlands | semiconductors | workday |
 | 93 🔥 | 18d | Applied Materials | [2026 Fall Process Engineer Co-op - Adv Degree Gloucester, MA](https://amat.wd1.myworkdayjobs.com/en-US/External/job/GloucesterMA/XMLNAME-2026-Fall-Process-Engineer-Co-op---Adv-Degree-Gloucester--MA_R2611502) | Gloucester,MA | semiconductors | workday |
-| 88 🔥 | 18d | GlobalFoundries | [Industrial Engineering & Tool Remarketing Intern (Diploma)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/SGP---Woodlands/XMLNAME-2H-University-Intern---Tool-Remarketing_JR-2502771) | SGP - Woodlands | semiconductors | workday |
 | 87 🔥 | 7h | Neuralink | [R&D Materials Engineer Intern](https://boards.greenhouse.io/neuralink/jobs/7808233003) | San Bruno, CA | other | simplify |
-| 85 🔥 | 15d | Chevron | [Chevron Venezuela - OE/HSE Intern](https://chevron.wd5.myworkdayjobs.com/en-US/jobs/job/Maracaibo-Zulia-Venezuela/Chevron-Venezuela---OE-HSE-Intern_R000069010) | Maracaibo, Zulia, Venezuela | energy | workday |
 | 82 ⭐ | 2d | Solar Turbines | [Gas Turbine Products Engineering Intern](https://cat.wd5.myworkdayjobs.com/en-US/solarturbines/job/San-Diego-California/XMLNAME-2027--Gas-Turbine-Product-Engineering-Internship_R0000382293) | San Diego, CA | energy | simplify |
 | 82 ⭐ | 7d | 3M | [Product Development Engineering Intern*](https://3m.wd1.myworkdayjobs.com/en-US/Search/job/CA-Ontario-Brockville/Product-Development-Engineering-Intern-_R01167138) | CA, Ontario, Brockville | chemicals_materials | workday |
 | 76 ⭐ | 24d | Heron Power | [Electronics Design Engineer Intern](http://jobs.ashbyhq.com/heron-power/28af5d2d-bd93-4681-9422-05d17c3437eb/application) | Santa Cruz, CA | energy | simplify |
 | 75 ⭐ | 4d | Procter & Gamble (P&G) | [R&D Engineer Co-op](https://pg.wd5.myworkdayjobs.com/1000/job/BOSTON-GO--TECH-CENTER/Northeastern-University-R-D-Engineer-Co-op--Northeastern-Students-Graduating-in-2028-2029-ONLY_R000155302) | Boston, MA | consumer_manufacturing | simplify |
 | 75 ⭐ | 5d | City of Aurora | [Water GIS Intern](https://auroragov.wd1.myworkdayjobs.com/careers/job/Daniel-P-Mikesell-Building-Southeast-Area-Maintenance-Facility--SEAM/Water-GIS-Intern_JR109039) | Aurora, CO | other | simplify |
 | 75 ⭐ | 9d | Microchip Technology | [Applications Engineering Intern](https://wd5.myworkdaysite.com/recruiting/microchiphr/External/job/CA---Roseville/Intern---Applications-Engineering_R2542-26) | Roseville, CA | semiconductors | simplify |
-| 75 ⭐ | 17d | GlobalFoundries | [Associate Engineering Intern, Tapeout Integration (Diploma)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/SGP---Woodlands/Associate-Engineering-Intern--Tapeout-Integration--Diploma-_JR-2502737) | SGP - Woodlands | semiconductors | workday |
-| 75 ⭐ | 18d | GlobalFoundries | [Associate Engineering Intern, CVD Equipment (Diploma)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/SGP---Woodlands/Associate-Engineering-Intern--CVD-Equipment--Diploma-_JR-2502738-1) | SGP - Woodlands | semiconductors | workday |
-| 75 ⭐ | 18d | GlobalFoundries | [Associate Equipment Engineer Intern (Diploma)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/SGP---Woodlands/XMLNAME-2H-University-Intern---Mechatronics-Engineering_JR-2502754) | SGP - Woodlands | semiconductors | workday |
-| 75 ⭐ | 23d | GlobalFoundries | [Equipment Engineering Intern, Metrology (July to December)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/SGP---Woodlands/XMLNAME-2H-University-Intern---Metrology-Equipment-Engineering_JR-2502751) | SGP - Woodlands | semiconductors | workday |
-| 75 ⭐ | 29d | Toyota Research Institute | [Energy & Materials Intern - XRD Advanced Analysis](https://jobs.lever.co/tri/15969a29-b217-482f-8c67-67d091b054c8/apply) | Mountain View, CA | other | simplify |
 | 73  | 16d | Tesla | [Firmware Engineer Intern - Power Electronics Firmware Engineer - Energ](https://www.tesla.com/careers/search/job/275689) | Palo Alto, CA | consumer_manufacturing | simplify |
 | 73  | 17d | Tesla | [Thermal Controls Engineer Intern - Thermal Controls Engineer - Vehicle](https://www.tesla.com/careers/search/job/275327) | Palo Alto, CA | consumer_manufacturing | simplify |
 | 73  | 18d | Tesla | [Inline Metrology Systems Design/Engineer Intern - Cell Engineering](https://www.tesla.com/careers/search/job/275335) | Fremont, CA | consumer_manufacturing | simplify |
@@ -37,8 +26,8 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 66  | 3d | Cirrus Logic | [Analog Design Engineer Co-op - Analog Design Engineer](https://jobs.eu.lever.co/cirrus/8ad92ca2-1f67-4a86-a5cf-12b7b2981960/apply) | Greensboro, NC | other | simplify |
 | 66  | 4d | Duracell | [Electronics Tech Intern](https://fa-ewub-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_26/job/1330) | Atlanta, GA | other | simplify |
 | 66  | 4d | Papa John's | [Engineering Co-op](https://papajohns.wd1.myworkdayjobs.com/papajohnscareers/job/HQ_Louisville/Co-Op_R26_0000001989) | Louisville, KY | other | simplify |
-| 66  | 5d | GE Aerospace | [Engineer Intern](https://geaerospace.wd5.myworkdayjobs.com/ge_externalsite/job/Jacksonville/Unison-Engineering-Intern---Spring-2027_R5037093-1) | Dayton, OH | other | simplify |
 | 66  | 5d | GE Aerospace | [Unison Engineer Intern](https://geaerospace.wd5.myworkdayjobs.com/ge_externalsite/job/Jacksonville/Unison-Engineering-Intern---Fall-2027_R5037092-1) | Dayton, OH | other | simplify |
+| 66  | 5d | GE Aerospace | [Engineer Intern](https://geaerospace.wd5.myworkdayjobs.com/ge_externalsite/job/Jacksonville/Unison-Engineering-Intern---Spring-2027_R5037093-1) | Dayton, OH | other | simplify |
 | 66  | 6d | DiDi Global | [Motion Planning Engineer Intern](https://job-boards.greenhouse.io/didi/jobs/8056492) | San Jose, CA | other | simplify |
 | 64  | 9d | Jump Trading | [FPGA Engineer Intern](https://boards.greenhouse.io/embed/job_app?token=8003013) | Chicago, IL | other | simplify |
 | 64  | 11d | Astranis | [Radiation Effects Engineer Intern](https://job-boards.greenhouse.io/astranis/jobs/4694853006) | SF | other | simplify |
@@ -54,6 +43,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 64  | 21d | Clera | [Founding Engineer Intern](https://jobs.ashbyhq.com/clera/d3c69268-3324-4a84-b911-7a4303672767/application) | SF | other | simplify |
 | 64  | 22d | Lila Sciences | [Next Gen Engineering Co-Op](https://job-boards.greenhouse.io/lilasciences/jobs/4289960009) | Cambridge, MA | other | simplify |
 | 64  | 22d | Cadence Design Systems | [Product Engineering Intern - Simulation and Verification](https://cadence.wd1.myworkdayjobs.com/University_Talent/job/Burlington-MA/Product-Engineering-Internship--Simulation-and-Verification--Fall-2026-_R53475) | Burlington, MA | other | simplify |
+| 64  | 23d | Hiverge | [Research Engineer Intern](https://jobs.ashbyhq.com/hiverge/ea6edea4-5216-4cdc-b368-909ba91c78a3/application) | Cambridge, UK | other | simplify |
 | 64  | 29d | Formlabs | [Hardware R&D Engineer Intern](https://careers.formlabs.com/job/7890746/apply/?gh_jid=7890746) | Cambridge, MA | other | simplify |
 
-_49 roles shown (score ≥ 42, posted ≤30d)._
+_39 roles shown (score ≥ 42, posted ≤30d)._
