@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-18 20:32 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
+_Last run: **2026-07-18 20:34 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -44,7 +44,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 98 🔥 | 8d | OpenAI | [Account Associate - SF](https://jobs.ashbyhq.com/openai/55f36629-8351-41d9-b2f5-3d63c5e26bf7) | San Francisco | ai_lab | ashby |
 | 98 🔥 | 8d | OpenAI | [Account Associate, Japan](https://jobs.ashbyhq.com/openai/2f3f416d-cc2a-4836-bcff-daee80c94e95) | Tokyo, Japan | ai_lab | ashby |
 | 98 🔥 | 12d | Notion | [Software Engineer, Early Career (AI)](https://jobs.ashbyhq.com/notion/85947779-6b87-466a-98bc-30a640448c28) | San Francisco, California | big_tech | ashby |
-| 97 🔥 | 23h | SpaceX | [Electrical Hardware Engineer, AI Satellites (Starmind)](https://boards.greenhouse.io/spacex/jobs/8639247002?gh_jid=8639247002) | Bastrop, TX | big_tech | greenhouse |
+| 97 🔥 | 1d | SpaceX | [Electrical Hardware Engineer, AI Satellites (Starmind)](https://boards.greenhouse.io/spacex/jobs/8639247002?gh_jid=8639247002) | Bastrop, TX | big_tech | greenhouse |
 | 97 🔥 | 16d | Amazon | [Software Dev Engineer I - Annapurna Labs](https://www.amazon.jobs/jobs/10464104/apply) | Austin, TX | big_tech | speedyapply |
 | 96 🔥 | 14h | CVS Health | [Beauty Sales Consultant, Licensed](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/CA---Studio-City/Beauty-Sales-Consultant--Licensed_R0949589) | CA - Studio City | healthtech | workday |
 | 96 🔥 | 14h | CVS Health | [Beauty Sales Consultant](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/CA---Studio-City/Beauty-Sales-Consultant_R0971756) | CA - Studio City | healthtech | workday |
@@ -110,7 +110,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 94 🔥 | 24d | Oscar Health | [Associate, Regulatory Operations](http://www.hioscar.com/careers/8023761?gh_jid=8023761) | Remote | healthtech | greenhouse |
 | 94 🔥 | 24d | LinkedIn | [AI Governance and Advisory Associate](https://jobs.smartrecruiters.com/LinkedIn3/744000133706629) | SF | big_tech | simplify |
 | 94 🔥 | 24d | LinkedIn | [AI Governance and Advisory Associate](https://jobs.smartrecruiters.com/LinkedIn3/744000133706629) | San Francisco, CA | big_tech | smartrecruiters |
-| 93 🔥 | 17h | Anthropic | [Finance & Strategy, GTM - Post Sales ](https://job-boards.greenhouse.io/anthropic/jobs/5163060008) | San Francisco, CA | ai_lab | greenhouse |
+| 93 🔥 | 18h | Anthropic | [Finance & Strategy, GTM - Post Sales ](https://job-boards.greenhouse.io/anthropic/jobs/5163060008) | San Francisco, CA | ai_lab | greenhouse |
 | 93 🔥 | 1d | OpenAI | [Safety Transparency Editor, Safety Systems](https://jobs.ashbyhq.com/openai/a6a421a5-0d3d-4f2f-9767-7c25b6e7d2fc) | San Francisco | ai_lab | ashby |
 | 93 🔥 | 1d | Anthropic | [Research Scientist, Life Sciences (Computational)](https://job-boards.greenhouse.io/anthropic/jobs/5357739008) | San Francisco, CA | ai_lab | greenhouse |
 | 93 🔥 | 9d | Salesforce | [Business Development Associate](https://salesforce.wd12.myworkdayjobs.com/en-US/futureforce_newgradroles/job/Illinois---Chicago/Business-Development-Associate_JR347430) | Illinois - Chicago | big_tech | workday |
