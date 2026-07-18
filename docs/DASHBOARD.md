@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-18 20:05 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
+_Last run: **2026-07-18 20:07 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -11,7 +11,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 100 🔥 | 1d | Oscar Health | [Associate, Actuarial](http://www.hioscar.com/careers/8069495?gh_jid=8069495) | Remote | healthtech | greenhouse |
 | 100 🔥 | 1d | NVIDIA | [Systems Software Engineer New Grad - Accelerated Kubernetes Performanc](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Systems-Software-Engineer--Accelerated-Kubernetes-Performance-and-Scale---New-College-Grad-2026_JR2020957) | Seattle, WA | big_tech | simplify |
 | 100 🔥 | 2d | Merck | [Associate Specialist, Customer Support](https://msd.wd5.myworkdayjobs.com/en-US/SearchJobs/job/USA---REMOTE---REMOTE/Associate-Specialist--Customer-Support_R406095-1/apply) | REMOTE, REMOTE, United States of America | healthtech | phenom |
-| 100 🔥 | 2d | Amazon | [Applied Scientist, Amazon Cryptographic Libraries](https://www.amazon.jobs/en/jobs/10476858/applied-scientist-amazon-cryptographic-libraries) | Seattle, Washington, USA | big_tech | amazon |
 | 100 🔥 | 2d | Vytalize Health | [Associate Data Engineer](https://jobs.ashbyhq.com/Vytalize%20Health/3576b087-709e-4bf0-a016-6cc1c24b802c/application?embed=true) | Remote in USA | healthtech | simplify |
 | 100 🔥 | 3d | AbbVie | [BTS Associate Software Engineer II - AI](https://jobs.smartrecruiters.com/AbbVie/3743990014111376) | North Chicago, IL | healthtech | smartrecruiters |
 | 100 🔥 | 3d | Johnson & Johnson | [Associate Sales Consultant, Early Intervention -  Somerset, NJ/Toms Ri](https://jj.wd5.myworkdayjobs.com/en-US/JJ/job/New-Jersey-Any-City/Associate-Sales-Consultant--Early-Intervention----Somerset--NJ-Toms-River--NJ---Brick--NJ---Princeton--NJ---Johnson---Johnson-MedTech--Orthopaedics_R-087819-1) | New Jersey (Any City) | healthtech | workday |
@@ -156,5 +155,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 92 🔥 | 11d | Salesforce | [Software Engineering AMTS (College Grad)](https://jobright.ai/jobs/info/69f4c70cdb88714bcdfafbe9?utm_campaign=Software%20Engineering&utm_source=1103) | California - San Francisco | big_tech | jobright |
 | 92 🔥 | 13d | Salesforce | [Software Engineering AMTS (College Grad)](https://jobright.ai/jobs/info/69f4c7a881706a5bd2162e3f?utm_campaign=Software%20Engineering&utm_source=1103) | Washington - Bellevue, US | big_tech | jobright |
 | 92 🔥 | 14d | Salesforce | [Software Engineering AMTS (College Grad)](https://jobright.ai/jobs/info/69f4c70ddb88714bcdfafbf1?utm_campaign=Software%20Engineering&utm_source=1103) | Texas - Dallas | big_tech | jobright |
+| 92 🔥 | 14d | Medtronic | [Sales Analyst – Cranial and Spinal Technologies](https://medtronic.wd1.myworkdayjobs.com/en-US/redeploymentmedtroniccareers/job/Sydney-New-South-Wales-Australia/Sales-Analyst---Cranial-and-Spinal-Technologies_R68534) | 3 Locations | healthtech | workday |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._

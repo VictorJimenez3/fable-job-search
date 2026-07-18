@@ -6200,6 +6200,9 @@
    "fetched": false,
    "sponsorship": "unknown"
   },
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -28923,7 +28926,7 @@
   ],
   "posted_at": 1783987200,
   "posting": {
-   "analyzed_at": 1784405124,
+   "analyzed_at": 1784405163,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 2,
@@ -28931,17 +28934,24 @@
   },
   "quality": {
    "ai_deferred_at": 1784405124,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784405163,
+   "live": true,
+   "new_grad": "no",
+   "reason": "2+ years exp required",
+   "role_family": "swe",
+   "years_required": 2
   },
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 64,
+  "score": 54,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "posted <7d +2",
-   "remote +2"
+   "remote +2",
+   "quality: wants 2+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "simplify",
@@ -49994,9 +50004,13 @@
   ],
   "posted_at": 1781196438,
   "posting": {
-   "analyzed_at": 1784354390,
-   "fetched": false,
+   "analyzed_at": 1784405233,
+   "fetched": true,
    "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784405233,
+   "attempts": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -50028,7 +50042,9 @@
   ],
   "posted_at": 1784130042,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784405138,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -61646,6 +61662,9 @@
    "fetched": false,
    "sponsorship": "unknown"
   },
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -72346,7 +72365,7 @@
   ],
   "posted_at": 1784073600,
   "posting": {
-   "analyzed_at": 1784405126,
+   "analyzed_at": 1784405178,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -72355,7 +72374,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784405126,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784405178,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0 years required, new grad eligible",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -79404,7 +79429,7 @@
   ],
   "posted_at": 1784073600,
   "posting": {
-   "analyzed_at": 1784405127,
+   "analyzed_at": 1784405186,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -79413,16 +79438,23 @@
   },
   "quality": {
    "ai_deferred_at": 1784405127,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784405186,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 62,
+  "score": 52,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <7d +2"
+   "posted <7d +2",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -87007,7 +87039,7 @@
   ],
   "posted_at": 1784073600,
   "posting": {
-   "analyzed_at": 1784405122,
+   "analyzed_at": 1784405147,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship",
@@ -87016,18 +87048,25 @@
   },
   "quality": {
    "ai_deferred_at": 1784405122,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784405147,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 65,
+  "score": 55,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "posted <7d +2",
    "remote +2",
-   "title matches your history +1"
+   "title matches your history +1",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -97524,6 +97563,17 @@
    "Irapuato, GUA, Mexico"
   ],
   "posted_at": 1784160000,
+  "posting": {
+   "analyzed_at": 1784405238,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0–2 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784405238,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -113105,11 +113155,13 @@
   ],
   "posted_at": 1775687115,
   "posting": {
-   "analyzed_at": 1784263433,
-   "fetched": false,
-   "sponsorship": "unknown",
-   "years_min": 2,
-   "years_note": "2+ years experience"
+   "analyzed_at": 1784405232,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784405232,
+   "attempts": 0
   },
   "remote": true,
   "rules_v": 3,
@@ -160230,7 +160282,9 @@
   ],
   "posted_at": 1784130042,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784405139,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -162157,7 +162211,7 @@
   "url": "https://psu.wd1.myworkdayjobs.com/en-US/PSU_Staff/job/Penn-State-University-Park/AI-Application-Specialist---Nittany-AI-Alliance_REQ_0000078963-2"
  },
  "6bedaa2fa74871ee": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "amazon",
   "company": "Amazon",
   "description": "",
@@ -162170,14 +162224,23 @@
   ],
   "posted_at": 1784160000,
   "posting": {
-   "analyzed_at": 1784270134,
+   "analyzed_at": 1784405224,
    "fetched": true,
    "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784405224,
+   "live": true,
+   "new_grad": "no",
+   "reason": "3+ years required, security role",
+   "role_family": "security",
+   "years_required": 3
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 100,
+  "score": 80,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
@@ -162186,7 +162249,8 @@
    "you've engaged with Amazon +8",
    "title matches your history +6",
    "SHPE 2026 exhibitor +4",
-   "marquee company (auto-alert)"
+   "marquee company (auto-alert)",
+   "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "big_tech",
   "source": "amazon",
@@ -167165,14 +167229,20 @@
   ],
   "posted_at": 1784073600,
   "posting": {
-   "analyzed_at": 1784405127,
+   "analyzed_at": 1784405193,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784405127,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784405193,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0+ years exp",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -174779,7 +174849,7 @@
   "url": "https://jobright.ai/jobs/info/6a521e648576ec69c014a8c5?utm_campaign=Data%20Analysis&utm_source=1103"
  },
  "752129ce1ae5633d": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "GE Appliances",
   "description": "",
@@ -174792,22 +174862,29 @@
   ],
   "posted_at": 1780740248,
   "posting": {
-   "analyzed_at": 1784405123,
+   "analyzed_at": 1784405155,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784405123,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784405155,
+   "live": true,
+   "new_grad": "no",
+   "reason": "3-year rotational program",
+   "role_family": "swe",
+   "years_required": 3
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 65,
+  "score": 45,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +5"
+   "title matches your history +5",
+   "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "other",
   "source": "simplify",
@@ -181922,6 +181999,15 @@
    "2 Locations"
   ],
   "posted_at": 1784235636,
+  "posting": {
+   "analyzed_at": 1784405240,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784405240,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -212456,6 +212542,9 @@
    "San Francisco"
   ],
   "posted_at": 1784214032,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -226208,6 +226297,15 @@
    "Owatonna, MN"
   ],
   "posted_at": 1784207426,
+  "posting": {
+   "analyzed_at": 1784405241,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784405241,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -250533,6 +250631,22 @@
    "Chicago, IL"
   ],
   "posted_at": 1780697321,
+  "posting": {
+   "analyzed_at": 1784405216,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0-2 Years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784405216,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role with 0-2 years experience requirement.",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -284207,6 +284321,9 @@
    "fetched": false,
    "sponsorship": "unknown"
   },
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -290238,7 +290355,7 @@
   ],
   "posted_at": 1781361769,
   "posting": {
-   "analyzed_at": 1784405121,
+   "analyzed_at": 1784405139,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 2,
@@ -290246,16 +290363,23 @@
   },
   "quality": {
    "ai_deferred_at": 1784405121,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784405139,
+   "live": true,
+   "new_grad": "no",
+   "reason": "2+ years required",
+   "role_family": "data",
+   "years_required": 2
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 66,
+  "score": 56,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 2+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "simplify",
@@ -291074,22 +291198,29 @@
   ],
   "posted_at": 1784073600,
   "posting": {
-   "analyzed_at": 1784405128,
+   "analyzed_at": 1784405201,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784405128,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784405201,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 62,
+  "score": 52,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <7d +2"
+   "posted <7d +2",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -366498,6 +366629,9 @@
    "New York City"
   ],
   "posted_at": 1784144783,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -370214,13 +370348,19 @@
   ],
   "posted_at": 1781906909,
   "posting": {
-   "analyzed_at": 1784405125,
+   "analyzed_at": 1784405171,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784405125,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784405171,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "2+ years a plus, new grad accepted",
+   "role_family": "swe",
+   "years_required": 2
   },
   "remote": false,
   "rules_v": 3,
@@ -373608,6 +373748,9 @@
    "North Wales, Pennsylvania, United States of America"
   ],
   "posted_at": 1784246400,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -376059,6 +376202,23 @@
    "Carlsbad, CA, United States"
   ],
   "posted_at": 1784073600,
+  "posting": {
+   "analyzed_at": 1784405208,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 0,
+   "years_note": "0-3 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784405208,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0-3 years, entry level",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
