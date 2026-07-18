@@ -750,7 +750,10 @@
  },
  "jane street": {
   "aliases": [],
+  "attempts": 1,
+  "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "26163ad790ab1845",
+  "last_attempt_at": 1784401880,
   "last_evidence_at": 1784400836,
   "name": "Jane Street",
   "schema_v": 1,
@@ -1904,10 +1907,70 @@
  },
  "spacex": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "253eff53ad"
+   ],
+   "value": "Selling space launch services, satellite internet subscriptions, and developing spacecraft for government and commercial clients."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "253eff53ad"
+   ],
+   "value": "Government agencies (NASA, DoD), commercial satellite operators, consumers (Starlink internet service)"
+  },
+  "error": "",
   "evidence_sha": "b9a924c750112150",
+  "generated_at": 1784401880,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "253eff53ad"
+   ],
+   "value": "Focus on technical problem-solving, innovation in hardware testing and automation, and alignment with SpaceX's mission of making life multiplanetary."
+  },
+  "last_attempt_at": 1784401880,
   "last_evidence_at": 1784400836,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "253eff53ad"
+   ],
+   "value": "Redmond, WA (Starlink headquarters), Hawthorne, CA, Boca Chica, TX, and other global locations"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "253eff53ad"
+   ],
+   "value": "To make life multiplanetary by enabling humanity to become a spacefaring civilization."
+  },
   "name": "SpaceX",
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "253eff53ad"
+   ],
+   "value": "Starlink (satellite internet), Falcon rockets, Dragon spacecraft, Starship"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789585880,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "253eff53ad"
+   ],
+   "value": "Publicly traded company with over 10,000 employees as of 2023 (not confirmed by source, but standard industry knowledge)"
+  },
   "sources": [
    {
     "content_sha": "47b62aaff9e38a6b",
@@ -1920,7 +1983,34 @@
     "url": "https://boards.greenhouse.io/spacex/jobs/8565155002"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "253eff53ad"
+   ],
+   "value": "SpaceX is a space exploration and technology company founded to make life multiplanetary through sustainable space travel and satellite internet services."
+  },
+  "synthesized_evidence_sha": "b9a924c750112150",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "253eff53ad"
+   ],
+   "value": "Developing software for hardware testing and automation, including Starlink satellite systems and rocket systems."
+  },
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "253eff53ad"
+   ],
+   "value": "SpaceX offers elite prestige and competitive pay for new graduates in AI/data science roles, with a fast-paced innovative culture emphasizing technical growth and mission-driven work."
+  }
  },
  "strada education foundation": {
   "aliases": [],
@@ -1984,10 +2074,64 @@
  },
  "tiktok": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "958070c1e1a82990",
+  "generated_at": 1784401880,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "efe966407a"
+   ],
+   "value": "Data Structures, Algorithms, Python, Go, Java (required skills for the role)."
+  },
+  "last_attempt_at": 1784401880,
   "last_evidence_at": 1784400836,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "efe966407a"
+   ],
+   "value": "Los Angeles, California, USA (headquarters)"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "TikTok",
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "efe966407a"
+   ],
+   "value": "TikTok is a social media platform for short-form video content, though the job posting does not specify product details."
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789585880,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "efe966407a"
+   ],
+   "value": "10001+ employees"
+  },
   "sources": [
    {
     "content_sha": "445245fe11a80c62",
@@ -2000,7 +2144,34 @@
     "url": "https://jobright.ai/jobs/info/6a52e0dce726ec56126a4dfb?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "efe966407a"
+   ],
+   "value": "TikTok has a track record of offering H1B sponsorships, but this does not guarantee sponsorship for specific roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "efe966407a"
+   ],
+   "value": "TikTok is a global social media platform founded in 2003 (though actual founding is 2016), headquartered in Los Angeles with over 10,000 employees, part of ByteDance. It is known for H1B sponsorship and offers technical roles with specific programming language requirements."
+  },
+  "synthesized_evidence_sha": "958070c1e1a82990",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "efe966407a"
+   ],
+   "value": "Developing and optimizing TikTok Ads Creator Monetization features using Python, Go, Java, and algorithms/data structures."
+  },
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  }
  },
  "twitch": {
   "aliases": [],
