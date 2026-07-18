@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-18 19:18 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
+_Last run: **2026-07-18 19:20 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -130,7 +130,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 92 🔥 | 21h | SpaceX | [Full Stack Software Engineer Observability - Observability - Starlink](https://boards.greenhouse.io/spacex/jobs/8638457002) | West Athens, CA | big_tech | simplify |
 | 92 🔥 | 21h | Lincoln Financial | [Associate Analytics Engineer](https://jobs.lincolnfinancial.com/job/Omaha-Associate,-Analytics-Engineer-NE-68046/1410206500/?ats=successfactors) | Villanova, PA | other | simplify |
 | 92 🔥 | 21h | OpenAI | [HR Generalist, Consumer Devices](https://jobs.ashbyhq.com/openai/000cf0f2-090d-40c6-b9f8-1699db9a4c68) | San Francisco | ai_lab | ashby |
-| 92 🔥 | 21h | OpenAI | [Partner Strategy & Operations](https://jobs.ashbyhq.com/openai/3fd0ca32-e787-437d-985a-b9f7e3299ef4) | San Francisco | ai_lab | ashby |
+| 92 🔥 | 22h | OpenAI | [Partner Strategy & Operations](https://jobs.ashbyhq.com/openai/3fd0ca32-e787-437d-985a-b9f7e3299ef4) | San Francisco | ai_lab | ashby |
 | 92 🔥 | 1d | MongoDB | [Associate Technical Services Engineer II](https://www.mongodb.com/careers/job/?gh_jid=8044218) | Austin | big_tech | greenhouse |
 | 92 🔥 | 1d | Anduril | [Shipping & Receiving Materials Associate](https://boards.greenhouse.io/andurilindustries/jobs/5170663007?gh_jid=5170663007) | Santa Ana, California, United States | big_tech | greenhouse |
 | 92 🔥 | 1d | Johnson & Johnson | [Outbound Transportation Analyst](https://jj.wd5.myworkdayjobs.com/en-US/JJ/job/Diegem-Flemish-Brabant-Belgium/Outbound-Transportation-Analyst_R-089164) | 4 Locations | healthtech | workday |

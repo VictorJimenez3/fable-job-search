@@ -956,13 +956,62 @@
  },
  "merck": {
   "aliases": [],
-  "attempts": 1,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 2,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "08b50c2d7fd6987f",
-  "last_attempt_at": 1784402259,
+  "generated_at": 1784402296,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "57498bcc20"
+   ],
+   "value": "The job posting highlights equal employment opportunity and benefits, but does not explicitly address work-life balance, high new-grad pay, or fast tech culture. However, the statistical programming role indicates technical focus on data analysis and clinical trials, suggesting a collaborative, mission-driven environment."
+  },
+  "last_attempt_at": 1784402296,
   "last_evidence_at": 1784393439,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "57498bcc20"
+   ],
+   "value": "Hybrid role based in North Wales, Pennsylvania, USA."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "57498bcc20"
+   ],
+   "value": "To discover, develop, and deliver innovative medicines and vaccines that improve health outcomes worldwide."
+  },
   "name": "Merck",
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789586296,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "84a875547c7d0318",
@@ -975,7 +1024,34 @@
     "url": "https://msd.wd5.myworkdayjobs.com/en-US/searchjobs/job/USA---Pennsylvania---North-Wales-Upper-Gwynedd/Scientist--Statistical-Programming--Hybrid-_R404899-2"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "57498bcc20"
+   ],
+   "value": "Merck is a global pharmaceutical company focused on discovering, developing, and delivering innovative medicines and vaccines to improve health outcomes worldwide."
+  },
+  "synthesized_evidence_sha": "08b50c2d7fd6987f",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "57498bcc20"
+   ],
+   "value": "Statistical programming for drug development and clinical trials; focus on data analysis and programming in pharmaceutical R&D."
+  },
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "57498bcc20"
+   ],
+   "value": "Merck's focus on innovative drug development through statistical programming aligns with a mission-driven AI/data science role that prioritizes impactful work without excessive burnout. The company emphasizes equal opportunity and provides benefits information, though specific work-life balance details are not explicitly stated in the source."
+  }
  },
  "mthree": {
   "aliases": [],
@@ -1841,13 +1917,66 @@
  },
  "polymarket": {
   "aliases": [],
-  "attempts": 1,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "93ce874b71"
+   ],
+   "value": "Transaction fees on trades within the prediction markets."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "93ce874b71"
+   ],
+   "value": "Individuals and institutions interested in predicting and trading outcomes of real-world events, including sports, politics, and finance."
+  },
+  "error": "",
   "evidence_sha": "0406c48b3a2a2411",
-  "last_attempt_at": 1784402259,
+  "generated_at": 1784402296,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "93ce874b71"
+   ],
+   "value": "Candidates should prepare to discuss technical challenges in decentralized applications, experience with blockchain or AI, and their interest in mission-driven work with a focus on maintaining work-life balance."
+  },
+  "last_attempt_at": 1784402296,
   "last_evidence_at": 1784400836,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "93ce874b71"
+   ],
+   "value": "To provide a decentralized platform for prediction markets that democratizes access to information and decision-making."
+  },
   "name": "Polymarket",
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "93ce874b71"
+   ],
+   "value": "Decentralized prediction markets for real-world events, enabling users to trade outcomes using cryptocurrencies on the Ethereum blockchain."
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789586296,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "fa75395a6321be5b",
@@ -1860,7 +1989,34 @@
     "url": "https://jobs.ashbyhq.com/polymarket/fc6fa07f-b39c-4916-b54e-1adca738c1be/application"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "93ce874b71"
+   ],
+   "value": "Polymarket is a decentralized prediction market platform that allows users to trade on the outcome of real-world events using cryptocurrencies. It operates on the Ethereum blockchain and offers a range of prediction markets across various domains."
+  },
+  "synthesized_evidence_sha": "0406c48b3a2a2411",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "93ce874b71"
+   ],
+   "value": "Developing and maintaining decentralized applications on the Ethereum blockchain, including smart contracts and user interfaces for prediction markets."
+  },
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "93ce874b71"
+   ],
+   "value": "Polymarket offers a top-tier AI/data science role in a fast, innovative tech culture with a mission-driven focus on decentralized prediction markets, avoiding slow bureaucracy and prioritizing work-life balance through sane hours and guaranteed shutdowns."
+  }
  },
  "primefocus health": {
   "aliases": [],
@@ -2629,13 +2785,64 @@
  },
  "zs": {
   "aliases": [],
-  "attempts": 1,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "f16f0e71f0"
+   ],
+   "value": "Management consulting and technology firm"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "fe4702e74ff868fe",
-  "last_attempt_at": 1784402259,
+  "generated_at": 1784402296,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "f16f0e71f0"
+   ],
+   "value": "Statistical algorithms, hypothesis testing, machine learning, data mining, text mining"
+  },
+  "last_attempt_at": 1784402296,
   "last_evidence_at": 1784397120,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "f16f0e71f0"
+   ],
+   "value": "Princeton, NJ +5 more"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "f16f0e71f0"
+   ],
+   "value": "Improving life and how we live it"
+  },
   "name": "ZS",
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789586296,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "4a7b6648e458bc9d",
@@ -2648,6 +2855,33 @@
     "url": "https://jobright.ai/jobs/info/6a3571e31232144fb1563348?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "f16f0e71f0"
+   ],
+   "value": "ZS is a management consulting and technology firm focused on improving life and how we live it, offering a top-tier AI/data science role with competitive pay, hybrid work, and a focus on technical growth in a fast-paced environment."
+  },
+  "synthesized_evidence_sha": "fe4702e74ff868fe",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "f16f0e71f0"
+   ],
+   "value": "Statistical algorithms, hypothesis testing, machine learning, data mining, text mining"
+  },
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "f16f0e71f0"
+   ],
+   "value": "Top-tier AI/data science role with elite prestige, high new-grad pay ($105K-$119K), fast innovative tech culture, and mission-driven work that respects work-life balance through sane hours and guaranteed shutdowns."
+  }
  }
 }
