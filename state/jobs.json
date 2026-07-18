@@ -2029,6 +2029,9 @@
    "Boston, MA"
   ],
   "posted_at": 1782957200,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -6744,6 +6747,21 @@
    "Stafford, Virginia, 22554"
   ],
   "posted_at": 1783036800,
+  "posting": {
+   "analyzed_at": 1784412690,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412690,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New Grad, Entry Level",
+   "role_family": "data",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -22545,7 +22563,9 @@
   ],
   "posted_at": 1783167365,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784412675,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -37739,6 +37759,20 @@
    "Atlanta, Georgia, 30383"
   ],
   "posted_at": 1783036800,
+  "posting": {
+   "analyzed_at": 1784412698,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412698,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level New Grad",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -41350,8 +41384,9 @@
   "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/System-Software-Engineer--Dynamo-Triton-Inference-Server---New-College-Grad-2026_JR2020767"
  },
  "1a80aa4ff09f1be9": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784412756,
   "company": "CharterUP",
   "description": "",
   "explicit_new_grad": false,
@@ -41362,6 +41397,11 @@
    "Austin, Texas, United States"
   ],
   "posted_at": 1782950400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412756,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -41369,7 +41409,8 @@
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -46614,7 +46655,7 @@
   "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/Research-Scientist--Efficient-Deep-Learning---New-College-Grad-2026_JR2019729-1"
  },
  "1e2d18dffc333057": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Noblis",
   "description": "",
@@ -46626,14 +46667,32 @@
    "Atlantic City, NJ"
   ],
   "posted_at": 1782950400,
+  "posting": {
+   "analyzed_at": 1784412757,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 0,
+   "years_note": "0-5 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412757,
+   "live": true,
+   "new_grad": "no",
+   "reason": "0+ years exp, but requires security skills",
+   "role_family": "security",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 68,
+  "score": 48,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: not new-grad (senior — LLM-verified) -20"
   ],
   "sector": "other",
   "source": "jobright",
@@ -61404,8 +61463,9 @@
   "url": "https://parsons.wd5.myworkdayjobs.com/en-US/search/job/US---CO-Westminster/Junior-Front-End-Developer_R183194"
  },
  "273c1dfad0c65901": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784412705,
   "company": "Booz Allen Hamilton",
   "description": "",
   "explicit_new_grad": false,
@@ -61416,6 +61476,11 @@
    "Springfield, VA, US"
   ],
   "posted_at": 1783036800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412705,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -61423,7 +61488,8 @@
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -70838,6 +70904,9 @@
    "Austin, TX, US"
   ],
   "posted_at": 1782950400,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -81073,8 +81142,9 @@
   "url": "https://genpt.wd1.myworkdayjobs.com/en-US/Careers/job/Claymont-DE-USA/Outside-Sales-Representative_R26_0000022017"
  },
  "3443f58f3d06dc8b": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784412765,
   "company": "CharterUP",
   "description": "",
   "explicit_new_grad": false,
@@ -81085,6 +81155,11 @@
    "Atlanta, GA"
   ],
   "posted_at": 1782950400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412765,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -81092,7 +81167,8 @@
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -84921,8 +84997,9 @@
   "url": "https://psu.wd1.myworkdayjobs.com/en-US/PSU_Staff/job/Penn-State-University-Park/Software-Engineer_REQ_0000079265-2"
  },
  "36a871161eb0e5fe": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784412766,
   "company": "A.P. Moller - Maersk",
   "description": "",
   "explicit_new_grad": false,
@@ -84933,6 +85010,11 @@
    "Hopedale, Massachusetts, United States of America"
   ],
   "posted_at": 1782950400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412766,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -84940,7 +85022,8 @@
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -85317,14 +85400,31 @@
    "135 Corporate Woods, Rochester, New York, United States of America"
   ],
   "posted_at": 1782950400,
+  "posting": {
+   "analyzed_at": 1784412768,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1 year of relevant experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412768,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "data",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 68,
+  "score": 58,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -87509,8 +87609,9 @@
   "url": "https://jobs.lever.co/getwingapp/a1af0822-c431-4625-b26f-bd1bf4ee45cb"
  },
  "3831be0ec8aa07a1": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784412775,
   "company": "CharterUP",
   "description": "",
   "explicit_new_grad": false,
@@ -87521,6 +87622,11 @@
    "Denver, CO"
   ],
   "posted_at": 1782950400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412775,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -87528,7 +87634,8 @@
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -109336,7 +109443,7 @@
   ],
   "posted_at": 1783123200,
   "posting": {
-   "analyzed_at": 1784412661,
+   "analyzed_at": 1784412675,
    "fetched": true,
    "intern_counts": true,
    "sponsorship": "yes",
@@ -109344,16 +109451,23 @@
   },
   "quality": {
    "ai_deferred_at": 1784412661,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784412675,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "data",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 68,
+  "score": 58,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -178481,8 +178595,9 @@
   "url": "https://jobs.lever.co/shieldai/41468aca-c1c2-4a7b-aec8-f499e64b6d1e"
  },
  "736530616b3cb390": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784412706,
   "company": "BD",
   "description": "",
   "explicit_new_grad": false,
@@ -178493,6 +178608,11 @@
    "USA NJ - Franklin Lakes, United States of America"
   ],
   "posted_at": 1783036800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412706,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -178500,7 +178620,8 @@
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -191103,7 +191224,7 @@
   "url": "https://job-boards.greenhouse.io/scaleai/jobs/4625345005"
  },
  "7c20485fde3aacb0": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Booz Allen Hamilton",
   "description": "",
@@ -191115,14 +191236,30 @@
    "Washington, District of Columbia, 20022"
   ],
   "posted_at": 1783036800,
+  "posting": {
+   "analyzed_at": 1784412707,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412707,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 3+ years experience",
+   "role_family": "data",
+   "years_required": 3
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 68,
+  "score": 48,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "other",
   "source": "jobright",
@@ -192922,8 +193059,9 @@
   "url": "https://boards.greenhouse.io/andurilindustries/jobs/5186068007?gh_jid=5186068007"
  },
  "7d26aa7b097c7afc": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784412714,
   "company": "Canadian Chamber of Commerce",
   "description": "",
   "explicit_new_grad": false,
@@ -192934,6 +193072,11 @@
    "OTTAWA, ON, CA"
   ],
   "posted_at": 1783036800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412714,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -192941,7 +193084,8 @@
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -231130,8 +231274,9 @@
   "url": "https://signetjewelers.wd1.myworkdayjobs.com/SignetCorporateCareers/job/Support-Center---Akron-OH/Data-Analyst--Central-Merchandise-Operations_REQ_81709"
  },
  "95e4c35a422fa98c": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784412715,
   "company": "Booz Allen Hamilton",
   "description": "",
   "explicit_new_grad": false,
@@ -231142,6 +231287,11 @@
    "Annapolis Junction, MD, US"
   ],
   "posted_at": 1783036800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412715,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -231149,7 +231299,8 @@
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -237936,6 +238087,21 @@
    "Manteno, Illinois"
   ],
   "posted_at": 1783036800,
+  "posting": {
+   "analyzed_at": 1784412716,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412716,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New Grad role for Data Analyst",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -298033,8 +298199,9 @@
   "url": "https://job-boards.greenhouse.io/discord/jobs/8627078002"
  },
  "c05abfddc186d5c2": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784412724,
   "company": "iSpot",
   "description": "",
   "explicit_new_grad": false,
@@ -298045,6 +298212,11 @@
    "Bellevue, WA"
   ],
   "posted_at": 1783036800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412724,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -298052,7 +298224,8 @@
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -304144,14 +304317,32 @@
    "Fort Meade, MD, US"
   ],
   "posted_at": 1783036800,
+  "posting": {
+   "analyzed_at": 1784412725,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 1,
+   "years_note": "1+ years of experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412725,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp, not new grad",
+   "role_family": "data",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 68,
+  "score": 58,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -336441,14 +336632,31 @@
    "Van Nuys, CA"
   ],
   "posted_at": 1783036800,
+  "posting": {
+   "analyzed_at": 1784412732,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1–3 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412732,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp",
+   "role_family": "data",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 68,
+  "score": 58,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -349403,11 +349611,11 @@
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 74,
+  "score": 68,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <24h +12",
+   "posted <72h +6",
    "remote +2"
   ],
   "sector": "other",
@@ -355972,6 +356180,21 @@
    "Norco, CA"
   ],
   "posted_at": 1782956169,
+  "posting": {
+   "analyzed_at": 1784412749,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "Must be a U.S. Citizen"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412749,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level, no experience required",
+   "role_family": "data",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -357417,6 +357640,9 @@
    "Irving, TX"
   ],
   "posted_at": 1783029915,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -385230,7 +385456,7 @@
   "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4501783005"
  },
  "f92035d2c786bb63": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Amca",
   "description": "",
@@ -385242,14 +385468,33 @@
    "El Segundo, CA"
   ],
   "posted_at": 1783123200,
+  "posting": {
+   "analyzed_at": 1784412683,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 1,
+   "years_note": "1-3 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412683,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required, non-technical role",
+   "role_family": "non-technical",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 68,
+  "score": 33,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10",
+   "quality: non-technical role (1+ years exp required, non-technical rol — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "jobright",
@@ -385957,6 +386202,21 @@
    "Hill AFB, UT"
   ],
   "posted_at": 1782957196,
+  "posting": {
+   "analyzed_at": 1784412741,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "Must be a US Citizen"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412741,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level, no experience required for level 1.",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
