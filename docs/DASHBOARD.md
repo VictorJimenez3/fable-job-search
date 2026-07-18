@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-18 21:32 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
+_Last run: **2026-07-18 21:34 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -107,7 +107,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 94 🔥 | 24d | Oscar Health | [Associate, Regulatory Operations](http://www.hioscar.com/careers/8023761?gh_jid=8023761) | Remote | healthtech | greenhouse |
 | 94 🔥 | 24d | LinkedIn | [AI Governance and Advisory Associate](https://jobs.smartrecruiters.com/LinkedIn3/744000133706629) | SF | big_tech | simplify |
 | 94 🔥 | 24d | LinkedIn | [AI Governance and Advisory Associate](https://jobs.smartrecruiters.com/LinkedIn3/744000133706629) | San Francisco, CA | big_tech | smartrecruiters |
-| 93 🔥 | 18h | Anthropic | [Finance & Strategy, GTM - Post Sales ](https://job-boards.greenhouse.io/anthropic/jobs/5163060008) | San Francisco, CA | ai_lab | greenhouse |
+| 93 🔥 | 19h | Anthropic | [Finance & Strategy, GTM - Post Sales ](https://job-boards.greenhouse.io/anthropic/jobs/5163060008) | San Francisco, CA | ai_lab | greenhouse |
 | 93 🔥 | 1d | OpenAI | [Safety Transparency Editor, Safety Systems](https://jobs.ashbyhq.com/openai/a6a421a5-0d3d-4f2f-9767-7c25b6e7d2fc) | San Francisco | ai_lab | ashby |
 | 93 🔥 | 2d | Anthropic | [Research Scientist, Life Sciences (Computational)](https://job-boards.greenhouse.io/anthropic/jobs/5357739008) | San Francisco, CA | ai_lab | greenhouse |
 | 93 🔥 | 9d | Salesforce | [Business Development Associate](https://salesforce.wd12.myworkdayjobs.com/en-US/futureforce_newgradroles/job/Illinois---Chicago/Business-Development-Associate_JR347430) | Illinois - Chicago | big_tech | workday |
@@ -123,7 +123,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 92 🔥 | 23h | Magnatech | [Associate Developer](https://magnatech.io/technology-careers/?gh_jid=4716011005) | Remote in USA | other | simplify |
 | 92 🔥 | 23h | SpaceX | [Full Stack Software Engineer Observability - Observability - Starlink](https://boards.greenhouse.io/spacex/jobs/8638457002) | West Athens, CA | big_tech | simplify |
 | 92 🔥 | 23h | Lincoln Financial | [Associate Analytics Engineer](https://jobs.lincolnfinancial.com/job/Omaha-Associate,-Analytics-Engineer-NE-68046/1410206500/?ats=successfactors) | Villanova, PA | other | simplify |
-| 92 🔥 | 1d | OpenAI | [HR Generalist, Consumer Devices](https://jobs.ashbyhq.com/openai/000cf0f2-090d-40c6-b9f8-1699db9a4c68) | San Francisco | ai_lab | ashby |
 | 92 🔥 | 1d | AbbVie | [Technology Engineer II – Platform & Full Stack Engineering](https://jobs.smartrecruiters.com/AbbVie/3743990014160896) | North Chicago, IL | healthtech | smartrecruiters |
 | 92 🔥 | 1d | SpaceX | [Power Electronics Engineer, AI Satellites (Starmind)](https://boards.greenhouse.io/spacex/jobs/8639268002?gh_jid=8639268002) | Bastrop, TX | big_tech | greenhouse |
 | 92 🔥 | 1d | MongoDB | [Associate Technical Services Engineer II](https://www.mongodb.com/careers/job/?gh_jid=8044218) | Austin | big_tech | greenhouse |
@@ -156,5 +155,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 92 🔥 | 18d | Oscar Health | [Associate, Medical Economics](http://www.hioscar.com/careers/8039029?gh_jid=8039029) | Atlanta, Georgia, United States | healthtech | greenhouse |
 | 92 🔥 | 18d | Oscar Health | [Associate, Medical Economics](http://www.hioscar.com/careers/8039020?gh_jid=8039020) | Tempe, Arizona, United States | healthtech | greenhouse |
 | 92 🔥 | 18d | Oscar Health | [Associate, Medical Economics](http://www.hioscar.com/careers/8023759?gh_jid=8023759) | New York, New York, United States | healthtech | greenhouse |
+| 92 🔥 | 18d | Capital One | [Fixed Term Associate - HR Coordinator (Pre-Onboarding)](https://capitalone.wd12.myworkdayjobs.com/en-US/Capital_One/job/Alabang-Muntinlupa-City/Fixed-Term-Associate---HR-Coordinator--Pre-Onboarding-_R245759) | Alabang, Muntinlupa City | fintech | workday |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
