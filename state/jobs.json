@@ -6025,6 +6025,22 @@
    "Wichita, KS"
   ],
   "posted_at": 1783462726,
+  "posting": {
+   "analyzed_at": 1784413863,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0–2 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784413863,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0-2 years, new grad role",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -7909,8 +7925,9 @@
   "url": "https://careers.datadoghq.com/detail/7452669/?gh_jid=7452669"
  },
  "05a87b5ded28fa31": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784413871,
   "company": "Cincinnati Children's Office of Academic Affairs and Career Development",
   "description": "",
   "explicit_new_grad": false,
@@ -7921,6 +7938,11 @@
    "Cincinnati, OH, United States"
   ],
   "posted_at": 1783382400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784413871,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -7928,7 +7950,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -24787,7 +24810,7 @@
   ],
   "posted_at": 1783555200,
   "posting": {
-   "analyzed_at": 1784413767,
+   "analyzed_at": 1784413792,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 1,
@@ -24795,17 +24818,24 @@
   },
   "quality": {
    "ai_deferred_at": 1784413767,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784413792,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 66,
+  "score": 56,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "remote +2",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -35228,8 +35258,9 @@
   "url": "https://transunion.wd5.myworkdayjobs.com/en-US/TransUnion/job/Chicago-Illinois/Vice-President--Global-Human-Resources-Technology---People-Operations_19041037"
  },
  "1624483917637bb2": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784413875,
   "company": "Federal Express Corporation",
   "description": "",
   "explicit_new_grad": false,
@@ -35240,6 +35271,11 @@
    "Moon, PA"
   ],
   "posted_at": 1783296000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784413875,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -35247,7 +35283,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -54141,11 +54178,11 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 62,
+  "score": 56,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <24h +12",
+   "posted <72h +6",
    "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
@@ -75971,8 +76008,9 @@
   "url": "https://amat.wd1.myworkdayjobs.com/External/job/Santa-ClaraCA/Software-Engineer-II--New-College-Grad---Santa-Clara--CA-_R2622398"
  },
  "30448f7fb8c2bbd3": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784413846,
   "company": "Benda Infotech",
   "description": "",
   "explicit_new_grad": false,
@@ -75983,6 +76021,11 @@
    "Chicago, IL, United States"
   ],
   "posted_at": 1783468800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784413846,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -75990,7 +76033,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -88639,6 +88683,23 @@
    "Ventura, CA, United States"
   ],
   "posted_at": 1783296000,
+  "posting": {
+   "analyzed_at": 1784413876,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 0,
+   "years_note": "0-4 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784413876,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0+ years exp.",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -112449,7 +112510,7 @@
   ],
   "posted_at": 1783555200,
   "posting": {
-   "analyzed_at": 1784413768,
+   "analyzed_at": 1784413799,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 1,
@@ -112457,16 +112518,23 @@
   },
   "quality": {
    "ai_deferred_at": 1784413768,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784413799,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "data",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 66,
+  "score": 56,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -126647,6 +126715,20 @@
    "Offices at Vernon Place, United States"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784413847,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784413847,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level position",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -128974,14 +129056,20 @@
   ],
   "posted_at": 1783555200,
   "posting": {
-   "analyzed_at": 1784413768,
+   "analyzed_at": 1784413807,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784413768,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784413807,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, no experience required",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -152295,6 +152383,16 @@
    "Chantilly, Virginia, 22021"
   ],
   "posted_at": 1783296000,
+  "posting": {
+   "analyzed_at": 1784413883,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "ai_deferred_at": 1784413883,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -179698,6 +179796,9 @@
    "SF"
   ],
   "posted_at": 1783375884,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -202876,6 +202977,17 @@
    "New York, NY"
   ],
   "posted_at": 1783296000,
+  "posting": {
+   "analyzed_at": 1784413884,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1–3 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784413884,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -211407,8 +211519,9 @@
   "url": "https://jobs.lever.co/palantir/8de3d5d0-8c0a-40ee-9f57-a75165c98689"
  },
  "88c985de9850e15a": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784413872,
   "company": "General Dynamics Information Technology",
   "description": "",
   "explicit_new_grad": false,
@@ -211419,6 +211532,11 @@
    "USA MD Hanover, United States of America"
   ],
   "posted_at": 1783382400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784413872,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -211426,7 +211544,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -225281,12 +225400,12 @@
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 92,
+  "score": 86,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "posted <24h +12",
+   "posted <72h +6",
    "remote +2",
    "title matches your history +6"
   ],
@@ -232358,7 +232477,7 @@
   ],
   "posted_at": 1783555200,
   "posting": {
-   "analyzed_at": 1784413769,
+   "analyzed_at": 1784413814,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship",
@@ -232367,16 +232486,23 @@
   },
   "quality": {
    "ai_deferred_at": 1784413769,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784413814,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "data",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 66,
+  "score": 56,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -233569,7 +233695,9 @@
   ],
   "posted_at": 1783548987,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784413845,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -242486,7 +242614,7 @@
   ],
   "posted_at": 1783555200,
   "posting": {
-   "analyzed_at": 1784413770,
+   "analyzed_at": 1784413822,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 1,
@@ -242494,16 +242622,23 @@
   },
   "quality": {
    "ai_deferred_at": 1784413770,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784413822,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "other-technical",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 66,
+  "score": 56,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -247518,12 +247653,11 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 72,
+  "score": 66,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <24h +12",
-   "off-field title (dashboard only)"
+   "posted <72h +6"
   ],
   "sector": "other",
   "source": "simplify",
@@ -249361,13 +249495,19 @@
   ],
   "posted_at": 1783635078,
   "posting": {
-   "analyzed_at": 1784413765,
+   "analyzed_at": 1784413784,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784413765,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784413784,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad position for 2026 class.",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -271645,6 +271785,18 @@
    "Ventura, California, United States"
   ],
   "posted_at": 1783296000,
+  "posting": {
+   "analyzed_at": 1784413885,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 0,
+   "years_note": "0-4 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784413885,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -283303,6 +283455,18 @@
    "McLean, Virginia, 22107"
   ],
   "posted_at": 1783296000,
+  "posting": {
+   "analyzed_at": 1784413886,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 1,
+   "years_note": "1 years of experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784413886,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -296788,6 +296952,9 @@
    "Miami, FL"
   ],
   "posted_at": 1783318265,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -302230,6 +302397,9 @@
    "NYC"
   ],
   "posted_at": 1783318132,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -314126,7 +314296,7 @@
   ],
   "posted_at": 1783555200,
   "posting": {
-   "analyzed_at": 1784413771,
+   "analyzed_at": 1784413830,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship",
@@ -314135,16 +314305,23 @@
   },
   "quality": {
    "ai_deferred_at": 1784413771,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784413830,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1-2 years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 66,
+  "score": 56,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -318902,6 +319079,9 @@
    "NYC"
   ],
   "posted_at": 1783318263,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -332748,6 +332928,20 @@
    "Eagan, MN, United States"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784413855,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784413855,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, new grad",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -372789,14 +372983,20 @@
   ],
   "posted_at": 1783555200,
   "posting": {
-   "analyzed_at": 1784413772,
+   "analyzed_at": 1784413838,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784413772,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784413838,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, new grad role",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
