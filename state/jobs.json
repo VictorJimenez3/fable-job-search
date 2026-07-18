@@ -11880,6 +11880,18 @@
    "Columbia, MD, Maryland, United States"
   ],
   "posted_at": 1783123200,
+  "posting": {
+   "analyzed_at": 1784414849,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 0,
+   "years_note": "0 years of experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414849,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -13390,8 +13402,9 @@
   "url": "https://boards.greenhouse.io/figma/jobs/6000002004?gh_jid=6000002004"
  },
  "08d0e56c417612fb": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784414824,
   "company": "Lam Research",
   "description": "",
   "explicit_new_grad": false,
@@ -13402,6 +13415,11 @@
    "Fremont, CA, US, 94538"
   ],
   "posted_at": 1783209600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414824,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -13409,7 +13427,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -16700,7 +16719,9 @@
   ],
   "posted_at": 1783318138,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784414809,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -41511,6 +41532,9 @@
    "Huntsville, AL"
   ],
   "posted_at": 1782957185,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -54981,13 +55005,19 @@
   ],
   "posted_at": 1783462029,
   "posting": {
-   "analyzed_at": 1784414740,
+   "analyzed_at": 1784414786,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784414740,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414786,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad class of 2026 listed",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -63903,7 +63933,7 @@
   ],
   "posted_at": 1783382400,
   "posting": {
-   "analyzed_at": 1784414743,
+   "analyzed_at": 1784414794,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -63912,7 +63942,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784414743,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414794,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, no experience required with Masters",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -151110,8 +151146,9 @@
   "url": "https://jobs.ashbyhq.com/Lynk/02d9059f-c9ab-4819-bf39-25aeab1a3102"
  },
  "60cf764d197d77f5": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784414852,
   "company": "Zscaler",
   "description": "",
   "explicit_new_grad": false,
@@ -151122,6 +151159,11 @@
    "San Jose, California, USA"
   ],
   "posted_at": 1783036800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414852,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -151129,7 +151171,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -202853,6 +202896,15 @@
    "NYC"
   ],
   "posted_at": 1783030004,
+  "posting": {
+   "analyzed_at": 1784414855,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414855,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -258050,6 +258102,18 @@
    "DC-Baltimore Area"
   ],
   "posted_at": 1783123200,
+  "posting": {
+   "analyzed_at": 1784414850,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 0,
+   "years_note": "0-4 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414850,
+   "attempts": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -264611,7 +264675,7 @@
   "url": "https://boards.greenhouse.io/andurilindustries/jobs/5081183007?gh_jid=5081183007"
  },
  "a9c8fe97e904de66": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "The Amatriot Group",
   "description": "",
@@ -264623,14 +264687,33 @@
    "Bethesda, MD"
   ],
   "posted_at": 1783296000,
+  "posting": {
+   "analyzed_at": 1784414809,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 15,
+   "years_note": "15 years of experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414809,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 64,
+  "score": 54,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "posting: wants 15+ yrs (dashboard only)",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -265588,6 +265671,23 @@
    "United States-Illinois-Wood Dale"
   ],
   "posted_at": 1783209600,
+  "posting": {
+   "analyzed_at": 1784414824,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 0,
+   "years_note": "0-3 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414824,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0+ years exp",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -269199,7 +269299,7 @@
   ],
   "posted_at": 1783462030,
   "posting": {
-   "analyzed_at": 1784414739,
+   "analyzed_at": 1784414778,
    "fetched": true,
    "intern_counts": true,
    "sponsorship": "unknown",
@@ -269208,7 +269308,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784414739,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414778,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role for new grads with up to 1 year experience",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
@@ -283363,6 +283469,15 @@
    "Blacksburg, VA"
   ],
   "posted_at": 1783036800,
+  "posting": {
+   "analyzed_at": 1784414853,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414853,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -287792,6 +287907,18 @@
    "Poway California"
   ],
   "posted_at": 1783123200,
+  "posting": {
+   "analyzed_at": 1784414851,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 0,
+   "years_note": "0-2 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414851,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -304224,6 +304351,16 @@
    "Salina, KS"
   ],
   "posted_at": 1783036800,
+  "posting": {
+   "analyzed_at": 1784414854,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414854,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -310391,6 +310528,21 @@
    "New York, NY, US"
   ],
   "posted_at": 1783209600,
+  "posting": {
+   "analyzed_at": 1784414832,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414832,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, New Grad role",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -326109,13 +326261,19 @@
   ],
   "posted_at": 1783468800,
   "posting": {
-   "analyzed_at": 1784414736,
+   "analyzed_at": 1784414755,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784414736,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414755,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, no experience required",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -336023,23 +336181,30 @@
   ],
   "posted_at": 1783468800,
   "posting": {
-   "analyzed_at": 1784414738,
+   "analyzed_at": 1784414763,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784414738,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414763,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 64,
+  "score": 54,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -345430,6 +345595,21 @@
    "New York"
   ],
   "posted_at": 1783209600,
+  "posting": {
+   "analyzed_at": 1784414840,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414840,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New Grad role for 2026 class",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -350373,8 +350553,9 @@
   "url": "https://job-boards.greenhouse.io/relaypro/jobs/6562850"
  },
  "e16bc7bf360818f3": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784414847,
   "company": "Redfin",
   "description": "",
   "explicit_new_grad": false,
@@ -350385,6 +350566,11 @@
    "Seattle, WA"
   ],
   "posted_at": 1783209600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414847,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -350392,7 +350578,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -362025,23 +362212,30 @@
   ],
   "posted_at": 1783382400,
   "posting": {
-   "analyzed_at": 1784414744,
+   "analyzed_at": 1784414801,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
    "ai_deferred_at": 1784414744,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414801,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 64,
+  "score": 54,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -379505,7 +379699,7 @@
   ],
   "posted_at": 1783462596,
   "posting": {
-   "analyzed_at": 1784414738,
+   "analyzed_at": 1784414770,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "unable to sponsor",
@@ -379514,17 +379708,24 @@
   },
   "quality": {
    "ai_deferred_at": 1784414738,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414770,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ year experience required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 64,
+  "score": 54,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "remote +2",
-   "title matches your history +2"
+   "title matches your history +2",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "simplify",
@@ -380770,6 +380971,15 @@
    "State College, PA"
   ],
   "posted_at": 1782956008,
+  "posting": {
+   "analyzed_at": 1784414856,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414856,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -386205,14 +386415,32 @@
    "Kirkland, WA"
   ],
   "posted_at": 1783296000,
+  "posting": {
+   "analyzed_at": 1784414816,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 1,
+   "years_note": "1–3 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414816,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 64,
+  "score": 54,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -396673,8 +396901,9 @@
   "url": "https://jobs.lever.co/veeva/9b5dcc3a-2cb6-4b31-9c0e-6817566379fa"
  },
  "fdee739cf13070a9": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784414848,
   "company": "Carriage Services",
   "description": "",
   "explicit_new_grad": false,
@@ -396685,6 +396914,11 @@
    "Houston, TX"
   ],
   "posted_at": 1783209600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414848,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -396692,7 +396926,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
