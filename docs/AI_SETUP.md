@@ -1,13 +1,13 @@
 # AI setup runbook — turn the radar's LLM layer ON
 
-**For: Victor + a local Claude Code session on the Mac.** Written 2026-07-17
-by the cloud session that shipped rules v2 + posting scraping. Everything
+**For: Victor + any local coding-agent session on the Mac.** Written 2026-07-17
+and operationally rechecked 2026-07-18. Everything
 deterministic already runs without AI (gates, scoring, posting scraping,
 sponsorship/years extraction, alerts). This doc is the checklist to light up
 the AI layer, which is currently **fully OFF in the cloud** — verified from
 live workflow env + state: `ANTHROPIC_API_KEY` is empty in Actions, 0 of
-10,705 records ever received an `llm_note`, and quality verdicts only appear
-when the Mac happens to be awake.
+the 11,010 records have an `llm_note`, and quality verdicts currently come from
+the Mac companion rather than Actions.
 
 ## What turns on when a provider exists
 
@@ -53,7 +53,7 @@ GitHub → repo **Settings → Secrets and variables → Actions → New reposit
 secret**. `enrich.yml` already wires all four names — no workflow edits
 needed.
 
-## Step 3 — verify (Victor or the local Claude)
+## Step 3 — verify (Victor or a local coding agent)
 
 1. Actions → **enrich** → Run workflow (branch: the default radar branch).
 2. In the run log expect: `enrich: generated N culture dossier(s) via
@@ -67,7 +67,8 @@ needed.
 ## Mac companion health check (the free local path)
 
 The Mac does the same enrich cycle with Ollama whenever it's awake — no key
-needed. It has been asleep since ~Jul 15; to check/revive:
+needed. It produced a successful enrichment commit on 2026-07-18; use these
+checks if it stops advancing state:
 
 ```bash
 launchctl list | grep jobradar          # com.jobradar.enrich loaded?
@@ -79,9 +80,10 @@ If the launchd job is gone, re-run `scripts/mac-companion/install.sh`.
 Cloud key and Mac coexist fine — verdicts are cached per job (`jd_sha` /
 attempt caps mean no double spend), and `merge_state.py` reconciles pushes.
 
-## For the local Claude session — read first, then next steps
+## For a local coding-agent session — read first, then next steps
 
-Read order: `README.md` → `DECISIONS.md` (#30–#35 are the current era) →
+Read order: `AGENTS.md` → `CLAUDE.md` (legacy name, shared rules) →
+`README.md` → `DECISIONS.md` (#30–#35 are the current era) →
 `docs/CLI_HANDOFF.md` → `profile.yaml`. House rules that bind you:
 deterministic scoring with reasons strings; LLM adjusts, never deletes;
 demote-don't-delete; never scrape LinkedIn; `docs/platform/index.html`

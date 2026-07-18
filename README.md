@@ -17,6 +17,10 @@ big tech second, open to everything good).
 **[→ RSS feed](docs/feed.xml)** ·
 **[→ Cross-CLI handoff notes](docs/CLI_HANDOFF.md)**
 
+The platform is now decision-first: filter by role family, sponsorship, and
+required experience; see honest eligibility facts before opening a posting;
+then use one primary apply link with explicit To apply/Applied tracking.
+
 Subscribe to the RSS feed at:
 `https://raw.githubusercontent.com/VictorJimenez3/fable-job-search/claude/newgrad-job-search-system-9gbj9k/docs/feed.xml`
 
@@ -44,10 +48,12 @@ every ~30 min (GitHub Actions cron)
 │     elite pharma/medtech/wearables — profile.yaml marquee_companies),
 │     $150k+ postings, and priority-sector engineering roles (healthtech)
 │     alert without explicit new-grad wording — but FIELD FIT outranks all
-│     of it: off-field titles (safeguards/policy/sales/PM/...) and
-│     mid-level titles (II/L4) go dashboard-only, never alerts. Rule bumps
+│     of it: field eligibility is title-led (description boilerplate cannot
+│     promote unrelated roles); off-field titles (safeguards/policy/sales/PM/...)
+│     and generic analysts go dashboard-only; mid-level titles (II/L4) do
+│     too. None become alerts. Rule bumps
 │     re-gate the stored jobs automatically (score.RULES_VERSION).
-│     Optional Claude re-rank + per-job application angle (add ANTHROPIC_API_KEY).
+│     Optional configured-LLM re-rank + per-job application angle.
 │
 └─ 5. DELIVER
       · GitHub issue "Job Radar alerts — week N" (assigned to you → push/email)

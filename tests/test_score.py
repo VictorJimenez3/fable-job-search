@@ -99,6 +99,42 @@ def test_gates_off_field_false_positive_guards():
     assert not any("off-field" in r for r in reasons)
 
 
+def test_gates_role_fit_is_title_led_not_description_led():
+    # Company/JD prose is saturated with AI/software terms. It cannot promote
+    # a clearly unrelated title into the technical-role funnel.
+    for title in ["Safety Transparency Editor", "Research Associate, Biology",
+                  "Shipping & Receiving Materials Associate", "Associate, Actuarial"]:
+        keep, alert_ok, reasons = gates(mk(
+            title, company="OpenAI", source="greenhouse",
+            desc="We build artificial intelligence software with machine learning engineers."))
+        assert keep is False and alert_ok is False, title
+        assert "not an AI/SWE/DS role" in reasons
+
+    # A technical title can still use description text as entry-level proof.
+    keep, alert_ok, _ = gates(mk(
+        "Software Engineer", source="greenhouse",
+        desc="This entry-level role welcomes recent graduates."))
+    assert keep and alert_ok
+
+
+def test_gates_generic_analyst_titles_do_not_count_as_data_science():
+    for title in ["Provider Configuration Analyst", "Care Strategy Analyst",
+                  "Regulatory Operations Analyst"]:
+        keep, alert_ok, reasons = gates(mk(title))
+        assert keep is True and alert_ok is False, title
+        assert any("dashboard only" in r for r in reasons), title
+    for title in ["Data Analyst", "Product Analyst", "Quantitative Analyst",
+                  "Analytics Engineer"]:
+        assert gates(mk(title))[0] is True, title
+
+
+def test_gates_ai_customer_roles_are_dashboard_only():
+    for title in ["AI Success Engineer", "AI Governance and Advisory Associate"]:
+        keep, alert_ok, reasons = gates(mk(title, company="OpenAI"))
+        assert keep is True and alert_ok is False, title
+        assert any("off-field title" in r for r in reasons), title
+
+
 def test_gates_priority_sector_alerts_on_strong_title():
     # the WHOOP lesson: healthtech + a real engineering title alerts without
     # new-grad wording (ATS postings carry no description to prove it).

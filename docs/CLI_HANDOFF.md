@@ -8,14 +8,16 @@ truth.
 
 Before changing the radar, read these in order:
 
-0. [`CLAUDE.md`](../CLAUDE.md) — auto-loaded every session; the doc-update
-   mandate and house rules live there. Docs are part of every change.
-1. [`README.md`](../README.md) for the system's purpose and operational flow
+0. [`AGENTS.md`](../AGENTS.md) — Codex's auto-loaded repository instructions,
+   validation commands, and production-branch safety notes.
+1. [`CLAUDE.md`](../CLAUDE.md) — despite the legacy filename, this remains the
+   shared tool-neutral repo map and doc-update mandate.
+2. [`README.md`](../README.md) for the system's purpose and operational flow
    (and [`TUTORIAL.md`](TUTORIAL.md) for how Victor actually uses it — keep it
    current when user-facing behavior changes).
-2. [`DECISIONS.md`](../DECISIONS.md) for the deliberate architecture and trade-offs.
-3. [`profile.yaml`](../profile.yaml) for Victor's active search preferences and ranking thresholds.
-4. The relevant module and test under `radar/` and `tests/`.
+3. [`DECISIONS.md`](../DECISIONS.md) for the deliberate architecture and trade-offs.
+4. [`profile.yaml`](../profile.yaml) for Victor's active search preferences and ranking thresholds.
+5. The relevant module and test under `radar/` and `tests/`.
 
 ## Keep these current
 
@@ -31,7 +33,7 @@ Before changing the radar, read these in order:
   `docs/DASHBOARD.md`, or `docs/feed.xml`) except for a deliberate repair with
   its reason documented in the commit/message. Crawls generate them.
 
-## Current operational facts (2026-07-13)
+## Current operational facts (verified 2026-07-18)
 
 - GitHub Actions is the production runtime; it uses Python 3.12. On Victor's
   Mac, system Python is 3.9 but the repo's `.venv` has the dependencies —
@@ -55,15 +57,20 @@ Before changing the radar, read these in order:
   an Opus session) advances Stage from lifecycle emails (applied/OA/
   interview/rejected, forward-only, auto-close after 45 d silence) — that
   path is coded and tested but **awaits the `EMAIL_ADDRESS` /
-  `EMAIL_APP_PASSWORD` secrets** (Gmail app password, see README §2).
-- **Scoring (rules v2, 2026-07-16, DECISIONS #31-32):** hard gates (now incl.
+  `EMAIL_APP_PASSWORD` secrets** (confirmed empty in the live workflow on
+  2026-07-18; Gmail app password setup is in README §2). The current 142
+  tracked entries are all still `saved`, not confirmed applications.
+- **Scoring (rules v3, 2026-07-18, DECISIONS #31-32, #36):** hard gates (incl.
   numeric levels: Engineer 3+/L5+/Level 3+/"Leader") + alert-eligibility
   paths: aggregator listing, explicit new-grad wording, marquee
   (`marquee_companies` incl. WHOOP/Oura/Dexcom/Abbott), $150k+ `pay_bank`,
   or `priority_sectors` (healthtech + strong engineering title). Then
   demotions that outrank ALL of those: `OFF_FIELD_RE` (safeguards/policy/
   sales/PM/support/...) and `MIDLEVEL_RE` (II/L4/Engineer 2) → dashboard
-  only. LLM quality verdicts may suppress marquee alerts now. `regate()`
+  only. Role eligibility is now title-led (description text cannot establish
+  field fit), and bare Analyst no longer maps to data science; generic/off-field
+  analysts remain dashboard-only for audit. LLM quality verdicts may suppress
+  marquee alerts. `regate()`
   runs at the top of every crawl and re-applies rule bumps
   (`score.RULES_VERSION`, records carry `rules_v` + `explicit_new_grad`)
   to stored jobs; manual commands: `python -m radar.main regate` /
@@ -79,6 +86,13 @@ Before changing the radar, read these in order:
   `candidate.needs_sponsorship: true` (profile.yaml, default false) also
   demotes no-sponsorship postings. `RADAR_SCRAPE_DISABLE=1` kills the pass.
   No LLM or secret involved.
+- **Platform QoL (DECISIONS #36):** Jobs filters persist per browser and now
+  cover role family, exact sponsorship state, experience requirement, sector,
+  score, pipeline, and sort. Rows always show eligibility badges, distinguishing
+  "not stated" from "not analyzed." Titles open the Fit & eligibility drawer;
+  the employer link is a separate primary action. Authenticated `open
+  application` also saves a new role to To apply, but Applied remains explicit.
+  Track/applied writes are idempotent.
 - **Local AI:** Mac companion installed (`~/.jobradar`, launchd
   `com.jobradar.enrich`, every 2 h while awake) running Ollama `qwen3:30b`
   with `format:"json"` forced (DECISIONS #20 — thinking models otherwise
@@ -90,6 +104,9 @@ Before changing the radar, read these in order:
   grading** (DECISIONS #33): JDs pasted into the platform's Role-fit tab
   land in `state/web_state.json` and get a verdict next cycle. Knobs:
   `RADAR_QUALITY_LIMIT`, `RADAR_QUALITY_DISABLE`, `RADAR_PASTED_LIMIT`.
+  The companion was active again on 2026-07-18; the fetched production state
+  contained 181 cached quality verdicts and 2,655 deterministic posting-fact
+  analyses.
 - **Free cloud LLM fallback (when the Mac sleeps):** `enrich.yml` (nightly)
   already wires `LLM_BASE_URL` / `LLM_API_KEY` / `LLM_MODEL` secrets, and
   `llm.complete()` retries 429/500/503 with Retry-After, so free
@@ -105,19 +122,23 @@ Before changing the radar, read these in order:
   gates exist in three layers: workflow condition, Python handler, Vercel
   backend. The Mac companion is fork-portable too: `JOBRADAR_REPO=<you>/<repo>`
   on install.sh; run.sh derives the branch from the clone.
+- **The Claude-named default branch is still production.** Codex work does not
+  require renaming it. If it is renamed, treat that as a coordinated migration:
+  three workflows, the Vercel branch default/environment, raw README/installer
+  URLs, and the installed Mac companion all reference or derive it. The full
+  checklist is in [`AGENTS.md`](../AGENTS.md).
 - **`CV/` is local-only and gitignored** (DECISIONS #29) — never commit it
   or anything derived from it; CV auto-tailoring is a Mac-companion feature.
 - **Next up — doable from any CLI/cloud session** (see ROADMAP.md):
   run `python -m radar.main repair-feedback` once (cosmetic — the stopwords
   already neutralize stale boosts at read time; do it in a checkout where
-  CI isn't racing you, i.e. right after a merge). Watch the first Mac/CI
-  enrich cycle after 2026-07-16 for the SPA-host quality pass
-  (`fetch_posting_spa` — built where ATS egress was blocked, so its first
-  live contact is that cycle; failures degrade to "unclear").
+  CI isn't racing you, i.e. right after a merge). The first live SPA-host
+  quality cycles have now completed and cached verdicts; continue sampling
+  verdict accuracy rather than treating successful execution as semantic QA.
 - **Next up — needs Victor / the Mac:** **enable the AI layer — full
-  runbook in [`docs/AI_SETUP.md`](AI_SETUP.md)** (verified 2026-07-17:
+  runbook in [`docs/AI_SETUP.md`](AI_SETUP.md)** (verified 2026-07-18:
   no LLM secret is active in Actions — 0 records ever got an llm_note;
-  quality verdicts only appear when the Mac is awake — so cloud AI is
+  quality verdicts currently come from the Mac — so cloud AI is
   fully OFF until Victor creates one free key and adds the secrets; the
   runbook also lists the queued AI work for the local session, incl. the
   parked RAG plan). Email autopilot secrets

@@ -580,3 +580,40 @@ it really want*. Fix: stop gating the basics on an LLM.
   exists, and now stores these deterministic facts from its fetched or
   pasted text too — so a Mac cycle or future cloud key enriches, but
   nothing depends on it.
+
+## 36. Candidate-first platform flow + title-led role gates (2026-07-18)
+
+The platform had the underlying data but made candidates work too hard to
+use it: no role-family selector, sponsorship/experience facts disappeared
+when they were unknown, job titles skipped the workspace and opened the
+posting directly, and applying/tracking required too many separate clicks.
+At the same time, description text was allowed to establish field fit. That
+made company boilerplate such as "we build AI software" promote unrelated
+titles at marquee companies (Safety Editor, Biology Research Associate,
+Shipping & Receiving Associate) into the alert feed.
+
+- **Rules v3 is title-led for role eligibility.** Description text may still
+  establish entry-level evidence, years, clearance, and other posting facts,
+  but cannot turn a non-technical title into AI/SWE/DS. Generic analyst and
+  recognized off-field titles are demoted to dashboard-only rather than
+  deleted; truly unrelated description-only matches fail the field gate.
+  The data-science title bucket no longer treats every bare "Analyst" as DS.
+- **The Jobs view filters the decisions candidates actually make:** role
+  family, visa sponsorship status, experience requirement, sector, score,
+  pipeline status, and sort order. Filters persist per browser and clearly
+  distinguish "not stated" from "not analyzed"; unknown is never presented
+  as a positive sponsorship claim.
+- **Job titles open a decision-first workspace.** Fit & eligibility is the
+  first tab, with role family, sponsorship, years, location, salary, score,
+  and age above company research. A separate primary button opens the actual
+  application so candidates can inspect the evidence before leaving.
+- **Applying is shorter but remains human-controlled.** `open application`
+  opens the employer link and, only when an authenticated instant-write path
+  exists, quietly saves an untracked role to **To apply**. It never claims an
+  application was submitted; `mark applied` remains explicit. Track/applied
+  actions are idempotent to prevent duplicate local pipeline records.
+
+Measured against production state before release: rules v3 reduced 3,250
+current alert records to about 2,600, demoting roughly 650 false positives.
+The normal `regate()` migration applies this on the next crawl; generated
+state is not edited by hand.

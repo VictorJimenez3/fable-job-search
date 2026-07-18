@@ -15,7 +15,7 @@ from .models import Job, norm
 
 # Bumped whenever gate rules change; regate() re-applies the current rules to
 # every stored job whose rules_v is older (demote/promote alert_ok in place).
-RULES_VERSION = 2
+RULES_VERSION = 3
 
 SENIOR_RE = re.compile(
     r"\b(senior|staff|principal|lead(er)?|director|manager|head of|sr\.?|vp|chief|"
@@ -36,6 +36,7 @@ OFF_FIELD_RE = re.compile(
     r"solutions?\s+(engineer|architect|consultant)|sales\s+engineer|field\s+engineer|"
     r"customer\s+(success|support|experience)|technical\s+support|"
     r"support\s+(engineer|specialist)|help\s?desk|"
+    r"success\s+engineer|ai\s+governance|governance\s+and\s+advisory|"
     r"(ux|ui|visual|graphic|product)\s+design(er)?|"
     r"(product|program|project)\s+manager|product\s+(owner|marketing)|"
     r"chief\s+of\s+staff|executive\s+assistant|administrative|"
@@ -55,7 +56,9 @@ ROLE_BUCKETS: dict[str, re.Pattern] = {
     "ai_ml": re.compile(
         r"machine learning|ml engineer|\bml\b|\bai\b|artificial intelligence|applied scientist|"
         r"research engineer|deep learning|\bllm\b|gen ?ai|generative|nlp|computer vision|perception", re.I),
-    "data_science": re.compile(r"data scien|analytics engineer|\banalyst\b|statistic|quantitative", re.I),
+    "data_science": re.compile(
+        r"data scien|decision scien|analytics engineer|data\s+(analyst|analytics)|"
+        r"(product|research|business intelligence|bi)\s+analyst|statistic|quantitative", re.I),
     "data_eng": re.compile(r"data engineer|data platform|data infrastructure|etl\b", re.I),
     "swe": re.compile(
         r"software|swe\b|backend|back[- ]end|full[- ]?stack|front[- ]?end|platform engineer|"
@@ -121,7 +124,15 @@ def gates(job: Job) -> tuple[bool, bool, list[str]]:
     m = YEARS_RE.search(job.description)
     if m and int(m.group(1)) >= 3:
         return False, False, [f"requires {m.group(1)}+ years"]
-    if role_bucket(t, job.description) is None:
+    # A description mentioning software/AI must not turn an obviously
+    # non-technical title into a target role (e.g. Safety Editor at OpenAI or
+    # a Biology Research Associate at Anthropic). Descriptions still inform
+    # entry-level and experience gates; role-family eligibility is title-led.
+    if role_bucket(t) is None:
+        if OFF_FIELD_RE.search(t):
+            return True, False, ["off-field title (dashboard only)"]
+        if re.search(r"\banalyst\b", t, re.I):
+            return True, False, ["generic analyst title (dashboard only)"]
         return False, False, ["not an AI/SWE/DS role"]
 
     aggregator = job.source in {"simplify", "vansh", "jobright", "speedyapply"}

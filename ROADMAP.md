@@ -29,8 +29,8 @@ fine — the bar for everyone else is "log in, then seamless", not parity.
 Layers 0–2 run inside the Mac companion's 2-hour enrich cycle: HTTP link
 liveness (dead → `closed_at`, off every board), LLM new-grad verification
 and role-fit cleanup (one JSON verdict per posting, cached on the job,
-score/alert adjusted with logged reasons — never silently deleted; marquee
-companies are never alert-suppressed by a verdict). ~15 jobs verified per
+score/alert adjusted with logged reasons — never silently deleted; field-fit,
+seniority, and verified posting facts may suppress marquee alerts). ~15 jobs verified per
 cycle, aggregator links first. Still open from this cluster:
 
 - **SPA-host coverage** — ✅ SHIPPED 2026-07-16 (`quality.fetch_posting_spa`,
@@ -63,6 +63,18 @@ included), dead links closed crawl-side. Shown as row tags, a drawer
 "Posting facts" card, and in alert-issue lines; `candidate.needs_sponsorship`
 in profile.yaml turns no-sponsorship postings into dashboard-only.
 
+## Candidate-first filters + application flow — ✅ SHIPPED 2026-07-18 (DECISIONS #36)
+
+The Jobs view now has persistent role-family, sponsorship, and experience
+dropdowns (plus the existing score/sector/status/sort controls), and every row
+shows explicit eligibility badges including the honest "not stated" vs "not
+analyzed" distinction. Titles open a Fit & eligibility workspace first;
+location, salary, score, age, visa, and years are visible before leaving for
+the employer. A primary apply button opens the posting and authenticated users
+are quietly saved to **To apply**; marking Applied stays explicit. Rules v3
+also makes field eligibility title-led, demoting roughly 650 current false
+positive alerts found through description boilerplate.
+
 ## Posting ↔ profile RAG (to-do, parked — Victor 2026-07-17: "to do list that for sure")
 
 Embed posting text and Victor's profile/CV bullets, use similarity as a
@@ -73,16 +85,19 @@ deterministic-auditable by logging the similarity as a reason line. Needs
 the scraped posting text (now shipping) + `CV/` content (Mac-only,
 DECISIONS #29). Park until the scrape pass has filled a few weeks of text.
 
-## Ranking v2 + platform research tabs — ✅ SHIPPED 2026-07-16 (DECISIONS #31-33)
+## Ranking v2/v3 + platform research tabs — ✅ SHIPPED 2026-07-18 (DECISIONS #31-33, #36)
 
 Field fit and seniority now outrank the Shams rule (off-field/mid-level
 title demotions, LLM verdicts may suppress marquee, numeric-level hard
 gates); `priority_sectors: [healthtech]` alerts strong engineering titles
 without new-grad wording (the WHOOP fix); `regate()` re-applies rule bumps
-to stored jobs. The platform drawer leads with a Company tab (what they
-do), adds a Role-fit tab with the LLM posting verdict + paste-in JD
-grading, and builds LinkedIn search links with entry-level/date filters in
+to stored jobs. The platform drawer now leads with Fit & eligibility, with
+Company research one tab away; the LLM posting verdict + paste-in JD grading
+remain in the fit view. It also builds LinkedIn search links with entry-level/date filters in
 the URL (links only — #16 stands). Search boxes keep focus while typing.
+Rules v3 makes role eligibility title-led and narrows the data-science analyst
+match; unrelated titles mentioned above no longer ride company/JD AI prose
+into alerts.
 
 ## CV auto-tailoring — ⏸️ ON HOLD (Victor's call, 2026-07-16; direction unchanged)
 
@@ -111,7 +126,10 @@ never in Actions.
   isn't LinkedIn scraping — evaluating SHPE directory + GitHub org members.)
 - **H-1B/sponsorship cross-check** — join companies against the public DOL
   LCA disclosure data; add a `sponsors: likely/no-history` column. Cheap,
-  official data. Build if sponsorship ever becomes a filter.
+  official data. Sponsorship is now a platform filter, so this is the next
+  useful eligibility upgrade: posting wording stays primary evidence, while
+  DOL history is clearly labeled as company-level historical context—not a
+  promise that a particular requisition sponsors.
 - **Meta careers adapter** — auth-gated GraphQL today; revisit if they ship a
   public search endpoint. Covered by aggregators meanwhile.
 - **SHPE deep mode** — rep CRM per booth, session planner, live exhibitor sync
@@ -121,6 +139,12 @@ never in Actions.
 ## Content
 - **Auto cover-letter skeletons** for S-tier roles only, same review-file
   flow as CV tailoring above.
+- **Local application-answer vault** — keep reusable answers (graduation,
+  work authorization/sponsorship, location, portfolio links, short project
+  blurbs) outside this public repo, then expose copy buttons and a per-job
+  checklist in the workspace. Candidate reviews every answer; no blind form
+  submission. This is the next application-speed QoL step after the shipped
+  open/save flow and should reuse the Mac-local privacy boundary from #29.
 
 ## Ops
 - **Calendar sync** — interview emails → Google Calendar holds.

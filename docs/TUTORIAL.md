@@ -19,24 +19,28 @@ the repo itself is the database.
 **https://victorjimenez3.github.io/fable-job-search/platform/** — the whole
 system as a website, refreshed automatically by every crawl:
 
-- **Jobs**: every role the radar has ever seen, searchable and filterable,
-  with score, salary, culture prestige, and the AI angle inline — plus
-  LinkedIn saved-search links with the entry-level + date filters already
-  in the URL.
+- **Jobs**: every role the radar has ever seen, with persistent dropdowns for
+  role family, sponsorship, experience, sector, and pipeline status. Each row
+  shows visa/years badges—including the important difference between "not
+  stated" and "not analyzed"—plus score, salary, culture, and age. The
+  **apply ↗** button opens the employer posting; when you are signed in it also
+  saves a new role to **To apply** without pretending you submitted it.
 - **Pipeline**: Maybe → To apply → Applied lanes. "To apply"/"Applied" mirror
   Notion exactly; "Maybe" is a scratch lane that lives on the platform only.
-- **Per-job workspace** (open ▸), four tabs: **Company** (what they do —
-  culture dossier, sector, research links) opens first; **Role fit** (why it
-  scored, the LLM posting verdict, and a paste box for job descriptions the
-  radar can't scrape — graded on the next enrich cycle); **Outreach**
-  (recruiter/alumni links, message templates pre-filled with the role,
-  saved conversations); **Notes**.
+- **Per-job workspace** (click the title or details ▸), four tabs: **Fit &
+  eligibility** opens first with role family, sponsorship, required years,
+  location, salary, posting age, score reasons, and the LLM verdict; it also
+  has a paste box for descriptions the radar cannot scrape (graded on the next
+  enrich cycle). **Company** has the culture dossier, sector, and research
+  links; **Outreach** has recruiter/alumni links, message templates pre-filled
+  with the role, and saved conversations; **Notes** holds your working notes
+  (keep them non-sensitive because synced web state is public).
 - **Companies**: the whole registry with culture data and research links.
 - **AI**: what the local model has enriched, scout status, registry stats.
 
-Reading needs nothing. To make the buttons write (track → Notion, notes →
-repo), paste a fine-grained GitHub token once under **Settings** (Contents:
-read/write on this repo — create at github.com/settings/personal-access-tokens/new).
+Reading needs nothing. On Vercel, sign in with GitHub once for instant owner
+writes. On the Pages mirror, buttons use prefilled GitHub issues by default;
+the optional Settings token enables instant writes and cross-device notes.
 GitHub checkboxes keep working exactly as before; both doors lead to the
 same tracker.
 
