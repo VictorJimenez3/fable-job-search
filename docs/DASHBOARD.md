@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-18 20:40 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
+_Last run: **2026-07-18 20:41 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -34,7 +34,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 99 🔥 | 9d | Anthropic | [Research Associate, Biology](https://job-boards.greenhouse.io/anthropic/jobs/5285248008) | San Francisco, CA | ai_lab | greenhouse |
 | 99 🔥 | 26d | Neuralink | [Associate General Counsel, Privacy & Compliance](https://boards.greenhouse.io/neuralink/jobs/7780172003?gh_jid=7780172003) | Austin, Texas, United States; South San  | healthtech | greenhouse |
 | 98 🔥 | 23h | AbbVie | [Technology Engineer II – Platform & Full Stack Engineering](https://jobs.smartrecruiters.com/AbbVie/3743990014160896) | North Chicago, IL | healthtech | smartrecruiters |
-| 98 🔥 | 23h | SpaceX | [Power Electronics Engineer, AI Satellites (Starmind)](https://boards.greenhouse.io/spacex/jobs/8639268002?gh_jid=8639268002) | Bastrop, TX | big_tech | greenhouse |
+| 98 🔥 | 1d | SpaceX | [Power Electronics Engineer, AI Satellites (Starmind)](https://boards.greenhouse.io/spacex/jobs/8639268002?gh_jid=8639268002) | Bastrop, TX | big_tech | greenhouse |
 | 98 🔥 | 2d | UTHealth Houston | [Accountant-Associate](https://fa-eomf-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1002/job/7363) | San Antonio, TX, United States | healthtech | oracle_orc |
 | 98 🔥 | 3d | Highmark Health | [Associate Data Solutions Analyst](https://jobright.ai/jobs/info/6a57bcbca791c6211bf00bfa?utm_campaign=Data%20Analysis&utm_source=1103) | PA, United States | healthtech | jobright |
 | 98 🔥 | 4d | Headway | [Business Development Associate, Care Partnerships](https://jobs.ashbyhq.com/headway/4e826c00-570b-4349-956c-c9ac35c2a637) | Remote | healthtech | ashby |
@@ -140,7 +140,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 92 🔥 | 2d | Beth Israel Lahey Health | [Biostatistician I (Epidemiology & Data Science Section)](https://jobright.ai/jobs/info/6a58e190856af468ab0005b6?utm_campaign=Data%20Analysis&utm_source=1103) | United States | healthtech | jobright |
 | 92 🔥 | 2d | Ford Motor Company | [Associate AI Software](https://efds.fa.em5.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/66460) | Irapuato, GUA, Mexico | other | oracle_orc |
 | 92 🔥 | 2d | Ensono | [Associate Machine Learning AI Engineer](https://ensono.com/company/careers/jobs-board/?gh_jid=4711789005) | Remote in USA | other | simplify |
-| 92 🔥 | 2d | Anduril | [Veteran & Community Engagement Associate](https://boards.greenhouse.io/andurilindustries/jobs/5187229007?gh_jid=5187229007) | Costa Mesa, California, United States; W | big_tech | greenhouse |
+| 92 🔥 | 3d | Anduril | [Veteran & Community Engagement Associate](https://boards.greenhouse.io/andurilindustries/jobs/5187229007?gh_jid=5187229007) | Costa Mesa, California, United States; W | big_tech | greenhouse |
 | 92 🔥 | 3d | OpenAI | [Founding Data Scientist, Pricing & Monetization](https://jobs.ashbyhq.com/openai/e5e1a914-79b6-4cf5-929a-01671d8ec4cd) | San Francisco | ai_lab | ashby |
 | 92 🔥 | 4d | OpenAI | [Quantitative Intelligence Analyst](https://jobs.ashbyhq.com/openai/5834b531-bb89-4471-9253-8c30bc0b26a8) | San Francisco | ai_lab | ashby |
 | 92 🔥 | 5d | Abridge | [Software Engineer - Early Career](https://jobs.ashbyhq.com/abridge/7d6ae2be-cd53-466c-8151-2dae2e87aace) | SF Office | healthtech | ashby |

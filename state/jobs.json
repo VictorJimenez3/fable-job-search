@@ -6245,12 +6245,12 @@
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 90,
+  "score": 84,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:healthtech +16",
-   "posted <24h +12",
+   "posted <72h +6",
    "remote +2"
   ],
   "sector": "healthtech",
@@ -18391,7 +18391,9 @@
   ],
   "posted_at": 1780844293,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784407282,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -28819,8 +28821,9 @@
   "url": "https://job-boards.greenhouse.io/twilio/jobs/7579499"
  },
  "12c91f4623361328": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784407315,
   "company": "Northrop Grumman",
   "description": "",
   "explicit_new_grad": true,
@@ -28831,6 +28834,11 @@
    "United States-Florida-Melbourne"
   ],
   "posted_at": 1783555200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407315,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -28840,7 +28848,8 @@
    "role:swe +20",
    "new-grad title +12",
    "title matches your history +5",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -40427,6 +40436,15 @@
    "San Jose, CA"
   ],
   "posted_at": 1780438071,
+  "posting": {
+   "analyzed_at": 1784407302,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784407302,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -50263,7 +50281,7 @@
   "url": "https://bestbuycanada.wd3.myworkdayjobs.com/en-US/BestBuyCA_Career/job/10651-Centreville/Associ-e--aux-ventes---Ordinateurs--Temps-plein----Computer-Sales-Associate--Full-Time-_R-50762"
  },
  "2195ef11970f74b1": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Innodata",
   "description": "",
@@ -50276,23 +50294,30 @@
   ],
   "posted_at": 1781169536,
   "posting": {
-   "analyzed_at": 1784407203,
+   "analyzed_at": 1784407234,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784407203,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407234,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "No experience req, non-technical tasks",
+   "role_family": "non-technical",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 82,
+  "score": 57,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "new-grad title +12",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: non-technical role (No experience req, non-technical tasks — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "simplify",
@@ -56167,7 +56192,7 @@
   "url": "https://jobs.smartrecruiters.com/JobsForHumanity/744000134446739"
  },
  "2505fb48dddac81b": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Innodata",
   "description": "",
@@ -56180,23 +56205,30 @@
   ],
   "posted_at": 1781169536,
   "posting": {
-   "analyzed_at": 1784407204,
+   "analyzed_at": 1784407242,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784407204,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407242,
+   "live": true,
+   "new_grad": "unclear",
+   "reason": "No clear experience requirement stated, role involves content labeling and evaluation, not technical development.",
+   "role_family": "non-technical",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 82,
+  "score": 57,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "new-grad title +12",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: non-technical role (No clear experience requirement stated,  — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "simplify",
@@ -60627,12 +60659,12 @@
   ],
   "posted_at": 1780466890,
   "posting": {
-   "analyzed_at": 1784407221,
+   "analyzed_at": 1784407296,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
-   "ai_deferred_at": 1784407221,
+   "ai_deferred_at": 1784407296,
    "attempts": 0
   },
   "remote": false,
@@ -63795,7 +63827,7 @@
   "url": "https://jobright.ai/jobs/info/6a54f06bae07d60a8d00ddac?utm_campaign=Software%20Engineering&utm_source=1103"
  },
  "2a30c05d54256038": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Innodata",
   "description": "",
@@ -63808,23 +63840,30 @@
   ],
   "posted_at": 1781169536,
   "posting": {
-   "analyzed_at": 1784407205,
+   "analyzed_at": 1784407250,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784407205,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407250,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "No experience required, non-technical tasks.",
+   "role_family": "non-technical",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 82,
+  "score": 57,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "new-grad title +12",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: non-technical role (No experience required, non-technical ta — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "simplify",
@@ -85917,12 +85956,12 @@
   ],
   "posted_at": 1781053789,
   "posting": {
-   "analyzed_at": 1784407208,
+   "analyzed_at": 1784407282,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
-   "ai_deferred_at": 1784407208,
+   "ai_deferred_at": 1784407282,
    "attempts": 0
   },
   "remote": false,
@@ -120463,8 +120502,9 @@
   "url": "https://jobs.ashbyhq.com/cursor/7bc441a4-9bb6-45cb-a9e0-5ae1b9c7ac5b"
  },
  "4fb810825292da28": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784407316,
   "company": "EverBank",
   "description": "",
   "explicit_new_grad": true,
@@ -120475,6 +120515,11 @@
    "Lewisville, TX, United States"
   ],
   "posted_at": 1783382400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407316,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -120484,7 +120529,8 @@
    "role:swe +20",
    "sector:fintech +5",
    "new-grad title +12",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "fintech",
   "source": "jobright",
@@ -137042,12 +137088,12 @@
   ],
   "posted_at": 1780466897,
   "posting": {
-   "analyzed_at": 1784407215,
+   "analyzed_at": 1784407288,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
-   "ai_deferred_at": 1784407215,
+   "ai_deferred_at": 1784407288,
    "attempts": 0
   },
   "remote": false,
@@ -151515,6 +151561,18 @@
    "Redmond, WA"
   ],
   "posted_at": 1783123200,
+  "posting": {
+   "analyzed_at": 1784407318,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 1,
+   "years_note": "1+ years of professional experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784407318,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -157385,6 +157443,17 @@
    "SF"
   ],
   "posted_at": 1779930365,
+  "posting": {
+   "analyzed_at": 1784407310,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0-2 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784407310,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -178200,6 +178269,17 @@
    "Mountain View, CA"
   ],
   "posted_at": 1783386976,
+  "posting": {
+   "analyzed_at": 1784407315,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 2,
+   "years_note": "2 years of experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784407315,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -182694,7 +182774,7 @@
   "url": "https://racetrac.wd5.myworkdayjobs.com/en-US/ssc/job/200-Galleria-Parkway-SE-Suite-900-Atlanta-GA-30339/Inventory-Analyst_R10010249"
  },
  "79712af27fd232c6": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Innodata",
   "description": "",
@@ -182707,23 +182787,30 @@
   ],
   "posted_at": 1781169536,
   "posting": {
-   "analyzed_at": 1784407205,
+   "analyzed_at": 1784407258,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784407205,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407258,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "No experience required, non-technical tasks",
+   "role_family": "non-technical",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 82,
+  "score": 57,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "new-grad title +12",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: non-technical role (No experience required, non-technical ta — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "simplify",
@@ -216498,7 +216585,7 @@
   "url": "https://globalhr.wd5.myworkdayjobs.com/en-US/REC_RTX_Ext_Gateway/job/US-VA-ARLINGTON-111--1300-17Th-St-N--BBN-ARLINGTON/Bioinformatics-Analyst-II----Hybrid-_01860210"
  },
  "904ac68faff2357c": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Innodata",
   "description": "",
@@ -216511,23 +216598,30 @@
   ],
   "posted_at": 1781169536,
   "posting": {
-   "analyzed_at": 1784407206,
+   "analyzed_at": 1784407266,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784407206,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784407266,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level, no experience required.",
+   "role_family": "non-technical",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 82,
+  "score": 57,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "new-grad title +12",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: non-technical role (Entry-level, no experience required. — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "simplify",
@@ -255808,12 +255902,12 @@
   ],
   "posted_at": 1781169536,
   "posting": {
-   "analyzed_at": 1784407207,
+   "analyzed_at": 1784407273,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
-   "ai_deferred_at": 1784407207,
+   "ai_deferred_at": 1784407273,
    "attempts": 0
   },
   "remote": false,
@@ -267038,8 +267132,9 @@
   "url": "https://jobs.lever.co/zoox/7dd45151-9d8a-45a4-bb33-86fb88c1995d"
  },
  "b0c56dfbf949e0df": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784407312,
   "company": "Absolute Security",
   "description": "",
   "explicit_new_grad": true,
@@ -267050,6 +267145,11 @@
    "Victoria, BC, Canada"
   ],
   "posted_at": 1783814400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407312,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -267060,7 +267160,8 @@
    "new-grad title +12",
    "posted <7d +2",
    "remote +2",
-   "title matches your history +5"
+   "title matches your history +5",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -279232,8 +279333,9 @@
   "url": "https://job-boards.greenhouse.io/instalilyai/jobs/4273002009"
  },
  "b875d865e0daef88": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784407317,
   "company": "AMD",
   "description": "",
   "explicit_new_grad": false,
@@ -279244,6 +279346,11 @@
    "San Jose,California,United States"
   ],
   "posted_at": 1783209600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784407317,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -279254,7 +279361,8 @@
    "sector:big_tech +10",
    "you've engaged with AMD +3",
    "title matches your history +4",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "big_tech",
   "source": "jobright",
@@ -288253,7 +288361,14 @@
    "New York, New York, United States"
   ],
   "posted_at": 1783900800,
+  "posting": {
+   "analyzed_at": 1784407311,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
   "quality": {
+   "ai_deferred_at": 1784407311,
    "attempts": 1
   },
   "remote": false,
@@ -292375,6 +292490,9 @@
    "Sunnyvale, CA"
   ],
   "posted_at": 1780305073,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -294679,12 +294797,12 @@
   ],
   "posted_at": 1781169536,
   "posting": {
-   "analyzed_at": 1784407207,
+   "analyzed_at": 1784407281,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
-   "ai_deferred_at": 1784407207,
+   "ai_deferred_at": 1784407281,
    "attempts": 0
   },
   "remote": false,
@@ -299071,12 +299189,12 @@
   ],
   "posted_at": 1780466893,
   "posting": {
-   "analyzed_at": 1784407218,
+   "analyzed_at": 1784407292,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
-   "ai_deferred_at": 1784407218,
+   "ai_deferred_at": 1784407292,
    "attempts": 0
   },
   "remote": false,
@@ -339676,12 +339794,12 @@
   ],
   "posted_at": 1780466902,
   "posting": {
-   "analyzed_at": 1784407209,
+   "analyzed_at": 1784407283,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
-   "ai_deferred_at": 1784407209,
+   "ai_deferred_at": 1784407283,
    "attempts": 0
   },
   "remote": false,
@@ -361365,6 +361483,15 @@
    "Seattle, WA"
   ],
   "posted_at": 1780466889,
+  "posting": {
+   "analyzed_at": 1784407299,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784407299,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -379747,6 +379874,15 @@
    "San Jose, CA"
   ],
   "posted_at": 1780438061,
+  "posting": {
+   "analyzed_at": 1784407306,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784407306,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
