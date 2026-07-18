@@ -2586,6 +2586,15 @@
    "Wilkes Barre, PA, US"
   ],
   "posted_at": 1783036800,
+  "posting": {
+   "analyzed_at": 1784411310,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411310,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -27200,7 +27209,9 @@
   ],
   "posted_at": 1783555200,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784411303,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -42387,6 +42398,15 @@
    "Conshohocken, PA, US"
   ],
   "posted_at": 1782777600,
+  "posting": {
+   "analyzed_at": 1784411314,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411314,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -80977,7 +80997,9 @@
   ],
   "posted_at": 1781082372,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784411298,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -89777,7 +89799,9 @@
   ],
   "posted_at": 1780967347,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784411298,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -109940,14 +109964,14 @@
   ],
   "posted_at": 1783375911,
   "posting": {
-   "analyzed_at": 1784411269,
+   "analyzed_at": 1784411308,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 2,
    "years_note": "two years of related experience"
   },
   "quality": {
-   "ai_deferred_at": 1784411269,
+   "ai_deferred_at": 1784411308,
    "attempts": 0
   },
   "remote": false,
@@ -115720,13 +115744,13 @@
   ],
   "posted_at": 1782108324,
   "posting": {
-   "analyzed_at": 1784411251,
+   "analyzed_at": 1784411297,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "citizenship is required"
   },
   "quality": {
-   "ai_deferred_at": 1784411251,
+   "ai_deferred_at": 1784411297,
    "attempts": 0
   },
   "remote": false,
@@ -129362,12 +129386,12 @@
   ],
   "posted_at": 1783606005,
   "posting": {
-   "analyzed_at": 1784411262,
+   "analyzed_at": 1784411302,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
-   "ai_deferred_at": 1784411262,
+   "ai_deferred_at": 1784411302,
    "attempts": 0
   },
   "remote": false,
@@ -134879,7 +134903,7 @@
   "url": "https://boards.greenhouse.io/cloudflare/jobs/8064514?gh_jid=8064514"
  },
  "57f36afedaa7b5c0": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "AG Technologies",
   "description": "",
@@ -134892,22 +134916,29 @@
   ],
   "posted_at": 1782137101,
   "posting": {
-   "analyzed_at": 1784411240,
+   "analyzed_at": 1784411280,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784411240,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784411280,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Master of Computer Science required",
+   "role_family": "swe",
+   "years_required": 3
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 72,
+  "score": 52,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "new-grad title +12"
+   "new-grad title +12",
+   "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "other",
   "source": "simplify",
@@ -143010,7 +143041,9 @@
   ],
   "posted_at": 1783548792,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784411305,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -148208,8 +148241,9 @@
   "url": "https://fa-ewjt-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/17296"
  },
  "60a6d8a0c30d3e9f": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784411313,
   "company": "Hudson River Trading",
   "description": "",
   "explicit_new_grad": false,
@@ -148220,6 +148254,11 @@
    "New York, NY"
   ],
   "posted_at": 1782864000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411313,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -148228,7 +148267,8 @@
    "base 40",
    "role:swe +20",
    "sector:fintech +5",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "fintech",
   "source": "jobright",
@@ -167069,6 +167109,9 @@
    "San Carlos, CA"
   ],
   "posted_at": 1782868139,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -170894,7 +170937,9 @@
   ],
   "posted_at": 1783555200,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784411304,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -178601,12 +178646,12 @@
   ],
   "posted_at": 1783468800,
   "posting": {
-   "analyzed_at": 1784411267,
+   "analyzed_at": 1784411306,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
-   "ai_deferred_at": 1784411267,
+   "ai_deferred_at": 1784411306,
    "attempts": 0
   },
   "remote": false,
@@ -188383,7 +188428,9 @@
   ],
   "posted_at": 1783549307,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784411304,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -204879,12 +204926,12 @@
   ],
   "posted_at": 1782137098,
   "posting": {
-   "analyzed_at": 1784411251,
+   "analyzed_at": 1784411286,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
-   "ai_deferred_at": 1784411251,
+   "ai_deferred_at": 1784411286,
    "attempts": 0
   },
   "remote": false,
@@ -231539,12 +231586,12 @@
   ],
   "posted_at": 1783462473,
   "posting": {
-   "analyzed_at": 1784411268,
+   "analyzed_at": 1784411307,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
-   "ai_deferred_at": 1784411268,
+   "ai_deferred_at": 1784411307,
    "attempts": 0
   },
   "remote": false,
@@ -274823,7 +274870,9 @@
   ],
   "posted_at": 1783375974,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784411308,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -276108,6 +276157,18 @@
    "US CO - Colorado Springs"
   ],
   "posted_at": 1783036800,
+  "posting": {
+   "analyzed_at": 1784411311,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 1,
+   "years_note": "1–3 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411311,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -278854,12 +278915,12 @@
   ],
   "posted_at": 1780912784,
   "posting": {
-   "analyzed_at": 1784411256,
+   "analyzed_at": 1784411299,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
-   "ai_deferred_at": 1784411256,
+   "ai_deferred_at": 1784411299,
    "attempts": 0
   },
   "remote": false,
@@ -296581,6 +296642,18 @@
    "Ann Arbor, MI"
   ],
   "posted_at": 1782950400,
+  "posting": {
+   "analyzed_at": 1784411312,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 1,
+   "years_note": "1-5 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411312,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -302354,8 +302427,9 @@
   "url": "https://mpc.wd1.myworkdayjobs.com/en-US/MPCCareers/job/Findlay-Ohio/Order-to-Cash-Business-Analyst_00022836"
  },
  "c4a6991b4f013104": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784411315,
   "company": "Berkshire Hathaway GUARD Insurance Companies",
   "description": "",
   "explicit_new_grad": false,
@@ -302366,6 +302440,11 @@
    "Alpharetta, GA, US"
   ],
   "posted_at": 1782777600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411315,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -302374,7 +302453,8 @@
    "base 40",
    "role:swe +20",
    "sector:fintech +5",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "fintech",
   "source": "jobright",
@@ -303900,12 +303980,12 @@
   ],
   "posted_at": 1780610833,
   "posting": {
-   "analyzed_at": 1784411259,
+   "analyzed_at": 1784411301,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
-   "ai_deferred_at": 1784411259,
+   "ai_deferred_at": 1784411301,
    "attempts": 0
   },
   "remote": false,
@@ -368503,7 +368583,9 @@
   ],
   "posted_at": 1781140141,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784411297,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -375958,6 +376040,16 @@
    "Seattle, WA"
   ],
   "posted_at": 1783296000,
+  "posting": {
+   "analyzed_at": 1784411309,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411309,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
