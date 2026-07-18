@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-18 22:07 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
+_Last run: **2026-07-18 22:08 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -51,7 +51,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 96 🔥 | 3d | UST HealthProof | [Junior Full Stack Developer](https://jobright.ai/jobs/info/6a5864d13330ca6f993c47fc?utm_campaign=Software%20Engineering&utm_source=1103) | Atlanta, GA, United States | healthtech | jobright |
 | 96 🔥 | 5d | Flatiron Health | [Associate, Life Science Partnerships](https://flatiron.com/careers/open-positions/job?gh_jid=7611841) | NY office | healthtech | greenhouse |
 | 96 🔥 | 10d | CareFirst BlueCross BlueShield | [Associate Data Analyst (Hybrid)](https://jobright.ai/jobs/info/6a4e4d259469c0662034ac35?utm_campaign=Data%20Analysis&utm_source=1103) | Baltimore, MD, United States | healthtech | jobright |
-| 96 🔥 | 10d | Northwell Health | [Associate Business Intelligence Analyst](https://eppr.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/192607) | Staten Island, NY | healthtech | simplify |
+| 96 🔥 | 11d | Northwell Health | [Associate Business Intelligence Analyst](https://eppr.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/192607) | Staten Island, NY | healthtech | simplify |
 | 96 🔥 | 11d | Northwell Health | [Associate Business Intelligence Analyst - Onsite](https://jobright.ai/jobs/info/6a4d272ed27b2c4dda9b6672?utm_campaign=Data%20Analysis&utm_source=1103) | 475 Seaview Avenue, Staten Island, NY, 1 | healthtech | jobright |
 | 96 🔥 | 11d | Notion | [Software Engineer – Early Career - AI](https://jobs.ashbyhq.com/notion/85947779-6b87-466a-98bc-30a640448c28/application) | SF | big_tech | simplify |
 | 96 🔥 | 12d | Capital One | [Data Analyst Associate](https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/McLean-VA/Data-Analyst-Associate---2027_R244316-1) | McLean, VA | fintech | simplify |

@@ -4824,8 +4824,9 @@
   "url": "https://boards.greenhouse.io/spacex/jobs/8458745002?gh_jid=8458745002"
  },
  "0354183f28ab591c": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784412536,
   "company": "Nasdaq",
   "description": "",
   "explicit_new_grad": false,
@@ -4836,6 +4837,11 @@
    "USA - Boston - Massachusetts, United States of America"
   ],
   "posted_at": 1783296000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412536,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -4843,7 +4849,8 @@
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -16729,6 +16736,21 @@
    "200 Chestnut St, Philadelphia, PA,19106"
   ],
   "posted_at": 1783382400,
+  "posting": {
+   "analyzed_at": 1784412476,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412476,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, no experience required",
+   "role_family": "data",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -38223,7 +38245,9 @@
   ],
   "posted_at": 1783548704,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784412448,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
@@ -39532,6 +39556,20 @@
    "Boston, MA"
   ],
   "posted_at": 1783376059,
+  "posting": {
+   "analyzed_at": 1784412521,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412521,
+   "live": true,
+   "new_grad": "unclear",
+   "reason": "No experience mention, not clearly technical or non-tech.",
+   "role_family": "other-technical",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -40320,14 +40358,31 @@
    "Cedar Hill, TX, United States"
   ],
   "posted_at": 1783382400,
+  "posting": {
+   "analyzed_at": 1784412484,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1-3 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412484,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "data",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 68,
+  "score": 58,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -45165,7 +45220,9 @@
   ],
   "posted_at": 1783462342,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784412451,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -52457,14 +52514,32 @@
    "San Francisco, United States"
   ],
   "posted_at": 1783382400,
+  "posting": {
+   "analyzed_at": 1784412491,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 1,
+   "years_note": "At least 1 year"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412491,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "data",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 68,
+  "score": 58,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -56995,6 +57070,9 @@
    "NYC"
   ],
   "posted_at": 1783433322,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -76089,14 +76167,31 @@
    "Maple Grove, MN, United States"
   ],
   "posted_at": 1783382400,
+  "posting": {
+   "analyzed_at": 1784412499,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1–2 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412499,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "data",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 68,
+  "score": 58,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -79346,6 +79441,23 @@
    "USA FL Hurlburt Field - 229 Cody Ave (FLC017), United States of America"
   ],
   "posted_at": 1783382400,
+  "posting": {
+   "analyzed_at": 1784412506,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 0,
+   "years_note": "0+ years of related experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412506,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, no experience required",
+   "role_family": "data",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -123744,6 +123856,21 @@
    "Pensacola, FL, United States"
   ],
   "posted_at": 1783382400,
+  "posting": {
+   "analyzed_at": 1784412514,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412514,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, new grad role",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -133269,8 +133396,9 @@
   "url": "https://jobs.ashbyhq.com/openai/941bad28-7abe-43c7-b20a-2bc7e5b3c6e8"
  },
  "5678f8d528a8c91a": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784412537,
   "company": "SCS Engineers",
   "description": "",
   "explicit_new_grad": false,
@@ -133281,6 +133409,11 @@
    "Atlanta, GA, US"
   ],
   "posted_at": 1783296000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412537,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -133288,7 +133421,8 @@
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -150384,14 +150518,31 @@
    "Virginia"
   ],
   "posted_at": 1783375282,
+  "posting": {
+   "analyzed_at": 1784412527,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "one year of relevant experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412527,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1 year experience required",
+   "role_family": "data",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 68,
+  "score": 58,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "simplify",
@@ -165137,6 +165288,9 @@
    "NYC"
   ],
   "posted_at": 1783329006,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -184438,7 +184592,9 @@
   ],
   "posted_at": 1783461677,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784412452,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -190156,8 +190312,9 @@
   "url": "https://job-boards.greenhouse.io/verkada/jobs/5130977007"
  },
  "7ba78d173f5cff23": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784412538,
   "company": "Cornell University",
   "description": "",
   "explicit_new_grad": false,
@@ -190168,6 +190325,11 @@
    "Ithaca (Main Campus), United States of America"
   ],
   "posted_at": 1783296000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412538,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -190175,7 +190337,8 @@
   "score_reasons": [
    "base 40",
    "role:data_science +22",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -210524,6 +210687,20 @@
    "Atlanta, GA"
   ],
   "posted_at": 1783386551,
+  "posting": {
+   "analyzed_at": 1784412468,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412468,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level, no experience required.",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -216171,11 +216348,11 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 72,
+  "score": 68,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <72h +6",
+   "posted <7d +2",
    "title matches your history +6"
   ],
   "sector": "other",
@@ -217536,7 +217713,9 @@
   ],
   "posted_at": 1783548129,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784412449,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -230771,6 +230950,20 @@
    "Akron, OH"
   ],
   "posted_at": 1783404472,
+  "posting": {
+   "analyzed_at": 1784412461,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412461,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role",
+   "role_family": "data",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -234628,6 +234821,9 @@
    "United States"
   ],
   "posted_at": 1783415513,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -267593,7 +267789,9 @@
   ],
   "posted_at": 1783468800,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784412449,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -277763,11 +277961,11 @@
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 68,
+  "score": 64,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <72h +6",
+   "posted <7d +2",
    "remote +2"
   ],
   "sector": "other",
@@ -319603,7 +319801,9 @@
   ],
   "posted_at": 1783548370,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784412448,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -363743,7 +363943,9 @@
   ],
   "posted_at": 1783548965,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784412447,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -366326,6 +366528,20 @@
    "Atlanta, GA"
   ],
   "posted_at": 1783415169,
+  "posting": {
+   "analyzed_at": 1784412453,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784412453,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for class of 2026",
+   "role_family": "data",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -370944,6 +371160,9 @@
    "NYC"
   ],
   "posted_at": 1783318148,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
