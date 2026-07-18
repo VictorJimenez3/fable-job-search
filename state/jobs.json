@@ -6924,6 +6924,21 @@
    "New York, NY, United States"
   ],
   "posted_at": 1783900800,
+  "posting": {
+   "analyzed_at": 1784410833,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410833,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "PhD student 2027, new grad role",
+   "role_family": "ml",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -15710,6 +15725,9 @@
    "SF"
   ],
   "posted_at": 1783635064,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -55544,6 +55562,9 @@
    "Sunnyvale, CA"
   ],
   "posted_at": 1783415513,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -95093,7 +95114,9 @@
   ],
   "posted_at": 1784095864,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784410823,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -104593,6 +104616,21 @@
    "New York, NY, United States"
   ],
   "posted_at": 1783900800,
+  "posting": {
+   "analyzed_at": 1784410841,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410841,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for 2027 class, no experience required beyond academic.",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -144852,6 +144890,22 @@
    "Bala Cynwyd, PA, United States"
   ],
   "posted_at": 1783641600,
+  "posting": {
+   "analyzed_at": 1784410864,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0-2 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410864,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, 0+ years exp",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -170354,8 +170408,9 @@
   "url": "https://job-boards.greenhouse.io/doordashusa/jobs/7580407"
  },
  "6f1c8a4784d189a1": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784410896,
   "company": "BAE Systems",
   "description": "",
   "explicit_new_grad": true,
@@ -170366,6 +170421,11 @@
    "Totowa, NJ, United States"
   ],
   "posted_at": 1783555200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410896,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -170373,7 +170433,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "new-grad title +12"
+   "new-grad title +12",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -182514,6 +182575,21 @@
    "San Francisco, CA, United States"
   ],
   "posted_at": 1783555200,
+  "posting": {
+   "analyzed_at": 1784410897,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410897,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for 2027 start.",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -200354,7 +200430,7 @@
   "url": "https://boards.greenhouse.io/andurilindustries/jobs/4776690007?gh_jid=4776690007"
  },
  "832b4cac3df6874d": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Vertiv",
   "description": "",
@@ -200366,15 +200442,33 @@
    "New Albany, OH"
   ],
   "posted_at": 1784066748,
+  "posting": {
+   "analyzed_at": 1784410823,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 2,
+   "years_note": "2–4 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410823,
+   "live": true,
+   "new_grad": "no",
+   "reason": "2-4 years experience required",
+   "role_family": "non-technical",
+   "years_required": 2
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 72,
+  "score": 37,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "posted <7d +2",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: wants 2+ yrs (LLM-verified) -10",
+   "quality: non-technical role (2-4 years experience required — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "simplify",
@@ -209210,6 +209304,20 @@
    "Boston, MA"
   ],
   "posted_at": 1783638714,
+  "posting": {
+   "analyzed_at": 1784410887,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410887,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level, new grad role.",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -214265,7 +214373,9 @@
   ],
   "posted_at": 1782482903,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784410822,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -217903,6 +218013,23 @@
    "Laurel, MD, 7901 Sandy Spring Road, Laurel, Maryland, United States of America"
   ],
   "posted_at": 1783728000,
+  "posting": {
+   "analyzed_at": 1784410856,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 0,
+   "years_note": "0-1 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410856,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, 0+ years exp",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -219341,6 +219468,9 @@
    "Denver, CO"
   ],
   "posted_at": 1783473024,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -223032,6 +223162,9 @@
    "Hazelwood, MO"
   ],
   "posted_at": 1783462726,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -246284,8 +246417,9 @@
   "url": "https://pinerest.wd5.myworkdayjobs.com/en-US/PineRest/job/Grand-Rapids-MI/Admin-Intake-Support-Specialist--Contact-Center--Per-Diem_JR104970"
  },
  "a17bce9aa9961c1a": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784410905,
   "company": "Honeywell",
   "description": "",
   "explicit_new_grad": true,
@@ -246296,6 +246430,11 @@
    "2000 Waterview Drive, Suite 300, Hamilton, NJ, 08691, US"
   ],
   "posted_at": 1783555200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410905,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -246303,7 +246442,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "new-grad title +12"
+   "new-grad title +12",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -246681,6 +246821,21 @@
    "San Francisco, CA, United States"
   ],
   "posted_at": 1783641600,
+  "posting": {
+   "analyzed_at": 1784410871,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "sponsorship is not available"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410871,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New Grad Program, no experience required",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -249158,6 +249313,22 @@
    "Bala Cynwyd, PA, United States"
   ],
   "posted_at": 1783555200,
+  "posting": {
+   "analyzed_at": 1784410906,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0-2 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410906,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0-2 years, entry level",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -268184,16 +268355,34 @@
    "Chicago, IL, United States"
   ],
   "posted_at": 1783814400,
+  "posting": {
+   "analyzed_at": 1784410849,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 1,
+   "years_note": "1–3 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410849,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "data",
+   "years_required": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 72,
+  "score": 62,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "posted <7d +2",
    "remote +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -274158,6 +274347,9 @@
    "Mountain View, CA"
   ],
   "posted_at": 1783559366,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -308662,6 +308854,22 @@
    "USA - Indianapolis - Lakeview Parkway - Multiple OpCo, United States of America"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784410914,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0-2+ years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410914,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0+ years exp",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -321911,8 +322119,9 @@
   "url": "https://jobright.ai/jobs/info/6a5120d702522b5b722e7b8a?utm_campaign=Software%20Engineering&utm_source=1103"
  },
  "d27860c2eec2c029": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784410831,
   "company": "Claritev",
   "description": "",
   "explicit_new_grad": false,
@@ -321923,6 +322132,11 @@
    "New York, NY, United States"
   ],
   "posted_at": 1783987200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410831,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -321932,7 +322146,8 @@
    "role:data_science +22",
    "posted <7d +2",
    "remote +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -322091,6 +322306,15 @@
    "San Mateo, CA, United States"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784410922,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784410922,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -345133,6 +345357,21 @@
    "San Jose, CA, United States"
   ],
   "posted_at": 1783641600,
+  "posting": {
+   "analyzed_at": 1784410879,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410879,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, New Grad role",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -382217,8 +382456,9 @@
   "url": "https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-Utah-Roy/ServiceNow-Developer--T1--T2---15066---Roy-Utah_R10238182"
  },
  "f97ffed87ab39dd9": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784410833,
   "company": "Resource Innovations",
   "description": "",
   "explicit_new_grad": false,
@@ -382229,6 +382469,11 @@
    "St Louis, MO, United States"
   ],
   "posted_at": 1783987200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410833,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -382238,7 +382483,8 @@
    "role:data_science +22",
    "posted <7d +2",
    "remote +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -388257,7 +388503,9 @@
   ],
   "posted_at": 1782956373,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784410822,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
