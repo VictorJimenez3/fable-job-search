@@ -29405,7 +29405,7 @@
   "url": "https://jobright.ai/jobs/info/6a57938ea791c6211befedb5?utm_campaign=Software%20Engineering&utm_source=1103"
  },
  "133da8782fe61520": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Innodata",
   "description": "",
@@ -29417,15 +29417,30 @@
    "West Virginia"
   ],
   "posted_at": 1781169534,
+  "posting": {
+   "analyzed_at": 1784406590,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784406590,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "No experience required, entry-level role.",
+   "role_family": "non-technical",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 84,
+  "score": 59,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: non-technical role (No experience required, entry-level role — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "simplify",
@@ -89376,8 +89391,9 @@
   "url": "https://jobright.ai/jobs/info/6a229b9814de9460dc842b38?utm_campaign=Software%20Engineering&utm_source=1103"
  },
  "3b65f12f1182033f": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784406633,
   "company": "InvestCloud, Inc.",
   "description": "",
   "explicit_new_grad": true,
@@ -89388,6 +89404,11 @@
    "Warren, NJ"
   ],
   "posted_at": 1782950400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784406633,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -89397,7 +89418,8 @@
    "role:swe +20",
    "sector:fintech +5",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "fintech",
   "source": "jobright",
@@ -106000,6 +106022,20 @@
    "Newport News, VA"
   ],
   "posted_at": 1780880781,
+  "posting": {
+   "analyzed_at": 1784406598,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784406598,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role for new grad",
+   "role_family": "other-technical",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -156500,6 +156536,20 @@
    "Rhode Island"
   ],
   "posted_at": 1781169535,
+  "posting": {
+   "analyzed_at": 1784406583,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784406583,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Flexible hours, no experience stated.",
+   "role_family": "other-technical",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -159182,8 +159232,9 @@
   "url": "https://whitecap.wd1.myworkdayjobs.com/en-US/careers/job/REMOTE-AZ/Technical-Sales-Representative-Tilt-Up_WCJR-034223"
  },
  "69ce5294e817c829": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784406613,
   "company": "JP Morgan Chase",
   "description": "",
   "explicit_new_grad": true,
@@ -159194,6 +159245,11 @@
    "Plano, TX"
   ],
   "posted_at": 1783721251,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784406613,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -159203,7 +159259,8 @@
    "role:data_science +22",
    "new-grad title +12",
    "you've engaged with JP Morgan Chase +3",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "simplify",
@@ -160716,13 +160773,19 @@
   ],
   "posted_at": 1781733745,
   "posting": {
-   "analyzed_at": 1784406514,
+   "analyzed_at": 1784406532,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784406514,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784406532,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Early-career, new grad role.",
+   "role_family": "ml",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -206018,6 +206081,17 @@
    "Hauppauge, NY 11788, USA"
   ],
   "posted_at": 1783209600,
+  "posting": {
+   "analyzed_at": 1784406632,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "Minimum one year"
+  },
+  "quality": {
+   "ai_deferred_at": 1784406632,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -213397,15 +213471,32 @@
    "Irvine, CA, United States"
   ],
   "posted_at": 1783641600,
+  "posting": {
+   "analyzed_at": 1784406614,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "minimum of one year"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784406614,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "data",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 83,
+  "score": 73,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "sector:healthtech +16",
-   "title matches your history +5"
+   "title matches your history +5",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "healthtech",
   "source": "jobright",
@@ -224704,8 +224795,19 @@
    "NYC"
   ],
   "posted_at": 1784068200,
+  "posting": {
+   "analyzed_at": 1784406606,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784406606,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role, no experience required",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -232580,13 +232682,19 @@
   ],
   "posted_at": 1781503935,
   "posting": {
-   "analyzed_at": 1784406516,
+   "analyzed_at": 1784406539,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784406516,
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784406539,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "new grad role for 2026 start",
+   "role_family": "ml",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -261131,8 +261239,9 @@
   "url": "https://jobright.ai/jobs/info/6a57c3c5efb06a45240dd18a?utm_campaign=Data%20Analysis&utm_source=1103"
  },
  "addf1fdbd85b9f7d": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784406634,
   "company": "InvestCloud, Inc.",
   "description": "",
   "explicit_new_grad": true,
@@ -261143,6 +261252,11 @@
    "Warren Twp, New Jersey, United States"
   ],
   "posted_at": 1782950400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784406634,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -261152,7 +261266,8 @@
    "role:swe +20",
    "sector:fintech +5",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "fintech",
   "source": "jobright",
@@ -271289,6 +271404,17 @@
    "Minnetonka, MN, United States of America"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784406629,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1-3+ year"
+  },
+  "quality": {
+   "ai_deferred_at": 1784406629,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -284609,7 +284735,9 @@
   ],
   "posted_at": 1783376277,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784406531,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -299959,7 +300087,7 @@
   "url": "https://fifththird.wd5.myworkdayjobs.com/en-US/53careers/job/San-Francisco-CA/Middle-Market-Business-Development-Officer_R68459"
  },
  "c7b13d3e97d6b92b": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Innodata",
   "description": "",
@@ -299971,16 +300099,31 @@
    "Remote in Canada"
   ],
   "posted_at": 1781169537,
+  "posting": {
+   "analyzed_at": 1784406575,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784406575,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "No experience req, non-technical tasks",
+   "role_family": "non-technical",
+   "years_required": null
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 84,
+  "score": 59,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "new-grad title +12",
    "remote +2",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: non-technical role (No experience req, non-technical tasks — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "simplify",
@@ -312408,8 +312551,19 @@
    "San Jose, CA"
   ],
   "posted_at": 1781503891,
+  "posting": {
+   "analyzed_at": 1784406558,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784406558,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "PhD candidate, research focus, RL/LLM",
+   "role_family": "ml",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -314381,8 +314535,9 @@
   "url": "https://jobs.ashbyhq.com/faros-ai/f0978123-07f9-457e-9236-dc136ac1c0e7"
  },
  "d17d97bb4e7f6e7e": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784406634,
   "company": "Torc Robotics",
   "description": "",
   "explicit_new_grad": true,
@@ -314393,6 +314548,11 @@
    "Ann Arbor, MI"
   ],
   "posted_at": 1782950400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784406634,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -314401,7 +314561,8 @@
    "base 40",
    "role:swe +20",
    "sector:ai_lab +11",
-   "new-grad title +12"
+   "new-grad title +12",
+   "quality: posting gone (link checked)"
   ],
   "sector": "ai_lab",
   "source": "jobright",
@@ -316591,8 +316752,9 @@
   "url": "https://jobright.ai/jobs/info/6a11ec5e619335383fb38f94?utm_campaign=Software%20Engineering&utm_source=1103"
  },
  "d32eee100b42d1e4": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784406636,
   "company": "Uber",
   "description": "",
   "explicit_new_grad": true,
@@ -316603,6 +316765,11 @@
    "Sunnyvale, California, United States"
   ],
   "posted_at": 1782864000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784406636,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -316612,7 +316779,8 @@
    "role:swe +20",
    "sector:big_tech +10",
    "new-grad title +12",
-   "culture fit 58/100 +1"
+   "culture fit 58/100 +1",
+   "quality: posting gone (link checked)"
   ],
   "sector": "big_tech",
   "source": "jobright",
@@ -318306,13 +318474,19 @@
   ],
   "posted_at": 1781503926,
   "posting": {
-   "analyzed_at": 1784406519,
+   "analyzed_at": 1784406548,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784406519,
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784406548,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "PhD graduate, 2026 start, research focus",
+   "role_family": "ml",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -322032,6 +322206,9 @@
    "McKinney, TX"
   ],
   "posted_at": 1781707135,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -326288,6 +326465,23 @@
    "New York, New York, United States"
   ],
   "posted_at": 1783641600,
+  "posting": {
+   "analyzed_at": 1784406622,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 0,
+   "years_note": "0–1 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784406622,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, 0-1 years exp",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -334924,6 +335118,21 @@
    "White Plains, NY"
   ],
   "posted_at": 1781474824,
+  "posting": {
+   "analyzed_at": 1784406568,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "unable to sponsor"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784406568,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Early-career role for new grad",
+   "role_family": "ml",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -341966,6 +342175,17 @@
    "Columbus, OH, United States"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784406630,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1-3+ year"
+  },
+  "quality": {
+   "ai_deferred_at": 1784406630,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -354477,8 +354697,9 @@
   "url": "https://stripe.com/jobs/search?gh_jid=7091959"
  },
  "ec820730845c9e83": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784406631,
   "company": "JP Morgan Chase",
   "description": "",
   "explicit_new_grad": true,
@@ -354489,6 +354710,11 @@
    "NYC"
   ],
   "posted_at": 1783375594,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784406631,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -354498,7 +354724,8 @@
    "role:data_science +22",
    "new-grad title +12",
    "you've engaged with JP Morgan Chase +3",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "simplify",
@@ -357589,6 +357816,15 @@
    "Chicago, IL"
   ],
   "posted_at": 1782943855,
+  "posting": {
+   "analyzed_at": 1784406635,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784406635,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -373742,6 +373978,9 @@
    "Seattle, WA"
   ],
   "posted_at": 1782053658,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "$173k/yr",
