@@ -2472,6 +2472,9 @@
    "NYC"
   ],
   "posted_at": 1781168789,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -14380,6 +14383,20 @@
    "Minneapolis, MN"
   ],
   "posted_at": 1781639187,
+  "posting": {
+   "analyzed_at": 1784416859,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416859,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for 2026",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -15211,7 +15228,7 @@
   "url": "https://ms.wd5.myworkdayjobs.com/External/job/New-York-New-York-United-States-of-America/Non-Agency-CMBS-Trading---Fixed-Income-Division---Analyst-Associate_JR038427"
  },
  "09a1d7ef732d4b59": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Markon",
   "description": "",
@@ -15223,13 +15240,25 @@
    "Odenton, MD"
   ],
   "posted_at": 1780006098,
+  "posting": {
+   "analyzed_at": 1784416874,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 7,
+   "years_note": "7 years of relevant experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784416874,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
   "score": 60,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "posting: wants 7+ yrs (dashboard only)"
   ],
   "sector": "other",
   "source": "simplify",
@@ -30217,7 +30246,7 @@
   ],
   "posted_at": 1782691200,
   "posting": {
-   "analyzed_at": 1784416761,
+   "analyzed_at": 1784416776,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship",
@@ -30226,7 +30255,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784416761,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784416776,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0+ years, entry level",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -54122,6 +54157,15 @@
    "Farmers Branch, TX"
   ],
   "posted_at": 1781330907,
+  "posting": {
+   "analyzed_at": 1784416866,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784416866,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -82558,6 +82602,20 @@
    "Dallas, TX"
   ],
   "posted_at": 1782252299,
+  "posting": {
+   "analyzed_at": 1784416830,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416830,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "entry level data engineer role",
+   "role_family": "data",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -85247,13 +85305,30 @@
    "Brookfield, IL"
   ],
   "posted_at": 1781676408,
+  "posting": {
+   "analyzed_at": 1784416852,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 2,
+   "years_note": "2–4 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416852,
+   "live": true,
+   "new_grad": "no",
+   "reason": "2-4 years exp required",
+   "role_family": "swe",
+   "years_required": 2
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 60,
+  "score": 50,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: wants 2+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "simplify",
@@ -110385,6 +110460,15 @@
    "Denver, CO"
   ],
   "posted_at": 1780438003,
+  "posting": {
+   "analyzed_at": 1784416870,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784416870,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -127148,7 +127232,9 @@
   ],
   "posted_at": 1782914873,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784416775,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -140208,6 +140294,20 @@
    "Atlanta, GA"
   ],
   "posted_at": 1782511768,
+  "posting": {
+   "analyzed_at": 1784416806,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416806,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for 2026, no experience required.",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -143033,6 +143133,20 @@
    "Santa Clara, CA"
   ],
   "posted_at": 1781762728,
+  "posting": {
+   "analyzed_at": 1784416845,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416845,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role with no experience requirement.",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -152831,13 +152945,19 @@
   ],
   "posted_at": 1782598083,
   "posting": {
-   "analyzed_at": 1784416765,
+   "analyzed_at": 1784416799,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784416765,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784416799,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level, new grad role.",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -152948,6 +153068,15 @@
    "Annapolis Junction, MD"
   ],
   "posted_at": 1780351406,
+  "posting": {
+   "analyzed_at": 1784416871,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784416871,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -162482,6 +162611,15 @@
    "Odenton, MD"
   ],
   "posted_at": 1780956310,
+  "posting": {
+   "analyzed_at": 1784416868,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784416868,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -164898,6 +165036,15 @@
    "Dulles, VA"
   ],
   "posted_at": 1780006773,
+  "posting": {
+   "analyzed_at": 1784416873,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784416873,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -176869,6 +177016,20 @@
    "Mason, OH"
   ],
   "posted_at": 1782252465,
+  "posting": {
+   "analyzed_at": 1784416822,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416822,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role with no experience requirement",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -284678,6 +284839,20 @@
    "Seattle, WA"
   ],
   "posted_at": 1782166893,
+  "posting": {
+   "analyzed_at": 1784416838,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416838,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role for new grad",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -306842,7 +307017,7 @@
   ],
   "posted_at": 1782691200,
   "posting": {
-   "analyzed_at": 1784416763,
+   "analyzed_at": 1784416784,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 1,
@@ -306850,15 +307025,22 @@
   },
   "quality": {
    "ai_deferred_at": 1784416763,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784416784,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 60,
+  "score": 50,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -332768,13 +332950,19 @@
   ],
   "posted_at": 1782691200,
   "posting": {
-   "analyzed_at": 1784416764,
+   "analyzed_at": 1784416791,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784416764,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784416791,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New Grad, Entry level",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -346398,6 +346586,9 @@
    "Pittsburgh, PA"
   ],
   "posted_at": 1779919882,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -365367,6 +365558,17 @@
    "SF"
   ],
   "posted_at": 1780621638,
+  "posting": {
+   "analyzed_at": 1784416868,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0–3 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784416868,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -372223,6 +372425,15 @@
    "Denver, CO"
   ],
   "posted_at": 1780064349,
+  "posting": {
+   "analyzed_at": 1784416873,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784416873,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -387038,6 +387249,16 @@
    "Salt Lake City, UT"
   ],
   "posted_at": 1780524330,
+  "posting": {
+   "analyzed_at": 1784416869,
+   "fetched": true,
+   "intern_counts": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784416869,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -398519,13 +398740,30 @@
    "Richmond, VA"
   ],
   "posted_at": 1782338882,
+  "posting": {
+   "analyzed_at": 1784416815,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1 years of experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416815,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1 year experience required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 60,
+  "score": 50,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "simplify",
@@ -400827,6 +401065,9 @@
    "Chantilly, VA"
   ],
   "posted_at": 1782482909,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
