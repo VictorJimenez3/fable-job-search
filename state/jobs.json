@@ -6526,12 +6526,12 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 98,
+  "score": 92,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:healthtech +16",
-   "posted <24h +12",
+   "posted <72h +6",
    "title matches your history +6",
    "SHPE 2026 exhibitor +4"
   ],
@@ -9374,7 +9374,7 @@
   ],
   "posted_at": 1782950400,
   "posting": {
-   "analyzed_at": 1784409399,
+   "analyzed_at": 1784409425,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -9383,18 +9383,25 @@
   },
   "quality": {
    "ai_deferred_at": 1784409399,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784409425,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 77,
+  "score": 67,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:big_tech +10",
    "you've engaged with SpaceX +6",
-   "title matches your history +1"
+   "title matches your history +1",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "big_tech",
   "source": "jobright",
@@ -23301,6 +23308,9 @@
    "Strongsville, OH"
   ],
   "posted_at": 1782137385,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -55883,12 +55893,12 @@
   "research_checked_at": 1784393439,
   "rules_v": 3,
   "salary": "",
-  "score": 90,
+  "score": 86,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "sector:healthtech +16",
-   "posted <24h +12",
+   "posted <72h +6",
    "you've engaged with Merck +2",
    "title matches your history +6",
    "SHPE 2026 exhibitor +4",
@@ -81193,16 +81203,34 @@
    "Redmond, WA"
   ],
   "posted_at": 1782777600,
+  "posting": {
+   "analyzed_at": 1784409489,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 1,
+   "years_note": "1+ years of experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784409489,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 77,
+  "score": 67,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:big_tech +10",
    "you've engaged with SpaceX +6",
-   "title matches your history +1"
+   "title matches your history +1",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "big_tech",
   "source": "jobright",
@@ -95671,16 +95699,34 @@
    "Hawthorne, CA"
   ],
   "posted_at": 1782777600,
+  "posting": {
+   "analyzed_at": 1784409497,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 2,
+   "years_note": "2+ years of professional experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784409497,
+   "live": true,
+   "new_grad": "no",
+   "reason": "2+ years exp required",
+   "role_family": "swe",
+   "years_required": 2
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 77,
+  "score": 67,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:big_tech +10",
    "you've engaged with SpaceX +6",
-   "title matches your history +1"
+   "title matches your history +1",
+   "quality: wants 2+ yrs (LLM-verified) -10"
   ],
   "sector": "big_tech",
   "source": "jobright",
@@ -107806,6 +107852,16 @@
    "Chicago, IL"
   ],
   "posted_at": 1782691200,
+  "posting": {
+   "analyzed_at": 1784409506,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "ai_deferred_at": 1784409506,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -124968,6 +125024,21 @@
    "Newton Highlands, Massachusetts, Massachusetts, 02461"
   ],
   "posted_at": 1782950400,
+  "posting": {
+   "analyzed_at": 1784409433,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784409433,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for 2026 class",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -125644,8 +125715,9 @@
   "url": "https://job-boards.greenhouse.io/pharomanagement/jobs/7751179003"
  },
  "5297022f0de62890": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784409441,
   "company": "Boeing",
   "description": "",
   "explicit_new_grad": true,
@@ -125656,6 +125728,11 @@
    "Hazelwood, MO, US"
   ],
   "posted_at": 1782950400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784409441,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -125665,7 +125742,8 @@
    "role:swe +20",
    "new-grad title +12",
    "title matches your history +1",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -152684,6 +152762,9 @@
    "Austin, TX"
   ],
   "posted_at": 1779980058,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "$153k/yr",
@@ -154250,7 +154331,7 @@
   "url": "https://boards.greenhouse.io/spacex/jobs/8601722002?gh_jid=8601722002"
  },
  "6522376faca7449d": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Field AI",
   "description": "",
@@ -154262,6 +154343,17 @@
    "Irvine, CA"
   ],
   "posted_at": 1780621772,
+  "posting": {
+   "analyzed_at": 1784409510,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 18,
+   "years_note": "at least 18 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784409510,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -154269,7 +154361,8 @@
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
-   "sector:ai_lab +11"
+   "sector:ai_lab +11",
+   "posting: wants 18+ yrs (dashboard only)"
   ],
   "sector": "ai_lab",
   "source": "simplify",
@@ -163648,6 +163741,20 @@
    "Chicago, IL"
   ],
   "posted_at": 1782944920,
+  "posting": {
+   "analyzed_at": 1784409481,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784409481,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "PhD required, new grad class of 2026",
+   "role_family": "ml",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -169269,6 +169376,21 @@
    "Melrose, Massachusetts, Massachusetts, 02176"
   ],
   "posted_at": 1782950400,
+  "posting": {
+   "analyzed_at": 1784409442,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784409442,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level new grad role",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -171064,6 +171186,21 @@
    "Wilmington, Massachusetts, Massachusetts, 01887"
   ],
   "posted_at": 1782950400,
+  "posting": {
+   "analyzed_at": 1784409450,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784409450,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role with no experience required",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -172981,6 +173118,17 @@
    "West Athens, CA"
   ],
   "posted_at": 1781821063,
+  "posting": {
+   "analyzed_at": 1784409508,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 2,
+   "years_note": "2+ years of professional experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784409508,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -257596,6 +257744,21 @@
    "Westford, Massachusetts, Massachusetts, 01886"
   ],
   "posted_at": 1782950400,
+  "posting": {
+   "analyzed_at": 1784409457,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784409457,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for 2026 class",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -278429,6 +278592,15 @@
    "Raleigh, NC"
   ],
   "posted_at": 1780017746,
+  "posting": {
+   "analyzed_at": 1784409511,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784409511,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -299827,6 +299999,17 @@
    "West Athens, CA"
   ],
   "posted_at": 1782177415,
+  "posting": {
+   "analyzed_at": 1784409507,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 2,
+   "years_note": "2+ years of professional experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784409507,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -312650,6 +312833,9 @@
    "Beaverton, OR"
   ],
   "posted_at": 1779872735,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -321918,6 +322104,21 @@
    "Arlington, Massachusetts, Massachusetts, 02474"
   ],
   "posted_at": 1782950400,
+  "posting": {
+   "analyzed_at": 1784409465,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784409465,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad position, entry level",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -328499,6 +328700,17 @@
    "Sunnyvale, CA"
   ],
   "posted_at": 1780006233,
+  "posting": {
+   "analyzed_at": 1784409511,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 2,
+   "years_note": "2+ years of professional experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784409511,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -329401,6 +329613,18 @@
    "Palo Alto, CA"
   ],
   "posted_at": 1782777600,
+  "posting": {
+   "analyzed_at": 1784409505,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 1,
+   "years_note": "1+ years of experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784409505,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -334392,14 +334616,20 @@
   ],
   "posted_at": 1783468800,
   "posting": {
-   "analyzed_at": 1784409393,
+   "analyzed_at": 1784409410,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784409393,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784409410,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role with no experience requirement mentioned.",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -335080,13 +335310,19 @@
   ],
   "posted_at": 1783468800,
   "posting": {
-   "analyzed_at": 1784409393,
+   "analyzed_at": 1784409418,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784409393,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784409418,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0+ years exp.",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -341923,11 +342159,11 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 74,
+  "score": 68,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <24h +12",
+   "posted <72h +6",
    "title matches your history +2"
   ],
   "sector": "other",
@@ -375178,6 +375414,9 @@
    "McKinney, TX"
   ],
   "posted_at": 1781100525,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -375957,6 +376196,9 @@
    "Fremont, CA"
   ],
   "posted_at": 1781820624,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -380363,17 +380605,32 @@
    "San Diego, CA"
   ],
   "posted_at": 1782950400,
+  "posting": {
+   "analyzed_at": 1784409473,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784409473,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 77,
+  "score": 67,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:big_tech +10",
    "you've engaged with Qualcomm +2",
    "title matches your history +1",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "big_tech",
   "source": "jobright",

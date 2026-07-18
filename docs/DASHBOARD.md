@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-18 21:16 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
+_Last run: **2026-07-18 21:18 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -33,7 +33,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 99 🔥 | 9d | Cadence | [Software Engineer, New College Grad 2026 (Undergrads)](https://jobright.ai/jobs/info/6a4fe38f4649561ec08af67a?utm_campaign=Software%20Engineering&utm_source=1103) | Burlington, MA, United States | healthtech | jobright |
 | 99 🔥 | 9d | Anthropic | [Research Associate, Biology](https://job-boards.greenhouse.io/anthropic/jobs/5285248008) | San Francisco, CA | ai_lab | greenhouse |
 | 99 🔥 | 26d | Neuralink | [Associate General Counsel, Privacy & Compliance](https://boards.greenhouse.io/neuralink/jobs/7780172003?gh_jid=7780172003) | Austin, Texas, United States; South San  | healthtech | greenhouse |
-| 98 🔥 | 1d | AbbVie | [Technology Engineer II – Platform & Full Stack Engineering](https://jobs.smartrecruiters.com/AbbVie/3743990014160896) | North Chicago, IL | healthtech | smartrecruiters |
 | 98 🔥 | 2d | UTHealth Houston | [Accountant-Associate](https://fa-eomf-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1002/job/7363) | San Antonio, TX, United States | healthtech | oracle_orc |
 | 98 🔥 | 3d | Highmark Health | [Associate Data Solutions Analyst](https://jobright.ai/jobs/info/6a57bcbca791c6211bf00bfa?utm_campaign=Data%20Analysis&utm_source=1103) | PA, United States | healthtech | jobright |
 | 98 🔥 | 4d | Headway | [Business Development Associate, Care Partnerships](https://jobs.ashbyhq.com/headway/4e826c00-570b-4349-956c-c9ac35c2a637) | Remote | healthtech | ashby |
@@ -120,12 +119,13 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 93 🔥 | 22d | Oscar Health | [Associate, Network Contracting](http://www.hioscar.com/careers/8030642?gh_jid=8030642) | Atlanta, Georgia, United States | healthtech | greenhouse |
 | 93 🔥 | 22d | Oscar Health | [Associate, Network Contracting](http://www.hioscar.com/careers/8027526?gh_jid=8027526) | New York, New York, United States | healthtech | greenhouse |
 | 93 🔥 | 22d | Oscar Health | [Associate, Network Contracting](http://www.hioscar.com/careers/8030641?gh_jid=8030641) | Tempe, Arizona, United States | healthtech | greenhouse |
-| 92 🔥 | 20h | SpaceX | [Property Tax Analyst](https://boards.greenhouse.io/spacex/jobs/8639546002?gh_jid=8639546002) | Hawthorne, CA | big_tech | greenhouse |
+| 92 🔥 | 21h | SpaceX | [Property Tax Analyst](https://boards.greenhouse.io/spacex/jobs/8639546002?gh_jid=8639546002) | Hawthorne, CA | big_tech | greenhouse |
 | 92 🔥 | 22h | Magnatech | [Associate Developer](https://magnatech.io/technology-careers/?gh_jid=4716011005) | Remote in USA | other | simplify |
 | 92 🔥 | 23h | SpaceX | [Full Stack Software Engineer Observability - Observability - Starlink](https://boards.greenhouse.io/spacex/jobs/8638457002) | West Athens, CA | big_tech | simplify |
 | 92 🔥 | 23h | Lincoln Financial | [Associate Analytics Engineer](https://jobs.lincolnfinancial.com/job/Omaha-Associate,-Analytics-Engineer-NE-68046/1410206500/?ats=successfactors) | Villanova, PA | other | simplify |
 | 92 🔥 | 23h | OpenAI | [HR Generalist, Consumer Devices](https://jobs.ashbyhq.com/openai/000cf0f2-090d-40c6-b9f8-1699db9a4c68) | San Francisco | ai_lab | ashby |
 | 92 🔥 | 23h | OpenAI | [Partner Strategy & Operations](https://jobs.ashbyhq.com/openai/3fd0ca32-e787-437d-985a-b9f7e3299ef4) | San Francisco | ai_lab | ashby |
+| 92 🔥 | 1d | AbbVie | [Technology Engineer II – Platform & Full Stack Engineering](https://jobs.smartrecruiters.com/AbbVie/3743990014160896) | North Chicago, IL | healthtech | smartrecruiters |
 | 92 🔥 | 1d | SpaceX | [Power Electronics Engineer, AI Satellites (Starmind)](https://boards.greenhouse.io/spacex/jobs/8639268002?gh_jid=8639268002) | Bastrop, TX | big_tech | greenhouse |
 | 92 🔥 | 1d | MongoDB | [Associate Technical Services Engineer II](https://www.mongodb.com/careers/job/?gh_jid=8044218) | Austin | big_tech | greenhouse |
 | 92 🔥 | 1d | Anduril | [Shipping & Receiving Materials Associate](https://boards.greenhouse.io/andurilindustries/jobs/5170663007?gh_jid=5170663007) | Santa Ana, California, United States | big_tech | greenhouse |
