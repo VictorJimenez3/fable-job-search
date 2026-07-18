@@ -6201,7 +6201,9 @@
    "sponsorship": "unknown"
   },
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784405292,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
@@ -9063,7 +9065,7 @@
   "url": "https://fifththird.wd5.myworkdayjobs.com/en-US/53careers/job/Virtual/Business-Development-Partner---Los-Angeles_R68551"
  },
  "06999a412c75da10": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "workday",
   "company": "BlackRock",
   "description": "",
@@ -9076,20 +9078,30 @@
   ],
   "posted_at": 1784308098,
   "posting": {
-   "analyzed_at": 1784308012,
+   "analyzed_at": 1784405301,
    "fetched": true,
    "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784405301,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 4+ years experience",
+   "role_family": "swe",
+   "years_required": 4
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 90,
+  "score": 70,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "new-grad title +12",
    "posted <72h +6",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: not new-grad (4+ yrs — LLM-verified) -20"
   ],
   "sector": "other",
   "source": "workday",
@@ -18402,6 +18414,20 @@
    "Philadelphia, PA"
   ],
   "posted_at": 1784216457,
+  "posting": {
+   "analyzed_at": 1784405317,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784405317,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level, no experience required",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -19466,14 +19492,12 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 75,
+  "score": 73,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:big_tech +10",
-   "posted <7d +2",
-   "culture fit 71/100 +3",
-   "seniority unclear (dashboard only)"
+   "culture fit 71/100 +3"
   ],
   "sector": "big_tech",
   "source": "greenhouse",
@@ -20624,6 +20648,9 @@
    "analyzed_at": 1784322816,
    "fetched": false,
    "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1
   },
   "remote": true,
   "rules_v": 3,
@@ -50004,13 +50031,19 @@
   ],
   "posted_at": 1781196438,
   "posting": {
-   "analyzed_at": 1784405233,
+   "analyzed_at": 1784405259,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784405233,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784405259,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level data role for new grad",
+   "role_family": "data",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -61663,7 +61696,9 @@
    "sponsorship": "unknown"
   },
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784405267,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
@@ -66851,12 +66886,11 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 66,
+  "score": 62,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <72h +6",
-   "off-field title (dashboard only)"
+   "posted <7d +2"
   ],
   "sector": "other",
   "source": "smartrecruiters",
@@ -75903,6 +75937,9 @@
    "San Francisco"
   ],
   "posted_at": 1784160262,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -82226,6 +82263,20 @@
    "New York, NY, United States"
   ],
   "posted_at": 1784160000,
+  "posting": {
+   "analyzed_at": 1784405325,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784405325,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for 2026 class",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -97564,7 +97615,7 @@
   ],
   "posted_at": 1784160000,
   "posting": {
-   "analyzed_at": 1784405238,
+   "analyzed_at": 1784405268,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 0,
@@ -97572,7 +97623,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784405238,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784405268,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Early-career, 0-2 years, AI focus",
+   "role_family": "ml",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -113155,13 +113212,19 @@
   ],
   "posted_at": 1775687115,
   "posting": {
-   "analyzed_at": 1784405232,
+   "analyzed_at": 1784405252,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784405232,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784405252,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "new grad role, data analytics",
+   "role_family": "data",
+   "years_required": null
   },
   "remote": true,
   "rules_v": 3,
@@ -114544,7 +114607,7 @@
   "url": "https://jobs.ashbyhq.com/openai/5e4ed6d1-2417-4bf5-bae0-905931c488e3"
  },
  "4c514bdef8076982": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "greenhouse",
   "company": "Clarity Innovations",
   "description": "",
@@ -114556,6 +114619,22 @@
    "Columbia, Maryland"
   ],
   "posted_at": 1784220099,
+  "posting": {
+   "analyzed_at": 1784405341,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 4,
+   "years_note": "4 years of related experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784405341,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level, 1+ year exp.",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -114565,7 +114644,8 @@
    "role:swe +20",
    "new-grad title +12",
    "posted <72h +6",
-   "title matches your history +6"
+   "title matches your history +6",
+   "posting: wants 4+ yrs (dashboard only)"
   ],
   "sector": "other",
   "source": "greenhouse",
@@ -151999,6 +152079,9 @@
    "HQ: San Francisco"
   ],
   "posted_at": 1784160296,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -162245,11 +162328,10 @@
    "base 40",
    "role:ai_ml +26",
    "sector:big_tech +10",
-   "posted <24h +12",
+   "posted <72h +6",
    "you've engaged with Amazon +8",
    "title matches your history +6",
    "SHPE 2026 exhibitor +4",
-   "marquee company (auto-alert)",
    "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "big_tech",
@@ -182000,13 +182082,19 @@
   ],
   "posted_at": 1784235636,
   "posting": {
-   "analyzed_at": 1784405240,
+   "analyzed_at": 1784405276,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784405240,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784405276,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role with data focus.",
+   "role_family": "data",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -192939,6 +193027,15 @@
    "New York, NY"
   ],
   "posted_at": 1784138635,
+  "posting": {
+   "analyzed_at": 1784405349,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784405349,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -212543,7 +212640,9 @@
   ],
   "posted_at": 1784214032,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784405268,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -213759,6 +213858,9 @@
    "San Francisco"
   ],
   "posted_at": 1784169595,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -226298,13 +226400,19 @@
   ],
   "posted_at": 1784207426,
   "posting": {
-   "analyzed_at": 1784405241,
+   "analyzed_at": 1784405284,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784405241,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784405284,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role, data analysis",
+   "role_family": "data",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -245613,7 +245721,7 @@
   "url": "https://theaccessgroup.wd103.myworkdayjobs.com/en-US/Access_Group_External_Careers/job/Timisoara/Cloud-Security-Engineer_JR001852-3"
  },
  "a4b52a2958bc22fb": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "greenhouse",
   "company": "Neuralink",
   "description": "",
@@ -245626,14 +245734,23 @@
   ],
   "posted_at": 1784313785,
   "posting": {
-   "analyzed_at": 1784318497,
-   "fetched": false,
+   "analyzed_at": 1784405293,
+   "fetched": true,
    "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784405293,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 3+ years experience",
+   "role_family": "security",
+   "years_required": 3
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 90,
+  "score": 70,
   "score_reasons": [
    "base 40",
    "role:swe +20",
@@ -245641,7 +245758,8 @@
    "posted <72h +6",
    "you've engaged with Neuralink +8",
    "title matches your history +1",
-   "culture fit 38/100 -1"
+   "culture fit 38/100 -1",
+   "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "healthtech",
   "source": "greenhouse",
@@ -251425,20 +251543,30 @@
   ],
   "posted_at": 1784313184,
   "posting": {
-   "analyzed_at": 1784313154,
+   "analyzed_at": 1784405333,
    "fetched": true,
    "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784405333,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 2+ years experience",
+   "role_family": "swe",
+   "years_required": 2
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 84,
+  "score": 74,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
    "posted <72h +6",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 2+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "workday",
@@ -276964,6 +277092,9 @@
    "Remote"
   ],
   "posted_at": 1784125277,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -284322,7 +284453,9 @@
    "sponsorship": "unknown"
   },
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784405267,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
@@ -305347,10 +305480,19 @@
   ],
   "posted_at": 1784330144,
   "posting": {
-   "analyzed_at": 1784330126,
+   "analyzed_at": 1784405309,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "without sponsorship"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784405309,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad program for 2026 class",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -331108,6 +331250,9 @@
    "Remote"
   ],
   "posted_at": 1784124972,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -366630,7 +366775,9 @@
   ],
   "posted_at": 1784144783,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784405275,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
@@ -373749,7 +373896,9 @@
   ],
   "posted_at": 1784246400,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784405258,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
