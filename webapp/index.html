@@ -357,9 +357,15 @@ function clearFilters() {
   S.filter = {...DEFAULT_FILTER}; S.shown = 250;
   localStorage.removeItem("jr_filters"); render();
 }
+function isOpenRelevant(j) {
+  if (j.closed_at) return false;
+  const hardReject = /^(intern\/co-op\/contract|senior\+ title|PhD-targeted title|requires clearance|non-US location|requires \d+\+ years|not an AI\/SWE\/DS role)$/i;
+  return !(j.score_reasons||[]).some(reason =>
+    hardReject.test(String(reason).replace(/^re-gate v\d+:\s*/i,"")));
+}
 function jobList() {
   const byId = appliedById(); const f = S.filter; const q = norm(f.q);
-  let rows = Object.values(S.jobs);
+  let rows = Object.values(S.jobs).filter(isOpenRelevant);
   if (f.alert) rows = rows.filter(j=>j.alert_ok);
   rows = rows.filter(j=>(j.score||0) >= f.min);
   if (f.sector) rows = rows.filter(j=>j.sector===f.sector);

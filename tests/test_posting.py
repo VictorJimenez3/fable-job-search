@@ -127,6 +127,38 @@ def test_scrape_pass_respects_budget(monkeypatch):
     assert calls["n"] == 3 and stats["fetched"] == 3
 
 
+def test_scrape_pass_revisits_pre_research_priority_job_once(monkeypatch):
+    fetched = []
+    saved = {}
+    monkeypatch.setattr("radar.quality.fetch_posting", lambda url: (
+        fetched.append(url) or True,
+        "Acme is a technology company. We build safe industrial systems for customers. " + PAD,
+    ))
+    monkeypatch.setattr("radar.company_research.load", lambda: {})
+    monkeypatch.setattr("radar.company_research.save", lambda records: saved.update(records))
+    monkeypatch.setattr("radar.state.load", lambda name, default: default)
+    monkeypatch.setattr(posting.time, "sleep", lambda s: None)
+    stored = {"old": {
+        "id": "old", "company": "Acme", "title": "Software Engineer, New Grad",
+        "url": "https://boards.example.com/j/old", "source": "greenhouse",
+        "alert_ok": True, "score": 82, "score_reasons": [],
+        "first_seen": NOW - 86400,
+        "posting": {"analyzed_at": NOW - 3600, "sponsorship": "unknown"},
+    }}
+
+    stats = posting.scrape_pass([], stored, {}, NOW, budget=2)
+
+    assert fetched == ["https://boards.example.com/j/old"]
+    assert stats["research_sources"] == 1
+    assert stored["old"]["research_checked_at"] == NOW
+    assert "acme" in saved
+
+    # A failed/empty evidence extraction is retried weekly, not every crawl.
+    fetched.clear()
+    posting.scrape_pass([], stored, {}, NOW + 3600, budget=2)
+    assert fetched == []
+
+
 def test_summary_tags():
     assert posting.summary_tags(None) == ""
     assert posting.summary_tags({"sponsorship": "no", "years_min": 2}) == \

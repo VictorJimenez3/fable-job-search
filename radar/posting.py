@@ -157,7 +157,7 @@ def scrape_pass(new_jobs: list, jobs_state: dict, domains: dict,
     A dead link found while fetching closes the job (same semantics as the
     quality pass). Budget counts fetches, not successes.
     """
-    from . import company_research, quality  # late imports avoid cycles
+    from . import company_research, quality, state  # late imports avoid cycles
     if env("RADAR_SCRAPE_DISABLE"):
         return {}
     budget = int(env("RADAR_SCRAPE_LIMIT", "20")) if budget is None else budget
@@ -191,6 +191,11 @@ def scrape_pass(new_jobs: list, jobs_state: dict, domains: dict,
                                          url=url, text=text, retrieved_at=now):
             research_changed = True
             stats["research_sources"] += 1
+        # Stored jobs can predate the evidence-first research feature. Record
+        # this migration check even when a posting contains no useful company
+        # excerpt, so a hostile/empty page is not fetched every 30 minutes.
+        if not is_job:
+            target["research_checked_at"] = now
         a = analyze(text)
         if not a:
             return
@@ -237,13 +242,33 @@ def scrape_pass(new_jobs: list, jobs_state: dict, domains: dict,
             break
         _fetch_and_apply(j, _job_as_rec(j), is_job=True)
 
-    # C: stored alert-worthy records not yet analyzed
+    # C: stored priority records not yet analyzed, plus a one-time evidence
+    # migration for priority jobs analyzed before company research existed.
     if stats["fetched"] < budget:
+        applied_ids = {a.get("id") for a in state.load("applied.json", [])
+                       if a.get("id")}
+        web = state.load("web_state.json", {})
+        tracked_ids = applied_ids | set((web.get("jobs") or {}).keys()) \
+            | set(web.get("maybe") or [])
+
+        def needs_evidence(rec: dict) -> bool:
+            dossier = company_research.dossier_for(rec.get("company", ""), research)
+            missing = not dossier or not dossier.get("sources")
+            last_check = int(rec.get("research_checked_at") or 0)
+            return missing and now - last_check >= 7 * 86400
+
         stored = [r for r in jobs_state.values()
-                  if r.get("alert_ok") and not r.get("closed_at")
-                  and not r.get("posting")
-                  and now - r.get("first_seen", 0) <= 30 * 86400]
-        stored.sort(key=lambda r: -r.get("score", 0))
+                  if not r.get("closed_at") and r.get("url")
+                  and (r.get("alert_ok") or r.get("id") in tracked_ids)
+                  and (not r.get("posting") or needs_evidence(r))
+                  and now - r.get("first_seen", 0) <= 45 * 86400]
+        stored.sort(key=lambda r: (
+            r.get("id") in tracked_ids,
+            bool(r.get("alert_ok")),
+            needs_evidence(r),
+            r.get("score", 0),
+            r.get("first_seen", 0),
+        ), reverse=True)
         for rec in stored:
             if stats["fetched"] >= budget:
                 break
