@@ -669,13 +669,60 @@
  },
  "cadence": {
   "aliases": [],
-  "attempts": 1,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 2,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "b2435af5dbb2d73c",
-  "last_attempt_at": 1784402988,
+  "generated_at": 1784403065,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784403065,
   "last_evidence_at": 1784389818,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "a6cd8b3d9f"
+   ],
+   "value": "Burlington, MA"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Cadence",
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789587065,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "a6cd8b3d9f"
+   ],
+   "value": "10001+ employees"
+  },
   "sources": [
    {
     "content_sha": "04905fcbaed8b81b",
@@ -688,7 +735,32 @@
     "url": "https://jobright.ai/jobs/info/6a4fe38f4649561ec08af67a?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "a6cd8b3d9f"
+   ],
+   "value": "H1B Sponsorship. Cadence has a track record of offering H1B sponsorships. Please note that this does not guarantee sponsorship for this specific role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a6cd8b3d9f"
+   ],
+   "value": "Cadence is a technology company founded in 1988 in San Jose, California, USA, with over 10,000 employees. They offer a Software Engineer role for new college graduates with a salary range of $74K to $136K annually. The company provides H1B sponsorship and emphasizes a fast, innovative tech culture."
+  },
+  "synthesized_evidence_sha": "b2435af5dbb2d73c",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  }
  },
  "celonis": {
   "aliases": [],
@@ -2810,7 +2882,10 @@
  },
  "quantifind": {
   "aliases": [],
+  "attempts": 1,
+  "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "b9cc6332ebbb7838",
+  "last_attempt_at": 1784403065,
   "last_evidence_at": 1784397120,
   "name": "Quantifind",
   "schema_v": 1,
@@ -3058,10 +3133,60 @@
  },
  "strada education foundation": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "eab572623dc393f7",
+  "generated_at": 1784403065,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "17c16172ed"
+   ],
+   "value": "The job posting does not explicitly state interview focus areas, but it emphasizes data engineering skills, client data systems, and technical expertise for the Associate Client Data Engineer role."
+  },
+  "last_attempt_at": 1784403065,
   "last_evidence_at": 1784397120,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "17c16172ed"
+   ],
+   "value": "Washington, DC (Hybrid work model)"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Strada Education Foundation",
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789587065,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "8e6c45d5b6d736c8",
@@ -3074,7 +3199,36 @@
     "url": "https://jobs.lever.co/stradaeducation/dca47da4-85fc-481f-8aa5-fa664a9d37bc/apply"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "17c16172ed"
+   ],
+   "value": "The job posting states that sponsorship is optional and not required for the role, with a note that providing this information is optional."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "17c16172ed"
+   ],
+   "value": "Strada Education Foundation is a mission-driven organization focused on education and workforce development, offering technical roles with a hybrid work model in Washington, DC."
+  },
+  "synthesized_evidence_sha": "eab572623dc393f7",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "17c16172ed"
+   ],
+   "value": "Data engineering for client systems, including building and maintaining data pipelines and infrastructure."
+  },
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "17c16172ed"
+   ],
+   "value": "Strada Education Foundation offers a top-tier AI/data science role with elite prestige and high new-grad pay in a fast, innovative tech culture. The company emphasizes work-life balance with sane hours and guaranteed shutdowns, avoiding toxic environments. It accelerates technical learning and career growth without sacrificing personal time."
+  }
  },
  "stubhub": {
   "aliases": [],
