@@ -15,7 +15,7 @@ from .models import Job, norm
 
 # Bumped whenever gate rules change; regate() re-applies the current rules to
 # every stored job whose rules_v is older (demote/promote alert_ok in place).
-RULES_VERSION = 5
+RULES_VERSION = 6
 
 SENIOR_RE = re.compile(
     r"\b(senior|staff|principal|lead(er)?|director|manager|head of|sr\.?|vp|chief|"
@@ -51,9 +51,13 @@ GENERIC_ALERT_RE = re.compile(
     r"research (and|&) development intern|laboratory intern|lab intern|technical intern)\b", re.I)
 INTERNSHIP_RE = re.compile(r"\b(intern(ship)?|co-?op|student program|summer student)\b", re.I)
 FULL_TIME_RE = re.compile(r"\b(full[- ]?time|new ?grad|university grad|entry[- ]level)\b", re.I)
-PHD_RE = re.compile(r"\b(ph\.?d|doctorate|doctoral|postdoc)\b", re.I)
+PHD_RE = re.compile(
+    r"\b(ph\.?d|doctorate|doctoral|postdoc|adv(?:anced)? degree|master'?s)\b", re.I)
 CLEARANCE_RE = re.compile(r"\b(security clearance|ts/sci|polygraph|top secret)\b", re.I)
 YEARS_RE = re.compile(r"(?:minimum|at least|requires?)\s+(\d+)\+?\s+years", re.I)
+SCHOOL_ONLY_RE = re.compile(
+    r"\b(?:university|college)\b.{0,100}\bonly\b|"
+    r"\bonly\b.{0,100}\b(?:university|college)\b", re.I)
 
 ROLE_BUCKETS: dict[str, re.Pattern] = {
     "chemical_process": re.compile(
@@ -147,6 +151,9 @@ def gates(job: Job) -> tuple[bool, bool, list[str]]:
         return False, False, ["senior+ title"]
     if PHD_RE.search(t):
         return False, False, ["PhD-targeted title"]
+    restriction_text = re.sub(r"[-_/]+", " ", f"{t} {job.description[:1500]} {job.url}")
+    if SCHOOL_ONLY_RE.search(restriction_text):
+        return False, False, ["restricted to another school"]
     if CLEARANCE_RE.search(text):
         return False, False, ["requires clearance"]
     if not location_ok(job):

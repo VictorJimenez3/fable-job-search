@@ -58,6 +58,7 @@ def test_rejects_senior_phd_and_non_us():
     assert gates(mk("Senior Process Engineering Intern"))[0] is False
     assert gates(mk("PhD Chemical Engineering Intern"))[0] is False
     assert gates(mk("Materials Engineering Co-op - Doctorate"))[0] is False
+    assert gates(mk("Process Engineer Co-op - Adv Degree"))[0] is False
     assert gates(mk("Process Engineering Intern", locations=["Toronto, Canada"]))[0] is False
     assert gates(mk("Process Engineering Intern", locations=["Bangalore, India"]))[0] is False
     assert gates(mk("Process Engineering Intern", locations=["Seneffe (BEL)"]))[0] is False
@@ -66,6 +67,12 @@ def test_rejects_senior_phd_and_non_us():
     assert gates(mk("Process Engineering Intern", locations=["Maracaibo, Zulia, Venezuela"]))[0] is False
     assert gates(mk("Process Engineering Intern", locations=["Bintulu"]))[0] is False
     assert gates(mk("Process Engineering Intern", locations=["Singapore", "Austin, TX"]))[0] is True
+
+
+def test_rejects_school_specific_only_role_from_url():
+    job = mk("R&D Engineer Co-op")
+    job.url = "https://example.com/Northeastern-University-Co-op-Students-ONLY/job"
+    assert gates(job) == (False, False, ["restricted to another school"])
 
 
 def test_rejects_clearance_and_large_experience_requirement():
