@@ -857,7 +857,7 @@ function rInterview() {
 
 function rAI() {
   const jobs = Object.values(S.jobs);
-  const withNote = jobs.filter(j=>j.llm_note).length;
+  const withVerdict = jobs.filter(j=>j.quality).length;
   const doss = Object.values(S.culture);
   const lastRun = S.runs[S.runs.length-1];
   const scoutAgo = S.scout.last_run ? Math.round((Date.now()/1000-S.scout.last_run)/86400) : null;
@@ -877,11 +877,11 @@ function rAI() {
           <span class="k">last enrich</span><span>${usage.generated_at?new Date(usage.generated_at*1000).toLocaleString():"–"}</span></div></div>
       <div class="lane"><h3>Model health · latest run</h3>
         <div class="kv">${models.length?models.map(([name,m])=>
-          `<span class="k">${esc(name)}</span><span>${m.ok||0}/${m.requests||0} OK · ${m.errors||0} errors · ${m.tokens||0} reported tokens</span>`).join(""):
+          `<span class="k">${esc(name)}</span><span>${m.ok||0}/${m.requests||0} OK · ${m.errors||0} fallbacks/errors · ${m.tokens||0} reported tokens</span>`).join(""):
           '<span class="sub">No hosted/local requests recorded yet.</span>'}</div></div>
       <div class="lane"><h3>Enrichment coverage</h3>
         <div class="kv">
-          <span class="k">jobs with AI angle</span><span>${withNote} / ${jobs.length}</span>
+          <span class="k">AI-reviewed postings</span><span>${withVerdict} / ${jobs.length}</span>
           <span class="k">culture dossiers</span><span>${doss.length}
             (${doss.filter(d=>d.source==="seed").length} curated,
              ${doss.filter(d=>d.source==="est.").length} legacy estimates)</span>
