@@ -1,11 +1,11 @@
 {
  "events": [
   {
-   "at": "2026-07-18T20:56:35+00:00",
+   "at": "2026-07-18T20:57:16+00:00",
    "completion_tokens": 240,
    "detail": "task schema validation failed",
    "endpoint": "local",
-   "latency_ms": 10810,
+   "latency_ms": 10835,
    "max_tokens": 240,
    "model": "qwen3:30b",
    "prompt_chars": 6707,
@@ -14,7 +14,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:56:44+00:00",
+   "at": "2026-07-18T20:57:25+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -27,7 +27,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:56:45+00:00",
+   "at": "2026-07-18T20:57:26+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -40,7 +40,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:56:46+00:00",
+   "at": "2026-07-18T20:57:26+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -53,7 +53,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:56:46+00:00",
+   "at": "2026-07-18T20:57:27+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -66,7 +66,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:56:47+00:00",
+   "at": "2026-07-18T20:57:28+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -79,7 +79,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:56:49+00:00",
+   "at": "2026-07-18T20:57:29+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -92,7 +92,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:56:49+00:00",
+   "at": "2026-07-18T20:57:30+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -105,7 +105,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:56:50+00:00",
+   "at": "2026-07-18T20:57:31+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -118,7 +118,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:56:51+00:00",
+   "at": "2026-07-18T20:57:31+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -131,7 +131,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:56:53+00:00",
+   "at": "2026-07-18T20:57:32+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -144,7 +144,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:56:53+00:00",
+   "at": "2026-07-18T20:57:33+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -157,7 +157,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:56:55+00:00",
+   "at": "2026-07-18T20:57:34+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -170,7 +170,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T20:56:55+00:00",
+   "at": "2026-07-18T20:57:35+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -183,26 +183,8 @@
    "task": "discovery"
   }
  ],
- "generated_at": 1784408215,
+ "generated_at": 1784408255,
  "history": [
-  {
-   "generated_at": 1784405695,
-   "logical_calls": 12,
-   "models": {
-    "local": {
-     "errors": 1,
-     "model": "qwen3:30b",
-     "ok": 0,
-     "requests": 1,
-     "tokens": 1689
-    }
-   },
-   "provider": "local",
-   "requests": 1,
-   "task_calls": {
-    "quality": 12
-   }
-  },
   {
    "generated_at": 1784405746,
    "logical_calls": 12,
@@ -709,6 +691,24 @@
   },
   {
    "generated_at": 1784408215,
+   "logical_calls": 12,
+   "models": {
+    "local": {
+     "errors": 1,
+     "model": "qwen3:30b",
+     "ok": 0,
+     "requests": 1,
+     "tokens": 1708
+    }
+   },
+   "provider": "local",
+   "requests": 1,
+   "task_calls": {
+    "quality": 12
+   }
+  },
+  {
+   "generated_at": 1784408255,
    "logical_calls": 12,
    "models": {
     "local": {
