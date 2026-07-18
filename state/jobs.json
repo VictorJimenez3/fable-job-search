@@ -11881,7 +11881,7 @@
   ],
   "posted_at": 1783123200,
   "posting": {
-   "analyzed_at": 1784414849,
+   "analyzed_at": 1784414867,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -11890,7 +11890,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784414849,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414867,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, 0+ years exp",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -38731,8 +38737,9 @@
   "url": "https://jobs.ashbyhq.com/kong/c0a091c1-46ba-4a87-93d9-45a1449ec234/application"
  },
  "185bcca25094cfdf": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784414927,
   "company": "ECS",
   "description": "",
   "explicit_new_grad": false,
@@ -38743,6 +38750,11 @@
    "Stafford, VA"
   ],
   "posted_at": 1782950400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414927,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -38750,7 +38762,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -41533,7 +41546,9 @@
   ],
   "posted_at": 1782957185,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784414912,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -48337,6 +48352,18 @@
    "Westminster, CO, United States of America"
   ],
   "posted_at": 1782777600,
+  "posting": {
+   "analyzed_at": 1784414960,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 1,
+   "years_note": "1+ years of hands-on experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414960,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -62419,6 +62446,20 @@
    "San Diego, CA"
   ],
   "posted_at": 1782955211,
+  "posting": {
+   "analyzed_at": 1784414920,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414920,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for class of 2026",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -94362,6 +94403,17 @@
    "Woodland, CA"
   ],
   "posted_at": 1782691200,
+  "posting": {
+   "analyzed_at": 1784414964,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1-3 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414964,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -132719,8 +132771,9 @@
   "url": "https://job-boards.greenhouse.io/twitch/jobs/8527485002"
  },
  "5520229378ee7077": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784414960,
   "company": "Applied Materials",
   "description": "",
   "explicit_new_grad": false,
@@ -132731,6 +132784,11 @@
    "Santa Clara,CA, United States of America"
   ],
   "posted_at": 1782777600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414960,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -132738,7 +132796,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -138635,14 +138694,33 @@
    "Bellevue, WA"
   ],
   "posted_at": 1782950400,
+  "posting": {
+   "analyzed_at": 1784414928,
+   "fetched": true,
+   "intern_counts": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 1,
+   "years_note": "1-3 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414928,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 64,
+  "score": 54,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -169232,14 +169310,31 @@
    "Concord, NC, US, 28026"
   ],
   "posted_at": 1782950400,
+  "posting": {
+   "analyzed_at": 1784414935,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "Minimum 1+ years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414935,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 64,
+  "score": 54,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -202897,13 +202992,19 @@
   ],
   "posted_at": 1783030004,
   "posting": {
-   "analyzed_at": 1784414855,
+   "analyzed_at": 1784414905,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784414855,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414905,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role for new grad.",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -217366,6 +217467,15 @@
    "United States"
   ],
   "posted_at": 1782691200,
+  "posting": {
+   "analyzed_at": 1784414965,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414965,
+   "attempts": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -231667,6 +231777,17 @@
    "Rosemont,Illinois,United States"
   ],
   "posted_at": 1782691200,
+  "posting": {
+   "analyzed_at": 1784414966,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1 to 2 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414966,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -240016,8 +240137,9 @@
   "url": "https://job-boards.greenhouse.io/diligentcorporation/jobs/5972120004"
  },
  "9a285cd4c455524e": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784414967,
   "company": "Aircall",
   "description": "",
   "explicit_new_grad": false,
@@ -240028,6 +240150,11 @@
    "Seattle, WA"
   ],
   "posted_at": 1782691200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414967,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -240035,7 +240162,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -241649,8 +241777,9 @@
   "url": "https://jobs.lever.co/prizeout/2788918c-e1b7-4e21-8c9c-deb96d087508"
  },
  "9b395dc1ae140875": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784414958,
   "company": "State of Ohio",
   "description": "",
   "explicit_new_grad": false,
@@ -241661,6 +241790,11 @@
    "Columbus, OH"
   ],
   "posted_at": 1782864000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414958,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -241668,7 +241802,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -256818,6 +256953,15 @@
    "Cedar Rapids, IA"
   ],
   "posted_at": 1782771083,
+  "posting": {
+   "analyzed_at": 1784414963,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414963,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -258103,7 +258247,7 @@
   ],
   "posted_at": 1783123200,
   "posting": {
-   "analyzed_at": 1784414850,
+   "analyzed_at": 1784414875,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship",
@@ -258112,7 +258256,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784414850,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414875,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0+ years exp, new grad role",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": true,
   "rules_v": 3,
@@ -264712,7 +264862,6 @@
    "base 40",
    "role:swe +20",
    "title matches your history +4",
-   "posting: wants 15+ yrs (dashboard only)",
    "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
@@ -283470,13 +283619,19 @@
   ],
   "posted_at": 1783036800,
   "posting": {
-   "analyzed_at": 1784414853,
+   "analyzed_at": 1784414890,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784414853,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414890,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, no experience required",
+   "role_family": "other-technical",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -287908,7 +288063,7 @@
   ],
   "posted_at": 1783123200,
   "posting": {
-   "analyzed_at": 1784414851,
+   "analyzed_at": 1784414883,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -287917,7 +288072,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784414851,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414883,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-Level (0-2 years)",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -292104,8 +292265,9 @@
   "url": "https://job-boards.greenhouse.io/icapitalnetwork/jobs/8634279002"
  },
  "ba0da921c0939e9b": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784414961,
   "company": "Small Business Consulting Corporation (SBCC)",
   "description": "",
   "explicit_new_grad": false,
@@ -292116,6 +292278,11 @@
    "10 Seibert Road, Scott Air Force Base, IL, USA, 62225"
   ],
   "posted_at": 1782777600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414961,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -292123,7 +292290,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -304352,14 +304520,20 @@
   ],
   "posted_at": 1783036800,
   "posting": {
-   "analyzed_at": 1784414854,
+   "analyzed_at": 1784414898,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
    "ai_deferred_at": 1784414854,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414898,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role, no experience required.",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -339781,6 +339955,15 @@
    "Worcester, United States of America"
   ],
   "posted_at": 1782777600,
+  "posting": {
+   "analyzed_at": 1784414962,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414962,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -356074,6 +356257,16 @@
    "McLean, Virginia, 22107"
   ],
   "posted_at": 1782864000,
+  "posting": {
+   "analyzed_at": 1784414959,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414959,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -362309,6 +362502,23 @@
    "B B Manufacturing - Valencia, CA 91355"
   ],
   "posted_at": 1782950400,
+  "posting": {
+   "analyzed_at": 1784414943,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 0,
+   "years_note": "0-2 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414943,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0+ years exp.",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -376936,14 +377146,32 @@
    "Sunnyvale, California, United States"
   ],
   "posted_at": 1782950400,
+  "posting": {
+   "analyzed_at": 1784414950,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 1,
+   "years_note": "1+ years of experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414950,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required.",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 64,
+  "score": 54,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -380972,13 +381200,19 @@
   ],
   "posted_at": 1782956008,
   "posting": {
-   "analyzed_at": 1784414856,
+   "analyzed_at": 1784414913,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784414856,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414913,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "part-time web design role for students",
+   "role_family": "other-technical",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
