@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-18 21:24 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
+_Last run: **2026-07-18 21:26 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -40,7 +40,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 98 🔥 | 5d | Amazon Web Services (AWS) | [DFT Design Engineer I, AWS Machine Learning Acceleration](https://jobright.ai/jobs/info/695496685bb7de448ef78f90?utm_campaign=Software%20Engineering&utm_source=1103) | Austin, TX, United States | big_tech | jobright |
 | 98 🔥 | 8d | OpenAI | [Account Associate - SF (Portuguese speaking)](https://jobs.ashbyhq.com/openai/08c536fc-1d2a-4ca3-99dd-6f6030286b0c) | San Francisco | ai_lab | ashby |
 | 98 🔥 | 8d | OpenAI | [Account Associate - SF](https://jobs.ashbyhq.com/openai/55f36629-8351-41d9-b2f5-3d63c5e26bf7) | San Francisco | ai_lab | ashby |
-| 98 🔥 | 8d | OpenAI | [Account Associate, Japan](https://jobs.ashbyhq.com/openai/2f3f416d-cc2a-4836-bcff-daee80c94e95) | Tokyo, Japan | ai_lab | ashby |
+| 98 🔥 | 9d | OpenAI | [Account Associate, Japan](https://jobs.ashbyhq.com/openai/2f3f416d-cc2a-4836-bcff-daee80c94e95) | Tokyo, Japan | ai_lab | ashby |
 | 98 🔥 | 12d | Notion | [Software Engineer, Early Career (AI)](https://jobs.ashbyhq.com/notion/85947779-6b87-466a-98bc-30a640448c28) | San Francisco, California | big_tech | ashby |
 | 97 🔥 | 16d | Amazon | [Software Dev Engineer I - Annapurna Labs](https://www.amazon.jobs/jobs/10464104/apply) | Austin, TX | big_tech | speedyapply |
 | 96 🔥 | 15h | CVS Health | [Beauty Sales Consultant, Licensed](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/CA---Studio-City/Beauty-Sales-Consultant--Licensed_R0949589) | CA - Studio City | healthtech | workday |
