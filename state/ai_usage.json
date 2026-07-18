@@ -1,46 +1,163 @@
 {
  "events": [
   {
-   "at": "2026-07-18T18:21:26+00:00",
-   "completion_tokens": 631,
+   "at": "2026-07-18T18:39:46+00:00",
+   "completion_tokens": 495,
    "detail": "",
    "endpoint": "local",
-   "latency_ms": 24239,
-   "max_tokens": 900,
-   "model": "qwen3:30b",
-   "prompt_chars": 2964,
-   "prompt_tokens": 697,
-   "status": "ok",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-07-18T18:21:44+00:00",
-   "completion_tokens": 496,
-   "detail": "",
-   "endpoint": "local",
-   "latency_ms": 17074,
-   "max_tokens": 900,
-   "model": "qwen3:30b",
-   "prompt_chars": 1637,
-   "prompt_tokens": 388,
-   "status": "ok",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-07-18T18:21:53+00:00",
-   "completion_tokens": 23,
-   "detail": "task schema validation failed",
-   "endpoint": "local",
-   "latency_ms": 9708,
+   "latency_ms": 13196,
    "max_tokens": 900,
    "model": "qwen3:30b",
    "prompt_chars": 2047,
    "prompt_tokens": 473,
-   "status": "invalid",
+   "status": "ok",
    "task": "company_research"
   },
   {
-   "at": "2026-07-18T18:22:10+00:00",
+   "at": "2026-07-18T18:40:07+00:00",
+   "completion_tokens": 675,
+   "detail": "",
+   "endpoint": "local",
+   "latency_ms": 21069,
+   "max_tokens": 900,
+   "model": "qwen3:30b",
+   "prompt_chars": 3406,
+   "prompt_tokens": 878,
+   "status": "ok",
+   "task": "company_research"
+  },
+  {
+   "at": "2026-07-18T18:40:27+00:00",
+   "completion_tokens": 663,
+   "detail": "",
+   "endpoint": "local",
+   "latency_ms": 20235,
+   "max_tokens": 900,
+   "model": "qwen3:30b",
+   "prompt_chars": 2093,
+   "prompt_tokens": 477,
+   "status": "ok",
+   "task": "company_research"
+  },
+  {
+   "at": "2026-07-18T18:40:42+00:00",
+   "completion_tokens": 32,
+   "detail": "",
+   "endpoint": "local",
+   "latency_ms": 12435,
+   "max_tokens": 240,
+   "model": "qwen3:30b",
+   "prompt_chars": 5923,
+   "prompt_tokens": 1240,
+   "status": "ok",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-18T18:40:50+00:00",
+   "completion_tokens": 33,
+   "detail": "",
+   "endpoint": "local",
+   "latency_ms": 6143,
+   "max_tokens": 240,
+   "model": "qwen3:30b",
+   "prompt_chars": 4446,
+   "prompt_tokens": 837,
+   "status": "ok",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-18T18:40:58+00:00",
+   "completion_tokens": 33,
+   "detail": "",
+   "endpoint": "local",
+   "latency_ms": 6766,
+   "max_tokens": 240,
+   "model": "qwen3:30b",
+   "prompt_chars": 6710,
+   "prompt_tokens": 1269,
+   "status": "ok",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-18T18:41:05+00:00",
+   "completion_tokens": 34,
+   "detail": "",
+   "endpoint": "local",
+   "latency_ms": 6772,
+   "max_tokens": 240,
+   "model": "qwen3:30b",
+   "prompt_chars": 6581,
+   "prompt_tokens": 1250,
+   "status": "ok",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-18T18:41:13+00:00",
+   "completion_tokens": 35,
+   "detail": "",
+   "endpoint": "local",
+   "latency_ms": 7071,
+   "max_tokens": 240,
+   "model": "qwen3:30b",
+   "prompt_chars": 5908,
+   "prompt_tokens": 1274,
+   "status": "ok",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-18T18:41:22+00:00",
+   "completion_tokens": 36,
+   "detail": "",
+   "endpoint": "local",
+   "latency_ms": 7842,
+   "max_tokens": 240,
+   "model": "qwen3:30b",
+   "prompt_chars": 6608,
+   "prompt_tokens": 1419,
+   "status": "ok",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-18T18:41:31+00:00",
+   "completion_tokens": 41,
+   "detail": "",
+   "endpoint": "local",
+   "latency_ms": 7991,
+   "max_tokens": 240,
+   "model": "qwen3:30b",
+   "prompt_chars": 6614,
+   "prompt_tokens": 1420,
+   "status": "ok",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-18T18:41:39+00:00",
+   "completion_tokens": 35,
+   "detail": "",
+   "endpoint": "local",
+   "latency_ms": 7081,
+   "max_tokens": 240,
+   "model": "qwen3:30b",
+   "prompt_chars": 5194,
+   "prompt_tokens": 1161,
+   "status": "ok",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-18T18:41:47+00:00",
+   "completion_tokens": 33,
+   "detail": "",
+   "endpoint": "local",
+   "latency_ms": 7455,
+   "max_tokens": 240,
+   "model": "qwen3:30b",
+   "prompt_chars": 6126,
+   "prompt_tokens": 1280,
+   "status": "ok",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-18T18:41:48+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -53,7 +170,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T18:22:12+00:00",
+   "at": "2026-07-18T18:41:49+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -66,7 +183,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T18:22:14+00:00",
+   "at": "2026-07-18T18:41:51+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -79,7 +196,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T18:22:15+00:00",
+   "at": "2026-07-18T18:41:52+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -92,7 +209,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T18:22:16+00:00",
+   "at": "2026-07-18T18:41:53+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -105,7 +222,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T18:22:17+00:00",
+   "at": "2026-07-18T18:41:54+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -118,7 +235,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T18:22:18+00:00",
+   "at": "2026-07-18T18:41:55+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -131,7 +248,72 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T18:22:18+00:00",
+   "at": "2026-07-18T18:41:56+00:00",
+   "completion_tokens": 0,
+   "detail": "per-run AI budget reached",
+   "endpoint": "none",
+   "latency_ms": 0,
+   "max_tokens": 240,
+   "model": "",
+   "prompt_chars": 6712,
+   "prompt_tokens": 0,
+   "status": "budget_skipped",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-18T18:41:57+00:00",
+   "completion_tokens": 0,
+   "detail": "per-run AI budget reached",
+   "endpoint": "none",
+   "latency_ms": 0,
+   "max_tokens": 240,
+   "model": "",
+   "prompt_chars": 5458,
+   "prompt_tokens": 0,
+   "status": "budget_skipped",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-18T18:41:58+00:00",
+   "completion_tokens": 0,
+   "detail": "per-run AI budget reached",
+   "endpoint": "none",
+   "latency_ms": 0,
+   "max_tokens": 240,
+   "model": "",
+   "prompt_chars": 5398,
+   "prompt_tokens": 0,
+   "status": "budget_skipped",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-18T18:41:59+00:00",
+   "completion_tokens": 0,
+   "detail": "per-run AI budget reached",
+   "endpoint": "none",
+   "latency_ms": 0,
+   "max_tokens": 240,
+   "model": "",
+   "prompt_chars": 5432,
+   "prompt_tokens": 0,
+   "status": "budget_skipped",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-18T18:42:00+00:00",
+   "completion_tokens": 0,
+   "detail": "per-run AI budget reached",
+   "endpoint": "none",
+   "latency_ms": 0,
+   "max_tokens": 240,
+   "model": "",
+   "prompt_chars": 5670,
+   "prompt_tokens": 0,
+   "status": "budget_skipped",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-18T18:42:01+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -144,7 +326,7 @@
    "task": "discovery"
   }
  ],
- "generated_at": 1784398938,
+ "generated_at": 1784400121,
  "history": [
   {
    "generated_at": 1784389350,
@@ -216,6 +398,25 @@
     "company_research": 3,
     "quality": 9
    }
+  },
+  {
+   "generated_at": 1784400121,
+   "logical_calls": 12,
+   "models": {
+    "local": {
+     "errors": 0,
+     "model": "qwen3:30b",
+     "ok": 12,
+     "requests": 12,
+     "tokens": 15123
+    }
+   },
+   "provider": "local",
+   "requests": 12,
+   "task_calls": {
+    "company_research": 3,
+    "quality": 9
+   }
   }
  ],
  "limits": {
@@ -225,15 +426,15 @@
  "logical_calls": 12,
  "models": {
   "local": {
-   "errors": 1,
+   "errors": 0,
    "model": "qwen3:30b",
-   "ok": 2,
-   "requests": 3,
-   "tokens": 2708
+   "ok": 12,
+   "requests": 12,
+   "tokens": 15123
   }
  },
  "provider": "local",
- "requests": 3,
+ "requests": 12,
  "task_calls": {
   "company_research": 3,
   "quality": 9

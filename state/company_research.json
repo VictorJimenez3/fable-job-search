@@ -1,10 +1,68 @@
 {
  "amazon": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "369b4988d3fef3ab",
+  "generated_at": 1784399972,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "93f9b9cc26",
+    "2aa4ca8b3b",
+    "ba3313e9ea"
+   ],
+   "value": "Must-have skills include Java, Python, C++, C#, Go, data structures, algorithms, and object-oriented design for technical roles."
+  },
+  "last_attempt_at": 1784399972,
   "last_evidence_at": 1784393439,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "93f9b9cc26"
+   ],
+   "value": "Seattle, WA (based on job posting for Software Development Engineer - 2026 (US))"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "93f9b9cc26"
+   ],
+   "value": "Customer obsession and innovation"
+  },
   "name": "Amazon",
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789583972,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "93f9b9cc26",
+    "2aa4ca8b3b",
+    "ba3313e9ea"
+   ],
+   "value": "10001+ employees"
+  },
   "sources": [
    {
     "content_sha": "9da2d725ee02c0bc",
@@ -37,7 +95,39 @@
     "url": "https://jobright.ai/jobs/info/6a0b55cc22d0d34036c8aea3?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "93f9b9cc26",
+    "2aa4ca8b3b"
+   ],
+   "value": "Amazon has a track record of offering H1B sponsorships, though it does not guarantee sponsorship for specific roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "93f9b9cc26",
+    "2aa4ca8b3b",
+    "ba3313e9ea"
+   ],
+   "value": "Amazon is a leading technology company focused on customer obsession and innovation, founded in 1994 in Seattle, Washington. It has over 10,000 employees and offers H1B sponsorships for eligible roles."
+  },
+  "synthesized_evidence_sha": "369b4988d3fef3ab",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "93f9b9cc26",
+    "2aa4ca8b3b",
+    "ba3313e9ea"
+   ],
+   "value": "Developing software using Java, Python, C++, C#, Go, data structures, algorithms, and object-oriented design for roles like Software Development Engineer and Database roles."
+  },
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  }
  },
  "amazon web services aws": {
   "aliases": [],
@@ -650,13 +740,60 @@
  },
  "mthree": {
   "aliases": [],
-  "attempts": 1,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 2,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "e61b93bf24512242",
-  "last_attempt_at": 1784398862,
+  "generated_at": 1784399972,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "2531311a8e"
+   ],
+   "value": "Top Applicants Must-Have Skills: Python pandas, numpy, Machine Learning Algorithms, Natural Language Processing (NLP)."
+  },
+  "last_attempt_at": 1784399972,
   "last_evidence_at": 1784397120,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "2531311a8e"
+   ],
+   "value": "Canada (Remote)"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "mthree",
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789583972,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "1b8e052b7d3f3aa9",
@@ -669,7 +806,34 @@
     "url": "https://jobright.ai/jobs/info/6a4145b43bfa967791ec0daf?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "2531311a8e"
+   ],
+   "value": "mthree is a tech company offering data science roles with a focus on AI and machine learning, targeting entry-level candidates with competitive compensation and remote work options."
+  },
+  "synthesized_evidence_sha": "e61b93bf24512242",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "2531311a8e"
+   ],
+   "value": "Python pandas, numpy, Machine Learning Algorithms, Natural Language Processing (NLP)"
+  },
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "2531311a8e"
+   ],
+   "value": "A top-tier AI or data science role with elite prestige and high new-grad pay (CA$85K/yr) in a fast, innovative tech culture without slow bureaucracy. Mission-driven with respect for work-life balance through sane hours and guaranteed shutdowns, avoiding toxic burnout environments."
+  }
  },
  "neuralink": {
   "aliases": [],
@@ -1185,10 +1349,68 @@
  },
  "qualcomm": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "a7308f63f9"
+   ],
+   "value": "Qualcomm licenses its technology and sells semiconductor products, primarily serving mobile and wireless communication markets."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "a7308f63f9"
+   ],
+   "value": "Major smartphone manufacturers, automotive companies, and IoT device makers, though specific names are not listed in the provided source."
+  },
+  "error": "",
   "evidence_sha": "fcc09c0d27e1e770",
+  "generated_at": 1784399972,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "a7308f63f9"
+   ],
+   "value": "Top applicants must have skills in C programming, data structures, Windows driver development, Linux kernel debugging, ARM CoreSight architecture, and optimization."
+  },
+  "last_attempt_at": 1784399972,
   "last_evidence_at": 1784397120,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "a7308f63f9"
+   ],
+   "value": "San Diego, CA (onsite position mentioned in job posting), with other global offices not specified in the source."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Qualcomm",
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "a7308f63f9"
+   ],
+   "value": "Qualcomm develops mobile processors (Snapdragon), modems, wireless communication technologies, and semiconductor solutions for various industries including mobile, automotive, and IoT."
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789583972,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "a7308f63f9"
+   ],
+   "value": "Global technology company with a significant workforce, though exact size is not specified in the source."
+  },
   "sources": [
    {
     "content_sha": "52d59142e5499b37",
@@ -1201,7 +1423,34 @@
     "url": "https://jobright.ai/jobs/info/6a0d9cc280bf0430c7624a1e?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a7308f63f9"
+   ],
+   "value": "Qualcomm is a leading semiconductor and telecommunications technology company focused on mobile and wireless innovations. The company develops advanced chips and technologies for smartphones, IoT, and other connected devices."
+  },
+  "synthesized_evidence_sha": "fcc09c0d27e1e770",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "a7308f63f9"
+   ],
+   "value": "Developing embedded software, drivers, and kernel-level solutions for mobile and IoT devices, focusing on optimization and debugging."
+  },
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "a7308f63f9"
+   ],
+   "value": "A top-tier AI or data science role that balances elite prestige and high new-grad pay with a fast, innovative tech culture rather than slow bureaucracy. A mission-driven company that actually respects work-life balance through sane hours and guaranteed shutdowns, avoiding toxic or high-burnout environments. A place that accelerates technical learning and career growth without sacrificing personal time."
+  }
  },
  "quantifind": {
   "aliases": [],
