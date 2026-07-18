@@ -1,24 +1,11 @@
 {
  "events": [
   {
-   "at": "2026-07-18T22:18:46+00:00",
-   "completion_tokens": 53,
-   "detail": "",
-   "endpoint": "local",
-   "latency_ms": 7432,
-   "max_tokens": 240,
-   "model": "qwen3:30b",
-   "prompt_chars": 6689,
-   "prompt_tokens": 1327,
-   "status": "ok",
-   "task": "quality"
-  },
-  {
-   "at": "2026-07-18T22:18:57+00:00",
+   "at": "2026-07-18T22:19:38+00:00",
    "completion_tokens": 240,
    "detail": "task schema validation failed",
    "endpoint": "local",
-   "latency_ms": 10615,
+   "latency_ms": 10656,
    "max_tokens": 240,
    "model": "qwen3:30b",
    "prompt_chars": 6713,
@@ -27,20 +14,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T22:19:09+00:00",
-   "completion_tokens": 0,
-   "detail": "per-run AI budget reached",
-   "endpoint": "none",
-   "latency_ms": 0,
-   "max_tokens": 240,
-   "model": "",
-   "prompt_chars": 6696,
-   "prompt_tokens": 0,
-   "status": "budget_skipped",
-   "task": "quality"
-  },
-  {
-   "at": "2026-07-18T22:19:09+00:00",
+   "at": "2026-07-18T22:19:52+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -53,7 +27,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T22:19:10+00:00",
+   "at": "2026-07-18T22:19:53+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -66,7 +40,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T22:19:11+00:00",
+   "at": "2026-07-18T22:19:54+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -79,7 +53,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T22:19:12+00:00",
+   "at": "2026-07-18T22:19:55+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -92,7 +66,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T22:19:13+00:00",
+   "at": "2026-07-18T22:19:55+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -105,7 +79,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T22:19:14+00:00",
+   "at": "2026-07-18T22:19:56+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -118,7 +92,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T22:19:15+00:00",
+   "at": "2026-07-18T22:19:57+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -131,7 +105,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T22:19:16+00:00",
+   "at": "2026-07-18T22:19:58+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -144,7 +118,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T22:19:17+00:00",
+   "at": "2026-07-18T22:19:58+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -157,7 +131,46 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-18T22:19:18+00:00",
+   "at": "2026-07-18T22:19:59+00:00",
+   "completion_tokens": 0,
+   "detail": "per-run AI budget reached",
+   "endpoint": "none",
+   "latency_ms": 0,
+   "max_tokens": 240,
+   "model": "",
+   "prompt_chars": 6667,
+   "prompt_tokens": 0,
+   "status": "budget_skipped",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-18T22:20:00+00:00",
+   "completion_tokens": 0,
+   "detail": "per-run AI budget reached",
+   "endpoint": "none",
+   "latency_ms": 0,
+   "max_tokens": 240,
+   "model": "",
+   "prompt_chars": 6684,
+   "prompt_tokens": 0,
+   "status": "budget_skipped",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-18T22:20:01+00:00",
+   "completion_tokens": 0,
+   "detail": "per-run AI budget reached",
+   "endpoint": "none",
+   "latency_ms": 0,
+   "max_tokens": 240,
+   "model": "",
+   "prompt_chars": 4773,
+   "prompt_tokens": 0,
+   "status": "budget_skipped",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-18T22:20:02+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -170,26 +183,8 @@
    "task": "discovery"
   }
  ],
- "generated_at": 1784413158,
+ "generated_at": 1784413202,
  "history": [
-  {
-   "generated_at": 1784410234,
-   "logical_calls": 12,
-   "models": {
-    "local": {
-     "errors": 0,
-     "model": "qwen3:30b",
-     "ok": 12,
-     "requests": 12,
-     "tokens": 14939
-    }
-   },
-   "provider": "local",
-   "requests": 12,
-   "task_calls": {
-    "quality": 12
-   }
-  },
   {
    "generated_at": 1784410361,
    "logical_calls": 12,
@@ -717,6 +712,24 @@
    "task_calls": {
     "quality": 12
    }
+  },
+  {
+   "generated_at": 1784413202,
+   "logical_calls": 12,
+   "models": {
+    "local": {
+     "errors": 1,
+     "model": "qwen3:30b",
+     "ok": 0,
+     "requests": 1,
+     "tokens": 1588
+    }
+   },
+   "provider": "local",
+   "requests": 1,
+   "task_calls": {
+    "quality": 12
+   }
   }
  ],
  "limits": {
@@ -728,13 +741,13 @@
   "local": {
    "errors": 1,
    "model": "qwen3:30b",
-   "ok": 1,
-   "requests": 2,
-   "tokens": 2968
+   "ok": 0,
+   "requests": 1,
+   "tokens": 1588
   }
  },
  "provider": "local",
- "requests": 2,
+ "requests": 1,
  "task_calls": {
   "quality": 12
  }
