@@ -18,6 +18,7 @@ from .config import env, github_owner, github_repo
 
 API = "https://api.github.com"
 LABEL = "radar-alerts"
+PROFILE_LABEL = "radar-cheme"
 BODY_LIMIT = 60000
 
 
@@ -29,7 +30,7 @@ def _headers() -> dict:
 
 def _week_title() -> str:
     now = datetime.now(timezone.utc)
-    return f"🎯 Job Radar alerts — week {now.strftime('%G-W%V')}"
+    return f"🧪 ChemE Job Radar alerts — week {now.strftime('%G-W%V')}"
 
 
 def format_line(j: dict, culture_map: dict | None = None) -> str:
@@ -73,7 +74,7 @@ def post_alerts(new_alerts: list[dict]) -> str | None:
     title = _week_title()
 
     r = requests.get(f"{API}/repos/{repo}/issues",
-                     params={"labels": LABEL, "state": "open", "per_page": 50},
+                     params={"labels": f"{LABEL},{PROFILE_LABEL}", "state": "open", "per_page": 50},
                      headers=_headers(), timeout=20)
     r.raise_for_status()
     issue = next((i for i in r.json() if i["title"] == title), None)
@@ -88,7 +89,8 @@ def post_alerts(new_alerts: list[dict]) -> str | None:
     if issue is None:
         body = HEADER + section_md
         r = requests.post(f"{API}/repos/{repo}/issues", headers=_headers(), timeout=20,
-                          json={"title": title, "body": body, "labels": [LABEL],
+                          json={"title": title, "body": body,
+                                "labels": [LABEL, PROFILE_LABEL],
                                 "assignees": [github_owner()]})
         r.raise_for_status()
         return r.json()["html_url"]

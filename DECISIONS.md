@@ -639,3 +639,19 @@ Backward-compatible state keys (`explicit_new_grad`, `quality.new_grad`, and
 `new_grad_tc`) remain readable so existing records and migrations do not
 break; new UI and documentation call them internship evidence, internship
 fit, and intern pay.
+
+## 38. Two production boards, one repository and one Notion tracker (2026-07-18)
+
+The existing new-grad board remains the primary Vercel project and production
+branch. ChemE is deployed independently at `job-radar-cheme.vercel.app`, reads
+`claude/cheme-intern-radar`, and uses a `cheme` profile marker plus dedicated
+GitHub labels so actions, issue edits, and comments reach the correct branch.
+This avoids one site's deployment or pipeline state overwriting the other.
+
+GitHub scheduled workflows are loaded only from the repository's default
+branch, so that branch contains small `cheme-*` orchestrators which check out
+and commit back to the ChemE branch. The ChemE board starts in tokenless/PAT
+mode because the existing GitHub OAuth app has one callback URL; it can receive
+its own OAuth app later without changing the architecture. Both boards use the
+same repository-level `NOTION_TOKEN` and the same Applications database by
+design. Separate board state does not mean duplicate Notion state.

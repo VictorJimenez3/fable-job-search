@@ -136,6 +136,7 @@
 // (used to fill outreach templates) and, if self-hosting on Vercel, the env
 // vars documented in docs/FORKING.md.
 const ME = { name: "{your name}", school: "{your school}", grad: "chemical engineering student" };
+const PROFILE = "cheme";
 let REPO = "VictorJimenez3/fable-job-search";
 let BRANCH = "claude/cheme-intern-radar";
 let RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/`;
@@ -226,7 +227,8 @@ async function gh(path, opts={}) {
 async function dispatch(action, job) {
   await gh(`/repos/${REPO}/dispatches`, {method:"POST",
     body: JSON.stringify({event_type:"radar-web",
-      client_payload:{action, id: job.id, url: job.url, company: job.company}})});
+      client_payload:{action, id: job.id, url: job.url, company: job.company,
+        profile:PROFILE}})});
   return true;
 }
 // Tokenless write path: open a prefilled GitHub issue — your GitHub login is
@@ -235,7 +237,7 @@ function issueCmd(cmd, job) {
   const ref = cmd === "applied" ? (job.url || job.id) : job.id;
   const u = `https://github.com/${REPO}/issues/new?title=${
     encodeURIComponent(`radar: ${cmd} ${job.company}`)}&body=${
-    encodeURIComponent(`${cmd} ${ref}`)}`;
+    encodeURIComponent(`radar-profile: ${PROFILE}\n${cmd} ${ref}`)}`;
   window.open(u, "_blank");
   toast("Hit 'Create' on GitHub — it processes & auto-closes in ~1 min");
   return false;

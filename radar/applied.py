@@ -65,7 +65,8 @@ def culture_generate_one(name: str, dossiers: dict) -> bool:
     except (ValueError, _json.JSONDecodeError):
         return False
     d = {f: row.get(f, "") for f in culture.FIELDS}
-    d.update(name=name, source="est.", generated_at=int(time.time()))
+    d.update(name=name, source="est.", generated_at=int(time.time()),
+             profile_mode=culture.PROFILE_MODE)
     d["fit"] = culture.fit_score(d)
     dossiers[norm(name)] = d
     culture.save(dossiers)
@@ -247,7 +248,7 @@ def reconcile_checkboxes() -> int:
     page = 1
     while True:
         r = requests.get(f"https://api.github.com/repos/{github_repo()}/issues",
-                         params={"labels": "radar-alerts", "state": "all",
+                         params={"labels": "radar-cheme", "state": "all",
                                  "per_page": 100, "page": page},
                          headers=headers, timeout=30)
         r.raise_for_status()

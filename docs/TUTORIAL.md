@@ -76,4 +76,6 @@ In GitHub Actions, manually run:
 - `enrich` for optional AI quality/dossier work;
 - `notion-verify` or `email-verify` before trusting a connector.
 
-Scheduled runs require this code to be on the repository's default branch.
+Scheduled runs are launched by the default branch's `cheme-*` workflows, which
+check out this branch explicitly. This branch should remain separate so its
+jobs and generated state do not replace the new-grad board.

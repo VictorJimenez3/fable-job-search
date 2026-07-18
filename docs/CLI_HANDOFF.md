@@ -27,13 +27,24 @@ Claude Code, and local development.
 - Generated state and docs still show the last production crawl until this
   branch is activated and crawled. Do not hand-edit them to make screenshots
   look current.
+- The independent production site is `https://job-radar-cheme.vercel.app`.
+  It reads this branch with `RADAR_PROFILE=cheme` and currently uses
+  tokenless/PAT writes. Both profiles share the repository `NOTION_TOKEN` and
+  one Notion Applications database.
 
-## Required activation outside the code
+## Production activation outside the code
 
-GitHub schedules only the default branch. Make this branch the default or merge
-it into the default, enable Actions, run `tests`, and then run `radar` manually.
-For Vercel, set `RADAR_BRANCH=claude/cheme-intern-radar` unless deploying a
-merged default branch. For Pages, publish `/docs` from the active branch.
+GitHub schedules only workflow files on the default branch. Keep the current
+new-grad branch as default: its `cheme-radar`, `cheme-daily-best`, and
+`cheme-reconcile-checkboxes` workflows explicitly check out this branch. Run
+those workflows from the default branch when verifying production. Interactive
+dispatches include `profile=cheme`; ChemE issues use the `radar-cheme` label,
+which routes checkbox edits and comments back here.
+
+Vercel is a separate `job-radar-cheme` project configured with
+`RADAR_BRANCH=claude/cheme-intern-radar`, `RADAR_PROFILE=cheme`, and
+`AUTH_MODE=tokenless`. A second GitHub OAuth app can enable instant owner-only
+writes later. It does not need a second Notion token or database.
 
 No connector was assumed to be configured. Verify rather than infer:
 
@@ -73,7 +84,7 @@ backward-compatible state reads. New records also carry
 
 ## Next work
 
-The code branch is feature-complete for first activation. Remaining work is the
-human configuration/activation checklist plus the prioritized product backlog
+The code branch is feature-complete and separately deployed. Remaining work is
+the human profile review plus the prioritized product backlog
 in `ROADMAP.md`, led by an official employer sponsorship-history evidence layer
 and academic-term/enrollment filters.

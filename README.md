@@ -8,7 +8,8 @@ environmental/safety, and quality/validation work.
 This is the `claude/cheme-intern-radar` profile of the broader Job Radar
 project. Scoring is deterministic and auditable; AI is optional.
 
-- [Platform](docs/platform/index.html)
+- [Production platform](https://job-radar-cheme.vercel.app)
+- [Static Pages mirror](docs/platform/index.html)
 - [User guide](docs/TUTORIAL.md)
 - [Live generated dashboard](docs/DASHBOARD.md)
 - [Roadmap](ROADMAP.md)
@@ -38,7 +39,7 @@ project. Scoring is deterministic and auditable; AI is optional.
 ## Pipeline
 
 ```text
-GitHub Actions (about every 30–60 minutes when this is the default branch)
+GitHub Actions (about every 30 minutes, orchestrated by the default branch)
   ├─ internship aggregator feed
   ├─ direct employer ATS searches (Workday, Greenhouse, Lever, Ashby, …)
   ├─ ATS discovery and live validation
@@ -50,20 +51,26 @@ GitHub Actions (about every 30–60 minutes when this is the default branch)
 The crawler works with no AI key. A failed source is isolated and logged; it
 does not fail the whole run.
 
-## Activate this branch
+## Production topology
 
-GitHub runs scheduled workflows only from a repository's default branch. To
-make this radar autonomous, merge this branch and make that result the default,
-or set `claude/cheme-intern-radar` as the default branch. Then:
+The new-grad tech board remains the repository's default production branch.
+ChemE is a separate Vercel project at
+[`job-radar-cheme.vercel.app`](https://job-radar-cheme.vercel.app), configured
+with `RADAR_BRANCH=claude/cheme-intern-radar` and `RADAR_PROFILE=cheme`. It has
+independent jobs, feedback, pipeline state, dashboard, and labeled GitHub board
+issues, so the two searches cannot overwrite each other.
 
-1. Open GitHub **Actions**, enable workflows, and manually run `tests`.
-2. Run `radar` once. Expect a one-time rules-v3 re-gate of inherited records.
-3. For a Vercel deployment, set `RADAR_BRANCH=claude/cheme-intern-radar`
-   (the checked-in backend default already uses it).
-4. For GitHub Pages, publish `/docs` from the active branch.
+GitHub schedules workflow files only from the default branch. That branch owns
+the `cheme-radar`, `cheme-daily-best`, and `cheme-reconcile-checkboxes`
+orchestrators; each explicitly checks out and commits back to this branch.
+Web actions carry the `cheme` profile marker, and ChemE issues carry
+`radar-cheme`, so interactive events route here too. Do not make this branch
+the repository default just to activate schedules.
 
-The three workflows that must target a named branch (`daily-best`,
-`reconcile-checkboxes`, and `web-actions`) already point to this branch.
+Both boards deliberately use the same repository-level `NOTION_TOKEN` and the
+same Applications database. The ChemE Vercel board starts in tokenless/PAT
+mode; adding instant OAuth writes later requires a second GitHub OAuth app with
+the ChemE URL as its callback, not a second Notion integration.
 
 ## Personalize before connecting accounts
 
@@ -83,7 +90,8 @@ schema.
 
 No connector is required for discovery or ranking.
 
-- `NOTION_TOKEN`: tracks saved/applied jobs in a Notion Applications database.
+- `NOTION_TOKEN`: tracks saved/applied jobs in the shared Notion Applications
+  database used by both boards.
   Share the database with the integration and make `profile.yaml` stage values
   exactly match its select/status options. Run `notion-verify` before relying
   on writes.

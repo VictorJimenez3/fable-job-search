@@ -17,12 +17,12 @@ from datetime import datetime, timezone
 
 import requests
 
-from .alerts import API, LABEL, _headers, format_line
+from .alerts import API, LABEL, PROFILE_LABEL, _headers, format_line
 from .config import env, github_owner, github_repo, profile
 
-MASTER_TITLE = "📌 Job Radar — master board (every open role, one place)"
-MASTER_LABEL = "radar-master"
-DAILY_LABEL = "radar-daily"
+MASTER_TITLE = "🧪 ChemE Job Radar — master board"
+MASTER_LABEL = "radar-cheme-master"
+DAILY_LABEL = "radar-cheme-daily"
 PAGE_LIMIT = 55000  # per body/comment, under GitHub's 65536 cap
 
 MASTER_HEADER = (
@@ -90,7 +90,7 @@ def update_master_board(jobs_state: dict, applied: list) -> str | None:
     else:
         r = requests.post(f"{API}/repos/{repo}/issues", headers=_headers(), timeout=20,
                           json={"title": MASTER_TITLE, "body": body,
-                                "labels": [LABEL, MASTER_LABEL],
+                                "labels": [LABEL, PROFILE_LABEL, MASTER_LABEL],
                                 "assignees": [github_owner()]})
         r.raise_for_status()
         issue = r.json()
@@ -126,7 +126,7 @@ def post_daily_best(jobs_state: dict, top_n: int = 10) -> str | None:
     repo = github_repo()
     now = int(time.time())
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    title = f"🏆 Best of {today}"
+    title = f"🧪 ChemE best of {today}"
 
     rows = [r for r in jobs_state.values()
             if r.get("alert_ok") and now - r.get("first_seen", 0) <= 86400]
@@ -156,7 +156,7 @@ def post_daily_best(jobs_state: dict, top_n: int = 10) -> str | None:
             + "\n".join(format_line(x, culture_map) for x in rows) + "\n")
     r = requests.post(f"{API}/repos/{repo}/issues", headers=_headers(), timeout=20,
                       json={"title": title, "body": body,
-                            "labels": [LABEL, DAILY_LABEL],
+                            "labels": [LABEL, PROFILE_LABEL, DAILY_LABEL],
                             "assignees": [github_owner()]})
     r.raise_for_status()
     return r.json()["html_url"]
