@@ -661,8 +661,9 @@ design. Separate board state does not mean duplicate Notion state.
 The first live ChemE crawl exposed a gap in the US-only location gate: Workday
 often returns ISO-3 country codes (`BEL`, `DEU`, `SGP`) instead of country names,
 and Venezuela was not in the original hint list. Four of the first ten alerts
-were consequently outside the US. Rules v4 recognizes common ISO-3 codes and
-additional country names as explicit foreign evidence. A multi-location posting
+were consequently outside the US. Rules v5 recognizes common ISO-3 codes,
+additional country/city evidence (including Bintulu, Malaysia), and explicit
+doctoral titles that are ineligible for an undergraduate search. A multi-location posting
 is retained when it also has a recognizable US option; a genuinely unknown
 location is still not silently treated as foreign. The rule-version bump
 re-gates stored jobs on the next crawl and removes the false alerts from the

@@ -22,7 +22,7 @@ project. Scoring is deterministic and auditable; AI is optional.
   JSON feed was live-checked on 2026-07-18, and direct ATS polling starts
   from 22 ChemE-relevant employers. Workday searches use ChemE internship
   and co-op queries rather than software/new-grad terms.
-- Rules v4 require internship/co-op evidence for alerts, classify seven ChemE
+- Rules v5 require internship/co-op evidence for alerts, classify seven ChemE
   role families, reject senior/PhD/clearance/non-US/3+ year roles, keep nearby
   engineering disciplines dashboard-only, and reject unrelated internship noise.
 - Posting text is analyzed for minimum experience and sponsorship language.

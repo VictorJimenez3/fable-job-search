@@ -15,7 +15,7 @@ from .models import Job, norm
 
 # Bumped whenever gate rules change; regate() re-applies the current rules to
 # every stored job whose rules_v is older (demote/promote alert_ok in place).
-RULES_VERSION = 4
+RULES_VERSION = 5
 
 SENIOR_RE = re.compile(
     r"\b(senior|staff|principal|lead(er)?|director|manager|head of|sr\.?|vp|chief|"
@@ -51,7 +51,7 @@ GENERIC_ALERT_RE = re.compile(
     r"research (and|&) development intern|laboratory intern|lab intern|technical intern)\b", re.I)
 INTERNSHIP_RE = re.compile(r"\b(intern(ship)?|co-?op|student program|summer student)\b", re.I)
 FULL_TIME_RE = re.compile(r"\b(full[- ]?time|new ?grad|university grad|entry[- ]level)\b", re.I)
-PHD_RE = re.compile(r"\bph\.?d\b|postdoc", re.I)
+PHD_RE = re.compile(r"\b(ph\.?d|doctorate|doctoral|postdoc)\b", re.I)
 CLEARANCE_RE = re.compile(r"\b(security clearance|ts/sci|polygraph|top secret)\b", re.I)
 YEARS_RE = re.compile(r"(?:minimum|at least|requires?)\s+(\d+)\+?\s+years", re.I)
 
@@ -87,7 +87,7 @@ FOREIGN_HINTS = re.compile(
     r"brazil|sao paulo|mexico city|poland|warsaw|krakow|israel|tel aviv|spain|madrid|barcelona|"
     r"portugal|lisbon|switzerland|zurich|sweden|stockholm|estonia|romania|dubai|uae|philippines|"
     r"manila|vietnam|korea|seoul|taiwan|taipei|nigeria|kenya|south africa|argentina|colombia|chile|"
-    r"panam[aá]|bangladesh|pakistan|malaysia|venezuela)\b", re.I)
+    r"panam[aá]|bangladesh|pakistan|malaysia|bintulu|venezuela)\b", re.I)
 FOREIGN_ISO3_RE = re.compile(
     r"\b(AFG|ALB|DZA|ARG|ARM|AUS|AUT|AZE|BHR|BGD|BLR|BEL|BOL|BIH|BWA|BRA|BGR|"
     r"KHM|CMR|CAN|CHL|CHN|COL|CRI|HRV|CYP|CZE|DNK|ECU|EGY|EST|ETH|FIN|FRA|"

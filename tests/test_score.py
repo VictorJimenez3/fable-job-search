@@ -57,12 +57,14 @@ def test_requires_internship_or_coop_evidence():
 def test_rejects_senior_phd_and_non_us():
     assert gates(mk("Senior Process Engineering Intern"))[0] is False
     assert gates(mk("PhD Chemical Engineering Intern"))[0] is False
+    assert gates(mk("Materials Engineering Co-op - Doctorate"))[0] is False
     assert gates(mk("Process Engineering Intern", locations=["Toronto, Canada"]))[0] is False
     assert gates(mk("Process Engineering Intern", locations=["Bangalore, India"]))[0] is False
     assert gates(mk("Process Engineering Intern", locations=["Seneffe (BEL)"]))[0] is False
     assert gates(mk("Process Engineering Intern", locations=["Stade-DEU"]))[0] is False
     assert gates(mk("Process Engineering Intern", locations=["SGP - Woodlands"]))[0] is False
     assert gates(mk("Process Engineering Intern", locations=["Maracaibo, Zulia, Venezuela"]))[0] is False
+    assert gates(mk("Process Engineering Intern", locations=["Bintulu"]))[0] is False
     assert gates(mk("Process Engineering Intern", locations=["Singapore", "Austin, TX"]))[0] is True
 
 
