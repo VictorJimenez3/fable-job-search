@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-18 19:57 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
+_Last run: **2026-07-18 19:59 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -19,7 +19,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 100 🔥 | 4d | NVIDIA | [System Software Engineer, Dynamo-Triton Inference Server - New College](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/System-Software-Engineer--Dynamo-Triton-Inference-Server---New-College-Grad-2026_JR2020767) | 2 Locations | big_tech | workday |
 | 100 🔥 | 4d | NVIDIA | [Compiler Engineer, AI Inference- New College Grad 2026](https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/Compiler-Engineer--AI-Inference--New-College-Grad-2026_JR2021230) | US, CA, Santa Clara | big_tech | workday |
 | 100 🔥 | 4d | NVIDIA | [Backend Compiler Engineer - New College Grad 2026](https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/Backend-Compiler-Engineer---New-College-Grad-2026_JR2021242) | US, CA, Santa Clara | big_tech | workday |
-| 100 🔥 | 4d | Bristol Myers Squibb | [Associate Engineer, Analytical AI Engineering](https://bristolmyerssquibb.wd5.myworkdayjobs.com/en-US/BMS/job/Princeton---NJ---US/Associate-Engineer--Analytical-AI-Engineering_R1603317-1) | Princeton - NJ - US | healthtech | workday |
+| 100 🔥 | 5d | Bristol Myers Squibb | [Associate Engineer, Analytical AI Engineering](https://bristolmyerssquibb.wd5.myworkdayjobs.com/en-US/BMS/job/Princeton---NJ---US/Associate-Engineer--Analytical-AI-Engineering_R1603317-1) | Princeton - NJ - US | healthtech | workday |
 | 100 🔥 | 5d | NVIDIA | [System Software Engineer - Dynamo-Triton Inference Server - New Colleg](https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/System-Software-Engineer--Dynamo-Triton-Inference-Server---New-College-Grad-2026_JR2020767) | Remote - Santa Clara, CA | big_tech | speedyapply |
 | 100 🔥 | 5d | NVIDIA | [System Software Engineer New Grad - Dynamo-Triton Inference Server](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/System-Software-Engineer--Dynamo-Triton-Inference-Server---New-College-Grad-2026_JR2020767) | Remote in USA | big_tech | simplify |
 | 100 🔥 | 5d | NVIDIA | [Compiler Engineer AI Inference New Grad](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Compiler-Engineer--AI-Inference--New-College-Grad-2026_JR2021230) | Santa Clara, CA | big_tech | simplify |
@@ -77,7 +77,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 94 🔥 | 1d | Oscar Health | [IT Engineer I](http://www.hioscar.com/careers/8070593?gh_jid=8070593) | Los Angeles, California, United States | healthtech | greenhouse |
 | 94 🔥 | 1d | Oscar Health | [IT Engineer I](http://www.hioscar.com/careers/8070587?gh_jid=8070587) | Tempe, Arizona, United States | healthtech | greenhouse |
 | 94 🔥 | 1d | Oscar Health | [IT Engineer I](http://www.hioscar.com/careers/8069062?gh_jid=8069062) | New York, New York, United States | healthtech | greenhouse |
-| 94 🔥 | 1d | CVS Health | [Patient Relations Analyst - Float](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/Rolling-Hills-Square/Patient-Relations-Analyst---Float_R0978229) | Rolling Hills Square | healthtech | workday |
+| 94 🔥 | 2d | CVS Health | [Patient Relations Analyst - Float](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/Rolling-Hills-Square/Patient-Relations-Analyst---Float_R0978229) | Rolling Hills Square | healthtech | workday |
 | 94 🔥 | 2d | CVS Health | [Analyst,Patient Relations](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/AZ---Phoenix/Analyst-Patient-Relations_R0976906) | AZ - Phoenix | healthtech | workday |
 | 94 🔥 | 2d | CVS Health | [IT Operations Analyst (OhioRISE)](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/OH---Work-from-hom/IT-Operations-Analyst--OhioRISE-_R0954602) | OH - Work from hom | healthtech | workday |
 | 94 🔥 | 2d | Medline | [Early Career Opportunities – Join Our Talent Community!](https://medline.wd5.myworkdayjobs.com/en-US/Medline/job/Northfield-Illinois/Early-Career-Opportunities---Join-Our-Talent-Community-_R2604656) | 4 Locations | healthtech | workday |
