@@ -22865,7 +22865,7 @@
   "url": "https://job-boards.greenhouse.io/canonical/jobs/5703396"
  },
  "0e1da5e0231519a2": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Ohio EPA",
   "description": "",
@@ -22878,22 +22878,29 @@
   ],
   "posted_at": 1783641600,
   "posting": {
-   "analyzed_at": 1784414515,
+   "analyzed_at": 1784414540,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784414515,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414540,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 36 mos experience",
+   "role_family": "other-technical",
+   "years_required": 3
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 64,
+  "score": 44,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "other",
   "source": "jobright",
@@ -25401,23 +25408,30 @@
   ],
   "posted_at": 1783641600,
   "posting": {
-   "analyzed_at": 1784414516,
+   "analyzed_at": 1784414548,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "Citizenship is required"
   },
   "quality": {
    "ai_deferred_at": 1784414516,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414548,
+   "live": true,
+   "new_grad": "no",
+   "reason": "2 years experience required",
+   "role_family": "swe",
+   "years_required": 2
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 64,
+  "score": 54,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "quality: wants 2+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "simplify",
@@ -31311,6 +31325,16 @@
    "Seattle, WA, United States"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784414630,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414630,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -57911,6 +57935,16 @@
    "Middleburg Heights, OH, United States"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784414631,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414631,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -57966,6 +58000,16 @@
    "Seattle, Washington, United States"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784414632,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414632,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -73407,8 +73451,9 @@
   "url": "https://boards.greenhouse.io/embed/job_app?token=8000835"
  },
  "2e87d4406aa87951": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784414615,
   "company": "Lockheed Martin",
   "description": "",
   "explicit_new_grad": false,
@@ -73419,6 +73464,11 @@
    "Camden, NJ, United States"
   ],
   "posted_at": 1783555200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414615,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -73426,7 +73476,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -79390,7 +79441,7 @@
   ],
   "posted_at": 1783641600,
   "posting": {
-   "analyzed_at": 1784414518,
+   "analyzed_at": 1784414556,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 1,
@@ -79398,16 +79449,23 @@
   },
   "quality": {
    "ai_deferred_at": 1784414518,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414556,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required.",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 64,
+  "score": 54,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -80627,6 +80685,18 @@
    "Stafford, VA"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784414633,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 1,
+   "years_note": "At least 1+ years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414633,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -88582,6 +88652,9 @@
    "Fairfax, VA"
   ],
   "posted_at": 1783549092,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -91339,7 +91412,7 @@
   ],
   "posted_at": 1783641600,
   "posting": {
-   "analyzed_at": 1784414518,
+   "analyzed_at": 1784414563,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -91348,7 +91421,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784414518,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414563,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0+ years exp",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -97507,14 +97586,30 @@
    "Redlands, CA, United States"
   ],
   "posted_at": 1783555200,
+  "posting": {
+   "analyzed_at": 1784414616,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414616,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1 year exp required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 64,
+  "score": 54,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -185001,7 +185096,7 @@
   ],
   "posted_at": 1783641600,
   "posting": {
-   "analyzed_at": 1784414519,
+   "analyzed_at": 1784414570,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -185010,16 +185105,23 @@
   },
   "quality": {
    "ai_deferred_at": 1784414519,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414570,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 64,
+  "score": 54,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -201154,7 +201256,7 @@
   ],
   "posted_at": 1783641600,
   "posting": {
-   "analyzed_at": 1784414520,
+   "analyzed_at": 1784414578,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 1,
@@ -201162,16 +201264,23 @@
   },
   "quality": {
    "ai_deferred_at": 1784414520,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414578,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 64,
+  "score": 54,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -230624,8 +230733,9 @@
   "url": "https://job-boards.greenhouse.io/3redpartners/jobs/8624128002"
  },
  "94541ebdf89fe379": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784414623,
   "company": "Seaga",
   "description": "",
   "explicit_new_grad": false,
@@ -230636,6 +230746,11 @@
    "River Falls, WI 54022, United States"
   ],
   "posted_at": 1783555200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414623,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -230643,7 +230758,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -251926,14 +252042,20 @@
   ],
   "posted_at": 1783641600,
   "posting": {
-   "analyzed_at": 1784414521,
+   "analyzed_at": 1784414585,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
    "ai_deferred_at": 1784414521,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414585,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, no experience required",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -285424,6 +285546,15 @@
    "Detroit, MI"
   ],
   "posted_at": 1783548241,
+  "posting": {
+   "analyzed_at": 1784414629,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414629,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -293262,7 +293393,7 @@
   "url": "https://jobs.ashbyhq.com/openai/83b6755d-7785-4186-9050-5ef3ad127941"
  },
  "bb4734f3fbfa1e8b": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Northrop Grumman",
   "description": "",
@@ -293276,6 +293407,17 @@
    "Fairfax, VA"
   ],
   "posted_at": 1783549092,
+  "posting": {
+   "analyzed_at": 1784414628,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 4,
+   "years_note": "4 years of experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414628,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -293283,7 +293425,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "posting: wants 4+ yrs (dashboard only)"
   ],
   "sector": "other",
   "source": "simplify",
@@ -314174,14 +314317,29 @@
    "West Redlands, Redlands, CA"
   ],
   "posted_at": 1783635803,
+  "posting": {
+   "analyzed_at": 1784414607,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414607,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1 year experience required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 64,
+  "score": 54,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "simplify",
@@ -315483,6 +315641,15 @@
    "Mississauga, CA"
   ],
   "posted_at": 1783555200,
+  "posting": {
+   "analyzed_at": 1784414624,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414624,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -320153,8 +320320,9 @@
   "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4637208005"
  },
  "cd80dca1761b568a": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784414625,
   "company": "Garmin",
   "description": "",
   "explicit_new_grad": false,
@@ -320165,6 +320333,11 @@
    "Chanhassen,Minnesota,United States"
   ],
   "posted_at": 1783555200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414625,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -320172,7 +320345,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -328019,7 +328193,7 @@
   ],
   "posted_at": 1783641600,
   "posting": {
-   "analyzed_at": 1784414522,
+   "analyzed_at": 1784414593,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 1,
@@ -328027,17 +328201,24 @@
   },
   "quality": {
    "ai_deferred_at": 1784414522,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414593,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1-2 years exp required, not new grad.",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 64,
+  "score": 54,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "remote +2",
-   "title matches your history +2"
+   "title matches your history +2",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -329771,14 +329952,20 @@
   ],
   "posted_at": 1783728000,
   "posting": {
-   "analyzed_at": 1784414513,
+   "analyzed_at": 1784414533,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
    "ai_deferred_at": 1784414513,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414533,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, new grad role",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -356735,7 +356922,7 @@
   "url": "https://job-boards.greenhouse.io/klaviyojobs/jobs/7764229003"
  },
  "e53287bd710d7e48": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "The Amatriot Group",
   "description": "",
@@ -356747,6 +356934,18 @@
    "West Bethesda, MD, United States"
   ],
   "posted_at": 1783555200,
+  "posting": {
+   "analyzed_at": 1784414626,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 15,
+   "years_note": "15 years of experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414626,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -356754,7 +356953,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "posting: wants 15+ yrs (dashboard only)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -367493,6 +367693,20 @@
    "Corning, NY, US, 14831"
   ],
   "posted_at": 1783641600,
+  "posting": {
+   "analyzed_at": 1784414600,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414600,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0+ years exp, new grad role",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -381187,8 +381401,9 @@
   "url": "https://boards.greenhouse.io/andurilindustries/jobs/5159902007?gh_jid=5159902007"
  },
  "f43a3375dbce0e03": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784414627,
   "company": "Charles Schwab",
   "description": "",
   "explicit_new_grad": false,
@@ -381199,6 +381414,11 @@
    "Southlake, TX, United States"
   ],
   "posted_at": 1783555200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414627,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -381206,7 +381426,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
