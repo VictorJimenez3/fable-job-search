@@ -138,6 +138,56 @@ def dossier_for(company: str, records: dict | None = None) -> dict | None:
     return None
 
 
+def job_is_relevant(job: dict) -> bool:
+    """Re-run the active profile's title/location gates for stored jobs.
+
+    Branches inherit historical state, and a saved ID from one profile must
+    never make another profile research an unrelated posting.
+    """
+    if job.get("closed_at"):
+        return False
+    from .models import Job
+    from .score import gates
+    candidate = Job(
+        company=job.get("company", ""), title=job.get("title", ""),
+        url=job.get("url", ""), source=job.get("source", ""),
+        locations=job.get("locations", []), salary=job.get("salary", ""),
+        remote=bool(job.get("remote")), sector=job.get("sector", ""),
+    )
+    keep, _, _ = gates(candidate)
+    return keep
+
+
+def prune_irrelevant_sources(records: dict, jobs_state: dict) -> bool:
+    """Remove official-job evidence rejected by the active branch profile."""
+    relevant_by_url: dict[str, bool] = {}
+    for job in jobs_state.values():
+        url = job.get("url", "")
+        if url:
+            relevant_by_url[url] = relevant_by_url.get(url, False) or job_is_relevant(job)
+    changed = False
+    for key in list(records):
+        record = records[key]
+        old_sources = list(record.get("sources") or [])
+        sources = [s for s in old_sources
+                   if s.get("url") not in relevant_by_url
+                   or relevant_by_url[s.get("url")]]
+        if sources == old_sources:
+            continue
+        changed = True
+        if not sources:
+            del records[key]
+            continue
+        record["sources"] = sources
+        record["evidence_sha"] = evidence_sha(sources)
+        record["status"] = "evidence_only"
+        record.pop("synthesized_evidence_sha", None)
+        record.pop("refresh_after", None)
+        for field in FIELDS:
+            record.pop(field, None)
+    return changed
+
+
 def _claim(value: str = "unknown") -> dict:
     return {"value": value, "source_ids": [], "confidence": "unknown"}
 
@@ -237,8 +287,10 @@ def enrich(jobs_state: dict, applied: list | None = None, web: dict | None = Non
     priority_ids |= set((web or {}).get("jobs") or {})
     now = int(time.time())
     grouped: dict[str, list[dict]] = {}
+    prune_irrelevant_sources(records, jobs_state)
     for job in jobs_state.values():
-        if job.get("closed_at") or now - job.get("first_seen", 0) > 45 * 86400:
+        if (not job.get("alert_ok") and not job_is_relevant(job)
+                or now - job.get("first_seen", 0) > 45 * 86400):
             continue
         grouped.setdefault(norm(job.get("company", "")), []).append(job)
     queue = []
