@@ -28516,7 +28516,7 @@
   ],
   "posted_at": 1783900800,
   "posting": {
-   "analyzed_at": 1784415183,
+   "analyzed_at": 1784415222,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship",
@@ -28525,17 +28525,24 @@
   },
   "quality": {
    "ai_deferred_at": 1784415183,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784415222,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 63,
+  "score": 53,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "posted <7d +2",
-   "title matches your history +1"
+   "title matches your history +1",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -55368,6 +55375,16 @@
    "El Segundo"
   ],
   "posted_at": 1782777600,
+  "posting": {
+   "analyzed_at": 1784415298,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "ai_deferred_at": 1784415298,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -72372,8 +72389,9 @@
   "url": "https://fa-evmr-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/38351"
  },
  "2dc18182b863e180": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784415296,
   "company": "Baxter International Inc.",
   "description": "",
   "explicit_new_grad": false,
@@ -72384,6 +72402,11 @@
    "Skaneateles, NY, United States of America"
   ],
   "posted_at": 1782864000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415296,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -72391,7 +72414,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +3"
+   "title matches your history +3",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -73815,14 +73839,20 @@
   ],
   "posted_at": 1783728000,
   "posting": {
-   "analyzed_at": 1784415187,
+   "analyzed_at": 1784415246,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "Visa sponsorship is available"
   },
   "quality": {
    "ai_deferred_at": 1784415187,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784415246,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Master's 2027, new grad, quantitative role",
+   "role_family": "other-technical",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -104400,6 +104430,9 @@
    "Long Beach, CA"
   ],
   "posted_at": 1783555200,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -105759,14 +105792,20 @@
   ],
   "posted_at": 1783987200,
   "posting": {
-   "analyzed_at": 1784415181,
+   "analyzed_at": 1784415199,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
    "ai_deferred_at": 1784415181,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784415199,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad, entry level, no experience required.",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -122327,8 +122366,9 @@
   "url": "https://jobs.lever.co/weloglobal/cafd4b51-61bd-4b57-a6b2-49c8d08c05e2"
  },
  "4df89e27a253435d": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784415300,
   "company": "CesiumAstro",
   "description": "",
   "explicit_new_grad": false,
@@ -122339,6 +122379,11 @@
    "Austin, TX"
   ],
   "posted_at": 1781042693,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415300,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -122346,7 +122391,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +3"
+   "title matches your history +3",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "simplify",
@@ -138610,6 +138656,18 @@
    "Penn State University Park, United States of America"
   ],
   "posted_at": 1782864000,
+  "posting": {
+   "analyzed_at": 1784415297,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 2,
+   "years_note": "2+ years of relevant experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784415297,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -166421,14 +166479,20 @@
   ],
   "posted_at": 1783987200,
   "posting": {
-   "analyzed_at": 1784415182,
+   "analyzed_at": 1784415207,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
    "ai_deferred_at": 1784415182,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784415207,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role, no experience required.",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -208819,24 +208883,31 @@
   ],
   "posted_at": 1783900800,
   "posting": {
-   "analyzed_at": 1784415185,
+   "analyzed_at": 1784415230,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
    "ai_deferred_at": 1784415185,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784415230,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 1+ years exp",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 63,
+  "score": 53,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "posted <7d +2",
-   "title matches your history +1"
+   "title matches your history +1",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -216020,8 +216091,9 @@
   "url": "https://boards.greenhouse.io/andurilindustries/jobs/5033583007?gh_jid=5033583007"
  },
  "8aca30d3a5c64b98": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784415285,
   "company": "Bobcat Company",
   "description": "",
   "explicit_new_grad": false,
@@ -216032,6 +216104,11 @@
    "Fargo, ND"
   ],
   "posted_at": 1783123200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415285,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -216039,7 +216116,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +3"
+   "title matches your history +3",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -230676,6 +230754,16 @@
    "Chantilly, VA"
   ],
   "posted_at": 1782950400,
+  "posting": {
+   "analyzed_at": 1784415295,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "ai_deferred_at": 1784415295,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -235538,13 +235626,19 @@
   ],
   "posted_at": 1783728000,
   "posting": {
-   "analyzed_at": 1784415188,
+   "analyzed_at": 1784415253,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784415188,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784415253,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role, no experience required",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -252061,14 +252155,20 @@
   ],
   "posted_at": 1783641600,
   "posting": {
-   "analyzed_at": 1784415188,
+   "analyzed_at": 1784415261,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
    "ai_deferred_at": 1784415188,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784415261,
+   "live": true,
+   "new_grad": "unclear",
+   "reason": "Clearance required, no experience specified",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -255228,7 +255328,7 @@
   ],
   "posted_at": 1783900800,
   "posting": {
-   "analyzed_at": 1784415186,
+   "analyzed_at": 1784415237,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship",
@@ -255237,17 +255337,24 @@
   },
   "quality": {
    "ai_deferred_at": 1784415186,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784415237,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 63,
+  "score": 53,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "posted <7d +2",
-   "title matches your history +1"
+   "title matches your history +1",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -262857,6 +262964,16 @@
    "Centennial, CO"
   ],
   "posted_at": 1783036800,
+  "posting": {
+   "analyzed_at": 1784415293,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "ai_deferred_at": 1784415293,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -296545,6 +296662,16 @@
    "Allen, TX"
   ],
   "posted_at": 1781346475,
+  "posting": {
+   "analyzed_at": 1784415299,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "sponsorship is not available"
+  },
+  "quality": {
+   "ai_deferred_at": 1784415299,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -328259,8 +328386,9 @@
   "url": "https://cisco.wd5.myworkdayjobs.com/en-US/cisco_careers/job/Eschborn-Germany/Associate-Sales-Representative---CSAP---Germany_2018447"
  },
  "d1c3a6d44d3f78a1": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784415277,
   "company": "Nakupuna Companies",
   "description": "",
   "explicit_new_grad": false,
@@ -328271,6 +328399,11 @@
    "United States"
   ],
   "posted_at": 1783382400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415277,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -328279,7 +328412,8 @@
    "base 40",
    "role:swe +20",
    "remote +2",
-   "title matches your history +1"
+   "title matches your history +1",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -339422,14 +339556,31 @@
    "Kohler, WI"
   ],
   "posted_at": 1783123200,
+  "posting": {
+   "analyzed_at": 1784415286,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1-2+ years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415286,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 63,
+  "score": 53,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +3"
+   "title matches your history +3",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -344264,6 +344415,23 @@
    "Redmond, WA, United States"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784415269,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 0,
+   "years_note": "0–2 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415269,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, 0+ years exp",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -356063,6 +356231,16 @@
    "Los Angeles, CA"
   ],
   "posted_at": 1782691200,
+  "posting": {
+   "analyzed_at": 1784415299,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "ai_deferred_at": 1784415299,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -358872,6 +359050,22 @@
    "Pittsburgh, PA"
   ],
   "posted_at": 1783375863,
+  "posting": {
+   "analyzed_at": 1784415278,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1-3 year"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784415278,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad encouraged, 1-3 years preferred but not required",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -376947,7 +377141,7 @@
   ],
   "posted_at": 1783987200,
   "posting": {
-   "analyzed_at": 1784415183,
+   "analyzed_at": 1784415214,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 1,
@@ -376955,17 +377149,24 @@
   },
   "quality": {
    "ai_deferred_at": 1784415183,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784415214,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 63,
+  "score": 53,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "posted <7d +2",
-   "title matches your history +1"
+   "title matches your history +1",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -377649,6 +377850,15 @@
    "Annapolis Junction, MD"
   ],
   "posted_at": 1782956444,
+  "posting": {
+   "analyzed_at": 1784415294,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784415294,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -394426,6 +394636,16 @@
    "New York, NY, US"
   ],
   "posted_at": 1782950400,
+  "posting": {
+   "analyzed_at": 1784415295,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "Visa sponsorship is available"
+  },
+  "quality": {
+   "ai_deferred_at": 1784415295,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
