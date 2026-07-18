@@ -766,7 +766,9 @@
   ],
   "posted_at": 1783030358,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784416664,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -23750,8 +23752,9 @@
   "url": "https://comcast.wd5.myworkdayjobs.com/Comcast_Careers/job/PA---Philadelphia-1701-John-F-Kennedy-Blvd/Machine-Learning-Engineer-3--7882_R440810"
  },
  "0e84da25a7bffec3": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784416728,
   "company": "iFIT",
   "description": "",
   "explicit_new_grad": false,
@@ -23762,13 +23765,19 @@
    "Logan, Utah"
   ],
   "posted_at": 1782777600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416728,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
   "score": 60,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -25531,6 +25540,23 @@
    "Arlington, VA"
   ],
   "posted_at": 1782691200,
+  "posting": {
+   "analyzed_at": 1784416753,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 0,
+   "years_note": "0-5 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416753,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0+ years exp, new grad role",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -30190,6 +30216,18 @@
    "Westford, Massachusetts, United States"
   ],
   "posted_at": 1782691200,
+  "posting": {
+   "analyzed_at": 1784416761,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 0,
+   "years_note": "0-2 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784416761,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -45894,6 +45932,21 @@
    "Wright Patterson AFB, OH, US"
   ],
   "posted_at": 1782777600,
+  "posting": {
+   "analyzed_at": 1784416729,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416729,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role for 2026 grad",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -69717,13 +69770,31 @@
    "Illinois, United States"
   ],
   "posted_at": 1782864000,
+  "posting": {
+   "analyzed_at": 1784416691,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 1,
+   "years_note": "At least 1 year"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416691,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 1+ years exp",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 60,
+  "score": 50,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -124495,7 +124566,7 @@
   "url": "https://job-boards.greenhouse.io/anthropic/jobs/4935314008"
  },
  "4ec75d5f55a35fad": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Momentum Engineering",
   "description": "",
@@ -124507,13 +124578,28 @@
    "Annapolis Junction, MD"
   ],
   "posted_at": 1782713300,
+  "posting": {
+   "analyzed_at": 1784416746,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416746,
+   "live": true,
+   "new_grad": "no",
+   "reason": "7+ years required, not new grad",
+   "role_family": "swe",
+   "years_required": 7
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 60,
+  "score": 40,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: not new-grad (7+ yrs — LLM-verified) -20"
   ],
   "sector": "other",
   "source": "simplify",
@@ -127061,6 +127147,9 @@
    "Lone Tree, CO"
   ],
   "posted_at": 1782914873,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -128696,6 +128785,22 @@
    "Charlotte, NC, US"
   ],
   "posted_at": 1782864000,
+  "posting": {
+   "analyzed_at": 1784416699,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0–2 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416699,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, 0+ years exp",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -130943,13 +131048,30 @@
    "Davenport, IA"
   ],
   "posted_at": 1782857254,
+  "posting": {
+   "analyzed_at": 1784416721,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 2,
+   "years_note": "minimum of two years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416721,
+   "live": true,
+   "new_grad": "no",
+   "reason": "2+ years required",
+   "role_family": "swe",
+   "years_required": 2
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 60,
+  "score": 50,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: wants 2+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "simplify",
@@ -141003,13 +141125,19 @@
   ],
   "posted_at": 1782943654,
   "posting": {
-   "analyzed_at": 1784416653,
+   "analyzed_at": 1784416683,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784416653,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784416683,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "1+ year experience reqd",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
@@ -152702,6 +152830,15 @@
    "Atlanta, GA"
   ],
   "posted_at": 1782598083,
+  "posting": {
+   "analyzed_at": 1784416765,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784416765,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -152825,8 +152962,9 @@
   "url": "https://jobs.lever.co/wyetechllc/e9ee766a-35f4-44a0-80b3-122a74ea677d/apply"
  },
  "6106a3a8e0e26339": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784416762,
   "company": "Bayer",
   "description": "",
   "explicit_new_grad": false,
@@ -152837,13 +152975,19 @@
    "Indianola, PA"
   ],
   "posted_at": 1782691200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416762,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
   "score": 60,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -195917,7 +196061,9 @@
   ],
   "posted_at": 1782950400,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784416666,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -200511,14 +200657,20 @@
   ],
   "posted_at": 1782943822,
   "posting": {
-   "analyzed_at": 1784416651,
+   "analyzed_at": 1784416667,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "not sponsor"
   },
   "quality": {
    "ai_deferred_at": 1784416651,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784416667,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role with no experience required",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -200652,7 +200804,9 @@
   ],
   "posted_at": 1783029915,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784416665,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -275653,13 +275807,12 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 76,
+  "score": 70,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <24h +12",
-   "title matches your history +4",
-   "seniority unclear (dashboard only)"
+   "posted <72h +6",
+   "title matches your history +4"
   ],
   "sector": "other",
   "source": "workday",
@@ -276728,8 +276881,9 @@
   "url": "https://boards.greenhouse.io/andurilindustries/jobs/5115242007?gh_jid=5115242007"
  },
  "af85d61fb5da23de": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784416737,
   "company": "Northrop Grumman Australia",
   "description": "",
   "explicit_new_grad": false,
@@ -276740,13 +276894,19 @@
    "Huntsville, Alabama, United States of America"
   ],
   "posted_at": 1782777600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416737,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
   "score": 60,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -288967,7 +289127,9 @@
   ],
   "posted_at": 1782956651,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784416666,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -292216,13 +292378,30 @@
    "Hollywood, Florida, United States"
   ],
   "posted_at": 1782777600,
+  "posting": {
+   "analyzed_at": 1784416738,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1-5 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416738,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 60,
+  "score": 50,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -306662,6 +306841,17 @@
    "New York"
   ],
   "posted_at": 1782691200,
+  "posting": {
+   "analyzed_at": 1784416763,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "Requires 1 year"
+  },
+  "quality": {
+   "ai_deferred_at": 1784416763,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -332577,6 +332767,15 @@
    "Huntington Beach, CA"
   ],
   "posted_at": 1782691200,
+  "posting": {
+   "analyzed_at": 1784416764,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784416764,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -338747,13 +338946,12 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 76,
+  "score": 70,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <24h +12",
-   "title matches your history +4",
-   "seniority unclear (dashboard only)"
+   "posted <72h +6",
+   "title matches your history +4"
   ],
   "sector": "other",
   "source": "workday",
@@ -352562,6 +352760,20 @@
    "Atlanta, GA"
   ],
   "posted_at": 1782857335,
+  "posting": {
+   "analyzed_at": 1784416713,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416713,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role for new grad",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -353644,12 +353856,11 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 72,
+  "score": 66,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <24h +12",
-   "seniority unclear (dashboard only)"
+   "posted <72h +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -366845,13 +367056,19 @@
   ],
   "posted_at": 1782943730,
   "posting": {
-   "analyzed_at": 1784416652,
+   "analyzed_at": 1784416675,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784416652,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784416675,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role for new grad",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -368772,8 +368989,9 @@
   "url": "https://ngc.wd1.myworkdayjobs.com/en-US/Northrop_Grumman_External_Site/job/United-States-Virginia-Chantilly/R10206390-22026-Associate-Cyber-Software-Engineer---Chantilly-VA_R10236425"
  },
  "ea5cc7e1e31af00d": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784416745,
   "company": "State Street",
   "description": "",
   "explicit_new_grad": false,
@@ -368784,13 +369002,19 @@
    "Boston, Massachusetts, United States"
   ],
   "posted_at": 1782777600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416745,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
   "score": 60,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -393176,6 +393400,20 @@
    "Chelmsford, MA, United States of America"
   ],
   "posted_at": 1782864000,
+  "posting": {
+   "analyzed_at": 1784416706,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416706,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, New Grad Role",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
