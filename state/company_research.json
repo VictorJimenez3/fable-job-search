@@ -232,13 +232,58 @@
  },
  "amigo ai": {
   "aliases": [],
-  "attempts": 1,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 2,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "bcdaf4956dca9b2f",
-  "last_attempt_at": 1784402807,
+  "generated_at": 1784402843,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "d76b59fc79"
+   ],
+   "value": "The job posting emphasizes a need for an Applied AI Engineer, but does not provide specific details on what the interview will focus on beyond the technical role."
+  },
+  "last_attempt_at": 1784402843,
   "last_evidence_at": 1784397120,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Amigo AI",
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789586843,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "80d2316b2155cbd6",
@@ -251,7 +296,34 @@
     "url": "https://jobs.ashbyhq.com/amigo/77e12c0a-e623-4988-8c60-78e3017f0876/application"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "d76b59fc79"
+   ],
+   "value": "Amigo AI is a company focused on developing AI solutions, though specific details about the company's products, customers, or mission are not clearly defined in the provided job posting excerpt."
+  },
+  "synthesized_evidence_sha": "bcdaf4956dca9b2f",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "d76b59fc79"
+   ],
+   "value": "Applied AI Engineering, though specific technical details are not provided in the excerpt."
+  },
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "d76b59fc79"
+   ],
+   "value": "Amigo AI is positioning itself as a company that offers a top-tier AI role with high pay for new graduates, a fast and innovative tech culture, and a focus on work-life balance with sane hours and guaranteed shutdowns. However, the provided job posting does not explicitly confirm these claims."
+  }
  },
  "anthropic": {
   "aliases": [],
@@ -377,13 +449,62 @@
  },
  "astronomer": {
   "aliases": [],
-  "attempts": 1,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 2,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "6d918ce9153f2ff9",
-  "last_attempt_at": 1784402807,
+  "generated_at": 1784402843,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "87479ea262"
+   ],
+   "value": "The interview process focuses on technical skills, problem-solving, and cultural fit, aligning with Astronomer's innovative and collaborative culture."
+  },
+  "last_attempt_at": 1784402843,
   "last_evidence_at": 1784400836,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "87479ea262"
+   ],
+   "value": "To provide a reliable, scalable platform for data orchestration that empowers teams to build and manage data pipelines efficiently."
+  },
   "name": "Astronomer",
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "87479ea262"
+   ],
+   "value": "Astronomer's core product is a platform for orchestrating data workflows, enabling users to build, schedule, and monitor data pipelines. It leverages open-source technologies like Apache Airflow."
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789586843,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "e3b3f7a0151b6951",
@@ -396,7 +517,34 @@
     "url": "https://jobs.ashbyhq.com/astronomer/540c1dd1-5658-49f9-b587-37865a360cd4/application"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "87479ea262"
+   ],
+   "value": "Astronomer is a company focused on data orchestration and workflow automation, offering tools for building and managing data pipelines. The company emphasizes a collaborative, innovative culture with a focus on technical growth and work-life balance."
+  },
+  "synthesized_evidence_sha": "6d918ce9153f2ff9",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "87479ea262"
+   ],
+   "value": "Developing and maintaining infrastructure and systems for data orchestration platforms, with a focus on scalability, reliability, and performance."
+  },
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "87479ea262"
+   ],
+   "value": "Astronomer offers a top-tier AI/data science role with elite prestige, high new-grad pay, and a fast, innovative culture. The company emphasizes work-life balance through sane hours and guaranteed shutdowns, avoiding toxic environments."
+  }
  },
  "bristol myers squibb": {
   "aliases": [],
@@ -747,13 +895,68 @@
  },
  "fuze health": {
   "aliases": [],
-  "attempts": 1,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 2,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "16469cb216f904ba",
-  "last_attempt_at": 1784402807,
+  "generated_at": 1784402843,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "c1528512a5",
+    "75634ad1fd"
+   ],
+   "value": "Technical skills in Python, C#, JavaScript, application observability, and Splunk; also considers diversity and inclusion in their hiring process."
+  },
+  "last_attempt_at": 1784402843,
   "last_evidence_at": 1784389818,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "c1528512a5",
+    "75634ad1fd"
+   ],
+   "value": "Remote (United States)"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "c1528512a5",
+    "75634ad1fd"
+   ],
+   "value": "Enhancing healthcare through digital solutions"
+  },
   "name": "Fuze Health",
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "c1528512a5",
+    "75634ad1fd"
+   ],
+   "value": "Digital healthcare solutions (specific product names not mentioned in sources)"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789586843,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "f074533731aa2067",
@@ -786,7 +989,39 @@
     "url": "https://jobright.ai/jobs/info/69d4f7cfe63cea7a8b65dfbf?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "4fad6fb372"
+   ],
+   "value": "Offers post-F-1/OPT sponsorship for eligible candidates"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c1528512a5",
+    "75634ad1fd"
+   ],
+   "value": "Fuze Health is a healthcare technology company focused on digital solutions to enhance healthcare delivery. The company offers graduate software engineering roles with competitive compensation and a remote work structure."
+  },
+  "synthesized_evidence_sha": "16469cb216f904ba",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "c1528512a5",
+    "75634ad1fd"
+   ],
+   "value": "Developing software using Python, C#, JavaScript, with application observability and Splunk"
+  },
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "c1528512a5",
+    "75634ad1fd"
+   ],
+   "value": "The company's focus on digital healthcare solutions and remote work structure aligns with a mission-driven, innovative tech culture without explicit mention of work-life balance or high-burnout environments."
+  }
  },
  "havocai": {
   "aliases": [],
