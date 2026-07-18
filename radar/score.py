@@ -15,7 +15,7 @@ from .models import Job, norm
 
 # Bumped whenever gate rules change; regate() re-applies the current rules to
 # every stored job whose rules_v is older (demote/promote alert_ok in place).
-RULES_VERSION = 7
+RULES_VERSION = 8
 
 SENIOR_RE = re.compile(
     r"\b(senior|staff|principal|lead(er)?|director|manager|head of|sr\.?|vp|chief|"
@@ -28,7 +28,10 @@ MIDLEVEL_RE = re.compile(r"\b(ii|l4|engineer\s+2|level\s+2|mid([- ]level)?)\b", 
 # Deliberately narrow: "Product Engineer" / "Security Engineer" must NOT match.
 OFF_FIELD_RE = re.compile(
     r"\b(software|frontend|backend|full[- ]?stack|data\s+(scien|engineer(?:ing)?)|machine\s+learning|\bai\b|"
-    r"firmware|computer\s+vision|network\s+engineer|reinforcement\s+learning|"
+    r"firmware|computer\s+vision|network\s+engineer|reinforcement\s+learning|deep\s+learning|"
+    r"\bjava\b|gpu\s+programming|fpga|3d\s+graphics|motion\s+planning|quantitative\s+research|"
+    r"forward\s+deployed\s+engineer|founding\s+engineer|growth\s+engineer|systems?\s+research\s+engineer|"
+    r"systems?\s+triage\s+engineer|racing\s+performance\s+engineer|data\s+capture\s+engineer(?:ing)?|"
     r"digital\s+verification|radio\s+frequency|hardware\s+(design|engineer)|electronic\s+design|"
     r"electrical|electronics|mechanical|civil|aerospace|computer\s+engineering|cyber|"
     r"policy|counsel|legal|paralegal|compliance|"

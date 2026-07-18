@@ -337,7 +337,7 @@ function roleFamily(j) {
 }
 function isChemeVisible(j) {
   const t = norm(j.title);
-  const unrelated = /\b(software|frontend|backend|full stack|data (scien|engineer(ing)?)|machine learning|ai|firmware|computer vision|network engineer|reinforcement learning|digital verification|radio frequency|hardware (design|engineer)|electronic design|electrical|electronics|mechanical|civil|aerospace|sales|marketing|finance|accounting|product manager|program manager|recruit|human resources)\b/;
+  const unrelated = /\b(software|frontend|backend|full stack|data (scien|engineer(ing)?)|machine learning|ai|firmware|computer vision|network engineer|reinforcement learning|deep learning|java|gpu programming|fpga|3d graphics|motion planning|quantitative research|forward deployed engineer|founding engineer|growth engineer|systems? research engineer|systems? triage engineer|racing performance engineer|data capture engineer(ing)?|digital verification|radio frequency|hardware (design|engineer)|electronic design|electrical|electronics|mechanical|civil|aerospace|sales|marketing|finance|accounting|product manager|program manager|recruit|human resources)\b/;
   return /\b(intern(ship)?|co-?op|summer student)\b/.test(t) &&
     !unrelated.test(t) && roleFamily(j)!=="other";
 }

@@ -96,7 +96,13 @@ def test_adjacent_engineering_internships_are_dashboard_only():
 
 def test_unrelated_internships_are_rejected():
     for title in ["Software Process Engineering Intern", "AI Engineering Intern",
-                  "Sales Engineering Intern", "Marketing Intern"]:
+                  "Sales Engineering Intern", "Marketing Intern",
+                  "Java Engineer Intern", "Deep Learning Engineer Intern",
+                  "Quantitative Research Engineer Intern", "FPGA Engineer Intern",
+                  "Motion Planning Engineer Intern", "Forward Deployed Engineer Intern",
+                  "Founding Engineer Intern", "Growth Engineer Intern",
+                  "Systems Research Engineer Intern - GPU Programming",
+                  "Racing Performance Engineer Intern", "Data Capture Engineering Intern"]:
         keep, alert_ok, reasons = gates(mk(
             title, company="Dow",
             desc="Dow builds chemical processes and advanced materials."))

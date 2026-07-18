@@ -36,3 +36,10 @@ def test_platform_filters_explicit_foreign_locations_directly():
     assert "j.closed_at || !isUSLocation(j)" in html
     for evidence in ("ontario", "brockville", "SGP", "GBR"):
         assert evidence in html
+
+
+def test_platform_hides_generic_tech_internships_from_cheme_roles():
+    html = (ROOT / "webapp/index.html").read_text()
+    for evidence in ("deep learning", "java", "gpu programming",
+                     "quantitative research", "forward deployed engineer"):
+        assert evidence in html

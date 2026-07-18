@@ -705,3 +705,15 @@ posting. Unknown locations remain visible for recall. The platform applies the
 same check directly instead of depending on historical re-gate reason strings,
 so inherited records disappear immediately even when their old alert status was
 already false and therefore never received a new reason line.
+
+## 43. Distinctive tech titles are not generic ChemE engineering (2026-07-18)
+
+Final production browser verification showed that a title can contain
+`Engineer Intern` yet still be unambiguously software/computing work. Java,
+deep-learning, GPU/FPGA, quantitative-research, motion-planning, growth,
+founding, forward-deployed, systems-research/triage, and 3D-graphics titles
+were therefore reaching the ChemE board through the broad general-engineering
+fallback. Rules v8 classifies those distinctive phrases as off-field in both
+the scorer and the frontend. This is a precision correction, not a blanket
+ban on generic engineering: energy, manufacturing, materials, lab, and R&D
+internships with genuinely ambiguous titles remain available for review.

@@ -22,12 +22,15 @@ project. Scoring is deterministic and auditable; AI is optional.
   JSON feed was live-checked on 2026-07-18, and direct ATS polling starts
   from 22 ChemE-relevant employers. Workday searches use ChemE internship
   and co-op queries rather than software/new-grad terms.
-- Rules v7 require internship/co-op evidence for alerts, classify seven ChemE
+- Rules v8 require internship/co-op evidence for alerts, classify seven ChemE
   role families, reject senior/PhD/clearance/non-US/3+ year roles, keep nearby
   engineering disciplines dashboard-only, and reject unrelated internship noise.
   Explicit foreign evidence wins over ambiguous abbreviations (for example,
   `CA, Ontario` is not treated as California), while a separately listed US
   location keeps a genuine multi-location posting visible.
+  Generic tech titles such as Java, deep-learning, GPU/FPGA, quantitative,
+  growth, and forward-deployed engineering are excluded instead of being
+  mislabeled as general engineering.
 - Posting text is analyzed for minimum experience and sponsorship language.
   With `candidate.needs_sponsorship: true`, an explicit no-sponsorship posting
   is visible but cannot become an alert. Unknown remains unknown; the app does
