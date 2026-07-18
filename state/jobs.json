@@ -13065,7 +13065,7 @@
   "url": "https://jobright.ai/jobs/info/6a2b90180ad4053b108cc7dd?utm_campaign=Software%20Engineering&utm_source=1103"
  },
  "08d671d93209ac8e": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Peraton",
   "description": "",
@@ -13078,23 +13078,30 @@
   ],
   "posted_at": 1780092557,
   "posting": {
-   "analyzed_at": 1784410226,
+   "analyzed_at": 1784410289,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784410226,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784410289,
+   "live": true,
+   "new_grad": "no",
+   "reason": "4 years experience required instead of degree",
+   "role_family": "swe",
+   "years_required": 4
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 76,
+  "score": 56,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: not new-grad (4+ yrs — LLM-verified) -20"
   ],
   "sector": "other",
   "source": "simplify",
@@ -32735,7 +32742,9 @@
   ],
   "posted_at": 1780449039,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784410243,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -33828,6 +33837,15 @@
    "Denver, CO, United States"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784410350,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784410350,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -51249,6 +51267,20 @@
    "Burlington, MA"
   ],
   "posted_at": 1783555200,
+  "posting": {
+   "analyzed_at": 1784410335,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410335,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New Grad position for 2026 class.",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -67504,8 +67536,9 @@
   "url": "https://job-boards.greenhouse.io/bgeinc/jobs/5197203008"
  },
  "2c0036e85e1d57fb": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784410358,
   "company": "RFA Engineering",
   "description": "",
   "explicit_new_grad": true,
@@ -67516,6 +67549,11 @@
    "Fargo, North Dakota, United States"
   ],
   "posted_at": 1782864000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410358,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -67524,7 +67562,8 @@
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "title matches your history +3"
+   "title matches your history +3",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -72381,14 +72420,20 @@
   ],
   "posted_at": 1780438068,
   "posting": {
-   "analyzed_at": 1784410214,
+   "analyzed_at": 1784410246,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "does not provide sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784410214,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784410246,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "PhD graduate, new grad role",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -77232,13 +77277,19 @@
   ],
   "posted_at": 1780438067,
   "posting": {
-   "analyzed_at": 1784410220,
+   "analyzed_at": 1784410268,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784410220,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784410268,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Graduate role for 2026, no experience required",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -80573,6 +80624,17 @@
    "Andover, MA"
   ],
   "posted_at": 1782864000,
+  "posting": {
+   "analyzed_at": 1784410359,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0 to 3 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784410359,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -84196,8 +84258,9 @@
   "url": "https://job-boards.greenhouse.io/peregrinetechnologies/jobs/4685063005"
  },
  "3702e177ec0e6d7f": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784410360,
   "company": "Universal Instruments Corporation",
   "description": "",
   "explicit_new_grad": true,
@@ -84208,6 +84271,11 @@
    "Conklin, NY, US"
   ],
   "posted_at": 1782864000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410360,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -84216,7 +84284,8 @@
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "title matches your history +3"
+   "title matches your history +3",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -115256,24 +115325,31 @@
   ],
   "posted_at": 1779487816,
   "posting": {
-   "analyzed_at": 1784410228,
+   "analyzed_at": 1784410304,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "must be a U.S. citizen"
   },
   "quality": {
    "ai_deferred_at": 1784410228,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784410304,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 2+ years exp or degree.",
+   "role_family": "swe",
+   "years_required": 2
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 76,
+  "score": 66,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:big_tech +10",
-   "you've engaged with SpaceX +6"
+   "you've engaged with SpaceX +6",
+   "quality: wants 2+ yrs (LLM-verified) -10"
   ],
   "sector": "big_tech",
   "source": "simplify",
@@ -130768,13 +130844,19 @@
   ],
   "posted_at": 1780438068,
   "posting": {
-   "analyzed_at": 1784410217,
+   "analyzed_at": 1784410258,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784410217,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784410258,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "PhD graduate position",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -132850,13 +132932,19 @@
   ],
   "posted_at": 1780438065,
   "posting": {
-   "analyzed_at": 1784410223,
+   "analyzed_at": 1784410279,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784410223,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784410279,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Graduate position for 2026 class",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -134480,6 +134568,15 @@
    "Chicago (Headquarters), United States"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784410351,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784410351,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -165980,7 +166077,7 @@
   ],
   "posted_at": 1783641600,
   "posting": {
-   "analyzed_at": 1784410233,
+   "analyzed_at": 1784410328,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship",
@@ -165989,18 +166086,25 @@
   },
   "quality": {
    "ai_deferred_at": 1784410233,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784410328,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 75,
+  "score": 65,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:big_tech +10",
    "you've engaged with TikTok +2",
-   "title matches your history +3"
+   "title matches your history +3",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "big_tech",
   "source": "jobright",
@@ -208696,6 +208800,15 @@
    "Chicago, IL"
   ],
   "posted_at": 1782943968,
+  "posting": {
+   "analyzed_at": 1784410356,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784410356,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -219297,6 +219410,9 @@
    "NYC"
   ],
   "posted_at": 1783328994,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -273095,6 +273211,18 @@
    "Burlington, MA"
   ],
   "posted_at": 1782963450,
+  "posting": {
+   "analyzed_at": 1784410355,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "citizenship is required",
+   "years_min": 0,
+   "years_note": "00 years of experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784410355,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -296278,6 +296406,21 @@
    "NYC"
   ],
   "posted_at": 1783549628,
+  "posting": {
+   "analyzed_at": 1784410342,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "we sponsor"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410342,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "entry-level research role for new grads",
+   "role_family": "ml",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -314170,6 +314313,16 @@
    "New York, NY"
   ],
   "posted_at": 1783382400,
+  "posting": {
+   "analyzed_at": 1784410352,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "ai_deferred_at": 1784410352,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -317513,6 +317666,18 @@
    "San Francisco"
   ],
   "posted_at": 1783209600,
+  "posting": {
+   "analyzed_at": 1784410354,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 1,
+   "years_note": "1 year of experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784410354,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -345803,14 +345968,20 @@
   ],
   "posted_at": 1783814400,
   "posting": {
-   "analyzed_at": 1784410232,
+   "analyzed_at": 1784410320,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
    "ai_deferred_at": 1784410232,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784410320,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role for new grads",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -354673,14 +354844,20 @@
   ],
   "posted_at": 1783987200,
   "posting": {
-   "analyzed_at": 1784410230,
+   "analyzed_at": 1784410312,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
    "ai_deferred_at": 1784410230,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784410312,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level, no experience required",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -355416,6 +355593,15 @@
    "Austin, TX"
   ],
   "posted_at": 1782943968,
+  "posting": {
+   "analyzed_at": 1784410357,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784410357,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -375042,7 +375228,7 @@
   ],
   "posted_at": 1779890924,
   "posting": {
-   "analyzed_at": 1784410227,
+   "analyzed_at": 1784410296,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 1,
@@ -375050,17 +375236,24 @@
   },
   "quality": {
    "ai_deferred_at": 1784410227,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784410296,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years experience required",
+   "role_family": "data",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 76,
+  "score": 66,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "title matches your history +6",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "simplify",
@@ -383960,6 +384153,18 @@
    "Palo Alto, CA, United States"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784410351,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 0,
+   "years_note": "0-2+ years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784410351,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
