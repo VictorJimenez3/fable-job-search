@@ -1,12 +1,12 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-18 21:52 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
+_Last run: **2026-07-18 21:54 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
 | Score | Age | Company | Role | Location | Sector | Src |
 |---|---|---|---|---|---|---|
-| 100 🔥 | 11h | CVS Health | [Analyst, Patient Relations](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/CT---New-Haven/Analyst--Patient-Relations_R0978633) | CT - New Haven | healthtech | workday |
+| 100 🔥 | 12h | CVS Health | [Analyst, Patient Relations](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/CT---New-Haven/Analyst--Patient-Relations_R0978633) | CT - New Haven | healthtech | workday |
 | 100 🔥 | 15h | CVS Health | [Inside Sales Development Associate (Cincinnati, OH)](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/OH---Cincinnati/Inside-Sales-Development-Associate--Cincinnati--OH-_R0979563) | OH - Cincinnati | healthtech | workday |
 | 100 🔥 | 1d | Oscar Health | [Associate, Actuarial](http://www.hioscar.com/careers/8069495?gh_jid=8069495) | Remote | healthtech | greenhouse |
 | 100 🔥 | 1d | NVIDIA | [Systems Software Engineer New Grad - Accelerated Kubernetes Performanc](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Systems-Software-Engineer--Accelerated-Kubernetes-Performance-and-Scale---New-College-Grad-2026_JR2020957) | Seattle, WA | big_tech | simplify |

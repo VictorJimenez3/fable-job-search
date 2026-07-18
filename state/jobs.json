@@ -414,14 +414,20 @@
   ],
   "posted_at": 1783900800,
   "posting": {
-   "analyzed_at": 1784411543,
+   "analyzed_at": 1784411585,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
    "ai_deferred_at": 1784411543,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784411585,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, new grad role",
+   "role_family": "data",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -15161,7 +15167,7 @@
   ],
   "posted_at": 1783900800,
   "posting": {
-   "analyzed_at": 1784411544,
+   "analyzed_at": 1784411593,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship",
@@ -15170,18 +15176,25 @@
   },
   "quality": {
    "ai_deferred_at": 1784411544,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784411593,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 70,
+  "score": 60,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "posted <7d +2",
    "remote +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -25704,7 +25717,7 @@
   ],
   "posted_at": 1783900800,
   "posting": {
-   "analyzed_at": 1784411545,
+   "analyzed_at": 1784411601,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -25713,17 +25726,24 @@
   },
   "quality": {
    "ai_deferred_at": 1784411545,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784411601,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years experience required",
+   "role_family": "data",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 70,
+  "score": 60,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -30973,6 +30993,18 @@
    "Hempstead, NY, United States"
   ],
   "posted_at": 1783814400,
+  "posting": {
+   "analyzed_at": 1784411653,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 0,
+   "years_note": "0-1 year"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411653,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -43545,8 +43577,9 @@
   "url": "https://jobright.ai/jobs/info/6a4884d6c2d11a6a466749fd?utm_campaign=Data%20Analysis&utm_source=1103"
  },
  "1c1cc6be0d1bdd19": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784411608,
   "company": "Mapfre",
   "description": "",
   "explicit_new_grad": false,
@@ -43557,6 +43590,11 @@
    "Webster, MA, United States"
   ],
   "posted_at": 1783900800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411608,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -43565,7 +43603,8 @@
    "base 40",
    "role:data_science +22",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -72481,6 +72520,21 @@
    "Buffalo - Fountain Plaza, United States of America"
   ],
   "posted_at": 1783900800,
+  "posting": {
+   "analyzed_at": 1784411609,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411609,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, New Grad Role",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -77539,8 +77593,9 @@
   "url": "https://job-boards.greenhouse.io/drweng/jobs/8066975"
  },
  "32107385fbf76fa5": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784411617,
   "company": "Ames Construction",
   "description": "",
   "explicit_new_grad": false,
@@ -77551,6 +77606,11 @@
    "Burnsville, MN, United States"
   ],
   "posted_at": 1783900800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411617,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -77559,7 +77619,8 @@
    "base 40",
    "role:data_science +22",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -82472,8 +82533,9 @@
   "url": "https://jobs.lever.co/mistral/f76907fd-428a-4824-a1cf-8013974fde29"
  },
  "35a01f26cdc56f45": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784411618,
   "company": "Lansing Building Products",
   "description": "",
   "explicit_new_grad": false,
@@ -82484,6 +82546,11 @@
    "Richmond, VA, United States"
   ],
   "posted_at": 1783900800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411618,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -82492,7 +82559,8 @@
    "base 40",
    "role:data_science +22",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -127054,15 +127122,33 @@
    "Annapolis Junction, MD, United States"
   ],
   "posted_at": 1783900800,
+  "posting": {
+   "analyzed_at": 1784411619,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 1,
+   "years_note": "1 year of experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411619,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "data",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 70,
+  "score": 60,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -145489,6 +145575,17 @@
    "United States"
   ],
   "posted_at": 1783728000,
+  "posting": {
+   "analyzed_at": 1784411655,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1-5 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411655,
+   "attempts": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -192081,6 +192178,18 @@
    "White Plains, NY, United States"
   ],
   "posted_at": 1783814400,
+  "posting": {
+   "analyzed_at": 1784411654,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 1,
+   "years_note": "1-3 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411654,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -199142,8 +199251,9 @@
   "url": "https://jobs.lever.co/getwingapp/9204f540-e85e-4f0e-861b-5a56866ab316"
  },
  "81d283e35040ffaa": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784411658,
   "company": "Michael Baker International",
   "description": "",
   "explicit_new_grad": false,
@@ -199154,6 +199264,11 @@
    "Remote in USA"
   ],
   "posted_at": 1783634972,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411658,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -199162,7 +199277,8 @@
    "base 40",
    "role:data_science +22",
    "remote +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "simplify",
@@ -199578,8 +199694,9 @@
   "url": "https://boards.greenhouse.io/andurilindustries/jobs/4792948007?gh_jid=4792948007"
  },
  "8226a9a73994e867": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784411626,
   "company": "General Dynamics Information Technology",
   "description": "",
   "explicit_new_grad": false,
@@ -199590,6 +199707,11 @@
    "USA FL Tampa, United States of America"
   ],
   "posted_at": 1783900800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411626,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -199598,7 +199720,8 @@
    "base 40",
    "role:data_science +22",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -226913,6 +227036,15 @@
    "United States"
   ],
   "posted_at": 1783728000,
+  "posting": {
+   "analyzed_at": 1784411656,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411656,
+   "attempts": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -241392,6 +241524,21 @@
    "New York, United States"
   ],
   "posted_at": 1783900800,
+  "posting": {
+   "analyzed_at": 1784411627,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411627,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, new grad",
+   "role_family": "data",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -244404,6 +244551,23 @@
    "New York, NY, United States"
   ],
   "posted_at": 1783900800,
+  "posting": {
+   "analyzed_at": 1784411635,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 0,
+   "years_note": "0-3 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411635,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0+ exp, new grad role.",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -245838,6 +246002,22 @@
    "Charlotte, NC"
   ],
   "posted_at": 1783900800,
+  "posting": {
+   "analyzed_at": 1784411642,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1-3 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411642,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "1-3 years experience, new grad eligible",
+   "role_family": "data",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -267639,14 +267819,20 @@
   ],
   "posted_at": 1783987200,
   "posting": {
-   "analyzed_at": 1784411537,
+   "analyzed_at": 1784411556,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "unable to sponsor"
   },
   "quality": {
    "ai_deferred_at": 1784411537,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784411556,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad program, no experience required",
+   "role_family": "data",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -272501,6 +272687,18 @@
    "Liverpool, NY, United States"
   ],
   "posted_at": 1783900800,
+  "posting": {
+   "analyzed_at": 1784411650,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 1,
+   "years_note": "minimum 1 year"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411650,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -272992,6 +273190,17 @@
    "New York, NY, United States"
   ],
   "posted_at": 1783900800,
+  "posting": {
+   "analyzed_at": 1784411651,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1-3 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411651,
+   "attempts": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -336320,8 +336529,9 @@
   "url": "https://jobs.lever.co/sprymethods/b6d9c752-d7a4-47be-a391-5bec2f468a4a"
  },
  "db5ca4e69e1585a9": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784411652,
   "company": "Morgan Stanley",
   "description": "",
   "explicit_new_grad": false,
@@ -336332,6 +336542,11 @@
    "Dallas, TX, United States"
   ],
   "posted_at": 1783900800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411652,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -336340,7 +336555,8 @@
    "base 40",
    "role:data_science +22",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -354268,7 +354484,7 @@
   ],
   "posted_at": 1783987200,
   "posting": {
-   "analyzed_at": 1784411540,
+   "analyzed_at": 1784411563,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 1,
@@ -354276,17 +354492,24 @@
   },
   "quality": {
    "ai_deferred_at": 1784411540,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784411563,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "data",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 70,
+  "score": 60,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -357173,7 +357396,7 @@
   "url": "https://jobs.ashbyhq.com/openai/ca7e4019-bf93-42fd-8f15-fac59c6e237c"
  },
  "e8904f5ab3cd5d44": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Sidley Austin LLP",
   "description": "",
@@ -357186,24 +357409,31 @@
   ],
   "posted_at": 1783987200,
   "posting": {
-   "analyzed_at": 1784411541,
+   "analyzed_at": 1784411571,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784411541,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784411571,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level role for new grad",
+   "role_family": "non-technical",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 70,
+  "score": 45,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: non-technical role (Entry level role for new grad — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "jobright",
@@ -389646,7 +389876,7 @@
   ],
   "posted_at": 1783987200,
   "posting": {
-   "analyzed_at": 1784411543,
+   "analyzed_at": 1784411578,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "cannot offer sponsor",
@@ -389655,17 +389885,24 @@
   },
   "quality": {
    "ai_deferred_at": 1784411543,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784411578,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 1+ year experience.",
+   "role_family": "data",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 70,
+  "score": 60,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "simplify",
@@ -390140,7 +390377,7 @@
   "url": "https://jobright.ai/jobs/info/6a566a70efb06a45240d5ba1?utm_campaign=Software%20Engineering&utm_source=1103"
  },
  "fdb65f94a2648fca": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Lockheed Martin",
   "description": "",
@@ -390152,6 +390389,17 @@
    "Colorado Springs, CO, United States"
   ],
   "posted_at": 1783728000,
+  "posting": {
+   "analyzed_at": 1784411657,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 5,
+   "years_note": "Minimum of five years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411657,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -390160,7 +390408,8 @@
    "base 40",
    "role:swe +20",
    "title matches your history +6",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "posting: wants 5+ yrs (dashboard only)"
   ],
   "sector": "other",
   "source": "jobright",
