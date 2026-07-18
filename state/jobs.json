@@ -413,6 +413,16 @@
    "Alexandria, VA 22301, USA"
   ],
   "posted_at": 1783900800,
+  "posting": {
+   "analyzed_at": 1784411543,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411543,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -14331,7 +14341,7 @@
   "url": "https://boards.greenhouse.io/spacex/jobs/8621649002"
  },
  "0958e56fafcfd3e7": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Boston Housing Authority",
   "description": "",
@@ -14343,15 +14353,31 @@
    "Boston, MA, United States"
   ],
   "posted_at": 1783987200,
+  "posting": {
+   "analyzed_at": 1784411491,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411491,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required, non-tech role",
+   "role_family": "non-technical",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 70,
+  "score": 35,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10",
+   "quality: non-technical role (1+ years exp required, non-tech role — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "jobright",
@@ -15134,6 +15160,18 @@
    "United States"
   ],
   "posted_at": 1783900800,
+  "posting": {
+   "analyzed_at": 1784411544,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 1,
+   "years_note": "minimum of 1 year"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411544,
+   "attempts": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -18111,7 +18149,7 @@
   ],
   "posted_at": 1782426038,
   "posting": {
-   "analyzed_at": 1784411422,
+   "analyzed_at": 1784411457,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 1,
@@ -18119,7 +18157,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784411422,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784411457,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "1-3 years experience (internships/projects)",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
@@ -25659,6 +25703,18 @@
    "Camp Lejeune, NC, United States"
   ],
   "posted_at": 1783900800,
+  "posting": {
+   "analyzed_at": 1784411545,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 1,
+   "years_note": "minimum of 1 year"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411545,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -31921,14 +31977,20 @@
   ],
   "posted_at": 1781302293,
   "posting": {
-   "analyzed_at": 1784411424,
+   "analyzed_at": 1784411466,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "citizenship is required"
   },
   "quality": {
    "ai_deferred_at": 1784411424,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784411466,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role for new grads with <2 years experience, requires STEM degree and security clearance.",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -38109,8 +38171,9 @@
   "url": "https://jobs.lever.co/appen/dc35af94-a2a7-4392-95bf-efc002263209"
  },
  "18790345572fb044": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784411498,
   "company": "The University of North Carolina at Chapel Hill",
   "description": "",
   "explicit_new_grad": false,
@@ -38121,6 +38184,11 @@
    "Chapel Hill, NC, United States"
   ],
   "posted_at": 1783987200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411498,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -38129,7 +38197,8 @@
    "base 40",
    "role:data_science +22",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -38912,6 +38981,20 @@
    "Lisle, IL, United States"
   ],
   "posted_at": 1783987200,
+  "posting": {
+   "analyzed_at": 1784411499,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411499,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, no experience required",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -42433,13 +42516,19 @@
   ],
   "posted_at": 1782777600,
   "posting": {
-   "analyzed_at": 1784411418,
+   "analyzed_at": 1784411441,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784411418,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784411441,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, no experience required.",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -167095,7 +167184,7 @@
   "url": "https://jobs.ashbyhq.com/rivet/f9b0e709-9d66-426b-92ab-19b2635ee617"
  },
  "6c5d2b04e924897d": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "HR&A Advisors",
   "description": "",
@@ -167107,15 +167196,33 @@
    "Los Angeles, CA, United States"
   ],
   "posted_at": 1783987200,
+  "posting": {
+   "analyzed_at": 1784411507,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 0,
+   "years_note": "0-2 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411507,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level, 0+ years exp",
+   "role_family": "non-technical",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 70,
+  "score": 45,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: non-technical role (Entry-level, 0+ years exp — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "jobright",
@@ -180354,7 +180461,9 @@
   ],
   "posted_at": 1780351687,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784411482,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -204945,15 +205054,32 @@
    "Henrietta, NY, United States"
   ],
   "posted_at": 1783987200,
+  "posting": {
+   "analyzed_at": 1784411515,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0 to 1+ years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411515,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "data",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 70,
+  "score": 60,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -237042,15 +237168,30 @@
    "Foxborough, MA, United States"
   ],
   "posted_at": 1783987200,
+  "posting": {
+   "analyzed_at": 1784411522,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411522,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required.",
+   "role_family": "data",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 70,
+  "score": 60,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -251200,7 +251341,9 @@
   ],
   "posted_at": 1781791784,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784411465,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -265982,6 +266125,20 @@
    "Alexandria, VA"
   ],
   "posted_at": 1783987200,
+  "posting": {
+   "analyzed_at": 1784411530,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411530,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level eDiscovery data tasks",
+   "role_family": "data",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -267481,6 +267638,16 @@
    "Sunnyvale, CA, United States"
   ],
   "posted_at": 1783987200,
+  "posting": {
+   "analyzed_at": 1784411537,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "unable to sponsor"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411537,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -315693,8 +315860,9 @@
   "url": "https://blackrock.wd1.myworkdayjobs.com/en-US/BlackRock_Early_Careers_Program/job/Atlanta-GA/XMLNAME-2026-Analyst-Program--exc-NY-_R255687"
  },
  "cddb6ec0b9ba9827": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784411538,
   "company": "RAPP",
   "description": "",
   "explicit_new_grad": false,
@@ -315705,6 +315873,11 @@
    "New York, NY, United States"
   ],
   "posted_at": 1783987200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411538,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -315713,7 +315886,8 @@
    "base 40",
    "role:data_science +22",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -317992,13 +318166,19 @@
   ],
   "posted_at": 1782482707,
   "posting": {
-   "analyzed_at": 1784411420,
+   "analyzed_at": 1784411450,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784411420,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784411450,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role, AI focus, no experience required",
+   "role_family": "ml",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -329832,8 +330012,9 @@
   "url": "https://bah.wd1.myworkdayjobs.com/en-US/bah_jobs/job/McLean-VA/Moveworks---ServiceNow-AI-Technologist_R0244557"
  },
  "d73c0f74c3926de4": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784411539,
   "company": "Werfen",
   "description": "",
   "explicit_new_grad": false,
@@ -329844,6 +330025,11 @@
    "Bedford, MA, United States"
   ],
   "posted_at": 1783987200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411539,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -329852,7 +330038,8 @@
    "base 40",
    "role:data_science +22",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -354080,6 +354267,17 @@
    "Charlottesville, VA, United States"
   ],
   "posted_at": 1783987200,
+  "posting": {
+   "analyzed_at": 1784411540,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1-4+ years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411540,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -354972,8 +355170,9 @@
   "url": "https://jobs.smartrecruiters.com/UnitedFranchiseGroup/744000131932527"
  },
  "e765d0662361f5f8": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784411541,
   "company": "SMARTFLOW TECHNOLOGIES LTD",
   "description": "",
   "explicit_new_grad": false,
@@ -354984,6 +355183,11 @@
    "Sanford, NC, United States"
   ],
   "posted_at": 1783987200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411541,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -354992,7 +355196,8 @@
    "base 40",
    "role:data_science +22",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -356980,6 +357185,16 @@
    "Chicago, United States of America"
   ],
   "posted_at": 1783987200,
+  "posting": {
+   "analyzed_at": 1784411541,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411541,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -382845,7 +383060,7 @@
   ],
   "posted_at": 1780610985,
   "posting": {
-   "analyzed_at": 1784411429,
+   "analyzed_at": 1784411474,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 1,
@@ -382853,7 +383068,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784411429,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784411474,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "1-5 years experience, new grad eligible",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
@@ -389424,6 +389645,18 @@
    "Oklahoma City, OK"
   ],
   "posted_at": 1783987200,
+  "posting": {
+   "analyzed_at": 1784411543,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "cannot offer sponsor",
+   "years_min": 1,
+   "years_note": "at least one year"
+  },
+  "quality": {
+   "ai_deferred_at": 1784411543,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -389657,15 +389890,32 @@
    "Boston, MA, United States"
   ],
   "posted_at": 1784073600,
+  "posting": {
+   "analyzed_at": 1784411483,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1-3 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411483,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "data",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 70,
+  "score": 60,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
