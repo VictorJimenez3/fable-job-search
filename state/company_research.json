@@ -649,13 +649,64 @@
  },
  "brunswick corporation": {
   "aliases": [],
-  "attempts": 2,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "0a09483941"
+   ],
+   "value": "Global marine leader"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "a4762f72bffa4d38",
-  "last_attempt_at": 1784403262,
+  "generated_at": 1784403316,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "0a09483941"
+   ],
+   "value": "Top Applicants Must-Have Skills: C, C++, Python, Socket, CAN, Embedded Linux; Optimizing Resume and LinkedIn Referrals for Higher Response Rates."
+  },
+  "last_attempt_at": 1784403316,
   "last_evidence_at": 1784400836,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "0a09483941"
+   ],
+   "value": "Oshkosh, WI (Hybrid)"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "0a09483941"
+   ],
+   "value": "Innovating next-generation technologies"
+  },
   "name": "Brunswick Corporation",
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789587316,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "fced5026a2aaf516",
@@ -668,7 +719,34 @@
     "url": "https://jobright.ai/jobs/info/6a25615c757ade085b6b19d1?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "0a09483941"
+   ],
+   "value": "Brunswick Corporation is a global marine leader focused on innovating next-generation technologies, offering entry-level engineering roles with competitive compensation and a hybrid work model."
+  },
+  "synthesized_evidence_sha": "a4762f72bffa4d38",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "0a09483941"
+   ],
+   "value": "Embedded Software Engineering using C, C++, Python, Socket, CAN, Embedded Linux"
+  },
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "0a09483941"
+   ],
+   "value": "Brunswick Corporation offers a top-tier AI/data science role with elite prestige and high new-grad pay, balancing innovative tech culture over bureaucracy, and emphasizes mission-driven work with respect for work-life balance through sane hours and guaranteed shutdowns."
+  }
  },
  "cadence": {
   "aliases": [],
@@ -1103,13 +1181,62 @@
  },
  "havocai": {
   "aliases": [],
-  "attempts": 2,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 3,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "a7f4d01d09"
+   ],
+   "value": "Military and commercial-grade autonomous systems customers"
+  },
+  "error": "",
   "evidence_sha": "d56437593ab5341e",
-  "last_attempt_at": 1784403262,
+  "generated_at": 1784403316,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "a7f4d01d09"
+   ],
+   "value": "Technical skills in Python, JavaScript, TypeScript, SQL, and APIs for developing business analytics solutions."
+  },
+  "last_attempt_at": 1784403316,
   "last_evidence_at": 1784400836,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "a7f4d01d09"
+   ],
+   "value": "San Diego, CA"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "HavocAI",
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789587316,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "56fd2f1bc6472220",
@@ -1122,7 +1249,34 @@
     "url": "https://jobright.ai/jobs/info/6a4c6564971cd25b06f9a716?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a7f4d01d09"
+   ],
+   "value": "HavocAI is a company focused on autonomous systems for military and commercial applications, offering a software engineering role with competitive compensation and a hybrid work model."
+  },
+  "synthesized_evidence_sha": "d56437593ab5341e",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "a7f4d01d09"
+   ],
+   "value": "Developing all-domain collaborative autonomy systems using Python, JavaScript, TypeScript, SQL, and APIs"
+  },
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "a7f4d01d09"
+   ],
+   "value": "A top-tier AI/data science role with elite prestige, high new-grad pay ($100K-$125K), and a fast, innovative tech culture focused on autonomous systems without bureaucracy."
+  }
  },
  "intuit": {
   "aliases": [],
@@ -2228,7 +2382,7 @@
  },
  "openai": {
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -2243,7 +2397,7 @@
    ],
    "value": "Digital Natives, startups, and AWS partners."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "32ed443013c5b518",
   "generated_at": 1784389190,
   "generator": {
@@ -2260,7 +2414,7 @@
    ],
    "value": "Focus on demonstrating AI deployment expertise, startup and digital native customer engagement, and rapid technical learning to match the fast, innovative culture."
   },
-  "last_attempt_at": 1784389190,
+  "last_attempt_at": 1784403316,
   "last_evidence_at": 1784400836,
   "locations": {
    "confidence": "unknown",
