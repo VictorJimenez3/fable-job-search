@@ -3971,8 +3971,9 @@
   "url": "https://job-boards.greenhouse.io/scaleai/jobs/4663481005"
  },
  "02e6036ab1ad70ab": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784410988,
   "company": "Citadel",
   "description": "",
   "explicit_new_grad": false,
@@ -3983,6 +3984,11 @@
    "New York, United States"
   ],
   "posted_at": 1783209600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410988,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -3990,7 +3996,8 @@
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -8147,8 +8154,9 @@
   "url": "https://boards.greenhouse.io/andurilindustries/jobs/5179736007?gh_jid=5179736007"
  },
  "05e4123795cf5fdd": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784410970,
   "company": "Symmons Industries",
   "description": "",
   "explicit_new_grad": true,
@@ -8159,6 +8167,11 @@
    "Braintree, MA, US"
   ],
   "posted_at": 1783296000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410970,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -8166,7 +8179,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "new-grad title +12"
+   "new-grad title +12",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -15726,7 +15740,9 @@
   ],
   "posted_at": 1783635064,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784410933,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -55563,7 +55579,9 @@
   ],
   "posted_at": 1783415513,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784410943,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -60924,14 +60942,32 @@
    "San Francisco, CA, United States"
   ],
   "posted_at": 1783382400,
+  "posting": {
+   "analyzed_at": 1784410944,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 1,
+   "years_note": "1–3 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410944,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required.",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 72,
+  "score": 62,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "new-grad title +12"
+   "new-grad title +12",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -92102,8 +92138,9 @@
   "url": "https://jobs.ashbyhq.com/hadrian-automation/65c6290c-0686-4a4e-964e-f7651322db4a"
  },
  "3c040a18ccf057f0": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784410952,
   "company": "Jamf",
   "description": "",
   "explicit_new_grad": true,
@@ -92114,6 +92151,11 @@
    "Eau Claire, WI"
   ],
   "posted_at": 1783382400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410952,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -92121,7 +92163,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "new-grad title +12"
+   "new-grad title +12",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -109645,6 +109688,22 @@
    "Indianapolis, IN, United States"
   ],
   "posted_at": 1783382400,
+  "posting": {
+   "analyzed_at": 1784410953,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0-2+ years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410953,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, 0+ years exp",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -116573,6 +116632,20 @@
    "Sunnyvale, CA"
   ],
   "posted_at": 1783202823,
+  "posting": {
+   "analyzed_at": 1784411006,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411006,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Data labeling for AI, entry-level",
+   "role_family": "data",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -129393,14 +129466,32 @@
    "Mountain View, California"
   ],
   "posted_at": 1783296000,
+  "posting": {
+   "analyzed_at": 1784410971,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 1,
+   "years_note": "1–2 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410971,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 72,
+  "score": 62,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "new-grad title +12"
+   "new-grad title +12",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -172757,8 +172848,9 @@
   "url": "https://boards.greenhouse.io/andurilindustries/jobs/4673956007?gh_jid=4673956007"
  },
  "70c834eec29080c9": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784410979,
   "company": "Raytheon",
   "description": "",
   "explicit_new_grad": true,
@@ -172769,6 +172861,11 @@
    "Fullerton, California, United States"
   ],
   "posted_at": 1783296000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410979,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -172777,7 +172874,8 @@
    "base 40",
    "role:swe +20",
    "new-grad title +8",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -174643,8 +174741,9 @@
   "url": "https://jobright.ai/jobs/info/6a56a689f7517b519ad57478?utm_campaign=Software%20Engineering&utm_source=1103"
  },
  "7217ce8c193edd08": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784410960,
   "company": "Collins Aerospace",
   "description": "",
   "explicit_new_grad": true,
@@ -174655,6 +174754,11 @@
    "Fullerton, CA, United States"
   ],
   "posted_at": 1783382400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410960,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -174663,7 +174767,8 @@
    "base 40",
    "role:swe +20",
    "new-grad title +8",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -206552,6 +206657,20 @@
    "Sunnyvale, CA"
   ],
   "posted_at": 1783202823,
+  "posting": {
+   "analyzed_at": 1784411013,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784411013,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level data labeling role",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -219469,7 +219588,9 @@
   ],
   "posted_at": 1783473024,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784410934,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -223163,7 +223284,9 @@
   ],
   "posted_at": 1783462726,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784410942,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -228719,6 +228842,20 @@
    "Sunnyvale, CA"
   ],
   "posted_at": 1783202824,
+  "posting": {
+   "analyzed_at": 1784410990,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410990,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level data labeling role",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -248944,6 +249081,22 @@
    "Indianapolis, IN, United States"
   ],
   "posted_at": 1783382400,
+  "posting": {
+   "analyzed_at": 1784410961,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0-2+ years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410961,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, 0+ years exp",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -260747,8 +260900,9 @@
   "url": "https://jobs.lever.co/weloglobal/0c05faa7-dbad-4d4b-9d13-2b628cef25c7"
  },
  "aa830d6a94d61ff8": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784410980,
   "company": "Amentum",
   "description": "",
   "explicit_new_grad": true,
@@ -260759,6 +260913,11 @@
    "US-VA-Dahlgren, United States of America"
   ],
   "posted_at": 1783296000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410980,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -260766,7 +260925,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "new-grad title +12"
+   "new-grad title +12",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -266885,6 +267045,20 @@
    "Sunnyvale, CA"
   ],
   "posted_at": 1783202824,
+  "posting": {
+   "analyzed_at": 1784410998,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410998,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level data labeling role for new grads.",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -274348,7 +274522,9 @@
   ],
   "posted_at": 1783559366,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784410934,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -287337,6 +287513,22 @@
    "Plymouth, MN, United States"
   ],
   "posted_at": 1783296000,
+  "posting": {
+   "analyzed_at": 1784410980,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0-2+ years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410980,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, 0+ years exp",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -310553,11 +310745,10 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 74,
+  "score": 72,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
-   "posted <7d +2",
    "title matches your history +6"
   ],
   "sector": "other",
@@ -317387,8 +317578,9 @@
   "url": "https://jobs.ashbyhq.com/elevenlabs/f2ae7fe0-67da-48ae-b126-b942899ec7e9"
  },
  "cf454705c963e954": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784410989,
   "company": "Affirm",
   "description": "",
   "explicit_new_grad": true,
@@ -317399,6 +317591,11 @@
    "San Francisco, California, United States"
   ],
   "posted_at": 1783209600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410989,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -317406,7 +317603,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "new-grad title +12"
+   "new-grad title +12",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -322307,13 +322505,19 @@
   ],
   "posted_at": 1783468800,
   "posting": {
-   "analyzed_at": 1784410922,
+   "analyzed_at": 1784410935,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784410922,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784410935,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New Grad position",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -331872,6 +332076,9 @@
    "Dahlgren, VA"
   ],
   "posted_at": 1783376017,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -367341,8 +367548,9 @@
   "url": "https://careers.duolingo.com/jobs/8628670002?gh_jid=8628670002"
  },
  "f00cbb055e94fb3e": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784410968,
   "company": "Jamf",
   "description": "",
   "explicit_new_grad": true,
@@ -367353,6 +367561,11 @@
    "Minneapolis, MN"
   ],
   "posted_at": 1783382400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784410968,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -367360,7 +367573,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "new-grad title +12"
+   "new-grad title +12",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -369124,6 +369338,9 @@
    "SF"
   ],
   "posted_at": 1783415417,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
