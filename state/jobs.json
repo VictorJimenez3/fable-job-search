@@ -1919,13 +1919,19 @@
   ],
   "posted_at": 1783981823,
   "posting": {
-   "analyzed_at": 1784414407,
+   "analyzed_at": 1784414446,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784414407,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414446,
+   "live": true,
+   "new_grad": "unclear",
+   "reason": "No clear experience level mentioned.",
+   "role_family": "other-technical",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -22871,6 +22877,15 @@
    "Columbus, OH, United States"
   ],
   "posted_at": 1783641600,
+  "posting": {
+   "analyzed_at": 1784414515,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414515,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -25385,6 +25400,16 @@
    "Palmdale, CA"
   ],
   "posted_at": 1783641600,
+  "posting": {
+   "analyzed_at": 1784414516,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "Citizenship is required"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414516,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -53974,14 +53999,20 @@
   ],
   "posted_at": 1783900800,
   "posting": {
-   "analyzed_at": 1784414408,
+   "analyzed_at": 1784414460,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
    "ai_deferred_at": 1784414408,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414460,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, new grad role",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -56219,14 +56250,20 @@
   ],
   "posted_at": 1783728000,
   "posting": {
-   "analyzed_at": 1784414413,
+   "analyzed_at": 1784414482,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
    "ai_deferred_at": 1784414413,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414482,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for Java developer with no experience required.",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -59825,7 +59862,7 @@
   ],
   "posted_at": 1783987200,
   "posting": {
-   "analyzed_at": 1784414404,
+   "analyzed_at": 1784414424,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 0,
@@ -59833,7 +59870,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784414404,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414424,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0-2 years experience required, new grad eligible.",
+   "role_family": "data",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -66987,8 +67030,9 @@
   "url": "https://job-boards.greenhouse.io/twitch/jobs/8610651002"
  },
  "2a7cda303ee86959": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784414517,
   "company": "Lockheed Martin",
   "description": "",
   "explicit_new_grad": false,
@@ -66999,6 +67043,11 @@
    "Huntsville, AL, United States"
   ],
   "posted_at": 1783641600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414517,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -67006,7 +67055,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -79339,6 +79389,17 @@
    "Illinois City, IL, United States"
   ],
   "posted_at": 1783641600,
+  "posting": {
+   "analyzed_at": 1784414518,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1 to 2 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414518,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -91277,6 +91338,18 @@
    "Burlington, MA, United States"
   ],
   "posted_at": 1783641600,
+  "posting": {
+   "analyzed_at": 1784414518,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 0,
+   "years_note": "0 to 3 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414518,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -123173,6 +123246,21 @@
    "Salina, KS, United States"
   ],
   "posted_at": 1783728000,
+  "posting": {
+   "analyzed_at": 1784414489,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414489,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, Recent Grad",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -184912,6 +185000,18 @@
    "Littleton, CO, United States"
   ],
   "posted_at": 1783641600,
+  "posting": {
+   "analyzed_at": 1784414519,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 1,
+   "years_note": "1+ years of professional experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414519,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -201053,6 +201153,17 @@
    "Austin, TX, United States"
   ],
   "posted_at": 1783641600,
+  "posting": {
+   "analyzed_at": 1784414520,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "Minimum of 1 year"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414520,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -212471,7 +212582,7 @@
   ],
   "posted_at": 1783987200,
   "posting": {
-   "analyzed_at": 1784414405,
+   "analyzed_at": 1784414432,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 0,
@@ -212479,7 +212590,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784414405,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414432,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0+ years exp, new grad role",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": true,
   "rules_v": 3,
@@ -214377,13 +214494,19 @@
   ],
   "posted_at": 1783980888,
   "posting": {
-   "analyzed_at": 1784414408,
+   "analyzed_at": 1784414453,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784414408,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414453,
+   "live": true,
+   "new_grad": "unclear",
+   "reason": "No clear role description provided",
+   "role_family": "other-technical",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -219025,12 +219148,12 @@
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 92,
+  "score": 88,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "new-grad title +12",
-   "posted <72h +6",
+   "posted <7d +2",
    "remote +2",
    "title matches your history +6"
   ],
@@ -242840,8 +242963,9 @@
   "url": "https://boards.greenhouse.io/spacex/jobs/8511086002?gh_jid=8511086002"
  },
  "9c50b69de8e62945": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784414497,
   "company": "BAE Systems",
   "description": "",
   "explicit_new_grad": false,
@@ -242852,6 +242976,11 @@
    "Huntsville, AL, United States"
   ],
   "posted_at": 1783728000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414497,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -242859,7 +242988,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -251795,6 +251925,16 @@
    "Poway, CA, United States"
   ],
   "posted_at": 1783641600,
+  "posting": {
+   "analyzed_at": 1784414521,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414521,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -277496,8 +277636,9 @@
   "url": "https://tdwilliamson.wd1.myworkdayjobs.com/en-US/TDWCareers/job/USA-OK-Tulsa/Applications-Analyst-I_REQ-03465"
  },
  "b154b1037ac2b1ca": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784414498,
   "company": "Lockheed Martin",
   "description": "",
   "explicit_new_grad": false,
@@ -277508,6 +277649,11 @@
    "Manassas, VA, United States"
   ],
   "posted_at": 1783728000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414498,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -277515,7 +277661,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -279887,6 +280034,21 @@
    "Mechanicsburg, PA, United States"
   ],
   "posted_at": 1783728000,
+  "posting": {
+   "analyzed_at": 1784414499,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414499,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, new grad role.",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -283481,6 +283643,21 @@
    "Cape Canaveral Florida"
   ],
   "posted_at": 1783728000,
+  "posting": {
+   "analyzed_at": 1784414506,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414506,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, Early Career",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -283784,14 +283961,20 @@
   ],
   "posted_at": 1783900800,
   "posting": {
-   "analyzed_at": 1784414411,
+   "analyzed_at": 1784414467,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784414411,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414467,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role",
+   "role_family": "data",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -309025,13 +309208,19 @@
   ],
   "posted_at": 1783987200,
   "posting": {
-   "analyzed_at": 1784414406,
+   "analyzed_at": 1784414439,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784414406,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414439,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, new grad role.",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -309239,7 +309428,7 @@
   ],
   "posted_at": 1783900800,
   "posting": {
-   "analyzed_at": 1784414412,
+   "analyzed_at": 1784414475,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -309248,7 +309437,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784414412,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784414475,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, 1+ years exp, recent grad role",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": true,
   "rules_v": 3,
@@ -321790,8 +321985,9 @@
   "url": "https://jobs.ashbyhq.com/glia/186fd664-63d9-48e8-a4eb-96fce7d372df"
  },
  "ce88f6cf7a50ff82": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784414514,
   "company": "American Express",
   "description": "",
   "explicit_new_grad": false,
@@ -321802,6 +321998,11 @@
    "Phoenix, AZ"
   ],
   "posted_at": 1783721402,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784414514,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -321809,7 +322010,8 @@
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "simplify",
@@ -327816,6 +328018,17 @@
    "United States"
   ],
   "posted_at": 1783641600,
+  "posting": {
+   "analyzed_at": 1784414522,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1–2 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414522,
+   "attempts": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -329557,6 +329770,16 @@
    "Colorado Springs, CO, United States"
   ],
   "posted_at": 1783728000,
+  "posting": {
+   "analyzed_at": 1784414513,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "ai_deferred_at": 1784414513,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
