@@ -15422,6 +15422,9 @@
    "Sydney, Australia"
   ],
   "posted_at": 1779845932,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -15453,6 +15456,9 @@
    "Paris, France"
   ],
   "posted_at": 1778140201,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -23360,6 +23366,9 @@
    "New York City"
   ],
   "posted_at": 1762190921,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -31514,7 +31523,7 @@
   "url": "https://boards.greenhouse.io/spacex/jobs/8552882002?gh_jid=8552882002"
  },
  "13621142b5226d94": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "greenhouse",
   "company": "Anthropic",
   "description": "",
@@ -31526,17 +31535,33 @@
    "San Francisco, CA"
   ],
   "posted_at": 1769204904,
+  "posting": {
+   "analyzed_at": 1784417186,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "We do sponsor"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784417186,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Senior candidates mentioned, requires experience",
+   "role_family": "security",
+   "years_required": 3
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 93,
+  "score": 73,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "sector:ai_lab +11",
    "you've engaged with Anthropic +6",
    "title matches your history +6",
-   "culture fit 80/100 +4"
+   "culture fit 80/100 +4",
+   "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "ai_lab",
   "source": "greenhouse",
@@ -74994,6 +75019,9 @@
    "Seoul, South Korea"
   ],
   "posted_at": 1778563359,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -97616,7 +97644,9 @@
   ],
   "posted_at": 1784060683,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784417126,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
@@ -103501,6 +103531,9 @@
    "India - Remote"
   ],
   "posted_at": 1780304014,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -117325,7 +117358,7 @@
   "url": "https://jobs.lever.co/palantir/f163223b-db5d-4c6d-b73f-0a2eaf85583f"
  },
  "4a257fbf3e064928": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "greenhouse",
   "company": "Clinical Architecture",
   "description": "",
@@ -117338,7 +117371,7 @@
   ],
   "posted_at": 1781788987,
   "posting": {
-   "analyzed_at": 1784417092,
+   "analyzed_at": 1784417136,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "without sponsorship",
@@ -117347,18 +117380,26 @@
   },
   "quality": {
    "ai_deferred_at": 1784417092,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784417136,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1-2 years experience required",
+   "role_family": "non-technical",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 94,
+  "score": 59,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "sector:healthtech +16",
    "new-grad title +12",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: wants 1+ yrs (LLM-verified) -10",
+   "quality: non-technical role (1-2 years experience required — LLM-verified) -25"
   ],
   "sector": "healthtech",
   "source": "greenhouse",
@@ -127659,7 +127700,7 @@
   "url": "https://stripe.com/jobs/search?gh_jid=7867389"
  },
  "50b040d4ef49b27d": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "greenhouse",
   "company": "Anthropic",
   "description": "",
@@ -127671,10 +127712,25 @@
    "Remote-Friendly (Travel-Required) | San Francisco, CA | New York City, NY"
   ],
   "posted_at": 1777362835,
+  "posting": {
+   "analyzed_at": 1784417163,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "We do sponsor"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784417163,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 3+ years experience",
+   "role_family": "swe",
+   "years_required": 3
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 93,
+  "score": 73,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
@@ -127682,7 +127738,8 @@
    "remote +2",
    "you've engaged with Anthropic +6",
    "title matches your history +4",
-   "culture fit 80/100 +4"
+   "culture fit 80/100 +4",
+   "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "ai_lab",
   "source": "greenhouse",
@@ -132503,6 +132560,21 @@
    "San Francisco, CA"
   ],
   "posted_at": 1774283279,
+  "posting": {
+   "analyzed_at": 1784417171,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "We do sponsor"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784417171,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role with no experience required.",
+   "role_family": "ml",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -155920,7 +155992,9 @@
   ],
   "posted_at": 1784054643,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784417134,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
@@ -178626,7 +178700,7 @@
   "url": "https://boards.greenhouse.io/spacex/jobs/8524791002?gh_jid=8524791002"
  },
  "715761907f8112a4": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "greenhouse",
   "company": "Anthropic",
   "description": "",
@@ -178639,19 +178713,25 @@
   ],
   "posted_at": 1752874001,
   "posting": {
-   "analyzed_at": 1784417086,
+   "analyzed_at": 1784417111,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "We do sponsor"
   },
   "quality": {
    "ai_deferred_at": 1784417086,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784417111,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Advanced degree required",
+   "role_family": "ml",
+   "years_required": null
   },
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 95,
+  "score": 75,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
@@ -178659,7 +178739,8 @@
    "remote +2",
    "you've engaged with Anthropic +6",
    "title matches your history +6",
-   "culture fit 80/100 +4"
+   "culture fit 80/100 +4",
+   "quality: not new-grad (senior — LLM-verified) -20"
   ],
   "sector": "ai_lab",
   "source": "greenhouse",
@@ -217527,7 +217608,7 @@
   "url": "https://jobs.lever.co/weloglobal/2bc7c7b4-8fed-41a3-9ef6-6c5359ca3b0b"
  },
  "8a3e3062d5830469": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "greenhouse",
   "company": "Anthropic",
   "description": "",
@@ -217539,17 +217620,33 @@
    "San Francisco, CA | New York City, NY"
   ],
   "posted_at": 1781214424,
+  "posting": {
+   "analyzed_at": 1784417156,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "We do sponsor"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784417156,
+   "live": true,
+   "new_grad": "no",
+   "reason": "3+ years required, senior role",
+   "role_family": "ml",
+   "years_required": 3
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 93,
+  "score": 73,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "sector:ai_lab +11",
    "you've engaged with Anthropic +6",
    "title matches your history +6",
-   "culture fit 80/100 +4"
+   "culture fit 80/100 +4",
+   "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "ai_lab",
   "source": "greenhouse",
@@ -234609,6 +234706,9 @@
    "San Francisco"
   ],
   "posted_at": 1773255596,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -249884,6 +249984,21 @@
    "Zürich, CH"
   ],
   "posted_at": 1772216716,
+  "posting": {
+   "analyzed_at": 1784417178,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "We do sponsor"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784417178,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role, no experience required.",
+   "role_family": "ml",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -296197,7 +296312,9 @@
   ],
   "posted_at": 1782361449,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784417136,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
@@ -303393,13 +303510,19 @@
   ],
   "posted_at": 1688055404,
   "posting": {
-   "analyzed_at": 1784417086,
+   "analyzed_at": 1784417118,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784417086,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784417118,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role, no experience required.",
+   "role_family": "ml",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -317809,6 +317932,9 @@
    "India - Remote"
   ],
   "posted_at": 1776333908,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -357084,7 +357210,7 @@
   ],
   "posted_at": 1784059380,
   "posting": {
-   "analyzed_at": 1784417088,
+   "analyzed_at": 1784417127,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 2,
@@ -357092,19 +357218,26 @@
   },
   "quality": {
    "ai_deferred_at": 1784417088,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784417127,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 2 years experience",
+   "role_family": "other-technical",
+   "years_required": 2
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 94,
+  "score": 84,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "sector:healthtech +16",
    "posted <7d +2",
    "title matches your history +6",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "quality: wants 2+ yrs (LLM-verified) -10"
   ],
   "sector": "healthtech",
   "source": "smartrecruiters",
@@ -361824,7 +361957,9 @@
   ],
   "posted_at": 1783466251,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784417135,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
@@ -371552,6 +371687,20 @@
    "New York, New York, United States"
   ],
   "posted_at": 1778162118,
+  "posting": {
+   "analyzed_at": 1784417147,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784417147,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Analytics Engineer",
+   "role_family": "data",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -382423,7 +382572,9 @@
   ],
   "posted_at": 1781539899,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784417143,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
@@ -386697,7 +386848,9 @@
   ],
   "posted_at": 1782365153,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784417135,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
@@ -389668,13 +389821,19 @@
   ],
   "posted_at": 1775781030,
   "posting": {
-   "analyzed_at": 1784417085,
+   "analyzed_at": 1784417103,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784417085,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784417103,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad program for 2026 cohort",
+   "role_family": "ml",
+   "years_required": 0
   },
   "remote": true,
   "rules_v": 3,
@@ -392255,7 +392414,9 @@
   ],
   "posted_at": 1781648097,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784417103,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
