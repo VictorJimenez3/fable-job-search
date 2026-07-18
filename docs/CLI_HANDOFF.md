@@ -8,9 +8,9 @@ Claude Code, and local development.
 - Active worktree/branch: `claude/cheme-intern-radar`.
 - The branch was stale and contained no ChemE implementation. It was merged
   with the current production branch before the ChemE conversion.
-- Rules are now v3 and internship-first. Stored jobs remain intact; the first
-  crawl re-gates old open records and prevents tech/new-grad records from
-  continuing as alerts.
+- Rules are now v4 and internship-first. Stored jobs remain intact; after each
+  rules-version bump, the next crawl re-gates old open records and prevents
+  tech/new-grad records from continuing as alerts.
 - `profile.yaml` has a generic Chemical Engineering candidate and intentionally
   sets `needs_sponsorship: true`. Identity and Notion option names require a
   human review before account connection.
@@ -54,7 +54,7 @@ No connector was assumed to be configured. Verify rather than infer:
 
 ## Implementation map
 
-- `radar/score.py`: ChemE gates, role buckets, rules-v3 re-gating.
+- `radar/score.py`: ChemE gates, role buckets, rules-version re-gating.
 - `radar/sector.py`: ChemE sector classification.
 - `radar/main.py`: source selection and registry-sector filtering.
 - `radar/posting.py`: deterministic sponsorship/experience facts.

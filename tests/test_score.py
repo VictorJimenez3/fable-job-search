@@ -59,6 +59,11 @@ def test_rejects_senior_phd_and_non_us():
     assert gates(mk("PhD Chemical Engineering Intern"))[0] is False
     assert gates(mk("Process Engineering Intern", locations=["Toronto, Canada"]))[0] is False
     assert gates(mk("Process Engineering Intern", locations=["Bangalore, India"]))[0] is False
+    assert gates(mk("Process Engineering Intern", locations=["Seneffe (BEL)"]))[0] is False
+    assert gates(mk("Process Engineering Intern", locations=["Stade-DEU"]))[0] is False
+    assert gates(mk("Process Engineering Intern", locations=["SGP - Woodlands"]))[0] is False
+    assert gates(mk("Process Engineering Intern", locations=["Maracaibo, Zulia, Venezuela"]))[0] is False
+    assert gates(mk("Process Engineering Intern", locations=["Singapore", "Austin, TX"]))[0] is True
 
 
 def test_rejects_clearance_and_large_experience_requirement():

@@ -655,3 +655,15 @@ mode because the existing GitHub OAuth app has one callback URL; it can receive
 its own OAuth app later without changing the architecture. Both boards use the
 same repository-level `NOTION_TOKEN` and the same Applications database by
 design. Separate board state does not mean duplicate Notion state.
+
+## 39. Explicit foreign Workday locations are hard-gated by country evidence (2026-07-18)
+
+The first live ChemE crawl exposed a gap in the US-only location gate: Workday
+often returns ISO-3 country codes (`BEL`, `DEU`, `SGP`) instead of country names,
+and Venezuela was not in the original hint list. Four of the first ten alerts
+were consequently outside the US. Rules v4 recognizes common ISO-3 codes and
+additional country names as explicit foreign evidence. A multi-location posting
+is retained when it also has a recognizable US option; a genuinely unknown
+location is still not silently treated as foreign. The rule-version bump
+re-gates stored jobs on the next crawl and removes the false alerts from the
+master board without deleting audit history.

@@ -22,7 +22,7 @@ project. Scoring is deterministic and auditable; AI is optional.
   JSON feed was live-checked on 2026-07-18, and direct ATS polling starts
   from 22 ChemE-relevant employers. Workday searches use ChemE internship
   and co-op queries rather than software/new-grad terms.
-- Rules v3 require internship/co-op evidence for alerts, classify seven ChemE
+- Rules v4 require internship/co-op evidence for alerts, classify seven ChemE
   role families, reject senior/PhD/clearance/non-US/3+ year roles, keep nearby
   engineering disciplines dashboard-only, and reject unrelated internship noise.
 - Posting text is analyzed for minimum experience and sponsorship language.
@@ -33,8 +33,8 @@ project. Scoring is deterministic and auditable; AI is optional.
   visible posting facts, a direct Apply action, role-specific research links,
   and outreach templates. Opening a role leads with fit and eligibility.
 - Old tech-oriented registry and culture state is preserved for audit but
-  excluded from ChemE polling/scoring. The first ChemE crawl re-gates inherited
-  open jobs under rules v3 without deleting history.
+  excluded from ChemE polling/scoring. Rules-version migrations re-gate inherited
+  open jobs without deleting history.
 
 ## Pipeline
 

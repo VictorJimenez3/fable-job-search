@@ -15,7 +15,7 @@ from .models import Job, norm
 
 # Bumped whenever gate rules change; regate() re-applies the current rules to
 # every stored job whose rules_v is older (demote/promote alert_ok in place).
-RULES_VERSION = 3
+RULES_VERSION = 4
 
 SENIOR_RE = re.compile(
     r"\b(senior|staff|principal|lead(er)?|director|manager|head of|sr\.?|vp|chief|"
@@ -81,13 +81,20 @@ ROLE_BUCKETS: dict[str, re.Pattern] = {
 }
 
 FOREIGN_HINTS = re.compile(
-    r"\b(canada|toronto|vancouver|london|uk\b|united kingdom|ireland|dublin|germany|berlin|munich|"
+    r"\b(canada|toronto|vancouver|london|uk\b|united kingdom|ireland|dublin|belgium|germany|berlin|munich|"
     r"france|paris|netherlands|amsterdam|india|bangalore|bengaluru|hyderabad|pune|chennai|gurgaon|"
     r"noida|mumbai|singapore|japan|tokyo|china|beijing|shanghai|shenzhen|australia|sydney|melbourne|"
     r"brazil|sao paulo|mexico city|poland|warsaw|krakow|israel|tel aviv|spain|madrid|barcelona|"
     r"portugal|lisbon|switzerland|zurich|sweden|stockholm|estonia|romania|dubai|uae|philippines|"
     r"manila|vietnam|korea|seoul|taiwan|taipei|nigeria|kenya|south africa|argentina|colombia|chile|"
-    r"panam[aá]|bangladesh|pakistan)\b", re.I)
+    r"panam[aá]|bangladesh|pakistan|malaysia|venezuela)\b", re.I)
+FOREIGN_ISO3_RE = re.compile(
+    r"\b(AFG|ALB|DZA|ARG|ARM|AUS|AUT|AZE|BHR|BGD|BLR|BEL|BOL|BIH|BWA|BRA|BGR|"
+    r"KHM|CMR|CAN|CHL|CHN|COL|CRI|HRV|CYP|CZE|DNK|ECU|EGY|EST|ETH|FIN|FRA|"
+    r"GEO|DEU|GHA|GRC|HKG|HUN|ISL|IND|IDN|IRL|ISR|ITA|JPN|JOR|KEN|KOR|KWT|"
+    r"LVA|LTU|LUX|MYS|MEX|MAR|NLD|NZL|NGA|NOR|PAK|PAN|PER|PHL|POL|PRT|QAT|"
+    r"ROU|RUS|SAU|SGP|SVK|SVN|ZAF|ESP|LKA|SWE|CHE|TWN|THA|TUR|UKR|ARE|GBR|"
+    r"URY|VEN|VNM)\b")
 US_HINTS = re.compile(
     r"\b(us|usa|u\.s\.|united states|remote)\b|"
     r"\b(al|ak|az|ar|ca|co|ct|de|fl|ga|hi|id|il|in|ia|ks|ky|la|me|md|ma|mi|mn|ms|mo|mt|ne|nv|nh|nj|"
@@ -124,9 +131,11 @@ def location_ok(job: Job) -> bool:
     if not job.locations:
         return True  # unknown — don't drop, scorer just won't reward it
     blob = " | ".join(job.locations)
-    if FOREIGN_HINTS.search(blob):
-        # foreign city named — keep only if there's also a strong US signal
-        return bool(re.search(r"\b(usa?|u\.s\.|united states)\b|remote \(?us", blob, re.I))
+    if FOREIGN_HINTS.search(blob) or FOREIGN_ISO3_RE.search(blob):
+        # A posting may list several locations. Keep it when at least one is
+        # recognizably US; otherwise explicit country names and ISO-3 codes
+        # from Workday are stronger evidence than an unknown city name.
+        return bool(US_HINTS.search(blob))
     return True
 
 
