@@ -669,7 +669,10 @@
  },
  "cadence": {
   "aliases": [],
+  "attempts": 1,
+  "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "b2435af5dbb2d73c",
+  "last_attempt_at": 1784402988,
   "last_evidence_at": 1784389818,
   "name": "Cadence",
   "schema_v": 1,
@@ -1045,10 +1048,71 @@
  },
  "intuit": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "60311de77c",
+    "c2264b84a9"
+   ],
+   "value": "Millions of consumers and small businesses managing their finances."
+  },
+  "error": "",
   "evidence_sha": "88a9c70056ebf5fa",
+  "generated_at": 1784402988,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784402988,
   "last_evidence_at": 1784397120,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "60311de77c",
+    "c2264b84a9"
+   ],
+   "value": "Mountain View, California, San Diego, CA, New York, NY"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "60311de77c",
+    "c2264b84a9"
+   ],
+   "value": "Transform how millions of consumers and small businesses manage their finances."
+  },
   "name": "Intuit",
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "60311de77c",
+    "c2264b84a9"
+   ],
+   "value": "Financial management software for consumers and small businesses (e.g., TurboTax, QuickBooks)."
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789586988,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "60311de77c",
+    "c2264b84a9"
+   ],
+   "value": "10,001+ employees"
+  },
   "sources": [
    {
     "content_sha": "15b2542304ca9caf",
@@ -1071,7 +1135,34 @@
     "url": "https://jobright.ai/jobs/info/6a278d7d7061b51a3a5f176c?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "60311de77c",
+    "c2264b84a9"
+   ],
+   "value": "Intuit has a track record of offering H1B sponsorships, but this does not guarantee sponsorship for specific roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "60311de77c",
+    "c2264b84a9"
+   ],
+   "value": "Intuit is a company founded in 1983 in Mountain View, California, with over 10,000 employees, specializing in financial management software for consumers and small businesses."
+  },
+  "synthesized_evidence_sha": "88a9c70056ebf5fa",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  }
  },
  "jane street": {
   "aliases": [],
@@ -2987,10 +3078,66 @@
  },
  "stubhub": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "b4526f2e66"
+   ],
+   "value": "Ticket marketplace where users buy and sell tickets for sports, concerts, theater, and live events"
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "b4526f2e66"
+   ],
+   "value": "Users buying and selling tickets for sports, concerts, theater, and live events"
+  },
+  "error": "",
   "evidence_sha": "ce6ceca8974e1331",
+  "generated_at": 1784402988,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784402988,
   "last_evidence_at": 1784400836,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "b4526f2e66"
+   ],
+   "value": "San Francisco, California, USA"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "StubHub",
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "b4526f2e66"
+   ],
+   "value": "Ticket marketplace for sports, concerts, theater, and live events"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789586988,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "b4526f2e66"
+   ],
+   "value": "1001-5000 employees"
+  },
   "sources": [
    {
     "content_sha": "60af589beed863a4",
@@ -3003,7 +3150,32 @@
     "url": "https://jobright.ai/jobs/info/6a518d8802522b5b722e8e0c?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "b4526f2e66"
+   ],
+   "value": "H1B Sponsorship is offered by StubHub; however, this does not guarantee sponsorship for specific roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "b4526f2e66"
+   ],
+   "value": "StubHub is a ticket marketplace company founded in 2000, based in San Francisco, with 1001-5000 employees. It offers H1B sponsorship for eligible roles and provides comprehensive benefits including 401k and health insurance."
+  },
+  "synthesized_evidence_sha": "ce6ceca8974e1331",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  }
  },
  "the walt disney company": {
   "aliases": [],
