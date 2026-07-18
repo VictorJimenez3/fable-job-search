@@ -414,7 +414,10 @@
  },
  "celonis": {
   "aliases": [],
+  "attempts": 1,
+  "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "4a0ce00f981dda85",
+  "last_attempt_at": 1784400204,
   "last_evidence_at": 1784393439,
   "name": "Celonis",
   "schema_v": 1,
@@ -837,10 +840,68 @@
  },
  "neuralink": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "84d580cd1f0fe369",
+  "generated_at": 1784400204,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "ebd55adb5b",
+    "e1c3fc3462",
+    "9a50d36e49"
+   ],
+   "value": "Full-stack development, native desktop development, Android, iOS, and operating system knowledge."
+  },
+  "last_attempt_at": 1784400204,
   "last_evidence_at": 1784393439,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "ebd55adb5b",
+    "e1c3fc3462",
+    "9a50d36e49"
+   ],
+   "value": "Fremont, California, USA"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Neuralink",
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789584204,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "ebd55adb5b",
+    "e1c3fc3462",
+    "9a50d36e49"
+   ],
+   "value": "201-500 employees"
+  },
   "sources": [
    {
     "content_sha": "c0e8732970094ec3",
@@ -873,7 +934,40 @@
     "url": "https://jobright.ai/jobs/info/6a52e53a8ef95364ead904ac?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "ebd55adb5b",
+    "e1c3fc3462",
+    "9a50d36e49"
+   ],
+   "value": "Neuralink has a track record of offering H1B sponsorships; however, this does not guarantee sponsorship for specific roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "ebd55adb5b",
+    "e1c3fc3462",
+    "9a50d36e49"
+   ],
+   "value": "Neuralink is a neurotechnology company founded in 2016 in Fremont, California, focused on developing brain-computer interfaces (BCIs) for medical applications. The company has a small to medium-sized workforce (201-500 employees) and offers H1B sponsorship for eligible candidates. Job postings emphasize technical skills in full-stack, desktop, and mobile development."
+  },
+  "synthesized_evidence_sha": "84d580cd1f0fe369",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "ebd55adb5b",
+    "e1c3fc3462",
+    "9a50d36e49"
+   ],
+   "value": "Developing BCI applications using full-stack, native desktop, Android, iOS, and operating system knowledge"
+  },
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  }
  },
  "notion": {
   "aliases": [],
@@ -1474,7 +1568,10 @@
  },
  "silna health": {
   "aliases": [],
+  "attempts": 1,
+  "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "73ed1497681aaf1b",
+  "last_attempt_at": 1784400204,
   "last_evidence_at": 1784393439,
   "name": "Silna Health",
   "schema_v": 1,
