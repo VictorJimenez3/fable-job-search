@@ -6843,6 +6843,16 @@
    "Los Angeles"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784416197,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "ai_deferred_at": 1784416197,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -43946,6 +43956,9 @@
    "Colorado Springs, CO"
   ],
   "posted_at": 1783549078,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -56598,6 +56611,16 @@
    "Boston, US"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784416198,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "ai_deferred_at": 1784416198,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -65686,6 +65709,15 @@
    "New York City, NY"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784416199,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784416199,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -70280,6 +70312,16 @@
    "Arlington, VA, United States"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784416200,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "ai_deferred_at": 1784416200,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -97871,6 +97913,18 @@
    "Office - USA - CA - Headquarters, US"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784416201,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 1,
+   "years_note": "at least 1 year"
+  },
+  "quality": {
+   "ai_deferred_at": 1784416201,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -141344,14 +141398,13 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 90,
+  "score": 84,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "sector:big_tech +10",
-   "posted <24h +12",
-   "title matches your history +6",
-   "seniority unclear (dashboard only)"
+   "posted <72h +6",
+   "title matches your history +6"
   ],
   "sector": "big_tech",
   "source": "greenhouse",
@@ -162410,7 +162463,7 @@
   ],
   "posted_at": 1783641600,
   "posting": {
-   "analyzed_at": 1784416089,
+   "analyzed_at": 1784416145,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -162419,7 +162472,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784416089,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784416145,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0+ years exp, entry level",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -196805,6 +196864,21 @@
    "Mountain View, CA, United States"
   ],
   "posted_at": 1783641600,
+  "posting": {
+   "analyzed_at": 1784416152,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416152,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, 0+ years exp",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -198618,7 +198692,7 @@
   "url": "https://hdpc.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/LateralHiring/job/171671"
  },
  "7ecb6744a823b895": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "HNTB",
   "description": "",
@@ -198630,13 +198704,31 @@
    "Tallahassee, FL"
   ],
   "posted_at": 1783641600,
+  "posting": {
+   "analyzed_at": 1784416160,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "sponsorship is not available",
+   "years_min": 4,
+   "years_note": "4 years of relevant experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416160,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level, no experience required.",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
   "score": 60,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "posting: wants 4+ yrs (dashboard only)"
   ],
   "sector": "other",
   "source": "simplify",
@@ -202564,6 +202656,15 @@
    "Victor, NY, United States"
   ],
   "posted_at": 1783555200,
+  "posting": {
+   "analyzed_at": 1784416193,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784416193,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -222381,7 +222482,7 @@
   ],
   "posted_at": 1783728000,
   "posting": {
-   "analyzed_at": 1784416078,
+   "analyzed_at": 1784416099,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -222390,15 +222491,22 @@
   },
   "quality": {
    "ai_deferred_at": 1784416078,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784416099,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 1+ years exp.",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 60,
+  "score": 50,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -232581,8 +232689,9 @@
   "url": "https://jobs.lever.co/weloglobal/d37e2c8e-e65a-486d-b033-7235745296d4"
  },
  "949cd27e642a395a": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784416168,
   "company": "Clinisys",
   "description": "",
   "explicit_new_grad": false,
@@ -232593,13 +232702,19 @@
    "Morrisville, NC, United States"
   ],
   "posted_at": 1783641600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416168,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
   "score": 60,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -240855,7 +240970,7 @@
   ],
   "posted_at": 1783728000,
   "posting": {
-   "analyzed_at": 1784416079,
+   "analyzed_at": 1784416107,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -240864,15 +240979,22 @@
   },
   "quality": {
    "ai_deferred_at": 1784416079,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784416107,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 60,
+  "score": 50,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -244463,8 +244585,9 @@
   "url": "https://boards.greenhouse.io/andurilindustries/jobs/5181436007?gh_jid=5181436007"
  },
  "9c271fbdcfd74932": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784416194,
   "company": "Bertrandt Group",
   "description": "",
   "explicit_new_grad": false,
@@ -244475,13 +244598,19 @@
    "San Jose, CA, United States"
   ],
   "posted_at": 1783555200,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416194,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
   "score": 60,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -288161,6 +288290,20 @@
    "Huntsville, Alabama, United States"
   ],
   "posted_at": 1783641600,
+  "posting": {
+   "analyzed_at": 1784416169,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416169,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role for new grad",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -297248,6 +297391,9 @@
    "San Jose, CA"
   ],
   "posted_at": 1783548695,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -315263,6 +315409,22 @@
    "Rome,NY,US"
   ],
   "posted_at": 1783641600,
+  "posting": {
+   "analyzed_at": 1784416176,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0–2 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416176,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0-2 years exp for entry level",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -315470,7 +315632,7 @@
   "url": "https://jobs.lever.co/weloglobal/9c43d2ae-8d66-4ba5-bfac-b3bea123621f"
  },
  "c8cef627d5bb0da3": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Gemba Advantage",
   "description": "",
@@ -315483,21 +315645,28 @@
   ],
   "posted_at": 1783728000,
   "posting": {
-   "analyzed_at": 1784416081,
+   "analyzed_at": 1784416115,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784416081,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784416115,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Mid-level required, SC clearance needed",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 60,
+  "score": 40,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: not new-grad (senior — LLM-verified) -20"
   ],
   "sector": "other",
   "source": "jobright",
@@ -344582,7 +344751,7 @@
   ],
   "posted_at": 1783728000,
   "posting": {
-   "analyzed_at": 1784416082,
+   "analyzed_at": 1784416121,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship",
@@ -344591,15 +344760,22 @@
   },
   "quality": {
    "ai_deferred_at": 1784416082,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784416121,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 60,
+  "score": 50,
   "score_reasons": [
    "base 40",
-   "role:swe +20"
+   "role:swe +20",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -349774,6 +349950,22 @@
    "Fenton, MO"
   ],
   "posted_at": 1783641600,
+  "posting": {
+   "analyzed_at": 1784416184,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1 -2 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784416184,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "1-2 years experience",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -350474,6 +350666,18 @@
    "Fort Meade, MD, United States"
   ],
   "posted_at": 1783641600,
+  "posting": {
+   "analyzed_at": 1784416192,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 0,
+   "years_note": "0 years experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784416192,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -368968,14 +369172,20 @@
   ],
   "posted_at": 1783728000,
   "posting": {
-   "analyzed_at": 1784416083,
+   "analyzed_at": 1784416129,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
    "ai_deferred_at": 1784416083,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784416129,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role for new grad",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -381010,6 +381220,16 @@
    "Austin, Texas, United States"
   ],
   "posted_at": 1783641600,
+  "posting": {
+   "analyzed_at": 1784416192,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "ai_deferred_at": 1784416192,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -381525,7 +381745,7 @@
   ],
   "posted_at": 1783728000,
   "posting": {
-   "analyzed_at": 1784416084,
+   "analyzed_at": 1784416137,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 0,
@@ -381533,7 +381753,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784416084,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784416137,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, 0+ years exp, new grad role.",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -394792,6 +395018,9 @@
    "San Diego, CA"
   ],
   "posted_at": 1783549080,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
