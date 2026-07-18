@@ -35614,12 +35614,12 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 84,
+  "score": 80,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "posted <72h +6",
+   "posted <7d +2",
    "title matches your history +6"
   ],
   "sector": "other",
@@ -46056,15 +46056,14 @@
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 81,
+  "score": 77,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:big_tech +10",
-   "posted <72h +6",
+   "posted <7d +2",
    "remote +2",
-   "culture fit 71/100 +3",
-   "seniority unclear (dashboard only)"
+   "culture fit 71/100 +3"
   ],
   "sector": "big_tech",
   "source": "greenhouse",
@@ -49769,11 +49768,11 @@
   "remote": false,
   "rules_v": 3,
   "salary": "$338k/yr",
-  "score": 70,
+  "score": 66,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <72h +6",
+   "posted <7d +2",
    "title matches your history +4"
   ],
   "sector": "other",
@@ -50279,11 +50278,11 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 81,
+  "score": 75,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
-   "posted <24h +12",
+   "posted <72h +6",
    "title matches your history +3"
   ],
   "sector": "other",
@@ -51701,8 +51700,20 @@
    "Redmond, Washington, USA"
   ],
   "posted_at": 1782864000,
+  "posting": {
+   "analyzed_at": 1784390675,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784390675,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for 2026 class, entry level.",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -55612,6 +55623,20 @@
    "Washington, DC"
   ],
   "posted_at": 1783634985,
+  "posting": {
+   "analyzed_at": 1784390698,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784390698,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "new grad role, data engineer",
+   "role_family": "data",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -78906,6 +78931,18 @@
    "Palo Alto, CA, United States"
   ],
   "posted_at": 1783728000,
+  "posting": {
+   "analyzed_at": 1784390731,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship",
+   "years_min": 1,
+   "years_note": "At least 1 year"
+  },
+  "quality": {
+   "ai_deferred_at": 1784390731,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -83333,8 +83370,9 @@
   "url": "https://jobs.ashbyhq.com/openai/fff7b15d-a1a0-441f-90f1-5efcae7f0051"
  },
  "37f4da37754b300f": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784390707,
   "company": "CVS Health",
   "description": "",
   "explicit_new_grad": false,
@@ -83345,6 +83383,11 @@
    "Needham, MA"
   ],
   "posted_at": 1781993676,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784390707,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -83354,7 +83397,8 @@
    "role:data_eng +18",
    "sector:healthtech +16",
    "you've engaged with CVS Health +8",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "healthtech",
   "source": "simplify",
@@ -84477,6 +84521,9 @@
    "Fullerton, CA"
   ],
   "posted_at": 1783640567,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -90702,6 +90749,9 @@
    "Seattle, Washington"
   ],
   "posted_at": 1783640550,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -104815,6 +104865,20 @@
    "Raleigh, NC"
   ],
   "posted_at": 1783030270,
+  "posting": {
+   "analyzed_at": 1784390715,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784390715,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for 2026",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -110357,8 +110421,9 @@
   "url": "https://job-boards.greenhouse.io/momentumcompany3/jobs/8607054002"
  },
  "4a32f9281680e6f3": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784390694,
   "company": "CVS Health",
   "description": "",
   "explicit_new_grad": false,
@@ -110369,6 +110434,11 @@
    "Smithfield, RI"
   ],
   "posted_at": 1781993678,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784390694,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -110378,7 +110448,8 @@
    "role:swe +20",
    "sector:healthtech +16",
    "you've engaged with CVS Health +8",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "healthtech",
   "source": "simplify",
@@ -132788,12 +132859,12 @@
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 84,
+  "score": 80,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:ai_lab +11",
-   "posted <72h +6",
+   "posted <7d +2",
    "remote +2",
    "title matches your history +5"
   ],
@@ -150074,8 +150145,9 @@
   "url": "https://boards.greenhouse.io/andurilindustries/jobs/5072894007?gh_jid=5072894007"
  },
  "64b9018dbd47b33b": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784390705,
   "company": "Altera Digital Health",
   "description": "",
   "explicit_new_grad": false,
@@ -150087,7 +150159,9 @@
   ],
   "posted_at": 1783555200,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784390705,
+   "live": false
   },
   "remote": true,
   "rules_v": 3,
@@ -150099,7 +150173,8 @@
    "sector:healthtech +16",
    "remote +2",
    "you've engaged with Altera Digital Health +4",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "healthtech",
   "source": "jobright",
@@ -158799,11 +158874,11 @@
   "remote": false,
   "rules_v": 3,
   "salary": "$338k/yr",
-  "score": 70,
+  "score": 66,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <72h +6",
+   "posted <7d +2",
    "title matches your history +4"
   ],
   "sector": "other",
@@ -162588,7 +162663,7 @@
   "url": "https://jobs.lever.co/weloglobal/550c61aa-98c1-479d-a817-4e3db4b7783a/apply"
  },
  "6d2ea8ed526c273b": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Amazon",
   "description": "",
@@ -162600,20 +162675,32 @@
    "Northridge, CA"
   ],
   "posted_at": 1783609926,
+  "posting": {
+   "analyzed_at": 1784390647,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784390647,
+   "live": true,
+   "new_grad": "no",
+   "reason": "3+ years experience required",
+   "role_family": "swe",
+   "years_required": 3
   },
   "remote": false,
   "rules_v": 3,
   "salary": "$178k/yr",
-  "score": 88,
+  "score": 68,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:big_tech +10",
    "you've engaged with Amazon +8",
    "title matches your history +6",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "big_tech",
   "source": "speedyapply",
@@ -167827,8 +167914,9 @@
   "url": "https://jj.wd5.myworkdayjobs.com/en-US/JJ/job/Santa-Clara-California-United-States-of-America/Tech-Ops-Support-Specialist--Shockwave_R-087675"
  },
  "713a9d3e5bf8081b": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784390727,
   "company": "MANTECH",
   "description": "",
   "explicit_new_grad": true,
@@ -167839,6 +167927,11 @@
    "USA-VA-Sterling"
   ],
   "posted_at": 1783641600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784390727,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -167848,7 +167941,8 @@
    "role:data_science +22",
    "new-grad title +12",
    "you've engaged with MANTECH +3",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -180378,8 +180472,20 @@
    "Seattle, Washington, USA"
   ],
   "posted_at": 1783209600,
+  "posting": {
+   "analyzed_at": 1784390667,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784390667,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for 2026 class, entry level, no experience required beyond degree",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -185546,11 +185652,11 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 73,
+  "score": 67,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <24h +12",
+   "posted <72h +6",
    "title matches your history +1"
   ],
   "sector": "other",
@@ -198847,11 +198953,11 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 76,
+  "score": 70,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <24h +12",
+   "posted <72h +6",
    "title matches your history +4"
   ],
   "sector": "other",
@@ -213119,8 +213225,9 @@
   "url": "https://stripe.com/jobs/search?gh_jid=7908923"
  },
  "90325e92f3aa037f": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784390695,
   "company": "Leidos",
   "description": "",
   "explicit_new_grad": true,
@@ -213131,6 +213238,11 @@
    "Huntsville, AL"
   ],
   "posted_at": 1783641600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784390695,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -213140,7 +213252,8 @@
    "role:ai_ml +26",
    "new-grad title +12",
    "you've engaged with Leidos +3",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "simplify",
@@ -215854,8 +215967,9 @@
   "url": "https://caci.wd1.myworkdayjobs.com/external/job/Ashburn-VA-US/AI-Prompt-Engineer_328834"
  },
  "91da012fdf1f702a": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784390706,
   "company": "CVS Health",
   "description": "",
   "explicit_new_grad": false,
@@ -215866,6 +215980,11 @@
    "Irving, TX"
   ],
   "posted_at": 1781993681,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784390706,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -215875,7 +215994,8 @@
    "role:data_eng +18",
    "sector:healthtech +16",
    "you've engaged with CVS Health +8",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "healthtech",
   "source": "simplify",
@@ -215995,8 +216115,9 @@
   "url": "https://jobs.ashbyhq.com/cerebras/40e0d3ee-8f0a-4b19-9bf9-79410b1c7735"
  },
  "91e62a3c8d4e922f": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784390696,
   "company": "Amazon",
   "description": "",
   "explicit_new_grad": false,
@@ -216008,7 +216129,9 @@
   ],
   "posted_at": 1783209600,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784390696,
+   "live": false
   },
   "remote": false,
   "rules_v": 3,
@@ -216020,7 +216143,8 @@
    "sector:big_tech +10",
    "you've engaged with Amazon +8",
    "title matches your history +5",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "big_tech",
   "source": "jobright",
@@ -216452,8 +216576,20 @@
    "Seattle, Washington, USA"
   ],
   "posted_at": 1782864000,
+  "posting": {
+   "analyzed_at": 1784390683,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784390683,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "new grad role for 2026 class",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -217176,8 +217312,9 @@
   "url": "https://jobs.lever.co/standtogether/aa104dad-d757-45b3-a182-661db7737194"
  },
  "92d2c0ff6f7a3aeb": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784390692,
   "company": "Amazon",
   "description": "",
   "explicit_new_grad": false,
@@ -217189,7 +217326,9 @@
   ],
   "posted_at": 1782864000,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784390692,
+   "live": false
   },
   "remote": false,
   "rules_v": 3,
@@ -217201,7 +217340,8 @@
    "sector:big_tech +10",
    "you've engaged with Amazon +8",
    "title matches your history +6",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "big_tech",
   "source": "jobright",
@@ -232160,11 +232300,11 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 77,
+  "score": 71,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <24h +12",
+   "posted <72h +6",
    "title matches your history +1",
    "SHPE 2026 exhibitor +4"
   ],
@@ -247163,8 +247303,9 @@
   "url": "https://jobs.ashbyhq.com/polymarket/fc6fa07f-b39c-4916-b54e-1adca738c1be/application"
  },
  "a6d4fc9015dc3176": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784390730,
   "company": "Nuro",
   "description": "",
   "explicit_new_grad": true,
@@ -247175,6 +247316,11 @@
    "Mountain View, CA, United States"
   ],
   "posted_at": 1783814400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784390730,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -247185,7 +247331,8 @@
    "new-grad title +12",
    "posted <7d +2",
    "you've engaged with Nuro +4",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -267877,13 +268024,12 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 82,
+  "score": 76,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:big_tech +10",
-   "posted <24h +12",
-   "off-field title (dashboard only)"
+   "posted <72h +6"
   ],
   "sector": "big_tech",
   "source": "smartrecruiters",
@@ -298816,8 +298962,20 @@
    "San Luis Obispo, CA"
   ],
   "posted_at": 1783296000,
+  "posting": {
+   "analyzed_at": 1784390659,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784390659,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad program with no experience required",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -305952,8 +306110,9 @@
   "url": "https://jobs.ashbyhq.com/openai/83730f3e-3a96-476e-afb0-15f1f045ab03"
  },
  "ce3dd8a94a1f5dd8": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784390729,
   "company": "RTX",
   "description": "",
   "explicit_new_grad": true,
@@ -305964,6 +306123,11 @@
    "US-CA-FULLERTON-676 ~ 1801 Hughes Dr ~ BLDG 676, United States of America"
   ],
   "posted_at": 1783296000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784390729,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -305975,7 +306139,8 @@
    "you've engaged with RTX +8",
    "title matches your history +4",
    "culture fit 39/100 -1",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -316322,8 +316487,9 @@
   "url": "https://jll.wd1.myworkdayjobs.com/en-US/jllcareers/job/Whiteville-NC/Mobile-Technician_REQ522773"
  },
  "d55423d492f256bc": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784390693,
   "company": "Amazon",
   "description": "",
   "explicit_new_grad": false,
@@ -316335,7 +316501,9 @@
   ],
   "posted_at": 1782777600,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784390693,
+   "live": false
   },
   "remote": false,
   "rules_v": 3,
@@ -316347,7 +316515,8 @@
    "sector:big_tech +10",
    "you've engaged with Amazon +8",
    "title matches your history +6",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "big_tech",
   "source": "jobright",
@@ -325066,6 +325235,20 @@
    "Canada"
   ],
   "posted_at": 1783641600,
+  "posting": {
+   "analyzed_at": 1784390707,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784390707,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level",
+   "role_family": "data",
+   "years_required": null
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -351292,6 +351475,9 @@
    "Palo Alto, CA"
   ],
   "posted_at": 1783375817,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -363800,8 +363986,9 @@
   "url": "https://boards.greenhouse.io/spacex/jobs/8559035002?gh_jid=8559035002"
  },
  "f5047a0e3b4ddeb7": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784390732,
   "company": "Amazon",
   "description": "",
   "explicit_new_grad": false,
@@ -363812,6 +363999,11 @@
    "Seattle, Washington, USA"
   ],
   "posted_at": 1783209600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784390732,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -363821,7 +364013,8 @@
    "role:swe +20",
    "sector:big_tech +10",
    "you've engaged with Amazon +8",
-   "SHPE 2026 exhibitor +4"
+   "SHPE 2026 exhibitor +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "big_tech",
   "source": "jobright",
@@ -377512,6 +377705,20 @@
    "San Mateo, CA"
   ],
   "posted_at": 1783030258,
+  "posting": {
+   "analyzed_at": 1784390721,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784390721,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -378373,11 +378580,11 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 80,
+  "score": 74,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <24h +12",
+   "posted <72h +6",
    "title matches your history +4",
    "SHPE 2026 exhibitor +4"
   ],
