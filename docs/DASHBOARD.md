@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-18 22:08 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
+_Last run: **2026-07-18 22:11 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -128,7 +128,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 92 🔥 | 1d | Anduril | [Shipping & Receiving Materials Associate](https://boards.greenhouse.io/andurilindustries/jobs/5170663007?gh_jid=5170663007) | Santa Ana, California, United States | big_tech | greenhouse |
 | 92 🔥 | 1d | Johnson & Johnson | [Outbound Transportation Analyst](https://jj.wd5.myworkdayjobs.com/en-US/JJ/job/Diegem-Flemish-Brabant-Belgium/Outbound-Transportation-Analyst_R-089164) | 4 Locations | healthtech | workday |
 | 92 🔥 | 1d | OpenAI | [Backend Software Engineer, API Enterprise Controls](https://jobs.ashbyhq.com/openai/d0956b18-4f80-4c67-b94b-313181a16be6) | San Francisco | ai_lab | ashby |
-| 92 🔥 | 1d | Chamber Cardio | [Data Analyst](https://jobs.ashbyhq.com/chambercardio/eb5a8d6e-def9-4ea6-a76f-b64995ad5711/application?embed=true) | Remote in USA | healthtech | simplify |
+| 92 🔥 | 2d | Chamber Cardio | [Data Analyst](https://jobs.ashbyhq.com/chambercardio/eb5a8d6e-def9-4ea6-a76f-b64995ad5711/application?embed=true) | Remote in USA | healthtech | simplify |
 | 92 🔥 | 2d | AbbVie | [System Design Analyst II - HYBRID](https://jobs.smartrecruiters.com/AbbVie/3743990014134426) | Florham Park, NJ | healthtech | smartrecruiters |
 | 92 🔥 | 2d | Anduril | [Division Operations Associate, TRS](https://boards.greenhouse.io/andurilindustries/jobs/5187826007?gh_jid=5187826007) | Costa Mesa, California, United States | big_tech | greenhouse |
 | 92 🔥 | 2d | AbbVie | [Business Systems Analyst](https://jobs.smartrecruiters.com/AbbVie/3743990014129201) | Austin, TX | healthtech | smartrecruiters |
