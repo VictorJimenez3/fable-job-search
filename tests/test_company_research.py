@@ -56,6 +56,26 @@ def test_parser_downgrades_uncited_claims_and_rejects_bad_response():
     assert research.parse_synthesis("not json", {"S1"}) is None
 
 
+def test_prune_removes_sources_rejected_by_active_profile(monkeypatch):
+    records = {}
+    for title, url in (("Software Engineer", "https://jobs.example/good"),
+                       ("Campus Recruiter", "https://jobs.example/wrong")):
+        research.capture_into(
+            records, company="Acme", title=title, url=url,
+            text="Acme is a technology company building useful products for customers. " * 5,
+            retrieved_at=NOW)
+    jobs = {
+        "good": {"title": "Software Engineer", "url": "https://jobs.example/good"},
+        "wrong": {"title": "Campus Recruiter", "url": "https://jobs.example/wrong"},
+    }
+    monkeypatch.setattr(research, "job_is_relevant",
+                        lambda job: job.get("title") == "Software Engineer")
+
+    assert research.prune_irrelevant_sources(records, jobs)
+    assert [s["url"] for s in records["acme"]["sources"]] == [
+        "https://jobs.example/good"]
+
+
 def test_enrich_is_grounded_cached_and_priority_bounded(tmp_path, monkeypatch):
     monkeypatch.setattr(research.state, "STATE_DIR", tmp_path)
     records = {}

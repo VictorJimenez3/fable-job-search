@@ -164,7 +164,7 @@ def scrape_pass(new_jobs: list, jobs_state: dict, domains: dict,
     stats = {"inline": 0, "fetched": 0, "closed": 0, "demoted": 0,
              "research_sources": 0}
     research = company_research.load()
-    research_changed = False
+    research_changed = company_research.prune_irrelevant_sources(research, jobs_state)
 
     def _fetch_and_apply(target, url_rec, is_job: bool) -> None:
         nonlocal research_changed
@@ -259,7 +259,9 @@ def scrape_pass(new_jobs: list, jobs_state: dict, domains: dict,
 
         stored = [r for r in jobs_state.values()
                   if not r.get("closed_at") and r.get("url")
-                  and (r.get("alert_ok") or r.get("id") in tracked_ids)
+                  and (r.get("alert_ok") or (
+                      r.get("id") in tracked_ids
+                      and company_research.job_is_relevant(r)))
                   and (not r.get("posting") or needs_evidence(r))
                   and now - r.get("first_seen", 0) <= 45 * 86400]
         stored.sort(key=lambda r: (
