@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-18 21:06 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
+_Last run: **2026-07-18 21:08 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -72,7 +72,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 94 🔥 | 1d | CVS Health | [Analyst, Workforce Management - Work From Home](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/FL---Work-from-home/Analyst--Workforce-Management---Work-From-Home_R0955776) | FL - Work from home | healthtech | workday |
 | 94 🔥 | 1d | Oscar Health | [IT Engineer I](http://www.hioscar.com/careers/8070593?gh_jid=8070593) | Los Angeles, California, United States | healthtech | greenhouse |
 | 94 🔥 | 1d | Oscar Health | [IT Engineer I](http://www.hioscar.com/careers/8070587?gh_jid=8070587) | Tempe, Arizona, United States | healthtech | greenhouse |
-| 94 🔥 | 1d | Oscar Health | [IT Engineer I](http://www.hioscar.com/careers/8069062?gh_jid=8069062) | New York, New York, United States | healthtech | greenhouse |
+| 94 🔥 | 2d | Oscar Health | [IT Engineer I](http://www.hioscar.com/careers/8069062?gh_jid=8069062) | New York, New York, United States | healthtech | greenhouse |
 | 94 🔥 | 2d | CVS Health | [Patient Relations Analyst - Float](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/Rolling-Hills-Square/Patient-Relations-Analyst---Float_R0978229) | Rolling Hills Square | healthtech | workday |
 | 94 🔥 | 2d | CVS Health | [Analyst,Patient Relations](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/AZ---Phoenix/Analyst-Patient-Relations_R0976906) | AZ - Phoenix | healthtech | workday |
 | 94 🔥 | 2d | CVS Health | [IT Operations Analyst (OhioRISE)](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/OH---Work-from-hom/IT-Operations-Analyst--OhioRISE-_R0954602) | OH - Work from hom | healthtech | workday |

@@ -1440,8 +1440,9 @@
   "url": "https://jobs.ashbyhq.com/Lightfield/b28053f9-2c70-4bc1-8003-0fc76a1fb011"
  },
  "0119ac8182860c27": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784408884,
   "company": "AccessPay",
   "description": "",
   "explicit_new_grad": true,
@@ -1452,6 +1453,11 @@
    "Manchester, England, United Kingdom"
   ],
   "posted_at": 1783382400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784408884,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -1461,7 +1467,8 @@
    "role:swe +20",
    "new-grad title +12",
    "remote +2",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -3517,8 +3524,9 @@
   "url": "https://jobs.ashbyhq.com/elevenlabs/3b57cc5c-f019-4a0b-a5ff-e1046e4f1fa1"
  },
  "02a7638bdd9c3172": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784408885,
   "company": "Comcast",
   "description": "",
   "explicit_new_grad": true,
@@ -3529,6 +3537,11 @@
    "Englewood, CO, United States"
   ],
   "posted_at": 1783382400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784408885,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -3537,7 +3550,8 @@
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -9768,7 +9782,9 @@
   ],
   "posted_at": 1783549077,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784408842,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -26857,6 +26873,18 @@
    "Hawthorne, CA"
   ],
   "posted_at": 1783209600,
+  "posting": {
+   "analyzed_at": 1784408930,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 2,
+   "years_note": "2+ years of professional experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784408930,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -61293,6 +61321,20 @@
    "San Jose, CA"
   ],
   "posted_at": 1783433379,
+  "posting": {
+   "analyzed_at": 1784408876,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784408876,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad position for class of 2026",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -77125,8 +77167,9 @@
   "url": "https://jobright.ai/jobs/info/6a5645b7e9b77f668bd62316?utm_campaign=Data%20Analysis&utm_source=1103"
  },
  "329a78a7d4b39bee": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784408925,
   "company": "Applied Systems Canada",
   "description": "",
   "explicit_new_grad": true,
@@ -77137,6 +77180,11 @@
    "US"
   ],
   "posted_at": 1783296000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784408925,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -77146,7 +77194,8 @@
    "role:swe +20",
    "new-grad title +12",
    "remote +2",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -107147,14 +107196,20 @@
   ],
   "posted_at": 1783468800,
   "posting": {
-   "analyzed_at": 1784408813,
+   "analyzed_at": 1784408843,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784408813,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784408843,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, 0+ years exp",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -108208,7 +108263,9 @@
   ],
   "posted_at": 1783473120,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784408842,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -111978,8 +112035,9 @@
   "url": "https://jobs.ashbyhq.com/abridge/c7f09dee-07ca-444f-803d-961e7f88056b"
  },
  "49b7482248127f7e": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784408886,
   "company": "Raytheon",
   "description": "",
   "explicit_new_grad": true,
@@ -111990,6 +112048,11 @@
    "Marlborough, MA, United States"
   ],
   "posted_at": 1783382400,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784408886,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -111998,7 +112061,8 @@
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -116679,6 +116743,20 @@
    "Baton Rouge, Louisiana, United States"
   ],
   "posted_at": 1783382400,
+  "posting": {
+   "analyzed_at": 1784408887,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784408887,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level, no experience required",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -180370,7 +180448,7 @@
   ],
   "posted_at": 1783468800,
   "posting": {
-   "analyzed_at": 1784408813,
+   "analyzed_at": 1784408851,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -180379,17 +180457,24 @@
   },
   "quality": {
    "ai_deferred_at": 1784408813,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784408851,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required.",
+   "role_family": "other-technical",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 78,
+  "score": 68,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -235252,6 +235337,23 @@
    "United States"
   ],
   "posted_at": 1783382400,
+  "posting": {
+   "analyzed_at": 1784408894,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only",
+   "years_min": 0,
+   "years_note": "0-3 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784408894,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, 0+ years exp",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -245447,15 +245549,31 @@
    "Dedham, MA, United States"
   ],
   "posted_at": 1783382400,
+  "posting": {
+   "analyzed_at": 1784408901,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "U.S. Citizen Only"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784408901,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 78,
+  "score": 68,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -251362,13 +251480,19 @@
   ],
   "posted_at": 1783555200,
   "posting": {
-   "analyzed_at": 1784408807,
+   "analyzed_at": 1784408826,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784408807,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784408826,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, new grad role",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": true,
   "rules_v": 3,
@@ -252898,8 +253022,9 @@
   "url": "https://job-boards.greenhouse.io/bgeinc/jobs/4965092008"
  },
  "a7158dcacada1b88": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784408926,
   "company": "Applied Systems Canada",
   "description": "",
   "explicit_new_grad": true,
@@ -252910,6 +253035,11 @@
    "UNAVAILABLE, UNAVAILABLE, US"
   ],
   "posted_at": 1783296000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784408926,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -252919,7 +253049,8 @@
    "role:swe +20",
    "new-grad title +12",
    "remote +2",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -253108,6 +253239,16 @@
    "US - Remote"
   ],
   "posted_at": 1783296000,
+  "posting": {
+   "analyzed_at": 1784408927,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "ai_deferred_at": 1784408927,
+   "attempts": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -261730,6 +261871,22 @@
    "Chantilly, VA"
   ],
   "posted_at": 1783376122,
+  "posting": {
+   "analyzed_at": 1784408909,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0 years of experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784408909,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level STEM role with 0 experience required.",
+   "role_family": "other-technical",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -267312,8 +267469,9 @@
   "url": "https://jobs.jobvite.com/tylertech/job/o8NHzfwV?nl=1&nl=1&fr=false"
  },
  "b00a064b0a15b48e": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784408928,
   "company": "QA Wolf",
   "description": "",
   "explicit_new_grad": true,
@@ -267324,6 +267482,11 @@
    "United States"
   ],
   "posted_at": 1783296000,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784408928,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -267333,7 +267496,8 @@
    "role:swe +20",
    "new-grad title +12",
    "remote +2",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -268272,6 +268436,22 @@
    "Chantilly, VA"
   ],
   "posted_at": 1783376122,
+  "posting": {
+   "analyzed_at": 1784408917,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0 years of experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784408917,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level STEM role with no experience required.",
+   "role_family": "other-technical",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -344915,15 +345095,32 @@
    "Atlanta, GA, United States"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784408859,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "1–3 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784408859,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 78,
+  "score": 68,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -345022,8 +345219,9 @@
   "url": "https://citi.wd5.myworkdayjobs.com/en-US/2/job/San-Francisco-California-United-States/Citi-Commercial-Bank---Commercial-Associate--Digital-Tech---Comms_26945133"
  },
  "e4441ce5397b18e3": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784408866,
   "company": "Amentum",
   "description": "",
   "explicit_new_grad": true,
@@ -345034,6 +345232,11 @@
    "US-VA-Dahlgren, United States of America"
   ],
   "posted_at": 1783468800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784408866,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -345042,7 +345245,8 @@
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "jobright",
@@ -355499,6 +355703,21 @@
    "Mountain View, CA"
   ],
   "posted_at": 1783468800,
+  "posting": {
+   "analyzed_at": 1784408867,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "H1B Sponsorship"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784408867,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, no experience required",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -361280,8 +361499,9 @@
   "url": "https://careers.airbnb.com/positions/8023818?gh_jid=8023818"
  },
  "ee9ef3a1d638a011": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784408875,
   "company": "General Dynamics",
   "description": "",
   "explicit_new_grad": true,
@@ -361292,6 +361512,11 @@
    "Groton, CT"
   ],
   "posted_at": 1783462244,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784408875,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -361300,7 +361525,8 @@
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "simplify",
@@ -363967,7 +364193,7 @@
   ],
   "posted_at": 1783555200,
   "posting": {
-   "analyzed_at": 1784408809,
+   "analyzed_at": 1784408834,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 1,
@@ -363975,17 +364201,24 @@
   },
   "quality": {
    "ai_deferred_at": 1784408809,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784408834,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1-2 years exp required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 78,
+  "score": 68,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -367809,6 +368042,15 @@
    "United States"
   ],
   "posted_at": 1783296000,
+  "posting": {
+   "analyzed_at": 1784408929,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784408929,
+   "attempts": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
