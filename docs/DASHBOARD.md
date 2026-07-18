@@ -1,13 +1,13 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-18 21:01 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
+_Last run: **2026-07-18 21:03 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
 | Score | Age | Company | Role | Location | Sector | Src |
 |---|---|---|---|---|---|---|
 | 100 🔥 | 11h | CVS Health | [Analyst, Patient Relations](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/CT---New-Haven/Analyst--Patient-Relations_R0978633) | CT - New Haven | healthtech | workday |
-| 100 🔥 | 14h | CVS Health | [Inside Sales Development Associate (Cincinnati, OH)](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/OH---Cincinnati/Inside-Sales-Development-Associate--Cincinnati--OH-_R0979563) | OH - Cincinnati | healthtech | workday |
+| 100 🔥 | 15h | CVS Health | [Inside Sales Development Associate (Cincinnati, OH)](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/OH---Cincinnati/Inside-Sales-Development-Associate--Cincinnati--OH-_R0979563) | OH - Cincinnati | healthtech | workday |
 | 100 🔥 | 1d | Oscar Health | [Associate, Actuarial](http://www.hioscar.com/careers/8069495?gh_jid=8069495) | Remote | healthtech | greenhouse |
 | 100 🔥 | 1d | NVIDIA | [Systems Software Engineer New Grad - Accelerated Kubernetes Performanc](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Systems-Software-Engineer--Accelerated-Kubernetes-Performance-and-Scale---New-College-Grad-2026_JR2020957) | Seattle, WA | big_tech | simplify |
 | 100 🔥 | 2d | Merck | [Associate Specialist, Customer Support](https://msd.wd5.myworkdayjobs.com/en-US/SearchJobs/job/USA---REMOTE---REMOTE/Associate-Specialist--Customer-Support_R406095-1/apply) | REMOTE, REMOTE, United States of America | healthtech | phenom |
@@ -44,9 +44,9 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 98 🔥 | 8d | OpenAI | [Account Associate, Japan](https://jobs.ashbyhq.com/openai/2f3f416d-cc2a-4836-bcff-daee80c94e95) | Tokyo, Japan | ai_lab | ashby |
 | 98 🔥 | 12d | Notion | [Software Engineer, Early Career (AI)](https://jobs.ashbyhq.com/notion/85947779-6b87-466a-98bc-30a640448c28) | San Francisco, California | big_tech | ashby |
 | 97 🔥 | 16d | Amazon | [Software Dev Engineer I - Annapurna Labs](https://www.amazon.jobs/jobs/10464104/apply) | Austin, TX | big_tech | speedyapply |
-| 96 🔥 | 14h | CVS Health | [Beauty Sales Consultant, Licensed](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/CA---Studio-City/Beauty-Sales-Consultant--Licensed_R0949589) | CA - Studio City | healthtech | workday |
-| 96 🔥 | 14h | CVS Health | [Beauty Sales Consultant](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/CA---Studio-City/Beauty-Sales-Consultant_R0971756) | CA - Studio City | healthtech | workday |
-| 96 🔥 | 14h | CVS Health | [Beauty Sales Consultant](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/CA---Los-Angeles/Beauty-Sales-Consultant_R0980004-1) | CA - Los Angeles | healthtech | workday |
+| 96 🔥 | 15h | CVS Health | [Beauty Sales Consultant, Licensed](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/CA---Studio-City/Beauty-Sales-Consultant--Licensed_R0949589) | CA - Studio City | healthtech | workday |
+| 96 🔥 | 15h | CVS Health | [Beauty Sales Consultant](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/CA---Studio-City/Beauty-Sales-Consultant_R0971756) | CA - Studio City | healthtech | workday |
+| 96 🔥 | 15h | CVS Health | [Beauty Sales Consultant](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/CA---Los-Angeles/Beauty-Sales-Consultant_R0980004-1) | CA - Los Angeles | healthtech | workday |
 | 96 🔥 | 1d | CVS Health | [AI Engineer](https://cvshealth.wd1.myworkdayjobs.com/CVS_Health_Careers/job/TX---Richardson/AI-Engineer_R0968098) | Richardson, TX | healthtech | simplify |
 | 96 🔥 | 1d | Merck | [Scientist, Statistical Programming (Hybrid)](https://msd.wd5.myworkdayjobs.com/en-US/SearchJobs/job/USA---Pennsylvania---North-Wales-Upper-Gwynedd/Scientist--Statistical-Programming--Hybrid-_R404899-2/apply) | North Wales, Pennsylvania, United States | healthtech | phenom |
 | 96 🔥 | 3d | UST HealthProof | [Junior Full Stack Developer](https://jobright.ai/jobs/info/6a5864d13330ca6f993c47fc?utm_campaign=Software%20Engineering&utm_source=1103) | Atlanta, GA, United States | healthtech | jobright |
