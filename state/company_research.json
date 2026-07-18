@@ -1636,10 +1636,10 @@
  },
  "palantir technologies": {
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "04155dc2886ba929",
-  "last_attempt_at": 1784402008,
+  "last_attempt_at": 1784402056,
   "last_evidence_at": 1784397120,
   "name": "Palantir Technologies",
   "schema_v": 1,
@@ -1925,13 +1925,56 @@
  },
  "silna health": {
   "aliases": [],
-  "attempts": 4,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 5,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "73ed1497681aaf1b",
-  "last_attempt_at": 1784402008,
+  "generated_at": 1784402056,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784402056,
   "last_evidence_at": 1784393439,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Silna Health",
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789586056,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "17613c48327869b2",
@@ -1944,7 +1987,32 @@
     "url": "https://jobs.ashbyhq.com/silnahealth.com/28ba5d0b-b862-4e04-995d-d5eff22d269e/application"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "b7e6129c69"
+   ],
+   "value": "Silna Health is a health tech company focused on AI-driven solutions for healthcare, as indicated by their job posting for an AI Deployment Analyst."
+  },
+  "synthesized_evidence_sha": "73ed1497681aaf1b",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "b7e6129c69"
+   ],
+   "value": "AI Deployment Analyst role involves deploying and maintaining AI models in healthcare settings, as per the job posting."
+  },
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  }
  },
  "snowflake": {
   "aliases": [],
@@ -2125,7 +2193,10 @@
  },
  "the walt disney company": {
   "aliases": [],
+  "attempts": 1,
+  "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "df283dffcfa062f0",
+  "last_attempt_at": 1784402056,
   "last_evidence_at": 1784397120,
   "name": "The Walt Disney Company",
   "schema_v": 1,

@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-18 19:14 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
+_Last run: **2026-07-18 19:15 UTC** · companies polled directly: **778** (registry 908) · jobs tracked: **12762** · new this run: **1** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -127,7 +127,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 93 🔥 | 22d | Oscar Health | [Associate, Network Contracting](http://www.hioscar.com/careers/8030641?gh_jid=8030641) | Tempe, Arizona, United States | healthtech | greenhouse |
 | 92 🔥 | 18h | SpaceX | [Property Tax Analyst](https://boards.greenhouse.io/spacex/jobs/8639546002?gh_jid=8639546002) | Hawthorne, CA | big_tech | greenhouse |
 | 92 🔥 | 20h | Magnatech | [Associate Developer](https://magnatech.io/technology-careers/?gh_jid=4716011005) | Remote in USA | other | simplify |
-| 92 🔥 | 20h | SpaceX | [Full Stack Software Engineer Observability - Observability - Starlink](https://boards.greenhouse.io/spacex/jobs/8638457002) | West Athens, CA | big_tech | simplify |
+| 92 🔥 | 21h | SpaceX | [Full Stack Software Engineer Observability - Observability - Starlink](https://boards.greenhouse.io/spacex/jobs/8638457002) | West Athens, CA | big_tech | simplify |
 | 92 🔥 | 21h | Lincoln Financial | [Associate Analytics Engineer](https://jobs.lincolnfinancial.com/job/Omaha-Associate,-Analytics-Engineer-NE-68046/1410206500/?ats=successfactors) | Villanova, PA | other | simplify |
 | 92 🔥 | 21h | OpenAI | [HR Generalist, Consumer Devices](https://jobs.ashbyhq.com/openai/000cf0f2-090d-40c6-b9f8-1699db9a4c68) | San Francisco | ai_lab | ashby |
 | 92 🔥 | 21h | OpenAI | [Partner Strategy & Operations](https://jobs.ashbyhq.com/openai/3fd0ca32-e787-437d-985a-b9f7e3299ef4) | San Francisco | ai_lab | ashby |
