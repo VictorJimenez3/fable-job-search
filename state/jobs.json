@@ -24810,6 +24810,9 @@
    "San Francisco"
   ],
   "posted_at": 1770936272,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -36251,8 +36254,9 @@
   "url": "https://careers-gdms.icims.com/jobs/72777/job?mobile=true&needsRedirect=false"
  },
  "1637ab4bc78b0099": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "oracle_orc",
+  "closed_at": 1784419652,
   "company": "American Express",
   "description": "",
   "explicit_new_grad": true,
@@ -36263,6 +36267,11 @@
    "Phoenix, AZ, United States"
   ],
   "posted_at": 1783641600,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419652,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -36272,7 +36281,8 @@
    "role:swe +20",
    "new-grad title +8",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "oracle_orc",
@@ -65290,7 +65300,9 @@
   ],
   "posted_at": 1782324846,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419583,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -72140,7 +72152,9 @@
   ],
   "posted_at": 1781806440,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419583,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -86839,6 +86853,9 @@
    "San Francisco"
   ],
   "posted_at": 1770936117,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -89820,6 +89837,9 @@
    "Sao Paulo, Brazil"
   ],
   "posted_at": 1776793501,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -136482,6 +136502,9 @@
    "London"
   ],
   "posted_at": 1780679796,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -155048,7 +155071,9 @@
   ],
   "posted_at": 1782908652,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419582,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -161885,12 +161910,12 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 89,
+  "score": 85,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
    "new-grad title +12",
-   "posted <72h +6",
+   "posted <7d +2",
    "you've engaged with Lightfield +2",
    "title matches your history +3"
   ],
@@ -170810,6 +170835,20 @@
    "Boston, Massachusetts, United States, Boulder, Colorado, United States"
   ],
   "posted_at": 1783974308,
+  "posting": {
+   "analyzed_at": 1784419644,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419644,
+   "live": true,
+   "new_grad": "unclear",
+   "reason": "Job title not specified in text",
+   "role_family": "other-technical",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -174042,7 +174081,9 @@
   ],
   "posted_at": 1780769640,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419584,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -199964,7 +200005,9 @@
   ],
   "posted_at": 1781189145,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419584,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
@@ -205378,7 +205421,6 @@
    "role:data_eng +18",
    "sector:healthtech +16",
    "title matches your history +4",
-   "re-gate v2: priority sector: healthtech (auto-alert)",
    "quality: not new-grad (senior — LLM-verified) -20"
   ],
   "sector": "healthtech",
@@ -208650,8 +208692,6 @@
    "role:swe +20",
    "sector:healthtech +16",
    "title matches your history +2",
-   "re-gate v2: priority sector: healthtech (auto-alert)",
-   "posting: wants 5+ yrs (dashboard only)",
    "quality: not new-grad (5+ yrs — LLM-verified) -20"
   ],
   "sector": "healthtech",
@@ -222892,6 +222932,9 @@
    "Toronto Office"
   ],
   "posted_at": 1778528315,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -229443,6 +229486,20 @@
    "Home based - EMEA"
   ],
   "posted_at": 1588077725,
+  "posting": {
+   "analyzed_at": 1784419612,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419612,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Junior role, new grad focus, Python/Go skills",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -230647,6 +230704,20 @@
    "Des Moines, IA"
   ],
   "posted_at": 1782740373,
+  "posting": {
+   "analyzed_at": 1784419619,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419619,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level, <1 yr exp, MEAN stack",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -232012,7 +232083,9 @@
   ],
   "posted_at": 1778529647,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419585,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
@@ -256764,6 +256837,9 @@
    "3 Locations"
   ],
   "posted_at": 1783724156,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -299042,6 +299118,22 @@
    "New York, NY"
   ],
   "posted_at": 1772052531,
+  "posting": {
+   "analyzed_at": 1784419588,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0-2+ years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419588,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0-2+ years, new grad role",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -316168,6 +316260,20 @@
    "Stennis Space Center, Mississippi"
   ],
   "posted_at": 1756500522,
+  "posting": {
+   "analyzed_at": 1784419604,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419604,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for 2026 class",
+   "role_family": "other-technical",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -322136,6 +322242,9 @@
    "NY office"
   ],
   "posted_at": 1777063354,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -332974,6 +333083,9 @@
    "San Francisco, CA or New York, NY"
   ],
   "posted_at": 1773250850,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -334410,7 +334522,7 @@
   "url": "https://jobs.smartrecruiters.com/AbbVie/3743990014150876"
  },
  "d185b158b3bc2d53": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "oracle_orc",
   "company": "Cantor Fitzgerald",
   "description": "",
@@ -334422,15 +334534,33 @@
    "New York, NY, United States"
   ],
   "posted_at": 1781136000,
+  "posting": {
+   "analyzed_at": 1784419628,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 5,
+   "years_note": "At least 5+ years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419628,
+   "live": true,
+   "new_grad": "no",
+   "reason": "5+ years required.",
+   "role_family": "security",
+   "years_required": 5
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 77,
+  "score": 57,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "title matches your history +5"
+   "title matches your history +5",
+   "posting: wants 5+ yrs (dashboard only)",
+   "quality: not new-grad (5+ yrs — LLM-verified) -20"
   ],
   "sector": "other",
   "source": "oracle_orc",
@@ -350243,6 +350373,9 @@
    "US - New York, NY"
   ],
   "posted_at": 1783715073,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -371751,6 +371884,23 @@
    "Roseville, California, United States of America"
   ],
   "posted_at": 1780810295,
+  "posting": {
+   "analyzed_at": 1784419635,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "Must Be US Citizen",
+   "years_min": 0,
+   "years_note": "0–4 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419635,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role with 0-4 years required.",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -376475,7 +376625,7 @@
   "url": "https://boards.greenhouse.io/accenturefederalservices/jobs/4697063006?gh_jid=4697063006"
  },
  "ec4a9b78071e195a": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "greenhouse",
   "company": "Schonfeld",
   "description": "",
@@ -376487,15 +376637,33 @@
    "Hong Kong, Hong Kong"
   ],
   "posted_at": 1767726420,
+  "posting": {
+   "analyzed_at": 1784419597,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 3,
+   "years_note": "3+ years of relevant experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419597,
+   "live": true,
+   "new_grad": "no",
+   "reason": "3+ years experience required",
+   "role_family": "other-technical",
+   "years_required": 3
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 78,
+  "score": 58,
   "score_reasons": [
    "base 40",
    "role:data_science +22",
    "new-grad title +12",
-   "title matches your history +4"
+   "title matches your history +4",
+   "posting: wants 3+ yrs (dashboard only)",
+   "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "other",
   "source": "greenhouse",
@@ -403354,6 +403522,9 @@
    "Boston Area"
   ],
   "posted_at": 1778098297,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
