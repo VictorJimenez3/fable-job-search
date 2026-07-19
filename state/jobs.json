@@ -10902,7 +10902,9 @@
   ],
   "posted_at": 1781790876,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419470,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -16760,7 +16762,9 @@
   ],
   "posted_at": 1782929645,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419474,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -31429,6 +31433,20 @@
    "Raleigh, NC"
   ],
   "posted_at": 1780094413,
+  "posting": {
+   "analyzed_at": 1784419533,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419533,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Associate level, new grad role.",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -65271,6 +65289,9 @@
    "USA - Las Cruces, NM"
   ],
   "posted_at": 1782324846,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -72118,6 +72139,9 @@
    "8 Locations"
   ],
   "posted_at": 1781806440,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -75270,6 +75294,20 @@
    "Los Gatos,California,United States of America"
   ],
   "posted_at": 1782864000,
+  "posting": {
+   "analyzed_at": 1784419483,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419483,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Full Stack Engineering 4 - Ads Measurement — Netflix",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -81435,12 +81473,12 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 84,
+  "score": 80,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "posted <72h +6",
+   "posted <7d +2",
    "title matches your history +6"
   ],
   "sector": "other",
@@ -155009,6 +155047,9 @@
    "USA - Las Cruces, NM"
   ],
   "posted_at": 1782908652,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -166543,6 +166584,22 @@
    "Beavercreek, Ohio"
   ],
   "posted_at": 1781028841,
+  "posting": {
+   "analyzed_at": 1784419517,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0–2 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419517,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0-2 years experience, new grad role",
+   "role_family": "other-technical",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -173984,6 +174041,9 @@
    "2 Locations"
   ],
   "posted_at": 1780769640,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -199903,6 +199963,9 @@
    "Remote"
   ],
   "posted_at": 1781189145,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -205278,7 +205341,7 @@
   "url": "https://job-boards.greenhouse.io/torcrobotics/jobs/8560188002"
  },
  "810115af2a413b2c": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "greenhouse",
   "company": "Horizon Surgical Systems",
   "description": "",
@@ -205290,16 +205353,33 @@
    "Los Angeles, California"
   ],
   "posted_at": 1781811713,
+  "posting": {
+   "analyzed_at": 1784419508,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 2,
+   "years_note": "2+ years of experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419508,
+   "live": true,
+   "new_grad": "no",
+   "reason": "2+ years required",
+   "role_family": "data",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 78,
+  "score": 58,
   "score_reasons": [
    "base 40",
    "role:data_eng +18",
    "sector:healthtech +16",
    "title matches your history +4",
-   "re-gate v2: priority sector: healthtech (auto-alert)"
+   "re-gate v2: priority sector: healthtech (auto-alert)",
+   "quality: not new-grad (senior — LLM-verified) -20"
   ],
   "sector": "healthtech",
   "source": "greenhouse",
@@ -208533,7 +208613,7 @@
   "url": "https://jobright.ai/jobs/info/6a43e83f105260150b72018d?utm_campaign=Data%20Analysis&utm_source=1103"
  },
  "831b43ef2f7dca02": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "greenhouse",
   "company": "Horizon Surgical Systems",
   "description": "",
@@ -208545,16 +208625,34 @@
    "Los Angeles, California"
   ],
   "posted_at": 1781811803,
+  "posting": {
+   "analyzed_at": 1784419501,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 5,
+   "years_note": "Minimum 5 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419501,
+   "live": true,
+   "new_grad": "no",
+   "reason": "5+ years required",
+   "role_family": "other-technical",
+   "years_required": 5
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 78,
+  "score": 58,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:healthtech +16",
    "title matches your history +2",
-   "re-gate v2: priority sector: healthtech (auto-alert)"
+   "re-gate v2: priority sector: healthtech (auto-alert)",
+   "posting: wants 5+ yrs (dashboard only)",
+   "quality: not new-grad (5+ yrs — LLM-verified) -20"
   ],
   "sector": "healthtech",
   "source": "greenhouse",
@@ -211365,7 +211463,9 @@
   ],
   "posted_at": 1783018592,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419473,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
@@ -223266,7 +223366,9 @@
   ],
   "posted_at": 1783016045,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419473,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -231909,6 +232011,9 @@
    "Toronto Office"
   ],
   "posted_at": 1778529647,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -232872,6 +232977,22 @@
    "Fort Huachuca, AZ"
   ],
   "posted_at": 1779374140,
+  "posting": {
+   "analyzed_at": 1784419550,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0 years of experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419550,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0 experience required for BS/BA",
+   "role_family": "other-technical",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -234492,6 +234613,20 @@
    "Seattle, WA"
   ],
   "posted_at": 1779214610,
+  "posting": {
+   "analyzed_at": 1784419558,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419558,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -245687,7 +245822,7 @@
   "url": "https://boards.greenhouse.io/cloudflare/jobs/8025521?gh_jid=8025521"
  },
  "9a8f075baf4aea61": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "lever",
   "company": "H1",
   "description": "",
@@ -245699,15 +245834,30 @@
    "Copenhagen"
   ],
   "posted_at": 1779196147,
+  "posting": {
+   "analyzed_at": 1784419564,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419564,
+   "live": true,
+   "new_grad": "no",
+   "reason": "5+ years required",
+   "role_family": "swe",
+   "years_required": 5
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 78,
+  "score": 58,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:healthtech +16",
-   "title matches your history +2"
+   "title matches your history +2",
+   "quality: not new-grad (5+ yrs — LLM-verified) -20"
   ],
   "sector": "healthtech",
   "source": "lever",
@@ -273756,6 +273906,20 @@
    "United States"
   ],
   "posted_at": 1780074702,
+  "posting": {
+   "analyzed_at": 1784419541,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419541,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role with infra focus.",
+   "role_family": "other-technical",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -276931,7 +277095,9 @@
   ],
   "posted_at": 1783584094,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419471,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -285790,7 +285956,7 @@
   "url": "https://jobs.ashbyhq.com/moab/8ab10f9b-2a49-409d-8b20-7ecf1ed92ee4/application"
  },
  "b2761e9422256ec4": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "smartrecruiters",
   "company": "City and County of San Francisco",
   "description": "",
@@ -285802,15 +285968,30 @@
    "San Francisco, CA"
   ],
   "posted_at": 1782920329,
+  "posting": {
+   "analyzed_at": 1784419474,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419474,
+   "live": true,
+   "new_grad": "no",
+   "reason": "4+ years experience required",
+   "role_family": "other-technical",
+   "years_required": 4
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 78,
+  "score": 58,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: not new-grad (4+ yrs — LLM-verified) -20"
   ],
   "sector": "other",
   "source": "smartrecruiters",
@@ -345029,7 +345210,7 @@
   "url": "https://job-boards.greenhouse.io/transmarketgroup/jobs/5151574007?gh_jid=5151574007"
  },
  "d8aebcdb96f2ef3f": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "greenhouse",
   "company": "Babel Street",
   "description": "",
@@ -345041,6 +345222,22 @@
    "Remote - United States; Reston, VA, United States; Somerville, Massachusetts, United States"
   ],
   "posted_at": 1782505236,
+  "posting": {
+   "analyzed_at": 1784419490,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 18,
+   "years_note": "at least 18 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419490,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "entry-level, new grad role",
+   "role_family": "data",
+   "years_required": null
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -345050,7 +345247,8 @@
    "role:swe +20",
    "new-grad title +12",
    "remote +2",
-   "title matches your history +4"
+   "title matches your history +4",
+   "posting: wants 18+ yrs (dashboard only)"
   ],
   "sector": "other",
   "source": "greenhouse",
@@ -351457,7 +351655,9 @@
   ],
   "posted_at": 1783374843,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419472,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -384513,7 +384713,9 @@
   ],
   "posted_at": 1783461048,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419472,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
@@ -387217,7 +387419,7 @@
   "url": "https://jobs.lever.co/weloglobal/b426802e-e06a-48a9-94cf-58741da49675"
  },
  "f2985884aeb3e639": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "workday",
   "company": "Amentum",
   "description": "",
@@ -387229,15 +387431,32 @@
    "US-DC-Washington"
   ],
   "posted_at": 1780777333,
+  "posting": {
+   "analyzed_at": 1784419524,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 1,
+   "years_note": "Minimum of 1 year"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419524,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years experience required",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 78,
+  "score": 58,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: not new-grad (senior — LLM-verified) -20"
   ],
   "sector": "other",
   "source": "workday",
