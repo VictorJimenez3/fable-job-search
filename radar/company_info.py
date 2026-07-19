@@ -69,3 +69,20 @@ def context(company: str, sector: str = "", dossiers: dict | None = None) -> tup
     if words & {"bank", "capital", "finance", "financial", "insurance"}:
         return "financial services", "financial products or services"
     return SECTOR_LABELS.get(sector, "general technology"), "industry context not yet profiled"
+
+
+def snapshot(company: str, sector: str = "", dossiers: dict | None = None) -> str:
+    """Compact, honest employer context for alert rows and daily-best issues."""
+    research = research_for(company)
+    culture = dossier_for(company, dossiers)
+    parts = []
+    if research and research.get("status") == "ready":
+        mission = claim_text(research, "mission")
+        if mission != "Not confirmed":
+            parts.append(f"mission: {mission}")
+    if culture:
+        pace = culture.get("pace") or "not confirmed"
+        vibe = culture.get("vibe") or "not confirmed"
+        pto = culture.get("pto") or "not confirmed"
+        parts.append(f"pace: {pace}; culture: {vibe}; PTO: {pto}")
+    return " · ".join(parts)

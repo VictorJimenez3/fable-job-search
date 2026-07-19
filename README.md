@@ -38,7 +38,7 @@ Subscribe to the RSS feed at:
 every ~30 min (GitHub Actions cron)
 │
 ├─ 1. BREADTH: pull 5 aggregators
-│     SimplifyJobs · vanshb03 · jobright-ai (SWE + Data) · speedyapply · HN Who-is-Hiring
+│     [SimplifyJobs/New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) · vanshb03 · jobright-ai (SWE + Data) · speedyapply · HN Who-is-Hiring
 │
 ├─ 2. DISCOVERY: mine every job URL for ATS tokens
 │     (Greenhouse / Lever / Ashby / Workday / SmartRecruiters / Recruitee)
@@ -51,7 +51,7 @@ every ~30 min (GitHub Actions cron)
 │       days before they show up anywhere else
 │
 ├─ 4. RANK: verified new-grad/early-career fit first, then AI/ML and data
-│     science, then AI-oriented/general SWE and systems; sector, company tier,
+│     science, then general SWE, then data engineering and systems; sector, company tier,
 │     freshness, and learned taste refine the order. Technical graduate,
 │     rotational, and leadership programs (J&J TLDP, Merck IT/emerging-talent,
 │     BMS digital programs, etc.) are a dedicated high-priority path. Marquee

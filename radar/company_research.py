@@ -27,11 +27,12 @@ _MARKERS = (
     "we are ", " is a ", "our mission", "our purpose", "we build", "we make",
     "we provide", "we help", "our platform", "our product", "our customers",
     "serves ", "leading ", "technology company", "healthcare company",
-    "sponsorship", "sponsor", "opt", "cpt", "visa",
+    "sponsorship", "sponsor", "opt", "cpt", "visa", "paid time off", "vacation",
+    "pto", "work-life", "work life", "fast-paced", "culture", "environment",
 )
 _BOILERPLATE = (
     "equal opportunity", "affirmative action", "reasonable accommodation",
-    "benefits include", "salary range", "compensation range", "privacy policy",
+    "salary range", "compensation range", "privacy policy",
     "background check", "all qualified applicants",
 )
 
@@ -263,8 +264,16 @@ def _priority(record: dict, jobs: list[dict], priority_ids: set[str], now: int) 
     if any(j.get("alert_ok") and not j.get("closed_at") for j in jobs):
         score += 100
     score += min(70, max((j.get("score", 0) for j in jobs), default=0))
-    if any(now - j.get("first_seen", 0) <= 72 * 3600 for j in jobs):
-        score += 40
+    # Keep the research queue aligned with what the user actually sees first:
+    # best fit, then newest posting.  first_seen is only a fallback because an
+    # aggregator can discover a posting after it was published.
+    newest = max((j.get("posted_at") or j.get("first_seen", 0) for j in jobs), default=0)
+    if newest and now - newest <= 24 * 3600:
+        score += 55
+    elif newest and now - newest <= 72 * 3600:
+        score += 35
+    elif any(now - j.get("first_seen", 0) <= 72 * 3600 for j in jobs):
+        score += 20
     if record.get("status") != "ready":
         score += 35
     if record.get("refresh_after", 0) <= now:

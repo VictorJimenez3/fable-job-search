@@ -722,7 +722,9 @@ function wsCompany(j, w, c, id) {
     ${c?`<div class="sect"><h4>Culture signals · ${c.source==="est."?"legacy AI estimate — not used in ranking":"human-curated"}</h4>
       <div class="kv"><span class="k">vibe</span><span>${esc(c.vibe)} — ${esc(c.fit_notes)}</span>
       <span class="k">fit</span><span>${c.fit}/100 · WLB ${c.wlb}/5 · pace ${esc(c.pace)}</span>
-      <span class="k">new-grad TC</span><span>${esc(c.new_grad_tc)}</span></div></div>`:""}
+      <span class="k">PTO</span><span>${esc(c.pto||"not confirmed")} · shutdowns ${esc(c.shutdowns||"not confirmed")}</span>
+      <span class="k">new-grad TC</span><span>${esc(c.new_grad_tc)}</span>
+      <span class="k">rotational</span><span>${esc(c.rotational||"none confirmed")}</span></div></div>`:""}
     <div class="sect"><h4>Radar coverage</h4><div class="kv">
       <span class="k">sector</span><span>${esc(j.sector||"not classified")}</span>
       <span class="k">ATS</span><span>${reg?`polling ${esc(reg.ats||"?")} · ${esc(reg.status||"?")}`:"not in direct-board registry"}</span>

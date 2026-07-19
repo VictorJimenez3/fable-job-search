@@ -72,8 +72,8 @@ Before changing the radar, read these in order:
   early-career evidence is required for alerts, except for a technical/data
   graduate, rotational, or leadership program. Aggregator listings, marquee
   companies, high salary, and healthtech no longer bypass that gate. Eligible
-  roles prioritize AI/ML, data science, data engineering, then AI-oriented or
-  general SWE/systems; program matches receive a separate auditable bonus and
+  roles prioritize AI/ML, data science, general SWE, then data engineering and
+  systems; program matches receive a separate auditable bonus and
   target healthcare program companies are labeled. Required 1+ years demotes
   to dashboard-only (0-2 years remains acceptable). `OFF_FIELD_RE` and
   `MIDLEVEL_RE` still outrank every alert path; company-tier reasons explicitly

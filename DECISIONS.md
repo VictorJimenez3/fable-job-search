@@ -692,8 +692,8 @@ eligibility therefore requires explicit new-grad/early-career evidence or a
 technical/data graduate, rotational, or leadership program. A required floor of
 1+ years is dashboard-only; 0-2 years remains compatible with new-grad hiring.
 
-Among eligible roles, AI/ML and data science lead, followed by data engineering,
-AI-oriented/general software engineering, and systems. Marquee employers receive
+Among eligible roles, AI/ML and data science lead, followed by general software
+engineering, then data engineering and systems. Marquee employers receive
 an explicit competitive label and a small secondary bonus, never a gate bypass.
 Technical program matches receive their own reason and bonus so opportunities
 such as Johnson & Johnson's Technology Leadership Development Program and
