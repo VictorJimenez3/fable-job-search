@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-19 22:27 UTC** · companies polled directly: **780** (registry 910) · jobs tracked: **14378** · new this run: **2** · alerts this run: **0**_
+_Last run: **2026-07-19 23:13 UTC** · companies polled directly: **780** (registry 910) · jobs tracked: **14378** · new this run: **2** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -43,7 +43,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 70  | 4d | SentiLink | [Data Scientist, New Grad](https://jobright.ai/jobs/info/6a55b7d705c65f7c8f4c673f?utm_campaign=Data%20Analysis&utm_source=1103) | United States | other | jobright |
 | 70  | 5d | SambaNova Systems | [AI Systems Performance Engineer New Grad](https://sambanova.ai/sambanova-available-positions/?gh_jid=6115124004) | San Jose, CA | other | simplify |
 | 70  | 10d | Quora | [Machine Learning Engineer New Grad](https://jobs.ashbyhq.com/quora/3eb7e80e-6a0d-41b6-8ee4-f62421c486e4/application) | Remote in USA | other | simplify |
-| 70  | 10d | Quora | [Machine Learning Engineer, New Grad - Quora (Remote)](https://jobs.ashbyhq.com/quora/3eb7e80e-6a0d-41b6-8ee4-f62421c486e4) | Remote - Multiple Locations | other | ashby |
+| 70  | 11d | Quora | [Machine Learning Engineer, New Grad - Quora (Remote)](https://jobs.ashbyhq.com/quora/3eb7e80e-6a0d-41b6-8ee4-f62421c486e4) | Remote - Multiple Locations | other | ashby |
 | 69  | 3d | Lightfield | [Software Engineer New Grad - Applied AI](https://jobs.ashbyhq.com/Lightfield/fc93a467-773d-4805-b342-bf470950732d/application?embed=true) | SF | other | simplify |
 | 69  | 3d | Lightfield | [Software Engineer, Applied AI, New Grad](https://jobs.ashbyhq.com/Lightfield/fc93a467-773d-4805-b342-bf470950732d) | HQ: San Francisco | other | ashby |
 | 69  | 4d | Palantir Technologies | [Software Engineer, New Grad - Defense](https://jobright.ai/jobs/info/6a57938ea791c6211befedb5?utm_campaign=Software%20Engineering&utm_source=1103) | Washington, D.C., United States | big_tech | jobright |
@@ -54,7 +54,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 69  | 20d | Palantir Technologies | [Software Engineer, New Grad - Production Infrastructure](https://jobright.ai/jobs/info/6a4298466c326942b4e835ad?utm_campaign=Software%20Engineering&utm_source=1103) | New York, NY | big_tech | jobright |
 | 69  | 20d | Palantir Technologies | [Software Engineer, New Grad - Infrastructure](https://jobright.ai/jobs/info/6a42b4ae6faf756060967a32?utm_campaign=Software%20Engineering&utm_source=1103) | Palo Alto, CA | big_tech | jobright |
 | 68  | 1d | LetsGetChecked | [Graduate Software Engineer](https://jobright.ai/jobs/info/69d4db85e63cea7a8b65d52b?utm_campaign=Software%20Engineering&utm_source=1103) | Remote - United States | other | jobright |
-| 68  | 5d | Hudson River Trading | [Algorithm Developer New Grad - Quant Researcher](https://www.hudsonrivertrading.com/careers/job/?gh_jid=8052050) | NYC | fintech | simplify |
+| 68  | 6d | Hudson River Trading | [Algorithm Developer New Grad - Quant Researcher](https://www.hudsonrivertrading.com/careers/job/?gh_jid=8052050) | NYC | fintech | simplify |
 | 68  | 17d | Bot Auto | [Machine Learning/Deep Learning Engineer New Grad](https://job-boards.greenhouse.io/botauto/jobs/5290395008) | Houston, TX | other | simplify |
 | 67  | 6d | Boeing | [Entry-Level Software Engineer–Developer](https://jobright.ai/jobs/info/6a54f06bae07d60a8d00ddac?utm_campaign=Software%20Engineering&utm_source=1103) | USA - Richardson, TX, United States of A | other | jobright |
 | 67  | 6d | Trexquant Investment LP | [Quantitative Researcher - Early Career (USA)](https://jobright.ai/jobs/info/6a556f82f2c46727285f25a3?utm_campaign=Data%20Analysis&utm_source=1103) | New York, New York, United States | fintech | jobright |
@@ -76,7 +76,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 65  | 2d | Northwood | [Infrastructure Engineer - Early Career](https://jobright.ai/jobs/info/6a56cacee9b77f668bd65c63?utm_campaign=Software%20Engineering&utm_source=1103) | Torrance, CA, United States | other | jobright |
 | 65  | 3d | Cybernetic Labs | [Software Engineer (Agent Platform) - New Grad - 2026-2027](https://jobs.ashbyhq.com/netic/d9bcb6a2-0e54-4cb3-baec-43f2d74db18f) | San Francisco | other | ashby |
 | 65  | 3d | Cybernetic Labs | [Full-Stack Software Engineer (Product) - New Grad - 2026-2027](https://jobs.ashbyhq.com/netic/bab5d1e5-e31b-42f0-9cef-334b1f17fed3) | San Francisco | other | ashby |
-| 65  | 5d | Old Mission | [Quantitative Trader Graduate Program](https://www.oldmissioncapital.com/careers/?gh_jid=7796044003) | Chicago, IL | other | simplify |
+| 65  | 6d | Old Mission | [Quantitative Trader Graduate Program](https://www.oldmissioncapital.com/careers/?gh_jid=7796044003) | Chicago, IL | other | simplify |
 | 65  | 18d | IMC Trading | [Graduate Software Engineer](https://jobright.ai/jobs/info/6a4556f7c2d11a6a46668d9b?utm_campaign=Software%20Engineering&utm_source=1103) | Chicago, United States | fintech | jobright |
 | 64  | 3d | Commvault | [Entry-Level Software Engineer - AI/ML](https://job-boards.greenhouse.io/commvault/jobs/5233620008) | Shrewsbury, NJ | other | simplify |
 | 64  | 3d | Bending Spoons | [Graduate software engineer](https://jobright.ai/jobs/info/6a59216a686b4755d1e0e89f?utm_campaign=Software%20Engineering&utm_source=1103) | United Kingdom | other | jobright |
@@ -96,7 +96,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 63  | 17d | Blue Origin | [Avionics / Embedded Software Engineer I - Early Career (2026 Starts)](https://jobright.ai/jobs/info/6a35bd6cce501060b5cf55d6?utm_campaign=Software%20Engineering&utm_source=1103) | Greater Seattle Area, United States of A | other | jobright |
 | 63  | 19d | TP-Link Systems Inc. | [2026 Early Career Embedded Software Engineer](https://jobright.ai/jobs/info/6a282bc27061b51a3a5f3d8b?utm_campaign=Software%20Engineering&utm_source=1103) | Irvine, CA | other | jobright |
 | 62  | 3d | Cybernetic Labs | [Software Engineer New Grad - Agent Platform](https://jobs.ashbyhq.com/netic/d9bcb6a2-0e54-4cb3-baec-43f2d74db18f/application?embed=true) | SF | other | simplify |
-| 62  | 5d | Old Mission | [Software Engineer – Graduate Program - August Start](https://www.oldmissioncapital.com/careers/?gh_jid=7796048003) | Chicago, IL | other | simplify |
+| 62  | 6d | Old Mission | [Software Engineer – Graduate Program - August Start](https://www.oldmissioncapital.com/careers/?gh_jid=7796048003) | Chicago, IL | other | simplify |
 | 62  | 6d | DMC Engineering | [Entry Level Embedded Engineer](https://jobright.ai/jobs/info/6a4e763f0ea38951a6ff3336?utm_campaign=Software%20Engineering&utm_source=1103) | Chicago, United States | other | jobright |
 | 62  | 8d | LetsGetChecked | [Graduate Software Engineer](https://jobright.ai/jobs/info/6a52a9fae726ec56126a4010?utm_campaign=Software%20Engineering&utm_source=1103) | United States | other | jobright |
 | 62  | 9d | Aquatic Capital Management | [Software Engineer, Early Career](https://jobright.ai/jobs/info/6a3ff4f3b526a24fc31305bd?utm_campaign=Software%20Engineering&utm_source=1103) | Chicago, IL, United States | fintech | jobright |
@@ -120,7 +120,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 60  | 13d | Citadel Securities | [Graduate Software Engineer](https://www.citadelsecurities.com/careers/details/software-engineer-university-graduate-us/) | Miami, FL | other | simplify |
 | 60  | 18d | Optiver | [Graduate Software Engineer](https://www.optiver.com/join-us/jobs/8401042002/?gh_jid=8401042002) | Chicago, IL | other | simplify |
 | 60  | 18d | Optiver | [Graduate Software Engineer](https://www.optiver.com/join-us/jobs/8604899002/?gh_jid=8604899002) | Austin, TX | other | simplify |
-| 60  | 26d | Cylake | [Software Engineer (2027 University Grad)](https://jobs.ashbyhq.com/cylake-inc/1d1ac42e-299c-42af-bd7c-b8c5fb07f735) | Sunnyvale | other | ashby |
+| 60  | 27d | Cylake | [Software Engineer (2027 University Grad)](https://jobs.ashbyhq.com/cylake-inc/1d1ac42e-299c-42af-bd7c-b8c5fb07f735) | Sunnyvale | other | ashby |
 | 59  | 4d | BAE Systems | [Entry Level Software Engineer](https://jobright.ai/jobs/info/6a587b6e9838a11e5d8387e1?utm_campaign=Software%20Engineering&utm_source=1103) | Hudson, NH, United States | other | jobright |
 | 59  | 5d | Albertsons Companies | [Front End Entry Level](https://jobright.ai/jobs/info/6a5b14efc8e3a473cb8aec64?utm_campaign=Software%20Engineering&utm_source=1103) | Kirkland, WA, United States | other | jobright |
 | 59  | 6d | WhatNot | [Software Engineer New Grad](https://jobs.ashbyhq.com/whatnot/bc8f8c7f-2c4c-4f43-a238-953568c101b8/application) | NYC | other | simplify |

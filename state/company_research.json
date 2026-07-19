@@ -370,10 +370,66 @@
  },
  "anduril": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "bdececdaa2"
+   ],
+   "value": "The U.S. military and allied nations."
+  },
+  "error": "",
   "evidence_sha": "189edd6ed7ea145b",
+  "generated_at": 1784502745,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "bdececdaa2"
+   ],
+   "value": "Based on the job posting's emphasis, interviews likely focus on software engineering skills applied to AI, autonomy, computer vision, sensor fusion, and networking. The company's stated need for speed ('in months, not years') suggests candidates may be evaluated on their ability to deliver quickly in a mission-critical context."
+  },
+  "last_attempt_at": 1784502745,
   "last_evidence_at": 1784481324,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "bdececdaa2"
+   ],
+   "value": "To transform U.S. and allied military capabilities with advanced technology in an era of strategic competition."
+  },
   "name": "Anduril",
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "bdececdaa2"
+   ],
+   "value": "Products involve autonomy, artificial intelligence, computer vision, sensor fusion, and networking technology for military applications. Specific product names are not detailed in the source."
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789686745,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "bdececdaa2"
+   ],
+   "value": "Rapidly growing team, described as a 'rapidly growing team'."
+  },
   "sources": [
    {
     "content_sha": "8038b96fe3c2e086",
@@ -386,7 +442,34 @@
     "url": "https://boards.greenhouse.io/andurilindustries/jobs/4802146007?gh_jid=4802146007"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "bdececdaa2"
+   ],
+   "value": "Anduril Industries is a defense technology company transforming military capabilities with advanced AI, autonomy, and sensor fusion. It aims to deliver cutting-edge technology to the U.S. military and allies significantly faster than traditional defense contractors."
+  },
+  "synthesized_evidence_sha": "189edd6ed7ea145b",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "bdececdaa2"
+   ],
+   "value": "Software engineering work involving autonomy, AI, computer vision, sensor fusion, and networking technology. The company emphasizes delivering technology in months, not years."
+  },
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "bdececdaa2"
+   ],
+   "value": "The role is positioned within a mission-driven organization focused on rapid innovation for national security, which aligns with the candidate's desire for fast, impactful tech culture over slow bureaucracy. As a defense technology company with a 'rapidly growing team' emphasizing speed, it suggests an environment that could accelerate technical learning and career growth."
+  }
  },
  "anduril industries": {
   "aliases": [],
@@ -1434,10 +1517,66 @@
  },
  "capricor therapeutics": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "0805d13609"
+   ],
+   "value": "Publicly traded (NASDAQ: CAPR) biotechnology company operating in research, manufacturing, and analytical data initiatives."
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "8d8e767efcdafba5",
+  "generated_at": 1784502745,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "0805d13609"
+   ],
+   "value": "Given the candidate's priorities for high new-grad pay, guaranteed shutdowns, and fast career growth without burnout, the interview should probe actual team hours, work-life balance policies, and compensation structure. Asking how the Data Science & Solutions team accelerates technical learning and handles deadlines can clarify if the environment avoids toxic burnout."
+  },
+  "last_attempt_at": 1784502745,
   "last_evidence_at": 1784491566,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "46a57c9a5f"
+   ],
+   "value": "Operates at least partially in California (references CA residents' rights under the California Consumer Privacy Act)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "0805d13609"
+   ],
+   "value": "Dedicated to advancing transformative cell and exosome-based therapies for rare diseases."
+  },
   "name": "Capricor Therapeutics",
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "0805d13609"
+   ],
+   "value": "Cell and exosome-based therapies for rare diseases, and a proprietary StealthX™ exosome platform for targeted delivery and vaccinology."
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789686745,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "a7a07954af621a9a",
@@ -1460,7 +1599,36 @@
     "url": "https://jobs.lever.co/capricor/f29602aa-a7bb-49ef-b998-f1b8efa99c44/apply"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "46a57c9a5f"
+   ],
+   "value": "Applicants are explicitly asked if they will require sponsorship for employment visa status now or in the future."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "0805d13609"
+   ],
+   "value": "A biotechnology company advancing transformative cell and exosome-based therapies for rare diseases, utilizing a proprietary StealthX™ exosome platform."
+  },
+  "synthesized_evidence_sha": "8d8e767efcdafba5",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "0805d13609"
+   ],
+   "value": "The Data Science & Solutions team supports research, manufacturing, and analytical data initiatives within a biotechnology environment."
+  },
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "0805d13609"
+   ],
+   "value": "As a mission-driven biotech focused on rare diseases, Capricor offers meaningful work in a highly specialized field. The Data Science & Solutions team bridges technical work with life sciences, which may appeal to a candidate seeking prestige and innovative tech culture rather than slow bureaucracy while maintaining personal time."
+  }
  },
  "celonis": {
   "aliases": [],
@@ -5057,10 +5225,60 @@
  },
  "ptc": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "ddff4ef9cd7b7469",
+  "generated_at": 1784502745,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784502745,
   "last_evidence_at": 1784491566,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "46295c05a1"
+   ],
+   "value": "Foster City, CA (Hybrid)."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "46295c05a1"
+   ],
+   "value": "Transforming the physical and digital worlds through innovative software solutions."
+  },
   "name": "PTC",
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789686745,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "2b099ce5f26d1469",
@@ -5073,7 +5291,34 @@
     "url": "https://jobright.ai/jobs/info/69fd14545cff890b03f360c5?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "46295c05a1"
+   ],
+   "value": "No H1B sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "46295c05a1"
+   ],
+   "value": "PTC is a leading company that transforms the physical and digital worlds through innovative software solutions."
+  },
+  "synthesized_evidence_sha": "ddff4ef9cd7b7469",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "46295c05a1"
+   ],
+   "value": "Junior Software Engineer role involving HTML, CSS, JavaScript, React, and Angular."
+  },
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  }
  },
  "publicis montr al": {
   "aliases": [],
@@ -5500,10 +5745,71 @@
  },
  "salesforce": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "ab78786b97a1a254",
+  "generated_at": 1784502745,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "0108e87e25",
+    "6e557ef7ce",
+    "499c8b7b97"
+   ],
+   "value": "Candidates should be prepared to discuss object-oriented programming, Java, Python, JavaScript, and HTML. Expect questions around architecture, design, implementation, and testing to build stable and scalable products. The candidate should emphasize a desire for quality and customer-valued features."
+  },
+  "last_attempt_at": 1784502745,
   "last_evidence_at": 1784481324,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "0108e87e25",
+    "6e557ef7ce",
+    "499c8b7b97"
+   ],
+   "value": "San Francisco, California, USA"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "499c8b7b97"
+   ],
+   "value": "Leading workforce transformation in the agentic era, with a focus on building breakthrough features for a trusted platform."
+  },
   "name": "Salesforce",
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "499c8b7b97"
+   ],
+   "value": "Agentforce (future of AI), with engineers building breakthrough features that customers will love, adopt, and use, while keeping the platform stable and scalable."
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789686745,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "0108e87e25",
+    "6e557ef7ce"
+   ],
+   "value": "10001+ employees. Founded in 1999."
+  },
   "sources": [
    {
     "content_sha": "ca744af1bf3500e1",
@@ -5536,7 +5842,41 @@
     "url": "https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/California---San-Francisco/Software-Engineering-AMTS-MTS--College-Grad-_JR330400-1"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "0108e87e25",
+    "6e557ef7ce"
+   ],
+   "value": "Has a track record of offering H1B sponsorships, though this does not guarantee sponsorship for any specific role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "0108e87e25",
+    "6e557ef7ce",
+    "499c8b7b97"
+   ],
+   "value": "Salesforce is a San Francisco-based enterprise software company founded in 1999 with over 10,001 employees. It provides a trusted, stable, and scalable platform and is actively building AI features for the 'agentic era'."
+  },
+  "synthesized_evidence_sha": "ab78786b97a1a254",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "0108e87e25",
+    "6e557ef7ce",
+    "499c8b7b97"
+   ],
+   "value": "Role encompasses architecture, design, implementation, and testing to build products right and release them with high quality. Requires object-oriented programming, Java, Python, JavaScript, and HTML."
+  },
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "499c8b7b97"
+   ],
+   "value": "The role promises architecture, design, and implementation work with world-class engineers on the 'future of AI' (Agentforce). The posting emphasizes building products right and releasing with high quality, which aligns with the candidate's desire for technical learning and a mission-driven culture. However, claims about work-life balance, scheduled shutdowns, high new-grad pay, guaranteed low burnout, or elite AI prestige cannot be confirmed from these specific job-postings."
+  }
  },
  "sambanova systems": {
   "aliases": [],
