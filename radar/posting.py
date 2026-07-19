@@ -53,6 +53,7 @@ _WORD_NUM = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5,
 _NUM = r"(\d{1,2}|one|two|three|four|five|six|seven|eight|nine|ten)"
 
 # ordered strongest-signal first; the FIRST match wins so "minimum of 3
+# ordered strongest-signal first; the FIRST match wins so "minimum of 3
 # years" beats a stray "10 years" elsewhere in a nice-to-have paragraph
 YEARS_PATTERNS = [
     # "0-2 years", "1 to 3 years" — a range: the floor is the requirement
@@ -63,7 +64,17 @@ YEARS_PATTERNS = [
     re.compile(rf"{_NUM}\s*\+?\s+years?[’']?\s+(?:of\s+)?"
                r"(?:relevant|professional|industry|software|engineering|work|"
                r"hands[- ]on|prior|related|full[- ]time)?\s*experience", re.I),
+    # Additional patterns for better coverage:
+    # "over X years", "more than X years"
+    re.compile(rf"(?:over|more\s+than|over|above)\s+{_NUM}\s*\+?\s+years?", re.I),
+    # "X years experience", "X years' experience", "X years experience in"
+    re.compile(rf"{_NUM}\s*\+?\s+years?['’]?\s+(?:of\s+)?experience", re.I),
+    # "seeking X years", "looking for X years"
+    re.compile(rf"(?:seeking|looking\s+for|require[sd]?|want[ns]?)\s+{_NUM}\s*\+?\s+years?", re.I),
+    # "X+ years", "X-plus years"
+    re.compile(rf"{_NUM}\s*(?:-?\+|-?\s*plus\s*)?\s*years?", re.I),
 ]
+# years" beats a stray "10 years" elsewhere in a nice-to-have paragraph
 
 INTERN_COUNTS_RE = re.compile(
     r"(internship(?:s)?\s+(?:experience\s+)?(?:count|counts|included|considered|welcome)|"

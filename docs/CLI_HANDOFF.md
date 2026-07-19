@@ -19,6 +19,31 @@ Before changing the radar, read these in order:
 4. [`profile.yaml`](../profile.yaml) for Victor's active search preferences and ranking thresholds.
 5. The relevant module and test under `radar/` and `tests/`.
 
+For feature implementation, also read [`USER_STORIES.md`](USER_STORIES.md).
+Each story records the intended user outcome, acceptance boundary, status, and
+known gap; update it when the feature changes.
+
+## Provenance required for every handoff
+
+Do not make the next CLI infer which agent changed a file. End each material
+session with:
+
+```text
+Agent: Codex | Claude Code | Qwen CLI | human
+Surface: exact CLI or local automation surface
+Model: exact model name, or `unknown`
+Proxy/provider: provider name, or `none`
+Scope: files/features changed
+Confidence: high | medium | low
+Validation: commands/checks and result
+Human follow-up: required action, or `none`
+```
+
+For commits, mirror the same fields as Git trailers where practical, for
+example `Agent: Codex`, `Model: GPT-5`, and `Surface: Codex CLI`. These fields
+are traceability metadata, not cryptographic proof. Existing concurrent edits
+must be called out and preserved, never attributed to the current agent.
+
 ## Keep these current
 
 - Update `README.md` when user-facing setup, commands, sources, delivery
@@ -52,6 +77,13 @@ generated state, or broaden scope. Human approval remains required for provider
 secret changes, OAuth activation, CV content, and production pushes.
 
 ## Current operational facts (verified 2026-07-18)
+
+- **Concurrent work to preserve:** `radar/posting.py` and `tests/test_posting.py`
+  have existing uncommitted modifications, and `.backup`/`.backup2` copies are
+  untracked (`radar/posting.py.backup`, `radar/posting.py.backup2`,
+  `tests/test_posting.py.bak`). Their author/provenance is not yet recorded;
+  do not overwrite, reset, delete, or attribute these files without first
+  coordinating with the active CLI.
 
 - GitHub Actions is the production runtime; it uses Python 3.12. On Victor's
   Mac, system Python is 3.9 but the repo's `.venv` has the dependencies —

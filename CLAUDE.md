@@ -11,6 +11,7 @@ and do not create a new doc when an existing one owns the topic.
 3. `docs/CLI_HANDOFF.md` — operational facts, current state, "next up"
 4. `profile.yaml` — Victor's search preferences and thresholds
 5. the specific `radar/` module + its `tests/` file
+6. `docs/USER_STORIES.md` when implementing or reprioritizing a feature
 
 ## Docs are part of the change, not an afterthought (MANDATORY)
 Every material change updates the docs in the same commit. This is not
@@ -25,6 +26,10 @@ are. Match the change to the doc that owns it:
 | operational facts, new env knobs/commands, or the "next up" queue | `docs/CLI_HANDOFF.md` |
 | candidate preferences or ranking policy only | `profile.yaml` (never implementation behavior) |
 | scoring gates, source parsing, state shape, or output | add/adjust `tests/` |
+
+Feature behavior and acceptance gaps belong in `docs/USER_STORIES.md`; keep it
+aligned with `ROADMAP.md` and `docs/CLI_HANDOFF.md` instead of leaving details
+only in a chat transcript.
 
 Topic-specific runbooks that already exist — extend these, don't fork them:
 `docs/AI_SETUP.md` (LLM enablement), `docs/FORKING.md`, `docs/SHPE.md`,
@@ -51,6 +56,29 @@ without scrolling through chat:
 4. End the session with a compact handoff: files changed, validation run and
    result, deployment/commit status, and any secrets or GitHub-side actions
    still required. If nothing changed, record that the audit was read-only.
+
+### Work provenance (MANDATORY)
+
+Every material change must identify who/what produced it. Include this block
+in the session handoff and, when committing, add equivalent Git trailers:
+
+```text
+Agent: Codex | Claude Code | Qwen CLI | human
+Surface: Codex CLI | Claude Code CLI | Qwen CLI | local script
+Model: exact model name if known (otherwise `unknown`)
+Proxy/provider: provider or `none`
+Scope: files/features touched
+Confidence: high | medium | low
+Validation: commands/checks and result
+Human follow-up: required action, or `none`
+```
+
+This is provenance and confidence metadata, not a cryptographic signature.
+Git author/committer identity remains the source for repository authentication;
+the block tells the next CLI how much independent review is warranted. Never
+claim a model or provider that was not actually used. If a concurrent edit is
+found, record it as existing concurrent work, preserve it, and do not sign it
+as your own.
 
 Small/local models may handle documentation, audits, tests, and mechanical
 edits when the acceptance criteria are already explicit. They must not invent

@@ -35,6 +35,19 @@ def test_analyze_years_shapes():
         ("You have 0-2 years of experience shipping software.", 0),
         ("1 to 3 years of relevant experience.", 1),
         ("7 years' experience in distributed systems.", 7),
+        ("Over 5 years of experience", 5),
+        ("More than 3 years experience", 3),
+        ("Above 7 years in software development", 7),
+        ("2 years experience", 2),
+        ("5 years of experience in Java", 5),
+        ("3+ years experience", 3),
+        ("4-plus years experience", 4),
+        ("seeking 2 years experience", 2),
+        ("looking for 5 years of experience", 5),
+        ("require 3 years experience", 3),
+        ("want 4 years experience", 4),
+        ("three years experience", 3),
+        ("five years of experience", 5),
     ]
     for text, want in cases:
         a = posting.analyze(text + PAD)

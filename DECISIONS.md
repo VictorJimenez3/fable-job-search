@@ -12,6 +12,15 @@ are temporarily dashboard-only so Victor's email/digest stream stays focused
 on AI/ML, data science, and AI-leaning software roles; records remain auditable
 and recoverable.
 
+## 44. Cross-CLI provenance metadata (2026-07-18)
+
+Every material change must identify its agent, CLI surface, model/provider,
+scope, confidence, validation, and human follow-up in the handoff, with matching
+Git trailers where practical. This is not cryptographic signing; it is a
+review-trust signal so Codex, Claude Code, Qwen, and human contributors can
+distinguish tested work from unreviewed proxy-model edits and preserve
+concurrent changes correctly.
+
 ## 43. Match model strength to task risk (2026-07-18)
 
 Local/small models are explicitly allowed to handle orientation, documentation,

@@ -3,6 +3,11 @@
 The dream-system backlog. Each item is scoped enough to build on request;
 none block anything currently running.
 
+Feature-level user stories and known acceptance gaps live in
+[`docs/USER_STORIES.md`](docs/USER_STORIES.md). Use that document when turning a
+roadmap item into implementation work; do not infer missing behavior from a
+short TODO label.
+
 ## CLI/model handoff policy (2026-07-18)
 
 Use the smallest trustworthy model for the task. The repository is the shared
