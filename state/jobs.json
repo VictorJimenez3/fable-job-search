@@ -10901,6 +10901,9 @@
    "NYC"
   ],
   "posted_at": 1781790876,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -16756,6 +16759,9 @@
    "USA - Oklahoma City, OK"
   ],
   "posted_at": 1782929645,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -41059,7 +41065,9 @@
   ],
   "posted_at": 1751057451,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419364,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -51367,7 +51375,9 @@
   ],
   "posted_at": 1732293972,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419364,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -55206,6 +55216,20 @@
    "USA"
   ],
   "posted_at": 1718988346,
+  "posting": {
+   "analyzed_at": 1784419389,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419389,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Graduate program, entry-level",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -58678,15 +58702,30 @@
    "New York, NY, United States"
   ],
   "posted_at": 1783296000,
+  "posting": {
+   "analyzed_at": 1784419437,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419437,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 2 years experience",
+   "role_family": "swe",
+   "years_required": 2
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 78,
+  "score": 68,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 2+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "oracle_orc",
@@ -62761,7 +62800,7 @@
   "url": "https://jobs.lever.co/wyetechllc/98328ced-2ebe-4ac0-8200-33982bedb5d2"
  },
  "26b29ca1edd05699": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "greenhouse",
   "company": "Truveta",
   "description": "",
@@ -62773,15 +62812,30 @@
    "Seattle, WA"
   ],
   "posted_at": 1779383656,
+  "posting": {
+   "analyzed_at": 1784419374,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419374,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 3+ years experience",
+   "role_family": "swe",
+   "years_required": 3
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 79,
+  "score": 59,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:healthtech +16",
-   "title matches your history +3"
+   "title matches your history +3",
+   "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "healthtech",
   "source": "greenhouse",
@@ -63564,15 +63618,31 @@
   "llm_note": "",
   "locations": [],
   "posted_at": null,
+  "posting": {
+   "analyzed_at": 1784419403,
+   "fetched": true,
+   "intern_counts": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419403,
+   "live": true,
+   "new_grad": "no",
+   "reason": "2+ years experience required",
+   "role_family": "swe",
+   "years_required": 2
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 78,
+  "score": 68,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 2+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "workday",
@@ -77688,6 +77758,20 @@
    "Irving, TX, United States"
   ],
   "posted_at": 1784073600,
+  "posting": {
+   "analyzed_at": 1784419396,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419396,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role for new grad",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -86615,7 +86699,9 @@
   ],
   "posted_at": 1720571914,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419365,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -140171,6 +140257,20 @@
    "Edinburgh, Scotland"
   ],
   "posted_at": 1783102446,
+  "posting": {
+   "analyzed_at": 1784419444,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419444,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "new grad role, security focus",
+   "role_family": "security",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -166799,7 +166899,7 @@
   "url": "https://job-boards.greenhouse.io/bgeinc/jobs/5282386008"
  },
  "686ae52ab900df25": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "workday",
   "company": "University of Wisconsin-Madison",
   "description": "",
@@ -166811,16 +166911,31 @@
    "University of Wisconsin Madison"
   ],
   "posted_at": 1784013113,
+  "posting": {
+   "analyzed_at": 1784419411,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419411,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 3+ years experience",
+   "role_family": "swe",
+   "years_required": 3
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 78,
+  "score": 58,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
    "posted <7d +2",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "other",
   "source": "workday",
@@ -169640,7 +169755,9 @@
   ],
   "posted_at": 1752861853,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419363,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -202480,6 +202597,20 @@
    "2 Locations"
   ],
   "posted_at": 1783056687,
+  "posting": {
+   "analyzed_at": 1784419451,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419451,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role for new grad",
+   "role_family": "security",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -211233,6 +211364,9 @@
    "Mountain View, CA"
   ],
   "posted_at": 1783018592,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -223131,6 +223265,9 @@
    "USA - Tukwila, WA"
   ],
   "posted_at": 1783016045,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -245437,7 +245574,7 @@
   "url": "https://www.mongodb.com/careers/job/?gh_jid=8010102"
  },
  "9a8255212c892aac": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "smartrecruiters",
   "company": "Harvard University",
   "description": "",
@@ -245450,24 +245587,31 @@
   ],
   "posted_at": 1783067122,
   "posting": {
-   "analyzed_at": 1784419342,
+   "analyzed_at": 1784419365,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784419342,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784419365,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role for new grad",
+   "role_family": "non-technical",
+   "years_required": 0
   },
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 79,
+  "score": 54,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
    "remote +2",
-   "title matches your history +5"
+   "title matches your history +5",
+   "quality: non-technical role (Entry-level role for new grad — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "smartrecruiters",
@@ -263404,15 +263548,33 @@
    "Montvale, New Jersey, United States"
   ],
   "posted_at": 1783439207,
+  "posting": {
+   "analyzed_at": 1784419421,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "without sponsorship",
+   "years_min": 1,
+   "years_note": "1-2 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419421,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1-2 years experience required",
+   "role_family": "swe",
+   "years_required": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 78,
+  "score": 68,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "greenhouse",
@@ -276768,6 +276930,9 @@
    "Houston, United States of America"
   ],
   "posted_at": 1783584094,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -279382,7 +279547,9 @@
   ],
   "posted_at": 1718149537,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419365,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -282151,6 +282318,20 @@
    "BU3-Budapest-GTC White House, Vaci ut 47, District XIII, Budapest"
   ],
   "posted_at": 1783361645,
+  "posting": {
+   "analyzed_at": 1784419429,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419429,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level, no experience required",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -351275,6 +351456,9 @@
    "Sunnyvale, California, United States of America"
   ],
   "posted_at": 1783374843,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -371119,6 +371303,20 @@
    "Athina, Attica, Greece"
   ],
   "posted_at": 1746615375,
+  "posting": {
+   "analyzed_at": 1784419381,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419381,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Graduate program for new CS grads",
+   "role_family": "other-technical",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -384314,6 +384512,9 @@
    "Hybrid - Denver"
   ],
   "posted_at": 1783461048,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -405194,7 +405395,9 @@
   ],
   "posted_at": 1760731066,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419363,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
