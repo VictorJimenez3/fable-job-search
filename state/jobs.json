@@ -8772,15 +8772,30 @@
    "2 Locations"
   ],
   "posted_at": 1781069491,
+  "posting": {
+   "analyzed_at": 1784419883,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419883,
+   "live": true,
+   "new_grad": "no",
+   "reason": "2+ years experience required.",
+   "role_family": "swe",
+   "years_required": 2
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 75,
+  "score": 65,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "title matches your history +3"
+   "title matches your history +3",
+   "quality: wants 2+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "workday",
@@ -59124,6 +59139,15 @@
    "San Francisco, CA"
   ],
   "posted_at": 1774469281,
+  "posting": {
+   "analyzed_at": 1784419892,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784419892,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -69701,6 +69725,20 @@
    "University of Maryland College Park"
   ],
   "posted_at": 1780950127,
+  "posting": {
+   "analyzed_at": 1784419805,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419805,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level data engineer role for new grad",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -91737,7 +91775,9 @@
   ],
   "posted_at": 1782323300,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419797,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
@@ -103224,7 +103264,7 @@
   "url": "https://jobs.lever.co/weloglobal/b26aa765-1a9d-46f7-a899-0354c3ee428d/apply"
  },
  "406131efc4ddf90b": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "greenhouse",
   "company": "Horizon Surgical Systems",
   "description": "",
@@ -103236,16 +103276,35 @@
    "Los Angeles, California"
   ],
   "posted_at": 1780954687,
+  "posting": {
+   "analyzed_at": 1784419798,
+   "fetched": true,
+   "intern_counts": true,
+   "sponsorship": "unknown",
+   "years_min": 3,
+   "years_note": "3 - 5 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419798,
+   "live": true,
+   "new_grad": "no",
+   "reason": "3+ years experience required",
+   "role_family": "swe",
+   "years_required": 3
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 76,
+  "score": 56,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:healthtech +16",
    "seniority unclear (dashboard only)",
-   "re-gate v2: priority sector: healthtech (auto-alert)"
+   "re-gate v2: priority sector: healthtech (auto-alert)",
+   "posting: wants 3+ yrs (dashboard only)",
+   "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "healthtech",
   "source": "greenhouse",
@@ -104586,7 +104645,9 @@
   ],
   "posted_at": 1782497639,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419796,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -107416,6 +107477,20 @@
    "Home based - Worldwide"
   ],
   "posted_at": 1780300671,
+  "posting": {
+   "analyzed_at": 1784419828,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419828,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Graduate Software Engineer role for 2025-2026 new grads",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -112831,15 +112906,30 @@
    "United States, Bellevue, WA"
   ],
   "posted_at": 1779224337,
+  "posting": {
+   "analyzed_at": 1784419844,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419844,
+   "live": true,
+   "new_grad": "no",
+   "reason": "2+ years experience required",
+   "role_family": "other-technical",
+   "years_required": 2
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 76,
+  "score": 66,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: wants 2+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "greenhouse",
@@ -131751,7 +131841,7 @@
   "url": "https://boards.greenhouse.io/andurilindustries/jobs/5124776007?gh_jid=5124776007"
  },
  "527b8f06c5bca0a0": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "greenhouse",
   "company": "National Information Solutions Cooperative (NISC)",
   "description": "",
@@ -131763,6 +131853,17 @@
    "Any NISC Office Location"
   ],
   "posted_at": 1777583559,
+  "posting": {
+   "analyzed_at": 1784419891,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 3,
+   "years_note": "3-7 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784419891,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -131771,7 +131872,8 @@
    "base 40",
    "role:data_eng +18",
    "new-grad title +12",
-   "title matches your history +5"
+   "title matches your history +5",
+   "posting: wants 3+ yrs (dashboard only)"
   ],
   "sector": "other",
   "source": "greenhouse",
@@ -133896,6 +133998,15 @@
    "Seattle, WA"
   ],
   "posted_at": 1774469282,
+  "posting": {
+   "analyzed_at": 1784419891,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784419891,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -138749,8 +138860,9 @@
   "url": "https://job-boards.greenhouse.io/canonical/jobs/7043026"
  },
  "56f1ac67cec8ec40": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "lever",
+  "closed_at": 1784419890,
   "company": "CesiumAstro",
   "description": "",
   "explicit_new_grad": true,
@@ -138761,6 +138873,11 @@
    "Austin, TX"
   ],
   "posted_at": 1781037106,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419890,
+   "live": false
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -138769,7 +138886,8 @@
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "title matches your history +3"
+   "title matches your history +3",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "lever",
@@ -157109,6 +157227,9 @@
    "New York, New York"
   ],
   "posted_at": 1776433484,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -173009,6 +173130,20 @@
    "Raleigh, NC"
   ],
   "posted_at": 1780010950,
+  "posting": {
+   "analyzed_at": 1784419836,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419836,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Associate level, new grad role",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -180796,6 +180931,20 @@
    "Home based - Worldwide"
   ],
   "posted_at": 1762533352,
+  "posting": {
+   "analyzed_at": 1784419860,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419860,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Junior role, new grad focus",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -182753,6 +182902,20 @@
    "New York, NY; San Francisco, CA; Los Angeles, CA; Seattle, WA; Sunnyvale, CA"
   ],
   "posted_at": 1759352627,
+  "posting": {
+   "analyzed_at": 1784419867,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419867,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level, new grad hiring",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -215170,6 +215333,9 @@
    "Raleigh-Durham"
   ],
   "posted_at": 1780334549,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -245708,6 +245874,20 @@
    "Capital Tower, Boulevard Mly Youssef, Casablanca, Maroc"
   ],
   "posted_at": 1715945483,
+  "posting": {
+   "analyzed_at": 1784419875,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419875,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Junior role, new grad class of 2026",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -246567,6 +246747,20 @@
    "Chicago, Illinois, United States"
   ],
   "posted_at": 1780413475,
+  "posting": {
+   "analyzed_at": 1784419820,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419820,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for 2026 class, no experience required",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -276189,7 +276383,6 @@
    "role:swe +20",
    "new-grad title +12",
    "title matches your history +4",
-   "posting: wants 3+ yrs (dashboard only)",
    "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "other",
@@ -303732,7 +303925,7 @@
   "url": "https://williammary.wd12.myworkdayjobs.com/en-US/WM/job/Posting-Location---William--Mary/Administrative---Fiscal-Coordinator--Art---Art-History-_JR101677"
  },
  "bd7375648a69fe01": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "greenhouse",
   "company": "Truveta",
   "description": "",
@@ -303744,16 +303937,35 @@
    "Seattle, WA"
   ],
   "posted_at": 1772490853,
+  "posting": {
+   "analyzed_at": 1784419852,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "unable to sponsor",
+   "years_min": 3,
+   "years_note": "3+ years of experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419852,
+   "live": true,
+   "new_grad": "no",
+   "reason": "3+ years experience required",
+   "role_family": "swe",
+   "years_required": 3
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 76,
+  "score": 56,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:healthtech +16",
    "seniority unclear (dashboard only)",
-   "re-gate v2: priority sector: healthtech (auto-alert)"
+   "re-gate v2: priority sector: healthtech (auto-alert)",
+   "posting: wants 3+ yrs (dashboard only)",
+   "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "healthtech",
   "source": "greenhouse",
@@ -314315,6 +314527,9 @@
    "New York"
   ],
   "posted_at": 1783966160,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -326005,7 +326220,6 @@
    "role:data_eng +18",
    "new-grad title +12",
    "title matches your history +6",
-   "posting: wants 3+ yrs (dashboard only)",
    "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "other",
@@ -331556,7 +331770,9 @@
   ],
   "posted_at": 1783445538,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419795,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -360166,6 +360382,20 @@
    "3 Locations"
   ],
   "posted_at": 1780777335,
+  "posting": {
+   "analyzed_at": 1784419813,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419813,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level, basic skills, new grad focus",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -390823,6 +391053,16 @@
    "Broomfield, Colorado, United States"
   ],
   "posted_at": 1784031556,
+  "posting": {
+   "analyzed_at": 1784419892,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "must be a U.S. citizen"
+  },
+  "quality": {
+   "ai_deferred_at": 1784419892,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -394547,6 +394787,16 @@
    "Broomfield, Colorado, United States"
   ],
   "posted_at": 1784031556,
+  "posting": {
+   "analyzed_at": 1784419893,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "must be a U.S. citizen"
+  },
+  "quality": {
+   "ai_deferred_at": 1784419893,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -407662,7 +407912,9 @@
   ],
   "posted_at": 1781892845,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419797,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
