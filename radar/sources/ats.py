@@ -130,7 +130,8 @@ def fetch_workday(entry: dict, queries: list[str] | None = None) -> list[Job]:
     base = f"https://{tenant}.{host}.myworkdayjobs.com"
     api = f"{base}/wday/cxs/{tenant}/{site}/jobs"
     seen, out = set(), []
-    for q in (queries or ["new grad", "early career"]):
+    for q in (queries or ["new grad", "early career", "leadership development",
+                          "graduate program", "rotational program", "emerging talent"]):
         for offset in (0, 20, 40):
             data = post_json(api, {"appliedFacets": {}, "limit": 20, "offset": offset, "searchText": q})
             postings = data.get("jobPostings") or []
@@ -239,7 +240,9 @@ def fetch_phenom(entry: dict, queries: list[str] | None = None) -> list[Job]:
     host = entry["extra"]["host"].rstrip("/")
     refnum = entry["extra"]["refnum"]
     out, seen = [], set()
-    for q in (queries or ["new grad", "early career", "entry level"]):
+    for q in (queries or ["new grad", "early career", "entry level",
+                          "leadership development", "graduate program",
+                          "rotational program", "emerging talent"]):
         payload = {
             "lang": "en_us", "deviceType": "desktop", "country": "us",
             "pageName": "search-results", "ddoKey": "refineSearch",
