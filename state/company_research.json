@@ -3937,24 +3937,26 @@
  },
  "qualcomm": {
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "high",
-   "source_ids": [
-    "a7308f63f9"
-   ],
-   "value": "Qualcomm licenses its technology and sells semiconductor products, primarily serving mobile and wireless communication markets."
-  },
-  "customers": {
    "confidence": "medium",
    "source_ids": [
+    "d58f58017b",
     "a7308f63f9"
    ],
-   "value": "Major smartphone manufacturers, automotive companies, and IoT device makers, though specific names are not listed in the provided source."
+   "value": "Qualcomm generates revenue through licensing its technology (e.g., 5G patents) and selling semiconductor products (e.g., Snapdragon chips)."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "d58f58017b",
+    "a7308f63f9"
+   ],
+   "value": "Qualcomm's products are used by major smartphone manufacturers (e.g., Samsung, Apple, Xiaomi), automotive companies, and IoT device makers."
   },
   "error": "",
   "evidence_sha": "28194d1126192b48",
-  "generated_at": 1784399972,
+  "generated_at": 1784475925,
   "generator": {
    "endpoint": "local",
    "model": "qwen3:30b",
@@ -3963,41 +3965,48 @@
   "interview_focus": {
    "confidence": "high",
    "source_ids": [
+    "d58f58017b",
     "a7308f63f9"
    ],
-   "value": "Top applicants must have skills in C programming, data structures, Windows driver development, Linux kernel debugging, ARM CoreSight architecture, and optimization."
+   "value": "Technical skills in Python, C/C++, Linux, and embedded systems (e.g., ARM architecture) are prioritized for AI/data science roles, with an emphasis on hands-on problem-solving and innovation in wireless/AI technologies."
   },
-  "last_attempt_at": 1784399972,
+  "last_attempt_at": 1784475925,
   "last_evidence_at": 1784461886,
   "locations": {
    "confidence": "high",
    "source_ids": [
+    "d58f58017b",
     "a7308f63f9"
    ],
-   "value": "San Diego, CA (onsite position mentioned in job posting), with other global offices not specified in the source."
+   "value": "Qualcomm has offices in San Diego, CA, and other global locations, with the job postings specifying San Diego for the listed roles."
   },
   "mission": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "low",
+   "source_ids": [
+    "d58f58017b",
+    "a7308f63f9"
+   ],
+   "value": "To create innovative wireless technologies that connect the world."
   },
   "name": "Qualcomm",
   "products": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
+    "d58f58017b",
     "a7308f63f9"
    ],
-   "value": "Qualcomm develops mobile processors (Snapdragon), modems, wireless communication technologies, and semiconductor solutions for various industries including mobile, automotive, and IoT."
+   "value": "Qualcomm develops mobile processors (Snapdragon), wireless communication technologies (5G), and AI/ML solutions for devices."
   },
   "prompt_v": 1,
-  "refresh_after": 1789583972,
+  "refresh_after": 1789659925,
   "schema_v": 1,
   "size_stage": {
    "confidence": "medium",
    "source_ids": [
+    "d58f58017b",
     "a7308f63f9"
    ],
-   "value": "Global technology company with a significant workforce, though exact size is not specified in the source."
+   "value": "Qualcomm is a large, publicly traded company (NASDAQ: QCOM) with a global workforce, though specific employee count is not mentioned in the sources."
   },
   "sources": [
    {
@@ -4028,26 +4037,29 @@
   },
   "status": "ready",
   "summary": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
+    "d58f58017b",
     "a7308f63f9"
    ],
-   "value": "Qualcomm is a leading semiconductor and telecommunications technology company focused on mobile and wireless innovations. The company develops advanced chips and technologies for smartphones, IoT, and other connected devices."
+   "value": "Qualcomm is a global technology company specializing in wireless communications, semiconductors, and AI-driven solutions, with a focus on innovation in mobile and IoT technologies."
   },
-  "synthesized_evidence_sha": "fcc09c0d27e1e770",
+  "synthesized_evidence_sha": "28194d1126192b48",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "d58f58017b",
     "a7308f63f9"
    ],
-   "value": "Developing embedded software, drivers, and kernel-level solutions for mobile and IoT devices, focusing on optimization and debugging."
+   "value": "Qualcomm engineers work on mobile platforms, embedded systems, AI/ML solutions, and wireless communication technologies using skills like Python, C, C++, Linux, and ARM architecture."
   },
   "why_it_matters": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
+    "d58f58017b",
     "a7308f63f9"
    ],
-   "value": "A top-tier AI or data science role that balances elite prestige and high new-grad pay with a fast, innovative tech culture rather than slow bureaucracy. A mission-driven company that actually respects work-life balance through sane hours and guaranteed shutdowns, avoiding toxic or high-burnout environments. A place that accelerates technical learning and career growth without sacrificing personal time."
+   "value": "A top-tier AI or data science role at Qualcomm offers elite prestige, competitive new-grad pay ($89K-$141K for entry-level roles), and a fast, innovative tech culture focused on wireless and AI technologies, avoiding slow bureaucracy. The company emphasizes technical learning and career growth in a high-impact environment."
   }
  },
  "quantifind": {
@@ -4175,10 +4187,58 @@
  },
  "rtx": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "ab449aff4bdc0175",
+  "generated_at": 1784475925,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784475925,
   "last_evidence_at": 1784466164,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "7e4880d1a3"
+   ],
+   "value": "El Segundo, CA"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "RTX",
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789659925,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "6be195915233468d",
@@ -4191,7 +4251,32 @@
     "url": "https://jobright.ai/jobs/info/6a5c8d9c686b4755d1e1c043?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "7e4880d1a3"
+   ],
+   "value": "RTX is a leader in aerospace and defense, seeking a Software Engineer I for their Space and RF Sensors team in El Segundo, CA, with entry-level compensation ranging from $63K to $120K annually."
+  },
+  "synthesized_evidence_sha": "ab449aff4bdc0175",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "7e4880d1a3"
+   ],
+   "value": "Software development for Space and RF Sensors team"
+  },
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  }
  },
  "s c electric company": {
   "aliases": [],
@@ -5198,7 +5283,7 @@
  },
  "tiktok": {
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -5209,7 +5294,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "8712da5689809b18",
   "generated_at": 1784401880,
   "generator": {
@@ -5224,7 +5309,7 @@
    ],
    "value": "Data Structures, Algorithms, Python, Go, Java (required skills for the role)."
   },
-  "last_attempt_at": 1784401880,
+  "last_attempt_at": 1784475925,
   "last_evidence_at": 1784461886,
   "locations": {
    "confidence": "high",
