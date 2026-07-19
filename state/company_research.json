@@ -950,10 +950,64 @@
  },
  "clera": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "dd39e71ac4"
+   ],
+   "value": "Large enterprise organizations (mentioned in Product Engineer role description)."
+  },
+  "error": "",
   "evidence_sha": "09057e2a3b355174",
+  "generated_at": 1784427647,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "b8d5c10bde"
+   ],
+   "value": "Comfort working with formal systems, symbolic reasoning, or verification methods (Research Scientist/Research Engineer role)."
+  },
+  "last_attempt_at": 1784427647,
   "last_evidence_at": 1784422709,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Clera",
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "b8d5c10bde"
+   ],
+   "value": "Training data for AI models grounded in formal verification systems, described as 'correct by construction'."
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789611647,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "dd39e71ac4"
+   ],
+   "value": "Early-stage (mentioned in Product Engineer role description as 'an early-stage opportunity')."
+  },
   "sources": [
    {
     "content_sha": "a50841d753197846",
@@ -986,7 +1040,38 @@
     "url": "https://jobs.ashbyhq.com/clera/cc678d72-04a4-4a52-9c94-d52f34447bf6"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "b8d5c10bde",
+    "dd39e71ac4",
+    "9a713bf4fe"
+   ],
+   "value": "Visa sponsorship is available for Product Engineer role but not for Research Scientist/Research Engineer (must be legally eligible to work in the US without sponsorship) or Sales Development Representative roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "b8d5c10bde",
+    "dd39e71ac4",
+    "9a713bf4fe"
+   ],
+   "value": "Clera is a company focused on building 'correct by construction' training data for AI models using formal verification systems, with roles in research, product engineering, and sales development."
+  },
+  "synthesized_evidence_sha": "09057e2a3b355174",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "b8d5c10bde"
+   ],
+   "value": "Building 'correct by construction' training data for AI models using formal verification systems; working with formal systems, symbolic reasoning, or verification methods."
+  },
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  }
  },
  "cvs health": {
   "aliases": [],
@@ -2070,7 +2155,7 @@
  },
  "notion": {
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -2081,7 +2166,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "7d14bb6ac1cae326",
   "generated_at": 1784389190,
   "generator": {
@@ -2098,7 +2183,7 @@
    ],
    "value": "Candidates should be prepared to discuss AI/ML engineering fundamentals, prototyping AI-powered user experiences, and integrating AI into collaborative software products, reflecting the role's blend of research and practical shipment."
   },
-  "last_attempt_at": 1784389190,
+  "last_attempt_at": 1784427647,
   "last_evidence_at": 1784422709,
   "locations": {
    "confidence": "high",
@@ -2442,7 +2527,7 @@
  },
  "openai": {
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -2457,7 +2542,7 @@
    ],
    "value": "Enterprise clients, startups, and individual users of AI models and tools."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "f57b85899eb4f695",
   "generated_at": 1784403469,
   "generator": {
@@ -2474,7 +2559,7 @@
    ],
    "value": "Technical skills in AI, data science, distributed systems, and problem-solving for roles like Machine Learning Engineer, AI Emerging Risks Analyst, and AI Deployment Engineer."
   },
-  "last_attempt_at": 1784403469,
+  "last_attempt_at": 1784427647,
   "last_evidence_at": 1784422709,
   "locations": {
    "confidence": "medium",

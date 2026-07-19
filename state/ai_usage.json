@@ -1,40 +1,34 @@
 {
  "events": [
   {
-   "at": "2026-07-19T00:20:44+00:00",
-   "completion_tokens": 600,
+   "at": "2026-07-19T02:21:05+00:00",
+   "completion_tokens": 646,
    "detail": "",
    "endpoint": "local",
-   "latency_ms": 15053,
-   "max_tokens": 600,
+   "latency_ms": 16710,
+   "max_tokens": 900,
    "model": "qwen3:30b",
-   "prompt_chars": 594,
-   "prompt_tokens": 165,
+   "prompt_chars": 3064,
+   "prompt_tokens": 758,
    "status": "ok",
-   "task": "discovery"
+   "task": "company_research"
+  },
+  {
+   "at": "2026-07-19T02:21:28+00:00",
+   "completion_tokens": 896,
+   "detail": "task schema validation failed",
+   "endpoint": "local",
+   "latency_ms": 23397,
+   "max_tokens": 900,
+   "model": "qwen3:30b",
+   "prompt_chars": 2094,
+   "prompt_tokens": 585,
+   "status": "invalid",
+   "task": "company_research"
   }
  ],
- "generated_at": 1784420445,
+ "generated_at": 1784427690,
  "history": [
-  {
-   "generated_at": 1784418299,
-   "logical_calls": 10,
-   "models": {
-    "local": {
-     "errors": 0,
-     "model": "qwen3:30b",
-     "ok": 10,
-     "requests": 10,
-     "tokens": 11804
-    }
-   },
-   "provider": "local",
-   "requests": 10,
-   "task_calls": {
-    "discovery": 1,
-    "quality": 9
-   }
-  },
   {
    "generated_at": 1784418416,
    "logical_calls": 12,
@@ -573,25 +567,47 @@
    "task_calls": {
     "discovery": 1
    }
+  },
+  {
+   "generated_at": 1784427690,
+   "logical_calls": 5,
+   "models": {
+    "local": {
+     "errors": 1,
+     "model": "qwen3:30b",
+     "ok": 1,
+     "requests": 2,
+     "tokens": 2885
+    }
+   },
+   "provider": "local",
+   "requests": 2,
+   "task_calls": {
+    "company_research": 3,
+    "discovery": 1,
+    "quality": 1
+   }
   }
  ],
  "limits": {
   "logical_calls": 12,
   "requests": 18
  },
- "logical_calls": 1,
+ "logical_calls": 5,
  "models": {
   "local": {
-   "errors": 0,
+   "errors": 1,
    "model": "qwen3:30b",
    "ok": 1,
-   "requests": 1,
-   "tokens": 765
+   "requests": 2,
+   "tokens": 2885
   }
  },
  "provider": "local",
- "requests": 1,
+ "requests": 2,
  "task_calls": {
-  "discovery": 1
+  "company_research": 3,
+  "discovery": 1,
+  "quality": 1
  }
 }
