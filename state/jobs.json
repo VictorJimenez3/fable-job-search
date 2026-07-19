@@ -243,7 +243,8 @@
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784389818,
+    "analyzed_at": 1784483596,
+    "fetch_status": "readable",
     "fetched": true,
     "sponsorship": "unknown"
    },
@@ -1431,12 +1432,12 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 45,
+  "score": 46,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "remote +2",
-   "not an AI/SWE/DS role"
+   "title matches your history +1"
   ],
   "sector": "other",
   "source": "lever",
@@ -1679,7 +1680,12 @@
    "fetched": true
   },
   "quality": {
-   "_posting": {},
+   "_posting": {
+    "analyzed_at": 1784487436,
+    "fetch_note": "page loaded but did not contain usable job text",
+    "fetch_status": "unreadable",
+    "fetched": true
+   },
    "attempts": 2,
    "checked_at": 1784401935,
    "new_grad": "unclear"
@@ -2575,15 +2581,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 24,
+  "score": 69,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "new-grad title +14",
    "posted <72h +6",
-   "title matches your history +6",
-   "verified new-grad/early-career evidence",
-   "posting: requires master's degree (bachelor's profile) (dashboard only) -45"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "jobright",
@@ -2734,12 +2738,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 51,
+  "score": 52,
   "score_reasons": [
    "base 20",
    "role:data_science +26",
-   "title matches your history +5",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -2790,12 +2793,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 44,
+  "score": 45,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +1",
-   "off-field title (dashboard only)"
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "workday",
@@ -6771,7 +6773,12 @@
    "fetched": true
   },
   "quality": {
-   "_posting": {},
+   "_posting": {
+    "analyzed_at": 1784487436,
+    "fetch_note": "could not retrieve the posting page/API",
+    "fetch_status": "unavailable",
+    "fetched": true
+   },
    "attempts": 2,
    "checked_at": 1784350195,
    "new_grad": "unclear"
@@ -7721,12 +7728,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 33,
+  "score": 34,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:fintech +5",
-   "title matches your history +5",
+   "title matches your history +6",
    "quality: not new-grad (1+ yrs — LLM-verified) -20"
   ],
   "sector": "fintech",
@@ -8811,14 +8818,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 55,
+  "score": 56,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:fintech +5",
    "posted <7d +2",
-   "title matches your history +5",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "fintech",
   "source": "jobright",
@@ -10368,12 +10374,12 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 61,
+  "score": 63,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:healthtech +16",
-   "you've engaged with Mayo Clinic +2"
+   "you've engaged with Mayo Clinic +4"
   ],
   "sector": "healthtech",
   "source": "jobright",
@@ -14065,12 +14071,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 48,
+  "score": 49,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +5",
-   "off-field title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "oracle_orc",
@@ -14739,13 +14744,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 57,
+  "score": 58,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:big_tech +10",
    "you've engaged with TikTok +2",
-   "title matches your history +2"
+   "title matches your history +3"
   ],
   "sector": "big_tech",
   "source": "jobright",
@@ -15656,13 +15661,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 53,
+  "score": 54,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:fintech +5",
-   "title matches your history +5",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "fintech",
   "source": "greenhouse",
@@ -18275,14 +18279,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 63,
+  "score": 64,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "new-grad title +14",
    "posted <7d +2",
-   "title matches your history +4",
-   "verified new-grad/early-career evidence"
+   "title matches your history +5"
   ],
   "sector": "other",
   "source": "jobright",
@@ -19724,13 +19727,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -20534,13 +20536,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -21440,7 +21441,8 @@
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784389818,
+    "analyzed_at": 1784483596,
+    "fetch_status": "readable",
     "fetched": true,
     "sponsorship": "unknown"
    },
@@ -21690,12 +21692,12 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 45,
+  "score": 46,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "remote +2",
-   "not an AI/SWE/DS role"
+   "title matches your history +1"
   ],
   "sector": "other",
   "source": "lever",
@@ -26281,12 +26283,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 44,
+  "score": 45,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +1",
-   "off-field title (dashboard only)"
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "workday",
@@ -28837,14 +28838,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 69,
+  "score": 71,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:healthtech +16",
    "posted <72h +6",
-   "title matches your history +4",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "healthtech",
   "source": "jobright",
@@ -30053,15 +30053,14 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 71,
+  "score": 75,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:healthtech +16",
    "posted <72h +6",
-   "you've engaged with Mayo Clinic +2",
-   "title matches your history +4",
-   "not verified new-grad/early-career (dashboard only)"
+   "you've engaged with Mayo Clinic +4",
+   "title matches your history +6"
   ],
   "sector": "healthtech",
   "source": "jobright",
@@ -31421,12 +31420,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 48,
+  "score": 49,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +5",
-   "off-field title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "lever",
@@ -34231,7 +34229,8 @@
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784389818,
+    "analyzed_at": 1784483596,
+    "fetch_status": "readable",
     "fetched": true,
     "sponsorship": "unknown"
    },
@@ -36364,11 +36363,11 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 52,
+  "score": 53,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +5",
+   "title matches your history +6",
    "SHPE 2026 exhibitor +4",
    "quality: posting gone (link checked)"
   ],
@@ -37208,7 +37207,8 @@
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784397120,
+    "analyzed_at": 1784483596,
+    "fetch_status": "readable",
     "fetched": true,
     "sponsorship": "no",
     "sponsorship_note": "U.S. Citizen Only"
@@ -38040,13 +38040,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 46,
+  "score": 47,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "you've engaged with Jane Street +2",
-   "title matches your history +1",
-   "off-field title (dashboard only)"
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "greenhouse",
@@ -39899,13 +39898,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -40238,12 +40236,12 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 45,
+  "score": 46,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "remote +2",
-   "not an AI/SWE/DS role"
+   "title matches your history +1"
   ],
   "sector": "other",
   "source": "lever",
@@ -42022,13 +42020,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 47,
+  "score": 48,
   "score_reasons": [
    "base 20",
    "role:data_eng +20",
    "posted <7d +2",
-   "title matches your history +5",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -42076,16 +42073,15 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 73,
+  "score": 75,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:healthtech +16",
    "posted <7d +2",
-   "you've engaged with Johnson & Johnson +2",
+   "you've engaged with Johnson & Johnson +4",
    "title matches your history +6",
-   "SHPE 2026 exhibitor +4",
-   "generic analyst title (dashboard only)"
+   "SHPE 2026 exhibitor +4"
   ],
   "sector": "healthtech",
   "source": "simplify",
@@ -42134,15 +42130,30 @@
   ],
   "posted_at": 1782834758,
   "posting": {
-   "analyzed_at": 1784483343,
+   "analyzed_at": 1784489703,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "citizenship is required"
   },
   "quality": {
+   "_posting": {
+    "analyzed_at": 1784489703,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "no",
+    "sponsorship_note": "citizenship is required"
+   },
    "ai_deferred_at": 1784483343,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784489703,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Mechanical/Aerospace engineering role, not computer science.",
+   "role_family": "other-technical",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 4,
@@ -42407,12 +42418,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 44,
+  "score": 45,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +1",
-   "off-field title (dashboard only)"
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "workday",
@@ -42767,13 +42777,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "$381k/yr",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "speedyapply",
@@ -44665,13 +44674,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 68,
+  "score": 72,
   "score_reasons": [
    "base 20",
    "role:data_science +26",
    "sector:healthtech +16",
-   "title matches your history +6",
-   "not verified new-grad/early-career (dashboard only)"
+   "you've engaged with Capricor Therapeutics +4",
+   "title matches your history +6"
   ],
   "sector": "healthtech",
   "source": "simplify",
@@ -46359,14 +46368,28 @@
   ],
   "posted_at": 1783535527,
   "posting": {
-   "analyzed_at": 1784483358,
+   "analyzed_at": 1784489730,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
+   "_posting": {
+    "analyzed_at": 1784489730,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "unknown"
+   },
    "ai_deferred_at": 1784483358,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784489730,
+   "degree_required": "unclear",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Launch Program for recent grads; role involves cybersecurity monitoring and GRC.",
+   "role_family": "security",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 4,
@@ -48221,12 +48244,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 54,
+  "score": 50,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:fintech +5",
-   "posted <72h +6"
+   "posted <7d +2"
   ],
   "sector": "fintech",
   "source": "greenhouse",
@@ -48589,13 +48612,12 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "remote +2",
-   "title matches your history +5",
-   "off-field title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "lever",
@@ -50494,12 +50516,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 51,
+  "score": 52,
   "score_reasons": [
    "base 20",
    "role:ai_ml +28",
-   "title matches your history +3",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +4"
   ],
   "sector": "other",
   "source": "workday",
@@ -50979,14 +51000,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 70,
+  "score": 66,
   "score_reasons": [
    "base 20",
    "role:ai_ml +28",
    "sector:big_tech +10",
-   "posted <72h +6",
-   "title matches your history +6",
-   "not verified new-grad/early-career (dashboard only)"
+   "posted <7d +2",
+   "title matches your history +6"
   ],
   "sector": "big_tech",
   "source": "smartrecruiters",
@@ -51954,12 +51974,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 33,
+  "score": 34,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:fintech +5",
-   "title matches your history +5",
+   "title matches your history +6",
    "quality: not new-grad (1+ yrs — LLM-verified) -20"
   ],
   "sector": "fintech",
@@ -54283,13 +54303,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 59,
+  "score": 60,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "new-grad title +14",
-   "title matches your history +2",
-   "verified new-grad/early-career evidence"
+   "title matches your history +3"
   ],
   "sector": "other",
   "source": "ashby",
@@ -54525,12 +54544,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 44,
+  "score": 45,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +1",
-   "off-field title (dashboard only)"
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "workday",
@@ -56749,12 +56767,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 46,
+  "score": 47,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +3",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +4"
   ],
   "sector": "other",
   "source": "workday",
@@ -57453,7 +57470,8 @@
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784402224,
+    "analyzed_at": 1784487436,
+    "fetch_status": "readable",
     "fetched": true,
     "sponsorship": "unknown"
    },
@@ -58664,16 +58682,15 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 71,
+  "score": 73,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:healthtech +16",
    "posted <7d +2",
-   "you've engaged with Johnson & Johnson +2",
+   "you've engaged with Johnson & Johnson +4",
    "title matches your history +4",
-   "SHPE 2026 exhibitor +4",
-   "generic analyst title (dashboard only)"
+   "SHPE 2026 exhibitor +4"
   ],
   "sector": "healthtech",
   "source": "workday",
@@ -59960,7 +59977,8 @@
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784389818,
+    "analyzed_at": 1784483596,
+    "fetch_status": "readable",
     "fetched": true,
     "sponsorship": "unknown"
    },
@@ -62389,12 +62407,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 48,
+  "score": 49,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -62995,13 +63012,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 68,
+  "score": 72,
   "score_reasons": [
    "base 20",
    "role:data_science +26",
    "sector:healthtech +16",
-   "title matches your history +6",
-   "not verified new-grad/early-career (dashboard only)"
+   "you've engaged with Capricor Therapeutics +4",
+   "title matches your history +6"
   ],
   "sector": "healthtech",
   "source": "lever",
@@ -65816,7 +65833,12 @@
    "fetched": true
   },
   "quality": {
-   "_posting": {},
+   "_posting": {
+    "analyzed_at": 1784487436,
+    "fetch_note": "page loaded but did not contain usable job text",
+    "fetch_status": "unreadable",
+    "fetched": true
+   },
    "attempts": 2,
    "checked_at": 1784056621,
    "new_grad": "unclear"
@@ -68539,12 +68561,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 33,
+  "score": 34,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:fintech +5",
-   "title matches your history +5",
+   "title matches your history +6",
    "quality: not new-grad (1+ yrs — LLM-verified) -20"
   ],
   "sector": "fintech",
@@ -68763,7 +68785,8 @@
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784389818,
+    "analyzed_at": 1784483596,
+    "fetch_status": "readable",
     "fetched": true,
     "sponsorship": "yes",
     "sponsorship_note": "H1B Sponsorship"
@@ -69463,14 +69486,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 57,
+  "score": 53,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "posted <72h +6",
+   "posted <7d +2",
    "title matches your history +4",
-   "SHPE 2026 exhibitor +4",
-   "generic analyst title (dashboard only)"
+   "SHPE 2026 exhibitor +4"
   ],
   "sector": "other",
   "source": "workday",
@@ -69805,13 +69827,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -72473,13 +72494,13 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 75,
+  "score": 71,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:ai_lab +11",
    "company tier: marquee (competitive)",
-   "posted <72h +6",
+   "posted <7d +2",
    "remote +2",
    "you've engaged with OpenAI +8",
    "title matches your history +1",
@@ -73263,13 +73284,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "jobright",
@@ -73326,11 +73346,11 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 48,
+  "score": 49,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +5",
+   "title matches your history +6",
    "quality: posting gone (link checked)"
   ],
   "sector": "other",
@@ -76593,14 +76613,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 64,
+  "score": 65,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "new-grad title +14",
    "posted <7d +2",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "jobright",
@@ -77161,12 +77180,12 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 45,
+  "score": 46,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "remote +2",
-   "not an AI/SWE/DS role"
+   "title matches your history +1"
   ],
   "sector": "other",
   "source": "lever",
@@ -77195,13 +77214,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 47,
+  "score": 48,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "you've engaged with mthree +3",
-   "title matches your history +1",
-   "not an AI/SWE/DS role"
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "greenhouse",
@@ -77480,13 +77498,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 60,
+  "score": 61,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <24h +12",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -77994,12 +78011,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 48,
+  "score": 49,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -78564,7 +78580,8 @@
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784400836,
+    "analyzed_at": 1784487436,
+    "fetch_status": "readable",
     "fetched": true,
     "sponsorship": "unknown"
    },
@@ -79400,15 +79417,30 @@
   ],
   "posted_at": 1782834758,
   "posting": {
-   "analyzed_at": 1784483347,
+   "analyzed_at": 1784489706,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "citizenship is required"
   },
   "quality": {
+   "_posting": {
+    "analyzed_at": 1784489706,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "no",
+    "sponsorship_note": "citizenship is required"
+   },
    "ai_deferred_at": 1784483347,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784489706,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Materials/Chemistry engineering role; no professional experience required.",
+   "role_family": "other-technical",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 4,
@@ -79652,13 +79684,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 53,
+  "score": 54,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:fintech +5",
-   "title matches your history +5",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "fintech",
   "source": "greenhouse",
@@ -80114,12 +80145,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 59,
+  "score": 55,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:big_tech +10",
-   "posted <72h +6"
+   "posted <7d +2"
   ],
   "sector": "big_tech",
   "source": "greenhouse",
@@ -84723,15 +84754,14 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 69,
+  "score": 71,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:healthtech +16",
-   "you've engaged with Johnson & Johnson +2",
+   "you've engaged with Johnson & Johnson +4",
    "title matches your history +4",
-   "SHPE 2026 exhibitor +4",
-   "generic analyst title (dashboard only)"
+   "SHPE 2026 exhibitor +4"
   ],
   "sector": "healthtech",
   "source": "workday",
@@ -85505,12 +85535,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 48,
+  "score": 49,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +5",
-   "off-field title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -87440,12 +87469,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 48,
+  "score": 49,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -88448,12 +88476,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 47,
+  "score": 48,
   "score_reasons": [
    "base 20",
    "role:data_science +26",
-   "title matches your history +1",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "jobright",
@@ -88700,13 +88727,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 54,
+  "score": 55,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <72h +6",
-   "title matches your history +5",
-   "off-field title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -90965,13 +90991,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 49,
+  "score": 50,
   "score_reasons": [
    "base 20",
    "role:data_science +26",
    "posted <7d +2",
-   "title matches your history +1",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "jobright",
@@ -94307,14 +94332,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 53,
+  "score": 54,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
    "you've engaged with JP Morgan Chase +3",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "oracle_orc",
@@ -96603,7 +96627,7 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 27,
+  "score": 72,
   "score_reasons": [
    "base 20",
    "role:swe +23",
@@ -96611,9 +96635,7 @@
    "you've engaged with RTX +8",
    "title matches your history +6",
    "culture fit 39/100 -1",
-   "SHPE 2026 exhibitor +4",
-   "technical leadership/rotational program",
-   "posting: requires master's degree (bachelor's profile) (dashboard only) -45"
+   "SHPE 2026 exhibitor +4"
   ],
   "sector": "other",
   "source": "workday",
@@ -99531,12 +99553,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 46,
+  "score": 47,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +3",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +4"
   ],
   "sector": "other",
   "source": "workday",
@@ -101337,15 +101358,14 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 74,
+  "score": 68,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:ai_lab +11",
-   "posted <24h +12",
+   "posted <72h +6",
    "remote +2",
-   "title matches your history +6",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "ai_lab",
   "source": "ashby",
@@ -102703,7 +102723,11 @@
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784350348,
+    "analyzed_at": 1784483596,
+    "education_mismatch": true,
+    "education_note": "This might include writing a script to import user feedback into Notion Qualification TypeScript Node.js Python HTML CSS JavaScript React Postgres MySQL MongoDB Impact-driven appro",
+    "education_required": "masters",
+    "fetch_status": "readable",
     "fetched": true,
     "sponsorship": "yes",
     "sponsorship_note": "H1B Sponsorship"
@@ -102720,15 +102744,13 @@
   "research_checked_at": 1784483596,
   "rules_v": 4,
   "salary": "",
-  "score": 30,
+  "score": 75,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:big_tech +10",
    "new-grad title +14",
-   "you've engaged with Notion +8",
-   "verified new-grad/early-career evidence",
-   "posting: requires master's degree (bachelor's profile) (dashboard only) -45"
+   "you've engaged with Notion +8"
   ],
   "sector": "big_tech",
   "source": "jobright",
@@ -103806,13 +103828,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -104213,7 +104234,7 @@
   "url": "https://hdpn.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/5668"
  },
  "374caa95e1dea802": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "workday",
   "company": "RTX",
   "description": "",
@@ -104226,20 +104247,35 @@
   ],
   "posted_at": 1782834758,
   "posting": {
-   "analyzed_at": 1784483349,
+   "analyzed_at": 1784489709,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "citizenship is required"
   },
   "quality": {
+   "_posting": {
+    "analyzed_at": 1784489709,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "no",
+    "sponsorship_note": "citizenship is required"
+   },
    "ai_deferred_at": 1784483349,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784489709,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires EE internship/co-op, CS major mismatch.",
+   "role_family": "other-technical",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 72,
+  "score": 52,
   "score_reasons": [
    "base 20",
    "role:swe +23",
@@ -104248,7 +104284,8 @@
    "title matches your history +6",
    "culture fit 39/100 -1",
    "SHPE 2026 exhibitor +4",
-   "technical leadership/rotational program"
+   "technical leadership/rotational program",
+   "quality: not new-grad (senior — LLM-verified) -20"
   ],
   "sector": "other",
   "source": "workday",
@@ -108066,7 +108103,8 @@
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784389818,
+    "analyzed_at": 1784483596,
+    "fetch_status": "readable",
     "fetched": true,
     "sponsorship": "unknown"
    },
@@ -108170,12 +108208,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 44,
+  "score": 45,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +1",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "oracle_orc",
@@ -109009,12 +109046,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 54,
+  "score": 55,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
+   "title matches your history +6",
    "SHPE 2026 exhibitor +4"
   ],
   "sector": "other",
@@ -109132,7 +109169,12 @@
    "fetched": true
   },
   "quality": {
-   "_posting": {},
+   "_posting": {
+    "analyzed_at": 1784487436,
+    "fetch_note": "page loaded but did not contain usable job text",
+    "fetch_status": "unreadable",
+    "fetched": true
+   },
    "attempts": 2,
    "checked_at": 1784401942,
    "new_grad": "unclear"
@@ -109640,11 +109682,12 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 45,
+  "score": 47,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "remote +2"
+   "remote +2",
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "lever",
@@ -111190,15 +111233,14 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 61,
+  "score": 62,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:big_tech +10",
    "company tier: marquee (competitive)",
-   "title matches your history +1",
-   "culture fit 80/100 +4",
-   "off-field title (dashboard only)"
+   "title matches your history +2",
+   "culture fit 80/100 +4"
   ],
   "sector": "big_tech",
   "source": "eightfold",
@@ -113155,14 +113197,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 71,
+  "score": 72,
   "score_reasons": [
    "base 20",
    "role:ai_ml +28",
    "sector:healthtech +16",
    "posted <7d +2",
-   "title matches your history +5",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "healthtech",
   "source": "workday",
@@ -114577,13 +114618,13 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 59,
+  "score": 60,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "new-grad title +14",
    "remote +2",
-   "off-field title (dashboard only)"
+   "title matches your history +1"
   ],
   "sector": "other",
   "source": "workday",
@@ -114846,13 +114887,13 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 59,
+  "score": 60,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "new-grad title +14",
    "remote +2",
-   "off-field title (dashboard only)"
+   "title matches your history +1"
   ],
   "sector": "other",
   "source": "workday",
@@ -115745,13 +115786,13 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 75,
+  "score": 71,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:ai_lab +11",
    "company tier: marquee (competitive)",
-   "posted <72h +6",
+   "posted <7d +2",
    "remote +2",
    "you've engaged with OpenAI +8",
    "title matches your history +1",
@@ -124411,13 +124452,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -124683,13 +124723,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
-   "off-field title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -124951,12 +124990,12 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 45,
+  "score": 46,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "remote +2",
-   "not an AI/SWE/DS role"
+   "title matches your history +1"
   ],
   "sector": "other",
   "source": "lever",
@@ -126377,7 +126416,8 @@
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784402187,
+    "analyzed_at": 1784483596,
+    "fetch_status": "readable",
     "fetched": true,
     "sponsorship": "unknown"
    },
@@ -126664,12 +126704,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 44,
+  "score": 45,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +1",
-   "off-field title (dashboard only)"
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "workday",
@@ -127226,16 +127265,15 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 71,
+  "score": 72,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "technical leadership program +12",
    "you've engaged with RTX +8",
-   "title matches your history +5",
+   "title matches your history +6",
    "culture fit 39/100 -1",
-   "SHPE 2026 exhibitor +4",
-   "technical leadership/rotational program"
+   "SHPE 2026 exhibitor +4"
   ],
   "sector": "other",
   "source": "simplify",
@@ -128223,14 +128261,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 55,
+  "score": 56,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:fintech +5",
    "posted <7d +2",
-   "title matches your history +5",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "fintech",
   "source": "jobright",
@@ -128345,12 +128382,12 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 45,
+  "score": 46,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "remote +2",
-   "not an AI/SWE/DS role"
+   "title matches your history +1"
   ],
   "sector": "other",
   "source": "lever",
@@ -129978,12 +130015,12 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 45,
+  "score": 46,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "remote +2",
-   "not an AI/SWE/DS role"
+   "title matches your history +1"
   ],
   "sector": "other",
   "source": "lever",
@@ -132295,7 +132332,8 @@
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784397120,
+    "analyzed_at": 1784487436,
+    "fetch_status": "readable",
     "fetched": true,
     "sponsorship": "unknown"
    },
@@ -134551,13 +134589,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 58,
+  "score": 59,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "new-grad title +14",
-   "title matches your history +1",
-   "verified new-grad/early-career evidence"
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "jobright",
@@ -135273,16 +135310,15 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 75,
+  "score": 77,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:healthtech +16",
    "posted <72h +6",
-   "you've engaged with Johnson & Johnson +2",
+   "you've engaged with Johnson & Johnson +4",
    "title matches your history +4",
-   "SHPE 2026 exhibitor +4",
-   "generic analyst title (dashboard only)"
+   "SHPE 2026 exhibitor +4"
   ],
   "sector": "healthtech",
   "source": "workday",
@@ -135661,12 +135697,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 45,
+  "score": 46,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +2",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +3"
   ],
   "sector": "other",
   "source": "workday",
@@ -136266,7 +136301,12 @@
    "fetched": true
   },
   "quality": {
-   "_posting": {},
+   "_posting": {
+    "analyzed_at": 1784487436,
+    "fetch_note": "page loaded but did not contain usable job text",
+    "fetch_status": "unreadable",
+    "fetched": true
+   },
    "attempts": 2,
    "checked_at": 1784401940,
    "new_grad": "unclear"
@@ -136720,12 +136760,12 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 45,
+  "score": 46,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "remote +2",
-   "not an AI/SWE/DS role"
+   "title matches your history +1"
   ],
   "sector": "other",
   "source": "lever",
@@ -140225,12 +140265,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 48,
+  "score": 49,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +5",
-   "off-field title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "jobright",
@@ -140682,12 +140721,12 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 45,
+  "score": 46,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "remote +2",
-   "not an AI/SWE/DS role"
+   "title matches your history +1"
   ],
   "sector": "other",
   "source": "lever",
@@ -140819,12 +140858,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 44,
+  "score": 45,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +1",
-   "off-field title (dashboard only)"
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "workday",
@@ -141875,16 +141913,15 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 71,
+  "score": 73,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:healthtech +16",
    "posted <7d +2",
-   "you've engaged with Johnson & Johnson +2",
+   "you've engaged with Johnson & Johnson +4",
    "title matches your history +4",
-   "SHPE 2026 exhibitor +4",
-   "off-field title (dashboard only)"
+   "SHPE 2026 exhibitor +4"
   ],
   "sector": "healthtech",
   "source": "workday",
@@ -145518,13 +145555,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 53,
+  "score": 54,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:fintech +5",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "fintech",
   "source": "workday",
@@ -149214,13 +149250,12 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "remote +2",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "ashby",
@@ -156979,13 +157014,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 53,
+  "score": 55,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <72h +6",
-   "title matches your history +4",
-   "not verified new-grad/early-career (dashboard only)"
+   "you've engaged with PTC +2",
+   "title matches your history +4"
   ],
   "sector": "other",
   "source": "jobright",
@@ -157418,12 +157453,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 47,
+  "score": 48,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +4",
-   "off-field title (dashboard only)"
+   "title matches your history +5"
   ],
   "sector": "other",
   "source": "workday",
@@ -159463,14 +159497,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 51,
+  "score": 52,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:fintech +5",
    "posted <7d +2",
-   "title matches your history +1",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +2"
   ],
   "sector": "fintech",
   "source": "jobright",
@@ -159725,13 +159758,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -160944,12 +160976,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 46,
+  "score": 47,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +1"
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "simplify",
@@ -164650,13 +164682,13 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 59,
+  "score": 60,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "new-grad title +14",
    "remote +2",
-   "off-field title (dashboard only)"
+   "title matches your history +1"
   ],
   "sector": "other",
   "source": "workday",
@@ -164899,13 +164931,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 51,
+  "score": 47,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "posted <72h +6",
-   "title matches your history +2",
-   "not an AI/SWE/DS role"
+   "posted <7d +2",
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "greenhouse",
@@ -165167,13 +165198,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 53,
+  "score": 55,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <72h +6",
-   "title matches your history +4",
-   "not verified new-grad/early-career (dashboard only)"
+   "you've engaged with PTC +2",
+   "title matches your history +4"
   ],
   "sector": "other",
   "source": "jobright",
@@ -166074,13 +166105,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 54,
+  "score": 55,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:big_tech +10",
-   "title matches your history +1",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +2"
   ],
   "sector": "big_tech",
   "source": "greenhouse",
@@ -167214,13 +167244,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -167588,7 +167617,12 @@
    "fetched": true
   },
   "quality": {
-   "_posting": {},
+   "_posting": {
+    "analyzed_at": 1784487436,
+    "fetch_note": "page loaded but did not contain usable job text",
+    "fetch_status": "unreadable",
+    "fetched": true
+   },
    "attempts": 2,
    "checked_at": 1784401936,
    "new_grad": "unclear"
@@ -169946,7 +169980,12 @@
    "fetched": true
   },
   "quality": {
-   "_posting": {},
+   "_posting": {
+    "analyzed_at": 1784487436,
+    "fetch_note": "page loaded but did not contain usable job text",
+    "fetch_status": "unreadable",
+    "fetched": true
+   },
    "attempts": 2,
    "checked_at": 1784401941,
    "new_grad": "unclear"
@@ -171714,12 +171753,12 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 45,
+  "score": 46,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "remote +2",
-   "not an AI/SWE/DS role"
+   "title matches your history +1"
   ],
   "sector": "other",
   "source": "lever",
@@ -174214,13 +174253,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 57,
+  "score": 54,
   "score_reasons": [
    "base 20",
    "role:data_science +26",
-   "posted <72h +6",
-   "title matches your history +5",
-   "not verified new-grad/early-career (dashboard only)"
+   "posted <7d +2",
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -176435,7 +176473,7 @@
   "url": "https://broadcom.wd1.myworkdayjobs.com/en-US/external_career/job/USA-TX-Plano-Legacy-Drive-Suite-700/Workload-Automation-Product-Owner_R025648-1"
  },
  "5ef4c58487dbc3ee": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "workday",
   "company": "Aptiv",
   "description": "",
@@ -176446,26 +176484,41 @@
   "locations": [],
   "posted_at": 1781884356,
   "posting": {
-   "analyzed_at": 1784483355,
+   "analyzed_at": 1784489726,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
+   "_posting": {
+    "analyzed_at": 1784489726,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "unknown"
+   },
    "ai_deferred_at": 1784483355,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784489726,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "IT leadership rotational program focused on project delivery, no experience required.",
+   "role_family": "non-technical",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 66,
+  "score": 41,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "technical leadership program +12",
    "title matches your history +6",
    "technical program alert floor +5",
-   "technical leadership/rotational program"
+   "technical leadership/rotational program",
+   "quality: non-technical role (IT leadership rotational program focused — LLM-verified) -25"
   ],
   "sector": "other",
   "source": "workday",
@@ -178561,7 +178614,12 @@
    "fetched": true
   },
   "quality": {
-   "_posting": {},
+   "_posting": {
+    "analyzed_at": 1784487436,
+    "fetch_note": "page loaded but did not contain usable job text",
+    "fetch_status": "unreadable",
+    "fetched": true
+   },
    "attempts": 2,
    "checked_at": 1784401943,
    "new_grad": "unclear"
@@ -182387,13 +182445,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 71,
+  "score": 65,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:healthtech +16",
-   "posted <24h +12",
-   "off-field title (dashboard only)"
+   "posted <72h +6"
   ],
   "sector": "healthtech",
   "source": "workday",
@@ -183057,11 +183114,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 43,
+  "score": 44,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "not an AI/SWE/DS role"
+   "title matches your history +1"
   ],
   "sector": "other",
   "source": "greenhouse",
@@ -183517,13 +183574,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 56,
+  "score": 57,
   "score_reasons": [
    "base 20",
    "role:data_science +26",
    "posted <72h +6",
-   "title matches your history +4",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +5"
   ],
   "sector": "other",
   "source": "jobright",
@@ -184614,14 +184670,13 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 54,
+  "score": 55,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:fintech +5",
    "remote +2",
-   "title matches your history +4",
-   "off-field title (dashboard only)"
+   "title matches your history +5"
   ],
   "sector": "fintech",
   "source": "workday",
@@ -192385,12 +192440,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 44,
+  "score": 45,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +1",
-   "not an AI/SWE/DS role"
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "lever",
@@ -195906,14 +195960,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 53,
+  "score": 54,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
    "you've engaged with JP Morgan Chase +3",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "oracle_orc",
@@ -201798,15 +201851,30 @@
   ],
   "posted_at": 1782143558,
   "posting": {
-   "analyzed_at": 1784483350,
+   "analyzed_at": 1784489715,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "citizenship is required"
   },
   "quality": {
+   "_posting": {
+    "analyzed_at": 1784489715,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "no",
+    "sponsorship_note": "citizenship is required"
+   },
    "ai_deferred_at": 1784483350,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784489715,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level rotational digital program explicitly open to external new grads.",
+   "role_family": "other-technical",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 4,
@@ -203344,12 +203412,12 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 45,
+  "score": 46,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "remote +2",
-   "not an AI/SWE/DS role"
+   "title matches your history +1"
   ],
   "sector": "other",
   "source": "lever",
@@ -206016,15 +206084,30 @@
   ],
   "posted_at": 1782143558,
   "posting": {
-   "analyzed_at": 1784483352,
+   "analyzed_at": 1784489717,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "citizenship is required"
   },
   "quality": {
+   "_posting": {
+    "analyzed_at": 1784489717,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "no",
+    "sponsorship_note": "citizenship is required"
+   },
    "ai_deferred_at": 1784483352,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784489717,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Engineering leadership program explicitly seeking recent bachelor's grads.",
+   "role_family": "other-technical",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 4,
@@ -206061,13 +206144,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -206843,13 +206925,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "jobright",
@@ -207463,12 +207544,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 48,
+  "score": 49,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +5",
-   "off-field title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -208377,13 +208457,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "$201k/yr",
-  "score": 61,
+  "score": 62,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "new-grad title +14",
-   "title matches your history +4",
-   "verified new-grad/early-career evidence"
+   "title matches your history +5"
   ],
   "sector": "other",
   "source": "speedyapply",
@@ -208624,13 +208703,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 63,
+  "score": 67,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:healthtech +16",
-   "title matches your history +4",
-   "off-field title (dashboard only)"
+   "you've engaged with Capricor Therapeutics +4",
+   "title matches your history +4"
   ],
   "sector": "healthtech",
   "source": "lever",
@@ -208779,14 +208858,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 68,
+  "score": 69,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:big_tech +10",
    "new-grad title +14",
-   "title matches your history +1",
-   "not an AI/SWE/DS role"
+   "title matches your history +2"
   ],
   "sector": "big_tech",
   "source": "greenhouse",
@@ -210162,13 +210240,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -210641,15 +210718,14 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 67,
+  "score": 69,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:healthtech +16",
    "posted <7d +2",
-   "you've engaged with Johnson & Johnson +2",
-   "SHPE 2026 exhibitor +4",
-   "off-field title (dashboard only)"
+   "you've engaged with Johnson & Johnson +4",
+   "SHPE 2026 exhibitor +4"
   ],
   "sector": "healthtech",
   "source": "workday",
@@ -212056,13 +212132,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 53,
+  "score": 49,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "posted <72h +6",
-   "title matches your history +4",
-   "generic analyst title (dashboard only)"
+   "posted <7d +2",
+   "title matches your history +4"
   ],
   "sector": "other",
   "source": "workday",
@@ -212557,14 +212632,13 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 52,
+  "score": 53,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "remote +2",
    "you've engaged with Polymarket +2",
-   "title matches your history +5",
-   "off-field title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "ashby",
@@ -212801,14 +212875,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 68,
+  "score": 69,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:big_tech +10",
    "new-grad title +14",
-   "title matches your history +1",
-   "not an AI/SWE/DS role"
+   "title matches your history +2"
   ],
   "sector": "big_tech",
   "source": "greenhouse",
@@ -217610,14 +217683,14 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 69,
+  "score": 73,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:healthtech +16",
    "posted <72h +6",
-   "title matches your history +4",
-   "not verified new-grad/early-career (dashboard only)"
+   "you've engaged with Mayo Clinic Healthcare London +2",
+   "title matches your history +6"
   ],
   "sector": "healthtech",
   "source": "jobright",
@@ -222738,13 +222811,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 53,
+  "score": 55,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <72h +6",
-   "title matches your history +4",
-   "not verified new-grad/early-career (dashboard only)"
+   "you've engaged with PTC +2",
+   "title matches your history +4"
   ],
   "sector": "other",
   "source": "jobright",
@@ -222955,15 +223028,14 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 70,
+  "score": 72,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:healthtech +16",
-   "you've engaged with Johnson & Johnson +2",
+   "you've engaged with Johnson & Johnson +4",
    "title matches your history +5",
-   "SHPE 2026 exhibitor +4",
-   "generic analyst title (dashboard only)"
+   "SHPE 2026 exhibitor +4"
   ],
   "sector": "healthtech",
   "source": "workday",
@@ -223251,13 +223323,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -224337,15 +224408,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 21,
+  "score": 66,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "technical leadership program +12",
    "title matches your history +6",
-   "technical program alert floor +5",
-   "technical leadership/rotational program",
-   "posting: requires master's degree (bachelor's profile) (dashboard only) -45"
+   "technical program alert floor +5"
   ],
   "sector": "other",
   "source": "workday",
@@ -225833,13 +225902,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 59,
+  "score": 55,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:big_tech +10",
-   "posted <72h +6",
-   "not verified new-grad/early-career (dashboard only)"
+   "posted <7d +2"
   ],
   "sector": "big_tech",
   "source": "smartrecruiters",
@@ -228161,13 +228229,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 54,
+  "score": 55,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:big_tech +10",
-   "title matches your history +1",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +2"
   ],
   "sector": "big_tech",
   "source": "simplify",
@@ -230139,15 +230206,14 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 69,
+  "score": 71,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:healthtech +16",
-   "you've engaged with Johnson & Johnson +2",
+   "you've engaged with Johnson & Johnson +4",
    "title matches your history +4",
-   "SHPE 2026 exhibitor +4",
-   "off-field title (dashboard only)"
+   "SHPE 2026 exhibitor +4"
   ],
   "sector": "healthtech",
   "source": "workday",
@@ -230703,12 +230769,12 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 45,
+  "score": 46,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "remote +2",
-   "not an AI/SWE/DS role"
+   "title matches your history +1"
   ],
   "sector": "other",
   "source": "lever",
@@ -233595,13 +233661,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -236995,13 +237060,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 62,
+  "score": 63,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "new-grad title +14",
-   "title matches your history +5",
-   "not an AI/SWE/DS role"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "lever",
@@ -237141,14 +237205,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 68,
+  "score": 69,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:big_tech +10",
    "new-grad title +14",
-   "title matches your history +1",
-   "verified new-grad/early-career evidence"
+   "title matches your history +2"
   ],
   "sector": "big_tech",
   "source": "greenhouse",
@@ -238173,14 +238236,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 65,
+  "score": 67,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:healthtech +16",
-   "you've engaged with Johnson & Johnson +2",
-   "SHPE 2026 exhibitor +4",
-   "off-field title (dashboard only)"
+   "you've engaged with Johnson & Johnson +4",
+   "SHPE 2026 exhibitor +4"
   ],
   "sector": "healthtech",
   "source": "workday",
@@ -242751,12 +242813,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 49,
+  "score": 45,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "posted <72h +6",
-   "not an AI/SWE/DS role"
+   "posted <7d +2"
   ],
   "sector": "other",
   "source": "greenhouse",
@@ -245950,15 +246011,14 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 62,
+  "score": 63,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:big_tech +10",
    "remote +2",
-   "title matches your history +4",
-   "culture fit 71/100 +3",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +5",
+   "culture fit 71/100 +3"
   ],
   "sector": "big_tech",
   "source": "greenhouse",
@@ -247022,12 +247082,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 53,
+  "score": 54,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:fintech +5",
-   "title matches your history +5"
+   "title matches your history +6"
   ],
   "sector": "fintech",
   "source": "greenhouse",
@@ -247532,12 +247592,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 57,
+  "score": 58,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "new-grad title +14",
-   "off-field title (dashboard only)"
+   "title matches your history +1"
   ],
   "sector": "other",
   "source": "workday",
@@ -248550,7 +248610,7 @@
   "url": "https://boards.greenhouse.io/andurilindustries/jobs/5105606007?gh_jid=5105606007"
  },
  "863ef75fe0e4fb30": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "workday",
   "company": "Vanguard",
   "description": "",
@@ -248563,26 +248623,41 @@
   ],
   "posted_at": 1783007550,
   "posting": {
-   "analyzed_at": 1784483354,
+   "analyzed_at": 1784489721,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
+   "_posting": {
+    "analyzed_at": 1784489721,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "unknown"
+   },
    "ai_deferred_at": 1784483354,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784489721,
+   "degree_required": "masters",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "2-year grad rotation requires advanced degree; data analytics focus.",
+   "role_family": "data",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 66,
+  "score": 21,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "technical leadership program +12",
    "title matches your history +6",
    "technical program alert floor +5",
-   "technical leadership/rotational program"
+   "technical leadership/rotational program",
+   "quality: requires master's degree (bachelor's profile) -45"
   ],
   "sector": "other",
   "source": "workday",
@@ -251928,14 +252003,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 64,
+  "score": 65,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "new-grad title +14",
    "posted <7d +2",
-   "title matches your history +5",
-   "not an AI/SWE/DS role"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "ashby",
@@ -257659,12 +257733,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 48,
+  "score": 49,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +5",
-   "off-field title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -260024,12 +260097,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 48,
+  "score": 49,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +5",
-   "off-field title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "greenhouse",
@@ -261175,15 +261247,14 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 69,
+  "score": 71,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:healthtech +16",
-   "you've engaged with Johnson & Johnson +2",
+   "you've engaged with Johnson & Johnson +4",
    "title matches your history +4",
-   "SHPE 2026 exhibitor +4",
-   "generic analyst title (dashboard only)"
+   "SHPE 2026 exhibitor +4"
   ],
   "sector": "healthtech",
   "source": "workday",
@@ -265200,7 +265271,7 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 55,
+  "score": 100,
   "score_reasons": [
    "base 20",
    "role:swe +23",
@@ -265209,12 +265280,9 @@
    "technical leadership program +12",
    "target healthcare program company +4",
    "posted <7d +2",
-   "you've engaged with Johnson & Johnson +2",
+   "you've engaged with Johnson & Johnson +4",
    "title matches your history +6",
-   "SHPE 2026 exhibitor +4",
-   "verified new-grad/early-career evidence",
-   "technical leadership/rotational program",
-   "posting: requires master's degree (bachelor's profile) (dashboard only) -45"
+   "SHPE 2026 exhibitor +4"
   ],
   "sector": "healthtech",
   "source": "workday",
@@ -265759,15 +265827,14 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 75,
+  "score": 71,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:healthtech +16",
-   "posted <72h +6",
+   "posted <7d +2",
    "title matches your history +6",
-   "SHPE 2026 exhibitor +4",
-   "generic analyst title (dashboard only)"
+   "SHPE 2026 exhibitor +4"
   ],
   "sector": "healthtech",
   "source": "smartrecruiters",
@@ -266213,13 +266280,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 60,
+  "score": 61,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <24h +12",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -267403,7 +267469,11 @@
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784389818,
+    "analyzed_at": 1784483596,
+    "education_mismatch": true,
+    "education_note": "Artificial Intelligence (AI) Transportation Cloud Computing Embedded Software Gaming Hardware Quantum Computing Semiconductor AI Infrastructure Autonomous Vehicles Embedded Systems",
+    "education_required": "masters",
+    "fetch_status": "readable",
     "fetched": true,
     "sponsorship": "yes",
     "sponsorship_note": "H1B Sponsorship"
@@ -267420,7 +267490,7 @@
   "research_checked_at": 1784483596,
   "rules_v": 4,
   "salary": "",
-  "score": 47,
+  "score": 92,
   "score_reasons": [
    "base 20",
    "role:swe +23",
@@ -267430,9 +267500,7 @@
    "you've engaged with NVIDIA +8",
    "title matches your history +6",
    "culture fit 83/100 +4",
-   "SHPE 2026 exhibitor +4",
-   "verified new-grad/early-career evidence",
-   "posting: requires master's degree (bachelor's profile) (dashboard only) -45"
+   "SHPE 2026 exhibitor +4"
   ],
   "sector": "big_tech",
   "source": "jobright",
@@ -268476,13 +268544,12 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 51,
+  "score": 47,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "posted <72h +6",
-   "remote +2",
-   "not verified new-grad/early-career (dashboard only)"
+   "posted <7d +2",
+   "remote +2"
   ],
   "sector": "other",
   "source": "smartrecruiters",
@@ -269443,13 +269510,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 62,
+  "score": 63,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "new-grad title +14",
-   "title matches your history +5",
-   "not an AI/SWE/DS role"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "lever",
@@ -269700,14 +269766,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 55,
+  "score": 56,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:fintech +5",
    "posted <7d +2",
-   "title matches your history +5",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "fintech",
   "source": "greenhouse",
@@ -272957,9 +273022,11 @@
    "sponsorship": "unknown"
   },
   "quality": {
-   "attempts": 1,
+   "attempts": 2,
+   "checked_at": 1784489703,
    "fetch_note": "page loaded without enough usable posting text",
-   "fetch_status": "unreadable"
+   "fetch_status": "unreadable",
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 4,
@@ -273732,12 +273799,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 44,
+  "score": 45,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +1",
-   "off-field title (dashboard only)"
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "workday",
@@ -274709,13 +274775,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 56,
+  "score": 57,
   "score_reasons": [
    "base 20",
    "role:data_science +26",
    "posted <72h +6",
-   "title matches your history +4",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +5"
   ],
   "sector": "other",
   "source": "greenhouse",
@@ -275342,16 +275407,15 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 74,
+  "score": 76,
   "score_reasons": [
    "base 20",
    "role:data_science +26",
    "sector:healthtech +16",
    "posted <7d +2",
-   "you've engaged with Johnson & Johnson +2",
+   "you've engaged with Johnson & Johnson +4",
    "title matches your history +4",
-   "SHPE 2026 exhibitor +4",
-   "not verified new-grad/early-career (dashboard only)"
+   "SHPE 2026 exhibitor +4"
   ],
   "sector": "healthtech",
   "source": "workday",
@@ -277510,7 +277574,12 @@
    "fetched": true
   },
   "quality": {
-   "_posting": {},
+   "_posting": {
+    "analyzed_at": 1784487436,
+    "fetch_note": "page loaded but did not contain usable job text",
+    "fetch_status": "unreadable",
+    "fetched": true
+   },
    "attempts": 2,
    "checked_at": 1784389341,
    "new_grad": "unclear"
@@ -278339,13 +278408,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "greenhouse",
@@ -287014,14 +287082,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <72h +6",
-   "title matches your history +1",
-   "not verified new-grad/early-career (dashboard only)",
-   "mid-level title (dashboard only)"
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "oracle_orc",
@@ -287735,12 +287801,12 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 45,
+  "score": 46,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "remote +2",
-   "not an AI/SWE/DS role"
+   "title matches your history +1"
   ],
   "sector": "other",
   "source": "lever",
@@ -289296,16 +289362,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 30,
+  "score": 75,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "new-grad title +14",
    "technical leadership program +12",
-   "title matches your history +6",
-   "verified new-grad/early-career evidence",
-   "technical leadership/rotational program",
-   "posting: requires master's degree (bachelor's profile) (dashboard only) -45"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "greenhouse",
@@ -291258,14 +291321,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 54,
+  "score": 55,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
-   "SHPE 2026 exhibitor +4",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +6",
+   "SHPE 2026 exhibitor +4"
   ],
   "sector": "other",
   "source": "jobright",
@@ -291710,12 +291772,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 48,
+  "score": 49,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +5",
-   "off-field title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -295322,13 +295383,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -296205,13 +296265,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -296292,12 +296351,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 48,
+  "score": 49,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "simplify",
@@ -301076,14 +301134,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 54,
+  "score": 55,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
-   "SHPE 2026 exhibitor +4",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +6",
+   "SHPE 2026 exhibitor +4"
   ],
   "sector": "other",
   "source": "workday",
@@ -302741,13 +302798,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <72h +6",
-   "title matches your history +1",
-   "off-field title (dashboard only)"
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "workday",
@@ -305728,13 +305784,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "jobright",
@@ -307924,13 +307979,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -309633,13 +309687,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 46,
+  "score": 48,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +1",
-   "off-field title (dashboard only)"
+   "title matches your history +3"
   ],
   "sector": "other",
   "source": "workday",
@@ -314766,13 +314819,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 60,
+  "score": 61,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <24h +12",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -316371,13 +316423,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 49,
+  "score": 50,
   "score_reasons": [
    "base 20",
    "role:ai_ml +28",
-   "title matches your history +1",
-   "not verified new-grad/early-career (dashboard only)",
-   "off-field title (dashboard only)"
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "workday",
@@ -316684,12 +316734,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 52,
+  "score": 53,
   "score_reasons": [
    "base 20",
    "role:ai_ml +28",
-   "title matches your history +4",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +5"
   ],
   "sector": "other",
   "source": "workday",
@@ -316712,13 +316761,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 54,
+  "score": 55,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <72h +6",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -319573,13 +319621,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -321909,7 +321956,12 @@
    "fetched": true
   },
   "quality": {
-   "_posting": {},
+   "_posting": {
+    "analyzed_at": 1784487436,
+    "fetch_note": "page loaded but did not contain usable job text",
+    "fetch_status": "unreadable",
+    "fetched": true
+   },
    "attempts": 2,
    "checked_at": 1784400245,
    "new_grad": "unclear"
@@ -323381,14 +323433,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 70,
+  "score": 66,
   "score_reasons": [
    "base 20",
    "role:ai_ml +28",
    "sector:big_tech +10",
-   "posted <72h +6",
-   "title matches your history +6",
-   "not verified new-grad/early-career (dashboard only)"
+   "posted <7d +2",
+   "title matches your history +6"
   ],
   "sector": "big_tech",
   "source": "smartrecruiters",
@@ -323416,12 +323467,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 49,
+  "score": 45,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "posted <72h +6",
-   "not an AI/SWE/DS role"
+   "posted <7d +2"
   ],
   "sector": "other",
   "source": "greenhouse",
@@ -323670,12 +323720,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 48,
+  "score": 49,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -325118,13 +325167,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "$201k/yr",
-  "score": 61,
+  "score": 62,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "new-grad title +14",
-   "title matches your history +4",
-   "verified new-grad/early-career evidence"
+   "title matches your history +5"
   ],
   "sector": "other",
   "source": "speedyapply",
@@ -327948,11 +327996,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 43,
+  "score": 44,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "off-field title (dashboard only)"
+   "title matches your history +1"
   ],
   "sector": "other",
   "source": "workday",
@@ -329031,13 +329079,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 58,
+  "score": 59,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "new-grad title +14",
-   "title matches your history +1",
-   "verified new-grad/early-career evidence"
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "jobright",
@@ -330444,12 +330491,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 44,
+  "score": 45,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +1",
-   "not an AI/SWE/DS role"
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "jobright",
@@ -330904,13 +330950,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -332260,16 +332305,15 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 61,
+  "score": 62,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
    "you've engaged with RTX +8",
-   "title matches your history +5",
+   "title matches your history +6",
    "culture fit 39/100 -1",
-   "SHPE 2026 exhibitor +4",
-   "off-field title (dashboard only)"
+   "SHPE 2026 exhibitor +4"
   ],
   "sector": "other",
   "source": "workday",
@@ -333417,14 +333461,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 51,
+  "score": 52,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:fintech +5",
    "posted <7d +2",
-   "title matches your history +1",
-   "off-field title (dashboard only)"
+   "title matches your history +2"
   ],
   "sector": "fintech",
   "source": "workday",
@@ -335095,12 +335138,12 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 45,
+  "score": 46,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "remote +2",
-   "not an AI/SWE/DS role"
+   "title matches your history +1"
   ],
   "sector": "other",
   "source": "lever",
@@ -342133,7 +342176,8 @@
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784402194,
+    "analyzed_at": 1784483596,
+    "fetch_status": "readable",
     "fetched": true,
     "sponsorship": "unknown"
    },
@@ -347334,13 +347378,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 60,
+  "score": 61,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <24h +12",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -351456,12 +351499,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "jobright",
@@ -351648,12 +351691,12 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 45,
+  "score": 46,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "remote +2",
-   "not an AI/SWE/DS role"
+   "title matches your history +1"
   ],
   "sector": "other",
   "source": "lever",
@@ -352977,7 +353020,12 @@
    "fetched": true
   },
   "quality": {
-   "_posting": {},
+   "_posting": {
+    "analyzed_at": 1784487436,
+    "fetch_note": "page loaded but did not contain usable job text",
+    "fetch_status": "unreadable",
+    "fetched": true
+   },
    "attempts": 2,
    "checked_at": 1784401939,
    "new_grad": "unclear"
@@ -353828,12 +353876,12 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 45,
+  "score": 46,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "remote +2",
-   "not an AI/SWE/DS role"
+   "title matches your history +1"
   ],
   "sector": "other",
   "source": "lever",
@@ -354430,7 +354478,8 @@
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784389818,
+    "analyzed_at": 1784483596,
+    "fetch_status": "readable",
     "fetched": true,
     "sponsorship": "unknown"
    },
@@ -356896,12 +356945,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 45,
+  "score": 46,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +2",
-   "off-field title (dashboard only)"
+   "title matches your history +3"
   ],
   "sector": "other",
   "source": "workday",
@@ -357705,13 +357753,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 52,
+  "score": 53,
   "score_reasons": [
    "base 20",
    "role:data_science +26",
    "sector:fintech +5",
-   "title matches your history +1",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +2"
   ],
   "sector": "fintech",
   "source": "jobright",
@@ -366178,13 +366225,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 60,
+  "score": 61,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <24h +12",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -368840,7 +368886,7 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 23,
+  "score": 78,
   "score_reasons": [
    "base 20",
    "role:ai_ml +28",
@@ -368848,9 +368894,7 @@
    "new-grad title +14",
    "title matches your history +1",
    "culture fit 62/100 +1",
-   "SHPE 2026 exhibitor +4",
-   "verified new-grad/early-career evidence",
-   "posting: wants 10+ yrs (dashboard only) -55"
+   "SHPE 2026 exhibitor +4"
   ],
   "sector": "big_tech",
   "source": "workday",
@@ -369905,13 +369949,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 54,
+  "score": 55,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <72h +6",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -372043,12 +372086,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 49,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <72h +6",
-   "off-field title (dashboard only)"
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "workday",
@@ -373409,16 +373452,15 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 73,
+  "score": 75,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:healthtech +16",
    "posted <7d +2",
-   "you've engaged with Johnson & Johnson +2",
+   "you've engaged with Johnson & Johnson +4",
    "title matches your history +6",
-   "SHPE 2026 exhibitor +4",
-   "generic analyst title (dashboard only)"
+   "SHPE 2026 exhibitor +4"
   ],
   "sector": "healthtech",
   "source": "jobright",
@@ -373702,13 +373744,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 46,
+  "score": 47,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "you've engaged with Jane Street +2",
-   "title matches your history +1",
-   "off-field title (dashboard only)"
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "greenhouse",
@@ -379398,13 +379439,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 46,
+  "score": 47,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "you've engaged with Jane Street +2",
-   "title matches your history +1",
-   "off-field title (dashboard only)"
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "greenhouse",
@@ -380232,13 +380272,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -380592,15 +380631,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 51,
+  "score": 52,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "you've engaged with Cisco +3",
-   "title matches your history +1",
-   "SHPE 2026 exhibitor +4",
-   "not verified new-grad/early-career (dashboard only)",
-   "mid-level title (dashboard only)"
+   "title matches your history +2",
+   "SHPE 2026 exhibitor +4"
   ],
   "sector": "other",
   "source": "workday",
@@ -385737,14 +385774,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 54,
+  "score": 55,
   "score_reasons": [
    "base 20",
    "role:data_science +26",
    "sector:fintech +5",
    "posted <7d +2",
-   "title matches your history +1",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +2"
   ],
   "sector": "fintech",
   "source": "greenhouse",
@@ -386009,13 +386045,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <72h +6",
-   "title matches your history +1",
-   "off-field title (dashboard only)"
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "workday",
@@ -386434,16 +386469,15 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 68,
+  "score": 71,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:healthtech +16",
    "posted <7d +2",
-   "you've engaged with Johnson & Johnson +2",
-   "title matches your history +1",
-   "SHPE 2026 exhibitor +4",
-   "off-field title (dashboard only)"
+   "you've engaged with Johnson & Johnson +4",
+   "title matches your history +2",
+   "SHPE 2026 exhibitor +4"
   ],
   "sector": "healthtech",
   "source": "workday",
@@ -388544,7 +388578,8 @@
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784402167,
+    "analyzed_at": 1784483596,
+    "fetch_status": "readable",
     "fetched": true,
     "sponsorship": "unknown"
    },
@@ -389498,9 +389533,11 @@
   ],
   "posted_at": 1783030020,
   "quality": {
-   "attempts": 1,
+   "attempts": 2,
+   "checked_at": 1784489730,
    "fetch_note": "could not retrieve usable posting text",
-   "fetch_status": "unavailable"
+   "fetch_status": "unavailable",
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 4,
@@ -391147,12 +391184,12 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 45,
+  "score": 46,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "remote +2",
-   "not an AI/SWE/DS role"
+   "title matches your history +1"
   ],
   "sector": "other",
   "source": "lever",
@@ -392122,16 +392159,15 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 57,
+  "score": 58,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
    "you've engaged with RTX +8",
-   "title matches your history +1",
+   "title matches your history +2",
    "culture fit 39/100 -1",
-   "SHPE 2026 exhibitor +4",
-   "not verified new-grad/early-career (dashboard only)"
+   "SHPE 2026 exhibitor +4"
   ],
   "sector": "other",
   "source": "jobright",
@@ -395463,14 +395499,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 68,
+  "score": 69,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:big_tech +10",
    "new-grad title +14",
-   "title matches your history +1",
-   "not an AI/SWE/DS role"
+   "title matches your history +2"
   ],
   "sector": "big_tech",
   "source": "greenhouse",
@@ -398926,14 +398961,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 64,
+  "score": 65,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "new-grad title +14",
    "posted <7d +2",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "jobright",
@@ -402061,12 +402095,12 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 45,
+  "score": 46,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "remote +2",
-   "not an AI/SWE/DS role"
+   "title matches your history +1"
   ],
   "sector": "other",
   "source": "lever",
@@ -402407,13 +402441,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -403767,7 +403800,8 @@
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784400836,
+    "analyzed_at": 1784487436,
+    "fetch_status": "readable",
     "fetched": true,
     "sponsorship": "yes",
     "sponsorship_note": "H1B Sponsorship"
@@ -407052,12 +407086,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 48,
+  "score": 49,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +5",
-   "off-field title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -415641,7 +415674,8 @@
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784402202,
+    "analyzed_at": 1784483596,
+    "fetch_status": "readable",
     "fetched": true,
     "sponsorship": "unknown"
    },
@@ -419690,12 +419724,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 48,
+  "score": 49,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "simplify",
@@ -420251,12 +420284,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 46,
+  "score": 48,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +3",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +5"
   ],
   "sector": "other",
   "source": "workday",
@@ -423174,13 +423206,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 62,
+  "score": 63,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "new-grad title +14",
-   "title matches your history +5",
-   "not an AI/SWE/DS role"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "lever",
@@ -424256,14 +424287,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 71,
+  "score": 72,
   "score_reasons": [
    "base 20",
    "role:ai_ml +28",
    "sector:healthtech +16",
    "posted <7d +2",
-   "title matches your history +5",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "healthtech",
   "source": "workday",
@@ -424753,15 +424783,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 27,
+  "score": 72,
   "score_reasons": [
    "base 20",
    "role:data_science +26",
    "new-grad title +14",
    "posted <72h +6",
-   "title matches your history +6",
-   "verified new-grad/early-career evidence",
-   "posting: requires master's degree (bachelor's profile) (dashboard only) -45"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "jobright",
@@ -426234,13 +426262,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 53,
+  "score": 49,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "posted <72h +6",
-   "title matches your history +4",
-   "generic analyst title (dashboard only)"
+   "posted <7d +2",
+   "title matches your history +4"
   ],
   "sector": "other",
   "source": "workday",
@@ -426870,12 +426897,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 44,
+  "score": 45,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +1",
-   "off-field title (dashboard only)"
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "workday",
@@ -428976,11 +429002,12 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 45,
+  "score": 47,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "remote +2"
+   "remote +2",
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "lever",
@@ -429285,15 +429312,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 2,
+  "score": 47,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "new-grad title +14",
    "posted <72h +6",
    "title matches your history +4",
-   "verified new-grad/early-career evidence",
-   "posting: requires master's degree (bachelor's profile) (dashboard only) -45",
    "quality: not new-grad (1+ yrs — LLM-verified) -20"
   ],
   "sector": "other",
@@ -430859,12 +430884,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 48,
+  "score": 49,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -431319,13 +431343,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -431583,12 +431606,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 48,
+  "score": 49,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "jobright",
@@ -431611,13 +431633,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 62,
+  "score": 63,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "new-grad title +14",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -433172,13 +433193,13 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 75,
+  "score": 71,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:ai_lab +11",
    "company tier: marquee (competitive)",
-   "posted <72h +6",
+   "posted <7d +2",
    "remote +2",
    "you've engaged with OpenAI +8",
    "title matches your history +1",
@@ -435322,12 +435343,12 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 45,
+  "score": 46,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "remote +2",
-   "not an AI/SWE/DS role"
+   "title matches your history +1"
   ],
   "sector": "other",
   "source": "lever",
@@ -435436,12 +435457,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 52,
+  "score": 54,
   "score_reasons": [
    "base 20",
    "role:data_science +26",
-   "title matches your history +6",
-   "not verified new-grad/early-career (dashboard only)"
+   "you've engaged with PTC +2",
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "jobright",
@@ -439671,7 +439692,12 @@
    "fetched": true
   },
   "quality": {
-   "_posting": {},
+   "_posting": {
+    "analyzed_at": 1784487436,
+    "fetch_note": "page loaded but did not contain usable job text",
+    "fetch_status": "unreadable",
+    "fetched": true
+   },
    "attempts": 2,
    "checked_at": 1784350337,
    "new_grad": "unclear"
@@ -439971,14 +439997,13 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 62,
+  "score": 58,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:ai_lab +11",
-   "posted <72h +6",
-   "remote +2",
-   "not an AI/SWE/DS role"
+   "posted <7d +2",
+   "remote +2"
   ],
   "sector": "ai_lab",
   "source": "ashby",
@@ -440362,10 +440387,10 @@
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784389818,
+    "analyzed_at": 1784483596,
+    "fetch_status": "readable",
     "fetched": true,
-    "sponsorship": "no",
-    "sponsorship_note": "without visa sponsorship"
+    "sponsorship": "unknown"
    },
    "attempts": 2,
    "checked_at": 1784056622,
@@ -447009,13 +447034,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -449688,13 +449712,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 62,
+  "score": 63,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "new-grad title +14",
-   "title matches your history +5",
-   "not an AI/SWE/DS role"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "lever",
@@ -451002,14 +451025,13 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 65,
+  "score": 67,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:healthtech +16",
-   "you've engaged with Johnson & Johnson +2",
-   "SHPE 2026 exhibitor +4",
-   "off-field title (dashboard only)"
+   "you've engaged with Johnson & Johnson +4",
+   "SHPE 2026 exhibitor +4"
   ],
   "sector": "healthtech",
   "source": "workday",
@@ -451940,13 +451962,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 54,
+  "score": 55,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <72h +6",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "simplify",
@@ -455243,13 +455264,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 50,
+  "score": 51,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <7d +2",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "oracle_orc",
@@ -458772,11 +458792,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 43,
+  "score": 45,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "off-field title (dashboard only)"
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "smartrecruiters",
@@ -460094,12 +460114,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 44,
+  "score": 45,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "title matches your history +1",
-   "off-field title (dashboard only)"
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "workday",
@@ -463619,7 +463638,8 @@
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784402231,
+    "analyzed_at": 1784487436,
+    "fetch_status": "readable",
     "fetched": true,
     "sponsorship": "unknown"
    },
@@ -463989,13 +464009,12 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 60,
+  "score": 61,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "posted <24h +12",
-   "title matches your history +5",
-   "generic analyst title (dashboard only)"
+   "title matches your history +6"
   ],
   "sector": "other",
   "source": "workday",
@@ -467064,12 +467083,11 @@
   "remote": false,
   "rules_v": 4,
   "salary": "",
-  "score": 47,
+  "score": 48,
   "score_reasons": [
    "base 20",
    "role:data_science +26",
-   "title matches your history +1",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +2"
   ],
   "sector": "other",
   "source": "jobright",
@@ -471466,7 +471484,8 @@
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784397120,
+    "analyzed_at": 1784487436,
+    "fetch_status": "readable",
     "fetched": true,
     "sponsorship": "unknown"
    },
@@ -473719,12 +473738,12 @@
   "remote": true,
   "rules_v": 4,
   "salary": "",
-  "score": 45,
+  "score": 46,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "remote +2",
-   "not an AI/SWE/DS role"
+   "title matches your history +1"
   ],
   "sector": "other",
   "source": "lever",

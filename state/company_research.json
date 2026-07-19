@@ -1931,62 +1931,60 @@
  },
  "fuze health": {
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
    "value": "Not confirmed"
   },
   "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "74b3d7776b"
+   ],
+   "value": "Partners in the healthcare sector looking to modernize and meet emerging patient and marketplace needs."
+  },
+  "error": "",
+  "evidence_sha": "02085c78310f4b6d",
+  "generated_at": 1784489599,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "74b3d7776b",
+    "e00d48c0d2",
+    "75634ad1fd"
+   ],
+   "value": "Focus on demonstrating proficiency in Python, C#, JavaScript, and application observability (Splunk). Show readiness to work in complex data environments and product engineering, and ask about the company's tech culture and work-life balance to ensure it meets your expectations for a fast, innovative, and respectful environment."
+  },
+  "last_attempt_at": 1784489599,
+  "last_evidence_at": 1784483596,
+  "locations": {
    "confidence": "unknown",
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "error": "",
-  "evidence_sha": "02085c78310f4b6d",
-  "generated_at": 1784402843,
-  "generator": {
-   "endpoint": "local",
-   "model": "qwen3:30b",
-   "task": "company_research"
-  },
-  "interview_focus": {
-   "confidence": "high",
-   "source_ids": [
-    "c1528512a5",
-    "75634ad1fd"
-   ],
-   "value": "Technical skills in Python, C#, JavaScript, application observability, and Splunk; also considers diversity and inclusion in their hiring process."
-  },
-  "last_attempt_at": 1784402843,
-  "last_evidence_at": 1784483596,
-  "locations": {
-   "confidence": "high",
-   "source_ids": [
-    "c1528512a5",
-    "75634ad1fd"
-   ],
-   "value": "Remote (United States)"
-  },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "c1528512a5",
-    "75634ad1fd"
+    "74b3d7776b"
    ],
-   "value": "Enhancing healthcare through digital solutions"
+   "value": "Dedicated to helping partners evolve and modernize to meet emerging patient and marketplace needs."
   },
   "name": "Fuze Health",
   "products": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "c1528512a5",
-    "75634ad1fd"
+    "74b3d7776b"
    ],
-   "value": "Digital healthcare solutions (specific product names not mentioned in sources)"
+   "value": "Technology solutions aimed at helping partners evolve and modernize to meet emerging patient and marketplace needs in the digital health, diagnostics, and pharmacy sectors."
   },
   "prompt_v": 1,
-  "refresh_after": 1789586843,
+  "refresh_after": 1789673599,
   "schema_v": 1,
   "size_stage": {
    "confidence": "unknown",
@@ -2026,37 +2024,34 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "high",
-   "source_ids": [
-    "4fad6fb372"
-   ],
-   "value": "Offers post-F-1/OPT sponsorship for eligible candidates"
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "c1528512a5",
-    "75634ad1fd"
+    "74b3d7776b"
    ],
-   "value": "Fuze Health is a healthcare technology company focused on digital solutions to enhance healthcare delivery. The company offers graduate software engineering roles with competitive compensation and a remote work structure."
+   "value": "Fuze Health is a digital health company formed by the strategic combination of proven, technology-powered innovators in the digital health, diagnostics, and pharmacy sectors."
   },
-  "synthesized_evidence_sha": "16469cb216f904ba",
+  "synthesized_evidence_sha": "02085c78310f4b6d",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "c1528512a5",
+    "74b3d7776b",
+    "e00d48c0d2",
     "75634ad1fd"
    ],
-   "value": "Developing software using Python, C#, JavaScript, with application observability and Splunk"
+   "value": "Entry-level role at the intersection of product engineering, cloud computing, and complex data environments; required skills include Python, C#, JavaScript, and application observability (Splunk)."
   },
   "why_it_matters": {
    "confidence": "medium",
    "source_ids": [
-    "c1528512a5",
-    "75634ad1fd"
+    "74b3d7776b"
    ],
-   "value": "The company's focus on digital healthcare solutions and remote work structure aligns with a mission-driven, innovative tech culture without explicit mention of work-life balance or high-burnout environments."
+   "value": "Fuze Health operates at the intersection of product engineering, cloud computing, and complex data environments, offering real-world software experience. The company's formation through a strategic combination of innovators suggests a dynamic, evolving tech environment, though alignment with elite AI or data science prestige and high new-grad pay is not confirmed."
   }
  },
  "ge aerospace": {
@@ -3494,82 +3489,64 @@
  },
  "notion": {
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
-   "confidence": "high",
-   "source_ids": [
-    "41bcebf401",
-    "58c82c50f4",
-    "7809b199f2"
-   ],
-   "value": "Notion operates on a freemium model with free and paid plans for individuals and teams."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "customers": {
-   "confidence": "high",
-   "source_ids": [
-    "41bcebf401",
-    "58c82c50f4",
-    "7809b199f2"
-   ],
-   "value": "Notion's customers include individuals, teams, and organizations seeking productivity and collaboration tools."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "error": "",
   "evidence_sha": "1b12722257a5e00b",
-  "generated_at": 1784434893,
+  "generated_at": 1784489599,
   "generator": {
-   "endpoint": "local",
-   "model": "qwen3:30b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "interview_focus": {
-   "confidence": "low",
-   "source_ids": [
-    "58c82c50f4",
-    "7809b199f2"
-   ],
-   "value": "The interview process focuses on technical skills, problem-solving, and cultural fit for AI and software engineering roles."
-  },
-  "last_attempt_at": 1784434893,
-  "last_evidence_at": 1784483596,
-  "locations": {
    "confidence": "medium",
    "source_ids": [
-    "41bcebf401",
-    "58c82c50f4",
-    "7809b199f2"
+    "94a0d92a0a",
+    "58c82c50f4"
    ],
-   "value": "Notion has offices in San Francisco and other locations, but specific locations for the role are not specified in the job postings."
+   "value": "Focus on assessing true work-life balance, sane hours, and the reality of the tech culture to ensure it avoids bureaucracy and burnout. You should also probe the AI early career role for technical learning depth and career growth potential to confirm it meets your elite prestige and innovation criteria."
   },
-  "mission": {
+  "last_attempt_at": 1784489599,
+  "last_evidence_at": 1784483596,
+  "locations": {
    "confidence": "high",
    "source_ids": [
-    "41bcebf401",
-    "58c82c50f4",
-    "7809b199f2"
+    "94a0d92a0a"
    ],
-   "value": "Notion's mission is to help teams and individuals organize their work and collaborate more effectively."
+   "value": "San Francisco, CA. The New Grad role is Full-time and Onsite."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "name": "Notion",
   "products": {
    "confidence": "high",
    "source_ids": [
-    "41bcebf401",
-    "58c82c50f4",
-    "7809b199f2"
+    "94a0d92a0a"
    ],
-   "value": "Notion is a productivity platform with tools for note-taking, project management, and collaboration."
+   "value": "A collaborative AI workspace focused on enhancing team productivity and knowledge sharing."
   },
   "prompt_v": 1,
-  "refresh_after": 1789618893,
+  "refresh_after": 1789673599,
   "schema_v": 1,
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "41bcebf401",
-    "58c82c50f4",
-    "7809b199f2"
+    "94a0d92a0a"
    ],
-   "value": "Notion is a growth-stage company with a focus on early career roles."
+   "value": "Founded in 2016. Has 501-1000 employees."
   },
   "sources": [
    {
@@ -3606,38 +3583,37 @@
   "sponsorship_context": {
    "confidence": "high",
    "source_ids": [
-    "41bcebf401",
-    "58c82c50f4",
-    "7809b199f2"
+    "94a0d92a0a"
    ],
-   "value": "Notion does not sponsor visas for early career roles based on the job postings provided."
+   "value": "Notion has a track record of offering H1B sponsorships, though this does not guarantee sponsorship for specific roles."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "94a0d92a0a",
     "41bcebf401",
-    "58c82c50f4",
-    "7809b199f2"
+    "58c82c50f4"
    ],
-   "value": "Notion is a productivity platform that offers a suite of tools for note-taking, project management, and collaboration, with a focus on simplicity and user experience."
+   "value": "Notion is a software company developing a collaborative AI workspace aimed at enhancing team productivity and knowledge sharing. They are actively recruiting software engineering new grads and early career talent, including AI-focused roles."
   },
-  "synthesized_evidence_sha": "7d14bb6ac1cae326",
+  "synthesized_evidence_sha": "1b12722257a5e00b",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "58c82c50f4",
-    "7809b199f2"
+    "94a0d92a0a",
+    "41bcebf401",
+    "58c82c50f4"
    ],
-   "value": "Notion's technical work includes software engineering for productivity tools, with AI-focused roles for early career engineers."
+   "value": "Hiring for Software Engineer, New Grad; Software Engineer, Early Career; and Software Engineer, Early Career (AI) roles."
   },
   "why_it_matters": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "58c82c50f4",
-    "7809b199f2"
+    "94a0d92a0a",
+    "58c82c50f4"
    ],
-   "value": "Notion offers a top-tier AI/data science role with elite prestige, high new-grad pay, and a fast, innovative tech culture. It is mission-driven with a focus on work-life balance through sane hours and guaranteed shutdowns, avoiding toxic environments. The company accelerates technical learning and career growth without sacrificing personal time."
+   "value": "Aligns with your priority for high new-grad pay and a fast, innovative tech culture, with the New Grad role offering $126K/yr-$146K/yr. The specific Early Career (AI) posting indicates a direct path into top-tier AI work. However, adherence to sane hours, guaranteed shutdowns, and avoidance of burnout cannot be confirmed from the provided sources."
   }
  },
  "nuro": {
@@ -3749,73 +3725,70 @@
  },
  "nvidia": {
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "766728e261"
+    "766728e261",
+    "0dde78ed2b"
    ],
-   "value": "Combining external EDA with internal EDA tools, leveraging AI and hardware innovation to provide solutions for AI, graphics, and simulation."
+   "value": "Develops industry-leading hardware and combines external EDA with highly optimized internal EDA tools."
   },
   "customers": {
-   "confidence": "high",
-   "source_ids": [
-    "502f97a915",
-    "766728e261",
-    "813750a83c"
-   ],
-   "value": "Industry for AI workloads, EDA customers, gaming and graphics industries"
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "error": "",
   "evidence_sha": "51d5fd0d4501efd9",
-  "generated_at": 1784483202,
+  "generated_at": 1784489599,
   "generator": {
-   "endpoint": "local",
-   "model": "qwen3:30b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "interview_focus": {
    "confidence": "high",
    "source_ids": [
-    "813750a83c"
+    "0dde78ed2b",
+    "29d0533621",
+    "766728e261"
    ],
-   "value": "Technical expertise in AI, data science, and relevant tools (e.g., PyTorch, CUDA), hands-on experience with large-scale AI training, and problem-solving for complex technical challenges."
+   "value": "To match the candidate's drive for technical growth and sane working hours, the interview should probe how the team balances the intense demands of optimizing advanced designs for AI/HPC with avoiding burnout. Ask about team structure, learning opportunities, and expectations around managing complex physical design algorithms without creeping into personal time."
   },
-  "last_attempt_at": 1784483202,
+  "last_attempt_at": 1784489599,
   "last_evidence_at": 1784483596,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "502f97a915",
     "766728e261",
-    "813750a83c"
+    "29d0533621",
+    "0dde78ed2b"
    ],
-   "value": "Santa Clara, CA (based on job postings)"
+   "value": "Santa Clara, California and Austin, Texas."
   },
   "mission": {
-   "confidence": "high",
-   "source_ids": [
-    "502f97a915"
-   ],
-   "value": "To deliver industry-leading accelerated computing for the world’s most ambitious AI workloads, pushing progress and positively affecting millions of lives."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "name": "NVIDIA",
   "products": {
    "confidence": "high",
    "source_ids": [
-    "502f97a915",
-    "766728e261",
-    "813750a83c"
+    "29d0533621"
    ],
-   "value": "DGX Cloud, EDA tools, AI for Graphics and Gaming solutions"
+   "value": "Graphics, high-performance computing (HPC), and artificial intelligence platforms."
   },
   "prompt_v": 1,
-  "refresh_after": 1789667202,
+  "refresh_after": 1789673599,
   "schema_v": 1,
   "size_stage": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "29d0533621"
+   ],
+   "value": "10001+ employees."
   },
   "sources": [
    {
@@ -3850,34 +3823,37 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "29d0533621"
+   ],
+   "value": "NVIDIA has a track record of offering H1B sponsorships, though sponsorship is not guaranteed for specific roles."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "502f97a915",
-    "766728e261",
-    "813750a83c"
+    "29d0533621"
    ],
-   "value": "NVIDIA is a leading AI and accelerated computing company focused on innovation in hardware and software for AI, graphics, and simulation. The company emphasizes a supportive, forward-thinking engineering environment for new graduates, with a strong focus on cutting-edge AI and data science roles."
+   "value": "NVIDIA is a computing platform company founded in 1993 and based in Santa Clara, California, operating at the intersection of graphics, HPC, and AI."
   },
-  "synthesized_evidence_sha": "26f31898923ee5ec",
+  "synthesized_evidence_sha": "51d5fd0d4501efd9",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "502f97a915",
     "766728e261",
-    "813750a83c"
+    "0dde78ed2b"
    ],
-   "value": "Accelerated Kubernetes performance, RTL synthesis, digital logic optimization, generative AI for graphics and gaming, training large models on multi-GPU clusters."
+   "value": "Building external and internal EDA tools, designing algorithms for RTL synthesis, digital logic, timing, power optimization, and multi-stage VLSI physical design (sizing, buffering, CTS, routing)."
   },
   "why_it_matters": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "0dde78ed2b",
+    "766728e261",
+    "29d0533621"
+   ],
+   "value": "For a candidate seeking a top-tier AI or data science role with massive scale and prestige, NVIDIA offers the chance to work exclusively on the latest processes and most advanced designs. Combining external and highly optimized internal EDA tools signals a fast-paced, innovative engineering culture pushing the boundaries of computing."
   }
  },
  "nvidia ai": {
@@ -4266,7 +4242,7 @@
  },
  "palantir technologies": {
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -4275,53 +4251,56 @@
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "ce9cb8883d",
-    "5c69659ce6"
+    "8bb6ead0e9",
+    "ce9cb8883d"
    ],
-   "value": "US Government and Defense sectors (based on job postings targeting these areas)."
+   "value": "U.S. Government and Defense sectors."
   },
   "error": "",
   "evidence_sha": "49044e031d8f5051",
-  "generated_at": 1784475917,
+  "generated_at": 1784489599,
   "generator": {
-   "endpoint": "local",
-   "model": "qwen3:30b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "interview_focus": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "ce9cb8883d",
-    "5c69659ce6"
+    "8bb6ead0e9",
+    "ce9cb8883d"
    ],
-   "value": "Technical skills in Python, Java, C++, TypeScript, JavaScript, Go, with emphasis on problem-solving for data-driven decision systems."
+   "value": "Focus on demonstrating practical proficiency in Python, Java, C++, and TypeScript (or Go/JavaScript) to prove technical competence for fast-paced, impactful engineering. Negotiate sane hours during interviews to ensure WLB priorities are met."
   },
-  "last_attempt_at": 1784475917,
+  "last_attempt_at": 1784489599,
   "last_evidence_at": 1784483596,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "ce9cb8883d",
-    "5c69659ce6"
+    "8bb6ead0e9",
+    "ce9cb8883d"
    ],
-   "value": "Washington, DC (onsite or hybrid roles), with potential for other locations not specified in the provided sources."
+   "value": "Washington, DC (Hybrid and Onsite options available)."
   },
   "mission": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "8bb6ead0e9",
+    "ce9cb8883d"
+   ],
+   "value": "Builds world-changing software for data-driven decisions and operations."
   },
   "name": "Palantir Technologies",
   "products": {
    "confidence": "high",
    "source_ids": [
-    "ce9cb8883d",
-    "5c69659ce6"
+    "8bb6ead0e9",
+    "ce9cb8883d"
    ],
-   "value": "Palantir builds software for data-driven decisions and operations, with specific focus on government and defense sectors."
+   "value": "Leading software for data-driven decisions and operations."
   },
   "prompt_v": 1,
-  "refresh_after": 1789659917,
+  "refresh_after": 1789673599,
   "schema_v": 1,
   "size_stage": {
    "confidence": "unknown",
@@ -4357,29 +4336,26 @@
   },
   "status": "ready",
   "summary": {
-   "confidence": "high",
-   "source_ids": [
-    "ce9cb8883d",
-    "5c69659ce6"
-   ],
-   "value": "Palantir Technologies is a leading software company specializing in data-driven decision-making tools, targeting government and defense sectors with new graduate roles offering competitive salaries and technical focus."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "unknown"
   },
-  "synthesized_evidence_sha": "77a059745169cecc",
+  "synthesized_evidence_sha": "49044e031d8f5051",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "ce9cb8883d",
-    "5c69659ce6"
+    "8bb6ead0e9",
+    "ce9cb8883d"
    ],
-   "value": "Developing software using Python, Java, C++, TypeScript, JavaScript, Go for data-driven decision systems."
+   "value": "New grad software and forward deployed engineering roles. Must-have technical skills include Python, Java, C++, TypeScript, JavaScript, and Go."
   },
   "why_it_matters": {
    "confidence": "high",
    "source_ids": [
-    "ce9cb8883d",
-    "5c69659ce6"
+    "8bb6ead0e9",
+    "ce9cb8883d"
    ],
-   "value": "The company offers elite technical roles with high new-grad pay ($135K-$155K) in a fast, innovative tech culture focused on data-driven solutions for government and defense sectors."
+   "value": "Offers top-tier new-grad pay ($135K-$155K/yr) and elite prestige in data-driven defense software. It attracts those looking for technically innovative, mission-driven environments rather than slow bureaucracy."
   }
  },
  "pariveda solutions": {
