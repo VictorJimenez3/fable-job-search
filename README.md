@@ -50,16 +50,16 @@ every ~30 min (GitHub Actions cron)
 │     → catches postings minutes-to-hours after they go live,
 │       days before they show up anywhere else
 │
-├─ 4. RANK: hard gates (no senior/intern/PhD/non-US/3+ yrs/numeric levels)
-│     then a scored, auditable rubric: role fit + sector fit + freshness +
-│     learned taste. Shams rule v2: marquee companies (MANGA, big AI labs,
-│     elite pharma/medtech/wearables — profile.yaml marquee_companies),
-│     $150k+ postings, and priority-sector engineering roles (healthtech)
-│     alert without explicit new-grad wording — but FIELD FIT outranks all
-│     of it: field eligibility is title-led (description boilerplate cannot
-│     promote unrelated roles); off-field titles (safeguards/policy/sales/PM/...)
-│     and generic analysts go dashboard-only; mid-level titles (II/L4) do
-│     too. None become alerts. Rule bumps
+├─ 4. RANK: verified new-grad/early-career fit first, then AI/ML and data
+│     science, then AI-oriented/general SWE and systems; sector, company tier,
+│     freshness, and learned taste refine the order. Technical graduate,
+│     rotational, and leadership programs (J&J TLDP, Merck IT/emerging-talent,
+│     BMS digital programs, etc.) are a dedicated high-priority path. Marquee
+│     companies, salary, aggregators, and healthtech no longer bypass the
+│     new-grad gate. FIELD FIT still outranks everything: description boilerplate
+│     cannot promote unrelated roles; off-field titles (safeguards/policy/sales/PM/...)
+│     and generic analysts go dashboard-only; mid-level titles (II/L4) and
+│     required 1+ years do too. None become alerts. Rule bumps
 │     re-gate the stored jobs automatically (score.RULES_VERSION).
 │     Optional configured-LLM re-rank + per-job application angle.
 │

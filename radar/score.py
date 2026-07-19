@@ -15,7 +15,7 @@ from .models import Job, norm
 
 # Bumped whenever gate rules change; regate() re-applies the current rules to
 # every stored job whose rules_v is older (demote/promote alert_ok in place).
-RULES_VERSION = 3
+RULES_VERSION = 4
 
 SENIOR_RE = re.compile(
     r"\b(senior|staff|principal|lead(er)?|director|manager|head of|sr\.?|vp|chief|"
@@ -28,7 +28,7 @@ MIDLEVEL_RE = re.compile(r"\b(ii|l4|engineer\s+2|level\s+2|mid([- ]level)?)\b", 
 # Deliberately narrow: "Product Engineer" / "Security Engineer" must NOT match.
 OFF_FIELD_RE = re.compile(
     r"\b(safeguards?|trust\s*(&|and)\s*safety|policy|counsel|legal|paralegal|compliance|"
-    r"recruit(er|ing)|talent|people\s+(ops|operations)|human\s+resources|hr|"
+    r"recruit(er|ing)|talent\s+(acquisition|management|operations|partner)|people\s+(ops|operations)|human\s+resources|hr|"
     r"sales|account\s+(executive|manager)|business\s+(development|operations|analyst)|"
     r"go[- ]to[- ]market|gtm|partnerships?|"
     r"marketing|brand|communications?|comms|public\s+relations|editorial|"
@@ -37,6 +37,7 @@ OFF_FIELD_RE = re.compile(
     r"customer\s+(success|support|experience)|technical\s+support|"
     r"support\s+(engineer|specialist)|help\s?desk|"
     r"success\s+engineer|ai\s+governance|governance\s+and\s+advisory|"
+    r"(?:technology|technical)\s+consultant|"
     r"(ux|ui|visual|graphic|product)\s+design(er)?|"
     r"(product|program|project)\s+manager|product\s+(owner|marketing)|"
     r"chief\s+of\s+staff|executive\s+assistant|administrative|"
@@ -46,11 +47,29 @@ PHD_RE = re.compile(r"\bph\.?d\b|postdoc", re.I)
 CLEARANCE_RE = re.compile(r"\b(security clearance|ts/sci|polygraph|top secret)\b", re.I)
 YEARS_RE = re.compile(r"(?:minimum|at least|requires?)\s+(\d+)\+?\s+years", re.I)
 
+# A new-grad role may say "0-2 years"; a required floor of 1+ years is an
+# experienced-hire role for this board. Posting scraping applies the same rule
+# after fetching the full JD.
+REQUIRED_YEARS_RE = re.compile(
+    r"(?:minimum|at\s+least|requires?|must\s+have|need(?:s)?|seeking|looking\s+for)\s+"
+    r"(?:of\s+)?(?P<floor>\d+|one|two|three|four|five|six|seven|eight|nine|ten)\s*\+?\s+years?"
+    r"|(?P<plus>\d+)\s*\+\s+years?\s+(?:of\s+)?(?:required\s+)?(?:relevant\s+|professional\s+|industry\s+|software\s+|engineering\s+)?experience"
+    r"|(?P<range>[1-9])\s*(?:-|–|to)\s*\d+\s+years?\s+(?:of\s+)?(?:relevant\s+|professional\s+|industry\s+|software\s+|engineering\s+)?experience"
+    r"|(?<![\d-])(?P<plain>[1-9]|one|two|three|four|five|six|seven|eight|nine|ten)\s+years?\s+(?:of\s+)?(?:relevant\s+|professional\s+|industry\s+|software\s+|engineering\s+)?experience",
+    re.I)
+_WORD_YEARS = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5,
+               "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10}
+
 NEW_GRAD_RE = re.compile(
     r"\b(new ?grad|university grad|recent(ly)? grad|early[- ]career|entry[- ]level|"
     r"campus|college grad|20(25|26|27) grad|class of 20(25|26|27)|junior|associate|"
     r"engineer i\b|graduate (software|engineer|program|scheme))\b", re.I)
 ENTRY_YEARS_RE = re.compile(r"\b0\s*[-–to ]+\s*[123]\s+years\b", re.I)
+STRONG_NEW_GRAD_RE = re.compile(
+    r"\b(new\s*grad|university\s+grad|recent(?:ly)?\s+grad|early[- ]career|"
+    r"entry[- ]level|college\s+grad|20(?:25|26|27)\s+grad|class\s+of\s+20(?:25|26|27)|"
+    r"graduate\s+(?:software|engineer|program|scheme)|rotational\s+program|"
+    r"graduate\s+program|emerging\s+talent|future\s+talent)\b", re.I)
 
 ROLE_BUCKETS: dict[str, re.Pattern] = {
     "ai_ml": re.compile(
@@ -65,6 +84,16 @@ ROLE_BUCKETS: dict[str, re.Pattern] = {
         r"infrastructure|site reliability|devops|mobile|\bios\b|android|\bdeveloper\b|systems engineer|"
         r"security engineer|cloud engineer|embedded", re.I),
 }
+
+PROGRAM_RE = re.compile(
+    r"\b(leadership\s+(?:development\s+)?program|rotational\s+program|"
+    r"graduate\s+program(?:me)?|emerging\s+talent|future\s+talent|"
+    r"technology\s+accelerator|tldp|mldp|dsldp|eldp)\b", re.I)
+TECH_PROGRAM_RE = re.compile(
+    r"\b(technology|information\s+technology|digital|data\s+science|"
+    r"data\s+engineering|data\s+analytics|analytics|artificial\s+intelligence|"
+    r"machine\s+learning|software\s+engineering|engineering|cloud|devops|"
+    r"cybersecurity|automation|\bit\b)\b", re.I)
 
 FOREIGN_HINTS = re.compile(
     r"\b(canada|toronto|vancouver|london|uk\b|united kingdom|ireland|dublin|germany|berlin|munich|"
@@ -107,10 +136,54 @@ def location_ok(job: Job) -> bool:
     return True
 
 
+def _required_years(text: str) -> int | None:
+    """Return the required experience floor when the JD states one."""
+    m = REQUIRED_YEARS_RE.search(text or "")
+    if not m:
+        return None
+    value = m.group("floor") or m.group("plus") or m.group("range") or m.group("plain")
+    if value is None:
+        return None
+    if value.isdigit():
+        return int(value)
+    return _WORD_YEARS.get(value.lower())
+
+
+def leadership_program_signal(company: str, title: str, description: str = "") -> bool:
+    """True for a technical/data early-career program, not generic leadership."""
+    text = f"{title}\n{description[:1800]}"
+    cfg = profile().get("programs", {})
+    program_re = (re.compile(r"(?<!\w)(?:" + "|".join(re.escape(v) for v in cfg["keywords"])
+                             + r")(?!\w)", re.I)
+                  if cfg.get("keywords") else PROGRAM_RE)
+    tech_re = (re.compile(r"(?<!\w)(?:" + "|".join(re.escape(v) for v in cfg["technical_keywords"])
+                          + r")(?!\w)", re.I)
+               if cfg.get("technical_keywords") else TECH_PROGRAM_RE)
+    if not program_re.search(text):
+        return False
+    # J&J's TLDP and comparable data-focused acronyms are documented program
+    # names whose short titles may omit the technology words.
+    acronym_program = re.search(r"\b(tldp|dsldp|eldp)\b", text, re.I)
+    known_company = norm(company) in target_program_companies()
+    if not tech_re.search(text) and not (acronym_program and known_company):
+        return False
+    if OFF_FIELD_RE.search(title):
+        return False
+    return True
+
+
+def new_grad_signal(title: str, description: str = "") -> bool:
+    """Require explicit early-career evidence instead of source/company guesses."""
+    text = f"{title}\n{description[:1800]}"
+    return bool(STRONG_NEW_GRAD_RE.search(text) or ENTRY_YEARS_RE.search(text))
+
+
 def gates(job: Job) -> tuple[bool, bool, list[str]]:
     """Returns (keep_at_all, alert_eligible, reasons)."""
     t = job.title
     text = f"{t}\n{job.description[:1500]}"
+    program = leadership_program_signal(job.company, t, job.description)
+    new_grad = new_grad_signal(t, job.description)
     if INTERN_RE.search(t):
         return False, False, ["intern/co-op/contract"]
     if SENIOR_RE.search(t):
@@ -121,56 +194,46 @@ def gates(job: Job) -> tuple[bool, bool, list[str]]:
         return False, False, ["requires clearance"]
     if not location_ok(job):
         return False, False, ["non-US location"]
-    m = YEARS_RE.search(job.description)
-    if m and int(m.group(1)) >= 3:
-        return False, False, [f"requires {m.group(1)}+ years"]
+    years = _required_years(job.description)
+    if years is not None and years >= 1:
+        return False, False, [f"requires {years}+ years (not new-grad)" ]
     # A description mentioning software/AI must not turn an obviously
     # non-technical title into a target role (e.g. Safety Editor at OpenAI or
     # a Biology Research Associate at Anthropic). Descriptions still inform
     # entry-level and experience gates; role-family eligibility is title-led.
-    if role_bucket(t) is None:
+    if role_bucket(t) is None and not program:
         if OFF_FIELD_RE.search(t):
             return True, False, ["off-field title (dashboard only)"]
         if re.search(r"\banalyst\b", t, re.I):
             return True, False, ["generic analyst title (dashboard only)"]
         return False, False, ["not an AI/SWE/DS role"]
 
-    aggregator = job.source in {"simplify", "vansh", "jobright", "speedyapply"}
-    explicit = bool(NEW_GRAD_RE.search(text) or ENTRY_YEARS_RE.search(text))
     reasons = []
-    alert_eligible = aggregator or explicit
-    # The Shams rule, v2: blockbusters skip the new-grad-wording requirement
-    # (hard gates above still apply). Likewise a pays-bank salary. Field fit
-    # and seniority now outrank these bypasses — see the demotions below.
-    if not alert_eligible and is_marquee(job.company):
-        alert_eligible = True
-        reasons.append("marquee company (auto-alert)")
-    if not alert_eligible and pays_bank(job.salary):
-        alert_eligible = True
-        reasons.append("pays bank (auto-alert)")
-    # Priority sectors: a role-fit title at a priority-sector company alerts
-    # without explicit new-grad wording — most ATS postings carry no
-    # description to prove it (the WHOOP lesson).
-    if (not alert_eligible and job.sector in priority_sectors()
-            and _strong_role_title(t)):
-        alert_eligible = True
-        reasons.append(f"priority sector: {job.sector} (auto-alert)")
+    alert_eligible = new_grad or program
+    if new_grad:
+        reasons.append("verified new-grad/early-career evidence")
+    if program:
+        reasons.append("technical leadership/rotational program")
+    if not alert_eligible:
+        reasons.append("not verified new-grad/early-career (dashboard only)")
     # Demotions outrank every auto-alert path above, marquee included:
     # dashboard-only, never deleted.
-    if alert_eligible and OFF_FIELD_RE.search(t):
+    if OFF_FIELD_RE.search(t):
         alert_eligible = False
-        reasons.append("off-field title (dashboard only)")
-    if alert_eligible and MIDLEVEL_RE.search(t):
+        if "off-field title (dashboard only)" not in reasons:
+            reasons.append("off-field title (dashboard only)")
+    if MIDLEVEL_RE.search(t):
         alert_eligible = False
-        reasons.append("mid-level title (dashboard only)")
+        if "mid-level title (dashboard only)" not in reasons:
+            reasons.append("mid-level title (dashboard only)")
     if not alert_eligible and not reasons:
         reasons.append("seniority unclear (dashboard only)")
     return True, alert_eligible, reasons
 
 
 def explicit_new_grad(title: str) -> bool:
-    """True when the title itself carries new-grad evidence (ranking/UI flag)."""
-    return bool(NEW_GRAD_RE.search(title))
+    """True when the title carries new-grad or technical-program evidence."""
+    return new_grad_signal(title)
 
 
 def _strong_role_title(t: str) -> bool:
@@ -187,6 +250,7 @@ def _strong_role_title(t: str) -> bool:
 
 _MARQUEE_CACHE: set | None = None
 _PRIORITY_SECTORS: set | None = None
+_PROGRAM_COMPANIES_CACHE: set | None = None
 
 
 def is_marquee(company: str) -> bool:
@@ -203,6 +267,15 @@ def priority_sectors() -> set:
     if _PRIORITY_SECTORS is None:
         _PRIORITY_SECTORS = set(profile().get("priority_sectors", []))
     return _PRIORITY_SECTORS
+
+
+def target_program_companies() -> set:
+    """Healthcare employers with recurring technical graduate programs."""
+    global _PROGRAM_COMPANIES_CACHE
+    if _PROGRAM_COMPANIES_CACHE is None:
+        names = profile().get("programs", {}).get("target_healthcare_companies", [])
+        _PROGRAM_COMPANIES_CACHE = {norm(c) for c in names}
+    return _PROGRAM_COMPANIES_CACHE
 
 
 _MONEY_RE = re.compile(r"(\d[\d,]*(?:\.\d+)?)\s*([kK])?")
@@ -281,8 +354,10 @@ def score(job: Job, feedback: dict, now: int | None = None) -> None:
     """Mutates job.score / job.score_reasons. Assumes gates already passed."""
     p = profile()
     now = now or int(time.time())
-    pts = 40
-    reasons = ["base 40"]
+    # Keep headroom below 100 so role/new-grad/company differences remain
+    # visible instead of flattening the whole alert board at 100.
+    pts = 20
+    reasons = ["base 20"]
 
     bucket = role_bucket(job.title, job.description) or "swe"
     role_pts = p["roles"].get(bucket, 10)
@@ -295,9 +370,20 @@ def score(job: Job, feedback: dict, now: int | None = None) -> None:
         reasons.append(f"sector:{job.sector} +{sector_pts}")
 
     b = p["bonuses"]
-    if NEW_GRAD_RE.search(job.title):
+    if new_grad_signal(job.title, job.description):
         pts += b["explicit_new_grad_title"]
         reasons.append(f"new-grad title +{b['explicit_new_grad_title']}")
+
+    if leadership_program_signal(job.company, job.title, job.description):
+        pts += b.get("leadership_program", 0)
+        reasons.append(f"technical leadership program +{b.get('leadership_program', 0)}")
+        if norm(job.company) in target_program_companies():
+            pts += b.get("target_program_company", 0)
+            reasons.append(f"target healthcare program company +{b.get('target_program_company', 0)}")
+
+    if is_marquee(job.company):
+        pts += b.get("marquee_company", 0)
+        reasons.append("company tier: marquee (competitive)")
 
     if job.posted_at:
         age_h = (now - job.posted_at) / 3600
@@ -346,6 +432,12 @@ def score(job: Job, feedback: dict, now: int | None = None) -> None:
     if norm(job.company) in _shpe_companies():
         pts += 4
         reasons.append("SHPE 2026 exhibitor +4")
+
+    if leadership_program_signal(job.company, job.title, job.description):
+        floor = int(p["thresholds"].get("alert", 66))
+        if pts < floor:
+            reasons.append(f"technical program alert floor +{floor - pts}")
+            pts = floor
 
     job.score = max(0, min(100, round(pts)))
     job.score_reasons = reasons

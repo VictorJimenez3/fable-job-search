@@ -68,17 +68,16 @@ Before changing the radar, read these in order:
   `EMAIL_APP_PASSWORD` secrets** (confirmed empty in the live workflow on
   2026-07-18; Gmail app password setup is in README §2). The current 142
   tracked entries are all still `saved`, not confirmed applications.
-- **Scoring (rules v3, 2026-07-18, DECISIONS #31-32, #36):** hard gates (incl.
-  numeric levels: Engineer 3+/L5+/Level 3+/"Leader") + alert-eligibility
-  paths: aggregator listing, explicit new-grad wording, marquee
-  (`marquee_companies` incl. WHOOP/Oura/Dexcom/Abbott), $150k+ `pay_bank`,
-  or `priority_sectors` (healthtech + strong engineering title). Then
-  demotions that outrank ALL of those: `OFF_FIELD_RE` (safeguards/policy/
-  sales/PM/support/...) and `MIDLEVEL_RE` (II/L4/Engineer 2) → dashboard
-  only. Role eligibility is now title-led (description text cannot establish
-  field fit), and bare Analyst no longer maps to data science; generic/off-field
-  analysts remain dashboard-only for audit. LLM quality verdicts may suppress
-  marquee alerts. `regate()`
+- **Scoring (rules v4, 2026-07-19, DECISIONS #47):** verified new-grad or
+  early-career evidence is required for alerts, except for a technical/data
+  graduate, rotational, or leadership program. Aggregator listings, marquee
+  companies, high salary, and healthtech no longer bypass that gate. Eligible
+  roles prioritize AI/ML, data science, data engineering, then AI-oriented or
+  general SWE/systems; program matches receive a separate auditable bonus and
+  target healthcare program companies are labeled. Required 1+ years demotes
+  to dashboard-only (0-2 years remains acceptable). `OFF_FIELD_RE` and
+  `MIDLEVEL_RE` still outrank every alert path; company-tier reasons explicitly
+  mark marquee roles as competitive. `regate()`
   runs at the top of every crawl and re-applies rule bumps
   (`score.RULES_VERSION`, records carry `rules_v` + `explicit_new_grad`)
   to stored jobs; manual commands: `python -m radar.main regate` /
@@ -90,7 +89,7 @@ Before changing the radar, read these in order:
   analyzed inline, and up to `RADAR_SCRAPE_LIMIT` (20) postings/run are
   fetched (SPA hosts via their JSON APIs) for new + stored alert-worthy
   jobs. Extracted facts live in `rec["posting"]` (sponsorship / years_min /
-  intern_counts + matched phrases): 3+ scraped yrs → dashboard-only;
+  intern_counts + matched phrases): 1+ scraped yrs → dashboard-only;
   `candidate.needs_sponsorship: true` (profile.yaml, default false) also
   demotes no-sponsorship postings. `RADAR_SCRAPE_DISABLE=1` kills the pass.
   No LLM or secret involved.
@@ -110,6 +109,15 @@ Before changing the radar, read these in order:
   tracked roles, and fresh high-score work outrank cold backlog. Kimi is final
   fallback because its authenticated endpoint has been intermittently 404.
   The 30-minute crawls never receive the named keys.
+- **Leadership-program watch (verified 2026-07-19):** the profile now treats
+  technical/data graduate and rotational programs as a first-class alert path.
+  The initial healthcare watchlist covers Johnson & Johnson, Merck, Pfizer,
+  Bristol Myers Squibb, Roche, Catalent, and Alcon. J&J's TLDP is explicitly
+  a two-year technology accelerator for college graduates spanning AI/data,
+  software, and digital health; Merck's official pages describe both its
+  graduate-oriented Manufacturing LDP and IT emerging-talent tracks. Static
+  program pages are evidence for discovery, but only live job postings enter
+  the tracker.
 - **Evidence-first dossiers:** `posting.scrape_pass` retains only bounded
   relevant excerpts from official postings in `state/company_research.json`.
   `company_research.py` uses evidence hashes/TTL and accepts only claim-level

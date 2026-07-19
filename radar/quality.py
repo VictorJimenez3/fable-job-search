@@ -5,8 +5,8 @@ Layered, cheapest first — ROADMAP "Job-quality LLM pass":
 
   Layer 0  HTTP liveness: a posting that 404s or says "no longer accepting
            applications" is closed (closed_at stamped, alert_ok dropped).
-  Layer 1  New-grad verification: one JSON question against the posting
-           text — a "new grad" board listing that actually wants 3+ years
+Layer 1  New-grad verification: one JSON question against the posting
+           text — a "new grad" board listing that actually wants 1+ years
            loses alert eligibility.
   Layer 2  Role-fit: right company, wrong role (sales/support/analyst-in-
            name-only) is demoted below the alert bar.
@@ -56,7 +56,7 @@ Posting text (may be truncated or noisy):
 ---
 Answer STRICT JSON only, no other text:
 {{"years_required": <integer or null>, "new_grad": "yes"|"no"|"unclear", "role_family": "swe"|"data"|"ml"|"security"|"other-technical"|"non-technical", "reason": "<15 words max>"}}
-Rules: new_grad="no" ONLY if the text clearly requires 3+ years of professional
+Rules: new_grad="no" if the text clearly requires 1+ years of professional
 experience or is explicitly senior/staff/lead. Internships are new_grad="no".
 role_family="non-technical" means sales, support, recruiting, marketing,
 project coordination — not an engineering/data/science role."""
@@ -198,17 +198,9 @@ def _effects(q: dict) -> list[tuple[str, int, bool]]:
     out = []
     if q.get("new_grad") == "no":
         yrs = q.get("years_required")
-        if yrs is not None and 0 < yrs < 3:
-            # the LLM is stricter than the house rule (hard gate is 3+ yrs):
-            # 1-2 yrs postings are still worth a new grad's application —
-            # rank them lower, but never hide them
-            out.append((f"quality: wants {yrs}+ yrs (LLM-verified) "
-                        f"-{_PENALTY_SOME_EXPERIENCE}",
-                        _PENALTY_SOME_EXPERIENCE, False))
-        else:
-            out.append((f"quality: not new-grad ({f'{yrs}+ yrs' if yrs else 'senior'}"
-                        f" — LLM-verified) -{_PENALTY_NOT_NEW_GRAD}",
-                        _PENALTY_NOT_NEW_GRAD, True))
+        out.append((f"quality: not new-grad ({f'{yrs}+ yrs' if yrs else 'senior'}"
+                    f" — LLM-verified) -{_PENALTY_NOT_NEW_GRAD}",
+                    _PENALTY_NOT_NEW_GRAD, True))
     if q.get("role_family") == "non-technical":
         out.append((f"quality: non-technical role ({(q.get('reason') or '')[:40]}"
                     f" — LLM-verified) -{_PENALTY_WRONG_ROLE}",

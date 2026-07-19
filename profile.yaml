@@ -31,9 +31,10 @@ culture_criteria: >
 
 roles:
   # max one bucket counts (the best match). points: title-keyword buckets
-  ai_ml: 26
-  data_science: 22
-  data_eng: 18
+  # New-grad evidence is a gate; these weights order the eligible roles.
+  ai_ml: 28
+  data_science: 26
+  data_eng: 23
   swe: 20
   # titles must match at least one bucket to be considered a tech role at all
 
@@ -46,7 +47,10 @@ sectors:
   other: 0
 
 bonuses:
-  explicit_new_grad_title: 12  # "new grad" / "university grad" / "2026" in title — the top of the board belongs to these
+  explicit_new_grad_title: 14  # strong new-grad title evidence is the primary ranking signal
+  leadership_program: 12       # technical graduate/rotational programs deserve extra visibility
+  target_program_company: 4    # researched healthcare program employers
+  marquee_company: 3           # prestige matters, but never overrides eligibility
   fresh_24h: 12
   fresh_72h: 6
   fresh_7d: 2
@@ -62,22 +66,59 @@ thresholds:
   alert: 66        # >= this and new-grad-eligible → GitHub issue alert (checkbox row)
   dashboard: 45    # >= this → appears on the dashboard
   max_posting_age_days: 10   # older than this when first seen → never alerted (stale)
-  pay_bank: 150000 # salary at/above this + a passing score → alert even without new-grad wording
+  pay_bank: 150000 # salary at/above this helps eligible roles; never bypasses new-grad fit
 
-# Priority sectors (DECISIONS #32): a role-fit title (matches a roles bucket)
-# at a company in one of these sectors is alert-eligible even without explicit
-# new-grad wording — most ATS postings carry no description to prove it, which
-# is how WHOOP's roles kept missing the alert issue. Off-field / mid-level
-# title demotions and LLM quality verdicts still apply on top.
+# Priority sectors still refine eligible roles, but do not bypass explicit
+# new-grad/early-career evidence or the technical-program path.
 priority_sectors:
   - healthtech
 
-# The Shams rule (v2, DECISIONS #31): a blockbuster skips the new-grad-wording
-# requirement — but no longer skips field fit. Roles at these marquee
-# employers alert when they pass the hard gates (senior / intern / clearance /
-# 3+ yrs / non-US), aren't off-field or mid-level titles, and clear the score
-# threshold. Everyone else needs new-grad evidence, an aggregator listing, a
-# pays-bank salary, or a priority-sector fit.
+# Alert policy: generic aggregator/marquee/healthtech roles do not bypass the
+# new-grad gate. Programs are matched against the posting title/description;
+# only technical or data-oriented programs enter the alert stream.
+programs:
+  keywords:
+    - leadership development
+    - leadership program
+    - rotational program
+    - graduate program
+    - graduate programme
+    - emerging talent
+    - future talent
+    - technology accelerator
+    - tldp
+    - mldp
+    - dsldp
+    - eldp
+  technical_keywords:
+    - technology
+    - information technology
+    - digital
+    - data science
+    - data engineering
+    - data analytics
+    - analytics
+    - it
+    - artificial intelligence
+    - machine learning
+    - software engineering
+    - engineering
+    - cloud
+    - devops
+    - cybersecurity
+    - automation
+  target_healthcare_companies:
+    - Johnson & Johnson
+    - Merck
+    - Pfizer
+    - Bristol Myers Squibb
+    - Roche
+    - Catalent
+    - Alcon
+
+# Marquee companies provide a small competitive-context bonus only after the
+# new-grad/early-career gate; they never make an experienced or off-field role
+# alertable.
 # Keep in sync with S.marquee in webapp/index.html (and its docs/platform copy).
 marquee_companies:
   # big tech / MANGA

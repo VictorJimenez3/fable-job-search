@@ -42,13 +42,12 @@ def test_gates_direct_ats_needs_entry_signal():
     assert keep and alert_ok
 
 
-def test_gates_marquee_company_alerts_without_entry_signal():
-    # The Shams rule: an Anthropic (or any marquee) posting from a direct ATS
-    # alerts even with zero new-grad wording...
+def test_gates_marquee_company_still_requires_new_grad_signal():
+    # Prestige is competitive context, not permission to bypass new-grad fit.
     keep, alert_ok, reasons = gates(mk("Research Engineer, Interpretability",
                                        company="Anthropic", source="greenhouse"))
-    assert keep and alert_ok
-    assert "marquee company (auto-alert)" in reasons
+    assert keep and not alert_ok
+    assert any("not verified new-grad" in r for r in reasons)
     # ...but the hard gates still silence marquee senior/intern roles
     assert gates(mk("Senior Research Engineer", company="Anthropic", source="greenhouse"))[0] is False
     assert gates(mk("Research Intern", company="OpenAI", source="greenhouse"))[0] is False
@@ -78,10 +77,10 @@ def test_gates_off_field_beats_marquee():
         keep, alert_ok, reasons = gates(mk(title, company=company, source="greenhouse"))
         assert keep is True and alert_ok is False, title
         assert any("off-field title" in r for r in reasons), title
-    # on-field marquee titles still auto-alert
+    # on-field marquee titles still need new-grad evidence
     keep, alert_ok, _ = gates(mk("Research Engineer, Interpretability",
                                  company="Anthropic", source="greenhouse"))
-    assert keep and alert_ok
+    assert keep and not alert_ok
 
 
 def test_gates_off_field_beats_explicit_new_grad():
@@ -135,14 +134,13 @@ def test_gates_ai_customer_roles_are_dashboard_only():
         assert any("off-field title" in r for r in reasons), title
 
 
-def test_gates_priority_sector_alerts_on_strong_title():
-    # the WHOOP lesson: healthtech + a real engineering title alerts without
-    # new-grad wording (ATS postings carry no description to prove it).
-    # Non-marquee company on purpose: WHOOP itself now alerts via marquee.
+def test_gates_priority_sector_still_requires_new_grad_signal():
+    # Healthtech + a technical title is valuable, but still cannot override
+    # the new-grad gate.
     keep, alert_ok, reasons = gates(mk("Software Engineer", company="Eight Sleep",
                                        source="greenhouse", sector="healthtech"))
-    assert keep and alert_ok
-    assert any("priority sector" in r for r in reasons)
+    assert keep and not alert_ok
+    assert any("not verified new-grad" in r for r in reasons)
     # same title outside a priority sector: dashboard only
     keep, alert_ok, _ = gates(mk("Software Engineer", company="Stripe",
                                  source="greenhouse", sector="fintech"))
@@ -156,8 +154,8 @@ def test_gates_priority_sector_alerts_on_strong_title():
 def test_gates_pays_bank_alerts_without_entry_signal():
     keep, alert_ok, reasons = gates(mk("Software Engineer", source="greenhouse",
                                        salary="$160,000 - $210,000"))
-    assert keep and alert_ok
-    assert "pays bank (auto-alert)" in reasons
+    assert keep and not alert_ok
+    assert any("not verified new-grad" in r for r in reasons)
     # below the bar: dashboard only, as before
     keep, alert_ok, _ = gates(mk("Software Engineer", source="greenhouse",
                                  salary="$95,000 - $120,000"))
@@ -178,6 +176,48 @@ def test_gates_reject_years_requirement():
     keep, _, _ = gates(mk("Software Engineer", source="greenhouse",
                           desc="Requires 5+ years of production experience."))
     assert keep is False
+
+
+def test_gates_rejects_any_positive_required_experience_floor():
+    keep, _, reasons = gates(mk("Software Engineer, New Grad", source="greenhouse",
+                                desc="Requires 1+ years of professional experience."))
+    assert keep is False
+    assert "not new-grad" in reasons[0]
+
+
+def test_gates_keeps_zero_to_two_year_new_grad_role():
+    keep, alert_ok, _ = gates(mk("Software Engineer", source="greenhouse",
+                                 desc="New grads welcome; 0-2 years of experience."))
+    assert keep and alert_ok
+
+
+def test_gates_alerts_technical_leadership_programs():
+    keep, alert_ok, reasons = gates(mk(
+        "Technology Leadership Development Program",
+        company="Johnson & Johnson", source="greenhouse",
+        desc="Two-year program across software engineering, data science, and digital health."))
+    assert keep and alert_ok
+
+    program = mk("Data Science Leadership Development Program - Associate Data Scientist",
+                  company="Travelers", source="greenhouse")
+    score(program, FB, NOW)
+    assert program.score >= 66
+    assert any("technical program alert floor" in r for r in program.score_reasons)
+    assert any("technical leadership" in r for r in reasons)
+
+    keep, alert_ok, _ = gates(mk(
+        "Emerging Talent Rotational Program - IT", company="Merck",
+        source="greenhouse", desc="AI/ML, data, and software rotations."))
+    assert keep and alert_ok
+
+
+def test_gates_rejects_off_field_leadership_programs():
+    keep, alert_ok, reasons = gates(mk(
+        "Finance Leadership Development Program",
+        company="Merck", source="greenhouse",
+        desc="A rotational program developing future finance leaders."))
+    assert keep and not alert_ok
+    assert any("off-field" in r for r in reasons)
 
 
 def test_score_prefers_healthtech_ai_over_generic_swe():
@@ -261,12 +301,12 @@ def test_regate_applies_current_rules_to_stored_jobs():
     assert jobs["b"]["alert_ok"] is True and jobs["b"]["rules_v"] == 1  # never re-opened/touched
     assert jobs["c"]["alert_ok"] is True                                 # version stamp respected
     assert jobs["d"]["alert_ok"] is False                                # verdict re-applied last
-    assert flipped == 2  # a demoted; d flipped up by gates then re-suppressed
+    assert flipped == 1  # only a changes; d remains suppressed by its verdict
 
 
-def test_regate_promotes_priority_sector_jobs():
-    jobs = {"w": _stored("Software Engineer", company="WHOOP",
+def test_regate_requires_new_grad_for_priority_sector_jobs():
+    jobs = {"w": _stored("Software Engineer, New Grad", company="WHOOP",
                          sector="healthtech", alert_ok=False)}
     assert regate(jobs) == 1
     assert jobs["w"]["alert_ok"] is True
-    assert jobs["w"]["explicit_new_grad"] is False
+    assert jobs["w"]["explicit_new_grad"] is True

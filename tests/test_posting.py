@@ -61,6 +61,21 @@ def test_apply_demotes_three_plus_years_and_is_idempotent():
     assert rec["score_reasons"].count("posting: wants 4+ yrs (dashboard only)") == 1
 
 
+def test_apply_demotes_any_positive_experience_floor():
+    rec = {"alert_ok": True, "score_reasons": []}
+    posting.apply_record(rec, {"sponsorship": "unknown", "years_min": 1,
+                               "years_note": "1+ years"}, fetched=True, now=NOW)
+    assert rec["alert_ok"] is False
+    assert "posting: wants 1+ yrs (dashboard only)" in rec["score_reasons"]
+
+
+def test_apply_keeps_zero_to_two_new_grad_range():
+    rec = {"alert_ok": True, "score_reasons": []}
+    posting.apply_record(rec, {"sponsorship": "unknown", "years_min": 0,
+                               "years_note": "0-2 years"}, fetched=True, now=NOW)
+    assert rec["alert_ok"] is True
+
+
 def test_sponsorship_demotes_only_when_needed(monkeypatch):
     rec = {"alert_ok": True, "score_reasons": []}
     a = {"sponsorship": "no", "sponsorship_note": "unable to sponsor"}

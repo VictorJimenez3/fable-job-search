@@ -683,3 +683,20 @@ Actions requires an OAuth refresh token for unattended access, so code ships
 ready while activation remains an explicit user authorization step. Main and
 ChemE may share one tracker without cross-board corruption because both Notion
 and Sheets updates match stable IDs, not company names.
+
+## 47. New-grad-first technical role and leadership-program focus (2026-07-19)
+
+Victor's highest-priority filter is now verified new-grad or early-career fit,
+not employer prestige, aggregator presence, salary, or healthtech alone. Alert
+eligibility therefore requires explicit new-grad/early-career evidence or a
+technical/data graduate, rotational, or leadership program. A required floor of
+1+ years is dashboard-only; 0-2 years remains compatible with new-grad hiring.
+
+Among eligible roles, AI/ML and data science lead, followed by data engineering,
+AI-oriented/general software engineering, and systems. Marquee employers receive
+an explicit competitive label and a small secondary bonus, never a gate bypass.
+Technical program matches receive their own reason and bonus so opportunities
+such as Johnson & Johnson's Technology Leadership Development Program and
+Merck's technology/emerging-talent tracks are visible even when their titles do
+not say "software engineer." Generic finance, sales, HR, and other off-field
+leadership programs stay dashboard-only.

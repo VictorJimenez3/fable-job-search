@@ -315,7 +315,8 @@ const ROLE_LABELS = {
   data_science:"Data science", data_eng:"Data engineering",
   analytics:"Analytics / BI", other:"Adjacent / unclassified",
 };
-const OFF_FIELD_TITLE = /\b(safeguards?|trust\s*(and|&)\s*safety|policy|counsel|legal|paralegal|compliance|recruit(er|ing)|talent|people\s+(ops|operations)|human\s+resources|sales|account\s+(executive|manager)|business\s+(development|operations|analyst)|go[- ]to[- ]market|gtm|partnerships?|marketing|brand|communications?|public\s+relations|finance|financial\s+analyst|accounting|payroll|procurement|revenue|solutions?\s+(engineer|architect|consultant)|field\s+engineer|customer\s+(success|support|experience)|technical\s+support|support\s+(engineer|specialist)|help\s?desk|success\s+engineer|ai\s+governance|governance\s+and\s+advisory|(ux|ui|visual|graphic|product)\s+design(er)?|(product|program|project)\s+manager|product\s+(owner|marketing)|chief\s+of\s+staff|executive\s+assistant|administrative|workplace|facilities)\b/i;
+const OFF_FIELD_TITLE = /\b(safeguards?|trust\s*(and|&)\s*safety|policy|counsel|legal|paralegal|compliance|recruit(er|ing)|talent\s+(acquisition|management|operations|partner)|people\s+(ops|operations)|human\s+resources|sales|account\s+(executive|manager)|business\s+(development|operations|analyst)|go[- ]to[- ]market|gtm|partnerships?|marketing|brand|communications?|public\s+relations|finance|financial\s+analyst|accounting|payroll|procurement|revenue|solutions?\s+(engineer|architect|consultant)|(?:technology|technical)\s+consultant|field\s+engineer|customer\s+(success|support|experience)|technical\s+support|support\s+(engineer|specialist)|help\s?desk|success\s+engineer|ai\s+governance|governance\s+and\s+advisory|(ux|ui|visual|graphic|product)\s+design(er)?|(product|program|project)\s+manager|product\s+(owner|marketing)|chief\s+of\s+staff|executive\s+assistant|administrative|workplace|facilities)\b/i;
+const TECH_PROGRAM_TITLE = /\b(tldp|dsldp|eldp)\b|\b(leadership\s+(development\s+)?program|rotational\s+program|graduate\s+program(?:me)?|emerging\s+talent|future\s+talent)\b.*\b(technology|digital|data|ai|ml|software|engineering|it|analytics|cloud|devops|cyber)\b|\b(technology|digital|data|ai|ml|software|engineering|it|analytics|cloud|devops|cyber)\b.*\b(leadership|rotational|graduate|emerging\s+talent|future\s+talent)\b/i;
 function roleFamily(j) {
   const t = norm(j.title);
   if (OFF_FIELD_TITLE.test(t)) return "other";
@@ -332,7 +333,7 @@ function sponsorStatus(j) {
 function experienceStatus(j) {
   if (!j.posting) return "unread";
   if (j.posting.years_min == null) return "unknown";
-  return j.posting.years_min <= 2 ? "entry" : "experienced";
+  return j.posting.years_min <= 0 ? "entry" : "experienced";
 }
 function eligibilityBadges(j) {
   const p = j.posting;
@@ -347,7 +348,9 @@ function eligibilityBadges(j) {
     `⏳ ${p.years_min}+ yrs${p.intern_counts ? " · internships count" : ""}`];
   else if (p.intern_counts) exp = ["good","⏳ internships count"];
   else exp = ["unknown","⏳ experience not stated"];
+  const program = TECH_PROGRAM_TITLE.test(j.title || "");
   return `<span class="chip">${esc(ROLE_LABELS[roleFamily(j)])}</span>
+    ${program?'<span class="chip marquee">technical program</span>':""}
     <span class="chip ${visa[0]}">${visa[1]}</span>
     <span class="chip ${exp[0]}">${exp[1]}</span>`;
 }
@@ -362,7 +365,7 @@ function clearFilters() {
 }
 function isOpenRelevant(j) {
   if (j.closed_at) return false;
-  const hardReject = /^(intern\/co-op\/contract|senior\+ title|PhD-targeted title|requires clearance|non-US location|requires \d+\+ years|not an AI\/SWE\/DS role)$/i;
+  const hardReject = /^(intern\/co-op\/contract|senior\+ title|PhD-targeted title|requires clearance|non-US location|requires [1-9]\+ years(?: \(not new-grad\))?|not an AI\/SWE\/DS role)$/i;
   return !(j.score_reasons||[]).some(reason =>
     hardReject.test(String(reason).replace(/^re-gate v\d+:\s*/i,"")));
 }
@@ -538,8 +541,8 @@ function rJobs() {
       <select aria-label="Experience requirement" onchange="setFilter('experience',this.value)">
         <option value="">any experience</option>
         <option value="entryfit" ${S.filter.experience==="entryfit"?"selected":""}>entry-compatible or unclear</option>
-        <option value="entry" ${S.filter.experience==="entry"?"selected":""}>0–2 years stated</option>
-        <option value="experienced" ${S.filter.experience==="experienced"?"selected":""}>3+ years stated</option>
+        <option value="entry" ${S.filter.experience==="entry"?"selected":""}>0 years / no required floor</option>
+        <option value="experienced" ${S.filter.experience==="experienced"?"selected":""}>1+ years stated</option>
         <option value="unknown" ${S.filter.experience==="unknown"?"selected":""}>experience not stated</option>
         <option value="unread" ${S.filter.experience==="unread"?"selected":""}>experience not analyzed</option>
       </select>

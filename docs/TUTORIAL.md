@@ -97,9 +97,12 @@ follow-up nudges for week-old applications, and LinkedIn hiring-post leads.
 
 ## The AI layer (what's "smart" and what isn't)
 
-- **Scoring is deterministic, not AI.** Gates (no senior/intern/clearance/3+yrs
-  roles, US-only) then an auditable point rubric — every score has printed
-  reasons. This runs in the cloud with zero API keys and is always on.
+- **Scoring is deterministic, not AI.** Gates require verified new-grad or
+  early-career evidence, reject required 1+ years, and exclude senior/intern/
+  clearance/off-field roles (US-only). Technical graduate and rotational
+  leadership programs are a dedicated exception. Eligible roles then use an
+  auditable point rubric prioritizing AI/ML and data science above SWE/systems;
+  every score has printed reasons. This runs in the cloud with zero API keys.
 - **Your MacBook is the bulk AI worker.** A background job (launchd, every 2 hours
   while the laptop is awake) pulls the latest state, runs **qwen3:30b through
   Ollama locally** (free, private, ~19 GB on disk), and pushes back:

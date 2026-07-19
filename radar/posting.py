@@ -10,8 +10,8 @@ the LLM quality pass layers on top when a provider is available.
 Stored on the record as rec["posting"]:
   {analyzed_at, fetched (bool), sponsorship: yes|no|unknown,
    sponsorship_note, years_min, years_note, intern_counts}
-Alert effects (demote-only, reasons logged, marquee included):
-  - years_min >= 3          -> alert_ok False ("wants N+ yrs")
+Alert effects (demote-only, reasons logged):
+  - years_min >= 1          -> alert_ok False ("wants N+ yrs")
   - sponsorship == "no" and profile candidate.needs_sponsorship
                             -> alert_ok False ("no visa sponsorship")
 """
@@ -127,7 +127,7 @@ def reapply(rec: dict) -> None:
         return
     reasons = rec.setdefault("score_reasons", [])
     yrs = p.get("years_min")
-    if yrs is not None and yrs >= 3 and rec.get("alert_ok"):
+    if yrs is not None and yrs >= 1 and rec.get("alert_ok"):
         rec["alert_ok"] = False
         line = f"posting: wants {yrs}+ yrs (dashboard only)"
         if line not in reasons:
