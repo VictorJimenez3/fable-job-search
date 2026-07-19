@@ -85,9 +85,11 @@ secret changes, OAuth activation, CV content, and production pushes.
   do not overwrite, reset, delete, or attribute these files without first
   coordinating with the active CLI.
   Additionally, the current session has modified `radar/company_research.py`,
-  `radar/quality.py` (staged for commit) and `docs/USER_STORIES.md` (not staged)
-  to implement user story improvements: lowered quality threshold to 40 and
-  increased company excerpt to 5 sentences.
+  `radar/quality.py`, `radar/brief.py` (staged for commit) and `docs/USER_STORIES.md` (not staged)
+  to implement user story improvements:
+  * Lowered quality threshold from 60 to 40 in radar/quality.py
+  * Increased company research excerpt from 4 to 5 sentences in radar/company_research.py
+  * Enhanced LLM rerank in radar/brief.py to process top 50 alert-worthy jobs by score for semantic ranking and application notes
 
 - GitHub Actions is the production runtime; it uses Python 3.12. On Victor's
   Mac, system Python is 3.9 but the repo's `.venv` has the dependencies —

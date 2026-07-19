@@ -23,7 +23,7 @@ Done means the verdict is cached, source text is identifiable, every penalty is
 auditable, deterministic gates remain authoritative, and provider failure falls
 back safely. The local catch-up queue is currently clear. The remaining gap is
 depth: most non-alert jobs still have no AI verdict, and AI is not yet a full
-semantic match to Victor’s experience. Progress: lowered minimum score threshold from 60 to 40 to increase LLM coverage beyond borderline cases.
+semantic match to Victor’s experience. Progress: lowered minimum score threshold from 60 to 40 to increase LLM coverage beyond borderline cases; enhanced LLM rerank to process top 50 alert-worthy jobs by score for semantic ranking and application notes.
 
 ### Personal ranking and alert focus — partially shipped
 

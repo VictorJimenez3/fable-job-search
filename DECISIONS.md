@@ -728,3 +728,12 @@ and Sheets updates match stable IDs, not company names.
 ## 45. Lowered quality threshold and increased company excerpt (2026-07-18)
 
 Lowered the minimum score threshold for the LLM quality pass from 60 to 40 to increase coverage beyond borderline cases. Increased the company research excerpt from 4 to 5 sentences to capture more relevant company information. Updated the user stories to reflect these improvements.
+
+## 46. Enhanced LLM rerank for semantic job ranking and application notes (2026-07-18)
+
+Enhanced the LLM rerank feature in radar/brief.py to:
+- Process only alert-worthy jobs (j.alert_ok) instead of borderline jobs
+- Sort alert-worthy jobs by score (highest first) to prioritize the most relevant opportunities
+- Increased batch size from 30 to 50 jobs for broader semantic analysis coverage
+- This ensures that jobs which actually receive alerts get LLM-based semantic ranking and personalized application notes
+- Addresses user story gaps: provides more semantic, profile-aware ranking and ensures AI notes appear on correctly ranked alerts

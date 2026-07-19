@@ -16,15 +16,18 @@ def rerank(jobs: list) -> None:
     if not llm.available() or not jobs:
         return
     p = profile()
-    batch = jobs[:30]
+    # Process alert-worthy jobs, sorted by score (highest first)
+    alert_worthy = [j for j in jobs if j.alert_ok]
+    alert_worthy.sort(key=lambda j: -j.score)
+    batch = alert_worthy[:50]
     rows = [{"id": j.id, "company": j.company, "title": j.title,
              "location": j.primary_location, "sector": j.sector,
              "desc": j.description[:400]} for j in batch]
     prompt = (
         "You are ranking job postings for this candidate:\n"
         f"{p['candidate']['narrative']}\n\n"
-        "For each posting, return fit 0-10 (10 = apply immediately) considering "
-        "role type, sector priority (healthtech > big tech/AI labs > edtech > other), "
+        "For each posting, return fit 0-10 (10 = apply immediately) considering \n"
+        "role type, sector priority (healthtech > big tech/AI labs > edtech > other), \n"
         "new-grad suitability, and growth. Also a <=12 word 'angle' for their application.\n"
         f"Postings:\n{json.dumps(rows, ensure_ascii=False)}\n\n"
         'Reply with ONLY a JSON array: [{"id": "...", "fit": 7, "angle": "..."}]')
