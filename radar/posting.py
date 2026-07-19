@@ -8,10 +8,14 @@ so it runs identically on CI, the Mac, and forks with zero credentials —
 the LLM quality pass layers on top when a provider is available.
 
 Stored on the record as rec["posting"]:
-  {analyzed_at, fetched (bool), sponsorship: yes|no|unknown,
-   sponsorship_note, years_min, years_note, intern_counts}
+  {analyzed_at, fetched (bool), fetch_status, sponsorship: yes|no|unknown,
+   sponsorship_note, years_min, years_note, education_required,
+   education_note, education_mismatch, intern_counts}
 Alert effects (demote-only, reasons logged):
-  - years_min >= 1          -> alert_ok False ("wants N+ yrs")
+  - years_min >= 1          -> alert_ok False ("wants N+ yrs") and a large
+                            score penalty; 5+ years is treated as a major
+                            mismatch for a bachelor's new-grad profile
+  - master's/PhD required  -> alert_ok False and a larger score penalty
   - sponsorship == "no" and profile candidate.needs_sponsorship
                             -> alert_ok False ("no visa sponsorship")
 """
@@ -70,6 +74,39 @@ INTERN_COUNTS_RE = re.compile(
     r"including\s+internships?|internship\s+or\s+co-?op\s+experience|"
     r"academic,?\s+internship|internship,?\s+academic)", re.I)
 
+DEGREE_TERMS_RE = re.compile(
+    r"\b(ph\.?d\.?|doctorate|doctoral|master(?:'s|s)?|m\.?s\.?|m\.?sc\.?|"
+    r"graduate\s+degree|advanced\s+degree)\b", re.I)
+EDUCATION_REQUIRED_RE = re.compile(
+    r"\b(required|required for|must have|must hold|minimum of|minimum|"
+    r"need(?:s)?|necessary|is a requirement)\b", re.I)
+EDUCATION_PREFERRED_RE = re.compile(
+    r"\b(preferred|preferred but not required|nice to have|plus|bonus|"
+    r"strongly preferred|or equivalent experience)\b", re.I)
+
+_DEGREE_RANK = {"bachelors": 1, "masters": 2, "phd": 3}
+
+
+def _degree_level(term: str) -> str:
+    low = term.lower().replace(".", "")
+    if "phd" in low or "doctor" in low:
+        return "phd"
+    return "masters"
+
+
+def _education_requirement(text: str) -> tuple[str, str] | None:
+    """Find an explicitly required degree, ignoring preferred-only mentions."""
+    for sentence in re.split(r"(?<=[.!?])\s+|\s*[•|]\s*", text or ""):
+        if not DEGREE_TERMS_RE.search(sentence) or not EDUCATION_REQUIRED_RE.search(sentence):
+            continue
+        if EDUCATION_PREFERRED_RE.search(sentence) and not re.search(
+                r"\b(required|required for|must have|must hold)\b", sentence, re.I):
+            continue
+        match = DEGREE_TERMS_RE.search(sentence)
+        level = _degree_level(match.group(0)) if match else "masters"
+        return level, re.sub(r"\s+", " ", sentence).strip()[:180]
+    return None
+
 
 def _num(s: str) -> int:
     s = s.lower()
@@ -101,6 +138,13 @@ def analyze(text: str) -> dict:
             break
     if INTERN_COUNTS_RE.search(text):
         out["intern_counts"] = True
+    education = _education_requirement(text)
+    if education:
+        level, note = education
+        out["education_required"] = level
+        out["education_note"] = note
+        candidate = profile().get("candidate", {}).get("degree", "bachelors")
+        out["education_mismatch"] = _DEGREE_RANK.get(level, 2) > _DEGREE_RANK.get(candidate, 1)
     return out
 
 
@@ -115,7 +159,8 @@ def apply_record(rec: dict, analysis: dict, fetched: bool, now: int | None = Non
     if not analysis:
         return
     now = now or int(time.time())
-    rec["posting"] = analysis | {"analyzed_at": now, "fetched": fetched}
+    rec["posting"] = analysis | {"analyzed_at": now, "fetched": fetched,
+                                  "fetch_status": "readable"}
     reapply(rec)
 
 
@@ -127,10 +172,21 @@ def reapply(rec: dict) -> None:
         return
     reasons = rec.setdefault("score_reasons", [])
     yrs = p.get("years_min")
-    if yrs is not None and yrs >= 1 and rec.get("alert_ok"):
+    if yrs is not None and yrs >= 1:
+        penalty = 35 + min(20, yrs * 4)
         rec["alert_ok"] = False
-        line = f"posting: wants {yrs}+ yrs (dashboard only)"
+        line = f"posting: wants {yrs}+ yrs (dashboard only) -{penalty}"
         if line not in reasons:
+            rec["score"] = max(0, rec.get("score", 0) - penalty)
+            reasons.append(line)
+    degree = p.get("education_required")
+    if p.get("education_mismatch") and degree:
+        penalty = 60 if degree == "phd" else 45
+        rec["alert_ok"] = False
+        label = "PhD" if degree == "phd" else "master's degree"
+        line = f"posting: requires {label} (bachelor's profile) (dashboard only) -{penalty}"
+        if line not in reasons:
+            rec["score"] = max(0, rec.get("score", 0) - penalty)
             reasons.append(line)
     if p.get("sponsorship") == "no" and needs_sponsorship() and rec.get("alert_ok"):
         rec["alert_ok"] = False
@@ -162,7 +218,7 @@ def scrape_pass(new_jobs: list, jobs_state: dict, domains: dict,
         return {}
     budget = int(env("RADAR_SCRAPE_LIMIT", "20")) if budget is None else budget
     stats = {"inline": 0, "fetched": 0, "closed": 0, "demoted": 0,
-             "research_sources": 0}
+             "unreadable": 0, "research_sources": 0}
     research = company_research.load()
     research_changed = company_research.prune_irrelevant_sources(research, jobs_state)
 
@@ -183,6 +239,21 @@ def scrape_pass(new_jobs: list, jobs_state: dict, domains: dict,
                 target.setdefault("closed_at", now)
                 if "posting gone (link checked)" not in target.get("score_reasons", []):
                     target.setdefault("score_reasons", []).append("posting gone (link checked)")
+            return
+        if alive is None or len(text or "") < 200:
+            stats["unreadable"] += 1
+            status = "unavailable" if alive is None else "unreadable"
+            note = ("could not retrieve the posting page/API" if alive is None
+                    else "page loaded but did not contain usable job text")
+            target_posting = target.posting if is_job else target.get("posting")
+            if not target_posting or not any(k in target_posting for k in
+                                             ("years_min", "education_required", "sponsorship")):
+                value = {"analyzed_at": now, "fetched": True,
+                         "fetch_status": status, "fetch_note": note}
+                if is_job:
+                    target.posting = value
+                else:
+                    target["posting"] = value
             return
         company = target.company if is_job else target.get("company", "")
         title = target.title if is_job else target.get("title", "")
@@ -232,6 +303,10 @@ def scrape_pass(new_jobs: list, jobs_state: dict, domains: dict,
                 stats["inline"] += 1
                 if was and not j.alert_ok:
                     stats["demoted"] += 1
+            else:
+                j.posting = {"analyzed_at": now, "fetched": False,
+                             "fetch_status": "unreadable",
+                             "fetch_note": "ATS text was too short to verify requirements"}
 
     # B: new alert-eligible jobs without text, best first
     b_candidates = sorted((j for j in new_jobs if j.alert_ok and not j.description
@@ -261,8 +336,12 @@ def scrape_pass(new_jobs: list, jobs_state: dict, domains: dict,
                   if not r.get("closed_at") and r.get("url")
                   and (r.get("alert_ok") or (
                       r.get("id") in tracked_ids
-                      and company_research.job_is_relevant(r)))
-                  and (not r.get("posting") or needs_evidence(r))
+                      and company_research.job_is_relevant(r)
+                      ) or (env("RADAR_SCRAPE_DASHBOARD")
+                            and r.get("score", 0) >= profile()["thresholds"]["dashboard"]))
+                  and (not r.get("posting") or needs_evidence(r)
+                       or (r.get("posting") or {}).get("fetch_status") != "readable"
+                       or not (r.get("posting") or {}).get("fetched", False))
                   and now - r.get("first_seen", 0) <= 45 * 86400]
         stored.sort(key=lambda r: (
             r.get("id") in tracked_ids,
@@ -281,7 +360,7 @@ def scrape_pass(new_jobs: list, jobs_state: dict, domains: dict,
 
 
 def summary_tags(p: dict | None) -> str:
-    """Short human tags for alert lines / UI ('🛂 no sponsorship · ⏳ 2+ yrs')."""
+    """Short human tags for alert lines / UI."""
     if not p:
         return ""
     tags = []
@@ -294,4 +373,10 @@ def summary_tags(p: dict | None) -> str:
         tags.append(f"⏳ {yrs}+ yrs" + (" (interns count)" if p.get("intern_counts") else ""))
     elif p.get("intern_counts"):
         tags.append("⏳ internships count")
+    if p.get("education_mismatch"):
+        tags.append("🎓 degree mismatch")
+    elif p.get("education_required"):
+        tags.append(f"🎓 {p['education_required']} required")
+    if p.get("fetch_status") in {"unavailable", "unreadable"}:
+        tags.append("⚠️ requirements unverified")
     return " · ".join(tags)

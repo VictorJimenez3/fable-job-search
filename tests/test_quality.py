@@ -51,12 +51,12 @@ def test_llm_not_new_grad_suppresses_and_penalizes(monkeypatch):
     monkeypatch.setattr(quality.http, "get",
                         lambda *a, **k: FakeResp(200, _posting("Requires 5 years of experience building services.")))
     monkeypatch.setattr(quality.llm, "complete", lambda *a, **k:
-                        '{"years_required": 5, "new_grad": "no", "role_family": "swe", "reason": "wants 5 years"}')
+                        '{"years_required": 5, "degree_required": "unclear", "new_grad": "no", "role_family": "swe", "reason": "wants 5 years"}')
     rec = _rec()
     assert quality.verify(rec)
     assert rec["alert_ok"] is False
-    assert rec["score"] == 80 - quality._PENALTY_NOT_NEW_GRAD
-    assert any("not new-grad" in r for r in rec["score_reasons"])
+    assert rec["score"] == 80 - (35 + 5 * 4)
+    assert any("wants 5+ yrs" in r for r in rec["score_reasons"])
     assert rec["quality"]["new_grad"] == "no"
 
 
@@ -71,7 +71,7 @@ def test_marquee_now_suppressed_by_verdict(monkeypatch):
     assert quality.verify(rec)
     assert rec["alert_ok"] is False
     assert rec["quality"]["new_grad"] == "no"
-    assert rec["score"] == 80 - quality._PENALTY_NOT_NEW_GRAD
+    assert rec["score"] == 80 - (35 + 4 * 4)
 
 
 def test_non_technical_role_demoted(monkeypatch):
@@ -139,7 +139,7 @@ def test_one_to_two_years_suppresses_alert(monkeypatch):
     rec = _rec()
     assert quality.verify(rec)
     assert rec["alert_ok"] is False
-    assert rec["score"] == 80 - quality._PENALTY_NOT_NEW_GRAD
+    assert rec["score"] == 80 - (35 + 1 * 4)
 
 
 def test_verify_pasted_grades_and_is_idempotent(monkeypatch):

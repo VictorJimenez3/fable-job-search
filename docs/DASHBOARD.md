@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-19 16:55 UTC** · companies polled directly: **780** (registry 910) · jobs tracked: **14354** · new this run: **2** · alerts this run: **0**_
+_Last run: **2026-07-19 17:17 UTC** · companies polled directly: **780** (registry 910) · jobs tracked: **14354** · new this run: **2** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -24,14 +24,13 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 82 ⭐ | 12d | Notion | [Software Engineer, Early Career (AI)](https://jobs.ashbyhq.com/notion/85947779-6b87-466a-98bc-30a640448c28) | San Francisco, California | big_tech | ashby |
 | 80 ⭐ | 12d | Notion | [Software Engineer – Early Career - AI](https://jobs.ashbyhq.com/notion/85947779-6b87-466a-98bc-30a640448c28/application) | SF | big_tech | simplify |
 | 79 ⭐ | 6d | NVIDIA AI | [Backend Compiler Engineer - New College Grad 2026](https://jobright.ai/jobs/info/6a55d93505c65f7c8f4c8a73?utm_campaign=Software%20Engineering&utm_source=1103) | Santa Clara, CA, United States | big_tech | jobright |
-| 78 ⭐ | 9d | Salesforce | [AI Builder, Emerging Talent](https://salesforce.wd12.myworkdayjobs.com/en-US/futureforce_newgradroles/job/California---San-Francisco/AI-Builder--Emerging-Talent_JR341276) | 4 Locations | big_tech | workday |
+| 78 ⭐ | 10d | Salesforce | [AI Builder, Emerging Talent](https://salesforce.wd12.myworkdayjobs.com/en-US/futureforce_newgradroles/job/California---San-Francisco/AI-Builder--Emerging-Talent_JR341276) | 4 Locations | big_tech | workday |
 | 77 ⭐ | 5d | Abridge | [Software Engineer - Early Career](https://jobs.ashbyhq.com/abridge/7d6ae2be-cd53-466c-8151-2dae2e87aace) | SF Office | healthtech | ashby |
 | 77 ⭐ | 12d | Salesforce | [Software Engineering AMTS (College Grad)](https://jobright.ai/jobs/info/69f4c70cdb88714bcdfafbe9?utm_campaign=Software%20Engineering&utm_source=1103) | California - San Francisco | big_tech | jobright |
 | 77 ⭐ | 14d | Salesforce | [Software Engineering AMTS (College Grad)](https://jobright.ai/jobs/info/69f4c7a881706a5bd2162e3f?utm_campaign=Software%20Engineering&utm_source=1103) | Washington - Bellevue, US | big_tech | jobright |
 | 77 ⭐ | 15d | Salesforce | [Software Engineering AMTS (College Grad)](https://jobright.ai/jobs/info/69f4c70ddb88714bcdfafbf1?utm_campaign=Software%20Engineering&utm_source=1103) | Texas - Dallas | big_tech | jobright |
 | 75 ⭐ | 10d | Momentum | [Launch Graduate Program: Associate Cybersecurity Analyst](https://job-boards.greenhouse.io/momentumcompany3/jobs/8614696002) | Dallas, Texas | other | greenhouse |
 | 75 ⭐ | 10d | Momentum | [Launch Graduate Program: IT Operations Associate](https://job-boards.greenhouse.io/momentumcompany3/jobs/8608791002) | Dallas, Texas | other | greenhouse |
-| 75 ⭐ | 11d | Momentum | [Launch Graduate Program: Associate People & Culture Coordinator](https://job-boards.greenhouse.io/momentumcompany3/jobs/8606602002) | Dallas, Texas | other | greenhouse |
 | 75 ⭐ | 12d | Notion | [Software Engineer – Early Career](https://jobs.ashbyhq.com/notion/297b4ece-765f-4eea-b1b8-46057cb6501f/application) | SF | big_tech | simplify |
 | 75 ⭐ | 14d | Notion | [Software Engineer, New Grad](https://jobright.ai/jobs/info/69eb5233dc35f7132c4af75a?utm_campaign=Software%20Engineering&utm_source=1103) | San Francisco, CA | big_tech | jobright |
 | 73  | 2d | Palantir Technologies | [Forward Deployed Software Engineer, New Grad - US Government](https://jobright.ai/jobs/info/6a5ade9e4da96a42cfd97a98?utm_campaign=Software%20Engineering&utm_source=1103) | Washington, D.C., United States | big_tech | jobright |
@@ -58,7 +57,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 69  | 3d | Lightfield | [Software Engineer, Applied AI, New Grad](https://jobs.ashbyhq.com/Lightfield/fc93a467-773d-4805-b342-bf470950732d) | HQ: San Francisco | other | ashby |
 | 69  | 4d | Palantir Technologies | [Software Engineer, New Grad - Defense](https://jobright.ai/jobs/info/6a57938ea791c6211befedb5?utm_campaign=Software%20Engineering&utm_source=1103) | Washington, D.C., United States | big_tech | jobright |
 | 69  | 4d | Palantir Technologies | [Forward Deployed Software Engineer, New Grad - Commercial](https://jobright.ai/jobs/info/6a58203168d16a30e2411d11?utm_campaign=Software%20Engineering&utm_source=1103) | Chicago, IL, United States | big_tech | jobright |
-| 69  | 10d | Checkout.com | [Specialist, Early Careers](https://jobs.ashbyhq.com/checkout.com/c8608c45-617c-4950-b356-d962a77bd365) | Ebene | other | ashby |
 | 69  | 16d | IXL Learning | [Software Engineer New Grad](https://www.ixl.com/company/jobs?gh_jid=8615717002) | Raleigh, NC | edtech | simplify |
 | 69  | 16d | IXL Learning | [Software Engineer New Grad](https://www.ixl.com/company/jobs?gh_jid=8615710002) | San Mateo, CA | edtech | simplify |
 | 69  | 19d | Palantir | [Software Engineer New Grad - Production Infrastructure](https://jobs.lever.co/palantir/15844944-fb69-4b57-9531-e988650b20c6/apply) | Washington, DC | big_tech | simplify |
@@ -100,22 +98,22 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 64  | 5d | Akuna Capital University | [Entry Level Software Engineer - C++](https://www.akunacapital.com/careers/job/8013085/?gh_jid=8013085) | Chicago, IL | fintech | simplify |
 | 64  | 8d | Lockheed Martin | [MLB Embedded S/W Engineer Asc - Early Career - Orlando, FL](https://jobright.ai/jobs/info/6a5272d0e726ec56126a321c?utm_campaign=Software%20Engineering&utm_source=1103) | Orlando, FL, United States | other | jobright |
 | 64  | 9d | Cadence Design Systems | [Software Engineer, New College Grad 2026 (Undergrads)](https://cadence.wd1.myworkdayjobs.com/en-US/University_Talent/job/Burlington-MA/Software-Engineer--New-College-Grad-2026--Undergrads-_R54894) | Burlington, MA | other | workday |
+| 64  | 12d | General Motors | [Software Engineer AV HIL Platform and Services (Early Career))](https://generalmotors.wd5.myworkdayjobs.com/en-US/Careers_GM/job/Sunnyvale-California-United-States-of-America/Software-Engineer-AV-HIL-Platform-and-Services--University-Grad-_JR-202604577) | Sunnyvale, California, United States of  | other | workday |
 | 63  | 1d | Basis Set | [Software Engineer (Early Career)](https://jobright.ai/jobs/info/6a5bbe2f63a8f619507cbde8?utm_campaign=Software%20Engineering&utm_source=1103) | San Francisco, CA, United States | other | jobright |
 | 63  | 2d | Pax | [Software Engineer (Early Career)](https://jobright.ai/jobs/info/6a5a58b54da96a42cfd95539?utm_campaign=Software%20Engineering&utm_source=1103) | San Francisco, CA, United States | other | jobright |
 | 63  | 3d | Zachary Piper Solutions | [Python Developer - Entry Level](https://jobright.ai/jobs/info/6a5914583ac7627fe9ffd33b?utm_campaign=Software%20Engineering&utm_source=1103) | Durham, NC, United States | other | jobright |
 | 63  | 6d | Old Mission | [Software Engineer – 2027 Graduate Program (August Start)](https://jobright.ai/jobs/info/6a554bd84119652ff3864afd?utm_campaign=Software%20Engineering&utm_source=1103) | Chicago, IL, United States | other | jobright |
 | 63  | 8d | General Dynamics Mission Systems | [Infrastructure Hardware Systems Engineer Entry Level](https://careers-gdms.icims.com/jobs/73388/job?mobile=true&needsRedirect=false) | Chula Vista, CA | other | simplify |
-| 63  | 9d | Ciena | [AI-Enabled Software Test Engineer - New Grad](https://ciena.wd5.myworkdayjobs.com/en-US/Careers/job/Ottawa/AI-Enabled-Software-Test-Engineer-II_R030842) | Ottawa | other | workday |
-| 63  | 12d | General Motors | [Software Engineer AV HIL Platform and Services (Early Career))](https://generalmotors.wd5.myworkdayjobs.com/en-US/Careers_GM/job/Sunnyvale-California-United-States-of-America/Software-Engineer-AV-HIL-Platform-and-Services--University-Grad-_JR-202604577) | Sunnyvale, California, United States of  | other | workday |
+| 63  | 10d | Ciena | [AI-Enabled Software Test Engineer - New Grad](https://ciena.wd5.myworkdayjobs.com/en-US/Careers/job/Ottawa/AI-Enabled-Software-Test-Engineer-II_R030842) | Ottawa | other | workday |
 | 63  | 17d | Blue Origin | [Avionics / Embedded Software Engineer I - Early Career (2026 Starts)](https://jobright.ai/jobs/info/6a35bd6cce501060b5cf55d7?utm_campaign=Software%20Engineering&utm_source=1103) | Los Angeles, CA, US | other | jobright |
 | 63  | 17d | Blue Origin | [Avionics / Embedded Software Engineer I - Early Career (2026 Starts)](https://jobright.ai/jobs/info/6a35bd6cce501060b5cf55d6?utm_campaign=Software%20Engineering&utm_source=1103) | Greater Seattle Area, United States of A | other | jobright |
 | 63  | 19d | TP-Link Systems Inc. | [2026 Early Career Embedded Software Engineer](https://jobright.ai/jobs/info/6a282bc27061b51a3a5f3d8b?utm_campaign=Software%20Engineering&utm_source=1103) | Irvine, CA | other | jobright |
+| 62  | 3d | Cybernetic Labs | [Software Engineer New Grad - Agent Platform](https://jobs.ashbyhq.com/netic/d9bcb6a2-0e54-4cb3-baec-43f2d74db18f/application?embed=true) | SF | other | simplify |
 | 62  | 5d | Old Mission | [Software Engineer – Graduate Program - August Start](https://www.oldmissioncapital.com/careers/?gh_jid=7796048003) | Chicago, IL | other | simplify |
 | 62  | 6d | DMC Engineering | [Entry Level Embedded Engineer](https://jobright.ai/jobs/info/6a4e763f0ea38951a6ff3336?utm_campaign=Software%20Engineering&utm_source=1103) | Chicago, United States | other | jobright |
 | 62  | 8d | LetsGetChecked | [Graduate Software Engineer](https://jobright.ai/jobs/info/6a52a9fae726ec56126a4010?utm_campaign=Software%20Engineering&utm_source=1103) | United States | other | jobright |
 | 62  | 9d | Aquatic Capital Management | [Software Engineer, Early Career](https://jobright.ai/jobs/info/6a3ff4f3b526a24fc31305bd?utm_campaign=Software%20Engineering&utm_source=1103) | Chicago, IL, United States | fintech | jobright |
 | 62  | 20d | Wolverine Trading | [Entry-Level C++ Software Engineer](https://jobright.ai/jobs/info/6a433366cbf92c7bcd36ef0a?utm_campaign=Software%20Engineering&utm_source=1103) | Chicago, IL | fintech | jobright |
-| 61  | 3d | Cybernetic Labs | [Software Engineer New Grad - Agent Platform](https://jobs.ashbyhq.com/netic/d9bcb6a2-0e54-4cb3-baec-43f2d74db18f/application?embed=true) | SF | other | simplify |
 | 61  | 3d | Cybernetic Labs | [Full-Stack Software Engineer New Grad - Product](https://jobs.ashbyhq.com/netic/bab5d1e5-e31b-42f0-9cef-334b1f17fed3/application?embed=true) | SF | other | simplify |
 | 61  | 4d | General Dynamics | [Entry Level Infrastructure Software Engineer](https://jobright.ai/jobs/info/6a582e0e9838a11e5d8373fb?utm_campaign=Software%20Engineering&utm_source=1103) | Pittsfield, MA, US | other | jobright |
 | 61  | 8d | Kustomer | [Software Engineer, Full Stack (Early Career)](https://jobs.ashbyhq.com/kustomer/4037272a-7fd3-4040-906b-47fde875a817) | US - New York, NY | other | ashby |
@@ -156,5 +154,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 57  | 9d | NetApp | [Entry Level Software Engineer - ANF (Azure NetApp Files)](https://jobright.ai/jobs/info/6a51bde202522b5b722eaad1?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose, CA, United States | other | jobright |
 | 57  | 9d | Pylon | [Software Engineer New Grad](https://jobs.ashbyhq.com/pylon-labs/38814ce7-217b-40f2-9ba5-8a7733a5691d/application) | SF | other | simplify |
 | 57  | 10d | Pylon | [Software Engineer, New Grad](https://jobright.ai/jobs/info/6a4fe2de9469c0662034f404?utm_campaign=Software%20Engineering&utm_source=1103) | San Francisco, CA, United States | other | jobright |
+| 57  | 11d | Faros | [Software Engineer - New Grad](https://jobright.ai/jobs/info/6a4e911515b4965afd583c5a?utm_campaign=Software%20Engineering&utm_source=1103) | San Mateo, CA, United States | other | jobright |
+| 57  | 11d | The Boeing Company | [Entry Level Simulation Software Engineer](https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Berkeley-MO/Entry-Level-Simulation-Software-Engineer_JR2026516853-1) | Hazelwood, MO | other | simplify |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._

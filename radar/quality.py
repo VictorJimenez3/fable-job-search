@@ -26,6 +26,7 @@ from __future__ import annotations
 import json
 import re
 import time
+from urllib.parse import urlsplit
 
 from . import http, llm
 from .config import env
@@ -47,6 +48,7 @@ _MAX_ATTEMPTS = 2          # LLM/fetch tries per job before marking unclear
 _PENALTY_NOT_NEW_GRAD = 20
 _PENALTY_WRONG_ROLE = 25
 _PENALTY_SOME_EXPERIENCE = 10
+_PENALTY_DEGREE_MISMATCH = 45
 
 PROMPT = """You screen job postings for a computer-science new grad (class of 2026, US).
 Job: {title} — {company}
@@ -55,9 +57,12 @@ Posting text (may be truncated or noisy):
 {text}
 ---
 Answer STRICT JSON only, no other text:
-{{"years_required": <integer or null>, "new_grad": "yes"|"no"|"unclear", "role_family": "swe"|"data"|"ml"|"security"|"other-technical"|"non-technical", "reason": "<15 words max>"}}
+{{"years_required": <integer or null>, "degree_required": "bachelors"|"masters"|"phd"|"unclear", "new_grad": "yes"|"no"|"unclear", "role_family": "swe"|"data"|"ml"|"security"|"other-technical"|"non-technical", "reason": "<15 words max>"}}
 Rules: new_grad="no" if the text clearly requires 1+ years of professional
 experience or is explicitly senior/staff/lead. Internships are new_grad="no".
+degree_required must reflect an explicitly required degree, not a preferred or
+nice-to-have degree. A master's/PhD requirement is a major mismatch because
+the candidate profile has a bachelor's degree.
 role_family="non-technical" means sales, support, recruiting, marketing,
 project coordination — not an engineering/data/science role."""
 
@@ -68,10 +73,60 @@ def _strip_html(html: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
+def _free_ats_api(url: str) -> tuple[bool | None, str] | None:
+    """Try public ATS JSON endpoints before generic HTML scraping.
+
+    These endpoints require no key and usually expose the complete JD even
+    when a browser page is a JavaScript shell or bot-protected. ``None`` means
+    the URL is not one of these ATS shapes or the API was inconclusive, so the
+    caller can still try the public page.
+    """
+    parts = urlsplit(url.split("?")[0].split("#")[0])
+    bits = [b for b in parts.path.split("/") if b]
+    try:
+        if ("greenhouse.io" in parts.netloc and "jobs" in bits
+                and bits.index("jobs") + 1 < len(bits)):
+            board = bits[bits.index("jobs") - 1]
+            job_id = bits[bits.index("jobs") + 1]
+            api = f"https://boards-api.greenhouse.io/v1/boards/{board}/jobs/{job_id}"
+            r = http.get(api, timeout=15, headers={"Accept": "application/json"})
+            if r.status_code in (404, 410):
+                return None
+            if r.status_code >= 400:
+                return None
+            body = r.json()
+            return True, _strip_html(" ".join(str(body.get(k) or "")
+                                              for k in ("content", "title", "location")))[:7000]
+        if "ashbyhq.com" in parts.netloc and len(bits) >= 2:
+            api = f"https://api.ashbyhq.com/posting/{bits[-1]}"
+            r = http.get(api, timeout=15, headers={"Accept": "application/json"})
+            if r.status_code >= 400:
+                return None
+            body = r.json()
+            return True, _strip_html(" ".join(str(body.get(k) or "")
+                                              for k in ("descriptionHtml", "description", "title")))[:7000]
+        if "lever.co" in parts.netloc and len(bits) >= 2:
+            api = f"https://api.lever.co/v0/postings/{bits[-2]}/{bits[-1]}?mode=json"
+            r = http.get(api, timeout=15, headers={"Accept": "application/json"})
+            if r.status_code >= 400:
+                return None
+            body = r.json()
+            text = str(body.get("descriptionPlain") or body.get("description") or "")
+            for item in body.get("lists") or []:
+                text += " " + str(item.get("content") or "")
+            return True, _strip_html(text)[:7000]
+    except Exception:
+        return None
+    return None
+
+
 def fetch_posting(url: str) -> tuple[bool | None, str]:
     """Returns (alive, text). alive=None means "couldn't tell" (network
     hiccup, bot wall) — callers must treat that as alive; only a definitive
     dead signal closes a job."""
+    api_result = _free_ats_api(url)
+    if api_result and len(api_result[1]) >= 200:
+        return api_result
     try:
         r = http.get(url, timeout=15, allow_redirects=True)
     except Exception:
@@ -181,6 +236,8 @@ def _parse_verdict(raw: str | None) -> dict | None:
         return None
     if v.get("new_grad") not in ("yes", "no", "unclear"):
         return None
+    if v.get("degree_required") not in ("bachelors", "masters", "phd", "unclear", None):
+        return None
     if v.get("role_family") not in ("swe", "data", "ml", "security",
                                       "other-technical", "non-technical"):
         return None
@@ -196,11 +253,21 @@ def _parse_verdict(raw: str | None) -> dict | None:
 def _effects(q: dict) -> list[tuple[str, int, bool]]:
     """(reason_line, score_penalty, suppress_alert) for a stored verdict."""
     out = []
+    # Deterministic posting extraction owns this penalty when usable text was
+    # retrieved; avoid double-counting the same requirement from the LLM.
+    posting = q.get("_posting") or {}
+    degree = q.get("degree_required")
+    if degree in ("masters", "phd") and not posting.get("education_mismatch"):
+        penalty = 60 if degree == "phd" else _PENALTY_DEGREE_MISMATCH
+        label = "PhD" if degree == "phd" else "master's degree"
+        out.append((f"quality: requires {label} (bachelor's profile) -{penalty}",
+                    penalty, True))
     if q.get("new_grad") == "no":
         yrs = q.get("years_required")
-        out.append((f"quality: not new-grad ({f'{yrs}+ yrs' if yrs else 'senior'}"
-                    f" — LLM-verified) -{_PENALTY_NOT_NEW_GRAD}",
-                    _PENALTY_NOT_NEW_GRAD, True))
+        if not posting.get("years_min"):
+            out.append((f"quality: not new-grad ({f'{yrs}+ yrs' if yrs else 'senior'}"
+                        f" — LLM-verified) -{_PENALTY_NOT_NEW_GRAD}",
+                        _PENALTY_NOT_NEW_GRAD, True))
     if q.get("role_family") == "non-technical":
         out.append((f"quality: non-technical role ({(q.get('reason') or '')[:40]}"
                     f" — LLM-verified) -{_PENALTY_WRONG_ROLE}",
@@ -226,6 +293,7 @@ def reapply(rec: dict) -> None:
             reasons.append(line)
         return
     reasons = rec.setdefault("score_reasons", [])
+    q["_posting"] = rec.get("posting") or {}
     for line, penalty, suppress in _effects(q):
         if line not in reasons:
             reasons.append(line)
@@ -249,6 +317,9 @@ def verify(rec: dict, domains: dict | None = None) -> bool:
         reapply(rec)
         return True
     if alive is None or len(text) < 200:
+        q["fetch_status"] = "unavailable" if alive is None else "unreadable"
+        q["fetch_note"] = ("could not retrieve usable posting text" if alive is None
+                            else "page loaded without enough usable posting text")
         # can't judge what we can't read; leave retryable until attempts cap
         if q["attempts"] >= _MAX_ATTEMPTS:
             q.update({"checked_at": now, "new_grad": "unclear"})
@@ -277,8 +348,10 @@ def verify(rec: dict, domains: dict | None = None) -> bool:
         return False
     q.update({
         "checked_at": now, "live": True,
+        "fetch_status": "readable",
         "new_grad": v.get("new_grad"),
         "years_required": v.get("years_required"),
+        "degree_required": v.get("degree_required") or "unclear",
         "role_family": v.get("role_family"),
         "reason": (v.get("reason") or "")[:120],
     })
@@ -313,6 +386,7 @@ def verify_pasted(rec: dict, jd_text: str) -> bool:
         return False
     q.update({
         "checked_at": int(time.time()), "live": True,
+        "fetch_status": "readable",
         "jd_sha": sha, "source": "pasted",
         "new_grad": v.get("new_grad"),
         "years_required": v.get("years_required"),

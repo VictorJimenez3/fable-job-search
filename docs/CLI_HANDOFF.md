@@ -82,6 +82,9 @@ Before changing the radar, read these in order:
   (`score.RULES_VERSION`, records carry `rules_v` + `explicit_new_grad`)
   to stored jobs; `python -m radar.main rescore` fully rebuilds every stored
   score after a profile-priority change, while `regate` only refreshes gates;
+  `RADAR_SCRAPE_DASHBOARD=1 RADAR_RESCRAPE_LIMIT=100 python -m radar.main
+  rescrape` rechecks visible dashboard roles through free ATS JSON/HTML
+  endpoints and labels unreadable requirements instead of guessing;
   manual commands: `python -m radar.main regate` /
   `repair-feedback`. The taste model filters `FEEDBACK_STOPWORDS`. The
   marquee list is duplicated in `webapp/index.html` (`S.marquee`) — keep

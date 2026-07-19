@@ -549,6 +549,24 @@ def rescore_cmd() -> int:
     return 0
 
 
+def rescrape_cmd() -> int:
+    """Fetch full posting text for current visible jobs using free ATS/HTML APIs."""
+    from . import posting
+    jobs_state = state.jobs()
+    registry = state.companies()
+    domains = {norm(e.get("name", "")): (e.get("extra") or {}).get("domain")
+               for e in registry.values()
+               if e.get("ats") == "eightfold" and (e.get("extra") or {}).get("domain")}
+    stats = posting.scrape_pass([], jobs_state, domains, int(time.time()),
+                                budget=int(env("RADAR_RESCRAPE_LIMIT", "100")))
+    state.save("jobs.json", jobs_state)
+    write_outputs(jobs_state, registry, state.load("runs.json", []),
+                  state.load("alert_history.json", []))
+    print(f"rescrape: fetched {stats.get('fetched', 0)}, unreadable {stats.get('unreadable', 0)}, "
+          f"closed {stats.get('closed', 0)}, demoted {stats.get('demoted', 0)}")
+    return 0
+
+
 def repair_feedback() -> int:
     """One-time repair: drop learned token boosts that FEEDBACK_STOPWORDS now
     filters at read time (business/marketing/product/... plus location noise).
@@ -610,7 +628,7 @@ def main() -> None:
                                         "migrate-checkbox-applied", "promote-shortlist",
                                         "marquee-backfill", "reconcile-checkboxes",
                                         "daily-best", "master-board", "web-action", "enrich",
-                                        "regate", "rescore", "repair-feedback"])
+                                        "regate", "rescore", "rescrape", "repair-feedback"])
     args = ap.parse_args()
     if args.command == "crawl":
         sys.exit(crawl())
@@ -658,6 +676,8 @@ def main() -> None:
         sys.exit(regate_cmd())
     elif args.command == "rescore":
         sys.exit(rescore_cmd())
+    elif args.command == "rescrape":
+        sys.exit(rescrape_cmd())
     elif args.command == "repair-feedback":
         sys.exit(repair_feedback())
 

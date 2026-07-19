@@ -700,3 +700,13 @@ such as Johnson & Johnson's Technology Leadership Development Program and
 Merck's technology/emerging-talent tracks are visible even when their titles do
 not say "software engineer." Generic finance, sales, HR, and other off-field
 leadership programs stay dashboard-only.
+# 49. Posting evidence and degree mismatch are first-class ranking inputs (2026-07-19)
+
+Full posting text is attempted through public ATS JSON endpoints (Greenhouse,
+Ashby, Lever, Workday, Oracle, and Eightfold) before generic HTML. If a page is
+blocked, empty, or only a JavaScript shell, the job records `requirements
+unverified` and the UI says why. Deterministic extraction now identifies required
+experience and master's/PhD degrees; positive experience floors receive large
+auditable penalties, and degrees above the candidate's bachelor's profile receive
+an even larger penalty while remaining visible for review. Preferred degrees do
+not trigger the mismatch.

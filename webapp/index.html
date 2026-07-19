@@ -756,10 +756,17 @@ function postingCard(j) {
              : "🛂 sponsorship not mentioned";
   const yrs = p.years_min!=null ? `⏳ wants <b>${p.years_min}+ yrs</b>${p.intern_counts?" (internships count)":""}${p.years_note?` — “${esc(p.years_note)}”`:""}`
             : p.intern_counts ? "⏳ internships count as experience" : "⏳ no experience requirement stated";
+  const edu = p.education_mismatch
+    ? `🎓 <b>major mismatch</b>: requires ${esc(p.education_required||"advanced degree")}; profile is bachelor's${p.education_note?` — “${esc(p.education_note)}”`:""}`
+    : p.education_required ? `🎓 requires ${esc(p.education_required)}` : "🎓 degree requirement not stated";
+  const read = p.fetch_status==="unavailable" || p.fetch_status==="unreadable"
+    ? `⚠️ <b>requirements unverified</b> — ${esc(p.fetch_note||"the full posting could not be read")}`
+    : `${new Date((p.analyzed_at||0)*1000).toLocaleDateString()} · ${p.fetched?"scraped from the posting":"from ATS/pasted text"}`;
   return `<div class="kv">
     <span class="k">visa</span><span>${spon}</span>
     <span class="k">experience</span><span>${yrs}</span>
-    <span class="k">read</span><span>${new Date((p.analyzed_at||0)*1000).toLocaleDateString()} · ${p.fetched?"scraped from the posting":"from ATS/pasted text"}</span>
+    <span class="k">education</span><span>${edu}</span>
+    <span class="k">read</span><span>${read}</span>
   </div>`;
 }
 function qualityCard(j) {
@@ -770,6 +777,7 @@ function qualityCard(j) {
   if (q.live === false) return `<p class="sub">⚠️ posting appears closed (link checked ${when})</p>`;
   return `<div class="kv">
     <span class="k">new grad</span><span>${esc(q.new_grad||"unclear")}${q.years_required?` · wants ${q.years_required}+ yrs`:""}</span>
+    <span class="k">degree</span><span>${esc(q.degree_required||"unclear")}${q.degree_required&&q.degree_required!=="bachelors"?" · major mismatch":""}</span>
     <span class="k">role family</span><span>${esc(q.role_family||"–")}</span>
     ${q.reason?`<span class="k">reason</span><span>${esc(q.reason)}</span>`:""}
     <span class="k">checked</span><span>${when} · ${q.source==="pasted"?"from your pasted JD":"from the posting page"} (LLM-verified)</span>

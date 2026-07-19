@@ -50,15 +50,30 @@ def test_analyze_intern_counts_and_short_text():
     assert posting.analyze("too short") == {}
 
 
+def test_analyze_required_degree_and_bachelor_mismatch():
+    text = ("Master's degree in computer science is required. "
+            "The team builds production systems. " + PAD)
+    a = posting.analyze(text)
+    assert a["education_required"] == "masters"
+    assert a["education_mismatch"] is True
+
+
+def test_preferred_degree_does_not_trigger_mismatch():
+    text = ("Master's degree preferred; bachelor's degree or equivalent is accepted. "
+            "The team builds production systems. " + PAD)
+    assert "education_required" not in posting.analyze(text)
+
+
 def test_apply_demotes_three_plus_years_and_is_idempotent():
-    rec = {"alert_ok": True, "score_reasons": []}
+    rec = {"alert_ok": True, "score": 80, "score_reasons": []}
     posting.apply_record(rec, {"sponsorship": "unknown", "years_min": 4,
                                "years_note": "4+ years"}, fetched=True, now=NOW)
     assert rec["alert_ok"] is False
-    assert rec["score_reasons"] == ["posting: wants 4+ yrs (dashboard only)"]
+    assert rec["score"] == 80 - (35 + 16)
+    assert rec["score_reasons"] == ["posting: wants 4+ yrs (dashboard only) -51"]
     posting.reapply(rec)
     posting.reapply(rec)
-    assert rec["score_reasons"].count("posting: wants 4+ yrs (dashboard only)") == 1
+    assert rec["score_reasons"].count("posting: wants 4+ yrs (dashboard only) -51") == 1
 
 
 def test_apply_demotes_any_positive_experience_floor():
@@ -66,7 +81,17 @@ def test_apply_demotes_any_positive_experience_floor():
     posting.apply_record(rec, {"sponsorship": "unknown", "years_min": 1,
                                "years_note": "1+ years"}, fetched=True, now=NOW)
     assert rec["alert_ok"] is False
-    assert "posting: wants 1+ yrs (dashboard only)" in rec["score_reasons"]
+    assert "posting: wants 1+ yrs (dashboard only) -39" in rec["score_reasons"]
+
+
+def test_apply_demotes_degree_mismatch_heavily():
+    rec = {"alert_ok": True, "score": 90, "score_reasons": []}
+    posting.apply_record(rec, {"sponsorship": "unknown",
+                               "education_required": "phd",
+                               "education_mismatch": True}, fetched=True, now=NOW)
+    assert rec["alert_ok"] is False
+    assert rec["score"] == 30
+    assert any("requires PhD" in r and "-60" in r for r in rec["score_reasons"])
 
 
 def test_apply_keeps_zero_to_two_new_grad_range():
