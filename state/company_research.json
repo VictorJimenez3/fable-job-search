@@ -4062,14 +4062,13 @@
  },
  "nvidia": {
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "766728e261",
-    "0dde78ed2b"
+    "29d0533621"
    ],
-   "value": "Develops industry-leading hardware and combines external EDA with highly optimized internal EDA tools."
+   "value": "NVIDIA operates as a computing platform company at the intersection of graphics, HPC, and AI, selling hardware and software solutions."
   },
   "customers": {
    "confidence": "unknown",
@@ -4078,31 +4077,30 @@
   },
   "error": "",
   "evidence_sha": "73a4d8b9b8173683",
-  "generated_at": 1784489599,
+  "generated_at": 1784497779,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "local",
+   "model": "qwen3:30b",
    "task": "company_research"
   },
   "interview_focus": {
    "confidence": "high",
    "source_ids": [
-    "0dde78ed2b",
-    "29d0533621",
+    "cccfae7c15",
     "766728e261"
    ],
-   "value": "To match the candidate's drive for technical growth and sane working hours, the interview should probe how the team balances the intense demands of optimizing advanced designs for AI/HPC with avoiding burnout. Ask about team structure, learning opportunities, and expectations around managing complex physical design algorithms without creeping into personal time."
+   "value": "Candidates should highlight technical expertise in AI inference optimization, distributed systems, and RTL synthesis, with a focus on innovative problem-solving and alignment with NVIDIA's industry-leading benchmarks and tools."
   },
-  "last_attempt_at": 1784489599,
+  "last_attempt_at": 1784497779,
   "last_evidence_at": 1784495630,
   "locations": {
    "confidence": "high",
    "source_ids": [
+    "cccfae7c15",
     "766728e261",
-    "29d0533621",
-    "0dde78ed2b"
+    "29d0533621"
    ],
-   "value": "Santa Clara, California and Austin, Texas."
+   "value": "Santa Clara, California, USA"
   },
   "mission": {
    "confidence": "unknown",
@@ -4113,19 +4111,20 @@
   "products": {
    "confidence": "high",
    "source_ids": [
-    "29d0533621"
+    "cccfae7c15",
+    "766728e261"
    ],
-   "value": "Graphics, high-performance computing (HPC), and artificial intelligence platforms."
+   "value": "NVIDIA's products include accelerators for GenAI inference, TensorRT-LLM, SGLang, vLLM, and EDA tools for RTL synthesis and digital logic optimization."
   },
   "prompt_v": 1,
-  "refresh_after": 1789673599,
+  "refresh_after": 1789681779,
   "schema_v": 1,
   "size_stage": {
    "confidence": "high",
    "source_ids": [
     "29d0533621"
    ],
-   "value": "10001+ employees."
+   "value": "10001+ employees"
   },
   "sources": [
    {
@@ -4164,33 +4163,35 @@
    "source_ids": [
     "29d0533621"
    ],
-   "value": "NVIDIA has a track record of offering H1B sponsorships, though sponsorship is not guaranteed for specific roles."
+   "value": "NVIDIA has a track record of offering H1B sponsorships, but this does not guarantee sponsorship for specific roles."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "cccfae7c15",
+    "766728e261",
     "29d0533621"
    ],
-   "value": "NVIDIA is a computing platform company founded in 1993 and based in Santa Clara, California, operating at the intersection of graphics, HPC, and AI."
+   "value": "NVIDIA is a leading technology company specializing in AI, graphics processing, and high-performance computing, known for its innovative hardware and software solutions. The company focuses on optimizing AI inference, digital logic synthesis, and software quality assurance, with a strong emphasis on cutting-edge technology and industry benchmarks."
   },
-  "synthesized_evidence_sha": "51d5fd0d4501efd9",
+  "synthesized_evidence_sha": "73a4d8b9b8173683",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "766728e261",
-    "0dde78ed2b"
+    "cccfae7c15",
+    "766728e261"
    ],
-   "value": "Building external and internal EDA tools, designing algorithms for RTL synthesis, digital logic, timing, power optimization, and multi-stage VLSI physical design (sizing, buffering, CTS, routing)."
+   "value": "Optimizing GenAI inference, implementing quantization and scheduling, designing distributed inference systems, RTL synthesis, and digital logic optimization."
   },
   "why_it_matters": {
    "confidence": "high",
    "source_ids": [
-    "0dde78ed2b",
+    "cccfae7c15",
     "766728e261",
     "29d0533621"
    ],
-   "value": "For a candidate seeking a top-tier AI or data science role with massive scale and prestige, NVIDIA offers the chance to work exclusively on the latest processes and most advanced designs. Combining external and highly optimized internal EDA tools signals a fast-paced, innovative engineering culture pushing the boundaries of computing."
+   "value": "NVIDIA offers elite prestige in AI and data science with high new-grad pay, fast-paced innovation, and a mission-driven culture focused on industry-leading performance standards and technical growth without sacrificing work-life balance."
   }
  },
  "nvidia ai": {
@@ -5559,13 +5560,60 @@
  },
  "sentara health": {
   "aliases": [],
-  "attempts": 1,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 2,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "f3b78f0ec2d20433",
-  "last_attempt_at": 1784490566,
+  "generated_at": 1784497779,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784497779,
   "last_evidence_at": 1784476311,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "d171030c5e"
+   ],
+   "value": "Remote (as per job posting location: Virginia Beach, VA, but remote option listed)"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "d171030c5e"
+   ],
+   "value": "to improve health every day"
+  },
   "name": "Sentara Health",
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789681779,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "563c6d265c58d261",
@@ -5578,7 +5626,32 @@
     "url": "https://sentara.wd1.myworkdayjobs.com/SCS/job/Virginia-Beach-VA/Healthcare-Value-Analyst---Remote_JR-101381"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "d171030c5e"
+   ],
+   "value": "Sentara Health is a healthcare organization focused on improving health through data-driven initiatives, with an emphasis on mission-driven work, diversity, and employee well-being."
+  },
+  "synthesized_evidence_sha": "f3b78f0ec2d20433",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "d171030c5e"
+   ],
+   "value": "Promotes self-service analytics for customer adoption, understanding and use of data."
+  },
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  }
  },
  "sentilink": {
   "aliases": [],
@@ -7041,13 +7114,62 @@
  },
  "vertex": {
   "aliases": [],
-  "attempts": 2,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 3,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "0da8a90489"
+   ],
+   "value": "Enterprise customers (implied by 'enterprise web applications')"
+  },
+  "error": "",
   "evidence_sha": "d4b6469588ddfad7",
-  "last_attempt_at": 1784495327,
+  "generated_at": 1784497779,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784497779,
   "last_evidence_at": 1784479880,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "0da8a90489"
+   ],
+   "value": "Remote (USA)"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Vertex",
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "0da8a90489"
+   ],
+   "value": "AI-powered enterprise web applications"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789681779,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "f6f04817bea9d8cf",
@@ -7060,7 +7182,32 @@
     "url": "https://vertexinc.wd1.myworkdayjobs.com/en-US/VertexInc/job/Remote-USA/AI-Product-Engineer_JR102443-1"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "0da8a90489"
+   ],
+   "value": "Vertex is a company seeking an AI Product Engineer to design and build AI-powered enterprise web applications. The company emphasizes customer-centric values and a high-visibility role."
+  },
+  "synthesized_evidence_sha": "d4b6469588ddfad7",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "0da8a90489"
+   ],
+   "value": "Design, build, and deliver AI-powered enterprise web applications"
+  },
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  }
  },
  "vytalize health": {
   "aliases": [],
