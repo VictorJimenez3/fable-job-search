@@ -1,115 +1,63 @@
 {
  "events": [
   {
-   "at": "2026-07-18T23:58:48+00:00",
-   "completion_tokens": 34,
-   "detail": "",
-   "endpoint": "local",
-   "latency_ms": 7145,
-   "max_tokens": 240,
-   "model": "qwen3:30b",
-   "prompt_chars": 6715,
-   "prompt_tokens": 1381,
-   "status": "ok",
-   "task": "quality"
-  },
-  {
-   "at": "2026-07-18T23:58:55+00:00",
-   "completion_tokens": 36,
-   "detail": "",
-   "endpoint": "local",
-   "latency_ms": 7102,
-   "max_tokens": 240,
-   "model": "qwen3:30b",
-   "prompt_chars": 6682,
-   "prompt_tokens": 1363,
-   "status": "ok",
-   "task": "quality"
-  },
-  {
-   "at": "2026-07-18T23:59:03+00:00",
-   "completion_tokens": 39,
-   "detail": "",
-   "endpoint": "local",
-   "latency_ms": 7064,
-   "max_tokens": 240,
-   "model": "qwen3:30b",
-   "prompt_chars": 6717,
-   "prompt_tokens": 1278,
-   "status": "ok",
-   "task": "quality"
-  },
-  {
-   "at": "2026-07-18T23:59:11+00:00",
-   "completion_tokens": 35,
-   "detail": "",
-   "endpoint": "local",
-   "latency_ms": 6821,
-   "max_tokens": 240,
-   "model": "qwen3:30b",
-   "prompt_chars": 6679,
-   "prompt_tokens": 1180,
-   "status": "ok",
-   "task": "quality"
-  },
-  {
-   "at": "2026-07-18T23:59:18+00:00",
-   "completion_tokens": 36,
-   "detail": "",
-   "endpoint": "local",
-   "latency_ms": 6333,
-   "max_tokens": 240,
-   "model": "qwen3:30b",
-   "prompt_chars": 4268,
-   "prompt_tokens": 802,
-   "status": "ok",
-   "task": "quality"
-  },
-  {
-   "at": "2026-07-18T23:59:26+00:00",
+   "at": "2026-07-19T00:00:22+00:00",
    "completion_tokens": 32,
    "detail": "",
    "endpoint": "local",
-   "latency_ms": 6982,
+   "latency_ms": 6947,
    "max_tokens": 240,
    "model": "qwen3:30b",
-   "prompt_chars": 6697,
-   "prompt_tokens": 1321,
+   "prompt_chars": 6404,
+   "prompt_tokens": 1299,
    "status": "ok",
    "task": "quality"
   },
   {
-   "at": "2026-07-18T23:59:36+00:00",
-   "completion_tokens": 34,
+   "at": "2026-07-19T00:00:30+00:00",
+   "completion_tokens": 32,
    "detail": "",
    "endpoint": "local",
-   "latency_ms": 6968,
+   "latency_ms": 6904,
    "max_tokens": 240,
    "model": "qwen3:30b",
-   "prompt_chars": 6718,
-   "prompt_tokens": 1283,
+   "prompt_chars": 6701,
+   "prompt_tokens": 1274,
    "status": "ok",
    "task": "quality"
   },
   {
-   "at": "2026-07-18T23:59:44+00:00",
-   "completion_tokens": 33,
+   "at": "2026-07-19T00:00:38+00:00",
+   "completion_tokens": 36,
    "detail": "",
    "endpoint": "local",
-   "latency_ms": 6934,
+   "latency_ms": 6921,
    "max_tokens": 240,
    "model": "qwen3:30b",
-   "prompt_chars": 6697,
-   "prompt_tokens": 1266,
+   "prompt_chars": 6006,
+   "prompt_tokens": 1219,
    "status": "ok",
    "task": "quality"
   },
   {
-   "at": "2026-07-19T00:00:01+00:00",
+   "at": "2026-07-19T00:00:59+00:00",
+   "completion_tokens": 35,
+   "detail": "",
+   "endpoint": "local",
+   "latency_ms": 6879,
+   "max_tokens": 240,
+   "model": "qwen3:30b",
+   "prompt_chars": 6745,
+   "prompt_tokens": 1388,
+   "status": "ok",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-19T00:01:21+00:00",
    "completion_tokens": 600,
    "detail": "",
    "endpoint": "local",
-   "latency_ms": 15031,
+   "latency_ms": 14984,
    "max_tokens": 600,
    "model": "qwen3:30b",
    "prompt_chars": 594,
@@ -118,26 +66,8 @@
    "task": "discovery"
   }
  ],
- "generated_at": 1784419201,
+ "generated_at": 1784419281,
  "history": [
-  {
-   "generated_at": 1784416654,
-   "logical_calls": 12,
-   "models": {
-    "local": {
-     "errors": 0,
-     "model": "qwen3:30b",
-     "ok": 12,
-     "requests": 12,
-     "tokens": 12161
-    }
-   },
-   "provider": "local",
-   "requests": 12,
-   "task_calls": {
-    "quality": 12
-   }
-  },
   {
    "generated_at": 1784416766,
    "logical_calls": 12,
@@ -684,26 +614,45 @@
     "discovery": 1,
     "quality": 8
    }
+  },
+  {
+   "generated_at": 1784419281,
+   "logical_calls": 5,
+   "models": {
+    "local": {
+     "errors": 0,
+     "model": "qwen3:30b",
+     "ok": 5,
+     "requests": 5,
+     "tokens": 6080
+    }
+   },
+   "provider": "local",
+   "requests": 5,
+   "task_calls": {
+    "discovery": 1,
+    "quality": 4
+   }
   }
  ],
  "limits": {
   "logical_calls": 12,
   "requests": 18
  },
- "logical_calls": 9,
+ "logical_calls": 5,
  "models": {
   "local": {
    "errors": 0,
    "model": "qwen3:30b",
-   "ok": 9,
-   "requests": 9,
-   "tokens": 10918
+   "ok": 5,
+   "requests": 5,
+   "tokens": 6080
   }
  },
  "provider": "local",
- "requests": 9,
+ "requests": 5,
  "task_calls": {
   "discovery": 1,
-  "quality": 8
+  "quality": 4
  }
 }
