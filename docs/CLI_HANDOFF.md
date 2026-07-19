@@ -101,11 +101,12 @@ Before changing the radar, read these in order:
   the employer link is a separate primary action. Authenticated `open
   application` also saves a new role to To apply, but Applied remains explicit.
   Track/applied writes are idempotent.
-- **AI foundation + company research (DECISIONS #39):** `radar/llm.py`
+- **AI foundation + company research (DECISIONS #39, #41):** `radar/llm.py`
   task-routes the four named NVIDIA NIM keys with hard logical/request budgets,
   two-provider fallback, transient retry, cooldown, output validation, and
-  secret-free `state/ai_usage.json`. Main nightly budget is 12/18; ChemE has a
-  default-branch `cheme-enrich.yml` orchestrator at 8/12. Explicit pasted JDs,
+  secret-free `state/ai_usage.json`. Main cloud enrichment now runs every two
+  hours with a 12/18 budget and rotates the first-choice provider by slot;
+  ChemE has a default-branch `cheme-enrich.yml` orchestrator at 8/12. Explicit pasted JDs,
   tracked roles, and fresh high-score work outrank cold backlog. Kimi is final
   fallback because its authenticated endpoint has been intermittently 404.
   The 30-minute crawls never receive the named keys.
