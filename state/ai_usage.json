@@ -1,66 +1,60 @@
 {
  "events": [
   {
-   "at": "2026-07-19T04:22:04+00:00",
-   "completion_tokens": 863,
+   "at": "2026-07-19T06:23:14+00:00",
+   "completion_tokens": 627,
    "detail": "",
    "endpoint": "local",
-   "latency_ms": 29499,
-   "max_tokens": 900,
-   "model": "qwen3:30b",
-   "prompt_chars": 2094,
-   "prompt_tokens": 585,
-   "status": "ok",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-07-19T04:22:33+00:00",
-   "completion_tokens": 888,
-   "detail": "",
-   "endpoint": "local",
-   "latency_ms": 28946,
-   "max_tokens": 900,
-   "model": "qwen3:30b",
-   "prompt_chars": 2170,
-   "prompt_tokens": 602,
-   "status": "ok",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-07-19T04:22:43+00:00",
-   "completion_tokens": 23,
-   "detail": "task schema validation failed",
-   "endpoint": "local",
-   "latency_ms": 10511,
+   "latency_ms": 23853,
    "max_tokens": 900,
    "model": "qwen3:30b",
    "prompt_chars": 2064,
    "prompt_tokens": 467,
-   "status": "invalid",
+   "status": "ok",
    "task": "company_research"
+  },
+  {
+   "at": "2026-07-19T06:23:34+00:00",
+   "completion_tokens": 575,
+   "detail": "",
+   "endpoint": "local",
+   "latency_ms": 20648,
+   "max_tokens": 900,
+   "model": "qwen3:30b",
+   "prompt_chars": 2152,
+   "prompt_tokens": 477,
+   "status": "ok",
+   "task": "company_research"
+  },
+  {
+   "at": "2026-07-19T06:23:49+00:00",
+   "completion_tokens": 35,
+   "detail": "",
+   "endpoint": "local",
+   "latency_ms": 13256,
+   "max_tokens": 240,
+   "model": "qwen3:30b",
+   "prompt_chars": 5518,
+   "prompt_tokens": 1145,
+   "status": "ok",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-19T06:24:07+00:00",
+   "completion_tokens": 600,
+   "detail": "",
+   "endpoint": "local",
+   "latency_ms": 16936,
+   "max_tokens": 600,
+   "model": "qwen3:30b",
+   "prompt_chars": 594,
+   "prompt_tokens": 165,
+   "status": "ok",
+   "task": "discovery"
   }
  ],
- "generated_at": 1784434966,
+ "generated_at": 1784442247,
  "history": [
-  {
-   "generated_at": 1784418501,
-   "logical_calls": 6,
-   "models": {
-    "local": {
-     "errors": 0,
-     "model": "qwen3:30b",
-     "ok": 6,
-     "requests": 6,
-     "tokens": 7447
-    }
-   },
-   "provider": "local",
-   "requests": 6,
-   "task_calls": {
-    "discovery": 1,
-    "quality": 5
-   }
-  },
   {
    "generated_at": 1784418593,
    "logical_calls": 9,
@@ -601,26 +595,46 @@
     "discovery": 1,
     "quality": 1
    }
+  },
+  {
+   "generated_at": 1784442247,
+   "logical_calls": 4,
+   "models": {
+    "local": {
+     "errors": 0,
+     "model": "qwen3:30b",
+     "ok": 4,
+     "requests": 4,
+     "tokens": 4091
+    }
+   },
+   "provider": "local",
+   "requests": 4,
+   "task_calls": {
+    "company_research": 2,
+    "discovery": 1,
+    "quality": 1
+   }
   }
  ],
  "limits": {
   "logical_calls": 12,
   "requests": 18
  },
- "logical_calls": 5,
+ "logical_calls": 4,
  "models": {
   "local": {
-   "errors": 1,
+   "errors": 0,
    "model": "qwen3:30b",
-   "ok": 2,
-   "requests": 3,
-   "tokens": 3428
+   "ok": 4,
+   "requests": 4,
+   "tokens": 4091
   }
  },
  "provider": "local",
- "requests": 3,
+ "requests": 4,
  "task_calls": {
-  "company_research": 3,
+  "company_research": 2,
   "discovery": 1,
   "quality": 1
  }

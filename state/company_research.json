@@ -1176,13 +1176,64 @@
  },
  "faros ai": {
   "aliases": [],
-  "attempts": 1,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 2,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "62027605b8"
+   ],
+   "value": "Sophisticated engineering teams from fast-growing technology companies to F500 enterprises."
+  },
+  "error": "",
   "evidence_sha": "d5db83c55ed4657c",
-  "last_attempt_at": 1784434893,
+  "generated_at": 1784442169,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "62027605b8"
+   ],
+   "value": "A top-tier AI or data science role that balances elite prestige and high new-grad pay with a fast, innovative tech culture rather than slow bureaucracy. A mission-driven company that actually respects work-life balance through sane hours and guaranteed shutdowns, avoiding toxic or high-burnout environments. A place that accelerates technical learning and career growth without sacrificing personal time."
+  },
+  "last_attempt_at": 1784442169,
   "last_evidence_at": 1784422709,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "62027605b8"
+   ],
+   "value": "To define how enterprises operate AI engineering, with a focus on visibility, control, and optimization of AI outcomes."
+  },
   "name": "Faros AI",
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "62027605b8"
+   ],
+   "value": "Faros AI platform for visibility and control in AI engineering, enabling teams to see what their AI investment ships, diagnose issues, and tune continuously."
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789626169,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "9ed9dd21875a139f",
@@ -1195,7 +1246,34 @@
     "url": "https://jobs.ashbyhq.com/faros-ai/fbe569bd-2970-4c08-b5f0-20da6962dca2"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "62027605b8"
+   ],
+   "value": "Faros AI provides engineering leaders with visibility and control over AI engineering outcomes, managing costs and ensuring compliance with policies. The company focuses on optimizing AI investments and diagnosing bottlenecks in AI development."
+  },
+  "synthesized_evidence_sha": "d5db83c55ed4657c",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "62027605b8"
+   ],
+   "value": "AI engineering visibility, control, cost management, and policy compliance for engineering teams."
+  },
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "62027605b8"
+   ],
+   "value": "A top-tier AI role with elite prestige and high new-grad pay in a fast, innovative tech culture. Mission-driven with respect for work-life balance through sane hours and guaranteed shutdowns, avoiding toxic environments. Accelerates technical learning and career growth without sacrificing personal time."
+  }
  },
  "fuze health": {
   "aliases": [],
@@ -3504,10 +3582,62 @@
  },
  "simpson strong tie": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "de4b96f23939cb08",
+  "generated_at": 1784442169,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "b10aed1d5a"
+   ],
+   "value": "Solid C#/.NET fundamentals and familiarity with desktop app patterns (WPF/WinForms) or strong OOP skills, as specified in the job posting."
+  },
+  "last_attempt_at": 1784442169,
   "last_evidence_at": 1784422709,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "b10aed1d5a"
+   ],
+   "value": "Plano, TX (based on the job posting location for the Software Engineer Associate role)"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Simpson Strong-Tie",
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "b10aed1d5a"
+   ],
+   "value": "Engineered structural connectors, software, and solutions for the building industry"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789626169,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "07a8e1f8a990e7b5",
@@ -3520,7 +3650,32 @@
     "url": "https://strongtie.wd1.myworkdayjobs.com/en-US/External/job/Plano-TX/Associate-Software-Engineer---Cloud-Services---API-Platform--C--Azure-track-_R7829"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "b10aed1d5a"
+   ],
+   "value": "Simpson Strong-Tie is a leader in engineered structural connectors, software, and solutions for the building industry, operating since 1956 with a focus on trusted manufacturing and corporate citizenship. The company emphasizes its 9 Principles of Business as core values."
+  },
+  "synthesized_evidence_sha": "de4b96f23939cb08",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "b10aed1d5a"
+   ],
+   "value": "Solid C#/.NET fundamentals and familiarity with desktop app patterns (WPF/WinForms) or strong OOP skills, as mentioned in the job posting for a Software Engineer Associate role."
+  },
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  }
  },
  "snowflake": {
   "aliases": [],
