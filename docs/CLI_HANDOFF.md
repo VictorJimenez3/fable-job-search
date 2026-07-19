@@ -80,7 +80,9 @@ Before changing the radar, read these in order:
   mark marquee roles as competitive. `regate()`
   runs at the top of every crawl and re-applies rule bumps
   (`score.RULES_VERSION`, records carry `rules_v` + `explicit_new_grad`)
-  to stored jobs; manual commands: `python -m radar.main regate` /
+  to stored jobs; `python -m radar.main rescore` fully rebuilds every stored
+  score after a profile-priority change, while `regate` only refreshes gates;
+  manual commands: `python -m radar.main regate` /
   `repair-feedback`. The taste model filters `FEEDBACK_STOPWORDS`. The
   marquee list is duplicated in `webapp/index.html` (`S.marquee`) — keep
   both copies in sync.

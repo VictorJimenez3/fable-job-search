@@ -31,7 +31,11 @@ def render_dashboard(jobs: dict, registry: dict, runs: list) -> str:
     rows = [j for j in jobs.values()
             if j["score"] >= p["thresholds"]["dashboard"]
             and (j.get("posted_at") or j.get("first_seen", now)) >= cutoff]
-    rows.sort(key=lambda j: (-j["score"], -(j.get("posted_at") or 0)))
+    # Alert-eligible roles are the actual user-facing matches. Dashboard-only
+    # roles remain available for audit/context, but raw score alone must not
+    # let an off-field or experienced role outrank a qualified new-grad role.
+    rows.sort(key=lambda j: (0 if j.get("alert_ok") else 1,
+                             -j["score"], -(j.get("posted_at") or 0)))
     rows = rows[:150]
 
     active = sum(1 for e in registry.values() if e["status"] == "active")

@@ -500,6 +500,55 @@ def regate_cmd() -> int:
     return 0
 
 
+def rescore_cmd() -> int:
+    """Rebuild every stored job score and eligibility decision in place.
+
+    Unlike ``regate``, this is a deliberate full-board repair after profile or
+    scoring-priority changes. It preserves the posting and quality evidence,
+    then reapplies their audited demotions after deterministic scoring.
+    """
+    from . import culture, posting, quality
+    import radar.score as score_mod
+
+    jobs_state = state.jobs()
+    fb = state.feedback()
+    culture.write_outputs()
+    score_mod._CULTURE_CACHE = None
+    now = int(time.time())
+    changed = 0
+    alerts = 0
+    for rec in jobs_state.values():
+        if rec.get("closed_at"):
+            continue
+        job = Job(company=rec.get("company", ""), title=rec.get("title", ""),
+                  url=rec.get("url", ""), source=rec.get("source", ""),
+                  locations=rec.get("locations", []), salary=rec.get("salary", ""),
+                  remote=bool(rec.get("remote")), posted_at=rec.get("posted_at"),
+                  ats=rec.get("ats", ""), sector=rec.get("sector", ""))
+        keep, alert_eligible, gate_reasons = gates(job)
+        score(job, fb, now)
+        job.score_reasons += gate_reasons
+        rec["score"] = job.score
+        rec["score_reasons"] = job.score_reasons
+        rec["alert_ok"] = bool(keep and alert_eligible)
+        rec["explicit_new_grad"] = explicit_new_grad(job.title)
+        rec["rules_v"] = RULES_VERSION
+        if rec.get("quality"):
+            quality.reapply(rec)
+        if rec.get("posting"):
+            posting.reapply(rec)
+        changed += 1
+        alerts += rec["alert_ok"] and rec["score"] >= profile()["thresholds"]["alert"]
+
+    state.save("jobs.json", jobs_state)
+    registry = state.companies()
+    runs = state.load("runs.json", [])
+    alert_history = state.load("alert_history.json", [])
+    write_outputs(jobs_state, registry, runs, alert_history)
+    print(f"rescore: rebuilt {changed} stored jobs; {alerts} currently alert-eligible; docs refreshed")
+    return 0
+
+
 def repair_feedback() -> int:
     """One-time repair: drop learned token boosts that FEEDBACK_STOPWORDS now
     filters at read time (business/marketing/product/... plus location noise).
@@ -561,7 +610,7 @@ def main() -> None:
                                         "migrate-checkbox-applied", "promote-shortlist",
                                         "marquee-backfill", "reconcile-checkboxes",
                                         "daily-best", "master-board", "web-action", "enrich",
-                                        "regate", "repair-feedback"])
+                                        "regate", "rescore", "repair-feedback"])
     args = ap.parse_args()
     if args.command == "crawl":
         sys.exit(crawl())
@@ -607,6 +656,8 @@ def main() -> None:
         sys.exit(enrich())
     elif args.command == "regate":
         sys.exit(regate_cmd())
+    elif args.command == "rescore":
+        sys.exit(rescore_cmd())
     elif args.command == "repair-feedback":
         sys.exit(repair_feedback())
 
