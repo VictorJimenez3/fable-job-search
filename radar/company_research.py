@@ -73,7 +73,7 @@ def extract_excerpt(company: str, text: str, limit: int = 600) -> str:
             continue
         chosen.append(sentence)
         used += extra
-        if len(chosen) >= 4:
+        if len(chosen) >= 5:
             break
     return " ".join(chosen)
 

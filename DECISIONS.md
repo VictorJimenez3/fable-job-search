@@ -724,3 +724,7 @@ Actions requires an OAuth refresh token for unattended access, so code ships
 ready while activation remains an explicit user authorization step. Main and
 ChemE may share one tracker without cross-board corruption because both Notion
 and Sheets updates match stable IDs, not company names.
+
+## 45. Lowered quality threshold and increased company excerpt (2026-07-18)
+
+Lowered the minimum score threshold for the LLM quality pass from 60 to 40 to increase coverage beyond borderline cases. Increased the company research excerpt from 4 to 5 sentences to capture more relevant company information. Updated the user stories to reflect these improvements.

@@ -344,7 +344,7 @@ def _candidates(jobs_state: dict, now: int,
     real application time. SPA hosts (Workday/Oracle/Eightfold) are included
     since 2026-07-16 — fetch_posting_spa reads them via their JSON APIs."""
     priority_ids = priority_ids or set()
-    minimum = int(env("RADAR_QUALITY_MIN_SCORE", "60"))
+    minimum = int(env("RADAR_QUALITY_MIN_SCORE", "40"))
     rows = [r for r in jobs_state.values()
             if r.get("alert_ok")
             and r.get("score", 0) >= minimum

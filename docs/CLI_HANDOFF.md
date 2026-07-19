@@ -79,11 +79,15 @@ secret changes, OAuth activation, CV content, and production pushes.
 ## Current operational facts (verified 2026-07-18)
 
 - **Concurrent work to preserve:** `radar/posting.py` and `tests/test_posting.py`
-  have existing uncommitted modifications, and `.backup`/`.backup2` copies are
+  have existing uncommitted modifications from another CLI, and `.backup`/`.backup2` copies are
   untracked (`radar/posting.py.backup`, `radar/posting.py.backup2`,
   `tests/test_posting.py.bak`). Their author/provenance is not yet recorded;
   do not overwrite, reset, delete, or attribute these files without first
   coordinating with the active CLI.
+  Additionally, the current session has modified `radar/company_research.py`,
+  `radar/quality.py` (staged for commit) and `docs/USER_STORIES.md` (not staged)
+  to implement user story improvements: lowered quality threshold to 40 and
+  increased company excerpt to 5 sentences.
 
 - GitHub Actions is the production runtime; it uses Python 3.12. On Victor's
   Mac, system Python is 3.9 but the repo's `.venv` has the dependencies —
