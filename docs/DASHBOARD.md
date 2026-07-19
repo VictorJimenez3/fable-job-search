@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-19 20:10 UTC** · companies polled directly: **780** (registry 910) · jobs tracked: **14374** · new this run: **3** · alerts this run: **0**_
+_Last run: **2026-07-19 21:09 UTC** · companies polled directly: **780** (registry 910) · jobs tracked: **14374** · new this run: **3** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -105,7 +105,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 62  | 20d | Wolverine Trading | [Entry-Level C++ Software Engineer](https://jobright.ai/jobs/info/6a433366cbf92c7bcd36ef0a?utm_campaign=Software%20Engineering&utm_source=1103) | Chicago, IL | fintech | jobright |
 | 61  | 3d | Cybernetic Labs | [Full-Stack Software Engineer New Grad - Product](https://jobs.ashbyhq.com/netic/bab5d1e5-e31b-42f0-9cef-334b1f17fed3/application?embed=true) | SF | other | simplify |
 | 61  | 4d | General Dynamics | [Entry Level Infrastructure Software Engineer](https://jobright.ai/jobs/info/6a582e0e9838a11e5d8373fb?utm_campaign=Software%20Engineering&utm_source=1103) | Pittsfield, MA, US | other | jobright |
-| 61  | 8d | Kustomer | [Software Engineer, Full Stack (Early Career)](https://jobs.ashbyhq.com/kustomer/4037272a-7fd3-4040-906b-47fde875a817) | US - New York, NY | other | ashby |
+| 61  | 9d | Kustomer | [Software Engineer, Full Stack (Early Career)](https://jobs.ashbyhq.com/kustomer/4037272a-7fd3-4040-906b-47fde875a817) | US - New York, NY | other | ashby |
 | 61  | 9d | Anduril Industries | [2026 Early Career Software Engineer](https://jobright.ai/jobs/info/6a50ef3f57513b72e0c62784?utm_campaign=Software%20Engineering&utm_source=1103) | Atlanta, Georgia, United States | other | jobright |
 | 61  | 9d | StubHub | [Software Engineer I - Open Distribution (New Grad)](https://jobright.ai/jobs/info/6a518d8802522b5b722e8e0c?utm_campaign=Software%20Engineering&utm_source=1103) | Los Angeles, California, United States | other | jobright |
 | 61  | 10d | Leidos Australia | [Entry Level Software Developer](https://jobright.ai/jobs/info/6a4fea1a1544d7246c0d6ff0?utm_campaign=Software%20Engineering&utm_source=1103) | St. Louis, Missouri, United States | other | jobright |

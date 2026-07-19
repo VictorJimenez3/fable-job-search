@@ -2720,13 +2720,62 @@
  },
  "jp morgan chase": {
   "aliases": [],
-  "attempts": 1,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "1e6f3b5278"
+   ],
+   "value": "Financial services firm generating revenue through investment banking, consumer and commercial banking, transaction processing, and asset management."
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "fb4ffdfb2dacfd00",
-  "last_attempt_at": 1784490566,
+  "generated_at": 1784495327,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "1e6f3b5278"
+   ],
+   "value": "Candidates should inquire directly about the pace of the tech culture, specific work hours and on-call expectations, guaranteed shutdown periods, and the practical balance between research-driven innovation and operational production demands, as none of these are addressed in the provided source."
+  },
+  "last_attempt_at": 1784495327,
   "last_evidence_at": 1784479880,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "JP Morgan Chase",
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "1e6f3b5278"
+   ],
+   "value": "Investment banking, consumer and small business banking, commercial banking, financial transaction processing, asset management, and internal AI research tools and platforms."
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789679327,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "641dc9902117c815",
@@ -2739,7 +2788,34 @@
     "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210760324"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1e6f3b5278"
+   ],
+   "value": "JP Morgan Chase is a leader in investment banking, consumer and small business banking, commercial banking, financial transaction processing and asset management with a history spanning over 200 years. The AI Research role focuses on deploying code to internal platforms and educating employees and students on research tools."
+  },
+  "synthesized_evidence_sha": "fb4ffdfb2dacfd00",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "1e6f3b5278"
+   ],
+   "value": "Deploying code to internal platforms in conjunction with production teams; educating employees and students on research tools and services built by the team."
+  },
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "1e6f3b5278"
+   ],
+   "value": "The role offers work on internal AI platforms at a prestigious, established financial leader. However, the posting does not confirm whether the culture is fast and innovative versus bureaucratic, nor does it provide any evidence regarding work-life balance, hours, shutdowns, or avoidance of burnout."
+  }
  },
  "kbr careers": {
   "aliases": [],
@@ -2953,10 +3029,68 @@
  },
  "mayo clinic": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "b6c41d3f1c"
+   ],
+   "value": "Nonprofit medical practice and medical research group."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "b6c41d3f1c"
+   ],
+   "value": "Patients seeking medical care."
+  },
+  "error": "",
   "evidence_sha": "7d9767d51f740076",
+  "generated_at": 1784495327,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "b6c41d3f1c"
+   ],
+   "value": "Evaluate the pace of innovation and technical learning in their IT infrastructure teams to ensure it meets your goal for fast, elite tech growth without bureaucratic slowdowns or burnout risk."
+  },
+  "last_attempt_at": 1784495327,
   "last_evidence_at": 1784491566,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "b6c41d3f1c"
+   ],
+   "value": "Rochester, MN with hybrid flexibility (remote and on-site work) for certain roles."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "b6c41d3f1c"
+   ],
+   "value": "Dedicated to patient care."
+  },
   "name": "Mayo Clinic",
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "b6c41d3f1c"
+   ],
+   "value": "Integrated health care, education, and research."
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789679327,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "73710f9df5b8cb1e",
@@ -2969,14 +3103,97 @@
     "url": "https://jobright.ai/jobs/info/6a5a2d3063a8f619507c5889?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "b6c41d3f1c"
+   ],
+   "value": "Mayo Clinic is a top-ranked nonprofit medical practice and medical research group focused on integrated health care, education, and research."
+  },
+  "synthesized_evidence_sha": "7d9767d51f740076",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "b6c41d3f1c"
+   ],
+   "value": "Includes IT roles such as Cloud Engineering and Cloud CMDB Steward maintaining cloud infrastructure and configuration management databases."
+  },
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "b6c41d3f1c"
+   ],
+   "value": "Offers a mission-driven environment dedicated to patient care, providing entry-level IT roles with competitive pay ($88K-$124K/yr) and hybrid work flexibility, aligning with your priority for sane hours and work-life balance."
+  }
  },
  "mayo clinic healthcare london": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "8cafd148ec"
+   ],
+   "value": "Healthcare facility operations."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "8cafd148ec"
+   ],
+   "value": "Patients in London seeking healthcare services."
+  },
+  "error": "",
   "evidence_sha": "ef217189550e658e",
+  "generated_at": 1784495327,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "8cafd148ec"
+   ],
+   "value": "Probe technical learning speed and career growth in cloud engineering, ensuring the role avoids slow bureaucracy. Clarify guaranteed shutdowns to confirm it avoids toxic, high-burnout environments."
+  },
+  "last_attempt_at": 1784495327,
   "last_evidence_at": 1784491566,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "8cafd148ec"
+   ],
+   "value": "London, with flexibility of both remote and on-site work."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Mayo Clinic Healthcare London",
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "8cafd148ec"
+   ],
+   "value": "World-leading medical expertise and healthcare services."
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789679327,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "c8a545f0a7cb520a",
@@ -2989,7 +3206,34 @@
     "url": "https://jobright.ai/jobs/info/6a5a34863ac7627fe9002ab4?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "8cafd148ec"
+   ],
+   "value": "Mayo Clinic Healthcare London is Mayo Clinic’s only facility outside the United States, bringing world-leading medical expertise to the heart of London."
+  },
+  "synthesized_evidence_sha": "ef217189550e658e",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "8cafd148ec"
+   ],
+   "value": "Open role for IT Assoc Cloud Engineer - IS-Mod - Cloud CMDB Steward. Skills mentioned include Cloud engineering, Azure, Google Cloud Platform (GCP), ITIL concepts, and Configuration Management."
+  },
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "8cafd148ec"
+   ],
+   "value": "The role aligns with a top-tier AI/data science priority by requiring cloud engineering across Azure and GCP, and offers remote flexibility which may suit a candidate seeking sane hours and personal time. However, the source confirms only medical prestige rather than elite tech culture."
+  }
  },
  "medpace": {
   "aliases": [],
@@ -6797,10 +7041,10 @@
  },
  "vertex": {
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "d4b6469588ddfad7",
-  "last_attempt_at": 1784490566,
+  "last_attempt_at": 1784495327,
   "last_evidence_at": 1784479880,
   "name": "Vertex",
   "schema_v": 1,
