@@ -13932,6 +13932,9 @@
    "Tallinn"
   ],
   "posted_at": 1782312770,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -46489,6 +46492,9 @@
    "Sunnyvale"
   ],
   "posted_at": 1782168140,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -59140,13 +59146,19 @@
   ],
   "posted_at": 1774469281,
   "posting": {
-   "analyzed_at": 1784419892,
+   "analyzed_at": 1784419913,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784419892,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784419913,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role, no experience required.",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -60493,6 +60505,15 @@
    "New York City"
   ],
   "posted_at": 1780810282,
+  "posting": {
+   "analyzed_at": 1784420004,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784420004,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -100963,8 +100984,9 @@
   "url": "https://jobright.ai/jobs/info/6a5267778576ec69c014bc17?utm_campaign=Data%20Analysis&utm_source=1103"
  },
  "3ecea8201548587c": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "lever",
+  "closed_at": 1784419959,
   "company": "Aledade",
   "description": "",
   "explicit_new_grad": true,
@@ -100975,6 +100997,11 @@
    "Remote, United States"
   ],
   "posted_at": 1782323180,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419959,
+   "live": false
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -100983,7 +101010,8 @@
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "remote +2"
+   "remote +2",
+   "quality: posting gone (link checked)"
   ],
   "sector": "other",
   "source": "lever",
@@ -101270,7 +101298,7 @@
   "url": "https://job-boards.greenhouse.io/thealleninstitute/jobs/7417128"
  },
  "3f02a3b4a5d7a364": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "greenhouse",
   "company": "TripAdvisor",
   "description": "",
@@ -101282,14 +101310,32 @@
    "Office "
   ],
   "posted_at": 1783020399,
+  "posting": {
+   "analyzed_at": 1784419991,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 3,
+   "years_note": "3+ years experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419991,
+   "live": true,
+   "new_grad": "no",
+   "reason": "3+ years experience required",
+   "role_family": "swe",
+   "years_required": 3
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 72,
+  "score": 52,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "new-grad title +12"
+   "new-grad title +12",
+   "posting: wants 3+ yrs (dashboard only)",
+   "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "other",
   "source": "greenhouse",
@@ -103301,9 +103347,6 @@
    "base 40",
    "role:swe +20",
    "sector:healthtech +16",
-   "seniority unclear (dashboard only)",
-   "re-gate v2: priority sector: healthtech (auto-alert)",
-   "posting: wants 3+ yrs (dashboard only)",
    "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "healthtech",
@@ -106036,6 +106079,20 @@
    "London"
   ],
   "posted_at": 1782821535,
+  "posting": {
+   "analyzed_at": 1784419952,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419952,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role with Kotlin experience required.",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -109603,6 +109660,23 @@
    "Nashville (Hybrid)"
   ],
   "posted_at": 1783542944,
+  "posting": {
+   "analyzed_at": 1784419968,
+   "fetched": true,
+   "intern_counts": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0–2 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419968,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role with 0-2 years experience required.",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -133999,13 +134073,19 @@
   ],
   "posted_at": 1774469282,
   "posting": {
-   "analyzed_at": 1784419891,
+   "analyzed_at": 1784419905,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784419891,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784419905,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for 2026 class",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -138269,6 +138349,20 @@
    "Boston, MA"
   ],
   "posted_at": 1783455176,
+  "posting": {
+   "analyzed_at": 1784419937,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419937,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for class of 2026",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -157228,7 +157322,9 @@
   ],
   "posted_at": 1776433484,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419905,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -209476,6 +209572,20 @@
    "Boston, MA"
   ],
   "posted_at": 1783455179,
+  "posting": {
+   "analyzed_at": 1784419983,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419983,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role for new grad.",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -215334,7 +215444,9 @@
   ],
   "posted_at": 1780334549,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419904,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
@@ -251462,6 +251574,20 @@
    "San Francisco, CA"
   ],
   "posted_at": 1777077834,
+  "posting": {
+   "analyzed_at": 1784419961,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419961,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level software engineer role",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -262852,6 +262978,15 @@
    "Colombo, Sri Lanka"
   ],
   "posted_at": 1781992440,
+  "posting": {
+   "analyzed_at": 1784420001,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784420001,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -271379,6 +271514,9 @@
    "Los Angeles, CA"
   ],
   "posted_at": 1781823535,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -279680,6 +279818,20 @@
    "Beaverton, OR, United States"
   ],
   "posted_at": 1783296000,
+  "posting": {
+   "analyzed_at": 1784419975,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419975,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level, new grad role",
+   "role_family": "security",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -285497,13 +285649,12 @@
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 68,
+  "score": 64,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <72h +6",
-   "remote +2",
-   "off-field title (dashboard only)"
+   "posted <7d +2",
+   "remote +2"
   ],
   "sector": "other",
   "source": "greenhouse",
@@ -303962,9 +304113,6 @@
    "base 40",
    "role:swe +20",
    "sector:healthtech +16",
-   "seniority unclear (dashboard only)",
-   "re-gate v2: priority sector: healthtech (auto-alert)",
-   "posting: wants 3+ yrs (dashboard only)",
    "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "healthtech",
@@ -314419,6 +314567,17 @@
    "New York, New York, United States, San Francisco, California, United States"
   ],
   "posted_at": 1781383631,
+  "posting": {
+   "analyzed_at": 1784420003,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0–1 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784420003,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -314528,7 +314687,9 @@
   ],
   "posted_at": 1783966160,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419936,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -321654,6 +321815,20 @@
    "Harrogate, England (Vocalink)"
   ],
   "posted_at": 1783416749,
+  "posting": {
+   "analyzed_at": 1784419945,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419945,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level support role for new grads",
+   "role_family": "other-technical",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -324449,6 +324624,9 @@
    "Burlington Massachusetts"
   ],
   "posted_at": 1781775117,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -342039,6 +342217,9 @@
    "San Francisco"
   ],
   "posted_at": 1780549150,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -353224,6 +353405,15 @@
    "3 Locations"
   ],
   "posted_at": 1782843244,
+  "posting": {
+   "analyzed_at": 1784419999,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784419999,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -391054,24 +391244,31 @@
   ],
   "posted_at": 1784031556,
   "posting": {
-   "analyzed_at": 1784419892,
+   "analyzed_at": 1784419921,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "must be a U.S. citizen"
   },
   "quality": {
    "ai_deferred_at": 1784419892,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784419921,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1-3 years required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 74,
+  "score": 64,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "posted <7d +2"
+   "posted <7d +2",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "greenhouse",
@@ -394788,24 +394985,31 @@
   ],
   "posted_at": 1784031556,
   "posting": {
-   "analyzed_at": 1784419893,
+   "analyzed_at": 1784419929,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "must be a U.S. citizen"
   },
   "quality": {
    "ai_deferred_at": 1784419893,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784419929,
+   "live": true,
+   "new_grad": "no",
+   "reason": "1-3 years required",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 74,
+  "score": 64,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "posted <7d +2"
+   "posted <7d +2",
+   "quality: wants 1+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "greenhouse",
