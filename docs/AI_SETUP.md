@@ -26,10 +26,13 @@ credits, and this radar does not need an OpenAI key.
 
 ## Routing and limits
 
-`radar/llm.py` makes one logical request and tries at most two healthy
-providers. It retries a transient response once, honors `Retry-After` (capped),
-then falls through. 401/403/404, rate limits, empty answers, and invalid schemas
-open task-local cooldowns instead of being hammered repeatedly.
+`radar/llm.py` makes one logical request and probes both configured lanes — local
+Ollama and hosted/API — when both exist. The first valid answer is selected, but
+the other lane is still attempted and logged. Within the hosted lane it tries at
+most two healthy providers. It retries a transient response once, honors
+`Retry-After` (capped), then falls through. 401/403/404, rate limits, empty
+answers, and invalid schemas open task-local cooldowns instead of being hammered
+repeatedly.
 
 | Task | Preferred order | Default output cap |
 |---|---|---|
@@ -49,6 +52,8 @@ Cloud budgets:
   3 company briefs;
 - ChemE nightly enrich: 8 logical calls, 12 provider requests, 3 quality jobs,
   3 company briefs;
+- local two-lane runs default to 24 provider requests so all 12 logical calls
+  can probe both Ollama and hosted/API when both are configured;
 - explicit pasted JDs and tracked roles are processed ahead of cold backlog;
 - the four keys are not exposed to the 30-minute crawl, so usage cannot scale
   with the number of postings found.
@@ -66,7 +71,9 @@ availability warnings as long as another model is healthy.
 
 Run **enrich** for the main board or **cheme-enrich** for ChemE. The platform's
 AI tab reads `state/ai_usage.json` and shows task counts, model successes/errors,
-reported tokens, and the hard budget. Telemetry never stores prompts or keys.
+reported tokens, and the hard budget. Each attempt records its lane (`local` or
+`api`), endpoint, status, latency, and whether it was selected; per-run attempt
+logs are retained in usage history. Telemetry never stores prompts or keys.
 
 ## Grounding rules
 

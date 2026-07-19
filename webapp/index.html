@@ -890,6 +890,10 @@ function rAI() {
         <div class="kv">${models.length?models.map(([name,m])=>
           `<span class="k">${esc(name)}</span><span>${m.ok||0}/${m.requests||0} OK · ${m.errors||0} fallbacks/errors · ${m.tokens||0} reported tokens</span>`).join(""):
           '<span class="sub">No hosted/local requests recorded yet.</span>'}</div></div>
+      <div class="lane"><h3>Attempt log · latest run</h3>
+        <div class="kv">${(usage.events||[]).slice(-12).reverse().map(e=>
+          `<span class="k">${esc(e.at||"")} · ${esc(e.lane||"?")}</span><span>${esc(e.endpoint||"router")} · ${esc(e.status||"?")}${e.selected?" · selected":""}${e.detail?" · "+esc(e.detail):""}</span>`).join("") ||
+          '<span class="sub">No attempts recorded yet.</span>'}</div></div>
       <div class="lane"><h3>Enrichment coverage</h3>
         <div class="kv">
           <span class="k">AI-reviewed postings</span><span>${withVerdict} / ${jobs.length}</span>

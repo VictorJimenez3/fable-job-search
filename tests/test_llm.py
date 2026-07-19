@@ -29,6 +29,29 @@ def test_local_ollama_uses_native_api_and_unloads(monkeypatch):
     assert seen["body"]["options"]["num_predict"] == 123
 
 
+def test_both_local_and_api_lanes_are_probed_and_local_is_selected(monkeypatch):
+    monkeypatch.setenv("LLM_BASE_URL", "http://localhost:11434/v1")
+    monkeypatch.setenv("LLM_MODEL", "qwen3:30b")
+    monkeypatch.setenv("NVIDIA_GLM_52_API_KEY", "glm-secret")
+    monkeypatch.setenv("NVIDIA_GLM_52_MODEL", "z-ai/glm-5.2")
+    monkeypatch.setenv("RADAR_AI_PROVIDER_ATTEMPTS", "1")
+    seen = []
+
+    def post(url, **kwargs):
+        seen.append(url)
+        if url.endswith("/api/chat"):
+            return Response()
+        return _Resp(200)
+
+    monkeypatch.setattr(llm.requests, "post", post)
+    assert llm.complete("use both", task="quality") == "useful answer"
+    report = llm.usage_report()
+    assert seen == ["http://localhost:11434/api/chat",
+                    "https://integrate.api.nvidia.com/v1/chat/completions"]
+    assert {e["lane"] for e in report["events"] if e["status"] == "ok"} == {"local", "api"}
+    assert sum(1 for e in report["events"] if e.get("selected")) == 1
+
+
 def test_non_ollama_compat_url_remains_supported(monkeypatch):
     monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
     monkeypatch.setenv("LLM_BASE_URL", "https://example.test/v1")

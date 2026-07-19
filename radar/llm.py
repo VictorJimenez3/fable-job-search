@@ -182,6 +182,10 @@ def provider() -> str | None:
     eps = _endpoints("general")
     if not eps:
         return None
+    has_local = any(_is_local(ep.base_url) for ep in eps)
+    has_api = any(not _is_local(ep.base_url) for ep in eps)
+    if has_local and has_api:
+        return "local + api-router"
     if any(ep.name.startswith("nvidia:") for ep in eps):
         return "nvidia-router"
     return eps[0].name
@@ -212,7 +216,7 @@ def _post_with_retry(url: str, *, timeout: int, json: dict,
 def _reserve_request() -> None:
     """Count the actual HTTP send, including transport retries."""
     global _requests
-    maximum = _int_env("RADAR_AI_MAX_REQUESTS", 18)
+    maximum = _int_env("RADAR_AI_MAX_REQUESTS", 24)
     if _requests >= maximum:
         raise BudgetFailure("per-run provider request budget reached")
     _requests += 1
@@ -288,12 +292,14 @@ def _call(ep: Endpoint, prompt: str, max_tokens: int, timeout: int,
 
 def _record(task: str, ep: Endpoint | None, status: str, started: float,
             prompt: str, max_tokens: int, usage: dict | None = None,
-            detail: str = "") -> None:
+            detail: str = "") -> dict:
     usage = usage or {}
-    _events.append({
+    event = {
         "at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "task": task,
         "endpoint": ep.name if ep else "none",
+        "lane": ("local" if ep and _is_local(ep.base_url) else
+                  "api" if ep else "router"),
         "model": ep.model if ep else "",
         "status": status,
         "latency_ms": round((time.monotonic() - started) * 1000),
@@ -302,8 +308,10 @@ def _record(task: str, ep: Endpoint | None, status: str, started: float,
         "prompt_tokens": usage.get("prompt_tokens") or usage.get("input_tokens") or 0,
         "completion_tokens": usage.get("completion_tokens") or usage.get("output_tokens") or 0,
         "detail": detail[:120],
-    })
+    }
+    _events.append(event)
     del _events[:-_EVENT_LIMIT]
+    return event
 
 
 def _cooldown(ep: Endpoint, status: int | None) -> None:
@@ -332,7 +340,7 @@ def complete(prompt: str, max_tokens: int = 2000, timeout: int = 180,
         return None
 
     max_calls = _int_env("RADAR_AI_MAX_CALLS", 12)
-    max_requests = _int_env("RADAR_AI_MAX_REQUESTS", 18)
+    max_requests = _int_env("RADAR_AI_MAX_REQUESTS", 24)
     if (_logical_calls >= max_calls or _task_calls.get(task, 0) >= _task_limit(task)
             or _requests >= max_requests):
         _record(task, None, "budget_skipped", time.monotonic(), prompt, max_tokens,
@@ -342,13 +350,22 @@ def complete(prompt: str, max_tokens: int = 2000, timeout: int = 180,
     _logical_calls += 1
     _task_calls[task] = _task_calls.get(task, 0) + 1
     provider_attempts = _int_env("RADAR_AI_PROVIDER_ATTEMPTS", 2, minimum=1)
-    tried = 0
+    # Local Ollama and hosted/API are independent health checks. Return the
+    # first valid answer, but probe both lanes so outages are visible.
+    lanes = {"local" if _is_local(ep.base_url) else "api" for ep in eps}
+    lane_success: set[str] = set()
+    api_attempts = 0
+    selected: dict | None = None
     for ep in eps:
-        if tried >= provider_attempts or _requests >= max_requests:
+        lane = "local" if _is_local(ep.base_url) else "api"
+        if lane in lane_success or _requests >= max_requests:
             break
+        if lane == "api" and api_attempts >= provider_attempts:
+            continue
         if _cooldowns.get(ep.name, 0) > time.monotonic():
             continue
-        tried += 1
+        if lane == "api":
+            api_attempts += 1
         started = time.monotonic()
         try:
             text, usage = _call(ep, prompt, max_tokens, timeout, json_mode)
@@ -358,8 +375,13 @@ def complete(prompt: str, max_tokens: int = 2000, timeout: int = 180,
                 _cooldown(ep, None)
                 continue
             if text:
-                _record(task, ep, "ok", started, prompt, max_tokens, usage)
-                return text
+                event = _record(task, ep, "ok", started, prompt, max_tokens, usage)
+                lane_success.add(lane)
+                if selected is None:
+                    selected = {"text": text, "event": event}
+                if lane_success >= lanes:
+                    break
+                continue
             _record(task, ep, "empty", started, prompt, max_tokens, usage)
             _cooldown(ep, None)
         except Exception as exc:
@@ -368,6 +390,9 @@ def complete(prompt: str, max_tokens: int = 2000, timeout: int = 180,
                     detail=f"{type(exc).__name__}: {exc}")
             _cooldown(ep, status)
             print(f"llm: {task} via {ep.name} failed; trying fallback: {exc}")
+    if selected:
+        selected["event"]["selected"] = True
+        return selected["text"]
     return None
 
 
@@ -389,7 +414,7 @@ def usage_report() -> dict:
         "generated_at": int(time.time()),
         "provider": provider(),
         "limits": {"logical_calls": _int_env("RADAR_AI_MAX_CALLS", 12),
-                   "requests": _int_env("RADAR_AI_MAX_REQUESTS", 18)},
+                   "requests": _int_env("RADAR_AI_MAX_REQUESTS", 24)},
         "logical_calls": _logical_calls,
         "requests": _requests,
         "task_calls": dict(sorted(_task_calls.items())),
@@ -407,6 +432,7 @@ def save_usage() -> dict:
     if report["logical_calls"] or report["events"]:
         history.append({k: report[k] for k in ("generated_at", "provider", "logical_calls",
                                                "requests", "task_calls", "models")})
+        history[-1]["attempts"] = report["events"]
     report["history"] = history[-30:]
     state.save("ai_usage.json", report)
     return report
