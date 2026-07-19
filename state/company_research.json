@@ -131,20 +131,25 @@
  },
  "amazon web services aws": {
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "business_model": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "c454ca38dc"
+   ],
+   "value": "AWS operates on a subscription-based model, offering cloud computing services through infrastructure as a service (IaaS), platform as a service (PaaS), and software as a service (SaaS) delivery models."
   },
   "customers": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "7b844791b3",
+    "c454ca38dc"
+   ],
+   "value": "AWS serves enterprise clients, government agencies (including US intelligence community), and individual developers through its cloud platform."
   },
   "error": "",
   "evidence_sha": "d790eb41abe80e6d",
-  "generated_at": 1784402660,
+  "generated_at": 1784449450,
   "generator": {
    "endpoint": "local",
    "model": "qwen3:30b",
@@ -153,32 +158,38 @@
   "interview_focus": {
    "confidence": "high",
    "source_ids": [
+    "7b844791b3",
     "c454ca38dc"
    ],
-   "value": "Technical learning and career growth without sacrificing personal time, as emphasized by the innovative tech culture and fast-paced environment."
+   "value": "Top applicants must demonstrate skills in Linux systems administration, security certifications (CND, Security+), and technical troubleshooting for security roles; for ML roles, focus on machine learning acceleration and silicon/software innovation."
   },
-  "last_attempt_at": 1784402660,
+  "last_attempt_at": 1784449450,
   "last_evidence_at": 1784444595,
   "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "c454ca38dc"
+   ],
+   "value": "Austin, TX (for the DFT Design Engineer role); AWS has global presence with offices worldwide, though specific locations not detailed in sources."
+  },
+  "mission": {
    "confidence": "high",
    "source_ids": [
     "c454ca38dc"
    ],
-   "value": "Austin, TX (onsite)"
-  },
-  "mission": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "value": "To be the world's most customer-centric company, providing reliable, scalable cloud services that enable businesses to innovate and grow."
   },
   "name": "Amazon Web Services (AWS)",
   "products": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "7b844791b3",
+    "c454ca38dc"
+   ],
+   "value": "AWS provides cloud infrastructure services including compute, storage, databases, and security services such as ADC System Security Engineering for government clients."
   },
   "prompt_v": 1,
-  "refresh_after": 1789586660,
+  "refresh_after": 1789633450,
   "schema_v": 1,
   "size_stage": {
    "confidence": "high",
@@ -214,30 +225,32 @@
    "source_ids": [
     "c454ca38dc"
    ],
-   "value": "H1B Sponsorship available"
+   "value": "AWS offers H1B sponsorship for eligible roles, as stated in the DFT Design Engineer I job posting."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "c454ca38dc"
+    "c454ca38dc",
+    "7b844791b3"
    ],
-   "value": "AWS is a leading cloud platform innovating in silicon and software solutions, founded in 2002 in Seattle, Washington, with over 10,000 employees."
+   "value": "AWS is a leading cloud computing platform offering infrastructure as a service, software as a service, and platform as a service solutions. The company focuses on innovation in technology and security services for enterprise and government clients."
   },
-  "synthesized_evidence_sha": "41b6d5fba9872cda",
+  "synthesized_evidence_sha": "d790eb41abe80e6d",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "7b844791b3",
     "c454ca38dc"
    ],
-   "value": "Silicon and software solutions for machine learning acceleration"
+   "value": "Developing and maintaining cloud infrastructure, security services, machine learning acceleration solutions, and silicon-based hardware for cloud platforms."
   },
   "why_it_matters": {
    "confidence": "high",
    "source_ids": [
     "c454ca38dc"
    ],
-   "value": "A top-tier AI or data science role with high new-grad pay ($104K-$185K/yr) in a fast, innovative tech culture, avoiding slow bureaucracy; mission-driven with respect for work-life balance through sane hours and guaranteed shutdowns, avoiding toxic environments."
+   "value": "AWS provides elite prestige as a leading cloud provider, with high compensation for new graduates in technical roles, fast-paced innovation in AI and data science, and a mission-driven focus on customer-centric cloud solutions."
   }
  },
  "amigo ai": {
@@ -1000,7 +1013,7 @@
  },
  "clera": {
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -1011,11 +1024,11 @@
    "source_ids": [
     "dd39e71ac4"
    ],
-   "value": "Large enterprise organizations (mentioned in Product Engineer role description)."
+   "value": "Large enterprise organizations"
   },
   "error": "",
   "evidence_sha": "87b63c777b19831b",
-  "generated_at": 1784427647,
+  "generated_at": 1784449450,
   "generator": {
    "endpoint": "local",
    "model": "qwen3:30b",
@@ -1024,11 +1037,12 @@
   "interview_focus": {
    "confidence": "high",
    "source_ids": [
-    "b8d5c10bde"
+    "b8d5c10bde",
+    "dd39e71ac4"
    ],
-   "value": "Comfort working with formal systems, symbolic reasoning, or verification methods (Research Scientist/Research Engineer role)."
+   "value": "Technical skills in formal systems, symbolic reasoning, or verification methods; ability to work with AI models and optimize codebases."
   },
-  "last_attempt_at": 1784427647,
+  "last_attempt_at": 1784449450,
   "last_evidence_at": 1784444595,
   "locations": {
    "confidence": "unknown",
@@ -1036,27 +1050,30 @@
    "value": "Not confirmed"
   },
   "mission": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "b8d5c10bde"
+   ],
+   "value": "To build 'correct by construction' training data for cutting-edge AI models using formal verification systems."
   },
   "name": "Clera",
   "products": {
    "confidence": "high",
    "source_ids": [
-    "b8d5c10bde"
+    "b8d5c10bde",
+    "dd39e71ac4"
    ],
-   "value": "Training data for AI models grounded in formal verification systems, described as 'correct by construction'."
+   "value": "Training data for AI models verified via formal systems, AI-powered features for enterprise adoption."
   },
   "prompt_v": 1,
-  "refresh_after": 1789611647,
+  "refresh_after": 1789633450,
   "schema_v": 1,
   "size_stage": {
    "confidence": "high",
    "source_ids": [
     "dd39e71ac4"
    ],
-   "value": "Early-stage (mentioned in Product Engineer role description as 'an early-stage opportunity')."
+   "value": "Early-stage"
   },
   "sources": [
    {
@@ -1093,29 +1110,30 @@
   "sponsorship_context": {
    "confidence": "high",
    "source_ids": [
+    "a01f23a958",
     "b8d5c10bde",
-    "dd39e71ac4",
-    "9a713bf4fe"
+    "dd39e71ac4"
    ],
-   "value": "Visa sponsorship is available for Product Engineer role but not for Research Scientist/Research Engineer (must be legally eligible to work in the US without sponsorship) or Sales Development Representative roles."
+   "value": "Visa sponsorship available for some roles (Product Engineer), not available for others (Frontend Engineer, Research Scientist)."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "a01f23a958",
     "b8d5c10bde",
-    "dd39e71ac4",
-    "9a713bf4fe"
+    "dd39e71ac4"
    ],
-   "value": "Clera is a company focused on building 'correct by construction' training data for AI models using formal verification systems, with roles in research, product engineering, and sales development."
+   "value": "Clera is an early-stage AI company focused on developing 'correct by construction' training data for AI models using formal verification systems, targeting enterprise customers with AI-powered capabilities."
   },
-  "synthesized_evidence_sha": "09057e2a3b355174",
+  "synthesized_evidence_sha": "87b63c777b19831b",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "b8d5c10bde"
+    "b8d5c10bde",
+    "dd39e71ac4"
    ],
-   "value": "Building 'correct by construction' training data for AI models using formal verification systems; working with formal systems, symbolic reasoning, or verification methods."
+   "value": "Developing training data using formal verification systems, symbolic reasoning, and working with AI models; maintaining and optimizing codebases for performance."
   },
   "why_it_matters": {
    "confidence": "unknown",
@@ -4021,24 +4039,26 @@
  },
  "spacex": {
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "253eff53ad"
+    "87e3c23527",
+    "5a6d0993f4"
    ],
-   "value": "Selling space launch services, satellite internet subscriptions, and developing spacecraft for government and commercial clients."
+   "value": "Launch services for government and commercial clients, satellite internet (Starlink), and spacecraft development."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "253eff53ad"
+    "87e3c23527",
+    "5a6d0993f4"
    ],
-   "value": "Government agencies (NASA, DoD), commercial satellite operators, consumers (Starlink internet service)"
+   "value": "Starlink users (millions of customers), government and commercial clients for rocket launches and spacecraft services"
   },
   "error": "",
   "evidence_sha": "1b06936381e28f7a",
-  "generated_at": 1784401880,
+  "generated_at": 1784449450,
   "generator": {
    "endpoint": "local",
    "model": "qwen3:30b",
@@ -4047,43 +4067,44 @@
   "interview_focus": {
    "confidence": "high",
    "source_ids": [
-    "253eff53ad"
+    "9fae95d943"
    ],
-   "value": "Focus on technical problem-solving, innovation in hardware testing and automation, and alignment with SpaceX's mission of making life multiplanetary."
+   "value": "Top skills include telemetry systems, real-time analytics, Python, Go, Java; emphasizes innovative problem-solving for space technology."
   },
-  "last_attempt_at": 1784401880,
+  "last_attempt_at": 1784449450,
   "last_evidence_at": 1784444595,
   "locations": {
-   "confidence": "high",
-   "source_ids": [
-    "253eff53ad"
-   ],
-   "value": "Redmond, WA (Starlink headquarters), Hawthorne, CA, Boca Chica, TX, and other global locations"
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "253eff53ad"
+    "87e3c23527",
+    "5a6d0993f4"
    ],
-   "value": "To make life multiplanetary by enabling humanity to become a spacefaring civilization."
+   "value": "Enable human life on Mars by making space exploration accessible and affordable."
   },
   "name": "SpaceX",
   "products": {
    "confidence": "high",
    "source_ids": [
-    "253eff53ad"
+    "87e3c23527",
+    "5a6d0993f4"
    ],
-   "value": "Starlink (satellite internet), Falcon rockets, Dragon spacecraft, Starship"
+   "value": "Starlink (satellite internet), rockets (Falcon 9, Falcon Heavy), spacecraft (Dragon)"
   },
   "prompt_v": 1,
-  "refresh_after": 1789585880,
+  "refresh_after": 1789633450,
   "schema_v": 1,
   "size_stage": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "253eff53ad"
+    "87e3c23527",
+    "5a6d0993f4"
    ],
-   "value": "Publicly traded company with over 10,000 employees as of 2023 (not confirmed by source, but standard industry knowledge)"
+   "value": "Large company with rapid growth, operating in multiple sectors of space technology."
   },
   "sources": [
    {
@@ -4126,24 +4147,28 @@
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "253eff53ad"
+    "87e3c23527",
+    "5a6d0993f4"
    ],
-   "value": "SpaceX is a space exploration and technology company founded to make life multiplanetary through sustainable space travel and satellite internet services."
+   "value": "SpaceX is a space exploration company focused on reducing space transportation costs and enabling human life on Mars."
   },
-  "synthesized_evidence_sha": "b9a924c750112150",
+  "synthesized_evidence_sha": "1b06936381e28f7a",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "253eff53ad"
+    "9fae95d943",
+    "87e3c23527",
+    "5a6d0993f4"
    ],
-   "value": "Developing software for hardware testing and automation, including Starlink satellite systems and rocket systems."
+   "value": "Developing Starlink user interfaces (mobile and web), telemetry systems, real-time analytics, and software for spacecraft operations."
   },
   "why_it_matters": {
    "confidence": "high",
    "source_ids": [
-    "253eff53ad"
+    "87e3c23527",
+    "5a6d0993f4"
    ],
-   "value": "SpaceX offers elite prestige and competitive pay for new graduates in AI/data science roles, with a fast-paced innovative culture emphasizing technical growth and mission-driven work."
+   "value": "A mission-driven company with elite prestige and innovative tech culture, focusing on real-world impact."
   }
  },
  "sprezzatura": {
