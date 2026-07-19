@@ -6001,6 +6001,9 @@
    "San Francisco"
   ],
   "posted_at": 1780635778,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -25414,6 +25417,9 @@
    "NYC Office"
   ],
   "posted_at": 1783963451,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -52896,6 +52902,9 @@
    "11 Locations"
   ],
   "posted_at": 1783985103,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -61649,6 +61658,9 @@
    "Nashville, Tennessee"
   ],
   "posted_at": 1783607998,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -70157,7 +70169,9 @@
   ],
   "posted_at": 1752597342,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419116,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -75149,7 +75163,9 @@
   ],
   "posted_at": 1738800848,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419118,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -89121,6 +89137,20 @@
    "New York, NY"
   ],
   "posted_at": 1625171097,
+  "posting": {
+   "analyzed_at": 1784419128,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419128,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New Grad role",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -100290,6 +100320,20 @@
    "New York, NY"
   ],
   "posted_at": 1656629416,
+  "posting": {
+   "analyzed_at": 1784419120,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419120,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New Grad position for CS student.",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -108539,6 +108583,22 @@
    "Charlotte, NC"
   ],
   "posted_at": 1783041321,
+  "posting": {
+   "analyzed_at": 1784419144,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0-3 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419144,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0-3 years, recent grads encouraged",
+   "role_family": "data",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -120677,7 +120737,7 @@
   "url": "https://jobs.ashbyhq.com/openai/c2aeb70d-3eca-4c4f-a414-6394b30fea80"
  },
  "4b612461a46b1b61": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "workday",
   "company": "BlackRock",
   "description": "",
@@ -120689,16 +120749,34 @@
    "Wilmington, DE"
   ],
   "posted_at": 1783972845,
+  "posting": {
+   "analyzed_at": 1784419168,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 4,
+   "years_note": "4 to 8 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419168,
+   "live": true,
+   "new_grad": "no",
+   "reason": "4-8 years exp required",
+   "role_family": "swe",
+   "years_required": 4
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 80,
+  "score": 60,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
    "posted <7d +2",
-   "title matches your history +6"
+   "title matches your history +6",
+   "posting: wants 4+ yrs (dashboard only)",
+   "quality: not new-grad (4+ yrs — LLM-verified) -20"
   ],
   "sector": "other",
   "source": "workday",
@@ -127962,7 +128040,9 @@
   ],
   "posted_at": 1752861935,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419116,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -151039,6 +151119,9 @@
    "San Francisco"
   ],
   "posted_at": 1761946725,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -179566,6 +179649,22 @@
    "Mountain View, California, United States"
   ],
   "posted_at": 1783382236,
+  "posting": {
+   "analyzed_at": 1784419136,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 2,
+   "years_note": "2 years of experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419136,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role for CS class of 2026",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -181101,7 +181200,9 @@
   ],
   "posted_at": 1739474482,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419118,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -202011,6 +202112,22 @@
    "Richardson, TX"
   ],
   "posted_at": 1782172494,
+  "posting": {
+   "analyzed_at": 1784419152,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 0,
+   "years_note": "0-2 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419152,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0-2 years, new grad welcome",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -204906,7 +205023,9 @@
   ],
   "posted_at": 1733855267,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419119,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
@@ -206615,7 +206734,9 @@
   ],
   "posted_at": 1731008665,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419119,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -238138,7 +238259,9 @@
   ],
   "posted_at": 1695767688,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419120,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -259784,7 +259907,9 @@
   ],
   "posted_at": 1753186523,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419115,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
@@ -277810,7 +277935,9 @@
   ],
   "posted_at": 1740674945,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419117,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -282528,6 +282655,9 @@
    "Remote, India"
   ],
   "posted_at": 1783596259,
+  "quality": {
+   "attempts": 1
+  },
   "remote": true,
   "rules_v": 3,
   "salary": "",
@@ -288968,7 +289098,7 @@
   "url": "https://job-boards.greenhouse.io/icapitalnetwork/jobs/8561276002"
  },
  "b49ddca87a47c7c7": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "workday",
   "company": "GSK",
   "description": "",
@@ -288980,15 +289110,33 @@
    "2 Locations"
   ],
   "posted_at": 1783665128,
+  "posting": {
+   "analyzed_at": 1784419177,
+   "fetched": true,
+   "sponsorship": "unknown",
+   "years_min": 5,
+   "years_note": "Minimum 5 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419177,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 5+ years experience",
+   "role_family": "data",
+   "years_required": 5
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 80,
+  "score": 60,
   "score_reasons": [
    "base 40",
    "role:data_eng +18",
    "sector:healthtech +16",
-   "title matches your history +6"
+   "title matches your history +6",
+   "posting: wants 5+ yrs (dashboard only)",
+   "quality: not new-grad (5+ yrs — LLM-verified) -20"
   ],
   "sector": "healthtech",
   "source": "workday",
@@ -306452,7 +306600,9 @@
   ],
   "posted_at": 1748580178,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419117,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -347944,7 +348094,9 @@
   ],
   "posted_at": 1750442741,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784419116,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
@@ -377491,7 +377643,7 @@
   "url": "https://astreya.wd5.myworkdayjobs.com/en-US/life-at-astreya-opportunities/job/New-York-NY/IT-Support-Specialist-II_R0015985"
  },
  "ed54246cd7f81000": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "greenhouse",
   "company": "Anthropic",
   "description": "",
@@ -377503,16 +377655,35 @@
    "San Francisco, CA | New York City, NY | Seattle, WA; Washington, DC"
   ],
   "posted_at": 1767999351,
+  "posting": {
+   "analyzed_at": 1784419159,
+   "fetched": true,
+   "sponsorship": "yes",
+   "sponsorship_note": "We do sponsor",
+   "years_min": 7,
+   "years_note": "7+ years of experience"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784419159,
+   "live": true,
+   "new_grad": "no",
+   "reason": "7+ years experience required",
+   "role_family": "security",
+   "years_required": 7
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 81,
+  "score": 61,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:ai_lab +11",
    "you've engaged with Anthropic +6",
-   "culture fit 80/100 +4"
+   "culture fit 80/100 +4",
+   "posting: wants 7+ yrs (dashboard only)",
+   "quality: not new-grad (7+ yrs — LLM-verified) -20"
   ],
   "sector": "ai_lab",
   "source": "greenhouse",
