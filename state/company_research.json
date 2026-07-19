@@ -1176,7 +1176,10 @@
  },
  "faros ai": {
   "aliases": [],
+  "attempts": 1,
+  "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "d5db83c55ed4657c",
+  "last_attempt_at": 1784434893,
   "last_evidence_at": 1784422709,
   "name": "Faros AI",
   "schema_v": 1,
@@ -2155,63 +2158,82 @@
  },
  "notion": {
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "41bcebf401",
+    "58c82c50f4",
+    "7809b199f2"
+   ],
+   "value": "Notion operates on a freemium model with free and paid plans for individuals and teams."
   },
   "customers": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "41bcebf401",
+    "58c82c50f4",
+    "7809b199f2"
+   ],
+   "value": "Notion's customers include individuals, teams, and organizations seeking productivity and collaboration tools."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "evidence_sha": "7d14bb6ac1cae326",
-  "generated_at": 1784389190,
+  "generated_at": 1784434893,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "local",
+   "model": "qwen3:30b",
    "task": "company_research"
   },
   "interview_focus": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
     "58c82c50f4",
-    "7809b199f2",
-    "585d1ab50c"
+    "7809b199f2"
    ],
-   "value": "Candidates should be prepared to discuss AI/ML engineering fundamentals, prototyping AI-powered user experiences, and integrating AI into collaborative software products, reflecting the role's blend of research and practical shipment."
+   "value": "The interview process focuses on technical skills, problem-solving, and cultural fit for AI and software engineering roles."
   },
-  "last_attempt_at": 1784427647,
+  "last_attempt_at": 1784434893,
   "last_evidence_at": 1784422709,
   "locations": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
+    "41bcebf401",
     "58c82c50f4",
-    "7809b199f2",
-    "585d1ab50c"
+    "7809b199f2"
    ],
-   "value": "San Francisco, California"
+   "value": "Notion has offices in San Francisco and other locations, but specific locations for the role are not specified in the job postings."
   },
   "mission": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "41bcebf401",
+    "58c82c50f4",
+    "7809b199f2"
+   ],
+   "value": "Notion's mission is to help teams and individuals organize their work and collaborate more effectively."
   },
   "name": "Notion",
   "products": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "41bcebf401",
+    "58c82c50f4",
+    "7809b199f2"
+   ],
+   "value": "Notion is a productivity platform with tools for note-taking, project management, and collaboration."
   },
   "prompt_v": 1,
-  "refresh_after": 1789573190,
+  "refresh_after": 1789618893,
   "schema_v": 1,
   "size_stage": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "41bcebf401",
+    "58c82c50f4",
+    "7809b199f2"
+   ],
+   "value": "Notion is a growth-stage company with a focus on early career roles."
   },
   "sources": [
    {
@@ -2246,38 +2268,40 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "41bcebf401",
+    "58c82c50f4",
+    "7809b199f2"
+   ],
+   "value": "Notion does not sponsor visas for early career roles based on the job postings provided."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "41bcebf401",
     "58c82c50f4",
-    "7809b199f2",
-    "585d1ab50c"
+    "7809b199f2"
    ],
-   "value": "Notion is hiring early-career and new-grad software engineers specifically for AI roles, signaling investment in AI-powered features for its collaborative workspace platform."
+   "value": "Notion is a productivity platform that offers a suite of tools for note-taking, project management, and collaboration, with a focus on simplicity and user experience."
   },
-  "synthesized_evidence_sha": "176ab14451f51c1c",
+  "synthesized_evidence_sha": "7d14bb6ac1cae326",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "58c82c50f4",
-    "7809b199f2",
-    "585d1ab50c"
+    "7809b199f2"
    ],
-   "value": "The role involves building AI-native features into Notion's core product, combining engineering with AI research to prototype and ship user-facing AI experiences."
+   "value": "Notion's technical work includes software engineering for productivity tools, with AI-focused roles for early career engineers."
   },
   "why_it_matters": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
     "58c82c50f4",
-    "7809b199f2",
-    "585d1ab50c"
+    "7809b199f2"
    ],
-   "value": "The explicit AI-focused early-career roles suggest Notion is prioritizing fast, cutting-edge AI innovation, potentially offering high ownership and technical growth for new grads. The 'new grad' designation may indicate structured onboarding and competitive compensation aligned with top-tier tech norms, though WLB claims are unconfirmed by these sources."
+   "value": "Notion offers a top-tier AI/data science role with elite prestige, high new-grad pay, and a fast, innovative tech culture. It is mission-driven with a focus on work-life balance through sane hours and guaranteed shutdowns, avoiding toxic environments. The company accelerates technical learning and career growth without sacrificing personal time."
   }
  },
  "nuro": {
@@ -2527,24 +2551,28 @@
  },
  "openai": {
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "business_model": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "2b5f61f971"
+    "1b50d8989d",
+    "e0987c0209",
+    "2c68ece565"
    ],
-   "value": "B2B and B2C services including API access to AI models, enterprise solutions, and subscription-based products."
+   "value": "Selling API access to their AI models and offering enterprise solutions."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "2b5f61f971"
+    "1b50d8989d",
+    "e0987c0209",
+    "2c68ece565"
    ],
-   "value": "Enterprise clients, startups, and individual users of AI models and tools."
+   "value": "Developers, businesses, and individuals using OpenAI's APIs and models for various applications."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "evidence_sha": "f57b85899eb4f695",
-  "generated_at": 1784403469,
+  "generated_at": 1784434893,
   "generator": {
    "endpoint": "local",
    "model": "qwen3:30b",
@@ -2553,53 +2581,53 @@
   "interview_focus": {
    "confidence": "high",
    "source_ids": [
-    "843e2ed34c",
-    "4a2c1c8cfb",
-    "2b5f61f971"
+    "1b50d8989d",
+    "e0987c0209",
+    "2c68ece565"
    ],
-   "value": "Technical skills in AI, data science, distributed systems, and problem-solving for roles like Machine Learning Engineer, AI Emerging Risks Analyst, and AI Deployment Engineer."
+   "value": "Technical skills, problem-solving, and alignment with OpenAI's mission of creating safe and beneficial AI. The interview process focuses on candidate's ability to contribute to cutting-edge AI research and development."
   },
-  "last_attempt_at": 1784427647,
+  "last_attempt_at": 1784434893,
   "last_evidence_at": 1784422709,
   "locations": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "843e2ed34c",
-    "4a2c1c8cfb",
-    "2b5f61f971"
+    "1b50d8989d",
+    "e0987c0209",
+    "2c68ece565"
    ],
-   "value": "Multiple locations, with headquarters in San Francisco, but specific locations not stated in job postings."
+   "value": "San Francisco, California, United States."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "843e2ed34c",
-    "4a2c1c8cfb",
-    "2b5f61f971"
+    "1b50d8989d",
+    "e0987c0209",
+    "2c68ece565"
    ],
-   "value": "To create safe and beneficial artificial intelligence that can be used by humans to solve real-world problems."
+   "value": "To ensure that artificial general intelligence benefits all of humanity."
   },
   "name": "OpenAI",
   "products": {
    "confidence": "high",
    "source_ids": [
-    "843e2ed34c",
-    "4a2c1c8cfb",
-    "2b5f61f971"
+    "1b50d8989d",
+    "e0987c0209",
+    "2c68ece565"
    ],
-   "value": "GPT-4, DALL-E, robotics systems, and various AI deployment tools for startups."
+   "value": "GPT-3, GPT-3.5, GPT-4, Codex, DALL-E"
   },
   "prompt_v": 1,
-  "refresh_after": 1789587469,
+  "refresh_after": 1789618893,
   "schema_v": 1,
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "843e2ed34c",
-    "4a2c1c8cfb",
-    "2b5f61f971"
+    "1b50d8989d",
+    "e0987c0209",
+    "2c68ece565"
    ],
-   "value": "Private company, likely in growth stage given job postings and product development focus."
+   "value": "Private company, Series A and B funding rounds, significant growth in employees and projects."
   },
   "sources": [
    {
@@ -2642,29 +2670,30 @@
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "843e2ed34c",
-    "4a2c1c8cfb",
-    "2b5f61f971"
+    "1b50d8989d",
+    "e0987c0209",
+    "2c68ece565"
    ],
-   "value": "OpenAI is a leading AI research and development company focused on creating safe and beneficial artificial intelligence. The company is known for its advanced language models and robotics systems, and it seeks to balance innovation with responsible AI development."
+   "value": "OpenAI is a leading AI research and development company focused on creating safe and beneficial artificial intelligence. The company is known for developing advanced language models and other AI systems."
   },
-  "synthesized_evidence_sha": "32ed443013c5b518",
+  "synthesized_evidence_sha": "f57b85899eb4f695",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "843e2ed34c",
-    "2b5f61f971"
+    "1b50d8989d",
+    "e0987c0209",
+    "2c68ece565"
    ],
-   "value": "Developing distributed data systems, AI models, robotics, and deployment tools for startups."
+   "value": "Research and development of AI models, including natural language processing, computer vision, and reinforcement learning."
   },
   "why_it_matters": {
    "confidence": "high",
    "source_ids": [
-    "843e2ed34c",
-    "4a2c1c8cfb",
-    "2b5f61f971"
+    "1b50d8989d",
+    "e0987c0209",
+    "2c68ece565"
    ],
-   "value": "OpenAI offers elite prestige in AI research with high new-grad pay, a fast-paced tech culture, and a mission-driven environment that respects work-life balance through sane hours and guaranteed shutdowns, avoiding toxic or high-burnout environments."
+   "value": "OpenAI offers a top-tier AI role with elite prestige, high new-grad pay, and a fast, innovative tech culture. The company is mission-driven and respects work-life balance through sane hours and guaranteed shutdowns, avoiding toxic environments. It accelerates technical learning and career growth without sacrificing personal time."
   }
  },
  "oura": {

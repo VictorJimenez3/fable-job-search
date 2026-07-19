@@ -1,53 +1,47 @@
 {
  "events": [
   {
-   "at": "2026-07-19T02:21:05+00:00",
-   "completion_tokens": 646,
+   "at": "2026-07-19T04:22:04+00:00",
+   "completion_tokens": 863,
    "detail": "",
    "endpoint": "local",
-   "latency_ms": 16710,
-   "max_tokens": 900,
-   "model": "qwen3:30b",
-   "prompt_chars": 3064,
-   "prompt_tokens": 758,
-   "status": "ok",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-07-19T02:21:28+00:00",
-   "completion_tokens": 896,
-   "detail": "task schema validation failed",
-   "endpoint": "local",
-   "latency_ms": 23397,
+   "latency_ms": 29499,
    "max_tokens": 900,
    "model": "qwen3:30b",
    "prompt_chars": 2094,
    "prompt_tokens": 585,
+   "status": "ok",
+   "task": "company_research"
+  },
+  {
+   "at": "2026-07-19T04:22:33+00:00",
+   "completion_tokens": 888,
+   "detail": "",
+   "endpoint": "local",
+   "latency_ms": 28946,
+   "max_tokens": 900,
+   "model": "qwen3:30b",
+   "prompt_chars": 2170,
+   "prompt_tokens": 602,
+   "status": "ok",
+   "task": "company_research"
+  },
+  {
+   "at": "2026-07-19T04:22:43+00:00",
+   "completion_tokens": 23,
+   "detail": "task schema validation failed",
+   "endpoint": "local",
+   "latency_ms": 10511,
+   "max_tokens": 900,
+   "model": "qwen3:30b",
+   "prompt_chars": 2064,
+   "prompt_tokens": 467,
    "status": "invalid",
    "task": "company_research"
   }
  ],
- "generated_at": 1784427690,
+ "generated_at": 1784434966,
  "history": [
-  {
-   "generated_at": 1784418416,
-   "logical_calls": 12,
-   "models": {
-    "local": {
-     "errors": 0,
-     "model": "qwen3:30b",
-     "ok": 12,
-     "requests": 12,
-     "tokens": 14555
-    }
-   },
-   "provider": "local",
-   "requests": 12,
-   "task_calls": {
-    "discovery": 1,
-    "quality": 11
-   }
-  },
   {
    "generated_at": 1784418501,
    "logical_calls": 6,
@@ -587,6 +581,26 @@
     "discovery": 1,
     "quality": 1
    }
+  },
+  {
+   "generated_at": 1784434966,
+   "logical_calls": 5,
+   "models": {
+    "local": {
+     "errors": 1,
+     "model": "qwen3:30b",
+     "ok": 2,
+     "requests": 3,
+     "tokens": 3428
+    }
+   },
+   "provider": "local",
+   "requests": 3,
+   "task_calls": {
+    "company_research": 3,
+    "discovery": 1,
+    "quality": 1
+   }
   }
  ],
  "limits": {
@@ -598,13 +612,13 @@
   "local": {
    "errors": 1,
    "model": "qwen3:30b",
-   "ok": 1,
-   "requests": 2,
-   "tokens": 2885
+   "ok": 2,
+   "requests": 3,
+   "tokens": 3428
   }
  },
  "provider": "local",
- "requests": 2,
+ "requests": 3,
  "task_calls": {
   "company_research": 3,
   "discovery": 1,
