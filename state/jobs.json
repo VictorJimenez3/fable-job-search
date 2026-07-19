@@ -42335,14 +42335,20 @@
   ],
   "posted_at": 1784246400,
   "posting": {
-   "analyzed_at": 1784449606,
+   "analyzed_at": 1784452985,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "without sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784449606,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784452985,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Early career Tech Catalyst Program for upcoming grads.",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -61544,7 +61550,7 @@
   ],
   "posted_at": 1784246400,
   "posting": {
-   "analyzed_at": 1784449609,
+   "analyzed_at": 1784453000,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 1,
@@ -61552,7 +61558,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784449609,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784453000,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level data role building SQL/ETL dashboards; only 1+ years required.",
+   "role_family": "data",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 3,
@@ -86991,7 +87003,7 @@
   "url": "https://fa-ewjt-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/16618"
  },
  "35bfdcff6dd7595e": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "The Hartford",
   "description": "",
@@ -87004,25 +87016,32 @@
   ],
   "posted_at": 1784246400,
   "posting": {
-   "analyzed_at": 1784449607,
+   "analyzed_at": 1784452991,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "without sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784449607,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784452991,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Text explicitly requires expected graduation of May 2027.",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 82,
+  "score": 62,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
    "posted <72h +6",
-   "title matches your history +4"
+   "title matches your history +4",
+   "quality: not new-grad (senior — LLM-verified) -20"
   ],
   "sector": "other",
   "source": "jobright",
@@ -107966,14 +107985,20 @@
   ],
   "posted_at": 1784246400,
   "posting": {
-   "analyzed_at": 1784449611,
+   "analyzed_at": 1784453009,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
   },
   "quality": {
    "ai_deferred_at": 1784449611,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784453009,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role, 0+ years exp, new grads ok.",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -187416,12 +187441,11 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 66,
+  "score": 62,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <72h +6",
-   "off-field title (dashboard only)"
+   "posted <7d +2"
   ],
   "sector": "other",
   "source": "smartrecruiters",
@@ -221777,13 +221801,12 @@
   "remote": true,
   "rules_v": 3,
   "salary": "",
-  "score": 68,
+  "score": 64,
   "score_reasons": [
    "base 40",
    "role:swe +20",
-   "posted <72h +6",
-   "remote +2",
-   "off-field title (dashboard only)"
+   "posted <7d +2",
+   "remote +2"
   ],
   "sector": "other",
   "source": "smartrecruiters",
@@ -302786,7 +302809,7 @@
   ],
   "posted_at": 1784246400,
   "posting": {
-   "analyzed_at": 1784449608,
+   "analyzed_at": 1784452994,
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only",
@@ -302795,18 +302818,25 @@
   },
   "quality": {
    "ai_deferred_at": 1784449608,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784452994,
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires 2 years of experience in full-stack development.",
+   "role_family": "swe",
+   "years_required": 2
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 80,
+  "score": 70,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "new-grad title +12",
    "posted <72h +6",
-   "title matches your history +2"
+   "title matches your history +2",
+   "quality: wants 2+ yrs (LLM-verified) -10"
   ],
   "sector": "other",
   "source": "jobright",
@@ -304177,7 +304207,7 @@
   "url": "https://job-boards.greenhouse.io/canonical/jobs/3137607"
  },
  "bc45ddcd45bd9728": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "InstaLILY AI",
   "description": "",
@@ -304190,7 +304220,7 @@
   ],
   "posted_at": 1784246400,
   "posting": {
-   "analyzed_at": 1784449610,
+   "analyzed_at": 1784453005,
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship",
@@ -304199,18 +304229,25 @@
   },
   "quality": {
    "ai_deferred_at": 1784449610,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784453005,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "GTM role focused on outbound sales and CRM automation, not engineering.",
+   "role_family": "non-technical",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 79,
+  "score": 54,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:ai_lab +11",
    "posted <72h +6",
-   "title matches your history +2"
+   "title matches your history +2",
+   "quality: non-technical role (GTM role focused on outbound sales and C — LLM-verified) -25"
   ],
   "sector": "ai_lab",
   "source": "jobright",
@@ -347858,12 +347895,12 @@
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 80,
+  "score": 76,
   "score_reasons": [
    "base 40",
    "role:swe +20",
    "sector:big_tech +10",
-   "posted <72h +6",
+   "posted <7d +2",
    "title matches your history +4"
   ],
   "sector": "big_tech",
