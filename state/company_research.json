@@ -2580,10 +2580,58 @@
  },
  "johnson johnson": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "56206b10960f82cb",
+  "generated_at": 1784483202,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784483202,
   "last_evidence_at": 1784476311,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "84327d2808"
+   ],
+   "value": "New Brunswick, New Jersey, United States"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Johnson & Johnson",
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789667202,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "255f59fa5710f6e8",
@@ -2596,7 +2644,34 @@
     "url": "https://jj.wd5.myworkdayjobs.com/en-US/JJ/job/New-Brunswick-New-Jersey-United-States-of-America/Class-of-2027-Technology-Leadership-Development-Program--TLDP-_R-088676"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "84327d2808"
+   ],
+   "value": "Requires permanent authorization to work in the U.S. without need for future sponsorship; CPT, OPT, or STEM OPT holders typically require sponsorship and do not meet requirements unless eligible for alternative long-term status."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "84327d2808"
+   ],
+   "value": "Johnson & Johnson is a global healthcare company focused on innovation and mission-driven work, offering a Technology Leadership Development Program for new graduates with a focus on leadership and technical development."
+  },
+  "synthesized_evidence_sha": "56206b10960f82cb",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "84327d2808"
+   ],
+   "value": "The program focuses on technology leadership development, including technical work in a fast, innovative tech culture with executive management involvement."
+  },
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  }
  },
  "jp morgan chase": {
   "aliases": [],
@@ -3674,24 +3749,26 @@
  },
  "nvidia": {
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "high",
    "source_ids": [
     "766728e261"
    ],
-   "value": "NVIDIA generates revenue through hardware sales (GPUs), software tools, and AI platform services, with a strategy of combining external EDA tools with internal optimizations."
+   "value": "Combining external EDA with internal EDA tools, leveraging AI and hardware innovation to provide solutions for AI, graphics, and simulation."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "45d46ed103"
+    "502f97a915",
+    "766728e261",
+    "813750a83c"
    ],
-   "value": "NVIDIA serves industries including gaming, finance, high-performance computing (HPC), and AI development through its GPUs and AI platforms."
+   "value": "Industry for AI workloads, EDA customers, gaming and graphics industries"
   },
   "error": "",
   "evidence_sha": "26f31898923ee5ec",
-  "generated_at": 1784390590,
+  "generated_at": 1784483202,
   "generator": {
    "endpoint": "local",
    "model": "qwen3:30b",
@@ -3702,48 +3779,43 @@
    "source_ids": [
     "813750a83c"
    ],
-   "value": "Interviews focus on hands-on experience with AI training, GPU architecture, and distributed systems, with a preference for candidates with experience in PyTorch, CUDA, and AI model optimization."
+   "value": "Technical expertise in AI, data science, and relevant tools (e.g., PyTorch, CUDA), hands-on experience with large-scale AI training, and problem-solving for complex technical challenges."
   },
-  "last_attempt_at": 1784390590,
+  "last_attempt_at": 1784483202,
   "last_evidence_at": 1784476311,
   "locations": {
    "confidence": "high",
    "source_ids": [
+    "502f97a915",
     "766728e261",
-    "813750a83c",
-    "45d46ed103"
+    "813750a83c"
    ],
-   "value": "NVIDIA has primary offices in Santa Clara, California, with job postings specifically for Santa Clara locations."
+   "value": "Santa Clara, CA (based on job postings)"
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "766728e261",
-    "45d46ed103"
+    "502f97a915"
    ],
-   "value": "NVIDIA is dedicated to advancing computing through visual and AI computing, with a focus on industry-leading hardware and software solutions."
+   "value": "To deliver industry-leading accelerated computing for the world’s most ambitious AI workloads, pushing progress and positively affecting millions of lives."
   },
   "name": "NVIDIA",
   "products": {
    "confidence": "high",
    "source_ids": [
+    "502f97a915",
     "766728e261",
-    "813750a83c",
-    "45d46ed103"
+    "813750a83c"
    ],
-   "value": "NVIDIA develops GPUs, AI computing platforms, and EDA tools for AI, graphics, and gaming applications."
+   "value": "DGX Cloud, EDA tools, AI for Graphics and Gaming solutions"
   },
   "prompt_v": 1,
-  "refresh_after": 1789574590,
+  "refresh_after": 1789667202,
   "schema_v": 1,
   "size_stage": {
-   "confidence": "medium",
-   "source_ids": [
-    "766728e261",
-    "813750a83c",
-    "45d46ed103"
-   ],
-   "value": "NVIDIA is a large, mature company with significant growth potential, as indicated by job postings for new graduates and expansion into AI and HPC markets."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -3786,28 +3858,26 @@
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "502f97a915",
     "766728e261",
-    "813750a83c",
-    "45d46ed103"
+    "813750a83c"
    ],
-   "value": "NVIDIA is a leading technology company specializing in AI, graphics processing, and high-performance computing, with a focus on innovative R&D roles for new graduates in AI, data science, and EDA engineering."
+   "value": "NVIDIA is a leading AI and accelerated computing company focused on innovation in hardware and software for AI, graphics, and simulation. The company emphasizes a supportive, forward-thinking engineering environment for new graduates, with a strong focus on cutting-edge AI and data science roles."
   },
-  "synthesized_evidence_sha": "e5416ffb3c9164c8",
+  "synthesized_evidence_sha": "26f31898923ee5ec",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "502f97a915",
     "766728e261",
-    "813750a83c",
-    "45d46ed103"
-   ],
-   "value": "Technical work includes developing EDA tools for RTL synthesis, optimizing AI models for GPU architectures, and deploying scalable AI solutions in production environments."
-  },
-  "why_it_matters": {
-   "confidence": "high",
-   "source_ids": [
     "813750a83c"
    ],
-   "value": "NVIDIA offers elite prestige in AI and data science through industry-leading hardware and software, with high new-grad pay and a fast, innovative culture. The company emphasizes AI tools in recruiting and focuses on visual and AI computing, aligning with candidate priorities."
+   "value": "Accelerated Kubernetes performance, RTL synthesis, digital logic optimization, generative AI for graphics and gaming, training large models on multi-GPU clusters."
+  },
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   }
  },
  "nvidia ai": {
@@ -4931,7 +5001,7 @@
  },
  "rtx": {
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -4944,7 +5014,7 @@
   },
   "error": "",
   "evidence_sha": "2fe23ee410f2faf5",
-  "generated_at": 1784475917,
+  "generated_at": 1784483202,
   "generator": {
    "endpoint": "local",
    "model": "qwen3:30b",
@@ -4953,18 +5023,21 @@
   "interview_focus": {
    "confidence": "high",
    "source_ids": [
-    "7e4880d1a3"
+    "60b95934dd",
+    "39667f4b3f"
    ],
-   "value": "Candidates should prepare to demonstrate technical skills relevant to software engineering for Space and RF Sensors, aligning with RTX's emphasis on innovation and technical excellence in aerospace and defense applications."
+   "value": "Self-motivation, team orientation, agility in fast-paced environments, and cross-functional collaboration skills are emphasized for success in RTX's tech roles."
   },
-  "last_attempt_at": 1784475917,
+  "last_attempt_at": 1784483202,
   "last_evidence_at": 1784476311,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "7e4880d1a3"
+    "85381f2414",
+    "60b95934dd",
+    "39667f4b3f"
    ],
-   "value": "El Segundo, CA (onsite)"
+   "value": "Arlington, VA (multiple locations mentioned: 108-1100 Wilson Blvd, Rosslyn HQ and 1000 Wilson Blvd, Wilson Fl-23)"
   },
   "mission": {
    "confidence": "unknown",
@@ -4978,7 +5051,7 @@
    "value": "Not confirmed"
   },
   "prompt_v": 1,
-  "refresh_after": 1789659917,
+  "refresh_after": 1789667202,
   "schema_v": 1,
   "size_stage": {
    "confidence": "unknown",
@@ -5026,24 +5099,29 @@
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "7e4880d1a3"
+    "85381f2414",
+    "60b95934dd",
+    "39667f4b3f"
    ],
-   "value": "RTX is a leading aerospace and defense company seeking a Software Engineer I for its Space and RF Sensors team in El Segundo, CA, offering a full-time onsite role with an entry-level salary range of $63K to $120K per year."
+   "value": "RTX is a major defense and aerospace company with a Leadership Development Program for new graduates in tech and engineering roles, emphasizing fast-paced innovation and cross-functional collaboration."
   },
-  "synthesized_evidence_sha": "ab449aff4bdc0175",
+  "synthesized_evidence_sha": "2fe23ee410f2faf5",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "7e4880d1a3"
+    "60b95934dd",
+    "39667f4b3f"
    ],
-   "value": "Software engineering for Space and RF Sensors team, including developing and maintaining software systems for aerospace and defense applications."
+   "value": "Fast-paced, dynamic technology and engineering environment with cross-functional collaboration on system requirements, architectural optimization, and hands-on experience in design, prototyping, and test environments."
   },
   "why_it_matters": {
    "confidence": "high",
    "source_ids": [
-    "7e4880d1a3"
+    "85381f2414",
+    "60b95934dd",
+    "39667f4b3f"
    ],
-   "value": "RTX offers a top-tier AI or data science role with elite prestige in aerospace and defense, balancing high new-grad pay ($63K-$120K) with a fast, innovative tech culture, as evidenced by the job posting's focus on software engineering for advanced systems."
+   "value": "RTX offers a top-tier AI/data science role through its Leadership Development Program, balancing elite prestige with high new-grad pay and a fast, innovative tech culture, avoiding slow bureaucracy. It emphasizes work-life balance with flexible work schedules and paid time off."
   }
  },
  "s c electric company": {
@@ -6739,36 +6817,6 @@
    ],
    "value": "A top-tier AI or data science role that balances elite prestige and high new-grad pay with a fast, innovative tech culture rather than slow bureaucracy. A mission-driven company that actually respects work-life balance through sane hours and guaranteed shutdowns, avoiding toxic or high-burnout environments. A place that accelerates technical learning and career growth without sacrificing personal time."
   }
- },
- "walmart": {
-  "aliases": [],
-  "evidence_sha": "cd2c26dfe7f21907",
-  "last_evidence_at": 1784481324,
-  "name": "Walmart",
-  "schema_v": 1,
-  "sources": [
-   {
-    "content_sha": "38fdae522e87552d",
-    "excerpt": "Walmart’s culture is a competitive advantage, and it’s fostered by being together. Paid time off benefits include PTO (including si The team fosters a culture of learning, innovation, and continuous improvement while building technologies that support Walmart&#39;s business objectives. About Walmart Global Tech Imagine working in an environment where one line of code can make life easier for hundreds of millions of people.",
-    "id": "d162b188c8",
-    "kind": "official_job",
-    "publisher": "Walmart",
-    "retrieved_at": 1784481324,
-    "title": "Official job posting — Software Engineer 3",
-    "url": "https://walmart.wd504.myworkdayjobs.com/WalmartExternal/job/Bentonville-AR/Software-Engineer-III_R-2556771"
-   },
-   {
-    "content_sha": "bded26a6ce6923ea",
-    "excerpt": "Paid time off benefits include PTO (including sick leave), parental leave, family care leave, bereavement, jury duty, and voting. You will also receive PTO and/or PPTO that can be used for vacation, sick leave, holidays, or other purposes. Focused on Walmart’s Everyday Low Prices philosophy, the team drives cost-effective solutions by optimizing processes and verticals. For information about PTO, see https://one.walmart.com/notices .",
-    "id": "c2d882b1f4",
-    "kind": "official_job",
-    "publisher": "Walmart",
-    "retrieved_at": 1784481324,
-    "title": "Official job posting — Software Engineer 3",
-    "url": "https://walmart.wd504.myworkdayjobs.com/WalmartExternal/job/USA-Crossman-Service-Building-CA-SUNNYVALE-Home-Office/XMLNAME--USA--Software-Engineer-III_R-2499802-1"
-   }
-  ],
-  "status": "evidence_only"
  },
  "welo global": {
   "aliases": [],
