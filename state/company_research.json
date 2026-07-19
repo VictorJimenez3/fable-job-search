@@ -962,7 +962,10 @@
  },
  "basis set": {
   "aliases": [],
+  "attempts": 1,
+  "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "a159a22be37717b7",
+  "last_attempt_at": 1784505063,
   "last_evidence_at": 1784461886,
   "name": "Basis Set",
   "schema_v": 1,
@@ -4886,10 +4889,62 @@
  },
  "pax": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "a1df09a030320315",
+  "generated_at": 1784505063,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "a4cefa4a0b"
+   ],
+   "value": "LLMs, API design, Backend architecture, Frontend UI, React"
+  },
+  "last_attempt_at": 1784505063,
   "last_evidence_at": 1784444595,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "a4cefa4a0b"
+   ],
+   "value": "San Francisco, California, USA"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Pax",
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789689063,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "a4cefa4a0b"
+   ],
+   "value": "2-10 employees"
+  },
   "sources": [
    {
     "content_sha": "61442d9abc542624",
@@ -4902,7 +4957,34 @@
     "url": "https://jobright.ai/jobs/info/6a5a58b54da96a42cfd95539?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "a4cefa4a0b"
+   ],
+   "value": "Pax has a track record of offering H1B sponsorships. Please note that this does not guarantee sponsorship for this specific role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a4cefa4a0b"
+   ],
+   "value": "Pax is a newly founded AI company based in San Francisco, California, with a team of 2-10 employees, offering H1B sponsorship for eligible candidates."
+  },
+  "synthesized_evidence_sha": "a1df09a030320315",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "a4cefa4a0b"
+   ],
+   "value": "LLMs, API design, Backend architecture, Frontend UI, React"
+  },
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  }
  },
  "pinterest": {
   "aliases": [],
@@ -7384,10 +7466,65 @@
  },
  "vanguard": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "2452d57aafa3da0b",
+  "generated_at": 1784505063,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "2b085d6a30",
+    "a556c8bea4"
+   ],
+   "value": "Mission-driven collaboration, technical skills for data & analytics or risk & security, and alignment with Vanguard's culture for long-term client outcomes and employee experience."
+  },
+  "last_attempt_at": 1784505063,
   "last_evidence_at": 1784476311,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "2b085d6a30",
+    "a556c8bea4"
+   ],
+   "value": "Malvern, PA (based on job posting location)"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "2b085d6a30",
+    "a556c8bea4"
+   ],
+   "value": "Support long-term client outcomes and enrich the employee experience through a mission-driven and highly collaborative culture."
+  },
   "name": "Vanguard",
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789689063,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "85c2bda59e00d67d",
@@ -7410,7 +7547,40 @@
     "url": "https://vanguard.wd5.myworkdayjobs.com/en-US/contractors_restricted/job/Malvern-PA/Technology-Leadership-Program---Risk---Security-Analyst--PA-_180077"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "2b085d6a30",
+    "a556c8bea4"
+   ],
+   "value": "Vanguard is not offering visa sponsorship for the Technology Leadership Program positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "2b085d6a30",
+    "a556c8bea4"
+   ],
+   "value": "Vanguard is a leading investment management company offering a Technology Leadership Program for new graduates in data science and analytics roles, emphasizing mission-driven work, collaborative culture, and competitive benefits."
+  },
+  "synthesized_evidence_sha": "2452d57aafa3da0b",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "2b085d6a30",
+    "a556c8bea4"
+   ],
+   "value": "Data & Analytics, Risk & Security roles within a two-year rotational development program for new graduates."
+  },
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "2b085d6a30",
+    "a556c8bea4"
+   ],
+   "value": "A top-tier AI or data science role with elite prestige, high new-grad pay, fast innovation culture, mission-driven work, and respect for work-life balance through sane hours and guaranteed shutdowns, avoiding burnout."
+  }
  },
  "veeva systems": {
   "aliases": [],

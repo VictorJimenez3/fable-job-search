@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-19 23:30 UTC** · companies polled directly: **781** (registry 911) · jobs tracked: **14395** · new this run: **17** · alerts this run: **0**_
+_Last run: **2026-07-19 23:51 UTC** · companies polled directly: **781** (registry 911) · jobs tracked: **14395** · new this run: **17** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -85,7 +85,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 64  | 6d | Akuna Capital University | [Entry Level Software Engineer - C++](https://www.akunacapital.com/careers/job/8013085/?gh_jid=8013085) | Chicago, IL | fintech | simplify |
 | 64  | 6d | Old Mission | [Software Engineer – 2027 Graduate Program (August Start)](https://jobright.ai/jobs/info/6a554bd84119652ff3864afd?utm_campaign=Software%20Engineering&utm_source=1103) | Chicago, IL, United States | other | jobright |
 | 64  | 8d | Lockheed Martin | [MLB Embedded S/W Engineer Asc - Early Career - Orlando, FL](https://jobright.ai/jobs/info/6a5272d0e726ec56126a321c?utm_campaign=Software%20Engineering&utm_source=1103) | Orlando, FL, United States | other | jobright |
-| 64  | 9d | Cadence Design Systems | [Software Engineer, New College Grad 2026 (Undergrads)](https://cadence.wd1.myworkdayjobs.com/en-US/University_Talent/job/Burlington-MA/Software-Engineer--New-College-Grad-2026--Undergrads-_R54894) | Burlington, MA | other | workday |
+| 64  | 10d | Cadence Design Systems | [Software Engineer, New College Grad 2026 (Undergrads)](https://cadence.wd1.myworkdayjobs.com/en-US/University_Talent/job/Burlington-MA/Software-Engineer--New-College-Grad-2026--Undergrads-_R54894) | Burlington, MA | other | workday |
 | 64  | 13d | General Motors | [Software Engineer AV HIL Platform and Services (Early Career))](https://generalmotors.wd5.myworkdayjobs.com/en-US/Careers_GM/job/Sunnyvale-California-United-States-of-America/Software-Engineer-AV-HIL-Platform-and-Services--University-Grad-_JR-202604577) | Sunnyvale, California, United States of  | other | workday |
 | 63  | 1d | Basis Set | [Software Engineer (Early Career)](https://jobright.ai/jobs/info/6a5bbe2f63a8f619507cbde8?utm_campaign=Software%20Engineering&utm_source=1103) | San Francisco, CA, United States | other | jobright |
 | 63  | 2d | Pax | [Software Engineer (Early Career)](https://jobright.ai/jobs/info/6a5a58b54da96a42cfd95539?utm_campaign=Software%20Engineering&utm_source=1103) | San Francisco, CA, United States | other | jobright |
