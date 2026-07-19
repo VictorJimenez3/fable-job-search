@@ -923,6 +923,15 @@
    "New York, NY"
   ],
   "posted_at": 1499466520,
+  "posting": {
+   "analyzed_at": 1784420101,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784420101,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -4922,6 +4931,20 @@
    "Sterling, Virginia, United States"
   ],
   "posted_at": 1780004861,
+  "posting": {
+   "analyzed_at": 1784420055,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784420055,
+   "live": true,
+   "new_grad": "unclear",
+   "reason": "Not a software role.",
+   "role_family": "other-technical",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -13933,7 +13956,9 @@
   ],
   "posted_at": 1782312770,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784420023,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -38848,6 +38873,15 @@
    "Jersey City, NJ"
   ],
   "posted_at": 1499985314,
+  "posting": {
+   "analyzed_at": 1784420098,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784420098,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -40772,6 +40806,15 @@
    "San Francisco, CA"
   ],
   "posted_at": 1504815276,
+  "posting": {
+   "analyzed_at": 1784420085,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784420085,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -46493,7 +46536,9 @@
   ],
   "posted_at": 1782168140,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784420015,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -60493,7 +60538,7 @@
   "url": "https://jabil.wd5.myworkdayjobs.com/en-US/Jabil_Careers/job/Mebane-NC/HR-Generalist-l--Manufacturing-_J2456988-1"
  },
  "253ec97731f25369": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "workday",
   "company": "Genentech",
   "description": "",
@@ -60506,22 +60551,29 @@
   ],
   "posted_at": 1780810282,
   "posting": {
-   "analyzed_at": 1784420004,
+   "analyzed_at": 1784420040,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784420004,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784420040,
+   "live": true,
+   "new_grad": "no",
+   "reason": "3+ years required",
+   "role_family": "swe",
+   "years_required": 3
   },
   "remote": false,
   "rules_v": 3,
   "salary": "",
-  "score": 72,
+  "score": 52,
   "score_reasons": [
    "base 40",
    "role:ai_ml +26",
-   "title matches your history +6"
+   "title matches your history +6",
+   "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "other",
   "source": "workday",
@@ -64102,6 +64154,20 @@
    "Arizona City, AZ"
   ],
   "posted_at": 1505250495,
+  "posting": {
+   "analyzed_at": 1784420072,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784420072,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, no experience required",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -101334,7 +101400,6 @@
    "base 40",
    "role:swe +20",
    "new-grad title +12",
-   "posting: wants 3+ yrs (dashboard only)",
    "quality: not new-grad (3+ yrs — LLM-verified) -20"
   ],
   "sector": "other",
@@ -166918,6 +166983,9 @@
    "NYC Office"
   ],
   "posted_at": 1772484390,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -169253,6 +169321,15 @@
    "Dayton, OH"
   ],
   "posted_at": 1497651148,
+  "posting": {
+   "analyzed_at": 1784420102,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784420102,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -188421,6 +188498,23 @@
    "Denver, CO or Long Beach, CA "
   ],
   "posted_at": 1774563831,
+  "posting": {
+   "analyzed_at": 1784420063,
+   "fetched": true,
+   "sponsorship": "no",
+   "sponsorship_note": "must be a U.S. citizen",
+   "years_min": 0,
+   "years_note": "0 to 2 years"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784420063,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level, no experience required.",
+   "role_family": "swe",
+   "years_required": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -221498,6 +221592,15 @@
    "San Antonio, TX"
   ],
   "posted_at": 1499898607,
+  "posting": {
+   "analyzed_at": 1784420100,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784420100,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -230896,6 +230999,15 @@
    "Dallas, TX"
   ],
   "posted_at": 1499960631,
+  "posting": {
+   "analyzed_at": 1784420099,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784420099,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -262979,13 +263091,19 @@
   ],
   "posted_at": 1781992440,
   "posting": {
-   "analyzed_at": 1784420001,
+   "analyzed_at": 1784420024,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784420001,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784420024,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "new grad role for class of 2026",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 3,
@@ -271515,7 +271633,9 @@
   ],
   "posted_at": 1781823535,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784420031,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -280955,6 +281075,15 @@
    "San Jose, CA"
   ],
   "posted_at": 1500072961,
+  "posting": {
+   "analyzed_at": 1784420097,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784420097,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -305973,6 +306102,15 @@
    "Texas City, TX"
   ],
   "posted_at": 1503959431,
+  "posting": {
+   "analyzed_at": 1784420096,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784420096,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -314568,7 +314706,7 @@
   ],
   "posted_at": 1781383631,
   "posting": {
-   "analyzed_at": 1784420003,
+   "analyzed_at": 1784420032,
    "fetched": true,
    "sponsorship": "unknown",
    "years_min": 0,
@@ -314576,7 +314714,13 @@
   },
   "quality": {
    "ai_deferred_at": 1784420003,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784420032,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "0-1 years experience required, new grad role.",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -320389,6 +320533,9 @@
    "New York City"
   ],
   "posted_at": 1761255452,
+  "quality": {
+   "attempts": 1
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -324625,7 +324772,9 @@
   ],
   "posted_at": 1781775117,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784420032,
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 3,
@@ -342218,7 +342367,9 @@
   ],
   "posted_at": 1780549150,
   "quality": {
-   "attempts": 1
+   "attempts": 2,
+   "checked_at": 1784420015,
+   "new_grad": "unclear"
   },
   "remote": true,
   "rules_v": 3,
@@ -350826,6 +350977,15 @@
    "Tampa, FL"
   ],
   "posted_at": 1503607952,
+  "posting": {
+   "analyzed_at": 1784420096,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784420096,
+   "attempts": 0
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -353406,13 +353566,19 @@
   ],
   "posted_at": 1782843244,
   "posting": {
-   "analyzed_at": 1784419999,
+   "analyzed_at": 1784420015,
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "ai_deferred_at": 1784419999,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784420015,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level role for new grad",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 3,
@@ -361018,6 +361184,20 @@
    "Denver, CO or Long Beach, CA"
   ],
   "posted_at": 1780414632,
+  "posting": {
+   "analyzed_at": 1784420048,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784420048,
+   "live": true,
+   "new_grad": "unclear",
+   "reason": "No clear role details.",
+   "role_family": "other-technical",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
@@ -378742,6 +378922,20 @@
    "Flower Mound, TX"
   ],
   "posted_at": 1504909337,
+  "posting": {
+   "analyzed_at": 1784420079,
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784420079,
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, no experience req.",
+   "role_family": "swe",
+   "years_required": null
+  },
   "remote": false,
   "rules_v": 3,
   "salary": "",
