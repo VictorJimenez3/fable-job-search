@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-19 17:57 UTC** · companies polled directly: **780** (registry 910) · jobs tracked: **14365** · new this run: **11** · alerts this run: **0**_
+_Last run: **2026-07-19 19:01 UTC** · companies polled directly: **780** (registry 910) · jobs tracked: **14371** · new this run: **6** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -19,14 +19,14 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 86 🔥 | 8d | Fuze Health | [Graduate Software Engineer - Fuze Services](https://jobright.ai/jobs/info/69d4f7cfe63cea7a8b65dfbf?utm_campaign=Software%20Engineering&utm_source=1103) | Remote - United States | healthtech | jobright |
 | 86 🔥 | 8d | Fuze Health | [Graduate Software Engineer - Fuze Services](https://jobright.ai/jobs/info/6a52583f9fbdab22fe13b2b3?utm_campaign=Software%20Engineering&utm_source=1103) | United States | healthtech | jobright |
 | 84 ⭐ | 10d | Cadence | [Software Engineer, New College Grad 2026 (Undergrads)](https://jobright.ai/jobs/info/6a4fe38f4649561ec08af67a?utm_campaign=Software%20Engineering&utm_source=1103) | Burlington, MA, United States | healthtech | jobright |
-| 82 ⭐ | 12d | Notion | [Software Engineer, Early Career (AI)](https://jobs.ashbyhq.com/notion/85947779-6b87-466a-98bc-30a640448c28) | San Francisco, California | big_tech | ashby |
+| 82 ⭐ | 13d | Notion | [Software Engineer, Early Career (AI)](https://jobs.ashbyhq.com/notion/85947779-6b87-466a-98bc-30a640448c28) | San Francisco, California | big_tech | ashby |
 | 80 ⭐ | 12d | Notion | [Software Engineer – Early Career - AI](https://jobs.ashbyhq.com/notion/85947779-6b87-466a-98bc-30a640448c28/application) | SF | big_tech | simplify |
 | 79 ⭐ | 6d | NVIDIA AI | [Backend Compiler Engineer - New College Grad 2026](https://jobright.ai/jobs/info/6a55d93505c65f7c8f4c8a73?utm_campaign=Software%20Engineering&utm_source=1103) | Santa Clara, CA, United States | big_tech | jobright |
 | 77 ⭐ | 6d | Abridge | [Software Engineer - Early Career](https://jobs.ashbyhq.com/abridge/7d6ae2be-cd53-466c-8151-2dae2e87aace) | SF Office | healthtech | ashby |
 | 77 ⭐ | 12d | Salesforce | [Software Engineering AMTS (College Grad)](https://jobright.ai/jobs/info/69f4c70cdb88714bcdfafbe9?utm_campaign=Software%20Engineering&utm_source=1103) | California - San Francisco | big_tech | jobright |
 | 77 ⭐ | 14d | Salesforce | [Software Engineering AMTS (College Grad)](https://jobright.ai/jobs/info/69f4c7a881706a5bd2162e3f?utm_campaign=Software%20Engineering&utm_source=1103) | Washington - Bellevue, US | big_tech | jobright |
 | 77 ⭐ | 15d | Salesforce | [Software Engineering AMTS (College Grad)](https://jobright.ai/jobs/info/69f4c70ddb88714bcdfafbf1?utm_campaign=Software%20Engineering&utm_source=1103) | Texas - Dallas | big_tech | jobright |
-| 75 ⭐ | 10d | Momentum | [Launch Graduate Program: Associate Cybersecurity Analyst](https://job-boards.greenhouse.io/momentumcompany3/jobs/8614696002) | Dallas, Texas | other | greenhouse |
+| 75 ⭐ | 11d | Momentum | [Launch Graduate Program: Associate Cybersecurity Analyst](https://job-boards.greenhouse.io/momentumcompany3/jobs/8614696002) | Dallas, Texas | other | greenhouse |
 | 75 ⭐ | 12d | Notion | [Software Engineer – Early Career](https://jobs.ashbyhq.com/notion/297b4ece-765f-4eea-b1b8-46057cb6501f/application) | SF | big_tech | simplify |
 | 73  | 2d | Palantir Technologies | [Forward Deployed Software Engineer, New Grad - US Government](https://jobright.ai/jobs/info/6a5ade9e4da96a42cfd97a98?utm_campaign=Software%20Engineering&utm_source=1103) | Washington, D.C., United States | big_tech | jobright |
 | 72  | 12d | ByteDance | [Graduate Software Engineer - Dev Infra](https://jobs.bytedance.com/en/position/7536272435440716040/detail) | San Jose, CA | big_tech | simplify |
@@ -126,7 +126,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 59  | 5d | Albertsons Companies | [Front End Entry Level](https://jobright.ai/jobs/info/6a5b14efc8e3a473cb8aec64?utm_campaign=Software%20Engineering&utm_source=1103) | Kirkland, WA, United States | other | jobright |
 | 59  | 5d | WhatNot | [Software Engineer New Grad](https://jobs.ashbyhq.com/whatnot/bc8f8c7f-2c4c-4f43-a238-953568c101b8/application) | NYC | other | simplify |
 | 59  | 5d | Northslope Technologies | [Forward Deployed Software Engineer New Grad](https://jobs.ashbyhq.com/northslope-technologies/80b82167-7101-4f78-9006-7755dd2ca01e/application) | NYC | other | simplify |
-| 59  | 5d | Northslope Technologies | [Forward Deployed Software Engineer, New Grad](https://jobs.ashbyhq.com/northslope-technologies/80b82167-7101-4f78-9006-7755dd2ca01e) | New York | other | ashby |
+| 59  | 6d | Northslope Technologies | [Forward Deployed Software Engineer, New Grad](https://jobs.ashbyhq.com/northslope-technologies/80b82167-7101-4f78-9006-7755dd2ca01e) | New York | other | ashby |
 | 59  | 6d | Northwood | [Software Engineer – General (new grad / early career)](https://jobright.ai/jobs/info/6a55b7ef05c65f7c8f4c67ad?utm_campaign=Software%20Engineering&utm_source=1103) | Torrance, CA, United States | other | jobright |
 | 59  | 6d | NetApp | [Entry Level Software Engineer - ANF (Azure NetApp Files) Job Details /](https://jobright.ai/jobs/info/6a54a8e5065af01f337ca7aa?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose, CA, US, 95128 | other | jobright |
 | 59  | 6d | Whatnot | [Software Engineer, New Grad](https://jobright.ai/jobs/info/6a556127268af95237beb54d?utm_campaign=Software%20Engineering&utm_source=1103) | New York, NY, United States | other | jobright |
