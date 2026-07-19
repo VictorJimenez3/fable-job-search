@@ -1,20 +1,33 @@
 {
  "events": [
   {
-   "at": "2026-07-19T00:15:23+00:00",
-   "completion_tokens": 240,
-   "detail": "task schema validation failed",
+   "at": "2026-07-19T00:15:51+00:00",
+   "completion_tokens": 33,
+   "detail": "",
    "endpoint": "local",
-   "latency_ms": 9410,
+   "latency_ms": 5395,
    "max_tokens": 240,
    "model": "qwen3:30b",
    "prompt_chars": 1960,
    "prompt_tokens": 521,
+   "status": "ok",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-19T00:16:01+00:00",
+   "completion_tokens": 240,
+   "detail": "task schema validation failed",
+   "endpoint": "local",
+   "latency_ms": 9387,
+   "max_tokens": 240,
+   "model": "qwen3:30b",
+   "prompt_chars": 1962,
+   "prompt_tokens": 519,
    "status": "invalid",
    "task": "quality"
   },
   {
-   "at": "2026-07-19T00:15:34+00:00",
+   "at": "2026-07-19T00:16:11+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -27,7 +40,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-19T00:15:35+00:00",
+   "at": "2026-07-19T00:16:12+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -40,7 +53,7 @@
    "task": "quality"
   },
   {
-   "at": "2026-07-19T00:15:36+00:00",
+   "at": "2026-07-19T00:16:12+00:00",
    "completion_tokens": 0,
    "detail": "per-run AI budget reached",
    "endpoint": "none",
@@ -53,27 +66,8 @@
    "task": "discovery"
   }
  ],
- "generated_at": 1784420136,
+ "generated_at": 1784420172,
  "history": [
-  {
-   "generated_at": 1784417692,
-   "logical_calls": 7,
-   "models": {
-    "local": {
-     "errors": 0,
-     "model": "qwen3:30b",
-     "ok": 7,
-     "requests": 7,
-     "tokens": 8893
-    }
-   },
-   "provider": "local",
-   "requests": 7,
-   "task_calls": {
-    "discovery": 1,
-    "quality": 6
-   }
-  },
   {
    "generated_at": 1784417782,
    "logical_calls": 8,
@@ -618,6 +612,24 @@
    "task_calls": {
     "quality": 12
    }
+  },
+  {
+   "generated_at": 1784420172,
+   "logical_calls": 12,
+   "models": {
+    "local": {
+     "errors": 1,
+     "model": "qwen3:30b",
+     "ok": 1,
+     "requests": 2,
+     "tokens": 1313
+    }
+   },
+   "provider": "local",
+   "requests": 2,
+   "task_calls": {
+    "quality": 12
+   }
   }
  ],
  "limits": {
@@ -629,13 +641,13 @@
   "local": {
    "errors": 1,
    "model": "qwen3:30b",
-   "ok": 0,
-   "requests": 1,
-   "tokens": 761
+   "ok": 1,
+   "requests": 2,
+   "tokens": 1313
   }
  },
  "provider": "local",
- "requests": 1,
+ "requests": 2,
  "task_calls": {
   "quality": 12
  }
