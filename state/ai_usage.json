@@ -1,70 +1,83 @@
 {
  "events": [
   {
-   "at": "2026-07-20T01:52:14+00:00",
-   "completion_tokens": 516,
+   "at": "2026-07-20T03:53:14+00:00",
+   "completion_tokens": 538,
    "detail": "",
    "endpoint": "local",
    "lane": "local",
-   "latency_ms": 19630,
-   "max_tokens": 900,
-   "model": "qwen3:30b",
-   "prompt_chars": 2118,
-   "prompt_tokens": 487,
-   "selected": true,
-   "status": "ok",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-07-20T01:52:32+00:00",
-   "completion_tokens": 563,
-   "detail": "",
-   "endpoint": "local",
-   "lane": "local",
-   "latency_ms": 18365,
-   "max_tokens": 900,
-   "model": "qwen3:30b",
-   "prompt_chars": 2127,
-   "prompt_tokens": 500,
-   "selected": true,
-   "status": "ok",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-07-20T01:52:43+00:00",
-   "completion_tokens": 23,
-   "detail": "task schema validation failed",
-   "endpoint": "local",
-   "lane": "local",
-   "latency_ms": 10285,
+   "latency_ms": 22740,
    "max_tokens": 900,
    "model": "qwen3:30b",
    "prompt_chars": 1956,
    "prompt_tokens": 428,
-   "status": "invalid",
+   "selected": true,
+   "status": "ok",
    "task": "company_research"
+  },
+  {
+   "at": "2026-07-20T03:53:34+00:00",
+   "completion_tokens": 477,
+   "detail": "",
+   "endpoint": "local",
+   "lane": "local",
+   "latency_ms": 19437,
+   "max_tokens": 900,
+   "model": "qwen3:30b",
+   "prompt_chars": 2101,
+   "prompt_tokens": 452,
+   "selected": true,
+   "status": "ok",
+   "task": "company_research"
+  },
+  {
+   "at": "2026-07-20T03:53:55+00:00",
+   "completion_tokens": 479,
+   "detail": "",
+   "endpoint": "local",
+   "lane": "local",
+   "latency_ms": 20928,
+   "max_tokens": 900,
+   "model": "qwen3:30b",
+   "prompt_chars": 2106,
+   "prompt_tokens": 456,
+   "selected": true,
+   "status": "ok",
+   "task": "company_research"
+  },
+  {
+   "at": "2026-07-20T03:54:10+00:00",
+   "completion_tokens": 43,
+   "detail": "",
+   "endpoint": "local",
+   "lane": "local",
+   "latency_ms": 13187,
+   "max_tokens": 240,
+   "model": "qwen3:30b",
+   "prompt_chars": 4510,
+   "prompt_tokens": 1005,
+   "selected": true,
+   "status": "ok",
+   "task": "quality"
+  },
+  {
+   "at": "2026-07-20T03:54:29+00:00",
+   "completion_tokens": 600,
+   "detail": "",
+   "endpoint": "local",
+   "lane": "local",
+   "latency_ms": 17933,
+   "max_tokens": 600,
+   "model": "qwen3:30b",
+   "prompt_chars": 594,
+   "prompt_tokens": 165,
+   "selected": true,
+   "status": "ok",
+   "task": "discovery"
   }
  ],
- "generated_at": 1784512366,
+ "generated_at": 1784519669,
  "history": [
-  {
-   "generated_at": 1784419461,
-   "logical_calls": 12,
-   "models": {
-    "local": {
-     "errors": 0,
-     "model": "qwen3:30b",
-     "ok": 12,
-     "requests": 12,
-     "tokens": 13911
-    }
-   },
-   "provider": "local",
-   "requests": 12,
-   "task_calls": {
-    "quality": 12
-   }
-  },
   {
    "generated_at": 1784419573,
    "logical_calls": 12,
@@ -1883,6 +1896,103 @@
     "discovery": 1,
     "quality": 1
    }
+  },
+  {
+   "attempts": [
+    {
+     "at": "2026-07-20T03:53:14+00:00",
+     "completion_tokens": 538,
+     "detail": "",
+     "endpoint": "local",
+     "lane": "local",
+     "latency_ms": 22740,
+     "max_tokens": 900,
+     "model": "qwen3:30b",
+     "prompt_chars": 1956,
+     "prompt_tokens": 428,
+     "selected": true,
+     "status": "ok",
+     "task": "company_research"
+    },
+    {
+     "at": "2026-07-20T03:53:34+00:00",
+     "completion_tokens": 477,
+     "detail": "",
+     "endpoint": "local",
+     "lane": "local",
+     "latency_ms": 19437,
+     "max_tokens": 900,
+     "model": "qwen3:30b",
+     "prompt_chars": 2101,
+     "prompt_tokens": 452,
+     "selected": true,
+     "status": "ok",
+     "task": "company_research"
+    },
+    {
+     "at": "2026-07-20T03:53:55+00:00",
+     "completion_tokens": 479,
+     "detail": "",
+     "endpoint": "local",
+     "lane": "local",
+     "latency_ms": 20928,
+     "max_tokens": 900,
+     "model": "qwen3:30b",
+     "prompt_chars": 2106,
+     "prompt_tokens": 456,
+     "selected": true,
+     "status": "ok",
+     "task": "company_research"
+    },
+    {
+     "at": "2026-07-20T03:54:10+00:00",
+     "completion_tokens": 43,
+     "detail": "",
+     "endpoint": "local",
+     "lane": "local",
+     "latency_ms": 13187,
+     "max_tokens": 240,
+     "model": "qwen3:30b",
+     "prompt_chars": 4510,
+     "prompt_tokens": 1005,
+     "selected": true,
+     "status": "ok",
+     "task": "quality"
+    },
+    {
+     "at": "2026-07-20T03:54:29+00:00",
+     "completion_tokens": 600,
+     "detail": "",
+     "endpoint": "local",
+     "lane": "local",
+     "latency_ms": 17933,
+     "max_tokens": 600,
+     "model": "qwen3:30b",
+     "prompt_chars": 594,
+     "prompt_tokens": 165,
+     "selected": true,
+     "status": "ok",
+     "task": "discovery"
+    }
+   ],
+   "generated_at": 1784519669,
+   "logical_calls": 5,
+   "models": {
+    "local": {
+     "errors": 0,
+     "model": "qwen3:30b",
+     "ok": 5,
+     "requests": 5,
+     "tokens": 4643
+    }
+   },
+   "provider": "local",
+   "requests": 5,
+   "task_calls": {
+    "company_research": 3,
+    "discovery": 1,
+    "quality": 1
+   }
   }
  ],
  "limits": {
@@ -1892,15 +2002,15 @@
  "logical_calls": 5,
  "models": {
   "local": {
-   "errors": 1,
+   "errors": 0,
    "model": "qwen3:30b",
-   "ok": 2,
-   "requests": 3,
-   "tokens": 2517
+   "ok": 5,
+   "requests": 5,
+   "tokens": 4643
   }
  },
  "provider": "local",
- "requests": 3,
+ "requests": 5,
  "task_calls": {
   "company_research": 3,
   "discovery": 1,

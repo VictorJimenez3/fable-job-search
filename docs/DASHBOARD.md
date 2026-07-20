@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-20 01:52 UTC** · companies polled directly: **781** (registry 911) · jobs tracked: **14398** · new this run: **3** · alerts this run: **1**_
+_Last run: **2026-07-20 03:54 UTC** · companies polled directly: **781** (registry 911) · jobs tracked: **14398** · new this run: **3** · alerts this run: **1**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -11,7 +11,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 97 🔥 | 7d | NVIDIA | [Compiler Engineer AI Inference New Grad](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Compiler-Engineer--AI-Inference--New-College-Grad-2026_JR2021230) | Santa Clara, CA | big_tech | simplify |
 | 96 🔥 | 6d | NVIDIA | [System Software Engineer - Dynamo-Triton Inference Server - New Colleg](https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/System-Software-Engineer--Dynamo-Triton-Inference-Server---New-College-Grad-2026_JR2020767) | Remote - Santa Clara, CA | big_tech | speedyapply |
 | 94 🔥 | 3d | NVIDIA | [Systems Software Engineer New Grad - Accelerated Kubernetes Performanc](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Systems-Software-Engineer--Accelerated-Kubernetes-Performance-and-Scale---New-College-Grad-2026_JR2020957) | Seattle, WA | big_tech | simplify |
-| 94 🔥 | 5d | NVIDIA | [System Software Engineer, Dynamo-Triton Inference Server - New College](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/System-Software-Engineer--Dynamo-Triton-Inference-Server---New-College-Grad-2026_JR2020767) | 2 Locations | big_tech | workday |
+| 94 🔥 | 6d | NVIDIA | [System Software Engineer, Dynamo-Triton Inference Server - New College](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/System-Software-Engineer--Dynamo-Triton-Inference-Server---New-College-Grad-2026_JR2020767) | 2 Locations | big_tech | workday |
 | 94 🔥 | 6d | NVIDIA | [Backend Compiler Engineer - New College Grad 2026](https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/Backend-Compiler-Engineer---New-College-Grad-2026_JR2021242) | US, CA, Santa Clara | big_tech | workday |
 | 92 🔥 | 7d | NVIDIA | [System Software Engineer New Grad - Dynamo-Triton Inference Server](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/System-Software-Engineer--Dynamo-Triton-Inference-Server---New-College-Grad-2026_JR2020767) | Remote in USA | big_tech | simplify |
 | 92 🔥 | 7d | NVIDIA | [Backend Compiler Engineer - New College Grad 2026](https://jobright.ai/jobs/info/6a55634d377f983ce8a99db8?utm_campaign=Software%20Engineering&utm_source=1103) | Santa Clara, CA, United States | big_tech | jobright |
@@ -72,7 +72,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 66  | 12d | KLA Corporation | [Data Scientist (Entry Level) - GSCS](https://kla.wd1.myworkdayjobs.com/en-US/UR/job/Milpitas-CA/Data-Scientist--Entry-Level----GSCS_2638246) | Milpitas, CA | other | workday |
 | 66  | 16d | Travelers | [Data Science Leadership Development Program - Dsldp - Associate Data S](https://travelers.wd5.myworkdayjobs.com/External/job/CT---Hartford/Data-Science-Leadership-Development-Program--DSLDP--Associate-Data-Scientist_R-51336) | Hartford, CT | other | simplify |
 | 66  | 17d | Vanguard | [Technology Leadership Program - Data & Analytics - Analyst](https://vanguard.wd5.myworkdayjobs.com/en-US/contractors_restricted/job/Charlotte-NC/Technology-Leadership-Program---Data---Analytics--Analyst----NC_180091) | Charlotte, NC | other | simplify |
-| 65  | 3d | Cybernetic Labs | [Software Engineer (Agent Platform) - New Grad - 2026-2027](https://jobs.ashbyhq.com/netic/d9bcb6a2-0e54-4cb3-baec-43f2d74db18f) | San Francisco | other | ashby |
+| 65  | 4d | Cybernetic Labs | [Software Engineer (Agent Platform) - New Grad - 2026-2027](https://jobs.ashbyhq.com/netic/d9bcb6a2-0e54-4cb3-baec-43f2d74db18f) | San Francisco | other | ashby |
 | 65  | 4d | Cybernetic Labs | [Full-Stack Software Engineer (Product) - New Grad - 2026-2027](https://jobs.ashbyhq.com/netic/bab5d1e5-e31b-42f0-9cef-334b1f17fed3) | San Francisco | other | ashby |
 | 65  | 6d | Old Mission | [Quantitative Trader Graduate Program](https://www.oldmissioncapital.com/careers/?gh_jid=7796044003) | Chicago, IL | other | simplify |
 | 65  | 7d | Boeing | [Entry-Level Software Engineer–Developer](https://jobright.ai/jobs/info/6a54f06bae07d60a8d00ddac?utm_campaign=Software%20Engineering&utm_source=1103) | USA - Richardson, TX, United States of A | other | jobright |
@@ -98,8 +98,8 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 62  | 7d | Old Mission | [Software Engineer – 2027 Graduate Program (August Start)](https://jobright.ai/jobs/info/6a554bd84119652ff3864afd?utm_campaign=Software%20Engineering&utm_source=1103) | Chicago, IL, United States | other | jobright |
 | 62  | 9d | LetsGetChecked | [Graduate Software Engineer](https://jobright.ai/jobs/info/6a52a9fae726ec56126a4010?utm_campaign=Software%20Engineering&utm_source=1103) | United States | other | jobright |
 | 62  | 10d | Aquatic Capital Management | [Software Engineer, Early Career](https://jobright.ai/jobs/info/6a3ff4f3b526a24fc31305bd?utm_campaign=Software%20Engineering&utm_source=1103) | Chicago, IL, United States | fintech | jobright |
-| 62  | 16d | Optiver | [Graduate Software Engineer - 2027 Start](https://www.optiver.com/join-us/jobs/8401042002/?gh_jid=8401042002) | Chicago, Illinois, United States | other | speedyapply |
-| 62  | 16d | Optiver | [Graduate Software Engineer - 2027 Start](https://www.optiver.com/join-us/jobs/8604899002/?gh_jid=8604899002) | Austin, Texas, United States | other | speedyapply |
+| 62  | 17d | Optiver | [Graduate Software Engineer - 2027 Start](https://www.optiver.com/join-us/jobs/8401042002/?gh_jid=8401042002) | Chicago, Illinois, United States | other | speedyapply |
+| 62  | 17d | Optiver | [Graduate Software Engineer - 2027 Start](https://www.optiver.com/join-us/jobs/8604899002/?gh_jid=8604899002) | Austin, Texas, United States | other | speedyapply |
 | 62  | 21d | Wolverine Trading | [Entry-Level C++ Software Engineer](https://jobright.ai/jobs/info/6a433366cbf92c7bcd36ef0a?utm_campaign=Software%20Engineering&utm_source=1103) | Chicago, IL | fintech | jobright |
 | 61  | 3d | Northwood | [Infrastructure Engineer - Early Career](https://jobright.ai/jobs/info/6a56cacee9b77f668bd65c63?utm_campaign=Software%20Engineering&utm_source=1103) | Torrance, CA, United States | other | jobright |
 | 61  | 4d | Cybernetic Labs | [Full-Stack Software Engineer New Grad - Product](https://jobs.ashbyhq.com/netic/bab5d1e5-e31b-42f0-9cef-334b1f17fed3/application?embed=true) | SF | other | simplify |
