@@ -48,6 +48,15 @@ repair.
 ## Working conventions
 - `git pull --rebase` before every push — CI commits state every ~30 min.
 - Run `python -m pytest tests/` before pushing; keep it green.
+
+### Production publishing authority
+
+Victor checks production directly for edits. Codex may publish validated,
+requested changes to the production branch without another approval step during
+the active task, and must report the exact commit/PR plus the user-visible
+location. Other AI agents require Victor's explicit permission before pushing,
+merging, or deploying to production. This documents workflow authority; actual
+GitHub/Vercel access controls remain the enforcement mechanism.
 - End a session by stating: what changed & why, files touched, validation
   run + result, and any secret/config still required (the CLI_HANDOFF
   handoff contract).

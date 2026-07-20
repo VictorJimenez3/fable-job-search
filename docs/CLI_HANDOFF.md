@@ -146,6 +146,10 @@ Before changing the radar, read these in order:
   three workflows, the Vercel branch default/environment, raw README/installer
   URLs, and the installed Mac companion all reference or derive it. The full
   checklist is in [`AGENTS.md`](../AGENTS.md).
+- **Publishing authority:** Victor checks production directly. Codex may publish
+  validated requested work during the active task and must report the exact
+  production commit/PR and visible surface. Any other AI agent needs Victor's
+  explicit permission before pushing, merging, or deploying.
 - **`CV/` is local-only and gitignored** (DECISIONS #29) — never commit it
   or anything derived from it; CV auto-tailoring is a Mac-companion feature.
 - **Deliberately deferred:** CV tailoring/CV role toggle and semantic/vector
