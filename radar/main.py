@@ -506,8 +506,6 @@ def _rebuild_scores(jobs_state: dict, fb: dict, now: int) -> tuple[int, int]:
     changed = 0
     alerts = 0
     for rec in jobs_state.values():
-        if rec.get("closed_at"):
-            continue
         job = Job(company=rec.get("company", ""), title=rec.get("title", ""),
                   url=rec.get("url", ""), source=rec.get("source", ""),
                   locations=rec.get("locations", []), salary=rec.get("salary", ""),
@@ -527,7 +525,8 @@ def _rebuild_scores(jobs_state: dict, fb: dict, now: int) -> tuple[int, int]:
         if rec.get("posting"):
             posting.reapply(rec)
         changed += 1
-        alerts += rec["alert_ok"] and rec["score"] >= profile()["thresholds"]["alert"]
+        alerts += (not rec.get("closed_at")) and rec["alert_ok"] \
+            and rec["score"] >= profile()["thresholds"]["alert"]
     return changed, alerts
 
 
