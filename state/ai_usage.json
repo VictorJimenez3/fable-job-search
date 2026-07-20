@@ -1,71 +1,52 @@
 {
  "events": [
   {
-   "at": "2026-07-19T23:51:20+00:00",
-   "completion_tokens": 626,
+   "at": "2026-07-20T01:52:14+00:00",
+   "completion_tokens": 516,
    "detail": "",
    "endpoint": "local",
    "lane": "local",
-   "latency_ms": 16245,
+   "latency_ms": 19630,
    "max_tokens": 900,
    "model": "qwen3:30b",
-   "prompt_chars": 2911,
-   "prompt_tokens": 637,
+   "prompt_chars": 2118,
+   "prompt_tokens": 487,
    "selected": true,
    "status": "ok",
    "task": "company_research"
   },
   {
-   "at": "2026-07-19T23:51:37+00:00",
-   "completion_tokens": 476,
+   "at": "2026-07-20T01:52:32+00:00",
+   "completion_tokens": 563,
    "detail": "",
    "endpoint": "local",
    "lane": "local",
-   "latency_ms": 16827,
-   "max_tokens": 900,
-   "model": "qwen3:30b",
-   "prompt_chars": 1975,
-   "prompt_tokens": 466,
-   "selected": true,
-   "status": "ok",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-07-19T23:51:47+00:00",
-   "completion_tokens": 19,
-   "detail": "task schema validation failed",
-   "endpoint": "local",
-   "lane": "local",
-   "latency_ms": 10246,
+   "latency_ms": 18365,
    "max_tokens": 900,
    "model": "qwen3:30b",
    "prompt_chars": 2127,
    "prompt_tokens": 500,
+   "selected": true,
+   "status": "ok",
+   "task": "company_research"
+  },
+  {
+   "at": "2026-07-20T01:52:43+00:00",
+   "completion_tokens": 23,
+   "detail": "task schema validation failed",
+   "endpoint": "local",
+   "lane": "local",
+   "latency_ms": 10285,
+   "max_tokens": 900,
+   "model": "qwen3:30b",
+   "prompt_chars": 1956,
+   "prompt_tokens": 428,
    "status": "invalid",
    "task": "company_research"
   }
  ],
- "generated_at": 1784505109,
+ "generated_at": 1784512366,
  "history": [
-  {
-   "generated_at": 1784419353,
-   "logical_calls": 6,
-   "models": {
-    "local": {
-     "errors": 1,
-     "model": "qwen3:30b",
-     "ok": 4,
-     "requests": 5,
-     "tokens": 5650
-    }
-   },
-   "provider": "local",
-   "requests": 5,
-   "task_calls": {
-    "discovery": 1,
-    "quality": 5
-   }
-  },
   {
    "generated_at": 1784419461,
    "logical_calls": 12,
@@ -1836,26 +1817,93 @@
     "company_research": 3,
     "discovery": 1
    }
+  },
+  {
+   "attempts": [
+    {
+     "at": "2026-07-20T01:52:14+00:00",
+     "completion_tokens": 516,
+     "detail": "",
+     "endpoint": "local",
+     "lane": "local",
+     "latency_ms": 19630,
+     "max_tokens": 900,
+     "model": "qwen3:30b",
+     "prompt_chars": 2118,
+     "prompt_tokens": 487,
+     "selected": true,
+     "status": "ok",
+     "task": "company_research"
+    },
+    {
+     "at": "2026-07-20T01:52:32+00:00",
+     "completion_tokens": 563,
+     "detail": "",
+     "endpoint": "local",
+     "lane": "local",
+     "latency_ms": 18365,
+     "max_tokens": 900,
+     "model": "qwen3:30b",
+     "prompt_chars": 2127,
+     "prompt_tokens": 500,
+     "selected": true,
+     "status": "ok",
+     "task": "company_research"
+    },
+    {
+     "at": "2026-07-20T01:52:43+00:00",
+     "completion_tokens": 23,
+     "detail": "task schema validation failed",
+     "endpoint": "local",
+     "lane": "local",
+     "latency_ms": 10285,
+     "max_tokens": 900,
+     "model": "qwen3:30b",
+     "prompt_chars": 1956,
+     "prompt_tokens": 428,
+     "status": "invalid",
+     "task": "company_research"
+    }
+   ],
+   "generated_at": 1784512366,
+   "logical_calls": 5,
+   "models": {
+    "local": {
+     "errors": 1,
+     "model": "qwen3:30b",
+     "ok": 2,
+     "requests": 3,
+     "tokens": 2517
+    }
+   },
+   "provider": "local",
+   "requests": 3,
+   "task_calls": {
+    "company_research": 3,
+    "discovery": 1,
+    "quality": 1
+   }
   }
  ],
  "limits": {
   "logical_calls": 12,
   "requests": 24
  },
- "logical_calls": 4,
+ "logical_calls": 5,
  "models": {
   "local": {
    "errors": 1,
    "model": "qwen3:30b",
    "ok": 2,
    "requests": 3,
-   "tokens": 2724
+   "tokens": 2517
   }
  },
  "provider": "local",
  "requests": 3,
  "task_calls": {
   "company_research": 3,
-  "discovery": 1
+  "discovery": 1,
+  "quality": 1
  }
 }
