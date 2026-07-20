@@ -578,7 +578,7 @@
  },
  "anthropic": {
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -591,21 +591,22 @@
   },
   "error": "",
   "evidence_sha": "c7a83357dd7c813f",
-  "generated_at": 1784398862,
+  "generated_at": 1784520372,
   "generator": {
-   "endpoint": "local",
-   "model": "qwen3:30b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "interview_focus": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "a0f72078a3",
-    "ac55d14be9"
+    "b06a250e1f",
+    "f488d503f2",
+    "47b81a157f"
    ],
-   "value": "Accelerating technical learning and career growth without sacrificing personal time, as the company provides funding and mentorship to promising technical talent regardless of previous experience."
+   "value": "Discuss how the team's quickly growing culture balances innovation with sane hours, and clarify expectations around in-office requirements to ensure it avoids the bureaucratic or high-burnout traits you want to avoid."
   },
-  "last_attempt_at": 1784398862,
+  "last_attempt_at": 1784520372,
   "last_evidence_at": 1784487436,
   "locations": {
    "confidence": "unknown",
@@ -615,24 +616,28 @@
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "a0f72078a3",
-    "ac55d14be9"
+    "47b81a157f"
    ],
-   "value": "Build beneficial AI systems through collaborative work across teams of researchers, engineers, policy experts, and business leaders."
+   "value": "To create reliable, interpretable, and steerable AI systems."
   },
   "name": "Anthropic",
   "products": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "47b81a157f"
+   ],
+   "value": "Reliable, interpretable, and steerable AI systems."
   },
   "prompt_v": 1,
-  "refresh_after": 1789582862,
+  "refresh_after": 1789704372,
   "schema_v": 1,
   "size_stage": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "b06a250e1f",
+    "f488d503f2"
+   ],
+   "value": "Quickly growing"
   },
   "sources": [
    {
@@ -669,33 +674,38 @@
   "sponsorship_context": {
    "confidence": "high",
    "source_ids": [
-    "a0f72078a3",
-    "ac55d14be9"
+    "47b81a157f"
    ],
-   "value": "Visa sponsorship is not currently available for the Anthropic Fellows Program. The company is expanding the Fellows Program across teams but does not specify sponsorship for other roles."
+   "value": "The company sponsors visas, though not for every role and every candidate."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "a0f72078a3",
-    "ac55d14be9"
+    "b06a250e1f",
+    "f488d503f2",
+    "47b81a157f"
    ],
-   "value": "Anthropic is a company focused on developing AI systems with a mission to build beneficial AI. They offer roles in AI research, engineering, and safety, with a Fellows Program for technical talent. The company emphasizes collaboration across teams and provides mentorship, though visa sponsorship is not currently available for certain roles."
+   "value": "Anthropic is a quickly growing group of researchers, engineers, policy experts, and business leaders working together to build beneficial AI systems."
   },
-  "synthesized_evidence_sha": "b00ee5a463598888",
+  "synthesized_evidence_sha": "c7a83357dd7c813f",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "a0f72078a3",
-    "ac55d14be9"
+    "b06a250e1f",
+    "f488d503f2",
+    "47b81a157f"
    ],
-   "value": "AI safety research, AI systems development, and engineering work across teams including researchers, engineers, policy experts, and business leaders."
+   "value": "AI research and engineering, including AI safety, AI security, and web platform development. Programs provide funding and mentorship to promising technical talent, with some work primarily using external infrastructure."
   },
   "why_it_matters": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "b06a250e1f",
+    "f488d503f2",
+    "47b81a157f"
+   ],
+   "value": "Aligns with your priority for an elite, mission-driven AI role in a quickly growing environment; the company invests in accelerating technical learning through direct funding and mentorship regardless of previous experience."
   }
  },
  "aptiv": {
@@ -1818,67 +1828,66 @@
  },
  "clera": {
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
    "value": "Not confirmed"
   },
   "customers": {
-   "confidence": "high",
-   "source_ids": [
-    "dd39e71ac4"
-   ],
-   "value": "Large enterprise organizations"
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "error": "",
   "evidence_sha": "b14b4acbff67939b",
-  "generated_at": 1784449450,
+  "generated_at": 1784520372,
   "generator": {
-   "endpoint": "local",
-   "model": "qwen3:30b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "interview_focus": {
    "confidence": "high",
    "source_ids": [
-    "b8d5c10bde",
-    "dd39e71ac4"
+    "a19fbdd118",
+    "b9c4dd9555"
    ],
-   "value": "Technical skills in formal systems, symbolic reasoning, or verification methods; ability to work with AI models and optimize codebases."
+   "value": "Prepare to demonstrate your ability to ship agentic LLM systems in production environments, as this is a strict requirement. Emphasize your capacity for high-impact learning and rapid technical growth in a 'build-from-zero' culture. Since you value work-life balance, use the interview to gauge expectations around hours and wellness programs, as the company's startup nature requires careful assessment of personal time boundaries."
   },
-  "last_attempt_at": 1784449450,
+  "last_attempt_at": 1784520372,
   "last_evidence_at": 1784491566,
   "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "a19fbdd118",
+    "b9c4dd9555"
+   ],
+   "value": "San Francisco, CA. Roles require on-site or hybrid work."
+  },
+  "mission": {
    "confidence": "unknown",
    "source_ids": [],
    "value": "Not confirmed"
-  },
-  "mission": {
-   "confidence": "high",
-   "source_ids": [
-    "b8d5c10bde"
-   ],
-   "value": "To build 'correct by construction' training data for cutting-edge AI models using formal verification systems."
   },
   "name": "Clera",
   "products": {
    "confidence": "high",
    "source_ids": [
-    "b8d5c10bde",
-    "dd39e71ac4"
+    "a19fbdd118"
    ],
-   "value": "Training data for AI models verified via formal systems, AI-powered features for enterprise adoption."
+   "value": "Graph-native context and memory infrastructure for AI agents."
   },
   "prompt_v": 1,
-  "refresh_after": 1789633450,
+  "refresh_after": 1789704372,
   "schema_v": 1,
   "size_stage": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "dd39e71ac4"
+    "a19fbdd118",
+    "b9c4dd9555"
    ],
-   "value": "Early-stage"
+   "value": "Seed-stage (as of Founding GTM posting), with claims of Series A/B backing and strong investor support (per Agent Systems Engineer posting). Hiring 'founding' roles."
   },
   "sources": [
    {
@@ -1915,35 +1924,36 @@
   "sponsorship_context": {
    "confidence": "high",
    "source_ids": [
-    "a01f23a958",
-    "b8d5c10bde",
-    "dd39e71ac4"
+    "b9c4dd9555",
+    "a01f23a958"
    ],
-   "value": "Visa sponsorship available for some roles (Product Engineer), not available for others (Frontend Engineer, Research Scientist)."
+   "value": "No visa sponsorship available. Candidates must be authorized to work in the United States without sponsorship."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "a01f23a958",
-    "b8d5c10bde",
-    "dd39e71ac4"
+    "a19fbdd118",
+    "b9c4dd9555"
    ],
-   "value": "Clera is an early-stage AI company focused on developing 'correct by construction' training data for AI models using formal verification systems, targeting enterprise customers with AI-powered capabilities."
+   "value": "An early-stage AI infrastructure startup building specialized context and memory infrastructure for AI agents."
   },
-  "synthesized_evidence_sha": "87b63c777b19831b",
+  "synthesized_evidence_sha": "b14b4acbff67939b",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "b8d5c10bde",
-    "dd39e71ac4"
+    "b9c4dd9555",
+    "a01f23a958"
    ],
-   "value": "Developing training data using formal verification systems, symbolic reasoning, and working with AI models; maintaining and optimizing codebases for performance."
+   "value": "Involves shipping agentic LLM systems in production environments and building frontend infrastructure."
   },
   "why_it_matters": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "a19fbdd118",
+    "b9c4dd9555"
+   ],
+   "value": "Clera aligns strongly with your priority for elite, high-paying technical roles in a fast-paced, innovative AI sector. The Agent Systems Engineer position offers a highly competitive salary ($180k-$250k) and involves cutting-edge work shipping agentic LLM systems. However, the company does not offer visa sponsorship, and as an early-stage startup, it does not currently mention guaranteed shutdowns or specific policies to prevent burnout."
   }
  },
  "crowdgen by appen": {
@@ -4694,10 +4704,68 @@
  },
  "nxp semiconductors": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "5dc61381adcc0022",
+  "generated_at": 1784520372,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "cee27dd267",
+    "91836041bf"
+   ],
+   "value": "Emphasize problem-solving skills, an analytical mindset, and any exposure to Smart Card/Java Card OS, secure coding, cryptography, or Global Platform/EMVco standards. Be prepared to discuss how you collaborate across hardware and software boundaries to optimize system performance."
+  },
+  "last_attempt_at": 1784520372,
   "last_evidence_at": 1784476311,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "cee27dd267",
+    "91836041bf"
+   ],
+   "value": "San Diego Innovation Drive (CA) and San Jose Holger Way (CA)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "cee27dd267",
+    "91836041bf"
+   ],
+   "value": "To enable possibilities with NFC, allowing users to interact securely with the world around them with a simple touch."
+  },
   "name": "NXP Semiconductors",
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "cee27dd267",
+    "91836041bf"
+   ],
+   "value": "NFC System Software and Smart Card Operating Systems (including Java Card OS)."
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789704372,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "c9638d45c3a6b69c",
@@ -4720,7 +4788,37 @@
     "url": "https://nxp.wd3.myworkdayjobs.com/en-US/careers/job/San-Jose-Holger-Way/NFC-System-Software-Engineer---Entry-Level_R-10064298"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "cee27dd267",
+    "91836041bf"
+   ],
+   "value": "NXP Semiconductors is a technology company hiring entry-level engineers to develop and validate NFC (Near Field Communication) system software, focusing on secure, fast, and intuitive wireless interactions."
+  },
+  "synthesized_evidence_sha": "5dc61381adcc0022",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "cee27dd267",
+    "91836041bf"
+   ],
+   "value": "Entry-level roles involve collaborating with hardware engineers, firmware developers, and software teams to ensure seamless integration and optimal system performance. Requires secure coding practices, knowledge of cryptography, and exposure to Global Platform and EMVco standards."
+  },
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "cee27dd267",
+    "91836041bf"
+   ],
+   "value": "Aligns with the candidate's desire for a fast, innovative tech culture and accelerated technical learning. The entry-level roles offer cross-functional collaboration with hardware and firmware teams, providing an excellent environment to build deep expertise in secure systems, cryptography, and OS development."
+  }
  },
  "om group inc": {
   "aliases": [],
@@ -8220,10 +8318,74 @@
  },
  "welo global": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "3b4a36b0c9"
+   ],
+   "value": "Freelance opportunity where workload is based on project needs, hiring independent contractors to complete AI data rating tasks."
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "751016ba38752f15",
+  "generated_at": 1784520372,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "f3747f0f10",
+    "43c60af062",
+    "3b4a36b0c9"
+   ],
+   "value": "Given the candidate's priority for a fast-paced, innovative AI culture, the interview should clarify if the freelance nature and task-based guidelines of this role align with their expectations. The candidate should also verify the ongoing project duration and potential burnout risks associated with project-based workloads to ensure it meets their work-life balance requirements."
+  },
+  "last_attempt_at": 1784520372,
   "last_evidence_at": 1784481324,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "f3747f0f10",
+    "43c60af062",
+    "3b4a36b0c9"
+   ],
+   "value": "Hiring for remote freelance roles targeting candidates in Latvia, Estonia, and Sweden."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "f3747f0f10",
+    "43c60af062",
+    "3b4a36b0c9"
+   ],
+   "value": "To enhance global user experiences and advance AI technologies through language skills and data rating."
+  },
   "name": "Welo Global",
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "f3747f0f10",
+    "43c60af062",
+    "3b4a36b0c9"
+   ],
+   "value": "Data rating services for AI technologies, specifically evaluating the quality of filters and options in desktop and mobile e-commerce views."
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789704372,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "10bcb261ff078930",
@@ -8256,7 +8418,40 @@
     "url": "https://jobs.lever.co/weloglobal/474d5d60-19a6-40ab-aa12-2ca3520fec2c"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "f3747f0f10",
+    "43c60af062",
+    "3b4a36b0c9"
+   ],
+   "value": "Welo Global is a company that hires freelance Data Raters to work on projects aimed at advancing AI technologies and enhancing global user experiences. They seek web-savvy individuals proficient in specific languages to evaluate the quality of e-commerce search filters and options."
+  },
+  "synthesized_evidence_sha": "751016ba38752f15",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "f3747f0f10",
+    "43c60af062",
+    "3b4a36b0c9"
+   ],
+   "value": "Following guidelines to check the quality of filters and options in desktop and mobile views (e-commerce searches). Requires web-savviness and familiarity with Relevance tasks."
+  },
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "f3747f0f10",
+    "43c60af062",
+    "3b4a36b0c9"
+   ],
+   "value": "For a candidate seeking an elite, top-tier AI/Data Science role with high new-grad pay, fast innovative tech culture, and strong work-life balance, this freelance Data Rater position represents a significant mismatch. It is an entry-level, freelance gig based on project needs rather than a prestigious full-time technical role offering guaranteed shutdowns, accelerated learning, or high compensation."
+  }
  },
  "zs": {
   "aliases": [],
