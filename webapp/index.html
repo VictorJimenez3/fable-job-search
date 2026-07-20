@@ -682,7 +682,7 @@ function openWS(id) {
     <div class="decision">
       <b>Quick decision</b>
       <div class="sub">${esc((j.locations||[])[0]||"location unknown")}${j.salary?" · "+esc(j.salary):""}
-        · score ${j.score??"?"} · ${ago(postedTs(j))||"date unknown"} old</div>
+        · score ${j.score??"?"} · scoring v${j.score_version||j.rules_v||"?"} · ${ago(postedTs(j))||"date unknown"} old</div>
       <div class="facts">${eligibilityBadges(j)}</div>
       <div class="acts" style="margin-top:0.65rem">
         <button class="act primary" onclick='startApply(jobById("${id}"))'>open application ↗</button>

@@ -32,6 +32,16 @@ def test_gates_accept_new_grad_us():
     assert keep and alert_ok
 
 
+def test_current_role_order_puts_general_swe_above_data_engineering():
+    swe = mk("Software Engineer, New Grad")
+    data = mk("Data Engineer, New Grad")
+    score(swe, FB, NOW)
+    score(data, FB, NOW)
+    assert swe.score > data.score
+    assert any("role:swe" in r for r in swe.score_reasons)
+    assert any("role:data_eng" in r for r in data.score_reasons)
+
+
 def test_gates_direct_ats_needs_entry_signal():
     # direct ATS posting without any new-grad language: kept, but not alertable
     keep, alert_ok, _ = gates(mk("Software Engineer", source="greenhouse"))

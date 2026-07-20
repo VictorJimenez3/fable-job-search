@@ -191,6 +191,13 @@ def crawl() -> int:
     cutoff = now - 120 * 86400
     jobs_state = {k: v for k, v in jobs_state.items() if v.get("first_seen", now) >= cutoff}
 
+    # The equation is not only for newly discovered rows. Rebuild every active
+    # stored posting before generated state is published so Vercel, dashboard,
+    # alerts, and the Mac companion all see the same current ranking.
+    full_rescored, current_alerts = _rebuild_scores(jobs_state, fb, now)
+    print(f"scoring: rebuilt {full_rescored} active posting(s) with rules v{RULES_VERSION}; "
+          f"{current_alerts} currently alert-eligible")
+
     alert_history = state.load("alert_history.json", [])
     for j in alerts:
         rec = j.to_record()
@@ -507,14 +514,27 @@ def rescore_cmd() -> int:
     scoring-priority changes. It preserves the posting and quality evidence,
     then reapplies their audited demotions after deterministic scoring.
     """
+    jobs_state = state.jobs()
+    fb = state.feedback()
+    now = int(time.time())
+    changed, alerts = _rebuild_scores(jobs_state, fb, now)
+
+    state.save("jobs.json", jobs_state)
+    registry = state.companies()
+    runs = state.load("runs.json", [])
+    alert_history = state.load("alert_history.json", [])
+    write_outputs(jobs_state, registry, runs, alert_history)
+    print(f"rescore: rebuilt {changed} stored jobs; {alerts} currently alert-eligible; docs refreshed")
+    return 0
+
+
+def _rebuild_scores(jobs_state: dict, fb: dict, now: int) -> tuple[int, int]:
+    """Apply the current deterministic equation to every active stored job."""
     from . import culture, posting, quality
     import radar.score as score_mod
 
-    jobs_state = state.jobs()
-    fb = state.feedback()
     culture.write_outputs()
     score_mod._CULTURE_CACHE = None
-    now = int(time.time())
     changed = 0
     alerts = 0
     for rec in jobs_state.values():
@@ -533,20 +553,14 @@ def rescore_cmd() -> int:
         rec["alert_ok"] = bool(keep and alert_eligible)
         rec["explicit_new_grad"] = explicit_new_grad(job.title)
         rec["rules_v"] = RULES_VERSION
+        rec["score_version"] = RULES_VERSION
         if rec.get("quality"):
             quality.reapply(rec)
         if rec.get("posting"):
             posting.reapply(rec)
         changed += 1
         alerts += rec["alert_ok"] and rec["score"] >= profile()["thresholds"]["alert"]
-
-    state.save("jobs.json", jobs_state)
-    registry = state.companies()
-    runs = state.load("runs.json", [])
-    alert_history = state.load("alert_history.json", [])
-    write_outputs(jobs_state, registry, runs, alert_history)
-    print(f"rescore: rebuilt {changed} stored jobs; {alerts} currently alert-eligible; docs refreshed")
-    return 0
+    return changed, alerts
 
 
 def rescrape_cmd() -> int:

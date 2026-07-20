@@ -106,6 +106,13 @@ official postings the crawler already reads. Products, customers, mission,
 business context, technical work, locations, visa context, candidate relevance,
 and interview focus carry source links/dates; absent facts say **Not confirmed**.
 
+Scoring is published in three places: the live Vercel dashboard reads
+`state/jobs.json`, the generated [dashboard](docs/DASHBOARD.md) lists the current
+score, and each job's **Why it scored** drawer shows the auditable equation
+reasons plus the scoring version. Every crawl now rebuilds all active stored
+postings before publishing those files; `python -m radar.main rescore` is the
+manual repair command.
+
 Other comment commands: `skip <company>` (downrank similar roles),
 `track <ats> <token> [Name]` (force-add a company to the crawl registry).
 

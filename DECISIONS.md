@@ -710,3 +710,12 @@ experience and master's/PhD degrees; positive experience floors receive large
 auditable penalties, and degrees above the candidate's bachelor's profile receive
 an even larger penalty while remaining visible for review. Preferred degrees do
 not trigger the mismatch.
+
+# 50. Full-board score rebuild and visible score version (2026-07-20)
+
+Changing the role weights or scoring equation must affect existing active
+postings, not only newly crawled jobs. Every crawl now rebuilds all active
+stored scores before publishing `state/jobs.json` and generated dashboard
+outputs; `rescore` remains the manual repair command. Records carry
+`score_version`, and the platform's job drawer displays that version beside
+the score and the auditable reason list.

@@ -68,7 +68,7 @@ Before changing the radar, read these in order:
   `EMAIL_APP_PASSWORD` secrets** (confirmed empty in the live workflow on
   2026-07-18; Gmail app password setup is in README §2). The current 142
   tracked entries are all still `saved`, not confirmed applications.
-- **Scoring (rules v4, 2026-07-19, DECISIONS #47):** verified new-grad or
+- **Scoring (rules v5, 2026-07-20, DECISIONS #47):** verified new-grad or
   early-career evidence is required for alerts, except for a technical/data
   graduate, rotational, or leadership program. Aggregator listings, marquee
   companies, high salary, and healthtech no longer bypass that gate. Eligible
@@ -80,7 +80,9 @@ Before changing the radar, read these in order:
   mark marquee roles as competitive. `regate()`
   runs at the top of every crawl and re-applies rule bumps
   (`score.RULES_VERSION`, records carry `rules_v` + `explicit_new_grad`)
-  to stored jobs; `python -m radar.main rescore` fully rebuilds every stored
+  to stored jobs; every crawl now fully rebuilds every active stored
+  score before publishing; `python -m radar.main rescore` is also available to
+  manually rebuild every stored
   score after a profile-priority change, while `regate` only refreshes gates;
   `RADAR_SCRAPE_DASHBOARD=1 RADAR_RESCRAPE_LIMIT=100 python -m radar.main
   rescrape` rechecks visible dashboard roles through free ATS JSON/HTML
