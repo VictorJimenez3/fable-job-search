@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-20 08:26 UTC** · companies polled directly: **782** (registry 912) · jobs tracked: **14454** · new this run: **33** · alerts this run: **0**_
+_Last run: **2026-07-20 11:17 UTC** · companies polled directly: **782** (registry 912) · jobs tracked: **14454** · new this run: **33** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -29,14 +29,14 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 77 ⭐ | 16d | Salesforce | [Software Engineering AMTS (College Grad)](https://jobright.ai/jobs/info/69f4c70ddb88714bcdfafbf1?utm_campaign=Software%20Engineering&utm_source=1103) | Texas - Dallas | big_tech | jobright |
 | 75 ⭐ | 11d | Momentum | [Launch Graduate Program: Associate Cybersecurity Analyst](https://job-boards.greenhouse.io/momentumcompany3/jobs/8614696002) | Dallas, Texas | other | greenhouse |
 | 75 ⭐ | 13d | Notion | [Software Engineer – Early Career](https://jobs.ashbyhq.com/notion/297b4ece-765f-4eea-b1b8-46057cb6501f/application) | SF | big_tech | simplify |
-| 72  | 12d | ByteDance | [Graduate Software Engineer - Dev Infra](https://jobs.bytedance.com/en/position/7536272435440716040/detail) | San Jose, CA | big_tech | simplify |
+| 72  | 13d | ByteDance | [Graduate Software Engineer - Dev Infra](https://jobs.bytedance.com/en/position/7536272435440716040/detail) | San Jose, CA | big_tech | simplify |
 | 72  | 19d | RTX | [Leadership Development Program - Engineering,  Aerospace/Mechanical (S](https://globalhr.wd5.myworkdayjobs.com/en-US/Private_Posting_No_TMP/job/US-VA-ARLINGTON-108--1100-Wilson-Blvd--ROSSLYN-HQ/Leadership-Development-Program---Engineering---Aerospace-Mechanical--Starts-June-2027-_01853757-1) | US-VA-ARLINGTON-108 ~ 1100 Wilson Blvd ~ | other | workday |
 | 72  | 19d | RTX | [Leadership Development Program - Engineering, Materials & Chemistry Di](https://globalhr.wd5.myworkdayjobs.com/en-US/Private_Posting_No_TMP/job/US-VA-ARLINGTON-108--1100-Wilson-Blvd--ROSSLYN-HQ/Leadership-Development-Program---Engineering--Materials---Chemistry-Discipline--Starts-June-2027-_01853293-1) | US-VA-ARLINGTON-108 ~ 1100 Wilson Blvd ~ | other | workday |
 | 72  | 27d | RTX | [Leadership Development Program - Engineering - Software](https://globalhr.wd5.myworkdayjobs.com/fr-CA/Private_Posting_No_TMP/job/US-VA-ARLINGTON-1000--1000-Wilson-Blvd--WILSON-Fl-23/Leadership-Development-Program---Engineering--Software--Starts-June-2027-_01853289) | Arlington, VA | other | simplify |
 | 72  | 27d | RTX | [Leadership Development Program - Digital (Starts June 2027)](https://globalhr.wd5.myworkdayjobs.com/en-US/Private_Posting_No_TMP/job/US-VA-ARLINGTON-108--1100-Wilson-Blvd--ROSSLYN-HQ/Leadership-Development-Program---Digital--Starts-June-2027-_01853105) | US-VA-ARLINGTON-108 ~ 1100 Wilson Blvd ~ | other | workday |
 | 72  | 27d | RTX | [Leadership Development Program - Engineering, Systems (Starts June 202](https://globalhr.wd5.myworkdayjobs.com/en-US/Private_Posting_No_TMP/job/US-VA-ARLINGTON-1000--1000-Wilson-Blvd--WILSON-Fl-23/Leadership-Development-Program---Engineering--Systems--Starts-June-2027-_01853288) | US-VA-ARLINGTON-1000 ~ 1000 Wilson Blvd  | other | workday |
 | 71  | 12d | Otter.ai | [Software Engineer New Grad - Backend](https://otter.ai/careers?gh_jid=7798264003) | Mountain View, CA | ai_lab | simplify |
-| 70  | 4d | Faros AI | [Software Engineer New Grad](https://jobs.ashbyhq.com/faros-ai/622e1f1e-4a39-4e7c-8526-1189ca588066/application?embed=true) | San Mateo, CA | ai_lab | simplify |
+| 70  | 5d | Faros AI | [Software Engineer New Grad](https://jobs.ashbyhq.com/faros-ai/622e1f1e-4a39-4e7c-8526-1189ca588066/application?embed=true) | San Mateo, CA | ai_lab | simplify |
 | 70  | 5d | SentiLink | [Data Scientist, New Grad](https://jobright.ai/jobs/info/6a55b7d705c65f7c8f4c673f?utm_campaign=Data%20Analysis&utm_source=1103) | United States | other | jobright |
 | 70  | 6d | SambaNova Systems | [AI Systems Performance Engineer New Grad](https://sambanova.ai/sambanova-available-positions/?gh_jid=6115124004) | San Jose, CA | other | simplify |
 | 70  | 11d | Quora | [Machine Learning Engineer New Grad](https://jobs.ashbyhq.com/quora/3eb7e80e-6a0d-41b6-8ee4-f62421c486e4/application) | Remote in USA | other | simplify |
@@ -117,7 +117,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 60  | 12d | DMC Engineering | [Entry Level Embedded Engineer](https://jobright.ai/jobs/info/6a4e702c15b4965afd5832ad?utm_campaign=Software%20Engineering&utm_source=1103) | Denver, CO, United States | other | jobright |
 | 60  | 12d | DMC Engineering | [Entry Level Embedded Engineer](https://jobright.ai/jobs/info/6a4e763f0ea38951a6ff3336?utm_campaign=Software%20Engineering&utm_source=1103) | Chicago (Headquarters), United States | other | jobright |
 | 60  | 12d | AppLovin | [Backend Engineer, New Grad](https://jobright.ai/jobs/info/6a3c3981882f121f56a33eac?utm_campaign=Software%20Engineering&utm_source=1103) | Palo Alto, CA, United States | other | jobright |
-| 60  | 13d | Citadel Securities | [Graduate Software Engineer](https://www.citadelsecurities.com/careers/details/software-engineer-university-graduate-us/) | Miami, FL | other | simplify |
+| 60  | 14d | Citadel Securities | [Graduate Software Engineer](https://www.citadelsecurities.com/careers/details/software-engineer-university-graduate-us/) | Miami, FL | other | simplify |
 | 60  | 18d | Optiver | [Graduate Software Engineer](https://www.optiver.com/join-us/jobs/8401042002/?gh_jid=8401042002) | Chicago, IL | other | simplify |
 | 60  | 18d | Optiver | [Graduate Software Engineer](https://www.optiver.com/join-us/jobs/8604899002/?gh_jid=8604899002) | Austin, TX | other | simplify |
 | 60  | 27d | Cylake | [Software Engineer (2027 University Grad)](https://jobs.ashbyhq.com/cylake-inc/1d1ac42e-299c-42af-bd7c-b8c5fb07f735) | Sunnyvale | other | ashby |
@@ -144,7 +144,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 57  | 11d | Pylon | [Software Engineer, New Grad](https://jobright.ai/jobs/info/6a4fe2de9469c0662034f404?utm_campaign=Software%20Engineering&utm_source=1103) | San Francisco, CA, United States | other | jobright |
 | 57  | 12d | Faros | [Software Engineer - New Grad](https://jobright.ai/jobs/info/6a4e911515b4965afd583c5a?utm_campaign=Software%20Engineering&utm_source=1103) | San Mateo, CA, United States | other | jobright |
 | 57  | 12d | The Boeing Company | [Entry Level Simulation Software Engineer](https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Berkeley-MO/Entry-Level-Simulation-Software-Engineer_JR2026516853-1) | Hazelwood, MO | other | simplify |
-| 57  | 12d | Cerebras | [Software Engineer New Grad](https://jobs.ashbyhq.com/cerebras/987d7f64-c957-4c8f-b89d-2f9d64738507/application) | Sunnyvale, CA | other | simplify |
+| 57  | 13d | Cerebras | [Software Engineer New Grad](https://jobs.ashbyhq.com/cerebras/987d7f64-c957-4c8f-b89d-2f9d64738507/application) | Sunnyvale, CA | other | simplify |
 | 57  | 13d | Amentum | [Entry Level Software Engineer](https://pae.wd1.myworkdayjobs.com/en-US/amentum_careers/job/US-VA-Dahlgren/Entry-Level-Software-Engineer_R0148259) | Fredericksburg, VA | other | simplify |
 | 57  | 17d | Collective | [Software Engineer (New Grad)](https://jobright.ai/jobs/info/6a3f4becce7cce40b34235d8?utm_campaign=Software%20Engineering&utm_source=1103) | San Francisco | other | jobright |
 | 57  | 17d | The Boeing Company | [Entry-Level Software Engineer](https://boeing.wd1.myworkdayjobs.com/external_subsidiary/job/USA---Maryland-Heights-MO/Entry-Level-Software-Engineer_JR2026516748-1) | Creve Coeur, MO | other | simplify |
