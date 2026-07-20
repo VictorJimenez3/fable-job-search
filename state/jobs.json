@@ -8667,15 +8667,30 @@
   ],
   "posted_at": 1784505600,
   "posting": {
-   "analyzed_at": 1784569976,
+   "analyzed_at": 1784571796,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "U.S. Citizen Only"
   },
   "quality": {
+   "_posting": {
+    "analyzed_at": 1784571796,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "no",
+    "sponsorship_note": "U.S. Citizen Only"
+   },
    "ai_deferred_at": 1784569976,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784571796,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry-level SWE with 0+ years exp and BS requirement.",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 5,
@@ -81608,13 +81623,12 @@
   "remote": false,
   "rules_v": 5,
   "salary": "",
-  "score": 61,
+  "score": 55,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "posted <24h +12",
-   "title matches your history +6",
-   "generic analyst title (dashboard only)"
+   "posted <72h +6",
+   "title matches your history +6"
   ],
   "score_version": 5,
   "sector": "other",
@@ -108153,16 +108167,14 @@
   "remote": false,
   "rules_v": 5,
   "salary": "",
-  "score": 68,
+  "score": 66,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:ai_lab +11",
    "company tier: marquee (competitive)",
-   "posted <7d +2",
    "you've engaged with OpenAI +8",
-   "culture fit 60/100 +1",
-   "not an AI/SWE/DS role"
+   "culture fit 60/100 +1"
   ],
   "score_version": 5,
   "sector": "ai_lab",
@@ -118404,13 +118416,12 @@
   "remote": true,
   "rules_v": 5,
   "salary": "",
-  "score": 51,
+  "score": 47,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "posted <72h +6",
-   "remote +2",
-   "off-field title (dashboard only)"
+   "posted <7d +2",
+   "remote +2"
   ],
   "score_version": 5,
   "sector": "other",
@@ -217193,7 +217204,7 @@
   "url": "https://jobs.ashbyhq.com/AfterQuery/f9055979-9c2d-4b5d-a0ec-f248205b1d16"
  },
  "6ea8fda9b37312ec": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "The Boeing Company",
   "description": "",
@@ -217206,26 +217217,41 @@
   ],
   "posted_at": 1784505600,
   "posting": {
-   "analyzed_at": 1784569977,
+   "analyzed_at": 1784571802,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
+   "_posting": {
+    "analyzed_at": 1784571802,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "unknown"
+   },
    "ai_deferred_at": 1784569977,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784571802,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "no",
+   "reason": "Requires bachelor's degree and 1+ years experience.",
+   "role_family": "swe",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 5,
   "salary": "",
-  "score": 70,
+  "score": 50,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "new-grad title +14",
    "posted <24h +12",
    "title matches your history +1",
-   "verified new-grad/early-career evidence"
+   "verified new-grad/early-career evidence",
+   "quality: not new-grad (1+ yrs — LLM-verified) -20"
   ],
   "score_version": 5,
   "sector": "other",
@@ -242722,15 +242748,13 @@
   "remote": false,
   "rules_v": 5,
   "salary": "",
-  "score": 69,
+  "score": 67,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:healthtech +16",
-   "posted <7d +2",
    "title matches your history +4",
-   "SHPE 2026 exhibitor +4",
-   "off-field title (dashboard only)"
+   "SHPE 2026 exhibitor +4"
   ],
   "score_version": 5,
   "sector": "healthtech",
@@ -279522,13 +279546,12 @@
   "remote": false,
   "rules_v": 5,
   "salary": "",
-  "score": 61,
+  "score": 55,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "posted <24h +12",
-   "title matches your history +6",
-   "generic analyst title (dashboard only)"
+   "posted <72h +6",
+   "title matches your history +6"
   ],
   "score_version": 5,
   "sector": "other",
@@ -330398,13 +330421,12 @@
   "remote": false,
   "rules_v": 5,
   "salary": "",
-  "score": 61,
+  "score": 55,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "posted <24h +12",
-   "title matches your history +6",
-   "generic analyst title (dashboard only)"
+   "posted <72h +6",
+   "title matches your history +6"
   ],
   "score_version": 5,
   "sector": "other",
@@ -349019,14 +349041,13 @@
   "remote": false,
   "rules_v": 5,
   "salary": "",
-  "score": 63,
+  "score": 59,
   "score_reasons": [
    "base 20",
    "role:swe +23",
    "sector:big_tech +10",
-   "posted <72h +6",
-   "title matches your history +4",
-   "not an AI/SWE/DS role"
+   "posted <7d +2",
+   "title matches your history +4"
   ],
   "score_version": 5,
   "sector": "big_tech",
@@ -364453,13 +364474,12 @@
   "remote": false,
   "rules_v": 5,
   "salary": "",
-  "score": 61,
+  "score": 55,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "posted <24h +12",
-   "title matches your history +6",
-   "generic analyst title (dashboard only)"
+   "posted <72h +6",
+   "title matches your history +6"
   ],
   "score_version": 5,
   "sector": "other",
@@ -383225,13 +383245,11 @@
   "remote": false,
   "rules_v": 5,
   "salary": "",
-  "score": 59,
+  "score": 57,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "new-grad title +14",
-   "posted <7d +2",
-   "verified new-grad/early-career evidence"
+   "new-grad title +14"
   ],
   "score_version": 5,
   "sector": "other",
@@ -384365,13 +384383,12 @@
   "remote": false,
   "rules_v": 5,
   "salary": "",
-  "score": 61,
+  "score": 55,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "posted <24h +12",
-   "title matches your history +6",
-   "generic analyst title (dashboard only)"
+   "posted <72h +6",
+   "title matches your history +6"
   ],
   "score_version": 5,
   "sector": "other",
@@ -463354,11 +463371,10 @@
   "remote": false,
   "rules_v": 5,
   "salary": "",
-  "score": 45,
+  "score": 43,
   "score_reasons": [
    "base 20",
-   "role:swe +23",
-   "posted <7d +2"
+   "role:swe +23"
   ],
   "score_version": 5,
   "sector": "other",
@@ -487064,13 +487080,12 @@
   "remote": false,
   "rules_v": 5,
   "salary": "",
-  "score": 61,
+  "score": 55,
   "score_reasons": [
    "base 20",
    "role:swe +23",
-   "posted <24h +12",
-   "title matches your history +6",
-   "generic analyst title (dashboard only)"
+   "posted <72h +6",
+   "title matches your history +6"
   ],
   "score_version": 5,
   "sector": "other",

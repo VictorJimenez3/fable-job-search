@@ -1,10 +1,71 @@
 {
  "accenture": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "75bf2a8feb",
+    "14f81f1629"
+   ],
+   "value": "Defense, national security, public safety, civilian, and military health organizations, including critical infrastructure sectors like energy, water, nuclear, and transportation."
+  },
+  "error": "",
   "evidence_sha": "0f2af43b6510bd7c",
+  "generated_at": 1784571637,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "75bf2a8feb",
+    "14f81f1629"
+   ],
+   "value": "Probe whether the day-to-day work involves top-tier AI/data science projects or is primarily cybersecurity and infrastructure risk analysis. Ask about the team's engineering culture to determine if it is bureaucratic or innovative. Seek details on compensation, R&D focus, and expectations for after-hours availability to ensure it meets personal time and learning needs."
+  },
+  "last_attempt_at": 1784571637,
   "last_evidence_at": 1784566499,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "75bf2a8feb",
+    "14f81f1629"
+   ],
+   "value": "United in a shared purpose to pursue the limitless potential of technology and ingenuity for clients."
+  },
   "name": "Accenture",
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "75bf2a8feb",
+    "14f81f1629"
+   ],
+   "value": "Cybersecurity tools providing protection across endpoints, peripherals, data, email, web, and networks, alongside risk analysis for critical infrastructure."
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789755637,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "75bf2a8feb",
+    "14f81f1629"
+   ],
+   "value": "13,000+ people"
+  },
   "sources": [
    {
     "content_sha": "6ab037e4d47b24c8",
@@ -27,7 +88,37 @@
     "url": "https://boards.greenhouse.io/accenturefederalservices/jobs/4698285006?gh_jid=4698285006"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "75bf2a8feb",
+    "14f81f1629"
+   ],
+   "value": "Accenture Federal Services is a technology company within global Accenture, focused on technology and ingenuity for federal clients."
+  },
+  "synthesized_evidence_sha": "0f2af43b6510bd7c",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "75bf2a8feb",
+    "14f81f1629"
+   ],
+   "value": "Supporting the incident response lifecycle in environments like CorpsNet, SIPRNet, cloud, and DMZs, and evaluating OT environments using standards like IEC 62443 and NIST SP 800-82."
+  },
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "75bf2a8feb",
+    "14f81f1629"
+   ],
+   "value": "The candidate wants a fast-paced, innovative AI/data science role with elite prestige, high new-grad pay, and strict work-life balance. Accenture Federal Services is a large 13,000+ person company indicating scale, but the sources do not confirm AI/data science roles, pay, or WLB. The federal focus on defense and national security may conflict with the candidate's desire for a fast, non-bureaucratic culture, though the mission-driven nature aligns with their goals."
+  }
  },
  "ahead": {
   "aliases": [],
@@ -3364,59 +3455,62 @@
  },
  "jane street": {
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
     "99092c9f75"
    ],
-   "value": "Trading and financial markets."
+   "value": "Proprietary trading firm that uses technology and quantitative methods to trade financial instruments in global markets."
   },
   "customers": {
    "confidence": "unknown",
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "evidence_sha": "677b742e0ce51faa",
-  "generated_at": 1784558066,
+  "generated_at": 1784571637,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "interview_focus": {
-   "confidence": "high",
-   "source_ids": [
-    "99092c9f75",
-    "ce971029c4"
-   ],
-   "value": "Candidates should prepare to demonstrate skills in functional programming and OCaml, as well as the ability to solve real-world problems in critical areas like trading desks, risk models, and network monitoring. Expect discussions on how you think about security, trade-offs, and sustainability, balancing the desire for a fast-paced tech culture with educational growth while avoiding toxic burnout."
-  },
-  "last_attempt_at": 1784569950,
-  "last_evidence_at": 1784561210,
-  "locations": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
-  },
-  "mission": {
    "confidence": "medium",
    "source_ids": [
     "ce971029c4"
    ],
-   "value": "While not explicitly stated as a corporate mission, the cybersecurity team's mission is to keep the firm safe through sustainable security practices and education on risk and best practices."
+   "value": "The firm emphasizes excitement to learn team-specific thinking (e.g., cybersecurity trade-offs, sustainability), collaboration, and technical rigor; it aims to give candidates a real sense of what it's like to work full-time."
+  },
+  "last_attempt_at": 1784571637,
+  "last_evidence_at": 1784561210,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "18ed09b638"
+   ],
+   "value": "New York (confirmed for HR Partner role); global scale implied but specific locations not confirmed in provided sources."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "18ed09b638",
+    "ce971029c4",
+    "99092c9f75"
+   ],
+   "value": "To operate a challenging, dynamic workplace for intellectually curious people, solving real problems across the firm with an emphasis on collaboration, education, and sustainability."
   },
   "name": "Jane Street",
   "products": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "99092c9f75"
    ],
-   "value": "Foundational infrastructure such as network monitoring and risk models."
+   "value": "Quantitative trading and market-making services across global financial markets."
   },
   "prompt_v": 1,
-  "refresh_after": 1789742066,
+  "refresh_after": 1789755637,
   "schema_v": 1,
   "size_stage": {
    "confidence": "unknown",
@@ -3464,26 +3558,27 @@
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "18ed09b638",
     "99092c9f75"
    ],
-   "value": "Jane Street is a trading firm where software engineers solve critical problems across trading desks, accounting, and infrastructure. The firm heavily utilizes functional programming, specifically OCaml."
+   "value": "Jane Street is a quantitative trading firm that operates in global financial markets, emphasizing technology, functional programming (OCaml), and intellectual rigor."
   },
-  "synthesized_evidence_sha": "5360646954771b83",
+  "synthesized_evidence_sha": "677b742e0ce51faa",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "99092c9f75",
     "ce971029c4"
    ],
-   "value": "Software engineers solve real problems in critical areas and build infrastructure using OCaml, a statically-typed functional programming language. Cybersecurity work involves programming, security trade-offs, and sustainability."
+   "value": "Software engineering across trading desks, accounting, infrastructure, network monitoring, and risk models, with a strong emphasis on functional programming in OCaml. Cybersecurity team focuses on security programming, risk education, trade-offs, and sustainability."
   },
   "why_it_matters": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "99092c9f75",
+    "18ed09b638",
     "ce971029c4"
    ],
-   "value": "The firm offers a fast, innovative technical culture using functional programming (OCaml) to solve critical trading and infrastructure problems. The environment focuses on a real sense of full-time work alongside a truly unparalleled educational experience, which aligns with the candidate's desire for rapid technical learning and high prestige without slow bureaucracy."
+   "value": "Jane Street describes itself as a challenging, dynamic environment that provides real work experience and an unparalleled educational experience, aligning with preference for accelerated technical learning and a fast, innovative tech culture over slow bureaucracy."
   }
  },
  "johnson johnson": {
@@ -6117,13 +6212,62 @@
  },
  "pfizer": {
   "aliases": [],
-  "attempts": 1,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 2,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "13103d17c66031f6",
-  "last_attempt_at": 1784569950,
+  "generated_at": 1784571637,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "5bc51a722a"
+   ],
+   "value": "Explore how enterprise data-to-AI pipelines are built at scale, how vendor and stakeholder interfaces are managed, and what structured adoption processes exist. Probe for specifics on work-life balance, guaranteed shutdowns, and burnout safeguards, since these are not evidenced in the posting."
+  },
+  "last_attempt_at": 1784571637,
   "last_evidence_at": 1784566499,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "5bc51a722a"
+   ],
+   "value": "United Kingdom - Walton Oaks (confirmed from job posting)."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "5bc51a722a"
+   ],
+   "value": "The job posting references work that supports the International Commercial Division, linking data and AI to business transformation and in-market network adoption, suggesting a mission focused on delivering healthcare impact at scale."
+  },
   "name": "Pfizer",
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789755637,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "4a6057017131354f",
@@ -6136,7 +6280,34 @@
     "url": "https://pfizer.wd1.myworkdayjobs.com/en-US/PfizerCareers/job/United-Kingdom---Walton-Oaks/Vice-President--Build---Data--Engineering---AI_4960896"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "5bc51a722a"
+   ],
+   "value": "Pfizer is a global biopharmaceutical company that discovers, develops, manufactures, and distributes medicines and vaccines. From a technical perspective, it offers enterprise-wide Vice President-level roles spanning data foundation to production AI, indicating a large-scale, mission-driven technology environment."
+  },
+  "synthesized_evidence_sha": "13103d17c66031f6",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "5bc51a722a"
+   ],
+   "value": "Enterprise-scale data and AI engineering: managing the full path from data foundation to production AI; overseeing data-supply vendor relationships and contracts (IQVIA, Komodo, Optum, Veeva); coordinating hand-offs into adoption, localization, and in-market networks."
+  },
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "5bc51a722a"
+   ],
+   "value": "The VP-level scope suggests high new-grad-caliber exposure and prestige, working end-to-end from data to production AI. The explicit mention of vendor management and cross-functional hand-offs may indicate structured processes that could support work-life balance, though actual hours, shutdowns, and burnout culture are not confirmed."
+  }
  },
  "pinterest": {
   "aliases": [],
@@ -7985,7 +8156,7 @@
  },
  "spacex": {
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -8017,7 +8188,7 @@
    ],
    "value": "Top skills include telemetry systems, real-time analytics, Python, Go, Java; emphasizes innovative problem-solving for space technology."
   },
-  "last_attempt_at": 1784569950,
+  "last_attempt_at": 1784571637,
   "last_evidence_at": 1784566499,
   "locations": {
    "confidence": "unknown",
