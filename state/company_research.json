@@ -2075,7 +2075,7 @@
  },
  "cvs health": {
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -2084,40 +2084,40 @@
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "808a9bf46e"
+    "b0fd9ca822"
    ],
-   "value": "Customers, patients, members, and communities"
+   "value": "Customers, patients, members, and communities served by the company's health offerings."
   },
   "error": "",
   "evidence_sha": "c2e501daeeeddd01",
-  "generated_at": 1784390590,
+  "generated_at": 1784532644,
   "generator": {
-   "endpoint": "local",
-   "model": "qwen3:30b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "interview_focus": {
    "confidence": "medium",
    "source_ids": [
-    "808a9bf46e"
+    "b0fd9ca822"
    ],
-   "value": "A place that accelerates technical learning and career growth without sacrificing personal time."
+   "value": "Probe whether the AI Engineer role truly follows a fast, innovative tech culture or if it operates under slow bureaucracy. Ask about guaranteed shutdowns and sane hours to confirm respect for personal time and the avoidance of high burnout, as these are not detailed in the job posting."
   },
-  "last_attempt_at": 1784390590,
+  "last_attempt_at": 1784532644,
   "last_evidence_at": 1784491566,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "808a9bf46e"
+    "b0fd9ca822"
    ],
-   "value": "TX---Richardson"
+   "value": "Has a presence in Richardson, TX (TX---Richardson)."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "808a9bf46e"
+    "b0fd9ca822"
    ],
-   "value": "Shaping a more connected, convenient and compassionate health experience"
+   "value": "Building a world of health around every individual and shaping a more connected, convenient, and compassionate health experience."
   },
   "name": "CVS Health",
   "products": {
@@ -2126,7 +2126,7 @@
    "value": "Not confirmed"
   },
   "prompt_v": 1,
-  "refresh_after": 1789574590,
+  "refresh_after": 1789716644,
   "schema_v": 1,
   "size_stage": {
    "confidence": "unknown",
@@ -2154,24 +2154,24 @@
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "808a9bf46e"
+    "b0fd9ca822"
    ],
-   "value": "CVS Health is a leading health care company focused on providing integrated health care services and products, with a commitment to diversity and inclusion in the workplace."
+   "value": "A healthcare company building a connected, convenient, and compassionate health experience for the individuals it serves, with a culture committed to fostering workplace belonging and valuing every colleague."
   },
-  "synthesized_evidence_sha": "7b0dac02a1b41784",
+  "synthesized_evidence_sha": "c2e501daeeeddd01",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "808a9bf46e"
+    "b0fd9ca822"
    ],
-   "value": "AI Engineer role focused on building a world of health around every individual"
+   "value": "Hires for roles such as AI Engineer."
   },
   "why_it_matters": {
    "confidence": "medium",
    "source_ids": [
-    "808a9bf46e"
+    "b0fd9ca822"
    ],
-   "value": "A top-tier AI role with elite prestige and high new-grad pay in a fast, innovative tech culture; mission-driven company respecting work-life balance through sane hours and guaranteed shutdowns, avoiding toxic environments."
+   "value": "Aligns with the desire for a mission-driven environment by explicitly focusing on compassion and shaping health experiences, while claiming a commitment to colleague value and inclusion. Fast, innovative tech culture, WLB, sane hours, and high new-grad pay are not confirmed."
   }
  },
  "east west bank": {
@@ -5056,7 +5056,7 @@
  },
  "openai": {
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -5075,7 +5075,7 @@
    ],
    "value": "Developers, businesses, and individuals using OpenAI's APIs and models for various applications."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "cbb6150379549890",
   "generated_at": 1784434893,
   "generator": {
@@ -5092,7 +5092,7 @@
    ],
    "value": "Technical skills, problem-solving, and alignment with OpenAI's mission of creating safe and beneficial AI. The interview process focuses on candidate's ability to contribute to cutting-edge AI research and development."
   },
-  "last_attempt_at": 1784434893,
+  "last_attempt_at": 1784532644,
   "last_evidence_at": 1784479880,
   "locations": {
    "confidence": "high",
@@ -5409,10 +5409,70 @@
  },
  "palantir": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "571290b707",
+    "70715ba9f3"
+   ],
+   "value": "Partners include research scientists, aerospace engineers, intelligence analysts, and economic forecasters. The platforms also help partners develop lifesaving drugs, forecast supply chain disruptions, and locate missing children."
+  },
+  "error": "",
   "evidence_sha": "a31c1c8372828072",
+  "generated_at": 1784532644,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "571290b707",
+    "70715ba9f3"
+   ],
+   "value": "Candidates should be prepared to discuss how they can contribute to small teams building software at scale, particularly within Production Infrastructure, developing database and search systems, and supporting storage technologies across cloud, on-premise, and classified environments. They should also be ready to discuss their alignment with Palantir's mission-driven approach to data-driven decisions and operations."
+  },
+  "last_attempt_at": 1784532644,
   "last_evidence_at": 1784481324,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "21dd5cfa09"
+   ],
+   "value": "Washington, D.C."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "571290b707",
+    "70715ba9f3"
+   ],
+   "value": "To build the world's leading software for data-driven decisions and operations, transforming how organizations around the world use data and bringing the right data to the people who need it."
+  },
   "name": "Palantir",
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "571290b707",
+    "70715ba9f3"
+   ],
+   "value": "Software products include Production Infrastructure (the substrate for deploying other platforms), Foundry, and Gotham."
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789716644,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "0bb77f74aed021df",
@@ -5445,7 +5505,39 @@
     "url": "https://jobs.lever.co/palantir/7d75bed5-45d8-4876-840a-2d92ea79c98d"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "21dd5cfa09"
+   ],
+   "value": "The application asks if the candidate will now or in the future require sponsorship for employment visa status (e.g., H-1B), but the provided sources do not explicitly confirm whether sponsorship is provided."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "571290b707",
+    "70715ba9f3"
+   ],
+   "value": "Palantir is a world-changing company that builds the world's leading software for data-driven decisions and operations, using data, AI, and world-leading infrastructure to support mission-critical workloads."
+  },
+  "synthesized_evidence_sha": "a31c1c8372828072",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "571290b707",
+    "70715ba9f3"
+   ],
+   "value": "Software Engineers work in small teams within the Production Infrastructure organization, developing database and search systems, and supporting storage technologies across cloud, on-premise, and classified or secure environments. They build software at scale to support mission-critical workloads."
+  },
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "571290b707",
+    "70715ba9f3"
+   ],
+   "value": "Palantir offers a top-tier AI and data science role focused on transforming how organizations use data through world-leading infrastructure. The role involves building software at scale to support mission-critical workloads, appealing to candidates seeking innovative tech work at a mission-driven company. The small team structure aligns with a fast culture rather than slow bureaucracy, accelerating technical learning and career growth."
+  }
  },
  "palantir technologies": {
   "aliases": [],
@@ -6660,10 +6752,62 @@
  },
  "sambanova systems": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "cfe68fe7f9c8d9fe",
+  "generated_at": 1784532644,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "bb01238703"
+   ],
+   "value": "Assess the culture to ensure it provides the required work-life balance and sane hours. Explore the scope of the AI Systems Performance Engineer role to verify it offers elite prestige and fast-paced learning."
+  },
+  "last_attempt_at": 1784532644,
   "last_evidence_at": 1784481324,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "bb01238703"
+   ],
+   "value": "Recruiting contact phone number suggests a presence in the 650 area code (San Francisco Bay Area/Peninsula)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "bb01238703"
+   ],
+   "value": "Employs some of the greatest minds and talent in AI and machine learning."
+  },
   "name": "SambaNova Systems",
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789716644,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "049d3c7de3d3c77a",
@@ -6676,7 +6820,34 @@
     "url": "https://sambanova.ai/sambanova-available-positions/?gh_jid=6115124004"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "bb01238703"
+   ],
+   "value": "SambaNova Systems is an AI and machine learning company that employs top talent in the field."
+  },
+  "synthesized_evidence_sha": "cfe68fe7f9c8d9fe",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "bb01238703"
+   ],
+   "value": "AI Systems Performance Engineering for new grads."
+  },
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "bb01238703"
+   ],
+   "value": "SambaNova hires top-tier AI/ML talent, aligning with the candidate's desire for an innovative, learning-focused environment. The company has an official pay transparency policy, suggesting potential to meet high new-grad pay expectations."
+  }
  },
  "sayvo ai": {
   "aliases": [],
