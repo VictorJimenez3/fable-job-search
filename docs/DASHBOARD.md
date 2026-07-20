@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-20 13:28 UTC** · companies polled directly: **785** (registry 923) · jobs tracked: **14515** · new this run: **39** · alerts this run: **0**_
+_Last run: **2026-07-20 14:40 UTC** · companies polled directly: **785** (registry 923) · jobs tracked: **14515** · new this run: **39** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -9,10 +9,10 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 99 🔥 | 6d | NVIDIA | [Compiler Engineer, AI Inference- New College Grad 2026](https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/Compiler-Engineer--AI-Inference--New-College-Grad-2026_JR2021230) | US, CA, Santa Clara | big_tech | workday |
 | 98 🔥 | 2d | NVIDIA | [Systems Software Engineer, Accelerated Kubernetes Performance and Scal](https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/Systems-Software-Engineer--Accelerated-Kubernetes-Performance-and-Scale---New-College-Grad-2026_JR2020957) | 2 Locations | big_tech | workday |
 | 97 🔥 | 7d | NVIDIA | [Compiler Engineer AI Inference New Grad](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Compiler-Engineer--AI-Inference--New-College-Grad-2026_JR2021230) | Santa Clara, CA | big_tech | simplify |
-| 96 🔥 | 6d | NVIDIA | [System Software Engineer - Dynamo-Triton Inference Server - New Colleg](https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/System-Software-Engineer--Dynamo-Triton-Inference-Server---New-College-Grad-2026_JR2020767) | Remote - Santa Clara, CA | big_tech | speedyapply |
 | 94 🔥 | 3d | NVIDIA | [Systems Software Engineer New Grad - Accelerated Kubernetes Performanc](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Systems-Software-Engineer--Accelerated-Kubernetes-Performance-and-Scale---New-College-Grad-2026_JR2020957) | Seattle, WA | big_tech | simplify |
 | 94 🔥 | 6d | NVIDIA | [System Software Engineer, Dynamo-Triton Inference Server - New College](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/System-Software-Engineer--Dynamo-Triton-Inference-Server---New-College-Grad-2026_JR2020767) | 2 Locations | big_tech | workday |
 | 94 🔥 | 6d | NVIDIA | [Backend Compiler Engineer - New College Grad 2026](https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/Backend-Compiler-Engineer---New-College-Grad-2026_JR2021242) | US, CA, Santa Clara | big_tech | workday |
+| 94 🔥 | 7d | NVIDIA | [System Software Engineer - Dynamo-Triton Inference Server - New Colleg](https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/System-Software-Engineer--Dynamo-Triton-Inference-Server---New-College-Grad-2026_JR2020767) | Remote - Santa Clara, CA | big_tech | speedyapply |
 | 92 🔥 | 7d | NVIDIA | [System Software Engineer New Grad - Dynamo-Triton Inference Server](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/System-Software-Engineer--Dynamo-Triton-Inference-Server---New-College-Grad-2026_JR2020767) | Remote in USA | big_tech | simplify |
 | 92 🔥 | 7d | NVIDIA | [Backend Compiler Engineer - New College Grad 2026](https://jobright.ai/jobs/info/6a55634d377f983ce8a99db8?utm_campaign=Software%20Engineering&utm_source=1103) | Santa Clara, CA, United States | big_tech | jobright |
 | 92 🔥 | 10d | NVIDIA | [Systems Software Engineer New Grad - Autonomous Systems Mapping](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Systems-Software-Engineer--Autonomous-Systems-Mapping---New-College-Graduate-2026_JR2020838) | Santa Clara, CA | big_tech | simplify |
@@ -28,14 +28,14 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 77 ⭐ | 15d | Salesforce | [Software Engineering AMTS (College Grad)](https://jobright.ai/jobs/info/69f4c7a881706a5bd2162e3f?utm_campaign=Software%20Engineering&utm_source=1103) | Washington - Bellevue, US | big_tech | jobright |
 | 77 ⭐ | 16d | Salesforce | [Software Engineering AMTS (College Grad)](https://jobright.ai/jobs/info/69f4c70ddb88714bcdfafbf1?utm_campaign=Software%20Engineering&utm_source=1103) | Texas - Dallas | big_tech | jobright |
 | 75 ⭐ | 11d | Momentum | [Launch Graduate Program: Associate Cybersecurity Analyst](https://job-boards.greenhouse.io/momentumcompany3/jobs/8614696002) | Dallas, Texas | other | greenhouse |
+| 75 ⭐ | 13d | ByteDance | [Graduate Software Engineer - Dev Infra](https://jobs.bytedance.com/en/position/7536272435440716040/detail) | San Jose, CA | big_tech | simplify |
 | 75 ⭐ | 13d | Notion | [Software Engineer – Early Career](https://jobs.ashbyhq.com/notion/297b4ece-765f-4eea-b1b8-46057cb6501f/application) | SF | big_tech | simplify |
+| 74  | 11d | Quora | [Machine Learning Engineer New Grad](https://jobs.ashbyhq.com/quora/3eb7e80e-6a0d-41b6-8ee4-f62421c486e4/application) | Remote in USA | other | simplify |
+| 74  | 11d | Quora | [Machine Learning Engineer, New Grad - Quora (Remote)](https://jobs.ashbyhq.com/quora/3eb7e80e-6a0d-41b6-8ee4-f62421c486e4) | Remote - Multiple Locations | other | ashby |
 | 74  | 12d | Otter.ai | [Software Engineer New Grad - Backend](https://otter.ai/careers?gh_jid=7798264003) | Mountain View, CA | ai_lab | simplify |
-| 73  | 13d | ByteDance | [Graduate Software Engineer - Dev Infra](https://jobs.bytedance.com/en/position/7536272435440716040/detail) | San Jose, CA | big_tech | simplify |
 | 72  | 4d | Lightfield | [Software Engineer New Grad - Applied AI](https://jobs.ashbyhq.com/Lightfield/fc93a467-773d-4805-b342-bf470950732d/application?embed=true) | SF | other | simplify |
 | 72  | 4d | Lightfield | [Software Engineer, Applied AI, New Grad](https://jobs.ashbyhq.com/Lightfield/fc93a467-773d-4805-b342-bf470950732d) | HQ: San Francisco | other | ashby |
 | 72  | 5d | Faros AI | [Software Engineer New Grad](https://jobs.ashbyhq.com/faros-ai/622e1f1e-4a39-4e7c-8526-1189ca588066/application?embed=true) | San Mateo, CA | ai_lab | simplify |
-| 72  | 11d | Quora | [Machine Learning Engineer New Grad](https://jobs.ashbyhq.com/quora/3eb7e80e-6a0d-41b6-8ee4-f62421c486e4/application) | Remote in USA | other | simplify |
-| 72  | 11d | Quora | [Machine Learning Engineer, New Grad - Quora (Remote)](https://jobs.ashbyhq.com/quora/3eb7e80e-6a0d-41b6-8ee4-f62421c486e4) | Remote - Multiple Locations | other | ashby |
 | 72  | 19d | RTX | [Leadership Development Program - Engineering,  Aerospace/Mechanical (S](https://globalhr.wd5.myworkdayjobs.com/en-US/Private_Posting_No_TMP/job/US-VA-ARLINGTON-108--1100-Wilson-Blvd--ROSSLYN-HQ/Leadership-Development-Program---Engineering---Aerospace-Mechanical--Starts-June-2027-_01853757-1) | US-VA-ARLINGTON-108 ~ 1100 Wilson Blvd ~ | other | workday |
 | 72  | 19d | RTX | [Leadership Development Program - Engineering, Materials & Chemistry Di](https://globalhr.wd5.myworkdayjobs.com/en-US/Private_Posting_No_TMP/job/US-VA-ARLINGTON-108--1100-Wilson-Blvd--ROSSLYN-HQ/Leadership-Development-Program---Engineering--Materials---Chemistry-Discipline--Starts-June-2027-_01853293-1) | US-VA-ARLINGTON-108 ~ 1100 Wilson Blvd ~ | other | workday |
 | 72  | 27d | RTX | [Leadership Development Program - Engineering - Software](https://globalhr.wd5.myworkdayjobs.com/fr-CA/Private_Posting_No_TMP/job/US-VA-ARLINGTON-1000--1000-Wilson-Blvd--WILSON-Fl-23/Leadership-Development-Program---Engineering--Software--Starts-June-2027-_01853289) | Arlington, VA | other | simplify |
@@ -62,8 +62,8 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 67  | 20d | Palantir | [Software Engineer New Grad - Defense](https://jobs.lever.co/palantir/f362d7aa-360d-4059-ab38-f482742693b3/apply) | Palo Alto, CA | big_tech | simplify |
 | 67  | 20d | Palantir | [Software Engineer New Grad - Defense](https://jobs.lever.co/palantir/0a838e66-1ab0-4fc4-b4d3-4671c0352278/apply) | NYC | big_tech | simplify |
 | 67  | 20d | Palantir | [Forward Deployed Software Engineer New Grad - Commercial](https://jobs.lever.co/palantir/e500bcf3-19d8-4d3c-b340-4d76e4a55b40/apply) | Chicago, IL | big_tech | simplify |
-| 67  | 20d | Palantir | [Software Engineer New Grad](https://jobs.lever.co/palantir/c34b424e-caf2-455a-b104-ae1096ccca29/apply) | Denver, CO | big_tech | simplify |
-| 67  | 20d | Palantir | [Forward Deployed Software Engineer New Grad - Commercial](https://jobs.lever.co/palantir/2e6b0ac8-83e9-4be5-a3aa-cf319f751728/apply) | NYC | big_tech | simplify |
+| 67  | 21d | Palantir | [Software Engineer New Grad](https://jobs.lever.co/palantir/c34b424e-caf2-455a-b104-ae1096ccca29/apply) | Denver, CO | big_tech | simplify |
+| 67  | 21d | Palantir | [Forward Deployed Software Engineer New Grad - Commercial](https://jobs.lever.co/palantir/2e6b0ac8-83e9-4be5-a3aa-cf319f751728/apply) | NYC | big_tech | simplify |
 | 67  | 21d | Palantir Technologies | [Software Engineer, New Grad - Defense](https://jobright.ai/jobs/info/6a427c50a5e15b1068379165?utm_campaign=Software%20Engineering&utm_source=1103) | Palo Alto, CA | big_tech | jobright |
 | 67  | 21d | Palantir Technologies | [Software Engineer, New Grad - Defense](https://jobright.ai/jobs/info/6a427c5aa5e15b1068379168?utm_campaign=Software%20Engineering&utm_source=1103) | New York, NY | big_tech | jobright |
 | 67  | 21d | Palantir Technologies | [Software Engineer, New Grad](https://jobright.ai/jobs/info/6a427c566faf756060966e30?utm_campaign=Software%20Engineering&utm_source=1103) | Denver, CO | big_tech | jobright |
@@ -75,12 +75,12 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 66  | 17d | Travelers | [Data Science Leadership Development Program - Dsldp - Associate Data S](https://travelers.wd5.myworkdayjobs.com/External/job/CT---Hartford/Data-Science-Leadership-Development-Program--DSLDP--Associate-Data-Scientist_R-51336) | Hartford, CT | other | simplify |
 | 66  | 17d | Vanguard | [Technology Leadership Program - Data & Analytics - Analyst](https://vanguard.wd5.myworkdayjobs.com/en-US/contractors_restricted/job/Charlotte-NC/Technology-Leadership-Program---Data---Analytics--Analyst----NC_180091) | Charlotte, NC | other | simplify |
 | 66  | 19d | IMC Trading | [Graduate Software Engineer](https://jobright.ai/jobs/info/6a4556f7c2d11a6a46668d9b?utm_campaign=Software%20Engineering&utm_source=1103) | Chicago, United States | fintech | jobright |
-| 65  | 3d | Commvault | [Entry-Level Software Engineer - AI/ML](https://job-boards.greenhouse.io/commvault/jobs/5233620008) | Shrewsbury, NJ | other | simplify |
+| 65  | 4d | Commvault | [Entry-Level Software Engineer - AI/ML](https://job-boards.greenhouse.io/commvault/jobs/5233620008) | Shrewsbury, NJ | other | simplify |
 | 65  | 4d | Cybernetic Labs | [Software Engineer (Agent Platform) - New Grad - 2026-2027](https://jobs.ashbyhq.com/netic/d9bcb6a2-0e54-4cb3-baec-43f2d74db18f) | San Francisco | other | ashby |
 | 65  | 4d | Cybernetic Labs | [Full-Stack Software Engineer (Product) - New Grad - 2026-2027](https://jobs.ashbyhq.com/netic/bab5d1e5-e31b-42f0-9cef-334b1f17fed3) | San Francisco | other | ashby |
 | 65  | 4d | Bending Spoons | [Graduate software engineer](https://jobright.ai/jobs/info/6a59216a686b4755d1e0e89f?utm_campaign=Software%20Engineering&utm_source=1103) | United Kingdom | other | jobright |
-| 65  | 5d | Akuna Capital | [Software Engineer - Entry-Level - Python](https://www.akunacapital.com/careers/job/8013230/?gh_jid=8013230) | Chicago, IL | fintech | speedyapply |
-| 65  | 5d | Akuna Capital | [Software Engineer - Entry-Level - C++](https://www.akunacapital.com/careers/job/8013085/?gh_jid=8013085) | Chicago, IL | fintech | speedyapply |
+| 65  | 6d | Akuna Capital | [Software Engineer - Entry-Level - Python](https://www.akunacapital.com/careers/job/8013230/?gh_jid=8013230) | Chicago, IL | fintech | speedyapply |
+| 65  | 6d | Akuna Capital | [Software Engineer - Entry-Level - C++](https://www.akunacapital.com/careers/job/8013085/?gh_jid=8013085) | Chicago, IL | fintech | speedyapply |
 | 65  | 6d | Akuna Capital University | [Entry Level Software Engineer - C++](https://www.akunacapital.com/careers/job/8013085/?gh_jid=8013085) | Chicago, IL | fintech | simplify |
 | 65  | 7d | Trexquant Investment LP | [Quantitative Researcher - Early Career (USA)](https://jobright.ai/jobs/info/6a556f82f2c46727285f25a3?utm_campaign=Data%20Analysis&utm_source=1103) | New York, New York, United States | fintech | jobright |
 | 65  | 9d | LetsGetChecked | [Graduate Software Engineer](https://jobright.ai/jobs/info/6a52a9fae726ec56126a4010?utm_campaign=Software%20Engineering&utm_source=1103) | United States | other | jobright |
@@ -120,7 +120,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 61  | 18d | Optiver | [Graduate Software Engineer](https://www.optiver.com/join-us/jobs/8401042002/?gh_jid=8401042002) | Chicago, IL | other | simplify |
 | 61  | 18d | Optiver | [Graduate Software Engineer](https://www.optiver.com/join-us/jobs/8604899002/?gh_jid=8604899002) | Austin, TX | other | simplify |
 | 60  | 5d | BAE Systems | [Entry Level Software Engineer](https://jobright.ai/jobs/info/6a587b6e9838a11e5d8387e1?utm_campaign=Software%20Engineering&utm_source=1103) | Hudson, NH, United States | other | jobright |
-| 60  | 6d | Albertsons Companies | [Front End Entry Level](https://jobright.ai/jobs/info/6a5b14efc8e3a473cb8aec64?utm_campaign=Software%20Engineering&utm_source=1103) | Kirkland, WA, United States | other | jobright |
 | 60  | 11d | Cadence Design Systems | [Software Engineer New Grad - Undergrads](https://cadence.wd1.myworkdayjobs.com/University_Talent/job/Burlington-MA/Software-Engineer--New-College-Grad-2026--Undergrads-_R54894) | Burlington, MA | other | simplify |
 | 60  | 27d | Cylake | [Software Engineer (2027 University Grad)](https://jobs.ashbyhq.com/cylake-inc/1d1ac42e-299c-42af-bd7c-b8c5fb07f735) | Sunnyvale | other | ashby |
 | 59  | 3d | Pax | [Software Engineer (Early Career)](https://jobright.ai/jobs/info/6a5a58b54da96a42cfd95539?utm_campaign=Software%20Engineering&utm_source=1103) | San Francisco, CA, United States | other | jobright |
@@ -140,13 +139,13 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 58  | 13d | Amentum | [Entry Level Software Engineer](https://pae.wd1.myworkdayjobs.com/en-US/amentum_careers/job/US-VA-Dahlgren/Entry-Level-Software-Engineer_R0148259) | Fredericksburg, VA | other | simplify |
 | 58  | 17d | The Boeing Company | [Entry-Level Software Engineer](https://boeing.wd1.myworkdayjobs.com/external_subsidiary/job/USA---Maryland-Heights-MO/Entry-Level-Software-Engineer_JR2026516748-1) | Creve Coeur, MO | other | simplify |
 | 58  | 20d | Integration Innovation (i3) | [Entry Level Software Engineer](https://careers-i3-corps.icims.com/jobs/5175/job?mobile=true&needsRedirect=false) | Huntsville, AL | other | simplify |
-| 58  | 23d | Cylake | [Software Engineer – University Grad](https://jobs.ashbyhq.com/cylake-inc/1d1ac42e-299c-42af-bd7c-b8c5fb07f735/application) | Sunnyvale, CA | other | simplify |
+| 58  | 24d | Cylake | [Software Engineer – University Grad](https://jobs.ashbyhq.com/cylake-inc/1d1ac42e-299c-42af-bd7c-b8c5fb07f735/application) | Sunnyvale, CA | other | simplify |
 | 58  | 24d | NXP Semiconductors | [NFC System Software Engineer - Entry Level](https://nxp.wd3.myworkdayjobs.com/en-US/careers/job/San-Jose-Holger-Way/NFC-System-Software-Engineer---Entry-Level_R-10064298) | San Jose, CA | other | simplify |
 | 58  | 24d | NXP Semiconductors | [NFC System Software Engineer - Entry Level](https://nxp.wd3.myworkdayjobs.com/en-US/careers/job/San-Jose-Holger-Way/NFC-System-Software-Engineer---Entry-Level_R-10064298) | San Jose (Holger Way) | other | workday |
 | 58  | 24d | NXP Semiconductors | [NFC System Software Validation Engineer - Entry Level](https://nxp.wd3.myworkdayjobs.com/en-US/careers/job/San-Diego-Innovation-Dr/NFC-System-Software-Validation-Engineer---Entry-Level_R-10064295) | San Diego (Innovation Dr) | other | workday |
-| 58  | 26d | AeroVironment | [Entry-Level Software Engineer](https://avav.wd1.myworkdayjobs.com/en-US/avav/job/Dayton-OH/Entry-Level-Software-Engineer_8010) | Dayton, OH | other | simplify |
+| 58  | 27d | AeroVironment | [Entry-Level Software Engineer](https://avav.wd1.myworkdayjobs.com/en-US/avav/job/Dayton-OH/Entry-Level-Software-Engineer_8010) | Dayton, OH | other | simplify |
 | 58  | 27d | Cox | [Entry Level Software Engineer](https://cox.wd1.myworkdayjobs.com/Cox_External_Career_Site_1/job/Burlington-VT/Entry-Level-Software-Engineer--Burlington--VT-_R202679034) | Burlington, VT | other | simplify |
-| 58  | 27d | AG Technologies | [Entry Level Software Engineer](https://jobs.smartrecruiters.com/AGTechnologies1/108734797) | Dallas, TX | other | simplify |
+| 58  | 28d | AG Technologies | [Entry Level Software Engineer](https://jobs.smartrecruiters.com/AGTechnologies1/108734797) | Dallas, TX | other | simplify |
 | 58  | 28d | General Dynamics Mission Systems | [Entry Level Software Engineer](https://careers-gdms.icims.com/jobs/73193/job?mobile=true&needsRedirect=false) | Scottsdale, AZ | other | simplify |
 | 57  | 7d | Northwood | [Software Engineer – General (new grad / early career)](https://jobright.ai/jobs/info/6a55b7ef05c65f7c8f4c67ad?utm_campaign=Software%20Engineering&utm_source=1103) | Torrance, CA, United States | other | jobright |
 | 57  | 7d | Whatnot | [Software Engineer, New Grad](https://jobright.ai/jobs/info/6a556127268af95237beb54d?utm_campaign=Software%20Engineering&utm_source=1103) | New York, NY, United States | other | jobright |
@@ -156,5 +155,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 57  | 12d | Faros | [Software Engineer - New Grad](https://jobright.ai/jobs/info/6a4e911515b4965afd583c5a?utm_campaign=Software%20Engineering&utm_source=1103) | San Mateo, CA, United States | other | jobright |
 | 57  | 13d | Cerebras | [Software Engineer New Grad](https://jobs.ashbyhq.com/cerebras/987d7f64-c957-4c8f-b89d-2f9d64738507/application) | Sunnyvale, CA | other | simplify |
 | 57  | 17d | Collective | [Software Engineer (New Grad)](https://jobright.ai/jobs/info/6a3f4becce7cce40b34235d8?utm_campaign=Software%20Engineering&utm_source=1103) | San Francisco | other | jobright |
+| 57  | 18d | Confido | [Software Engineer New Grad](https://jobs.ashbyhq.com/confido/69c0e572-b2f4-442f-beb8-1240155c629e/application) | NYC | other | simplify |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
