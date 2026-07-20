@@ -29,13 +29,14 @@ AGG_SOURCES = {
     "vansh": aggregators.fetch_vansh,
     "jobright": aggregators.fetch_jobright,
     "speedyapply": aggregators.fetch_speedyapply,
+    "zapply": aggregators.fetch_zapply,
     "hn": hn.fetch_hn,
 }
 
 
 def _fetch_aggregators(disabled: set[str]) -> tuple[list[Job], dict]:
     jobs, stats = [], {}
-    with ThreadPoolExecutor(max_workers=5) as ex:
+    with ThreadPoolExecutor(max_workers=6) as ex:
         futs = {ex.submit(fn): name for name, fn in AGG_SOURCES.items() if name not in disabled}
         for fut in as_completed(futs):
             name = futs[fut]
@@ -197,6 +198,20 @@ def crawl() -> int:
     full_rescored, current_alerts = _rebuild_scores(jobs_state, fb, now)
     print(f"scoring: rebuilt {full_rescored} active posting(s) with rules v{RULES_VERSION}; "
           f"{current_alerts} currently alert-eligible")
+
+    from . import company_research
+    researched_companies = company_research.prepare_for_jobs(
+        [j.to_record() for j in new_jobs],
+        limit=int(env("RADAR_CRAWL_WEB_RESEARCH_LIMIT", "6")))
+    if researched_companies:
+        print(f"company research: captured external sources for {researched_companies} new companies")
+    from . import llm
+    if llm.available("company_research"):
+        synthesized = company_research.enrich(
+            jobs_state, state.applied(), state.load("web_state.json", {}),
+            limit=int(env("RADAR_CRAWL_COMPANY_RESEARCH_LIMIT", "2")))
+        if synthesized:
+            print(f"company research: synthesized {synthesized} new company brief(s)")
 
     alert_history = state.load("alert_history.json", [])
     for j in alerts:

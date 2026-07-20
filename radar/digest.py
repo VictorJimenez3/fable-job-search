@@ -7,6 +7,7 @@ from datetime import datetime, timezone
 from xml.sax.saxutils import escape
 
 from .config import DOCS_DIR, github_repo, profile
+from .provenance import info
 
 
 def _age(posted_at, now) -> str:
@@ -57,10 +58,12 @@ def render_dashboard(jobs: dict, registry: dict, runs: list) -> str:
     ]
     for j in rows:
         loc = (j.get("locations") or [""])[0][:40]
+        source_label, source_url = info(j.get("source", ""), j.get("source_url", ""))
+        source_link = f"[{source_label}]({j.get('source_url') or source_url or j.get('url', '')})"
         lines.append(
             f"| {j['score']} {_fire(j['score'])} | {_age(j.get('posted_at'), now)} "
             f"| {j['company'][:38]} | [{j['title'][:70]}]({j['url']}) "
-            f"| {loc} | {j.get('sector') or '—'} | {j['source']} |")
+            f"| {loc} | {j.get('sector') or '—'} | {source_link} |")
     lines += ["", f"_{len(rows)} roles shown (score ≥ {p['thresholds']['dashboard']}, posted ≤30d)._"]
     return "\n".join(lines) + "\n"
 

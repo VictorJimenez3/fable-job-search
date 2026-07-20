@@ -9,6 +9,7 @@ from datetime import datetime, timezone
 
 from ..http import get_json, get_text
 from ..models import Job
+from ..provenance import info
 
 SIMPLIFY_URL = "https://raw.githubusercontent.com/SimplifyJobs/New-Grad-Positions/dev/.github/scripts/listings.json"
 VANSH_URL = "https://raw.githubusercontent.com/vanshb03/New-Grad-2026/dev/.github/scripts/listings.json"
@@ -17,6 +18,7 @@ JOBRIGHT_URLS = [
     "https://raw.githubusercontent.com/jobright-ai/2026-Data-Analysis-New-Grad/master/README.md",
 ]
 SPEEDY_URL = "https://raw.githubusercontent.com/speedyapply/2027-SWE-College-Jobs/main/NEW_GRAD_USA.md"
+ZAPPLY_URL = "https://raw.githubusercontent.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027/main/README.md"
 
 # Aggregator ``active`` is the source's current availability signal. Its
 # posted/updated timestamp is often stale (especially for evergreen new-grad
@@ -40,6 +42,7 @@ def _simplify_like(url: str, source: str) -> list[Job]:
             title=row.get("title", "").strip(),
             url=row.get("url", ""),
             source=source,
+            source_url=info(source)[1],
             locations=locs,
             posted_at=int(posted) if posted else None,
             remote=any("remote" in (l or "").lower() for l in locs),
@@ -93,6 +96,7 @@ def fetch_jobright() -> list[Job]:
                 continue
             out.append(Job(
                 company=company, title=title, url=link, source="jobright",
+                source_url=info("jobright")[1],
                 locations=[loc] if loc else [],
                 posted_at=posted,
                 remote="remote" in f"{loc} {model}".lower(),
@@ -120,9 +124,29 @@ def fetch_speedyapply() -> list[Job]:
             continue
         out.append(Job(
             company=company, title=title, url=link, source="speedyapply",
+            source_url=info("speedyapply")[1],
             locations=[loc] if loc else [],
             posted_at=now - age * 86400,
             salary=salary,
             remote="remote" in loc.lower(),
         ))
+    return out
+
+
+_ZAPPLY_ROW = re.compile(
+    r"^\|\s*\*{0,2}([^|*]+?)\*{0,2}\s*\|\s*\*{0,2}([^|*]+?)\*{0,2}\s*\|"
+    r"\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|[^|]*\|\s*[^\n]*?\((https?://[^)]+)\)", re.M)
+
+
+def fetch_zapply() -> list[Job]:
+    """Read Zapply's public DS/ML GitHub table; gates remove non-new-grad noise."""
+    md = get_text(ZAPPLY_URL)
+    out = []
+    for company, title, loc, _posted, link in _ZAPPLY_ROW.findall(md):
+        if company.strip().strip("-") == "" or title.strip().strip("-") == "":
+            continue
+        out.append(Job(company=company.strip(), title=title.strip(), url=link.strip(),
+                       source="zapply", source_url=info("zapply")[1],
+                       locations=[loc.strip()] if loc.strip() else [],
+                       remote="remote" in loc.lower()))
     return out

@@ -37,6 +37,7 @@ class Job:
     title: str
     url: str
     source: str                      # simplify | vansh | jobright | speedyapply | greenhouse | ...
+    source_url: str = ""             # board/feed that surfaced this posting
     locations: list[str] = field(default_factory=list)
     posted_at: int | None = None     # unix epoch seconds, None if unknown
     description: str = ""            # plain text, may be empty; trimmed to 4000 chars

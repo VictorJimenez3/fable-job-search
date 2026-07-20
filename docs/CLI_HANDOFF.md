@@ -125,13 +125,14 @@ Before changing the radar, read these in order:
   graduate-oriented Manufacturing LDP and IT emerging-talent tracks. Static
   program pages are evidence for discovery, but only live job postings enter
   the tracker.
-- **Evidence-first dossiers:** `posting.scrape_pass` retains only bounded
-  relevant excerpts from official postings in `state/company_research.json`.
-  `company_research.py` uses evidence hashes/TTL and accepts only claim-level
-  cited synthesis; unsupported facts become `Not confirmed`. Legacy
-  `culture.json` estimates stay visible but only `source: seed` affects score.
-  The UI shows sources/freshness, fixes company→registry lookup, and includes
-  an Interview v1 workspace. Mac push-race merging preserves research/usage.
+- **Evidence-first dossiers:** `posting.scrape_pass` retains bounded official
+  posting excerpts, then recurring research also fetches public company/about,
+  careers, benefits, culture, and discovery-board pages. Each source URL is
+  retained in `state/company_research.json`; the Company tab shows the
+  plain-English overview, employer profile table, and posting discovery source.
+  Local Ollama (`qwen3:30b`) is supported for synthesis; malformed/truncated
+  output is rejected and deterministic crawling continues. Non-public profile
+  values are explicitly labeled estimated.
 - **Tracker selection/readback (DECISIONS #40):** Notion now pulls manual stage
   changes by owned page ID. `TRACKER_BACKEND=google_sheets` selects the
   OAuth-refresh-token Sheets adapter (stable ID upsert + stage readback); setup

@@ -898,25 +898,45 @@
   }
  },
  "anthropic": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
    "value": "Not confirmed"
+  },
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
   },
   "customers": {
    "confidence": "unknown",
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "error": "",
-  "evidence_sha": "c7a83357dd7c813f",
+  "error": "provider unavailable or response was not source-grounded",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "88b425f57cb646af",
   "generated_at": 1784520372,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
    "task": "company_research"
+  },
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Ai Lab / technology (estimated)"
   },
   "interview_focus": {
    "confidence": "medium",
@@ -927,8 +947,8 @@
    ],
    "value": "Discuss how the team's quickly growing culture balances innovation with sane hours, and clarify expectations around in-office requirements to ensure it avoids the bureaucratic or high-burnout traits you want to avoid."
   },
-  "last_attempt_at": 1784520372,
-  "last_evidence_at": 1784487436,
+  "last_attempt_at": 1784580765,
+  "last_evidence_at": 1784580810,
   "locations": {
    "confidence": "unknown",
    "source_ids": [],
@@ -942,6 +962,11 @@
    "value": "To create reliable, interpretable, and steerable AI systems."
   },
   "name": "Anthropic",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
   "products": {
    "confidence": "high",
    "source_ids": [
@@ -950,8 +975,22 @@
    "value": "Reliable, interpretable, and steerable AI systems."
   },
   "prompt_v": 1,
-  "refresh_after": 1789704372,
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
@@ -962,6 +1001,56 @@
   },
   "sources": [
    {
+    "content_sha": "30780332320199da",
+    "excerpt": "What Anthropic pays Anthropic is a top payer, and compensation is consistently rated its strongest dimension on Blind — reviewers put pay and culture at the top even as they put work-life balance at the bottom. But the hours are long: Reddit testimony from staff describes \"60-80+ hour weeks were the norm for technical and nontechnical roles alike.\" Compensation and culture score very high on Blind and Glassdoor, while work-life balance is the weakest area , rated around 3.6/5 per a March 2026 jobsbyculture profile. Work-life balance is the lowest-rated dimension, and Glassdoor reviews explicitly call out an elite-school culture that some find exclusionary. Anthropic Careers 2026 — Open Roles, Salaries & Culture L anded .",
+    "id": "54ce385fc7",
+    "kind": "company_careers_or_benefits",
+    "publisher": "Anthropic",
+    "retrieved_at": 1784580810,
+    "title": "Anthropic Careers 2026 — Open Roles, Salaries & Culture",
+    "url": "https://www.landed.jobs/companies/anthropic"
+   },
+   {
+    "content_sha": "c58d5339feaf737d",
+    "excerpt": "View All Jobs Join Log In For Employers Companies Anthropic Teams Anthropic Save Saved HQ San Francisco 2,500 Total Employees View Website Overview Jobs 313 Offices Perks + Benefits More Info Working at Anthropic Culture & Values Career Growth & Development Compensation & Benefits Work-Life Balance & Wellbeing Leadership & Management Stability & Growth Is This Your Company? What's the Company Culture Like at Anthropic? Anthropic Career Growth & Development What's the Work-Life Balance Like at Anthropic? In this environment, rewards may feel less aligned if workload intensity outpaces what individuals consider sustainable.",
+    "id": "3a6f764c45",
+    "kind": "company_careers_or_benefits",
+    "publisher": "Anthropic",
+    "retrieved_at": 1784580810,
+    "title": "Anthropic Compensation & Benefits 2026 | Built In",
+    "url": "https://builtin.com/company/anthropic/faq/compensation-benefits"
+   },
+   {
+    "content_sha": "0fbd2c7c0ea62602",
+    "excerpt": "Reports indicate Anthropic offers market-leading benefits tailored to both financial and personal well-being: comprehensive health/dental/vision insurance, fertility coverage, 22 weeks parental leave, flexible PTO, and stipends for wellness and professional development up to ~$15K annually (Source: Anthropic themselves). Employees rate work-life balance 3.6 out of 5 —the lowest among company ratings on Blind, though compensation and culture score very high (source: Blind ) Reddit discussions reinforce that long hours are common; some report working 60+ hours during peak periods or deployments, while others say a 45–50‑hour week is typical. Anthropic Office Locations Anthropic is headquartered in San Francisco, California, but maintains a remote-first culture , where most roles allow distributed work across the U.S., UK, and Canada. How is work-life balance at Anthropic?",
+    "id": "e82df07bce",
+    "kind": "company_careers_or_benefits",
+    "publisher": "Anthropic",
+    "retrieved_at": 1784580810,
+    "title": "Anthropic Review 2025 – Culture, Careers & AI Safety Focus",
+    "url": "https://www.getbridged.co/company-reviews/anthropic"
+   },
+   {
+    "content_sha": "080d66fbd7175f73",
+    "excerpt": "Safety Is a Science We treat AI safety as a systematic science, conducting research, applying it to our products, feeding those insights back into our research, and regularly sharing what we learn with the world along the way. What we value and how we act Every day, we make critical decisions that inform our ability to achieve our mission. Our values guide how we work together, the decisions we make, and ultimately how we show up for each other and work toward our mission. Users are our customers, policy-makers, Ants, and anyone impacted by the technology we build or the actions we take.",
+    "id": "95960c77a4",
+    "kind": "company_web",
+    "publisher": "Anthropic",
+    "retrieved_at": 1784580810,
+    "title": "Company \\ Anthropic",
+    "url": "https://www.anthropic.com/company"
+   },
+   {
+    "content_sha": "f661abb10a57416d",
+    "excerpt": "Users are our customers, policy-makers, Ants, and anyone impacted by the technology we build or the actions we take. We sponsor visas and green cards for eligible roles. Be helpful, honest, and harmless Anthropic is a high-trust, low-ego organization. Principles that guide how we show up for each other and our mission Act for the global good We strive to make decisions that maximize positive outcomes for humanity in the long run.",
+    "id": "478c39cd16",
+    "kind": "company_careers_or_benefits",
+    "publisher": "Anthropic",
+    "retrieved_at": 1784580810,
+    "title": "Careers \\ Anthropic",
+    "url": "https://www.anthropic.com/careers"
+   },
+   {
     "content_sha": "d5c64f00e61758d5",
     "excerpt": "Our team is a quickly growing group of committed researchers, engineers, policy experts, and business leaders working together to build beneficial AI systems.&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;a href=&quot;https://bit.ly/afpsafety&quot;&gt;&lt;strong&gt;Apply using this link&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt;. We provide funding and mentorship to promising technical talent - regardless of previous experience.&lt;/p&gt; &lt;p&gt;Fellows will primarily use external infrastructure (e.g.",
     "id": "b06a250e1f",
@@ -970,26 +1059,6 @@
     "retrieved_at": 1784487436,
     "title": "Official job posting — Anthropic Fellows Program, AI Security",
     "url": "https://job-boards.greenhouse.io/anthropic/jobs/5030244008"
-   },
-   {
-    "content_sha": "d5c64f00e61758d5",
-    "excerpt": "Our team is a quickly growing group of committed researchers, engineers, policy experts, and business leaders working together to build beneficial AI systems.&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;a href=&quot;https://bit.ly/afpsafety&quot;&gt;&lt;strong&gt;Apply using this link&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt;. We provide funding and mentorship to promising technical talent - regardless of previous experience.&lt;/p&gt; &lt;p&gt;Fellows will primarily use external infrastructure (e.g.",
-    "id": "f488d503f2",
-    "kind": "official_job",
-    "publisher": "Anthropic",
-    "retrieved_at": 1784487436,
-    "title": "Official job posting — Anthropic Fellows Program, AI Safety",
-    "url": "https://job-boards.greenhouse.io/anthropic/jobs/5183044008"
-   },
-   {
-    "content_sha": "a9c9253eeab9fc99",
-    "excerpt": "However, some roles may require more time in our offices.&lt;/p&gt; &lt;p&gt;&lt;strong data-stringify-type=&quot;bold&quot;&gt;Visa sponsorship:&lt;/strong&gt;&amp;nbsp;We do sponsor visas! However, we aren&#39;t able to successfully sponsor visas for every role and every candidate. &lt;div class=&quot;content-intro&quot;&gt;&lt;h2&gt;&lt;strong&gt;About Anthropic&lt;/strong&gt;&lt;/h2&gt; &lt;p&gt;Anthropic’s mission is to create reliable, interpretable, and steerable AI systems.",
-    "id": "47b81a157f",
-    "kind": "official_job",
-    "publisher": "Anthropic",
-    "retrieved_at": 1784487436,
-    "title": "Official job posting — Software Engineer, Web Platform",
-    "url": "https://job-boards.greenhouse.io/anthropic/jobs/5305402008"
    }
   ],
   "sponsorship_context": {
@@ -1009,7 +1078,6 @@
    ],
    "value": "Anthropic is a quickly growing group of researchers, engineers, policy experts, and business leaders working together to build beneficial AI systems."
   },
-  "synthesized_evidence_sha": "c7a83357dd7c813f",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
@@ -1019,6 +1087,9 @@
    ],
    "value": "AI research and engineering, including AI safety, AI security, and web platform development. Programs provide funding and mentorship to promising technical talent, with some work primarily using external infrastructure."
   },
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784580810,
+  "web_search_url": "https://duckduckgo.com/?q=Anthropic+company+careers+benefits",
   "why_it_matters": {
    "confidence": "high",
    "source_ids": [
@@ -1027,6 +1098,11 @@
     "47b81a157f"
    ],
    "value": "Aligns with your priority for an elite, mission-driven AI role in a quickly growing environment; the company invests in accelerating technical learning through direct funding and mentorship regardless of previous experience."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
   }
  },
  "anything": {
@@ -6482,6 +6558,11 @@
   }
  },
  "nvidia": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
   "aliases": [],
   "attempts": 4,
   "business_model": {
@@ -6491,18 +6572,33 @@
    ],
    "value": "NVIDIA operates as a computing platform company at the intersection of graphics, HPC, and AI, selling hardware and software solutions."
   },
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
   "customers": {
    "confidence": "unknown",
    "source_ids": [],
    "value": "Not confirmed"
   },
   "error": "",
-  "evidence_sha": "73a4d8b9b8173683",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "56bc2a6d4093a3a9",
   "generated_at": 1784497779,
   "generator": {
    "endpoint": "local",
    "model": "qwen3:30b",
    "task": "company_research"
+  },
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Big Tech / technology (estimated)"
   },
   "interview_focus": {
    "confidence": "high",
@@ -6513,7 +6609,7 @@
    "value": "Candidates should highlight technical expertise in AI inference optimization, distributed systems, and RTL synthesis, with a focus on innovative problem-solving and alignment with NVIDIA's industry-leading benchmarks and tools."
   },
   "last_attempt_at": 1784497779,
-  "last_evidence_at": 1784495630,
+  "last_evidence_at": 1784580766,
   "locations": {
    "confidence": "high",
    "source_ids": [
@@ -6529,6 +6625,11 @@
    "value": "Not confirmed"
   },
   "name": "NVIDIA",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
   "products": {
    "confidence": "high",
    "source_ids": [
@@ -6538,8 +6639,22 @@
    "value": "NVIDIA's products include accelerators for GenAI inference, TensorRT-LLM, SGLang, vLLM, and EDA tools for RTL synthesis and digital logic optimization."
   },
   "prompt_v": 1,
-  "refresh_after": 1789681779,
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
@@ -6548,6 +6663,36 @@
    "value": "10001+ employees"
   },
   "sources": [
+   {
+    "content_sha": "a9568463118cef6d",
+    "excerpt": "Nvidia Culture Built In’s 2026 analysis of Nvidia’s workplace culture identifies three defining features: open communication, project-based teamwork, and a high-intensity environment. The Code of Conduct says: “We foster an environment of transparency, openness, and sharing information.” Built In’s 2026 culture report describes a “politics-free environment” where employees collaborate across functions with shared ownership and recognition based on contribution. The Nvidia mission statement, vision, core values, and culture behind those numbers are the subject of this post. This is a similar approach to Google’s mission and vision , where the mission focuses on organizing information and the vision targets accessibility.",
+    "id": "448641c05d",
+    "kind": "company_web",
+    "publisher": "NVIDIA",
+    "retrieved_at": 1784580766,
+    "title": "NVIDIA Mission Statement 2026: Vision, Innovation Strategy And Core Values",
+    "url": "https://www.companieshistory.com/nvidia-mission-statement/"
+   },
+   {
+    "content_sha": "6ecf3154dbdb141f",
+    "excerpt": "Life, Culture, Career at NVIDIA NVIDIA Home NVIDIA Home Menu Menu icon Menu Menu icon Close Close icon Close Close icon Close Close icon Caret down icon Accordion is closed, click to open. Read About Giving Back Programs For Parents NVIDIA has one of the nation’s best parental policies, including up to 22 weeks of fully paid leave, unlimited reimbursements for adoption and surrogacy expenses, and plans that cover in vitro fertilization and egg freezing. It starts with hiring brilliant, passionate people from a wide range of backgrounds, then creating an empowering environment where they have the support and inspiration to help take on the world's greatest challenges–together. It allows us to accept that we are human, not robots, not data points, but human compassion.",
+    "id": "d3d27b205e",
+    "kind": "company_careers_or_benefits",
+    "publisher": "NVIDIA",
+    "retrieved_at": 1784580766,
+    "title": "Life, Culture, Career at NVIDIA",
+    "url": "https://www.nvidia.com/en-eu/about-nvidia/careers/life-at-nvidia/"
+   },
+   {
+    "content_sha": "cd0e794f9c7ff86e",
+    "excerpt": "Our product lines range from consumer graphics to self-driving cars to the growing field of AI. NVIDIA Careers NVIDIA Home NVIDIA Home Menu Menu icon Menu Menu icon Close Close icon Close Close icon Close Close icon Caret down icon Accordion is closed, click to open. Watch this video for a glimpse at why NVIDIA is like no place you've ever worked. > Explore Life at NVIDIA We’re an eclectic, passionate group of professionals dedicated to solving some of the world’s biggest challenges.",
+    "id": "732ee1fd28",
+    "kind": "company_careers_or_benefits",
+    "publisher": "NVIDIA",
+    "retrieved_at": 1784580766,
+    "title": "Jobs at NVIDIA | NVIDIA Careers",
+    "url": "https://www.nvidia.com/en-in/about-nvidia/careers/"
+   },
    {
     "content_sha": "654188cd60324d0f",
     "excerpt": "We optimize and benchmark GenAI inference on NVIDIA&#39;s latest accelerators, defining the industry’s performance standards across language models, video generation, and speech workloads. What You Will Be Doing: Drive industry benchmark results: own the end-to-end optimization pipeline, implement and integrate optimizations in quantization, scheduling, memory management, and distributed inference across TensorRT-LLM, SGLang, and vLLM. Architect distributed inference: Design and optimize execution from single-GPU to rack-scale clusters, managing performance across clusters of GPUs.",
@@ -6596,7 +6741,6 @@
    ],
    "value": "NVIDIA is a leading technology company specializing in AI, graphics processing, and high-performance computing, known for its innovative hardware and software solutions. The company focuses on optimizing AI inference, digital logic synthesis, and software quality assurance, with a strong emphasis on cutting-edge technology and industry benchmarks."
   },
-  "synthesized_evidence_sha": "73a4d8b9b8173683",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
@@ -6605,6 +6749,9 @@
    ],
    "value": "Optimizing GenAI inference, implementing quantization and scheduling, designing distributed inference systems, RTL synthesis, and digital logic optimization."
   },
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784580766,
+  "web_search_url": "https://duckduckgo.com/?q=NVIDIA+company+careers+benefits",
   "why_it_matters": {
    "confidence": "high",
    "source_ids": [
@@ -6613,6 +6760,11 @@
     "29d0533621"
    ],
    "value": "NVIDIA offers elite prestige in AI and data science with high new-grad pay, fast-paced innovation, and a mission-driven culture focused on industry-leading performance standards and technical growth without sacrificing work-life balance."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
   }
  },
  "nvidia ai": {
@@ -7036,11 +7188,125 @@
   }
  },
  "oracle": {
+  "ai_ds_prestige_tier": {
+   "confidence": "high",
+   "source_ids": [
+    "3efeddbee2"
+   ],
+   "value": "Elite (Oracle is a leader in enterprise AI infrastructure, with a strong reputation for technical depth and scalability in AI solutions)."
+  },
   "aliases": [],
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "3efeddbee2"
+   ],
+   "value": "Oracle generates revenue through licensing enterprise software, cloud infrastructure subscriptions, and database services, with a strong emphasis on AI and data-driven solutions to enhance customer value."
+  },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "3efeddbee2"
+   ],
+   "value": "Innovative and collaborative, with a focus on technical excellence and mission-driven work in AI infrastructure."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "3efeddbee2"
+   ],
+   "value": "Enterprise businesses across industries including finance, healthcare, government, and retail that rely on Oracle's cloud and database solutions for mission-critical operations."
+  },
+  "error": "",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3efeddbee2"
+   ],
+   "value": "Estimated: $150,000 - $180,000 base salary + bonus and equity for new graduates in AI/data science roles."
+  },
   "evidence_sha": "8accdd6205f74cd5",
+  "generated_at": 1784581004,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "3efeddbee2"
+   ],
+   "value": "Enterprise software, cloud computing, AI and data science."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "3efeddbee2"
+   ],
+   "value": "Candidates should highlight experience with AI infrastructure, scalability challenges, and collaboration in high-performance computing environments, demonstrating ability to optimize GPU-based systems for customer workloads."
+  },
+  "last_attempt_at": 1784581004,
   "last_evidence_at": 1784553830,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "3efeddbee2"
+   ],
+   "value": "Oracle has global offices with major hubs in Redwood Shores (California), Austin (Texas), and international locations including Dublin, Tokyo, and Singapore."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "3efeddbee2"
+   ],
+   "value": "To help customers turn the promise of AI into a better future for all by embedding AI across products and services."
+  },
   "name": "Oracle",
+  "pace_of_work": {
+   "confidence": "high",
+   "source_ids": [
+    "3efeddbee2"
+   ],
+   "value": "Fast-paced and innovative, with a focus on scaling AI infrastructure to meet customer demands while maintaining performance standards."
+  },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "3efeddbee2"
+   ],
+   "value": "Oracle Cloud Infrastructure (OCI), Autonomous Database, AI-driven analytics tools, and enterprise applications like ERP and HCM."
+  },
+  "prompt_v": 2,
+  "pto_days": {
+   "confidence": "high",
+   "source_ids": [
+    "3efeddbee2"
+   ],
+   "value": "Flexible Vacation (no fixed number of days; employees can take time off as needed within company guidelines)."
+  },
+  "refresh_after": 1789765004,
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "low",
+   "source_ids": [
+    "3efeddbee2"
+   ],
+   "value": "No specific shutdowns mentioned in the job posting; Oracle may have seasonal or company-wide shutdowns, but none are explicitly detailed in the provided source."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "3efeddbee2"
+   ],
+   "value": "Large enterprise (publicly traded, Fortune 500 company with over 100,000 employees globally)."
+  },
   "sources": [
    {
     "content_sha": "4da1d2b246c1759f",
@@ -7053,7 +7319,43 @@
     "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_45001/job/334579"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "3efeddbee2"
+   ],
+   "value": "Oracle provides H-1B sponsorship for eligible international candidates on a case-by-case basis, with a focus on critical tech roles like AI infrastructure development."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "3efeddbee2"
+   ],
+   "value": "Oracle is a global technology company that develops, licenses, and supports enterprise software, cloud infrastructure, and database management systems, with a growing focus on AI and data-driven solutions."
+  },
+  "synthesized_evidence_sha": "8accdd6205f74cd5",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "3efeddbee2"
+   ],
+   "value": "Developing and optimizing AI infrastructure components such as GPU control plane and data plane for high-performance computing in customer AI workloads."
+  },
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "3efeddbee2"
+   ],
+   "value": "A top-tier AI role at Oracle offers prestige through its leadership in enterprise AI infrastructure, competitive compensation, and a fast-paced tech culture focused on innovation, avoiding bureaucratic delays common in large enterprises."
+  },
+  "wlb_rating": {
+   "confidence": "medium",
+   "source_ids": [
+    "3efeddbee2"
+   ],
+   "value": "Good (Oracle offers flexible vacation policies and aims to balance work with personal time, though specific work-life balance metrics are not explicitly detailed in the job posting)."
+  }
  },
  "otter ai": {
   "aliases": [],
@@ -10779,26 +11081,6 @@
    ],
    "value": "The company operates at massive scale leveraging modern data-intensive tech stacks (Kafka, Elastic Search), which aligns with the candidate's desire for a fast, innovative tech culture and technical learning in AI/data science. However, the sources do not confirm work-life balance, sane hours, or avoidance of burnout."
   }
- },
- "titan": {
-  "aliases": [],
-  "evidence_sha": "ee1b0a4a20018b64",
-  "last_evidence_at": 1784578610,
-  "name": "Titan",
-  "schema_v": 1,
-  "sources": [
-   {
-    "content_sha": "b7827f5c732f334a",
-    "excerpt": "In under a year, we’ve raised over $70M from General Catalyst, acquired market-leading MSPs like RFA, and deployed agents who are seeing real-world impact on productivity. About The Role: We are looking for a \"high-slope\" New Grad who doesn't just want to code, but wants to build products that people actually use. NEW GRAD PRODUCT ENGINEER About Titan: Titan is an AI holding company transforming IT services with its Augmented AI platform. Joining Titan means helping to redefine how work is done in IT Services and building a $100B company.",
-    "id": "c9d917e035",
-    "kind": "official_job",
-    "publisher": "Titan",
-    "retrieved_at": 1784578610,
-    "title": "Official job posting — New Grad Product Engineer",
-    "url": "https://jobs.ashbyhq.com/titan-msp/6ba1f660-6436-42f6-aaab-80ca931e8339"
-   }
-  ],
-  "status": "evidence_only"
  },
  "treehouse foods": {
   "aliases": [],

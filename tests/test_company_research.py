@@ -56,6 +56,20 @@ def test_parser_downgrades_uncited_claims_and_rejects_bad_response():
     assert research.parse_synthesis("not json", {"S1"}) is None
 
 
+def test_parser_accepts_estimated_profile_fields():
+    body = {field: {"value": "Not confirmed", "source_ids": [], "confidence": "low"}
+            for field in research.FIELDS}
+    body["summary"] = {"value": "Builds clinical software", "source_ids": ["S1"],
+                        "confidence": "high"}
+    body["products"] = {"value": "Care platform", "source_ids": ["S1"],
+                        "confidence": "medium"}
+    body["pto_days"] = {"value": "Estimated: 15-20 days", "source_ids": [],
+                        "confidence": "estimated"}
+    parsed = research.parse_synthesis(json.dumps(body), {"S1"})
+    assert parsed["pto_days"]["confidence"] == "estimated"
+    assert parsed["pto_days"]["value"].startswith("Estimated:")
+
+
 def test_prune_removes_sources_rejected_by_active_profile(monkeypatch):
     records = {}
     for title, url in (("Software Engineer", "https://jobs.example/good"),

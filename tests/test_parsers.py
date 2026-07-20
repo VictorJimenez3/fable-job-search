@@ -80,3 +80,16 @@ def test_speedyapply_markdown_table():
     # speedyapply links point straight at ATS pages — that's the discovery goldmine
     assert any("myworkdayjobs" in x.url or "greenhouse" in x.url or "lever" in x.url
                or "ashby" in x.url or "smartrecruiters" in x.url for x in jobs)
+
+
+def test_zapply_markdown_table_preserves_board_provenance():
+    md = ("| Company | Role | Location | Posted | Visa | **Apply** |\n"
+          "| --- | --- | --- | --- | --- | --- |\n"
+          "| **Acme** | **Data Scientist** | Remote | Recently |  | [Apply](https://acme.example/jobs/1) |\n")
+    with patch.object(aggregators, "get_text", return_value=md):
+        jobs = aggregators.fetch_zapply()
+    assert len(jobs) == 1
+    assert jobs[0].company == "Acme"
+    assert jobs[0].source == "zapply"
+    assert jobs[0].source_url == aggregators.ZAPPLY_URL.replace(
+        "raw.githubusercontent.com", "github.com").replace("/main/README.md", "")
