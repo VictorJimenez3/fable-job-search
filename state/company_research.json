@@ -3364,7 +3364,7 @@
  },
  "jane street": {
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -3377,7 +3377,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "677b742e0ce51faa",
   "generated_at": 1784558066,
   "generator": {
@@ -3393,7 +3393,7 @@
    ],
    "value": "Candidates should prepare to demonstrate skills in functional programming and OCaml, as well as the ability to solve real-world problems in critical areas like trading desks, risk models, and network monitoring. Expect discussions on how you think about security, trade-offs, and sustainability, balancing the desire for a fast-paced tech culture with educational growth while avoiding toxic burnout."
   },
-  "last_attempt_at": 1784558066,
+  "last_attempt_at": 1784569950,
   "last_evidence_at": 1784561210,
   "locations": {
    "confidence": "unknown",
@@ -6117,7 +6117,10 @@
  },
  "pfizer": {
   "aliases": [],
+  "attempts": 1,
+  "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "13103d17c66031f6",
+  "last_attempt_at": 1784569950,
   "last_evidence_at": 1784566499,
   "name": "Pfizer",
   "schema_v": 1,
@@ -7982,7 +7985,7 @@
  },
  "spacex": {
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -7999,7 +8002,7 @@
    ],
    "value": "Starlink users (millions of customers), government and commercial clients for rocket launches and spacecraft services"
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "f3b56397f416a469",
   "generated_at": 1784449450,
   "generator": {
@@ -8014,7 +8017,7 @@
    ],
    "value": "Top skills include telemetry systems, real-time analytics, Python, Go, Java; emphasizes innovative problem-solving for space technology."
   },
-  "last_attempt_at": 1784449450,
+  "last_attempt_at": 1784569950,
   "last_evidence_at": 1784566499,
   "locations": {
    "confidence": "unknown",

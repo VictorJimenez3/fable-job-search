@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-20 16:59 UTC** · companies polled directly: **787** (registry 925) · jobs tracked: **14644** · new this run: **57** · alerts this run: **1**_
+_Last run: **2026-07-20 17:52 UTC** · companies polled directly: **787** (registry 925) · jobs tracked: **14644** · new this run: **57** · alerts this run: **1**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -22,10 +22,10 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 83 ⭐ | 1d | SayVo AI | [Entry-Level Software Developer](https://jobright.ai/jobs/info/6a5d496563a8f619507ceed7?utm_campaign=Software%20Engineering&utm_source=1103) | United States | ai_lab | jobright |
 | 82 ⭐ | 13d | Notion | [Software Engineer, Early Career (AI)](https://jobs.ashbyhq.com/notion/85947779-6b87-466a-98bc-30a640448c28) | San Francisco, California | big_tech | ashby |
 | 80 ⭐ | 13d | Notion | [Software Engineer – Early Career - AI](https://jobs.ashbyhq.com/notion/85947779-6b87-466a-98bc-30a640448c28/application) | SF | big_tech | simplify |
-| 79 ⭐ | 6d | Abridge | [Software Engineer - Early Career](https://jobs.ashbyhq.com/abridge/7d6ae2be-cd53-466c-8151-2dae2e87aace) | SF Office | healthtech | ashby |
 | 78 ⭐ | 13d | Salesforce | [Software Engineering AMTS (College Grad)](https://jobright.ai/jobs/info/69f4c70cdb88714bcdfafbe9?utm_campaign=Software%20Engineering&utm_source=1103) | California - San Francisco | big_tech | jobright |
 | 78 ⭐ | 15d | Salesforce | [Software Engineering AMTS (College Grad)](https://jobright.ai/jobs/info/69f4c7a881706a5bd2162e3f?utm_campaign=Software%20Engineering&utm_source=1103) | Washington - Bellevue, US | big_tech | jobright |
 | 78 ⭐ | 16d | Salesforce | [Software Engineering AMTS (College Grad)](https://jobright.ai/jobs/info/69f4c70ddb88714bcdfafbf1?utm_campaign=Software%20Engineering&utm_source=1103) | Texas - Dallas | big_tech | jobright |
+| 77 ⭐ | 7d | Abridge | [Software Engineer - Early Career](https://jobs.ashbyhq.com/abridge/7d6ae2be-cd53-466c-8151-2dae2e87aace) | SF Office | healthtech | ashby |
 | 77 ⭐ | 7d | NVIDIA AI | [Backend Compiler Engineer - New College Grad 2026](https://jobright.ai/jobs/info/6a55d93505c65f7c8f4c8a73?utm_campaign=Software%20Engineering&utm_source=1103) | Santa Clara, CA, United States | big_tech | jobright |
 | 75 ⭐ | 11d | Momentum | [Launch Graduate Program: Associate Cybersecurity Analyst](https://job-boards.greenhouse.io/momentumcompany3/jobs/8614696002) | Dallas, Texas | other | greenhouse |
 | 75 ⭐ | 13d | ByteDance | [Graduate Software Engineer - Dev Infra](https://jobs.bytedance.com/en/position/7536272435440716040/detail) | San Jose, CA | big_tech | simplify |
@@ -42,8 +42,8 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 72  | 28d | RTX | [Leadership Development Program - Digital (Starts June 2027)](https://globalhr.wd5.myworkdayjobs.com/en-US/Private_Posting_No_TMP/job/US-VA-ARLINGTON-108--1100-Wilson-Blvd--ROSSLYN-HQ/Leadership-Development-Program---Digital--Starts-June-2027-_01853105) | US-VA-ARLINGTON-108 ~ 1100 Wilson Blvd ~ | other | workday |
 | 72  | 28d | RTX | [Leadership Development Program - Engineering, Systems (Starts June 202](https://globalhr.wd5.myworkdayjobs.com/en-US/Private_Posting_No_TMP/job/US-VA-ARLINGTON-1000--1000-Wilson-Blvd--WILSON-Fl-23/Leadership-Development-Program---Engineering--Systems--Starts-June-2027-_01853288) | US-VA-ARLINGTON-1000 ~ 1000 Wilson Blvd  | other | workday |
 | 71  | 2d | LetsGetChecked | [Graduate Software Engineer](https://jobright.ai/jobs/info/69d4db85e63cea7a8b65d52b?utm_campaign=Software%20Engineering&utm_source=1103) | Remote - United States | other | jobright |
-| 70  | 16h | WOOD Federal Solutions | [Software Engineer (entry-level)](https://jobright.ai/jobs/info/6a5e0a5927bf767ea68f48ee?utm_campaign=Software%20Engineering&utm_source=1103) | Ft. Meade, MD, United States | other | jobright |
-| 70  | 16h | The Boeing Company | [Entry Level Software Engineer](https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Berkeley-MO/Entry---Level-Software-Engineer_JR2026519286-1) | Hazelwood, MO | other | simplify |
+| 70  | 17h | WOOD Federal Solutions | [Software Engineer (entry-level)](https://jobright.ai/jobs/info/6a5e0a5927bf767ea68f48ee?utm_campaign=Software%20Engineering&utm_source=1103) | Ft. Meade, MD, United States | other | jobright |
+| 70  | 17h | The Boeing Company | [Entry Level Software Engineer](https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Berkeley-MO/Entry---Level-Software-Engineer_JR2026519286-1) | Hazelwood, MO | other | simplify |
 | 70  | 5d | SentiLink | [Data Scientist, New Grad](https://jobright.ai/jobs/info/6a55b7d705c65f7c8f4c673f?utm_campaign=Data%20Analysis&utm_source=1103) | United States | other | jobright |
 | 70  | 6d | SambaNova Systems | [AI Systems Performance Engineer New Grad](https://sambanova.ai/sambanova-available-positions/?gh_jid=6115124004) | San Jose, CA | other | simplify |
 | 70  | 7d | Palantir Technologies | [Software Engineer, New Grad - Production Infrastructure](https://jobright.ai/jobs/info/6a55b6b1ef22935f2e3f5e86?utm_campaign=Software%20Engineering&utm_source=1103) | Seattle, WA, United States | big_tech | jobright |
@@ -73,7 +73,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 66  | 6d | Old Mission | [Quantitative Trader Graduate Program](https://www.oldmissioncapital.com/careers/?gh_jid=7796044003) | Chicago, IL | other | simplify |
 | 66  | 7d | Boeing | [Entry-Level Software Engineer–Developer](https://jobright.ai/jobs/info/6a54f06bae07d60a8d00ddac?utm_campaign=Software%20Engineering&utm_source=1103) | USA - Richardson, TX, United States of A | other | jobright |
 | 66  | 10d | Elbit Systems of America | [Operations Data Analyst (Entry Level)](https://jobright.ai/jobs/info/6a43316f4461bf091787ad4b?utm_campaign=Data%20Analysis&utm_source=1103) | 7635 Plantation Rd, Roanoke, VA 24019, U | other | jobright |
-| 66  | 12d | KLA Corporation | [Data Scientist (Entry Level) - GSCS](https://kla.wd1.myworkdayjobs.com/en-US/UR/job/Milpitas-CA/Data-Scientist--Entry-Level----GSCS_2638246) | Milpitas, CA | other | workday |
+| 66  | 13d | KLA Corporation | [Data Scientist (Entry Level) - GSCS](https://kla.wd1.myworkdayjobs.com/en-US/UR/job/Milpitas-CA/Data-Scientist--Entry-Level----GSCS_2638246) | Milpitas, CA | other | workday |
 | 66  | 17d | Travelers | [Data Science Leadership Development Program - Dsldp - Associate Data S](https://travelers.wd5.myworkdayjobs.com/External/job/CT---Hartford/Data-Science-Leadership-Development-Program--DSLDP--Associate-Data-Scientist_R-51336) | Hartford, CT | other | simplify |
 | 66  | 17d | Vanguard | [Technology Leadership Program - Data & Analytics - Analyst](https://vanguard.wd5.myworkdayjobs.com/en-US/contractors_restricted/job/Charlotte-NC/Technology-Leadership-Program---Data---Analytics--Analyst----NC_180091) | Charlotte, NC | other | simplify |
 | 66  | 19d | IMC Trading | [Graduate Software Engineer](https://jobright.ai/jobs/info/6a4556f7c2d11a6a46668d9b?utm_campaign=Software%20Engineering&utm_source=1103) | Chicago, United States | fintech | jobright |
@@ -95,7 +95,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 63  | 6d | Old Mission | [Software Engineer – Graduate Program - August Start](https://www.oldmissioncapital.com/careers/?gh_jid=7796048003) | Chicago, IL | other | simplify |
 | 63  | 7d | Old Mission | [Software Engineer – 2027 Graduate Program (August Start)](https://jobright.ai/jobs/info/6a554bd84119652ff3864afd?utm_campaign=Software%20Engineering&utm_source=1103) | Chicago, IL, United States | other | jobright |
 | 63  | 9d | General Dynamics Mission Systems | [Infrastructure Hardware Systems Engineer Entry Level](https://careers-gdms.icims.com/jobs/73388/job?mobile=true&needsRedirect=false) | Chula Vista, CA | other | simplify |
-| 63  | 10d | Ciena | [AI-Enabled Software Test Engineer - New Grad](https://ciena.wd5.myworkdayjobs.com/en-US/Careers/job/Ottawa/AI-Enabled-Software-Test-Engineer-II_R030842) | Ottawa | other | workday |
+| 63  | 11d | Ciena | [AI-Enabled Software Test Engineer - New Grad](https://ciena.wd5.myworkdayjobs.com/en-US/Careers/job/Ottawa/AI-Enabled-Software-Test-Engineer-II_R030842) | Ottawa | other | workday |
 | 63  | 17d | Optiver | [Graduate Software Engineer - 2027 Start](https://www.optiver.com/join-us/jobs/8401042002/?gh_jid=8401042002) | Chicago, Illinois, United States | other | speedyapply |
 | 63  | 17d | Optiver | [Graduate Software Engineer - 2027 Start](https://www.optiver.com/join-us/jobs/8604899002/?gh_jid=8604899002) | Austin, Texas, United States | other | speedyapply |
 | 63  | 18d | Blue Origin | [Avionics / Embedded Software Engineer I - Early Career (2026 Starts)](https://jobright.ai/jobs/info/6a35bd6cce501060b5cf55d7?utm_campaign=Software%20Engineering&utm_source=1103) | Los Angeles, CA, US | other | jobright |
