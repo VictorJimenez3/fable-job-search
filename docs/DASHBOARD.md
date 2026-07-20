@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-20 14:40 UTC** · companies polled directly: **785** (registry 923) · jobs tracked: **14515** · new this run: **39** · alerts this run: **0**_
+_Last run: **2026-07-20 15:32 UTC** · companies polled directly: **786** (registry 924) · jobs tracked: **14587** · new this run: **72** · alerts this run: **2**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -42,6 +42,8 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 72  | 27d | RTX | [Leadership Development Program - Digital (Starts June 2027)](https://globalhr.wd5.myworkdayjobs.com/en-US/Private_Posting_No_TMP/job/US-VA-ARLINGTON-108--1100-Wilson-Blvd--ROSSLYN-HQ/Leadership-Development-Program---Digital--Starts-June-2027-_01853105) | US-VA-ARLINGTON-108 ~ 1100 Wilson Blvd ~ | other | workday |
 | 72  | 27d | RTX | [Leadership Development Program - Engineering, Systems (Starts June 202](https://globalhr.wd5.myworkdayjobs.com/en-US/Private_Posting_No_TMP/job/US-VA-ARLINGTON-1000--1000-Wilson-Blvd--WILSON-Fl-23/Leadership-Development-Program---Engineering--Systems--Starts-June-2027-_01853288) | US-VA-ARLINGTON-1000 ~ 1000 Wilson Blvd  | other | workday |
 | 71  | 2d | LetsGetChecked | [Graduate Software Engineer](https://jobright.ai/jobs/info/69d4db85e63cea7a8b65d52b?utm_campaign=Software%20Engineering&utm_source=1103) | Remote - United States | other | jobright |
+| 70  | 15h | WOOD Federal Solutions | [Software Engineer (entry-level)](https://jobright.ai/jobs/info/6a5e0a5927bf767ea68f48ee?utm_campaign=Software%20Engineering&utm_source=1103) | Ft. Meade, MD, United States | other | jobright |
+| 70  | 15h | The Boeing Company | [Entry Level Software Engineer](https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS/job/USA---Berkeley-MO/Entry---Level-Software-Engineer_JR2026519286-1) | Hazelwood, MO | other | simplify |
 | 70  | 5d | SentiLink | [Data Scientist, New Grad](https://jobright.ai/jobs/info/6a55b7d705c65f7c8f4c673f?utm_campaign=Data%20Analysis&utm_source=1103) | United States | other | jobright |
 | 70  | 6d | SambaNova Systems | [AI Systems Performance Engineer New Grad](https://sambanova.ai/sambanova-available-positions/?gh_jid=6115124004) | San Jose, CA | other | simplify |
 | 70  | 7d | Palantir Technologies | [Software Engineer, New Grad - Production Infrastructure](https://jobright.ai/jobs/info/6a55b6b1ef22935f2e3f5e86?utm_campaign=Software%20Engineering&utm_source=1103) | Seattle, WA, United States | big_tech | jobright |
@@ -127,7 +129,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 59  | 6d | Northslope Technologies | [Forward Deployed Software Engineer New Grad](https://jobs.ashbyhq.com/northslope-technologies/80b82167-7101-4f78-9006-7755dd2ca01e/application) | NYC | other | simplify |
 | 59  | 6d | Northslope Technologies | [Forward Deployed Software Engineer, New Grad](https://jobs.ashbyhq.com/northslope-technologies/80b82167-7101-4f78-9006-7755dd2ca01e) | New York | other | ashby |
 | 59  | 9d | Kustomer | [Software Engineer – Early Career - Full Stack](https://jobs.ashbyhq.com/kustomer/4037272a-7fd3-4040-906b-47fde875a817/application) | NYC | other | simplify |
-| 59  | 12d | Jane Street | [Software Engineer Full-Time: New Grad](https://www.janestreet.com/join-jane-street/position/8594541002) | New York City, NY | other | speedyapply |
+| 59  | 13d | Jane Street | [Software Engineer Full-Time: New Grad](https://www.janestreet.com/join-jane-street/position/8594541002) | New York City, NY | other | speedyapply |
 | 59  | 14d | Ralliant | [Software Security Engineer (Entry-Level)](https://ibwujb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/9235) | Beaverton, OR, United States | other | oracle_orc |
 | 59  | 17d | Anduril Industries | [2027 Early Career Software Engineer](https://jobright.ai/jobs/info/6a2b27080ad4053b108cb17d?utm_campaign=Software%20Engineering&utm_source=1103) | Seattle, WA | other | jobright |
 | 59  | 17d | Anduril Industries | [2027 Early Career Software Engineer](https://jobright.ai/jobs/info/6a3d8ab68bfad862bc99d9d6?utm_campaign=Software%20Engineering&utm_source=1103) | Atlanta, Georgia, United States | other | jobright |
@@ -154,7 +156,5 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 57  | 11d | Pylon | [Software Engineer, New Grad](https://jobright.ai/jobs/info/6a4fe2de9469c0662034f404?utm_campaign=Software%20Engineering&utm_source=1103) | San Francisco, CA, United States | other | jobright |
 | 57  | 12d | Faros | [Software Engineer - New Grad](https://jobright.ai/jobs/info/6a4e911515b4965afd583c5a?utm_campaign=Software%20Engineering&utm_source=1103) | San Mateo, CA, United States | other | jobright |
 | 57  | 13d | Cerebras | [Software Engineer New Grad](https://jobs.ashbyhq.com/cerebras/987d7f64-c957-4c8f-b89d-2f9d64738507/application) | Sunnyvale, CA | other | simplify |
-| 57  | 17d | Collective | [Software Engineer (New Grad)](https://jobright.ai/jobs/info/6a3f4becce7cce40b34235d8?utm_campaign=Software%20Engineering&utm_source=1103) | San Francisco | other | jobright |
-| 57  | 18d | Confido | [Software Engineer New Grad](https://jobs.ashbyhq.com/confido/69c0e572-b2f4-442f-beb8-1240155c629e/application) | NYC | other | simplify |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
