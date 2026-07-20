@@ -16,6 +16,7 @@ os.environ.setdefault("RADAR_AI_MAX_CALLS", "10000")
 os.environ.setdefault("RADAR_AI_MAX_REQUESTS", "10000")
 os.environ.setdefault("RADAR_AI_TASK_COMPANY_RESEARCH_LIMIT", "10000")
 os.environ.setdefault("RADAR_AI_PROVIDER_ATTEMPTS", "2")
+os.environ.setdefault("RADAR_AI_ROTATE_PROVIDERS", "1")
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 

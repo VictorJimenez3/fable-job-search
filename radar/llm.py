@@ -339,6 +339,18 @@ def complete(prompt: str, max_tokens: int = 2000, timeout: int = 180,
     if not eps:
         return None
 
+    # Hosted providers can have very different latency and schema reliability.
+    # When enabled, spread independent calls across configured API models so a
+    # flaky first-choice model does not serialize the entire backlog behind its
+    # timeout. Fallback still runs if the rotated provider fails validation.
+    if env("RADAR_AI_ROTATE_PROVIDERS") == "1" and len(eps) > 1:
+        local = [ep for ep in eps if _is_local(ep.base_url)]
+        hosted = [ep for ep in eps if not _is_local(ep.base_url)]
+        if hosted:
+            offset = _logical_calls % len(hosted)
+            hosted = hosted[offset:] + hosted[:offset]
+            eps = local + hosted
+
     max_calls = _int_env("RADAR_AI_MAX_CALLS", 12)
     max_requests = _int_env("RADAR_AI_MAX_REQUESTS", 24)
     if (_logical_calls >= max_calls or _task_calls.get(task, 0) >= _task_limit(task)
