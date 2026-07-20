@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-20 18:48 UTC** · companies polled directly: **826** (registry 1125) · jobs tracked: **14644** · new this run: **335** · alerts this run: **0**_
+_Last run: **2026-07-20 20:21 UTC** · companies polled directly: **866** (registry 1172) · jobs tracked: **15968** · new this run: **1324** · alerts this run: **9**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -46,7 +46,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 98 🔥 | 6d | WHOOP | [Android Engineer](https://jobright.ai/jobs/info/6a16c1c4128680351d96caf0?utm_campaign=Software%20Engineering&utm_source=1103) | Boston, MA | healthtech | jobright |
 | 97 🔥 | 3d | Mayo Clinic | [IT Assoc Cloud Engineer - IS-Mod - Cloud CMDB Steward](https://jobright.ai/jobs/info/6a5a2d3063a8f619507c5889?utm_campaign=Software%20Engineering&utm_source=1103) | Rochester, MN, United States | healthtech | jobright |
 | 97 🔥 | 11d | Cadence | [Software Engineer, New College Grad 2026 (Undergrads)](https://jobright.ai/jobs/info/6a4fe38f4649561ec08af67a?utm_campaign=Software%20Engineering&utm_source=1103) | Burlington, MA, United States | healthtech | jobright |
-| 96 🔥 | 18h | Globus Medical | [Associate Software Engineer](https://globusmedical.wd5.myworkdayjobs.com/GMED_Careers/job/Audubon-PA/Associate-Software-Engineer_JR106980-1) | King of Prussia, PA | healthtech | simplify |
+| 96 🔥 | 20h | Globus Medical | [Associate Software Engineer](https://globusmedical.wd5.myworkdayjobs.com/GMED_Careers/job/Audubon-PA/Associate-Software-Engineer_JR106980-1) | King of Prussia, PA | healthtech | simplify |
 | 96 🔥 | 3d | AdventHealth Colorado | [RN Clinical Data Analyst](https://jobright.ai/jobs/info/6a5a755d686b4755d1e1546e?utm_campaign=Data%20Analysis&utm_source=1103) | ADVENTHEALTH ZEPHYRHILLS, United States  | healthtech | jobright |
 | 96 🔥 | 4d | Beth Israel Lahey Health | [Biostatistician 1 - Epidemiology & Data Science Section](https://bilh.wd1.myworkdayjobs.com/External/job/Beth-Israel-Deaconess-Medical-Center/Biostatistician-I--Epidemiology---Data-Science-Section-_JR99657) | Boston, MA | healthtech | simplify |
 | 96 🔥 | 5d | Michigan Medicine | [Graduate Student Events and Data Analyst](https://jobright.ai/jobs/info/6a5805f568d16a30e2411334?utm_campaign=Data%20Analysis&utm_source=1103) | Dearborn, MI, United States | healthtech | jobright |
@@ -71,7 +71,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 94 🔥 | 7d | Amazon Web Services (AWS) | [DFT Design Engineer I, AWS Machine Learning Acceleration](https://jobright.ai/jobs/info/695496685bb7de448ef78f90?utm_campaign=Software%20Engineering&utm_source=1103) | Austin, TX, United States | big_tech | jobright |
 | 94 🔥 | 13d | Notion | [Software Engineer – Early Career - AI](https://jobs.ashbyhq.com/notion/85947779-6b87-466a-98bc-30a640448c28/application) | SF | big_tech | simplify |
 | 94 🔥 | 18d | TikTok | [Machine Learning Engineer Graduate - E-Commerce Supply Chain & Logisti](https://lifeattiktok.com/search/7515557805312297223) | San Jose, CA | big_tech | simplify |
-| 93 🔥 | 18h | RTX | [2026 Raytheon Full Time-Software Engineer I – EOIR Advanced Products a](https://jobright.ai/jobs/info/6a5df808270e3033b045b540?utm_campaign=Software%20Engineering&utm_source=1103) | McKinney, TX, United States | other | jobright |
+| 93 🔥 | 20h | RTX | [2026 Raytheon Full Time-Software Engineer I – EOIR Advanced Products a](https://jobright.ai/jobs/info/6a5df808270e3033b045b540?utm_campaign=Software%20Engineering&utm_source=1103) | McKinney, TX, United States | other | jobright |
 | 93 🔥 | 1d | SayVo AI | [Entry-Level Software Developer](https://jobright.ai/jobs/info/6a5d496563a8f619507ceed7?utm_campaign=Software%20Engineering&utm_source=1103) | United States | ai_lab | jobright |
 | 93 🔥 | 2d | Qualcomm | [#Software Engineer – Platform Test](https://jobright.ai/jobs/info/69f528ebdb88714bcdfb24e8?utm_campaign=Software%20Engineering&utm_source=1103) | San Diego, CA, United States | big_tech | jobright |
 | 93 🔥 | 2d | SpaceX | [Full Stack Software Engineer Observability - Observability - Starlink](https://boards.greenhouse.io/spacex/jobs/8638457002) | West Athens, CA | big_tech | simplify |
@@ -102,6 +102,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 90 🔥 | 17d | IXL Learning | [Software Engineer New Grad](https://www.ixl.com/company/jobs?gh_jid=8615710002) | San Mateo, CA | edtech | simplify |
 | 89 🔥 | 9d | Qualcomm | [#Embedded Software Engineer](https://jobright.ai/jobs/info/6a0d9cc280bf0430c7624a1e?utm_campaign=Software%20Engineering&utm_source=1103) | San Diego, CA | big_tech | jobright |
 | 89 🔥 | 14d | Ascend Schools | [Data Analyst](https://jobright.ai/jobs/info/6a4b9814971cd25b06f97b81?utm_campaign=Data%20Analysis&utm_source=1103) | Brooklyn, NY | edtech | jobright |
+| 88 🔥 | 20h | Bank of America | [Quantitative Engineer - Consumer & Wholesale](https://jobright.ai/jobs/info/6a5e5056f29acc1a11746b59?utm_campaign=Software%20Engineering&utm_source=1103) | Jersey City, NJ, United States | fintech | jobright |
 | 88 🔥 | 4d | RTX | [2026 Raytheon Full Time- Software Engineer I -(Onsite)](https://jobright.ai/jobs/info/6a5c8d9c686b4755d1e1c043?utm_campaign=Software%20Engineering&utm_source=1103) | El Segundo, CA, United States | other | jobright |
 | 88 🔥 | 4d | Qualcomm | [Software Product Application Engineer](https://jobright.ai/jobs/info/6a50aad95165966a1161aba2?utm_campaign=Software%20Engineering&utm_source=1103) | San Diego, CA, United States | big_tech | jobright |
 | 88 🔥 | 5d | Bracebridge Capital | [Machine Learning Analyst](https://job-boards.greenhouse.io/bracebridgecapital/jobs/4715042005) | Boston, MA | fintech | simplify |
@@ -120,6 +121,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 88 🔥 | 18d | TikTok | [Software Engineer Graduate (Ads Measurement Signal and Privacy Infra T](https://jobright.ai/jobs/info/6a471f418204a812e98cb047?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose | big_tech | jobright |
 | 88 🔥 | 20d | TikTok | [Software Engineer Graduate (Experimentation and Evaluation) - 2026 Sta](https://jobright.ai/jobs/info/6a44451e65e80d3c99f2c3c8?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose | big_tech | jobright |
 | 88 🔥 | 21d | TikTok | [Software Engineer Graduate (Global CRM) - 2026 Start (BS/MS)](https://jobright.ai/jobs/info/6a432e92e09ecb495964263a?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose, CA | big_tech | jobright |
+| 87 🔥 | 20h | Publicis Groupe | [Data Scientist](https://jobright.ai/jobs/info/6a5df7a567b2850e77dee966?utm_campaign=Data%20Analysis&utm_source=1103) | Chicago, IL, US | other | jobright |
 | 87 🔥 | 4d | UST HealthProof | [Jr Fullstack Engineer](https://jobright.ai/jobs/info/6a592a44686b4755d1e0ed1a?utm_campaign=Software%20Engineering&utm_source=1103) | New Jersey, United States | healthtech | jobright |
 | 87 🔥 | 4d | UST HealthProof | [Jr Fullstack Engineer](https://jobright.ai/jobs/info/6a597eea3ac7627fe9fff965?utm_campaign=Software%20Engineering&utm_source=1103) | Bellevue, WA, United States | healthtech | jobright |
 | 87 🔥 | 6d | Qualcomm | [#Display Software Engineer](https://jobright.ai/jobs/info/6a56d78621f64463ad3572f0?utm_campaign=Software%20Engineering&utm_source=1103) | San Diego, CA, United States | big_tech | jobright |
@@ -134,8 +136,9 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 86 🔥 | 16d | Skild AI | [Software Engineer, Manufacturing Test Systems](https://jobright.ai/jobs/info/6a0ff2599f654b3359ce8f33?utm_campaign=Software%20Engineering&utm_source=1103) | San Mateo, California | ai_lab | jobright |
 | 86 🔥 | 18d | Qualcomm | [Product Software Engineer](https://jobright.ai/jobs/info/6a3d3668882f121f56a36694?utm_campaign=Software%20Engineering&utm_source=1103) | San Diego, CA | big_tech | jobright |
 | 86 🔥 | 19d | Oracle | [Software Developer](https://jobright.ai/jobs/info/6a365f5a1232144fb15658f0?utm_campaign=Software%20Engineering&utm_source=1103) | Kansas City, MO, United States | big_tech | jobright |
-| 85 🔥 | 18h | Publicis Groupe | [Data Scientist](https://jobright.ai/jobs/info/6a5df7a567b2850e77dee966?utm_campaign=Data%20Analysis&utm_source=1103) | Chicago, IL, US | other | jobright |
-| 85 🔥 | 20h | Clera | [Founding AI Engineer](https://jobs.ashbyhq.com/clera/536ff8a3-aeb6-419b-af3f-f12df2b6ad1d/application?embed=true) | SF | other | simplify |
+| 85 🔥 | 20h | Chenega MIOS SBU | [Data Analyst](https://jobright.ai/jobs/info/6a5e4c40270e3033b045ce9a?utm_campaign=Data%20Analysis&utm_source=1103) | Alexandria,Virginia,United States | other | jobright |
+| 85 🔥 | 20h | RigUp | [Data Analyst](https://jobright.ai/jobs/info/6a5e477167b2850e77df0187?utm_campaign=Data%20Analysis&utm_source=1103) | Fort Worth, TX, United States | other | jobright |
+| 85 🔥 | 22h | Clera | [Founding AI Engineer](https://jobs.ashbyhq.com/clera/536ff8a3-aeb6-419b-af3f-f12df2b6ad1d/application?embed=true) | SF | other | simplify |
 | 85 🔥 | 4d | Lightfield | [Software Engineer New Grad - Applied AI](https://jobs.ashbyhq.com/Lightfield/fc93a467-773d-4805-b342-bf470950732d/application?embed=true) | SF | other | simplify |
 | 85 🔥 | 4d | Lightfield | [Software Engineer, Applied AI, New Grad](https://jobs.ashbyhq.com/Lightfield/fc93a467-773d-4805-b342-bf470950732d) | HQ: San Francisco | other | ashby |
 | 85 🔥 | 4d | Figma | [Software Engineer, Full Stack](https://jobright.ai/jobs/info/6906b3ef63502c0aded82a6a?utm_campaign=Software%20Engineering&utm_source=1103) | New York, NY | big_tech | jobright |
@@ -145,7 +148,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 85 🔥 | 11d | Jump Trading | [AI Research Engineer](https://boards.greenhouse.io/embed/job_app?token=8052313) | Chicago, IL | fintech | simplify |
 | 85 🔥 | 15d | WHOOP | [Software Engineer I (Backend)](https://jobright.ai/jobs/info/699e63ede0bddb6acacde721?utm_campaign=Software%20Engineering&utm_source=1103) | Boston, MA | other | jobright |
 | 85 🔥 | 18d | RTX | [Systems Engineer 1 - String Engineer](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-MA-WOBURN-WB1--235-Presidential-Way--SPENCER-BLDG/Systems-Engineer-I--String-Engineer-Onsite_01855457) | Burlington, MA | other | simplify |
-| 84 ⭐ | 4h | RF-SMART | [Product Analyst 1 - Automation](https://job-boards.greenhouse.io/rfsmart/jobs/5363087008) | Highlands Ranch, CO | other | simplify |
+| 84 ⭐ | 5h | RF-SMART | [Product Analyst 1 - Automation](https://job-boards.greenhouse.io/rfsmart/jobs/5363087008) | Highlands Ranch, CO | other | simplify |
 | 84 ⭐ | 1d | Hudson River Trading | [Algorithm Developer (Quant Research & Trading) – 2027 PhDs](https://jobright.ai/jobs/info/6a5508722084cd792b4759a7?utm_campaign=Data%20Analysis&utm_source=1103) | New York, NY, United States | fintech | jobright |
 | 84 ⭐ | 2d | Hudson River Trading | [Algorithm Developer (Quant Research & Trading) – 2027 Grads](https://jobright.ai/jobs/info/6a55087ef2c46727285ef45a?utm_campaign=Data%20Analysis&utm_source=1103) | New York, NY, United States | fintech | jobright |
 | 84 ⭐ | 5d | Faros AI | [Software Engineer New Grad](https://jobs.ashbyhq.com/faros-ai/622e1f1e-4a39-4e7c-8526-1189ca588066/application?embed=true) | San Mateo, CA | ai_lab | simplify |
@@ -153,8 +156,5 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 84 ⭐ | 10d | mthree | [Junior Data Scientist](https://jobright.ai/jobs/info/6a4145b43bfa967791ec0daf?utm_campaign=Data%20Analysis&utm_source=1103) | Canada | other | jobright |
 | 84 ⭐ | 11d | RTX | [Embedded Cybersecurity Software Engineer 1](https://globalhr.wd5.myworkdayjobs.com/fr-CA/Private_Posting_No_TMP/job/US-IA-CEDAR-RAPIDS-137--855-35Th-St-NE--BLDG-137/Embedded-Cybersecurity-Software-Engineer-I--Onsite-_01829680-1) | Cedar Rapids, IA | other | simplify |
 | 84 ⭐ | 12d | Momentum | [Launch Graduate Program: Associate Cybersecurity Analyst](https://job-boards.greenhouse.io/momentumcompany3/jobs/8614696002) | Dallas, Texas | other | greenhouse |
-| 84 ⭐ | 12d | Motorola | [Junior Software Engineer - AI Agent Platform](https://motorolasolutions.wd5.myworkdayjobs.com/Careers/job/Ontario-Remote-Work/Junior-Software-Engineer--AI-Agent-Platform_R66146) | Alberta, Canada | other | simplify |
-| 84 ⭐ | 17d | Vanguard | [Technology Leadership Program - Data & Analytics - Analyst](https://vanguard.wd5.myworkdayjobs.com/en-US/contractors_restricted/job/Charlotte-NC/Technology-Leadership-Program---Data---Analytics--Analyst----NC_180091) | Charlotte, NC | other | simplify |
-| 84 ⭐ | 18d | Truist Bank | [Data Scientist 1 - Fraud Reporting](https://truist.wd1.myworkdayjobs.com/en-US/Careers/job/Charlotte-NC/Data-Scientist-I----Fraud-Reporting_R0115931) | Charlotte, NC | fintech | simplify |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
