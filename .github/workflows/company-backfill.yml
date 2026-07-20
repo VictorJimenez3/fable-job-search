@@ -1,0 +1,68 @@
+name: company research backfill
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: radar-company-backfill
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Drain company dossier backlog
+        env:
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+          NVIDIA_API_BASE_URL: ${{ vars.NVIDIA_API_BASE_URL }}
+          NVIDIA_GLM_52_API_KEY: ${{ secrets.NVIDIA_GLM_52_API_KEY }}
+          NVIDIA_GLM_52_MODEL: ${{ vars.NVIDIA_GLM_52_MODEL }}
+          NVIDIA_DEEPSEEK_V4_PRO_API_KEY: ${{ secrets.NVIDIA_DEEPSEEK_V4_PRO_API_KEY }}
+          NVIDIA_DEEPSEEK_V4_PRO_MODEL: ${{ vars.NVIDIA_DEEPSEEK_V4_PRO_MODEL }}
+          NVIDIA_NEMOTRON_3_ULTRA_550B_A55B_API_KEY: ${{ secrets.NVIDIA_NEMOTRON_3_ULTRA_550B_A55B_API_KEY }}
+          NVIDIA_NEMOTRON_3_ULTRA_550B_A55B_MODEL: ${{ vars.NVIDIA_NEMOTRON_3_ULTRA_550B_A55B_MODEL }}
+          NVIDIA_KIMI_K2_6_API_KEY: ${{ secrets.NVIDIA_KIMI_K2_6_API_KEY }}
+          NVIDIA_KIMI_K2_6_MODEL: ${{ vars.NVIDIA_KIMI_K2_6_MODEL }}
+          RADAR_AI_MAX_CALLS: "10000"
+          RADAR_AI_MAX_REQUESTS: "10000"
+          RADAR_AI_PROVIDER_ATTEMPTS: "2"
+          RADAR_AI_TASK_COMPANY_RESEARCH_LIMIT: "10000"
+          RADAR_COMPANY_RESEARCH_WEB_BATCH: "40"
+          RADAR_COMPANY_RESEARCH_SYNTH_BATCH: "12"
+          RADAR_COMPANY_RESEARCH_MAX_TOKENS: "2200"
+          RADAR_COMPANY_RESEARCH_MAX_AGE_DAYS: "365"
+          RADAR_COMPANY_RESEARCH_WEB_RESEARCH_LIMIT: "0"
+        run: python -u scripts/backfill_company_research.py
+
+      - name: Commit research state and docs
+        run: |
+          git config user.name "job-radar[bot]"
+          git config user.email "radar@users.noreply.github.com"
+          git add state/company_research.json state/ai_usage.json docs
+          if git diff --cached --quiet; then
+            echo "no changes"; exit 0
+          fi
+          git commit -m "radar: drain company research backlog"
+          for i in 1 2 3 4; do
+            git push && exit 0
+            git pull --rebase --autostash || true
+            sleep $((i * 2))
+          done
+          git push

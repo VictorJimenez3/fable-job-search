@@ -100,20 +100,31 @@ def _clean_page(raw: str) -> str:
 
 def _search_links(company: str) -> list[str]:
     """Use a public search page only to discover candidate company URLs."""
-    try:
-        html = get("https://html.duckduckgo.com/html/",
-                   params={"q": f'"{company}" company careers benefits mission'},
-                   headers={"User-Agent": "JobRadar/1.0 (personal research)"}).text
-    except Exception as exc:
-        print(f"company research: web search failed for {company}: {exc}")
-        return []
     links = []
-    for href in re.findall(r'class="result__a"[^>]+href="([^"]+)"', html):
-        parsed = urlparse(href)
-        if "duckduckgo.com" in parsed.netloc:
-            href = parse_qs(parsed.query).get("uddg", [""])[0]
-        if href.startswith("http") and href not in links:
-            links.append(href)
+    query = f'"{company}" company careers benefits mission'
+    searches = (
+        ("https://www.bing.com/search", r'class="(?:tilk|b_algo)"[^>]+[^>]*href="([^"]+)"'),
+        ("https://www.google.com/search", r'<a href="/url\?q=([^&"]+)'),
+        # DuckDuckGo is a final fallback; it can be unavailable from GitHub
+        # runners and should never delay the working search providers.
+        ("https://html.duckduckgo.com/html/", r'class="result__a"[^>]+href="([^"]+)"'),
+    )
+    for endpoint, pattern in searches:
+        try:
+            html = get(endpoint, params={"q": query}, timeout=8,
+                       headers={"User-Agent": "Mozilla/5.0 (JobRadar personal research)"}).text
+        except Exception as exc:
+            print(f"company research: web search failed for {company} at {endpoint}: {exc}")
+            continue
+        for href in re.findall(pattern, html, re.S):
+            href = html_lib.unescape(href)
+            parsed = urlparse(href)
+            if "duckduckgo.com" in parsed.netloc:
+                href = parse_qs(parsed.query).get("uddg", [""])[0]
+            if href.startswith("http") and href not in links:
+                links.append(href)
+        if links:
+            break
     return links[:10]
 
 
@@ -210,7 +221,8 @@ def prepare_external_sources(records: dict, company: str, job_urls: list[str],
             continue
         seen.add(url)
         try:
-            response = get(url, headers={"User-Agent": "JobRadar/1.0 (personal research)"})
+            response = get(url, timeout=8,
+                           headers={"User-Agent": "JobRadar/1.0 (personal research)"})
             if response.status_code >= 400:
                 continue
             title_match = re.search(r"(?is)<title[^>]*>(.*?)</title>", response.text)
@@ -219,12 +231,13 @@ def prepare_external_sources(records: dict, company: str, job_urls: list[str],
             lower = f"{url} {title}".lower()
             if any(x in lower for x in ("career", "jobs", "benefit", "culture", "working")):
                 kind = "company_careers_or_benefits"
-            changed |= capture_external_into(records, company=company, url=url,
+            changed |= capture_external_into(records, company=company,
+                                             url=response.url or url,
                                              title=title, text=_clean_page(response.text),
                                              kind=kind, retrieved_at=now)
         except Exception as exc:
             print(f"company research: page fetch failed for {company} {url}: {exc}")
-        if len(seen) >= 5:
+        if len(seen) >= 3:
             break
     record["web_researched_at"] = now
     record["web_research_status"] = "sources captured" if changed else "no usable public page"
@@ -472,9 +485,10 @@ def enrich(jobs_state: dict, applied: list | None = None, web: dict | None = Non
     now = int(time.time())
     grouped: dict[str, list[dict]] = {}
     prune_irrelevant_sources(records, jobs_state)
+    max_age_days = int(env("RADAR_COMPANY_RESEARCH_MAX_AGE_DAYS", "45"))
     for job in jobs_state.values():
-        if (not job.get("alert_ok") and not job_is_relevant(job)
-                or now - job.get("first_seen", 0) > 45 * 86400):
+        too_old = max_age_days > 0 and now - job.get("first_seen", 0) > max_age_days * 86400
+        if (not job.get("alert_ok") and not job_is_relevant(job)) or too_old:
             continue
         grouped.setdefault(norm(job.get("company", "")), []).append(job)
     # New postings get a company web-research attempt before the AI queue is
