@@ -719,3 +719,26 @@ stored scores before publishing `state/jobs.json` and generated dashboard
 outputs; `rescore` remains the manual repair command. Records carry
 `score_version`, and the platform's job drawer displays that version beside
 the score and the auditable reason list.
+
+## 51. Source coverage, notification delivery, and in-house tracking (2026-07-20)
+
+SimplifyJobs/New-Grad-Positions is treated as trusted new-grad evidence because
+its maintained board is explicitly scoped to new-grad roles; SWEList currently
+uses that same public feed, so a separate fragile SWEList scraper would only
+duplicate ingestion. Active rows are retained for one year even when an
+aggregator's timestamp is stale; stale timestamps still suppress notification
+alerts. The platform now has one assigned GitHub issue per new qualifying
+posting for reliable per-posting push/email notifications, plus one unassigned
+master board for all-at-once browsing. The in-house Pipeline is the primary
+tracker; Notion is an optional mirror and untracking creates a tombstone so
+reconcile cannot silently re-add a deliberately removed role.
+
+## 52. Ranking policy v6: new-grad first, then role and field (2026-07-20)
+
+New-grad/early-career evidence is the dominant score component and trusted
+new-grad board sources can supply that evidence when a title is terse. Within
+that eligible set, AI/ML, data science, general SWE, data engineering, and
+systems are ordered in that priority; health, sports, videogames, education,
+AI labs, and big tech are explicit high-value sectors. Marquee-company points
+remain competitive context rather than a gate bypass. Every full rebuild stamps
+rules/score version 6 so existing postings receive the same equation.

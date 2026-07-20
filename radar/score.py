@@ -15,7 +15,7 @@ from .models import Job, norm
 
 # Bumped whenever gate rules change; regate() re-applies the current rules to
 # every stored job whose rules_v is older (demote/promote alert_ok in place).
-RULES_VERSION = 5
+RULES_VERSION = 6
 
 SENIOR_RE = re.compile(
     r"\b(senior|staff|principal|lead(er)?|director|manager|head of|sr\.?|vp|chief|"
@@ -70,6 +70,7 @@ STRONG_NEW_GRAD_RE = re.compile(
     r"entry[- ]level|college\s+grad|20(?:25|26|27)\s+grad|class\s+of\s+20(?:25|26|27)|"
     r"graduate\s+(?:software|engineer|program|scheme)|rotational\s+program|"
     r"graduate\s+program|emerging\s+talent|future\s+talent)\b", re.I)
+TRUSTED_NEW_GRAD_SOURCES = {"simplify", "vansh", "jobright", "speedyapply"}
 
 ROLE_BUCKETS: dict[str, re.Pattern] = {
     "ai_ml": re.compile(
@@ -178,12 +179,17 @@ def new_grad_signal(title: str, description: str = "") -> bool:
     return bool(STRONG_NEW_GRAD_RE.search(text) or ENTRY_YEARS_RE.search(text))
 
 
+def source_new_grad(job: Job) -> bool:
+    """Treat dedicated new-grad aggregators as strong provenance evidence."""
+    return job.source.lower() in TRUSTED_NEW_GRAD_SOURCES
+
+
 def gates(job: Job) -> tuple[bool, bool, list[str]]:
     """Returns (keep_at_all, alert_eligible, reasons)."""
     t = job.title
     text = f"{t}\n{job.description[:1500]}"
     program = leadership_program_signal(job.company, t, job.description)
-    new_grad = new_grad_signal(t, job.description)
+    new_grad = new_grad_signal(t, job.description) or source_new_grad(job)
     if INTERN_RE.search(t):
         return False, False, ["intern/co-op/contract"]
     if SENIOR_RE.search(t):
@@ -354,10 +360,10 @@ def score(job: Job, feedback: dict, now: int | None = None) -> None:
     """Mutates job.score / job.score_reasons. Assumes gates already passed."""
     p = profile()
     now = now or int(time.time())
-    # Keep headroom below 100 so role/new-grad/company differences remain
-    # visible instead of flattening the whole alert board at 100.
-    pts = 20
-    reasons = ["base 20"]
+    # New-grad evidence is intentionally the largest component. A prestigious
+    # or fresh experienced role must not outrank an eligible new-grad role.
+    pts = 5
+    reasons = ["base 5"]
 
     bucket = role_bucket(job.title, job.description) or "swe"
     role_pts = p["roles"].get(bucket, 10)
@@ -370,11 +376,18 @@ def score(job: Job, feedback: dict, now: int | None = None) -> None:
         reasons.append(f"sector:{job.sector} +{sector_pts}")
 
     b = p["bonuses"]
-    if new_grad_signal(job.title, job.description):
+    program = leadership_program_signal(job.company, job.title, job.description)
+    new_grad = new_grad_signal(job.title, job.description) or source_new_grad(job)
+    if new_grad or program:
         pts += b["explicit_new_grad_title"]
-        reasons.append(f"new-grad title +{b['explicit_new_grad_title']}")
+        evidence = ("trusted new-grad board" if source_new_grad(job)
+                    and not new_grad_signal(job.title, job.description)
+                    else "new-grad/early-career")
+        reasons.append(f"{evidence} priority +{b['explicit_new_grad_title']}")
+    else:
+        reasons.append("new-grad evidence absent (below eligible roles)")
 
-    if leadership_program_signal(job.company, job.title, job.description):
+    if program:
         pts += b.get("leadership_program", 0)
         reasons.append(f"technical leadership program +{b.get('leadership_program', 0)}")
         if norm(job.company) in target_program_companies():
@@ -483,7 +496,8 @@ def regate(jobs_state: dict) -> int:
                   remote=bool(rec.get("remote")), sector=rec.get("sector", ""))
         keep, alert_eligible, reasons = gates(job)
         new_alert = keep and alert_eligible
-        rec["explicit_new_grad"] = explicit_new_grad(job.title)
+        rec["explicit_new_grad"] = (explicit_new_grad(job.title)
+                                     or source_new_grad(job))
         rec["rules_v"] = RULES_VERSION
         if bool(rec.get("alert_ok")) != new_alert:
             rec["alert_ok"] = new_alert

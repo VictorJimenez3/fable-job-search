@@ -12,6 +12,16 @@ BIG_TECH = {
     "tesla", "spacex", "palantir", "servicenow", "workday", "intuit", "ebay", "shopify",
 }
 
+SPORTS = {
+    "nike", "espn", "fanatics", "sportradar", "draftkings", "under armour",
+    "mlb", "nba", "nfl", "nhl", "formula 1", "fifa", "pga tour",
+}
+VIDEO_GAMES = {
+    "playstation", "sony interactive entertainment", "sony", "nintendo", "xbox",
+    "electronic arts", "ea games", "epic games", "take two interactive", "valve",
+    "activision", "blizzard", "riot games", "ubisoft", "bungie", "gameloft",
+}
+
 LEXICONS: dict[str, list[str]] = {
     "healthtech": [
         "health", "med", "bio", "care", "clinic", "pharma", "patient", "dental",
@@ -24,10 +34,12 @@ LEXICONS: dict[str, list[str]] = {
         "credit", "insur", "wealth", "asset", "ledger", "treasury",
     ],
     "ai_lab": ["ai", "ml", "intelligence", "neural", "deep", "cognit", "robot"],
+    "sports": ["sports", "athletic", "stadium", "league", "soccer", "baseball", "basketball"],
+    "video_games": ["game", "gaming", "playstation", "xbox", "nintendo", "esports"],
 }
 
 # lexicon order matters: healthtech wins ties (user priority)
-_ORDER = ["healthtech", "edtech", "fintech", "ai_lab"]
+_ORDER = ["healthtech", "sports", "video_games", "edtech", "fintech", "ai_lab"]
 
 
 def infer(company: str, seed_sectors: dict[str, str]) -> str:
@@ -40,6 +52,12 @@ def infer(company: str, seed_sectors: dict[str, str]) -> str:
     for bt in BIG_TECH:
         if n == bt or n.startswith(bt + " ") or compact == bt:
             return "big_tech"
+    for name in SPORTS:
+        if n == name or n.startswith(name + " "):
+            return "sports"
+    for name in VIDEO_GAMES:
+        if n == name or n.startswith(name + " "):
+            return "video_games"
     words = n.split()
     padded = f" {n} "
     deny = {"media", "medium", "comedy", "academic"}  # false-positive stems

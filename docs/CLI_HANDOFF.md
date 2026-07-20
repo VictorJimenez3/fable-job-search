@@ -39,11 +39,11 @@ Before changing the radar, read these in order:
   Mac, system Python is 3.9 but the repo's `.venv` has the dependencies —
   run tests with `.venv/bin/python -m pytest tests/`. CI commits state every
   ~30 min, so always `git pull --rebase` before pushing.
-- **Delivery surfaces, all live:** weekly alert issue (checkbox = track to
-  Notion as not-yet-applied), 📌 master board issue (every open alert-worthy
-  role, rewritten each crawl), 🏆 daily best-of issue, docs/DASHBOARD.md,
-  RSS, and the platform website. Twice-daily reconcile sweep guarantees no
-  checked box is ever lost.
+- **Delivery surfaces, all live:** one assigned alert issue per new qualifying
+  posting (GitHub push/email), an intentionally unassigned 📌 master board
+  (every open alert-worthy role, rewritten each crawl), 🏆 daily best-of issue,
+  docs/DASHBOARD.md, RSS, and the platform website. Twice-daily reconcile sweep
+  guarantees no checked box is ever lost.
 - **The platform has two permanent doors** (DECISIONS #27): Vercel
   (job-radar-vmj-8946s-projects.vercel.app — GitHub OAuth, instant writes,
   Victor's daily driver) and GitHub Pages
@@ -68,7 +68,7 @@ Before changing the radar, read these in order:
   `EMAIL_APP_PASSWORD` secrets** (confirmed empty in the live workflow on
   2026-07-18; Gmail app password setup is in README §2). The current 142
   tracked entries are all still `saved`, not confirmed applications.
-- **Scoring (rules v5, 2026-07-20, DECISIONS #47):** verified new-grad or
+- **Scoring (rules v6, 2026-07-20):** verified new-grad or
   early-career evidence is required for alerts, except for a technical/data
   graduate, rotational, or leadership program. Aggregator listings, marquee
   companies, high salary, and healthtech no longer bypass that gate. Eligible

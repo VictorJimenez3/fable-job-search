@@ -10,6 +10,7 @@
 - Comment commands:
     applied <url or id>   log a confirmed application immediately
     skip <company or id>  negative feedback (downranks similar roles)
+    untrack <id or url>   remove from the in-house pipeline and archive Notion
     track <ats> <token> [Company Name]   manually add a company to the registry
 """
 from __future__ import annotations
@@ -28,6 +29,7 @@ CHECKED = re.compile(r"^- \[[xX]\] .*?<!--radar:([a-f0-9]{16})-->", re.M)
 CMD_SAVE = re.compile(r"^save\s+(\S+)", re.I | re.M)
 CMD_APPLIED = re.compile(r"^applied\s+(\S+)", re.I | re.M)
 CMD_SKIP = re.compile(r"^skip\s+(.+?)\s*$", re.I | re.M)
+CMD_UNTRACK = re.compile(r"^untrack\s+(\S+)", re.I | re.M)
 CMD_TRACK = re.compile(r"^track\s+(\w+)\s+(\S+)(?:\s+(.+))?", re.I | re.M)
 CMD_CULTURE = re.compile(r"^culture\s+(.+?)\s*$", re.I | re.M)
 
@@ -93,6 +95,26 @@ def record_applied(job: dict, applied: list, fb: dict, via: str, stage: str = "a
     return True
 
 
+def remove_tracking(ref: str, applied: list, untracked: set[str]) -> bool:
+    """Remove one local tracker entry and archive its Notion page if present."""
+    entry = next((a for a in applied if a.get("id") == ref or a.get("url") == ref), None)
+    if not entry:
+        return False
+    page = entry.get("notion_page")
+    token = env("NOTION_TOKEN")
+    if page and token:
+        from .notion_sync import archive_page, page_id_from_url
+        page_id = page_id_from_url(page)
+        if page_id:
+            try:
+                archive_page(token, page_id)
+            except Exception as exc:
+                print(f"tracker: could not archive Notion page for {entry.get('company')}: {exc}")
+    applied.remove(entry)
+    untracked.add(entry["id"])
+    return True
+
+
 def handle_event(event_path: str) -> None:
     with open(event_path) as f:
         event = json.load(f)
@@ -111,6 +133,7 @@ def handle_event(event_path: str) -> None:
     jobs = state.jobs()
     applied = state.applied()
     shortlist = state.shortlist()
+    untracked = set(state.load("untracked.json", []))
     fb = state.feedback()
     changed = 0
 
@@ -127,7 +150,7 @@ def handle_event(event_path: str) -> None:
         if "radar-alerts" in labels:
             for jid in CHECKED.findall(body):
                 job = jobs.get(jid)
-                if job:
+                if job and jid not in untracked:
                     changed += record_applied(job, applied, fb,
                                               via="issue-checkbox", stage="saved")
                     shortlist[:] = [s for s in shortlist if s["id"] != job["id"]]
@@ -143,6 +166,7 @@ def handle_event(event_path: str) -> None:
             ref = m.group(1).strip()
             job = jobs.get(ref) or next((j for j in jobs.values() if j.get("url") == ref), None)
             if job:
+                untracked.discard(job["id"])
                 changed += record_applied(job, applied, fb, via="issue-command", stage="saved")
                 shortlist[:] = [s for s in shortlist if s["id"] != job["id"]]
         for m in CMD_APPLIED.finditer(body):
@@ -155,6 +179,7 @@ def handle_event(event_path: str) -> None:
                        "company": ref.split("/")[2] if ref.startswith("http") else ref,
                        "title": "Manually logged application", "url": ref if ref.startswith("http") else "",
                        "locations": [], "score": None, "source": "manual"}
+            untracked.discard(job["id"])
             changed += record_applied(job, applied, fb, via="comment")
             # Clear any old shortlist entry for this now-confirmed application.
             shortlist[:] = [s for s in shortlist if s["id"] != job["id"]]
@@ -164,6 +189,9 @@ def handle_event(event_path: str) -> None:
             comp = norm(job["company"]) if job else norm(ref)
             if comp and comp not in fb["negative_companies"]:
                 fb["negative_companies"].append(comp)
+                changed += 1
+        for m in CMD_UNTRACK.finditer(body):
+            if remove_tracking(m.group(1).strip(), applied, untracked):
                 changed += 1
         for m in CMD_CULTURE.finditer(body):
             from . import culture
@@ -189,7 +217,7 @@ def handle_event(event_path: str) -> None:
     else:
         for jid in CHECKED.findall(body):
             job = jobs.get(jid)
-            if job:
+            if job and jid not in untracked:
                 changed += record_applied(job, applied, fb, via="issue-checkbox", stage="saved")
                 shortlist[:] = [s for s in shortlist if s["id"] != job["id"]]
 
@@ -199,6 +227,8 @@ def handle_event(event_path: str) -> None:
         state.save("applied.json", applied)
         state.save("shortlist.json", shortlist)
         state.save("feedback.json", fb)
+    state.save("untracked.json", sorted(untracked))
+    if changed or pulled or synced:
         print(f"applied: recorded {changed} change(s), pulled {pulled}, "
               f"synced {synced} to Notion")
     else:
@@ -243,6 +273,7 @@ def reconcile_checkboxes() -> int:
     hist = {a["id"]: a for a in state.load("alert_history.json", [])}
     applied = state.applied()
     shortlist = state.shortlist()
+    untracked = set(state.load("untracked.json", []))
     fb = state.feedback()
 
     checked: set[str] = set()
@@ -269,7 +300,7 @@ def reconcile_checkboxes() -> int:
     changed = 0
     for jid in checked:
         job = jobs.get(jid) or hist.get(jid)
-        if job:
+        if job and jid not in untracked:
             changed += record_applied(job, applied, fb, via="reconcile", stage="saved")
             shortlist[:] = [s for s in shortlist if s["id"] != jid]
     pulled = sync_from_notion(applied)
@@ -278,6 +309,7 @@ def reconcile_checkboxes() -> int:
         state.save("applied.json", applied)
         state.save("shortlist.json", shortlist)
         state.save("feedback.json", fb)
+    state.save("untracked.json", sorted(untracked))
     print(f"reconcile: {len(checked)} checked boxes across all issues, "
           f"{changed} newly tracked, {pulled} stage change(s) pulled, "
           f"{synced} synced to Notion")

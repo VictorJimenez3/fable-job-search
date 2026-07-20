@@ -14,8 +14,8 @@ candidate:
   narrative: >
     Graduating senior targeting full-time new-grad roles in AI/ML engineering,
     software engineering, and data science. Strongest interest in healthcare /
-    health tech, then big tech and AI-native companies; genuinely open to
-    edtech, fintech, and startups. Has interned/applied across big tech and
+    health tech, big tech, sports, videogames, and education; genuinely open to
+    AI-native companies, edtech, fintech, and startups. Has interned/applied across big tech and
     financial services (Amazon, NVIDIA, Microsoft, Google, Capital One, BNY,
     Mastercard, Adobe, Pinterest, OpenAI, Commure, IXL). Values working on
     products with real-world impact and modern ML stacks.
@@ -33,14 +33,16 @@ culture_criteria: >
 roles:
   # max one bucket counts (the best match). points: title-keyword buckets
   # New-grad evidence is a gate; these weights order the eligible roles.
-  ai_ml: 28
-  data_science: 26
-  swe: 23
-  data_eng: 20
+  ai_ml: 26
+  data_science: 23
+  swe: 20
+  data_eng: 17
   # titles must match at least one bucket to be considered a tech role at all
 
 sectors:
   healthtech: 16
+  sports: 12
+  video_games: 12
   ai_lab: 11
   big_tech: 10
   edtech: 8
@@ -48,13 +50,13 @@ sectors:
   other: 0
 
 bonuses:
-  explicit_new_grad_title: 14  # strong new-grad title evidence is the primary ranking signal
-  leadership_program: 12       # technical graduate/rotational programs deserve extra visibility
+  explicit_new_grad_title: 45  # new-grad evidence is the dominant ranking dimension
+  leadership_program: 8         # technical graduate/rotational programs get a secondary lift
   target_program_company: 4    # researched healthcare program employers
-  marquee_company: 3           # prestige matters, but never overrides eligibility
-  fresh_24h: 12
-  fresh_72h: 6
-  fresh_7d: 2
+  marquee_company: 8            # prestige matters after new-grad + role fit
+  fresh_24h: 6
+  fresh_72h: 3
+  fresh_7d: 1
   remote: 2
   feedback_company_max: 8      # learned from what you actually apply to
   feedback_tokens_max: 6
@@ -150,6 +152,19 @@ marquee_companies:
   - Oura
   - Dexcom
   - Abbott
+  # sports / games / education companies Victor explicitly called out
+  - Nike
+  - ESPN
+  - Fanatics
+  - PlayStation
+  - Sony Interactive Entertainment
+  - Nintendo
+  - Electronic Arts
+  - Epic Games
+  - Duolingo
+  - Coursera
+  - Khan Academy
+  - IXL Learning
 
 llm:
   # Provider resolution (radar/llm.py): ANTHROPIC_API_KEY -> Claude;

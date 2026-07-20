@@ -7,7 +7,7 @@ import pytest
 from radar import state
 from radar.applied import handle_event
 from radar.board import _open_rows, _paginate
-from radar.alerts import format_line
+from radar.alerts import format_line, post_alerts
 
 NOW = int(time.time())
 
@@ -103,3 +103,44 @@ def test_opened_issue_save_command_tracks_job(tmp_state, tmp_path, monkeypatch):
     assert len(state.applied()) == 1
     assert state.applied()[0]["stage"] == "saved"
     assert state.applied()[0]["via"] == "issue-command"
+
+
+def test_untrack_removes_in_house_entry_and_tombstones_it(tmp_state, tmp_path, monkeypatch):
+    from radar.main import web_action
+    monkeypatch.delenv("NOTION_TOKEN", raising=False)
+    entry = {"id": JOB["id"], "company": JOB["company"], "title": JOB["title"],
+             "url": JOB["url"], "stage": "saved"}
+    state.save("applied.json", [entry])
+    event = tmp_path / "dispatch.json"
+    event.write_text(json.dumps({"client_payload": {"action": "untrack",
+                                                     "id": JOB["id"],
+                                                     "url": JOB["url"]}}))
+    monkeypatch.setenv("GITHUB_EVENT_PATH", str(event))
+    assert web_action() == 0
+    assert state.applied() == []
+    assert JOB["id"] in state.load("untracked.json", [])
+
+
+def test_alerts_create_one_assigned_issue_per_job(monkeypatch):
+    monkeypatch.setenv("GITHUB_TOKEN", "test-token")
+    monkeypatch.setattr("radar.alerts.github_repo", lambda: "VictorJimenez3/fable-job-search")
+    calls = []
+
+    class Response:
+        def raise_for_status(self):
+            return None
+
+        def json(self):
+            return {"html_url": f"https://github.com/example/{len(calls)}"}
+
+    def fake_post(url, **kwargs):
+        calls.append((url, kwargs["json"]))
+        return Response()
+
+    monkeypatch.setattr("radar.alerts.requests.post", fake_post)
+    jobs = [{**JOB, "id": "1" * 16, "company": "PlayStation"},
+            {**JOB, "id": "2" * 16, "company": "Fanatics"}]
+    post_alerts(jobs)
+    assert len(calls) == 2
+    assert all(c[1]["assignees"] == ["VictorJimenez3"] for c in calls)
+    assert all("Job Radar alerts — week" not in c[1]["title"] for c in calls)

@@ -18,7 +18,11 @@ JOBRIGHT_URLS = [
 ]
 SPEEDY_URL = "https://raw.githubusercontent.com/speedyapply/2027-SWE-College-Jobs/main/NEW_GRAD_USA.md"
 
-MAX_AGE_S = 45 * 86400  # ignore aggregator entries older than 45 days entirely
+# Aggregator ``active`` is the source's current availability signal. Its
+# posted/updated timestamp is often stale (especially for evergreen new-grad
+# listings), so retain active rows for the dashboard and let the alert policy
+# decide whether an old row is email-worthy.
+MAX_AGE_S = 365 * 86400
 
 
 def _simplify_like(url: str, source: str) -> list[Job]:

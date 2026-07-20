@@ -31,12 +31,21 @@ none block anything currently running.
 
 ## Deliberately deferred by Victor
 
-1. **RAG and vector search.** Embed job descriptions, company dossiers,
+1. **Scoring/state maintenance hardening — TODO.** The current repair can
+   rebuild the whole repository state, but it is easy for a live cron or Mac
+   enrichment commit to race that generated snapshot. Add a first-class
+   `score_version` health check in CI, fail loudly when any stored job is
+   unscored, and make rescore/backfill an explicit scheduled maintenance job
+   with state-merge protection. Until then, every scoring-policy change must
+   run `python -m radar.main rescore` and verify `score_version` coverage before
+   publishing.
+
+2. **RAG and vector search.** Embed job descriptions, company dossiers,
    candidate profile/CV material, and saved decisions; support semantic search
    and similarity-based ranking with explainable evidence. Keep deterministic
    gates authoritative and log retrieval/similarity reasons. This supersedes
    the currently parked posting↔profile RAG spike below.
-2. **CV-aware target-role toggle.** When a CV is available, add a `CV` option
+3. **CV-aware target-role toggle.** When a CV is available, add a `CV` option
    to the existing “all target roles” dropdown. It should show roles that can
    be meaningfully tailored to the selected CV, then offer a local, review-only
    tailored draft. Personal CV content stays local and never enters public

@@ -32,6 +32,11 @@ database.
 Subscribe to the RSS feed at:
 `https://raw.githubusercontent.com/VictorJimenez3/fable-job-search/claude/newgrad-job-search-system-9gbj9k/docs/feed.xml`
 
+The SimplifyJobs feed is retained as active-source coverage for up to a year;
+its stale timestamps keep old listings out of alert email, but do not silently
+remove them from the in-house board. SWEList uses that same New-Grad-Positions
+feed, so it is covered by the same ingestion path.
+
 ## How it works
 
 ```
@@ -64,9 +69,10 @@ every ~30 min (GitHub Actions cron)
 │     Optional configured-LLM re-rank + per-job application angle.
 │
 └─ 5. DELIVER
-      · GitHub issue "Job Radar alerts — week N" (assigned to you → push/email)
-      · 📌 master board issue — every open alert-worthy role in ONE place
-        (body + comment pages; rewritten each crawl; checkboxes work there too)
+      · one assigned 🎯 GitHub issue per new alert (push/email per posting)
+      · 📌 master board issue — every open alert-worthy role in ONE place,
+        deliberately unassigned/no extra notification (body + comment pages;
+        rewritten each crawl; checkboxes work there too)
       · 🏆 "Best of <date>" issue each evening — the daily top-10, emailed to
         you via GitHub's own notification
       · docs/DASHBOARD.md — everything decent, sorted
@@ -75,8 +81,10 @@ every ~30 min (GitHub Actions cron)
 
 ### Tracking and applied logging
 
-1. **Check a box on an alert issue to track a job.** It appears in your selected
-   tracker (Notion by default; Google Sheets is also supported) immediately with the not-yet-applied status
+1. **Check a box on an alert issue or the master board to track a job.** It
+   appears in the in-house Pipeline immediately with the not-yet-applied status
+   and is mirrored to your selected external tracker (Notion by default;
+   Google Sheets remains optional/legacy)
    (`stage_saved` in profile.yaml, default "Not started") and improves future
    ranking.
 2. **When you apply, the inbox becomes the source of truth.** With the email

@@ -1,11 +1,9 @@
 """GitHub-issue alert channel.
 
-Why issues: assigning an issue to you triggers GitHub's native notification
-pipeline (mobile push + email) with zero extra credentials, and the issue body
-doubles as the tracking UI — checking a job adds it to Victor's Notion
-Applications database right away with the not-yet-applied status; he flips it
-to Applied in Notion when he actually applies. One issue per ISO week keeps
-noise down; each run appends a timestamped section.
+Why issues: assigning one issue per new alert to you triggers GitHub's native
+notification pipeline (mobile push + email) with zero extra credentials.
+The separate master board is the manual all-at-once view; it is intentionally
+not assigned and does not generate notifications.
 """
 from __future__ import annotations
 
@@ -27,9 +25,9 @@ def _headers() -> dict:
             "X-GitHub-Api-Version": "2022-11-28"}
 
 
-def _week_title() -> str:
-    now = datetime.now(timezone.utc)
-    return f"🎯 Job Radar alerts — week {now.strftime('%G-W%V')}"
+def _alert_title(job: dict) -> str:
+    stamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    return f"🎯 {job['company']} — {job['title'][:72]} · {stamp}"
 
 
 def format_line(j: dict, culture_map: dict | None = None) -> str:
@@ -65,7 +63,7 @@ HEADER = (
 
 
 def post_alerts(new_alerts: list[dict]) -> str | None:
-    """Append alert lines to this week's issue (create if needed). Returns issue URL."""
+    """Create one assigned issue per new alert so each alert can notify Victor."""
     if not new_alerts:
         return None
     token = env("GITHUB_TOKEN")
@@ -73,40 +71,15 @@ def post_alerts(new_alerts: list[dict]) -> str | None:
         print("alerts: GITHUB_TOKEN not set — skipping issue creation")
         return None
     repo = github_repo()
-    title = _week_title()
-
-    r = requests.get(f"{API}/repos/{repo}/issues",
-                     params={"labels": LABEL, "state": "open", "per_page": 50},
-                     headers=_headers(), timeout=20)
-    r.raise_for_status()
-    issue = next((i for i in r.json() if i["title"] == title), None)
-
     from .culture import load as culture_load
     culture_map = culture_load()
-    ts = datetime.now(timezone.utc).strftime("%a %b %d, %H:%M UTC")
-    section = [f"\n### {ts} — {len(new_alerts)} new", ""]
-    section += [format_line(j, culture_map) for j in new_alerts]
-    section_md = "\n".join(section) + "\n"
-
-    if issue is None:
-        body = HEADER + section_md
-        r = requests.post(f"{API}/repos/{repo}/issues", headers=_headers(), timeout=20,
-                          json={"title": title, "body": body, "labels": [LABEL],
-                                "assignees": [github_owner()]})
+    last_url = None
+    for job in new_alerts:
+        r = requests.post(
+            f"{API}/repos/{repo}/issues", headers=_headers(), timeout=20,
+            json={"title": _alert_title(job),
+                  "body": HEADER + format_line(job, culture_map) + "\n",
+                  "labels": [LABEL], "assignees": [github_owner()]})
         r.raise_for_status()
-        return r.json()["html_url"]
-
-    body = issue["body"] or ""
-    if len(body) + len(section_md) > BODY_LIMIT:
-        # body is full: post the section as a comment on the same issue.
-        # Comments notify subscribers (body edits don't), checkbox ticks in
-        # comments are tracked, and it avoids continuation-issue clutter.
-        r = requests.post(f"{API}/repos/{repo}/issues/{issue['number']}/comments",
-                          headers=_headers(), timeout=20, json={"body": section_md})
-        r.raise_for_status()
-        return issue["html_url"]
-
-    r = requests.patch(f"{API}/repos/{repo}/issues/{issue['number']}",
-                       headers=_headers(), timeout=20, json={"body": body + section_md})
-    r.raise_for_status()
-    return issue["html_url"]
+        last_url = r.json().get("html_url") or last_url
+    return last_url
