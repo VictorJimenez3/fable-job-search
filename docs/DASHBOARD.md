@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-20 05:05 UTC** · companies polled directly: **781** (registry 911) · jobs tracked: **14398** · new this run: **3** · alerts this run: **1**_
+_Last run: **2026-07-20 06:46 UTC** · companies polled directly: **782** (registry 912) · jobs tracked: **14421** · new this run: **23** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -70,7 +70,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 67  | 21d | Palantir Technologies | [Forward Deployed Software Engineer, New Grad - Commercial](https://jobright.ai/jobs/info/6a427c5d6faf756060966e31?utm_campaign=Software%20Engineering&utm_source=1103) | New York, NY | big_tech | jobright |
 | 66  | 10d | Elbit Systems of America | [Operations Data Analyst (Entry Level)](https://jobright.ai/jobs/info/6a43316f4461bf091787ad4b?utm_campaign=Data%20Analysis&utm_source=1103) | 7635 Plantation Rd, Roanoke, VA 24019, U | other | jobright |
 | 66  | 12d | KLA Corporation | [Data Scientist (Entry Level) - GSCS](https://kla.wd1.myworkdayjobs.com/en-US/UR/job/Milpitas-CA/Data-Scientist--Entry-Level----GSCS_2638246) | Milpitas, CA | other | workday |
-| 66  | 16d | Travelers | [Data Science Leadership Development Program - Dsldp - Associate Data S](https://travelers.wd5.myworkdayjobs.com/External/job/CT---Hartford/Data-Science-Leadership-Development-Program--DSLDP--Associate-Data-Scientist_R-51336) | Hartford, CT | other | simplify |
+| 66  | 17d | Travelers | [Data Science Leadership Development Program - Dsldp - Associate Data S](https://travelers.wd5.myworkdayjobs.com/External/job/CT---Hartford/Data-Science-Leadership-Development-Program--DSLDP--Associate-Data-Scientist_R-51336) | Hartford, CT | other | simplify |
 | 66  | 17d | Vanguard | [Technology Leadership Program - Data & Analytics - Analyst](https://vanguard.wd5.myworkdayjobs.com/en-US/contractors_restricted/job/Charlotte-NC/Technology-Leadership-Program---Data---Analytics--Analyst----NC_180091) | Charlotte, NC | other | simplify |
 | 65  | 4d | Cybernetic Labs | [Software Engineer (Agent Platform) - New Grad - 2026-2027](https://jobs.ashbyhq.com/netic/d9bcb6a2-0e54-4cb3-baec-43f2d74db18f) | San Francisco | other | ashby |
 | 65  | 4d | Cybernetic Labs | [Full-Stack Software Engineer (Product) - New Grad - 2026-2027](https://jobs.ashbyhq.com/netic/bab5d1e5-e31b-42f0-9cef-334b1f17fed3) | San Francisco | other | ashby |
@@ -93,7 +93,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 63  | 18d | Blue Origin | [Avionics / Embedded Software Engineer I - Early Career (2026 Starts)](https://jobright.ai/jobs/info/6a35bd6cce501060b5cf55d7?utm_campaign=Software%20Engineering&utm_source=1103) | Los Angeles, CA, US | other | jobright |
 | 63  | 18d | Blue Origin | [Avionics / Embedded Software Engineer I - Early Career (2026 Starts)](https://jobright.ai/jobs/info/6a35bd6cce501060b5cf55d6?utm_campaign=Software%20Engineering&utm_source=1103) | Greater Seattle Area, United States of A | other | jobright |
 | 63  | 20d | TP-Link Systems Inc. | [2026 Early Career Embedded Software Engineer](https://jobright.ai/jobs/info/6a282bc27061b51a3a5f3d8b?utm_campaign=Software%20Engineering&utm_source=1103) | Irvine, CA | other | jobright |
-| 62  | 3d | Cybernetic Labs | [Software Engineer New Grad - Agent Platform](https://jobs.ashbyhq.com/netic/d9bcb6a2-0e54-4cb3-baec-43f2d74db18f/application?embed=true) | SF | other | simplify |
+| 62  | 4d | Cybernetic Labs | [Software Engineer New Grad - Agent Platform](https://jobs.ashbyhq.com/netic/d9bcb6a2-0e54-4cb3-baec-43f2d74db18f/application?embed=true) | SF | other | simplify |
 | 62  | 6d | Old Mission | [Software Engineer – Graduate Program - August Start](https://www.oldmissioncapital.com/careers/?gh_jid=7796048003) | Chicago, IL | other | simplify |
 | 62  | 7d | Old Mission | [Software Engineer – 2027 Graduate Program (August Start)](https://jobright.ai/jobs/info/6a554bd84119652ff3864afd?utm_campaign=Software%20Engineering&utm_source=1103) | Chicago, IL, United States | other | jobright |
 | 62  | 9d | LetsGetChecked | [Graduate Software Engineer](https://jobright.ai/jobs/info/6a52a9fae726ec56126a4010?utm_campaign=Software%20Engineering&utm_source=1103) | United States | other | jobright |
