@@ -64,3 +64,13 @@ Do not rename the default branch piecemeal. A coordinated rename must update:
 For ordinary work, branch from the latest remote default, keep generated state
 out of feature commits, and rebase immediately before handoff because production
 may advance every 30–60 minutes.
+
+## Production publishing authority
+
+Victor routinely checks the production site for Codex's edits, so a handoff must
+state the exact production commit/PR and where the change is visible. For rapid
+prototyping, Codex is authorized to push, merge, and deploy the requested,
+validated changes without an additional approval prompt. Other AI coding agents
+must not push, merge, or deploy to production unless Victor explicitly grants
+permission in the current conversation. This is an operating rule for agents;
+GitHub/Vercel permissions remain the technical enforcement layer.

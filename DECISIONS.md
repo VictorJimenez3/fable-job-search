@@ -761,3 +761,11 @@ data-science/ML board joins the existing GitHub feeds, but its rows still pass
 the same new-grad and role gates because the board contains some experienced
 roles. EntryLevel and JobsForNewGrad were researched as possible future inputs,
 but are not scraped without a stable public feed.
+
+## 55. Codex is the default production publisher (2026-07-20)
+
+Victor checks the live production site for changes. For rapid prototyping, Codex
+may push, merge, and deploy validated requested work without an extra approval
+prompt during the active task. Other AI coding agents require Victor's explicit
+permission before any production write. This is documented workflow authority;
+GitHub and Vercel permissions remain the technical enforcement layer.
