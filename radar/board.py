@@ -1,8 +1,7 @@
 """Consolidated views: the master-board issue and the daily-best issue.
 
-Why: weekly alert issues fill up (GitHub caps an issue body at ~64KB) and
-Victor shouldn't bounce between them to check boxes. The master board is ONE
-stable issue holding every open, alert-worthy role — body plus bot comments
+Why: individual alert issues are notification surfaces, while this master board
+is ONE stable issue holding every open, alert-worthy role — body plus bot comments
 as extra pages, rewritten in place each crawl. Its checkboxes carry the same
 ``<!--radar:ID-->`` markers, so the existing applied-sync workflow tracks
 them to Notion (comment-checkbox edits included). The daily-best issue is a
@@ -29,8 +28,9 @@ MASTER_HEADER = (
     "Every alert-worthy open role the radar currently knows, best first — "
     "**{count} roles**, refreshed {stamp}. Extra pages live in the comments "
     "below.\n\n"
-    "☑️ Checking a box here works exactly like the weekly issues: the job "
-    "lands in your Notion tracker as not-applied; flip its status in Notion "
+    "☑️ Checking a box here works exactly like an alert issue: the job "
+    "lands in the in-house Pipeline and is mirrored to Notion as not-applied; "
+    "flip its status in Notion "
     "when you apply. Already-tracked jobs show up pre-checked.\n")
 
 
@@ -86,12 +86,11 @@ def update_master_board(jobs_state: dict, applied: list) -> str | None:
         issue = found[0]
         requests.patch(f"{API}/repos/{repo}/issues/{issue['number']}",
                        headers=_headers(), timeout=20,
-                       json={"body": body}).raise_for_status()
+                       json={"body": body, "assignees": []}).raise_for_status()
     else:
         r = requests.post(f"{API}/repos/{repo}/issues", headers=_headers(), timeout=20,
                           json={"title": MASTER_TITLE, "body": body,
-                                "labels": [LABEL, MASTER_LABEL],
-                                "assignees": [github_owner()]})
+                                "labels": [LABEL, MASTER_LABEL], "assignees": []})
         r.raise_for_status()
         issue = r.json()
 

@@ -75,6 +75,11 @@
   .chip.good { color:var(--accent-ink); border-color:var(--accent-ink); }
   .chip.bad { color:var(--danger); border-color:var(--danger); }
   .chip.unknown { color:var(--muted); border-style:dashed; }
+  .togglebar { display:flex; gap:0.3rem; flex-wrap:wrap; align-items:center; }
+  .togglebar .label { font-size:0.7rem; color:var(--muted); margin-right:0.2rem; }
+  button.toggle { background:none; border:1px solid var(--line); color:var(--muted);
+    border-radius:999px; padding:0.15rem 0.5rem; cursor:pointer; font-size:0.68rem; }
+  button.toggle.on { color:var(--accent-ink); border-color:var(--accent-ink); background:var(--paper); }
   .acts { display:flex; gap:0.3rem; }
   .filters { padding:0.65rem; margin-bottom:0.75rem; background:var(--card);
              border:1px solid var(--line); border-radius:8px; }
@@ -164,7 +169,7 @@ let BRANCH = "claude/newgrad-job-search-system-9gbj9k";
 let RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/`;
 const API = "https://api.github.com";
 
-const DEFAULT_FILTER = {q:"", min:66, sector:"", role:"", sponsorship:"",
+const DEFAULT_FILTER = {q:"", min:45, sector:"", role:"", sectors:[], roles:[], sponsorship:"",
   experience:"", alert:false, lane:"", sort:"best"};
 function storedFilter() {
   try {
@@ -174,6 +179,8 @@ function storedFilter() {
       f._alertFilterVersion = 2;
       localStorage.setItem("jr_filters", JSON.stringify(f));
     }
+    if (!Array.isArray(f.roles)) f.roles = f.role ? [f.role] : [];
+    if (!Array.isArray(f.sectors)) f.sectors = f.sector ? [f.sector] : [];
     return f;
   }
   catch { return {}; }
@@ -187,7 +194,9 @@ const S = {           // app state
   marquee:new Set(["meta","apple","amazon","netflix","google","microsoft","nvidia",
     "anthropic","openai","deepmind","genentech","moderna","regeneron",
     "vertex pharmaceuticals","eli lilly","merck","medtronic","intuitive surgical","stryker",
-    "whoop","oura","dexcom","abbott"]),  // mirror of profile.yaml marquee_companies
+    "whoop","oura","dexcom","abbott","nike","espn","fanatics",
+    "playstation","sony interactive entertainment","nintendo","electronic arts",
+    "epic games","duolingo","coursera","khan academy","ixl learning"]),  // mirror of profile.yaml marquee_companies
 };
 const norm = s => (s||"").toLowerCase().replace(/[^a-z0-9 ]/g," ").replace(/\s+/g," ").trim();
 const token = () => localStorage.getItem("jr_pat") || "";
@@ -359,6 +368,13 @@ function setFilter(key, value, fullRender=true) {
   localStorage.setItem("jr_filters", JSON.stringify(S.filter));
   if (fullRender) render(); else renderJobsList();
 }
+function toggleFilter(key, value) {
+  const values = Array.isArray(S.filter[key]) ? S.filter[key] : [];
+  const i = values.indexOf(value);
+  if (i >= 0) values.splice(i, 1); else values.push(value);
+  S.filter[key] = values; S.filter.role = ""; S.filter.sector = "";
+  S.shown = 250; localStorage.setItem("jr_filters", JSON.stringify(S.filter)); render();
+}
 function clearFilters() {
   S.filter = {...DEFAULT_FILTER}; S.shown = 250;
   localStorage.removeItem("jr_filters"); render();
@@ -373,11 +389,11 @@ function jobList() {
   const byId = appliedById(); const f = S.filter; const q = norm(f.q);
   let rows = Object.values(S.jobs).filter(isOpenRelevant);
   rows = rows.filter(j=>byId[j.id] || S.web.maybe.includes(j.id) || S.web.jobs[j.id]
-    || !postedTs(j) || Date.now()/1000-postedTs(j) <= 45*86400);
+    || !postedTs(j) || Date.now()/1000-postedTs(j) <= 365*86400);
   if (f.alert) rows = rows.filter(j=>j.alert_ok);
   rows = rows.filter(j=>(j.score||0) >= f.min);
-  if (f.sector) rows = rows.filter(j=>j.sector===f.sector);
-  if (f.role) rows = rows.filter(j=>roleFamily(j)===f.role);
+  if (f.sectors?.length) rows = rows.filter(j=>f.sectors.includes(j.sector));
+  if (f.roles?.length) rows = rows.filter(j=>f.roles.includes(roleFamily(j)));
   else rows = rows.filter(j=>roleFamily(j)!=="other");
   if (f.sponsorship) rows = rows.filter(j=>sponsorStatus(j)===f.sponsorship);
   if (f.experience === "entryfit") rows = rows.filter(j=>experienceStatus(j)!=="experienced");
@@ -405,6 +421,15 @@ async function actMaybe(j) {
   if (i>=0) S.web.maybe.splice(i,1); else S.web.maybe.push(j.id);
   saveWeb(); render();
 }
+async function actUntrack(j) {
+  if (!j || !confirm("Remove this job from the in-house tracker and archive its Notion page if synced?")) return false;
+  try { if (await doWrite("untrack", j)) {
+    S.applied = S.applied.filter(a=>a.id!==j.id);
+    S.web.maybe = S.web.maybe.filter(x=>x!==j.id); saveWeb();
+    closeWS(); toast("Removed from tracker"); render(); return true;
+  }} catch(e) { toast("Remove failed: "+e.message.slice(0,90)); }
+  return false;
+}
 async function apiAction(action, job) {
   const r = await fetch("/api/action", {method:"POST",
     headers:{"Content-Type":"application/json"},
@@ -418,7 +443,7 @@ async function doWrite(action, job) {   // best available write path
   if (token()) return dispatch(action, job);
   if (S.backend) { toast("Sign in with GitHub (top right) for one-click writes");
                    return false; }
-  return issueCmd(action === "track" ? "save" : "applied", job);
+  return issueCmd(action === "track" ? "save" : action === "untrack" ? "untrack" : "applied", job);
 }
 async function actTrack(j, quiet=false) {
   if (!j) return false;
@@ -505,7 +530,7 @@ function rowHTML(j, byId) {
     ${lane?`<span class="chip ${lane}">${lane==="saved"?"to apply":lane}</span>`:""}
     <div class="acts">
       ${lane && lane!=="maybe" ? "" : `<button class="act" onclick='actMaybe(S.jobs["${j.id}"])'>${lane==="maybe"?"un-maybe":"maybe"}</button>`}
-      ${lane ? "" : `<button class="act" onclick='actTrack(S.jobs["${j.id}"])'>save</button>`}
+      ${lane ? `<button class="act" onclick='actUntrack(S.jobs["${j.id}"])'>remove</button>` : `<button class="act" onclick='actTrack(S.jobs["${j.id}"])'>save</button>`}
       <button class="act primary" onclick='startApply(S.jobs["${j.id}"])'>apply ↗</button>
       <button class="act" onclick='openWS("${j.id}")'>details ▸</button>
     </div></div>`;
@@ -521,14 +546,13 @@ function rJobs() {
         oninput="setFilter('q',this.value,false)">
       <label class="sub">min <input type="number" style="width:4.2rem" value="${S.filter.min}"
         onchange="setFilter('min',+this.value)"></label>
-      <select aria-label="Role family" onchange="setFilter('role',this.value)">
-        <option value="">all core roles</option>
-        ${Object.entries(ROLE_LABELS).map(([k,l])=>`<option value="${k}" ${k===S.filter.role?"selected":""}>${l}</option>`).join("")}
-      </select>
-      <select aria-label="Sector" onchange="setFilter('sector',this.value)">
-        <option value="">all sectors</option>
-        ${sectors.map(s=>`<option ${s===S.filter.sector?"selected":""}>${s}</option>`).join("")}</select>
       <span class="sub" id="jobsCount"></span>
+    </div>
+    <div class="togglebar"><span class="label">role fields</span>
+      ${Object.entries(ROLE_LABELS).map(([k,l])=>`<button class="toggle ${S.filter.roles?.includes(k)?"on":""}" onclick="toggleFilter('roles','${k}')">${l}</button>`).join("")}
+    </div>
+    <div class="togglebar" style="margin-top:0.45rem"><span class="label">sectors</span>
+      ${sectors.map(s=>`<button class="toggle ${S.filter.sectors?.includes(s)?"on":""}" onclick="toggleFilter('sectors','${s}')">${s}</button>`).join("")}
     </div>
     <div class="bar">
       <select aria-label="Visa sponsorship" onchange="setFilter('sponsorship',this.value)">
@@ -695,6 +719,7 @@ function openWS(id) {
     <div class="sect acts drawer-actions">
       ${a?"":`<button class="act" onclick='actMaybe(jobById("${id}"))'>${laneOf(id, appliedById())==="maybe"?"remove maybe":"maybe"}</button>`}
       ${a?"":`<button class="act" onclick='actTrack(jobById("${id}"))'>save → To apply</button>`}
+      ${a?`<button class="act" onclick='actUntrack(jobById("${id}"))'>remove from tracker</button>`:""}
       ${a&&(a.stage||"applied")!=="saved"?"":`<button class="act" onclick='actApplied(jobById("${id}"))'>mark applied</button>`}
       <button class="act primary" onclick='startApply(jobById("${id}"))'>open application ↗</button>
     </div>`;
@@ -830,7 +855,7 @@ function renderCosList() {
   for (const j of Object.values(S.jobs)) {
     const tracked = byId[j.id] || S.web.maybe.includes(j.id) || S.web.jobs[j.id];
     if (!isOpenRelevant(j) || roleFamily(j)==="other"
-        || (!tracked && postedTs(j) && Date.now()/1000-postedTs(j) > 45*86400)
+        || (!tracked && postedTs(j) && Date.now()/1000-postedTs(j) > 365*86400)
         || (!tracked && (j.score||0) < DEFAULT_FILTER.min)) continue;
     const k = norm(j.company);
     counts[k] = counts[k]||{name:j.company, open:0, best:0, bestId:j.id};

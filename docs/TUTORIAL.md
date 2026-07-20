@@ -7,9 +7,10 @@ This is the manual for *using* the radar day to day. For how it's built, read
 
 Every ~30 minutes, GitHub Actions crawls ~700 company job boards and the big
 new-grad aggregators, scores each posting against your preferences
-(profile.yaml), and delivers anything high-scoring as a checkbox line on a
-weekly GitHub issue that pushes to your phone. Checking a box puts the job in
-your selected tracker (Notion by default; Google Sheets optional). Your MacBook
+(profile.yaml), and delivers each new high-scoring posting as its own assigned
+GitHub issue that pushes to your phone. A separate unassigned master board keeps
+everything together. Checking a box puts the job in the in-house Pipeline and
+mirrors it to your selected tracker (Notion by default; Google Sheets optional). Your MacBook
 handles local bulk AI when awake, while a tightly budgeted NVIDIA cloud pass
 handles time-sensitive enrichment nightly. The repo itself is the database.
 
@@ -59,7 +60,8 @@ the same Applications database instead of creating a second Notion system.
 | Where | What you see | When to look |
 |---|---|---|
 | **"📌 Master board"** issue ([Issues tab](https://github.com/VictorJimenez3/fable-job-search/issues)) | Every open alert-worthy role in ONE place, best first — no bouncing between issues. Extra pages are in its comments; checkboxes work everywhere, and already-tracked jobs show pre-checked | When you sit down to browse/check jobs |
-| GitHub issue **"🎯 Job Radar alerts — week N"** | New high-scoring roles as they're found | When your phone buzzes (GitHub app push / email) |
+| Individual **"🎯" alert issue** | One new high-scoring role | When your phone buzzes (GitHub app push / email) |
+| **"📌 Master board"** issue | All open alert-worthy roles in one place; intentionally unassigned | When you want the full browseable list |
 | **"🏆 Best of \<date\>"** issue | The day's top 10, posted each evening — GitHub emails it to you | Evening email |
 | **Notion "2026 Applications"** | Every job you checked, plus your real pipeline | When applying / updating statuses |
 | [docs/DASHBOARD.md](DASHBOARD.md) | Everything decent the radar has seen, ranked — not just alert-worthy | Browsing for more options |
@@ -70,7 +72,7 @@ follow-up nudges for week-old applications, and LinkedIn hiring-post leads.
 
 ## The core loop
 
-1. Phone buzzes → open the week's alert issue.
+1. Phone buzzes → open the individual alert issue.
 2. A line looks like:
    > ☐ 🔥 **Tempus** — [ML Engineer, New Grad](…) · Chicago, IL · `88` · **health technology** — precision-medicine data platform
 3. Interested? **Tap the checkbox.** Within a minute a GitHub Action fires and
@@ -80,11 +82,12 @@ follow-up nudges for week-old applications, and LinkedIn hiring-post leads.
    yourself** (Applied, etc.). The radar never guesses whether you applied.
 5. Not interested in a company? Comment `skip Acme Corp` on the issue —
    similar roles get downranked.
-6. Marquee employers (MANGA, big AI labs, elite pharma/medtech — the
-   `marquee_companies` list in profile.yaml) and $150k+ postings always
-   alert; add or remove names in that list anytime. A twice-daily sweep
-   re-reads every issue so no checked box is ever missed, and once a week
-   the local AI scouts new healthcare/wearables employers to track.
+6. New-grad evidence is the first gate. Among eligible roles, AI/ML and data
+   science lead, then general SWE, then data engineering/systems; health,
+   sports, video games, education, big tech, and AI labs receive strong field
+   fit. Marquee employers add competitive context but never bypass new-grad or
+   role fit. A twice-daily sweep re-reads every issue so no checked box is ever
+   missed, and the local AI scouts new healthcare/wearables employers to track.
 
 ## Comment commands (on any radar issue)
 

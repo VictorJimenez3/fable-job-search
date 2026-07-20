@@ -18,7 +18,7 @@ from .brief import rerank
 from .config import env, profile, seeds
 from .digest import write_outputs
 from .models import Job, norm
-from .score import RULES_VERSION, explicit_new_grad, gates, regate, score
+from .score import RULES_VERSION, explicit_new_grad, gates, regate, score, source_new_grad
 from .sector import infer
 from .sources import aggregators, hn
 from .sources.ats import FETCHERS
@@ -186,9 +186,9 @@ def crawl() -> int:
         rec = j.to_record()
         rec["first_seen"] = now
         rec["rules_v"] = RULES_VERSION
-        rec["explicit_new_grad"] = explicit_new_grad(j.title)
+        rec["explicit_new_grad"] = explicit_new_grad(j.title) or source_new_grad(j)
         jobs_state[j.id] = rec
-    cutoff = now - 120 * 86400
+    cutoff = now - 365 * 86400
     jobs_state = {k: v for k, v in jobs_state.items() if v.get("first_seen", now) >= cutoff}
 
     # The equation is not only for newly discovered rows. Rebuild every active
@@ -445,44 +445,12 @@ def promote_shortlist_applications() -> int:
 
 
 def marquee_backfill() -> int:
-    """One-time correction after adopting the Shams rule (DECISIONS #19).
+    """Compatibility alias for the old marquee-only repair command.
 
-    Marquee-company jobs already in state were held back by the new-grad-
-    evidence alert gate (alert_ok=False, dashboard only). Flip them to
-    alert-eligible under the new policy and post the strongest recent ones to
-    the weekly alert issue so they aren't silently skipped.
+    Marquee employers are competitive context now, not a gate bypass. A full
+    rescore is the safe repair for records created under the old policy.
     """
-    from .alerts import post_alerts
-    from .score import is_marquee
-    thr = profile()["thresholds"]
-    jobs_state = state.jobs()
-    alert_history = state.load("alert_history.json", [])
-    already = {a["id"] for a in alert_history}
-    now = int(time.time())
-    flipped, candidates = 0, []
-    for rec in jobs_state.values():
-        if rec.get("alert_ok") or not is_marquee(rec["company"]):
-            continue
-        rec["alert_ok"] = True
-        rec["score_reasons"] = rec.get("score_reasons", []) + ["marquee company (auto-alert)"]
-        flipped += 1
-        if (rec.get("score", 0) >= thr["alert"] and rec["id"] not in already
-                and now - rec.get("first_seen", 0) <= 14 * 86400):
-            candidates.append(rec)
-    candidates.sort(key=lambda r: -r.get("score", 0))
-    alerts = candidates[:int(env("RADAR_MAX_ALERTS", "25"))]
-    for rec in alerts:
-        alert_history.append(rec | {"alerted_at": now})
-    state.save("jobs.json", jobs_state)
-    state.save("alert_history.json", alert_history[-500:])
-    url = None
-    try:
-        url = post_alerts(alerts)
-    except Exception as e:
-        print(f"alerts: failed to post issue: {e}")
-    print(f"marquee-backfill: {flipped} jobs now alert-eligible, "
-          f"{len(alerts)} posted to the alert issue" + (f" → {url}" if url else ""))
-    return 0
+    return rescore_cmd()
 
 
 def regate_cmd() -> int:
@@ -551,7 +519,7 @@ def _rebuild_scores(jobs_state: dict, fb: dict, now: int) -> tuple[int, int]:
         rec["score"] = job.score
         rec["score_reasons"] = job.score_reasons
         rec["alert_ok"] = bool(keep and alert_eligible)
-        rec["explicit_new_grad"] = explicit_new_grad(job.title)
+        rec["explicit_new_grad"] = explicit_new_grad(job.title) or source_new_grad(job)
         rec["rules_v"] = RULES_VERSION
         rec["score_version"] = RULES_VERSION
         if rec.get("quality"):
@@ -609,19 +577,29 @@ def web_action() -> int:
     with open(path) as f:
         payload = _json.load(f).get("client_payload") or {}
     action = payload.get("action")
-    if action not in {"track", "applied"}:
+    if action not in {"track", "applied", "untrack"}:
         print(f"web-action: unknown action {action!r}")
         return 0
     jobs = state.jobs()
     hist = {a["id"]: a for a in state.load("alert_history.json", [])}
     job = jobs.get(payload.get("id")) or hist.get(payload.get("id")) \
         or next((j for j in jobs.values() if j.get("url") == payload.get("url")), None)
-    if job is None:
-        print(f"web-action: job {payload.get('id')!r} not found")
-        return 0
     applied = state.applied()
     shortlist = state.shortlist()
     fb = state.feedback()
+    untracked = set(state.load("untracked.json", []))
+    if action == "untrack":
+        changed = applied_mod.remove_tracking(payload.get("id") or payload.get("url", ""), applied, untracked)
+        shortlist[:] = [s for s in shortlist if s.get("id") != payload.get("id")]
+        state.save("applied.json", applied)
+        state.save("shortlist.json", shortlist)
+        state.save("untracked.json", sorted(untracked))
+        print(f"web-action: untrack {payload.get('company')} — changed={changed}")
+        return 0
+    if job is None:
+        print(f"web-action: job {payload.get('id')!r} not found")
+        return 0
+    untracked.discard(job["id"])
     changed = applied_mod.record_applied(
         job, applied, fb, via="platform",
         stage="saved" if action == "track" else "applied")
@@ -631,6 +609,7 @@ def web_action() -> int:
     state.save("applied.json", applied)
     state.save("shortlist.json", shortlist)
     state.save("feedback.json", fb)
+    state.save("untracked.json", sorted(untracked))
     print(f"web-action: {action} {job['company']} — changed={changed}, notion synced={synced}")
     return 0
 

@@ -3,6 +3,7 @@ import time
 from radar.models import Job
 from radar.score import (RULES_VERSION, gates, regate, score,
                          update_feedback_from_applied)
+from radar.sector import infer
 
 NOW = int(time.time())
 FB = {"company_boosts": {}, "token_boosts": {}, "negative_companies": []}
@@ -50,6 +51,18 @@ def test_gates_direct_ats_needs_entry_signal():
     keep, alert_ok, _ = gates(mk("Software Engineer", source="greenhouse",
                                  desc="We welcome new grad applicants with 0-2 years experience."))
     assert keep and alert_ok
+
+
+def test_trusted_new_grad_board_source_supplies_missing_title_signal():
+    job = mk("Software Engineer", source="simplify")
+    keep, alert_ok, reasons = gates(job)
+    assert keep and alert_ok
+    assert any("verified new-grad" in r for r in reasons)
+
+
+def test_preferred_sports_and_video_game_companies_are_classified():
+    assert infer("PlayStation", {}) == "video_games"
+    assert infer("Fanatics", {}) == "sports"
 
 
 def test_gates_marquee_company_still_requires_new_grad_signal():
@@ -212,7 +225,7 @@ def test_gates_alerts_technical_leadership_programs():
                   company="Travelers", source="greenhouse")
     score(program, FB, NOW)
     assert program.score >= 66
-    assert any("technical program alert floor" in r for r in program.score_reasons)
+    assert any("technical leadership program" in r for r in program.score_reasons)
     assert any("technical leadership" in r for r in reasons)
 
     keep, alert_ok, _ = gates(mk(
@@ -243,6 +256,19 @@ def test_score_prefers_healthtech_ai_over_generic_swe():
 
     assert ai_health.score > generic.score + 15
     assert any("healthtech" in r for r in ai_health.score_reasons)
+
+
+def test_new_grad_priority_beats_prestigious_experienced_role():
+    eligible = mk("Software Engineer, New Grad", company="RandomCo")
+    experienced = mk("Senior Machine Learning Engineer", company="NVIDIA", source="greenhouse")
+    # The senior title is normally gated out; model the dashboard-only case
+    # directly to assert the ranking policy itself.
+    experienced.title = "Machine Learning Engineer"
+    score(eligible, FB, NOW)
+    score(experienced, FB, NOW)
+    assert eligible.score > experienced.score
+    assert any("new-grad/early-career priority" in r for r in eligible.score_reasons)
+    assert any("new-grad evidence absent" in r for r in experienced.score_reasons)
 
 
 def test_feedback_boosts_applied_companies():

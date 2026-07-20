@@ -1,4 +1,4 @@
-// POST {action: "track"|"applied", id, url, company} → repository_dispatch.
+// POST {action: "track"|"applied"|"untrack", id, url, company} → repository_dispatch.
 // Auth: the sealed session cookie. Only the repo owner may write; GitHub
 // would refuse anyone else anyway (their OAuth token lacks repo write), but
 // we reject early for a clear error.
@@ -13,7 +13,7 @@ module.exports = async (req, res) => {
     return;
   }
   const { action, id, url, company } = req.body || {};
-  if (!["track", "applied"].includes(action) || !id) {
+  if (!["track", "applied", "untrack"].includes(action) || !id) {
     res.status(400).json({ error: "bad payload" });
     return;
   }
