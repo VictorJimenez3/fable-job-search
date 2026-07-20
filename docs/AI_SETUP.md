@@ -37,7 +37,7 @@ repeatedly.
 | Task | Preferred order | Default output cap |
 |---|---|---|
 | Job quality / pasted JD | GLM → DeepSeek → Nemotron → Kimi | 240 tokens |
-| Grounded company research | Nemotron → GLM → DeepSeek → Kimi | 900 tokens |
+| Grounded company research | Nemotron → GLM → DeepSeek → Kimi (or local Ollama) | 2200 tokens |
 | Batch re-rank | GLM → DeepSeek → Nemotron → Kimi | 1,200 tokens |
 | Scout | Nemotron → GLM → DeepSeek → Kimi | 600 tokens |
 | Strategy note | Nemotron → GLM → DeepSeek → Kimi | 300 tokens |
@@ -77,8 +77,10 @@ logs are retained in usage history. Telemetry never stores prompts or keys.
 
 ## Grounding rules
 
-- Model memory is not a source. Company briefs use only source blocks captured
-  from official postings and every displayed factual claim cites a source ID.
+- Model memory is not a source. Before synthesis, the crawler captures bounded
+  excerpts from public company/about, careers, benefits, culture, and monitored
+  board pages. Every sourced claim cites a source ID; non-public PTO, WLB, pace,
+  and pay are conservative values labeled `Estimated` rather than confirmed.
 - Unsupported claims become **Not confirmed**. Posting marketing copy cannot
   prove WLB, compensation, size, or sponsorship unless it states the fact.
 - Legacy `source: est.` Culture Compass entries remain visibly labeled but do

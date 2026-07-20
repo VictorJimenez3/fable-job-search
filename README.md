@@ -42,8 +42,8 @@ feed, so it is covered by the same ingestion path.
 ```
 every ~30 min (GitHub Actions cron)
 │
-├─ 1. BREADTH: pull 5 aggregators
-│     [SimplifyJobs/New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) · vanshb03 · jobright-ai (SWE + Data) · speedyapply · HN Who-is-Hiring
+├─ 1. BREADTH: pull new-grad aggregators
+│     [SimplifyJobs/New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) · vanshb03 · jobright-ai (SWE + Data) · speedyapply · [Zapply DS/ML](https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027) · HN Who-is-Hiring
 │
 ├─ 2. DISCOVERY: mine every job URL for ATS tokens
 │     (Greenhouse / Lever / Ashby / Workday / SmartRecruiters / Recruitee)
@@ -110,9 +110,11 @@ sector — built entirely from what the watcher reads, so you can see which
 sectors actually reply.
 
 The platform now builds evidence-first company briefs from bounded excerpts of
-official postings the crawler already reads. Products, customers, mission,
-business context, technical work, locations, visa context, candidate relevance,
-and interview focus carry source links/dates; absent facts say **Not confirmed**.
+public company/about, careers, benefits, culture, and monitored-board pages in
+addition to postings. Products, customers, mission, business context, technical
+work, locations, visa context, candidate relevance, and interview focus carry
+source links/dates. Non-public employer-profile values are visibly labeled
+**Estimated**, and every posting retains the board or discovery URL that found it.
 
 Scoring is published in three places: the live Vercel dashboard reads
 `state/jobs.json`, the generated [dashboard](docs/DASHBOARD.md) lists the current

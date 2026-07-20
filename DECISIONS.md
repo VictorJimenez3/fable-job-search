@@ -742,3 +742,22 @@ systems are ordered in that priority; health, sports, videogames, education,
 AI labs, and big tech are explicit high-value sectors. Marquee-company points
 remain competitive context rather than a gate bypass. Every full rebuild stamps
 rules/score version 6 so existing postings receive the same equation.
+
+## 53. Company research is a recurring web-enrichment stage (2026-07-20)
+
+New postings now trigger bounded public-web research for the employer before
+LLM synthesis. The crawler captures company/about, careers, benefits, culture,
+and discovery-board excerpts, retains their URLs, and shares one dossier across
+that employer's roles. The Company tab renders the plain-English overview plus
+the requested employer profile table. Exact policies are only stated when
+evidence supports them; otherwise the UI says `Estimated` or `None found in
+research`, and deterministic crawling continues if AI or web requests fail.
+
+## 54. Discovery provenance is part of every posting (2026-07-20)
+
+Aggregator jobs retain a human-readable source label and board URL in
+`source_url`; alerts, the dashboard, and the web drawer expose it. Zapply's
+data-science/ML board joins the existing GitHub feeds, but its rows still pass
+the same new-grad and role gates because the board contains some experienced
+roles. EntryLevel and JobsForNewGrad were researched as possible future inputs,
+but are not scraped without a stable public feed.

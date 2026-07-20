@@ -8,20 +8,28 @@ missing evidence remains explicitly unknown.
 from __future__ import annotations
 
 import hashlib
+import html as html_lib
 import json
 import re
 import time
+from urllib.parse import parse_qs, quote_plus, urlparse
 
 from . import llm, state
 from .config import env, profile
+from .http import get
 from .models import norm
 
 SCHEMA_V = 1
-PROMPT_V = 1
+PROMPT_V = 2
 REFRESH_SECONDS = 60 * 86400
 FIELDS = ("summary", "products", "customers", "mission", "business_model",
           "size_stage", "technical_work", "locations", "sponsorship_context",
-          "why_it_matters", "interview_focus")
+          "why_it_matters", "interview_focus", "industry", "ai_ds_prestige_tier",
+          "pace_of_work", "wlb_rating", "culture_vibe", "pto_days", "shutdowns",
+          "estimated_new_grad_tech_pay", "rotational_program_name")
+PROFILE_FIELDS = ("industry", "ai_ds_prestige_tier", "pace_of_work", "wlb_rating",
+                  "culture_vibe", "pto_days", "shutdowns",
+                  "estimated_new_grad_tech_pay", "rotational_program_name")
 _UNKNOWN = {"", "unknown", "not confirmed", "not stated", "not available"}
 _MARKERS = (
     "we are ", " is a ", "our mission", "our purpose", "we build", "we make",
@@ -83,6 +91,170 @@ def _source_id(url: str, excerpt: str) -> str:
     return hashlib.sha1(f"{url}|{excerpt}".encode()).hexdigest()[:10]
 
 
+def _clean_page(raw: str) -> str:
+    text = html_lib.unescape(raw or "")
+    text = re.sub(r"(?is)<script.*?</script>|<style.*?</style>|<noscript.*?</noscript>", " ", text)
+    text = re.sub(r"(?s)<[^>]+>", " ", text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def _search_links(company: str) -> list[str]:
+    """Use a public search page only to discover candidate company URLs."""
+    try:
+        html = get("https://html.duckduckgo.com/html/",
+                   params={"q": f'"{company}" company careers benefits mission'},
+                   headers={"User-Agent": "JobRadar/1.0 (personal research)"}).text
+    except Exception as exc:
+        print(f"company research: web search failed for {company}: {exc}")
+        return []
+    links = []
+    for href in re.findall(r'class="result__a"[^>]+href="([^"]+)"', html):
+        parsed = urlparse(href)
+        if "duckduckgo.com" in parsed.netloc:
+            href = parse_qs(parsed.query).get("uddg", [""])[0]
+        if href.startswith("http") and href not in links:
+            links.append(href)
+    return links[:10]
+
+
+def _source_record(company: str, url: str, title: str, text: str,
+                   kind: str, now: int) -> dict | None:
+    excerpt = extract_excerpt(company, text, limit=900)
+    if not excerpt:
+        excerpt = re.sub(r"\s+", " ", text or "").strip()[:900]
+    if not excerpt or not url:
+        return None
+    return {
+        "id": _source_id(url, excerpt), "url": url, "title": title[:180],
+        "kind": kind, "publisher": company, "retrieved_at": now,
+        "excerpt": excerpt, "content_sha": hashlib.sha256(excerpt.encode()).hexdigest()[:16],
+    }
+
+
+def capture_external_into(records: dict, *, company: str, url: str, title: str,
+                          text: str, kind: str = "company_web",
+                          retrieved_at: int | None = None) -> bool:
+    """Capture a bounded non-posting company source with an explicit kind."""
+    now = retrieved_at or int(time.time())
+    source = _source_record(company, url, title, text, kind, now)
+    if not source:
+        return False
+    record = records.setdefault(norm(company), {
+        "schema_v": SCHEMA_V, "name": company, "aliases": [],
+        "status": "evidence_only", "sources": [],
+    })
+    old = list(record.get("sources") or [])
+    if any(s.get("url") == url and s.get("content_sha") == source["content_sha"] for s in old):
+        return False
+    sources = [s for s in old if s.get("url") != url]
+    sources.insert(0, source)
+    record["sources"] = sources[:6]
+    record["evidence_sha"] = evidence_sha(record["sources"])
+    record["last_evidence_at"] = now
+    record.pop("synthesized_evidence_sha", None)
+    record.pop("refresh_after", None)
+    return True
+
+
+def _profile_defaults(record: dict, sector: str = "") -> None:
+    """Keep the Company tab useful even while a model/provider is unavailable."""
+    label = sector.replace("_", " ") or "technology"
+    defaults = {
+        "industry": f"{label.title()} / technology (estimated)",
+        "ai_ds_prestige_tier": "Tier 3 — not yet ranked from company-specific data (estimated)",
+        "pace_of_work": "Moderate-to-fast (estimated)",
+        "wlb_rating": "3/5 (estimated)",
+        "culture_vibe": "Technology team; company-specific culture research pending (estimated)",
+        "pto_days": "15–20 days (estimated)",
+        "shutdowns": "None found in research (estimated)",
+        "estimated_new_grad_tech_pay": "$85k–$125k base (estimated; US market)",
+        "rotational_program_name": "None found in research",
+    }
+    for field, value in defaults.items():
+        claim = record.get(field) or {}
+        if not claim or str(claim.get("value", "")).lower() in _UNKNOWN:
+            record[field] = _claim(value, confidence="estimated")
+
+
+def prepare_external_sources(records: dict, company: str, job_urls: list[str],
+                             source_urls: list[str] | None = None,
+                             sector: str = "") -> bool:
+    """Research company/about/careers pages before asking the model to synthesize."""
+    record = records.setdefault(norm(company), {
+        "schema_v": SCHEMA_V, "name": company, "aliases": [],
+        "status": "evidence_only", "sources": [],
+    })
+    now = int(time.time())
+    for source_url in source_urls or []:
+        if source_url:
+            capture_external_into(
+                records, company=company, url=source_url,
+                title=f"Discovery source for {company}",
+                text=f"This company posting was surfaced through the monitored source: {source_url}.",
+                kind="discovery_feed", retrieved_at=now)
+    if record.get("web_researched_at", 0) > now - 30 * 86400:
+        return False
+    links: list[str] = []
+    for url in (source_urls or []) + job_urls:
+        host = urlparse(url).netloc.lower()
+        if url.startswith("http") and host and not any(x in host for x in (
+                "greenhouse.io", "ashbyhq.com", "lever.co", "myworkdayjobs.com",
+                "oraclecloud.com", "github.com", "jobright", "speedyapply")):
+            links.append(f"{urlparse(url).scheme}://{host}")
+    links += _search_links(company)
+    seen = set()
+    changed = False
+    for url in links:
+        parsed = urlparse(url)
+        if parsed.netloc in {"html.duckduckgo.com", "www.google.com"} or url in seen:
+            continue
+        seen.add(url)
+        try:
+            response = get(url, headers={"User-Agent": "JobRadar/1.0 (personal research)"})
+            if response.status_code >= 400:
+                continue
+            title_match = re.search(r"(?is)<title[^>]*>(.*?)</title>", response.text)
+            title = _clean_page(title_match.group(1)) if title_match else f"{company} public company page"
+            kind = "company_web"
+            lower = f"{url} {title}".lower()
+            if any(x in lower for x in ("career", "jobs", "benefit", "culture", "working")):
+                kind = "company_careers_or_benefits"
+            changed |= capture_external_into(records, company=company, url=url,
+                                             title=title, text=_clean_page(response.text),
+                                             kind=kind, retrieved_at=now)
+        except Exception as exc:
+            print(f"company research: page fetch failed for {company} {url}: {exc}")
+        if len(seen) >= 5:
+            break
+    record["web_researched_at"] = now
+    record["web_research_status"] = "sources captured" if changed else "no usable public page"
+    record["web_search_url"] = f"https://duckduckgo.com/?q={quote_plus(company + ' company careers benefits')}"
+    _profile_defaults(record, sector)
+    return changed
+
+
+def prepare_for_jobs(jobs: list[dict], limit: int = 8) -> int:
+    """Capture discovery/official web sources for the highest-value companies."""
+    if limit <= 0 or not jobs:
+        return 0
+    records = load()
+    grouped: dict[str, list[dict]] = {}
+    for job in jobs:
+        if job.get("company"):
+            grouped.setdefault(norm(job["company"]), []).append(job)
+    ordered = sorted(grouped.values(), key=lambda rows: -max((r.get("score", 0) for r in rows), default=0))
+    made = 0
+    for rows in ordered[:limit]:
+        first = rows[0]
+        prepare_external_sources(records, first["company"],
+                                 [r.get("url", "") for r in rows],
+                                 [r.get("source_url", "") for r in rows],
+                                 first.get("sector", ""))
+        made += 1
+    save(records)
+    return made
+
+
 def capture_into(records: dict, *, company: str, title: str, url: str,
                  text: str, retrieved_at: int | None = None) -> bool:
     """Add/update one bounded official-posting source in an in-memory store."""
@@ -112,9 +284,9 @@ def capture_into(records: dict, *, company: str, title: str, url: str,
         return False
     sources = [s for s in old_sources if s.get("url") != url]
     sources.insert(0, source)
-    # Three short sources are enough to ground a useful overview while
-    # keeping this public repository small.
-    record["sources"] = sources[:3]
+    # Keep both job evidence and the external company research together. The
+    # source list is intentionally bounded because it is committed state.
+    record["sources"] = sources[:6]
     record["evidence_sha"] = evidence_sha(record["sources"])
     record["last_evidence_at"] = now
     if not record.get("summary"):
@@ -189,8 +361,8 @@ def prune_irrelevant_sources(records: dict, jobs_state: dict) -> bool:
     return changed
 
 
-def _claim(value: str = "unknown") -> dict:
-    return {"value": value, "source_ids": [], "confidence": "unknown"}
+def _claim(value: str = "unknown", confidence: str = "unknown") -> dict:
+    return {"value": value, "source_ids": [], "confidence": confidence}
 
 
 def parse_synthesis(raw: str | None, source_ids: set[str]) -> dict | None:
@@ -216,14 +388,14 @@ def parse_synthesis(raw: str | None, source_ids: set[str]) -> dict | None:
         value = str(item.get("value") or "unknown").strip()[:500]
         ids = item.get("source_ids") or []
         confidence = str(item.get("confidence") or "low").lower()
-        if confidence not in {"high", "medium", "low"}:
+        if confidence not in {"high", "medium", "low", "estimated"}:
             confidence = "low"
         if not isinstance(ids, list):
             ids = []
         ids = list(dict.fromkeys(str(i) for i in ids if str(i) in source_ids))[:3]
         if value.lower() in _UNKNOWN:
             result[field] = _claim("Not confirmed")
-        elif not ids:
+        elif not ids and confidence != "estimated":
             result[field] = _claim("Not confirmed")
         else:
             result[field] = {"value": value, "source_ids": ids, "confidence": confidence}
@@ -243,18 +415,21 @@ def _prompt(record: dict) -> str:
 Company identity: {record['name']}
 Candidate priorities (use only for why_it_matters/interview_focus): {criteria}
 
-Use ONLY the numbered official sources below. Do not use model memory. If a
-fact is absent, set value to "Not confirmed" with no source IDs. Job-posting
-marketing copy can support what the company says it does, but cannot prove WLB,
-company size, compensation, or sponsorship unless explicitly stated. Keep each
-value concise and useful to someone unfamiliar with the company.
+Use the supplied sources first. The first two output items are a plain-English
+2-3 sentence explanation of what the company does and how it makes money.
+For the profile fields, fill every field. Exact PTO, WLB, pace, and pay are
+often not public: give a conservative company-specific estimate and prefix it
+with "Estimated:"; never invent a precise policy. For rotational programs,
+write "None found in research" if no program source appears. Keep every value
+useful to someone unfamiliar with the company. Estimates may have confidence
+"estimated" and do not require a source ID; sourced facts must cite IDs.
 
 {blocks}
 
 Return ONLY JSON with exactly these keys: {', '.join(FIELDS)}.
 Each value must be an object:
-{{"value":"text or Not confirmed","source_ids":["source id"],"confidence":"high|medium|low"}}
-Every factual non-unknown value must cite one or more supplied source IDs."""
+{{"value":"concise text","source_ids":["source id"],"confidence":"high|medium|low|estimated"}}
+Every sourced factual value must cite one or more supplied source IDs."""
 
 
 def _priority(record: dict, jobs: list[dict], priority_ids: set[str], now: int) -> int:
@@ -302,6 +477,21 @@ def enrich(jobs_state: dict, applied: list | None = None, web: dict | None = Non
                 or now - job.get("first_seen", 0) > 45 * 86400):
             continue
         grouped.setdefault(norm(job.get("company", "")), []).append(job)
+    # New postings get a company web-research attempt before the AI queue is
+    # assembled. One dossier is shared by all roles at that employer.
+    web_limit = int(env("RADAR_COMPANY_WEB_RESEARCH_LIMIT", "12"))
+    web_done = 0
+    for key, jobs in sorted(grouped.items(), key=lambda item: -max((j.get("score", 0) for j in item[1]), default=0)):
+        if web_done >= web_limit:
+            break
+        record = records.setdefault(key, {"schema_v": SCHEMA_V, "name": jobs[0].get("company", key),
+                                          "aliases": [], "status": "evidence_only", "sources": []})
+        if not record.get("web_researched_at"):
+            prepare_external_sources(records, jobs[0].get("company", key),
+                                     [j.get("url", "") for j in jobs],
+                                     [j.get("source_url", "") for j in jobs],
+                                     jobs[0].get("sector", ""))
+            web_done += 1
     queue = []
     for key, jobs in grouped.items():
         record = records.get(key)
@@ -317,7 +507,10 @@ def enrich(jobs_state: dict, applied: list | None = None, web: dict | None = Non
     for _, key, record in queue[:limit]:
         ids = {s.get("id") for s in record.get("sources") or [] if s.get("id")}
         prompt = _prompt(record)
-        raw = llm.complete(prompt, max_tokens=900, timeout=150, json_mode=True,
+        # The dossier has a fixed 20-field schema. 900 tokens truncates valid
+        # local-model JSON before the final profile fields; leave enough room
+        # while the global AI budget still bounds cost.
+        raw = llm.complete(prompt, max_tokens=int(env("RADAR_COMPANY_RESEARCH_MAX_TOKENS", "2200")), timeout=180, json_mode=True,
                            task="company_research",
                            validator=lambda text, ids=ids: parse_synthesis(text, ids) is not None)
         record["last_attempt_at"] = now
@@ -327,6 +520,10 @@ def enrich(jobs_state: dict, applied: list | None = None, web: dict | None = Non
             record["error"] = "provider unavailable or response was not source-grounded"
             continue
         record.update(claims)
+        # A model may omit a non-public policy even when the rest of its JSON
+        # is valid. Keep every Company-tab column populated with an explicitly
+        # estimated value rather than silently rendering an empty cell.
+        _profile_defaults(record)
         record.update({
             "schema_v": SCHEMA_V,
             "prompt_v": PROMPT_V,

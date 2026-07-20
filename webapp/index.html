@@ -126,6 +126,7 @@
        color:var(--muted); border-bottom:1.5px solid var(--ink); padding:0.3rem 0.6rem 0.3rem 0; }
   td { border-bottom:1px solid var(--line); padding:0.4rem 0.6rem 0.4rem 0; }
   .wrap { overflow-x:auto; }
+  .table-scroll { overflow-x:auto; margin-top:0.6rem; }
   .note { background:var(--card); border-left:3px solid var(--amber); padding:0.6rem 0.8rem;
           border-radius:0 5px 5px 0; font-size:0.85rem; margin-bottom:0.9rem; }
   .toast { position:fixed; bottom:1rem; left:50%; transform:translateX(-50%);
@@ -664,6 +665,31 @@ function claimHTML(d, field, label) {
   return `<span class="k">${esc(label)}</span><span>${esc(claim.value)} ${cites}
     <span class="chip unknown">${esc(claim.confidence||"low")} confidence</span></span>`;
 }
+const PROFILE_COLUMNS = [
+  ["Company", "name"], ["Industry", "industry"],
+  ["AI/DS Prestige Tier", "ai_ds_prestige_tier"], ["Pace of Work", "pace_of_work"],
+  ["WLB Rating", "wlb_rating"], ["Culture Vibe", "culture_vibe"],
+  ["PTO Days", "pto_days"], ["Shutdowns", "shutdowns"],
+  ["Est. New Grad Tech Pay", "estimated_new_grad_tech_pay"],
+  ["Rotational Program Name", "rotational_program_name"]
+];
+function profileValue(d, field) {
+  if (field === "name") return d?.name || "Company";
+  return d?.[field]?.value || "Research pending";
+}
+function companyProfileTable(d) {
+  if (!d) return `<p class="sub">Company research is queued; the next crawl/enrich pass fills this profile.</p>`;
+  return `<div class="table-scroll"><table class="company-profile"><thead><tr>${PROFILE_COLUMNS.map(([label])=>`<th>${esc(label)}</th>`).join("")}</tr></thead>
+    <tbody><tr>${PROFILE_COLUMNS.map(([,field])=>`<td>${esc(profileValue(d,field))}</td>`).join("")}</tr></tbody></table></div>`;
+}
+function foundVia(j) {
+  const labels = {simplify:"SimplifyJobs New-Grad-Positions", vansh:"Vansh New-Grad-2026",
+    jobright:"Jobright new-grad GitHub board", speedyapply:"SpeedyApply college jobs",
+    zapply:"Zapply DS/ML board", hn:"Hacker News Who Is Hiring"};
+  const label = labels[j.source] || "direct company / ATS monitoring";
+  const url = j.source_url || j.url;
+  return `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(label)} ↗</a>`;
+}
 function researchFreshness(d) {
   if (!d?.generated_at) return "official evidence captured · synthesis queued";
   const days = Math.max(0,Math.floor((Date.now()/1000-d.generated_at)/86400));
@@ -729,7 +755,10 @@ function wsCompany(j, w, c, id) {
   const d = S.research[norm(j.company)];
   const reg = S.registryByCompany[norm(j.company)];
   return `
+    <div class="sect"><h4>Found via</h4><p>${foundVia(j)}</p></div>
     ${d?`<div class="sect"><h4>Company brief · ${esc(researchFreshness(d))}</h4>
+      <p>${esc(profileValue(d,"summary"))}</p>
+      ${companyProfileTable(d)}
       <div class="kv">
         ${claimHTML(d,"summary","what they do")}
         ${claimHTML(d,"products","products")}
@@ -742,8 +771,8 @@ function wsCompany(j, w, c, id) {
         ${claimHTML(d,"why_it_matters","why it may matter")}
       </div></div>`
     :`<div class="sect"><h4>Company brief</h4>
-      <p class="sub">No official evidence captured yet. The radar queues active, saved, and
-      high-fit companies first${j.sector?`; current sector: <b>${esc(j.sector)}</b>`:""}.</p></div>`}
+      ${companyProfileTable(d)}
+      <p class="sub">No researched company sources yet. The radar will try the company site, careers/benefits pages, and public search results.</p></div>`}
     ${c?`<div class="sect"><h4>Culture signals · ${c.source==="est."?"legacy AI estimate — not used in ranking":"human-curated"}</h4>
       <div class="kv"><span class="k">vibe</span><span>${esc(c.vibe)} — ${esc(c.fit_notes)}</span>
       <span class="k">fit</span><span>${c.fit}/100 · WLB ${c.wlb}/5 · pace ${esc(c.pace)}</span>

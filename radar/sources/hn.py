@@ -34,7 +34,7 @@ def fetch_hn(limit: int = 60) -> list[Job]:
             company=company,
             title=f"Engineering role (HN Who is Hiring): {first_line[:90]}",
             url=f"https://news.ycombinator.com/item?id={c['id']}",
-            source="hn", ats="hn",
+            source="hn", source_url="https://news.ycombinator.com/item?id=" + str(story["objectID"]), ats="hn",
             locations=[],
             posted_at=c.get("created_at_i"),
             description=text[:4000],

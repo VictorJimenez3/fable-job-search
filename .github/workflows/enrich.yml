@@ -54,7 +54,9 @@ jobs:
           RADAR_AI_PROVIDER_ATTEMPTS: "2"
           RADAR_AI_ROTATE_PROVIDERS: "1"
           RADAR_QUALITY_LIMIT: "10"
-          RADAR_COMPANY_RESEARCH_LIMIT: "4"
+          RADAR_COMPANY_RESEARCH_LIMIT: "8"
+          RADAR_COMPANY_RESEARCH_MAX_TOKENS: "2200"
+          RADAR_COMPANY_WEB_RESEARCH_LIMIT: "12"
           RADAR_ENRICH_LIMIT: "0"
         run: python -m radar.main enrich
 
