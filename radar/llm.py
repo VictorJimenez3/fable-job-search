@@ -45,7 +45,10 @@ _NVIDIA = {
 _TASK_PREFERENCES = {
     "quality": ("glm", "deepseek", "nemotron", "kimi"),
     "pasted_jd": ("glm", "deepseek", "nemotron", "kimi"),
-    "company_research": ("nemotron", "glm", "deepseek", "kimi"),
+    # Production telemetry shows GLM is currently the only consistently valid
+    # synthesis model. Keep DeepSeek as the useful fallback; Nemotron's JSON
+    # completion and Kimi's endpoint are unreliable for this task.
+    "company_research": ("glm", "deepseek", "nemotron", "kimi"),
     "rerank": ("glm", "deepseek", "nemotron", "kimi"),
     "discovery": ("nemotron", "glm", "deepseek", "kimi"),
     "strategy": ("nemotron", "glm", "deepseek", "kimi"),

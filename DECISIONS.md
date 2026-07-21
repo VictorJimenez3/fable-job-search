@@ -778,3 +778,20 @@ by score and then recency, normally wait for three roles, allow a high-score
 urgent exception, and release a smaller batch after 12 hours. Overflow is
 retained for the next interval, and empty intervals stay quiet. The existing
 nightly best-of issue remains as a separate daily summary.
+
+## 57. Backfills checkpoint and scoring maintenance is automated (2026-07-21)
+
+The first company-research drain committed only after the entire run. A timeout
+or rate limit could therefore discard every dossier synthesized earlier in that
+run. Backfill cycles are now deliberately small, prioritize the highest-score
+visible employers, and commit after each cycle; the next cycle starts from the
+latest branch snapshot and resumes safely. Production telemetry showed GLM was
+the reliable company-synthesis provider while Nemotron frequently failed schema
+validation, DeepSeek was slow, and Kimi returned 404, so the backlog lane is
+GLM-first with a bounded request timeout and fallback.
+
+Scoring policy changes must affect every stored job. CI now fails on missing or
+stale score coverage, and a six-hour maintenance workflow rebuilds scores from
+a fresh upstream snapshot before pushing. If a crawl races the rebuild, the
+maintenance attempt discards its stale temporary commit and recalculates from
+the newer state rather than merging generated JSON by hand.

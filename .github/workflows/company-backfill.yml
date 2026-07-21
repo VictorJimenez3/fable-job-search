@@ -26,7 +26,7 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Drain company dossier backlog
+      - name: Drain company dossier backlog in checkpoints
         env:
           LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
@@ -43,27 +43,41 @@ jobs:
           RADAR_AI_MAX_CALLS: "10000"
           RADAR_AI_MAX_REQUESTS: "10000"
           RADAR_AI_PROVIDER_ATTEMPTS: "2"
-          RADAR_AI_ROTATE_PROVIDERS: "1"
+          RADAR_AI_ROTATE_PROVIDERS: "0"
           RADAR_AI_TASK_COMPANY_RESEARCH_LIMIT: "10000"
           RADAR_COMPANY_RESEARCH_WEB_BATCH: "10"
           RADAR_COMPANY_RESEARCH_SYNTH_BATCH: "8"
           RADAR_COMPANY_RESEARCH_MAX_TOKENS: "2200"
+          RADAR_COMPANY_RESEARCH_TIMEOUT: "75"
           RADAR_COMPANY_RESEARCH_MAX_AGE_DAYS: "365"
           RADAR_COMPANY_RESEARCH_WEB_RESEARCH_LIMIT: "0"
-        run: python -u scripts/backfill_company_research.py
-
-      - name: Commit research state and docs
         run: |
           git config user.name "job-radar[bot]"
           git config user.email "radar@users.noreply.github.com"
-          git add state/company_research.json state/ai_usage.json docs
-          if git diff --cached --quiet; then
-            echo "no changes"; exit 0
-          fi
-          git commit -m "radar: drain company research backlog"
-          for i in 1 2 3 4; do
-            git push && exit 0
-            git pull --rebase --autostash || true
-            sleep $((i * 2))
+          for cycle in $(seq 1 100); do
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+            set +e
+            RADAR_BACKFILL_CYCLES=1 python -u scripts/backfill_company_research.py
+            result=$?
+            set -e
+            git add state/company_research.json state/ai_usage.json
+            if git diff --cached --quiet; then
+              echo "backfill: no checkpoint changes"; exit 0
+            fi
+            git commit -m "radar: checkpoint company research backfill"
+            pushed=0
+            for attempt in 1 2 3 4; do
+              if git push; then pushed=1; break; fi
+              git pull --rebase --autostash origin "${GITHUB_REF_NAME}" || true
+              sleep $((attempt * 2))
+            done
+            if [ "$pushed" -ne 1 ]; then
+              echo "backfill: could not push checkpoint" >&2
+              exit 1
+            fi
+            if [ "$result" -eq 2 ]; then
+              echo "backfill: queue exhausted"
+              exit 0
+            fi
           done
-          git push
+          echo "backfill: checkpoint limit reached; resume with workflow_dispatch"
