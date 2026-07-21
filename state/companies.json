@@ -2054,11 +2054,12 @@
   "extra": {},
   "failures": 0,
   "first_seen": 1784605425,
-  "last_ok": 0,
+  "last_ok": 1784614589,
   "name": "Spacial AI",
   "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
-  "status": "new",
+  "status": "active",
   "token": "spacial"
  },
  "ashby:spaice-tech": {
@@ -9346,7 +9347,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1784605444,
+  "last_ok": 1784614608,
   "name": "3M",
   "origin": "seed",
   "probe_attempts": 1,
@@ -9724,7 +9725,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1784605446,
+  "last_ok": 1784614609,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
@@ -9866,6 +9867,22 @@
   "last_ok": 1784346676,
   "name": "Argonne National Laboratory",
   "origin": "harvest:simplify",
+  "sector": "",
+  "status": "active",
+  "token": "argonne"
+ },
+ "workday:argonne:EDU_PUB": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "EDU_PUB"
+  },
+  "failures": 0,
+  "first_seen": 1784614589,
+  "last_ok": 1784614590,
+  "name": "Argonne National Laboratory",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
   "status": "active",
   "token": "argonne"
@@ -10448,6 +10465,22 @@
   "sector": "",
   "status": "active",
   "token": "broadcom"
+ },
+ "workday:brookfield:brookfieldprivate": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd5",
+   "site": "brookfieldprivate"
+  },
+  "failures": 0,
+  "first_seen": 1784614589,
+  "last_ok": 1784614591,
+  "name": "Brookfield",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "brookfield"
  },
  "workday:brunswick:search": {
   "ats": "workday",
@@ -11327,7 +11360,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1784605440,
+  "last_ok": 1784614602,
   "name": "Dow",
   "origin": "seed",
   "probe_attempts": 1,
@@ -11420,7 +11453,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1784605435,
+  "last_ok": 1784614598,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -11505,6 +11538,22 @@
   "sector": "",
   "status": "active",
   "token": "ensemblehp"
+ },
+ "workday:equifax:UR_External": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd5",
+   "site": "UR_External"
+  },
+  "failures": 0,
+  "first_seen": 1784614589,
+  "last_ok": 1784614590,
+  "name": "Equifax",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "equifax"
  },
  "workday:evergreenix:external-careers2": {
   "ats": "workday",
@@ -11931,7 +11980,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1784605439,
+  "last_ok": 1784614603,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -12976,6 +13025,22 @@
   "status": "active",
   "token": "marvell"
  },
+ "workday:marvell:MarvellCareers2": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "MarvellCareers2"
+  },
+  "failures": 0,
+  "first_seen": 1784614589,
+  "last_ok": 1784614591,
+  "name": "Marvell",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "marvell"
+ },
  "workday:masco:Masco": {
   "ats": "workday",
   "extra": {
@@ -13201,7 +13266,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1784605435,
+  "last_ok": 1784614600,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -14626,7 +14691,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1784605440,
+  "last_ok": 1784614603,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
