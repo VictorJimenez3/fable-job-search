@@ -795,3 +795,13 @@ stale score coverage, and a six-hour maintenance workflow rebuilds scores from
 a fresh upstream snapshot before pushing. If a crawl races the rebuild, the
 maintenance attempt discards its stale temporary commit and recalculates from
 the newer state rather than merging generated JSON by hand.
+
+## 58. Hosted providers race; benchmark decides task quality (2026-07-21)
+
+Serial provider fallback made a slow or broken free endpoint block every later
+provider. Each logical AI call now starts every configured healthy endpoint at
+once; the first schema-valid response wins while slower attempts finish for
+telemetry. A concurrent benchmark workflow tests the real company-research and
+posting-quality schemas and records the fastest valid provider per task, so the
+documented order is a measured tie-break rather than an artificial serial
+queue.

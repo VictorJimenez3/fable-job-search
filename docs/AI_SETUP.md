@@ -26,25 +26,24 @@ credits, and this radar does not need an OpenAI key.
 
 ## Routing and limits
 
-`radar/llm.py` makes one logical request and probes both configured lanes — local
-Ollama and hosted/API — when both exist. The first valid answer is selected, but
-the other lane is still attempted and logged. Within the hosted lane it tries at
-most two healthy providers. It retries a transient response once, honors
-`Retry-After` (capped), then falls through. 401/403/404, rate limits, empty
-answers, and invalid schemas open task-local cooldowns instead of being hammered
-repeatedly.
+`radar/llm.py` makes one logical request and races every configured healthy
+endpoint concurrently. The first valid answer wins; slower calls still finish
+long enough to record latency, validity, and failure telemetry. It retries a
+transient response once, honors `Retry-After` (capped), then applies task-local
+cooldowns to 401/403/404, rate limits, empty answers, and invalid schemas.
 
 | Task | Preferred order | Default output cap |
 |---|---|---|
 | Job quality / pasted JD | GLM → DeepSeek → Nemotron → Kimi | 240 tokens |
-| Grounded company research | Nemotron → GLM → DeepSeek → Kimi (or local Ollama) | 2200 tokens |
+| Grounded company research | GLM → DeepSeek → Nemotron → Kimi (or local Ollama) | 2200 tokens |
 | Batch re-rank | GLM → DeepSeek → Nemotron → Kimi | 1,200 tokens |
 | Scout | Nemotron → GLM → DeepSeek → Kimi | 600 tokens |
 | Strategy note | Nemotron → GLM → DeepSeek → Kimi | 300 tokens |
 
-Kimi is deliberately last because its key now authenticates but the NIM model
-endpoint has returned intermittent `404 model unavailable`. It stays configured
-as a canary/fallback rather than consuming every fourth request.
+All four configured NVIDIA providers are now launched for each API request;
+the table is the benchmark/tie-break order, not a serial fallback chain. Kimi
+is still expected to lose until its intermittent `404 model unavailable` issue
+is fixed.
 
 Cloud budgets:
 
@@ -59,7 +58,7 @@ Cloud budgets:
   with the number of postings found.
 
 Override knobs are `RADAR_AI_MAX_CALLS`, `RADAR_AI_MAX_REQUESTS`,
-`RADAR_AI_PROVIDER_ATTEMPTS`, `RADAR_AI_TASK_<TASK>_LIMIT`,
+`RADAR_AI_TASK_<TASK>_LIMIT`,
 `RADAR_QUALITY_LIMIT`, and `RADAR_COMPANY_RESEARCH_LIMIT`.
 
 ## Verify and observe
@@ -68,6 +67,11 @@ Run **Actions → nvidia-verify → Run workflow**. It tests all four models eve
 when one fails and writes a matrix to the workflow summary. Authentication or
 configuration failures fail the workflow; 404/429/5xx are reported as endpoint
 availability warnings as long as another model is healthy.
+
+Run **Actions → AI provider benchmark → Run workflow** to test all four models
+concurrently on the real company-research and posting-quality schemas. The
+latency/validity report is stored in `state/ai_benchmark.json` and the fastest
+valid model per task is recorded as the measured winner.
 
 Run **enrich** for the main board or **cheme-enrich** for ChemE. The platform's
 AI tab reads `state/ai_usage.json` and shows task counts, model successes/errors,

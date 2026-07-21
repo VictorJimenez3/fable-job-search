@@ -45,9 +45,12 @@ def test_both_local_and_api_lanes_are_probed_and_local_is_selected(monkeypatch):
 
     monkeypatch.setattr(llm.requests, "post", post)
     assert llm.complete("use both", task="quality") == "useful answer"
+    deadline = __import__("time").time() + 1
+    while len(seen) < 2 and __import__("time").time() < deadline:
+        __import__("time").sleep(0.01)
     report = llm.usage_report()
-    assert seen == ["http://localhost:11434/api/chat",
-                    "https://integrate.api.nvidia.com/v1/chat/completions"]
+    assert set(seen) == {"http://localhost:11434/api/chat",
+                         "https://integrate.api.nvidia.com/v1/chat/completions"}
     assert {e["lane"] for e in report["events"] if e["status"] == "ok"} == {"local", "api"}
     assert sum(1 for e in report["events"] if e.get("selected")) == 1
 
@@ -130,7 +133,7 @@ def test_named_router_falls_back_after_unavailable_model(monkeypatch):
 
     monkeypatch.setattr(llm.requests, "post", post)
     assert llm.complete("grade", task="quality") == "graded"
-    assert seen == ["z-ai/glm-5.2", "deepseek-ai/deepseek-v4-pro"]
+    assert set(seen) == {"z-ai/glm-5.2", "deepseek-ai/deepseek-v4-pro"}
     report = llm.usage_report()
     assert report["requests"] == 2 and report["models"]["nvidia:deepseek"]["ok"] == 1
 
@@ -163,3 +166,23 @@ def test_schema_failure_falls_through_within_one_logical_call(monkeypatch):
 
     assert llm.complete("json", task="quality", validator=valid) == "graded"
     assert llm.usage_report()["logical_calls"] == 1
+
+
+def test_all_configured_api_providers_are_started_concurrently(monkeypatch):
+    _named_env(monkeypatch)
+    monkeypatch.setenv("NVIDIA_NEMOTRON_3_ULTRA_550B_A55B_API_KEY", "nemotron-secret")
+    monkeypatch.setenv("NVIDIA_NEMOTRON_3_ULTRA_550B_A55B_MODEL", "nvidia/nemotron")
+    monkeypatch.setenv("NVIDIA_KIMI_K2_6_API_KEY", "kimi-secret")
+    monkeypatch.setenv("NVIDIA_KIMI_K2_6_MODEL", "moonshotai/kimi")
+    started = []
+    release = __import__("threading").Event()
+
+    def post(url, **kwargs):
+        started.append(kwargs["json"]["model"])
+        release.wait(0.05)
+        return _Resp(200)
+
+    monkeypatch.setattr(llm.requests, "post", post)
+    assert llm.complete("race", task="quality") == "graded"
+    assert set(started) == {"z-ai/glm-5.2", "deepseek-ai/deepseek-v4-pro",
+                            "nvidia/nemotron", "moonshotai/kimi"}

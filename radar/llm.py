@@ -16,7 +16,9 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from datetime import datetime, timezone
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import os
+import threading
 import time
 from typing import Callable
 
@@ -91,6 +93,7 @@ _requests = 0
 _task_calls: dict[str, int] = {}
 _cooldowns: dict[str, float] = {}
 _events: list[dict] = []
+_counter_lock = threading.Lock()
 
 
 def _config_signature() -> tuple:
@@ -220,9 +223,10 @@ def _reserve_request() -> None:
     """Count the actual HTTP send, including transport retries."""
     global _requests
     maximum = _int_env("RADAR_AI_MAX_REQUESTS", 24)
-    if _requests >= maximum:
-        raise BudgetFailure("per-run provider request budget reached")
-    _requests += 1
+    with _counter_lock:
+        if _requests >= maximum:
+            raise BudgetFailure("per-run provider request budget reached")
+        _requests += 1
 
 
 def _strip_thinking(text: str) -> str:
@@ -312,8 +316,9 @@ def _record(task: str, ep: Endpoint | None, status: str, started: float,
         "completion_tokens": usage.get("completion_tokens") or usage.get("output_tokens") or 0,
         "detail": detail[:120],
     }
-    _events.append(event)
-    del _events[:-_EVENT_LIMIT]
+    with _counter_lock:
+        _events.append(event)
+        del _events[:-_EVENT_LIMIT]
     return event
 
 
@@ -342,72 +347,67 @@ def complete(prompt: str, max_tokens: int = 2000, timeout: int = 180,
     if not eps:
         return None
 
-    # Hosted providers can have very different latency and schema reliability.
-    # When enabled, spread independent calls across configured API models so a
-    # flaky first-choice model does not serialize the entire backlog behind its
-    # timeout. Fallback still runs if the rotated provider fails validation.
-    if env("RADAR_AI_ROTATE_PROVIDERS") == "1" and len(eps) > 1:
-        local = [ep for ep in eps if _is_local(ep.base_url)]
-        hosted = [ep for ep in eps if not _is_local(ep.base_url)]
-        if hosted:
-            offset = _logical_calls % len(hosted)
-            hosted = hosted[offset:] + hosted[:offset]
-            eps = local + hosted
-
     max_calls = _int_env("RADAR_AI_MAX_CALLS", 12)
     max_requests = _int_env("RADAR_AI_MAX_REQUESTS", 24)
-    if (_logical_calls >= max_calls or _task_calls.get(task, 0) >= _task_limit(task)
-            or _requests >= max_requests):
+    with _counter_lock:
+        over_budget = (_logical_calls >= max_calls
+                       or _task_calls.get(task, 0) >= _task_limit(task)
+                       or _requests >= max_requests)
+    if over_budget:
         _record(task, None, "budget_skipped", time.monotonic(), prompt, max_tokens,
                 detail="per-run AI budget reached")
         return None
 
-    _logical_calls += 1
-    _task_calls[task] = _task_calls.get(task, 0) + 1
-    provider_attempts = _int_env("RADAR_AI_PROVIDER_ATTEMPTS", 2, minimum=1)
-    # Local Ollama and hosted/API are independent health checks. Return the
-    # first valid answer, but probe both lanes so outages are visible.
-    lanes = {"local" if _is_local(ep.base_url) else "api" for ep in eps}
-    lane_success: set[str] = set()
-    api_attempts = 0
-    selected: dict | None = None
-    for ep in eps:
-        lane = "local" if _is_local(ep.base_url) else "api"
-        if lane in lane_success or _requests >= max_requests:
-            break
-        if lane == "api" and api_attempts >= provider_attempts:
-            continue
-        if _cooldowns.get(ep.name, 0) > time.monotonic():
-            continue
-        if lane == "api":
-            api_attempts += 1
+    with _counter_lock:
+        _logical_calls += 1
+        _task_calls[task] = _task_calls.get(task, 0) + 1
+
+    # Race every healthy configured endpoint. The first *valid* answer wins;
+    # slower calls continue only long enough to record telemetry. This avoids
+    # serially waiting behind a flaky free-tier provider while preserving
+    # deterministic schema validation and cooldowns.
+    candidates = [ep for ep in eps if _cooldowns.get(ep.name, 0) <= time.monotonic()]
+    if not candidates:
+        return None
+
+    def attempt(ep: Endpoint) -> tuple[str | None, dict | None]:
         started = time.monotonic()
         try:
             text, usage = _call(ep, prompt, max_tokens, timeout, json_mode)
             if text and validator is not None and not validator(text):
-                _record(task, ep, "invalid", started, prompt, max_tokens, usage,
-                        detail="task schema validation failed")
+                event = _record(task, ep, "invalid", started, prompt, max_tokens, usage,
+                                detail="task schema validation failed")
                 _cooldown(ep, None)
-                continue
+                return None, event
             if text:
-                event = _record(task, ep, "ok", started, prompt, max_tokens, usage)
-                lane_success.add(lane)
-                if selected is None:
-                    selected = {"text": text, "event": event}
-                if lane_success >= lanes:
-                    break
-                continue
-            _record(task, ep, "empty", started, prompt, max_tokens, usage)
+                return text, _record(task, ep, "ok", started, prompt, max_tokens, usage)
+            event = _record(task, ep, "empty", started, prompt, max_tokens, usage)
             _cooldown(ep, None)
+            return None, event
         except Exception as exc:
             status = exc.status if isinstance(exc, CallFailure) else None
-            _record(task, ep, "error", started, prompt, max_tokens,
-                    detail=f"{type(exc).__name__}: {exc}")
+            event = _record(task, ep, "error", started, prompt, max_tokens,
+                            detail=f"{type(exc).__name__}: {exc}")
             _cooldown(ep, status)
-            print(f"llm: {task} via {ep.name} failed; trying fallback: {exc}")
+            return None, event
+
+    pool = ThreadPoolExecutor(max_workers=len(candidates),
+                              thread_name_prefix="radar-llm")
+    futures = {pool.submit(attempt, ep): ep for ep in candidates}
+    selected = None
+    try:
+        for future in as_completed(futures):
+            text, event = future.result()
+            if text and selected is None:
+                selected = (text, event)
+                break
+    finally:
+        # Do not make the caller wait for slower providers after a winner is
+        # available. In-flight requests still finish and write telemetry.
+        pool.shutdown(wait=False, cancel_futures=False)
     if selected:
-        selected["event"]["selected"] = True
-        return selected["text"]
+        selected[1]["selected"] = True
+        return selected[0]
     return None
 
 
