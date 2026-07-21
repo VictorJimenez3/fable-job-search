@@ -1,0 +1,52 @@
+name: score maintenance
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: radar-score-maintenance
+  cancel-in-progress: false
+
+jobs:
+  rescore:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Rebuild and publish score snapshot
+        run: |
+          git config user.name "job-radar[bot]"
+          git config user.email "radar@users.noreply.github.com"
+          for attempt in 1 2 3 4; do
+            git fetch origin "${GITHUB_REF_NAME}"
+            git reset --hard "origin/${GITHUB_REF_NAME}"
+            python -m radar.main rescore
+            python -m radar.main score-health
+            git add state/jobs.json state/culture.json docs/DASHBOARD.md docs/CULTURE.md docs/feed.xml
+            if git diff --cached --quiet; then
+              echo "score maintenance: already current"
+              exit 0
+            fi
+            git commit -m "radar: scheduled score maintenance"
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              exit 0
+            fi
+            echo "score maintenance: upstream moved; retrying from fresh state"
+          done
+          echo "score maintenance: could not publish after retries" >&2
+          exit 1

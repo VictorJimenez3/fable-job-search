@@ -524,7 +524,11 @@ def enrich(jobs_state: dict, applied: list | None = None, web: dict | None = Non
         # The dossier has a fixed 20-field schema. 900 tokens truncates valid
         # local-model JSON before the final profile fields; leave enough room
         # while the global AI budget still bounds cost.
-        raw = llm.complete(prompt, max_tokens=int(env("RADAR_COMPANY_RESEARCH_MAX_TOKENS", "2200")), timeout=180, json_mode=True,
+        raw = llm.complete(
+            prompt,
+            max_tokens=int(env("RADAR_COMPANY_RESEARCH_MAX_TOKENS", "2200")),
+            timeout=int(env("RADAR_COMPANY_RESEARCH_TIMEOUT", "90")),
+            json_mode=True,
                            task="company_research",
                            validator=lambda text, ids=ids: parse_synthesis(text, ids) is not None)
         record["last_attempt_at"] = now

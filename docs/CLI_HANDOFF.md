@@ -154,6 +154,13 @@ Before changing the radar, read these in order:
   `alert-batch.yml` sends up to 15 unsent roles every four hours, ranked by
   score and recency. It records delivered IDs in
   `state/notification_state.json`, so overflow is not lost.
+- **Maintenance:** `score-maintenance.yml` runs every six hours and rebuilds
+  every stored score from the latest production snapshot. `tests.yml` and the
+  maintenance workflow run `python -m radar.main score-health`, which fails if
+  any stored record lacks the current score/rules version. The manual company
+  backfill checkpoints one bounded batch per commit, prioritizes high-score
+  visible employers, and uses GLM-first API synthesis with a 75-second request
+  timeout; rerun `company research backfill` to resume safely.
 - **`CV/` is local-only and gitignored** (DECISIONS #29) — never commit it
   or anything derived from it; CV auto-tailoring is a Mac-companion feature.
 - **Deliberately deferred:** CV tailoring/CV role toggle and semantic/vector

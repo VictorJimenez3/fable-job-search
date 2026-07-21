@@ -1,6 +1,7 @@
 import time
 
 from radar.models import Job
+from radar import main
 from radar.score import (RULES_VERSION, gates, regate, score,
                          update_feedback_from_applied)
 from radar.sector import infer
@@ -346,3 +347,16 @@ def test_regate_requires_new_grad_for_priority_sector_jobs():
     assert regate(jobs) == 1
     assert jobs["w"]["alert_ok"] is True
     assert jobs["w"]["explicit_new_grad"] is True
+
+
+def test_score_health_requires_current_version_and_reasons(tmp_path, monkeypatch, capsys):
+    from radar import state
+    monkeypatch.setattr(state, "STATE_DIR", tmp_path)
+    state.save("jobs.json", {
+        "ok": {"score_version": RULES_VERSION, "rules_v": RULES_VERSION,
+               "score_reasons": []},
+        "old": {"score_version": RULES_VERSION - 1, "rules_v": RULES_VERSION,
+                "score_reasons": []},
+    })
+    assert main.score_health_cmd() == 1
+    assert "1 record(s)" in capsys.readouterr().out

@@ -31,14 +31,11 @@ none block anything currently running.
 
 ## Deliberately deferred by Victor
 
-1. **Scoring/state maintenance hardening — TODO.** The current repair can
-   rebuild the whole repository state, but it is easy for a live cron or Mac
-   enrichment commit to race that generated snapshot. Add a first-class
-   `score_version` health check in CI, fail loudly when any stored job is
-   unscored, and make rescore/backfill an explicit scheduled maintenance job
-   with state-merge protection. Until then, every scoring-policy change must
-   run `python -m radar.main rescore` and verify `score_version` coverage before
-   publishing.
+1. **Scoring/state maintenance hardening — ✅ foundation shipped.** CI now
+   fails when any stored job lacks the current `score_version`, and a scheduled
+   six-hour rescore rebuilds from a fresh upstream snapshot before publishing.
+   The remaining long-term improvement is a shared state transaction layer for
+   all generated writers, but scoring now has an automated repair path.
 
 2. **RAG and vector search.** Embed job descriptions, company dossiers,
    candidate profile/CV material, and saved decisions; support semantic search
@@ -195,6 +192,11 @@ never in Actions.
   open/save flow and should reuse the Mac-local privacy boundary from #29.
 
 ## Ops
+- **Company-research backlog throughput — ✅ checkpointing shipped.** The
+  manual backfill now prioritizes visible high-score employers, uses GLM-first
+  synthesis with a bounded timeout, and commits each small cycle before moving
+  on. A cancelled or rate-limited run resumes from its last checkpoint instead
+  of losing the entire process.
 - **Calendar sync** — interview emails → Google Calendar holds.
 - **Weekly Notion rollup** — mirror the Monday memo into Job Search HQ.
 - **Registry hygiene job** — ✅ SHIPPED 2026-07-16 (`discovery.hygiene`,

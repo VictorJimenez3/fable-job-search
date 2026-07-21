@@ -511,6 +511,21 @@ def rescore_cmd() -> int:
     return 0
 
 
+def score_health_cmd() -> int:
+    """Fail loudly if generated jobs state is not covered by current scoring."""
+    jobs_state = state.jobs()
+    missing = [jid for jid, rec in jobs_state.items()
+               if rec.get("score_version") != RULES_VERSION
+               or rec.get("rules_v") != RULES_VERSION
+               or not isinstance(rec.get("score_reasons"), list)]
+    if missing:
+        print(f"score-health: FAIL {len(missing)} record(s) need rules v{RULES_VERSION}; "
+              f"first ids: {', '.join(missing[:10])}")
+        return 1
+    print(f"score-health: PASS {len(jobs_state)} record(s) covered by rules v{RULES_VERSION}")
+    return 0
+
+
 def _rebuild_scores(jobs_state: dict, fb: dict, now: int) -> tuple[int, int]:
     """Apply the current deterministic equation to every active stored job."""
     from . import culture, posting, quality
@@ -636,7 +651,7 @@ def main() -> None:
                                         "marquee-backfill", "reconcile-checkboxes",
                                         "daily-best", "master-board", "web-action", "enrich",
                                         "email-batch",
-                                        "regate", "rescore", "rescrape", "repair-feedback"])
+                                        "regate", "rescore", "score-health", "rescrape", "repair-feedback"])
     args = ap.parse_args()
     if args.command == "crawl":
         sys.exit(crawl())
@@ -688,6 +703,8 @@ def main() -> None:
         sys.exit(regate_cmd())
     elif args.command == "rescore":
         sys.exit(rescore_cmd())
+    elif args.command == "score-health":
+        sys.exit(score_health_cmd())
     elif args.command == "rescrape":
         sys.exit(rescrape_cmd())
     elif args.command == "repair-feedback":

@@ -20,3 +20,5 @@ jobs:
           cache: pip
       - run: pip install -r requirements.txt pytest
       - run: python -m pytest tests/ -q
+      - name: Verify stored score coverage
+        run: python -m radar.main score-health

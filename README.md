@@ -123,7 +123,9 @@ Scoring is published in three places: the live Vercel dashboard reads
 score, and each job's **Why it scored** drawer shows the auditable equation
 reasons plus the scoring version. Every crawl now rebuilds all active stored
 postings before publishing those files; `python -m radar.main rescore` is the
-manual repair command.
+manual repair command. CI also checks score coverage, and a six-hour scheduled
+maintenance workflow repairs the generated snapshot if a writer missed a
+version stamp.
 
 Other comment commands: `skip <company>` (downrank similar roles),
 `track <ats> <token> [Name]` (force-add a company to the crawl registry).
