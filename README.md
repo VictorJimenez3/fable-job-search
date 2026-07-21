@@ -116,7 +116,10 @@ public company/about, careers, benefits, culture, and monitored-board pages in
 addition to postings. Products, customers, mission, business context, technical
 work, locations, visa context, candidate relevance, and interview focus carry
 source links/dates. Non-public employer-profile values are visibly labeled
-**Estimated**, and every posting retains the board or discovery URL that found it.
+**Estimated**, and every posting retains the board or discovery URL that found
+it. New postings trigger this research automatically; the manual company-
+research backfill is resumable and commits bounded checkpoints, so a long run
+can be interrupted without losing completed dossiers.
 
 Scoring is published in three places: the live Vercel dashboard reads
 `state/jobs.json`, the generated [dashboard](docs/DASHBOARD.md) lists the current
@@ -193,11 +196,19 @@ The companion releases the model from memory after every request; confirm with
 `ollama ps` (it should show no loaded model between enrichment cycles).
 
 Optional upgrades:
-- The four NVIDIA NIM keys are now wired into a task-aware, budgeted cloud
-  router with fallback, cooldowns, schema validation, and usage telemetry.
-  Main and ChemE enrich nightly; they are deliberately not exposed to every
-  30-minute crawl. Configuration and operating policy:
+- The four NVIDIA NIM keys are wired into a task-aware, budgeted cloud router
+  that races all configured providers concurrently; the first schema-valid
+  response wins while every attempt logs latency, validity, and errors. Main
+  and ChemE enrichment runs every two hours and is deliberately not exposed to
+  every 30-minute crawl. Configuration and operating policy:
   [docs/AI_SETUP.md](docs/AI_SETUP.md).
+- Run **Actions → AI provider benchmark** to test all four providers against
+  the real company-research and posting-quality schemas. Measured winners and
+  latency are stored in `state/ai_benchmark.json`; current production results
+  favor GLM for both tasks.
+- Run **Actions → company research backfill** to drain older employer dossiers.
+  It prioritizes high-score visible companies, uses bounded API calls, and
+  checkpoints research/telemetry safely when production changes concurrently.
 - Prefer Google Workspace to Notion? The Google Sheets tracker adapter is
   complete; its one-time OAuth activation is documented in
   [docs/GOOGLE_SHEETS_SETUP.md](docs/GOOGLE_SHEETS_SETUP.md).
@@ -231,7 +242,10 @@ narrative Claude uses. Edit and push — next run picks it up. Seed companies:
 ## Operating notes
 
 - **State** (`state/*.json`) is committed back by CI after each run: seen jobs,
-  the company registry, learned taste, applied log, run stats.
+  the company registry, learned taste, applied log, run stats, company research,
+  AI usage, and provider benchmark results.
+- **Score maintenance** runs every six hours and verifies that every stored job
+  carries the current score/rules version before publishing a repaired snapshot.
 - GitHub cron is best-effort: `*/30` in practice fires every 30–60 min.
 - Scheduled workflows pause after 60 days without repo activity; any commit
   (including CI's own) resets the clock, so this is only relevant if the radar
