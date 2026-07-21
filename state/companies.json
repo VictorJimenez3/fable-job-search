@@ -9386,7 +9386,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1784664373,
+  "last_ok": 1784669579,
   "name": "3M",
   "origin": "seed",
   "probe_attempts": 1,
@@ -9764,7 +9764,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1784664382,
+  "last_ok": 1784669579,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
@@ -10879,6 +10879,22 @@
   "status": "active",
   "token": "centific"
  },
+ "workday:cerence:Cerence": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd5",
+   "site": "Cerence"
+  },
+  "failures": 0,
+  "first_seen": 1784669558,
+  "last_ok": 1784669560,
+  "name": "Cerence",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "cerence"
+ },
  "workday:ceritypartners:ceritypartnerscareers": {
   "ats": "workday",
   "extra": {
@@ -11495,7 +11511,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1784664372,
+  "last_ok": 1784669573,
   "name": "Dow",
   "origin": "seed",
   "probe_attempts": 1,
@@ -11588,7 +11604,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1784664363,
+  "last_ok": 1784669567,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -12131,7 +12147,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1784664371,
+  "last_ok": 1784669574,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -12276,6 +12292,22 @@
   "sector": "",
   "status": "active",
   "token": "hargreaveslansdown"
+ },
+ "workday:harriscomputer:1": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd3",
+   "site": "1"
+  },
+  "failures": 0,
+  "first_seen": 1784669558,
+  "last_ok": 1784669559,
+  "name": "Harris Computer",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "harriscomputer"
  },
  "workday:hcmportal:Search": {
   "ats": "workday",
@@ -13417,7 +13449,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1784664364,
+  "last_ok": 1784669568,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -14858,7 +14890,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1784664369,
+  "last_ok": 1784669573,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
@@ -15845,6 +15877,23 @@
   "sector": "",
   "status": "invalid",
   "token": "vhr-epri"
+ },
+ "workday:vhr-genband:ribboncareers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "ribboncareers"
+  },
+  "failures": 0,
+  "first_seen": 1784669558,
+  "invalidated_at": 1784669560,
+  "last_ok": 0,
+  "name": "Ribbon",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "invalid",
+  "token": "vhr-genband"
  },
  "workday:viavisolutions:careers": {
   "ats": "workday",
