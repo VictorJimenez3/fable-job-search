@@ -31,7 +31,7 @@ jobs:
           NVIDIA_KIMI_K2_6_API_KEY: ${{ secrets.NVIDIA_KIMI_K2_6_API_KEY }}
           NVIDIA_KIMI_K2_6_MODEL: ${{ vars.NVIDIA_KIMI_K2_6_MODEL }}
           BENCHMARK_TIMEOUT: "90"
-        run: python scripts/benchmark_ai_providers.py | tee benchmark-output.json
+        run: set -o pipefail; python scripts/benchmark_ai_providers.py | tee benchmark-output.json
       - name: Publish benchmark telemetry
         run: |
           git config user.name "job-radar[bot]"
