@@ -234,21 +234,44 @@ def crawl() -> int:
 
     write_outputs(jobs_state, registry, runs, alert_history)
 
-    from .alerts import post_alerts  # late import: needs GITHUB_TOKEN only here
+    # Workflow crawls publish generated state before making external GitHub
+    # writes.  A rejected state push can then be rebuilt from fresh upstream
+    # without duplicated issues or a master board that points at uncommitted
+    # jobs.  Local/manual crawls retain the convenient immediate delivery.
+    deferred_delivery = env("RADAR_DEFER_DELIVERY", "").lower() in {"1", "true", "yes"}
     url = None
-    try:
-        url = post_alerts([j.to_record() | {"llm_note": j.llm_note} for j in alerts])
-    except Exception as e:
-        print(f"alerts: failed to post issue: {e}")
-    try:
-        from .board import update_master_board
-        update_master_board(jobs_state, state.applied())
-    except Exception as e:
-        print(f"board: failed to update master board: {e}")
+    if deferred_delivery:
+        print("crawl: delivery deferred until state publication succeeds")
+    else:
+        url = deliver_alerts()
     print(f"crawl done in {time.time() - t0:.1f}s: {len(new_jobs)} new jobs "
           f"({dropped} gated out), {len(alerts)} alerts"
           + (f" → {url}" if url else ""))
     return 0
+
+
+def deliver_alerts() -> str | None:
+    """Idempotently publish recent tracking issues and refresh the master board.
+
+    This intentionally does not write generated state.  It is safe to invoke
+    after every successful crawl, or to replay after an interrupted delivery.
+    """
+    now = int(time.time())
+    history = state.load("alert_history.json", [])
+    recent = [rec for rec in history if rec.get("alerted_at", 0) >= now - 14 * 86400]
+    url = None
+    try:
+        from .alerts import post_alerts
+        url = post_alerts(recent)
+    except Exception as e:
+        print(f"alerts: failed to post issue: {e}")
+    try:
+        from .board import update_master_board
+        update_master_board(state.jobs(), state.applied())
+    except Exception as e:
+        print(f"board: failed to update master board: {e}")
+    print(f"delivery: checked {len(recent)} recent alert(s)" + (f" → {url}" if url else ""))
+    return url
 
 
 def seed_cmd() -> int:
@@ -649,7 +672,7 @@ def main() -> None:
                                         "strategist", "notion-verify", "email-watch", "email-verify",
                                         "migrate-checkbox-applied", "promote-shortlist",
                                         "marquee-backfill", "reconcile-checkboxes",
-                                        "daily-best", "master-board", "web-action", "enrich",
+                                        "daily-best", "master-board", "deliver-alerts", "web-action", "enrich",
                                         "email-batch",
                                         "regate", "rescore", "score-health", "rescrape", "repair-feedback"])
     args = ap.parse_args()
@@ -695,6 +718,9 @@ def main() -> None:
         from .board import update_master_board
         url = update_master_board(state.jobs(), state.applied())
         print(f"master-board: {url or 'not updated'}")
+    elif args.command == "deliver-alerts":
+        url = deliver_alerts()
+        print(f"deliver-alerts: {url or 'nothing new'}")
     elif args.command == "web-action":
         sys.exit(web_action())
     elif args.command == "enrich":

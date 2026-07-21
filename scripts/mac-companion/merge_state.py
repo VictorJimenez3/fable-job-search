@@ -49,7 +49,9 @@ for k, ours in ours_research.items():
     sources.update({s.get("id"): s for s in (ours.get("sources") or []) if s.get("id")})
     winner = ours if ours.get("generated_at", 0) >= upstream.get("generated_at", 0) else upstream
     merged = dict(winner)
-    merged["sources"] = sorted(sources.values(), key=lambda s: -s.get("retrieved_at", 0))[:3]
+    # Keep the same six-source evidence window used by company research.  This
+    # merge is a lossless reconciliation boundary, not a smaller cache.
+    merged["sources"] = sorted(sources.values(), key=lambda s: -s.get("retrieved_at", 0))[:6]
     payload = "|".join(sorted(f"{s.get('id')}:{s.get('content_sha')}" for s in merged["sources"]))
     merged["evidence_sha"] = hashlib.sha256(payload.encode()).hexdigest()[:16]
     if merged != upstream:

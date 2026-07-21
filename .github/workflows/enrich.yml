@@ -34,7 +34,7 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Enrich
+      - name: Enrich and safely publish additive AI caches
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
@@ -58,20 +58,43 @@ jobs:
           RADAR_COMPANY_RESEARCH_MAX_TOKENS: "2200"
           RADAR_COMPANY_WEB_RESEARCH_LIMIT: "12"
           RADAR_ENRICH_LIMIT: "0"
-        run: python -m radar.main enrich
-
-      - name: Commit state + docs
         run: |
           git config user.name "job-radar[bot]"
           git config user.email "radar@users.noreply.github.com"
-          git add state docs
-          if git diff --cached --quiet; then
-            echo "no changes"; exit 0
-          fi
-          git commit -m "radar: cloud enrich $(date -u +'%Y-%m-%d %H:%M')"
+          python -m radar.main enrich
+
+          commit_state() {
+            git add state docs
+            git diff --cached --quiet && return 1
+            git commit -m "radar: cloud enrich $(date -u +'%Y-%m-%d %H:%M')"
+          }
+          commit_state || { echo "enrich: no generated-state changes"; exit 0; }
+
           for i in 1 2 3 4; do
-            git push && exit 0
-            git pull --rebase --autostash || true
+            if git push; then
+              echo "enrich: published on attempt $i"
+              exit 0
+            fi
+            # AI outputs are caches, not a second authoritative jobs snapshot.
+            # Preserve only additive evidence, reset to production, reapply it,
+            # and deterministically rebuild scores/docs without another API call.
+            echo "enrich: upstream moved; merging additive AI caches"
+            checkpoint_dir="$(mktemp -d)"
+            cp state/jobs.json "$checkpoint_dir/jobs.json"
+            cp state/culture.json "$checkpoint_dir/culture.json"
+            cp state/company_research.json "$checkpoint_dir/research.json" 2>/dev/null || printf '{}' > "$checkpoint_dir/research.json"
+            cp state/ai_usage.json "$checkpoint_dir/usage.json" 2>/dev/null || printf '{}' > "$checkpoint_dir/usage.json"
+            git fetch origin "${GITHUB_REF_NAME}"
+            git reset --hard "origin/${GITHUB_REF_NAME}"
+            MERGE_JOBS="$checkpoint_dir/jobs.json" \
+            MERGE_CULTURE="$checkpoint_dir/culture.json" \
+            MERGE_RESEARCH="$checkpoint_dir/research.json" \
+            MERGE_AI_USAGE="$checkpoint_dir/usage.json" \
+              python scripts/mac-companion/merge_state.py
+            rm -rf "$checkpoint_dir"
+            python -m radar.main rescore
+            commit_state || { echo "enrich: production already contains merged evidence"; exit 0; }
             sleep $((i * 2))
           done
-          git push
+          echo "enrich: upstream kept moving; leaving production unchanged" >&2
+          exit 1

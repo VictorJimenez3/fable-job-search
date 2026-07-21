@@ -806,3 +806,20 @@ telemetry. A concurrent benchmark workflow tests the real company-research and
 posting-quality schemas and records the fastest valid provider per task, so the
 documented order is a measured tie-break rather than an artificial serial
 queue.
+
+## 59. Generated state publishes before idempotent delivery (2026-07-21)
+
+Concurrent writers routinely change `state/*.json` and generated docs, so a
+generic `git pull --rebase` is neither a reliable retry nor a safe merge
+strategy. The crawl now rebuilds from the newest production snapshot when its
+push loses a race; it makes no external GitHub writes until that state commit
+succeeds. A separate delivery command then upserts tracking issues using the
+embedded `<!--radar:<job-id>-->` marker (including closed issues) and refreshes
+the master board. This makes delivery replay-safe without turning individual
+tracking issues back into email notifications.
+
+Cloud enrichment uses the complementary rule: its LLM quality, culture, company
+research, and usage results are additive evidence caches. On a rejected push it
+resets to current production, merges only those caches, and runs deterministic
+`rescore` to regenerate derived jobs/docs. Neither path force-pushes, silently
+drops production state, or attempts to text-merge generated JSON.

@@ -29,25 +29,40 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Crawl, score, alert
+      - name: Crawl and safely publish state
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python -m radar.main crawl
-
-      - name: Commit state + dashboard
+          RADAR_DEFER_DELIVERY: "1"
         run: |
           git config user.name "job-radar[bot]"
           git config user.email "radar@users.noreply.github.com"
-          git add state docs
-          if git diff --cached --quiet; then
-            echo "no changes"; exit 0
-          fi
-          git commit -m "radar: crawl $(date -u +'%Y-%m-%d %H:%M')"
           for i in 1 2 3 4; do
-            git push && exit 0
-            git pull --rebase --autostash || true
+            python -m radar.main crawl
+            git add state docs
+            if git diff --cached --quiet; then
+              echo "crawl: no generated-state changes"
+              exit 0
+            fi
+            git commit -m "radar: crawl $(date -u +'%Y-%m-%d %H:%M')"
+            if git push; then
+              echo "crawl: published on attempt $i"
+              exit 0
+            fi
+            # A crawl rewrites jobs/docs from a point-in-time source snapshot.
+            # Never rebase that generated state.  Start over from current
+            # production so neither side's discoveries or scores are dropped.
+            echo "crawl: upstream moved; rebuilding from fresh production"
+            git fetch origin "${GITHUB_REF_NAME}"
+            git reset --hard "origin/${GITHUB_REF_NAME}"
             sleep $((i * 2))
           done
-          git push
+
+          echo "crawl: upstream kept moving; leaving production unchanged" >&2
+          exit 1
+
+      - name: Deliver idempotent tracking issues and master board
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -m radar.main deliver-alerts

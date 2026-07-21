@@ -155,7 +155,7 @@ def test_untrack_removes_in_house_entry_and_tombstones_it(tmp_state, tmp_path, m
     assert JOB["id"] in state.load("untracked.json", [])
 
 
-def test_alerts_create_one_assigned_issue_per_job(monkeypatch):
+def test_alerts_create_one_silent_issue_per_missing_job(monkeypatch):
     monkeypatch.setenv("GITHUB_TOKEN", "test-token")
     monkeypatch.setattr("radar.alerts.github_repo", lambda: "VictorJimenez3/fable-job-search")
     calls = []
@@ -171,6 +171,14 @@ def test_alerts_create_one_assigned_issue_per_job(monkeypatch):
         calls.append((url, kwargs["json"]))
         return Response()
 
+    class ExistingResponse:
+        def raise_for_status(self):
+            return None
+
+        def json(self):
+            return []
+
+    monkeypatch.setattr("radar.alerts.requests.get", lambda *args, **kwargs: ExistingResponse())
     monkeypatch.setattr("radar.alerts.requests.post", fake_post)
     jobs = [{**JOB, "id": "1" * 16, "company": "PlayStation"},
             {**JOB, "id": "2" * 16, "company": "Fanatics"}]
@@ -178,3 +186,21 @@ def test_alerts_create_one_assigned_issue_per_job(monkeypatch):
     assert len(calls) == 2
     assert all(c[1]["assignees"] == [] for c in calls)
     assert all("Job Radar alerts — week" not in c[1]["title"] for c in calls)
+
+
+def test_alerts_skip_existing_marker_even_when_issue_is_closed(monkeypatch):
+    monkeypatch.setenv("GITHUB_TOKEN", "test-token")
+    monkeypatch.setattr("radar.alerts.github_repo", lambda: "VictorJimenez3/fable-job-search")
+
+    class ExistingResponse:
+        def raise_for_status(self):
+            return None
+
+        def json(self):
+            return [{"state": "closed", "body": "tracked <!--radar:1111111111111111-->"}]
+
+    monkeypatch.setattr("radar.alerts.requests.get", lambda *args, **kwargs: ExistingResponse())
+    calls = []
+    monkeypatch.setattr("radar.alerts.requests.post", lambda *args, **kwargs: calls.append(args))
+    post_alerts([{**JOB, "id": "1" * 16, "company": "PlayStation"}])
+    assert calls == []

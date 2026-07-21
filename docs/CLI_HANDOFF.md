@@ -38,7 +38,9 @@ Before changing the radar, read these in order:
 - GitHub Actions is the production runtime; it uses Python 3.12. On Victor's
   Mac, system Python is 3.9 but the repo's `.venv` has the dependencies —
   run tests with `.venv/bin/python -m pytest tests/`. CI commits state every
-  ~30 min, so always `git pull --rebase` before pushing.
+  ~30 min, so fetch/rebase code work before pushing. Generated state is
+  deliberately different: never rebase it after a rejected push; use the
+  workflow-specific rebuild/cache-merge recovery described below.
 - **Delivery surfaces, all live:** one unassigned alert issue per new qualifying
   posting for tracking, one assigned batch issue for controlled GitHub
   push/email, an intentionally unassigned 📌 master board
