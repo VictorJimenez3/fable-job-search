@@ -150,6 +150,10 @@ Before changing the radar, read these in order:
   validated requested work during the active task and must report the exact
   production commit/PR and visible surface. Any other AI agent needs Victor's
   explicit permission before pushing, merging, or deploying.
+- **Notification cadence:** individual alert issues remain intact, while
+  `alert-batch.yml` sends up to 15 unsent roles every four hours, ranked by
+  score and recency. It records delivered IDs in
+  `state/notification_state.json`, so overflow is not lost.
 - **`CV/` is local-only and gitignored** (DECISIONS #29) — never commit it
   or anything derived from it; CV auto-tailoring is a Mac-companion feature.
 - **Deliberately deferred:** CV tailoring/CV role toggle and semantic/vector

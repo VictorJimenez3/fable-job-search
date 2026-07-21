@@ -635,6 +635,7 @@ def main() -> None:
                                         "migrate-checkbox-applied", "promote-shortlist",
                                         "marquee-backfill", "reconcile-checkboxes",
                                         "daily-best", "master-board", "web-action", "enrich",
+                                        "email-batch",
                                         "regate", "rescore", "rescrape", "repair-feedback"])
     args = ap.parse_args()
     if args.command == "crawl":
@@ -671,6 +672,10 @@ def main() -> None:
         from .board import post_daily_best
         url = post_daily_best(state.jobs())
         print(f"daily-best: {url or 'nothing posted'}")
+    elif args.command == "email-batch":
+        from .board import post_email_batch
+        url = post_email_batch(state.load("alert_history.json", []))
+        print(f"email-batch: {url or 'nothing posted'}")
     elif args.command == "master-board":
         from .board import update_master_board
         url = update_master_board(state.jobs(), state.applied())
