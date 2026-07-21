@@ -1,0 +1,48 @@
+name: alert email batches
+
+on:
+  schedule:
+    - cron: "0 */4 * * *"   # six opportunities per day; empty batches send nothing
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: radar-alert-batch
+  cancel-in-progress: false
+
+jobs:
+  batch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: claude/newgrad-job-search-system-9gbj9k
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Send alert batch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RADAR_EMAIL_BATCH_SIZE: "15"
+        run: python -m radar.main email-batch
+      - name: Commit notification state
+        run: |
+          git config user.name "job-radar[bot]"
+          git config user.email "radar@users.noreply.github.com"
+          git add state/notification_state.json
+          if git diff --cached --quiet; then
+            echo "no notification state change"; exit 0
+          fi
+          git commit -m "radar: record alert email batch"
+          for i in 1 2 3 4; do
+            git push && exit 0
+            git pull --rebase --autostash || true
+            sleep $((i * 2))
+          done
+          git push

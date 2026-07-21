@@ -17,11 +17,13 @@ from datetime import datetime, timezone
 import requests
 
 from .alerts import API, LABEL, _headers, format_line
+from . import state
 from .config import env, github_owner, github_repo, profile
 
 MASTER_TITLE = "📌 Job Radar — master board (every open role, one place)"
 MASTER_LABEL = "radar-master"
 DAILY_LABEL = "radar-daily"
+BATCH_LABEL = "radar-email-batch"
 PAGE_LIMIT = 55000  # per body/comment, under GitHub's 65536 cap
 
 MASTER_HEADER = (
@@ -159,3 +161,46 @@ def post_daily_best(jobs_state: dict, top_n: int = 10) -> str | None:
                             "assignees": [github_owner()]})
     r.raise_for_status()
     return r.json()["html_url"]
+
+
+def email_batch_rows(alert_history: list[dict], sent_ids: set[str], now: int,
+                     limit: int = 15) -> list[dict]:
+    """Choose unsent alerts: importance first, then freshness."""
+    rows = [a for a in alert_history
+            if a.get("id") not in sent_ids
+            and 0 < now - a.get("alerted_at", 0) <= 14 * 86400]
+    rows.sort(key=lambda a: (-a.get("score", 0), -a.get("alerted_at", 0)))
+    return rows[:limit]
+
+
+def post_email_batch(alert_history: list[dict], limit: int | None = None) -> str | None:
+    """Send a periodic multi-job GitHub email and remember delivered rows."""
+    token = env("GITHUB_TOKEN")
+    if not token:
+        print("email-batch: GITHUB_TOKEN not set — skipping")
+        return None
+    now = int(time.time())
+    limit = int(env("RADAR_EMAIL_BATCH_SIZE", "15")) if limit is None else limit
+    notification = state.load("notification_state.json", {})
+    sent_ids = set(notification.get("email_batch_sent_ids", []))
+    rows = email_batch_rows(alert_history, sent_ids, now, limit)
+    if not rows:
+        print("email-batch: no unsent alerts")
+        return None
+    repo = github_repo()
+    stamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    title = f"📬 Job Radar batch — {stamp} ({len(rows)} roles)"
+    from .culture import load as culture_load
+    body = (f"The radar found **{len(rows)}** new roles since the last batch. "
+            "They are ordered by score, then recency. Check a box to track one.\n\n"
+            + "\n".join(format_line(row, culture_load()) for row in rows) + "\n")
+    response = requests.post(f"{API}/repos/{repo}/issues", headers=_headers(), timeout=20,
+                             json={"title": title, "body": body,
+                                   "labels": [LABEL, BATCH_LABEL],
+                                   "assignees": [github_owner()]})
+    response.raise_for_status()
+    sent_ids.update(row["id"] for row in rows)
+    notification["email_batch_sent_ids"] = list(sent_ids)[-1000:]
+    notification["last_email_batch_at"] = now
+    state.save("notification_state.json", notification)
+    return response.json()["html_url"]

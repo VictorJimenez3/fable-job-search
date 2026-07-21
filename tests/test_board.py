@@ -6,7 +6,7 @@ import pytest
 
 from radar import state
 from radar.applied import handle_event
-from radar.board import _open_rows, _paginate
+from radar.board import _open_rows, _paginate, email_batch_rows
 from radar.alerts import format_line, post_alerts
 
 NOW = int(time.time())
@@ -40,6 +40,18 @@ def test_paginate_respects_page_limit():
     assert sum(p.count("- [ ]") for p in pages) == 100
     # order preserved across page boundaries
     assert "job 0 " in pages[0] and "job 99 " in pages[-1]
+
+
+def test_email_batch_prioritizes_score_then_recency():
+    history = [
+        {"id": "old-high", "score": 95, "alerted_at": NOW - 3600},
+        {"id": "new-high", "score": 95, "alerted_at": NOW - 60},
+        {"id": "new-low", "score": 70, "alerted_at": NOW - 10},
+        {"id": "sent", "score": 100, "alerted_at": NOW - 60},
+        {"id": "stale", "score": 100, "alerted_at": NOW - 15 * 86400},
+    ]
+    rows = email_batch_rows(history, {"sent"}, NOW, limit=3)
+    assert [r["id"] for r in rows] == ["new-high", "old-high", "new-low"]
 
 
 def test_checkbox_in_board_page_comment_tracks_job(tmp_state, tmp_path, monkeypatch):

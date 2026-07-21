@@ -769,3 +769,11 @@ may push, merge, and deploy validated requested work without an extra approval
 prompt during the active task. Other AI coding agents require Victor's explicit
 permission before any production write. This is documented workflow authority;
 GitHub and Vercel permissions remain the technical enforcement layer.
+
+## 56. Alert email batches supplement per-posting issues (2026-07-20)
+
+GitHub issue notifications remain the per-posting surface, but a six-times-
+daily batch workflow now emails up to 15 unsent alerts at a time. Batches rank
+by score and then recency, retain overflow for the next interval, and send
+nothing when there are no new alerts. The existing nightly best-of issue remains
+as a separate daily summary.

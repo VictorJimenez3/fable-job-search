@@ -75,6 +75,8 @@ every ~30 min (GitHub Actions cron)
         rewritten each crawl; checkboxes work there too)
       · 🏆 "Best of <date>" issue each evening — the daily top-10, emailed to
         you via GitHub's own notification
+      · 📬 alert batches every 4h — up to 15 unsent roles, ranked by score
+        then recency; empty intervals stay quiet
       · docs/DASHBOARD.md — everything decent, sorted
       · docs/feed.xml — RSS for instant notifications in any feed reader
 ```
