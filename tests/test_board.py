@@ -54,6 +54,28 @@ def test_email_batch_prioritizes_score_then_recency():
     assert [r["id"] for r in rows] == ["new-high", "old-high", "new-low"]
 
 
+def test_email_batch_holds_one_normal_role_until_minimum_or_timeout(tmp_state, monkeypatch):
+    from radar.board import post_email_batch
+    monkeypatch.setenv("GITHUB_TOKEN", "token")
+    monkeypatch.setenv("RADAR_EMAIL_BATCH_MIN", "3")
+    monkeypatch.setenv("RADAR_EMAIL_BATCH_MAX_WAIT_HOURS", "12")
+    monkeypatch.setattr("radar.board.requests.post", lambda *a, **k: pytest.fail("should hold"))
+    assert post_email_batch([{
+        **JOB, "alerted_at": NOW - 2 * 3600,
+    }]) is None
+
+
+def test_email_batch_sends_one_after_max_wait(tmp_state, monkeypatch):
+    from radar.board import post_email_batch
+    monkeypatch.setenv("GITHUB_TOKEN", "token")
+    monkeypatch.setenv("RADAR_EMAIL_BATCH_MIN", "3")
+    monkeypatch.setenv("RADAR_EMAIL_BATCH_MAX_WAIT_HOURS", "12")
+    response = type("Response", (), {"raise_for_status": lambda self: None,
+                                      "json": lambda self: {"html_url": "https://github.test/1"}})()
+    monkeypatch.setattr("radar.board.requests.post", lambda *a, **k: response)
+    assert post_email_batch([{**JOB, "alerted_at": NOW - 13 * 3600}]) == "https://github.test/1"
+
+
 def test_checkbox_in_board_page_comment_tracks_job(tmp_state, tmp_path, monkeypatch):
     # master-board pages live in bot comments; ticking a box there arrives as
     # an issue_comment edit and must track the job like a body checkbox
