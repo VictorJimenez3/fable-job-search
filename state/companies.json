@@ -1393,6 +1393,19 @@
   "status": "active",
   "token": "loveholidays"
  },
+ "ashby:mach": {
+  "ats": "ashby",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1784632675,
+  "last_ok": 1784632676,
+  "name": "Mach Industries",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "mach"
+ },
  "ashby:marianaminerals": {
   "ats": "ashby",
   "extra": {},
@@ -9347,7 +9360,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1784623685,
+  "last_ok": 1784632690,
   "name": "3M",
   "origin": "seed",
   "probe_attempts": 1,
@@ -9725,7 +9738,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1784623689,
+  "last_ok": 1784632694,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
@@ -11408,7 +11421,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1784623680,
+  "last_ok": 1784632686,
   "name": "Dow",
   "origin": "seed",
   "probe_attempts": 1,
@@ -11501,7 +11514,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1784623675,
+  "last_ok": 1784632680,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -11988,6 +12001,22 @@
   "status": "active",
   "token": "gevernova"
  },
+ "workday:gevernova:vernova_externalsite": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd5",
+   "site": "vernova_externalsite"
+  },
+  "failures": 0,
+  "first_seen": 1784632675,
+  "last_ok": 1784632676,
+  "name": "GE Vernova",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "gevernova"
+ },
  "workday:gi:Global_Infrastructure": {
   "ats": "workday",
   "extra": {
@@ -12028,7 +12057,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1784623681,
+  "last_ok": 1784632686,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -13314,7 +13343,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1784623676,
+  "last_ok": 1784632683,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -14739,7 +14768,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1784623681,
+  "last_ok": 1784632687,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
@@ -15693,6 +15722,23 @@
   "sector": "",
   "status": "active",
   "token": "vfc"
+ },
+ "workday:vhr-epri:epricareers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "epricareers"
+  },
+  "failures": 0,
+  "first_seen": 1784632675,
+  "invalidated_at": 1784632676,
+  "last_ok": 0,
+  "name": "EPRI",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "invalid",
+  "token": "vhr-epri"
  },
  "workday:viavisolutions:careers": {
   "ats": "workday",

@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-21 10:09 UTC** · companies polled directly: **7** (ChemE registry 9) · jobs tracked: **34 shown / 11091 stored** · new this run: **0** · alerts this run: **0**_
+_Last run: **2026-07-21 11:18 UTC** · companies polled directly: **7** (ChemE registry 9) · jobs tracked: **34 shown / 11094 stored** · new this run: **3** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -8,14 +8,14 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 |---|---|---|---|---|---|---|
 | 78 ⭐ | 5d | Solar Turbines | [Gas Turbine Products Engineering Intern](https://cat.wd5.myworkdayjobs.com/en-US/solarturbines/job/San-Diego-California/XMLNAME-2027--Gas-Turbine-Product-Engineering-Internship_R0000382293) | San Diego, CA | energy | simplify |
 | 77 ⭐ | 3d | Neuralink | [R&D Materials Engineer Intern](https://boards.greenhouse.io/neuralink/jobs/7808233003) | San Bruno, CA | other | simplify |
-| 76 ⭐ | 8h | Revise Robotics | [Engineer Intern](https://jobs.ashbyhq.com/reviserobotics/7b0426d4-cf8c-4fdf-98a8-5a0360706633/application?embed=true) | NYC | other | simplify |
-| 76 ⭐ | 8h | Fluency | [Engineer Intern](https://jobs.ashbyhq.com/fluency/2aced4e2-485b-4525-802c-763e62c91e88/application?embed=true) | SF | other | simplify |
-| 76 ⭐ | 8h | Firetiger | [Product Engineer Intern/Co-op](https://jobs.ashbyhq.com/firetiger/7acf0768-f10d-4650-bcfc-12ed6e5d7cfc/application?embed=true) | SF | other | simplify |
-| 76 ⭐ | 8h | Roam | [Engineer Intern](https://jobs.ashbyhq.com/tryroam/59b76a77-44e5-424b-a3d5-71edf091869c/application?embed=true) | SF | other | simplify |
-| 76 ⭐ | 8h | Varick Agents | [Engineer Intern](https://jobs.ashbyhq.com/varick-agents/b2df1c3b-43c7-40d4-8271-150a06f10bf2/application?embed=true) | SF | other | simplify |
-| 76 ⭐ | 8h | Gritt Robotics Inc | [Robot Learning Engineer Intern](https://jobs.ashbyhq.com/gritt/5c4737ce-f546-453b-b30d-791a121fb9fd/application?embed=true) | San Bruno, CA | other | simplify |
-| 76 ⭐ | 8h | Odin Dynamics, Inc | [Engineering Intern](https://jobs.ashbyhq.com/odin-dynamics/db6fe6ed-3517-423d-a757-3b6edea4b51d/application?embed=true) | LA | other | simplify |
-| 76 ⭐ | 8h | Fab2 | [Packaging Engineer Intern](https://jobs.ashbyhq.com/fab2/4497473d-0ce0-4e83-88c3-2afedceac622/application?embed=true) | SF | other | simplify |
+| 76 ⭐ | 10h | Revise Robotics | [Engineer Intern](https://jobs.ashbyhq.com/reviserobotics/7b0426d4-cf8c-4fdf-98a8-5a0360706633/application?embed=true) | NYC | other | simplify |
+| 76 ⭐ | 10h | Fluency | [Engineer Intern](https://jobs.ashbyhq.com/fluency/2aced4e2-485b-4525-802c-763e62c91e88/application?embed=true) | SF | other | simplify |
+| 76 ⭐ | 10h | Firetiger | [Product Engineer Intern/Co-op](https://jobs.ashbyhq.com/firetiger/7acf0768-f10d-4650-bcfc-12ed6e5d7cfc/application?embed=true) | SF | other | simplify |
+| 76 ⭐ | 10h | Roam | [Engineer Intern](https://jobs.ashbyhq.com/tryroam/59b76a77-44e5-424b-a3d5-71edf091869c/application?embed=true) | SF | other | simplify |
+| 76 ⭐ | 10h | Varick Agents | [Engineer Intern](https://jobs.ashbyhq.com/varick-agents/b2df1c3b-43c7-40d4-8271-150a06f10bf2/application?embed=true) | SF | other | simplify |
+| 76 ⭐ | 10h | Gritt Robotics Inc | [Robot Learning Engineer Intern](https://jobs.ashbyhq.com/gritt/5c4737ce-f546-453b-b30d-791a121fb9fd/application?embed=true) | San Bruno, CA | other | simplify |
+| 76 ⭐ | 10h | Odin Dynamics, Inc | [Engineering Intern](https://jobs.ashbyhq.com/odin-dynamics/db6fe6ed-3517-423d-a757-3b6edea4b51d/application?embed=true) | LA | other | simplify |
+| 76 ⭐ | 10h | Fab2 | [Packaging Engineer Intern](https://jobs.ashbyhq.com/fab2/4497473d-0ce0-4e83-88c3-2afedceac622/application?embed=true) | SF | other | simplify |
 | 76 ⭐ | 27d | Heron Power | [Electronics Design Engineer Intern](http://jobs.ashbyhq.com/heron-power/28af5d2d-bd93-4681-9422-05d17c3437eb/application) | Santa Cruz, CA | energy | simplify |
 | 75 ⭐ | 12d | Microchip Technology | [Applications Engineering Intern](https://wd5.myworkdaysite.com/recruiting/microchiphr/External/job/CA---Roseville/Intern---Applications-Engineering_R2542-26) | Roseville, CA | semiconductors | simplify |
 | 73  | 14d | General Motors | [Research and Development Intern - Research & Development](https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Warren-Michigan-United-States-of-America/XMLNAME-2026-Fall-Intern---Research---Development_JR-202613027) | Warren, MI | consumer_manufacturing | simplify |
