@@ -772,12 +772,13 @@ GitHub and Vercel permissions remain the technical enforcement layer.
 
 ## 56. Alert email batches supplement per-posting issues (2026-07-20)
 
-GitHub issue notifications remain the per-posting surface, but a six-times-
-daily batch workflow now emails up to 15 unsent alerts at a time. Batches rank
-by score and then recency, normally wait for three roles, allow a high-score
-urgent exception, and release a smaller batch after 12 hours. Overflow is
-retained for the next interval, and empty intervals stay quiet. The existing
-nightly best-of issue remains as a separate daily summary.
+Individual GitHub alert issues remain durable per-posting tracking surfaces but
+are unassigned and silent. A six-times-daily batch workflow emails up to 15
+unsent alerts at a time. Batches rank by score and then recency, normally wait
+for three roles, allow a high-score urgent exception, and release a smaller
+batch after 12 hours. Overflow is retained for the next interval, and empty
+intervals stay quiet. The existing nightly best-of issue remains a separate
+daily summary.
 
 ## 57. Backfills checkpoint and scoring maintenance is automated (2026-07-21)
 

@@ -176,5 +176,5 @@ def test_alerts_create_one_assigned_issue_per_job(monkeypatch):
             {**JOB, "id": "2" * 16, "company": "Fanatics"}]
     post_alerts(jobs)
     assert len(calls) == 2
-    assert all(c[1]["assignees"] == ["VictorJimenez3"] for c in calls)
+    assert all(c[1]["assignees"] == [] for c in calls)
     assert all("Job Radar alerts — week" not in c[1]["title"] for c in calls)

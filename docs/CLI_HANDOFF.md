@@ -39,8 +39,9 @@ Before changing the radar, read these in order:
   Mac, system Python is 3.9 but the repo's `.venv` has the dependencies —
   run tests with `.venv/bin/python -m pytest tests/`. CI commits state every
   ~30 min, so always `git pull --rebase` before pushing.
-- **Delivery surfaces, all live:** one assigned alert issue per new qualifying
-  posting (GitHub push/email), an intentionally unassigned 📌 master board
+- **Delivery surfaces, all live:** one unassigned alert issue per new qualifying
+  posting for tracking, one assigned batch issue for controlled GitHub
+  push/email, an intentionally unassigned 📌 master board
   (every open alert-worthy role, rewritten each crawl), 🏆 daily best-of issue,
   docs/DASHBOARD.md, RSS, and the platform website. Twice-daily reconcile sweep
   guarantees no checked box is ever lost.
@@ -151,9 +152,9 @@ Before changing the radar, read these in order:
   validated requested work during the active task and must report the exact
   production commit/PR and visible surface. Any other AI agent needs Victor's
   explicit permission before pushing, merging, or deploying.
-- **Notification cadence:** individual alert issues remain intact, while
-  `alert-batch.yml` sends up to 15 unsent roles every four hours, ranked by
-  score and recency. It records delivered IDs in
+- **Notification cadence:** individual alert issues are silent tracking
+  surfaces. `alert-batch.yml` sends up to 15 unsent roles every four hours,
+  ranked by score and recency, as the normal alert email. It records delivered IDs in
   `state/notification_state.json`, so overflow is not lost.
 - **Maintenance:** `score-maintenance.yml` runs every six hours and rebuilds
   every stored score from the latest production snapshot. `tests.yml` and the

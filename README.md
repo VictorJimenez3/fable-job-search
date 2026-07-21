@@ -69,14 +69,15 @@ every ~30 min (GitHub Actions cron)
 │     Optional configured-LLM re-rank + per-job application angle.
 │
 └─ 5. DELIVER
-      · one assigned 🎯 GitHub issue per new alert (push/email per posting)
+      · one silent 🎯 GitHub issue per new alert for tracking/checking boxes
       · 📌 master board issue — every open alert-worthy role in ONE place,
         deliberately unassigned/no extra notification (body + comment pages;
         rewritten each crawl; checkboxes work there too)
       · 🏆 "Best of <date>" issue each evening — the daily top-10, emailed to
         you via GitHub's own notification
       · 📬 alert batches every 4h — normally waits for 3 roles, or 12h for a
-        smaller batch; urgent scores can still send immediately
+        smaller batch; urgent scores can still send immediately; this is the
+        only normal alert email surface
       · docs/DASHBOARD.md — everything decent, sorted
       · docs/feed.xml — RSS for instant notifications in any feed reader
 ```

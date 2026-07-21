@@ -1,9 +1,8 @@
 """GitHub-issue alert channel.
 
-Why issues: assigning one issue per new alert to you triggers GitHub's native
-notification pipeline (mobile push + email) with zero extra credentials.
-The separate master board is the manual all-at-once view; it is intentionally
-not assigned and does not generate notifications.
+Why issues: one issue per new alert gives each posting a durable checkbox and
+tracking surface. Those issues are intentionally unassigned; the separate
+batch issue is the only normal alert notification surface.
 """
 from __future__ import annotations
 
@@ -12,7 +11,7 @@ from datetime import datetime, timezone
 
 import requests
 
-from .config import env, github_owner, github_repo
+from .config import env, github_repo
 
 API = "https://api.github.com"
 LABEL = "radar-alerts"
@@ -66,7 +65,7 @@ HEADER = (
 
 
 def post_alerts(new_alerts: list[dict]) -> str | None:
-    """Create one assigned issue per new alert so each alert can notify Victor."""
+    """Create silent per-posting tracking issues; email comes from batches."""
     if not new_alerts:
         return None
     token = env("GITHUB_TOKEN")
@@ -82,7 +81,7 @@ def post_alerts(new_alerts: list[dict]) -> str | None:
             f"{API}/repos/{repo}/issues", headers=_headers(), timeout=20,
             json={"title": _alert_title(job),
                   "body": HEADER + format_line(job, culture_map) + "\n",
-                  "labels": [LABEL], "assignees": [github_owner()]})
+                  "labels": [LABEL], "assignees": []})
         r.raise_for_status()
         last_url = r.json().get("html_url") or last_url
     return last_url
