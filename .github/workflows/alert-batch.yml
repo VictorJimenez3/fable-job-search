@@ -30,6 +30,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RADAR_EMAIL_BATCH_SIZE: "15"
+          RADAR_EMAIL_BATCH_MIN: "3"
+          RADAR_EMAIL_BATCH_MAX_WAIT_HOURS: "12"
+          RADAR_EMAIL_BATCH_URGENT_SCORE: "92"
         run: python -m radar.main email-batch
       - name: Commit notification state
         run: |

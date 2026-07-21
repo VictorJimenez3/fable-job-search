@@ -774,6 +774,7 @@ GitHub and Vercel permissions remain the technical enforcement layer.
 
 GitHub issue notifications remain the per-posting surface, but a six-times-
 daily batch workflow now emails up to 15 unsent alerts at a time. Batches rank
-by score and then recency, retain overflow for the next interval, and send
-nothing when there are no new alerts. The existing nightly best-of issue remains
-as a separate daily summary.
+by score and then recency, normally wait for three roles, allow a high-score
+urgent exception, and release a smaller batch after 12 hours. Overflow is
+retained for the next interval, and empty intervals stay quiet. The existing
+nightly best-of issue remains as a separate daily summary.

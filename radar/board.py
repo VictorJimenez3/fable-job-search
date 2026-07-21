@@ -183,10 +183,20 @@ def post_email_batch(alert_history: list[dict], limit: int | None = None) -> str
     limit = int(env("RADAR_EMAIL_BATCH_SIZE", "15")) if limit is None else limit
     notification = state.load("notification_state.json", {})
     sent_ids = set(notification.get("email_batch_sent_ids", []))
-    rows = email_batch_rows(alert_history, sent_ids, now, limit)
-    if not rows:
+    pending = email_batch_rows(alert_history, sent_ids, now, 1000)
+    if not pending:
         print("email-batch: no unsent alerts")
         return None
+    min_batch = int(env("RADAR_EMAIL_BATCH_MIN", "3"))
+    max_wait_hours = float(env("RADAR_EMAIL_BATCH_MAX_WAIT_HOURS", "12"))
+    urgent_score = int(env("RADAR_EMAIL_BATCH_URGENT_SCORE", "92"))
+    oldest_age = now - min(row.get("alerted_at", now) for row in pending)
+    urgent = max(row.get("score", 0) for row in pending) >= urgent_score
+    if len(pending) < min_batch and not urgent and oldest_age < max_wait_hours * 3600:
+        print(f"email-batch: holding {len(pending)} role(s); waiting for "
+              f"{min_batch} roles or {max_wait_hours:g}h")
+        return None
+    rows = pending[:limit]
     repo = github_repo()
     stamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     title = f"📬 Job Radar batch — {stamp} ({len(rows)} roles)"
