@@ -1195,46 +1195,41 @@
  },
  "abridge": {
   "ai_ds_prestige_tier": {
-   "confidence": "high",
-   "source_ids": [
-    "c506f91dd5",
-    "32f5f82d41"
-   ],
-   "value": "Tier 1: Top-conference publishing (NeurIPS/ICML/ACL/AMIA), CMU/Stanford/MIT alumni density, recognized leader in clinical AI category with deployed product at scale."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Top-tier: Clinical LLM leader with peer-reviewed publications, partnerships with major health systems, and recognized technical depth in generative AI for medicine."
   },
   "aliases": [],
-  "attempts": 19,
+  "attempts": 20,
   "business_model": {
    "confidence": "estimated",
    "source_ids": [
-    "c506f91dd5",
-    "b71d634fc5"
+    "c506f91dd5"
    ],
-   "value": "B2B SaaS: enterprise subscriptions sold to health systems per provider/seat, with implementation and integration fees. Revenue scales with clinician adoption across deployed sites."
+   "value": "B2B SaaS model selling AI-powered clinical intelligence platform to healthcare organizations, likely via enterprise contracts and per-seat or per-encounter licensing."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [
-    "32f5f82d41",
-    "03a0eeebf0"
+    "c506f91dd5"
    ],
-   "value": "Mission-driven, clinician-obsessed, intellectually honest. Low ego, high collaboration. Strong writing culture (RFCs, design docs). Diverse team (clinicians, researchers, engineers). Pittsburgh grit + Silicon Valley ambition."
+   "value": "Mission-driven, clinically grounded, engineering-led. Team includes MDs, researchers, and ML engineers. Values evidence over hype; culture shaped by patient safety constraints."
   },
   "customers": {
    "confidence": "medium",
    "source_ids": [
     "c506f91dd5"
    ],
-   "value": "Health systems, academic medical centers, and multi-specialty clinics (e.g., University of Kansas Health System, UPMC, Yale New Haven Health). Sold B2B to enterprise healthcare organizations."
+   "value": "Healthcare systems, clinicians, and healthcare organizations seeking AI-powered clinical documentation and workflow automation."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $140-165K base + $30-50K equity (4yr) + $15-25K sign-on = $185-240K total Year 1. Top of market for Pittsburgh; competitive with Bay Area new-grad offers."
+   "value": "Estimated: $170k-$220k base + equity (0.05-0.15%), signing bonus $25-50k. Total comp ~$200k-$280k. Premium for ML/PhD backgrounds."
   },
   "evidence_sha": "cc2622d0930be8ad",
-  "generated_at": 1784630048,
+  "generated_at": 1784677856,
   "generator": {
    "endpoint": "nvidia:nemotron",
    "model": "nvidia/nemotron-3-ultra-550b-a55b",
@@ -1243,55 +1238,51 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "c506f91dd5",
-    "b71d634fc5"
+    "c506f91dd5"
    ],
-   "value": "Healthcare AI / Clinical NLP / Ambient Clinical Intelligence"
+   "value": "Healthcare AI / Clinical NLP / Health Tech"
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Expect deep technical loops: ML system design (real-time ASR/LLM pipelines), clinical NLP evaluation, production ML/MLOps, and domain-specific challenges (hallucination control, HIPAA, EHR integration). Behavioral emphasis on clinician empathy, cross-functional collaboration, and shipping in regulated environments. Prepare for a take-home or live coding involving audio/text processing."
+   "value": "Expect deep technical screening on LLM fine-tuning, clinical NLP evaluation metrics, and healthcare data privacy (HIPAA/FHIR). Prepare for system design around real-time clinical workflows and model safety/guardrails. Behavioral rounds will probe mission alignment and ability to ship in regulated environments without heroics."
   },
-  "last_attempt_at": 1784677761,
+  "last_attempt_at": 1784677856,
   "last_evidence_at": 1784583416,
   "locations": {
    "confidence": "medium",
    "source_ids": [
-    "32f5f82d41",
-    "03a0eeebf0"
+    "32f5f82d41"
    ],
-   "value": "Pittsburgh, PA (HQ); San Francisco Bay Area; remote-friendly across US. Engineering hub in Pittsburgh with strong Carnegie Mellon ties."
+   "value": "Headquarters in Pittsburgh, PA with possible remote/hybrid arrangements; LinkedIn presence suggests US-based team."
   },
   "mission": {
    "confidence": "medium",
    "source_ids": [
-    "03a0eeebf0",
     "c506f91dd5"
    ],
-   "value": "To help clinicians focus on patients instead of paperwork by using AI to transform clinical conversations into structured documentation and actionable insights."
+   "value": "To build patient-centered clinical intelligence that connects care delivery, payment, and evidence-based treatment through AI."
   },
   "name": "Abridge",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fast but sustainable: 2-week sprints, quarterly planning, explicit 'no weekends' norm for most teams. Research-to-production cycle ~3-6 months. On-call rotation for platform engineers (light)."
+   "value": "Estimated: Fast-paced but sustainable; growth-stage velocity with clinical rigor gates. Not a 'move fast and break things' culture due to patient safety requirements."
   },
   "products": {
    "confidence": "medium",
    "source_ids": [
-    "b71d634fc5",
     "c506f91dd5"
    ],
-   "value": "Abridge Platform for Clinicians: ambient AI scribe that integrates with EHRs (Epic, etc.) to generate real-time clinical notes, orders, and after-visit summaries. Also offers patient-facing summaries and enterprise analytics."
+   "value": "Clinical intelligence platform leveraging generative AI for clinical documentation, care delivery integration, payment alignment, and evidence-based treatment support."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15 days PTO + 10 company holidays + unlimited sick/mental health days. Winter shutdown (Dec 24-Jan 1). Parental leave 16 weeks paid."
+   "value": "Estimated: 15-20 days PTO + 10-12 holidays; unlimited policy common in similar-stage health tech but actual usage varies."
   },
-  "refresh_after": 1789814048,
+  "refresh_after": 1789861856,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -1301,15 +1292,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Yes: Annual winter shutdown (typically Dec 24 - Jan 1). Summer 'recharge' week in July (varies by year)."
+   "value": "Estimated: No guaranteed company-wide shutdowns publicly documented; some health tech firms observe winter break but not standardized."
   },
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "32f5f82d41",
-    "c506f91dd5"
+    "32f5f82d41"
    ],
-   "value": "Series C startup (~$150M+ raised, $850M valuation as of 2024). ~300-500 employees. Headquartered in Pittsburgh, PA with remote/hybrid options."
+   "value": "Estimated: Growth-stage startup (Series B/C), approximately 200-500 employees based on healthcare AI company trajectory."
   },
   "sources": [
    {
@@ -1345,29 +1335,24 @@
   ],
   "sponsorship_context": {
    "confidence": "estimated",
-   "source_ids": [
-    "32f5f82d41"
-   ],
-   "value": "H-1B and Green Card sponsorship available for qualifying roles. Active STEM OPT employer. Cap-exempt status via university research partnerships (CMU)."
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and green cards for specialized AI/ML roles given talent competition in healthcare AI; no public policy details found."
   },
   "status": "ready",
   "summary": {
    "confidence": "medium",
    "source_ids": [
-    "c506f91dd5",
-    "b71d634fc5",
-    "03a0eeebf0"
+    "c506f91dd5"
    ],
-   "value": "Abridge is an AI-powered clinical documentation platform that uses ambient listening technology to automatically generate structured clinical notes from patient-clinician conversations. The company sells its platform to health systems and clinics to reduce physician documentation burden and improve care delivery."
+   "value": "Abridge develops a patient-centered clinical intelligence platform that uses AI to connect care delivery, payment systems, and evidence-based treatment. The platform aims to improve clinical documentation and healthcare workflows through generative AI."
   },
-  "synthesized_evidence_sha": "1273188e70d6b8cd",
+  "synthesized_evidence_sha": "cc2622d0930be8ad",
   "technical_work": {
    "confidence": "medium",
    "source_ids": [
-    "c506f91dd5",
-    "b71d634fc5"
+    "c506f91dd5"
    ],
-   "value": "Core: speech recognition, NLP/LLM fine-tuning for clinical domain, real-time audio processing, EHR integration (FHIR/HL7), scalable cloud infrastructure. Research-heavy: publishes at top ML conferences (NeurIPS, ICML, AMIA)."
+   "value": "Generative AI for clinical NLP, large language model fine-tuning for medical documentation, healthcare data integration, HIPAA-compliant ML infrastructure, real-time clinical decision support systems."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583416,
@@ -1375,12 +1360,12 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Abridge sits at the intersection of elite AI research (top-tier publications, CMU lineage) and high-impact clinical deployment across major health systems. It offers new-grad compensation competitive with FAANG ($170-220K+ total) while maintaining a mission-driven culture with explicit work-life boundaries—rare in healthcare AI. The technical bar is high (speech + LLMs + regulated deployment), accelerating growth without the burnout typical of hyperscaling startups."
+   "value": "Abridge sits at the intersection of elite AI research (clinical LLMs) and high-impact healthcare mission, offering new-grads top-tier technical prestige without the burnout culture of big tech. The clinical AI domain provides publishing-worthy work and direct patient impact, while the growth-stage size means ownership scope and faster iteration than bureaucratic incumbents."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 4.2/5. Culture emphasizes sustainable pace; leadership publicly advocates for clinician and employee wellbeing. Typical weeks 40-45h; crunch rare and compensated."
+   "value": "Estimated: 4/5. Healthcare AI typically respects boundaries better than consumer AI; regulated environment enforces process over heroics. No public data on guaranteed shutdowns."
   }
  },
  "accenture": {
@@ -1848,6 +1833,94 @@
   "web_research_status": "sources captured",
   "web_researched_at": 1784673987,
   "web_search_url": "https://duckduckgo.com/?q=Acorns+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
+ "acrisure": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "08f5422489331fef",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784677860,
+  "name": "Acrisure",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "4542c578e8",
+    "kind": "company_web",
+    "publisher": "Acrisure",
+    "retrieved_at": 1784677860,
+    "title": "Acrisure public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=34197583d289bc8fbee014ff7c9137ad73bb3caf90863c82de8a714e48581d58JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9jdXN0b21lci5hY3Jpc3VyZS5jb20vcG9ydGFs&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "0d574b77fa",
+    "kind": "company_web",
+    "publisher": "Acrisure",
+    "retrieved_at": 1784677860,
+    "title": "Acrisure public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=25d88951f7ed3cccae35bce9468232ecee8b868776525beed7d9d48b1aacb02aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cuYWNyaXN1cmUuY29tL2Fib3V0LWFjcmlzdXJl&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "9481e7fa17",
+    "kind": "company_web",
+    "publisher": "Acrisure",
+    "retrieved_at": 1784677860,
+    "title": "Acrisure public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=9a488cf7cbd49735e2cddfd0633f865533258fe6d11da458b4708b453dacd2faJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cuYWNyaXN1cmUuY29tLw&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784677860,
+  "web_search_url": "https://duckduckgo.com/?q=Acrisure+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
@@ -7764,7 +7837,7 @@
    "value": "Estimated: Tier 2/3. While the Applied AI Engineer title suggests specialized technical work, there is insufficient public data in the sources to confirm top-tier elite prestige."
   },
   "aliases": [],
-  "attempts": 20,
+  "attempts": 21,
   "business_model": {
    "confidence": "low",
    "source_ids": [
@@ -7815,7 +7888,7 @@
    ],
    "value": "Ask specific questions about their day-to-day pace to confirm it favors fast innovation over slow bureaucracy. Verify their work-life balance claims by asking about expected hours, on-call rotations, and guaranteed shutdowns to ensure they respect personal time and accelerate learning without burnout."
   },
-  "last_attempt_at": 1784677761,
+  "last_attempt_at": 1784677856,
   "last_evidence_at": 1784583373,
   "locations": {
    "confidence": "low",
@@ -8208,6 +8281,94 @@
   "web_research_status": "sources captured",
   "web_researched_at": 1784674897,
   "web_search_url": "https://duckduckgo.com/?q=Analysis+Group+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
+ "anchor general insurance agency": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "4e0503636012e09a",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fintech / technology (estimated)"
+  },
+  "last_evidence_at": 1784677860,
+  "name": "Anchor General Insurance Agency",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "f3c36d7be5",
+    "kind": "company_web",
+    "publisher": "Anchor General Insurance Agency",
+    "retrieved_at": 1784677860,
+    "title": "Anchor General Insurance Agency public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=1c7c5eb91531f5e6e45aa6d40ce0c8737c83e65fd72a87f57c93ace2bed62b2eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9uanByb3BlcnR5dGF4cmVsaWVmLmNvbS9hbmNob3ItcHJvZ3JhbS5odG1s&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "1f2fe50149",
+    "kind": "company_web",
+    "publisher": "Anchor General Insurance Agency",
+    "retrieved_at": 1784677860,
+    "title": "Anchor General Insurance Agency public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=973b6055d16879faf7d25357a25e4e959ef5b14af5e05c956bbfe8e3957283d8JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9uai5nb3YvdHJlYXN1cnkvdGF4YXRpb24vYW5jaG9yL2VsaWdpYmlsaXR5LnNodG1s&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "15059fb377",
+    "kind": "company_web",
+    "publisher": "Anchor General Insurance Agency",
+    "retrieved_at": 1784677860,
+    "title": "Anchor General Insurance Agency public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=4ce08846d33e34be6ac07cfa8c57346f6b5bef830268e8f05a111af797d4cc3fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9uai5nb3YvdHJlYXN1cnkvdGF4YXRpb24vYW5jaG9yL2luZGV4LnNodG1s&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784677860,
+  "web_search_url": "https://duckduckgo.com/?q=Anchor+General+Insurance+Agency+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
@@ -9425,6 +9586,94 @@
   "web_research_status": "sources captured",
   "web_researched_at": 1784676782,
   "web_search_url": "https://duckduckgo.com/?q=Aon+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
+ "apex satellite platforms": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "f1fffca76b360174",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784677861,
+  "name": "Apex - Satellite Platforms",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "b8fe06d5a4",
+    "kind": "company_web",
+    "publisher": "Apex - Satellite Platforms",
+    "retrieved_at": 1784677861,
+    "title": "Apex - Satellite Platforms public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=d1fe81f8f860002de08105bfc097ed312436b6a3410460400192cbad770992a2JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9hcGV4dHJhZGVyZnVuZGluZy5jb20v&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "4927e30ae4",
+    "kind": "company_web",
+    "publisher": "Apex - Satellite Platforms",
+    "retrieved_at": 1784677861,
+    "title": "Apex - Satellite Platforms public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=c632a5bd07d8bded87d694092b37584a6baa91ca23cceabd2117e754a446c935JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQXBleF8oMjAyNl9maWxtKQ&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "81619c785b",
+    "kind": "company_web",
+    "publisher": "Apex - Satellite Platforms",
+    "retrieved_at": 1784677861,
+    "title": "Apex - Satellite Platforms public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=259879b9a70a458f6eec454eb3b643776dd530c34e45322a5473f735094545a0JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cuYXBleHZzLmNvbS9BcGV4VUkvZGVmYXVsdC5hc3B4&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784677861,
+  "web_search_url": "https://duckduckgo.com/?q=Apex+-+Satellite+Platforms+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
@@ -33554,7 +33803,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -33572,7 +33821,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784677761,
+  "last_attempt_at": 1784677856,
   "last_evidence_at": 1784677181,
   "name": "Cox",
   "pace_of_work": {
@@ -39929,6 +40178,94 @@
    "value": "3/5 (estimated)"
   }
  },
+ "doximity": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "db41ad3c19294f38",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Healthtech / technology (estimated)"
+  },
+  "last_evidence_at": 1784677853,
+  "name": "Doximity",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "ebcde74b08",
+    "kind": "company_web",
+    "publisher": "Doximity",
+    "retrieved_at": 1784677853,
+    "title": "Doximity public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=c4971e004132011f863c420b22b4da6f41721c22175f4694f06e7b0163402ac3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cuemlsbG93LmNvbS9kb3VnbGFzLWNvdW50eS1vci9ob3VzZXMvP21zb2NraWQ9MDFlYzI0OGY1YWQxNjgwOTBmODkzMzEyNWIxZjY5M2E&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "57beafdd08",
+    "kind": "company_web",
+    "publisher": "Doximity",
+    "retrieved_at": 1784677853,
+    "title": "Doximity public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=7ee22c95914a9e4de5de88e435586722bfa90d3f79c0c9362cc892082f523e9bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cuemlsbG93LmNvbS9kb3VnbGFzLWNvdW50eS1vci9uZXdlc3QvP21zb2NraWQ9MDFlYzI0OGY1YWQxNjgwOTBmODkzMzEyNWIxZjY5M2E&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "041f50bde1",
+    "kind": "company_web",
+    "publisher": "Doximity",
+    "retrieved_at": 1784677853,
+    "title": "Doximity public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=14a64a98a8e6c8478a5117cf621802d97b4c48f807190d08f1c71eaf7f62a486JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cuemlsbG93LmNvbS9kb3VnbGFzLWNvdW50eS1vci8_bXNvY2tpZD0wMWVjMjQ4ZjVhZDE2ODA5MGY4OTMzMTI1YjFmNjkzYQ&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784677853,
+  "web_search_url": "https://duckduckgo.com/?q=Doximity+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
  "draftkings": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
@@ -41537,6 +41874,94 @@
   "web_research_status": "sources captured",
   "web_researched_at": 1784655990,
   "web_search_url": "https://duckduckgo.com/?q=Edgehog+Trading+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
+ "eight sleep": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "4bb4fc64a12de089",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Healthtech / technology (estimated)"
+  },
+  "last_evidence_at": 1784677852,
+  "name": "Eight Sleep",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "1f2f099649",
+    "kind": "company_web",
+    "publisher": "Eight Sleep",
+    "retrieved_at": 1784677852,
+    "title": "Eight Sleep public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=c599376c3dc2a291f15e44c8bddda91d93e0bb27f8fef7900599b42ec167368fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cubmV3d29ybGRlbmN5Y2xvcGVkaWEub3JnL2VudHJ5LzhfKG51bWJlcik&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "1d376508e2",
+    "kind": "company_web",
+    "publisher": "Eight Sleep",
+    "retrieved_at": 1784677852,
+    "title": "Eight Sleep public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=2cafc05e0ccccef77f2e2331c23375e3a35c30975769059e79129dab258d0b33JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9zaW1wbGUubS53aWtpcGVkaWEub3JnL3dpa2kvOF8obnVtYmVyKQ&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "2e05a7cebd",
+    "kind": "company_web",
+    "publisher": "Eight Sleep",
+    "retrieved_at": 1784677852,
+    "title": "Eight Sleep public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=9f6e2ea9817776515cae2ae527bd3a1b86acce816254735180d6ddc20e5f572bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS84&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784677852,
+  "web_search_url": "https://duckduckgo.com/?q=Eight+Sleep+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
@@ -50916,6 +51341,104 @@
    "value": "3/5 (estimated)"
   }
  },
+ "garner health": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "69d69658d4d8ca4a",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Healthtech / technology (estimated)"
+  },
+  "last_evidence_at": 1784677862,
+  "name": "Garner Health",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "536936aa58",
+    "kind": "company_web",
+    "publisher": "Garner Health",
+    "retrieved_at": 1784677862,
+    "title": "Garner Health public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=fce2ea7eaf088e4f1493735e79bb150dcf4d3673eadb6bb13c1d2afbb43e4ec0JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cuZ2FybmVyZ3VpZGUuY29tL25vbi1ocmEv&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "c2269eb874",
+    "kind": "company_web",
+    "publisher": "Garner Health",
+    "retrieved_at": 1784677862,
+    "title": "Garner Health public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=2106e8ed5f77fd758a90a46447aaf9308a17027ca5a07946708598cb4388db22JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9nYXJuZXJoZWFsdGguY29tLw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "a4683a9199",
+    "kind": "company_web",
+    "publisher": "Garner Health",
+    "retrieved_at": 1784677862,
+    "title": "Garner Health public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=ab43c5840e581fac9c39affb1aaddffdf7cc3800d1f77874a6ba50a64c64397eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9hcHAuZ2V0Z2FybmVyLmNvbS9zaWduLWlu&ntb=1"
+   },
+   {
+    "content_sha": "59bda2899fd8987f",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027.",
+    "id": "17f8c9c419",
+    "kind": "discovery_feed",
+    "publisher": "Garner Health",
+    "retrieved_at": 1784677862,
+    "title": "Discovery source for Garner Health",
+    "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784677862,
+  "web_search_url": "https://duckduckgo.com/?q=Garner+Health+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
  "gateway services inc": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
@@ -52433,7 +52956,7 @@
    "value": "Tier 2 (Elite Biotech AI). While not a pure big-tech giant like Google or OpenAI, the platform's novelty and massive funding make it highly prestigious for deep-tech AI applied to the life sciences, acting as a strong resume-builder in a rapidly growing sector."
   },
   "aliases": [],
-  "attempts": 18,
+  "attempts": 19,
   "business_model": {
    "confidence": "low",
    "source_ids": [
@@ -52488,7 +53011,7 @@
    ],
    "value": "Focus on evaluating your ability to apply advanced machine learning concepts to complex, noisy biological datasets, as well as your software engineering best practices for scalable data pipelines. Candidates should ask targeted questions regarding the speed of the engineering lifecycle, the balance between rapid tech culture and traditional biological validation constraints, and the reality of their work-life balance and compensation structure for new graduate data scientists."
   },
-  "last_attempt_at": 1784677761,
+  "last_attempt_at": 1784677856,
   "last_evidence_at": 1784631080,
   "locations": {
    "confidence": "low",
@@ -54853,6 +55376,94 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
+ "google deepmind": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "ef676b16d06f2eae",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Ai Lab / technology (estimated)"
+  },
+  "last_evidence_at": 1784677853,
+  "name": "Google DeepMind",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "28f553439b",
+    "kind": "company_web",
+    "publisher": "Google DeepMind",
+    "retrieved_at": 1784677853,
+    "title": "Google DeepMind public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=03b30017e37c015f8686b516177a9f0ac7f965ca6e3cc8326672b6d3374f1549JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9ibG9nLmdvb2dsZS8&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "c355b44c6d",
+    "kind": "company_web",
+    "publisher": "Google DeepMind",
+    "retrieved_at": 1784677853,
+    "title": "Google DeepMind public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=1ece0dadccc7601136b9aa841956e21bec2d86460404c4563d530174eb10fef6JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9hYm91dC5nb29nbGUvcHJvZHVjdHMv&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "ba4e434134",
+    "kind": "company_web",
+    "publisher": "Google DeepMind",
+    "retrieved_at": 1784677853,
+    "title": "Google DeepMind public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=14006ec2bd51b6c320160204cd9c6351953a7367995397fe8d7277d6021eaa6bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784677853,
+  "web_search_url": "https://duckduckgo.com/?q=Google+DeepMind+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
@@ -61961,6 +62572,94 @@
    "value": "3/5 (estimated)"
   }
  },
+ "icarus": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "04c59ca31f787b21",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784677853,
+  "name": "Icarus",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "716d28d1cb",
+    "kind": "company_web",
+    "publisher": "Icarus",
+    "retrieved_at": 1784677853,
+    "title": "Icarus public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=603b32e14ffd64a6e9efcb1934149a2f86d94df8f00a712a569e84ed09c1dc5eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9zdG9yZS5zdGVhbXBvd2VyZWQuY29tL2FwcC8xMTQ5NDYwL0ljYXJ1cy8&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "4e6fbd0574",
+    "kind": "company_web",
+    "publisher": "Icarus",
+    "retrieved_at": 1784677853,
+    "title": "Icarus public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=a8532b993dc9c0140e91ab4d986a2fda6cf3d6da7d1f0e3d5079b04a8d051b00JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cuZ3JlZWtteXRob2xvZ3kuY29tL015dGhzL01vcnRhbHMvSWNhcnVzL2ljYXJ1cy5odG1s&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "fd3e530734",
+    "kind": "company_web",
+    "publisher": "Icarus",
+    "retrieved_at": 1784677853,
+    "title": "Icarus public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=fd2c5d669aa437ce626e44aedbc8b513190b0423c080d5d9cbf6f6870dd172e3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvSWNhcnVz&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784677853,
+  "web_search_url": "https://duckduckgo.com/?q=Icarus+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
  "icf": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
@@ -63528,12 +64227,82 @@
   }
  },
  "included health": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
   "aliases": [],
-  "evidence_sha": "5dbb9bdb9c1d9901",
-  "last_evidence_at": 1784650713,
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "4b882a1838efbbf9",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Healthtech / technology (estimated)"
+  },
+  "last_evidence_at": 1784677853,
   "name": "Included Health",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "75b976e7f1",
+    "kind": "company_web",
+    "publisher": "Included Health",
+    "retrieved_at": 1784677853,
+    "title": "Included Health public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=e775d06d1dc198b4e006dfc774552fce0a8f6d068ecfdc3d7f6785b524d0e9ecJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2luY2x1ZGU&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "4912a7e435",
+    "kind": "company_web",
+    "publisher": "Included Health",
+    "retrieved_at": 1784677853,
+    "title": "Included Health public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=1ee79d12ae4012522d0704ca5851e05296acf3ca10fb8b9f821807fc79fee250JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9kaWN0aW9uYXJ5LmNhbWJyaWRnZS5vcmcvZGljdGlvbmFyeS9lbmdsaXNoL2luY2x1ZGVk&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "fcaf287bd6",
+    "kind": "company_web",
+    "publisher": "Included Health",
+    "retrieved_at": 1784677853,
+    "title": "Included Health public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=3848edf5b1d03bf015ed73e29e6877fdcd15e1943b9efcd6326870df85c1121cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS90aGVzYXVydXMvaW5jbHVkZWQ&ntb=1"
+   },
    {
     "content_sha": "9a4454743d5a4b6a",
     "excerpt": "If you thrive in a collaborative, fast-paced environment and enjoy solving real-world technical problems that make a difference in people’s lives — we’d love to meet you. You’ll collaborate closely with Client Launch Managers, Product, and Engineering to implement new services, resolve complex issues, and ensure a seamless experience for our customers and members. At Included Health, we’re passionate about transforming healthcare through innovation and empathy.",
@@ -63545,7 +64314,15 @@
     "url": "https://jobs.lever.co/includedhealth/9614ad28-0a65-4e27-abb2-1fafbdab06f9"
    }
   ],
-  "status": "evidence_only"
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784677853,
+  "web_search_url": "https://duckduckgo.com/?q=Included+Health+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
  },
  "infojini": {
   "ai_ds_prestige_tier": {
@@ -63717,6 +64494,94 @@
   "web_research_status": "sources captured",
   "web_researched_at": 1784589346,
   "web_search_url": "https://duckduckgo.com/?q=Innodata+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
+ "innoflight": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "c1808e24ce0b2c8a",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784677859,
+  "name": "Innoflight",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "db2ba56c4e",
+    "kind": "company_web",
+    "publisher": "Innoflight",
+    "retrieved_at": 1784677859,
+    "title": "Innoflight public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=9dd986f2a5d8d9c44f914d10aa8dd25cda50c32f9742a4e8162acb286493b64fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2NvbXBhbnkvaW5ub2ZsaWdodC1sbGM&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "2fc8d99a94",
+    "kind": "company_web",
+    "publisher": "Innoflight",
+    "retrieved_at": 1784677859,
+    "title": "Innoflight public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=9f9109e519b9f70b85b97142e13b54e6a159265ff04d30d53cbc1ceb75cc35cfJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9pbm5vZmxpZ2h0LmNvbS9hYm91dC11cy8&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "bd5d3ac138",
+    "kind": "company_web",
+    "publisher": "Innoflight",
+    "retrieved_at": 1784677859,
+    "title": "Innoflight public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=8bab163d69ba1caad32a84d33a5d5c56b45fb299a3c27b28e4b831efc7a8275cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9pbm5vZmxpZ2h0LmNvbS8&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784677859,
+  "web_search_url": "https://duckduckgo.com/?q=Innoflight+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
@@ -74144,6 +75009,104 @@
    "value": "3/5 (estimated)"
   }
  },
+ "linkedin": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "86bc127c530e1c4e",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Big Tech / technology (estimated)"
+  },
+  "last_evidence_at": 1784677851,
+  "name": "LinkedIn",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "6d4fba1dd4",
+    "kind": "company_web",
+    "publisher": "LinkedIn",
+    "retrieved_at": 1784677851,
+    "title": "LinkedIn public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=0216a0e759654c84e6cc16ece6733b418e8a0581bf0c75ba87eb27ea142c04b5JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL0xpbmtlZEluLw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "9ff16d6c24",
+    "kind": "company_web",
+    "publisher": "LinkedIn",
+    "retrieved_at": 1784677851,
+    "title": "LinkedIn public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=c6b5a04ce049bfced1e58397e5cef8b14b5fd4c865a690222f8a2c03e7533d36JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cubGlua2VkaW4uY29tLw&ntb=1"
+   },
+   {
+    "content_sha": "638b6293e0aefdb9",
+    "excerpt": "SmartRecruiters Job Search SmartRecruiters Jobs Powered by",
+    "id": "f16eec2a6f",
+    "kind": "company_careers_or_benefits",
+    "publisher": "LinkedIn",
+    "retrieved_at": 1784677851,
+    "title": "SmartRecruiters Job Search",
+    "url": "https://jobs.smartrecruiters.com/"
+   },
+   {
+    "content_sha": "59bda2899fd8987f",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027.",
+    "id": "17f8c9c419",
+    "kind": "discovery_feed",
+    "publisher": "LinkedIn",
+    "retrieved_at": 1784677851,
+    "title": "Discovery source for LinkedIn",
+    "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784677851,
+  "web_search_url": "https://duckduckgo.com/?q=LinkedIn+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
  "liveflow": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
@@ -76136,6 +77099,94 @@
   "web_research_status": "sources captured",
   "web_researched_at": 1784674192,
   "web_search_url": "https://duckduckgo.com/?q=Magnatech+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
+ "magnet forensics": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "233b95de3a8571d0",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784677856,
+  "name": "Magnet Forensics",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "f4baef3977",
+    "kind": "company_web",
+    "publisher": "Magnet Forensics",
+    "retrieved_at": 1784677856,
+    "title": "Magnet Forensics public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=0fc2806a62b4b673ef798927de1115030ec750c3b9fe17090977490df5fbe504JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9zY2llbmNlbm90ZXMub3JnL21hZ25ldHMtZGVmaW5pdGlvbi10eXBlcy1wcm9wZXJ0aWVzLWFuZC11c2VzLw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "0ec5ce23a2",
+    "kind": "company_web",
+    "publisher": "Magnet Forensics",
+    "retrieved_at": 1784677856,
+    "title": "Magnet Forensics public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=448750fe94285bf978c5dd1735b066c80cf30c0ef775a282acc7cc80203f6eb5JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cuYW1hem9uLmNvbS9tYWduZXRzL3M_az1tYWduZXRz&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "9babb99ec3",
+    "kind": "company_web",
+    "publisher": "Magnet Forensics",
+    "retrieved_at": 1784677856,
+    "title": "Magnet Forensics public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=7f73714306ea7af0c5dbfa6df758ba3edca90c2b51ff4ed52cccb9300abcb9e3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9NYWduZXQ&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784677856,
+  "web_search_url": "https://duckduckgo.com/?q=Magnet+Forensics+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
@@ -78856,128 +79907,95 @@
  },
  "mayo clinic": {
   "ai_ds_prestige_tier": {
-   "confidence": "high",
-   "source_ids": [
-    "b6c41d3f1c"
-   ],
-   "value": "High prestige due to institution reputation, though not typically considered Tier 1 for pure AI/DS speed compared to top tech firms [b6c41d3f1c]."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Top-tier (healthcare AI). Consistently publishes at NeurIPS, ICML, AMIA, Nature Medicine. Partners with Google Health, NVIDIA, NIH. Recognized as a leader in clinical AI translation."
   },
   "aliases": [],
-  "attempts": 19,
+  "attempts": 20,
   "business_model": {
-   "confidence": "high",
-   "source_ids": [
-    "b6c41d3f1c"
-   ],
-   "value": "Nonprofit healthcare system generating revenue through clinical patient services and research grants [b6c41d3f1c]."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Nonprofit integrated healthcare system. Revenue comes from patient care services, research grants, contracts, and educational programs. All surplus is reinvested into patient care, research, and education. No shareholders."
   },
   "culture_vibe": {
-   "confidence": "high",
-   "source_ids": [
-    "b6c41d3f1c"
-   ],
-   "value": "Mission-driven, elite medical institution culture prioritizing patient care and respect over tech-bro hustle [b6c41d3f1c]."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Collaborative, mission-obsessed, academically rigorous. Physicians and scientists co-lead; hierarchy is flat in research teams. Midwestern humility (Rochester) blended with global excellence. Low politics, high psychological safety. Diversity initiatives active but progress ongoing."
   },
   "customers": {
-   "confidence": "high",
-   "source_ids": [
-    "61674651e7",
-    "6844eddede"
-   ],
-   "value": "Patients seeking world-class medical care and clinical trial participants [61674651e7, 6844eddede]."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Patients seeking complex and routine care; referring physicians and health systems; medical students and trainees; research sponsors (NIH, industry); insurance partners; employers offering Mayo Clinic benefits."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "high",
-   "source_ids": [
-    "b6c41d3f1c"
-   ],
-   "value": "Estimated: $88K - $124K base salary. Based on public data for entry-level IT/Cloud roles [b6c41d3f1c]."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: $110k-$135k base + 5-10% annual bonus + comprehensive benefits (pension, 403b match, tuition remission). Total comp ~$125k-$150k. Below FAANG but competitive for nonprofit healthcare; Rochester COL ~40% lower than Bay Area."
   },
   "evidence_sha": "822d0ae4b1b3521e",
-  "generated_at": 1784669629,
+  "generated_at": 1784677856,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "high",
-   "source_ids": [
-    "b6c41d3f1c"
-   ],
-   "value": "Healthcare / Hospitals & Health Care [b6c41d3f1c]."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Healthcare / Academic Medical Center / Nonprofit Biomedical Research"
   },
   "interview_focus": {
-   "confidence": "high",
-   "source_ids": [
-    "b6c41d3f1c"
-   ],
-   "value": "Probe deeply into their actual AI deployment speed versus legacy healthcare constraints, the true innovation pace of their data science teams, and whether the guaranteed work-life balance and sane healthcare hours compensate for potentially lower new-grad tech pay and slower technical growth compared to FAANG."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect rigorous technical assessment (ML fundamentals, coding, system design) plus domain-relevant questions: handling messy clinical data, model interpretability for clinicians, regulatory/privacy constraints (HIPAA, FDA), and collaboration with physicians. Behavioral interviews emphasize patient-first mindset, cross-functional communication, and ethical AI. Prepare a concrete example of translating a technical project into real-world impact."
   },
-  "last_attempt_at": 1784677761,
+  "last_attempt_at": 1784677856,
   "last_evidence_at": 1784583329,
   "locations": {
-   "confidence": "high",
-   "source_ids": [
-    "58644e4628",
-    "b6c41d3f1c"
-   ],
-   "value": "Multiple physical locations including Rochester, MN and Eau Claire, WI, with hybrid/remote work flexibility available for tech roles [58644e4628, b6c41d3f1c]."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary campuses: Rochester MN (HQ), Phoenix/Scottsdale AZ, Jacksonville FL. Mayo Clinic Health System: 70+ locations across MN, WI, IA. Remote/hybrid options exist for many data science and AI roles."
   },
   "mission": {
-   "confidence": "high",
-   "source_ids": [
-    "b6c41d3f1c"
-   ],
-   "value": "Focused on integrated health care, education, and research to provide top-ranked patient care [b6c41d3f1c]."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To inspire hope and contribute to health and well-being by providing the best care to every patient through integrated clinical practice, education, and research."
   },
   "name": "Mayo Clinic",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [
-    "b6c41d3f1c"
-   ],
-   "value": "Estimated: Slow to moderate. Mission-driven and patient-centric, meaning heavy compliance, bureaucracy, and caution over rapid tech iteration."
+   "source_ids": [],
+   "value": "Measured and deliberate. Clinical validation, regulatory review, and physician collaboration slow deployment vs. pure tech, but reduce rework and increase impact certainty. Sprint cycles exist but are buffered by clinical governance."
   },
   "products": {
-   "confidence": "high",
-   "source_ids": [
-    "b6c41d3f1c",
-    "6844eddede"
-   ],
-   "value": "Integrated clinical healthcare services, patient online portals, medical research, and healthcare education [b6c41d3f1c, 6844eddede]."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Clinical care across all major specialties; biomedical research; medical education (medical school, residencies, fellowships); health information technology platforms; AI-driven diagnostic tools; telemedicine services; laboratory and pathology services; health plan (Mayo Clinic Health System)."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "b6c41d3f1c"
-   ],
-   "value": "Estimated: 20-25 days. Largelegacy non-profits typically offer strong vacation packages, but exact policies are not public."
+   "source_ids": [],
+   "value": "Estimated: 15-20 days PTO + 10-12 paid holidays + 2-3 personal days. Increases with tenure. Separate sick leave and CME/research time for applicable roles."
   },
-  "refresh_after": 1789853629,
+  "refresh_after": 1789861856,
   "rotational_program_name": {
-   "confidence": "high",
-   "source_ids": [
-    "b6c41d3f1c"
-   ],
-   "value": "None found in research."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "b6c41d3f1c"
-   ],
-   "value": "Estimated: No company-wide tech shutdowns. Standard healthcare operations run 24/7."
+   "source_ids": [],
+   "value": "Estimated: Organization-wide shutdown between Christmas and New Year (~5 business days). Some departments observe summer half-days. No guaranteed monthly/quarterly shutdowns."
   },
   "size_stage": {
-   "confidence": "high",
-   "source_ids": [
-    "61674651e7"
-   ],
-   "value": "Large, established nonprofit healthcare institution with a global footprint [61674651e7]."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature nonprofit (founded 1864). ~76,000 staff across three major campuses and Mayo Clinic Health System (70+ communities). Annual revenue ~$17B. Consistently ranked #1 hospital by U.S. News."
   },
   "sources": [
    {
@@ -79012,45 +80030,34 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
-   "source_ids": [
-    "4637331f9c"
-   ],
-   "value": "Not explicitly stated in the provided sources for tech roles."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B, O-1, and green cards for research and technical roles. Cap-exempt H-1B eligibility as nonprofit research institution. Dedicated immigration support team."
   },
   "status": "ready",
   "summary": {
-   "confidence": "high",
-   "source_ids": [
-    "b6c41d3f1c",
-    "61674651e7"
-   ],
-   "value": "Mayo Clinic is a top-ranked nonprofit academic medical center and medical research group dedicated to integrated patient care, education, and research [b6c41d3f1c]. They operate a massive healthcare system across multiple physical locations and online patient portals, funded through patient services and institutional research [61674651e7, b6c41d3f1c]. For a new grad, this translates to a highly prestigious, mission-driven environment handling vast amounts of sensitive medical data rather than a "
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mayo Clinic is a nonprofit academic medical center that integrates clinical practice, medical education, and research. It operates major campuses in Minnesota, Arizona, and Florida, serving over 1.3 million patients annually from around the world."
   },
-  "synthesized_evidence_sha": "c3a2c20ac174bf5e",
+  "synthesized_evidence_sha": "822d0ae4b1b3521e",
   "technical_work": {
-   "confidence": "high",
-   "source_ids": [
-    "b6c41d3f1c"
-   ],
-   "value": "Cloud infrastructure management, healthcare platform engineering, and data stewardship [b6c41d3f1c]."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AI/ML in clinical decision support, radiology, pathology, genomics, and operational optimization. Large-scale EHR data (Epic), federated learning, NLP for clinical notes, digital pathology, clinical trial matching, remote monitoring platforms. Strong publication record in top ML/medical journals."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583329,
   "web_search_url": "https://duckduckgo.com/?q=Mayo+Clinic+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "high",
-   "source_ids": [
-    "b6c41d3f1c"
-   ],
-   "value": "As an elitist new-grad prioritizing high prestige and high pay alongside aggressive innovation, Mayo Clinic offers elite brand recognition and mission-driven impact, but you must scrutinize whether their notoriously slow, heavily regulated healthcare bureaucracy will stifle your desire for a fast, rapid-learning tech culture or if it aligns with your WLB and sane hours requirements."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mayo Clinic offers elite prestige in healthcare AI with a mission-driven culture that genuinely balances impact and sustainability. As a nonprofit academic medical center, it avoids quarterly-pressure bureaucracy, invests heavily in long-term research, and provides structured career growth for new grads without the burnout typical of big tech or hospital IT shops. You'll work on clinically validated AI that directly affects patient outcomes, with access to world-class data and physician collabor"
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "b6c41d3f1c"
-   ],
-   "value": "Estimated: High. Healthcare institutions generally emphasize sane hours and sustainable workloads over tech-burnout culture."
+   "source_ids": [],
+   "value": "Strong for healthcare AI. Typical 40-45 hour weeks for individual contributors; on-call rare for research-focused roles. Leadership respects boundaries; 'shutdown' culture encouraged. Less burnout than big tech or clinical IT ops."
   }
  },
  "mayo clinic healthcare london": {
@@ -79935,6 +80942,182 @@
   "web_research_status": "sources captured",
   "web_researched_at": 1784676792,
   "web_search_url": "https://duckduckgo.com/?q=Mechanize+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
+ "medavie": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "135f8fc8343793d4",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Healthtech / technology (estimated)"
+  },
+  "last_evidence_at": 1784677861,
+  "name": "Medavie",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "47c12489e7",
+    "kind": "company_web",
+    "publisher": "Medavie",
+    "retrieved_at": 1784677861,
+    "title": "Medavie public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=99026fe7f917aa1fcec6a052fab725eb8e77ed9dd40111adf49d3089ee7bc5c1JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9jbHV0dGVyY292ZXIuZGUvY29sbGVjdGlvbnMvaWtlYS1hdWZiZXdhaHJ1bmdzYm94ZW4&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "bf01b71f65",
+    "kind": "company_web",
+    "publisher": "Medavie",
+    "retrieved_at": 1784677861,
+    "title": "Medavie public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=1815ab97610631d8c9e79507148cfb4e74d1d1d89ca39d82368f0f40acf36ebcJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cuaWtlYS5jb20vY2gvZGUvY2F0L2JveGVuLWtvZXJiZS0xMDU1MC8_bXNvY2tpZD0wMWVjMjQ4ZjVhZDE2ODA5MGY4OTMzMTI1YjFmNjkzYQ&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "847efd3a4d",
+    "kind": "company_web",
+    "publisher": "Medavie",
+    "retrieved_at": 1784677861,
+    "title": "Medavie public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=8a97a0a2359c1b45c1d878f9dee3cbbb4c979d9823496192cf91e014b14053a6JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cuaWtlYS5jb20vY2gvZGUvY2F0L2F1ZmJld2FocnVuZ3Nib3hlbi0xMDc5Ny8_bXNvY2tpZD0wMWVjMjQ4ZjVhZDE2ODA5MGY4OTMzMTI1YjFmNjkzYQ&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784677861,
+  "web_search_url": "https://duckduckgo.com/?q=Medavie+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
+ "medical college of wisconsin": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "eba95f6f00367b88",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Healthtech / technology (estimated)"
+  },
+  "last_evidence_at": 1784677862,
+  "name": "Medical College of Wisconsin",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "c9c025021f",
+    "kind": "company_web",
+    "publisher": "Medical College of Wisconsin",
+    "retrieved_at": 1784677862,
+    "title": "Medical College of Wisconsin public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=0cf3b20dac1cde4c5452db8c2329e377ba6b020fc87c6e8182502a7de94104e2JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cuaW1zYXouY29tLw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "8861f404de",
+    "kind": "company_web",
+    "publisher": "Medical College of Wisconsin",
+    "retrieved_at": 1784677862,
+    "title": "Medical College of Wisconsin public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=1c2c1a0371cb57bdddc8a40197de7a1f8d1f101a6aa26a60ad470ec9491a7cceJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cubWF5b2NsaW5pYy5vcmcvZGlzZWFzZXMtY29uZGl0aW9ucw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "3dce62b86e",
+    "kind": "company_web",
+    "publisher": "Medical College of Wisconsin",
+    "retrieved_at": 1784677862,
+    "title": "Medical College of Wisconsin public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=8d2faf040150bc7a14c4f58e3bd10ee47540e2300b2729e37c1b0174abb38a9dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cud2VibWQuY29tLw&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784677862,
+  "web_search_url": "https://duckduckgo.com/?q=Medical+College+of+Wisconsin+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
@@ -80893,6 +82076,94 @@
   "web_research_status": "sources captured",
   "web_researched_at": 1784674182,
   "web_search_url": "https://duckduckgo.com/?q=MerQube+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
+ "mesh optical technologies": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "11865c6d868984c8",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784677861,
+  "name": "Mesh Optical Technologies",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "7252a08e93",
+    "kind": "company_web",
+    "publisher": "Mesh Optical Technologies",
+    "retrieved_at": 1784677861,
+    "title": "Mesh Optical Technologies public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=2e731b3eb1b7b286067e6a9c7da107d6e49b2d9c64d86a883ab992e6ad7d8379JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L21lc2g&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "28ad816c5e",
+    "kind": "company_web",
+    "publisher": "Mesh Optical Technologies",
+    "retrieved_at": 1784677861,
+    "title": "Mesh Optical Technologies public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=c4ed8355298cbe25b56d457682336b5057dd800c428fa7e786ee9c93cc712caaJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9tZXNocGF5bWVudHMuY29tLw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "5035701ab8",
+    "kind": "company_web",
+    "publisher": "Mesh Optical Technologies",
+    "retrieved_at": 1784677861,
+    "title": "Mesh Optical Technologies public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=bd99fdfe812e867b6e61b56841967bed5369a611439ae6b57d45addb836a0b0aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cubmxtLm5paC5nb3YvbWVzaC9tZXNoaG9tZS5odG1s&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784677861,
+  "web_search_url": "https://duckduckgo.com/?q=Mesh+Optical+Technologies+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
@@ -86201,6 +87472,94 @@
   "web_research_status": "sources captured",
   "web_researched_at": 1784677482,
   "web_search_url": "https://duckduckgo.com/?q=NCR+Voyix+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
+ "neon": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "8c529123f9de2c58",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784677861,
+  "name": "Neon",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "b0808dafb9",
+    "kind": "company_web",
+    "publisher": "Neon",
+    "retrieved_at": 1784677861,
+    "title": "Neon public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=d4a8ff0df7ded01a2ab1ba5d76b68742b0c2115c93bf9ab3f02093a14a6e199bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTmVvbg&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "af1a4e41da",
+    "kind": "company_web",
+    "publisher": "Neon",
+    "retrieved_at": 1784677861,
+    "title": "Neon public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=1a694c76c92e56204b244c18916e8e237681296a54e31d1a2e82bdd938379283JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cubmVvbnJhdGVkLmNvbS8&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "31b0f9aafa",
+    "kind": "company_web",
+    "publisher": "Neon",
+    "retrieved_at": 1784677861,
+    "title": "Neon public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=b10f3778ef4ad4176f1bd5f1079e32451f9676fc635675821551d6b3c481575bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9uZW9uLmNvbS8&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784677861,
+  "web_search_url": "https://duckduckgo.com/?q=Neon+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
@@ -93164,6 +94523,94 @@
    "value": "3/5 (estimated)"
   }
  },
+ "openevidence": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "c28e390e9db904ca",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Healthtech / technology (estimated)"
+  },
+  "last_evidence_at": 1784677852,
+  "name": "OpenEvidence",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "8f55c826e2",
+    "kind": "company_web",
+    "publisher": "OpenEvidence",
+    "retrieved_at": 1784677852,
+    "title": "OpenEvidence public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=3c6cbd44ee5d4a4e96b2c14b206d1a325fac7bb3a42ed48450f5df980fa3e151JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvT3BlbkV2aWRlbmNl&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "85017a3a5a",
+    "kind": "company_web",
+    "publisher": "OpenEvidence",
+    "retrieved_at": 1784677852,
+    "title": "OpenEvidence public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=a716880b1ccf4ac9989f50effda0442b49d61610f35751869a0d0c48cc06c2ccJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cub3BlbmV2aWRlbmNlLmNvbS9hYm91dA&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "6105337f8d",
+    "kind": "company_web",
+    "publisher": "OpenEvidence",
+    "retrieved_at": 1784677852,
+    "title": "OpenEvidence public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=17851915f044b61b1bc1bb002f07bc33e8d1a4462a39bd1fa7c559358050501eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cub3BlbmV2aWRlbmNlLmNvbS8&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784677852,
+  "web_search_url": "https://duckduckgo.com/?q=OpenEvidence+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
  "optiver": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
@@ -98967,7 +100414,7 @@
    "value": "Could not be confirmed from the supplied sources; pages failed to load content."
   },
   "aliases": [],
-  "attempts": 19,
+  "attempts": 20,
   "business_model": {
    "confidence": "low",
    "source_ids": [
@@ -99026,7 +100473,7 @@
    ],
    "value": "Focus your interviews on confirming the actual day-to-day technical pace, work-life balance boundaries, and AI/data science tech stack to see if it meets your high-growth, low-burnout criteria."
   },
-  "last_attempt_at": 1784677761,
+  "last_attempt_at": 1784677856,
   "last_evidence_at": 1784583318,
   "locations": {
    "confidence": "low",
@@ -104824,7 +106271,7 @@
    "value": "Estimated: Tier 1. Quora's pioneering work in large-scale natural language processing and its rapid expansion into generative AI via Poe places it among elite consumer AI companies."
   },
   "aliases": [],
-  "attempts": 18,
+  "attempts": 19,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -104876,7 +106323,7 @@
    ],
    "value": "Candidates should expect a rigorous evaluation of ML engineering skills and systems design, demonstrating how they can specifically accelerate learning and contribute to the fast-paced evolution of the Poe platform."
   },
-  "last_attempt_at": 1784677761,
+  "last_attempt_at": 1784677856,
   "last_evidence_at": 1784583455,
   "locations": {
    "confidence": "medium",
@@ -109484,6 +110931,94 @@
   "web_research_status": "sources captured",
   "web_researched_at": 1784677413,
   "web_search_url": "https://duckduckgo.com/?q=Roku+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
+ "rolls royce": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "de6d4534a50b036a",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784677860,
+  "name": "Rolls-Royce",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "61db6ff829",
+    "kind": "company_web",
+    "publisher": "Rolls-Royce",
+    "retrieved_at": 1784677860,
+    "title": "Rolls-Royce public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=1da8231c619c11054f65ddb8f1e26cdcb5dd47a2b69a13bbaaf4ca24f0d9cf79JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9zYWxseXNiYWtpbmdhZGRpY3Rpb24uY29tL3NvZnQtZGlubmVyLXJvbGxzLw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "4b1ccbfa7f",
+    "kind": "company_web",
+    "publisher": "Rolls-Royce",
+    "retrieved_at": 1784677860,
+    "title": "Rolls-Royce public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=59bbeb11d9803f191b9a20294495d3de5688f7daba5029e80f6f699a5e699fc4JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cuYWxscmVjaXBlcy5jb20vcmVjaXBlLzIxNTM3OC9jbGFzc2ljLWRpbm5lci1yb2xscy8&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "3558aa94b3",
+    "kind": "company_web",
+    "publisher": "Rolls-Royce",
+    "retrieved_at": 1784677860,
+    "title": "Rolls-Royce public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=0cc22992c30d5155a25da8beb6cd6b1c071b1e6b245998af4f4eeb82ba98a7fcJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cucm9sbHMtcm95Y2Vtb3RvcmNhcnMuY29tLw&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784677860,
+  "web_search_url": "https://duckduckgo.com/?q=Rolls-Royce+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
@@ -118604,7 +120139,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 12,
+  "attempts": 13,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -118622,7 +120157,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784677761,
+  "last_attempt_at": 1784677856,
   "last_evidence_at": 1784645043,
   "name": "Sony Interactive Entertainment",
   "pace_of_work": {
@@ -123561,6 +125096,94 @@
   "web_research_status": "sources captured",
   "web_researched_at": 1784675468,
   "web_search_url": "https://duckduckgo.com/?q=Swift+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
+ "sword health": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "353cb2490fb1f33a",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Healthtech / technology (estimated)"
+  },
+  "last_evidence_at": 1784677853,
+  "name": "Sword Health",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "2b57f91411",
+    "kind": "company_web",
+    "publisher": "Sword Health",
+    "retrieved_at": 1784677853,
+    "title": "Sword Health public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=cb946989dcaa28089749f870663a6ce540af0a670c6d85ea96e48032cf0b4597JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cuc3dvcmRza25pdmVzYW5kZGFnZ2Vycy5jb20vc3dvcmRzLWZvci1zYWxlLw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "64ef07a21f",
+    "kind": "company_web",
+    "publisher": "Sword Health",
+    "retrieved_at": 1784677853,
+    "title": "Sword Health public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=81ba8bca9190e7ab8391d38f8adbafdbd586817f04b26a330573566c5960eeffJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cuY29sZHN0ZWVsLmNvbS9zd29yZHMv&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "f1647edcb4",
+    "kind": "company_web",
+    "publisher": "Sword Health",
+    "retrieved_at": 1784677853,
+    "title": "Sword Health public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=5d16e35cff1f60421110bdb86cf9846bc700012bb4b1107699429d5196be6e14JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvU3dvcmQ&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784677853,
+  "web_search_url": "https://duckduckgo.com/?q=Sword+Health+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
@@ -130869,6 +132492,94 @@
    "value": "3/5 (estimated)"
   }
  },
+ "trend health partners": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "446bf55305300a61",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Healthtech / technology (estimated)"
+  },
+  "last_evidence_at": 1784677862,
+  "name": "Trend Health Partners",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "6765cbb327",
+    "kind": "company_web",
+    "publisher": "Trend Health Partners",
+    "retrieved_at": 1784677862,
+    "title": "Trend Health Partners public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=d86ea2f6e76eae43743e8026e43ec2a21fd5efd8f5f6a86953ef11ab12ef66d0JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cudHJlbmRtaWNyby5jb20vZW5fYXUvZm9ySG9tZS5odG1s&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "10ea4e5638",
+    "kind": "company_web",
+    "publisher": "Trend Health Partners",
+    "retrieved_at": 1784677862,
+    "title": "Trend Health Partners public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=b487e01ffb7ff2d3123e3d4a4bb08333326d62a580856fcdc9e8165e85b41cdeJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly90cmVuZHMuZ29vZ2xlLmNvbS90cmVuZGluZw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "5187eede4c",
+    "kind": "company_web",
+    "publisher": "Trend Health Partners",
+    "retrieved_at": 1784677862,
+    "title": "Trend Health Partners public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=89a24e004a60f671e46d3206898a8b5d3034eb70090b5627e8df78d6a7923c69JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly90cmVuZHMuZ29vZ2xlLmNvbS90cmVuZHMv&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784677862,
+  "web_search_url": "https://duckduckgo.com/?q=Trend+Health+Partners+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
  "trexquant": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
@@ -133273,6 +134984,94 @@
   "web_research_status": "sources captured",
   "web_researched_at": 1784674659,
   "web_search_url": "https://duckduckgo.com/?q=UBS+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
+ "uhaul": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "f8fb5d7820bd0596",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784677861,
+  "name": "Uhaul",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "b82234f509",
+    "kind": "company_web",
+    "publisher": "Uhaul",
+    "retrieved_at": 1784677861,
+    "title": "Uhaul public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=38d591e31da3ab84a23f6b4ebcd8d0fcc840cfa15a66e3ffa280dec4fec055a5JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly90cnVja3NoYXJlLnVoYXVsLmNvbS8&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "8148f693cc",
+    "kind": "company_web",
+    "publisher": "Uhaul",
+    "retrieved_at": 1784677861,
+    "title": "Uhaul public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=d3cd9ab9a4e11081300e29291ce7286cea89cd84baccef191ace3ddf100258a1JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cudWhhdWwuY29tL1RydWNrLVJlbnRhbHMv&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "8e11e9fa4c",
+    "kind": "company_web",
+    "publisher": "Uhaul",
+    "retrieved_at": 1784677861,
+    "title": "Uhaul public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=b5aacfcc0eeed35a0d366c27e80bda58786089f2aaab5239429d3d6bdf395d6fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cudWhhdWwuY29tLw&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784677861,
+  "web_search_url": "https://duckduckgo.com/?q=Uhaul+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
@@ -136777,6 +138576,94 @@
   "web_research_status": "sources captured",
   "web_researched_at": 1784583394,
   "web_search_url": "https://duckduckgo.com/?q=UT+Southwestern+Medical+Center+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
+ "uthealth houston": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "709f8be45ead77de",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Healthtech / technology (estimated)"
+  },
+  "last_evidence_at": 1784677852,
+  "name": "UTHealth Houston",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "109f9bf86a",
+    "kind": "company_web",
+    "publisher": "UTHealth Houston",
+    "retrieved_at": 1784677852,
+    "title": "UTHealth Houston public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=dac3ba1fc9fea3448e64c9b363c278d6e1d8eaec5f5ccef1bcc906a1de0949a1JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9zdXBwb3J0Lm1pY3Jvc29mdC5jb20vZnItZnIvYWNjb3VudHMtYmlsbGluZy9tYW5hZ2UvaG93LXRvLXNpZ24taW4tdG8taG90bWFpbA&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "0a3f8f539a",
+    "kind": "company_web",
+    "publisher": "UTHealth Houston",
+    "retrieved_at": 1784677852,
+    "title": "UTHealth Houston public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=3f8fdecfe188dd03a30abd27698b9a2aaf881a3e04b453eeb6397866e0145f3dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9zdXBwb3J0Lm1pY3Jvc29mdC5jb20vcHQtYnIvYWNjb3VudHMtYmlsbGluZy9tYW5hZ2UvaG93LXRvLXNpZ24taW4tdG8taG90bWFpbA&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "bc990e64b2",
+    "kind": "company_web",
+    "publisher": "UTHealth Houston",
+    "retrieved_at": 1784677852,
+    "title": "UTHealth Houston public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=346ec316458da05b4b5fc3c9353b2b34fec0d005ecceebaa9695cd68c9ffbaebJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9zdXBwb3J0Lm1pY3Jvc29mdC5jb20vZW4tZ2IvY29udGFjdHVz&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784677852,
+  "web_search_url": "https://duckduckgo.com/?q=UTHealth+Houston+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
