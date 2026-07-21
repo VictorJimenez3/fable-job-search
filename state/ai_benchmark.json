@@ -1,0 +1,81 @@
+{
+ "generated_at": 1784671904,
+ "tasks": [
+  {
+   "http_status": 200,
+   "latency_ms": 63906,
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "provider": "deepseek",
+   "status": "valid",
+   "task": "company_research",
+   "valid": true
+  },
+  {
+   "http_status": 200,
+   "latency_ms": 37501,
+   "model": "z-ai/glm-5.2",
+   "provider": "glm",
+   "status": "valid",
+   "task": "company_research",
+   "valid": true
+  },
+  {
+   "http_status": 404,
+   "latency_ms": 182,
+   "model": "moonshotai/kimi-k2.6",
+   "provider": "kimi",
+   "status": "http_error",
+   "task": "company_research",
+   "valid": false
+  },
+  {
+   "http_status": 503,
+   "latency_ms": 404,
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "provider": "nemotron",
+   "status": "http_error",
+   "task": "company_research",
+   "valid": false
+  },
+  {
+   "http_status": 200,
+   "latency_ms": 24266,
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "provider": "deepseek",
+   "status": "valid",
+   "task": "quality",
+   "valid": true
+  },
+  {
+   "http_status": 200,
+   "latency_ms": 8581,
+   "model": "z-ai/glm-5.2",
+   "provider": "glm",
+   "status": "valid",
+   "task": "quality",
+   "valid": true
+  },
+  {
+   "http_status": 404,
+   "latency_ms": 179,
+   "model": "moonshotai/kimi-k2.6",
+   "provider": "kimi",
+   "status": "http_error",
+   "task": "quality",
+   "valid": false
+  },
+  {
+   "http_status": 200,
+   "latency_ms": 7788,
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "provider": "nemotron",
+   "status": "invalid_schema",
+   "task": "quality",
+   "valid": false
+  }
+ ],
+ "winners": {
+  "company_research": "glm",
+  "quality": "glm"
+ }
+}
