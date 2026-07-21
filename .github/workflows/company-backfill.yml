@@ -68,7 +68,22 @@ jobs:
             pushed=0
             for attempt in 1 2 3 4; do
               if git push; then pushed=1; break; fi
-              git pull --rebase --autostash origin "${GITHUB_REF_NAME}" || true
+              # Generated JSON does not rebase safely. Preserve this completed
+              # checkpoint, reset to newest production, and merge only the
+              # additive research/telemetry caches.
+              checkpoint_dir="$(mktemp -d)"
+              git show HEAD:state/company_research.json > "$checkpoint_dir/research.json"
+              git show HEAD:state/ai_usage.json > "$checkpoint_dir/usage.json"
+              git fetch origin "${GITHUB_REF_NAME}"
+              git reset --hard "origin/${GITHUB_REF_NAME}"
+              printf '{}' > "$checkpoint_dir/empty.json"
+              MERGE_JOBS="$checkpoint_dir/empty.json" \
+              MERGE_CULTURE="$checkpoint_dir/empty.json" \
+              MERGE_RESEARCH="$checkpoint_dir/research.json" \
+              MERGE_AI_USAGE="$checkpoint_dir/usage.json" \
+                python scripts/mac-companion/merge_state.py
+              git add state/company_research.json state/ai_usage.json
+              git commit -m "radar: merge company research checkpoint"
               sleep $((attempt * 2))
             done
             if [ "$pushed" -ne 1 ]; then
