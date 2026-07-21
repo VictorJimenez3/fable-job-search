@@ -109,12 +109,13 @@ Before changing the radar, read these in order:
   Track/applied writes are idempotent.
 - **AI foundation + company research (DECISIONS #39, #41):** `radar/llm.py`
   task-routes the four named NVIDIA NIM keys with hard logical/request budgets,
-  two-provider fallback, transient retry, cooldown, output validation, and
-  secret-free `state/ai_usage.json`. Main cloud enrichment now runs every two
-  hours with a 12/18 budget and rotates the first-choice provider by slot;
+  concurrent provider racing, transient retry, cooldown, output validation,
+  and secret-free `state/ai_usage.json`. Main cloud enrichment now runs every
+  two hours with a 12/18 budget;
   ChemE has a default-branch `cheme-enrich.yml` orchestrator at 8/12. Explicit pasted JDs,
-  tracked roles, and fresh high-score work outrank cold backlog. Kimi is final
-  fallback because its authenticated endpoint has been intermittently 404.
+  tracked roles, and fresh high-score work outrank cold backlog. The benchmark
+  workflow measures task-specific winners; Kimi remains unreliable because its
+  authenticated endpoint has intermittently returned 404.
   The 30-minute crawls never receive the named keys.
 - **Leadership-program watch (verified 2026-07-19):** the profile now treats
   technical/data graduate and rotational programs as a first-class alert path.
