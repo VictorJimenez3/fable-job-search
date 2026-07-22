@@ -699,7 +699,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -717,7 +717,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784690392,
+  "last_attempt_at": 1784690525,
   "last_evidence_at": 1784677407,
   "name": "8VC",
   "pace_of_work": {
@@ -13909,11 +13909,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -13925,6 +13927,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784690525,
   "last_evidence_at": 1784677106,
   "name": "Anima",
   "pace_of_work": {
@@ -18546,47 +18549,121 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown - insufficient data from sources to assess AI/data science prestige tier"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "87abec602b",
+    "991d9a6219",
+    "9f09002b22"
+   ],
+   "value": "Business model not discernible from the provided sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown - insufficient data from sources to assess culture"
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "87abec602b",
+    "991d9a6219",
+    "9f09002b22"
+   ],
+   "value": "Customer base not identifiable from the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown - no compensation data available from sources"
   },
   "evidence_sha": "e2cbc46b0746b6e7",
+  "generated_at": 1784690525,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Edtech / technology (estimated)"
+   "value": "Education / EdTech (inferred from name only; not confirmed by sources)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Focus interview questions on: actual AI/data science team structure and projects, compensation transparency for new grads, engineering culture pace and innovation vs bureaucracy, explicit work-life balance policies (shutdowns, hour expectations), career development and mentorship programs, and mission alignment with educational impact."
+  },
+  "last_attempt_at": 1784690525,
   "last_evidence_at": 1784585999,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "87abec602b",
+    "991d9a6219",
+    "9f09002b22"
+   ],
+   "value": "Locations not specified in the provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "87abec602b",
+    "991d9a6219",
+    "9f09002b22"
+   ],
+   "value": "Mission statement not available from the provided sources."
+  },
   "name": "Ascend Schools",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown - insufficient data from sources to assess work pace"
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "87abec602b",
+    "991d9a6219",
+    "9f09002b22"
+   ],
+   "value": "No product information available from the provided sources, which only contain redirect pages."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown - no PTO policy information in sources"
   },
+  "refresh_after": 1789874525,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "87abec602b",
+    "991d9a6219",
+    "9f09002b22"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown - no shutdown policy information in sources"
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "87abec602b",
+    "991d9a6219",
+    "9f09002b22"
+   ],
+   "value": "Company size and stage not available from the provided sources."
   },
   "sources": [
    {
@@ -18620,14 +18697,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=42dcb4d9e31aafd4057d54d5fa006baaa976781a33fcb158aa22ead7a4740316JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=2355962d-b9fc-6fa1-2f05-81b1b8e06e8c&u=a1aHR0cHM6Ly9sZXRzYXNjZW5kLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "87abec602b",
+    "991d9a6219",
+    "9f09002b22"
+   ],
+   "value": "Visa sponsorship information not available from the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "87abec602b",
+    "991d9a6219",
+    "9f09002b22"
+   ],
+   "value": "Ascend Schools appears to be an educational organization based on the name, but the provided sources are redirect/login pages that do not contain substantive information about the company's operations, mission, or business model."
+  },
+  "synthesized_evidence_sha": "e2cbc46b0746b6e7",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "87abec602b",
+    "991d9a6219",
+    "9f09002b22"
+   ],
+   "value": "Technical work details not available from the provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784585999,
   "web_search_url": "https://duckduckgo.com/?q=Ascend+Schools+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks a top-tier AI/data science role balancing elite prestige, high new-grad pay, fast innovative culture, mission-driven work, strong work-life balance with sane hours and guaranteed shutdowns, and accelerated technical growth without sacrificing personal time. Ascend Schools' alignment with these priorities cannot be assessed from the provided sources."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown - insufficient data from sources to assess work-life balance"
   }
  },
  "ascendant program services llc": {
@@ -37575,7 +37685,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -37593,7 +37703,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784690392,
+  "last_attempt_at": 1784690525,
   "last_evidence_at": 1784677402,
   "name": "Cape",
   "pace_of_work": {
@@ -68257,7 +68367,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -68275,7 +68385,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784690392,
+  "last_attempt_at": 1784690525,
   "last_evidence_at": 1784676545,
   "name": "Esri",
   "pace_of_work": {
@@ -124309,7 +124419,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -124327,7 +124437,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784690392,
+  "last_attempt_at": 1784690525,
   "last_evidence_at": 1784677411,
   "name": "McDonald's",
   "pace_of_work": {
@@ -168523,11 +168633,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -168539,6 +168651,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784690525,
   "last_evidence_at": 1784675398,
   "name": "Rocket",
   "pace_of_work": {
@@ -178111,7 +178224,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -178129,7 +178242,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784690392,
+  "last_attempt_at": 1784690525,
   "last_evidence_at": 1784677402,
   "name": "Sierra",
   "pace_of_work": {
