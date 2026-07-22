@@ -102,8 +102,11 @@ every ~30 min (GitHub Actions cron)
    It only ever moves a job *forward*, so a stray late email can't undo a
    later stage. You can still change anything in Notion/Sheets by hand; the
    twice-daily readback now brings those stage edits into the radar.
-3. For a job found outside the radar, comment `applied <url>` on any issue to
-   log it as Applied immediately.
+3. For a job found outside the radar, use **Pipeline → Add a role you found
+   yourself** to save its company, title, live link, and optional location to
+   the in-house **To apply** lane and Notion. It is explicitly marked manual,
+   never creates an alert, and is not mislabeled as new-grad. You can also
+   comment `applied <url>` on any issue to log it as Applied immediately.
 4. A twice-daily reconcile sweep re-reads every radar issue and tracks any
    checked box the event pipeline missed — a tick is never lost.
 

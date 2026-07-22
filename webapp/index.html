@@ -86,6 +86,11 @@
   .filters .bar { margin-bottom:0.45rem; }
   .filters .bar:last-child { margin-bottom:0; }
   .lanes { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:0.9rem; }
+  .manual-add { background:var(--card); border:1px solid var(--line); border-radius:8px;
+                padding:0.8rem; margin-bottom:0.9rem; }
+  .manual-add h2 { margin:0; font-size:0.95rem; }
+  .manual-add .bar { margin:0.55rem 0 0; }
+  .manual-add input { flex:1 1 12rem; min-width:0; }
   .lane { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:0.7rem; }
   .lane h3 { margin:0 0 0.6rem; font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase;
              font-family:ui-monospace,Menlo,monospace; color:var(--muted); }
@@ -271,6 +276,7 @@ async function dispatch(action, job) {
   await gh(`/repos/${REPO}/dispatches`, {method:"POST",
     body: JSON.stringify({event_type:"radar-web",
       client_payload:{action, id: job.id, url: job.url, company: job.company,
+        title: job.title, location: (job.locations||[])[0] || "",
         profile:PROFILE}})});
   return true;
 }
@@ -434,7 +440,8 @@ async function actUntrack(j) {
 async function apiAction(action, job) {
   const r = await fetch("/api/action", {method:"POST",
     headers:{"Content-Type":"application/json"},
-    body: JSON.stringify({action, id:job.id, url:job.url, company:job.company})});
+    body: JSON.stringify({action, id:job.id, url:job.url, company:job.company,
+      title:job.title, location:(job.locations||[])[0] || ""})});
   if (!r.ok) throw new Error((await r.json()).error || r.status);
   return true;
 }
@@ -598,6 +605,26 @@ function rJobs() {
     <div id="jobsList"></div>`;
   renderJobsList();
 }
+async function addManualJob() {
+  const company = $("#manualCompany")?.value.trim();
+  const title = $("#manualTitle")?.value.trim();
+  const url = $("#manualUrl")?.value.trim();
+  const location = $("#manualLocation")?.value.trim();
+  if (!company || !title || !url) {
+    toast("Company, title, and live posting link are required"); return;
+  }
+  try { new URL(url); } catch (_) { toast("Use a full https:// posting link"); return; }
+  if (!canWrite()) {
+    toast("Sign in with GitHub (top right) to add a role and sync it to Notion"); return;
+  }
+  const job = {id:"", company, title, url, locations:location?[location]:[]};
+  try {
+    if (await doWrite("manual-add", job)) {
+      ["#manualCompany", "#manualTitle", "#manualUrl", "#manualLocation"].forEach(sel=>$(sel).value="");
+      toast("Added to To apply → Notion syncs in ~1 min; refresh Pipeline to see it");
+    }
+  } catch(e) { toast("Add failed: "+e.message.slice(0,90)); }
+}
 function renderJobsList() {
   const el = $("#jobsList"); if (!el) return;
   const byId = appliedById();
@@ -617,7 +644,15 @@ function rPipe() {
   const stages = [
     ["saved","📝 To apply"],["applied","✅ Applied"],["oa","🧪 OA"],
     ["interview","🗣 Interview"],["rejected","↩ Rejected"],["closed","⏸ Closed"]];
-  $("#main").innerHTML = `<div class="lanes">
+  $("#main").innerHTML = `<section class="manual-add">
+    <h2>Add a role you found yourself</h2>
+    <p class="sub">This lives in To apply and mirrors to Notion. It is marked manual, never sent as an alert, and does not pretend to be new-grad evidence.</p>
+    <div class="bar"><input id="manualCompany" aria-label="Company" placeholder="Company *">
+      <input id="manualTitle" aria-label="Role title" placeholder="Role title *">
+      <input id="manualUrl" aria-label="Live posting URL" placeholder="Live posting URL *">
+      <input id="manualLocation" aria-label="Location" placeholder="Location (optional)">
+      <button class="act primary" onclick="addManualJob()">add to To apply + Notion</button></div>
+  </section><div class="lanes">
     <div class="lane"><h3>🤔 Maybe (${maybe.length})</h3>${maybe.map(cardHTML).join("")||'<span class="sub">Park jobs here from the Jobs tab.</span>'}</div>
     ${stages.map(([key,label])=>{ const rows=S.applied.filter(a=>(a.stage||"applied")===key);
       return `<div class="lane"><h3>${label} (${rows.length})</h3>${rows.map(cardHTML).join("")||'<span class="sub">Nothing here yet.</span>'}</div>`; }).join("")}

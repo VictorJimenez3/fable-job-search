@@ -618,9 +618,12 @@ def repair_feedback() -> int:
 
 
 def web_action() -> int:
-    """Handle a platform repository_dispatch: the website's track/applied
-    buttons fire {action, id, url, company} and land here (~1 min later the
-    job is in Notion). Same record path as checkboxes — one source of truth."""
+    """Handle a platform repository_dispatch.
+
+    Track/applied use an existing radar record; manual-add creates a clearly
+    labeled dashboard-only record before sending it through that same saved /
+    Notion path. A manual role is never treated as new-grad alert evidence.
+    """
     import json as _json
     path = env("GITHUB_EVENT_PATH")
     if not path:
@@ -629,7 +632,7 @@ def web_action() -> int:
     with open(path) as f:
         payload = _json.load(f).get("client_payload") or {}
     action = payload.get("action")
-    if action not in {"track", "applied", "untrack"}:
+    if action not in {"track", "applied", "untrack", "manual-add"}:
         print(f"web-action: unknown action {action!r}")
         return 0
     jobs = state.jobs()
@@ -648,13 +651,46 @@ def web_action() -> int:
         state.save("untracked.json", sorted(untracked))
         print(f"web-action: untrack {payload.get('company')} — changed={changed}")
         return 0
+    if action == "manual-add":
+        company = str(payload.get("company") or "").strip()[:200]
+        title = str(payload.get("title") or "").strip()[:240]
+        url = str(payload.get("url") or "").strip()[:2000]
+        location = str(payload.get("location") or "").strip()[:240]
+        if not company or not title or not url.startswith(("https://", "http://")):
+            print("web-action: invalid manual-add payload")
+            return 1
+        # URL lookup above makes a repeat click idempotent. Otherwise derive a
+        # stable ID from employer/title/location just like crawler records.
+        if job is None:
+            seed_sectors = {norm(s["name"]): s.get("sector", "other") for s in seeds()}
+            manual = Job(company=company, title=title, url=url, source="manual",
+                         source_url=url, locations=[location] if location else [],
+                         ats="greenhouse" if "greenhouse.io" in url else "")
+            manual.sector = infer(manual.company, seed_sectors)
+            _, _, reasons = gates(manual)
+            score(manual, fb, int(time.time()))
+            job = manual.to_record()
+            job.update({
+                "first_seen": int(time.time()), "rules_v": RULES_VERSION,
+                "score_version": RULES_VERSION, "explicit_new_grad": False,
+                "alert_ok": False, "manual_added": True,
+                "score_reasons": job["score_reasons"] + reasons + [
+                    "manual entry: user-added; never alert eligible"],
+            })
+            jobs[job["id"]] = job
+            state.save("jobs.json", jobs)
+        else:
+            # An existing crawler record keeps its authoritative score and
+            # provenance; a manual save simply sends it to the tracker.
+            job["manual_added"] = True
+            state.save("jobs.json", jobs)
     if job is None:
         print(f"web-action: job {payload.get('id')!r} not found")
         return 0
     untracked.discard(job["id"])
     changed = applied_mod.record_applied(
-        job, applied, fb, via="platform",
-        stage="saved" if action == "track" else "applied")
+        job, applied, fb, via="manual-platform" if action == "manual-add" else "platform",
+        stage="saved" if action in {"track", "manual-add"} else "applied")
     from .notion_sync import sync_applied
     synced = sync_applied(applied)
     shortlist[:] = [s for s in shortlist if s["id"] != job["id"]]

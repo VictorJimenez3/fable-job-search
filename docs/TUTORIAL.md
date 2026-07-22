@@ -80,6 +80,10 @@ follow-up nudges for week-old applications, and LinkedIn hiring-post leads.
    **Not started**. (It also teaches the ranker you like companies like this.)
 4. When you actually apply, open the entry in Notion and **change its status
    yourself** (Applied, etc.). The radar never guesses whether you applied.
+   For a live posting you find outside the radar, open the platform's
+   **Pipeline** tab and use **Add a role you found yourself**. It creates a
+   saved To apply item in the in-house tracker and Notion, clearly marked as a
+   manual entry; it does not generate an alert or claim new-grad eligibility.
 5. Not interested in a company? Comment `skip Acme Corp` on the issue —
    similar roles get downranked.
 6. New-grad evidence is the first gate. Among eligible roles, AI/ML and data

@@ -110,6 +110,28 @@ def test_web_action_track_records_saved(tmp_state, tmp_path, monkeypatch):
     assert state.applied()[0]["stage"] == "applied"
 
 
+def test_web_action_manual_add_creates_saved_dashboard_record(tmp_state, tmp_path, monkeypatch):
+    from radar.main import web_action
+    monkeypatch.delenv("NOTION_TOKEN", raising=False)
+    ev = tmp_path / "dispatch.json"
+    url = "https://job-boards.greenhouse.io/fanaticsinc/jobs/4245392009"
+    ev.write_text(json.dumps({"client_payload": {
+        "action": "manual-add", "company": "Fanatics", "title": "AI Engineer",
+        "url": url, "location": "New York, NY, United States"}}))
+    monkeypatch.setenv("GITHUB_EVENT_PATH", str(ev))
+    assert web_action() == 0
+    jobs = state.jobs()
+    job = next(j for j in jobs.values() if j["url"] == url)
+    assert job["manual_added"] is True
+    assert job["sector"] == "sports"
+    assert job["alert_ok"] is False
+    assert job["explicit_new_grad"] is False
+    assert "manual entry: user-added; never alert eligible" in job["score_reasons"]
+    assert state.applied()[0]["id"] == job["id"]
+    assert state.applied()[0]["stage"] == "saved"
+    assert state.applied()[0]["via"] == "manual-platform"
+
+
 def test_events_from_strangers_are_ignored(tmp_state, tmp_path, monkeypatch):
     # public repo: anyone can comment `applied <url>` — only the owner counts
     monkeypatch.delenv("NOTION_TOKEN", raising=False)

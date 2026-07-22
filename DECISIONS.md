@@ -842,3 +842,15 @@ HTTP request, including retries and simultaneous model-race candidates. It
 therefore spaces sends two seconds apart while still working continuously;
 provider-specific circuit breakers handle outages without turning them into a
 tight retry loop.
+
+## 62. Manual role capture belongs in Pipeline, not the alert feed (2026-07-22)
+
+Jobs discovered outside the radar still need one-click capture without a
+separate Notion chore. The Pipeline tab therefore accepts a company, role,
+live posting URL, and optional location from the authenticated owner and
+dispatches it through the same saved-stage/Notion sync path as tracked radar
+roles. The handler derives the normal stable job ID, makes repeated URL saves
+idempotent, and stores a visible `manual_added` marker. Manual items are forced
+dashboard-only (`alert_ok=false`, `explicit_new_grad=false`) so they never
+become fabricated new-grad alerts or alter alert delivery; an already-crawled
+posting retains its existing authoritative score and provenance.

@@ -110,6 +110,11 @@ Before changing the radar, read these in order:
   the employer link is a separate primary action. Authenticated `open
   application` also saves a new role to To apply, but Applied remains explicit.
   Track/applied writes are idempotent.
+- **Manual Pipeline additions (DECISIONS #62):** Pipeline—not the main Jobs
+  tab—contains an owner-authenticated form for a company, role, live URL, and
+  optional location. It adds a stable manual record to To apply and the same
+  Notion sync path, while forcing `alert_ok=false` and
+  `explicit_new_grad=false`; it cannot create a misleading alert.
 - **AI foundation + company research (DECISIONS #39, #41):** `radar/llm.py`
   task-routes the four named NVIDIA NIM keys with hard logical/request budgets,
   concurrent provider racing, transient retry, cooldown, output validation,
