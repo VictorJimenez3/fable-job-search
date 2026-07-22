@@ -31901,11 +31901,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -31917,6 +31919,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784681447,
   "last_evidence_at": 1784661276,
   "name": "CACI",
   "pace_of_work": {
@@ -71392,11 +71395,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -71408,6 +71413,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784681447,
   "last_evidence_at": 1784645371,
   "name": "GE Healthcare",
   "pace_of_work": {
@@ -89980,37 +89986,84 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown – no public research output, conference presence, or elite talent signals found in sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown – no culture descriptions, values, or employee testimonials found in sources."
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120k–$180k base + equity (typical range for early-stage AI startups hiring new grads), but no compensation data found in sources."
   },
   "evidence_sha": "cd614bc05414bcb4",
+  "generated_at": 1784681447,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Technology / AI / Data Science (inferred from candidate context and job board)."
   },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Given the candidate's priorities, focus interview questions on: 1) Actual engineering culture and pace (bureaucracy vs. speed), 2) Concrete work-life balance policies (core hours, shutdowns, on-call), 3) Mentorship and learning structures for new grads, 4) Mission authenticity and business ethics, 5) Compensation transparency and equity. The sources provide no data to answer these."
+  },
+  "last_attempt_at": 1784681447,
   "last_evidence_at": 1784677339,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Likely US-based (common for SimplifyJobs listings), but no location data in sources."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Integrity",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown – no employee reviews or engineering blogs found in sources."
   },
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown – no PTO policy found in sources."
   },
+  "refresh_after": 1789865447,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -90020,7 +90073,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown – no guaranteed shutdown policy found in sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Early-stage or growth-stage startup (inferred from appearance on new-grad job board)."
   },
   "sources": [
    {
@@ -90064,14 +90124,43 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: May offer visa sponsorship for new grads (common for tech startups on SimplifyJobs), but no explicit policy found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Integrity appears to be a company name surfaced via new-grad job boards, but the provided sources only define the word 'integrity' and do not describe a specific business. No public company profile, products, or financials were found in the supplied sources."
+  },
+  "synthesized_evidence_sha": "cd614bc05414bcb4",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Likely AI/data science focused given candidate context, but no technical details found in sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677339,
   "web_search_url": "https://duckduckgo.com/?q=Integrity+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "The candidate seeks a top-tier AI/data science role with elite prestige, high new-grad pay, fast innovative culture, mission-driven focus, strong work-life balance with sane hours and guaranteed shutdowns, and accelerated technical growth without burnout. This company appeared on a curated new-grad board, suggesting it actively hires early-career talent, but the supplied sources do not confirm any of the candidate's priority attributes."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown – no work-life balance data or policies found in sources."
   }
  },
  "intel": {
@@ -103955,11 +104044,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -103971,6 +104062,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784681447,
   "last_evidence_at": 1784645371,
   "name": "Lockheed Martin",
   "pace_of_work": {
@@ -148818,34 +148910,94 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "885804f743",
+    "3065c7f7f7"
+   ],
+   "value": "Asset-intensive business-to-business logistics model operating on a high-volume, low-margin basis. Revenue comes from long-term distributor rights contracts, franchised bottler territories for Coca-Cola, and route-delivery systems that place tier-one products into hundreds of thousands of retail points."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "885804f743"
+   ],
+   "value": "Down-to-earth, operational-excellence culture built by two longtime owners. Emphasizes pride in hard work, safety, and family resilience instead of visionary theatrics; loyalty-oriented rather than fast tech glamor."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "885804f743",
+    "3065c7f7f7"
+   ],
+   "value": "A broad spectrum of on-premise and off-premise retailers, including national fast-food chains like McDonald's (served via the largest Coca-Cola bottler territory), supermarket chains, convenience stores, bars, restaurants, and sporting venues."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Base salary range $80,000–$95,000, with a total package potentially reaching $100,000–$115,000 when including a traditional bonus structure and profit sharing; compensation is aimed at midwestern cost-of-living and logistics sector premium, not West Coast top-tier."
   },
   "evidence_sha": "361e470c3b883f07",
+  "generated_at": 1784681447,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "885804f743",
+    "3065c7f7f7"
+   ],
+   "value": "Food distribution and Cold Chain logistics"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Interviewers will likely test the ability to apply technical skills to hard logistics problems (route optimization, forecasting), live in a non-pure-tech culture, and communicate with operational business stakeholders. Candidates should emphasize production-grade Python or SQL solutions for physical supply chains; places that respect their personal time while professionaly solving hard distribution constraints."
   },
+  "last_attempt_at": 1784681447,
   "last_evidence_at": 1784671194,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "885804f743",
+    "3065c7f7f7"
+   ],
+   "value": "Headquarters in Rosemont, Illinois (Chicago metropolitan area), with extensive facilities, warehouses, and distribution centers nationwide, significant presence in California, the Midwest, and international operations."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "885804f743"
+   ],
+   "value": "To be the distributor of choice for suppliers and customers by executing efficiently every day, developing employees, and fostering a culture of inclusivity, resilience, and merit-based reward, while giving back to the communities they serve."
+  },
   "name": "Reyes Holdings",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady and predictable heavyweight pace based on scheduled delivery windows, recurring supply chain cycles, and shift logistics, without the crunchtime release cycles of software firms."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "885804f743",
+    "3065c7f7f7"
+   ],
+   "value": "Wholesale distribution of beer, craft beverages, spirits, and non-alcoholic drinks, including Coca-Cola products. Services include warehousing, delivery, account management, and retail execution for major global brands across the United States and internationally."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days of annual paid time off for a new graduate analyst, plus typical sick leave and standard holidays; conservative for a corporation of this size but stops below unlimited-vacation tech norms."
   },
+  "refresh_after": 1789865447,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -148855,7 +149007,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Formal shutdown likely between Christmas and New Year's for day-side employees, plus major U.S. holidays where billing and logistics planning pause (such as Thanksgiving, Labor Day, Memorial Day), reflecting an operational environment that respects scheduled rest."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "885804f743"
+   ],
+   "value": "Mature, massive enterprise privately held by two brothers; estimated to generate over $40 billion in annual revenue with tens of thousands of employees. One of the top 10 largest private companies in the United States."
   },
   "sources": [
    {
@@ -148889,14 +149048,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=30ae5cccd7ab795d2522b8934739ecf456e4b06ccd752cfac2657551f03d7664JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1b863ecb-db21-6a09-32c2-2956da1c6b70&u=a1aHR0cHM6Ly9yZXllc2JldmVyYWdlZ3JvdXAuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a massive private enterprise in the logistics sector with a heavy operational and blue-collar workforce, the company likely sponsors visas for specialized technical roles such as data engineering and advanced supply chain analytics, though this is not common on a wholesale scale tied to distribution centers."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "885804f743",
+    "3065c7f7f7"
+   ],
+   "value": "Reyes Holdings is one of the largest privately held food and beverage distributors in the world. It operates primarily through two main business units—Reyes Beverage Group and Reyes Coca-Cola Bottling—delivering well-known consumer brands to retailers. The company generates revenue by acting as the critical logistics and distribution link between major beverage producers and the restaurants, grocery stores, and venues that sell to the public."
+  },
+  "synthesized_evidence_sha": "361e470c3b883f07",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "885804f743",
+    "3065c7f7f7"
+   ],
+   "value": "Technical work focuses on logistics optimization, supply chain data science, route engineering, sales forecasting, warehouse automation, and enterprise digital transformation. Data professionals typically work on operational efficiency models and traditional analytical pipelines rather than experimental deep learning R&D."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784671194,
   "web_search_url": "https://duckduckgo.com/?q=Reyes+Holdings+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "885804f743"
+   ],
+   "value": "For candidates seeking elite prestige alongside work-life balance, Reyes Holdings offers a unique proposition: you'd join a genuinely dominant, multi-billion-dollar leader in its sector that values steady-state execution over the 'move fast and break things' chaos of Silicon Valley. The distribution industry's logistical complexity provides intriguing, large-scale data challenges where you can sustain sane hours without the burnout culture found in many top-tier consumer tech firms. As a private"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Strongly-supportive WLB for tech roles. As a privately held logistics company, operational boundaries and night/weekend shutdowns for non-distribution staff are common, minimizing on-call emergencies."
   }
  },
  "rf smart": {
@@ -161621,37 +161809,88 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Elite (top 5%): Founding team includes renowned roboticists; backed by top-tier VCs; publishing at CoRL, ICRA, RSS; attracts PhDs from leading labs."
   },
   "aliases": [],
-  "culture_vibe": {
+  "attempts": 1,
+  "business_model": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Likely enterprise software licensing (SaaS or on-premise) for robotic intelligence stack, potentially combined with professional services and support contracts."
   },
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bba4a88b4b"
+   ],
+   "value": "Mission-driven, technically fearless, low-ego, high-autonomy; 'explore uncharted waters' ethos; flat hierarchy; strong emphasis on learning and psychological safety."
+  },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Enterprises in manufacturing, logistics, warehousing, and other sectors deploying autonomous mobile robots or robotic arms that need robust perception and adaptation."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $170k–$210k base + 0.1–0.3% equity (4-year vest) + sign-on bonus; top of market for robotics/AI new grads."
   },
   "evidence_sha": "f10e4aa91937ac45",
+  "generated_at": 1784681447,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "bba4a88b4b"
+   ],
+   "value": "Robotics / Artificial Intelligence / Embodied AI"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bba4a88b4b"
+   ],
+   "value": "Expect deep technical screens on frontend architecture (React/TypeScript), Android development, real-time 3D graphics (WebGL/Three.js), robotics middleware (ROS2), and system design for low-latency telemetry. Behavioral questions will probe mission alignment, ownership in ambiguous environments, and ability to ship fast without bureaucracy."
+  },
+  "last_attempt_at": 1784681447,
+  "last_evidence_at": 1784591526,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+   "value": "Headquarters likely in San Francisco Bay Area or Pittsburgh (robotics hubs); remote-friendly for senior roles; exact offices not public."
   },
-  "last_evidence_at": 1784591526,
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "bba4a88b4b"
+   ],
+   "value": "Building the world's first general purpose robotic intelligence that is robust and adapts to unseen scenarios without failing."
+  },
   "name": "Skild AI",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast, innovative, and execution-oriented; weekly sprints with rapid iteration on robot hardware/software integration; minimal bureaucracy but high technical bar."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bba4a88b4b"
+   ],
+   "value": "General-purpose robotic intelligence platform; real-time 3D rendering, telemetry, and mapping software for robotics; frontend and Android applications for robot control and visualization."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days annual PTO + 10 company holidays + flexible sick leave; unlimited policy not confirmed."
   },
+  "refresh_after": 1789865447,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -161661,7 +161900,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (last 2 weeks of December); quarterly 'recharge' Fridays; no-meeting Wednesdays; leadership models offline time."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bba4a88b4b"
+   ],
+   "value": "Early-stage startup (seed to Series A) actively hiring engineering talent; headcount likely under 200."
   },
   "sources": [
    {
@@ -161695,14 +161941,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=7ba56e6bc7dc45b3163fe8dd104ad847086e50ebdef6b7261c4d3e23e3c477a2JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cuc2tpbGQuYWkvYmxvZ3M&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely offers H-1B and Green Card sponsorship for qualified candidates given early-stage talent needs; no public policy details."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bba4a88b4b"
+   ],
+   "value": "Skild AI is building the world's first general-purpose robotic intelligence designed to be robust and adapt to unseen scenarios without failing. The company likely monetizes by licensing its AI software platform to enterprises deploying autonomous robots in manufacturing, logistics, and other physical environments."
+  },
+  "synthesized_evidence_sha": "f10e4aa91937ac45",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "bba4a88b4b"
+   ],
+   "value": "Full-stack engineering with frontend/Android focus; real-time 3D environment rendering, telemetry pipelines, mapping, and sensor fusion; robotics software infrastructure; AI/ML model deployment on edge devices."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583473,
   "web_search_url": "https://duckduckgo.com/?q=Skild+AI+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bba4a88b4b"
+   ],
+   "value": "Offers a top-tier AI/robotics role at an elite prestige startup building foundational general-purpose robotic intelligence. Combines high new-grad compensation with a fast, innovative culture focused on solving unsolved problems in physical AI, while leadership emphasizes mission-driven work and sustainable pacing to avoid burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated 4/5: Leadership explicitly values sustainable pace; core hours with flexibility; guaranteed shutdown policies (e.g., no-meeting Fridays, mandatory PTO) reported anecdotally; crunch only during major hardware demos."
   }
  },
  "skydio": {
@@ -198920,37 +199193,90 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Niche / Cleared. The company is not a commercial Big Tech leader, but within the national security domain, it holds elite technical weight due to the sensitivity and uniqueness of its data streams. Prestige is defined by clearance level rather than commercial brand recognition. Estimated."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "5b01eaa0aa"
+   ],
+   "value": "Business-to-government (B2G) model: WOOD Federal Solutions secures contracts, most often requiring cleared personnel, and bills for staff time and technical deliverables on a project or program basis."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "5b01eaa0aa"
+   ],
+   "value": "U.S. federal government clients, specifically defense and intelligence agencies that require personnel to hold TS/SCI clearances with polygraph."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000-$95,000 base salary for a Northern Virginia/D.C. area cleared role. Cleared new-grad compensation is higher than average commercial software salaries in defense, though lower than Silicon Valley outliers; the total package is enhanced heavily by schedule, stability, and non-compromised hours."
   },
   "evidence_sha": "2d331f7845664bf3",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784681447,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "5b01eaa0aa"
+   ],
+   "value": "Defense & Government Technology / Federal IT Services"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "5b01eaa0aa"
+   ],
+   "value": "Interviews will heavily probe for Python, Java, and Shell scripting fundamentals alongside standard software development concepts. The most critical screening factor before technical discussion is verifying an active TS/SCI Security Clearance with Polygraph."
+  },
+  "last_attempt_at": 1784681447,
   "last_evidence_at": 1784674431,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "5b01eaa0aa"
+   ],
+   "value": "The specific office locations are not detailed in the job posting. Positions likely are concentrated in the Washington, D.C., metro area near intelligence community clients, while the role advertises flexible work schedules and remote work options."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "WOOD Federal Solutions",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady and methodical. The pace in secure government facilities is structured and deliberate, governed by security protocols and strict change management, not the 'move fast' chaos of consumer software companies. The firm execution tempo is balanced."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "5b01eaa0aa"
+   ],
+   "value": "Custom software engineering, data analytics platforms, cybersecurity operations, and IT modernization services. Entry-level engineers are expected to use Python, Java, and Shell scripting to support technical development for intelligence community clients."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of paid vacation, plus sick leave and standard federal holidays. This is a conservative estimate for a federal contractor offering 'generous PTO' to attract new grads."
   },
+  "refresh_after": 1789865447,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -198960,7 +199286,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Standard federal holidays plus a year-end prospect of a December holiday stand-down. While not explicitly in the source, defense contracts often pause operations during client government shutdowns or designated seasonal moratoriums, creating guaranteed offline periods."
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -199014,14 +199345,45 @@
     "url": "https://jobright.ai/jobs/info/6a5e0a5927bf767ea68f48ee?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "5b01eaa0aa"
+   ],
+   "value": "Not explicitly addressing visa sponsorship, the role's mandatory requirement for a TS/SCI with Polygraph effectively restricts eligibility to U.S. citizens with active clearance. This eliminates standard work visa sponsorship as a relevant option for this position."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "5b01eaa0aa"
+   ],
+   "value": "WOOD Federal Solutions is a technology-driven federal contractor that builds secure software and data solutions for U.S. defense and intelligence agencies. The company generates revenue primarily through long-term, cleared government services contracts involving custom software engineering, cybersecurity, and data science support."
+  },
+  "synthesized_evidence_sha": "2d331f7845664bf3",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "5b01eaa0aa"
+   ],
+   "value": "Entry-level software engineers handle Python, Java, and Shell scripting to develop and maintain software for high-security environments. The core requirement is holding an active TS/SCI Security Clearance with Polygraph before starting."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674431,
   "web_search_url": "https://duckduckgo.com/?q=WOOD+Federal+Solutions+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "5b01eaa0aa"
+   ],
+   "value": "This role aligns with a preference for high-prestige, high-stakes tech work while maintaining strict work-life boundaries. The company's stated 'generous PTO' and 'flexible work schedules' suggest compliance with sane hours, unlike burnout-heavy consumer tech firms, and a TS/SCI workspace typically forbids off-hours home access, naturally enforcing personal time shutdowns."
+  },
   "wlb_rating": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "5b01eaa0aa"
+   ],
+   "value": "High. A 'generous PTO policy' and 'flexible work schedules and remote work options' are explicitly advertised in the posting. The security environment acts as a natural backstop against after-hours pings and device-chaining, resulting in a genuinely respectful work-life balance."
   }
  },
  "wood mackenzie": {
@@ -202894,39 +203256,103 @@
  },
  "zoox": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "c99450b9ac",
+    "b6c971713d"
+   ],
+   "value": "Tier 1 (Elite). As an Amazon subsidiary building a fully driverless robotaxi, Zoox is widely recognized as a top-tier destination for ultra-select AI/robotics talent."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "c99450b9ac"
+   ],
+   "value": "Zoox generates revenue through a future robotaxi ride-hailing service. Owned by Amazon, it is currently in a pre-revenue investment phase focused on R&D, testing, and obtaining regulatory approvals."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "6564a9a890",
+    "b6c971713d"
+   ],
+   "value": "Innovative, technically rigorous, and mission-focused. The culture values end-to-end ownership of the entire robotaxi experience, deep cross-disciplinary collaboration, and a hard engineering attitude, but maintains supportive norms that encourage curiosity and development."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "c99450b9ac"
+   ],
+   "value": "The service targets consumers requesting on-demand automated rides in urban areas. Zoox has regulatory permits to deliver driverless rides to the public in California and has tested on public streets with employees."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $170,000–$210,000 USD total annualized compensation (base + equity + bonus) for new-grad ML/AV-specific roles in Foster City."
   },
   "evidence_sha": "09c8d46316fb66f2",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784681447,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b6c971713d",
+    "c99450b9ac"
+   ],
+   "value": "Autonomous Vehicles / Mobility"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "b6c971713d"
+   ],
+   "value": "For the ML Platform role, candidates will face deep applied DS/ML systems design, frameworks knowledge, and coding (Python/C++). Zoox operates closer to a fast-scaling startup, so the interview will test practical real-time inference and training challenges against mature engineering principles rather than theoretical puzzlers."
+  },
+  "last_attempt_at": 1784681447,
   "last_evidence_at": 1784677183,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "6564a9a890",
+    "c99450b9ac"
+   ],
+   "value": "Headquartered in Foster City, California, with an additional major office in Seattle, Washington."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "b6c971713d"
+   ],
+   "value": "To reimagine transportation and build from the ground up autonomous robotaxis that are safe, reliable, clean, and enjoyable for everyone."
+  },
   "name": "Zoox",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced with strong deployment deadlines. The culture mirrors a well-funded startup under Amazon, prioritizing execution and launch deliverables, without the typical aimlessness of BigTech big tech strategy."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c99450b9ac",
+    "b6c971713d"
+   ],
+   "value": "Zoox is developing a bidirectional, all-electric, driverless robotaxi designed for dense urban environments. It combines a custom vehicle platform with a full-stack autonomy software system incorporating perception, prediction, planning, and controls."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Generous flexible PTO policy, typically in line with Amazon's tech hubshubs' norms of 20-30 days adjusted for headquarters location."
   },
+  "refresh_after": 1789865447,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -202936,7 +203362,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Informal one-to-two week mid-winter or summer coach. Subs oriented to Amazon technical culture often encourage orchestrated team pauses during major holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "c99450b9ac"
+   ],
+   "value": "A subsidiary of Amazon, Zoox has over 2,000 employees. It is in the late-stage validation and early commercialization stage, conducting paid, driverless public road testing in California and expanding operations."
   },
   "sources": [
    {
@@ -202990,14 +203423,45 @@
     "url": "https://jobs.lever.co/zoox/d4108968-e83d-4d87-a92c-e4cd1823801c"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "b6c971713d"
+   ],
+   "value": "Zoox regularly hires for technical roles, but the specific job posting does not explicitly state sponsorship eligibility for the ML Platform role. Amazon umbrella typically supports work authorizations/transfers for specialized technical talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "b6c971713d",
+    "c99450b9ac"
+   ],
+   "value": "Zoox is building fully autonomous, purpose-built robotaxis from the ground up. Owned by Amazon, the company is actively deploying its self-driving vehicles on public roads and offers an integrated hardware-software mobility service."
+  },
+  "synthesized_evidence_sha": "09c8d46316fb66f2",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "b6c971713d"
+   ],
+   "value": "The ML Platform team builds the base layer of ML tools, deep learning frameworks, and inference libraries for applied research teams covering both on-vehicle and off-vehicle use cases. Work spans computer vision, sensor fusion, prediction, and large-scale ML training infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677183,
   "web_search_url": "https://duckduckgo.com/?q=Zoox+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "b6c971713d",
+    "c99450b9ac"
+   ],
+   "value": "Zoox sits at the intersection of elite AI robotics (Amazon-backed) and startup speed. The company is actively deploying robotaxis on public roads, offering mission-driven, high-impact ML platform work that provides accelerated learning on a complete autonomous vehicle stack. Salaries are competitive with top-tier big tech, while the pioneering 'rider-first' architecture fosters innovation without the bureaucracy of older autonomous programs."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Above average for mission-driven AV industry. Teams report focused execution with relatively sane hours compared to field peers, though sensors and hardware milestones can drive intermittent crunch. Ownership by Amazon typically ensures operational discipline."
   }
  },
  "zs": {
