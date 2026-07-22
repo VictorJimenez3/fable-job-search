@@ -3879,11 +3879,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -3895,6 +3897,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784681898,
   "last_evidence_at": 1784675357,
   "name": "AeroVironment",
   "pace_of_work": {
@@ -32381,37 +32384,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Upper-middle tier for defense contracting; highly respected in the government sector but lacks the consumer-facing brand cachet of a top-tier 'Big Tech' or unclassified research lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Operates as a government services contractor, generating revenue through cost-reimbursable, fixed-price, and time-and-materials contracts with U.S. government agencies."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "65d6f00f95"
+   ],
+   "value": "Primarily branches of the U.S. Department of Defense, the U.S. Intelligence Community, and other federal government agencies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "9e1fbb701e"
+   ],
+   "value": "Estimated: $80,000 - $110,000 base salary for an entry-level technical role, based on the Denver posting range of $53K - $106K plus a weighted national average for cleared asset areas."
   },
   "evidence_sha": "2004ebb1de1d9999",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784681898,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "65d6f00f95"
+   ],
+   "value": "Defense & Government Information Technology Services"
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "9e1fbb701e"
+   ],
+   "value": "Likely emphasizes problem-solving, Agile methodology adherence, coding proficiency, and cultural fit for government work. Will heavily assess clearance eligibility and interest in long-term, mission-oriented projects rather than shifting startup pivots."
+  },
+  "last_attempt_at": 1784681898,
   "last_evidence_at": 1784673658,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "65d6f00f95",
+    "9e1fbb701e"
+   ],
+   "value": "Headquarters in Reston, VA (Washington, D.C. metro area). Current job postings include Denver, CO, and other major federal contracting hubs. Significant presence across U.S. government client sites."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "65d6f00f95",
+    "9e1fbb701e"
+   ],
+   "value": "To deliver distinctive expertise and differentiated technology to U.S. government customers in support of national security missions."
+  },
   "name": "CACI bv",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "9e1fbb701e"
+   ],
+   "value": "Estimated: Fast-paced within structured contractual boundaries. Agile team references suggest high productivity during working hours, but the government-contractor cycle avoids the chaotic pivots of pure startups."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "65d6f00f95",
+    "9e1fbb701e"
+   ],
+   "value": "Information technology services, mission expertise, and enterprise solutions including Agile software development, cybersecurity, data analytics, intelligence, and engineering services for government customers."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days paid time off plus federal holidays. Government contractors often follow federal schedules with a standard tiered accrual based on tenure."
   },
+  "refresh_after": 1789865898,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -32421,7 +32484,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed shutdown for all federal U.S. holidays. A full week off for Christmas through New Year's is a common but not guaranteed practice at many federal contractors."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "65d6f00f95"
+   ],
+   "value": "Large, publicly traded company (estimated >20,000 employees) focused on established defense and federal IT markets; not a startup."
   },
   "sources": [
    {
@@ -32475,14 +32545,40 @@
     "url": "https://jobright.ai/jobs/info/6a5f021af3674a0545d2b93d?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a U.S. government defense contractor, many roles require U.S. citizenship and the ability to obtain a security clearance. Sponsorship for visas is typically not available for cleared or national security positions; general technology roles may vary but are not standard."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "65d6f00f95",
+    "9e1fbb701e"
+   ],
+   "value": "CACI is a large professional services and information technology company providing digital solutions and mission expertise to U.S. government agencies, primarily in defense and national security. It makes money through long-term government contracts, delivering services like Agile software development, systems integration, and data analytics support."
+  },
+  "synthesized_evidence_sha": "2004ebb1de1d9999",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "9e1fbb701e"
+   ],
+   "value": "Roles can involve Agile software development, application creation (likely using Java, JavaScript, Python, SQL), data analytics integration, and mission-specific system deployment. A Junior Application Developer posting specifies working on a fast-paced Agile team."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673658,
   "web_search_url": "https://duckduckgo.com/?q=CACI+bv+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good, likely enforcing 40-45 hour weeks. Government contracting inherently promotes fulfillment of contractual hours rather than indefinite crisis-mode. A clear boundary exists between work and personal life."
   }
  },
  "caci international inc": {
@@ -43904,11 +44000,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -43920,6 +44018,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784681898,
   "last_evidence_at": 1784674273,
   "name": "Comcast",
   "pace_of_work": {
@@ -52198,37 +52297,102 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Not applicable or does not register in AI/DS tiers; primarily a legal defense organization."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "05bd586b6a",
+    "f120cd5fd1",
+    "eeb34ab376"
+   ],
+   "value": "A government-funded, nonprofit public defender agency that operates on public appropriations, grants, and some limited client fees; no charge for core legal representation services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission- and justice-centered; collegial but litigation-driven; client-focused; typical trappings of public interest law, not tech innovation."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "05bd586b6a",
+    "f120cd5fd1",
+    "eeb34ab376"
+   ],
+   "value": "Indigent individuals facing criminal prosecution in Philadelphia who are constitutionally entitled to counsel under Gideon v. Wainwright."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $45,000-$60,000 for an entry-level socio-technical data role; significantly lower than elite tech packages; benefits are solid but salaries are government-constrained."
   },
   "evidence_sha": "0ba15884802bba44",
+  "generated_at": 1784681898,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "05bd586b6a",
+    "f120cd5fd1",
+    "eeb34ab376"
+   ],
+   "value": "Legal Services / Public Defense"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Emphasizes commitment to indigent defense, ethical judgment, and mission alignment; lacks typical parallel for AI/DS skill demonstration and would not track FAANG-style tech cycles."
   },
+  "last_attempt_at": 1784681898,
   "last_evidence_at": 1784661274,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "05bd586b6a",
+    "f120cd5fd1",
+    "eeb34ab376"
+   ],
+   "value": "Philadelphia, Pennsylvania, USA."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "05bd586b6a",
+    "f120cd5fd1",
+    "eeb34ab376"
+   ],
+   "value": "Ensuring the constitutional right to counsel for all, providing high-quality, zealous, and holistic defense to individuals, and promoting justice, dignity, and community well-being."
+  },
   "name": "Defender Association of Philadelphia",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and high-volume driven by court scheduling and large caseloads, not iterative tech deployment or product sprints."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "05bd586b6a",
+    "f120cd5fd1",
+    "eeb34ab376"
+   ],
+   "value": "Legal defense representation in criminal trials, appeals, and related proceedings; holistic advocacy including social services support for clients."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Generous PTO package for government-adjacent nonprofit, roughly 15-25 vacation/personal days annually, with separate sick leave and judicial recesses lightly offsetting demand."
   },
+  "refresh_after": 1789865898,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -52238,7 +52402,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Philadelphia municipal government holidays observed, and courthouse shutdown days; no companywide fleet holiday or hackathon shutdowns."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "05bd586b6a",
+    "f120cd5fd1",
+    "eeb34ab376"
+   ],
+   "value": "Large, well-established nonprofit employing hundreds of attorneys, social workers, investigators, and administrative staff, operating since the 1960s."
   },
   "sources": [
    {
@@ -52272,14 +52445,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=b38e21aa6bbe813170ec517a0cc20c60926c40f46d2920be40dc3fa7c6355905JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=04c514de-9105-6e33-3bee-034390f06f34&u=a1aHR0cHM6Ly93d3cubGFuZHJvdmVydXNhLmNvbS9kZWZlbmRlci9pbmRleC5odG1s&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "05bd586b6a",
+    "f120cd5fd1",
+    "eeb34ab376"
+   ],
+   "value": "Unlikely to offer visa sponsorship (H-1B, etc.) for non-legal roles, as it is a government-funded non-federal entity with restricted budgets and a mission focused on local criminal justice."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "05bd586b6a",
+    "f120cd5fd1",
+    "eeb34ab376"
+   ],
+   "value": "The Defender Association of Philadelphia is a nonprofit public defender office providing legal defense to individuals accused of crimes who cannot afford an attorney. It is government-funded through city and state appropriations, grants, and contracts, not through client billing."
+  },
+  "synthesized_evidence_sha": "0ba15884802bba44",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "05bd586b6a",
+    "f120cd5fd1",
+    "eeb34ab376"
+   ],
+   "value": "Primarily legal, investigative, and social work. Specialized technical roles such as AI, data science, or software engineering are not a central part of their public defender operations. Potential technical projects involve very limited data analysis for case management or grant reporting."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784661274,
   "web_search_url": "https://duckduckgo.com/?q=Defender+Association+of+Philadelphia+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mission-driven government role offering built-in work-life balance via unionized or funded hourly ceilings, but it is a legal defense organization, not a tech company, and cannot deliver elite prestige, high new-grad tech pay, or a fast, innovative tech culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Generally structured hours with boundaries protecting leave, though weekly legal work can exceed 40 hours during trials; overall healthier than tech crunch, but emotionally taxing."
   }
  },
  "deliveroo": {
@@ -90511,40 +90717,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Corporate Applied Analytics. Data science supports internal risk, actuarial, and client analytics. No significant AI research presence, publications, or open-source leadership. Not competitive with FAANG, AI labs, or top-tier tech for prestige."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Recurring revenue model: charges per-employee-per-month fees for PEO services (typically $100-$200/employee/month) plus fees for ancillary services. Revenue scales with client headcount. Publicly traded (NYSE: NSP) with ~$6B annual revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, process-oriented, sales-influenced (PEO model), stable, low drama. Values tenure and domain expertise. Not a 'tech-first' culture — engineering supports the service business. Collaborative but hierarchical. Good for work-life integration; less for technical ambition."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Small and medium-sized businesses (typically 5-5,000 employees) across various industries including professional services, manufacturing, technology, healthcare, financial services, and non-profits seeking to outsource HR functions and access Fortune 500-level benefits."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000-$120,000 base + 5-10% target bonus + RSU (vesting 4yr). Total comp ~$100K-$135K. Below top-tier tech (FAANG/unicorns: $150K-$250K+). Competitive for corporate Houston/Dallas market."
   },
   "evidence_sha": "21bb1812890ead14",
+  "generated_at": 1784681898,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Professional Employer Organization (PEO) / HR Outsourcing / Human Capital Management"
   },
-  "last_attempt_at": 1784681809,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect behavioral and domain-focused interviews: SQL/analytics case studies, HR/payroll domain questions, statistical modeling for risk/benefits, and collaboration with non-technical stakeholders. Less emphasis on LeetCode-hard algorithms or ML theory. Prepare for 'how would you analyze client churn' or 'design a benefits utilization dashboard' type problems. Ask about: data stack maturity, model deployment processes, ratio of research vs. production work, and whether the team publishes or open-"
+  },
+  "last_attempt_at": 1784681898,
   "last_evidence_at": 1784674722,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Kingwood, TX (Houston metro). Major offices in Dallas, Austin, San Antonio, Denver, Atlanta, Orlando, Raleigh, Northern Virginia, Boston, New York, Chicago, Minneapolis, Los Angeles, San Francisco, Seattle. Hybrid/remote options vary by role."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To help businesses succeed so communities prosper by providing scalable HR solutions that reduce administrative burden, mitigate risk, and enable clients to focus on growth."
+  },
   "name": "Insperity",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate / steady. Enterprise software release cycles, quarterly planning, compliance-driven deadlines. Not 'move fast and break things.' Projects measured in quarters. Low burnout risk but also low velocity for innovative ML work."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core offerings include PEO services (HR administration, payroll processing, employee benefits, workers' compensation, compliance), workforce optimization solutions, talent acquisition, performance management, training and development, and technology platforms for HR management."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + sick leave. Tenure-based accrual. No public unlimited PTO policy."
   },
+  "refresh_after": 1789865898,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -90554,7 +90798,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns. Standard holiday calendar (Thanksgiving week, Christmas week). Some teams may have informal slow periods."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public company (NYSE: NSP), ~4,000+ internal employees, serving 100,000+ client businesses and 2+ million worksite employees. Founded 1986, profitable and mature."
   },
   "sources": [
    {
@@ -90588,14 +90837,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=46bc7e857ebd1143e0af14666ca671e4c76ee856edcd59891fbf29bca015b8ecJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=16ae2af2-1db7-6310-1eaf-3d6f1cb262fb&u=a1aHR0cHM6Ly93d3cuaW5zcGVyaXR5LmNvbS9sb2ctaW4v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a large public company, Insperity sponsors H-1B visas and employment-based green cards for qualified technical roles. Historical H-1B data shows sponsorship for software engineers, data analysts, and IT roles. No public cap-exempt status."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Insperity is a professional employer organization (PEO) and HR solutions provider that helps small and medium-sized businesses manage human resources, payroll, benefits, compliance, and risk management. The company operates as a co-employer for client employees, enabling economies of scale for benefits and administrative efficiency."
+  },
+  "synthesized_evidence_sha": "21bb1812890ead14",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Internal technology focuses on HRIS/payroll platforms, benefits administration systems, data analytics for workforce insights, mobile apps for employees/clients, and integration APIs. Not an AI-first company; data science roles likely support actuarial, risk modeling, and client analytics rather than cutting-edge ML research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674722,
   "web_search_url": "https://duckduckgo.com/?q=Insperity+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a candidate prioritizing elite AI prestige, high new-grad pay, and fast innovation culture: Insperity is a mature HR services company, not an AI-native or tech-first organization. Data science roles exist but support actuarial/risk/client analytics rather than frontier ML. Pay is solid corporate (estimated $90-120K base for new grad DS) but not top-tier tech scale. Culture is professional services / corporate — stable, process-oriented, with reasonable WLB — but lacks the 'fast, innovative t"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "7.5/10 estimated. Typical corporate hours (40-45 hrs/week), limited on-call, rare weekends. Mature processes reduce fire drills. Hybrid schedules common. Not a 'guaranteed shutdown' culture but predictable."
   }
  },
  "instalily": {
@@ -102435,50 +102705,114 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 – nationally significant classified programs but not a primary AI research publisher; prestige comes from deployment scale and clearance level rather than open-source contribution."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "500976fffb",
+    "2a7688a18e"
+   ],
+   "value": "Government contractor model: wins competitive tenders and sole-source contracts for multi-year programs; revenue comes from cost-plus, fixed-price, and time-and-materials contracts with Australian federal agencies."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-first engineering culture; structured, process-heavy (CMMI/ISO), clearance-gated; collaborative but hierarchical; strong veteran/ex-military presence; diversity initiatives growing."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "500976fffb",
+    "2a7688a18e"
+   ],
+   "value": "Australian Department of Defence, intelligence community agencies, federal civilian departments, and allied partner forces."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: AUD 78k–92k base + 9.5% super + potential clearance allowance (AUD 5k–15k); signing bonus rare; relocation assistance case-by-case."
   },
   "evidence_sha": "e5d03f62311ae592",
+  "generated_at": 1784681898,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "500976fffb"
+   ],
+   "value": "Defense technology / Government IT services / Systems integration"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Prepare for: (1) clearance eligibility discussion, (2) applied ML/system-design questions using defense/ISR scenarios, (3) behavioral examples showing delivery under regulatory constraints, (4) questions about workload predictability on cost-plus vs fixed-price contracts, (5) how the grad program (if any) rotates between classified and unclassified streams."
   },
-  "last_attempt_at": 1784681809,
+  "last_attempt_at": 1784681898,
   "last_evidence_at": 1784672017,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "500976fffb",
+    "b35f75eda1"
+   ],
+   "value": "Primary offices in Canberra (Russell, Barton, Fyshwick), Sydney, Brisbane, Melbourne, Adelaide; some roles require baseline or NV1/NV2 security clearance."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "500976fffb",
+    "b35f75eda1"
+   ],
+   "value": "Deliver innovative technology solutions that protect national security, improve health outcomes, and enable mission success for government customers."
+  },
   "name": "Leidos Australia",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate–high: program milestones drive sprints; classified environments limit external collaboration but provide stable long-term roadmaps; less 'move fast break things', more 'deliver to spec on schedule'."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "500976fffb",
+    "2a7688a18e"
+   ],
+   "value": "Defense systems integration, cybersecurity services, intelligence analytics, health IT modernization, logistics and sustainment, and AI/ML-enabled decision support for government missions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20 days annual leave + 10–12 public holidays + up to 15 days personal/carer’s leave per NES; additional study/exam leave for grads."
   },
+  "refresh_after": 1789865898,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "medium",
+   "source_ids": [
+    "b35f75eda1"
+   ],
+   "value": "Leidos Australia Graduate Program (2-year, 3–4 rotations across cyber, analytics, systems engineering, software delivery)"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Christmas–New Year stand-down (typically 5–10 business days) common on defense sites; no guaranteed company-wide summer shutdown."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "500976fffb"
+   ],
+   "value": "Large established subsidiary (parent Leidos ~$15B+ revenue, ~45k employees globally); Australia operation has 1,000+ staff across multiple sites."
   },
   "sources": [
    {
@@ -102512,14 +102846,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=e26ba1d3cd6031b1a80f544b6de8e7e731068f8c1bd8fbd3f959cf57d40d4a81JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=32b443f7-64f1-66a5-2db3-546a65e467d4&u=a1aHR0cHM6Ly93d3cubGVpZG9zLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "b35f75eda1"
+   ],
+   "value": "Employer-sponsored visas (subclass 482/186) available for roles requiring scarce skills; citizenship or eligibility for Australian security clearance is mandatory for most technical positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "500976fffb",
+    "2a7688a18e"
+   ],
+   "value": "Leidos Australia is the Australian subsidiary of Leidos, a Fortune 500 defense, intelligence, and health technology company. It delivers large-scale systems integration, cybersecurity, and data-driven solutions primarily for Australian government defense and national security agencies."
+  },
+  "synthesized_evidence_sha": "e5d03f62311ae592",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "500976fffb",
+    "b35f75eda1"
+   ],
+   "value": "Classified and unclassified software engineering, data science, AI/ML model development for ISR and decision support, cyber operations, cloud migration (AWS/GovCloud/Azure), DevSecOps, and systems engineering for air/land/sea platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672017,
   "web_search_url": "https://duckduckgo.com/?q=Leidos+Australia+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Leidos Australia offers rare access to classified, mission-critical AI/data-science work at national scale—prestige from defending sovereign capability—while its government-contractor structure enforces clearer contractual hours and leave entitlements than many pure-play tech firms, aligning with your desire for elite impact without burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated 3.5/5 – contractual hours (37.5–40/week) are respected on most cost-plus programs; surge periods occur around capability releases; on-call rotations exist for operational systems."
   }
  },
  "leland": {
@@ -166209,39 +166572,103 @@
  },
  "southern company": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "edf8064ec1"
+   ],
+   "value": "Tier 3 -- Large-cap industrial/utility established company; not recognized as a top-tier tech firm for AI or data science prestige."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "edf8064ec1",
+    "08577b1fba"
+   ],
+   "value": "Regulated monopoly utility operations across multiple states, generating stable returns through rate-regulated electricity and natural gas sales."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "edf8064ec1",
+    "08577b1fba"
+   ],
+   "value": "Traditional, stability-focused Southern corporate culture. Emphasis on safety, reliability, community, and long-term, steady employment. Bureaucracy is likely high due to regulations."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "edf8064ec1",
+    "08577b1fba"
+   ],
+   "value": "Residential, commercial, and industrial customers in the Southeastern United States, including major metropolitan areas like Atlanta and Birmingham."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$95,000 base salary for a new-grad Data Scientist/AI role in Atlanta. Total compensation likely modest with a conservative bonus structure, well below top-tier tech firms."
   },
   "evidence_sha": "f3397e5fdf0a3c97",
+  "generated_at": 1784681898,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "edf8064ec1",
+    "08577b1fba"
+   ],
+   "value": "Utilities / Electrical Power Generation & Natural Gas Distribution"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "For a candidate seeking an elite AI role here, interviews would likely test domain-specific applications like predictive grid maintenance or load forecasting. The candidate should probe deeply into team autonomy, red tape, and whether they use a modern stack, while weighing trade-offs between prestige/pay and the utility’s high stability and balanced hours."
   },
+  "last_attempt_at": 1784681898,
   "last_evidence_at": 1784655992,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "edf8064ec1",
+    "08577b1fba"
+   ],
+   "value": "Headquarters in Atlanta, Georgia; operations concentrated in the Southeastern United States including Alabama, Georgia, Illinois, Mississippi, Tennessee, and Virginia."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "edf8064ec1"
+   ],
+   "value": "To provide clean, safe, reliable, and affordable energy to their customers and serve the communities where they operate."
+  },
   "name": "Southern Company",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "edf8064ec1"
+   ],
+   "value": "Slower and more methodical due to a regulated environment, strict safety protocols, and capital-intensive infrastructure lifecycle. Emphasis on stability and reliability over rapid innovation."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "edf8064ec1"
+   ],
+   "value": "Electricity generation, transmission, and distribution; natural gas distribution; energy services including wholesale gas marketing and fiber optics."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of combined PTO/bank for a new graduate in a corporate technical role, increasing with tenure."
   },
+  "refresh_after": 1789865898,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -166251,7 +166678,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns beyond major federal holidays; core hours likely only during business days with no expected weekend work."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "edf8064ec1",
+    "08577b1fba"
+   ],
+   "value": "Large-cap, mature Fortune 500 public utility giant with massive market capitalization, operating one of the largest power generation fleets in the United States."
   },
   "sources": [
    {
@@ -166285,14 +166720,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=5d7863d8455b8f37ec4cb8ce47bff9a9064ffa26d000b523c043f485f672c4bbJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=260a9729-c6c2-672f-23e1-80b4c77d665c&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvU291dGhlcm5fVW5pdGVkX1N0YXRlcw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "edf8064ec1",
+    "08577b1fba"
+   ],
+   "value": "Southern Company is a leading energy provider serving millions of electric and natural gas customers across the Southeastern United States. The company generates revenue primarily through regulated utility operations, owning and operating a massive portfolio of power generation assets and transmission infrastructure."
+  },
+  "synthesized_evidence_sha": "f3397e5fdf0a3c97",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "edf8064ec1"
+   ],
+   "value": "Operates and maintains diverse power generation fleets (coal, nuclear, natural gas, renewables) and extensive transmission/distribution grids; employs data science for grid optimization, predictive maintenance, and demand forecasting."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784655992,
   "web_search_url": "https://duckduckgo.com/?q=Southern+Company+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "edf8064ec1"
+   ],
+   "value": "Southern Company does not align with the candidate's stated priority for a top-tier, fast-paced innovative tech culture. While it offers mission-driven work in critical infrastructure and likely provides the excellent work-life balance and 'sane hours' the candidate seeks, the utility industry inherently possesses a slower, more bureaucratic pace that contradicts the desire for an elite tech environment and the highest new-grad pay."
+  },
   "wlb_rating": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "edf8064ec1"
+   ],
+   "value": "Excellent -- regulated utility structure and unionized workforce often lead to structured workdays. Highly rated for work-life balance in peer reviews; 'sane hours' are the norm."
   }
  },
  "space dynamics laboratory": {
@@ -177575,11 +178040,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -177591,6 +178058,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784681898,
   "last_evidence_at": 1784672018,
   "name": "Texas Instruments",
   "pace_of_work": {
