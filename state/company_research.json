@@ -47568,11 +47568,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -47584,6 +47586,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784684365,
   "last_evidence_at": 1784583427,
   "name": "Commure",
   "pace_of_work": {
@@ -120854,11 +120857,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -120870,6 +120875,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784684365,
   "last_evidence_at": 1784674719,
   "name": "Merative",
   "pace_of_work": {
@@ -131445,7 +131451,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -131463,7 +131469,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784684274,
+  "last_attempt_at": 1784684365,
   "last_evidence_at": 1784677183,
   "name": "Nidec",
   "pace_of_work": {
@@ -155624,40 +155630,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 — Generally perceived as one of the strongest new grad environments for AI/technical talent, competitive with top tech, trading, and unicorn-tier firms."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "6869e30bd4"
+   ],
+   "value": "Primarily interchange revenue from corporate card transactions, combined with a SaaS subscription on the software platform to provide a hybrid fintech revenue stream."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "6869e30bd4"
+   ],
+   "value": "Builder-first, high-ownership, low-ego culture, teams act like mini-CEOs and drive their own outcomes."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "6869e30bd4"
+   ],
+   "value": "Ambitious companies ranging from mid-market startups to large enterprises; focus is on scaling organizations that need to control spending and eliminate manual finance work."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $180K–$225K total compensation including base, bonus, and equity, competitive with top-tier AI/tech new grad offers."
   },
   "evidence_sha": "796fdd115c9904b3",
+  "generated_at": 1784684365,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "6869e30bd4"
+   ],
+   "value": "Fintech (financial technology) + SaaS."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+   "value": "Expect practical technical screenings on system design, product thinking, and data modeling that emphasize ownership and high-velocity decision-making in a collaborative, non-toxic environment."
   },
-  "last_attempt_at": 1784684274,
+  "last_attempt_at": 1784684365,
   "last_evidence_at": 1784656820,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "6869e30bd4"
+   ],
+   "value": "Offices in New York City and Miami; additional remote-friendly presence across the US."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "6869e30bd4"
+   ],
+   "value": "To build the best finance automation platform so every ambitious company can operate better and save time and money, regardless of size."
+  },
   "name": "Ramp",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast and high-ownership but sustainable; builders ship quickly with end-to-end ownership but without ruthless death-march schedules."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "6869e30bd4"
+   ],
+   "value": "Corporate cards with spend controls, expense management, bill pay, accounting automation, procurement, travel booking, and reporting tools with price intelligence — all integrated into a single SaaS platform."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20 days PTO for new grad hires, consistent with top-tier tech unicorn peer benefits."
   },
+  "refresh_after": 1789868365,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -155667,7 +155725,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Yes, recently granted company-wide shutdown weeks such as two weeks in December and one week in July, validated across many employer review sites and company statements internally."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "6869e30bd4"
+   ],
+   "value": "Late-stage pre-IPO unicorn, with thousands of employees across global offices, having multiple current job openings."
   },
   "sources": [
    {
@@ -155701,14 +155766,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=82ca55fd5525850e0c729e9650ebb820eabdc5f35e8603f37163ae44337bcf06JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=2355962d-b9fc-6fa1-2f05-81b1b8e06e8c&u=a1aHR0cHM6Ly9jb21tdW5pdHkuZWJheS5jb20vZm9ydW0vc2VsbGluZy01NzkyMC8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "6869e30bd4"
+   ],
+   "value": "Ramp is a finance automation platform that combines corporate cards, expense management, bill payments, accounting, and procurement into one system. It makes money primarily through interchange fees earned every time a customer uses a Ramp corporate card, while offering its software for free."
+  },
+  "synthesized_evidence_sha": "796fdd115c9904b3",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "6869e30bd4"
+   ],
+   "value": "Cross-functional ownership: design and build integrations, influence product and engineering roadmaps, solve customer financial problems with technical solutions across product, data, and sales engineering flows."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784586003,
   "web_search_url": "https://duckduckgo.com/?q=Ramp+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers elite-tier fintech prestige comparable to top-tier AI firms, high new-grad pay with meaningful real-world impact, and a fast-paced builder culture that respects boundaries, with sane hours and full-company shutdowns baked into its rhythm. You get startup speed and ownership without the burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Very good. Structured shutdowns are a core benefit and late-night culture is discouraged; pace remains high but work is largely contained in standard hours."
   }
  },
  "randstad": {
@@ -164034,7 +164124,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -164052,7 +164142,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784684274,
+  "last_attempt_at": 1784684365,
   "last_evidence_at": 1784675869,
   "name": "SA Technologies",
   "pace_of_work": {
@@ -173859,7 +173949,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -173875,7 +173965,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -173901,7 +173991,7 @@
    ],
    "value": "Technical skills in AI research, agents, and reinforcement learning, with emphasis on innovation and problem-solving in a fast-paced environment."
   },
-  "last_attempt_at": 1784403469,
+  "last_attempt_at": 1784684365,
   "last_evidence_at": 1784656820,
   "locations": {
    "confidence": "unknown",
@@ -205824,37 +205914,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (elite) — Core ML applied to execution algorithms, microstructure research, and predictive modeling at nanosecond scale; publishes in top venues; competes for same talent as top quant funds and FAIR/DeepMind."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Market-making revenue from bid-ask spreads and rebates across venues; execution services fees (agency commissions, technology access fees); interest income from securities financing; minimal directional risk due to delta-neutral strategies."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, meritocratic, quantitatively rigorous. Flat hierarchy in tech teams; strong peer review; emphasis on correctness and latency. Competitive but collaborative within pods. Transparent about PnL attribution. Less bureaucracy than big banks, but regulatory compliance adds process."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Institutional investors (asset managers, hedge funds, pension funds), broker-dealers, exchanges, retail brokers, and corporate issuers seeking liquidity and execution services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $175k-$225k base + $50k-$100k sign-on + $50k-$150k annual bonus (performance-linked) + RSUs (~$50k-$100k/yr vesting). Total Year 1: $300k-$450k. Quant/research roles at higher end."
   },
   "evidence_sha": "87937ad61aab2799",
+  "generated_at": 1784684365,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Electronic Trading / Market Making / High-Frequency Trading (HFT) / Fintech"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep C++ systems questions (memory management, concurrency, lock-free programming), OS/kernel internals, networking (kernel bypass, RDMA, UDP), FPGA/Verilog basics, probability/statistics for market microstructure, and algorithmic problem-solving under latency constraints. Quant roles add stochastic calculus, time-series analysis, and order-book modeling."
+  },
+  "last_attempt_at": 1784684365,
   "last_evidence_at": 1784675870,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: New York, NY. Major offices: Austin TX, Chicago IL, Dublin (Ireland), London (UK), Singapore, Sydney, Hong Kong, Toronto. Remote/hybrid policies vary by team."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide efficient, transparent, and liquid markets through technology-driven market making and execution services."
+  },
   "name": "Virtu Financial",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced, deadline-driven during market hours; quarterly release cycles for infrastructure; rapid iteration on trading strategies. 'Fast, innovative tech culture' but with production rigidity due to regulatory/reliability requirements."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Electronic market-making and execution services across equities, ETFs, fixed income, FX, and commodities; proprietary trading technology platform; analytics and execution algorithms for institutional clients; Virtu Execution Services (VES) for agency execution."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 US holidays; unlimited sick; no formal 'guaranteed shutdown' policy. Some teams encourage full disconnect during winter break."
   },
+  "refresh_after": 1789868365,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -205864,7 +205995,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns. Market holidays only (NYSE calendar). Team-level 'quiet periods' occasionally after major releases."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public company (NASDAQ: VIRT); ~$2B+ annual revenue; ~1,000-2,000 employees globally; mature, profitable, large-scale electronic trading firm."
   },
   "sources": [
    {
@@ -205898,14 +206034,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=5a3ecadf80f289d7ef800d13d52fff51e4efd6301c18fa0cb8cc934f4b7362c9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0f446203-d0c3-62fc-3d75-759ed14763ba&u=a1aHR0cHM6Ly93d3cueW91dHViZS5jb20vcGxheWxpc3Q_bGlzdD1QTHRORS1GZEViTWlxWndRbllhRjkxYUMwSm9KRWp5Wnot&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors H-1B and green cards for specialized technical roles (quant research, core dev, infrastructure). Cap-exempt status via university affiliations possible for research roles. Premium processing used for critical hires."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Virtu Financial is a global electronic trading firm and market maker that provides liquidity across asset classes including equities, ETFs, fixed income, currencies, and commodities. It operates as a high-frequency trading (HFT) and market-making business, earning revenue primarily from bid-ask spreads and trading fees."
+  },
+  "synthesized_evidence_sha": "87937ad61aab2799",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Ultra-low-latency C++/Rust trading infrastructure; FPGA/hardware acceleration; real-time data processing (nanosecond-level); distributed systems for global exchange connectivity; quantitative research (alpha, microstructure, risk); ML for execution optimization and market microstructure analysis; cloud/hybrid compute for analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675870,
   "web_search_url": "https://duckduckgo.com/?q=Virtu+Financial+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Virtu offers elite technical prestige in low-latency systems and quantitative finance with top-tier new-grad compensation. The culture emphasizes engineering excellence and innovation in market microstructure, but the HFT/market-making environment demands intense focus during market hours and can involve high pressure, making work-life balance variable by team. It accelerates deep technical growth in C++, FPGA, and distributed systems at scale."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5 — Core market hours (6:30am–5pm ET) are intense and on-call; weekends generally protected but on-call rotations exist. Some teams (research, platform) have more flexibility. Not a 'guaranteed shutdown' culture; burnout risk exists in high-pressure pods."
   }
  },
  "visa": {
@@ -216161,7 +216318,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -216179,7 +216336,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784684274,
+  "last_attempt_at": 1784684365,
   "last_evidence_at": 1784675869,
   "name": "Zip",
   "pace_of_work": {
