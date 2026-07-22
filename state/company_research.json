@@ -35421,7 +35421,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -35439,7 +35439,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784687742,
+  "last_attempt_at": 1784687834,
   "last_evidence_at": 1784674482,
   "name": "Cadence Design Systems",
   "pace_of_work": {
@@ -43016,40 +43016,88 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Top-tier (Tier 1) — recognized leader in on-chain data, risk ML, and programmable money; publishes research; hires from PhD programs and FAIR/Google Brain alumni."
   },
   "aliases": [],
-  "attempts": 4,
-  "culture_vibe": {
+  "attempts": 5,
+  "business_model": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Revenue from USDC transaction/redemption fees, interest earned on the ~$30B+ reserve portfolio backing USDC, and subscription/usage fees for Circle APIs and enterprise treasury products."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "72384b85e2"
+   ],
+   "value": "Remote-first, transparent, mission-driven ('prosperous global economy'); emphasizes mutual respect, mindfulness, continuous learning (Crypto Literacy program), and low-ego collaboration."
+  },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fintech apps, exchanges, market makers, payment processors, global enterprises, DeFi protocols, and developers building on-chain payment and treasury workflows."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $160k–$190k base + $30k–$60k equity (4-yr) + $15k–$25k sign-on ≈ $205k–$275k total Year 1; top-of-market for crypto/fintech."
   },
   "evidence_sha": "5a0f7c8432c34871",
+  "generated_at": 1784687834,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
-  "last_attempt_at": 1784687742,
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "72384b85e2"
+   ],
+   "value": "Expect rigorous systems design (distributed ledgers, high-throughput APIs), deep-dive on blockchain fundamentals, and behavioral screens for collaboration in a remote, respect-driven culture. Prepare for live coding in Go/Rust/TypeScript and questions on consistency, security, and regulatory constraints."
+  },
+  "last_attempt_at": 1784687834,
   "last_evidence_at": 1784674768,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "72384b85e2"
+   ],
+   "value": "Remote-first globally; physical hubs in Boston (HQ), New York, San Francisco, Dublin, Singapore. Hires in many US states and select countries."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "72384b85e2"
+   ],
+   "value": "To create a more prosperous global economy for everyone by building open, programmable internet-based financial infrastructure."
+  },
   "name": "Circle",
   "pace_of_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "72384b85e2"
+   ],
+   "value": "Fast, iterative product cycles driven by protocol upgrades and regulatory deadlines; but culture emphasizes sustainable pace and 'mindfulness' over heroics."
+  },
+  "products": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "USDC (USD Coin) stablecoin; Circle Payments API (programmable fiat-to-crypto on/off-ramps); Circle Accounts (business treasury accounts); Circle Mint (institutional issuance/redemption); Web3 services (programmable wallets, smart contract platform)."
   },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10–12 company holidays + flexible 'recharge' days; unlimited sick/mental-health days."
   },
+  "refresh_after": 1789871834,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -43059,7 +43107,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically last week of December) + occasional 'global reset' long weekends; not guaranteed every year."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Late-stage private company (~500–800 employees); profitable at scale; last valued at $9B (2022); preparing for potential public listing."
   },
   "sources": [
    {
@@ -43093,14 +43146,39 @@
     "url": "https://careers.circle.com/us/en"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B, STEM OPT, and green cards for technical roles; dedicated immigration support; hires internationally where entity exists."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Circle is a global financial technology company that issues USDC, a leading regulated stablecoin pegged to the US dollar, and provides programmable payments and treasury infrastructure for businesses and developers. It makes money primarily through transaction fees on USDC minting/redemption, interest income on the reserves backing USDC, and fees for its API-based payment and account services."
+  },
+  "synthesized_evidence_sha": "5a0f7c8432c34871",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "High-scale distributed systems (blockchain settlement, ledger engineering); core protocol work on Ethereum, Solana, and other L1/L2s; fintech APIs, risk/fraud ML, regulatory reporting automation, cryptographic key management, and developer tooling."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674768,
   "web_search_url": "https://duckduckgo.com/?q=Circle+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "72384b85e2"
+   ],
+   "value": "Circle offers elite prestige in crypto/fintech with top-of-market new-grad compensation, a remote-first culture that explicitly prioritizes 'healthy life balance' and mutual respect, and deep technical challenges in programmable money—all without the burnout reputation of many high-growth unicorns."
+  },
   "wlb_rating": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "72384b85e2"
+   ],
+   "value": "Strong (≈4/5) — remote-first, explicit 'healthy life balance' messaging, guaranteed shutdown periods, and peer reviews citing reasonable hours for a high-impact role."
   }
  },
  "cisco": {
@@ -46769,11 +46847,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -46785,6 +46865,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784687834,
   "last_evidence_at": 1784673658,
   "name": "Collabera",
   "pace_of_work": {
@@ -70822,7 +70903,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -70840,7 +70921,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
-  "last_attempt_at": 1784687742,
+  "last_attempt_at": 1784687834,
   "last_evidence_at": 1784583446,
   "name": "Figma",
   "pace_of_work": {
@@ -106459,7 +106540,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -106477,7 +106558,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784687742,
+  "last_attempt_at": 1784687834,
   "last_evidence_at": 1784675879,
   "name": "Kitware",
   "pace_of_work": {
@@ -138185,7 +138266,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -138203,7 +138284,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784687742,
+  "last_attempt_at": 1784687834,
   "last_evidence_at": 1784674771,
   "name": "Oklo",
   "pace_of_work": {
@@ -145390,7 +145471,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -145408,7 +145489,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784687742,
+  "last_attempt_at": 1784687834,
   "last_evidence_at": 1784674729,
   "name": "Peraton",
   "pace_of_work": {
@@ -190789,7 +190870,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 13,
+  "attempts": 14,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -190831,7 +190912,7 @@
    ],
    "value": "Probe whether the 'dynamic team' and 'exciting environment' translate to true technical learning and career growth for AI/Data Science work, or if the highly structured nature of defense/aerospace solutions will conflict with the desire to avoid slow bureaucracy."
   },
-  "last_attempt_at": 1784687742,
+  "last_attempt_at": 1784687834,
   "last_evidence_at": 1784674726,
   "locations": {
    "confidence": "high",
