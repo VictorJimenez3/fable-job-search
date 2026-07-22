@@ -3077,11 +3077,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -3093,6 +3095,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784748671,
   "last_evidence_at": 1784742129,
   "name": "Acxiom",
   "pace_of_work": {
@@ -10907,48 +10910,118 @@
  "altron inc": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "5149c002cd"
+   ],
+   "value": "Estimated: Low. As an IT services provider focused on logistics and financial IT rather than cutting-edge AI research, it does not align with top-tier AI or data science prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "5149c002cd"
+   ],
+   "value": "IT services and solutions provider generating revenue through enterprise logistics and financial management software/services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "5149c002cd"
+   ],
+   "value": "Estimated: Traditional IT services culture. Onsite work and enterprise tech stacks suggest a structured environment rather than an innovative, mission-driven tech culture."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "5149c002cd"
+   ],
+   "value": "Organizations requiring IT, logistics, and financial management support, likely including public sector and government clients given the Manassas, VA headquarters."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "5149c002cd"
+   ],
+   "value": "Estimated: $85,000 - $105,000 base salary for new grad Software Engineer 1 roles."
   },
   "evidence_sha": "6ec95d2942899143",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784748671,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "5149c002cd"
+   ],
+   "value": "Information Technology Services and Consulting."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5149c002cd"
+   ],
+   "value": "Probe deeply into the company's culture, pace, and hours. Ask whether any AI or advanced data-science work exists beyond traditional logistics IT, how bureaucracy impacts engineering velocity, and what the promotion timeline looks like. Crucially, verify if remote flexibility exists or if the rigid onsite mandate will stifle your desired work-life balance."
+  },
+  "last_attempt_at": 1784748671,
   "last_evidence_at": 1784742767,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "5149c002cd"
+   ],
+   "value": "Manassas, VA (onsite work required)."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5149c002cd"
+   ],
+   "value": "Not explicitly stated in available sources; focus appears to be on providing logistics and financial management IT solutions."
+  },
   "name": "Altron, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "5149c002cd"
+   ],
+   "value": "Estimated: Moderate to slow. Traditional IT services firms handling enterprise logistics and financial systems tend to be more bureaucratic and methodical rather than fast and innovative."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "5149c002cd"
+   ],
+   "value": "Information technology services, logistics management solutions, and financial management software/services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10-15 days annually, typical for traditional IT services firms."
   },
+  "refresh_after": 1789932671,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research"
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None known. No information on guaranteed company shutdowns was found in the research."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "5149c002cd"
+   ],
+   "value": "Company stage not explicitly stated; job posting indicates active hiring at entry-level, suggesting a stable operating company."
   },
   "sources": [
    {
@@ -11002,14 +11075,43 @@
     "url": "https://jobright.ai/jobs/info/6a60d76fc752926c2268276d?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "5149c002cd"
+   ],
+   "value": "Altron, Inc. is an IT company that offers logistics management and financial management services. They likely generate revenue through enterprise IT consulting, software solutions, and managed services contracts with government and corporate clients."
+  },
+  "synthesized_evidence_sha": "6ec95d2942899143",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "5149c002cd"
+   ],
+   "value": "Software engineering roles requiring Java, JavaScript frameworks (React, Vue), Oracle, and PostgreSQL. Work is onsite in a traditional IT services environment."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784742767,
   "web_search_url": "https://duckduckgo.com/?q=Altron%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5149c002cd"
+   ],
+   "value": "This is an IT services company requiring onsite work in Manassas, VA, which likely runs contrary to your preference for a fast, innovative tech culture and elite AI/data-science prestige. The tech stack (Java, React, Oracle) and onsite requirement suggest a more traditional, slow-paced environment rather than a cutting-edge AI role."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "5149c002cd"
+   ],
+   "value": "Estimated: Moderate. Onsite government-adjacent IT services often have stable hours but lack the flexible, guaranteed shutdowns or fast-paced tech culture you desire."
   }
  },
  "amatrol": {
@@ -11196,7 +11298,7 @@
    "value": "Tier 1 (Elite). Amazon is a pioneer in production AI and cloud infrastructure globally, rivaling Google, Meta, and Microsoft in AI talent branding."
   },
   "aliases": [],
-  "attempts": 27,
+  "attempts": 28,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -11246,7 +11348,7 @@
    "source_ids": [],
    "value": "Amazon interviews emphasize its Leadership Principles with behavioral questions, plus technical screening covering data structures, system design, algorithms, and coding proficiency. Storytelling about ownership, bias for action, and customer obsession is crucial. For AI and data science roles, expect deep dives into machine learning theory, statistical analysis, and deployment experience."
   },
-  "last_attempt_at": 1784748506,
+  "last_attempt_at": 1784748671,
   "last_evidence_at": 1784732707,
   "locations": {
    "confidence": "high",
@@ -20945,37 +21047,90 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "0dbc6be4b3"
+   ],
+   "value": "Aerospace manufacturing and satellite internet services. The company builds proprietary small satellites and sells dedicated satellite bandwidth or entire spacecraft to regional operators."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Fast, mission-driven, innovation-focused tech culture without slow bureaucracy."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "0dbc6be4b3",
+    "752f35e186"
+   ],
+   "value": "Telecommunications providers, regional satellite operators, and specific national entities needing dedicated, localized broadband infrastructure."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140,000 - $170,000 base salary, aligning with elite new-grad tech pay in the San Francisco aerospace sector."
   },
   "evidence_sha": "0beb8fad4954455b",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784748671,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784748506,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0dbc6be4b3",
+    "c8456a8113"
+   ],
+   "value": "Aerospace and satellite telecommunications."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784748671,
   "last_evidence_at": 1784747329,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "752f35e186"
+   ],
+   "value": "San Francisco, California."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "0dbc6be4b3",
+    "752f35e186"
+   ],
+   "value": "To connect the world by making space-based internet access affordable and accessible through innovative, smaller-scale satellite technology."
+  },
   "name": "Astranis Space Technologies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Very fast-paced, high-output tech culture driven by aggressive satellite deployment schedules and continuous innovation, avoiding slow bureaucracy."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "0dbc6be4b3"
+   ],
+   "value": "MicroGEO satellites, which are smaller and more cost-effective geostationary communications spacecraft designed for targeted regional coverage."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard PTO, consistent with mid-stage commercial space tech companies that offer competitive benefits."
   },
+  "refresh_after": 1789932671,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -20985,7 +21140,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed shutdowns implemented to respect work-life balance and prevent burnout."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "0dbc6be4b3"
+   ],
+   "value": "mid-stage commercial aerospace manufacturer actively scaling production and launching initial satellite constellations."
   },
   "sources": [
    {
@@ -21039,14 +21201,42 @@
     "url": "https://jobright.ai/jobs/info/6a60e90611edf44d7915e7d6?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "c8456a8113"
+   ],
+   "value": "Not explicitly stated in provided sources, though active hiring for Fall 2026 associate roles suggests structured early-career pipelines."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "0dbc6be4b3",
+    "752f35e186"
+   ],
+   "value": "Astranis Space Technologies designs, builds, and operates compact, high-power geostationary communications satellites. The company makes money by selling these dedicated satellites and their associated launch and operation services to specific regional and commercial network operators."
+  },
+  "synthesized_evidence_sha": "0beb8fad4954455b",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "c8456a8113"
+   ],
+   "value": "Software engineering roles focus heavily on C, C++, scripting languages, embedded systems, and real-time operating systems (RTOS) for flight software development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784747329,
   "web_search_url": "https://duckduckgo.com/?q=Astranis+Space+Technologies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. The company is reputed to respect personal time and offers guaranteed shutdowns, avoiding toxic or high-burnout environments?"
   }
  },
  "astrazeneca": {
@@ -75242,7 +75432,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -75260,7 +75450,7 @@
    "source_ids": [],
    "value": "Sports / technology (estimated)"
   },
-  "last_attempt_at": 1784730215,
+  "last_attempt_at": 1784748671,
   "last_evidence_at": 1784725192,
   "name": "Fanatics",
   "pace_of_work": {
@@ -148807,47 +148997,109 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low. As a traditional regional insurance carrier, NYCM is unlikely to compete with elite tech firms for cutting-edge AI or data science prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "e7d271073b"
+   ],
+   "value": "Underwriting insurance policies and collecting premiums to generate revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional and stable. A legacy insurer likely values process and consistency over rapid innovation and risk-taking."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "e7d271073b"
+   ],
+   "value": "Individuals and businesses seeking property and casualty insurance coverage."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $65,000 - $85,000. Regional insurance tech roles typically pay less than elite tech hubs."
   },
   "evidence_sha": "d37d50e7091e27ec",
+  "generated_at": 1784748671,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e7d271073b"
+   ],
+   "value": "Insurance"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+   "value": "Candidates should clarify the specifics of the technical stack, the pace of innovation within the IT department, and opportunities for career growth. It is crucial to ask about work-life balance policies, expected hours, and whether the culture leans towards slow bureaucracy or agile practices to ensure it aligns with their priorities."
   },
+  "last_attempt_at": 1784748671,
   "last_evidence_at": 1784732707,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "e7d271073b"
+   ],
+   "value": "Headquartered in Edmeston, New York, USA. Operates on a hybrid work model."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "e7d271073b"
+   ],
+   "value": "Providing reliable insurance solutions to its regional customer base."
+  },
   "name": "NYCM Insurance",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow. A 125-year-old legacy insurance company typically operates at a deliberate, process-oriented pace rather than a fast, innovative tech culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "e7d271073b"
+   ],
+   "value": "Personal and commercial insurance products, including auto, home, and business coverage."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-25 days. Traditional mid-sized companies often fall in this range, though exact policy is not public."
   },
+  "refresh_after": 1789932671,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "e7d271073b"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unlikely to have guaranteed tech-wide shutdowns, though standard public holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "e7d271073b"
+   ],
+   "value": "Established late-stage company with 501-1000 employees."
   },
   "sources": [
    {
@@ -148901,14 +149153,41 @@
     "url": "https://jobright.ai/jobs/info/6a60b0b5a4c799127e993b38?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "e7d271073b"
+   ],
+   "value": "Not explicitly mentioned in the available sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "e7d271073b"
+   ],
+   "value": "NYCM Insurance is a regional property and casualty insurance provider founded in 1899 and headquartered in Edmeston, New York. The company generates revenue by underwriting insurance policies and collecting premiums from its policyholders."
+  },
+  "synthesized_evidence_sha": "d37d50e7091e27ec",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "e7d271073b"
+   ],
+   "value": "Software development involving programming, troubleshooting, documentation, and adherence to software development standards."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784732707,
   "web_search_url": "https://duckduckgo.com/?q=NYCM+Insurance+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a regional insurer, NYCM likely offers a stable work environment, but may not provide the elite prestige, fast-paced tech culture, or high new-grad compensation benchmarks typically found at top-tier AI or data science firms. Candidates should weigh the job security and potential work-life balance of a 19th-century company against their desire for accelerated technical learning."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Regional insurance companies often emphasize sane hours and long-term employee retention, though this must be verified."
   }
  },
  "nymbus": {
@@ -152431,48 +152710,124 @@
  "optimum media": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "e5f157d57f"
+   ],
+   "value": "Estimated: Moderate. As an advertising and media consultancy, it likely lacks the elite top-tier prestige of pure-play tech or AI research firms."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "e5f157d57f"
+   ],
+   "value": "Late-stage consultancy generating revenue through multiscreen advertising sales and media consulting services."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "e5f157d57f"
+   ],
+   "value": "Self-described as an innovative multiscreen advertising sales and media consultancy business servicing various clients across the United States."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "e5f157d57f"
+   ],
+   "value": "Various clients across the United States."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "e5f157d57f"
+   ],
+   "value": "Estimated: $77,000 - $127,000 per year for entry-level data roles."
   },
   "evidence_sha": "03942f09c90826ba",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784748671,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e5f157d57f"
+   ],
+   "value": "Media Consultancy and Advertising Sales."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e5f157d57f"
+   ],
+   "value": "To ensure this role meets your standards, focus the interview on the exact technical stack and whether the data work involves advanced AI/ML modeling or is limited to standard advertising analytics. Ask precise questions about expected working hours, on-call expectations, and work-life balance policies to confirm it avoids the toxic burnout culture you want to escape."
+  },
+  "last_attempt_at": 1784748671,
   "last_evidence_at": 1784732708,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "e5f157d57f"
+   ],
+   "value": "Long Island City, New York, USA (Headquarters); roles such as Data Analyst are based in New York, NY."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "e5f157d57f"
+   ],
+   "value": "Mission details are not explicitly public, but the company focuses on delivering innovative multiscreen advertising and media consultancy solutions."
+  },
   "name": "Optimum Media",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e5f157d57f"
+   ],
+   "value": "Estimated: Fast-paced, driven by client demands and the innovative multiscreen advertising market."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "e5f157d57f"
+   ],
+   "value": "Multiscreen advertising sales and media consultancy services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "e5f157d57f"
+   ],
+   "value": "Estimated: Unknown, no public details; typical late-stage companies of this size often offer around 15-20 days of PTO."
   },
+  "refresh_after": 1789932671,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "e5f157d57f"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "e5f157d57f"
+   ],
+   "value": "Estimated: No public information on guaranteed company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "e5f157d57f"
+   ],
+   "value": "Late stage company with 501-1000 employees, founded in 2018 in Long Island City, New York, USA."
   },
   "sources": [
    {
@@ -152526,14 +152881,45 @@
     "url": "https://jobright.ai/jobs/info/6a60a51671c79e639619c155?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "e5f157d57f"
+   ],
+   "value": "Not found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "e5f157d57f"
+   ],
+   "value": "Optimum Media is an innovative multiscreen advertising sales and media consultancy business servicing various clients across the United States. It makes money by providing media consulting and advertising sales services to its clientele."
+  },
+  "synthesized_evidence_sha": "03942f09c90826ba",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "e5f157d57f"
+   ],
+   "value": "Hires for data roles such as Data Analyst, which presumably supports advertising sales and media consulting through data analysis."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784732708,
   "web_search_url": "https://duckduckgo.com/?q=Optimum+Media+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "e5f157d57f"
+   ],
+   "value": "Optimum Media offers a compelling entry-level compensation range ($77K-$127K) that aligns with your need for high new-grad pay, and its self-described innovative culture could indicate a fast-paced technical environment. However, as a media consultancy rather than a pure tech or AI firm, it may lack the elite technical prestige and deep AI focus you are prioritizing for your data science career."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "e5f157d57f"
+   ],
+   "value": "Estimated: Unspecified. The consultancy nature of the business may require client-driven deadlines, so work-life balance should be verified during interviews."
   }
  },
  "optiver": {
@@ -187731,38 +188117,103 @@
  "signet jewelers": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "18090e0838"
+   ],
+   "value": "Estimated: Low tier; traditional retail companies generally do not offer the elite, top-tier AI/DS prestige found in big tech or specialized AI firms."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "18090e0838"
+   ],
+   "value": "Estimated: Retail sales of jewelry through physical storefronts and online e-commerce channels."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "18090e0838"
+   ],
+   "value": "Estimated: Corporate and traditional, focused on retail metrics rather than hyper-technical innovation."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "44908d8f05"
+   ],
+   "value": "Estimated: General retail consumers, specifically individuals purchasing jewelry for engagement, wedding, and gifting occasions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "18090e0838"
+   ],
+   "value": "Estimated: $80,000 to $110,000; likely falling short of the elite new-grad tech pay threshold the candidate is aiming for."
   },
   "evidence_sha": "f3e52eb5375c6998",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784748671,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "44908d8f05"
+   ],
+   "value": "Retail Jewelry"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "44908d8f05"
+   ],
+   "value": "Probe whether the AI/DS team genuinely operates with a modern, fast-paced tech culture or if it is bottlenecked by legacy retail bureaucracy. Ask about guaranteed shutdown periods, on-call expectations, and whether new-grad compensation meets the elite pay threshold the candidate is targeting."
+  },
+  "last_attempt_at": 1784748671,
   "last_evidence_at": 1784674071,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "18090e0838"
+   ],
+   "value": "Estimated: Headquartered in Ohio with retail locations and operational offices spread globally."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "44908d8f05"
+   ],
+   "value": "Estimated: Providing customers with high-quality jewelry and a memorable shopping experience, although exact mission text was not found in the retrieved sources."
+  },
   "name": "Signet Jewelers",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "44908d8f05"
+   ],
+   "value": "Estimated: Slow to moderate, typical of established retail chains, which may frustrate a candidate seeking a fast, innovative tech environment."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "44908d8f05"
+   ],
+   "value": "Estimated: Fine jewelry, watches, and related accessories."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "ecb358d448"
+   ],
+   "value": "Estimated: Standard corporate retail range of 15 to 25 days of PTO annually, dependent on tenure and role."
   },
+  "refresh_after": 1789932671,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -187773,6 +188224,13 @@
    "confidence": "estimated",
    "source_ids": [],
    "value": "None found in research (estimated)"
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "18090e0838"
+   ],
+   "value": "Estimated: Publicly traded, large-scale enterprise with thousands of retail locations."
   },
   "sources": [
    {
@@ -187806,14 +188264,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=5bbadbf906a5008bcd6b5017d7db37fb834c4d8918c236e3733e9f53c531fb9dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0cf12d84-b1cd-6f48-3717-3a19b0b16e7e&u=a1aHR0cHM6Ly9zaWduZXRqZXdlbGVycy5jb20vb3VyLWhvbWUvZGVmYXVsdC5hc3B4&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "18090e0838",
+    "ecb358d448",
+    "44908d8f05"
+   ],
+   "value": "Signet Jewelers operates as a large retail company specializing in jewelry and watches, generating revenue through the direct sale of merchandise to consumers. The exact operational details are not available as the provided public web pages did not successfully extract or display content."
+  },
+  "synthesized_evidence_sha": "f3e52eb5375c6998",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674071,
   "web_search_url": "https://duckduckgo.com/?q=Signet+Jewelers+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "18090e0838"
+   ],
+   "value": "This candidate seeks an elite, high-paying AI/Data Science role with fast innovation, guaranteed shutdowns, and strong work-life balance. As a massive traditional retail corporation, Signet historically leans toward slow bureaucracy rather than the fast-paced, hyper-innovative tech culture the candidate desires."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "44908d8f05"
+   ],
+   "value": "Estimated: Likely sane hours with standard corporate expectations, though specific shutdown policies are unclear."
   }
  },
  "signify": {
