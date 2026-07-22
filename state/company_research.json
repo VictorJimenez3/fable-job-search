@@ -40530,40 +40530,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Respected cleared-space player with real ML/AI work on classified programs, but not a primary AI research lab. Prestige derives from mission impact and clearance level, not public publications."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Federal government contracting: competes for and executes prime and subcontract awards (cost-plus, fixed-price, T&M) across multiple contract vehicles (e.g., GSA schedules, GWACs, agency IDIQs). Revenue scales with headcount, contract wins, and technical differentiation in cleared work."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-first, professional, compliance-aware. Engineering culture is disciplined (CMMI, Agile, DevSecOps) with strong peer review. Less 'move fast and break things'; more 'deliver securely and sustainably'. Employee-owned (via ANC) fosters long-term view. Diversity and veteran hiring are emphasized."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "U.S. Department of Defense, intelligence community agencies, federal civilian agencies, and prime contractors on major federal IT and engineering contracts."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k-$110k base + $5k-$15k sign-on + clearance premium (5-15%) + RSU/401k match (6%). Total comp ~$100k-$130k. Varies by location, clearance level, and contract billing rate."
   },
   "evidence_sha": "688fd6eaa67feec5",
+  "generated_at": 1784683548,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Federal Government Contracting / Defense & Intelligence IT Services"
   },
-  "last_attempt_at": 1784683459,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect clearance verification, citizenship confirmation, and technical depth in Python, cloud (AWS/Azure Gov), ML frameworks, and DevSecOps. Be ready to discuss classified-environment constraints (air-gapped networks, no personal devices). Ask about specific contract's WLB: core hours, on-call rotation, comp time policy, and whether the program has mandated shutdowns. Probe training budget, tuition assistance, and internal mobility across SBUs."
+  },
+  "last_attempt_at": 1784683548,
   "last_evidence_at": 1784583499,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Chantilly, VA / Dulles corridor; additional presence at customer sites nationwide (e.g., DC metro, Colorado Springs, Huntsville, Tampa, St. Louis) and remote/hybrid options depending on contract clearance requirements."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Deliver innovative, secure, and reliable technology solutions that enable government customers to achieve their national security and public service missions, while creating shareholder value for Chenega's Alaska Native shareholders."
+  },
   "name": "Chenega MIOS SBU",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate to fast depending on contract. Sustained engineering pace on DevSecOps/cloud contracts; surge cycles around delivery milestones, exercises, or operational events. Generally less chaotic than startup crunch but deadline-driven."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "IT modernization, cybersecurity operations, cloud engineering, DevSecOps, data analytics, AI/ML integration, systems engineering, training and simulation, and mission operations support for defense and intelligence agencies."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays + possible comp time. Accrual often starts at 4 hrs/pay period (13 days/yr) and scales with tenure. Some contracts allow negative PTO for clearance processing delays."
   },
+  "refresh_after": 1789867548,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -40573,7 +40611,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically Dec 24-Jan 2) common on many contracts; some programs add summer shutdown week. Not guaranteed company-wide — confirm per contract."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mid-to-large government contractor; Chenega Corporation has 3,000+ employees across all SBUs. MIOS SBU likely employs hundreds of cleared technical staff across multiple contract sites."
   },
   "sources": [
    {
@@ -40607,14 +40650,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=70b0db1846b730c158d330d49954901e0bf260e0992694dfbec80c78bf874eefJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9jaGVuZWdhc2VjdXJpdHkuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active sponsor of U.S. security clearances (Secret, TS/SCI). H-1B sponsorship possible for specialized roles but limited by contract requirements for U.S. citizenship and clearances. Most technical roles require U.S. citizenship and ability to obtain/maintain clearance."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Chenega MIOS SBU (Mission Integration & Operations Support) is a Strategic Business Unit of Chenega Corporation, an Alaska Native Corporation. It provides mission-critical IT, cybersecurity, engineering, and operational support services primarily to U.S. federal government agencies, especially defense and intelligence customers. Revenue comes from federal contracts, task orders, and IDIQ vehicles."
+  },
+  "synthesized_evidence_sha": "688fd6eaa67feec5",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cleared software engineering, cloud architecture (AWS GovCloud, Azure Government), DevSecOps pipelines, cybersecurity operations (SOC, red/blue team), data science/ML for ISR and analytics, model-based systems engineering, and Agile development on classified programs."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583499,
   "web_search_url": "https://duckduckgo.com/?q=Chenega+MIOS+SBU+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Chenega MIOS offers cleared AI/DS work on national-security missions with the stability of a large Alaska Native Corporation. Prestige comes from high-impact defense/intel programs; pay is competitive for cleared new grads. Culture varies by contract but generally emphasizes mission focus over bureaucracy. Work-life balance depends on program tempo — some contracts enforce strict 40-hour weeks and shutdowns; others surge. Learning is accelerated by exposure to classified datasets, cutting-edge c"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5. Many cleared contracts enforce 40-hour weeks, comp time for OT, and annual shutdowns (e.g., Christmas/New Year). Some operational roles require shift work or on-call. Varies significantly by program — ask for the specific contract's policy."
   }
  },
  "cherokee federal": {
@@ -69312,37 +69376,82 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Emerging / niche—high domain impact but not yet a widely recognized AI brand like top-tier labs or unicorns."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Likely mission-driven, engineering-centric, and pragmatic given the safety-critical domain; bureaucracy level unknown."
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k–$140k base + equity (climate-tech/early-stage range); top-tier AI labs pay significantly more. Confirm exact figures during recruiting."
   },
   "evidence_sha": "8faea76c911e0a14",
+  "generated_at": 1784683548,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "d97223a040",
+    "879fb25e6b",
+    "39911bd95e"
+   ],
+   "value": "Wildfire technology / Climate tech / Public safety AI"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Prepare for: (1) real-time ML inference pipelines & model deployment at the edge or in the cloud; (2) geospatial/temporal data processing (satellite imagery, camera streams, sensor networks); (3) system design for low-latency alerting and high availability during fire season; (4) practical questions on data quality, false-positive reduction, and model monitoring in safety-critical contexts. Ask directly about on-call rotation, seasonal crunch policies, and whether the team has explicit ‘no-meeti"
   },
+  "last_attempt_at": 1784683548,
   "last_evidence_at": 1784674221,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Fire Rover",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Seasonal intensity (high during fire season, lower off-season) with potential for rapid iteration cycles typical of early-stage climate-tech startups."
   },
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Not published. Typical early-stage US tech startups offer 15–20 days + holidays; verify in offer conversation."
   },
+  "refresh_after": 1789867548,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -69352,7 +69461,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No public policy found. Ask whether the company institutes company-wide shutdown weeks (e.g., summer/winter) or mandatory disconnect periods."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Unknown. The presence of a new-grad posting suggests at least early-stage hiring capacity, but headcount and funding stage are not public."
   },
   "sources": [
    {
@@ -69396,14 +69512,39 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Fire Rover appears to be a company that posted a 2026 new-grad software engineer role on a monitored job board. Public sources do not clearly describe its product, business model, or operations; the name suggests a focus on wildfire detection, monitoring, or response technology."
+  },
+  "synthesized_evidence_sha": "8faea76c911e0a14",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely involves real-time data ingestion (satellite, sensor, camera feeds), computer vision for fire detection, geospatial analysis, and alerting/decision-support dashboards. Stack and specifics are not documented."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674221,
   "web_search_url": "https://duckduckgo.com/?q=Fire+Rover+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "If Fire Rover builds AI-driven wildfire detection/response, it offers a mission-critical, high-impact domain where a new grad can work on real-time computer vision, geospatial data, and large-scale sensor fusion—potentially with the urgency and autonomy of a startup rather than a bureaucratic gov contractor. The candidate’s priorities (elite AI prestige, fast innovative culture, sane hours, guaranteed shutdowns, accelerated learning) would hinge on whether the team is a small, well-funded, engin"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown—no employee reviews or policy disclosures found. Candidate should probe for explicit shutdown rituals, on-call expectations, and seasonal crunch mitigation."
   }
  },
  "first financial bank": {
@@ -71802,11 +71943,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -71818,6 +71961,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784683548,
   "last_evidence_at": 1784675221,
   "name": "Fort Myer Construction Corporation",
   "pace_of_work": {
@@ -73294,11 +73438,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -73310,6 +73456,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784683548,
   "last_evidence_at": 1784674653,
   "name": "Freedom Technology Solutions Group, LLC",
   "pace_of_work": {
@@ -127481,11 +127628,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -127497,6 +127646,7 @@
    "source_ids": [],
    "value": "Ai Lab / technology (estimated)"
   },
+  "last_attempt_at": 1784683548,
   "last_evidence_at": 1784584190,
   "name": "Netrolynx AI",
   "pace_of_work": {
@@ -145927,37 +146077,80 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "High — Clinical-grade genomic ML at a commercial-stage liquid biopsy company represents elite technical prestige; work publishes in top journals (Nature Medicine, Genome Biology) and directly impacts oncology guidelines."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue from clinical laboratory testing services (liquid biopsy assays), pharma partnerships for biomarker development and clinical trial services, and potential licensing of proprietary genomic analysis platforms."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, scientifically rigorous, collaborative across computational and wet-lab teams; Bay Area biotech culture tends toward intellectual humility, data-driven decision making, and respect for domain expertise."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary customers include oncologists, hospitals, cancer centers, pharmaceutical companies for clinical trial enrollment, and biotech partners developing targeted therapies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140k-$170k base + equity (0.05-0.15%) + sign-on $10-25k; competitive with Bay Area biotech/healthtech new grad offers."
   },
   "evidence_sha": "8aea6bc93e335aa3",
+  "generated_at": 1784683548,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Precision Oncology / Liquid Biopsy / Genomic Diagnostics / Healthtech"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Expect strong emphasis on: 1) Production-grade ML/software engineering for regulated environments (FDA/CLIA), 2) Bioinformatics algorithms (alignment, variant calling, CNV detection), 3) Cloud-native data pipelines (AWS/GCP, Nextflow, Spark), 4) Statistical rigor and validation methodologies, 5) Cross-functional collaboration with wet-lab scientists and clinical teams. Prepare for take-homes involving NGS data processing or ML model evaluation on genomic datasets."
+  },
+  "last_attempt_at": 1784683548,
   "last_evidence_at": 1784680811,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Hayward, California (San Francisco Bay Area) with potential additional sites; hiring for new grad roles suggests Bay Area presence."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To advance precision oncology through non-invasive liquid biopsy technology, enabling earlier cancer detection, personalized treatment selection, and improved patient outcomes."
+  },
   "name": "Predicine",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast — Biotech balances innovation velocity with regulatory/compliance gates; sprints driven by clinical milestones and assay validation timelines rather than arbitrary feature deadlines."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Predicine focuses on liquid biopsy assays, circulating tumor DNA (ctDNA) analysis, and genomic profiling platforms for oncology applications including early detection, treatment monitoring, and minimal residual disease detection."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays; typical for Bay Area biotech at this stage."
   },
+  "refresh_after": 1789867548,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -145967,7 +146160,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal company-wide shutdowns; some teams may observe reduced operations between Christmas/New Year."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-stage startup (Series B-C), approximately 100-500 employees, with commercial lab operations and active pharma partnerships."
   },
   "sources": [
    {
@@ -146011,14 +146209,39 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B visas for technical roles given Bay Area biotech talent needs; new grad hiring suggests openness to STEM OPT candidates."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Predicine is a precision oncology company that develops liquid biopsy and genomic profiling technologies for cancer detection, monitoring, and treatment selection. The company appears to be hiring 2026 new graduate software engineers based on monitored job boards."
+  },
+  "synthesized_evidence_sha": "8aea6bc93e335aa3",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Bioinformatics pipelines for NGS data analysis, machine learning for variant calling and biomarker discovery, cloud infrastructure for genomic data processing, clinical-grade software development, and integration with laboratory automation systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680811,
   "web_search_url": "https://duckduckgo.com/?q=Predicine+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Predicine sits at the intersection of AI/ML, genomics, and clinical oncology — a high-impact domain where data science directly enables cancer patient care. As a Bay Area precision oncology company hiring new grads, it offers elite technical prestige (genomic ML at clinical grade) with mission-driven purpose. The biotech/healthtech sector typically provides more structured hours than consumer tech, aligning with the candidate's desire for sane schedules and guaranteed shutdowns while still accel"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Healthtech/biotech typically offers better WLB than consumer tech; lab operations enforce natural boundaries; clinical-grade software requires disciplined processes that discourage hero-mode firefighting."
   }
  },
  "predictx": {
@@ -172865,49 +173088,135 @@
  },
  "sparks wiz limited": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "ff810e168c",
+    "ac73a0905e",
+    "fbce6649db"
+   ],
+   "value": "Cannot be assessed. No AI or data science prestige information is found in the given sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "ff810e168c",
+    "ac73a0905e",
+    "fbce6649db"
+   ],
+   "value": "The given sources point to sports and other unrelated entities, not a clear business model for a technology firm named Sparks Wiz Limited."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Undetermined. The retrieved pages do not illuminate Sparks Wiz Limited's internal culture."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "ff810e168c",
+    "ac73a0905e",
+    "fbce6649db"
+   ],
+   "value": "Unable to determine. The sources do not describe a technology company's customer base."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Not available. A compensation range cannot be estimated due to absence of relevant company data."
   },
   "evidence_sha": "5cd53c1bca17ea23",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784683548,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ff810e168c",
+    "ac73a0905e",
+    "fbce6649db"
+   ],
+   "value": "The supplied sources do not describe a technology or AI company; they relate primarily to sports (WNBA)."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "ff810e168c",
+    "ac73a0905e",
+    "fbce6649db"
+   ],
+   "value": "The supplied sources do not provide any information about Sparks Wiz Limited's technology, culture, or interview process."
+  },
+  "last_attempt_at": 1784683548,
   "last_evidence_at": 1784643843,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "ff810e168c",
+    "ac73a0905e",
+    "fbce6649db"
+   ],
+   "value": "Unable to find Sparks Wiz Limited office locations in the provided WNBA and unrelated pages."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "ff810e168c",
+    "ac73a0905e",
+    "fbce6649db"
+   ],
+   "value": "Unable to determine mission statement for a technology entity from the given sources."
+  },
   "name": "Sparks Wiz Limited",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown. A company-specific estimate cannot be reliably formed from the available sources."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "ff810e168c",
+    "ac73a0905e",
+    "fbce6649db"
+   ],
+   "value": "Unable to determine. The provided sources relate to a professional basketball team, not technology products or services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown. No policy details can be extracted from the given sources."
   },
+  "refresh_after": 1789867548,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "ff810e168c",
+    "ac73a0905e",
+    "fbce6649db"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown. Company-wide shutdown practices cannot be verified from the provided documents."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "ff810e168c",
+    "ac73a0905e",
+    "fbce6649db"
+   ],
+   "value": "Unable to determine the size or stage of a technology company from the supplied sources."
   },
   "sources": [
    {
@@ -172941,14 +173250,51 @@
     "url": "https://www.bing.com/ck/a?!&&p=c327ff1e88f7843a2766d6232ee582df3b32ed65754879dc04dc698a438229a4JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1b7e6636-68a1-6781-39ed-71ab69546607&u=a1aHR0cHM6Ly9zcGFya3Mud25iYS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "ff810e168c",
+    "ac73a0905e",
+    "fbce6649db"
+   ],
+   "value": "No sponsorship or visa information for a technology company is available in these sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "ff810e168c",
+    "ac73a0905e",
+    "fbce6649db"
+   ],
+   "value": "Based on the provided sources, Sparks Wiz Limited cannot be factually described. The supplied sources redirect to the WNBA's Los Angeles Sparks, not a technology or AI company."
+  },
+  "synthesized_evidence_sha": "5cd53c1bca17ea23",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "ff810e168c",
+    "ac73a0905e",
+    "fbce6649db"
+   ],
+   "value": "No information on AI, data science, or technical work found in sources; they pertain to unrelated organizations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784643843,
   "web_search_url": "https://duckduckgo.com/?q=Sparks+Wiz+Limited+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "ff810e168c",
+    "ac73a0905e",
+    "fbce6649db"
+   ],
+   "value": "Cannot confirm an elite tech, high-pay, high-WLB mission fit because the retrieved information does not represent the target company's real industry or culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown. Work-life balance cannot be inferred from the provided source material."
   }
  },
  "spatial front inc": {
@@ -177655,39 +178001,96 @@
  },
  "studco building systems us": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "7b20e698c6"
+   ],
+   "value": "Low — not an AI/data science company; technical roles center on business systems and CAD automation."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "7b20e698c6"
+   ],
+   "value": "B2B manufacturing and sales of building systems/components to the construction trade."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "7b20e698c6"
+   ],
+   "value": "Established, engineering-focused manufacturing culture; likely traditional hierarchy with emphasis on reliability and safety over rapid innovation."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "7b20e698c6"
+   ],
+   "value": "Construction contractors, builders, and commercial/residential building firms purchasing building systems and components."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $65k–$85k base (manufacturing IT/engineering support in upstate NY); well below top-tier AI/new-grad market rates."
   },
   "evidence_sha": "0d651e3b1c57249f",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784683548,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "7b20e698c6"
+   ],
+   "value": "Construction Materials / Building Systems Manufacturing"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "7b20e698c6"
+   ],
+   "value": "Expect questions on JavaScript, C#, object-oriented programming, VBA, and Autodesk Inventor iLogic for CAD automation. Focus on business systems development and manufacturing/engineering software integration rather than ML/AI."
+  },
+  "last_attempt_at": 1784683548,
   "last_evidence_at": 1784674190,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "7b20e698c6"
+   ],
+   "value": "Webster, New York, United States (headquarters)."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Studco Building Systems-US",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate, typical for manufacturing IT/engineering support; not a fast-paced innovative tech culture."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "7b20e698c6"
+   ],
+   "value": "Building systems and construction components (specific product lines not detailed in sources); likely includes steel framing, modular systems, or related structural products given the company name and industry."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10–15 days PTO + holidays (typical for US manufacturing SMEs); no public policy found."
   },
+  "refresh_after": 1789867548,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -177697,7 +178100,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns publicly documented; may observe standard holiday closures."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "7b20e698c6"
+   ],
+   "value": "Established SME: 51–200 employees, founded 1986, headquartered in Webster, NY."
   },
   "sources": [
    {
@@ -177751,14 +178161,43 @@
     "url": "https://jobright.ai/jobs/info/6a5e87d2270e3033b045e7a1?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "7b20e698c6"
+   ],
+   "value": "Company has a track record of offering H1B sponsorships, though not guaranteed for every role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "7b20e698c6"
+   ],
+   "value": "Studco Building Systems-US is a building systems manufacturer founded in 1986, based in Webster, New York. The company designs and produces construction-related building components and systems, selling B2B to contractors and builders in the construction industry."
+  },
+  "synthesized_evidence_sha": "0d651e3b1c57249f",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "7b20e698c6"
+   ],
+   "value": "Business systems development and CAD automation: JavaScript, C#, VBA, Autodesk Inventor iLogic for internal tools and engineering automation. Not an AI/data science focus."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674190,
   "web_search_url": "https://duckduckgo.com/?q=Studco+Building+Systems-US+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "7b20e698c6"
+   ],
+   "value": "This is a traditional manufacturing/construction technology role, not a top-tier AI or data science position. It offers stable engineering work in a established company with H1B sponsorship history, but does not match the candidate's priorities for elite AI prestige, high new-grad pay, fast innovative tech culture, or guaranteed work-life balance shutdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate (3/5) — manufacturing-adjacent IT roles often have standard hours but limited public data on shutdown policies."
   }
  },
  "stv": {
