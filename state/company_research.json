@@ -1320,7 +1320,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -1338,7 +1338,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784749244,
+  "last_attempt_at": 1784749525,
   "last_evidence_at": 1784711510,
   "name": "AAR",
   "pace_of_work": {
@@ -11398,116 +11398,145 @@
  },
  "amazon": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 1 (Elite). Amazon is a pioneer in production AI and cloud infrastructure globally, rivaling Google, Meta, and Microsoft in AI talent branding."
+   "confidence": "high",
+   "source_ids": [
+    "9675da81a9",
+    "7d096ae7b0",
+    "9b16c6179e"
+   ],
+   "value": "Top-tier prestige, particularly for roles within AWS Annapurna Labs focusing on ML infrastructure and custom silicon software."
   },
   "aliases": [],
-  "attempts": 32,
+  "attempts": 33,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "7d8703034f",
-    "870094a783"
+    "9b16c6179e",
+    "7d8703034f"
    ],
-   "value": "Amazon operates a diversified technology business model combining first-party retail, third-party marketplace fees, AWS cloud computing services, advertising services, and subscription services under Prime."
+   "value": "Generates revenue through direct online retail, third-party seller fees, cloud computing subscriptions (AWS), digital advertising, and hardware sales."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Data-driven, intensely customer-obsessed, and efficiency-focused. Scrappy innovation is inherent within that giant scale. The environment rewards ownership and bias for action but has a reputation for being stressful."
+   "confidence": "high",
+   "source_ids": [
+    "9675da81a9",
+    "7d096ae7b0"
+   ],
+   "value": "Inclusive culture focused on customer obsession, guided by strict leadership principles that demand extreme ownership and data-driven decision making."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "7d8703034f",
-    "870094a783"
+    "9b16c6179e",
+    "7d8703034f"
    ],
-   "value": "Global consumers shopping online, third-party sellers using the marketplace, enterprises and governments using AWS cloud services, and digital subscribers across Prime and entertainment services."
+   "value": "General consumers globally for retail and digital goods, as well as enterprises and developers utilizing AWS and cloud infrastructure services."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "870094a783"
+    "9675da81a9",
+    "9b16c6179e",
+    "7d8703034f"
    ],
-   "value": "Estimated: For new-grad software and AI engineering roles, total annual compensation commonly ranges from $130,000 to $180,000 including base, bonuses, and equity. Data analyst / data science entry pay may be lower, ranging from $60,000 to $95,000 for cost-of-living adjusted locations."
+   "value": "Estimated: $160,000 - $200,000+ total compensation (base + RSUs) for SDE I / ML roles, though entry-level data analyst roles may pay an hourly rate of $25-$27/hr."
   },
   "evidence_sha": "1371c07aa1a35747",
-  "generated_at": 1784673262,
+  "generated_at": 1784749525,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "7d8703034f",
-    "870094a783"
+    "9b16c6179e",
+    "7d8703034f"
    ],
-   "value": "E-commerce, Cloud Computing (AWS), Artificial Intelligence & Machine Learning, Logistics."
+   "value": "E-commerce, Cloud Computing, and Technology."
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Amazon interviews emphasize its Leadership Principles with behavioral questions, plus technical screening covering data structures, system design, algorithms, and coding proficiency. Storytelling about ownership, bias for action, and customer obsession is crucial. For AI and data science roles, expect deep dives into machine learning theory, statistical analysis, and deployment experience."
+   "source_ids": [
+    "9675da81a9",
+    "7d096ae7b0",
+    "9b16c6179e"
+   ],
+   "value": "Candidates should expect intense technical evaluations that prioritize raw algorithmic skill and system design over work-life balance discussions. To succeed, you must demonstrate extreme ownership and a bias for action, proving you can thrive in a data-driven, high-pressure environment."
   },
-  "last_attempt_at": 1784749244,
+  "last_attempt_at": 1784749525,
   "last_evidence_at": 1784732707,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "7d8703034f",
-    "870094a783"
+    "9b16c6179e",
+    "7d8703034f"
    ],
-   "value": "Offices across the United States including Austin, TX and Reading, PA plus other major tech hubs; roles are primarily full-time on-site."
+   "value": "Headquartered in Seattle, Washington, USA, with operations across the globe including Reading, PA."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "870094a783"
+    "9675da81a9",
+    "7d096ae7b0"
    ],
-   "value": "Amazon seeks to be Earth's most customer-centric company, building innovative solutions on behalf of customers."
+   "value": "To be Earth's most customer-centric company, empowering Amazonians to deliver the best results for customers through an inclusive culture."
   },
   "name": "Amazon",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Generally aggressive and high-velocity, though pace varies by team; operations-heavy orgs like AWS may trend faster with higher pressure than corporate data analyst roles."
+   "source_ids": [
+    "9675da81a9",
+    "7d096ae7b0"
+   ],
+   "value": "Estimated: Extremely fast-paced, highly innovative tech culture with aggressive goals and frequent product deliveries."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "7d8703034f",
-    "870094a783"
+    "9675da81a9",
+    "7d096ae7b0",
+    "9b16c6179e"
    ],
-   "value": "E-commerce retail marketplace, Amazon Web Services (AWS) cloud infrastructure, Alexa-enabled devices, Kindle e-readers, Fire tablets, Prime Video, Amazon Music, and digital advertising services."
+   "value": "E-commerce platform, Amazon Web Services (AWS), consumer electronics (Kindle, Echo), and custom silicon/ML accelerators developed by Annapurna Labs (e.g., Graviton, Inferentia)."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Standard US technology package, typically 15-20 days of annual paid time off for a new hire (excluding holidays). Paid sick leave and personal days may vary by state."
+   "source_ids": [
+    "9675da81a9",
+    "7d096ae7b0"
+   ],
+   "value": "Estimated: 10-15 days of paid time off for new grads, accruing with tenure, alongside standard paid parental leave."
   },
+  "refresh_after": 1789933525,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "9675da81a9",
+    "7d096ae7b0",
+    "9b16c6179e"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No company-wide global shutdowns guaranteed for all teams; operational continuity is a key principle. Individual teams may implement occasional recharge days or limited winter breaks, but it is not a universal promised benefit."
+   "source_ids": [
+    "9675da81a9",
+    "7d096ae7b0"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns for all teams, though select sub-teams may have slower periods."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "7d8703034f",
-    "870094a783"
+    "9b16c6179e",
+    "7d8703034f"
    ],
-   "value": "Publicly traded multinational with 10,001+ employees, founded in 1994 and headquartered in Seattle, Washington."
+   "value": "Established large enterprise with 10,001+ employees, founded in 1994 in Seattle, Washington, USA."
   },
   "sources": [
    {
@@ -11574,40 +11603,48 @@
   "sponsorship_context": {
    "confidence": "high",
    "source_ids": [
-    "7d8703034f",
-    "870094a783"
+    "9b16c6179e",
+    "7d8703034f"
    ],
-   "value": "Amazon has a track record of offering H1B sponsorships, though this does not guarantee sponsorship for every role."
+   "value": "Amazon has a track record of offering H1B sponsorships, though this does not guarantee sponsorship for every specific role."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "7d8703034f",
-    "870094a783"
+    "9b16c6179e",
+    "7d8703034f"
    ],
-   "value": "Amazon is a global technology company that runs the world's largest e-commerce marketplace and cloud computing platform. It makes money primarily through online retail sales, third-party seller services, Amazon Web Services (AWS), digital advertising, and subscription services like Prime."
+   "value": "Amazon is a global technology and e-commerce giant that sells consumer goods, cloud computing, and smart devices. It makes money primarily through online retail sales, AWS cloud subscriptions, advertising, and subscription services like Prime."
   },
+  "synthesized_evidence_sha": "1371c07aa1a35747",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "7d8703034f",
-    "870094a783"
+    "9675da81a9",
+    "7d096ae7b0",
+    "9b16c6179e"
    ],
-   "value": "Technical roles span embedded systems engineering, data analysis within Worldwide Operations teams, and AI/data science projects tied to logistics optimization. Software Development Engineer new grad roles target embedded systems and pay $127K-$185K/yr."
+   "value": "Opportunities include data analysis within Worldwide Operations, designing ML infrastructure tooling for custom accelerators, and developing Graviton software at Annapurna Labs."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784582968,
   "web_search_url": "https://duckduckgo.com/?q=Amazon+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Amazon offers elite prestige and new-grad pay competitive with top tech firms, plus a fast innovation pace within mission-critical teams like embedded systems and operations data analytics. While work-life balance and culture vary significantly by team, the company provides high-impact technical learning and brand recognition that accelerates careers for those who thrive in high-agency environments."
+   "source_ids": [
+    "9675da81a9",
+    "7d096ae7b0"
+   ],
+   "value": "While Amazon provides top-tier prestige and high new-grad pay for AI/ML roles, its fast-paced, innovative culture is driven by heavy bureaucracy and high expectations. The demanding environment often conflicts with a desire for guaranteed shutdowns and a strong work-life balance."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Below-average to moderate; Amazon is well-known for a demanding culture prioritizing customer outcomes, though non-AWS corporate divisions can offer a slightly more sustainable cadence."
+   "source_ids": [
+    "9675da81a9",
+    "7d096ae7b0"
+   ],
+   "value": "Estimated: Often challenging; work-life balance varies heavily by team but can lean toxic or high-burnout due to high operational load and performance pressures."
   }
  },
  "amazon com llc": {
@@ -25043,7 +25080,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -25061,7 +25098,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784749244,
+  "last_attempt_at": 1784749525,
   "last_evidence_at": 1784716480,
   "name": "AXS",
   "pace_of_work": {
@@ -75749,7 +75786,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 11,
+  "attempts": 12,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -75767,7 +75804,7 @@
    "source_ids": [],
    "value": "Sports / technology (estimated)"
   },
-  "last_attempt_at": 1784749244,
+  "last_attempt_at": 1784749525,
   "last_evidence_at": 1784725192,
   "name": "Fanatics",
   "pace_of_work": {
@@ -90591,7 +90628,7 @@
    "value": "Tier 1 (Elite) - Google is known as an absolute top destination alongside DeepMind and a handful of other leading AI labs, offering unmatched scale, talent density, and research credibility."
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -90643,7 +90680,7 @@
    "source_ids": [],
    "value": "Google places high emphasis on general cognitive ability, technical depth in machine learning algorithms and system design, clear coding skills, and leadership/role-related behaviors. AI-specific roles will dig into modern NLP, deep learning system design, data pipeline reasoning, and model-centric product design. Across all loops, “Googleyness” and culture-fit checks for collaboration and humility are a constant."
   },
-  "last_attempt_at": 1784749244,
+  "last_attempt_at": 1784749525,
   "last_evidence_at": 1784737782,
   "locations": {
    "confidence": "high",
@@ -106114,7 +106151,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -106132,7 +106169,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784749244,
+  "last_attempt_at": 1784749525,
   "last_evidence_at": 1784711510,
   "name": "Innovativity",
   "pace_of_work": {
@@ -134678,7 +134715,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 20,
+  "attempts": 21,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -134696,7 +134733,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784749244,
+  "last_attempt_at": 1784749525,
   "last_evidence_at": 1784693223,
   "name": "Micron Technology",
   "pace_of_work": {
@@ -193675,7 +193712,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -193693,7 +193730,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784749244,
+  "last_attempt_at": 1784749525,
   "last_evidence_at": 1784742130,
   "name": "SpaceXAI",
   "pace_of_work": {
