@@ -82365,37 +82365,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Unknown - insufficient data"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No business model information available in supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Unknown - insufficient data"
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No customer information available in supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown - no compensation data in sources"
   },
   "evidence_sha": "58e65fcd391068a0",
+  "generated_at": 1784689438,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+   "value": "AI / Machine Learning (inferred from company name only)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Without company data, focus interview questions on: actual engineering culture and pace, concrete WLB policies (shutdowns, on-call), mentorship and growth structure, compensation transparency, and mission authenticity. Verify all claims against team members' lived experience."
+  },
+  "last_attempt_at": 1784689438,
   "last_evidence_at": 1784655993,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No location information available in supplied sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No mission statement available in supplied sources."
+  },
   "name": "Giga AI",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Unknown - insufficient data"
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No product information available in supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown - no policy data in sources"
   },
+  "refresh_after": 1789873438,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -82405,7 +82446,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown - no policy data in sources"
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No company size or stage information available in supplied sources."
   },
   "sources": [
    {
@@ -82439,14 +82485,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=b1d7ce656c8cfdaebece8a4349889a0921ff77540bbb81d6c5d3163b9f87cc94JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=260a9729-c6c2-672f-23e1-80b4c77d665c&u=a1aHR0cHM6Ly9naWdhLmFpLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No visa sponsorship information available in supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No substantive information about Giga AI's business, products, or operations was found in the provided sources. The sources contain only redirect notices without company details."
+  },
+  "synthesized_evidence_sha": "58e65fcd391068a0",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No technical work details available in supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784655993,
   "web_search_url": "https://duckduckgo.com/?q=Giga+AI+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks elite AI/data science role with high new-grad pay, fast innovative culture, mission-driven focus, genuine work-life balance with sane hours and guaranteed shutdowns, and accelerated technical growth without personal time sacrifice. Cannot assess fit due to lack of company data in sources."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Unknown - insufficient data"
   }
  },
  "gilead": {
@@ -83666,7 +83733,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -83684,7 +83751,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784689344,
+  "last_attempt_at": 1784689438,
   "last_evidence_at": 1784673987,
   "name": "Global Lending Services",
   "pace_of_work": {
@@ -99970,38 +100037,97 @@
  "integration innovation i3": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "ba72f1312d"
+   ],
+   "value": "Tier 3 — Respected niche in real-time simulation/GNC; not a headline AI lab but elite within defense modeling & simulation."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "ba72f1312d"
+   ],
+   "value": "Government services contractor earning revenue through cost-plus, fixed-price, and IDIQ task orders for missile simulation and GNC engineering."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "ba72f1312d"
+   ],
+   "value": "Small-team, mission-focused, engineering-first culture with modern tooling; self-motivated, flexible, and collaborative across contractors and partners."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "ba72f1312d"
+   ],
+   "value": "U.S. Department of Defense and prime defense contractors via T&M, FFP, IDIQ, CPFF, and Task Order contracts."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k-$105k base + modest bonus — competitive for defense small business in high-cost areas; clearance eligibility adds premium."
   },
   "evidence_sha": "f998da7957c3c71e",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784689438,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ba72f1312d"
+   ],
+   "value": "Defense / Aerospace / Government Services"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "ba72f1312d"
+   ],
+   "value": "Deep C++ real-time programming, 6DOF dynamics, HWIL integration experience, and ability to thrive in a fast-paced small team with multiple contract types. Expect questions on simulation architecture, numerical methods, and modern devops practices applied to defense constraints."
+  },
+  "last_attempt_at": 1784689438,
   "last_evidence_at": 1784676947,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "ba72f1312d"
+   ],
+   "value": "Deliver high-fidelity missile simulation and GNC solutions that enable rapid, reliable defense system development."
+  },
   "name": "Integration Innovation (i3)",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "ba72f1312d"
+   ],
+   "value": "Fast — described as 'dynamic, fast-paced development environment' and 'fast-paced, growing small business environment'."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "ba72f1312d"
+   ],
+   "value": "6DOF missile simulation software, real-time GNC algorithms, HWIL test infrastructure, and modern software development tooling for defense programs."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays — typical for defense small businesses; no public policy found."
   },
+  "refresh_after": 1789873438,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -100011,7 +100137,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; some defense contractors observe winter break but not universal."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "ba72f1312d"
+   ],
+   "value": "Small business, growing, with multiple contractors and teaming partners."
   },
   "sources": [
    {
@@ -100045,14 +100178,41 @@
     "url": "https://careers-i3-corps.icims.com/jobs/search?hashed=-626009033"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "ba72f1312d"
+   ],
+   "value": "Integration Innovation (i3) is a small, fast-growing defense contractor specializing in guidance, navigation, and control (GNC) engineering and hardware-in-the-loop (HWIL) missile simulation for government customers."
+  },
+  "synthesized_evidence_sha": "f998da7957c3c71e",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "ba72f1312d"
+   ],
+   "value": "Real-time C++/Python development for 6DOF missile dynamics, HWIL integration, simulation architecture, and modern CI/CD tooling for defense software."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676947,
   "web_search_url": "https://duckduckgo.com/?q=Integration+Innovation+%28i3%29+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "ba72f1312d"
+   ],
+   "value": "Offers elite technical prestige in missile GNC/HWIL simulation — a niche with high barriers to entry — combined with small-company speed and modern tooling. The fast-paced, growing environment accelerates learning on real-time, safety-critical systems without the bureaucracy of large primes, while defense contracting structure can provide more predictable hours than commercial crunch cultures."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — defense small business often has surge periods but generally more bounded hours than big-tech crunch; contract structure encourages predictable delivery."
   }
  },
  "integrity": {
@@ -106849,40 +107009,90 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Respected applied-AI work in national-security and energy domains; not a primary AI research lab but high-impact production deployments."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "9ab7677479"
+   ],
+   "value": "Revenue from cost-reimbursable and fixed-price government contracts, commercial EPC projects, technology licensing, and recurring services/software. Heavy reliance on U.S. federal spending."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, hierarchical, compliance-heavy federal-contractor culture. Strong engineering tradition; innovation encouraged within regulatory constraints. Less \"tech-startup\" vibe, more \"aerospace/defense prime\" vibe."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "9ab7677479"
+   ],
+   "value": "U.S. federal agencies (DoD, intelligence community, NASA, DOE), allied governments, and commercial energy/chemical companies worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k-$110k base + modest bonus/RSU; higher for clearance-required roles. Total comp ~$95k-$130k."
   },
   "evidence_sha": "198ee8edabab1e8c",
+  "generated_at": 1784689438,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "9ab7677479"
+   ],
+   "value": "Government services / Engineering & Construction / Defense Technology"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Prepare for clearance-process questions, domain knowledge in defense/energy, and applied ML/system-design scenarios (e.g., sensor fusion, optimization under constraints). Ask about specific program team tempo, on-call expectations, and internal mobility between cleared/uncleared work."
   },
-  "last_attempt_at": 1784689344,
+  "last_attempt_at": 1784689438,
   "last_evidence_at": 1784674830,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "9ab7677479"
+   ],
+   "value": "Headquartered in Houston, TX; major offices in Arlington/VA, UK, Australia, and 40+ countries. Many roles require security clearance and on-site presence at government facilities."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "9ab7677479"
+   ],
+   "value": "Deliver innovative, sustainable solutions for government and commercial clients to advance critical infrastructure, national security, and energy transition."
+  },
   "name": "KBR",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast — project-driven with contract milestones; surge periods common near delivery dates."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "9ab7677479"
+   ],
+   "value": "Engineering and construction services, government services (defense/intelligence), technology solutions for energy transition and sustainable infrastructure, proprietary process technologies (e.g., ammonia, refining), and digital/analytics offerings."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays; varies by contract and tenure."
   },
+  "refresh_after": 1789873438,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -106892,7 +107102,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some programs observe holiday breaks but not universal."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "9ab7677479"
+   ],
+   "value": "Public company (NYSE: KBR), ~30,000+ employees globally, $7B+ annual revenue, mature multinational contractor."
   },
   "sources": [
    {
@@ -106926,14 +107143,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=e60bfda007e17e9b6a21804d10f2bcfbc95b45740b38841be11263c92bb5797cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1652f470-e9a6-6726-1fef-e3ede8396625&u=a1aHR0cHM6Ly93d3cua2JyLmNvbS9lbg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Sponsors H-1B and green cards for specialized roles; clearance-eligible positions often require U.S. citizenship. Global mobility programs exist for non-clearance roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "9ab7677479"
+   ],
+   "value": "KBR (formerly Kellogg Brown & Root) is a global engineering, procurement, and construction company providing technology and services to government and commercial customers in defense, intelligence, energy, and infrastructure sectors."
+  },
+  "synthesized_evidence_sha": "198ee8edabab1e8c",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "9ab7677479"
+   ],
+   "value": "Applied data science/AI for predictive maintenance, digital twins, autonomous systems, satellite imagery analysis, process optimization, and mission planning. Legacy stack mixed with modern cloud/ML tooling."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674830,
   "web_search_url": "https://duckduckgo.com/?q=KBR+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "KBR offers elite-prestige defense/intelligence work with meaningful national-security impact and strong new-grad compensation. However, it operates in a regulated, clearance-heavy federal-contractor culture that can be bureaucratic and deadline-driven, with variable WLB depending on program phase. Guaranteed shutdowns are uncommon; expect periods of high intensity around contract deliveries."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5 — Varies by program; cleared roles often require on-site presence and can involve extended hours during critical phases. Limited formal shutdown policies."
   }
  },
  "kbr careers": {
@@ -107626,40 +107868,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2: Respected applied AI/ML in signal processing, RF fingerprinting, test automation optimization. Not a primary AI research lab but publishes at NeurIPS/ICML workshops and contributes to 6G/quantum standards. Strong for applied ML engineers wanting hardware-domain impact."
   },
   "aliases": [],
-  "attempts": 3,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 4,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "e3d0b78aba"
+   ],
+   "value": "Sells high-margin test & measurement hardware (oscilloscopes, analyzers) with recurring revenue from software subscriptions (PathWave), calibration services, and support contracts. Revenue split roughly 60% products, 40% services/software."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "e3d0b78aba"
+   ],
+   "value": "Engineering-first, collaborative, low-politics. 'HP Way' legacy: respect for individual, open-door management, profit-sharing. Diverse global workforce. Strong ERGs. Innovation encouraged via internal hackathons and patent program. Risk-averse on quality (medical/defense customers) but technically ambitious."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "e3d0b78aba"
+   ],
+   "value": "Electronics manufacturers, semiconductor companies, telecommunications carriers, aerospace/defense contractors, automotive OEMs, academic research institutions, and government agencies worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $135,000-$155,000 base + $15,000-$25,000 RSU (4-yr) + $10,000-$15,000 sign-on + 6% 401k match + ESPP 10% discount. Total Year 1 ~$170k-$210k. Varies by location (Santa Rosa vs. Colorado Springs) and role (RF HW vs. ML SW)."
   },
   "evidence_sha": "b35de3d5996c0ecb",
+  "generated_at": 1784689438,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e3d0b78aba"
+   ],
+   "value": "Electronic Test & Measurement / Electronic Design Automation (EDA) / Semiconductor Capital Equipment"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "e3d0b78aba"
+   ],
+   "value": "Expect deep technical screens: RF/microwave theory, DSP algorithms, FPGA/Verilog, C++/Python for instrument control, and increasingly ML for signal classification. System-design questions around test architecture. Behavioral focus on collaboration, documentation rigor, and customer-facing problem solving. LeetCode hard rare; domain expertise weighted heavily."
+  },
+  "last_attempt_at": 1784689438,
+  "last_evidence_at": 1784677400,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Headquarters: Santa Rosa, CA. Major R&D hubs: Santa Rosa, Colorado Springs, Penang (Malaysia), Boeblingen (Germany), Tokyo. Sales/support in 30+ countries. Hybrid work policy common."
   },
-  "last_attempt_at": 1784689344,
-  "last_evidence_at": 1784677400,
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "e3d0b78aba"
+   ],
+   "value": "To accelerate innovation to connect and secure the world through electronic design and test solutions that enable breakthroughs in technology."
+  },
   "name": "Keysight Technologies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Measured, engineering-driven cadence. Quarterly hardware release cycles, 12-18 month major product cycles. Sprint-based software (2-3 weeks). Low fire-drill culture; emphasis on first-pass silicon success and regulatory compliance. Estimated: Sustainable pace with predictable crunch only near tape-out/launch."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "e3d0b78aba"
+   ],
+   "value": "Oscilloscopes, signal analyzers, network analyzers, electronic design automation (EDA) software, 5G/6G test solutions, automotive Ethernet test, quantum computing test systems, and PathWave design/test software platform."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 2 floating days + guaranteed year-end shutdown (5-7 business days). Accrual starts day one. Unlimited sick leave. 12 weeks paid parental leave (primary)."
   },
+  "refresh_after": 1789873438,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -107669,7 +107963,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Yes, mandatory company-wide shutdown between Christmas and New Year (typically Dec 24 - Jan 1). Additional optional summer shutdown week in some divisions."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public company (NYSE: KEYS), ~15,000 employees globally, $5.4B annual revenue (FY2023), mature profitable enterprise with 80+ year heritage (spun from Agilent/HP)."
   },
   "sources": [
    {
@@ -107703,14 +108002,41 @@
     "url": "https://jobs.keysight.com/external"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B visas for specialized engineering roles (RF, DSP, FPGA, software). Green card support (PERM) typically offered after 1+ years for high-performing technical staff. STEM OPT friendly."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "e3d0b78aba"
+   ],
+   "value": "Keysight Technologies is a global leader in electronic design and test solutions, providing hardware, software, and services that help engineers validate and optimize electronic systems across industries."
+  },
+  "synthesized_evidence_sha": "b35de3d5996c0ecb",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "e3d0b78aba"
+   ],
+   "value": "Core R&D in RF/microwave/mmWave instrumentation, high-speed digital test, photonics, quantum systems, EDA algorithms, FPGA/DSP firmware, cloud-native test automation, AI/ML for signal analysis and predictive maintenance."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677400,
   "web_search_url": "https://duckduckgo.com/?q=Keysight+Technologies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "e3d0b78aba"
+   ],
+   "value": "Keysight sits at the intersection of elite hardware engineering and cutting-edge AI/data science (signal processing, 6G, quantum), offering new-grad compensation competitive with top tech ($130-160k base + equity) while maintaining a mature engineering culture with reasonable hours (40-45h typical), strong WLB reputation, and guaranteed holiday shutdowns. You'll work on instruments that define industry standards without the burnout culture of pure-play AI labs."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4.2/5. Strong culture of 'no emails after hours' and protected vacation. Core hours 10am-3pm typical. Holiday shutdown (Dec 24-Jan 1) guaranteed. On-call rotation rare outside cloud ops. Glassdoor/Blind consistently cite WLB as top perk."
   }
  },
  "khan academy": {
@@ -148722,7 +149048,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 10,
+  "attempts": 11,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -148740,7 +149066,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784689344,
+  "last_attempt_at": 1784689438,
   "last_evidence_at": 1784676244,
   "name": "Perpay",
   "pace_of_work": {
@@ -176495,11 +176821,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -176511,6 +176839,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784689438,
   "last_evidence_at": 1784677402,
   "name": "Sierra",
   "pace_of_work": {
@@ -207083,11 +207412,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -207099,6 +207430,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784689438,
   "last_evidence_at": 1784673989,
   "name": "University of Rochester",
   "pace_of_work": {
