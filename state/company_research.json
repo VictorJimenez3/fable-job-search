@@ -2999,11 +2999,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -3015,6 +3017,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
+  "last_attempt_at": 1784682082,
   "last_evidence_at": 1784583355,
   "name": "Adobe",
   "pace_of_work": {
@@ -3879,7 +3882,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -3897,7 +3900,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784681990,
+  "last_attempt_at": 1784682082,
   "last_evidence_at": 1784675357,
   "name": "AeroVironment",
   "pace_of_work": {
@@ -6487,52 +6490,139 @@
  },
  "akina inc": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "1160896ad2",
+    "806f95a257",
+    "d9379caad8"
+   ],
+   "value": "Insufficient data to assess prestige tier; unknown what product or AI capabilities exist at Akina, Inc."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "1160896ad2",
+    "806f95a257",
+    "d9379caad8"
+   ],
+   "value": "The business model cannot be determined as the supplied sources lack substantive corporate information."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "1160896ad2",
+    "806f95a257",
+    "d9379caad8"
+   ],
+   "value": "No culture information for Akina, Inc could be extracted from the supplied sources."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "1160896ad2",
+    "806f95a257",
+    "d9379caad8"
+   ],
+   "value": "No customer information for Akina, Inc could be extracted from the supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: No compensation figures available from provided sources for Akina, Inc."
   },
   "evidence_sha": "ae3db948698a917a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784682082,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784681990,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "1160896ad2",
+    "806f95a257",
+    "d9379caad8"
+   ],
+   "value": "The industry could not be determined from the supplied sources."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Without substantive corporate data, candidates should inquire directly about the tech culture, pace of engineering work, specific shutdown policies, and whether the expectations match the advertised work-life balance and compensation."
+  },
+  "last_attempt_at": 1784682082,
   "last_evidence_at": 1784676942,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "1160896ad2",
+    "806f95a257",
+    "d9379caad8"
+   ],
+   "value": "No office or headquarters locations for Akina, Inc could be identified from the supplied sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "1160896ad2",
+    "806f95a257",
+    "d9379caad8"
+   ],
+   "value": "No mission statement for Akina, Inc could be extracted from the supplied sources."
+  },
   "name": "Akina, Inc",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: As an early-stage or startup entity, the pace of work is typically fast, but specifics for Akina, Inc are unverified."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "1160896ad2",
+    "806f95a257",
+    "d9379caad8"
+   ],
+   "value": "No product information for Akina, Inc could be extracted from the supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: No PTO information from the supplied sources."
   },
+  "refresh_after": 1789866082,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "1160896ad2",
+    "806f95a257",
+    "d9379caad8"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "1160896ad2",
+    "806f95a257",
+    "d9379caad8"
+   ],
+   "value": "No shutdown policies were mentioned in the supplied sources."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "The company's size and stage are unknown from the supplied sources, though its appearance on a 2026 new-grad hiring tracker suggests it is an active, hiring entity."
   },
   "sources": [
    {
@@ -6576,14 +6666,51 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "1160896ad2",
+    "806f95a257",
+    "d9379caad8"
+   ],
+   "value": "No specific immigration or sponsorship information for Akina, Inc could be identified from the supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "1160896ad2",
+    "806f95a257",
+    "d9379caad8"
+   ],
+   "value": "Based on provided sources, the specific business activities and products of Akina, Inc cannot be determined. The supplied pages contain generic redirect prompts and no substantive information about the company's operations or revenue model."
+  },
+  "synthesized_evidence_sha": "ae3db948698a917a",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "1160896ad2",
+    "806f95a257",
+    "d9379caad8"
+   ],
+   "value": "The nature of the technical work could not be identified from the provided materials."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676942,
   "web_search_url": "https://duckduckgo.com/?q=Akina%2C+Inc+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1160896ad2",
+    "806f95a257",
+    "d9379caad8"
+   ],
+   "value": "No company-specific culture or policy data was available to corroborate alignment with the candidate's priorities for a fast, innovative AI environment with high pay, prestige, and strict work-life balance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Startups often have demanding schedules, but without specific data on Akina, Inc's sane-hours or shutdown policies, a balanced work-life rating cannot be confirmed and is estimated as variable."
   }
  },
  "akkodis group nordics": {
@@ -44098,7 +44225,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -44116,7 +44243,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784681990,
+  "last_attempt_at": 1784682082,
   "last_evidence_at": 1784674273,
   "name": "Comcast",
   "pace_of_work": {
@@ -49302,41 +49429,97 @@
  "cybernetic labs": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "1b14c13cc0"
+   ],
+   "value": "Estimated: Tier 2 (strong investor backing suggests high technical bar, but insufficient public AI research output or brand recognition to confirm Tier 1)."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "1b14c13cc0"
+   ],
+   "value": "Business model not disclosed in sources. The 'Netic' posting suggests a B2B model serving essential service businesses, possibly a marketplace or SaaS platform for job booking."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "1b14c13cc0"
+   ],
+   "value": "Estimated: High-autonomy, builder-oriented, early-stage intensity. 'Zero-to-one seat: no playbook' suggests a culture that rewards initiative and tolerates ambiguity. Investor pedigree (Founders Fund, Greylock) implies a talent-dense, technically rigorous environment."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "1b14c13cc0"
+   ],
+   "value": "No customer information found for Cybernetic Labs. The 'Netic' job posting indicates they serve 'some of the largest, most important essential service businesses in the US' across services industries."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "1b14c13cc0"
+   ],
+   "value": "Estimated: $130k-$170k base + equity (Series B startups with top-tier investors typically pay near top of market for AI/DS new grads; exact figures not public)."
   },
   "evidence_sha": "7dec6afbfc8d85c2",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784682082,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784681990,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "1b14c13cc0"
+   ],
+   "value": "Technology / Software / AI (inferred); 'Netic' operates in essential services marketplace or SaaS for service industries."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "1b14c13cc0"
+   ],
+   "value": "Ask specifically about: (1) actual working hours and whether 'guaranteed shutdowns' or core-hours policies exist; (2) how the company prevents burnout during rapid scaling; (3) structured mentorship and learning programs for new grads; (4) whether the 'zero-to-one' scope applies to AI/data roles or only marketing; (5) concrete examples of work-life boundaries respected by leadership. Request to speak with a recent new-grad hire about their first 90 days."
+  },
+  "last_attempt_at": 1784682082,
   "last_evidence_at": 1784674482,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Cybernetic Labs",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "1b14c13cc0"
+   ],
+   "value": "Estimated: Fast. The 'Netic' posting emphasizes 'expanding into new [verticals] very quickly' and a 'zero-to-one' role with no playbook, indicating high velocity and ambiguity."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "1b14c13cc0"
+   ],
+   "value": "No specific product information found in the provided sources for Cybernetic Labs. A job posting for 'Netic' mentions helping customers book hundreds of thousands of jobs across services industries in North America."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days (typical for US venture-backed startups; no policy disclosed)."
   },
+  "refresh_after": 1789866082,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -49346,7 +49529,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns disclosed. Not mentioned in sources."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "1b14c13cc0"
+   ],
+   "value": "Stage and size unknown for Cybernetic Labs. The 'Netic' posting indicates Series B with $43M raised from Founders Fund, Greylock, Hanabi, and Dylan Field, suggesting a well-funded growth-stage startup."
   },
   "sources": [
    {
@@ -49390,14 +49580,41 @@
     "url": "https://jobs.ashbyhq.com/netic/bb595b94-54df-4533-8bc4-17590d6225ed"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "1b14c13cc0"
+   ],
+   "value": "Cybernetic Labs appears to be an early-stage technology company, though the provided sources do not contain accessible public information about its products, mission, or operations. One job posting references a similarly named entity 'Netic' with $43M Series B funding serving essential service businesses in the US."
+  },
+  "synthesized_evidence_sha": "7dec6afbfc8d85c2",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "1b14c13cc0"
+   ],
+   "value": "Technical work details not available for Cybernetic Labs. The 'Netic' posting describes a 'zero-to-one seat' in product marketing with no existing playbook, implying greenfield product and technical challenges."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674482,
   "web_search_url": "https://duckduckgo.com/?q=Cybernetic+Labs+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "1b14c13cc0"
+   ],
+   "value": "If Cybernetic Labs operates similarly to the 'Netic' entity in the funding announcement, it offers a top-tier AI/data science opportunity at a well-capitalized, fast-growing startup backed by elite investors (Founders Fund, Greylock). The 'zero-to-one' environment promises high autonomy and rapid technical growth, while the essential-services focus provides mission-driven impact. However, the lack of public information on work-life balance, shutdown policies, or rotational programs means the can"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5. No public data on hours, shutdowns, or burnout prevention. Fast growth and zero-to-one expectations often correlate with longer hours unless explicit guardrails exist."
   }
  },
  "cyberproof": {
@@ -69463,7 +69680,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -69481,7 +69698,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784681990,
+  "last_attempt_at": 1784682082,
   "last_evidence_at": 1784593393,
   "name": "FOX",
   "pace_of_work": {
@@ -126866,7 +127083,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -126884,7 +127101,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784681990,
+  "last_attempt_at": 1784682082,
   "last_evidence_at": 1784666846,
   "name": "Northrop Grumman Australia",
   "pace_of_work": {
@@ -178147,7 +178364,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -178165,7 +178382,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784681990,
+  "last_attempt_at": 1784682082,
   "last_evidence_at": 1784672018,
   "name": "Texas Instruments",
   "pace_of_work": {
