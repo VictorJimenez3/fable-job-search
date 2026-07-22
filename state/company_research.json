@@ -27227,42 +27227,115 @@
  },
  "beta soft systems": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "fa19f451f3",
+    "963f9bc8cb",
+    "8ca24f740b"
+   ],
+   "value": "Low — no evidence of AI/data science research, publications, or elite product work; core business is QA staffing."
   },
   "aliases": [],
-  "attempts": 3,
-  "culture_vibe": {
+  "attempts": 4,
+  "business_model": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "fa19f451f3",
+    "963f9bc8cb",
+    "8ca24f740b"
+   ],
+   "value": "Revenue from client companies for placed contractors/employees (W2 model); potential training program fees; visa sponsorship services as a differentiator for talent acquisition."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "fa19f451f3",
+    "963f9bc8cb",
+    "8ca24f740b"
+   ],
+   "value": "Transactional, compliance-focused (visa/immigration), sales-driven placement culture; supportive for immigration needs but not mission-driven tech innovation."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "fa19f451f3",
+    "963f9bc8cb",
+    "8ca24f740b"
+   ],
+   "value": "Leading tech companies seeking entry-level QA/test talent; international students and recent graduates (F1 visa holders, Canadian citizens) needing visa sponsorship and industry entry."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $55k–$75k base + minimal bonus; staffing firms often pay entry-level QA below top-tier tech; no equity."
   },
   "evidence_sha": "ece4deae9f649221",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784688476,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784688384,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "fa19f451f3",
+    "963f9bc8cb",
+    "8ca24f740b"
+   ],
+   "value": "IT staffing / technology consulting / visa-enabled talent placement"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "fa19f451f3",
+    "963f9bc8cb",
+    "8ca24f740b"
+   ],
+   "value": "Expect basic QA/testing fundamentals, visa status discussion, and willingness to deploy to client sites. Ask: typical client engagement length, bench policy, training budget, overtime expectations, and whether any internal AI/ML projects exist."
+  },
+  "last_attempt_at": 1784688476,
   "last_evidence_at": 1784674777,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "14bf6bf9f4",
+    "fa19f451f3"
+   ],
+   "value": "Headquarters likely in the US (betausa.com domain); remote/hybrid placements at client sites nationwide. No explicit office list in sources."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "fa19f451f3",
+    "963f9bc8cb",
+    "8ca24f740b"
+   ],
+   "value": "Forms a link between academia and industry, using in-depth industry knowledge to guide students and help them secure the best training opportunities anticipating the needs of leading tech companies."
+  },
   "name": "Beta Soft Systems",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to high depending on client project; staffing firms often expect quick ramp-up and billable utilization targets."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "fa19f451f3",
+    "963f9bc8cb",
+    "8ca24f740b"
+   ],
+   "value": "Staffing and placement services for entry-level QA/software testing roles; training guidance for students targeting tech companies; visa sponsorship (H1-B, TN) as a core service offering."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10–15 days PTO + US federal holidays (typical for small US staffing firms); no public policy found."
   },
+  "refresh_after": 1789872476,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -27272,7 +27345,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "None found in research — no evidence of guaranteed company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "fa19f451f3",
+    "f16eec2a6f"
+   ],
+   "value": "Small to mid-sized staffing firm (estimated 50–200 employees); mature enough for consistent H1-B filings and SmartRecruiter adoption, but not a large enterprise."
   },
   "sources": [
    {
@@ -27336,14 +27417,51 @@
     "url": "https://jobs.smartrecruiters.com/BetaSoftSystems3/84395022"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "fa19f451f3",
+    "963f9bc8cb",
+    "8ca24f740b"
+   ],
+   "value": "Actively sponsors H1-B for F1 visa holders and TN visas for Canadian citizens; emphasizes strong visa filing/stamping history; hires as W2 employees (not C2C)."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "fa19f451f3",
+    "963f9bc8cb",
+    "8ca24f740b"
+   ],
+   "value": "Beta Soft Systems operates as a technology staffing and training firm that bridges academia and industry, placing entry-level candidates—particularly international students on F1 visas—into QA and software testing roles with H1-B sponsorship. They hire directly as W2 employees and market their visa filing track record."
+  },
+  "synthesized_evidence_sha": "ece4deae9f649221",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "fa19f451f3",
+    "963f9bc8cb",
+    "8ca24f740b"
+   ],
+   "value": "Entry-level QA automation, manual testing, test case design, defect tracking; exposure to client tech stacks (likely Java, Python, Selenium, CI/CD). Limited internal R&D or AI/ML work evident."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674777,
   "web_search_url": "https://duckduckgo.com/?q=Beta+Soft+Systems+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "fa19f451f3",
+    "963f9bc8cb",
+    "8ca24f740b"
+   ],
+   "value": "For a new grad prioritizing elite AI/data science prestige, high pay, and fast innovation: this role is entry-level QA staffing, not core AI/DS research or product engineering. The culture centers on visa-enabled placement, not technical depth or work-life balance guarantees. Growth depends on client assignments, not internal mentorship."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 2.5/5 — client-driven deadlines, potential bench pressure, limited control over assignment location/hours; no published shutdown policies."
   }
  },
  "beth israel deaconess medical center": {
@@ -137296,11 +137414,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -137312,6 +137432,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784688476,
   "last_evidence_at": 1784673977,
   "name": "Novartis",
   "pace_of_work": {
@@ -142861,7 +142982,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -142879,7 +143000,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784688384,
+  "last_attempt_at": 1784688476,
   "last_evidence_at": 1784672490,
   "name": "Pace® Analytical Services",
   "pace_of_work": {
@@ -147032,11 +147153,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -147048,6 +147171,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784688476,
   "last_evidence_at": 1784676244,
   "name": "Perpay",
   "pace_of_work": {
@@ -154531,11 +154655,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -154547,6 +154673,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784688476,
   "last_evidence_at": 1784674487,
   "name": "Publicis Groupe ANZ",
   "pace_of_work": {
@@ -159459,7 +159586,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -159477,7 +159604,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784688384,
+  "last_attempt_at": 1784688476,
   "last_evidence_at": 1784673976,
   "name": "Raytheon",
   "pace_of_work": {
@@ -164632,7 +164759,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -164650,7 +164777,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
-  "last_attempt_at": 1784688384,
+  "last_attempt_at": 1784688476,
   "last_evidence_at": 1784583447,
   "name": "Roblox",
   "pace_of_work": {
@@ -186783,40 +186910,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Elite) — Public robotics/AI company with large-scale deployments, top-tier investors, and recognized technical depth in autonomy."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Sells and deploys turnkey robotic warehouse systems (hardware + software) under long-term contracts that include recurring service, maintenance, and software revenue. Generates revenue from system sales, installation, and ongoing SaaS-like service fees."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, gritty, collaborative, mission-driven. Less corporate polish than big tech; more 'build it, break it, fix it' startup energy at scale. Values technical excellence and ownership. Can be intense during deployments."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large retailers and wholesalers with high-volume distribution centers. Publicly disclosed anchor customers include Walmart (largest), Target, Albertsons, C&S Wholesale Grocers, and others in North America."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k–$160k base + $30k–$60k equity (4yr) + $10k–$20k sign-on. Total ~$170k–$240k year 1. Competitive with top robotics/AI peers."
   },
   "evidence_sha": "05e5ceec9d312a3d",
+  "generated_at": 1784688476,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Industrial Robotics / Warehouse Automation / AI-enabled Supply Chain Technology"
   },
-  "last_attempt_at": 1784688384,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical loops: C++/Python systems coding, robotics algorithms (planning, perception, control), distributed systems design, and hardware-software integration scenarios. Behavioral emphasis on ownership, debugging under pressure, and cross-functional collaboration (ME/EEs/software). May include on-site robotics lab demo or take-home simulating fleet logic. Prepare for questions on real-time constraints, safety-critical design, and scaling autonomy."
+  },
+  "last_attempt_at": 1784688476,
   "last_evidence_at": 1784673660,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Wilmington, MA (Boston metro). Engineering hubs in MA, possibly remote-friendly for senior roles. Deployment sites at customer DCs across U.S. and Canada."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To modernize the supply chain by making warehouses faster, more efficient, and more resilient through autonomous robotics and AI — reducing cost, labor dependency, and waste while improving speed and accuracy."
+  },
   "name": "Symbotic",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast — deployment deadlines, hardware-software integration cycles, and 24/7 fleet operations drive urgency. Engineering culture prioritizes velocity and reliability over process."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core offering is the Symbotic System: a fleet of autonomous mobile robots, high-density storage structures, AI-powered vision and planning software, and a warehouse execution/control platform. Also provides installation, maintenance, and ongoing software updates as a managed service."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10–12 holidays (US). No public policy; typical for public industrial tech."
   },
+  "refresh_after": 1789872476,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -186826,7 +186991,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns. Some teams may observe reduced ops over winter holidays, not formal policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public company (NASDAQ: SYM) founded in 2007; ~1,200–1,500 employees (2024). Post-IPO (2022 via SPAC), scaling deployments across North America with large backlog."
   },
   "sources": [
    {
@@ -186860,14 +187030,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=63addf60213dde28fb6dfc1cfe56fdccf39426421743ef441de8b84e2b100557JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2b466e61-87e5-6127-3909-79fc865660d9&u=a1aHR0cHM6Ly93d3cuc3ltYm90aWMuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a public U.S. company with significant engineering hiring, likely sponsors H-1B and supports green cards for qualifying roles. No public policy details found in supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Symbotic is an AI-enabled robotics company that designs, builds, and operates autonomous warehouse systems for major retailers and wholesalers. It combines autonomous mobile robots, computer vision, and fleet orchestration software to automate inbound, storage, retrieval, and outbound processes in distribution centers."
+  },
+  "synthesized_evidence_sha": "05e5ceec9d312a3d",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Heavy robotics/AI/software engineering: fleet autonomy (planning, perception, SLAM), real-time control systems, computer vision, simulation/digital twins, distributed systems, cloud infrastructure, and warehouse execution software. Strong C++/Python/ROS stack; hardware-software integration is core."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673660,
   "web_search_url": "https://duckduckgo.com/?q=Symbotic+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Symbotic sits at the intersection of elite AI/robotics prestige (complex autonomy at scale, public company, Walmart-backed) and high new-grad compensation. Its mission — automating the physical supply chain — is tangible and high-impact. Culture is described as fast-paced but engineering-led, with a focus on shipping reliable hardware-software systems rather than bureaucratic process. For a candidate seeking top-tier technical challenge, strong pay, and a culture that values shipping over politi"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Moderate (6/10) — Core engineering roles have reasonable hours, but deployment/field roles involve travel and on-call. No guaranteed shutdowns; crunch periods around major installs."
   }
  },
  "synechron": {
