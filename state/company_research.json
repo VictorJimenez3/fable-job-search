@@ -7613,39 +7613,100 @@
  },
  "alliancebernstein": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Tier 2 - Top asset manager with elite internal quant/data science teams on par with top-tier buy-side firms, though the brand is more recognized in finance than broad tech."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "29c5644a29"
+   ],
+   "value": "Generates revenue through management fees (a percentage of assets under management) and performance fees for delivering investment outperformance."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "0fcdc10a2f"
+   ],
+   "value": "Professional, intellectual, and academically rigorous with a modernizing tech culture. The shift toward Nashville fosters a less intense, more collaborative vibe than the typical New York hedge fund."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "29c5644a29"
+   ],
+   "value": "Institutional investors (pension funds, endowments, sovereign wealth funds), retail investors through mutual funds and ETFs, and high-net-worth individuals via private wealth management."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $150,000-$180,000 TC (Base + Year-end bonus in high cost-of-living locales like NYC). Typically heavy on the base salary with a guaranteed bonus portion for first-years."
   },
   "evidence_sha": "6d72f1b940ae70f0",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784681359,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "29c5644a29"
+   ],
+   "value": "Financial Services / Asset Management"
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Interview processes typically emphasize algorithmic coding, statistical rigor, probability theory, and product sense for financial data. The firm will probe for mission alignment with systematic investing and innovative data problem-solving."
+  },
+  "last_attempt_at": 1784681359,
   "last_evidence_at": 1784674660,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "0fcdc10a2f",
+    "29c5644a29"
+   ],
+   "value": "Headquarters moved to Nashville, TN in 2018; major presence in New York City, with global offices in London, Hong Kong, Sydney, and Tokyo."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "29c5644a29",
+    "0fcdc10a2f"
+   ],
+   "value": "To be the most trusted investment firm by delivering exceptional insights and outcomes for clients through rigorous research and innovation."
+  },
   "name": "AllianceBernstein",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Professional and steady; driven by market hours and quarterly cycles, not chaotic startup sprints. Generally faster than traditional banks in tech-modernization efforts."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "29c5644a29"
+   ],
+   "value": "Institutional and retail investment strategies including equity, fixed-income, multi-asset, and alternative products, as well as private wealth management services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days for entry-level professional roles, competitive with large financial services firms."
   },
+  "refresh_after": 1789865359,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -7655,7 +7716,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Market holidays are strictly observed firm-wide; core institutional trading is guaranteed to shut down. Widespread effective slowdown over the Christmas to New Year period."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "29c5644a29",
+    "0fcdc10a2f"
+   ],
+   "value": "Large, publicly traded global investment manager headquartered in Nashville, TN, with over 4,000 employees and more than $600 billion in assets under management."
   },
   "sources": [
    {
@@ -7699,14 +7768,41 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H-1B and employment visas for highly specialized quantitative and tech roles in major offices like NYC and Nashville given the firm's global scale and need for top talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "29c5644a29"
+   ],
+   "value": "AllianceBernstein is a global investment management firm that provides research, portfolio strategy, and investment services to institutional and retail clients. It makes money by charging management and performance fees on the assets it oversees across equities, fixed income, and multi-asset strategies."
+  },
+  "synthesized_evidence_sha": "6d72f1b940ae70f0",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "29c5644a29"
+   ],
+   "value": "Data science teams build quantitative research platforms, machine learning and AI models for portfolio management, and NLP solutions that analyze financial text data. Internally, there is a focus on modernizing legacy infrastructure with cloud-based data engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674660,
   "web_search_url": "https://duckduckgo.com/?q=AllianceBernstein+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "29c5644a29"
+   ],
+   "value": "The role directly builds high-impact quantitative models that are core to the business, confirming the high 'AI/DS prestige tier' in finance. Early, hands-on ownership of production systems accelerates technical learning and career growth. The established Wall Street culture typically offers a sharp end-of-day cut-off, which provides effective work-life balance and avoids the 24/7 on-call burnout common in pure tech startups."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4 out of 5. Asset management provides more predictable schedules than sell-side banking or Silicon Valley high-growth startups, with fewer weekend crunches."
   }
  },
  "allianz": {
@@ -20639,37 +20735,99 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Elite tier-2 technology brand – viewed as comparable to top mid-cap tech companies. It is not FAANG, but holds high prestige among mission-driven technologists and is recognized for solving extremely hard, real-world AI and computer vision problems."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "7f274dcbc1",
+    "4c87a51bfd"
+   ],
+   "value": "A hybrid hardware-plus-SaaS model. Hardware sales (cameras, tasers) provide upfront revenue, while the Axon Evidence and Axon Records cloud platforms generate recurring subscription revenue with high retention from multi-year contracts with government agencies."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "4c87a51bfd"
+   ],
+   "value": "Mission-driven, collegial, and candid. The company stresses 'we work better together' and prizes ethical deliberation. Not a boiler-room sales culture; the engineering ethos is methodical and purpose-oriented, built around protecting life."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "7f274dcbc1",
+    "4c87a51bfd"
+   ],
+   "value": "U.S. federal, state, and local law enforcement agencies form the core. The company also serves international law enforcement, fire and EMS departments, correctional facilities, and enterprise security teams. Its products are used by first responders and justice-system personnel."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120,000 - $150,000 starting salary, equity, and annual performance bonus. Total compensation may range from $140,000 to $180,000 in the first year for a new graduate 'Software Engineer I' in a product-oriented, AI-adjacent role in Scottsdale."
   },
   "evidence_sha": "04d8af8d5c716726",
+  "generated_at": 1784681359,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "7f274dcbc1",
+    "4c87a51bfd"
+   ],
+   "value": "Public Safety Technology / Cloud Software"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "The interview process will probe for strong CS fundamentals, clean code in languages like Java or Python, and system design thinking tailored to a fast, iterative culture. Expect questions that gauge mission alignment and ability to deliver in a fast-paced but non-toxic environment; behavioral rounds will likely test how candidates handle ambiguity and care for end users in high-stakes contexts."
   },
+  "last_attempt_at": 1784681359,
   "last_evidence_at": 1784674660,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "7f274dcbc1"
+   ],
+   "value": "Headquarters in Scottsdale, Arizona, USA. Additional major offices in the style of Seattle, Washington and Ho Chi Minh, Vietnam, with remote and hybrid flexibility for certain roles. The Software Engineer I posting is tied to the US."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "7f274dcbc1",
+    "4c87a51bfd"
+   ],
+   "value": "Axon's stated mission is to 'protect life' and to reduce gun-related deaths between police and the public by making a bullet obsolete. It aims to capture truth through technology, elevating accountability and de-escalation."
+  },
   "name": "Axon",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "4c87a51bfd"
+   ],
+   "value": "Fast-paced and challenging (per the company), driven by critical customer needs rather than internal politics. The official Greenhouse states that-day is 'fast-paced and meaningful,' but also that teams connect with 'candor and care,' suggesting urgency without toxicity."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "7f274dcbc1",
+    "4c87a51bfd"
+   ],
+   "value": "Products integrate a hardware and software ecosystem: Axon Body cameras, Axon Fleet in-car cameras, TASER 7 and TASER 10 conducted electrical weapons, and Axon Records, a cloud-based records management system. The unifying platform is Axon Evidence, which handles digital evidence storage, management, analysis, and sharing."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Axon provides at least 15 days PTO plus standard federal holidays, as befits a public enterprise-technology company competing for AI talent. Exact vacation details are not public but the company is competitive with other public SaaS firms."
   },
+  "refresh_after": 1789865359,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -20679,7 +20837,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No documented recognizable company-wide shutdowns in research, though the organization’s culture of work-life balance may include periodic recharges around major U.S. holidays. No public source confirms a formal paid unwind."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "7f274dcbc1"
+   ],
+   "value": "Late-stage public company listed on Nasdaq (ticker: AXON). Headcount is listed as 1,001-5,000 employees. It is a fast-growing technology firm mixing mature public-company infrastructure with a high-growth culture."
   },
   "sources": [
    {
@@ -20743,14 +20908,42 @@
     "url": "https://job-boards.greenhouse.io/axon/jobs/7576969003"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "7f274dcbc1"
+   ],
+   "value": "Axon has a track record of offering H-1B sponsorships according to aggregator data disclosure, though this does not guarantee sponsorship for every individual role a candidate may apply to."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "7f274dcbc1",
+    "4c87a51bfd"
+   ],
+   "value": "Axon is a mission-driven public safety technology company that makes body cameras, conducted electrical weapons (like TASERs), and a cloud-based digital evidence management platform. The company generates revenue primarily by selling these hardware devices to law enforcement and government agencies, paired with recurring high-margin software subscriptions for its evidence management and productivity suite."
+  },
+  "synthesized_evidence_sha": "04d8af8d5c716726",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "4c87a51bfd"
+   ],
+   "value": "Engineers work across big-data platforms, AI, video analysis, real-time streaming, device firmware, and cloud-native full-stack applications. Required technical skills include Java, C#, Python, TypeScript, and API design. Work involves high-stakes, real-time problem spaces that push rapid iteration and learning."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674660,
   "web_search_url": "https://duckduckgo.com/?q=Axon+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "It fits a top-tier AI/data-science candidate who wants direct civic impact without the death-march pace: engineers own real-time, life-saving tech with a mission-driven culture. Axon famously promotes a sane-hours and 'sustainable pace' culture, with explicit leadership support for work-life balance, making it one of the rare high-prestige tech companies where burnout is actively designed against."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Excellent relative to tech peers. No source details guarantee mandatory 'shutdowns,' but a mission-driven public company focused on first responders typically respects time off to protect performance. Aggregated employee reports describe fostered 'work-life balance,' in many teams, with flexible policies."
   }
  },
  "axos bank": {
@@ -21881,49 +22074,134 @@
  },
  "bank of america": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "f702688fe5",
+    "f4cd60e3f0"
+   ],
+   "value": "Top financial services tier; a Bulge Bracket bank with growing investment in AI and reusable data products, but prestige is sector-strong, below FAANG or dedicated AI labs in pure tech."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "f702688fe5",
+    "f4cd60e3f0"
+   ],
+   "value": "Diversified financial services model earning revenue through net interest margin on lending activities and fee income from wealth management, investment banking, and transaction-based treasury solutions."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "f4cd60e3f0",
+    "f702688fe5"
+   ],
+   "value": "A formally structured but intellectually curious environment inside the technical teams, with a stated identity of welcoming tricky problems and cross-functional data work. Balance is offered by leadership through structured programs and diversity initiatives, though large-bank hierarchy and governance persist."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "f4cd60e3f0",
+    "f702688fe5"
+   ],
+   "value": "Serves individuals, small businesses, and large global corporations across all segments and industries; the data science team builds solutions for global transaction services (GTS) clients including payments, pricing, and client servicing functions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "f702688fe5",
+    "f4cd60e3f0"
+   ],
+   "value": "Estimated: $115,000-$140,000 base salary for a Data Scientist or Quantiative Analyst I in New York City; plus annual bonus and benefits package aligned with large U.S. bank compensation."
   },
   "evidence_sha": "84706b6e787a65a3",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+  "generated_at": 1784681359,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f702688fe5",
+    "f4cd60e3f0"
+   ],
+   "value": "Financial Services (Banking)"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "f702688fe5",
+    "f4cd60e3f0"
+   ],
+   "value": "Expect questions on cross-functional partnership, product mindset, and turning business problems into reusable data solutions. Emphasis on real-world applied data science breadth (NLP, optimization, client behavior), semantic data modeling, and driving AI adoption while influencing strategic decisions with compliance and governance awareness."
+  },
+  "last_attempt_at": 1784681359,
   "last_evidence_at": 1784656820,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "f702688fe5",
+    "f4cd60e3f0"
+   ],
+   "value": "New York, NY is a confirmed site for the analytics and data science roles found in research; other large tech/financial hubs are typical for the bank."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "f4cd60e3f0",
+    "f702688fe5"
+   ],
+   "value": "Turn technology advances into practical treasury and data solutions for clients globally while supporting responsible growth and enterprise-wide AI adoption through trusted, semmantically consistent data."
+  },
   "name": "Bank of America",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "f4cd60e3f0",
+    "f702688fe5"
+   ],
+   "value": "Estimated: Structured and measured corporate tempo with review processes; the analytics transformation and GTS teams aim for rapid innovation across a wide problem set, but within the confines of a large, regulated financial institution."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "f4cd60e3f0",
+    "f702688fe5"
+   ],
+   "value": "Consumer banking (deposits, credit cards, mortgages), wealth and investment management (Merrill), and global corporate and institutional services including treasury and payments technology, liquidity management, and data-driven client solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days based on tenure for new university graduates in professional banking roles, plus safe days and some civic days separate from sick insurance."
   },
+  "refresh_after": 1789865359,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
+   "source_ids": [
+    "f702688fe5",
+    "f4cd60e3f0"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Typically observes all U.S. bank holidays (10 days) plus potential enterprise-wide quiet weeks for winter period; year-end is lighter and consistent with institutional banking schedules."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "f702688fe5",
+    "f4cd60e3f0"
+   ],
+   "value": "Mature, large-cap public company; a globally systemically important bank with thousands of employees across multiple continents."
   },
   "sources": [
    {
@@ -21957,14 +22235,50 @@
     "url": "https://ghr.wd1.myworkdayjobs.com/us-emplsv/job/New-York/Data-Scientist_23022413"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "f702688fe5",
+    "f4cd60e3f0"
+   ],
+   "value": "As a large global financial institution, Bank of America historically sponsors work visas (H-1B) for specialized technical roles; specific eligibility should be confirmed with the recruiter for each requisition."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "f702688fe5",
+    "f4cd60e3f0"
+   ],
+   "value": "Bank of America is a global financial institution serving individuals, businesses, and investors. It makes money primarily through interest from lending (credit cards, mortgages, loans) and fees from advisory, treasury, and wealth management services."
+  },
+  "synthesized_evidence_sha": "84706b6e787a65a3",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "f4cd60e3f0",
+    "f702688fe5"
+   ],
+   "value": "Develops trusted, reusable data products and applies data science (optimization, search, NLP, behavioral modeling) across all Global Transaction Services functions; focuses on AI adoption, decision-influencing analytics, and driving innovation beyond narrow problem sets."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583449,
   "web_search_url": "https://duckduckgo.com/?q=Bank+of+America+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "f4cd60e3f0",
+    "f702688fe5"
+   ],
+   "value": "It offers a platform at a top-tier financial institution to work on broad, impactful AI and data science problems across global corporate business lines, aligning with elite prestige and brand recognition. Select analytics and data science teams emphasize a culture of learning from tricky problems with a mandate across the entire GTS landscape, which signals faster development cycles than back-office ops, though the wider bank culture is corporate, with a structured environment that typically re"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "f4cd60e3f0",
+    "f702688fe5"
+   ],
+   "value": "Estimated: Better than elite tech startup or investment banking; typical professional banking expectations around 40-50 hour weeks with pressure during product deadlines, but commonly respected boundaries compared with Big Tech or HFTs."
   }
  },
  "banner engineering careers": {
@@ -31780,37 +32094,99 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "National Security Elite. Not a FAANG name, but holds strong prestige within defense tech and cleared communities, with work on advanced AI/ML, SIGINT, and cyber that directly impacts national safety."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "5a017bb407"
+   ],
+   "value": "Professional services and technology solutions company earning revenue predominantly through long-term, cost-plus and fixed-price prime government contracts and subcontracts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Patriotic mission-focused, process-heavy, stable, and respectful of seniority and clearance protocols. Not 'move fast and break things'; ideal for someone seeking balanced, deliberate innovation."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "5a017bb407",
+    "89b99fd675"
+   ],
+   "value": "U.S. federal government agencies, including the Department of Defense, Intelligence Community, Department of Homeland Security, and other federal civilian bodies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "3fdc229a7f"
+   ],
+   "value": "Estimated: $85,000 - $115,000 base salary total, for a high-cost area role like Denver, CO. Lower salaries are common in low-cost areas, and the job posting range of $53K-$106K confirms entry-level spreads."
   },
   "evidence_sha": "bb07f66366b45e27",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784681359,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "89b99fd675",
+    "5a017bb407"
+   ],
+   "value": "Government Technology / Defense & Intelligence Contracting"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "3fdc229a7f"
+   ],
+   "value": "Evaluate coding fundamentals, ability to work on an Agile team, and interest in national security tech, including GIS or cloud. Also probe whether the candidate’s drive for prestige aligns with a stable, mission-centric, and process-driven government-contracting rhythm."
+  },
+  "last_attempt_at": 1784681359,
   "last_evidence_at": 1784673569,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "3fdc229a7f",
+    "5a017bb407"
+   ],
+   "value": "Headquarters in Reston, VA, with major offices across the U.S. (for example, Denver, CO, and Northern Virginia) and locations supporting government sites worldwide."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "89b99fd675",
+    "3fdc229a7f"
+   ],
+   "value": "To support national security missions through distinctive technology, expertise, and innovation for America’s most critical government customers."
+  },
   "name": "CACI International Inc",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate and deliberate federal contracting cadence bound by statements of work and strict compliance milestones. Rarely chaotic compared to commercial startups; this is a methodical setting."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "89b99fd675",
+    "3fdc229a7f"
+   ],
+   "value": "Enterprise IT, mission software and applications, data analytics, geospatial intelligence (GIS), cloud migration, electronic warfare, and cybersecurity solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of combined PTO + sick leave per year initially, scaling with tenure in a typical government-contracting benefits structure."
   },
+  "refresh_after": 1789865359,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -31820,7 +32196,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed closure on all 11 U.S. federal holidays, with some locations observing an additional year-end holiday shutdown or early Friday release on a government schedule."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "5a017bb407"
+   ],
+   "value": "Large, publicly traded (NYSE: CACI) government contractor with roughly 23,000 employees; a mature, stable enterprise with steady federal demand."
   },
   "sources": [
    {
@@ -31874,14 +32257,45 @@
     "url": "https://jobright.ai/jobs/info/6a5e918ef29acc1a1174876e?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "3fdc229a7f"
+   ],
+   "value": "Most roles require an active U.S. government security clearance or the ability to obtain one; U.S. citizenship is typically required, and visa sponsorship is uncommon."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "89b99fd675",
+    "5a017bb407"
+   ],
+   "value": "CACI provides technology and expertise to U.S. government defense, intelligence, and civilian agencies. It makes money by delivering mission-critical IT systems, software, data analytics, electronic warfare, and cybersecurity under long-term federal contracts."
+  },
+  "synthesized_evidence_sha": "bb07f66366b45e27",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "3fdc229a7f",
+    "89b99fd675"
+   ],
+   "value": "Work ranges from building web-based software on Agile teams to cloud-native architectures, GIS development, AI/ML applied to intelligence problems, SIGINT, and electronic warfare systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673569,
   "web_search_url": "https://duckduckgo.com/?q=CACI+International+Inc+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3fdc229a7f"
+   ],
+   "value": "Serves a clear national security mission where seriousness and stability are valued, distinguishing it from high-burnout commercial tech. Estimated: Abides by government contracting rhythms that enforce program-funded, pre-scheduled hours and minimal overtime, giving reliability not found in ad-tech. Expect real work-life boundaries, planned government holidays with office closures, and a path to elite cleared-AI careers where compensation rises with clearance and experience."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Above Average. Anchors set around a standard 40-hour week driven by funding, with rare crunch time, predictable schedule, and strong job security."
   }
  },
  "cadence": {
@@ -45610,41 +46024,102 @@
  "cornell university": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "06cc8980a2",
+    "58e4486f13"
+   ],
+   "value": "Tier 1 - Elite University. An Ivy League institution with top-tier computing and information science research output and brand halo, highly valued as a career launchpad into cutting-edge AI/DS roles in tech or academia."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "06cc8980a2"
+   ],
+   "value": "A non-profit private university, supported by a mix of student tuition and fees, government and corporate research grants and contracts, endowment income, and alumni and donor philanthropy."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "58e4486f13"
+   ],
+   "value": "Mission-driven, intellectually curious, and collaborative, with a focus on designing for the public good. It is stable and risk-averse compared to a VC-backed startup, with a formal but supportive environment geared toward learning and expanding projects."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "06cc8980a2",
+    "7bd73e0acb"
+   ],
+   "value": "Undergraduate and graduate students, research funding agencies, corporate research partners, philanthropic donors, and the general public who benefit from Cornell's land-grant mission and extension programs."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 - $110,000 total annual compensation for a new grad AI Engineer role at an Ivy League university in upstate New York. Pure salary, with predictable university benefits and retirement, but no equity-based top-up like a tech startup."
   },
   "evidence_sha": "4c03f7a1804b6e90",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784681359,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784681270,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "06cc8980a2"
+   ],
+   "value": "Higher Education and Academic Research."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "58e4486f13"
+   ],
+   "value": "Will likely probe technical expertise in building AI applications (RAG, model serving, cloud), ability to work independently on strategic, high-priority projects in a hybrid team setting, and cultural fit for a mission-driven academic institution that values reasoned deliberation and learning over fast-ship product cycles."
+  },
+  "last_attempt_at": 1784681359,
   "last_evidence_at": 1784673560,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "58e4486f13"
+   ],
+   "value": "The primary campus is in Ithaca, New York. The AI Engineer role noted is a hybrid position, combining remote work with in-person responsibilities on the Ithaca campus."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "06cc8980a2",
+    "7bd73e0acb"
+   ],
+   "value": "To discover, preserve, and disseminate knowledge; to educate the next generation of global citizens; and to promote a culture of broad inquiry throughout and beyond the Cornell community."
+  },
   "name": "Cornell University",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slower and more deliberate than a fast-paced startup or big tech commercial product team. Work is driven by strategic university initiatives and quarterly project goals, with a focus on quality and thoughtful implementation."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "06cc8980a2",
+    "7bd73e0acb",
+    "58e4486f13"
+   ],
+   "value": "Cornell's primary outputs are undergraduate and graduate degree programs, foundational and applied research across many disciplines, and public-service knowledge transfer. Technology-focused products include open-source software, AI models, and digital infrastructure developed by its IT and research teams."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-22 days per year of combined vacation and personal time, plus separate holidays. Accrues over time with years of service, starting typically at 15 vacation/annual leave days."
   },
+  "refresh_after": 1789865359,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -45654,7 +46129,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed shutdowns for official university holidays, including a week-long winter break closure in late December. Summer hours may offer half-day Fridays. Exact shutdown policies would be confirmed by a specific job counselor."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "06cc8980a2"
+   ],
+   "value": "Large, mature institution with 15,000+ faculty and staff, over 25,000 undergraduate and graduate students, and an endowment exceeding $10 billion. It operates as a stable, established private university with centralized IT and distributed research labs."
   },
   "sources": [
    {
@@ -45708,14 +46190,44 @@
     "url": "https://cornell.wd1.myworkdayjobs.com/cornellpositions/job/Ithaca-Main-Campus/AI-Engineer--Temporary-_WDR-00059902"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "58e4486f13"
+   ],
+   "value": "The specific AI Engineer temporary position explicitly states: No Visa sponsorship available."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "06cc8980a2",
+    "7bd73e0acb"
+   ],
+   "value": "Cornell University is a private Ivy League research university dedicated to teaching, research, and public engagement. It generates revenue primarily through tuition, sponsored research funding, philanthropic gifts, and returns on its substantial endowment."
+  },
+  "synthesized_evidence_sha": "4c03f7a1804b6e90",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "58e4486f13"
+   ],
+   "value": "For an AI Engineer at Cornell's central IT or research labs, technical work includes developing retrieval-augmented generation (RAG) applications, fine-tuning and hosting open-source and commercial models, building APIs and user interfaces, and evaluating AI/ML solutions. The role operates in a hybrid cloud environment (on-prem and public cloud), uses infrastructure-as-code, and is a strategic enabler for high-priority campus-wide projects."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673560,
   "web_search_url": "https://duckduckgo.com/?q=Cornell+University+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "58e4486f13"
+   ],
+   "value": "Offers the prestige of an Ivy League brand on your resume, accelerating your long-term career growth in AI research or elite tech companies. The mission-driven culture and higher-education setting typically provide a slower, more deliberate pace with genuinely respected hours and seasonal shutdowns, fully addressing the need for high-impact work without burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Very high. Universities typically enforce standard business hours, strictly discourage after-hours work for exempt staff, and offer generous PTO and holiday schedules. The baseline expectation is a 35-40 hour week."
   }
  },
  "cornerstone partners": {
@@ -75482,85 +75994,106 @@
  },
  "google": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "7123296fbf",
+    "f77cc3b91f"
+   ],
+   "value": "Tier 1 (Elite) - Google is known as an absolute top destination alongside DeepMind and a handful of other leading AI labs, offering unmatched scale, talent density, and research credibility."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "7123296fbf",
+    "f77cc3b91f"
+   ],
+   "value": "Google is primarily an advertising business, generating over 75% of revenue through Google Search, YouTube, and its Ad Network. Its supplementary business models include Google Cloud (infrastructure, platform, and AI services sold via subscriptions/usage) and hardware/content subscriptions like YouTube Premium. AI is increasingly a driver both as an ad-targeting performance engine and an emerging enterprise product line."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "7123296fbf",
+    "f77cc3b91f"
+   ],
+   "value": "Mission-driven, data-centric, transparently candid, and intellectually collaborative. Google’s culture heavily rewards authentic team-driven curiosity, lots of internal openness, and initiative backed by a safety-first operational rigor."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "1a3f44f129"
+    "7123296fbf",
+    "f77cc3b91f"
    ],
-   "value": "Schools, companies, government agencies"
+   "value": "Google’s primary customers are the billions of individual users who use its free products and the millions of advertisers and businesses that pay to reach those users. On the enterprise side, Google Cloud serves organizations of all sizes needing computing, storage, and AI/ML services."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $175,000 – $205,000 total first-year compensation (base + sign-on + equity + target bonus) on average for U.S. AI/Data Science SWE and engineering-adjacent Research roles."
   },
   "evidence_sha": "d2606593ced5e5dc",
-  "generated_at": 1784519570,
+  "generated_at": 1784681359,
   "generator": {
-   "endpoint": "local",
-   "model": "qwen3:30b",
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
-  },
-  "interview_focus": {
    "confidence": "high",
    "source_ids": [
-    "1a3f44f129"
+    "7123296fbf",
+    "db4cef9189",
+    "f77cc3b91f"
    ],
-   "value": "Demonstrate passion for Google products like Google Workspace and Chrome; showcase ability to perform financial analysis, budgeting, and strategic planning; highlight innovative approaches to identifying business opportunities and connecting them to sales teams."
+   "value": "Internet, Cloud Computing, Digital Advertising, AI & Machine Learning"
   },
-  "last_attempt_at": 1784681270,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Google places high emphasis on general cognitive ability, technical depth in machine learning algorithms and system design, clear coding skills, and leadership/role-related behaviors. AI-specific roles will dig into modern NLP, deep learning system design, data pipeline reasoning, and model-centric product design. Across all loops, “Googleyness” and culture-fit checks for collaboration and humility are a constant."
+  },
+  "last_attempt_at": 1784681359,
   "last_evidence_at": 1784583317,
   "locations": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "7123296fbf",
+    "f77cc3b91f"
+   ],
+   "value": "Global headquarters in Mountain View, CA. Major tech offices across the U.S. (New York, Sunnyvale, Seattle, Kirkland, Cambridge, Los Angeles, Austin, Chicago), as well as international hubs in London, Zurich, Bangalore, Tokyo, Tel Aviv, and Singapore, among others."
   },
   "mission": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "7123296fbf",
+    "f77cc3b91f"
+   ],
+   "value": "Google’s mission is to organize the world's information and make it universally accessible and useful."
   },
   "name": "Google",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Medium-high. The tangible, product-driven pace for AI infrastructure development is relentless but sustainable, while pure research areas can be slightly more measured. Long-term planning over firefighting is structurally rewarded, and the sheer complexity of systems favors deliberate rigour over erratic bursts."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "1a3f44f129"
+    "7123296fbf",
+    "db4cef9189",
+    "f77cc3b91f"
    ],
-   "value": "Google Workspace, Chrome, Google Cloud"
+   "value": "Google's core products include Google Search, YouTube, Android, Google Maps, Chrome, Google Play, Gmail, Google Drive, Google Photos, and Google Cloud Platform. It also offers hardware like Pixel phones and Nest devices, and is deeply invested in AI through Google DeepMind, the Gemini model family, and AI features integrated across its product suite."
   },
-  "prompt_v": 1,
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days vacation plus 1 extra personal/miscellaneous day, alongside generous illness and mental-health-welcoming policy."
   },
+  "refresh_after": 1789865359,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -75570,12 +76103,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed company-wide holiday shutdown from Christmas Eve through New Year's Day, and additional protected no-meeting/non-essential response days during major holidays like Thanksgiving, Memorial Day, and Independence Day."
   },
   "size_stage": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "7123296fbf",
+    "f77cc3b91f"
+   ],
+   "value": "Google is a massive public company with over 180,000 employees and a market capitalization exceeding $2 trillion. It operates at an incredible scale across mature and hyper-growth markets, with a near unlimited R&D budget and deeply institutionalized infrastructure."
   },
   "sources": [
    {
@@ -75610,37 +76146,42 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Google routinely sponsors H-1B visas and permanent residency for technical roles including AI and Data Science positions, supported by established legal teams and high approval rates."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "1a3f44f129"
+    "7123296fbf",
+    "db4cef9189",
+    "f77cc3b91f"
    ],
-   "value": "Google Cloud teams assist organizations in enhancing productivity, mobility, and collaboration through Google Cloud solutions, with roles involving financial analysis, budgeting, and strategic planning to support sales teams and identify business opportunities."
+   "value": "Google is a global technology company that builds products and platforms—including Search, YouTube, Android, Cloud, and advanced AI models—to organize the world's information and make it universally accessible. The company generates the vast majority of its revenue by selling targeted digital advertising across its own properties and partner sites, while its growing Google Cloud and subscription businesses contribute to a more diversified income stream."
   },
+  "synthesized_evidence_sha": "d2606593ced5e5dc",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "1a3f44f129"
+    "7123296fbf",
+    "f77cc3b91f",
+    "db4cef9189"
    ],
-   "value": "Performing budgeting, planning, and analysis activities; devising new ways to identify and communicate with potential opportunities; connecting opportunities to sales teams; showing how Google Cloud impacts business"
+   "value": "Google produces foundational applied AI/CS technology at an unmatched scale, including large language models (Gemini), Tensor Processing Unit (TPU) hardware, computer vision, recommendation systems for Search/Ads/YouTube, and core cloud AI infrastructure. Research and product-driven roles are deeply integrated in AI-first activities across DeepMind, Google Research, and all major product areas."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583317,
   "web_search_url": "https://duckduckgo.com/?q=Google+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Google offers elite tech prestige, top-of-market new-grad pay, and a fast-moving yet science-driven AI culture where your work immediately scales to billions, without the grinding startup death-march lifestyle. Broad company-wide respect for work-life balance, segment-level on-call boundaries, and very limited recurring off-hours fire drills help protect personal time while multiplying learning and career growth."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4 out of 5. Overtime is generally discouraged, core working hours are respected, and true breaks (Sabbatical, 4-day weekends) are normalized. Erratic late-night emergency pages exist but are less common than at a typical startup of equivalent placement."
   }
  },
  "google deepmind": {
@@ -148873,37 +149414,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 / Elite Niche: High-prestige in the Austin tech scene and energy tech vertical, but without the broad generic brand recognition of a FAANG. Compensates with strong engineering culture and complex domain data."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "56d8e06bbe"
+   ],
+   "value": "RigUp generates revenue by taking a percentage of each transaction processed through its marketplace, functioning similarly to a specialized labor-focused software-as-a-service (SaaS) enabled marketplace. This creates a predictable, scalable revenue stream tied to energy sector spending."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "56d8e06bbe"
+   ],
+   "value": "Hard-working, grounded, Texan-friendly. Described by insiders as 'tech for an essential industry' rather than pure academic research or flashy consumer web. The mission, empowering blue-collar energy workers, creates a practical results-oriented culture."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "56d8e06bbe"
+   ],
+   "value": "Large-scale energy operators (oil & gas exploration and production companies) on the buy side, and independent contractors and service companies on the supply side."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120,000 - $145,000 base salary, standard annual equity grant competitive with Series C+/pre-IPO valuations. Austin-based premium but discounted against the hyperinflated Bay Area salary market."
   },
   "evidence_sha": "54c6b43c9871912f",
+  "generated_at": 1784681359,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "56d8e06bbe"
+   ],
+   "value": "Energy Technology / Industrial SaaS"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Validate that the company's status as a late-stage private firm in a core industry (energy tech) provides mission stability, evidenced by team-wide guaranteed shutdowns and sane hours. Inquire about the specific AI stack for the marketplace (matching logic, supply forecasting) to confirm that technical acceleration comes from complex business logic rather than crisis-driven 'firefighting'."
   },
+  "last_attempt_at": 1784681359,
   "last_evidence_at": 1784583488,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "56d8e06bbe"
+   ],
+   "value": "Headquarters in Austin, Texas, with additional office presence likely in Houston and other energy hubs. The LinkedIn page confirms the primary location as Austin, TX."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "56d8e06bbe"
+   ],
+   "value": "To empower the people who power the world by modernizing how the energy industry finds, hires, and pays for skilled labor and services."
+  },
   "name": "RigUp",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast and results-oriented, typical of a marketplace startup nearing an exit, but grounded by a structured B2B sales cycle. Less chaotic than an ad-revenue-reliant consumer social app."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "56d8e06bbe"
+   ],
+   "value": "A digital platform for labor and services procurement in the energy sector, including contractor vetting, compliance management, invoicing, and payment solutions. Given the candidate's field, the technical work likely involves building AI-driven matching algorithms, pricing models, and data analytics tools to optimize the skilled labor supply chain."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days minimum annual accrued PTO, a standard starting point for comparable Austin tech firms at this stage."
   },
+  "refresh_after": 1789865359,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -148913,7 +149509,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed company-wide holiday shutdown between Christmas and New Year's, common for late-stage tech firms serving slower downstream energy clients during the holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "56d8e06bbe"
+   ],
+   "value": "Late-stage venture-backed private company (post-Series D), with over 400 employees listed on LinkedIn. The company has raised significant funding and is likely acting with the scale of a mature firm, potentially positioning for an IPO."
   },
   "sources": [
    {
@@ -148947,14 +149550,38 @@
     "url": "https://www.bing.com/ck/a?!&&p=fea8d4a1566d47d63e2774c5de89b69b355ea0eb23ef986d3b830b422fb5c9a4JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2NvbXBhbnkvcmlndXA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely standard for a venture-backed tech company of its size in Austin; the specific job links were not accessible. Assume standard H-1B sponsorship for specialized AI/tech roles is possible but should be verified directly with the recruiter."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "56d8e06bbe",
+    "7c9f67cc0a"
+   ],
+   "value": "RigUp operates an online marketplace and workforce management platform that connects energy companies, primarily in oil and gas, with skilled contract labor and service providers. The platform streamlines sourcing, compliance, and payment for field operations."
+  },
+  "synthesized_evidence_sha": "54c6b43c9871912f",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AI/ML engineering likely focuses on core marketplace mechanics: developing a two-sided matching engine for jobs and labor, dynamic pricing, fraud detection, and predictive analytics for workforce demand. Data engineering handles sensitive compliance and financial data at scale."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583488,
   "web_search_url": "https://duckduckgo.com/?q=RigUp+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Rig commands a tier-1 tech reputation less diluted than FAANG due to its unicorn status and mission-driven focus, which correlates with elite prestige. The focus on complex marketplace AI offers intense technical learning in optimization and prediction without the open-ended 'always-on' B2C consumer scale, and the late-stage stability suggests sustainable, high new-grad pay with more grounded growth targets."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Above average for venture-backed tech, potentially 4/5. The B2B marketplace model requires reliability over 'move fast and break things', and Austin culture often discourages the 24/7 grind mentality found in smaller San Francisco startups."
   }
  },
  "ritchie bros": {
@@ -168172,39 +168799,96 @@
  },
  "stripe": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "63ff1db6c1"
+   ],
+   "value": "Tier 1 for a private technology company, reflecting very high engineering prestige and strong advanced problem sets."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "63ff1db6c1"
+   ],
+   "value": "Transactional, charging a per-transaction processing fee once a business starts collecting revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Defined by user-first trust orientation and a high-learning environment. Effectively balances a fierce sense of urgency with treating people well. Inclusive, collegial engineering, and lacks toxic pressure."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "8196021043"
+   ],
+   "value": "Millions of businesses of all sizes, from large public corporations to early-stage startups across 40+ countries."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated $175k–$210k salary + meaningful equity, plus signing and annual bonus. Total first-year compensation likely exceeds $225k."
   },
   "evidence_sha": "6b985f55dbf8de0a",
+  "generated_at": 1784681359,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8196021043"
+   ],
+   "value": "Financial infrastructure and payments technology."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
+   "value": "Likely centers on high-signal systems design, coding, and integration questions along with deep dives on privacy and authorization architecture. Evaluates real world problem-solving and ownership rather than rote algorithm memorization."
   },
+  "last_attempt_at": 1784681359,
   "last_evidence_at": 1784583908,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "9a31ca4e4a"
+   ],
+   "value": "Multiple technical offices, likely including Seattle, Toronto, and other major North American tech hubs. Authorization Infrastructure role suggests collaborative, cross-team work."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "8196021043",
+    "9a31ca4e4a"
+   ],
+   "value": "Increase the GDP of the internet by building a trustworthy financial infrastructure layer."
+  },
   "name": "Stripe",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: An intense but considered pace and extremely high-energy. It is not a slow bureaucracy; builders drive outcomes but teams also empower sustainable deep thinking and robust architectures."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "8196021043",
+    "63ff1db6c1"
+   ],
+   "value": "A payments platform with APIs for online transaction processing, plus tools for fraud prevention, billing, subscriptions, and financial analytics. It also issues cards and manages treasury functions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Flexible, non-accrued, often averaging 20+ days annually for full-time new-grad engineers."
   },
+  "refresh_after": 1789865359,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -168214,7 +168898,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely includes company-wide recharge days or periodic extended weekends, on top of standard vacation."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "8196021043"
+   ],
+   "value": "Large private technology company still actively hiring. Operates at massive scale globally."
   },
   "sources": [
    {
@@ -168248,14 +168939,40 @@
     "url": "https://www.bing.com/ck/a?!&&p=5c51273afa22adba579807d83f4e92886778008fb6eac81df3fcd640028c9566JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cubmVyZHdhbGxldC5jb20vYnVzaW5lc3Mvc29mdHdhcmUvbGVhcm4vd2hhdC1pcy1zdHJpcGU_bXNvY2tpZD0xNjA5ODZhOGM2N2Q2ZjY4MDI4ZDkxMzRjNzJlNmU2Zg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "8196021043"
+   ],
+   "value": "Stripe builds financial infrastructure that lets businesses accept payments and manage online money flows. It handles the complex backend so companies can launch and scale revenue operations quickly."
+  },
+  "synthesized_evidence_sha": "6b985f55dbf8de0a",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "8196021043",
+    "9a31ca4e4a"
+   ],
+   "value": "Designing and building secure authorization infrastructure, privacy technologies, and data protection systems that safeguard sensitive user information across the global payments network. This includes internal platform engineering and data-centric security tooling."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583445,
   "web_search_url": "https://duckduckgo.com/?q=Stripe+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tackles extremely high-stakes infrastructure problems—the authorization platform protects user data and trust for the entire Stripe ecosystem. It pairs technical depth with a culture that actively prioritizes non-toxic, sustainable speed and thinking from first principles."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Above average for elite technology companies. Strong cultural disdain for burnout; expectation of protecting personal life and proven deep respect for life outside of work."
   }
  },
  "stryker": {
