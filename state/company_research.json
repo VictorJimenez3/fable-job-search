@@ -11196,7 +11196,7 @@
    "value": "Tier 1 (Elite). Amazon is a pioneer in production AI and cloud infrastructure globally, rivaling Google, Meta, and Microsoft in AI talent branding."
   },
   "aliases": [],
-  "attempts": 25,
+  "attempts": 26,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -11246,7 +11246,7 @@
    "source_ids": [],
    "value": "Amazon interviews emphasize its Leadership Principles with behavioral questions, plus technical screening covering data structures, system design, algorithms, and coding proficiency. Storytelling about ownership, bias for action, and customer obsession is crucial. For AI and data science roles, expect deep dives into machine learning theory, statistical analysis, and deployment experience."
   },
-  "last_attempt_at": 1784742126,
+  "last_attempt_at": 1784748360,
   "last_evidence_at": 1784732707,
   "locations": {
    "confidence": "high",
@@ -15411,76 +15411,75 @@
   "ai_ds_prestige_tier": {
    "confidence": "high",
    "source_ids": [
-    "54ce385fc7",
-    "3a6f764c45"
+    "54ce385fc7"
    ],
-   "value": "Tier 1 (elite). Directly comparable to OpenAI, DeepMind, and FAANG advanced AI labs; pioneers in frontier model safety, often cited in foundational alignment research."
+   "value": "Elite-tier; highly regarded for its top-tier compensation and culture within the AI sector."
   },
   "aliases": [],
-  "attempts": 11,
+  "attempts": 12,
   "business_model": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "cd62e31bec",
+    "a7c5740a80"
+   ],
+   "value": "Develops and deploys AI models and infrastructure, partnering with businesses to integrate AI into their workflows while enforcing responsible scaling policies."
   },
   "culture_vibe": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "54ce385fc7",
-    "e82df07bce",
     "3a6f764c45"
    ],
-   "value": "Mission-driven, safety-first, academic-meets-startup. Strong emphasis on elite credential peers, philosopher-researcher ethos, and responsible development. Some glassdoor reviews indicate an elitism slightly exclusionary feel, but Blind reviews still highly saturate compensation and actual team mission."
+   "value": "Highly rated for compensation and culture, but noted for an elite-school vibe that some find exclusionary; workload intensity can feel unsustainable."
   },
   "customers": {
    "confidence": "medium",
    "source_ids": [
-    "cd62e31bec"
+    "cd62e31bec",
+    "a7c5740a80"
    ],
-   "value": "Enterprise businesses, software developers, and end-users who leverage API access for building applications, as well as individual and team subscribers to Claude's premium plans."
+   "value": "Businesses requiring recruiting and infrastructure AI solutions, as well as enterprise users leveraging large language models for technical and operational workflows."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "54ce385fc7",
-    "3a6f764c45"
+    "54ce385fc7"
    ],
-   "value": "Estimated: Base pay $175,000–$210,000, plus substantial equity/options and bonuses in competitive sphere; typical annualized value first-year could $250,000–$350,000+ depending on preferable performance and stock appreciation."
+   "value": "Estimated: $250,000 - $350,000+ total compensation, reflecting elite-tier new-grad pay."
   },
   "evidence_sha": "13be404b269526fd",
-  "generated_at": 1784681004,
+  "generated_at": 1784748360,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "a7c5740a80",
-    "b8b89dc01f"
+    "cd62e31bec",
+    "a7c5740a80"
    ],
-   "value": "Artificial Intelligence / Generative AI / AI Safety & Research."
+   "value": "Artificial Intelligence Research and Development."
   },
   "interview_focus": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "a7c5740a80",
-    "cd62e31bec",
+    "54ce385fc7",
     "3a6f764c45"
    ],
-   "value": "Interview processes emphasize technical depth (ML systems design, model alignment coding), safety mindset, and founder culture. Expect algorithmic problem-solving, infrastructure design focused on mitigating real misuse, and behavioral style assessing mission alignment, high agency, and respect for an elite, academic environment. Ask how the team balances launch velocity with Responsible Scaling Policy commitments."
+   "value": "To ensure mutual fit, the candidate should interview Anthropic on workload sustainability and boundaries. Ask about team-specific expectations, on-call duties, and whether the fast-paced growth leaves room for personal time."
   },
-  "last_attempt_at": 1784681004,
+  "last_attempt_at": 1784748360,
   "last_evidence_at": 1784747330,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "e82df07bce",
     "3a6f764c45"
    ],
-   "value": "Headquartered in San Francisco, California, with a remote-first culture allowing distributed work across the U.S., United Kingdom, and Canada."
+   "value": "Headquartered in San Francisco."
   },
   "mission": {
    "confidence": "high",
@@ -15489,16 +15488,17 @@
     "a7c5740a80",
     "b8b89dc01f"
    ],
-   "value": "To create reliable, interpretable, and steerable AI systems that are beneficial and safe, moving the industry toward responsible development."
+   "value": "To create reliable, interpretable, and steerable AI systems."
   },
   "name": "Anthropic",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "54ce385fc7",
-    "e82df07bce"
+    "cd62e31bec",
+    "a7c5740a80",
+    "b8b89dc01f"
    ],
-   "value": "Estimated: Fast and demanding; reports from staff describe 60-80+ hour weeks normalize in critical periods, with 45–50 hours typical. Few refs mention commonplace 'peak' sprints and always-on velocity."
+   "value": "Estimated: Very fast and intense, characterized by a quickly growing environment and heavy workloads."
   },
   "products": {
    "confidence": "high",
@@ -15506,16 +15506,18 @@
     "cd62e31bec",
     "a7c5740a80"
    ],
-   "value": "Claude, a family of foundational AI models (large language models), and API access for developers and enterprises to integrate conversational and reasoning capabilities into their own applications."
+   "value": "Beneficial AI systems and models, including the Claude AI assistant and Safeguards systems designed to detect and mitigate model misuse."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [
-    "e82df07bce"
+    "54ce385fc7",
+    "3a6f764c45"
    ],
-   "value": "Estimated: Flexible (unlimited) PTO policy, common among tier-1 peers, aligned with Anthropic's stated flexible leave language."
+   "value": "Estimated: 15-25 days of standard PTO, though heavy workloads may limit actual usage."
   },
+  "refresh_after": 1789932360,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -15525,19 +15527,17 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [
-    "e82df07bce",
     "54ce385fc7",
     "3a6f764c45"
    ],
-   "value": "Estimated: No assured all-company mandatory shutdown or guaranteed hard control documented in provided research—candidates advise clarifying explicit team slowdown periods to ensure genuine rechargers."
+   "value": "Estimated: No guaranteed shutdowns found in research."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "3a6f764c45",
-    "e82df07bce"
+    "3a6f764c45"
    ],
-   "value": "Approximately 2,500 total employees, rapidly growing with a remote-first culture across the U.S., UK, and Canada."
+   "value": "A quickly growing company with 2,500 total employees and 313 open jobs listed."
   },
   "sources": [
    {
@@ -15602,9 +15602,11 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "low",
+   "source_ids": [
+    "3a6f764c45"
+   ],
+   "value": "Not explicitly detailed in the provided sources."
   },
   "status": "ready",
   "summary": {
@@ -15614,36 +15616,35 @@
     "a7c5740a80",
     "b8b89dc01f"
    ],
-   "value": "Anthropic is an AI research and safety company that builds large language models, most notably the Claude family of AI assistants. It generates revenue by selling API access to these models and through enterprise and consumer subscriptions to its AI products."
+   "value": "Anthropic is an AI safety company that builds reliable, interpretable, and steerable AI systems. It generates revenue by offering enterprise and consumer access to its Claude AI models."
   },
+  "synthesized_evidence_sha": "13be404b269526fd",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "cd62e31bec",
-    "a7c5740a80",
-    "b8b89dc01f"
+    "a7c5740a80"
    ],
-   "value": "Roles span core ML research, infrastructure engineering for scalable model training/inference, safeguards against misuse (adversarial testing, policy violation detection), recruiting solutions engineering with Claude, and IT operations. High demand for elite technical talent working on novel model capabilities, safety alignment, and scaling systems."
+   "value": "Involves machine learning infrastructure engineering for safeguards, building responsible scaling systems, and providing technical AI partnerships for recruiting."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784580810,
   "web_search_url": "https://duckduckgo.com/?q=Anthropic+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "a7c5740a80",
     "54ce385fc7",
-    "e82df07bce"
+    "3a6f764c45"
    ],
-   "value": "Anthropic offers elite AI prestige and top-of-market new-grad pay, coupled with a mission-driven safety culture rather than a products-first team. While competitive and fast-paced, external reports indicate the team is committed to RSPs and internal guardrails; Explicit alignment on consumable hours vs. burnout remains pressure point—ask about sustainable workloads and specific shutdown triad."
+   "value": "The candidate seeks an elite, high-paying AI role with a fast, innovative culture and strict work-life balance. Anthropic offers top-tier prestige and elite new-grad pay, but a fast-paced environment with 60-80+ hour weeks contradicts the need for sane hours and guaranteed shutdowns."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
     "54ce385fc7",
-    "e82df07bce"
+    "3a6f764c45"
    ],
-   "value": "Estimated: Rated around 3.6 out of 5 on Blind, the lowest rated dimension at the company; compensation and culture score much higher."
+   "value": "Estimated: Moderate to low, with work-life balance rated as the weakest dimension at 3.6/5."
   }
  },
  "anyscale": {
@@ -48796,111 +48797,104 @@
  },
  "clera": {
   "ai_ds_prestige_tier": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "e7fb2fe978",
-    "8d7f4b2f2a"
+    "73ecccec95"
    ],
-   "value": "Tier 3: Early-stage tier startup. Prestige comes from being a foundational team member building novel AI matching systems, not from a massive corporate brand name. Offers high potential career growth if the platform scales."
+   "value": "Estimated: Low. As an IT consulting firm focused on ServiceNow governance rather than proprietary AI research or core data science, Clera does not align with 'elite prestige' AI rankings."
   },
   "aliases": [],
-  "attempts": 13,
+  "attempts": 14,
   "business_model": {
-   "confidence": "medium",
-   "source_ids": [
-    "e7fb2fe978",
-    "8d7f4b2f2a"
-   ],
-   "value": "Clera makes money by charging companies for access to its curated candidate platform. This likely operates on a subscription or per-hire fee model, connecting employers with pre-vetted candidates and streamlining the talent acquisition process."
-  },
-  "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "e7fb2fe978",
-    "8d7f4b2f2a"
+    "73ecccec95",
+    "8bb9896d91"
    ],
-   "value": "Mission-driven, transparent, and builder-focused. A culture that philosophically puts people (candidates) first, which signals internal values of respect and avoiding dehumanizing practices. The team is flat, scrappy, and collaborative."
+   "value": "B2B IT consulting and talent provision. Clera places specialized consultants on client engagements, operating via W-2 contracts and utilizing platforms to recruit and match talent to urgent client needs."
+  },
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [
+    "73ecccec95"
+   ],
+   "value": "Estimated: Consulting-focused and client-driven. The culture likely prioritizes billable utilization and meeting client governance needs over internal tech innovation or relaxed personal time."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "e7fb2fe978",
-    "8d7f4b2f2a"
+    "73ecccec95"
    ],
-   "value": "Clera serves two primary customer segments: job-seeking candidates looking for transparency and a better recruiting experience, and companies seeking efficient access to pre-vetted, high-quality talent across multiple industries."
+   "value": "Enterprises requiring urgent, system-wide AI governance and technology lifecycle management support."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $110,000 - $155,000 base salary plus significant equity (0.30% - 0.30% ownership). A pre-seed startup cannot compete with the base salary of other big companies, but offers a life-changing equity upside with competitive new-grad pay."
+   "source_ids": [
+    "73ecccec95"
+   ],
+   "value": "Estimated: Moderate contracting rates. Does not align with 'high new-grad pay' benchmarks set by elite tech or AI companies."
   },
   "evidence_sha": "f7af42bf9d49c805",
-  "generated_at": 1784673262,
+  "generated_at": 1784748360,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "e7fb2fe978",
-    "8d7f4b2f2a"
+    "73ecccec95",
+    "8bb9896d91"
    ],
-   "value": "Recruitment Technology (RecTech) / Human Resources Technology (HRTech)."
+   "value": "IT Services and IT Consulting"
   },
   "interview_focus": {
    "confidence": "medium",
    "source_ids": [
-    "e7fb2fe978",
-    "8d7f4b2f2a"
+    "73ecccec95"
    ],
-   "value": "Given the candidate's priorities and Clera's stage, the interview process will heavily assess culture-add for a fast, innovation-driven, yet s culture. Prepare to discuss your technical approach to building AI/ML systems, your interest in the concept of a 'candidate-first' mission, and how you balance getting a high volume of quality work done while defining your own personal boundaries to prevent burnout. Early whiteboard sessions should demonstrate full-stack thinking."
+   "value": "Probe the structure of the 'urgent client engagement' to assess whether the pace will lead to burnout or violate the desire for sane hours. Clarify if the work involves advanced, innovative AI development fitting a top-tier AI candidate, or if it is primarily ServiceNow administration. Inquire about utilization expectations, work-life balance policies, and opportunities for technical learning and career growth outside of specific client contracts."
   },
-  "last_attempt_at": 1784742126,
+  "last_attempt_at": 1784748360,
   "last_evidence_at": 1784719450,
   "locations": {
-   "confidence": "low",
-   "source_ids": [
-    "8d7f4b2f2a",
-    "8bb9896d91"
-   ],
-   "value": "Specific office locations are not detailed in the provided sources, though the Los Angeles Tribune review and the nature of the startup suggest a US-based, possibly Los Angeles-area, operation with early-stage roles that may be remote or hybrid."
-  },
-  "mission": {
    "confidence": "high",
    "source_ids": [
-    "e7fb2fe978",
-    "8d7f4b2f2a"
+    "73ecccec95"
    ],
-   "value": "Clera's mission is to reverse the traditional recruitment process by putting candidates first, making the hiring landscape more equitable, transparent, and efficient for everyone involved."
+   "value": "Fully remote within the United States."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "name": "Clera",
   "pace_of_work": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "e7fb2fe978",
-    "8bb9896d91"
+    "73ecccec95"
    ],
-   "value": "Very fast-paced, typical of a recently pre-seed startup. The company is in build mode, requiring constant shipping and iteration. This pace is innovation-driven rather than corporate process-driven."
+   "value": "Estimated: Fast-paced and project-driven. The mention of an 'urgent client engagement' suggests a reactive, high-pressure consulting pace rather than a steady, innovative environment."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "e7fb2fe978",
-    "8d7f4b2f2a",
-    "8bb9896d91"
+    "73ecccec95"
    ],
-   "value": "Clera provides a candidate-first recruitment platform where job seekers create comprehensive profiles. Companies then search, browse, and connect with these pre-vetted candidates. The platform also offers application management and direct job listings on their site."
+   "value": "Specialized consulting services for AI governance, lifecycle management, and enterprise technology implementations, particularly focused on the ServiceNow platform."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Flexible PTO (15-20 days equivalent). Early-stage startups at this stage typically offer an unlimited or flexible vacation policy with an implicit expectation of taking at least 15 days to ensure employees recharge."
+   "source_ids": [
+    "73ecccec95"
+   ],
+   "value": "Estimated: Standard W-2 contract minimums. As a contractor placement firm, PTO is likely limited or pro-rated compared to elite tech giants."
   },
-  "refresh_after": 1789857262,
+  "refresh_after": 1789932360,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -48909,16 +48903,15 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: A company-wide winter holiday shutdown between Christmas and New Year's is highly probable for a company with a candidate-first culture that respects work-life bal."
+   "source_ids": [
+    "73ecccec95"
+   ],
+   "value": "Estimated: Unlikely. Client-driven consulting engagements rarely feature guaranteed company-wide shutdowns."
   },
   "size_stage": {
-   "confidence": "high",
-   "source_ids": [
-    "e7fb2fe978",
-    "8bb9896d91"
-   ],
-   "value": "Clera is an early-stage startup that has recently raised a $3M pre-seed funding round and is actively building its foundational team."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -48963,46 +48956,46 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Clera's capability for visa sponsorship is not explicitly stated. As a very early-stage startup fresh off a pre-seed round, they likely have limited immigration support infrastructure at this stage, though this is not confirmed."
+   "confidence": "high",
+   "source_ids": [
+    "73ecccec95"
+   ],
+   "value": "Visa sponsorship is not available for consulting roles."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "e7fb2fe978",
-    "8d7f4b2f2a",
+    "73ecccec95",
     "8bb9896d91"
    ],
-   "value": "Clera is a recruitment platform that reverses the traditional hiring process by putting job candidates first, creating detailed profiles for them and connecting them directly with top-tier companies. The platform streamlines the hiring process across multiple industries, making it faster and more transparent for both candidates and employers."
+   "value": "Clera is a consulting firm that supports enterprise clients with technology and governance engagements. It generates revenue by providing specialized consultants, such as ServiceNow AI Control Tower experts, to client organizations on a contract or project basis, either directly or through talent platforms like GetClera."
   },
-  "synthesized_evidence_sha": "06d0a1f18d4e0f1e",
+  "synthesized_evidence_sha": "f7af42bf9d49c805",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "e7fb2fe978",
-    "8bb9896d91"
+    "73ecccec95"
    ],
-   "value": "As an early-stage tech startup, technical work at Clera involves building the core platform from the ground up, including the AI matching algorithms that power the candidate-company connection, full-stack development of the web application, and scaling the infrastructure for their first growth phase."
+   "value": "ServiceNow AI Control Tower implementation, enterprise-wide AI governance, and lifecycle management."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583489,
   "web_search_url": "https://duckduckgo.com/?q=Clera+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "e7fb2fe978",
-    "8d7f4b2f2a"
+    "73ecccec95",
+    "e7fb2fe978"
    ],
-   "value": "This role is ideal for a candidate who wants to build AI technology from the ground up, avoiding the bureaucracy of big tech. A mission-driven company, Clera aims to disrupt a broken hiring system, and as an early hire, you'd shape the culture to be one that respects work-life balance and sane working hours from day one. The early stage fast-paced innovation offers accelerated learning without the legacy and toxic culture often found in many scaled organizations."
+   "value": "As a consulting firm placing W-2 contractors on client engagements rather than developing proprietary AI products, Clera does not match the priority for a top-tier, high-prestige AI/Data Science role with elite new-grad pay. Consulting work tied to 'urgent client engagements' also typically conflicts with the desire for a relaxed work-life balance with guaranteed shutdowns, and requires navigating client bureaucracy rather than a fast, innovative tech culture."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "8d7f4b2f2a"
+    "73ecccec95"
    ],
-   "value": "Estimated: Moderate to good for an early-stage startup. The company's candidate-first mission suggests a culture that values people over processes, but the realities of a small team gunning for product-market require high commitment during the week. Likely avoids a toxic or high-burnout grind culture."
+   "value": "Estimated: Below average for AI/tech roles. Urgent client-driven consulting contracts typically lack guaranteed shutdowns or predictable, sane hours."
   }
  },
  "clinical architecture": {
@@ -115695,111 +115688,138 @@
  "kla corporation": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 1 (elite) — KLA's AI/ML work is applied to mission-critical semiconductor manufacturing at atomic scales; publications at top venues (SPIE, IEEE) and direct impact on every advanced node."
-  },
-  "aliases": [],
-  "attempts": 10,
-  "business_model": {
-   "confidence": "medium",
    "source_ids": [
+    "e53ff28988",
     "d1fe5f189b"
    ],
-   "value": "Capital equipment sales (inspection/metrology tools) plus recurring revenue from services, upgrades, and software licenses to semiconductor fabs worldwide."
+   "value": "T1 (Top-tier). KLA sets the industry standard for semiconductor process control, meaning its AI, machine learning, and data science roles deal with proprietary, mission-critical datasets at a globally recognized scale."
+  },
+  "aliases": [],
+  "attempts": 11,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "e53ff28988",
+    "d1fe5f189b"
+   ],
+   "value": "KLA makes money by designing, manufacturing, and selling highly specialized capital equipment, hardware, and associated software to semiconductor foundries and IC manufacturers."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Engineering-first, collaborative, low-ego, with deep domain expertise valued over buzzwords. Diverse, global workforce; strong emphasis on technical mentorship and long-term career growth. Bureaucracy exists but is mitigated by clear technical ownership."
+   "confidence": "high",
+   "source_ids": [
+    "e53ff28988",
+    "d1fe5f189b"
+   ],
+   "value": "Established, engineering-centric, and mission-driven. Employees are proud of the fact that 'no laptop, smartphone, or smart car would have made it into your hands without us,' fostering a culture of high-impact technical excellence."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
+    "e53ff28988",
     "d1fe5f189b"
    ],
-   "value": "Leading-edge semiconductor manufacturers (foundries and IDMs) producing ICs for smartphones, laptops, wearables, VR, automotive, and other advanced electronics."
+   "value": "Leading-edge integrated circuit (IC) manufacturers and foundries. KLA's tools are foundational to the global semiconductor ecosystem, meaning their customers produce the chips used in laptops, smartphones, wearables, VR devices, and smart cars."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $130k-$160k base + 10-15% target bonus + RSU grant (vesting 4 years) — total first-year comp ~$170k-$220k, competitive with top semiconductor peers."
+   "source_ids": [
+    "e53ff28988",
+    "d1fe5f189b"
+   ],
+   "value": "Estimated: $120,000 - $155,000 base salary for software and high-performance computing engineering roles in Milpitas, CA, with additional stock grants, sign-on bonuses, and comprehensive health benefits."
   },
   "evidence_sha": "f6235cf41525821c",
-  "generated_at": 1784674075,
+  "generated_at": 1784748360,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
+    "e53ff28988",
     "d1fe5f189b"
    ],
-   "value": "Semiconductor capital equipment / process control / electronic design automation (EDA) adjacent."
+   "value": "Semiconductor Manufacturing Equipment & Electronics"
   },
   "interview_focus": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "e53ff28988",
     "d1fe5f189b"
    ],
-   "value": "Expect deep technical screens on algorithms, data structures, and domain-specific knowledge (optics, signal processing, ML for vision, real-time C++/Python). Prepare for system-design questions around high-throughput inspection pipelines and cross-disciplinary collaboration with physicists and mechanical engineers. Behavioral rounds will probe ownership, rigor, and ability to ship reliable hardware/software systems."
+   "value": "Candidates should expect deep technical interviews emphasizing high-performance computing (HPC), performance optimization, scalability, and system reliability. To align with the company's high standards without sacrificing sanity, candidates should probe interviewers about the team's agile practices, tech-debt management, and work-life balance protocols to ensure the fast-paced technical learning is supported by guaranteed personal time."
   },
-  "last_attempt_at": 1784742126,
+  "last_attempt_at": 1784748360,
   "last_evidence_at": 1784724909,
   "locations": {
    "confidence": "high",
    "source_ids": [
+    "e53ff28988",
     "d1fe5f189b"
    ],
-   "value": "Headquarters: Milpitas, CA (Silicon Valley). Major R&D/manufacturing sites in the US (CA, OR, NY), Europe, Israel, and Asia. Global sales/service footprint."
+   "value": "Milpitas, CA (Headquarters). KLA also operates globally with offices and R&D centers worldwide."
   },
   "mission": {
    "confidence": "medium",
    "source_ids": [
+    "e53ff28988",
     "d1fe5f189b"
    ],
-   "value": "Enabling the semiconductor ecosystem to build the electronics that power modern life by providing market-leading process control and yield management solutions."
+   "value": "To provide the process control and inspection technology that enables the continuous advancement of the global semiconductor manufacturing ecosystem."
   },
   "name": "KLA Corporation",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Fast but structured — product cycles tied to semiconductor node roadmaps (2-3 year cadences) create urgency without the chaotic sprint culture of consumer software. Hardware integration checkpoints enforce discipline."
+   "source_ids": [
+    "e53ff28988",
+    "d1fe5f189b"
+   ],
+   "value": "Estimated: Fast-paced and innovative, with high expectations for software optimization and system reliability. As an established tech leader, innovation is heavily structured and milestone-driven rather than chaotic."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
+    "e53ff28988",
     "d1fe5f189b"
    ],
-   "value": "Patterned wafer optical inspection systems (Broadband Plasma Division), metrology systems, defect inspection, and process control software for semiconductor fabrication."
+   "value": "Market-leading patterned wafer optical inspection systems (such as the Broadband Plasma division tools), high-performance computing (HPC) software systems, and diversified semiconductor manufacturing equipment."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15-20 days annual PTO + 10-12 company holidays + sick leave; accrual increases with tenure. Exact policy not public."
+   "source_ids": [
+    "e53ff28988",
+    "d1fe5f189b"
+   ],
+   "value": "Estimated: 15 to 20 days of standard Paid Time Off annually for new graduate corporate employees, with standard incremental increases based on tenure."
   },
-  "refresh_after": 1789858075,
+  "refresh_after": 1789932360,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No guaranteed company-wide shutdowns; some sites may observe reduced ops during year-end holidays but not a formal policy."
+   "source_ids": [
+    "e53ff28988",
+    "d1fe5f189b"
+   ],
+   "value": "Estimated: No strict guaranteed corporate-wide shutdowns documented, though standard paid holidays and occasional end-of-year deceleration periods are likely observed."
   },
   "size_stage": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "e259b2ea47",
-    "66cb7cd5c4"
+    "e53ff28988",
+    "d1fe5f189b"
    ],
-   "value": "Large public company (NASDAQ: KLAC), Fortune 500, ~15,000+ employees, mature stage with decades of semiconductor industry leadership."
+   "value": "KLA is a global, established, large-cap corporation (Fortune 500) that dominates the semiconductor process control market."
   },
   "sources": [
    {
@@ -115865,39 +115885,48 @@
   ],
   "sponsorship_context": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "As a large US-based multinational, KLA routinely sponsors H-1B visas and employment-based green cards for technical roles; new-grad offers typically include sponsorship eligibility."
+   "source_ids": [
+    "e53ff28988",
+    "d1fe5f189b"
+   ],
+   "value": "KLA typically sponsors H-1B visas and provides OPT/STEM OPT support for qualified engineering roles at their US offices."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "e53ff28988",
     "d1fe5f189b"
    ],
-   "value": "KLA Corporation is a global leader in process control and yield management solutions for the semiconductor manufacturing ecosystem. The company designs, manufactures, and sells advanced inspection and metrology equipment that enables chipmakers to produce leading-edge integrated circuits for virtually all modern electronics."
+   "value": "KLA Corporation is a global leader in diversified electronics and equipment for the semiconductor manufacturing ecosystem. They design and manufacture market-leading patterned wafer optical inspection systems and process control solutions used to fabricate leading-edge integrated circuits."
   },
-  "synthesized_evidence_sha": "de7abbba4ffec68b",
+  "synthesized_evidence_sha": "f6235cf41525821c",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "e53ff28988",
     "d1fe5f189b"
    ],
-   "value": "Semiconductor process control: optical physics, plasma physics, precision robotics, high-speed image processing, machine learning for defect classification, distributed control systems, and full-stack software for fab automation."
+   "value": "Software engineering roles involve developing real-time and high-performance computing (HPC) systems. Work heavily focuses on performance optimization, scalability, and reliability considerations for optical inspection systems."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674036,
   "web_search_url": "https://duckduckgo.com/?q=KLA+Corporation+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "e53ff28988",
     "d1fe5f189b"
    ],
-   "value": "KLA offers elite semiconductor-tech prestige and top-tier new-grad compensation in a hardware-driven innovation culture that moves faster than traditional industrials but avoids the burnout cycles of pure-play software giants. The mission — enabling every advanced chip on the planet — is tangible and impact-driven, while the hardware/product-cycle cadence tends to enforce more predictable hours than ad-driven or consumer-internet peers."
+   "value": "KLA offers a rigorous environment for data scientists and software engineers to build algorithms and high-performance computing systems that directly impact global chip production. The technical domain (optimizing inspection algorithms and processing massive wafer data) provides elite, high-prestige engineering challenges with competitive new-grad pay, while the company's mature processes help avoid the chaotic burnout culture seen at younger startups."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 4/5 — Hardware-centric culture and fab-customer schedules generally respect evenings/weekends; on-call rotations exist for critical tools but are shared and compensated. Less \"always-on\" pressure than cloud/SaaS."
+   "source_ids": [
+    "e53ff28988",
+    "d1fe5f189b"
+   ],
+   "value": "Estimated: Good. KLA's mature corporate structure and mission-driven environment generally provide reasonable work hours and better work-life balance than high-burnout tech startups, though project deadlines can occasionally demand localized intense periods."
   }
  },
  "klarity": {
@@ -143229,6 +143258,104 @@
    "value": "Estimated: 3/5 – corporate roles ~45-50 hrs/wk with some flexibility; plant-adjacent roles may require shift coverage, weekends, or on-call. No public guaranteed shutdown policy."
   }
  },
+ "nice": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "c64f941752231448",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784748359,
+  "name": "NICE",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "9f1db6e19d",
+    "kind": "company_web",
+    "publisher": "NICE",
+    "retrieved_at": 1784748359,
+    "title": "NICE public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=7e672e18f82a449e075dca32ee0eca2b40c2641293b04e651f9ba3a24d499d49JmltdHM9MTc4NDY3ODQwMA&ptn=3&ver=2&hsh=4&fclid=021fe83b-d43a-6c1c-1355-ffa5d5686d22&u=a1aHR0cHM6Ly93d3cubmljZS5vcmcudWsv&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "d7f052f456",
+    "kind": "company_web",
+    "publisher": "NICE",
+    "retrieved_at": 1784748359,
+    "title": "NICE public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=f5ff7cc4b8712d99cef50edab408b4c9faef77137a5aa47d322242aa0533b2b6JmltdHM9MTc4NDY3ODQwMA&ptn=3&ver=2&hsh=4&fclid=021fe83b-d43a-6c1c-1355-ffa5d5686d22&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTmljZQ&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "077afbd520",
+    "kind": "company_web",
+    "publisher": "NICE",
+    "retrieved_at": 1784748359,
+    "title": "NICE public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=29a0fcb9e8c5cf4bf7571880762069b01c9118a740c23b2b9a0d62cdb80e9d95JmltdHM9MTc4NDY3ODQwMA&ptn=3&ver=2&hsh=4&fclid=021fe83b-d43a-6c1c-1355-ffa5d5686d22&u=a1aHR0cHM6Ly93d3cubmljZS5jb20v&ntb=1"
+   },
+   {
+    "content_sha": "59bda2899fd8987f",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027.",
+    "id": "17f8c9c419",
+    "kind": "discovery_feed",
+    "publisher": "NICE",
+    "retrieved_at": 1784748359,
+    "title": "Discovery source for NICE",
+    "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784748359,
+  "web_search_url": "https://duckduckgo.com/?q=NICE+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
  "nidec": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
@@ -147490,7 +147617,7 @@
    "value": "Tier 1 - NVIDIA is widely regarded as an essential AI company, occupying a dominant position in the industry second to none. It is considered elite due to its central role as the hardware engine powering the modern AI revolution."
   },
   "aliases": [],
-  "attempts": 16,
+  "attempts": 17,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -147544,7 +147671,7 @@
    ],
    "value": "Will assess deep algorithmic knowledge in areas like RTL synthesis and multi-stage logic optimization, or compiler infrastructure and developer toolchain productivity. Expect rigorous coding, system design, and domain-specific problem-solving, balanced with culture-add questions checking for mission alignment and the ability to work with brilliant, hardworking teams."
   },
-  "last_attempt_at": 1784742126,
+  "last_attempt_at": 1784748360,
   "last_evidence_at": 1784732707,
   "locations": {
    "confidence": "high",
@@ -161924,44 +162051,43 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
-    "8ec9b40886"
+    "a8bcfd2ff1"
    ],
-   "value": "Estimated: High crypto-startup prestige due to massive public visibility, but not traditional FAANG-tier AI/data science prestige."
+   "value": "Estimated: Top-tier, given its status as the world's largest prediction market and the technical complexity of aggregating diverse opinions into transparent probabilities."
   },
   "aliases": [],
-  "attempts": 13,
+  "attempts": 14,
   "business_model": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "8ec9b40886",
-    "77a17e8fca"
+    "a8bcfd2ff1"
    ],
-   "value": "Operates as a decentralized prediction market, generating revenue through transaction fees on trades and potentially capturing value through the liquidity mechanisms of its smart contracts."
+   "value": "Operates a fast-growing peer-to-peer marketplace with no centralized 'house', generating volume through trading activity ($21B traded in 2025)."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [
-    "5f82eab0ff"
+    "a8bcfd2ff1"
    ],
-   "value": "Estimated: Crypto-native, highly mission-driven, transparent, and deeply engaged with global news and probability forecasting."
+   "value": "Innovative crypto/web3-adjacent company that values market-based solutions and transparency, appealing to mission-driven technologists."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "77a17e8fca"
+    "a8bcfd2ff1"
    ],
-   "value": "Individual traders, crypto-enthusiasts, and retail users interested in speculating on or hedging against geopolitical, cultural, and financial events."
+   "value": "Individuals looking to express views on real-world events and those using the platform as an alternative news source."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "5f82eab0ff"
+    "a8bcfd2ff1"
    ],
-   "value": "Estimated: Competitive crypto-market rates, likely $140k-$180k base plus token/ equity, but heavily dependent on funding stages and token performance."
+   "value": "Estimated: Likely high-end due to its massive volume ($21B) and elite status, though exact new-grad pay is not publicly specified."
   },
   "evidence_sha": "3302ce1f87a50601",
-  "generated_at": 1784675873,
+  "generated_at": 1784748360,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -161970,80 +162096,70 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "8ec9b40886",
-    "5f82eab0ff"
+    "a8bcfd2ff1"
    ],
-   "value": "Decentralized Finance (DeFi) / Prediction Markets / Crypto"
+   "value": "Prediction Markets / Fintech / Blockchain Technology"
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [
-    "8ec9b40886",
-    "5f82eab0ff"
-   ],
-   "value": "Probe deeply into actual day-to-day working hours, on-call expectations, and the company's commitment to sane work-life balance to ensure the demanding startup pace does not lead to burnout, while confirming that the technical learning curve justifies the potential lack of traditional slow-bureaucracy stability."
+   "source_ids": [],
+   "value": "Given the candidate's priority for work-life balance and guaranteed shutdowns, it's important to probe Polymarket's stance on sane hours and whether they have explicit policies to avoid high-burnout environments."
   },
-  "last_attempt_at": 1784742126,
+  "last_attempt_at": 1784748360,
   "last_evidence_at": 1784724909,
   "locations": {
-   "confidence": "low",
+   "confidence": "estimated",
    "source_ids": [
-    "5f82eab0ff"
+    "a8bcfd2ff1"
    ],
-   "value": "Operates primarily remotely with a globally distributed team, reflecting its decentralized crypto-native nature."
+   "value": "Not explicitly stated in the provided sources, but given its peer-to-peer and tech nature, it likely has remote or distributed team capabilities alongside any physical hubs."
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "5f82eab0ff"
+    "a8bcfd2ff1"
    ],
-   "value": "To provide a decentralized, transparent, and accessible platform for forecasting real-world events."
+   "value": "To enable individuals to express views on real-world events by trading on outcomes, aggregating diverse opinions into transparent, market-based probabilities that reflect collective expectations about the future."
   },
   "name": "Polymarket",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "5f82eab0ff"
+    "a8bcfd2ff1"
    ],
-   "value": "Estimated: Extremely fast-paced and innovative startup culture, constantly adapting to real-world events and market demands with very little bureaucracy."
+   "value": "Estimated: Fast, based on description of being 'fast-growing' and the platform's rapid scaling to $21B in volume."
   },
   "products": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "77a17e8fca"
+    "a8bcfd2ff1"
    ],
-   "value": "A decentralized web-based prediction market platform featuring an order book for trading event outcome shares."
+   "value": "A peer-to-peer prediction market platform with no centralized 'house' that covers politics, economics, sports, culture, and current affairs."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "8ec9b40886"
-   ],
-   "value": "Estimated: Standard startup flexible PTO, likely around 15-20 days, but culturally highly dependent on team workload."
+   "source_ids": [],
+   "value": "Estimated: Unknown, requires direct outreach to confirm if they offer standard fintech/crypto packages."
   },
-  "refresh_after": 1789859873,
+  "refresh_after": 1789932360,
   "rotational_program_name": {
-   "confidence": "high",
-   "source_ids": [
-    "5f82eab0ff"
-   ],
+   "confidence": "estimated",
+   "source_ids": [],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "5f82eab0ff"
-   ],
-   "value": "Estimated: No public information indicating guaranteed company-wide shutdowns."
+   "source_ids": [],
+   "value": "Estimated: Unknown, requires direct outreach to confirm if they have guaranteed company shutdowns to prevent burnout."
   },
   "size_stage": {
    "confidence": "medium",
    "source_ids": [
-    "5f82eab0ff"
+    "a8bcfd2ff1"
    ],
-   "value": "A rapidly growing, early-stage startup that has gained massive public attention and significant trading volume, likely backed by major venture capital."
+   "value": "Growing fast in terms of trading volume and adoption as an alternative news source, indicating a scaling late-stage startup or growth-phase company."
   },
   "sources": [
    {
@@ -162089,28 +162205,24 @@
   ],
   "sponsorship_context": {
    "confidence": "estimated",
-   "source_ids": [
-    "5f82eab0ff"
-   ],
-   "value": "Estimated: Due to the complexities of US gambling regulations, Polymarket operates offshore and may have limitations or specific geographic restrictions for hiring and employment."
+   "source_ids": [],
+   "value": "Not explicitly found in research."
   },
   "status": "ready",
   "summary": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "8ec9b40886",
-    "77a17e8fca",
-    "5f82eab0ff"
+    "a8bcfd2ff1"
    ],
-   "value": "Polymarket is a decentralized prediction market platform built on blockchain technology that allows users to bet on the outcomes of real-world events. It makes money by facilitating these trades and taking a small transaction fee on the trades executed on its platform."
+   "value": "Polymarket is the world's largest prediction market platform, operating as a peer-to-peer marketplace where individuals trade on the outcomes of real-world events. It makes money by facilitating these trades, aggregating diverse opinions into transparent probabilities, and has seen massive growth with $21B traded in 2025."
   },
-  "synthesized_evidence_sha": "69ec3e9892924bdb",
+  "synthesized_evidence_sha": "3302ce1f87a50601",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "77a17e8fca"
+    "a8bcfd2ff1"
    ],
-   "value": "Involves building and scaling decentralized applications, smart contract development, designing high-throughput trading infrastructure, and creating robust web interfaces for complex financial data."
+   "value": "Likely involves building and scaling peer-to-peer marketplace infrastructure, real-time trading systems, data aggregation for probabilities, and platforms that serve as alternative news sources."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784630051,
@@ -162118,16 +162230,14 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [
-    "8ec9b40886"
+    "a8bcfd2ff1"
    ],
-   "value": "Polymarket offers a highly innovative, fast-paced crypto-tech environment that accelerates technical learning, though candidates should thoroughly vet its work-life balance and new-grad compensation to ensure it meets their expectations for a non-toxic, high-prestige role with guaranteed shutdowns."
+   "value": "For a candidate seeking elite prestige and high new-grad pay in a fast, innovative tech culture, Polymarket offers an alternative to slow bureaucracy. Its mission-driven approach and rapid growth ($21B in 2025) suggest an environment that accelerates technical learning and career growth."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "77a17e8fca"
-   ],
-   "value": "Estimated: Potentially variable and demanding due to 24/7 crypto market operations, requiring candidate diligence to confirm if respectful WLB is actually practiced."
+   "source_ids": [],
+   "value": "Estimated: Unknown, requires further investigation based on candidate priorities for work-life balance and sane hours."
   }
  },
  "power3 solutions": {
@@ -167191,101 +167301,105 @@
  },
  "qualcomm": {
   "ai_ds_prestige_tier": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "8ab1307951",
-    "a7308f63f9"
+    "092a5c5a87"
    ],
-   "value": "Tier 1+ (Elite Hardware-AI). Qualcomm is a world-leading name in edge AI and on-device processing, which carries enormous technical cachet in AI circles. It provides prestige equivalent to top research labs but from a hard-engineering perspective."
+   "value": "Estimated: Tier 2 (Strong hardware/edge-AI prestige, though generally considered below first-wave generative AI software giants)."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "01a61d4794",
-    "8ab1307951"
+    "092a5c5a87"
    ],
-   "value": "Qualcomm operates a fabless model with two core segments: QCT (chip sales) and QTL (one of the most profitable patent-licensing businesses in tech, collecting royalties on a percentage of a handset’s cost)."
+   "value": "Invents, develops, and licenses foundational wireless technologies and semiconductor systems for mobile, automotive, and IoT industries."
   },
   "culture_vibe": {
    "confidence": "medium",
    "source_ids": [
-    "8ab1307951"
+    "092a5c5a87"
    ],
-   "value": "Engineer-led, technical bottom-up culture prioritizing logical argument over hierarchy. Obsessed with connectivity innovation and performance per watt, gracefully and cooperatively. Not shaped by advertising or consumer entertainment tech pressures."
+   "value": "Engineering-focused and innovation-driven, emphasizing deep technical expertise in wireless and chip systems."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
-    "8ab1307951"
+    "092a5c5a87"
    ],
-   "value": "Sells to smartphone giants like Samsung and Chinese OEMs, automotive manufacturers, and industrial IoT firms. Indirectly serves billions through devices using its technology."
+   "value": "Major smartphone manufacturers, automotive OEMs, and IoT device makers."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
+    "092a5c5a87",
     "a7308f63f9"
    ],
-   "value": "Estimated: base salaries for new grad AI/embedded roles in San Diego start around $94K-$141K (as evidenced by entry-level listings). Total compensation (salary + annual RSUs + annual bonus) for top-tier computation-profile candidates typically ranges from $140,000 to $185,000+."
+   "value": "Estimated: $94K/yr - $141K/yr base salary for entry-level software and embedded roles."
   },
   "evidence_sha": "9d778fe6e68f82f8",
-  "generated_at": 1784676548,
+  "generated_at": 1784748360,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "8ab1307951"
+    "092a5c5a87"
    ],
-   "value": "Fabless Semiconductor and Wireless Technology Intellectual Property."
+   "value": "Semiconductors and Wireless Technology."
   },
   "interview_focus": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
+    "092a5c5a87",
     "a7308f63f9"
    ],
-   "value": "For AI and data science roles, expect a robust emphasis on low-level programming efficiency and hardware-aware algorithm optimization rather than pure model tuning. Embedded postings demand C programming, data structures, Linux kernel debugging, and ARM architecture. Culture-fit assessments will prioritize a collaborative, low-ego precision over a startup's pace."
+   "value": "Highlight your ability to learn quickly in an innovative tech culture, mastering deep technical skills like C, C++, or Python while maintaining a healthy work-life balance. Emphasize your passion for mission-driven AI and data science applications that contribute to a smarter, connected future without exhibiting burnout tendencies."
   },
-  "last_attempt_at": 1784676548,
+  "last_attempt_at": 1784748360,
   "last_evidence_at": 1784742766,
   "locations": {
    "confidence": "high",
    "source_ids": [
     "a7308f63f9"
    ],
-   "value": "Global headquarters in San Diego, CA, with major tech hubs in Santa Clara, Austin, and international design centers in Bangalore and beyond. The embedded role listed is full-time onsite at HQ."
+   "value": "San Diego, CA (among other global locations)."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "8ab1307951"
+    "092a5c5a87"
    ],
-   "value": "To drive the intelligent, connected edge and enable a world where everyone and everything can communicate and interact seamlessly through breakthrough wireless innovation."
+   "value": "To drive digital transformation for a smarter, connected future."
   },
   "name": "Qualcomm",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Deliberate but technically intense. Pace is dictated by multi-year chip tape-out cycles and automotive-grade safety standards rather than weekly sprint cycles, leading to rigorous reviews and a steady cadence."
+   "source_ids": [
+    "a7308f63f9"
+   ],
+   "value": "Estimated: Moderate to fast-paced, driven by tight hardware release cycles and industry innovation standards."
   },
   "products": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "8ab1307951"
+    "a7308f63f9",
+    "092a5c5a87"
    ],
-   "value": "Flagship Snapdragon mobile platforms, 5G modems, AI processing units, automotive telematics and ADAS chips, IoT silicon, and extensive wireless technology IP. Qualcomm also provides complete RF front-end solutions and software for connected computing."
+   "value": "Snapdragon platforms, modem-RF systems, and embedded software/hardware for mobile, automotive, and IoT devices."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 4 weeks (20 days) of paid vacation, plus a separate sick leave bank."
+   "value": "Estimated: 15-20 days of standard paid time off, accrued annually."
   },
+  "refresh_after": 1789932360,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -167295,14 +167409,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Guaranteed company-wide winter shutdown (state contains last-week-of-December through New Year's Day) paid, with some engineering groups also observing a summer week."
+   "value": "Estimated: Occasional holiday shutdowns, though not guaranteed annually."
   },
   "size_stage": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "01a61d4794"
    ],
-   "value": "Large-cap, mature public company with roughly 50,000 employees worldwide. Actively hiring for next-gen AI and 6G R&D, indicating a steady-state but innovation-heavy expansion phase."
+   "value": "Publicly traded, large-cap global technology company."
   },
   "sources": [
    {
@@ -167357,25 +167471,28 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "low",
+   "source_ids": [
+    "092a5c5a87"
+   ],
+   "value": "Not explicitly found in research."
   },
   "status": "ready",
   "summary": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "01a61d4794",
-    "8ab1307951"
+    "092a5c5a87"
    ],
-   "value": "Qualcomm is a global leader in wireless technology, designing and supplying the advanced semiconductors, software, and systems that power the majority of the world's smartphones and other connected devices. The company makes money primarily by licensing its foundational wireless intellectual property to device manufacturers and selling its Snapdragon processors and other chipsets."
+   "value": "Qualcomm is a leading technology innovator driving digital transformation for a smarter, connected future, primarily specializing in wireless technology and semiconductors. The company makes money by inventing and licensing these foundational technologies, as well as manufacturing and selling chipsets that power mobile devices, automotive systems, and IoT products."
   },
+  "synthesized_evidence_sha": "9d778fe6e68f82f8",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "a7308f63f9"
+    "a7308f63f9",
+    "092a5c5a87"
    ],
-   "value": "Deeply technical roles span on-device AI inference, low-level kernel/drivers, and data science beyond just data engineering. Entry-level roles involve real C programming, ARM architecture, and Linux debugging."
+   "value": "Embedded software development, Linux kernel debugging, ARM CoreSight architecture, Windows driver development, and general software engineering utilizing C, C++, Java, and Python."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583367,
@@ -167383,15 +167500,16 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [
-    "01a61d4794",
-    "a7308f63f9"
+    "092a5c5a87"
    ],
-   "value": "Qualcomm balances big-tech prestige and domain exclusivity with mission-driven, efficient execution. Unlike pure software firms, its elite AI work often requires optimizing for fixed hardware power budgets, which encourages deliberate, non-superfluous coding instead of hectic iteration, naturally supporting a healthier work environment. The company's immense licensing royalties provide a financial cushion that shields employees from the frantic pivots seen at ad-dependent, softer tech companies."
+   "value": "Qualcomm offers strong technical learning and high new-grad pay, placing you at the forefront of AI and hardware innovation. The company provides a mission-driven environment focused on the connected future, allowing you to accelerate your career while leveraging a balanced work culture that generally respects personal time."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Well-above-industry-average for hardware-focused AI work, with a strong reputation for sanity and predictable schedules in core engineering roles at HQ, contrasting with software-only consumer tech firms."
+   "source_ids": [
+    "092a5c5a87"
+   ],
+   "value": "Estimated: Generally good, allowing for technical career growth without the heavy burnout commonly seen in early-stage startups."
   }
  },
  "qualcomm innovation center inc": {
@@ -191797,126 +191915,126 @@
  },
  "spacex": {
   "ai_ds_prestige_tier": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "3f7bcba425",
-    "1db9db9c4d"
+    "eba7ad0d07"
    ],
-   "value": "Tier 1+ (Elite). While not a pure AI/Data Science lab, SpaceX is a world-renowned, highly selective engineering brand that applies advanced algorithms and data processing for real-time hardware telemetry, guidance, navigation, controls, and high-frequency Starlink data analysis, making the resume prestige value extremely high."
+   "value": "Estimated: Top tier. The Starmind AI satellite program requires industry-leading compute and orbital inference, making it highly prestigious for cutting-edge AI hardware."
   },
   "aliases": [],
-  "attempts": 11,
+  "attempts": 12,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "3f7bcba425"
+    "eba7ad0d07",
+    "cdc4dd7d35"
    ],
-   "value": "SpaceX earns money through commercial launch service contracts for payloads and satellites, long-term government resupply and crew transport deals with NASA, and a recurring consumer subscription hardware model for Starlink broadband internet."
+   "value": "Designing, manufacturing, and launching orbital vehicles and infrastructure for both government and commercial clients."
   },
   "culture_vibe": {
-   "confidence": "medium",
-   "source_ids": [
-    "3f7bcba425"
-   ],
-   "value": "High-urgency, mission-first, scrappy engineering culture that values first-principles thinking and direct impact over bureaucracy. Expect bottom-up innovation and a flat hierarchy where anyone can question a design requirement."
-  },
-  "customers": {
    "confidence": "high",
    "source_ids": [
-    "3f7bcba425"
+    "5ed2f63722"
    ],
-   "value": "Government agencies (NASA, U.S. Department of Defense), commercial satellite operators, international governments, and Starlink residential and enterprise internet subscribers."
+   "value": "High-growth, highly technical, and exceptionally driven; excels in intense process improvements and product delivery."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "5ed2f63722"
+   ],
+   "value": "Commercial space clients, satellite network users, and government space organizations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "1db9db9c4d"
+    "5ed5c239cc",
+    "eba7ad0d07"
    ],
-   "value": "Estimated: $120,000 - $145,000 base salary, with additional significant equity (stock options) and potential bonuses; total compensation likely in the $140,000 - $170,000 range for new graduate software engineers."
+   "value": "Estimated: $140,000 - $180,000 base salary, plus significant equity and bonuses."
   },
   "evidence_sha": "29948a9c9b322b2d",
-  "generated_at": 1784672487,
+  "generated_at": 1784748360,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "3f7bcba425"
+    "5ed2f63722"
    ],
-   "value": "Aerospace & Space Technology, Telecommunications (Starlink)"
+   "value": "Aerospace and Defense"
   },
   "interview_focus": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "3f7bcba425"
+    "cdc4dd7d35",
+    "eba7ad0d07"
    ],
-   "value": "Interviews will emphasize practical software engineering skills, systems design, and problem-solving under real-world constraints. Candidates should be prepared to demonstrate how to build reliable tools to accelerate a fast, non-bureaucratic factory floor and mission control work style."
+   "value": "Interviewers will test for an unrelenting motivation and the ability to excel in a highly technical, fast-paced environment; candidates should highlight rapid technical learning over personal time sustainability."
   },
-  "last_attempt_at": 1784742126,
+  "last_attempt_at": 1784748360,
   "last_evidence_at": 1784747329,
   "locations": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "3f7bcba425"
+    "5ed2f63722"
    ],
-   "value": "Headquartered in Hawthorne, CA (Los Angeles area) with major operations in Cape Canaveral, FL; McGregor, TX; and Redmond, WA. This specific new grad role is based in Hawthorne, CA."
+   "value": "Major engineering hubs include SpaceX facilities in Hawthorne, CA, Starbase in Texas, and Cape Canaveral, FL."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "3f7bcba425"
+    "cdc4dd7d35",
+    "eba7ad0d07"
    ],
-   "value": "To enable a future where humanity is out exploring the stars by making life multiplanetary, while revolutionizing space technology with the ultimate goal of enabling human life on Mars."
+   "value": "To actively develop technologies that enable human life on Mars and make humanity a multi-planetary species."
   },
   "name": "SpaceX",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "3f7bcba425"
+    "5ed2f63722",
+    "cdc4dd7d35"
    ],
-   "value": "Estimated: Very fast-paced with aggressive timelines and a high ownership, ship-and-iterate culture similar to a demanding software startup but focused on physical hardware launches."
+   "value": "Estimated: Extremely fast-paced and intense. Required to excel in a dynamic environment and possess unrelenting motivation."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "3f7bcba425"
+    "eba7ad0d07"
    ],
-   "value": "Reusable launch vehicles (Falcon 9, Falcon Heavy), Dragon spacecraft for cargo and crew, Starlink satellite internet constellation, Raptor rocket engines, and Starship (super heavy-lift launch vehicle in development)."
+   "value": "Spacecraft, rockets, and AI-enabled orbital satellites with advanced compute electronics and memory."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "high",
    "source_ids": [
-    "3f7bcba425"
+    "5ed2f63722"
    ],
-   "value": "Estimated: 15 days of paid vacation per year."
+   "value": "Estimated: Accrues 3 weeks (15 days) of paid vacation plus 10 paid holidays per year."
   },
+  "refresh_after": 1789932360,
   "rotational_program_name": {
-   "confidence": "high",
-   "source_ids": [
-    "dbc3b9e88f",
-    "1db9db9c4d"
-   ],
-   "value": "None found in research."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "3f7bcba425"
-   ],
-   "value": "Estimated: No company-wide mandatory shutdowns found. Standard paid holidays (at least 10 per year) are granted."
+   "source_ids": [],
+   "value": "Estimated: No guaranteed company-wide shutdowns listed,(typical hours flexibility not defined in public docs)."
   },
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "3f7bcba425"
+    "5ed2f63722"
    ],
-   "value": "Large, privately held, high-growth company with over 12,000 employees; considered the dominant player in the commercial space launch market and a late-stage, mature startup."
+   "value": "High-growth, large-scale aerospace manufacturer and space transportation company."
   },
   "sources": [
    {
@@ -191981,43 +192099,49 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
-    "3f7bcba425"
+    "5ed2f63722"
    ],
-   "value": "For many technical roles, SpaceX can sponsor visas but is bound by U.S. International Traffic in Arms Regulations (ITAR) which generally requires employees to be a U.S. citizen, lawful permanent resident, or protected individual; this can limit sponsorship for nationals of certain countries."
+   "value": "Company hires high-performing candidates for dynamic, high-growth roles, though specific visa sponsorship policies are not listed."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "3f7bcba425"
+    "5ed2f63722",
+    "eba7ad0d07"
    ],
-   "value": "SpaceX designs, manufactures, and launches advanced rockets and spacecraft to transport cargo and crew to Earth orbit and beyond, with the ultimate goal of enabling human life on other planets. It generates revenue primarily through commercial satellite launches, cargo and crew delivery contracts with NASA and the U.S. government, and its Starlink satellite internet service."
+   "value": "SpaceX designs and manufactures advanced spacecraft and rockets to enable human space exploration. It generates revenue through aerospace engineering contracts, satellite deployment, and orbital spaceflight services."
   },
+  "synthesized_evidence_sha": "29948a9c9b322b2d",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "3f7bcba425"
+    "5ed5c239cc",
+    "927d97b9d8",
+    "eba7ad0d07"
    ],
-   "value": "Software roles involve building full-stack internal tools and mission-critical systems for rocket production, launch, and Starlink operations using Python, C++, and modern web frameworks; aerospace experience is not required as the company seeks fresh ideas from all areas."
+   "value": "Involves full stack development (Python, C#.NET, Go, Scala), AI satellite payload design, compute electronics, and manufacturing engineering."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583365,
   "web_search_url": "https://duckduckgo.com/?q=SpaceX+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "3f7bcba425"
+    "5ed2f63722",
+    "eba7ad0d07"
    ],
-   "value": "SpaceX marries elite engineering prestige and top-of-market new-grad pay with a mission-driven culture and intense technical learning. The estimated sane-hours policy (accruing three weeks of paid vacation plus 10+ holidays) and non-aerospace background being welcomed signals a balance of high innovation speed without requiring previous niche domain grind."
+   "value": "SpaceX matches a candidate's desire for top-tier prestige and maximum new-grad pay but fundamentally conflicts with the need for work-life balance and sane hours; its fast-paced, high-growth environment is known for being intense and demanding."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "3f7bcba425"
+    "5ed2f63722",
+    "cdc4dd7d35"
    ],
-   "value": "Estimated: Average to below-average for standard tech, though explicit paid vacation and holiday accrual are provided. High workload intensity is common during launch campaigns, balanced by standard paid time off."
+   "value": "Estimated: Low to Moderate. Expected to struggle with work-life balance due to the highly dynamic, unrelenting motivation expected of technical staff."
   }
  },
  "spacexai": {
