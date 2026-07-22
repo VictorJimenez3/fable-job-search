@@ -90,6 +90,7 @@ class BudgetFailure(CallFailure):
 _signature: tuple | None = None
 _logical_calls = 0
 _requests = 0
+_next_request_at = 0.0
 _task_calls: dict[str, int] = {}
 _cooldowns: dict[str, float] = {}
 _failures: dict[str, int] = {}
@@ -108,10 +109,11 @@ def _config_signature() -> tuple:
 
 def reset_runtime() -> None:
     """Reset per-process budgets and health. Public mainly for tests/CLI runs."""
-    global _signature, _logical_calls, _requests
+    global _signature, _logical_calls, _requests, _next_request_at
     _signature = _config_signature()
     _logical_calls = 0
     _requests = 0
+    _next_request_at = 0.0
     _task_calls.clear()
     _cooldowns.clear()
     _failures.clear()
@@ -222,13 +224,27 @@ def _post_with_retry(url: str, *, timeout: int, json: dict,
 
 
 def _reserve_request() -> None:
-    """Count the actual HTTP send, including transport retries."""
-    global _requests
+    """Count and, when configured, smoothly pace every HTTP send.
+
+    A shared token gate applies to normal sends and retry sends alike. This is
+    deliberately global to the worker: racing four providers must not turn a
+    nominal 30-RPM allowance into an instantaneous 120-request burst.
+    """
+    global _requests, _next_request_at
     maximum = _int_env("RADAR_AI_MAX_REQUESTS", 24)
+    per_minute = _int_env("RADAR_AI_REQUESTS_PER_MINUTE", 0)
+    wait = 0.0
     with _counter_lock:
         if _requests >= maximum:
             raise BudgetFailure("per-run provider request budget reached")
         _requests += 1
+        if per_minute:
+            now = time.monotonic()
+            send_at = max(now, _next_request_at)
+            _next_request_at = send_at + 60 / per_minute
+            wait = send_at - now
+    if wait > 0:
+        time.sleep(wait)
 
 
 def _strip_thinking(text: str) -> str:

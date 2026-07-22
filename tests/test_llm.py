@@ -112,6 +112,19 @@ def test_persistent_429_still_degrades_to_none(monkeypatch):
     assert srv.calls == 1 + llm._MAX_RETRIES  # bounded, no spin
 
 
+def test_global_request_pacer_smooths_provider_races(monkeypatch):
+    monkeypatch.setenv("RADAR_AI_MAX_REQUESTS", "10")
+    monkeypatch.setenv("RADAR_AI_REQUESTS_PER_MINUTE", "30")
+    llm.reset_runtime()
+    ticks = iter([10.0, 10.0])
+    waits = []
+    monkeypatch.setattr(llm.time, "monotonic", lambda: next(ticks))
+    monkeypatch.setattr(llm.time, "sleep", waits.append)
+    llm._reserve_request()
+    llm._reserve_request()
+    assert waits == [2.0]
+
+
 def _named_env(monkeypatch):
     monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
     monkeypatch.delenv("LLM_BASE_URL", raising=False)

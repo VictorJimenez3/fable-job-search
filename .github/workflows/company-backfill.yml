@@ -46,6 +46,9 @@ jobs:
           NVIDIA_KIMI_K2_6_MODEL: ${{ vars.NVIDIA_KIMI_K2_6_MODEL }}
           RADAR_AI_MAX_CALLS: "10000"
           RADAR_AI_MAX_REQUESTS: "10000"
+          # Smooth the shared provider traffic: one actual send every two
+          # seconds, including retries, instead of model-race bursts.
+          RADAR_AI_REQUESTS_PER_MINUTE: "30"
           RADAR_AI_PROVIDER_ATTEMPTS: "2"
           RADAR_AI_ROTATE_PROVIDERS: "0"
           RADAR_AI_TASK_COMPANY_RESEARCH_LIMIT: "10000"

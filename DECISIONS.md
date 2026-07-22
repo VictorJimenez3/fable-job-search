@@ -833,3 +833,12 @@ logical task races the configured API providers and uses the first
 schema-valid response. Provider failures are circuit-broken with exponential
 cooldowns, so 429s and timeouts stop consuming subsequent company slots while
 recovered or alternate providers can take the work.
+
+## 61. Backfill traffic is smoothly paced below provider quota (2026-07-22)
+
+The configured provider allowance is an upper bound, not a reason to send a
+burst. The dossier backfill now uses a single 30-RPM gate across every actual
+HTTP request, including retries and simultaneous model-race candidates. It
+therefore spaces sends two seconds apart while still working continuously;
+provider-specific circuit breakers handle outages without turning them into a
+tight retry loop.
