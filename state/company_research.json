@@ -27554,52 +27554,125 @@
  },
  "beth israel lahey health": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "cdec755bc1"
+   ],
+   "value": "Elite (Non-Profit/Research). The academic affiliation provides top-tier prestige comparable to universities in the life sciences niche. The role carries the cachet of a serious institution, focusing peer regard on the clinical health domain."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "cdec755bc1"
+   ],
+   "value": "It is a non-profit healthcare system that generates revenue primarily through fee-for-service clinical care and insurance reimbursements. Surplus revenue is reinvested back into the organization for research, facilities, and community health programs."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "cdec755bc1"
+   ],
+   "value": "Collegial, curious, and mission-anchored. The atmosphere blends the serious intellectual rigor of an academic environment with the operational stability of a massive health system. It's inherently respectful of clinical boundaries and patient safety, which filters into respect for personal safety."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "cdec755bc1"
+   ],
+   "value": "Patients in the New England region, primarily Massachusetts, who access services through a network of academic medical centers, community hospitals, and outpatient care facilities."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "cdec755bc1"
+   ],
+   "value": "Estimated: $115,000-$135,000 base salary. In the ultra-competitive Boston health-tech market, elite specialist systems pay compensately for AI/data roles. Academic non-profits like this match a bolus of high salary with strong 403(b) retirement packs, offsetting a slight discount versus pure big tech."
   },
   "evidence_sha": "b887e02dbe0d19e9",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784688843,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784688751,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "cdec755bc1"
+   ],
+   "value": "Healthcare & Life Sciences"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "cdec755bc1"
+   ],
+   "value": "Interviews will probe for applied technical skill and a passion for the mission. Expect a focus on delivering robust validation through health data science, not just fast software, which aligns with a fast-moving tech stack but within a disciplined and regulated medical context. Show how you balance rigor with efficiency to fit an evidence-based culture."
+  },
+  "last_attempt_at": 1784688843,
   "last_evidence_at": 1784583331,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "cdec755bc1"
+   ],
+   "value": "Headquartered in the Boston, Massachusetts metropolitan area, with its entire network of hospitals and clinics located throughout the eastern part of the state. This offers prime access to the Cambridge/Boston tech and pharma hub."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "cdec755bc1"
+   ],
+   "value": "The organization is fundamentally driven by patient care, medical research, and teaching. As a non-profit, it is explicitly mission-driven, focusing on community health rather than shareholder returns."
+  },
   "name": "Beth Israel Lahey Health",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "cdec755bc1"
+   ],
+   "value": "Estimated: Steady, structured sprints based on academic research cadence. The innovation pace is genuine but bound by clinical validation, not random Agile reactivity. No rushing to ship ads—the pressure comes from advancing clinical research, which feels urgent but rarely chaotic."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "cdec755bc1"
+   ],
+   "value": "The core offering is direct patient care, spanning primary care, specialized medicine, hospital services, and surgery across an extensive network of hospitals and clinics. This is underpinned by significant medical research and clinical trials."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "cdec755bc1"
+   ],
+   "value": "Estimated: 25-30 days of consolidated PTO. As a large establishing of higher education and a non-profit health system, it typically combines vacation, sick time, and flexible personal holidays into a generous plan to enable burnout prevention."
   },
+  "refresh_after": 1789872843,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "cdec755bc1"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "cdec755bc1"
+   ],
+   "value": "Estimated: Guaranteed shutdown on major holidays (federal style) and likely a soft freeze during the late December window between Christmas and New Year's. This pattern is standard for research-heavy health systems as non-clinical projects pause."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "cdec755bc1"
+   ],
+   "value": "A large, mature health system. It is one of the biggest employers in Massachusetts, operating 13 hospitals and over 600 care sites."
   },
   "sources": [
    {
@@ -27633,14 +27706,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=89f5c86def11de786e716198c6802b391bd468dbdb5f59f1e0ba2300226b6455JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9iZXRoZXNkYS5uZXQvZW4tVVM&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "cdec755bc1"
+   ],
+   "value": "As a major non-profit academic medical center, it routinely sponsors visas like H-1B for skilled researchers or healthcare IT roles such as biostatisticians and informatics analysts. This is standard practice to secure top-tier academic and technical talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "cdec755bc1"
+   ],
+   "value": "Beth Israel Lahey Health is a major non-profit integrated healthcare system in Massachusetts, formed by the merger of Beth Israel Deaconess Medical Center and Lahey Health. It provides a wide range of clinical care, research, and community health services."
+  },
+  "synthesized_evidence_sha": "b887e02dbe0d19e9",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "cdec755bc1"
+   ],
+   "value": "Technical roles would center on clinical informatics, AI for diagnostics, medical imaging, predictive health analytics, operational efficiency, and research computing. The environment supports academic medicine, meaning close ties to nearby institutions and NIH-level research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583331,
   "web_search_url": "https://duckduckgo.com/?q=Beth+Israel+Lahey+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bfcbbe9f90"
+   ],
+   "value": "This is a mission-driven powerhouse that directly funds a sane pace of work through its non-profit structure, avoiding the feature-factory burnout of hyper-growth tech firms. It offers the intellectual prestige of elite-tier academic medicine and the Cambridge life sciences cluster, accelerating your AI career through high-impact, research-oriented health data challenges while genuinely respecting boundaries like shutdowns for personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "cdec755bc1",
+    "bfcbbe9f90"
+   ],
+   "value": "Estimated: Very Healthy (4/5). Academic non-profits like this fund specific research scope and rarely demand the grind of venture-backed startups. The main risk comes from projects tied to clinical trials with hard grant deadlines, but this is the exception, not the norm."
   }
  },
  "betterhealth a planned parenthood partnership": {
@@ -56712,7 +56817,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -56730,7 +56835,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784688751,
+  "last_attempt_at": 1784688843,
   "last_evidence_at": 1784676245,
   "name": "Decagon",
   "pace_of_work": {
@@ -102116,42 +102221,101 @@
  },
  "jabil": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "d6ce7ed3ad"
+   ],
+   "value": "Tier 2: A respected, high-volume business application environment within a large-cap company, but not considered an elite AI research institution or top-tier tech firm."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "d6ce7ed3ad",
+    "095fb6651b",
+    "dfabd3a253"
+   ],
+   "value": "Jabil operates a business-to-business (B2B) contract manufacturing model. It makes money by manufacturing and assembling products, managing supply chains, and providing design services for clients, who then sell these products under their own brand names."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, collaborative, and process-oriented. The culture emphasizes reliability, safety, and operational excellence to serve large brand customers, which translates into a predictable, team-focused, and less volatile environment than typical Silicon Valley startups."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "095fb6651b",
+    "dfabd3a253"
+   ],
+   "value": "Jabil serves a wide range of Fortune 500 and leading brands across industries such as healthcare, automotive, consumer electronics, defense, and cloud/enterprise technology. Specific clients are typically not disclosed due to the contract manufacturing nature of the business."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: For a top-tier AI/DS new-grad role in a major US tech hub, total compensation can range from $110,000 to $135,000, heavily weighted toward base salary (e.g., $90,000-$110,000) with a smaller bonus. Signing bonuses are less common than at elite software firms."
   },
   "evidence_sha": "bc7f83156b5105fe",
+  "generated_at": 1784688843,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d6ce7ed3ad",
+    "095fb6651b",
+    "dfabd3a253"
+   ],
+   "value": "Contract Manufacturing & Supply Chain Services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should be prepared to demonstrate skills in solving complex operational and supply chain problems using AI/ML. Interview questions may focus on process optimization, applied statistics for manufacturing, predictive maintenance modeling, and proficiency with industrial-scale data. Emphasize your interest in building high-impact solutions within collaborative global teams and your preference for a structured, sustainable work environment that avoids hero-worship culture."
   },
-  "last_attempt_at": 1784688751,
+  "last_attempt_at": 1784688843,
   "last_evidence_at": 1784673980,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "d6ce7ed3ad"
+   ],
+   "value": "Jabil is headquartered in St. Petersburg, Florida, USA. It operates over 100 locations across more than 30 countries worldwide."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "095fb6651b",
+    "dfabd3a253"
+   ],
+   "value": "Jabil's public mission centers on making anything possible and everything better, acting as a trusted partner for the world's biggest brands by offering integrated, end-to-end manufacturing solutions."
+  },
   "name": "Jabil",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady and structured, typical of a mature, process-driven multinational. Pace is driven by predictable production schedules and client contract deliverables rather than volatile consumer internet metrics."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "095fb6651b",
+    "dfabd3a253"
+   ],
+   "value": "Jabil's core product is its manufacturing and supply chain expertise. It produces components and finished products across diverse sectors including automotive, healthcare, packaging, consumer electronics, and aerospace, offering services from design and engineering to 3D printing and automation."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of paid time off annually for a new graduate, likely a combined bank of vacation and sick time typical for a company of this size and sector."
   },
+  "refresh_after": 1789872843,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -102161,7 +102325,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: May include optional shutdown periods between Christmas and New Year's Day. A company-wide mandatory shutdown is not standard in the manufacturing sector but is possible at specific sites in other regions."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "d6ce7ed3ad"
+   ],
+   "value": "Jabil is a mature, large-cap public company with over 250,000 employees worldwide and annual revenue of approximately $33.4 billion (FY2023). It is not a startup."
   },
   "sources": [
    {
@@ -102195,14 +102366,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=56fab2bc0b231ed253a69e8df623728026be167ba22dc39682b44b7fda18413aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=26baeef9-727a-6b43-20f5-f964738b6a1e&u=a1aHR0cHM6Ly93d3cuamFiaWwuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a large multinational corporation with a significant US headquarters, Jabil typically sponsors H-1B visas for highly specialized technical roles. Exact role-level sponsorship eligibility cannot be confirmed without a specific job posting."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "095fb6651b",
+    "dfabd3a253"
+   ],
+   "value": "Jabil is a global manufacturing services company that designs, engineers, and manufactures products for other companies. It earns revenue by providing end-to-end supply chain, design, and production solutions on a contract basis, turning client concepts into physical, mass-produced goods."
+  },
+  "synthesized_evidence_sha": "bc7f83156b5105fe",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "095fb6651b",
+    "dfabd3a253"
+   ],
+   "value": "Technical work spans advanced manufacturing engineering, supply chain optimization, automation, robotics, and materials science. Data scientists and AI engineers at Jabil likely focus on optimizing massive, complex manufacturing and logistics operations, predicting supply chain disruptions, and applying computer vision for quality assurance."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673980,
   "web_search_url": "https://duckduckgo.com/?q=Jabil+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The AI/DS role at Jabil likely offers a strong, stable salary common among large enterprises, avoiding the boom-and-bust cycle of startups. It provides a mission focused on operational excellence rather than rapid growth, which can lead to a healthier work-life balance with standard corporate hours and a lower risk of weekend 'crisis' sprints compared to ad-tech or finance. The sheer scale of global manufacturing data provides a unique and rich technical playground for complex AI problems withou"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Above average for a large technology-adjacent corporation. The manufacturing sector's emphasis on scheduled production runs and shift-based operations can create clearer 'off-work' boundaries than standard tech firms."
   }
  },
  "jacobs": {
@@ -137625,7 +137823,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -137643,7 +137841,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784688751,
+  "last_attempt_at": 1784688843,
   "last_evidence_at": 1784673977,
   "name": "Novartis",
   "pace_of_work": {
@@ -147428,7 +147626,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -147446,7 +147644,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784688751,
+  "last_attempt_at": 1784688843,
   "last_evidence_at": 1784676244,
   "name": "Perpay",
   "pace_of_work": {
@@ -149503,37 +149701,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 (strong technical reputation in niche, not widely known as elite like FAIR/Google Brain)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: B2B software/subscription or professional services for data systems; no revenue details found in sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-first, innovation-oriented, likely flat hierarchy; no employee reviews or culture artifacts found."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Enterprise clients in data-intensive industries; no customer references found in sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$160k base + equity + bonus (competitive for Tier 2 AI/data science)"
   },
   "evidence_sha": "35d2bf1c8cef0ab4",
+  "generated_at": 1784688843,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Enterprise data software / AI infrastructure"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare for deep technical assessments in ML systems, data architecture, and scalable pipelines. Ask explicitly about: (1) typical weekly hours and on-call expectations, (2) existence of guaranteed shutdown periods (e.g., weekends, holidays), (3) mentorship structure and promotion velocity for new grads, (4) team autonomy vs. top-down roadmap control. Request to speak with recent hires about burnout risk."
+  },
+  "last_attempt_at": 1784688843,
   "last_evidence_at": 1784673985,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters likely in US (usa.pioneer.com domain); possible remote/hybrid options; no office locations found in sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mission-driven around advancing data science/AI innovation; no public mission statement found in sources."
+  },
   "name": "Pioneer Data Systems",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced, iterative product cycles typical of growth-stage data/AI startups; no process maturity indicators found."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely provides data infrastructure, analytics, or AI/ML platform services given the name, but no product details found in sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 holidays (US norm for tech); no policy found."
   },
+  "refresh_after": 1789872843,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -149543,7 +149782,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns documented; may observe standard holidays only."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-stage growth company (100-500 employees); no headcount or funding data found in sources."
   },
   "sources": [
    {
@@ -149577,14 +149821,35 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely supports H-1B and green card sponsorship for technical roles; no immigration policy found in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Pioneer Data Systems appears to be a technology company with limited public information available. The company's website redirects suggest a corporate presence but no detailed business description is accessible via the provided sources."
+  },
+  "synthesized_evidence_sha": "35d2bf1c8cef0ab4",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Involves distributed systems, ML pipelines, data engineering, and cloud-native architecture; no technical blog or stack details found in sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673985,
   "web_search_url": "https://duckduckgo.com/?q=Pioneer+Data+Systems+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Matches your priority for a top-tier AI/data science role with elite prestige and high new-grad pay in a fast, innovative culture. The company's name and domain suggest a data-centric mission that could offer accelerated technical learning without bureaucracy. However, work-life balance guarantees and shutdown policies are unverified — you should probe these directly in interviews."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 (potential for good balance if culture respects boundaries, but unverified)"
   }
  },
  "plaid": {
@@ -159925,7 +160190,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -159943,7 +160208,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784688751,
+  "last_attempt_at": 1784688843,
   "last_evidence_at": 1784673976,
   "name": "Raytheon",
   "pace_of_work": {
@@ -177071,11 +177336,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -177087,6 +177354,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784688843,
   "last_evidence_at": 1784605608,
   "name": "Sixtyfour (X25)",
   "pace_of_work": {
