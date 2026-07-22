@@ -27150,11 +27150,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -27166,6 +27168,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784688201,
   "last_evidence_at": 1784674777,
   "name": "Beta Soft Systems",
   "pace_of_work": {
@@ -70652,40 +70655,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Respected in applied AI for fraud, risk, and personalization at massive scale; publishes at KDD/SIGIR but not a primary AI research lab like FAIR/DeepMind."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "B2B fintech: recurring revenue from SaaS/licensing, transaction-volume-based processing fees, and professional services; high-margin software layered on massive payment volumes."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Corporate-engineering hybrid: structured, process-oriented, compliance-aware; collaborative but hierarchical; strong DEI and upskilling programs; less 'move fast' more 'move safely'."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Banks, credit unions, payment processors, asset managers, insurers, merchants, and corporations worldwide; serves over 20,000 clients in 130+ countries."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $115k-$135k base + 10-15% target bonus + $20k-$40k RSUs (4-yr) = ~$150k-$185k Year 1 TC; higher in NYC/SF hubs."
   },
   "evidence_sha": "0ba151e2c5aa7056",
+  "generated_at": 1784688201,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Financial Technology (FinTech) / Payment Processing / Banking Software"
   },
-  "last_attempt_at": 1784688110,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect system-design heavy loops (high-throughput, low-latency, idempotency), SQL/data modeling, fraud/ML case studies, and behavioral questions on stakeholder management in regulated environments. LeetCode medium/hard common; domain knowledge (payments, ISO 8583, ACID) a differentiator."
+  },
+  "last_attempt_at": 1784688201,
   "last_evidence_at": 1784673659,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Jacksonville, FL; major hubs in London, New York, Pune, Manila, Belfast, Chicago, and remote-friendly roles across US/UK/India."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To advance the way the world pays, banks, and invests by delivering innovative financial technology that enables commerce and financial inclusion."
+  },
   "name": "Fidelity National Information Services",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate to slow — regulated releases, long client onboarding cycles, and change-management processes; sprint cadence exists but production deployments are gated."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core banking platforms (e.g., Profile, Horizon), payment processing (Worldpay, NYCE), digital banking, lending, wealth management, capital markets, anti-fraud, and risk/compliance solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 company holidays + 2 volunteer days; accrual increases with tenure; unlimited not offered."
   },
+  "refresh_after": 1789872201,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -70695,7 +70736,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some BU-level winter breaks (Dec 25-Jan 1) but not universal."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public company (NYSE: FIS), ~55,000 employees, $14B+ annual revenue (2023), Fortune 500; mature, post-Worldpay integration phase."
   },
   "sources": [
    {
@@ -70729,14 +70775,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=3fc9dd79d8a8bd48df977e16894ef654a89748b63e3f03f88bc767db1ce5eeddJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2b466e61-87e5-6127-3909-79fc865660d9&u=a1aHR0cHM6Ly93d3cuZmlkZWxpdHkuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active H-1B sponsor (consistently top 50); supports GC processing (PERM) for experienced hires; new-grad sponsorship common in tech hubs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fidelity National Information Services (FIS) is a global financial technology leader providing payments, banking, and investment software and services to financial institutions, merchants, and corporations. It generates revenue primarily through transaction processing fees, recurring software licensing/subscription fees, and professional services."
+  },
+  "synthesized_evidence_sha": "0ba151e2c5aa7056",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large-scale payment processing, real-time transaction systems, cloud migration (AWS/Azure), AI/ML for fraud detection and personalization, API platforms, core banking modernization, data engineering at petabyte scale."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673659,
   "web_search_url": "https://duckduckgo.com/?q=Fidelity+National+Information+Services+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "FIS offers elite fintech scale (petabyte data, billions of transactions) with new-grad compensation competitive with pure tech firms, but culture leans corporate/process-heavy rather than startup-fast; work-life balance varies by team—core payments teams face on-call pressure, while platform/AI groups report more sustainable pace. Prestige is high in financial services tech, but innovation speed is gated by regulatory and client constraints."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "3.2/5 — Generally 40-50 hr weeks; on-call rotations in payments/platform teams (1 week/month); some groups enforce 'no-meeting Fridays' and core-hours flexibility."
   }
  },
  "field ai": {
@@ -71227,42 +71294,100 @@
  },
  "figma": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "240dea24e1",
+    "83de283a63"
+   ],
+   "value": "Top-tier: recognized for pioneering real-time collaboration algorithms, browser-based graphics, and increasing investment in ML for design automation (smart layout, component suggestions, generative features). Publishes at SIGGRAPH, UIST, CHI; strong engineering brand."
   },
   "aliases": [],
-  "attempts": 11,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 12,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "bcc0669a17",
+    "240dea24e1"
+   ],
+   "value": "Freemium SaaS subscription model: free tier for individuals and small teams; paid Professional and Organization plans per editor per month; Enterprise tier with custom pricing for advanced security, compliance, and administration. Revenue comes from recurring subscriptions."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "240dea24e1"
+   ],
+   "value": "Design-led, low-ego, highly collaborative, craft-obsessed, transparent, and inclusive. Values \"default to open,\" \"play,\" and \"thoughtful rigor.\" Strong emphasis on mentorship, learning, and psychological safety."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "240dea24e1"
+   ],
+   "value": "Customers range from individual freelancers and startups to large enterprises such as Microsoft, Google, Airbnb, Uber, and Salesforce. Figma serves designers, product managers, engineers, and cross-functional teams across technology, media, finance, and education sectors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $170k-$210k base + $30k-$60k RSU (4-year) + $10k-$20k sign-on; total first-year $210k-$290k. Highly competitive with top-tier AI labs and big tech."
   },
   "evidence_sha": "f3b3971dd507844c",
+  "generated_at": 1784688201,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "240dea24e1"
+   ],
+   "value": "SaaS / Design Software / Developer Tools / Creative Technology"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
+   "value": "Expect deep technical screens on distributed systems, real-time algorithms, graphics rendering, and ML fundamentals; product sense and design collaboration scenarios; cultural fit for low-ego, high-craft environment; emphasis on learning agility and cross-functional communication."
   },
-  "last_attempt_at": 1784688110,
+  "last_attempt_at": 1784688201,
   "last_evidence_at": 1784583446,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "240dea24e1"
+   ],
+   "value": "Headquarters in San Francisco; major hubs in New York, London, Tokyo, and remote-first culture with employees across US, Europe, and Asia. Offices designed for collaboration but remote work is fully supported."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "bcc0669a17",
+    "240dea24e1"
+   ],
+   "value": "To make design accessible and collaborative for everyone, enabling teams to create better products together through a browser-based, real-time platform."
+  },
   "name": "Figma",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast but sustainable: rapid iteration cycles (weekly releases), hackathons, and innovation time, balanced by explicit cultural guardrails against burnout. Teams ship quickly but with strong design review and user feedback loops."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "bcc0669a17",
+    "240dea24e1"
+   ],
+   "value": "Core products include Figma Design (interface design and prototyping), FigJam (online whiteboarding for brainstorming and diagramming), and Figma Enterprise (advanced security, administration, and organization features). The platform also offers plugins, widgets, and APIs for extensibility."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual PTO + 10-12 company holidays + flexible sick/mental health days; unlimited policy for some roles but with strong cultural encouragement to take 3+ weeks off per year."
   },
+  "refresh_after": 1789872201,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -71272,7 +71397,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (last week of December through first week of January); occasional additional company-wide recharge days (e.g., \"Figma Fridays\" summer half-days)."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "240dea24e1"
+   ],
+   "value": "Late-stage private company (acquired by Adobe in 2022 for $20B, though integration operates independently); ~1,000-2,000 employees; valuation ~$10-20B range pre-acquisition; profitable with strong ARR growth."
   },
   "sources": [
    {
@@ -71306,14 +71438,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=74c50469f3dbdb6c81858b0e5d207009eec4424a7097e7864cec887497d8322fJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRmlnbWE&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B, TN, and other work visas; supports green card processes (PERM, EB-2/EB-3); dedicated immigration team; hires internationally for both office and remote roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "bcc0669a17",
+    "240dea24e1"
+   ],
+   "value": "Figma is a cloud-based collaborative design platform that enables teams to design, prototype, and hand off digital products in real time. It operates as a web-first application with multiplayer editing, making it a standard tool for UI/UX designers, product teams, and developers."
+  },
+  "synthesized_evidence_sha": "f3b3971dd507844c",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "240dea24e1",
+    "83de283a63"
+   ],
+   "value": "Core engineering challenges include real-time collaboration (CRDTs, operational transforms), high-performance WebGL rendering, browser-based multiplayer infrastructure, plugin/extensibility platform, large-scale data pipelines, and ML-assisted design features (auto-layout, smart selection, content generation)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583446,
   "web_search_url": "https://duckduckgo.com/?q=Figma+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Figma offers elite AI/data science prestige through its cutting-edge real-time collaboration engine, WebGL rendering, and emerging ML-assisted design features, combined with top-tier new-grad compensation. Its mission-driven, design-centric culture emphasizes craft and user impact over bureaucracy, with a strong reputation for work-life balance, sane hours, and a fast but sustainable pace that accelerates technical growth without burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4.2/5 — widely reported as respecting boundaries, flexible hours, no mandatory weekends, and supportive management. Occasional crunch around major launches but not systemic."
   }
  },
  "figure": {
@@ -94362,38 +94521,103 @@
  "icf international": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "2c56908690"
+   ],
+   "value": "Tier 2: Respected federal mission AI work with publication opportunities, but not core AI research lab prestige. Strong for applied ML/public sector impact profile."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "2c56908690"
+   ],
+   "value": "Revenue generated through time-and-materials, cost-plus-fixed-fee, and fixed-price contracts with government and commercial clients. Business segments: Government Services (majority) and Commercial Services. Publicly traded on NASDAQ (ICFI)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "2c56908690"
+   ],
+   "value": "Mission-driven, collaborative, mid-career heavy. 'Government contractor professional' — structured, process-oriented, respectful of boundaries. Less 'move fast break things,' more 'deliver reliably for the client.' Employee resource groups active. Diversity metrics published annually."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "2c56908690"
+   ],
+   "value": "Primary customers are U.S. federal agencies (HHS, DOE, EPA, FEMA, DOD, VA), state/local governments, international governments, multilateral organizations (World Bank, UN), and commercial clients in energy, healthcare, and transportation sectors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "2c56908690"
+   ],
+   "value": "Estimated: $105,000-$125,000 base + 5-10% target bonus + RSU (vesting 4 years) + tuition reimbursement. Total comp ~$115K-$140K. Varies by location (DC/CA premium) and clearance level."
   },
   "evidence_sha": "b439088de2b9bbfa",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784688201,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2c56908690"
+   ],
+   "value": "Government Consulting / Professional Services / Federal IT Services"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2c56908690"
+   ],
+   "value": "Expect: 1) Technical screen (Python/SQL/ML fundamentals), 2) Case study on federal data challenge (e.g., messy administrative data, privacy constraints), 3) Behavioral on mission alignment and client-facing skills, 4) Security clearance discussion (many roles require Public Trust/Secret). Prepare examples of translating technical work for non-technical stakeholders and handling ambiguous requirements."
+  },
+  "last_attempt_at": 1784688201,
   "last_evidence_at": 1784674483,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "2c56908690"
+   ],
+   "value": "Headquarters: Reston, VA. Major U.S. offices: Washington DC, Atlanta, Boston, Chicago, Denver, San Francisco, Seattle. International: UK, Canada, India, China, Brazil, and 30+ other countries. Hybrid/remote options vary by contract."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "2c56908690"
+   ],
+   "value": "To partner with clients to deliver meaningful, lasting solutions that improve lives and strengthen communities through evidence-based expertise and innovative technology."
+  },
   "name": "ICF International",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "2c56908690"
+   ],
+   "value": "Moderate: Project-based with federal fiscal year cycles. Crunch periods around contract deadlines and proposal seasons, but generally predictable 40-45 hour weeks on delivery contracts. Proposal work can spike to 50-60 hours temporarily."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "2c56908690"
+   ],
+   "value": "Consulting services across energy transition, climate resilience, public health, disaster recovery, cybersecurity, digital modernization, and program evaluation. Technology solutions include data analytics, AI/ML applications, cloud migration, and custom software development for government and commercial clients."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "2c56908690"
+   ],
+   "value": "Estimated: 15 days PTO + 11 federal holidays + 2 floating holidays (accrual-based, increases with tenure). Unlimited sick leave per federal contractor requirements."
   },
+  "refresh_after": 1789872201,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -94402,8 +94626,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "2c56908690"
+   ],
+   "value": "Estimated: Full shutdown between Christmas/New Year (5-7 days) + early release before major federal holidays. Not guaranteed annually but consistent practice."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "2c56908690"
+   ],
+   "value": "Large public company (~9,000 employees globally, ~$1.9B annual revenue). Mature stage with 50+ year history. Headquarters in Reston, VA with offices worldwide."
   },
   "sources": [
    {
@@ -94437,14 +94670,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=6da02ded423f2f3e1eb78eb30a380bf202ea6b259f62020c57c523f319813fccJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=26a4c2ce-575e-61a8-27ca-d553565360e2&u=a1aHR0cHM6Ly9jb2FjaGluZ2ZlZGVyYXRpb24ub3JnLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2c56908690"
+   ],
+   "value": "Active H-1B sponsor for specialized roles (data science, cybersecurity, engineering). Green card sponsorship (PERM) available for permanent roles, typically after 1+ years. Cap-exempt status through university/nonprofit affiliations for some research positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "2c56908690"
+   ],
+   "value": "ICF International is a global consulting services firm that provides professional services and technology solutions to government agencies and commercial clients. The company helps clients solve complex challenges in energy, environment, health, disaster management, and social programs through advisory, implementation, and technology services."
+  },
+  "synthesized_evidence_sha": "b439088de2b9bbfa",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "2c56908690"
+   ],
+   "value": "Data science and AI work focuses on federal mission applications: predictive analytics for public health, climate modeling, fraud detection, natural language processing for policy analysis, geospatial AI for disaster response, and ML operations for government systems modernization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674483,
   "web_search_url": "https://duckduckgo.com/?q=ICF+International+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2c56908690"
+   ],
+   "value": "ICF offers elite-prestige federal mission work with top-tier new-grad compensation (~$105-125K base + bonus) while maintaining better WLB than Big Tech or pure defense contractors. You'll apply AI/DS to real public-impact problems (climate, health, disaster response) with guaranteed federal holidays, 40-hour billable expectations on most contracts, and structured learning paths — but it's still a government contractor, so pace varies by contract and bureaucracy exists."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "2c56908690"
+   ],
+   "value": "7/10: Strong federal holiday observance, limited weekend work on most contracts, generous telework. Some contracts require on-site or strict hours. Better than Big 4/defense contractors, but client-driven."
   }
  },
  "icon": {
@@ -138803,42 +139067,106 @@
  },
  "oklo": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "e2152899b6"
+   ],
+   "value": "Top-tier for nuclear-digital intersection: pioneering reactor digital twins, ML for licensing automation, and fuel cycle optimization in a regulated, safety-critical domain. Rare blend of AI/ML prestige with hard-tech mission."
   },
   "aliases": [],
-  "attempts": 5,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 6,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "e2152899b6",
+    "aae716a0ea"
+   ],
+   "value": "Build-own-operate model: Oklo develops, owns, and operates Aurora powerhouses, selling electricity and heat under long-term power purchase agreements (PPAs). Additional revenue from fuel recycling services and government cost-share awards (e.g., DOE ARDP)."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "e2152899b6"
+   ],
+   "value": "Mission-obsessed, detail-oriented, anti-bureaucracy, team-first. Described as \"genuinely a team\" not performative culture. Engineering rigor valued over hours theater. High psychological safety for raising safety/quality concerns."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "aae716a0ea"
+   ],
+   "value": "U.S. Department of Energy, Idaho National Laboratory (INL), utilities, industrial facilities, data centers, and remote communities seeking carbon-free heat and power via long-term power purchase agreements."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$135k base + equity (0.05-0.15% for IC1) + signing bonus $10-20k; competitive with top deep-tech startups, adjusted for Santa Clara cost of living."
   },
   "evidence_sha": "9da8d0bc9bae0f8d",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784688201,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784688110,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e2152899b6",
+    "aae716a0ea"
+   ],
+   "value": "Advanced nuclear energy / clean tech / deep tech"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "e2152899b6",
+    "20e8aa3fc5"
+   ],
+   "value": "Probe how \"fast-moving startup\" reality aligns with nuclear's regulatory pace: ask about sprint cycles vs. NRC licensing gates, how they protect shutdown time during crunch periods, and what technical mentorship looks like for early-career engineers on first-of-a-kind systems. Verify the \"no fake flair\" claim by asking how team health is measured."
+  },
+  "last_attempt_at": 1784688201,
   "last_evidence_at": 1784674771,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "aae716a0ea"
+   ],
+   "value": "Headquarters: Santa Clara, CA. Project sites: Idaho National Laboratory (Aurora demo), Meitner facility (fuel recycling), and remote deployment sites. Some roles offer hybrid/remote flexibility."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "e2152899b6",
+    "aae716a0ea"
+   ],
+   "value": "Deploy advanced fission to provide affordable, clean energy at scale while closing the fuel cycle through recycling, enabling a sustainable energy future."
+  },
   "name": "Oklo",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "e2152899b6",
+    "20e8aa3fc5"
+   ],
+   "value": "Fast-paced startup velocity (weekly sprints, rapid iteration) gated by nuclear regulatory milestones; \"fast-moving\" per job posts but with hard safety/licensing deadlines that create periodic intensity spikes."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "e2152899b6",
+    "aae716a0ea"
+   ],
+   "value": "Aurora compact fast reactor (15-50 MWe), fuel recycling services (reprocessing used nuclear fuel), and integrated powerhouse systems for off-grid and grid-connected applications."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays + flexible/unlimited sick leave; no public policy disclosed."
   },
+  "refresh_after": 1789872201,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -138848,7 +139176,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; leadership emphasizes work-life balance but nuclear project milestones may limit extended closures."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "c66115f78a"
+   ],
+   "value": "Public company (NYSE: OKLO) via SPAC merger (2024), ~200-300 employees, pre-revenue commercial deployment phase with first Aurora at INL targeted for late 2020s."
   },
   "sources": [
    {
@@ -138912,14 +139247,46 @@
     "url": "https://job-boards.greenhouse.io/oklo/jobs/6093041004"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H-1B for specialized nuclear/software roles given talent scarcity; no public policy detail. ITAR/export control restrictions apply to certain nuclear technology roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "e2152899b6",
+    "aae716a0ea"
+   ],
+   "value": "Oklo is a fast-moving advanced nuclear startup developing compact fast reactors (Aurora) to provide clean, reliable power through power purchase agreements and fuel recycling services. They focus on first-of-a-kind reactor design and deployment at sites like Idaho National Laboratory."
+  },
+  "synthesized_evidence_sha": "9da8d0bc9bae0f8d",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "e2152899b6",
+    "20e8aa3fc5",
+    "aae716a0ea"
+   ],
+   "value": "Multi-physics reactor design (neutronics, thermal-hydraulics, structural), fuel cycle modeling, digital twin/simulation, safety analysis, licensing automation, supply chain tech for nuclear-grade manufacturing, and site infrastructure software."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674771,
   "web_search_url": "https://duckduckgo.com/?q=Oklo+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "e2152899b6"
+   ],
+   "value": "Oklo offers a rare combination: elite nuclear/AI prestige (first-of-a-kind fast reactor + digital engineering), high new-grad pay for deep tech, and a stated culture that rejects performative \"pieces of flair\" and explicitly calls out work-life balance as genuine. For a candidate wanting mission-driven impact without burnout, this is a standout signal in hard tech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "e2152899b6"
+   ],
+   "value": "Estimated: 7/10 — leadership explicitly rejects \"lack of work-life balance\" and \"fake flair\" culture; however, first-of-a-kind nuclear deployment inevitably creates crunch periods around licensing and construction milestones."
   }
  },
  "old mission": {
@@ -185923,11 +186290,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -185939,6 +186308,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784688201,
   "last_evidence_at": 1784673660,
   "name": "Symbotic",
   "pace_of_work": {
@@ -198545,47 +198915,113 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Applied ML in retail context; solid engineering brand, not a research flagship."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Omnichannel retailer: operates 2,000+ company-owned stores + e-commerce; revenue from product sales, private-label brands, and services (e.g., propane exchange, trailer rental)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Down-to-earth, customer-obsessed, low-ego; values tenure and internal mobility; 'Life Out Here' ethos permeates decisions."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Recreational farmers, ranchers, rural homeowners, tradespeople, and pet owners across the U.S.; loyalty program (Neighbor's Club) has 30M+ members."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k–$115k base + 10–15% target bonus + RSU (~$15k–$25k/yr vest); total ~$120k–$150k Year 1."
   },
   "evidence_sha": "90a34dc8cc083063",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784688201,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Specialty Retail (Farm & Ranch / Rural Lifestyle)"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Expect practical system-design (scaling e-commerce, inventory), SQL/analytics case studies, and behavioral questions tied to 'Life Out Here' values. LeetCode Hard is rare; focus on clean code, retail-domain modeling, and cross-functional collaboration stories."
+  },
+  "last_attempt_at": 1784688201,
   "last_evidence_at": 1784677347,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Headquartered in Brentwood, TN; stores in 49 states; tech hubs in Nashville, TN and remote-friendly roles."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "To serve the needs of recreational farmers and ranchers and those who enjoy the rural lifestyle (publicly stated as 'Life Out Here')."
+  },
   "name": "TSC",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — steady sprints with seasonal peaks (spring planting, holidays); not a 24/7 on-call culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Farm and ranch supplies (feed, fencing, equipment), hardware, tools, truck/tool boxes, workwear, pet and animal care, lawn/garden/seasonal, and home improvement goods."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 2 floating days (accrual-based; increases with tenure)."
   },
+  "refresh_after": 1789872201,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdown; some teams observe reduced ops between Christmas and New Year."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Large public company (NASDAQ: TSCO); ~$14B+ annual revenue; ~50,000 employees; mature, profitable, dividend-paying."
   },
   "sources": [
    {
@@ -198629,14 +199065,41 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors H-1B for specialized tech roles; green-card support for senior hires; new-grad sponsorship case-by-case."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "TSC (Tractor Supply Company) is a leading U.S. retail chain operating over 2,000 stores that sells farm, ranch, and rural lifestyle products including hardware, tools, seasonal goods, and pet supplies. It makes money through brick-and-mortar and e-commerce sales to recreational farmers, ranchers, and rural homeowners."
+  },
+  "synthesized_evidence_sha": "90a34dc8cc083063",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "E-commerce platform, supply-chain/logistics optimization, data analytics, customer personalization, mobile app, in-store tech (POS, inventory), and emerging ML/AI for demand forecasting and marketing."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677347,
   "web_search_url": "https://duckduckgo.com/?q=TSC+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "TSC offers a stable, profitable Fortune-500 backdrop with a growing tech org that is investing in ML/AI for personalization and supply-chain. Pay is competitive for retail-tech but below elite pure-play AI labs. Culture is mission-driven around rural communities; hours are generally sane for a non-tech giant, but pace can spike around retail holidays. Good fit if you want impact at scale without 'move fast and break things' burnout, less so if you seek cutting-edge research prestige."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — core hours respected, limited weekend work outside peak retail weeks; remote/hybrid flexibility varies by team."
   }
  },
  "tsmg": {
@@ -205182,37 +205645,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Unknown – no public research output, conference presence, or AI product portfolio found in sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue model not documented. Presumed to be project-based consulting fees, managed services contracts, and staff augmentation margins."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional services culture – client-focused, credential-oriented, potentially hierarchical. Innovation depth depends on internal R&D investment vs. billable utilization pressure."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Customer base not documented in sources. Typically serves enterprise clients across healthcare, finance, and government sectors for such firms."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$110,000 base + modest bonus – typical for IT consulting new grad roles, below elite AI lab tiers."
   },
   "evidence_sha": "20a3045ab8d121f7",
+  "generated_at": 1784688201,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "IT Consulting / Technology Services"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Should probe for: actual AI/ML project portfolio, engineering culture vs. consulting delivery pressure, concrete WLB policies (shutdowns, on-call), mentorship structure, and new grad compensation transparency. Verify if work is product innovation or client implementation."
+  },
+  "last_attempt_at": 1784688201,
   "last_evidence_at": 1784673660,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters and office locations not provided in sources. US-based given the company name."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mission statement not available in provided sources."
+  },
   "name": "USM Business Systems",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to high – typical for client-facing consulting with project deadlines, but varies by engagement."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No specific product information found in the provided sources. Likely offers IT consulting, staffing, and digital transformation services based on typical business systems integrators."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + US federal holidays – standard for mid-sized US IT services firms."
   },
+  "refresh_after": 1789872201,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -205222,7 +205726,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns documented. Some firms observe winter break but not universal."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Company size and stage not specified in sources. Appears to be an established mid-market IT services provider."
   },
   "sources": [
    {
@@ -205256,14 +205765,35 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Visa sponsorship policies not documented. Many US IT consulting firms sponsor H-1B visas for technical roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "USM Business Systems appears to be a technology consulting and services firm, but the provided sources contain only redirect links without substantive company information. No verifiable details about its core business, products, or revenue model were found in the supplied materials."
+  },
+  "synthesized_evidence_sha": "20a3045ab8d121f7",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technical focus unclear from sources. Likely involves enterprise application development, cloud migration, data analytics, and legacy modernization based on industry norms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673660,
   "web_search_url": "https://duckduckgo.com/?q=USM+Business+Systems+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks elite AI/data science role with high new-grad pay, fast innovative culture, mission-driven focus, strong work-life balance with guaranteed shutdowns, and accelerated technical growth without burnout. Without verified company data, cannot assess alignment."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5 – consulting firms often have variable hours; no guaranteed shutdowns documented."
   }
  },
  "ust": {
