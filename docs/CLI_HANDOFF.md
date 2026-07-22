@@ -162,7 +162,9 @@ Before changing the radar, read these in order:
   evidence caches. The dossier backfill uses eight bounded concurrent company
   tasks with global request budgets and exponential provider circuit breakers;
   `state/ai_usage.json` is the evidence for actual usage versus configured
-  quota.
+  quota. It runs as a sustained six-hour scheduled worker (up to GitHub's
+  330-minute job limit) and resumes from checkpoints automatically; the
+  two-hour `enrich` workflow remains the fresh/high-priority lane.
 - **Notification cadence:** individual alert issues are silent tracking
   surfaces. `alert-batch.yml` sends up to 15 unsent roles every four hours,
   ranked by score and recency, as the normal alert email. It records delivered IDs in

@@ -1,6 +1,10 @@
 name: company research backfill
 
 on:
+  schedule:
+    # One sustained worker every six hours. It drains for up to the runner's
+    # safe limit; the next invocation resumes from committed checkpoints.
+    - cron: "0 */6 * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -55,7 +59,10 @@ jobs:
         run: |
           git config user.name "job-radar[bot]"
           git config user.email "radar@users.noreply.github.com"
-          for cycle in $(seq 1 100); do
+          # Keep draining until the queue is empty or GitHub's job limit ends
+          # this worker. Every cycle is independently checkpointed, so the
+          # next scheduled run resumes safely without a manual dispatch.
+          for cycle in $(seq 1 1000); do
             git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
             set +e
             RADAR_BACKFILL_CYCLES=1 python -u scripts/backfill_company_research.py
@@ -96,4 +103,4 @@ jobs:
               exit 0
             fi
           done
-          echo "backfill: checkpoint limit reached; resume with workflow_dispatch"
+          echo "backfill: checkpoint limit reached; scheduled worker will resume"
