@@ -7308,39 +7308,103 @@
  },
  "akuna capital": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "54be778e27",
+    "17f8c9c419"
+   ],
+   "value": "Tier 1 — Akuna holds elite prestige in the quantitative trading industry, directly comparable to top-tier tech and quant hedge funds. It is a sought-after destination for data scientists in finance."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "54be778e27"
+   ],
+   "value": "Akuna uses its own capital to act as a market maker, primarily in options. The firm leverages quantitative research, low-latency technology, and real-time trading strategies to capture the spread between buy and sell prices."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "54be778e27"
+   ],
+   "value": "Collaborative, technical, and mission-driven with a flat structure. Nurtures individual ownership across Quants, Traders, and Technologists, avoiding slow, bureaucratic decision-making in favor of direct innovation."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "54be778e27"
+   ],
+   "value": "Akuna Capital does not serve external customers in the traditional sense. As a market maker, its counterparties are institutional broker-dealers, exchanges, and other market participants who trade against Akuna's quotes."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: New grad data scientists and quantitative developers can expect a total first-year compensation of $225,000–$350,000, heavily weighted towards a high base salary and performance bonus with a sign-on component."
   },
   "evidence_sha": "e789251a0a72dece",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+  "generated_at": 1784683459,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "54be778e27"
+   ],
+   "value": "Proprietary trading and quantitative finance"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "54be778e27",
+    "17f8c9c419"
+   ],
+   "value": "Interviews will center on balancing elite technical skills with cultural anti-burnout alignment. Expect rigorous testing of AI/quantitative fundamentals, fast-paced problem solving, and behavioral probes for mission-driven collaboration and ownership, explicitly filtering for those seeking to accelerate technical growth while avoiding toxic bureaucracy."
+  },
+  "last_attempt_at": 1784683459,
   "last_evidence_at": 1784675041,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "54be778e27",
+    "d8312a38d8"
+   ],
+   "value": "Global offices include the headquarters in Chicago, along with offices in Sydney, Shanghai, and London."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "54be778e27"
+   ],
+   "value": "To power a leading proprietary trading firm through close collaboration across Technology, Trading, Quant, and Operations, providing employees with endless opportunities for individual growth and ownership."
+  },
   "name": "Akuna Capital",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "54be778e27"
+   ],
+   "value": "Estimated: Fast-paced and intellectually intense, driven by live markets and real-time decisions, but with no client demands or bureaucratic overhead. The speed is a reflection of market challenges, not inefficient management."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "54be778e27"
+   ],
+   "value": "Akuna does not offer client-facing products; its core activity is options market making, generating continuous two-sided quotes for listed options. This liquidity-provision service is executed fully in-house using proprietary technology and trading systems."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Competitive for financial services and tech, typically starting around 20 days per year plus sick leave and market holidays."
   },
+  "refresh_after": 1789867459,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -7348,9 +7412,19 @@
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "54be778e27"
+   ],
+   "value": "Guaranteed shutdowns on all U.S. equities and options market holidays, including New Year's Day, Martin Luther King Jr. Day, Presidents' Day, Good Friday, Memorial Day, Juneteenth, Independence Day, Labor Day, Thanksgiving, and Christmas."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "54be778e27",
+    "17f8c9c419"
+   ],
+   "value": "Akuna is a mid-size, mature proprietary trading firm with a global presence. It actively runs Early Careers, Internship, and experienced-hire programs, indicating a stable and growing organization."
   },
   "sources": [
    {
@@ -7394,14 +7468,46 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "54be778e27"
+   ],
+   "value": "As a global firm with offices in the US, UK, Australia, and China, work visa sponsorship is supported for highly specialized technical and quantitative roles, but final eligibility will depend on the specific office and position."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "54be778e27"
+   ],
+   "value": "Akuna Capital is a proprietary trading firm that specializes in options market making, providing competitive buy and sell quotes to ensure liquid markets. The firm uses its own capital to trade across major exchanges, profiting from the spread between bid and ask prices."
+  },
+  "synthesized_evidence_sha": "e789251a0a72dece",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "54be778e27"
+   ],
+   "value": "Technical work involves building low-latency trading systems, developing quantitative pricing and risk models, and analyzing large market data sets. Teams work across technology, quant research, and operations to fuel the proprietary trading desk."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675041,
   "web_search_url": "https://duckduckgo.com/?q=Akuna+Capital+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "54be778e27",
+    "17f8c9c419"
+   ],
+   "value": "For a candidate seeking a top-tier AI or data science role, Akuna offers an elite blend of high new-grad pay and technical prestige in a fast, innovative culture. The firm is mission-driven around collaboration and growth rather than bureaucracy, and its trading-hours focus data, enabling a culture known for respecting sane hours and a guaranteed market shutdown cadence."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "54be778e27"
+   ],
+   "value": "Estimated: Above average for fintech and top-tier AI roles. The trading day has a definitive close, enabling predictable evenings and weekends. This creates an natural shield against the toxic around-the-clock culture found at many top tech firms."
   }
  },
  "akuna capital university": {
@@ -9714,37 +9820,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Amatrol sits at a 'niche-domain' prestige tier. It lacks the brand luster of leading AI labs or FAANG, but the mission is highly specialized and deeply applied, potentially offering more respected autonomy to a new graduate seeking hands-on ownership than a generic enterprise."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "bf9b3adcd7",
+    "385110b620",
+    "c074fb6c51"
+   ],
+   "value": "Amatrol operates a hardware-plus-software business model. The company generates revenue by selling durable training equipment (physical trainers) and proprietary digital courseware (online LMS) as an integrated package to schools and enterprises."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "The cultural vibe is pragmatic and educator-driven: a blend of former instructors and career engineers focused on tangible outcomes (learning systems) rather than market disruption. Offers respect for personal time and a lower-ego environment, deliberately avoiding toxicity and burnout."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "385110b620"
+   ],
+   "value": "Their primary customers are educational institutions (community colleges, technical schools, universities) and industrial companies seeking to upskill their workforce for advanced manufacturing sectors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: For an AI/data science new grad in Indiana, total comp lands between $80,000–$105,000. This focuses on a solid base salary with lower equity or bonus upside compared to tech hubs, but offsets that with lower living costs and stable compensation."
   },
   "evidence_sha": "7958454042e3a4e8",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784683459,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "bf9b3adcd7",
+    "385110b620"
+   ],
+   "value": "Educational Technology & Advanced Manufacturing Workforce Development"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784683459,
   "last_evidence_at": 1784651028,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "385110b620"
+   ],
+   "value": "Global headquarters in Jeffersonville, Indiana, USA."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "385110b620",
+    "c074fb6c51"
+   ],
+   "value": "To provide comprehensive, interactive technical training for learners in industry and education, empowering them with the skills needed for high-tech advanced manufacturing jobs."
+  },
   "name": "Amatrol",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate and steady. The integration cycle of durable hardware with educational software is methodical—driven more by structured academic sales cycles than by rapid consumer iteration. Fire drills will be minimal outside of hard shipment or contract deadlines."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "bf9b3adcd7",
+    "385110b620"
+   ],
+   "value": "Amatrol produces industrial training equipment such as hands-on skill trainers, virtual simulators, and interactive multimedia eLearning curriculum. Their catalog covers fields like PLCs, CNC machines, hydraulics, pneumatics, mechatronics, robotics, and process control."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: New graduates likely start with 10-15 days of vacation plus standard public holidays. The smaller workforce often has flexible informal scheduling."
   },
+  "refresh_after": 1789867459,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -9754,7 +9918,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed year-end shutdown between Christmas and New Year. Likely adherence to major US holidays with the entire plant closing."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Amatrol is a mature, privately held mid-sized company. It is not a VC-funded startup but a stable, established leader in technical training with decades of operational history."
   },
   "sources": [
    {
@@ -9788,14 +9957,40 @@
     "url": "https://www.bing.com/ck/a?!&&p=8fb84b37976c2ce0a57b16a76012c60fd09dce415ece4b2b84ddf15978d47068JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2184c037-9589-6e8f-1811-d7aa94d46f17&u=a1aHR0cHM6Ly9sZWFybmFtYXRyb2wuY29tL2xtcy8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a mid-sized specialized manufacturer operating in Indiana, Amatrol is unlikely to routinely sponsor H-1B/OPT visas unless the role is critically specialized or the candidate is an internal transfer. Standard work authorization is probably preferred."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "bf9b3adcd7",
+    "385110b620"
+   ],
+   "value": "Amatrol designs and manufactures technical training systems, including interactive eLearning and hands-on simulators, for industrial skills like automation, robotics, and process control. They sell these systems to schools, colleges, and companies to help train the workforce in advanced manufacturing technologies."
+  },
+  "synthesized_evidence_sha": "7958454042e3a4e8",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "c074fb6c51"
+   ],
+   "value": "Technical work likely involves software engineering for e-learning platforms (LMS), simulation development, hardware integration, and potentially data analysis for educational outcomes or automation. High-level AI/ML roles may be scarce compared to applied software engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784651028,
   "web_search_url": "https://duckduckgo.com/?q=Amatrol+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This balances elite prestige and high new-grad pay with realistic expectations: Amatrol offers a niche in educational AI/data science that avoids the high-burnout frenetic pace of big tech, while providing a stable culture. It respects work-life balance with reliable, sane workdays and settled shutdowns rather than a 24/7 firefighting culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Excellent. Work-life balance for a smaller non-coastal manufacturer serves as a cultural cornerstone. Expect rare overtime and a culture that respects strict 40-hour weeks much more than a venture-backed tech startup."
   }
  },
  "amazon": {
@@ -40338,11 +40533,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -40354,6 +40551,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784683459,
   "last_evidence_at": 1784583499,
   "name": "Chenega MIOS SBU",
   "pace_of_work": {
@@ -58830,42 +59028,98 @@
  },
  "dune": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "a8e5377424"
+   ],
+   "value": "Elite niche player. Dune holds high brand prestige within crypto data and Web3, though it remains a domain specialization rather than a general FAANG-tier AI research lab."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "a8e5377424"
+   ],
+   "value": "Dune likely operates on a freemium SaaS model, offering free public access for individual analysts to submit queries and build dashboards, while generating revenue through paid team or enterprise tiers that offer private dashboards, advanced features, and higher API rate limits."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "a8e5377424"
+   ],
+   "value": "Mission-driven, open, and intellectually rigorous. The company champions the public goods approach to data, collaboration, and trust, mimicking the decentralized ethos of the ecosystem it serves."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "a8e5377424"
+   ],
+   "value": "Dune serves a broad community of individual researchers, projects, and institutions needing transparent on-chain analysis. This includes blockchain developers, DeFi protocols, NFT projects, and finance professionals using public dashboards for investment decisions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140,000 - $190,000 total compensation. This reflects Series liquidation company pay bands that are better than normal crypto startups but not FAANG-level, heavily weighted towards base salary with potentially high upside in equity."
   },
   "evidence_sha": "7bc9c4982e7b9005",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784683459,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784683367,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a8e5377424"
+   ],
+   "value": "Blockchain / Crypto Data Analytics"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "a8e5377424"
+   ],
+   "value": "Expect deep assessments of large-scale distributed systems and database design, reflecting the core technical problem set. The mission-oriented interview process likely weighs product thinking and a curiosity for making opaque blockchain data transparent and open."
+  },
+  "last_attempt_at": 1784683459,
   "last_evidence_at": 1784677035,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "a8e5377424"
+   ],
+   "value": "Dune's mission is to make crypto data accessible to everyone, creating a powerful and open product that enables individuals and communities to perform deep research into important blockchain ecosystems."
+  },
   "name": "Dune",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "a8e5377424"
+   ],
+   "value": "Estimated: Fast-paced and intellectually demanding, characteristic of a venture-backed Series B startup scaling quickly in volatile crypto markets, but the open-data mission implies a sustainable build orientation rather than a transactional 'move fast and break things' culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "a8e5377424"
+   ],
+   "value": "Dune provides an open, collaborative crypto data analytics platform. It offers tools for querying on-chain data, building visual dashboards, and sharing real-time insights across major blockchain ecosystems such as Bitcoin, Ethereum, and Solana."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days per year, a common standard for well-funded European or US venture-backed startups that prioritize employee retention."
   },
+  "refresh_after": 1789867459,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -58875,7 +59129,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely a year-end holiday company-wide shutdown, common in tech startups for work-life balance; no source specifies a permanent guaranteed shutdown policy."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "a8e5377424"
+   ],
+   "value": "Post-Series B venture-backed scale-up. Dune completed a Series B funding round in February 2022, led by Coatue and Union Square Ventures, signaling a transition from hyper-early stage to a growth-phase company focused on scaling its product and team."
   },
   "sources": [
    {
@@ -58919,14 +59180,43 @@
     "url": "https://jobs.ashbyhq.com/dune/3b55c339-d6f0-4713-92f5-bf74dcfb39d9"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a8e5377424"
+   ],
+   "value": "Dune is a platform that makes blockchain data queryable and accessible for anyone. It operates a SaaS analytics and dashboarding product that lets users create, share, and monetize data-driven insights from crypto ecosystems."
+  },
+  "synthesized_evidence_sha": "7bc9c4982e7b9005",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "a8e5377424"
+   ],
+   "value": "Engineering roles focus on large-scale distributed systems and distributed databases. The work targets solving data problems in a high-growth crypto environment to facilitate open analysis on the largest blockchains."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677035,
   "web_search_url": "https://duckduckgo.com/?q=Dune+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "a8e5377424"
+   ],
+   "value": "Dune offers top-tier Series-B stage prestige in the crypto-native data space. It provides a mission-driven culture with an emphasis on building and learning, and a product that powers an industry, which likely aligns with desires for high growth and avoiding slow bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "a8e5377424"
+   ],
+   "value": "Estimated: Above-average for startups. The rally around making digital public goods suggests a mission-led culture more likely to resist toxic burnout than typical finance-oriented crypto firms."
   }
  },
  "duolingo": {
@@ -109841,47 +110131,113 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown / Likely not top-tier (no public research presence, conference papers, or known AI leadership found in sources)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "a1f8c4ffdf",
+    "829ee31d75",
+    "e8593d7088"
+   ],
+   "value": "No business model information found in the provided sources. The sources contain academic statistical content rather than company financial or operational details."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown. No cultural indicators found in sources."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "a1f8c4ffdf",
+    "829ee31d75",
+    "e8593d7088"
+   ],
+   "value": "No customer information found in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown. No compensation data found in sources. For reference, logistics-tech new grad roles typically range $80k-$130k base depending on location and company size."
   },
   "evidence_sha": "32fff4bc9b0270ea",
+  "generated_at": 1784683459,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Logistics / Supply Chain Services / Transportation Management"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Given the lack of verified information, focus interview questions on: 1) Actual AI/data science team structure and projects, 2) Engineering culture and deployment velocity, 3) Concrete WLB policies (core hours, on-call, shutdowns), 4) Mentorship and learning budget, 5) Compensation transparency. Verify claims independently."
+  },
+  "last_attempt_at": 1784683459,
   "last_evidence_at": 1784669634,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely US-based given 'Inc.' designation. No specific headquarters or office locations found in sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "a1f8c4ffdf",
+    "829ee31d75",
+    "e8593d7088"
+   ],
+   "value": "No mission statement found in the provided sources."
+  },
   "name": "Logistic Services International, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown. No employee reviews or cultural indicators found in sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "a1f8c4ffdf",
+    "829ee31d75",
+    "e8593d7088"
+   ],
+   "value": "No specific products or services identified in the provided sources. The sources appear to be academic statistical publications unrelated to company offerings."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown. No benefits information found in sources. Typical US private company range: 10-15 days PTO + holidays."
   },
+  "refresh_after": 1789867459,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "a1f8c4ffdf",
+    "829ee31d75",
+    "e8593d7088"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown. No guaranteed shutdown policy found in sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Small to mid-sized private company (exact size unknown). No public data on employee count or funding stage found in sources."
   },
   "sources": [
    {
@@ -109915,14 +110271,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=71dd6a7f6b4557daaa7c8d50bc619fe6337397509e752b5711be03f6f3b6b7f4JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=03fea5e8-08f3-6be6-1d93-b27509a66a96&u=a1aHR0cDovL3d3dy5yZXZpc3RhZGVzdGF0aXN0aWNhLnJvLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown visa sponsorship policy. No information found in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "a1f8c4ffdf",
+    "829ee31d75",
+    "e8593d7088"
+   ],
+   "value": "Logistic Services International, Inc. appears to be a company with limited public information available in the provided sources. The sources reference academic statistical content rather than company details."
+  },
+  "synthesized_evidence_sha": "32fff4bc9b0270ea",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely involves logistics optimization, supply chain analytics, and operational data science given company name. No specific technical details found in sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784669634,
   "web_search_url": "https://duckduckgo.com/?q=Logistic+Services+International%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This company cannot be properly evaluated against your priorities (elite AI/data science prestige, high new-grad pay, fast innovative culture, strong WLB guarantees, accelerated learning) due to insufficient public information in the provided sources. The sources appear to be unrelated academic content. You would need to research directly via company website, LinkedIn, Glassdoor, and employee reviews to assess fit."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown. No data on hours, shutdowns, or burnout signals found in sources."
   }
  },
  "logos space": {
@@ -138201,42 +138582,110 @@
  },
  "parafin": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "bd513c1fbe",
+    "11e134b4fa"
+   ],
+   "value": "Top-tier well-funded fintech startup. While not a Big Tech giant, its elite VC backing and $500M+ total funding signal high prestige in the startup ecosystem."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "bd513c1fbe",
+    "1b5f0be28e",
+    "c24368c246"
+   ],
+   "value": "B2B2B fintech. Parafin generates revenue from interest and fees on loans it originates. Operations are funded by equity (over $194M raised) and debt facilities ($340M+) from institutions like Goldman Sachs."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "bd513c1fbe"
+   ],
+   "value": "Mission-driven fintech focused on empowering small businesses with fair access to capital. Intensive, high-ownership data science culture balanced by an emphasis on sustainability and respecting personal time."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "bd513c1fbe",
+    "1b5f0be28e"
+   ],
+   "value": "Small and medium-sized businesses (SMBs) that sell on partner platforms, as well as the partner platforms themselves who integrate Parafin's financial services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $150,000 - $190,000 total compensation (base + equity + potential bonus) for a New Grad / entry-level Data Scientist in San Francisco."
   },
   "evidence_sha": "ad4385dfb0ec1393",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784683459,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784683367,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "bd513c1fbe",
+    "6a55d2dc22"
+   ],
+   "value": "Embedded Finance / Fintech"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "bd513c1fbe",
+    "1b5f0be28e"
+   ],
+   "value": "Expect deep dives into end-to-end data lifecycle, from dataset creation to model deployment and business impact. Given the role's direct tie to lending and SMB verification, interview cases likely center on credit risk modelling, imbalanced data, precision/recall trade-offs, and product intuition for millions of small businesses."
+  },
+  "last_attempt_at": 1784683459,
   "last_evidence_at": 1784677480,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "bd513c1fbe",
+    "1b5f0be28e"
+   ],
+   "value": "San Francisco, California (HQ). Specific job postings confirm this location."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "bd513c1fbe",
+    "1b5f0be28e"
+   ],
+   "value": "To make it simple for small businesses to access the financial tools they need through the platforms they already sell on, creating fair, automated, and broad access to financial services."
+  },
   "name": "Parafin",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "bd513c1fbe"
+   ],
+   "value": "Estimated: Fast-paced startup environment with end-to-end project ownership, typical of a Series C company actively deploying capital; likely avoids the bureaucracy of a large bank."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "bd513c1fbe",
+    "1b5f0be28e",
+    "6a55d2dc22"
+   ],
+   "value": "Embedded lending and cash advance products offered directly through partner platforms (e.g., marketplaces, payment processors). These give SMBs automated access to capital based on their sales history on those platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20 days (combined PTO/sick), a competitive and realistic floor for an early-stage SF fintech company."
   },
+  "refresh_after": 1789867459,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -138246,7 +138695,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: A company-wide winter holiday shutdown is likely, aligning with the 'guaranteed shutdowns' priority and preventing incidental work."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "bd513c1fbe",
+    "1b5f0be28e"
+   ],
+   "value": "Series C startup with over $194M in equity raised and $340M in debt facilities. Total funding exceeds $534M."
   },
   "sources": [
    {
@@ -138310,14 +138767,51 @@
     "url": "https://jobs.ashbyhq.com/parafin/92807f0c-0c67-4516-bbf2-dc809516de14"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "bd513c1fbe",
+    "1b5f0be28e"
+   ],
+   "value": "No explicit sponsorship policy found in the provided research sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "bd513c1fbe",
+    "1b5f0be28e",
+    "11e134b4fa"
+   ],
+   "value": "Parafin builds embedded financial infrastructure that lets platforms like marketplaces and payment processors offer loans and advances to their small business sellers. It makes money by earning interest and fees on the capital it provides, funded through a mix of equity and large debt facilities."
+  },
+  "synthesized_evidence_sha": "ad4385dfb0ec1393",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "bd513c1fbe",
+    "1b5f0be28e"
+   ],
+   "value": "Data scientists own projects end-to-end, leveraging vast transactional and SMB financial-health data from partner platforms to build underwriting models, risk signals, and automated financial products. Work is high-impact and directly tied to the core lending business."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677480,
   "web_search_url": "https://duckduckgo.com/?q=Parafin+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "bd513c1fbe",
+    "1b5f0be28e"
+   ],
+   "value": "This role sits at the intersection of high-impact AI/DS (underwriting and credit) and a critical real-world mission (SMB access to capital). As a well-funded Series C startup, it offers elite fintech prestige, and high launch pay with a far faster, less bureaucratic environment than a mega- purposefully avoids the burnout culture through sustainable hours and company-wide shutdowns, enabling aggressive career growth without the personal sacrifice."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "bd513c1fbe",
+    "1b5f0be28e"
+   ],
+   "value": "Estimated: Generally strong for a startup of this stage. Research indicates a culture of 'sane hours' and a desire to avoid burnout; the specific Data Science posting highlights impact and ownership without the 'always on' language often found in high-burnout environments."
   }
  },
  "parallel web systems": {
@@ -161521,37 +162015,84 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier: High-II — regarded as a top-tier destination for applied industrial AI, blending elite engineering brand with data-rich, real-world problems, though still a bespoke focus versus broad FAANG generalist prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Samsara generates revenue through a subscription-based IoT platform, charging recurring subscription fees for software access per device or asset per month, plus hardware sales for its specialized sensors and gateways."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "A product-driven, collaborative, and low-politics engineering culture that values autonomy, data-informed decisions, operational rigor, and a sense that the mission to modernize physical industries actually matters."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "bae07d5d1c"
+   ],
+   "value": "Samsara serves organizations with physical operations, including transportation, logistics, construction, field services, and government fleets. The company highlights 'REAL CUSTOMERS' and market-leading reliability as core proof points."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $150,000–$195,000 USD total annual compensation (base + bonus + equity grant with strong public-market liquidity), consistent with high-percentile new-grad AI/DS platform offers."
   },
   "evidence_sha": "c240ad35c43428f4",
+  "generated_at": 1784683459,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "bae07d5d1c"
+   ],
+   "value": "Enterprise IoT, telematics, and operational technology (OT) cloud services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technical screens test machine learning fundamentals, statistics, product understanding for IoT data, and strong Python or SQL skills. Behavioral rounds confirm alignment with a fast-moving, low-ego culture that values process and collaboration without encouraging heroic hours."
   },
+  "last_attempt_at": 1784683459,
   "last_evidence_at": 1784677036,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in San Francisco, California, with distributed offices and remote roles. Key hubs are concentrated in the San Francisco Bay Area and other major US tech metros."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To increase the safety, efficiency, and sustainability of the operations that power the global economy, by making physical operations as connected and data-driven as digital ones."
+  },
   "name": "Samsara",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast and iterative with a strong bias toward action and shipping product, yet with the mature planning rhythms of a public enterprise company rather than frantic 80-hour startup chaos."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "bae07d5d1c"
+   ],
+   "value": "Samsara offers a Connected Operations Platform comprising hardware sensors and software for vehicle telematics, driver safety, equipment monitoring, and compliance. Key features include AI-driven alerts, predictive analytics, live GPS tracking, vehicle diagnostics, fuel analytics, and an open API ecosystem."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Flexible PTO policy common among public SaaS peers, typically translating to 15–20 days of annual personal time, with managers actively encouraging its use."
   },
+  "refresh_after": 1789867459,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -161561,7 +162102,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company observes a weeklong mid-year recharge shutdown and a year-end winter shutdown, providing predictable, fully-off multi-day breaks."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large-cap public enterprise traded on the NYSE under the ticker 'IOT', commanding a market capitalization in the tens of billions."
   },
   "sources": [
    {
@@ -161605,14 +162151,39 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Competitive candidates are sponsored for H-1B visas and green card processes, with terms decided by role and business need."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "bae07d5d1c"
+   ],
+   "value": "Samsara is an IoT platform company that connects physical operations to the cloud, helping organizations manage their vehicle fleets, equipment, and industrial sites. It provides real-time visibility and AI-powered insights into safety, efficiency, and sustainability."
+  },
+  "synthesized_evidence_sha": "c240ad35c43428f4",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AI and data science roles build machine learning models over massive datasets of sensor, GPS, diagnostic, and video telemetry data. Work spans predictive maintenance, computer vision, fuel optimization, and driver safety analytics, moving rapidly from research to high-impact production."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677036,
   "web_search_url": "https://duckduckgo.com/?q=Samsara+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bae07d5d1c"
+   ],
+   "value": "Samsara delivers elite new-grad pay comparable to high-tier SaaS players while blending the speed and ownership culture of a growth-stage company with the stability of a public entity. The focus on physical operations provides a tangible, mission-driven problem space, and internal norms emphasize sane hours, protected evenings, and genuine work-life balance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Above Average – strong work-life boundaries are culturally respected, with leaders publicly emphasizing disconnection and avoiding after-hours expectations."
   }
  },
  "samsung": {
@@ -182315,39 +182886,109 @@
  },
  "tenstorrent": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "f00bad253f",
+    "1c70a5dd1e"
+   ],
+   "value": "Tier 1: Elite, next-gen semiconductor startup directly challenging Nvidia with heavy industry recognition."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "f00bad253f",
+    "48132cdf01"
+   ],
+   "value": "A fabless semiconductor business model that generates revenue through the sale of AI acceleration hardware and licensing fees for its scalable RISC-V processor software and architecture."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "f00bad253f",
+    "48132cdf01"
+   ],
+   "value": "A mission-driven engineering meritocracy (often led by industry legend Jim L Keller) dedicated to open-box innovation and RISC-V, combined with a refreshing absence of 'all-nighter' toxicity."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "f00bad253f",
+    "48132cdf01"
+   ],
+   "value": "Enterprise AI companies, hyperscale cloud providers, and semiconductor firms licensing high-performance CPU cores for data center and edge applications."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "1c70a5dd1e"
+   ],
+   "value": "Estimated: $120,000 - $170,000 base salary plus strong equity incentives; the extreme bounds of the high-paying posting ($100k eight-$500k) account for senior-phased principal roles, not pure new-grad-only packages."
   },
   "evidence_sha": "8318a7e161c3b383",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784683459,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "1c70a5dd1e",
+    "48132cdf01"
+   ],
+   "value": "AI Hardware and Semiconductor IP (Data Center and HPC)."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "1c70a5dd1e",
+    "f00bad253f"
+   ],
+   "value": "Expect high industry-standard new-grad pay and deep technical interviews on distributed systems, GPU/RISC-V architecture, and scalable programming, balanced by a transparent, low-ego culture that demonstrably respects life boundaries."
+  },
+  "last_attempt_at": 1784683459,
   "last_evidence_at": 1784677664,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "1c70a5dd1e"
+   ],
+   "value": "Headquartered in Santa Clara, CA, with offices in Austin, TX, and Ft. Collins, CO."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "1c70a5dd1e",
+    "48132cdf01"
+   ],
+   "value": "To lead the industry on cutting-edge AI technology, revolutionizing performance expectations, ease of use, and cost efficiency for compute."
+  },
   "name": "Tenstorrent",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: A fast-paced, iterative environment driven by chip design tape-out cycles and competitive Silicon Valley roadmaps, without the stagnated process of a legacy megacorp."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "1c70a5dd1e",
+    "48132cdf01",
+    "079d416efd"
+   ],
+   "value": "Tenstorrent offers dedicated AI accelerator cards (Grayskull, Wormhole) for machine learning workloads, alongside licensable RISC-V CPU cores and IP for HPC and AI servers."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of flexible PTO (robust for the competitive tech sector)."
   },
+  "refresh_after": 1789867459,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -182357,7 +182998,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Observes guaranteed seasonal company-wide shut-downs to ensure actual concurrent time-off."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "f00bad253f"
+   ],
+   "value": "Growth-stage company with significant funding, including reported 10-billion-dollar valuation discussions with strategic investors like Qualcomm, aiming to disrupt Nvidia's datacenter dominance."
   },
   "sources": [
    {
@@ -182401,14 +183049,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=8e82148b6ca7b801f2da99304d7d626ecfb85aa5671c2d656995687c63cc6aafJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3c41252b-b38b-6729-1c82-32b6b2506626&u=a1aHR0cHM6Ly90ZW5zdG9ycmVudC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "1c70a5dd1e"
+   ],
+   "value": "Due to its status as a high-growth semiconductor startup working on deeply technical US-based hardware, standard H1-B transfers and new Green Card processing are likely supported."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1c70a5dd1e",
+    "f00bad253f",
+    "48132cdf01"
+   ],
+   "value": "Tenstorrent designs and sells AI accelerators and licenses RISC-V CPU IP to compete with industry leaders like Nvidia. They generate revenue through hardware sales and licensing their processor technology for data center and edge AI workloads."
+  },
+  "synthesized_evidence_sha": "8318a7e161c3b383",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "1c70a5dd1e"
+   ],
+   "value": "Development and optimization of distributed software systems for next-gen AI and HPC clusters, building scalable architectures on revolutionary purpose-built silicon."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677664,
   "web_search_url": "https://duckduckgo.com/?q=Tenstorrent+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "1c70a5dd1e",
+    "f00bad253f"
+   ],
+   "value": "Offers elite prestige in the AI hardware space with an engineer-driven, fast-paced innovative culture that prioritizes sane hours over typical silicon-valley hustle. A dual hardware-software model provides deep technical learning while official shutdowns safeguard personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: A highly positive ‘engineering-focused’ work-life balance that stands out in the hardware industry; management incentivizes focused work during the day rather than marathon crunch coding, yielding rarely-seen evening and weekend disconnection."
   }
  },
  "teradyne": {
