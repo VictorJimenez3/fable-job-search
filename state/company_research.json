@@ -48801,7 +48801,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -48819,7 +48819,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784689129,
+  "last_attempt_at": 1784689220,
   "last_evidence_at": 1784599680,
   "name": "Commvault",
   "pace_of_work": {
@@ -67177,37 +67177,98 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong applied ML at scale with proprietary identity graph; respected in MarTech but not a primary AI research lab like FAIR/DeepMind/OpenAI."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "e4db816046",
+    "f9c6e560c0"
+   ],
+   "value": "B2B enterprise SaaS and services: platform licensing (PeopleCloud), managed services for loyalty/CRM, digital media execution fees, and data/analytics consulting. Revenue driven by long-term contracts with large advertisers."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "4939165430"
+   ],
+   "value": "Established engineering culture with guilds/communities of practice; data-driven decision making; collaborative but matrixed (product/engineering/client services). Diversity and inclusion emphasized via Publicis Groupe ERGs. Less 'move fast break things', more 'reliable at scale'."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "e4db816046",
+    "f9c6e560c0"
+   ],
+   "value": "Large enterprise brands across retail, financial services, automotive, travel, and CPG — typically Fortune 1000 companies seeking first-party data activation, loyalty programs, and omnichannel personalization."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$135k base + 10-15% bonus + RSUs (4-yr vest ~$40k-$60k total) for Software Engineer/ML Engineer new grads in US hubs. Higher in SF/NYC."
   },
   "evidence_sha": "327a5d55788626c1",
+  "generated_at": 1784689220,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e4db816046",
+    "f9c6e560c0"
+   ],
+   "value": "Marketing Technology (MarTech) / AdTech / Data-Driven Marketing Services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical screens on distributed systems, ML model lifecycle, and data privacy architecture. Prepare for case studies on real-time personalization trade-offs, identity graph design, and measuring incremental lift. Cultural fit questions will probe collaboration across product, engineering, and client-facing teams."
   },
+  "last_attempt_at": 1784689220,
   "last_evidence_at": 1784676251,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "e4db816046",
+    "f9c6e560c0"
+   ],
+   "value": "Headquartered in Irving, TX (Dallas metro). Major hubs in New York, Chicago, San Francisco, London, Bangalore, Singapore, Sydney. Hybrid/remote options vary by role and team."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "f9c6e560c0",
+    "4939165430"
+   ],
+   "value": "To make marketing more relevant and measurable by connecting brands with people through data, technology, and identity — enabling personalized experiences at scale while respecting consumer privacy."
+  },
   "name": "Epsilon",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — Enterprise product cycles with quarterly planning; faster than traditional agencies but slower than pure tech product companies. Some on-call for platform reliability."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "e4db816046",
+    "f9c6e560c0"
+   ],
+   "value": "Core offerings include the Epsilon PeopleCloud platform (identity resolution, CDP, decisioning, email, loyalty), digital media solutions, CRM/loyalty program management, and data/analytics services for retail, financial services, automotive, and travel sectors."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays (US); varies by tenure and location. Unlimited not standard; accrual-based."
   },
+  "refresh_after": 1789873220,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -67217,7 +67278,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 25-Jan 1) typical for Publicis Groupe entities; occasional summer half-days. Not guaranteed weekly shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "e4db816046",
+    "4939165430"
+   ],
+   "value": "Large, mature subsidiary (~8,000+ employees globally) of Publicis Groupe (€13B+ revenue). Established 1969; operates as a stable, well-funded business unit within a global holding company."
   },
   "sources": [
    {
@@ -67251,14 +67320,44 @@
     "url": "https://careers.publicisgroupe.com/jobs"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "4939165430"
+   ],
+   "value": "As a large Publicis Groupe entity, Epsilon routinely sponsors H-1B and green cards for specialized technical roles (data science, engineering, ML). STEM OPT friendly; immigration support handled via corporate legal."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "e4db816046",
+    "f9c6e560c0",
+    "4939165430"
+   ],
+   "value": "Epsilon is a global marketing technology and data-driven marketing services company, operating as a subsidiary of Publicis Groupe. It helps brands leverage consumer data, loyalty programs, and digital media to deliver personalized marketing at scale."
+  },
+  "synthesized_evidence_sha": "327a5d55788626c1",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "e4db816046",
+    "f9c6e560c0"
+   ],
+   "value": "Large-scale data engineering (petabyte-scale consumer graphs), real-time identity resolution, ML for audience modeling and personalization, high-throughput decisioning APIs, cloud-native platforms (AWS/Azure/GCP), and privacy-compliant data governance."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676251,
   "web_search_url": "https://duckduckgo.com/?q=Epsilon+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Epsilon offers elite-scale data assets (200M+ US consumer profiles) and a mature ML platform (PeopleCloud) within a Publicis Groupe-backed environment — providing prestige, high new-grad compensation, and exposure to real-time identity resolution at massive scale, while its corporate structure enables more predictable hours than agency-side or startup roles."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — Corporate policies support boundaries (core hours, no-meeting Fridays in some orgs), but client deliverables and platform ops can create crunch periods. Better than agency/consulting averages."
   }
  },
  "equifax": {
@@ -83477,7 +83576,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -83495,7 +83594,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784689129,
+  "last_attempt_at": 1784689220,
   "last_evidence_at": 1784673987,
   "name": "Global Lending Services",
   "pace_of_work": {
@@ -107238,7 +107337,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -107256,7 +107355,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784689129,
+  "last_attempt_at": 1784689220,
   "last_evidence_at": 1784677400,
   "name": "Keysight Technologies",
   "pace_of_work": {
@@ -132393,48 +132492,154 @@
  "neon health": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "81347feeab",
+    "f49092320d",
+    "8469d00607"
+   ],
+   "value": "Unknown — no AI/DS publications, conference presence, or talent signals in supplied sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "81347feeab",
+    "f49092320d",
+    "8469d00607"
+   ],
+   "value": "Unknown — no revenue model details in supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "81347feeab",
+    "f49092320d",
+    "8469d00607"
+   ],
+   "value": "Unknown — no culture descriptions in supplied sources."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "81347feeab",
+    "f49092320d",
+    "8469d00607"
+   ],
+   "value": "Unknown — no customer segment data in supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "81347feeab",
+    "f49092320d",
+    "8469d00607"
+   ],
+   "value": "Estimated: Unknown — no compensation data in supplied sources."
   },
   "evidence_sha": "59c791c6bad325d6",
+  "generated_at": 1784689220,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "source_ids": [
+    "81347feeab",
+    "f49092320d",
+    "8469d00607"
+   ],
+   "value": "Healthcare technology (inferred from name only; not confirmed by sources)"
   },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "81347feeab",
+    "f49092320d",
+    "8469d00607"
+   ],
+   "value": "No technical or cultural interview insights available from supplied sources. Candidate should verify company legitimacy and request detailed role information before investing interview time."
+  },
+  "last_attempt_at": 1784689220,
   "last_evidence_at": 1784583477,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "81347feeab",
+    "f49092320d",
+    "8469d00607"
+   ],
+   "value": "Unknown — no office locations or remote policies in supplied sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "81347feeab",
+    "f49092320d",
+    "8469d00607"
+   ],
+   "value": "Unknown — mission statement not present in supplied sources."
+  },
   "name": "Neon Health",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "81347feeab",
+    "f49092320d",
+    "8469d00607"
+   ],
+   "value": "Estimated: Unknown — no work pace indicators in supplied sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "81347feeab",
+    "f49092320d",
+    "8469d00607"
+   ],
+   "value": "Unknown — sources are Amazon redirect pages with no Neon Health product information."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "81347feeab",
+    "f49092320d",
+    "8469d00607"
+   ],
+   "value": "Estimated: Unknown — no PTO policy disclosed in supplied sources."
   },
+  "refresh_after": 1789873220,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "81347feeab",
+    "f49092320d",
+    "8469d00607"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "81347feeab",
+    "f49092320d",
+    "8469d00607"
+   ],
+   "value": "Estimated: Unknown — no guaranteed shutdown policies mentioned in supplied sources."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "81347feeab",
+    "f49092320d",
+    "8469d00607"
+   ],
+   "value": "Unknown — company size and funding stage not disclosed in supplied sources."
   },
   "sources": [
    {
@@ -132468,14 +132673,55 @@
     "url": "https://www.bing.com/ck/a?!&&p=34c5be8b436d1b59d21cbe55e665f9b4ca388018f7ac3799811e2908aeffc3ddJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cuYW1hem9uLmNvbS8tL2VzL2dwL2Nzcy9ob21lcGFnZS5odG1s&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "81347feeab",
+    "f49092320d",
+    "8469d00607"
+   ],
+   "value": "Unknown — visa sponsorship policy not mentioned in supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "81347feeab",
+    "f49092320d",
+    "8469d00607"
+   ],
+   "value": "Neon Health appears to be a healthcare technology company, but the provided sources (Amazon redirect links) contain no verifiable information about its operations, products, or business model."
+  },
+  "synthesized_evidence_sha": "59c791c6bad325d6",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "81347feeab",
+    "f49092320d",
+    "8469d00607"
+   ],
+   "value": "Unknown — no technical stack, AI/DS projects, or engineering practices described in supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583477,
   "web_search_url": "https://duckduckgo.com/?q=Neon+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "81347feeab",
+    "f49092320d",
+    "8469d00607"
+   ],
+   "value": "Cannot assess alignment with candidate priorities (elite AI/DS prestige, high new-grad pay, fast innovative culture, mission-driven, strong WLB, guaranteed shutdowns, accelerated learning) because supplied sources contain no substantive company information."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "81347feeab",
+    "f49092320d",
+    "8469d00607"
+   ],
+   "value": "Estimated: Unknown — no work-life balance policies or employee reports in supplied sources."
   }
  },
  "nestl": {
@@ -137347,40 +137593,80 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 — strong applied data science with actuarial depth, growing ML engineering, but not a primary AI research lab."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue comes from insurance premiums, investment management fees, and asset-based fees on managed accounts. As a mutual company, profits are returned to policyholders via dividends."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Collaborative, low-ego, mission-oriented; engineering culture modernizing but still influenced by actuarial/insurance traditions; emphasis on career development and stability."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primarily individuals and families seeking financial security through insurance and investment products; also serves small businesses with group benefits and executive planning."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$135k base + 10-15% target bonus + RSUs (vesting 4y); total comp ~$130k-$160k."
   },
   "evidence_sha": "b172f70e73ac1724",
+  "generated_at": 1784689220,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Insurance & Financial Services (Mutual)"
   },
-  "last_attempt_at": 1784689129,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect questions on applied ML for insurance (risk modeling, churn, recommendation), scalable data pipelines, and ethical AI. Prepare for behavioral assessments on collaboration in regulated environments and balancing innovation with compliance. Ask about deployment velocity, model governance, and protected learning time."
+  },
+  "last_attempt_at": 1784689220,
   "last_evidence_at": 1784677399,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "fff7d542e7"
+   ],
+   "value": "Headquartered in Milwaukee, WI; major tech hubs in Milwaukee, New York, San Francisco, and remote-friendly roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To deliver financial security to policyowners through a mutual structure that aligns company interests with client outcomes."
+  },
   "name": "Northwestern Mutual",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — regulated environment imposes governance gates; digital transformation initiatives aim for faster cycles but legacy systems create drag."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core products include life insurance (term, whole, universal), disability income insurance, long-term care insurance, annuities, and investment advisory/wealth management services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 company holidays; additional volunteer time off."
   },
+  "refresh_after": 1789873220,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -137390,7 +137676,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some teams observe quiet periods around holidays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature enterprise (Fortune 500) with ~$35B+ revenue and 7,000+ employees; operates as a mutual organization rather than public corporation."
   },
   "sources": [
    {
@@ -137424,14 +137715,35 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors H-1B and green cards for specialized technical roles; history of cap-exempt filings through university partnerships."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Northwestern Mutual is a mutual insurance and financial services company owned by its policyholders. It provides life insurance, disability income, long-term care insurance, annuities, and investment/wealth management services."
+  },
+  "synthesized_evidence_sha": "b172f70e73ac1724",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actuarial modeling, data analytics, AI/ML for underwriting and customer experience, cloud migration, digital platform development, and cybersecurity."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677399,
   "web_search_url": "https://duckduckgo.com/?q=Northwestern+Mutual+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Northwestern Mutual offers a mission-driven mutual structure that prioritizes policyholder value over short-term shareholders, potentially aligning with a desire for purpose. Its growing AI/DS investments in actuarial science, personalization, and digital advice provide elite technical challenges. The company's size and stability may support sane hours and WLB, but bureaucracy risk exists in a 160-year-old insurer."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.8/5 — industry reputation for reasonable hours vs. Wall Street; some on-call for production models; shutdowns not guaranteed."
   }
  },
  "northwestern university": {
@@ -148118,7 +148430,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 8,
+  "attempts": 9,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -148136,7 +148448,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784689129,
+  "last_attempt_at": 1784689220,
   "last_evidence_at": 1784676244,
   "name": "Perpay",
   "pace_of_work": {
@@ -187823,7 +188135,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -187841,7 +188153,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784689129,
+  "last_attempt_at": 1784689220,
   "last_evidence_at": 1784674488,
   "name": "Susquehanna International Group (SIG)",
   "pace_of_work": {
