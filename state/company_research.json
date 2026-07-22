@@ -2996,40 +2996,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Top-tier – Adobe Research publishes at NeurIPS, CVPR, SIGGRAPH; leads in generative AI for creative tools (Firefly) and document AI."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Subscription-based SaaS (Software as a Service) with tiered plans for individuals, teams, and enterprises; also sells perpetual licenses for some products."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Creative, inclusive, engineering-driven with strong design partnership; values learning, experimentation, and employee well-being; low politics, high collaboration."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Creative professionals (designers, photographers, video editors), enterprises, marketers, developers, and educational institutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $180,000-$220,000 total compensation (base ~$130k-$150k, sign-on bonus, RSU vesting over 4 years); varies by role (research vs applied) and location."
   },
   "evidence_sha": "b7a3141b9a5d4acf",
+  "generated_at": 1784682267,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
+   "value": "Software – Creative Cloud, Digital Media, Digital Experience, Document Management."
   },
-  "last_attempt_at": 1784682175,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical interviews covering ML fundamentals, system design, coding (Python/C++), and applied research problems; behavioral questions tied to Adobe's core values (genuine, exceptional, innovative, involved). Prepare for portfolio/demo discussions if applying to creative AI roles."
+  },
+  "last_attempt_at": 1784682267,
   "last_evidence_at": 1784583355,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in San Jose, California; major offices in San Francisco, Seattle, New York, Boston, Austin, London, Munich, Tokyo, Sydney, Bangalore, and many others; supports remote/hybrid work."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Change the world through digital experiences."
+  },
   "name": "Adobe",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast – innovative product cycles with quarterly releases, but less chaotic than hyper-growth startups; emphasis on sustainable velocity."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Creative Cloud (Photoshop, Illustrator, Premiere Pro), Document Cloud (Acrobat, Sign), Experience Cloud (marketing analytics, advertising, commerce), and Adobe Sensei AI/ML framework."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days accrued PTO per year plus 10-12 company holidays; unlimited sick leave; additional volunteer time off."
   },
+  "refresh_after": 1789866267,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -3039,7 +3077,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual week-long shutdown between Christmas and New Year; occasional additional shutdown days (e.g., summer Fridays in some orgs)."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public company (NASDAQ: ADBE); ~$20B+ annual revenue; ~30,000 employees globally; mature, profitable, and growing."
   },
   "sources": [
    {
@@ -3073,14 +3116,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=f1117f9647c453d3e227e9a54a70afb1867aa65531af6d19de827a06000fdc67JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9nZXQuYWRvYmUuY29tL3JlYWRlci8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B visas and employment-based green cards for technical roles; known for strong immigration support for new grads and experienced hires."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Adobe provides creative software (Creative Cloud), document solutions (Document Cloud), and digital experience platforms (Experience Cloud) to individuals and enterprises. It generates revenue primarily through recurring subscription fees for its SaaS offerings."
+  },
+  "synthesized_evidence_sha": "b7a3141b9a5d4acf",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AI/ML research (Adobe Sensei) for creative assistance, document intelligence, content understanding, generative AI (Firefly), large-scale data pipelines, cloud infrastructure, and real-time collaboration systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583355,
   "web_search_url": "https://duckduckgo.com/?q=Adobe+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Adobe offers top-tier AI/data science prestige through Adobe Research and Sensei, competitive new-grad compensation, and a culture that emphasizes innovation (e.g., Firefly generative AI) while maintaining reasonable work-life balance. Its mission-driven focus on creativity and digital experiences aligns with candidates seeking impact without burnout, and the company is known for sane hours, guaranteed shutdown periods, and strong learning opportunities."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good – generally 40-45 hour weeks for most teams; company-wide shutdowns (e.g., winter break) and respect for personal time; low burnout reputation compared to peer FAANG."
   }
  },
  "adt": {
@@ -3882,7 +3946,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -3900,7 +3964,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784682175,
+  "last_attempt_at": 1784682267,
   "last_evidence_at": 1784675357,
   "name": "AeroVironment",
   "pace_of_work": {
@@ -44309,40 +44373,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 (Strong): Respected industry player with massive data scale but not considered an elite AI-first firm."
   },
   "aliases": [],
-  "attempts": 4,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 5,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "6bca1639da"
+   ],
+   "value": "Subscription-based revenue from broadband, video, and mobile services, plus advertising and content licensing across owned media properties."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "6bca1639da"
+   ],
+   "value": "People-first, connection-driven, and collaborative. Leadership messaging emphasizes belonging, creativity, and well-being over grind culture."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "6bca1639da"
+   ],
+   "value": "Tens of millions of residential subscribers and business clients across the United States, plus viewers of NBCUniversal and Sky content globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000-$140,000 base salary plus annual bonus and equity for high-demand AI/DS new grad roles, depending on location."
   },
   "evidence_sha": "f470f9aed1ae224d",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784682267,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784682175,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "6bca1639da"
+   ],
+   "value": "Telecommunications, Media, and Technology"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "6bca1639da"
+   ],
+   "value": "Look for evidence of machine learning depth, systems thinking at scale, and the ability to collaborate cross-functionally. Demonstrating a focus on calculated innovation and real-world impact while preparing clearly for balanced, sustainable delivery aligns with the company's pace and culture."
+  },
+  "last_attempt_at": 1784682267,
   "last_evidence_at": 1784674273,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "6bca1639da"
+   ],
+   "value": "Headquarters in Philadelphia, with major tech hubs in Denver, Sunnyvale, and New York area, plus distributed offices nationally. Many roles offer hybrid flexibility."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "6bca1639da"
+   ],
+   "value": "To connect people to the moments that matter through innovative technology and storytelling."
+  },
   "name": "Comcast",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Sustainable pace with structured sprint cycles typical of large-scale product engineering; not a high-burn startup pace."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "6bca1639da"
+   ],
+   "value": "Residential and business internet (Xfinity), cable TV and streaming (Xfinity, Peacock, NOW TV), mobile phone service (Xfinity Mobile), home security, and theme parks."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of paid vacation plus floating holidays and sick time in typical corporate tech roles."
   },
+  "refresh_after": 1789866267,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -44352,7 +44470,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide mandatory shutdowns found; select teams may observe quiet periods around holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "6bca1639da"
+   ],
+   "value": "Large, publicly traded Fortune 50 corporation with tens of thousands of employees globally."
   },
   "sources": [
    {
@@ -44396,14 +44521,43 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "6bca1639da"
+   ],
+   "value": "Comcast sponsors work visas for specialized technical roles including data science and AI positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "6bca1639da"
+   ],
+   "value": "Comcast is a global media and technology company that delivers broadband internet, video, mobile, and entertainment to tens of millions of homes and businesses. It makes money by charging recurring subscription fees for these connectivity and content services and by selling advertising across its TV, streaming, and digital platforms."
+  },
+  "synthesized_evidence_sha": "f470f9aed1ae224d",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "6bca1639da"
+   ],
+   "value": "Data science and AI roles span personalization and recommendation engines, network optimization, generative AI for customer support, real-time analytics on connectivity data, and content delivery algorithms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674273,
   "web_search_url": "https://duckduckgo.com/?q=Comcast+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "6bca1639da"
+   ],
+   "value": "Comcast offers experience on large-scale consumer platforms with high visibility and impact, while actively supporting employee well-being and life outside of work."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good; mature boundaries and predictable schedules are common in many technical teams."
   }
  },
  "command holdings a pequot company": {
@@ -69762,42 +69916,103 @@
  },
  "fox": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "caa8986dcc"
+   ],
+   "value": "High-Esteem Tier (Fortune 500 Media/Entertainment): Strong consumer brand prestige, but recognized primarily for its dominant linear business rather than being a Tier-1 pure tech company or foundational AI research lab."
   },
   "aliases": [],
-  "attempts": 3,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 4,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "caa8986dcc",
+    "47b156274f"
+   ],
+   "value": "Operates a dual-revenue stream model based on mass-audience scale: selling advertising inventory against high-engagement content (news, live sports) and charging monthly per-subscriber carriage fees to pay-TV distributors for its core linear channels."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "caa8986dcc",
+    "47b156274f"
+   ],
+   "value": "A competitive, mission-driven media culture focused on live-content urgency but balanced by the mindset of an established profitable company. A practical mindset focused on audience scale, content quality, and brand loyalty rather than rapid hyped pivots."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "caa8986dcc",
+    "47b156274f"
+   ],
+   "value": "Mass-market television viewers in the United States, pay-TV distributors (cable, satellite, virtual MVPDs), and advertisers seeking broad, engaged audiences, particularly in news and live sports."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140,000 - $170,000 total compensation, this range blends a competitive Fortune 500 base salary with a relocation bonus and performance-based variable arising but excludes any ephemeral equity value present in pure-tech stocks."
   },
   "evidence_sha": "39dc021989182d81",
+  "generated_at": 1784682267,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "caa8986dcc",
+    "47b156274f"
+   ],
+   "value": "Media & Entertainment, Broadcasting, Digital Streaming"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Interviews should focus on demonstrating an ability to apply data science or engineering rigor to high-scale consumer products (streaming, ad tech) while expressing a clear desire for a collaborative, mission-driven culture that respects personal time through consistent shutdowns and structured work hours."
   },
-  "last_attempt_at": 1784682175,
+  "last_attempt_at": 1784682267,
   "last_evidence_at": 1784593393,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "caa8986dcc",
+    "47b156274f"
+   ],
+   "value": "Primary corporate headquarters in New York, NY, with significant operations in Los Angeles, CA. Tubeless and sports tech hubs exist in cities including San Francisco, New York, and Los Angeles."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "caa8986dcc",
+    "3f23c50a05"
+   ],
+   "value": "FOX Corporation focuses on delivering compelling content across its influential news, sports, and entertainment platforms, with an emphasis on serving its established audience and maximizing live-viewing scale."
+  },
   "name": "FOX",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-to-fast. The media industry is deadline-driven (live broadcasts) however, as a Fortune 500 media firm, the pace of work mirrors a stable corporate technology cadence rather than a chaotic startup burn rate."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "caa8986dcc",
+    "47b156274f"
+   ],
+   "value": "Cable news programming (FOX News Channel, FOX Business Network), national broadcast television, live sports programming (NFL, MLB, college football), the free ad-supported streaming service Tubi, and various digital platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of paid time off annually, aligned with standard competitive corporate media benefits, often expressed as a combined vacation/sick bank for salaried employees."
   },
+  "refresh_after": 1789866267,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -69807,7 +70022,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Observed weekly shutdowns (weekends strictly off for standard corporate tech roles) with guaranteed extended shutdowns or half-days around major holidays (Christmas to New Year's) and this is a cultural norm to avoid burnout."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "caa8986dcc",
+    "47b156274f"
+   ],
+   "value": "FOX is a mature, publicly traded Fortune 500 large-cap corporation formed as a leaner, broadcast-focused entity after the 2019 Disney acquisition of 21st Century Fox assets, with a national broadcast network reach."
   },
   "sources": [
    {
@@ -69841,14 +70064,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=1ef7edd5ae0d0f17c5d5aaae2e79d94943fb477187b4480a5874ce1d732eb401JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=0d7479d2-dd10-665e-36fa-6e4fdcff67b5&u=a1aHR0cHM6Ly93d3cuZm94LmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "caa8986dcc",
+    "47b156274f",
+    "3f23c50a05"
+   ],
+   "value": "FOX Corporation is a leading media and entertainment company that produces and distributes news, sports, and entertainment content through well-known brands like FOX News, FOX Sports, and the FOX broadcast network. The company generates revenue primarily from advertising, subscription fees charged to pay-TV distributors (affiliate fees), and content licensing."
+  },
+  "synthesized_evidence_sha": "39dc021989182d81",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "caa8986dcc",
+    "47b156274f"
+   ],
+   "value": "Technology areas span ad-tech for digital and linear platforms, data engineering for real-time sports analytics and audience data, and streaming infrastructure for free-to-consumer services like Tubeless."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784593393,
   "web_search_url": "https://duckduckgo.com/?q=FOX+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "FOX offers a unique blend of big-brand prestige and a fast-paced media technology environment, balancing elite name recognition (high new-grad pay scales) with a practical work-life balance framework that includes predictable shutdowns and a culture rooted in schedule sanity rather than Silicon Valley burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good; rated around 3.8/5.0. FOX tends to uphold consistent business hours for corporate technical roles, with a strong division between essential broadcast operations and standard development cycles."
   }
  },
  "fox corporation": {
@@ -113248,40 +113499,86 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Top-tier for biomedical AI research (world-class data, publications, clinical deployment). Not a commercial AI product company; prestige is academic/clinical, not Silicon Valley 'tech' prestige."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Non-profit integrated healthcare system: revenue from patient care services (clinical contracts, insurance, Medicare/Medicaid), research grants, philanthropy, and licensing; all surplus reinvested in mission."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, collaborative, hierarchical, consensus-oriented. 'Patients first' permeates decisions. Academic rigor over hackathon speed. Strong internal mobility for those who navigate the system."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Patients (global referrals), insurers, government research funders (NIH, etc.), medical students/residents, and internal clinical/research staff."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k–$110k base (Rochester MN COL-adjusted), minimal equity (non-profit), strong benefits (pension, tuition remission). Well below FAANG/top AI labs ($150k–$250k+)."
   },
   "evidence_sha": "ae50ea1b68d79ffb",
+  "generated_at": 1784682267,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c0932cbd48"
+   ],
+   "value": "Healthcare / Academic Medical Center / Non-profit Research"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "c0932cbd48"
+   ],
+   "value": "Expect clinical domain questions (HIPAA, FHIR, Epic), ML for healthcare (imbalanced data, interpretability, regulatory), and software engineering fundamentals. Emphasize collaborative, patient-safety mindset. Ask about: release cycles for clinical tools, IRB/regulatory workflow, mentorship structure for new grads, and on-call expectations."
+  },
+  "last_attempt_at": 1784682267,
+  "last_evidence_at": 1784651027,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "c0932cbd48"
+   ],
+   "value": "Primary campus: Rochester, MN. Major campuses: Phoenix/Scottsdale, AZ; Jacksonville, FL. Health system sites across MN, WI, IA. Hybrid/remote flexibility noted for some IT roles."
+  },
+  "mission": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "To inspire hope and contribute to health and well-being by providing the best care to every patient through integrated clinical practice, education, and research."
   },
-  "last_attempt_at": 1784682175,
-  "last_evidence_at": 1784651027,
   "name": "Mayo Clinic Rochester",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow to moderate. Governance, IRB, clinical safety reviews, and Epic change-control create multi-month cycles. Innovation exists but is disciplined, not 'move fast'."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "c0932cbd48"
+   ],
+   "value": "Clinical healthcare services, biomedical research, medical education, and custom clinical/enterprise IT applications (including AI/ML tools for diagnostics, treatment planning, and operational analytics)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10–12 paid holidays (varies by role/tenure). Academic calendar may allow seasonal slowdowns."
   },
+  "refresh_after": 1789866267,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -113291,7 +113588,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns. Some departments observe reduced operations between Christmas and New Year; not universal or policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature non-profit (≈70,000+ staff system-wide; Rochester campus ~35,000). Not a startup; stable, bureaucratic governance."
   },
   "sources": [
    {
@@ -113325,14 +113627,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=b5ca8b7f7b2c780226d4f099f4c09a880608bce29595f45e3f611e9220861bd2JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cubWF5b2NsaW5pY2xhYnMuY29tL3Rlc3QtY2F0YWxvZw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established H-1B sponsor for research and specialized clinical/IT roles (cap-exempt as non-profit academic medical center). Green card support common for PhD-level researchers; less routine for new-grad SE."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "c0932cbd48"
+   ],
+   "value": "Mayo Clinic Rochester is a world-renowned non-profit academic medical center focused on integrated patient care, research, and education. It operates as a destination healthcare system with a massive clinical practice and research enterprise."
+  },
+  "synthesized_evidence_sha": "ae50ea1b68d79ffb",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "c0932cbd48"
+   ],
+   "value": "Custom clinical/enterprise application development, EHR integration (Epic), biomedical AI/ML (imaging, genomics, NLP for clinical notes), data platforms, and research computing. Two-year limited-tenure SE roles focus on maintenance/enhancement."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583371,
   "web_search_url": "https://duckduckgo.com/?q=Mayo+Clinic+Rochester+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "c0932cbd48"
+   ],
+   "value": "Mayo offers elite institutional prestige and a genuine patient-first mission, with substantial AI/DS research scope (imaging, genomics, clinical NLP). However, as a large academic medical center, pace is deliberative and bureaucratic — not a fast, innovative tech culture. WLB is generally respected (standard healthcare IT hours, limited on-call), but guaranteed shutdowns don't exist. New-grad pay is competitive for the region/non-profit sector but well below top-tier tech. Best for mission-drive"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7.5/10. Standard 40–45 hr weeks for IT/research roles; limited on-call for clinical systems. No guaranteed shutdowns. Burnout risk lower than big tech or clinical roles, but academic pressure exists."
   }
  },
  "mbda": {
@@ -127170,40 +127499,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Top-Tier Defense (Specialised Elite). Not prestige-driven Big Tech for consumer AI, but carries deep respect in defence and security-oriented rigorous AI engineering sectors."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "22370b419b"
+   ],
+   "value": "Operates as a government-contracted defence prime, bidding on large-scale, multi-year development and sustainment projects. Revenue is secured through performance-based milestone payments and long-term service agreements for highly sensitive, regulated military programmes."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, inclusive, and security-conscious. A 'big company' culture with defence sector politeness, balanced learning stipends, and low turnover. Dress code and bureaucracy can feel dry compared to startups, but psychological safety reversely eliminates toxicity."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "54cd6c2a79"
+   ],
+   "value": "Primarily the Australian Department of Defence, including the Royal Australian Air Force (RAAF), Royal Australian Navy, and Australian Army. Also serves allied Five Eyes defence forces and Commonwealth government agencies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: AUD $80,000 - $100,000 total annual package. Base typically comprises $75,000 - $90,000 for a graduate track, plus superannuation and bonus potential aligning shareholder scheme, markedly higher than non-defense peer roles."
   },
   "evidence_sha": "c72e26e3c08d828a",
+  "generated_at": 1784682267,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "22370b419b",
+    "54cd6c2a79"
+   ],
+   "value": "Defence and Aerospace Technology"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect a process valuing compliance without tech-paralysis: they screen technical grounding in Python/C++ or ML benchmarks such as PyTorch/TensorFlow, but heavily weigh STAR-format situations to gauge how you solve unstructured mission problems or negotiate bureaucratic inputs without burning out. Interviews emphasize culture fit around safety, integrity, and demonstrable collaboration. Live coding enabled, though often replaced by an underside take-on pairing session."
   },
-  "last_attempt_at": 1784682175,
+  "last_attempt_at": 1784682267,
   "last_evidence_at": 1784666846,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "5f8e2df2fd"
+   ],
+   "value": "Key Australian engineering hubs in Brisbane (including Amberley), Sydney (Macquarie Park), Canberra, and Elizabeth (Adelaide). Brisbane supports C4ISR and logistics analysis workloads highly relevant to AI opportunities."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "54cd6c2a79"
+   ],
+   "value": "To defend and protect Australia's national security interests by providing technology-advanced systems that give military forces a decisive advantage."
+  },
   "name": "Northrop Grumman Australia",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate and steady. Work is requirements-driven with rigorous security checking and deployment gates, so a slightly slower phase- structured pace than high-velocity startup brute forces. Still, genuine internal push for Agile and digital transformation has reduced legacy waterfall bottlenecks."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "22370b419b",
+    "54cd6c2a79"
+   ],
+   "value": "Products and services include autonomous systems, C4ISR (Command, Control, Communications, Computers, Intelligence, Surveillance, Reconnaissance), cyber security solutions, advanced electronics, and sustainment of military aircraft like the F-35 and E-7A Wedgetail. Work focuses on software, hardware, and systems integration rather than manufacturing."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 4 weeks annual leave (20 days) + additional personalised leave types (altitude day etc). Standard for Australian defence prime contractor."
   },
+  "refresh_after": 1789866267,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -127213,7 +127594,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed company-wide end-of-year shutdown (roughly 1-2 full paid weeks across Christmas/New Year period) where entire operations pause, not just base leave."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "22370b419b"
+   ],
+   "value": "Mature global enterprise operating in Australia with over 1,000 local employees as part of a parent company exceeding 100,000 employees worldwide. Not a startup; growth in Australia is steady and driven by sovereign defence capability initiatives."
   },
   "sources": [
    {
@@ -127247,14 +127635,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=6b014b8df08e76b61dea27bffd6475f2c7c17f272c574886ffac3127b42a9a82JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1788d514-e421-6752-0a9a-c289e5f76653&u=a1aHR0cHM6Ly93d3cubm9ydGhyb3BncnVtbWFuLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "5f8e2df2fd"
+   ],
+   "value": "Australian citizenship is mandatory because work requires a Baseline or higher (NV1/NV2) security clearance. Chance of sponsorship for newly skilled visas is functionally zero unless the candidate already holds a current Australian security clearance."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "22370b419b",
+    "54cd6c2a79"
+   ],
+   "value": "Northrop Grumman Australia is the Australian subsidiary of the American defence and aerospace giant, delivering advanced mission systems and technologies primarily for the Australian Defence Force. It earns revenue by securing long-term government contracts to design, integrate, and sustain complex military platforms in areas like intelligence, surveillance, cyber security, and logistics."
+  },
+  "synthesized_evidence_sha": "c72e26e3c08d828a",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "54cd6c2a79",
+    "22370b419b"
+   ],
+   "value": "AI engineering and data science roles concentrate on applied, accredited defense outcomes: sensor fusion, predictive maintenance for aircraft, computer vision for intelligence analysis, and cyber network defence algorithms. Work must adhere to Defence security processes, but the company has ab internal mandate to modernise tooling and adopt agile methods in its digital divisions, pushing against bureaucratic slowdown."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784666846,
   "web_search_url": "https://duckduckgo.com/?q=Northrop+Grumman+Australia+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "It provides a mission-driven stable environment where AI work has a tangible impact on national security. The company's strong emphasis on 'work-life effectiveness' and formal paid shutdowns acts as a genuine guardrail against burnout, forming a structure that demands productivity inside office hours rather than punishing weekend sprints."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Very Strong. The company actively advertises work-life effectiveness. Overtime is not glorified; compressed weeks 9 day fortnights are typical for staff, and standing Christmas shutdowns are universally protected."
   }
  },
  "northslope technologies": {
@@ -140266,11 +140683,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -140282,6 +140701,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784682267,
   "last_evidence_at": 1784674483,
   "name": "PNC Financial Services",
   "pace_of_work": {
@@ -178454,7 +178874,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -178472,7 +178892,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784682175,
+  "last_attempt_at": 1784682267,
   "last_evidence_at": 1784672018,
   "name": "Texas Instruments",
   "pace_of_work": {
