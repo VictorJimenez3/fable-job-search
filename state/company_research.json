@@ -699,7 +699,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -717,7 +717,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784690231,
+  "last_attempt_at": 1784690392,
   "last_evidence_at": 1784677407,
   "name": "8VC",
   "pace_of_work": {
@@ -37575,7 +37575,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -37593,7 +37593,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784690231,
+  "last_attempt_at": 1784690392,
   "last_evidence_at": 1784677402,
   "name": "Cape",
   "pace_of_work": {
@@ -68257,7 +68257,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -68275,7 +68275,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784690231,
+  "last_attempt_at": 1784690392,
   "last_evidence_at": 1784676545,
   "name": "Esri",
   "pace_of_work": {
@@ -75052,37 +75052,86 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 – Respected regional/national research hub (R2 Carnegie) with dedicated AI centers and NSF-scale projects, but not a top-10 CS/AI brand like Stanford/MIT/CMU."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public university model: state appropriations (~30-40%), tuition & fees (~30%), federal/state/private research grants (~20%), auxiliary services (housing, parking, athletics), philanthropy. Non-profit; surpluses reinvested in mission."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, collaborative, bureaucratic but transparent; shared-governance culture with faculty senate and strong unions; diverse student body (HSI); Southeast Florida lifestyle."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary: degree-seeking students (undergrad, grad, professional); research sponsors (NSF, NIH, DoD, industry partners); secondary: continuing-ed learners, athletic fans, community stakeholders."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000-$90,000 base for research engineer/data scientist roles (OPS/grant-funded or A&P classification); + comprehensive benefits (health, retirement FRS, tuition remission)."
   },
   "evidence_sha": "86649e70849ff664",
+  "generated_at": 1784690392,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b178ca7b90"
+   ],
+   "value": "Higher Education / Public Research University"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect questions on research methodology, grant-writing awareness, reproducibility, and translational impact. Demonstrate ability to collaborate across disciplines (engineering, medicine, marine science). Be ready to discuss teaching/mentoring philosophy if role includes instructional duties. Ask about current NSF/DoD AI awards, HPC access, and pathways to PI status."
   },
+  "last_attempt_at": 1784690392,
   "last_evidence_at": 1784674038,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "b178ca7b90"
+   ],
+   "value": "Main campus: Boca Raton, FL; satellite campuses: Davie, Fort Lauderdale, Jupiter (Harbor Branch Oceanographic Institute), Dania Beach; some remote/hybrid roles post-COVID."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "b178ca7b90"
+   ],
+   "value": "To provide high-quality education, advance research and creative activity, and serve the diverse communities of Southeast Florida through academic excellence and innovation."
+  },
   "name": "Florida Atlantic University",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate – Grant-driven project cycles with semester boundaries; periods of intensity around proposal deadlines balanced by predictable academic calendar. No sustained crunch culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "b178ca7b90"
+   ],
+   "value": "Undergraduate and graduate degree programs across 10 colleges (engineering, business, science, medicine, arts, etc.); sponsored research in ocean engineering, neuroscience, AI/ML, biotech; continuing education and professional certificates; athletic programs (NCAA Division I)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 22-25 days annual leave + 12-13 paid holidays + sick leave accrual (varies by classification/union contract); tuition remission for employee/dependents."
   },
+  "refresh_after": 1789874392,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -75092,7 +75141,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: University closes for winter break (typically Dec 24-Jan 2) and major holidays; no additional mandatory shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "b178ca7b90"
+   ],
+   "value": "Large public university; ~30,000 students, ~3,500 faculty/staff; annual budget ~$1B; classified R2 (Doctoral Universities – High Research Activity) by Carnegie. Mature, stable institution."
   },
   "sources": [
    {
@@ -75126,14 +75182,37 @@
     "url": "https://www.bing.com/ck/a?!&&p=65b9b6bae71a30e22275135772e0a1ac06e6029341fd3f91c14d90d7152f839dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2fce379a-2ad2-621a-3a8d-20072bc96375&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRmxvcmlkYQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a public university, FAU routinely sponsors H-1B visas for faculty and research staff; OPT/CPT support for student employees; green card sponsorship for tenure-track and long-term research roles. Cap-exempt H-1B eligibility."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "b178ca7b90"
+   ],
+   "value": "Florida Atlantic University (FAU) is a public research university in Boca Raton, Florida, serving over 30,000 students across 10 colleges. It operates as a state-funded institution with research grants, tuition, and auxiliary enterprises driving its budget."
+  },
+  "synthesized_evidence_sha": "86649e70849ff664",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AI/ML research in Center for Connected Autonomy & AI, Institute for Sensing and Embedded Network Systems Engineering (I-SENSE), College of Engineering & Computer Science; HPC clusters; industry partnerships (e.g., NSF AI Institute proposals); data science curriculum development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674038,
   "web_search_url": "https://duckduckgo.com/?q=Florida+Atlantic+University+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "FAU offers a legitimate AI/data-science research environment (I-SENSE, Center for Connected Autonomy & AI) with public-university stability and cap-exempt H-1B sponsorship. The pace is academic—grant-driven sprints balanced by semester cycles—avoiding corporate crunch culture. Pay trails top-tier industry but new-grad research/engineering roles start competitively for the region (~$70-90k) with strong benefits, tuition remission, and a 37.5-hour workweek norm. Work-life balance is structurally r"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "4/5 – 37.5-hour standard week, 12+ paid holidays, generous sick/annual leave accrual, strong union (AFSCME/UFF) protections, rare weekend/on-call expectations for most technical staff."
   }
  },
  "fluidstack": {
@@ -81116,50 +81195,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 (Defense Elite) — Recognized leader in deployed military AI/ML (Project Maven partners, CJADC2, autonomous systems), but not a primary commercial AI research lab. Prestige high within defense/intel community; lower in general tech rankings."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Government defense contracting: mix of cost-plus, fixed-price, and IDIQ contracts. Revenue driven by multi-year programs of record, R&D prototypes, and sustainment/modernization awards. Part of General Dynamics (NYSE: GD) which reports ~$40B+ annual revenue; GDMS is a multi-billion dollar segment."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, patriotic, process-oriented. Collaborative but hierarchical. Strong 'protect the warfighter' ethos. Diversity improving but still male-dominated in senior technical ranks. Internal mobility encouraged across programs. Less perks/free food; focus on stability, benefits, mission."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary customers are U.S. Department of Defense agencies (Army, Navy, Air Force, Space Force), intelligence community (NSA, CIA, NGA), Department of Homeland Security, and allied foreign governments via FMS (Foreign Military Sales)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95,000-$115,000 base + $5k-15k signing bonus + 5-10% annual bonus + RSU (General Dynamics stock, vesting 3-4 yr). Total comp ~$105k-$135k Year 1. Varies by location (DC/CA higher) and clearance level."
   },
   "evidence_sha": "209aa9b9845f949f",
+  "generated_at": 1784690392,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Defense / Aerospace / Government Contracting (C4ISR, Cyber, AI/ML for National Security)"
   },
-  "last_attempt_at": 1784690231,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect heavy emphasis on U.S. citizenship/clearance eligibility, systems thinking, and domain fundamentals (signals, networks, OS internals, ML math). Behavioral questions target collaboration in regulated environments and handling ambiguity in long acquisition cycles. Technical screens: C/C++ memory management, real-time OS concepts, DSP basics, ML model deployment constraints (SWaP), and cyber fundamentals. Prepare for 'how would you design this for a denied environment?' scenarios."
+  },
+  "last_attempt_at": 1784690392,
   "last_evidence_at": 1784674834,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Major hubs: Scottsdale AZ, San Diego CA, Reston VA, Fairfax VA, West Falls Church VA, Tampa FL, Huntsville AL, Orlando FL, Pittsfield MA, and various customer sites. Many roles require on-site presence for classified work (SCI/TS clearance)."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide innovative, mission-critical technology that protects warfighters and ensures national security across land, sea, air, space, and cyber domains."
+  },
   "name": "General Dynamics Mission Systems",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Measured, program-driven pace. Development cycles align with DoD acquisition timelines (years). Sprints exist but gated by security reviews, configuration management, and milestone reviews. Faster prototyping in IRAD/CRAD projects; slower transition to programs of record."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "C4ISR systems, tactical radios, satellite communications, cyber defense tools, AI/ML analytics platforms, electronic warfare, signal intelligence (SIGINT), secure mobile networks, and mission computing hardware/software."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-11 federal holidays + 9/80 schedule (26 three-day weekends/yr). Accrual increases with tenure. No unlimited PTO."
   },
+  "refresh_after": 1789874392,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research"
+   "value": "None found in research — GDMS hires directly into specific program/functional roles. General Dynamics corporate offers 'Leadership Development Programs' (finance, operations) but not a technical new-grad rotation within Mission Systems."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide shutdown between Christmas and New Year (typically 5-7 business days using PTO/holiday combo). Some sites observe additional summer shutdown day. Not a guaranteed 'full paid shutdown' but widely practiced."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature business unit (~12,000+ employees) within a Fortune 100 defense prime contractor. Established >60 years (heritage via General Dynamics, Motorola, etc.). Not a startup; stable, bureaucratic structure typical of defense primes."
   },
   "sources": [
    {
@@ -81183,14 +81305,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=f96c1e29e4b7c27ab5d91b5bea1cd87d8ac524359e5502fea2a8c849a0d199cdJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1652f470-e9a6-6726-1fef-e3ede8396625&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2dlbmVyYWw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "U.S. citizenship required for virtually all roles due to security clearance requirements (Secret/TS/SCI). No H-1B or visa sponsorship for standard engineering positions. Green card holders may be eligible for some lower-clearance roles but rare."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "General Dynamics Mission Systems (GDMS) is a business unit of General Dynamics (NYSE: GD) that delivers advanced technology solutions for national defense, including C4ISR systems, cybersecurity, AI/ML, signal processing, and secure communications. It operates as a major U.S. defense contractor serving the Department of Defense, intelligence community, and allied nations."
+  },
+  "synthesized_evidence_sha": "209aa9b9845f949f",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Embedded real-time software (C/C++, Rust), radio waveform development, AI/ML for ISR/autonomy, cybersecurity (offensive/defensive), cloud-native DevSecOps, RF/DSP algorithm engineering, FPGA/ASIC design, systems engineering for DoD acquisition programs."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674834,
   "web_search_url": "https://duckduckgo.com/?q=General+Dynamics+Mission+Systems+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "GDMS offers elite defense-sector prestige and genuine mission impact on national security AI/cyber programs. New-grad pay is strong for the sector (estimated $95-115k base + bonus) but below commercial AI labs. Culture is engineering-heavy and mission-driven, but bureaucracy, clearance overhead, and program-driven pace can slow innovation. Work-life balance is generally respected (9/80 schedules common, estimated 15-20 PTO days + holidays) with less burnout than big tech, though crunch periods o"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "7/10 — Standard 40-45 hr weeks common; 9/80 compressed schedule (every other Friday off) widely used. Overtime during proposal pushes or integration events. Clear boundaries due to classified facility hours. Less 'always on' culture than commercial tech."
   }
  },
  "general legal yc26": {
@@ -124166,11 +124309,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -124182,6 +124327,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784690392,
   "last_evidence_at": 1784677411,
   "name": "McDonald's",
   "pace_of_work": {
@@ -165962,37 +166108,88 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2: Strong applied AI/ML reputation in vertical SaaS; known for sophisticated pricing science but not a primary research publisher like FAIR or Google Brain."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "134bb31651"
+   ],
+   "value": "B2B SaaS model selling AI-powered pricing optimization software to retailers, likely via subscription licenses for their platform covering base pricing, promotions, and markdown modules."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-led, data-driven culture valuing scientific rigor and business impact. Collaborative across ML, product, and retail domain experts. Less hype-driven than consumer AI; more focused on measurable ROI for clients."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "134bb31651"
+   ],
+   "value": "Retailers across various segments seeking to optimize pricing strategies and improve financial performance through AI-driven insights."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$160k base + equity (RSUs) + bonus; total comp ~$150k-$190k. Austin market adjustment applied. Conga bands likely align with mid-tier enterprise SaaS."
   },
   "evidence_sha": "7e3f47f7585de8f1",
+  "generated_at": 1784690392,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "134bb31651"
+   ],
+   "value": "Retail Technology / AI SaaS (Price Optimization)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical screens on ML fundamentals (regression, time series, optimization), system design for scalable pricing engines, and practical experience with production ML pipelines. Prepare for case studies on retail pricing scenarios (elasticity, seasonality, markdown optimization). Behavioral interviews will assess collaboration with domain experts and business stakeholders. Demonstrate ability to balance model accuracy with latency constraints and explainability for business users."
   },
+  "last_attempt_at": 1784690392,
   "last_evidence_at": 1784616150,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Austin, Texas; likely additional offices in major tech hubs and/or remote-friendly given Conga ownership."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "134bb31651"
+   ],
+   "value": "To deliver smarter science and smarter people for optimal pricing performance, helping retailers unlock pricing strategies that achieve stronger financial results and satisfy customer expectations."
+  },
   "name": "Revionics",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast — quarterly release cycles with sprint-based delivery; faster than enterprise IT but more measured than early-stage startups. Occasional crunches around major retail seasons (holiday)."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "134bb31651"
+   ],
+   "value": "AI-powered retail pricing optimization platform with modules for Base Price optimization, Promotions management, Markdown optimization, and a core AI Engine for pricing decision clarity. Includes robust data analytics for strategic decision making."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 US holidays; Conga likely offers standard enterprise accrual. Unlimited PTO not indicated."
   },
+  "refresh_after": 1789874392,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -166002,7 +166199,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns documented; typical Conga/enterprise SaaS observes standard holiday breaks (Dec 24-Jan 1)."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established private company (acquired by Apttus in 2018, then part of Conga); estimated 200-500 employees based on typical retail SaaS scale."
   },
   "sources": [
    {
@@ -166036,14 +166238,39 @@
     "url": "https://revionics.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely supports H-1B and green card sponsorship given technical AI/ML roles and Conga backing; confirm with recruiter."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "134bb31651"
+   ],
+   "value": "Revionics provides AI-powered retail price optimization software that helps retailers make smarter pricing decisions across base pricing, promotions, and markdowns. Their platform uses advanced artificial intelligence and data analytics to unlock pricing insights and achieve stronger financial results for retail clients."
+  },
+  "synthesized_evidence_sha": "7e3f47f7585de8f1",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "134bb31651"
+   ],
+   "value": "Applied AI/ML for retail pricing optimization: demand forecasting, elasticity modeling, reinforcement learning for dynamic pricing, large-scale data pipelines, optimization algorithms, and production ML engineering for real-time pricing decisions."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784616150,
   "web_search_url": "https://duckduckgo.com/?q=Revionics+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revionics offers a top-tier applied AI role in retail pricing optimization — a high-impact domain where ML directly drives revenue. As part of Conga, it combines elite technical challenges (large-scale demand forecasting, real-time optimization) with the stability of a mature SaaS business. The mission-driven focus on 'smarter science' aligns with candidates seeking technical depth without the burnout culture of ad-tech or hedge funds. Work-life balance is likely more sustainable than pure resea"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Conga ownership suggests mature HR policies; typical 40-45 hr weeks with on-call rotations for production pricing engines. Guaranteed shutdowns not documented but industry norms support reasonable boundaries."
   }
  },
  "revolutional": {
@@ -177884,7 +178111,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -177902,7 +178129,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784690231,
+  "last_attempt_at": 1784690392,
   "last_evidence_at": 1784677402,
   "name": "Sierra",
   "pace_of_work": {
