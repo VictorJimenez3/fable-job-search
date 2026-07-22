@@ -34629,39 +34629,100 @@
  },
  "carnegie mellon university": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "df5785342d"
+   ],
+   "value": "Tier 1 (Global elite institution with top-ranked AI-specific computing programs)"
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "df5785342d"
+   ],
+   "value": "Non-profit institution funded by net student revenue, government and corporate research grants, endowment returns, and charitable giving. Technology is transferred through licensing and sponsored research agreements, not direct product sales."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "df5785342d"
+   ],
+   "value": "Intellectual, curious, and collaborative with deep technical rigor. The environment is mission-driven with an emphasis on scientific truth over hypergrowth, resulting in low burnout and high intrinsic motivation."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "df5785342d"
+   ],
+   "value": "Undergraduate and graduate students seeking elite technical education. Federal funding agencies (NSF, DARPA) and corporate sponsors form the customer base for its research output. Alumni and corporate recruiters form its placement pipeline."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: As a university, post-doctoral researchers and entry-level research scientists receive guaranteed salary bands that are structured lower than high-risk tech entities and startups. A new-graduate technical role, such as a research associate, is estimated at $95,000-$130,000 with exceptional benefits."
   },
   "evidence_sha": "661dba876f638157",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784681270,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "df5785342d"
+   ],
+   "value": "Higher Education / Advanced Technical Research"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "df5785342d"
+   ],
+   "value": "Expect deep technical discussions focused on algorithmic fundamentals, publication history, and research problem formulation. Behavioral interviews will assess cross-domain collaboration and teaching ability, not product-delivery pressure, reflecting a low-bureaucracy academic tech culture rather than a competitive corporate sprint."
+  },
+  "last_attempt_at": 1784681270,
   "last_evidence_at": 1784655989,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "df5785342d"
+   ],
+   "value": "Main campus located in Pittsburgh, Pennsylvania, with additional satellite locations in Silicon Valley, Qatar, and Washington D.C."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "df5785342d"
+   ],
+   "value": "To create and disseminate knowledge through research, artistic expression, and education, and to transfer intellectual products to society."
+  },
   "name": "Carnegie Mellon University",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "df5785342d"
+   ],
+   "value": "Slower, methodical pace inherent to academic institutions, typical of the semester cycle and grant lifecycle. It is process-driven rather than focused on rapid commercial product release cycles."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "df5785342d"
+   ],
+   "value": "CMU produces academic degrees (Bachelors, Masters, Doctorates), original research, and technology prototypes, particularly from the School of Computer Science. It does not sell commercial software or physical products; its licensed technologies and spin-off companies are commercialized by third parties."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Academic staff roles often allow considerable time off synced with holiday breaks and summers, with an estimated structured leave of 20-24 vacation days plus statutory holidays, typical for top-tier US universities."
   },
+  "refresh_after": 1789865270,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -34669,9 +34730,18 @@
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "df5785342d"
+   ],
+   "value": "Guarantees extended year-end shutdowns and additional seasonal breaks (spring and fall) in alignment with the university's standard academic schedule."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "df5785342d"
+   ],
+   "value": "Mature institution with annual operating revenue exceeding $1.5B, approximately 15,000 students, and over 5,000 faculty/staff. It is a large, stable organization with steady economic cycles typical of higher education."
   },
   "sources": [
    {
@@ -34705,14 +34775,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=8a44629c8f8b4ba101eccfef9d57008bc5554babfb48fedb15d47520d9ce5d09JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=260a9729-c6c2-672f-23e1-80b4c77d665c&u=a1aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9lbi11cz9tc29ja2lkPTI2MGE5NzI5YzZjMjY3MmYyM2UxODBiNGM3N2Q2NjVj&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "df5785342d"
+   ],
+   "value": "The university is typically exempt from the H-1B cap and regularly sponsors visas for post-doctoral researchers and faculty. Due to its non-profit status, employment-based sponsorships are generally uncapped and reliable for highly specialized technical roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "df5785342d"
+   ],
+   "value": "Carnegie Mellon University (CMU) is a private research university renowned globally for its leadership in computer science, artificial intelligence, and robotics. It is not a commercial company but a non-profit educational institution that generates revenue primarily through tuition, research grants, and philanthropic donations."
+  },
+  "synthesized_evidence_sha": "661dba876f638157",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "df5785342d"
+   ],
+   "value": "Research staff and faculty perform foundational AI/ML research, NLP, computer vision, and autonomous systems development. Technical work is highly exploratory with long R&D cycles, producing papers and prototypes rather than production code."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784655989,
   "web_search_url": "https://duckduckgo.com/?q=Carnegie+Mellon+University+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "df5785342d"
+   ],
+   "value": "The candidate prioritizes elite prestige: CMU provides unmatched brand recognition in AI and data science. The fixed salary, absence of startup equity, and structured university calendar can provide lower direct pay but guarantees genuine work-life balance and avoids the 'move fast and break things' burnout. It is a mission-driven non-profit conducting fundamental research rather than chasing advertising revenue."
+  },
   "wlb_rating": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "df5785342d"
+   ],
+   "value": "Exceptional work-life balance. Work is structured around the academic calendar, avoiding the 24/7 on-call culture of tech startups. Positions, especially in research, value intellectual sustainability and sane hours."
   }
  },
  "carolina population center": {
@@ -35328,44 +35429,114 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "6f13b95106",
+    "7155146fdd"
+   ],
+   "value": "Revenue is generated through Equipment sales (machines and engines), Aftermarket parts and services, and Financial services (Cat Financial offers dealer/customer financing and insurance). Services and digital solutions are increasingly central to growth alongside iconic yellow iron."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "6f13b95106",
+    "234253da21"
+   ],
+   "value": "Heavy construction, mining, infrastructure, energy, forestry, and transportation industries globally. Served primarily through a network of independent dealers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: For MS/PhD AI/DS talent in Cat Digital hubs (Chicago, Irving), base salary $100K–$125K, with total comp (bonus + RSU/ESPP) reaching $115K–$145K. These estimates place Cat competitive with old-line industrial AI, but still below FAANG-level total equity awards."
   },
   "evidence_sha": "910fe729e3450f85",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784681270,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "6f13b95106",
+    "234253da21"
+   ],
+   "value": "Heavy Equipment, Industrial Machinery, and Energy"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784681270,
   "last_evidence_at": 1784673568,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "6f13b95106",
+    "7155146fdd",
+    "234253da21"
+   ],
+   "value": "Global footprint. Major US tech and innovation hubs include the corporate headquarters warehouse in Irving (TX), and the Cat Digital technology hub in Chicago (IL). Peoria, IL is a historical major engineering and operational center. Opportunities carry a hybrid or on-site culture, especially for roles interfacing with hardware development."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "234253da21"
+   ],
+   "value": "To help customers build a better, more sustainable world through innovative products and services."
+  },
   "name": "Caterpillar Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady, deliberate, and process-heavy. This is not a fast-ship startup pace; the focus is on safety, regulation, and 25,000-hour machine uptime, meaning slower velocity than ad-tech, but surprising technical complexity."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "234253da21"
+   ],
+   "value": "Construction and mining equipment (tractors, excavators, loaders, dozers, mining trucks), diesel and gas engines, industrial gas turbines, diesel-electric locomotives, and related parts, services, and financial solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-21 days combined vacation and sick, growing with tenure. This is a typical large Midwestern industrial-company model, often administered within an FTO category at senior management level."
   },
+  "refresh_after": 1789865270,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "6f13b95106",
+    "7155146fdd",
+    "234253da21"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: End-of-year winter shutdown (approximately the week between Christmas and New Year's holiday) is common across most business units and corporate functions."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "6f13b95106",
+    "234253da21"
+   ],
+   "value": "Massive, mature Fortune 100 industrial. Publicly traded (NYSE: CAT) with a market cap around $150B+ and approximately 100,000+ employees globally."
   },
   "sources": [
    {
@@ -35399,14 +35570,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=af785a999ebf83184e5199781204444a9beed99539c3d9e0aa5bf66881b45a3fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0988a76f-e90c-65d2-24f0-b0f2e84e64a2&u=a1aHR0cHM6Ly93d3cuY2F0ZXJwaWxsYXIuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "6f13b95106",
+    "7155146fdd",
+    "234253da21"
+   ],
+   "value": "Caterpillar Inc. is the world's leading manufacturer of construction and mining equipment, diesel and natural gas engines, industrial gas turbines, and diesel-electric locomotives. The company makes money by selling heavy machinery and equipment directly to end-users and through a global network of independent dealers, generating significant recurring revenue from parts, services, and financial products (like insurance and equipment financing)."
+  },
+  "synthesized_evidence_sha": "910fe729e3450f85",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "6f13b95106",
+    "234253da21"
+   ],
+   "value": "AI and data science roles span predictive maintenance for heavy assets, autonomous haulage systems (mining), supply chain optimization, GenAI-driven parts forecasting, and digital platform development. Cat Digital is the enterprise's central tech hub, intended to drive purposes like autonomy, sustainability, and data analytics. These roles blend physical operational technology (OT) with enterprise software, rather than consumer-facing internet products."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673568,
   "web_search_url": "https://duckduckgo.com/?q=Caterpillar+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Strong. The dominant culture is 40-45 hour weeks commonly. As an industrial giant, 'safety first' and union-adjacent norms at manufacturing sites create a factory structured culture (though corporate can be flexible). It is widely regarded as a lifestyle-friendly company relative to tech-native companies."
   }
  },
  "cdk global": {
@@ -45415,11 +45614,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -45431,6 +45632,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784681270,
   "last_evidence_at": 1784673560,
   "name": "Cornell University",
   "pace_of_work": {
@@ -72106,40 +72308,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Cruise autonomy research, Ultium battery AI, vehicle intelligence platforms — publishes at CVPR/NeurIPS/ICRA, competes for top PhD talent)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Traditional OEM model: design/engineer/manufacture vehicles, sell through franchised dealers, capture recurring revenue via financing (GM Financial), parts/service, and connected services. Pivoting to EV-first with vertical integration in batteries (Ultium) and software-defined vehicle architecture."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first culture in tech hubs (Mountain View, Phoenix, Austin) with hackathons, tech talks, open-source contributions; Detroit core more traditional but modernizing. Safety-obsessed, data-driven, collaborative. Diversity & inclusion emphasized. Less 'move fast break things,' more 'move fast validate safely.'"
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Consumer retail buyers, commercial fleet customers, government agencies, and rideshare/delivery operators across North America, China, and select international markets."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k–$150k base + $15k–$30k sign-on + $30k–$60k RSU (4-yr) = ~$175k–$240k year-1 total compensation for AI/DS roles; Cruise offers may exceed range."
   },
   "evidence_sha": "33da41627d3c11c8",
+  "generated_at": 1784681270,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Automotive / Mobility / EV / Autonomous Vehicles"
   },
-  "last_attempt_at": 1784678371,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect LeetCode-style coding (medium-hard), system design for vehicle-scale data/platforms, ML fundamentals (perception, prediction, planning for AV; battery modeling for EV), and behavioral questions tied to GM's values (safety, inclusion, innovation). Domain knowledge in robotics, embedded systems, or automotive is a plus but not required for general AI/DS roles. Prepare for 'why GM over pure tech?' narratives."
+  },
+  "last_attempt_at": 1784681270,
   "last_evidence_at": 1784657139,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Detroit, MI (Renaissance Center). Major tech hubs: Mountain View, CA (Cruise); Phoenix, AZ; Austin, TX; Toronto; Warren, MI (Tech Center). Manufacturing across US, Canada, Mexico, China, South Korea."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To create a world with zero crashes, zero emissions, and zero congestion through advanced technology and electric vehicles."
+  },
   "name": "General Motors",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-to-fast in Cruise and EV software orgs (2-week sprints, quarterly OKRs); slower in legacy vehicle programs (3–5 year cycles). Overall faster than traditional auto, slower than Big Tech."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Vehicles (cars, trucks, SUVs, EVs) under Chevrolet, Buick, GMC, Cadillac; GM Financial auto lending; OnStar connected services; Ultium battery platform; Cruise autonomous driving technology; BrightDrop commercial EV solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 1–2 floating days; additional 'winter shutdown' week (5 days) between Christmas–New Year; unlimited sick leave."
   },
+  "refresh_after": 1789865270,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -72149,7 +72389,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual winter shutdown (typically Dec 24–Jan 1, ~5 business days) where most non-manufacturing operations close; some teams may have summer shutdown days."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public company (NYSE: GM); ~165,000 employees globally; $150B+ annual revenue; mature but undergoing major EV/AV transformation."
   },
   "sources": [
    {
@@ -72183,14 +72428,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=27254948a044be6227c5ddfb5a4d5c33e7c5e20434a96447aa5d588a6c834a43JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3cbd1a2a-2c33-601d-0784-0db72d6a6181&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2dlbmVyYWw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active H-1B sponsor for engineering/tech roles; supports STEM OPT extensions; green card sponsorship (PERM) for qualified candidates. Large international workforce."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "General Motors is a global automotive manufacturer that designs, builds, and sells vehicles under brands including Chevrolet, Buick, GMC, and Cadillac. The company makes money primarily through vehicle sales, financing via GM Financial, and increasingly through software-enabled services and its Cruise autonomous vehicle subsidiary."
+  },
+  "synthesized_evidence_sha": "33da41627d3c11c8",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "EV platform engineering (Ultium), battery cell R&D, autonomous driving (Cruise), vehicle software/OTA, connected services (OnStar), manufacturing automation, ADAS, simulation/validation, cybersecurity, data platforms for telematics/fleet."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784657139,
   "web_search_url": "https://duckduckgo.com/?q=General+Motors+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "GM offers elite AI/DS prestige through its Cruise autonomy division and Ultium EV platform work, with new-grad total compensation competitive with top tech ($130k–$170k base + equity/bonus). The mission-driven zero-crashes/zero-emissions narrative is genuine and central to strategy. Culture is shifting from legacy auto bureaucracy toward software-defined speed, but remains a large corporation — expect structured processes, not startup chaos. Work-life balance is generally respected with 9/80 or "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.8/5 — engineering roles typically 40–45 hrs/week; Cruise can spike to 50+ during milestones; 9/80 schedules and winter shutdown week common."
   }
  },
  "generalist": {
@@ -75221,7 +75487,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -75264,7 +75530,7 @@
    ],
    "value": "Demonstrate passion for Google products like Google Workspace and Chrome; showcase ability to perform financial analysis, budgeting, and strategic planning; highlight innovative approaches to identifying business opportunities and connecting them to sales teams."
   },
-  "last_attempt_at": 1784681178,
+  "last_attempt_at": 1784681270,
   "last_evidence_at": 1784583317,
   "locations": {
    "confidence": "unknown",
@@ -93398,94 +93664,96 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Top‑tier (recognized for large‑scale biomedical AI, strong publication record, and elite new‑grad program)."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Integrated healthcare portfolio: high‑margin prescription drugs, recurring‑revenue medical device platforms, and branded consumer products, supported by global R&D, manufacturing, and commercial operations."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Collaborative, inclusive, mission‑oriented, with strong executive sponsorship for early‑career talent and emphasis on ethical AI."
   },
   "customers": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Healthcare providers, hospitals, payers, government health agencies, and individual consumers across more than 175 countries."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120k–$140k base salary + annual bonus + equity (RSUs), total compensation ~$150k–$180k."
   },
   "evidence_sha": "300261a10199c041",
-  "generated_at": 1784483202,
+  "generated_at": 1784681270,
   "generator": {
-   "endpoint": "local",
-   "model": "qwen3:30b",
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Healthcare / Life Sciences (Pharmaceuticals, MedTech, Consumer Health)."
   },
   "interview_focus": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Depth in machine‑learning fundamentals, applied data‑science projects, leadership potential for rotational assignments, and alignment with J&J’s patient‑first culture."
   },
-  "last_attempt_at": 1784681178,
+  "last_attempt_at": 1784681270,
   "last_evidence_at": 1784645371,
   "locations": {
-   "confidence": "high",
-   "source_ids": [
-    "84327d2808"
-   ],
-   "value": "New Brunswick, New Jersey, United States"
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in New Brunswick, NJ, USA; major R&D hubs in the US, Europe, and Asia; operations in 60+ countries."
   },
   "mission": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "\"Caring for the world, one person at a time\" – advancing health through science and innovation."
   },
   "name": "Johnson & Johnson",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate‑fast – project cycles driven by regulatory milestones but with dedicated sprint cadences in digital teams."
   },
   "products": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Pharmaceuticals (e.g., immunology, oncology), Medical Devices (e.g., surgical, orthopedics, vision), Consumer Health (e.g., OTC medicines, skin care, baby care)."
   },
-  "prompt_v": 1,
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 paid vacation days per year plus standard US holidays."
   },
+  "refresh_after": 1789865270,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "ed0fc162fc",
+    "84327d2808"
+   ],
+   "value": "Technology Leadership Development Program (TLDP)"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual company‑wide winter shutdown (typically last week of December) and optional summer “recharge” weeks."
   },
   "size_stage": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Large, publicly‑traded Fortune 500 company (~150,000 employees worldwide)."
   },
   "sources": [
    {
@@ -93522,37 +93790,35 @@
   "sponsorship_context": {
    "confidence": "high",
    "source_ids": [
+    "ed0fc162fc",
     "84327d2808"
    ],
-   "value": "Requires permanent authorization to work in the U.S. without need for future sponsorship; CPT, OPT, or STEM OPT holders typically require sponsorship and do not meet requirements unless eligible for alternative long-term status."
+   "value": "The TLDP role requires permanent U.S. work authorization; candidates on CPT, OPT, or STEM OPT are not eligible unless they have an alternative long‑term status that does not require company sponsorship."
   },
   "status": "ready",
   "summary": {
-   "confidence": "high",
-   "source_ids": [
-    "84327d2808"
-   ],
-   "value": "Johnson & Johnson is a global healthcare company focused on innovation and mission-driven work, offering a Technology Leadership Development Program for new graduates with a focus on leadership and technical development."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Johnson & Johnson is a diversified global healthcare company that develops and sells pharmaceuticals, medical devices, and consumer health products. It generates revenue by marketing these products to hospitals, clinicians, governments, and everyday consumers worldwide."
   },
+  "synthesized_evidence_sha": "300261a10199c041",
   "technical_work": {
-   "confidence": "high",
-   "source_ids": [
-    "84327d2808"
-   ],
-   "value": "The program focuses on technology leadership development, including technical work in a fast, innovative tech culture with executive management involvement."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AI/ML for drug discovery, clinical trial analytics, medical device software, supply‑chain optimization, digital health apps, and data platforms across the three business segments."
   },
   "web_research_status": "no usable public page",
   "web_researched_at": 1784583061,
   "web_search_url": "https://duckduckgo.com/?q=Johnson+%26+Johnson+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Offers a prestigious, high‑pay new‑grad AI/data‑science track inside a mission‑driven healthcare giant that emphasizes work‑life balance, structured leadership rotations, and rapid technical growth without the burnout typical of pure‑tech firms."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good – company promotes sane hours, protected weekends, and organization‑wide shutdown periods; burnout risk lower than typical high‑growth tech."
   }
  },
  "johnson johnson medtech": {
@@ -131730,47 +131996,113 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Iron strong mid-tier. It sits below FAANG/OpenAI/Anthropic in pure brand prestige but commands quartz elite stature within the cleared defense-tech ecosystem (alongside Palantir and Anduril) that opens unique doors in national security AI."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "0187e691b5",
+    "4d7aae4497"
+   ],
+   "value": "Government services contractor with growing commercial-grade digital solutions. Revenue comes from cost-plus-fee and fixed-price contracts, with an increasing emphasis on selling proprietary AI, cyber, and integrated data platforms alongside its traditional engineering services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven and intellectually curious, balancing grey-beard engineering rigor with a growing hunger for modern agile delivery. The vibe is professional and stable, consciously avoiding the chaotic 'move fast and break things' burnout culture."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "0187e691b5"
+   ],
+   "value": "Primarily U.S. federal government agencies (including the Department of Defense and the Intelligence Community), state and local governments, and private-sector critical infrastructure operators."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "$115,000 - $145,000 base salary as an AI/Data Engineering new grad in a MCOL/HCOL hub, depending on clearance status and degree level (Master's/PhD). Total comp is typically limited on equity compared to commercial tech, lackingstandard RSUs."
   },
   "evidence_sha": "82e4e995a1867472",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784681270,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0187e691b5"
+   ],
+   "value": "Defense Technology and Critical Infrastructure Solutions"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784681270,
   "last_evidence_at": 1784674263,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "0187e691b5",
+    "4d7aae4497"
+   ],
+   "value": "Headquartered in Chantilly, Virginia (Washington D.C. metro area). Major technical hubs include Huntsville (AL), Colorado Springs (CO), San Antonio (TX), and Riyadh (Saudi Arabia). Hybrid and remote flexibility is often available for cleared personnel near secure facilities."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "0187e691b5"
+   ],
+   "value": "To deliver a better world by designing, building, and protecting the critical infrastructure that connects and secures communities and nations."
+  },
   "name": "Parsons",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate to Fast. The company is intentionally accelerating its internal digital divisions to mirror product-company sprint cycles, but mission-critical defense work and multi-year government contracting lifecycles inevitably introduce periods of programmatic cadence that are slower than consumer software."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "7747d987c9",
+    "0187e691b5"
+   ],
+   "value": "Services span cybersecurity, artificial intelligence, software development, critical infrastructure protection, urban planning, and engineering solutions for defense, intelligence, and public-sector clients."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated 15-20 days of paid of paid vacation time annually for a new grad, based upon competitive intelligence within large government contractors."
   },
+  "refresh_after": 1789865270,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f",
+    "17f8c9c419"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated 9/80 schedule (every other Friday off) for manyeligible business units, a lightweight winter holiday shutdown is standard. Federal holidays are strictly observed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "4d7aae4497"
+   ],
+   "value": "Large-cap public company (NYSE: PSN) with roughly 18,000 employees globally, generating approximately $6.5 billion in annual revenue. It is a mature, established mid-tier defense prime undergoing a tech-driven transformation."
   },
   "sources": [
    {
@@ -131824,14 +132156,43 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "0187e691b5",
+    "7747d987c9"
+   ],
+   "value": "Parsons is a digitally enabled solutions provider that delivers advanced technology, engineering, and security services primarily to the U.S. federal government and critical infrastructure markets. The company makes money by designing, building, and maintaining complex physical and digital infrastructure—from AI-driven cyber operations and missile defense systems to smart-city transportation networks and environmental remediation projects."
+  },
+  "synthesized_evidence_sha": "82e4e995a1867472",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "7747d987c9",
+    "0187e691b5"
+   ],
+   "value": "AI/data scientists work on computer vision, sensor fusion, geospatial intelligence, natural language processing, and predictive analytics for national security missions. This includes training models on classified data, deploying ML pipelines at the tactical edge, and building data platforms to detect advanced cyber threats."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674263,
   "web_search_url": "https://duckduckgo.com/?q=Parsons+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "0187e691b5"
+   ],
+   "value": "Parsons offers a rare combination of a deep-tech mission and a mid-tier scale that can shield you from the crushing bureaucracy of larger defense primes. The company has publicly emphasized investing in a digital 'demo-first' culture to compete with commercial tech, which aligns tightly with a candidate seeking prestige and fast paced AI work without sacrificing personal life."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Above Average for Engineering and Tech. The defense contracting model traditionally protects the 40-hour week unless there is an active bid or demo deadline."
   }
  },
  "parsons corporation": {
@@ -148001,37 +148362,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown – no AI/data science presence documented in sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown – no culture information in sources."
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown – no compensation data in sources."
   },
   "evidence_sha": "7a8e167aa6b09638",
+  "generated_at": 1784681270,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Without company technical details, suggest probing: actual ML/data science team size and project scope; deployment frequency and experimentation culture; on-call expectations and shutdown policies; mentorship structure for new grads; and concrete examples of work-life balance enforcement."
+  },
+  "last_attempt_at": 1784681270,
   "last_evidence_at": 1784583505,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "RF-SMART",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown – no work pace information in sources."
   },
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown – no PTO policy documented in sources."
   },
+  "refresh_after": 1789865270,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -148041,7 +148443,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown – no shutdown policy documented in sources."
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -148075,14 +148482,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=c706c130b6983e744fd4714cd5c46f0f357dba90ed16753b1f747fbcfa581023JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9maW5hbmNlLnlhaG9vLmNvbS9xdW90ZS9SRi8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "89b2f88277",
+    "d8e10c1a29",
+    "ca5530cd03"
+   ],
+   "value": "No usable company information found in the provided sources. The three source URLs are redirect links (Bing tracking URLs) that return only 'Please click here if the page does not redirect automatically' with no extractable content about RF-SMART."
+  },
+  "synthesized_evidence_sha": "7a8e167aa6b09638",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583505,
   "web_search_url": "https://duckduckgo.com/?q=RF-SMART+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks elite AI/data science prestige with high new-grad pay, fast innovative culture, mission-driven focus, strong work-life balance with sane hours/guaranteed shutdowns, and accelerated technical growth without personal time sacrifice. Cannot assess fit without company data."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown – no work-life balance data in sources."
   }
  },
  "rfa engineering": {
