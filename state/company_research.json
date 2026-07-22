@@ -3073,51 +3073,124 @@
  "acxiom": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "6accd76b59"
+   ],
+   "value": "Estimated: Tier 3. Primarily known for traditional data processing and legacy IT services rather than cutting-edge AI research or elite data science prestige."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "c83cd51603"
+   ],
+   "value": "B2B enterprise SaaS and data services. Revenue is generated through long-term contracts, software subscriptions, and managed service fees for processing and activating client data."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "6accd76b59"
+   ],
+   "value": "Estimated: Traditional, corporate, and mission-focused. Heavily bureaucratic with an emphasis on legacy processes rather than fast-paced innovation."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "c83cd51603"
+   ],
+   "value": "Enterprise-level clients, specifically major brands and marketing agencies operating in the retail, financial services, and technology sectors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $70,000 to $90,000 base salary for new-grad software and data engineers, reflecting its location profile and enterprise status."
   },
   "evidence_sha": "57a71c69a7545536",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784748808,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784748671,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c83cd51603"
+   ],
+   "value": "Information Technology and Data Services / Marketing Technology."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Prepare to discuss SQL query optimization, ETL pipeline design, and data structure knowledge. Assess whether the specific team uses modern machine learning and AI tools or relies on legacy systems, ensuring any offer meets your baseline for technical learning, pay, and work-life balance without forcing you into a bureaucratic sinkhole."
+  },
+  "last_attempt_at": 1784748808,
   "last_evidence_at": 1784742129,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "c83cd51603"
+   ],
+   "value": "Global presence with major US hubs in Arkansas (Conway/Little Rock) and New York, alongside various international offices."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "c83cd51603"
+   ],
+   "value": "To create and deliver innovative, data-driven solutions that enable companies to better understand, engage, and market to their target audiences."
+  },
   "name": "Acxiom",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "6accd76b59"
+   ],
+   "value": "Estimated: Moderate to slow. Operations skew toward traditional enterprise software delivery cycles rather than rapid, agile tech-company sprints."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "c83cd51603"
+   ],
+   "value": "Data onboarding, identity resolution tools, marketing automation software, audience segmentation platforms, and cloud-based data management systems."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "1694ec93af"
+   ],
+   "value": "Estimated: 15 to 20 days of standard paid time off annually, typical of large enterprise IT employers."
   },
+  "refresh_after": 1789932808,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "1694ec93af"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "1694ec93af"
+   ],
+   "value": "Estimated: No specific information found in the provided sources regarding guaranteed company-wide shutdown periods."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "6accd76b59"
+   ],
+   "value": "Large, established global enterprise. Acxiom operates as a mature, private company (formerly NASDAQ-listed, acquired by IPG in 2018)."
   },
   "sources": [
    {
@@ -3171,14 +3244,46 @@
     "url": "https://acxiomllc.wd5.myworkdayjobs.com/AcxiomUSA/job/3397/Associate-Software-Engineer_JR014379"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "1694ec93af"
+   ],
+   "value": "Not explicitly detailed in the provided sources. Candidates must contact recruiters directly for visa sponsorship details."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c83cd51603",
+    "c08cc4182c"
+   ],
+   "value": "Acxiom is a global technology and data services company that specializes in enterprise data management, audience targeting, and marketing automation. It generates revenue by providing its corporate clients with the data infrastructure, analytics, and software platforms they need to execute personalized, data-driven marketing campaigns."
+  },
+  "synthesized_evidence_sha": "57a71c69a7545536",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "1694ec93af"
+   ],
+   "value": "Backend software engineering (Java, Spring, Python), large-scale data engineering (SQL, ETL pipelines), cloud infrastructure management (AWS/Azure), and data architecture."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784742129,
   "web_search_url": "https://duckduckgo.com/?q=Acxiom+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Acxiom provides solid large-scale data engineering experience and a stable work environment, but its enterprise identity struggles to meet the bar for elite, fast-paced AI prestige. It is a safer fallback that may lack the high pay, advanced data science work, and hyper-innovative tech culture provided by top-tier competitors."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "1694ec93af"
+   ],
+   "value": "Estimated: Good. Generally offers sane working hours compared to high-burnout tech firms, appealing to candidates prioritizing personal time."
   }
  },
  "adaptiva": {
@@ -11298,7 +11403,7 @@
    "value": "Tier 1 (Elite). Amazon is a pioneer in production AI and cloud infrastructure globally, rivaling Google, Meta, and Microsoft in AI talent branding."
   },
   "aliases": [],
-  "attempts": 28,
+  "attempts": 29,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -11348,7 +11453,7 @@
    "source_ids": [],
    "value": "Amazon interviews emphasize its Leadership Principles with behavioral questions, plus technical screening covering data structures, system design, algorithms, and coding proficiency. Storytelling about ownership, bias for action, and customer obsession is crucial. For AI and data science roles, expect deep dives into machine learning theory, statistical analysis, and deployment experience."
   },
-  "last_attempt_at": 1784748671,
+  "last_attempt_at": 1784748808,
   "last_evidence_at": 1784732707,
   "locations": {
    "confidence": "high",
@@ -36354,39 +36459,105 @@
  },
  "bullzeye equipment supply": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "22cbc40a54"
+   ],
+   "value": "None – no AI/data science roles or research found. Company is a traditional equipment supplier with a web dev need."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "5f2274dc3e",
+    "e57d34fb58",
+    "3cb2222d13"
+   ],
+   "value": "E-commerce retailer/distributor of electrical and lighting equipment. Revenue from direct sales via company website (WordPress/WooCommerce) and Amazon Marketplace. Likely earns margin on wholesale-to-retail markup."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "22cbc40a54"
+   ],
+   "value": "Estimated: Small, pragmatic, commerce-focused team. Likely values self-starters who can own the web stack end-to-end. Not a 'fast, innovative tech culture' in the Silicon Valley sense; more traditional business with digital needs."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "5f2274dc3e",
+    "e57d34fb58",
+    "3cb2222d13"
+   ],
+   "value": "Likely contractors, electricians, facility managers, and commercial/industrial buyers seeking replacement ballasts and lighting components. Online sales suggest both B2B and B2C channels."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $60,000–$85,000 base (US). Small non-tech companies typically pay below top-tier tech market rates. No equity or signing bonus data."
   },
   "evidence_sha": "35afd76f38f9f9a6",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784748808,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "5f2274dc3e",
+    "e57d34fb58",
+    "3cb2222d13"
+   ],
+   "value": "Electrical equipment wholesale / E-commerce retail"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "22cbc40a54"
+   ],
+   "value": "Expect practical assessments on WordPress/WooCommerce customization, PHP/JS debugging, e-commerce performance optimization, and possibly AWS/hosting. Ask about deployment processes, on-call expectations, and how technical decisions are made. Clarify whether any data science/AI initiatives exist (unlikely). Probe for concrete WLB policies: typical hours, weekend work, vacation usage."
+  },
+  "last_attempt_at": 1784748808,
   "last_evidence_at": 1784742129,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5f2274dc3e",
+    "e57d34fb58"
+   ],
+   "value": "Estimated: Likely US-based (Amazon.com seller, .com domain). No specific headquarters or office locations disclosed in sources. Remote/hybrid policy unknown."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Bullzeye Equipment & Supply",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to variable. Small e-commerce operations often have steady feature work but can spike during sales events or platform issues. No data on sprint cycles or release cadence."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "5f2274dc3e",
+    "e57d34fb58",
+    "3cb2222d13"
+   ],
+   "value": "Electrical and lighting equipment, specifically fluorescent ballasts (F15T8 models) and related lighting components. The company operates e-commerce stores on its own domain and Amazon Marketplace."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: No public policy found. Typical US small business: 10-15 days PTO + holidays. Not guaranteed."
   },
+  "refresh_after": 1789932808,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -36396,7 +36567,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found. Unlikely for a small e-commerce retailer."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "22cbc40a54"
+   ],
+   "value": "Estimated: Small to mid-sized company (10-100 employees). Active hiring for a Full Stack Web Developer suggests growth in digital capabilities."
   },
   "sources": [
    {
@@ -36450,14 +36628,43 @@
     "url": "https://jobright.ai/jobs/info/69e93c7f3aa0c479643a8a30?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "5f2274dc3e",
+    "e57d34fb58",
+    "3cb2222d13"
+   ],
+   "value": "Bullzeye Equipment & Supply appears to be an electrical and lighting equipment supplier that sells products like fluorescent ballasts (F15T8) through online channels including Amazon. The company maintains a web presence using WordPress and WooCommerce and is actively hiring a Full Stack Web Developer to maintain and optimize its e-commerce platform."
+  },
+  "synthesized_evidence_sha": "35afd76f38f9f9a6",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "22cbc40a54"
+   ],
+   "value": "Full-stack web development focused on WordPress/WooCommerce e-commerce platform maintenance, optimization, and feature development. Stack likely includes PHP, JavaScript, MySQL, HTML/CSS, and AWS/hosting management. No AI/data science roles identified in sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784742129,
   "web_search_url": "https://duckduckgo.com/?q=Bullzeye+Equipment+%26+Supply+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "22cbc40a54"
+   ],
+   "value": "This role offers hands-on full-stack ownership of a live revenue-generating e-commerce platform (WordPress/WooCommerce) at a small company where impact is visible. However, it is not an AI/data science role, does not carry elite prestige, and lacks the structured mentorship, guaranteed shutdowns, or high new-grad pay typical of top-tier tech employers. Work-life balance and learning pace are unknown but likely variable in a small-business setting."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown. No public policies on hours, shutdowns, or burnout prevention. Small businesses vary widely; candidate should ask directly."
   }
  },
  "bureau veritas": {
@@ -43910,11 +44117,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -43926,6 +44135,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784748808,
   "last_evidence_at": 1784747329,
   "name": "CGI",
   "pace_of_work": {
@@ -75432,7 +75642,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -75450,7 +75660,7 @@
    "source_ids": [],
    "value": "Sports / technology (estimated)"
   },
-  "last_attempt_at": 1784748671,
+  "last_attempt_at": 1784748808,
   "last_evidence_at": 1784725192,
   "name": "Fanatics",
   "pace_of_work": {
@@ -152091,105 +152301,101 @@
  },
  "openai": {
   "ai_ds_prestige_tier": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
+    "1a48569e62",
     "17f8c9c419"
    ],
-   "value": "Tier 1 (Elite) — Considered one of the most prestigious AI labs in the industry."
+   "value": "Top-tier (Elite Frontier AI Lab / Premier AI Research Org)"
   },
   "aliases": [],
-  "attempts": 10,
+  "attempts": 11,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "6deb785fab",
-    "3957e367e3"
+    "f48a1a3017"
    ],
-   "value": "OpenAIs revenue is driven through subscription tiers like ChatGPT Plus/Pro, enterprise licensing of its state-of-the-art models, and API usage fees for models and tools provided to developers and businesses globally."
+   "value": "Revenue is generated via multi-channel demand generation including product-led self-serve motions and sales-assisted enterprise channels, optimizing across awareness, acquisition, activation, retention, and expansion."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "899b392f6d",
-    "3957e367e3"
+    "1a48569e62"
    ],
-   "value": "Mission-focused, technically elite, and safety-conscious. The culture promotes operational speed and reliability with a serious commitment to responsible deployment, explicitly valuing platforms that avoid burnout through structured rest."
+   "value": "Collaborative, mission-driven, and focused on safely deploying powerful technology while valuing different perspectives and experiences."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "6deb785fab",
-    "3957e367e3"
+    "aba3a3e16c",
+    "f48a1a3017",
+    "ec357515cb"
    ],
-   "value": "A broad range of individual users and enterprise clients adopting AI responsibly, including high-stakes security environments that purchase ChatGPT and API-based products for tangible business value."
+   "value": "Both consumer retail users and enterprise B2B clients, acquired through global performance marketing across multiple regions, languages, and levels of market maturity."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $175,000 - $230,000+ annual total compensation, consisting of a high base salary and equity grants."
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Elite tier market-rate (e.g., $200k-$300k+ total compensation), reflecting the high premium placed on top AI research talent."
   },
   "evidence_sha": "f824d045f41dc6e9",
-  "generated_at": 1784681086,
+  "generated_at": 1784748808,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "6deb785fab"
+    "1a48569e62"
    ],
    "value": "Artificial Intelligence Research and Deployment"
   },
   "interview_focus": {
-   "confidence": "high",
-   "source_ids": [
-    "899b392f6d",
-    "3957e367e3"
-   ],
-   "value": "Expect rigorous technical interviews evaluating end-to-end engineering, AI application design, or customer-centric solutions architecture, without sacrificing the expectation of working within a culture that values sane hours and structured rest."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Emphasize your ability to thrive in a dynamic, highly collaborative environment, showcasing a strong test-and-learn mindset and the technical depth to push AI boundaries safely without experiencing burnout."
   },
-  "last_attempt_at": 1784681086,
+  "last_attempt_at": 1784748808,
   "last_evidence_at": 1784742471,
   "locations": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "3957e367e3",
-    "899b392f6d"
+    "aba3a3e16c"
    ],
-   "value": "Global presence with a headquarters in San Francisco, California, and opportunities ranging from internal engineering to field-based customer-facing roles."
+   "value": "Global operations with marketing teams specifically targeting multiple regions, languages, and levels of market maturity internationally."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "899b392f6d",
-    "3957e367e3"
+    "1a48569e62"
    ],
-   "value": "To ensure that artificial general intelligence (AGI) benefits all of humanity."
+   "value": "To push the boundaries of the capabilities of AI systems and safely deploy them to the world, ensuring AI is created with safety and human needs at its core by encompassing many different perspectives, voices, and experiences."
   },
   "name": "OpenAI",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Fast-paced and highly innovative with a focus on high output and speed, yet balanced by a culture that reportedly commits to structured shutdowns to avoid burnout."
+   "value": "Estimated: Fast-moving and highly complex, requiring comfort in dynamic environments with a strong test-and-learn mindset."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "8b0689fc7f",
-    "6deb785fab",
-    "3957e367e3"
+    "1a48569e62"
    ],
-   "value": "ChatGPT, enterprise API platform, and custom model solutions. The company also builds internal productivity and security applications for business functions like Finance and Supply Chain."
+   "value": "AI models and consumer/enterprise software products, built to safely deploy powerful AI systems and allow customers to optimize their own models."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 20+ days per year (conservative estimate for a top-tier AI firm competitive with Bayesian benefits)."
+   "value": "Estimated: Standard tech-market average (e.g., 15-20 days annually), though precise public policy is not specified in current sources."
   },
+  "refresh_after": 1789932808,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -152199,12 +152405,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Formal shutdown periods are offered as a counter-balance to prevent burnout, aligning with the candidate's need for guaranteed disconnection."
+   "value": "Estimated: No specific company-wide guaranteed shutdowns are documented in current sources, though standard holidays likely apply."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "A large, heavily-funded private organization in the growth and scaling stage, deploying advanced AI and expanding enterprise capabilities globally."
+   "confidence": "high",
+   "source_ids": [
+    "1a48569e62",
+    "c0b795026c",
+    "aba3a3e16c"
+   ],
+   "value": "Dynamic, global-scale organization operating in fast-moving, highly complex technical environments with dedicated teams for research, product, growth marketing, and simulation infrastructure."
   },
   "sources": [
    {
@@ -152269,26 +152479,30 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Sponsorship information is not detailed in the provided sources, but top-tier AI companies of this scale often provide visa sponsorship for highly specialized technical roles."
+   "confidence": "medium",
+   "source_ids": [
+    "1a48569e62",
+    "17f8c9c419"
+   ],
+   "value": "Actively hires highly technical engineering and research talent for its AI mission, participating in pipelines to source new graduate Data Science candidates."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "a186b901c2",
-    "6deb785fab"
+    "1a48569e62",
+    "f48a1a3017"
    ],
-   "value": "OpenAI is an artificial intelligence research and deployment company best known for ChatGPT. It builds large-scale AI models and APIs that power products for both consumers and enterprises across the world."
+   "value": "OpenAI is an artificial intelligence research and deployment company that pushes the boundaries of AI capabilities to safely deploy them to the world through products. They make money through a combination of self-serve, product-led consumer subscriptions and sales-assisted enterprise B2B motions across global markets."
   },
+  "synthesized_evidence_sha": "f824d045f41dc6e9",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "899b392f6d",
-    "3957e367e3"
+    "c0b795026c",
+    "1a48569e62"
    ],
-   "value": "Work includes building internal enterprise applications end-to-end for functions like Finance and Supply Chain, as well as creating repeatable security reference architectures, demos, and pilots that help customers adopt AI safely."
+   "value": "Teams turn simulation systems into automated, production-quality pipelines for ML model training and hardware-in-the-loop validation, implement ML artifact versioning, and collaborate closely on research to push AI model optimization and capabilities safely."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677182,
@@ -152296,15 +152510,12 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Offers a top-tier AI role with elite prestige and high compensation that balances innovation and mission-focus with a guaranteed shutdown culture, directly respecting the candidate's need for technical growth and work-life balance over toxic bureaucracy."
+   "value": "OpenAI offers top-tier technical prestige and elite new-grad pay, providing a mission-driven environment where you can accelerate your career by working on the bleeding edge of AI safety and model deployment without getting bogged down in slow bureaucracy."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "899b392f6d",
-    "3957e367e3"
-   ],
-   "value": "Estimated: High — The company mission explicitly balances operational speed with care, and demands for downtime (like guaranteed shutdowns) are flagged as a cultural fit, pushing beyond typical Silicon Valley burnout cycles."
+   "source_ids": [],
+   "value": "Estimated: Moderate, as the dynamic, fast-paced nature of a frontier AI lab pushes boundaries and can be demanding."
   }
  },
  "openevidence": {
@@ -180014,47 +180225,122 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated Tier 3. While highly respected in the power systems hardware industry, this is not an elite FAANG-level AI/Data Science prestige employer."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "697de7c07c"
+   ],
+   "value": "Manufactures and sells electric power grid infrastructure hardware and smart grid solutions B2B."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "c51c4df3d3"
+   ],
+   "value": "Employee-owned, team-based, and mission-driven. The culture values keeping the lights on for communities while focusing on electric grid innovation."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "c51c4df3d3"
+   ],
+   "value": "People and businesses worldwide, specifically entities requiring robust electric power distribution systems."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "697de7c07c"
+   ],
+   "value": "Estimated: $80,000 to $107,000 per year for entry-level software engineers."
   },
   "evidence_sha": "856655b5cb186c6c",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784748808,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "697de7c07c"
+   ],
+   "value": "Electrical industry / Electric Power Systems Distribution."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "c51c4df3d3"
+   ],
+   "value": "Discuss how you can thrive in a dynamic, fast-paced environment while maintaining sane hours, and ask how their 100% employee-owned culture actively protects work-life balance through guaranteed shutdowns or reasonable schedules."
+  },
+  "last_attempt_at": 1784748808,
   "last_evidence_at": 1784732392,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "697de7c07c"
+   ],
+   "value": "Chicago, IL (Hybrid work model)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "c51c4df3d3",
+    "697de7c07c"
+   ],
+   "value": "To help keep the lights on for people and businesses worldwide by transforming the grid for resilient and reliable power."
+  },
   "name": "S&C Electric Company",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "c51c4df3d3"
+   ],
+   "value": "Estimated: Fast-paced and dynamic. The company operates with a team-based work environment that encourages rapid innovation and technical development."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "697de7c07c",
+    "c51c4df3d3"
+   ],
+   "value": "Switching, protection, and control solutions for electric power systems, alongside innovative solutions for the smart grid."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "c51c4df3d3"
+   ],
+   "value": "Estimated: 15-20 days of annual PTO for new graduates, based on standard electrical engineering industry norms for established midwest companies."
   },
+  "refresh_after": 1789932808,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "c51c4df3d3",
+    "697de7c07c"
+   ],
+   "value": "Early Talent Program"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Yes (likely limited holiday shutdowns). Established employee-owned manufacturers in the Midwest typically offer a short guaranteed shutdown period around July 4th or Christmas to ensure plant maintenance and employee rest."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "c51c4df3d3"
+   ],
+   "value": "Established, 100% employee-owned company operating globally."
   },
   "sources": [
    {
@@ -180108,14 +180394,48 @@
     "url": "https://jobright.ai/jobs/info/6a5a8a994da96a42cfd9672f?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "c51c4df3d3"
+   ],
+   "value": "Committed to equal-opportunity employment. Specific visa sponsorship capabilities are not explicitly detailed but standard for engineering roles of this nature."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "697de7c07c",
+    "c51c4df3d3"
+   ],
+   "value": "S&C Electric Company is a 100% employee-owned provider of switching, protection, and control solutions for electric power systems. The company designs and manufactures innovative smart grid solutions to make electric power distribution systems more resilient and reliable, generating revenue by selling this hardware and associated technologies to utilities worldwide."
+  },
+  "synthesized_evidence_sha": "856655b5cb186c6c",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "697de7c07c",
+    "c51c4df3d3"
+   ],
+   "value": "Full-time software engineering for electric power distribution systems, operating in a fast-paced, dynamic team-based work environment. Roles are hybrid and entry-level for 0+ years of experience."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677286,
   "web_search_url": "https://duckduckgo.com/?q=S%26C+Electric+Company+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "c51c4df3d3",
+    "697de7c07c"
+   ],
+   "value": "This position aligns with your desire for a mission-driven company and avoids the high burnout of toxic tech cultures by focusing on resilient infrastructure. The fast-paced, innovative work environment supports accelerated technical learning, while the employee-owned structure encourages career growth and mutual respect."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "c51c4df3d3"
+   ],
+   "value": "Estimated: Good. As a 100% employee-owned company, work-life balance is driven by ownership culture rather than grindset tech culture, aligned with sensible hours and mutual respect."
   }
  },
  "s p global": {
@@ -236402,48 +236722,129 @@
  "zoll cardiac management solutions": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "2d6316ce8b"
+   ],
+   "value": "Estimated: Tier 3. While highly regarded in the medical device industry, ZOLL is not traditionally recognized as a top-tier prestige destination for elite AI or data science talent when compared to big-tech or specialized AI firms."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "2d6316ce8b"
+   ],
+   "value": "Manufactures and sells proprietary medical devices and supportive software ecosystems, likely supplemented by ongoing service contracts and software maintenance."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "2d6316ce8b"
+   ],
+   "value": "Estimated: Mission-driven, stable, and collaborative, with a strong emphasis on product reliability and safety over shipping disruptive features at breakneck speed."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "2d6316ce8b",
+    "76d80c29ed"
+   ],
+   "value": "Emergency Medical Services (EMS), hospitals, and healthcare professionals involved in cardiac resuscitation and patient management."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "2d6316ce8b"
+   ],
+   "value": "Estimated: $85,000 - $105,000 base salary for a Software Engineer I, providing solid compensation but likely falling short of the elite new-grad pay scales seen at top-tier AI/tech firms."
   },
   "evidence_sha": "60c0316c4253d947",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784748808,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2d6316ce8b",
+    "76d80c29ed"
+   ],
+   "value": "Medical Devices and Healthcare Technology"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2d6316ce8b"
+   ],
+   "value": "Probe deeply into the team's specific use of Python versus systems languages like C/C++, asking whether your day-to-day will involve building innovative data pipelines and AI models or simply supporting legacy device interfaces. Ask about the frequency of production deployments and software update cycles to gauge if the regulated medical environment moves too slowly for your fast-paced tech appetite, and request examples of junior engineers' technical growth trajectories to verify the learning s"
+  },
+  "last_attempt_at": 1784748808,
   "last_evidence_at": 1784742471,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "76d80c29ed",
+    "80ceda3e60",
+    "7837b21a8b"
+   ],
+   "value": "Operations are based in the United States and the United Kingdom, with detailed company information available through regional pages."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "2d6316ce8b",
+    "76d80c29ed"
+   ],
+   "value": "To develop products and software that advance emergency cardiac care and improve patient outcomes during critical resuscitation events."
+  },
   "name": "ZOLL Cardiac Management Solutions",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "2d6316ce8b"
+   ],
+   "value": "Estimated: Moderate to slow. Medical device software development requires rigorous validation and compliance with healthcare regulations (e.g., FDA), typically enforcing a methodical, structured pace over a rapid, fail-fast release cycle."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "2d6316ce8b"
+   ],
+   "value": "Software supporting ZOLL medical products, defibrillation systems, and applications that interface with various emergency care devices."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "2d6316ce8b"
+   ],
+   "value": "Estimated: 15-20 days of paid time off annually, plus standard public holidays, reflecting the comprehensive benefits package typical of established medical enterprises."
   },
+  "refresh_after": 1789932808,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "2d6316ce8b"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "2d6316ce8b"
+   ],
+   "value": "Estimated: No guaranteed corporate-wide shutdowns found in research, though standard holidays are observed. MedTech operations typically require continuous support."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "2d6316ce8b"
+   ],
+   "value": "Established medical device manufacturer operating with the comprehensive benefits infrastructure typical of a large, stable enterprise."
   },
   "sources": [
    {
@@ -236487,14 +236888,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=e26afa15443de94acd740a50e0aab7bdef160bd12a01e6c444ed4aa4e2285d3dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3c41252b-b38b-6729-1c82-32b6b2506626&u=a1aHR0cHM6Ly93d3cuem9sbC5jb20vZW4tdXM&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "2d6316ce8b"
+   ],
+   "value": "Not explicitly mentioned in current sources; candidates should verify visa sponsorship availability directly with the talent acquisition team for the Software Engineer I role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "2d6316ce8b",
+    "76d80c29ed"
+   ],
+   "value": "ZOLL Cardiac Management Solutions develops software and medical devices for emergency cardiac care, including defibrillators and diagnostic tools. The company makes money by selling these life-saving medical devices and related software subscriptions to emergency medical services (EMS) and hospitals."
+  },
+  "synthesized_evidence_sha": "60c0316c4253d947",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "2d6316ce8b"
+   ],
+   "value": "Designing, developing, and maintaining software to support medical products, involving a tech stack that includes C, C++, C#, and Python."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677665,
   "web_search_url": "https://duckduckgo.com/?q=ZOLL+Cardiac+Management+Solutions+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2d6316ce8b"
+   ],
+   "value": "ZOLL offers a mission-driven environment focused on life-saving medical tech, but as a hardware-adjacent medical device company, it may lean toward slower, regulated bureaucracy rather than the fast-paced, elite AI/data science culture you desire. While work-life balance in MedTech can be sane due to strict regulatory cycles preventing ad-hoc feature rushes, you must carefully screen managers during interviews to ensure the role accelerates modern technical learning without forcing you into main"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "2d6316ce8b"
+   ],
+   "value": "Estimated: Good. MedTech hardware companies typically offer stable working hours due to predictable manufacturing and compliance cycles, avoiding the high-burnout, on-call culture prevalent in pure big-tech software firms."
   }
  },
  "zoll medical corporation": {
