@@ -90514,7 +90514,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -90532,7 +90532,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784681721,
+  "last_attempt_at": 1784681809,
   "last_evidence_at": 1784674722,
   "name": "Insperity",
   "pace_of_work": {
@@ -95350,40 +95350,99 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Strong tier-2 prestige for AI/data science: a Fortune 115 industry titan leading real-world AI application for smart buildings and sustainability, but it is not the primary brand who comes to mind in AI research. It is highly respected in industry circles, slightly below the top-tier pure tech companies."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "bfe92b79f8",
+    "f0ea8a0da3"
+   ],
+   "value": "The business model is a hybrid of product sales and recurring service and digital subscription revenue. They sell physical building equipment and then secure long-term, recurring revenue through installations, energy performance service contracts, and software-as-a-service from the OpenBlue platform."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "2ed1fccb76",
+    "bfe92b79f8"
+   ],
+   "value": "Professional, stable, and mission-led. The 140-year-plus industrial heritage brings a culture of safety, discipline, and deep domain expertise. The digital push through OpenBlue injects a data-driven innovation layer without replacing the old-guard ethos of respecting weekends."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "bfe92b79f8",
+    "2ed1fccb76"
+   ],
+   "value": "Customers span large-scale enterprises, real estate developers, hospitals, schools, data centers, governments, and industrial manufacturers across 150+ countries."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $125,000 - $145,000 total compensation for AI/data science graduates in major U.S. hubs. The base is around $100,000-$115,000 with a sign-on bonus and performance-eligible bonus. It is high for non-FAANG but below $180,000+ top-tier prestige offers."
   },
   "evidence_sha": "76b7e305092ba58a",
+  "generated_at": 1784681809,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "bfe92b79f8",
+    "2ed1fccb76"
+   ],
+   "value": "Commercial building solutions, H-VAC, fire and security, and industrial technology."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Interviews will test your ability to scale AI into real physical systems, not just toy models. Prepare for behavioral questions on navigating bureaucracy for innovation, data processing at a terrestrial scale, product-sense for sustainability, and coding against legacy IoT data. Sell your ability to balance elite fast-paced delivery with the accommodation required in a 100,000-person hard-tech environment."
   },
-  "last_attempt_at": 1784681721,
+  "last_attempt_at": 1784681809,
   "last_evidence_at": 1784593387,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "2ed1fccb76"
+   ],
+   "value": "Global HQ in Cork, Ireland; North American field HQ in Glendale, Wisconsin. Major tech and business hubs are also in Milwaukee, WI, and San Jose, CA. The candidate will find large facilities and teams throughout the U.S. Midwest and North America."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "bfe92b79f8"
+   ],
+   "value": "To reimagine the performance of buildings to serve people, places, and the planet through a fully integrated digital ecosystem that makes buildings smart, healthy, and sustainable."
+  },
   "name": "Johnson Controls",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "2ed1fccb76"
+   ],
+   "value": "Estimated: Purposeful medium. Pace is faster and more entrepreneurial than government or healthcare, but significantly more deliberate and process-respecting than VC-funded startups. Iterations are structured around product life cycles that run for years, not weeks."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "bfe92b79f8",
+    "f0ea8a0da3"
+   ],
+   "value": "Products include HVAC equipment, fire detection and suppression systems, security systems, and the AI-powered 'OpenBlue' digital platform. OpenBlue connects building systems and applies data analytics and machine learning for performance optimization, energy efficiency, and predictive maintenance."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of vacation per year plus 1-2 floating and 10+ federal holidays for new graduates, varying by US region and team. Annual and holidays are the standard for this manufacturer grade, not flexible, unlimited."
   },
+  "refresh_after": 1789865809,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -95393,7 +95452,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: The company has observed an annual week-long holiday shutdown between Christmas and New Year's Day for many of its U.S. offices and factories. Many tech groups also schedule a-zone-but-not-working week around July for summer maintenance."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "2ed1fccb76"
+   ],
+   "value": "A Fortune 500, publicly traded (NYSE: JCI) mature multinational corporation with $26.79 billion in annual revenue, ~100,000 employees, and a 140-year operating history."
   },
   "sources": [
    {
@@ -95427,14 +95493,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=a7b01ccd52badb5d75a99bb5c73fc1db4c9d6d14aa3703fd8995f3b01beb14c0JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=0d7479d2-dd10-665e-36fa-6e4fdcff67b5&u=a1aHR0cHM6Ly93d3cuam5qLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "bfe92b79f8",
+    "2ed1fccb76"
+   ],
+   "value": "Johnson Controls is a global leader in smart, healthy, and sustainable building solutions, operating for over 135 years. The company makes money by designing, selling, installing, and servicing integrated building equipment, controls, and software systems that optimize energy, improve safety, and enhance occupant experience for commercial, industrial, and institutional customers worldwide."
+  },
+  "synthesized_evidence_sha": "76b7e305092ba58a",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "bfe92b79f8",
+    "f0ea8a0da3"
+   ],
+   "value": "Technical work centers on industrial AI, IoT, and data science applied to physical infrastructure. Teams build machine learning models on the OpenBlue platform for energy optimization, digital twin simulation, predictive HVAC maintenance, and computer vision security. Work combines cloud-scale data engineering with domain-specific challenges like thermodynamics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784593387,
   "web_search_url": "https://duckduckgo.com/?q=Johnson+Controls+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Johnson Controls provides an uncommon balance for AI talent: the prestige and resources of a Fortune 115 company with mission-driven, green-tech work, paired with a legacy industrial culture that estimates no 'move fast and break things' insanity. You get to work on impactful, real-world AI problems while keeping your life."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Above average for a Fortune 500 engineering role, generally rated 4 out of 5. True shut-downs and scheduled-release cycles prevent constant fire drills. Large-company culture means pockets of overtime exist, but systematic burnout is not part of the identity."
   }
  },
  "johnson electric": {
@@ -102345,11 +102438,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -102361,6 +102456,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784681809,
   "last_evidence_at": 1784672017,
   "name": "Leidos Australia",
   "pace_of_work": {
@@ -110161,42 +110257,102 @@
  },
  "marriott international": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "641681e7ff",
+    "3bb4d5d654"
+   ],
+   "value": "High; Marriott is the leading global pure-play hospitality brand with heavy name recognition across all levels, but sits a tier below an elite tech fundamental research lab like OpenAI or DeepMind in pure technical prestige."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "641681e7ff",
+    "3bb4d5d654"
+   ],
+   "value": "Asset-light business model. The company does not own most of the properties bearing its names. It captures recurring revenue by managing properties for a fee and licensing brands via franchise agreements, which provides high margins and strong cash flow with reduced capital intensity."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "3bb4d5d654"
+   ],
+   "value": "Friendly, service-oriented, diverse and rooted in 'people first' ethos, but undeniably bureaucratic with significant cross-team processes and approvals required before shipping product. Not a hacker-centric minimalist culture."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "3bb4d5d654"
+   ],
+   "value": "Leisure and business travelers worldwide, spanning individual guests seeking hotel stays, experience packages, and loyalty rewards, as well as corporate travel and group event organizers. The primary economic engine is franchisees and property owners who pay to use Marriott's systems, standards, and reservation platforms."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Base salary between $110,000-$130,000, with total compensation (base plus annual bonus) reaching $125,000-$155,000 in corporate Bethesda-area data science or AI engineering alignments."
   },
   "evidence_sha": "abf2e2f0107169b0",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784681809,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784681721,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "641681e7ff",
+    "3bb4d5d654"
+   ],
+   "value": "Travel and Hospitality (Asset-Light Management and Franchising)"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3bb4d5d654",
+    "641681e7ff"
+   ],
+   "value": "Expect interviews testing structured problem-solving with SQL and Python data wrangling, concise business intuition about how a pricing model impacts revenue, and behavioral questions reading for respect for Marriott's structured, cross-functional operating rhythm. Pace signals will be deliberate, not silicon-speed."
+  },
+  "last_attempt_at": 1784681809,
   "last_evidence_at": 1784674722,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "3bb4d5d654"
+   ],
+   "value": "Corporate headquarters in Bethesda, Maryland, with significant technology hubs and offices across the United States and likely international tech centers. See Marriott's careers site for specific tech lab locations."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "3bb4d5d654"
+   ],
+   "value": "To connect people through the power of travel, guided by core values that include putting people first, pursuing excellence, and acting with integrity."
+  },
   "name": "Marriott International",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady, mature corporate cadence, not a fast-moving startup cycle. A large enterprise is known for stability and deliberate execution rather than rapid iteration and pivots."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "3bb4d5d654"
+   ],
+   "value": "A portfolio of over 30 hotel brands across luxury, premium, and select-service tiers, including The Ritz-Carlton, St. Regis, W Hotels, Sheraton, Marriott, and Westin. Also operates Marriott Bonvoy, a loyalty and travel program connecting members to experiences and properties."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 18-22 days of paid time off in year one, plus additional sick leave and corporate holidays, based on competitive senior corporate benefits for large-cap hospitality."
   },
+  "refresh_after": 1789865809,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -110206,7 +110362,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown is not an official global policy across all tech teams, but observers note light working periods during Christmas/New Year and other holiday windows regularly occur as de facto quiet periods."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "641681e7ff",
+    "3bb4d5d654"
+   ],
+   "value": "Extremely mature global enterprise with roughly 8,000 properties across nearly 140 countries and a workforce numbering in the hundreds of thousands. It is a firmly established Fortune 500 company with steady, non-volatile growth."
   },
   "sources": [
    {
@@ -110240,14 +110404,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=448ee971f3b1dd88457173a4cfa620287d58c740d8183ea75fe46ea4f7ca1c31JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=16ae2af2-1db7-6310-1eaf-3d6f1cb262fb&u=a1aHR0cHM6Ly93d3cubWFycmlvdHQuY29tL2RlZmF1bHQubWk_bXNvY2tpZD0xNmFlMmFmMjFkYjc2MzEwMWVhZjNkNmYxY2IyNjJmYg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and other visas for highly specialized technical roles such as data science and software engineering at corporate levels. Verify with recruiter, as policies change."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "4c796dd5f6",
+    "3bb4d5d654"
+   ],
+   "value": "Marriott International is a global hospitality company that manages, franchises, and owns a vast portfolio of hotel and lodging brands. It generates revenue primarily through fees from property owners for managing and franchising its brands, rather than owning the physical real estate."
+  },
+  "synthesized_evidence_sha": "abf2e2f0107169b0",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "641681e7ff",
+    "3bb4d5d654"
+   ],
+   "value": "Demand forecasting and algorithm-based pricing to set optimal room rates. Personalization and recommendation engines using customer profile data for marketing and loyalty programs. Chatbots and LLM-powered customer service and concierge tools. Fraud detection and risk management systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674722,
   "web_search_url": "https://duckduckgo.com/?q=Marriott+International+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "641681e7ff",
+    "3bb4d5d654"
+   ],
+   "value": "This role sits inside a technology division focused on predictive analytics and digital optimization for one of the world's largest travel companies. It offers architecture-scale data and AI problems without the frantic 'founding sprint' burnout of startups and aligns with a candidate demand for elite brand prestige, stable business logic, and genuine guardrails on working hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Strong work-life balance by comparison to high-burnout tech firms, reflecting the structured culture of descendants of a large institutional company. Typical high corporate benefits and expected 40-45 hour weeks without toxic crunch."
   }
  },
  "marsh": {
@@ -130700,39 +130894,96 @@
  },
  "onyx point llc": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "c08e7414b7"
+   ],
+   "value": "Niche / Non-standard. It does not register as a Big Tech or Unicorn AI prestige hire, but instead signals high-end, secured government computing. Prestige is sector-specific, not broadly recognized in the consumer tech world."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "c08e7414b7"
+   ],
+   "value": "The company likely generates revenue through government contracting, providing software engineering services, specifically developing and maintaining high-performance, secure software for defense and intelligence clients."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-Focused & Formal. The culture is likely driven by client security directives and compliance rather than a 'move fast and break things' innovation culture. This may conflict with the desire for 'fast, innovative tech culture'."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "c08e7414b7"
+   ],
+   "value": "Given the Hanover, MD location and the nature of the technical work implied by MapReduce and cleared defense terminology, the primary customer is likely U.S. government defense or intelligence agencies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "c08e7414b7"
+   ],
+   "value": "$78,000 - $95,000 base salary. While the job posting lists a very high cap ($250K), typical new-grad roles at small defense contractors in Maryland fall on the lower end of the stated range in base pay."
   },
   "evidence_sha": "c19e60209d8692dd",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784681809,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "c08e7414b7"
+   ],
+   "value": "Defense & Government Technology / Cybersecurity."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "c08e7414b7"
+   ],
+   "value": "Due to the specific technical stack, expect deep dives into Java, algorithmic thinking for distributed systems (MapReduce), and automated testing (QTA). The process will likely test aptitude for acquiring security clearances and handling non-standard classified project constraints rather than pure web-scale consumer tech."
+  },
+  "last_attempt_at": 1784681809,
   "last_evidence_at": 1784674767,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "c08e7414b7"
+   ],
+   "value": "The specific job posting is for Hanover, MD. No other office locations are mentioned in the available sources."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Onyx Point, LLC.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Medium to Fast. Defense contractors are typically driven by strict delivery milestones and urgent national security goals, but are constrained by government oversight which can create a more rigid and regulated pace compared to commercial startups."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "c08e7414b7"
+   ],
+   "value": "Specific products are unclear from available sources. The required skills suggest work involving large-scale data processing frameworks (MapReduce) and custom testing automation (GhostMachine, QTA), which points to internal tools or client solutions for data analysis and cybersecurity."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days (120 hours) of Paid Time Off plus 10 federal holidays. A conservative estimate standard for small-to-mid government contractors."
   },
+  "refresh_after": 1789865809,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -130742,7 +130993,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Not guaranteed. Unlike some prime hardware manufacturers, smaller contracting firms rarely execute company-wide week-long shutdowns and usually maintain operations on client active days."
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -130786,14 +131042,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=78608a09f598d6f2a47007d38467ae445dd1a14364528ca3335078ef1049aa89JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ea687d1-bcb0-6028-15c3-904cbd536131&u=a1aHR0cHM6Ly9vbnl4Y29sbGVjdGlvbi5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "c08e7414b7"
+   ],
+   "value": "Onyx Point, LLC appears to be a technology-focused company hiring early-career software engineers, with a job posting emphasizing skills in Java, MapReduce, and software design. Based on its name and the technical requirements, it likely operates as a government or defense contractor providing software development and data engineering services."
+  },
+  "synthesized_evidence_sha": "c19e60209d8692dd",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "c08e7414b7"
+   ],
+   "value": "Postings show work with Java, MapReduce, GhostMachine, and QTA (Quality Test Automation). This suggests back-end data processing, large-scale distributed computing, and custom internal testing frameworks, likely in a secure or classified environment."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674767,
   "web_search_url": "https://duckduckgo.com/?q=Onyx+Point%2C+LLC.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "c08e7414b7"
+   ],
+   "value": "The listed salary band for entry-level ($78K-$250K) is aggressive and widens to capture high-end, cleared technical talent, aligning with the candidate's desire for elite pay. The nature of small defense contractors often provides deep technical work early on, though the work-life balance varies and must be carefully verified against the candidate's desire for 'sane hours' and 'guaranteed shutdowns,' which are not guaranteed in a contractor setting."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. Contractors often bill by the hour and require strict core hours and occasional surge hours for deadlines, providing less flexibility than modern tech product companies. 'Sane hours and guaranteed shutdowns' are atypical for the defense contracting sector overall."
   }
  },
  "openai": {
@@ -133394,37 +133677,82 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Insufficient public data to classify; the candidate should verify any claims of top-tier AI prestige directly during the interview process."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven and innovation-focused, but the actual cultural environment cannot be validated from the provided sources."
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: To attract top-tier AI talent, base salary may range $120,000-$160,000 with significant equity, though actual bands depend heavily on company stage, funding, and prestige. Confirm exact total compensation during the offer stage."
   },
   "evidence_sha": "1425dcb408b3cb12",
+  "generated_at": 1784681809,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "d4647e0a3b"
+   ],
+   "value": "Technology/Software"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "To assess alignment with candidate priorities, the interview should explore whether the company's technical stack and projects involve cutting-edge AI, how it compares to Big Tech in prestige and pay bands, and whether it enforces explicit limits on working hours or scheduled company-wide shutdowns to prevent burnout."
   },
+  "last_attempt_at": 1784681809,
   "last_evidence_at": 1784672484,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Parallel Web Systems",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced but potentially more sustainable than Agile-at-scale bureaucracies, if the company culture matches the candidate's hope for innovation without burnout."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "d4647e0a3b"
+   ],
+   "value": "A source references a 'Desktop' product line, but no detailed product information or service descriptions are available from the provided materials."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: No specific PTO policy found in research. May offer unlimited vacation or a standard 15-20 days; clarify in the interview to ensure alignment with requiring genuine, scheduled time off."
   },
+  "refresh_after": 1789865809,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -133434,7 +133762,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: The company may offer guaranteed company-wide shutdowns if it respects work-life balance as per the culture, but no such policy is confirmed in the sources."
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -133468,14 +133801,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=e9c003373213dac2241d41e2a611c146d2e907dbd269f28a202a4a980720c366JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=068da0dd-8eee-6028-1b01-b7408fbe61eb&u=a1aHR0cHM6Ly93d3cucGFyYWxsZWxzLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "fb24675bde",
+    "d4647e0a3b",
+    "965e5407eb"
+   ],
+   "value": "Parallel Web Systems appears to be a technology company, but the provided sources contain insufficient substantive detail to describe its specific function or revenue model in plain English. The source materials are limited to redirect prompts rather than descriptive content about the company's operations."
+  },
+  "synthesized_evidence_sha": "1425dcb408b3cb12",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672484,
   "web_search_url": "https://duckduckgo.com/?q=Parallel+Web+Systems+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Based on candidate priorities, this role could be compelling if Parallel Web Systems operates with a fast, innovative culture, elite AI/data science prestige, high new-grad compensation, and a mission-driven commitment to work-life balance with guaranteed shutdowns and sane hours. However, none of these attributes are confirmed by the supplied sources."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: High, assuming the company mission includes respected work-life balance, but no specific policies are found in the sources."
   }
  },
  "paramount": {
@@ -151662,49 +152020,122 @@
  },
  "robert bosch venture capital": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "e3146204de",
+    "5f658fe639"
+   ],
+   "value": "Tier 2: High corporate prestige brand. Not a dedicated tech firm, but carries immense respect in deep-tech and European engineering circles for data-driven investment analysis."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "e3146204de"
+   ],
+   "value": "Makes money by acquiring equity stakes in high-growth potential startups and generating returns through liquidity events like initial public offerings or acquisitions."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "e3146204de",
+    "5f658fe639"
+   ],
+   "value": "International, analytical, and collegial, combining the scientific rigor of the Bosch engineering with the curious, future-focused nature of the venture capital world."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "e3146204de"
+   ],
+   "value": "Its customers are the innovative technology startups it invests in and the limited partners or parent company providing the investment funds."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120,000-$140,000 base salary for a new graduate analyst in a US office, plus a discrete bonus. Top-tier for a corporate role but possibly less than elite tech firm total comp."
   },
   "evidence_sha": "9d934ca2d0f825f5",
+  "generated_at": 1784681809,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e3146204de",
+    "5f658fe639"
+   ],
+   "value": "Venture Capital & Private Equity / Corporate Venture within the Automotive and Industrial Technology sectors."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+   "value": "Will test data-driven analytical rigor, depth of technical insight for assessing startup viability, and cultural alignment. Candidates should demonstrate genuine enthusiasm for venture capital and how robust technical analysis drives investment decisions."
   },
+  "last_attempt_at": 1784681809,
   "last_evidence_at": 1784672483,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "e3146204de",
+    "5f658fe639"
+   ],
+   "value": "Headquartered in Stuttgart, Germany, with offices in key global innovation hubs including Palo Alto, USA, and Shanghai, China."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "e3146204de",
+    "5f658fe639"
+   ],
+   "value": "To invest in transformative technology startups that align with Bosch's strategic interests and to foster innovation that shapes future markets."
+  },
   "name": "Robert Bosch Venture Capital",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady and strategic pace in a corporate VC environment, not frantic. Intensity spikes around deal closings, but the overall rhythm is slower than real-time product-centric tech firms."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "e3146204de",
+    "5f658fe639"
+   ],
+   "value": "RBVC does not develop products. It offers venture capital investment, strategic partnership facilitation, and access to Bosch's global network and technical expertise for its portfolio companies."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-30 days annually, reflecting a generous entity in the European tradition, with competitive US packages."
   },
+  "refresh_after": 1789865809,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No mandatory company-wide shutdown periods found, but strong cultural example of minimal off-hours contact."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "e3146204de",
+    "5f658fe639"
+   ],
+   "value": "Subsidiary of a large, mature enterprise (Bosch Group). The venture arm operates with a lean team typical of corporate VC firms."
   },
   "sources": [
    {
@@ -151738,14 +152169,44 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a large multinational entity, the Bosch Group typically has pathways for work authorization, but specific sponsorship availability is role-dependent and must be confirmed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "e3146204de",
+    "5f658fe639"
+   ],
+   "value": "Robert Bosch Venture Capital (RBVC) is the corporate venture capital arm of the Bosch Group, investing in early-stage technology startups worldwide. They provide funding to innovative companies and generate returns through equity appreciation and successful exits."
+  },
+  "synthesized_evidence_sha": "9d934ca2d0f825f5",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "e3146204de",
+    "5f658fe639"
+   ],
+   "value": "Involves deep technology due diligence, market analysis, and portfolio support in fields like AI, autonomy, IoT, and semiconductors. Technical roles focus on evaluating startup feasibility and technology trends rather than building software."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672483,
   "web_search_url": "https://duckduckgo.com/?q=Robert+Bosch+Venture+Capital+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "e3146204de",
+    "5f658fe639"
+   ],
+   "value": "Offers a rare opportunity to evaluate cutting-edge AI and deep-tech startups globally within the prestige and stability of a legacy industrial giant. The role provides elite deal-focused technical learning without the grind of 80-hour investment banking weeks, aligning with a culture that formally respects personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Very Good. As a European-founded corporate VC, it promotes a strong engineering culture with strict respect for working hours and low burnout risk, and is not a high-burnout environment."
   }
  },
  "robert half": {
@@ -194723,39 +195184,102 @@
  },
  "visa": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "bd5f4e8ec4"
+   ],
+   "value": "Elite established player in fintech, with strong and growing AI/DS brand, competing for talent alongside top FAANG companies and consultancies in the payments domain but with a more stable industry profile."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "bd5f4e8ec4",
+    "15e5904a78"
+   ],
+   "value": "Visa generates the majority of its revenue from service fees based on the total dollar volume of transactions on Visa-branded cards, data processing fees per transaction cleared through VisaNet, and cross-border fees on international transactions. It does not bear credit risk of cardholders, which are managed by its partner financial institutions."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "bd5f4e8ec4"
+   ],
+   "value": "Professional, ethically grounded, and collaborative. The culture reflects a balance of transactional-tech innovation with a mature corporate responsibility mandate due to its role in global financial infrastructure. Diversity and inclusion are promoted, and the feel is often described as collegial rather than intensely competitive."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "bd5f4e8ec4",
+    "15e5904a78"
+   ],
+   "value": "Visa’s direct customers are financial institutions that issue Visa cards to individuals, merchants, and corporations; it also serves governments, payment processors, and corporate travel accounts. The end-users are individual and business cardholders who use the cards worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Entry-level AI/Data Science/Software Engineering compensation packages in major U.S. tech hubs (Bay Area, Austin) typically range from $135,000-$170,000 total annual compensation depending on location and team match, including base salary, signing bonus, and annual performance and potential equity grants."
   },
   "evidence_sha": "c9a5f0bdcfb7dd7f",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784681809,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "bd5f4e8ec4",
+    "15e5904a78"
+   ],
+   "value": "Financial Services / Digital Payments Technology"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
+   "value": "Expect case studies and technical deep-dives on system design for high-throughput/low-latency architectures, machine learning model lifecycle (especially fraud/risk), and coding proficiency in Python or Java. Visa interviews also typically emphasize behavioral questions probing collaboration, ethical data-stewardship, and dealing with ambiguity given the company’s risk mitigation and regulatory context."
+  },
+  "last_attempt_at": 1784681809,
   "last_evidence_at": 1784593389,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "bd5f4e8ec4"
+   ],
+   "value": "Visa’s global corporate headquarters is in San Francisco, California, with a major regional headquarters in Foster City, California. Engineering and AI hubs include Austin, Texas, Atlanta, Georgia, Denver, Colorado, and Bangalore, India, with additional offices in London, Singapore, Dubai, and Miami."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "bd5f4e8ec4"
+   ],
+   "value": "Visa's stated mission is to be the best way to pay and be paid for everyone, everywhere. Its corporate purpose focuses on enabling individuals, businesses, and economies to thrive through affordable, convenient, secure, and reliable digital payments."
+  },
   "name": "Visa",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to brisk with measured, process-oriented execution aligned to financial industry reliability rather than chaotic start-up speed. New-grads can expect a structured environment that values engineering rigor and security, avoiding fire-drill “move fast and break things” cultures."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "15e5904a78",
+    "bd5f4e8ec4"
+   ],
+   "value": "Visa's core products are credit, debit, and prepaid cards operating on the VisaNet processing network, alongside business-to-business payment solutions, commercial cards, and digital wallets. The company also provides fraud protection, data analytics, and consulting services to its financial institution clients."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of vacation per year for new graduates, aligning with large-cap American companies, in addition to personal/sick days and separate company-observed holidays."
   },
+  "refresh_after": 1789865809,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -194765,7 +195289,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Visa tends to observe all main U.S. public holidays with company-wide closures, but does not typically implement week-long whole-company shutdowns like some technology firms. Some teams may have lighter staffing between Christmas and New Year's informally."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "bd5f4e8ec4"
+   ],
+   "value": "Visa is a mature large-cap public company (ticker V), with approximately 30,000 employees globally and one of the highest market capitalizations in the world. It is a well-established industry leader, not a startup or growth-stage company."
   },
   "sources": [
    {
@@ -194799,14 +195330,43 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a large publicly traded global technology company, Visa typically sponsors work visas for candidates in highly specialized AI, data science, and engineering positions, especially at its major U.S. tech hubs. Sponsorship will depend on role requirements, the candidate's profile, and current immigration regulations."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "bd5f4e8ec4",
+    "15e5904a78"
+   ],
+   "value": "Visa operates the world’s largest retail electronic payments network, connecting consumers, merchants, financial institutions, and governments globally. It doesn’t issue cards or extend credit itself, but earns revenue from transaction processing fees, service fees on payment volume, and cross-border transaction charges whenever a Visa-branded card is used."
+  },
+  "synthesized_evidence_sha": "c9a5f0bdcfb7dd7f",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "bd5f4e8ec4",
+    "f16eec2a6f"
+   ],
+   "value": "Technical teams at Visa work on high-scale real-time payment processing (thousands of transactions per second), AI-driven fraud detection models, generative AI applications, and massive data pipelines analyzing consumer spending patterns. The work spans deep infrastructure engineering, applied ML, and data science on one of the world's largest and most secure transaction networks."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784593389,
   "web_search_url": "https://duckduckgo.com/?q=Visa+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "bd5f4e8ec4"
+   ],
+   "value": "Visa marries elite brand-name prestige with an AI and data-science challenge at massive scale (the world's payments network), without the chaotic burnout culture sometimes found in pure-play Silicon Valley tech firms. The mission-driven nature of global commerce is balanced by a more measured operational tempo that respects personal time, making it a rare combination of high-impact technical work and sustainable work-life boundaries sought by top new-grad talent."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Above average for a large-cap tech/fintech company. Work weeks typically fall within 35-45 hours, with genuine boundaries and predictable release cycles, though on-call expectations exist for critical and product teams handling real-time payments."
   }
  },
  "vishay intertechnology": {
