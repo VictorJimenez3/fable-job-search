@@ -41011,7 +41011,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -41029,7 +41029,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784692689,
+  "last_attempt_at": 1784692874,
   "last_evidence_at": 1784674523,
   "name": "Censys",
   "pace_of_work": {
@@ -69336,7 +69336,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 20,
+  "attempts": 21,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -69354,7 +69354,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784692689,
+  "last_attempt_at": 1784692874,
   "last_evidence_at": 1784676545,
   "name": "Esri",
   "pace_of_work": {
@@ -102913,7 +102913,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 12,
+  "attempts": 13,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -102931,7 +102931,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784692689,
+  "last_attempt_at": 1784692874,
   "last_evidence_at": 1784674043,
   "name": "International Monetary Fund",
   "pace_of_work": {
@@ -109245,37 +109245,90 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — High-prestige applied AI in national security/space; not a pure research lab but deploys at scale on classified programs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a270634ed7"
+   ],
+   "value": "Revenue from long-term government contracts (cost-plus, fixed-price), commercial EPC projects, technology licensing, and recurring digital/consulting services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, engineering-heavy, structured but with pockets of innovation (KBRwyle, KBR Digital). Less 'move fast' culture; more 'deliver reliably for the warfighter'."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d103a00323"
+   ],
+   "value": "U.S. federal agencies (DoD, NASA, intelligence community), allied governments, and major energy/industrial corporations worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$110,000 base + modest signing bonus/RSUs (vesting 4yr). Lower than FAANG but competitive for cleared defense roles."
   },
   "evidence_sha": "1467307e13dfde32",
+  "generated_at": 1784692874,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d103a00323"
+   ],
+   "value": "Government Contracting / Engineering & Construction / Defense Technology"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Expect clearance-related questions, domain knowledge in defense/energy, applied ML for sensor fusion or simulation, and behavioral questions on working in regulated, mission-critical environments."
   },
+  "last_attempt_at": 1784692874,
   "last_evidence_at": 1784583419,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d103a00323"
+   ],
+   "value": "Headquartered in Houston, TX; major hubs in Arlington/VA, Huntsville/AL, Colorado Springs/CO, UK, Australia, Middle East; remote options vary by contract."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d103a00323"
+   ],
+   "value": "Deliver innovative, mission-critical solutions that protect national security, advance energy transition, and enable sustainable infrastructure for clients globally."
+  },
   "name": "KBR Careers",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate to fast on innovation programs; slower on compliance-heavy contracts. Project-driven with milestones tied to government fiscal cycles."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d103a00323"
+   ],
+   "value": "Government services (defense, intelligence, space), energy solutions (refining, petrochemicals, clean energy), technology & consulting (digital, cyber, AI/ML), and sustainable infrastructure projects."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays; accrual-based, increases with tenure. No unlimited PTO policy."
   },
+  "refresh_after": 1789876874,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -109285,7 +109338,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; observes federal holidays. Some programs may have slow periods between contract years."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a270634ed7"
+   ],
+   "value": "Public company (NYSE: KBR), ~33,000 employees, $6-7B annual revenue, mature multinational contractor."
   },
   "sources": [
    {
@@ -109319,14 +109379,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=791b39d4f4bc2aac10e91cdd5751fae263378fa6487e0a2e23f46f666884c01eJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9pbnZlc3RvcnMua2JyLmNvbS9Ib21lL2RlZmF1bHQuYXNweA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active H-1B sponsor for specialized technical roles; many positions require U.S. citizenship/security clearance due to defense work."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d103a00323"
+   ],
+   "value": "KBR is a global engineering, procurement, and construction company delivering technology-driven solutions for government and commercial clients across defense, intelligence, energy, and infrastructure sectors."
+  },
+  "synthesized_evidence_sha": "1467307e13dfde32",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d103a00323"
+   ],
+   "value": "AI/ML for defense analytics, digital twins, cybersecurity, autonomous systems, data fusion, cloud platforms, and advanced modeling for energy/space missions."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583419,
   "web_search_url": "https://duckduckgo.com/?q=KBR+Careers+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "KBR offers elite-prestige defense/space AI work with new-grad pay competitive with top tech, but operates in a government-contractor culture that can mean clearance bureaucracy, variable WLB by program, and less pure 'tech company' pace than FAANG."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — Varies significantly by program; some roles have guaranteed 40-hr weeks, others surge near deliverables. Limited shutdowns beyond federal holidays."
   }
  },
  "kbra": {
@@ -171183,7 +171268,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -171201,7 +171286,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784692689,
+  "last_attempt_at": 1784692874,
   "last_evidence_at": 1784677413,
   "name": "Roku",
   "pace_of_work": {
@@ -192745,7 +192830,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 10,
+  "attempts": 11,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -192763,7 +192848,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784692689,
+  "last_attempt_at": 1784692874,
   "last_evidence_at": 1784677412,
   "name": "Synergy ECP",
   "pace_of_work": {
@@ -206505,7 +206590,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -206523,7 +206608,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784692689,
+  "last_attempt_at": 1784692874,
   "last_evidence_at": 1784677414,
   "name": "Twitch Interactive, Inc.",
   "pace_of_work": {
@@ -226646,7 +226731,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 11,
+  "attempts": 12,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -226664,7 +226749,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784692689,
+  "last_attempt_at": 1784692874,
   "last_evidence_at": 1784674276,
   "name": "Zapier",
   "pace_of_work": {
