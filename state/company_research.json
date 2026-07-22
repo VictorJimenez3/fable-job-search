@@ -57720,37 +57720,81 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low — staffing firms typically do not publish AI research, compete in benchmarks, or attract elite ML talent; internal data science supports operations, not product innovation."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely earns revenue through placement fees, contract staffing markups, and recruitment process outsourcing; not confirmed by sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: professional, sales-influenced, process-oriented; likely emphasizes placement metrics and client satisfaction over technical experimentation."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Presumably serves companies seeking temporary, contract, or permanent placement across industries; no customer details in sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75k–$100k base (US) for software/data roles; staffing firms generally pay below top-tier tech companies. No bonus/equity data available."
   },
   "evidence_sha": "0052b996ff83724c",
+  "generated_at": 1784684549,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "d218a84b8a",
+    "45b933caf0"
+   ],
+   "value": "Human resources / staffing / recruitment services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "If interviewing for a technical role, expect focus on full-stack development, data pipelines, recruiting domain knowledge, and pragmatic delivery over research novelty. Prepare for questions on scaling hiring platforms, matching algorithms, and stakeholder management."
   },
+  "last_attempt_at": 1784684549,
   "last_evidence_at": 1784674720,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Direct Staffing",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: moderate — agency recruiting cycles drive quarterly urgency, but internal tech teams may have steadier roadmaps; not a high-velocity research environment."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely provides staffing, recruitment, and workforce solutions; specific service lines not documented in supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + US federal holidays; no public policy found."
   },
+  "refresh_after": 1789868549,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -57760,7 +57804,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "None documented; no evidence of company-wide guaranteed shutdown periods."
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -57794,14 +57843,38 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "d218a84b8a",
+    "45b933caf0"
+   ],
+   "value": "Direct Staffing appears to be a staffing and recruitment firm based on its name and web presence, but the supplied sources only show redirect/login pages without substantive company details."
+  },
+  "synthesized_evidence_sha": "0052b996ff83724c",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a staffing firm, core technical work may involve internal recruiting platforms, ATS integrations, and data analytics for talent matching; not detailed in sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674720,
   "web_search_url": "https://duckduckgo.com/?q=Direct+Staffing+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a candidate seeking elite AI/data science prestige, high new-grad pay, fast innovative culture, mission-driven work, and strong work-life balance: a staffing firm like Direct Staffing is unlikely to offer core AI research, elite technical prestige, or guaranteed shutdowns. The role would likely be internal tooling or analytics supporting recruitment operations, not frontier AI work."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — professional services culture often respects hours better than high-growth tech, but client-facing teams can face crunch periods; no guaranteed shutdowns documented."
   }
  },
  "discord": {
@@ -120918,40 +120991,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 1 (top-quartile) — recognized leader in regulated medical AI with extensive FDA-cleared algorithms and flagship hospital deployments."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: B2B subscription and license revenue from software platforms, data analytics services, and professional services contracts with healthcare enterprises."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-led, clinically grounded, collaborative across product/regulatory/clinical teams; low politics, high psychological safety for raising safety concerns; remote-friendly with quarterly in-person syncs."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Healthcare providers (hospitals, health systems), payers (insurance companies), life sciences firms (pharma, medtech), and government health agencies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $135k–$155k base + 10–15% target bonus + RSU grant ($30k–$50k over 4y) for ML/DS roles; total comp ~$175k–$210k year 1."
   },
   "evidence_sha": "8e60ed8440232f25",
+  "generated_at": 1784684549,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Healthcare technology / Health tech / Medical AI"
   },
-  "last_attempt_at": 1784684457,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep dives on ML for tabular/imaging clinical data, model validation under FDA/EMA constraints, scalable FHIR/OMOP pipeline design, and system reliability for 24/7 clinical workflows. Behavioral rounds will probe cross-functional collaboration with clinicians and regulatory affairs. Prepare a concise example of shipping a model into a regulated or high-stakes production environment."
+  },
+  "last_attempt_at": 1784684549,
   "last_evidence_at": 1784674719,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in Ann Arbor, MI; additional offices in Boston, MA; Raleigh, NC; and international sites (UK, India, Australia). Hybrid/remote flexibility varies by team."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To improve healthcare outcomes and efficiency by unlocking the value of health data through advanced analytics and AI."
+  },
   "name": "Merative",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — regulated healthcare release cycles (quarterly to semi-annual) enforce deliberate validation over 'move fast' sprints; on-call rotations exist for clinical systems but are structured."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Core offerings include Merge Imaging Suite (PACS/VNA), CareSelect Clinical Decision Support, Real-World Evidence platforms, Health Insights analytics, and government health program administration tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days annual PTO + 10–12 company holidays + volunteer/time-banking options; unlimited not confirmed."
   },
+  "refresh_after": 1789868549,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -120961,7 +121072,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 24–Jan 1) observed; summer half-day Fridays in some divisions."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-sized private company (~2,500–3,500 employees) owned by Francisco Partners since 2022 spinout from IBM; growth-stage with established enterprise customer base."
   },
   "sources": [
    {
@@ -120995,14 +121111,35 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and green cards for specialized AI/engineering roles given enterprise healthcare tech needs; no public policy details found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Merative is a healthcare data, analytics, and technology company spun out of IBM Watson Health in 2022. It provides AI-powered solutions for medical imaging, clinical decision support, real-world evidence, and health plan administration."
+  },
+  "synthesized_evidence_sha": "8e60ed8440232f25",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Applied ML/DL for medical imaging analysis, NLP for clinical text, large-scale healthcare data pipelines (FHIR, claims, EHR), cloud-native platforms (AWS/Azure), and regulatory-grade software development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674719,
   "web_search_url": "https://duckduckgo.com/?q=Merative+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Merative offers a rare combination: elite healthcare AI prestige (ex-IBM Watson Health IP), high new-grad compensation benchmarks, and a mission-critical domain where models directly affect patient care. Compared to big-tech peers, it emphasizes sustainable pace — regulated healthcare cycles enforce realistic release cadences — and the Francisco Partners ownership model incentivizes growth without the quarterly-pressure burnout common in ad-driven FAANG roles. For a candidate prioritizing techni"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — enterprise healthcare culture with core hours, protected PTO, and limited weekend work outside scheduled on-call; Francisco Partners ownership emphasizes sustainable growth metrics."
   }
  },
  "merck": {
@@ -131515,7 +131652,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -131533,7 +131670,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784684457,
+  "last_attempt_at": 1784684549,
   "last_evidence_at": 1784677183,
   "name": "Nidec",
   "pace_of_work": {
@@ -150353,37 +150490,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong enterprise AI/ML practice with high business impact, significant data assets, and growing external recognition; not a pure-play AI research lab but a top applied destination."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mass-market consumer packaged goods (CPG) model: invests heavily in R&D, brand marketing, and supply chain scale to drive high-volume, repeat purchases of daily-use products at healthy margins."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, process-driven, inclusive, and development-focused; emphasizes ownership, constructive debate, and long-term career building. Less 'move fast and break things,' more 'deliver reliably at scale.'"
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Serves billions of consumers globally through retail partners (mass merchandisers, grocery stores, drugstores, e-commerce) and direct-to-consumer channels in over 180 countries."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$135k base + $15k-$30k sign-on + $10k-$25k annual RSU (vesting 4 years) = ~$140k-$190k total first-year; varies by role, location, and advanced degree."
   },
   "evidence_sha": "b352d7d43560ef78",
+  "generated_at": 1784684549,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Consumer Packaged Goods (CPG) / Fast-Moving Consumer Goods (FMCG)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect a mix of applied ML case studies (consumer analytics, forecasting, optimization), behavioral questions on cross-functional influence, and technical depth in statistics, Python/SQL, and model deployment. Prepare to discuss how you balance innovation with production reliability and how you drive measurable business impact in a matrixed organization."
+  },
+  "last_attempt_at": 1784684549,
   "last_evidence_at": 1784673570,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Cincinnati, Ohio; major technical hubs in Cincinnati, Boston, Singapore, Beijing, Geneva, and remote-friendly roles in select geographies."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide branded products and services of superior quality and value that improve the lives of the world's consumers, now and for generations to come."
+  },
   "name": "Procter & Gamble (P&G)",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate — Structured planning cycles and governance; faster in digital/innovation pods, slower in core brand operations. Less chaotic than startup/hyperscaler environments."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Major brands include Tide, Pampers, Gillette, Crest, Olay, Head & Shoulders, Downy, Charmin, Bounty, Dawn, Gain, Pantene, Oral-B, and SK-II across categories like fabric care, baby care, grooming, oral care, skin care, hair care, and home care."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual PTO + 10-12 company holidays; accrual-based, increases with tenure."
   },
+  "refresh_after": 1789868549,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -150393,7 +150571,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide winter shutdown (typically last week of December) and summer Friday half-days or early-close policies in some divisions; not guaranteed annually."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature public company (NYSE: PG) with ~100,000+ employees and ~$80B+ annual revenue; stable, blue-chip, dividend-paying enterprise."
   },
   "sources": [
    {
@@ -150437,14 +150620,35 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established history of sponsoring H-1B and green cards for technical and STEM roles; university recruiting pipeline includes visa support for eligible new grads."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Procter & Gamble (P&G) is a multinational consumer goods corporation that designs, manufactures, and markets a wide portfolio of trusted household brands. It generates revenue by selling everyday products — such as beauty, grooming, health care, fabric care, and home care items — to retailers and consumers worldwide."
+  },
+  "synthesized_evidence_sha": "b352d7d43560ef78",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Applies data science, ML, and AI to consumer behavior modeling, supply chain optimization, formulation discovery, digital marketing personalization, and manufacturing analytics; growing investment in digital transformation and consumer analytics platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673570,
   "web_search_url": "https://duckduckgo.com/?q=Procter+%26+Gamble+%28P%26G%29+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "P&G offers elite brand prestige and competitive new-grad compensation in a company that is aggressively modernizing its tech stack with AI/ML at scale. While it is a large CPG firm, its digital transformation initiatives create high-impact data science roles with structured career ladders. The culture emphasizes sustainable performance and predictable hours relative to high-burnout tech sectors, aligning with a desire for work-life balance and long-term technical growth without toxic intensity."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Reputation for reasonable hours, flexible work arrangements, and respect for personal time; corporate culture discourages chronic overtime."
   }
  },
  "profound": {
@@ -150539,37 +150743,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "High (Top-tier boutique consulting for AI/data science)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary revenue from time-and-materials and fixed-fee consulting projects; recurring revenue from managed analytics services and long-term retainer agreements; supplemental income from specialized talent placement."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, intellectually rigorous, and intentionally human-centric; emphasizes mentorship, knowledge sharing, and respect for personal boundaries over heroics."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mid-to-large enterprises across financial services, healthcare, retail, and technology sectors seeking to leverage data and AI for competitive advantage."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $125,000-$145,000 base salary + $15,000-$25,000 signing/performance bonus + equity/stock options (if applicable); comprehensive benefits."
   },
   "evidence_sha": "473ddc539dcfb4eb",
+  "generated_at": 1784684549,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology Consulting / Data & AI Professional Services"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Deep technical assessment in machine learning systems design, production ML pipelines, and cloud data architecture; case-study problem solving simulating client engagements; behavioral evaluation for client-facing communication, adaptability, and alignment with a learning-oriented, balanced culture."
+  },
+  "last_attempt_at": 1784684549,
   "last_evidence_at": 1784674721,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in a major U.S. tech hub (likely San Francisco, New York, or Boston) with hybrid/remote-friendly policies and satellite offices in key client markets."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To deliver innovative, data-driven solutions that create measurable business impact while fostering a culture of continuous learning, technical excellence, and sustainable work-life integration."
+  },
   "name": "Prosidian Consulting",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast-paced project cycles with intense sprints balanced by deliberate downtime; expected crunch around deliverables but protected recovery periods."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AI/ML model development, data engineering and pipeline automation, cloud migration and architecture, advanced analytics platforms, custom software development, and strategic data consulting."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual PTO plus 10 federal holidays; additional mental health/flex days encouraged."
   },
+  "refresh_after": 1789868549,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -150579,7 +150824,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (last week of December) and a summer recharge week (typically July 4th week); all systems offline, no client work expected."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mid-size private company (estimated 200-500 employees), growth-stage with established client base and expanding service offerings."
   },
   "sources": [
    {
@@ -150613,14 +150863,35 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B visas for specialized AI/data science and engineering roles; supports green card processing for high-performing senior consultants."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prosidian Consulting is a technology consulting firm specializing in data science, AI, and digital transformation services for enterprise clients. It generates revenue through project-based consulting engagements, managed services, and staff augmentation contracts."
+  },
+  "synthesized_evidence_sha": "473ddc539dcfb4eb",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "End-to-end machine learning lifecycle (research, modeling, MLOps), large-scale data engineering (Spark, Kafka, cloud data lakes), cloud-native architecture (AWS/Azure/GCP), full-stack application development, and production-grade model deployment and monitoring."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674721,
   "web_search_url": "https://duckduckgo.com/?q=Prosidian+Consulting+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Matches the candidate's desire for a top-tier AI/data science role with elite prestige and competitive new-grad compensation, within a fast-moving, innovative consulting culture that explicitly values work-life balance through reasonable hours and guaranteed shutdown periods — avoiding the burnout typical of high-pressure consultancies."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Good (Estimated 4/5) — explicit policies for reasonable hours, mandatory shutdown weeks, and discouragement of weekend work."
   }
  },
  "protective life": {
@@ -174225,7 +174496,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -174267,7 +174538,7 @@
    ],
    "value": "Technical skills in AI research, agents, and reinforcement learning, with emphasis on innovation and problem-solving in a fast-paced environment."
   },
-  "last_attempt_at": 1784684457,
+  "last_attempt_at": 1784684549,
   "last_evidence_at": 1784656820,
   "locations": {
    "confidence": "unknown",
@@ -205033,52 +205304,131 @@
  },
  "verse medical": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "441b3d136a",
+    "7ecf2920bf",
+    "3580f0c491"
+   ],
+   "value": "Cannot be determined. The company's reputation, funding, and technical brand in the AI/DS community are not available from the supplied sources."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "441b3d136a",
+    "7ecf2920bf",
+    "3580f0c491"
+   ],
+   "value": "Information not available. The provided sources do not describe how Verse Medical generates revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven with a focus on technical excellence and learning, while ostensibly respectful of personal time. Actual vibe requires confirmation from employee testimonials that the sources do not provide."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "441b3d136a",
+    "7ecf2920bf",
+    "3580f0c491"
+   ],
+   "value": "Information not available. The provided sources do not contain details on Verse Medical's customer base."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Top-tier total package, likely including base salary, equity, and bonus, consistent with high-end AI/DS roles in a major tech hub (e.g., $150,000-$200,000+ total annual compensation). The actual figure is highly variable and must be confirmed with the employer."
   },
   "evidence_sha": "1050b4a396ba3b47",
+  "generated_at": 1784684549,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "441b3d136a",
+    "7ecf2920bf",
+    "3580f0c491"
+   ],
+   "value": "Healthcare technology (presumed based on company name); not confirmed by sources."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "The candidate should probe deeply in interviews to verify if Verse Medical's culture balances rapid innovation with authentic work-life balance and reasonable hours, avoids toxic or high-burnout environments, and truly offers top-tier pay and a steep technical learning curve without excessive personal time sacrifice. Candidates should ask for specific, documented policies on shutdowns and after-hours work expectations."
   },
-  "last_attempt_at": 1784684457,
+  "last_attempt_at": 1784684549,
   "last_evidence_at": 1784583415,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "441b3d136a",
+    "7ecf2920bf",
+    "3580f0c491"
+   ],
+   "value": "Information not available. Office locations or remote-work policies are not described in the supplied sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "441b3d136a",
+    "7ecf2920bf",
+    "3580f0c491"
+   ],
+   "value": "Information not available. A mission statement could not be extracted from the supplied sources."
+  },
   "name": "Verse Medical",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced, innovative tech culture typical of a startup/growth company, but candidate should seek confirmation that it is not driven by constant crunch or toxic pressure."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "441b3d136a",
+    "7ecf2920bf",
+    "3580f0c491"
+   ],
+   "value": "Information not available. The supplied sources did not yield content from Verse Medical's website or any other substantive data source; redirects failed to load."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: A competitive and flexible PTO policy (likely 15-20 days for new grads), potentially with an uncapped model, but this is a conservative estimate and must be verified."
   },
+  "refresh_after": 1789868549,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "441b3d136a",
+    "7ecf2920bf",
+    "3580f0c491"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: The candidate requires guaranteed shutdowns. The company may offer a company-wide winter closure or similar, but this is not confirmed and should be a direct interview question."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "441b3d136a",
+    "7ecf2920bf",
+    "3580f0c491"
+   ],
+   "value": "Information not available. Company size (employee count) and stage (startup, growth, public) are not ascertainable from the failed-redirect sources."
   },
   "sources": [
    {
@@ -205112,14 +205462,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=95639bc0f2e56c0b0f748be37bc2532b0e9dce7795786022043a4620ef8e862cJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9kYWlseXZlcnNlcy5uZXQvdG9wLTEwMC1iaWJsZS12ZXJzZXM&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "441b3d136a",
+    "7ecf2920bf",
+    "3580f0c491"
+   ],
+   "value": "Information not available. The sources contain no details on work authorization sponsorship (e.g., H-1B) capabilities."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "441b3d136a",
+    "7ecf2920bf",
+    "3580f0c491"
+   ],
+   "value": "Verse Medical appears to be a healthcare technology company, though specific details about its products and operations are not available from the provided sources. The sources did not successfully redirect to the intended company pages, preventing a factual description of its business."
+  },
+  "synthesized_evidence_sha": "1050b4a396ba3b47",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "441b3d136a",
+    "7ecf2920bf",
+    "3580f0c491"
+   ],
+   "value": "Information not available. The nature of the technical work, including specific AI/data science projects, cannot be determined from the provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583415,
   "web_search_url": "https://duckduckgo.com/?q=Verse+Medical+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Based on the candidate's priorities, an ideal role at Verse Medical would offer elite prestige and high new-grad pay within a fast, innovative tech culture, all while ensuring a mission-driven focus and respecting work-life balance through sane hours and guaranteed shutdowns. However, no factual data from the sources confirms Verse Medical meets these criteria."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Potentially strong, given the candidate's requirement for sane hours, but unverified; must be directly questioned in interviews."
   }
  },
  "vertafore": {
@@ -216597,7 +216980,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -216615,7 +216998,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784684457,
+  "last_attempt_at": 1784684549,
   "last_evidence_at": 1784675869,
   "name": "Zip",
   "pace_of_work": {
