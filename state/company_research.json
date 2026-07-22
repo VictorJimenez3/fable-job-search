@@ -25537,40 +25537,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Staffing/consulting firm placing talent into client AI teams; not an AI product company or research lab. Prestige comes from client brand names (e.g., FAANG, pharma, finance) on your resume, not from BCforward's own AI reputation."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue generated primarily through billable consulting hours (time-and-materials), managed services contracts, and permanent placement fees. Margins depend on spread between client bill rates and consultant pay."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional services culture — collaborative but transactional. Emphasis on billability, client satisfaction, and upskilling for marketability. Limited internal community (consultants embedded at client sites). Diversity and inclusion initiatives present. Not a 'tech-first' culture; decisions driven by sales delivery."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fortune 500 and Global 2000 enterprises across financial services, healthcare, life sciences, manufacturing, retail, and government sectors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75k–$95k base + $5k–$10k signing bonus (US). Hourly bill-rate equivalent $45–$60/hr for W-2 consultants. No RSU/equity (private). Benefits: 401k match ~4%, health/dental/vision standard."
   },
   "evidence_sha": "d8e2c5a9641491d9",
+  "generated_at": 1784684915,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
-  "last_attempt_at": 1784684824,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect client-facing behavioral questions (handling ambiguous requirements, stakeholder communication) plus practical coding/SQL and domain-specific technical screens (e.g., Python/pandas for data, Java/Spring for app dev). Prepare to discuss past projects in terms of business impact and adaptability. LeetCode Hard is rare; focus on clean, maintainable solutions and clear explanation of trade-offs."
+  },
+  "last_attempt_at": 1784684915,
   "last_evidence_at": 1784675870,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Indianapolis, IN; major delivery centers in Columbus (OH), Dallas, Chicago, New York, Toronto, and offshore centers in India (Pune, Hyderabad). Remote/hybrid options common for client engagements."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To deliver innovative technology solutions and top-tier talent that enable clients to achieve their business objectives through digital transformation."
+  },
   "name": "BCforward",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced, project-driven; intensity set by client deadlines. Typical consulting cycles: 3–12 month engagements with ramp-up crunches and steady-state periods. Internal bench time between projects may be slow."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "IT staff augmentation, managed services, application development, data analytics, cloud solutions, cybersecurity services, and enterprise application support (e.g., SAP, Oracle, Salesforce)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 6–8 company holidays (US); accrual starts day one. Unlimited PTO not offered. Carryover and payout policies vary by state/region."
   },
+  "refresh_after": 1789868915,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -25580,7 +25618,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns. Some clients observe year-end freeze (Dec 24–Jan 1) but consultants often remain on support rotation."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Private, mature company with 2,500–5,000 employees globally; profitable and established since 1998."
   },
   "sources": [
    {
@@ -25614,14 +25657,35 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active H-1B sponsor (consulting model relies on visa talent); transfers and cap-subject petitions filed regularly. Green card sponsorship (PERM) offered for select long-term consultants, typically after 1+ years on assignment."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "BCforward is a global IT consulting and staffing firm that provides technology talent and managed services to enterprise clients across industries. Founded in 1998 and headquartered in Indianapolis, Indiana, the company operates as a private staffing and solutions provider placing contractors and consultants at Fortune 500 companies."
+  },
+  "synthesized_evidence_sha": "d8e2c5a9641491d9",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Consultants work on client-site or remote engagements spanning full-stack development, data engineering, ML model deployment, cloud migration, ERP implementations, and QA automation. Stack varies by client project."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675870,
   "web_search_url": "https://duckduckgo.com/?q=BCforward+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "BCforward offers entry into enterprise-scale AI/data projects at major brands without the bureaucracy of Big Tech, but the consulting model means your experience depends heavily on the client assignment. Pay is competitive for staffing firms, yet work-life balance varies by project—some clients demand long hours while others respect boundaries. Learning is fast because you rotate through diverse tech stacks, but career progression follows a consulting ladder (senior consultant → lead → architect"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5 — Highly variable by client. Some assignments offer 40-hour weeks and remote flexibility; others (e.g., critical go-lives, regulated industries) require 50–60+ hours. No company-wide guaranteed shutdowns; PTO accrual standard but utilization depends on billability pressure."
   }
  },
  "bct llc": {
@@ -81374,37 +81438,87 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown / not verifiable. No evidence of AI/data science presence, publications, conference activity, or talent brand in the field."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "bf46dac24e",
+    "6a740e9479"
+   ],
+   "value": "Business model cannot be determined from supplied sources. The redirects suggest possible confusion with other entities (gaming, banking), but no revenue streams, pricing, or go-to-market strategy for Global Channel Management were documented."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown. Insufficient data to assess culture, values, or team dynamics."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Customer segments unknown due to insufficient source information. No client types, industries served, or target markets were disclosed in the available materials."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown. No compensation data, levels.fyi reports, or offer details found."
   },
   "evidence_sha": "637f7f7a67fde3c2",
+  "generated_at": 1784684915,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "bf46dac24e",
+    "6a740e9479"
+   ],
+   "value": "Industry classification unclear. Redirects suggest possible gaming (global-game.com) or financial services (globalku.org), but neither reliably maps to Global Channel Management."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Interview process and technical focus unknown. No interview reports, question patterns, or assessment details found. Candidate should ask recruiter for process overview, team structure, and examples of recent AI/data science projects if pursuing."
   },
+  "last_attempt_at": 1784684915,
   "last_evidence_at": 1784674433,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters and office locations not disclosed in sources. No geographic footprint could be verified."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No mission statement or company purpose found in the provided sources. The redirects do not lead to an identifiable Global Channel Management website with mission content."
+  },
   "name": "Global Channel Management",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown. No employee reviews, engineering blogs, or cultural signals to infer work pace."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "bf46dac24e",
+    "6a740e9479"
+   ],
+   "value": "No specific products or services could be identified from the provided sources. The redirects point to unrelated websites (global-game.com and globalku.org), which do not appear to represent Global Channel Management's offerings."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown. No benefits documentation or policy references in sources."
   },
+  "refresh_after": 1789868915,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -81414,7 +81528,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown. No mention of company-wide shutdowns, forced PTO, or similar policies."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Company size and stage unknown. No employee count, funding history, or growth stage information appears in the provided sources."
   },
   "sources": [
    {
@@ -81448,14 +81567,40 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Visa sponsorship policy unknown. No immigration or hiring eligibility information found in the provided materials."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "bf46dac24e",
+    "6a740e9479"
+   ],
+   "value": "Global Channel Management appears to be a company with limited public information available. The provided sources redirect to unrelated domains (a gaming site and a credit union), suggesting the company may operate under a different name or have minimal web presence. No clear business description or revenue model could be verified from the supplied sources."
+  },
+  "synthesized_evidence_sha": "637f7f7a67fde3c2",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
+   "value": "Technical stack and engineering focus unknown. No job postings, tech blogs, or engineering descriptions were found in the sources. The SmartRecruiters link (source f16eec2a6f) is a generic job board, not a company-specific page."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674433,
   "web_search_url": "https://duckduckgo.com/?q=Global+Channel+Management+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a candidate seeking a top-tier AI/data science role with elite prestige, high new-grad pay, fast innovative culture, mission-driven focus, strong work-life balance, and accelerated learning: this company cannot be evaluated against those criteria due to near-total absence of public information. The sources do not confirm it operates in AI/data science, offers competitive compensation, or maintains a healthy culture. Candidate should request direct company materials before investing interview"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown. No Glassdoor/Blind data, policy mentions, or employee testimonials found in sources."
   }
  },
  "global engineering technology inc get": {
@@ -118510,37 +118655,102 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 – Strong applied AI/ML within a large, established insurer; not a pure research lab but high impact on core business."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "da60859a4b",
+    "2603bbd364",
+    "d63b6885c7"
+   ],
+   "value": "Earns premiums from insurance policies and annuity contracts, invests those funds to generate investment income, and charges fees for asset management and distribution."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, mission‑driven, collaborative; emphasizes employee development and ethical stewardship; less bureaucratic than legacy insurers due to digital transformation focus."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "da60859a4b",
+    "2603bbd364",
+    "d63b6885c7"
+   ],
+   "value": "Individual consumers seeking retirement planning, income protection, and wealth accumulation; financial advisors and institutions distributing insurance products."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $100k‑$125k base + 10‑15% bonus + RSUs (vesting over 4 years); total comp ~$120k‑$150k."
   },
   "evidence_sha": "4811aca1dcbf5bbf",
+  "generated_at": 1784684915,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "da60859a4b",
+    "2603bbd364",
+    "d63b6885c7"
+   ],
+   "value": "Insurance / Financial Services"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare for actuarial/data science case studies, ML model deployment in regulated environments, cloud architecture questions, and behavioral assessments on collaboration and work‑life boundaries. Highlight experience with insurance/financial data, model explainability, and scalable systems."
+  },
+  "last_attempt_at": 1784684915,
   "last_evidence_at": 1784674433,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "da60859a4b",
+    "2603bbd364",
+    "d63b6885c7"
+   ],
+   "value": "Headquartered in Cincinnati, Ohio; additional offices in major U.S. cities; hybrid and remote options available for many roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "da60859a4b",
+    "2603bbd364",
+    "d63b6885c7"
+   ],
+   "value": "To help people secure their financial future through insurance and retirement solutions, backed by the strength of MassMutual."
+  },
   "name": "MassMutual Ascend",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate – Project cycles driven by regulatory and product timelines; faster than traditional insurance IT but not startup speed."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "da60859a4b",
+    "2603bbd364",
+    "d63b6885c7"
+   ],
+   "value": "Fixed and variable annuities, life insurance, retirement income solutions, and investment advisory services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15‑20 days annual PTO plus 10‑12 company holidays; additional volunteer time off."
   },
+  "refresh_after": 1789868915,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -118550,7 +118760,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year‑end shutdown (approx. 1 week) and summer shutdown (approx. 1 week) observed by most teams."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "da60859a4b",
+    "2603bbd364",
+    "d63b6885c7"
+   ],
+   "value": "Large, established subsidiary of a Fortune 100 mutual company (MassMutual); thousands of employees, mature market presence."
   },
   "sources": [
    {
@@ -118584,14 +118803,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=7cfc5ddcf93b97267042c2e0d88a9c5482f4c361a7eb61f1adce2e58a663189eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=17b15538-f6ae-67cc-2d9b-42a5f755668d&u=a1aHR0cHM6Ly93d3cubWFzc211dHVhbC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "da60859a4b",
+    "2603bbd364",
+    "d63b6885c7"
+   ],
+   "value": "Likely sponsors H-1B and other work visas for specialized technical roles given parent company size; confirm with recruiter."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "da60859a4b",
+    "2603bbd364",
+    "d63b6885c7"
+   ],
+   "value": "MassMutual Ascend is a subsidiary of MassMutual focused on insurance and annuity products. It generates revenue through premiums on life insurance, fixed and variable annuities, and investment management fees."
+  },
+  "synthesized_evidence_sha": "4811aca1dcbf5bbf",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "da60859a4b",
+    "2603bbd364",
+    "d63b6885c7"
+   ],
+   "value": "Actuarial modeling, data analytics, cloud infrastructure, digital platform development, AI/ML for underwriting and customer personalization, legacy system modernization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674433,
   "web_search_url": "https://duckduckgo.com/?q=MassMutual+Ascend+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers elite prestige as part of a Fortune 100 mutual insurer with competitive new‑grad pay for AI/data science roles. Culture emphasizes work‑life balance through sane hours and guaranteed shutdowns, avoiding high‑burnout environments. Provides accelerated technical learning and career growth within a mission‑driven financial services leader."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 – Company promotes work‑life balance with core hours, limited on‑call, and explicit shutdown periods."
   }
  },
  "mastercard": {
@@ -155680,11 +155932,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -155696,6 +155950,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784684915,
   "last_evidence_at": 1784593387,
   "name": "R1 RCM",
   "pace_of_work": {
@@ -171359,11 +171614,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -171375,6 +171632,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
+  "last_attempt_at": 1784684915,
   "last_evidence_at": 1784583450,
   "name": "Shopify",
   "pace_of_work": {
@@ -189670,7 +189928,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -189712,7 +189970,7 @@
    ],
    "value": "Probe whether the 'dynamic team' and 'exciting environment' translate to true technical learning and career growth for AI/Data Science work, or if the highly structured nature of defense/aerospace solutions will conflict with the desire to avoid slow bureaucracy."
   },
-  "last_attempt_at": 1784684824,
+  "last_attempt_at": 1784684915,
   "last_evidence_at": 1784674726,
   "locations": {
    "confidence": "high",
@@ -210258,11 +210516,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -210274,6 +210534,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784684915,
   "last_evidence_at": 1784674481,
   "name": "Weber State University Department of Automotive Technology",
   "pace_of_work": {
@@ -213860,11 +214121,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -213876,6 +214139,7 @@
    "source_ids": [],
    "value": "Edtech / technology (estimated)"
   },
+  "last_attempt_at": 1784684915,
   "last_evidence_at": 1784583908,
   "name": "Wonderschool",
   "pace_of_work": {
