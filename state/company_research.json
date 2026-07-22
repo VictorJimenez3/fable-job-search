@@ -23576,47 +23576,117 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Top-tier for quantitative finance ML roles; prestige depends on firm's track record and alumni placement, which are unverified."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a17c3bfa81",
+    "ea649eca97",
+    "39d24410da"
+   ],
+   "value": "Likely a quantitative trading firm earning profits from proprietary trading strategies, market making, or providing liquidity, but the supplied sources do not confirm this."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Intellectually intense, meritocratic, technology-focused; culture specifics unknown. Candidate should probe for bureaucracy vs. agility, mentorship quality, and burnout prevention."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "a17c3bfa81",
+    "ea649eca97",
+    "39d24410da"
+   ],
+   "value": "No customer or client information available from the supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $175k-$250k base + significant bonus (potential total $300k-$500k+); top quant firms pay premium but wide variance. No compensation data in sources."
   },
   "evidence_sha": "ebdba6bda6024eed",
+  "generated_at": 1784691440,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "a17c3bfa81",
+    "ea649eca97",
+    "39d24410da"
+   ],
+   "value": "Quantitative Trading / Financial Technology"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+   "value": "Prepare for rigorous technical interviews covering probability, statistics, C++/Python performance optimization, systems design for low-latency, and ML model validation. Critically, ask direct questions about typical weekly hours, on-call expectations, weekend work frequency, and whether the firm has explicit policies protecting personal time (e.g., no-meeting days, mandatory vacation, trading-hour-aligned schedules). Request to speak with current junior quant researchers or data scientists abou"
   },
+  "last_attempt_at": 1784691440,
   "last_evidence_at": 1784630051,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely headquartered in a major financial center (e.g., New York, Chicago, London, Singapore); no location data in sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "a17c3bfa81",
+    "ea649eca97",
+    "39d24410da"
+   ],
+   "value": "No mission statement found in the supplied sources."
+  },
   "name": "AXQ Capital",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced, deadline-driven, aligned with market hours; typical for quant trading but may conflict with candidate's desire for predictable shutdowns."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "a17c3bfa81",
+    "ea649eca97",
+    "39d24410da"
+   ],
+   "value": "No product information found in the supplied sources; the company website redirects without revealing details about trading strategies, software platforms, or data services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO plus market holidays; financial firms often have limited vacation usage due to trading calendar demands. No policy found in sources."
   },
+  "refresh_after": 1789875440,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "a17c3bfa81",
+    "ea649eca97",
+    "39d24410da"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed daily shutdowns; trading hours dictate core schedule. Some firms offer \"protected weekends\" or \"no-meeting Fridays\" but not universal. No policy found in sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Small to mid-sized quantitative trading firm (likely 20-200 employees) based on typical industry profile; no headcount data in sources."
   },
   "sources": [
    {
@@ -23650,14 +23720,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=c8e61ce715d75ae1f9164437b3ec5b910498044f10a6d87e151286ca09e56b75JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=227c6992-93b9-66c6-194e-7e0f92fd67be&u=a1aHR0cHM6Ly93d3cuYXhxY2FwLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May sponsor H-1B visas for specialized quantitative roles, but no sponsorship data found in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "a17c3bfa81",
+    "ea649eca97",
+    "39d24410da"
+   ],
+   "value": "AXQ Capital appears to be a quantitative trading or financial technology firm based on its name and web presence, but the provided sources only show redirect pages without substantive content about its operations, products, or business model."
+  },
+  "synthesized_evidence_sha": "ebdba6bda6024eed",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: High-frequency trading systems, low-latency infrastructure, quantitative research, machine learning for alpha generation, and risk management platforms; specifics not in sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784630051,
   "web_search_url": "https://duckduckgo.com/?q=AXQ+Capital+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "If AXQ Capital is an elite quantitative trading firm, it could offer top-tier compensation and cutting-edge AI/ML work in financial markets. However, the candidate's priorities around work-life balance, sane hours, and guaranteed shutdowns are often at odds with high-frequency trading cultures, which typically demand intense hours and high pressure. Without verified information on AXQ's actual culture, the candidate should investigate thoroughly whether this specific firm aligns with their WLB r"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 2-3/5 for quantitative trading industry; likely demanding hours during market sessions and research crunches, but unknown if AXQ has explicit WLB protections."
   }
  },
  "b b manufacturing": {
@@ -68891,7 +68986,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 11,
+  "attempts": 12,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -68909,7 +69004,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784691284,
+  "last_attempt_at": 1784691440,
   "last_evidence_at": 1784676545,
   "name": "Esri",
   "pace_of_work": {
@@ -87135,11 +87230,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -87151,6 +87248,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784691440,
   "last_evidence_at": 1784631338,
   "name": "Grand Canyon University",
   "pace_of_work": {
@@ -89131,7 +89229,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -89149,7 +89247,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784691284,
+  "last_attempt_at": 1784691440,
   "last_evidence_at": 1784616151,
   "name": "Handshake",
   "pace_of_work": {
@@ -102297,7 +102395,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -102315,7 +102413,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784691284,
+  "last_attempt_at": 1784691440,
   "last_evidence_at": 1784674043,
   "name": "International Monetary Fund",
   "pace_of_work": {
@@ -138785,7 +138883,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -138803,7 +138901,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784691284,
+  "last_attempt_at": 1784691440,
   "last_evidence_at": 1784677412,
   "name": "North Star Staffing Solutions",
   "pace_of_work": {
@@ -191875,7 +191973,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -191893,7 +191991,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784691284,
+  "last_attempt_at": 1784691440,
   "last_evidence_at": 1784677412,
   "name": "Synergy ECP",
   "pace_of_work": {
@@ -225635,7 +225733,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -225653,7 +225751,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784691284,
+  "last_attempt_at": 1784691440,
   "last_evidence_at": 1784674276,
   "name": "Zapier",
   "pace_of_work": {
