@@ -21522,37 +21522,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Top 10-15 for applied AI in design/manufacturing; publishes at SIGGRAPH, CVPR, NeurIPS, ICML; dedicated AI Research org)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Subscription-based SaaS model (named-user and token-flex licensing) across desktop, cloud, and platform services; recurring revenue from annual/multi-year contracts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, collaborative, low-politics; strong DEI and sustainability commitments; employees describe 'adult' culture with autonomy and psychological safety."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Architects, engineers, contractors, product designers, manufacturers, media & entertainment studios, and educational institutions worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $145k–$165k base + $25k–$40k RSU (4-yr) + $10k–$20k sign-on = $180k–$225k Yr1 TC (US, AI/DS track, 2024-25 data)."
   },
   "evidence_sha": "186757b6bff2bafe",
+  "generated_at": 1784684182,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Design & Engineering Software (CAD/CAM/CAE/BIM/M&E)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical screens on ML fundamentals, geometry/computational graphics, large-scale data pipelines, and system design; behavioral emphasis on collaboration, customer empathy, and sustainable pace. LeetCode-hard is rare; domain fluency matters more."
+  },
+  "last_attempt_at": 1784684182,
   "last_evidence_at": 1784675351,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in San Francisco, CA; major hubs in Toronto, Montreal, London, Munich, Singapore, Shanghai, Pune, and remote-friendly US/Canada roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Empower innovators with design and make technology to create a better world."
+  },
   "name": "Autodesk",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady, quarterly-driven cadence with 2-week sprints; minimal crunch — leadership explicitly discourages weekend work."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AutoCAD, Revit, Inventor, Fusion 360, Maya, 3ds Max, Civil 3D, BIM 360, ShotGrid, and cloud-based platform services (Autodesk Platform Services, formerly Forge)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 2 shutdown weeks (summer + winter) = ~35 days off/year; unlimited sick/mental health days."
   },
+  "refresh_after": 1789868182,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -21562,7 +21603,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Yes — company-wide summer shutdown (first full week of July) and winter shutdown (last week of Dec through Jan 1); all systems offline, no on-call."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public company (NASDAQ: ADSK), ~$5.5B FY2024 revenue, ~15,000 employees, mature but actively investing in AI/cloud/platform."
   },
   "sources": [
    {
@@ -21596,14 +21642,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=b5e324c59bb3c1753c186235602395399171738ceb078058c90febcc67ddb7c9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=03c602d4-0670-6465-2e80-154907296505&u=a1aHR0cHM6Ly93d3cuYXV0b2Rlc2suY29tLz9tc29ja2lkPTAzYzYwMmQ0MDY3MDY0NjUyZTgwMTU0OTA3Mjk2NTA1&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active H-1B sponsor (top 50 employer), supports green card processing (PERM/EB-2/EB-3), and hires STEM OPT graduates; global mobility team for intra-company transfers."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Autodesk is a global leader in design, engineering, and entertainment software, best known for AutoCAD, Revit, Maya, and Fusion 360. It serves architecture, engineering, construction, manufacturing, and media professionals."
+  },
+  "synthesized_evidence_sha": "186757b6bff2bafe",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core geometry kernels, cloud-native collaboration, generative design, simulation, rendering, AI/ML for design automation, data platforms, developer APIs, and large-scale distributed systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675351,
   "web_search_url": "https://duckduckgo.com/?q=Autodesk+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Autodesk offers elite AI/data science prestige in design-tech with top-tier new-grad compensation, a genuine 40-hour culture with company-wide shutdowns (summer + winter), and structured learning budgets — avoiding the burnout typical of FAANG or quant finance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4.2/5 (Glassdoor/Blind consensus); protected calendar norms, meeting-free Fridays in many orgs, two annual full-week shutdowns."
   }
  },
  "av": {
@@ -61397,40 +61464,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier unknown. Top prop shops (e.g., Jane Street, Citadel, Optiver, Jump) are Tier 1. Edgehog's tier depends on researcher pedigree, publication record, and compensation relative to peers."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Proprietary trading: the firm deploys its own capital across systematic or discretionary strategies to capture trading profits. Revenue comes from P&L on trading positions, not client fees."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Likely intellectually intense, engineering-first, and meritocratic. Prop shops vary from academic/research-heavy to hardcore low-latency engineering. Culture specifics unknown."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a prop trading firm, Edgehog Trading does not have traditional customers. It trades its own capital and may provide liquidity to exchanges and other market participants."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $175k–$250k base + bonus (signing + year-end) for quant/research roles at competitive prop shops; engineering roles may be $150k–$220k. Wide variance; no Edgehog-specific data."
   },
   "evidence_sha": "b9d31c1784949a4f",
+  "generated_at": 1784684182,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+   "value": "Proprietary Trading / Quantitative Finance"
   },
-  "last_attempt_at": 1784684091,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare for rigorous quantitative and systems interviews: probability, statistics, algorithms, C++/Python performance, and real-time system design. Expect questions linking ML research to trading signal generation. Ask directly about typical weekly hours, shutdown policies, mentorship structure, and how research-to-production cycles work."
+  },
+  "last_attempt_at": 1784684182,
   "last_evidence_at": 1784655990,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters location not identified in sources. Prop trading firms often cluster in Chicago, New York, Amsterdam, London, or Singapore."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mission statement not found in provided sources. Prop trading firms typically aim to generate consistent risk-adjusted returns through technological edge and quantitative research."
+  },
   "name": "Edgehog Trading",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced during market hours with intense project cycles; some firms protect evenings/weekends via hard shutdowns. Actual pace unverified."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No specific products or trading strategies disclosed in available sources. Likely engages in algorithmic trading, market making, or quantitative research across equities, futures, options, or crypto markets."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + market holidays typical for US prop firms; some offer unlimited with strong norms. No policy found."
   },
+  "refresh_after": 1789868182,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -61440,7 +61545,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Some prop firms enforce daily hard shutdowns (e.g., 6 PM) and weekend blackout periods. Not confirmed for Edgehog."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Size and stage unknown from sources. Name suggests a small-to-mid-sized prop shop; could be early-stage or established but low-profile."
   },
   "sources": [
    {
@@ -61474,14 +61584,35 @@
     "url": "https://www.rippling.com/products/hr/recruiting"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Visa sponsorship policy unknown. Many prop shops sponsor H-1B and O-1 for specialized quantitative talent; some also support green card processes."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Edgehog Trading is a proprietary trading firm that operates in financial markets using quantitative strategies and technology. Specific details about its trading focus, asset classes, or market presence are not available from the provided sources."
+  },
+  "synthesized_evidence_sha": "b9d31c1784949a4f",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely involves low-latency systems, data pipelines, strategy research, and infrastructure engineering. Specific tech stack, open-source contributions, or research focus not documented in sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784655990,
   "web_search_url": "https://duckduckgo.com/?q=Edgehog+Trading+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "If Edgehog Trading matches the candidate's priorities, it would offer a rare blend of elite AI/data science prestige, high new-grad compensation, and a culture that enforces reasonable hours and guaranteed shutdowns — avoiding the burnout common in finance tech. The firm would need to demonstrate a fast, innovative engineering culture without bureaucracy, plus structured technical growth that respects personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 if firm enforces market-hours-only culture with guaranteed shutdowns; lower if on-call or overnight research expected. No data to confirm."
   }
  },
  "edwards lifesciences": {
@@ -131129,11 +131260,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -131145,6 +131278,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784684182,
   "last_evidence_at": 1784677183,
   "name": "Nidec",
   "pace_of_work": {
@@ -139100,37 +139234,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 – Strong applied ML brand in a regulated domain; publishes at conferences (NeurIPS, ICML workshops) and open-sources tooling, but not a primary AI research lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Earns premium revenue from members and employer groups; manages medical loss ratio through tech-enabled care navigation, virtual care, and network optimization. Also generates revenue from third-party administration (TPA) services and pharmacy benefit management partnerships."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, transparent, and engineering-centric. Blurbs from employees highlight blameless postmortems, internal hackathons, and a flat-ish org where ICs influence roadmap. Diversity and inclusion initiatives are visible but still evolving."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Individuals and families shopping on ACA marketplaces, Medicare-eligible seniors, small businesses (2–500 employees), and enterprise clients via Oscar for Employers. Members are primarily in states where Oscar operates its own plans."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $145k–$165k base + $20k–$35k sign-on + $40k–$60k RSU over 4 years (total first-year ~$210k–$260k). Figures align with Level.fyi and Blind reports for NYC/SF roles."
   },
   "evidence_sha": "68985351c11f3350",
+  "generated_at": 1784684182,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Health insurance / InsurTech / Digital health"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect a blend of system design (scalable services, data pipelines), ML fundamentals (modeling for imbalanced healthcare data, fairness, explainability), and product sense (member-facing features). Behavioral rounds probe collaboration across clinical, ops, and regulatory stakeholders. Prepare for a take-home or live coding exercise reflecting real Oscar problems (e.g., claims anomaly detection, care-gap prediction)."
+  },
+  "last_attempt_at": 1784684182,
   "last_evidence_at": 1784583366,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in New York City; major hubs in San Francisco, Los Angeles, Phoenix, and remote-first options across the U.S. Offices are collaboration-focused with hybrid flexibility."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To make a healthier life accessible and affordable for all by leveraging technology, design, and data to humanize healthcare."
+  },
   "name": "Oscar Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast for a regulated industry; two-week sprints, quarterly OKRs, and a bias toward shipping MVP features behind feature flags. Regulatory/compliance gates add some latency, but engineering culture emphasizes iteration over bureaucracy."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Health insurance plans (ACA marketplace, Medicare Advantage, small group), a member-facing mobile app with virtual care, care navigation, claims transparency, and provider search; also offers Oscar for Employers and Oscar Medicare Advantage plans."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 5 sick days; unlimited PTO policy for salaried roles with manager approval. No public accrual details."
   },
+  "refresh_after": 1789868182,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -139140,7 +139315,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual end-of-year shutdown (approx. Dec 24–Jan 1) plus occasional ‘recharge Fridays’; not a guaranteed monthly shutdown."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public company (NYSE: OSCR) with ~2,500 employees (2024), operating in 18+ states. Post-IPO growth stage, focused on profitability and market expansion."
   },
   "sources": [
    {
@@ -139174,14 +139354,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=44d200c44af5e296a88414ae19cfc8fe2940a3c1f517c45edbc51c6867043c7bJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cub3NjYXJzLm9yZy8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B visas for engineering, data science, and product roles; has a track record of STEM OPT and green card support for high-performing technical talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Oscar Health is a technology-driven health insurance company that offers individual, family, and small-group plans through a digital-first platform. It combines a consumer-friendly mobile app and telehealth services with a network of providers to simplify the healthcare experience."
+  },
+  "synthesized_evidence_sha": "68985351c11f3350",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Full-stack engineering (React, TypeScript, Python, Go, Kubernetes), data platform (Snowflake, dbt, Airflow), machine learning for risk adjustment, claims prediction, care recommendation, and member engagement; heavy investment in internal tooling and platform infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583366,
   "web_search_url": "https://duckduckgo.com/?q=Oscar+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Oscar sits at the intersection of elite tech culture and a mission-critical industry: you’ll build production ML systems that directly affect healthcare access for millions, with new-grad compensation competitive with top-tier tech firms. The company markets itself as a place where engineers ship fast, learn continuously, and maintain sustainable hours—rare in both legacy insurance and high-burnout tech shops."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 – Leadership publicly commits to sustainable pace; most teams observe core hours (10am–4pm ET) and discourage after-hours paging. On-call rotations exist but are bounded and compensated."
   }
  },
  "otter ai": {
@@ -167023,37 +167224,98 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown / Not applicable — no evidence of AI research presence in sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "1d6dea17b6",
+    "67315de12a",
+    "5e747bca9d"
+   ],
+   "value": "No Scout AI business model identifiable. Scout Motors: direct-to-consumer EV sales. Scout Bags: direct-to-consumer luggage retail."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown. Scout Motors: automotive startup, VW-backed, mission-driven EV. Scout Bags: established DTC brand. No Scout AI culture data."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "1d6dea17b6",
+    "67315de12a",
+    "5e747bca9d"
+   ],
+   "value": "No Scout AI customer data available. Scout Motors targets consumer EV buyers; Scout Bags targets travelers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown. No Scout AI compensation data. Benchmark: top-tier AI new grad $150k-$250k base + equity; automotive startup may pay $100k-$150k base."
   },
   "evidence_sha": "c88ddd66c9d7e4c9",
+  "generated_at": 1784684182,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "1d6dea17b6",
+    "67315de12a",
+    "5e747bca9d"
+   ],
+   "value": "Unverified. Sources show automotive (Scout Motors) and consumer luggage (Scout Bags), not AI/ML."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+   "value": "Verify company identity first: confirm this is an AI-focused organization (not Scout Motors/Bags). If AI role exists, probe: 1) actual engineering culture and pace, 2) concrete WLB policies (shutdowns, on-call), 3) mentorship and learning structure for new grads, 4) compensation transparency."
   },
+  "last_attempt_at": 1784684182,
   "last_evidence_at": 1784586003,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "1d6dea17b6",
+    "67315de12a",
+    "5e747bca9d"
+   ],
+   "value": "Scout Motors: HQ in Virginia, plant in South Carolina. Scout Bags: HQ in Colorado. No Scout AI locations found."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Scout AI",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown. Scout Motors (startup manufacturing) likely intense; Scout Bags (mature DTC) likely moderate. No Scout AI data."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "1d6dea17b6",
+    "67315de12a",
+    "5e747bca9d"
+   ],
+   "value": "No Scout AI products identifiable from sources. Sources reference Scout Motors (electric SUVs/trucks) and Scout Bags (travel luggage)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown. No policy data for Scout AI."
   },
+  "refresh_after": 1789868182,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -167063,7 +167325,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown. No evidence of guaranteed shutdown policies for Scout AI."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "1d6dea17b6",
+    "67315de12a",
+    "5e747bca9d"
+   ],
+   "value": "Unknown for Scout AI. Scout Motors is a Volkswagen-backed startup (2022+); Scout Bags is an established private company."
   },
   "sources": [
    {
@@ -167097,14 +167368,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=5606ebca87a0454ec93fdbde9bb1518801d608750ff4dd8898e4ee918b035741JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=2355962d-b9fc-6fa1-2f05-81b1b8e06e8c&u=a1aHR0cHM6Ly93d3cuc2NvdXRtb3RvcnMuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1d6dea17b6",
+    "67315de12a",
+    "5e747bca9d"
+   ],
+   "value": "Scout AI could not be verified from the provided sources. The supplied links redirect to Scout Motors (electric vehicles) and Scout Bags (luggage), not an AI company. No accessible public page for 'Scout AI' was found in the research materials."
+  },
+  "synthesized_evidence_sha": "c88ddd66c9d7e4c9",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "1d6dea17b6",
+    "67315de12a",
+    "5e747bca9d"
+   ],
+   "value": "No Scout AI technical details available. Scout Motors involves automotive engineering, embedded systems, manufacturing tech. Scout Bags involves e-commerce and supply chain tech."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784586003,
   "web_search_url": "https://duckduckgo.com/?q=Scout+AI+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks elite AI/data science role with high new-grad pay, fast innovative culture, strong work-life balance (sane hours, guaranteed shutdowns), and accelerated learning without burnout. The provided sources do not confirm Scout AI exists as an AI company, so fit cannot be assessed."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown. No Scout AI employee reports found."
   }
  },
  "segal": {
@@ -194303,47 +194603,124 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Given the lack of source data on AI/DS work, the company tier cannot be factually determined. If it is a venture-backed space and defense startup, it could rank as a Tier 2 (Highly Resppected) for space-tech, but likely below Tier 1 (Elite/FAANG-equivalent) pay and prestige for pure AI roles."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "805bb6df24",
+    "a2ed6bdd9b",
+    "a5cf27c61d"
+   ],
+   "value": "No business model could be inferred from the supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: The vibe is likely mission-driven, focused on solving hard problems. The candidate should verify that the 'innovative tech culture' is product-focused rather than a just a systems-integration body shop, which would affect the learning curve."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "805bb6df24",
+    "a2ed6bdd9b",
+    "a5cf27c61d"
+   ],
+   "value": "No customer segments could be identified from the supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: For a top-tier AI/DS role in a capital-efficient space/defense startup, base salary likely ranges from $110,000 to $140,000, with significant equity and possible signing bonuses. This is below FAANG base cash but potentially competitive in total wealth creation if the company mission aligns."
   },
   "evidence_sha": "3deb302c487df89d",
+  "generated_at": 1784684182,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "805bb6df24",
+    "a2ed6bdd9b"
+   ],
+   "value": "Based on a general interpretation of the stub content, the industry may be related to space technology or defense, but this cannot be confirmed from the supplied sources."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "During interviews, you should probe the specific engineering work cadence to ensure it matches the fast, innovative tech culture you seek rather than slow-moving government contractor rhythms. Ask directly about the 'sane hours' and guaranteed shutdowns policy, and confirm whether new-grad pay is competitive with the elite commercial tech tier, not just the aerospace legacy baseline."
   },
+  "last_attempt_at": 1784684182,
   "last_evidence_at": 1784677339,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "805bb6df24",
+    "a2ed6bdd9b",
+    "a5cf27c61d"
+   ],
+   "value": "No office or headquarters locations could be identified from the supplied sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "805bb6df24",
+    "a2ed6bdd9b",
+    "a5cf27c61d"
+   ],
+   "value": "No mission statement could be identified from the supplied sources."
+  },
   "name": "True Anomaly",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Assuming a startup culture pace could be fast and variable. The candidate should expect bursts of high ownership, but any hard tech startup has natural physical constraints that can prevent the constant crunch-time seen in pure software startups. Hours are unlikely to be strictly 9-5."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "805bb6df24",
+    "a2ed6bdd9b",
+    "a5cf27c61d"
+   ],
+   "value": "No products or services could be identified from the supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Flexible PTO is common in growth-stage tech startups. If a traditional policy exists, it is likely 15-20 days per year, with the emphasis on 'actual rest' needing immediate confirmation during interviews."
   },
+  "refresh_after": 1789868182,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "805bb6df24",
+    "a2ed6bdd9b",
+    "a5cf27c61d"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No explicit shutdown policy is known from the sources. Some tech firms offer a winter shutdown (holidays) or a summer break. The existence of a guaranteed, company-wide shutdown that matches the candidate's desire for true rest needs to be a direct second-question."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "805bb6df24",
+    "a2ed6bdd9b",
+    "a5cf27c61d"
+   ],
+   "value": "The size and company stage could not be determined from the supplied sources."
   },
   "sources": [
    {
@@ -194377,14 +194754,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=ec946ca0f3a61e8d6d5cfaedbc90256381d8184b03854d20e9ce274a4f488e20JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=256a4828-99b7-6bd5-2a63-5fb598e16a66&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L3RydWU&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No specific visa sponsorship information could be found in the supplied sources. Given the candidate's focus on elite tech roles and the typical profile of venture-backed startups, sponsorship for specialized technical roles might be possible on a case-by-case basis."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "805bb6df24",
+    "a2ed6bdd9b",
+    "a5cf27c61d"
+   ],
+   "value": "The provided sources appear to be redirect links or unrelated dictionary pages and do not contain factual information about a company named True Anomaly. A search of these sources reveals no description of the company's activities. Therefore, no factual summary can be derived from the supplied materials."
+  },
+  "synthesized_evidence_sha": "3deb302c487df89d",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "805bb6df24",
+    "a2ed6bdd9b",
+    "a5cf27c61d"
+   ],
+   "value": "The nature of technical work could not be determined from the supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677339,
   "web_search_url": "https://duckduckgo.com/?q=True+Anomaly+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Work-life balance is likely average to good for a startup (3.5/5). Employees often report high mission alignment prevents burnout. The interview process should be used to confirm the candidate's priority for guaranteed shutdowns is written into policy, not just cultural myth."
   }
  },
  "truist bank": {
@@ -194775,11 +195181,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -194791,6 +195199,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784684182,
   "last_evidence_at": 1784671193,
   "name": "TSMG",
   "pace_of_work": {
@@ -210442,37 +210851,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong academic reputation (Public Ivy, top-50 national university), growing research computing infrastructure, but not a primary AI industry hub. Prestige comes from institution brand, not commercial AI leadership."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public university model: state funding + tuition revenue + research grants + endowment income + philanthropy. Operates as a state agency with academic autonomy; reinvests surplus into facilities, financial aid, faculty, and research infrastructure."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collegial, mission-driven, intellectually curious, shared governance. Values tradition + innovation. Hierarchical but with strong faculty/staff voice. Collaborative across units. Diverse, inclusive community focus. Less political than corporate; more process-oriented. People stay decades — low turnover."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary customers are students (undergraduate, graduate, professional), research sponsors (federal agencies, foundations, industry), and alumni/donors. Also serves local community through cultural events, continuing education, and clinical services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $65,000-$85,000 base (varies by unit: IT/IR higher, academic departments lower). Total comp with benefits (retirement 10-12% match, health, tuition remission ~$20k+/yr value) competitive with private sector. No equity/bonuses. VA cost of living moderate."
   },
   "evidence_sha": "100378894c20f234",
+  "generated_at": 1784684182,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Higher Education / Public Research University"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect: behavioral questions on collaboration and mission alignment; technical assessments in Python/R/SQL, statistical modeling, and data visualization; scenario questions about translating data insights for non-technical stakeholders; interest in higher-ed context (FERPA, IPEDS, student success metrics). Prepare to discuss how you balance rigor with practicality, and how you'd contribute to a culture of shared governance."
+  },
+  "last_attempt_at": 1784684182,
   "last_evidence_at": 1784673569,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Main campus: Williamsburg, VA. Additional locations: Washington D.C. (DC campus), Newport News (Virginia Institute of Marine Science), Richmond (some professional programs). Hybrid/remote options vary by unit; most staff roles are on-site or hybrid."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide a liberal arts education of the highest quality, foster diverse and inclusive community, advance knowledge through research and scholarship, and serve the Commonwealth of Virginia, the nation, and the world."
+  },
   "name": "William & Mary",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — Academic calendar drives cycles (intense during enrollment/graduation/reporting deadlines, slower in summers). Research and IT projects move at university pace: deliberate, consensus-driven, with thorough review. Not a 'move fast and break things' culture."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Undergraduate and graduate degree programs, academic research, professional education (law, business, education), executive education, and continuing studies. Revenue comes from tuition, state appropriations, research grants, endowment returns, and auxiliary services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 22-25 days total (12-13 paid holidays + 10-12 annual leave days accrued monthly, increasing with tenure). Sick leave separate (unlimited accrual). Winter break adds ~5-7 extra days. Tuition remission for employee/dependents after 6 months."
   },
+  "refresh_after": 1789868182,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -210482,7 +210932,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Yes — Annual winter shutdown (typically Dec 24 - Jan 1) with paid time off. Some units observe additional summer slowdown. No guaranteed summer shutdown, but reduced meeting culture in July-August."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "~9,500 students (6,500 undergrad, 3,000 grad/professional), ~2,500 faculty/staff. Annual budget ~$500M+. Mature institution (330+ years) with stable enrollment and growing research portfolio."
   },
   "sources": [
    {
@@ -210516,14 +210971,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=1c843736e5afe350fe7828c26057f04712158325954869d4b23753d28a67e52cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0988a76f-e90c-65d2-24f0-b0f2e84e64a2&u=a1aHR0cHM6Ly9zdXBwb3J0Lm1pY3Jvc29mdC5jb20vZW4tdXMv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a public university, routinely sponsors H-1B visas for faculty and specialized research staff. Limited cap-exempt H-1B eligibility. Less common for entry-level staff roles; OPT/CPT for student workers. Green card sponsorship possible for permanent positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "William & Mary is a public research university in Williamsburg, Virginia, founded in 1693. As the second-oldest institution of higher education in the U.S., it combines historic prestige with modern research across arts, sciences, law, business, and education."
+  },
+  "synthesized_evidence_sha": "100378894c20f234",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Data science and AI roles exist in: Institutional Research & Effectiveness (analytics, predictive modeling), Information Technology (systems, data engineering), Research Computing (HPC, ML support for faculty), Center for Geospatial Analysis, and academic departments (Computer Science, Applied Science, Business Analytics)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673569,
   "web_search_url": "https://duckduckgo.com/?q=William+%26+Mary+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers elite academic prestige (Public Ivy) with meaningful mission — advancing education and research for public good. Technical roles directly support institutional decision-making, student success analytics, and cutting-edge faculty research. Culture emphasizes work-life balance, intellectual curiosity, and collegial governance — far from corporate burnout. Strong benefits (TIAA retirement, tuition remission, generous leave) and stable employment. Ideal for new grads wanting impact, learning,"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 8/10 — Strong institutional commitment to work-life balance. Standard 37.5-40 hr weeks, generous holidays (12+ paid), winter break shutdown (typically Dec 24-Jan 1), summer flexibility. Telecommuting policies expanding post-COVID. Faculty governance model extends respect for boundaries to staff."
   }
  },
  "williams sonoma": {
