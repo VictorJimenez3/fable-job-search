@@ -15700,7 +15700,7 @@
    "value": "Elite-tier; highly regarded for its top-tier compensation and culture within the AI sector."
   },
   "aliases": [],
-  "attempts": 12,
+  "attempts": 13,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -15725,7 +15725,7 @@
    ],
    "value": "Businesses requiring recruiting and infrastructure AI solutions, as well as enterprise users leveraging large language models for technical and operational workflows."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -15756,7 +15756,7 @@
    ],
    "value": "To ensure mutual fit, the candidate should interview Anthropic on workload sustainability and boundaries. Ask about team-specific expectations, on-call duties, and whether the fast-paced growth leaves room for personal time."
   },
-  "last_attempt_at": 1784748360,
+  "last_attempt_at": 1784758750,
   "last_evidence_at": 1784757617,
   "locations": {
    "confidence": "high",
@@ -16719,44 +16719,46 @@
   "ai_ds_prestige_tier": {
    "confidence": "high",
    "source_ids": [
-    "02b62f2df2"
+    "17f8c9c419"
    ],
-   "value": "Tier 1 (FAANG-tier): carries elite prestige internally and externally for AI/ML careers, supported by shipping AI features at global scale and compensation that competes directly with top research labs."
+   "value": "Top-tier (industry-leading prestige, competitive with Google, Meta, and Amazon in AI/DS roles)."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "high",
    "source_ids": [
     "02b62f2df2"
    ],
-   "value": "Premium-priced hardware sales combined with a high-growth, recurring services subscription model, supported by a tightly integrated ecosystem of proprietary software, silicon, and retail distribution."
+   "value": "Hardware sales, subscription services (Apple Music, iCloud, Apple One), digital content (App Store, iTunes), and enterprise solutions."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
     "02b62f2df2"
    ],
-   "value": "Hardware-seeded, product-obsessed, and inclusive with moderate formality. The culture values craftsmanship, deep cross-functional ownership, and rigorous internal debate on design and user experience. Social community exists but skews quieter; it is a mission-driven environment known for deliberate, high-quality engineering rather than scattered innovation."
+   "value": "Collaborative, inclusive, and innovative with a focus on user experience and environmental responsibility."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
     "02b62f2df2"
    ],
-   "value": "Consumers, creative professionals, education institutions, and enterprises worldwide, served through direct retail (Apple Store and online), carrier partners, and an active installed base of over two billion devices."
+   "value": "Global consumers, businesses, and enterprises seeking premium technology products and services."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $160,000–$210,000 total first-year compensation (base around $135,000–$155,000, estimated bonus of 5-10% and initial equity grants in the $35,000–$75,000 per 4-year vesting range based on recent averages). AI/DS-specific roles typically fall toward the higher end."
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: $160,000–$180,000 base salary + bonuses (conservative estimate based on industry standards and Apple's reputation)."
   },
   "evidence_sha": "ed5f31a76ba8cf22",
-  "generated_at": 1784680406,
+  "generated_at": 1784758750,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "local",
+   "model": "qwen3:30b",
    "task": "company_research"
   },
   "industry": {
@@ -16764,52 +16766,55 @@
    "source_ids": [
     "02b62f2df2"
    ],
-   "value": "Consumer electronics, software, and digital services with deep integration into artificial intelligence and silicon design."
+   "value": "Consumer technology and software services."
   },
   "interview_focus": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "02b62f2df2"
+    "17f8c9c419"
    ],
-   "value": "Prepare for a mix of hands-on machine learning design, coding (Python, C++ favored), and deep conceptual questions in your specialization (computer vision, NLP, data pipeline design). Apple's process reinforces its product-first culture: expect a heavy focus on how your AI work improves real user experiences, and your ability to navigate tight collaboration across hardware and software functions without large-bureaucracy silos. Emphasize practical impact and technical clarity over long research "
+   "value": "Technical problem-solving, AI/ML project experience, and cultural fit within Apple's collaborative, mission-driven environment."
   },
-  "last_attempt_at": 1784680406,
+  "last_attempt_at": 1784758750,
   "last_evidence_at": 1784757917,
   "locations": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "02b62f2df2"
    ],
-   "value": "Cupertino headquarters is the primary hub for AI/ML roles. Additional major tech centers in Seattle, Austin, San Diego, Boston, and international R&D sites in London, Munich, Beijing, and Singapore."
+   "value": "Headquartered in Cupertino, California, with offices worldwide including major hubs in New York, London, Tokyo, and Dublin."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
     "02b62f2df2"
    ],
-   "value": "To bring the best user experience to customers through innovative hardware, software, and services. Apple also commits to becoming carbon neutral across its entire business and supply chain by 2030."
+   "value": "To create products that enrich people's lives through innovation, simplicity, and user experience."
   },
   "name": "Apple",
   "pace_of_work": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
     "02b62f2df2"
    ],
-   "value": "Estimated: Deliberate and product-focused rather than a fast-shipping startup sprint. Teams prioritize lower-volume, high-quality releases, with extended development cycles tied to hardware anniversaries. Bureaucratic oversight can arise from multiple stakeholder reviews for high-touch product work."
+   "value": "Fast-paced with a focus on rapid innovation and product iteration."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
     "02b62f2df2"
    ],
-   "value": "iPhone, Mac, iPad, Apple Watch, AirPods, Apple Vision Pro, Apple TV, HomePod, and a portfolio of software and services including iOS, macOS, iCloud, Apple Music, Apple TV+, Apple Fitness+, and Apple Pay."
+   "value": "iPhone, Mac, iPad, Apple Watch, Apple TV, Apple Music, iCloud, Apple Pay, and various software services."
   },
   "prompt_v": 2,
   "pto_days": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 10 to 15 days of vacation per year for new-grad hires, supplemented by a separate pool of sick leave and a generous holiday calendar. Exact accruals vary by policy group and location."
+   "confidence": "medium",
+   "source_ids": [
+    "02b62f2df2"
+   ],
+   "value": "20 days annually (standard for senior roles; new grads may receive less)."
   },
+  "refresh_after": 1789942750,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -16817,16 +16822,18 @@
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Guaranteed full company-wide holiday shutdown covering the week between Christmas and New Year. Apple also adheres to dedicated quiet periods for its design and engineering cadences, resulting in additional predictable, low-meeting recovery intervals."
+   "confidence": "high",
+   "source_ids": [
+    "02b62f2df2"
+   ],
+   "value": "Guaranteed shutdowns during major holidays and company-wide breaks (e.g., Christmas, New Year's)."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
     "02b62f2df2"
    ],
-   "value": "Large-cap public company, market capitalization in the trillions, with a stable global workforce exceeding 160,000 employees and a mature, profitable multi-product business."
+   "value": "Publicly traded multinational corporation with over 200,000 employees."
   },
   "sources": [
    {
@@ -16851,9 +16858,11 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "02b62f2df2"
+   ],
+   "value": "Apple sponsors H-1B visas for eligible roles and supports visa processing for international hires."
   },
   "status": "ready",
   "summary": {
@@ -16861,29 +16870,33 @@
    "source_ids": [
     "02b62f2df2"
    ],
-   "value": "Apple designs, manufactures, and sells consumer electronics, software, and services—most famously the iPhone, Mac, iPad, Apple Watch, and subscription offerings like iCloud and Apple Music. It makes money primarily through high-margin hardware sales and a fast-growing services segment built on its installed base of over two billion active devices."
+   "value": "Apple designs and sells consumer electronics, software, and online services, generating revenue primarily through hardware sales, subscriptions, and digital content."
   },
+  "synthesized_evidence_sha": "ed5f31a76ba8cf22",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "02b62f2df2"
+    "17f8c9c419"
    ],
-   "value": "AI and data science work spans on-device machine learning (Core ML), silicon-level neural engines, privacy-focused intelligence for Siri and computational photography, and applied research across computer vision, natural language processing, recommendation systems, and data engineering for the services platform."
+   "value": "AI/ML development, data analysis, software engineering, hardware integration, and system optimization for consumer products and services."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583061,
   "web_search_url": "https://duckduckgo.com/?q=Apple+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419",
+    "02b62f2df2"
+   ],
+   "value": "Apple offers elite prestige in AI/DS roles with high new-grad compensation, fast-paced innovation, and a strong focus on work-life balance through structured shutdowns and reasonable hours."
+  },
+  "wlb_rating": {
+   "confidence": "high",
    "source_ids": [
     "02b62f2df2"
    ],
-   "value": "Apple offers a rare combination of elite AI prestige and top-tier new-grad pay within a culture that moves fast without glorifying burnout. Its deep vertical integration means AI/ML practitioners see their work ship to hundreds of millions of devices, all while having protected personal time through an enterprise-wide shutdown policy that rivals rarely match. For a candidate seeking accelerated technical learning and big-scale impact alongside a long-term sustainable career, Apple's focus on pro"
-  },
-  "wlb_rating": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Strong work-life balance relative to other big tech firms. While workload varies team by team, Apple's structural dislike of always-on chat rooms and lack of internal 'move fast and break things' dogma leads to more sustainable rhythms than similarly prestigious companies. On-call can exist for cloud services teams but is rarely panicked."
+   "value": "High (Apple emphasizes work-life balance through structured shutdowns and reasonable hours, avoiding burnout)."
   }
  },
  "applied information sciences": {
@@ -149002,125 +149015,144 @@
   "ai_ds_prestige_tier": {
    "confidence": "high",
    "source_ids": [
-    "197d20b440"
+    "71eabe7253",
+    "029a5b6bba",
+    "85660a81ab"
    ],
-   "value": "Tier 1 - The dominant industry leader in AI hardware and infrastructure, making its mark on every GPU produced globally."
+   "value": "Top-tier, industry-leading prestige in AI and data science, with NVIDIA as a benchmark for AI innovation and research."
   },
   "aliases": [],
-  "attempts": 19,
+  "attempts": 20,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "ff09a3aa14",
-    "197d20b440"
+    "71eabe7253",
+    "029a5b6bba",
+    "85660a81ab"
    ],
-   "value": "Builds industry-leading hardware and combines the best of external EDA with highly optimized internal tools, pairing cutting-edge GPUs with proprietary compilers and software ecosystems to power AI, deep learning, and autonomous systems."
+   "value": "Sells hardware (GPUs, AI accelerators) and software solutions (libraries, frameworks) to enterprises, cloud providers, and developers, with significant revenue from data center and AI segments."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "197d20b440",
-    "f6fa431ced"
+    "029a5b6bba",
+    "71eabe7253"
    ],
-   "value": "A mission-driven environment populated by brilliant and hardworking people, focused on growing rapidly while maintaining a culture of elite technical innovation."
+   "value": "Inclusive, encouraging, collaborative, and focused on innovation with a strong emphasis on technical excellence."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "197d20b440",
-    "f6fa431ced"
+    "71eabe7253",
+    "029a5b6bba",
+    "85660a81ab"
    ],
-   "value": "A broad base of enterprise technology companies, AI researchers, automotive manufacturers, and developers working on the hottest state-of-the-art fields such as virtual reality, AI, deep learning, and autonomous vehicles."
+   "value": "Enterprises, cloud providers, researchers, developers, and industries including gaming, autonomous vehicles, and healthcare."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "af7e7615f7",
-    "dbc3b9e88f"
+    "af7e7615f7"
    ],
-   "value": "Estimated: Elite top-tier new-grad pay ranging from $180,000 to $230,000 total compensation (base + equity) for technical roles."
+   "value": "Estimated: $160,000 - $185,000 base + bonuses"
   },
   "evidence_sha": "04660a76732dafe9",
-  "generated_at": 1784748506,
+  "generated_at": 1784758750,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "local",
+   "model": "qwen3:30b",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "197d20b440",
-    "f6fa431ced"
+    "71eabe7253",
+    "029a5b6bba",
+    "85660a81ab"
    ],
-   "value": "Artificial Intelligence Hardware and Software / Deep Learning / Semiconductors"
+   "value": "Semiconductors, AI, high-performance computing, and software development."
   },
   "interview_focus": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "71eabe7253",
+    "029a5b6bba",
+    "85660a81ab"
+   ],
+   "value": "Technical problem-solving, algorithm design, GPU optimization, AI/ML model deployment, and collaborative innovation in high-performance computing environments."
   },
-  "last_attempt_at": 1784756465,
+  "last_attempt_at": 1784758750,
   "last_evidence_at": 1784757617,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "ff09a3aa14",
-    "197d20b440"
+    "71eabe7253",
+    "85660a81ab",
+    "ff09a3aa14"
    ],
-   "value": "US-CA-Santa-Clara (HQ) and globally distributed technical hubs."
+   "value": "Santa Clara, Austin, and remote roles across the U.S., with global presence in key tech hubs."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "f6fa431ced"
+    "71eabe7253",
+    "029a5b6bba",
+    "85660a81ab"
    ],
-   "value": "Dedicated to a computing model focused on visual and AI computing, simulating human intelligence to act as the brain of computers, robots, and self-driving cars that can perceive and understand the world."
+   "value": "To accelerate the world's most important technologies, including AI, computing, and data science, through innovative hardware and software solutions."
   },
   "name": "NVIDIA",
   "pace_of_work": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "197d20b440",
-    "f6fa431ced"
+    "71eabe7253",
+    "029a5b6bba",
+    "85660a81ab"
    ],
-   "value": "Estimated: Fast-paced and highly innovative culture, actively avoiding slow bureaucracy, focused on rapidly growing some of the hottest tech fields."
+   "value": "Fast-paced, innovative, with rapid iteration and focus on cutting-edge AI and hardware advancements."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "ff09a3aa14",
-    "197d20b440",
-    "f6fa431ced"
+    "71eabe7253",
+    "029a5b6bba",
+    "85660a81ab"
    ],
-   "value": "GPUs, internal and external EDA tools, deep learning algorithms, compute compilers aligned with open-source ecosystems, and AI brains for robots and self-driving cars."
+   "value": "GPUs, AI accelerators, data center solutions, and software libraries for AI, deep learning, and high-performance computing."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15-20 days of standard PTO, plus holidays."
+   "source_ids": [
+    "af7e7615f7"
+   ],
+   "value": "Estimated: 20-25 days"
   },
-  "refresh_after": 1789932506,
+  "refresh_after": 1789942750,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "af7e7615f7"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Typically features holiday closures and occasional shutdown days, though specific guaranteed shutdowns are not explicitly publicized."
+   "confidence": "low",
+   "source_ids": [
+    "af7e7615f7"
+   ],
+   "value": "None found in research"
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "197d20b440",
-    "f6fa431ced"
+    "71eabe7253",
+    "029a5b6bba",
+    "85660a81ab"
    ],
-   "value": "A large, rapidly growing, industry-dominating public technology company that states its product lines are growing fast and teams are expanding with top talent."
+   "value": "Large enterprise, global scale, with significant growth in AI and data center markets."
   },
   "sources": [
    {
@@ -149185,44 +149217,54 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
-    "f6fa431ced"
+    "71eabe7253",
+    "029a5b6bba",
+    "85660a81ab"
    ],
-   "value": "NVIDIA actively recruits and sponsors top technical talent globally, fueling its rapid growth."
+   "value": "Sponsorship is available for eligible candidates, though specific visa types and processes are not detailed in the job postings."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "ff09a3aa14",
-    "197d20b440",
-    "f6fa431ced"
+    "71eabe7253",
+    "029a5b6bba",
+    "85660a81ab"
    ],
-   "value": "NVIDIA is a foundational technology company that pioneered the GPU and focuses on visual, AI, and deep learning computing. They make money by designing and selling high-performance hardware and developing the internal and external software ecosystems required to run complex workloads."
+   "value": "NVIDIA designs and manufactures GPUs and AI computing platforms, powering advancements in AI, gaming, and data centers through high-performance hardware and software solutions."
   },
-  "synthesized_evidence_sha": "7eca5291784d4cc5",
+  "synthesized_evidence_sha": "04660a76732dafe9",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "ff09a3aa14",
-    "197d20b440",
-    "f6fa431ced"
+    "71eabe7253",
+    "029a5b6bba",
+    "85660a81ab"
    ],
-   "value": "New grads work on highly optimized internal EDA tools, RTL logic synthesis algorithms, and compiler infrastructure aligned with open-source ecosystems. Work impacts every GPU produced and spans AI, deep learning, and autonomous vehicle projects."
+   "value": "Developing parallel algorithms, GPU optimization, AI inference, VLSI physical design, EDA tools, compiler infrastructure, and high-performance computing software."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784580766,
   "web_search_url": "https://duckduckgo.com/?q=NVIDIA+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "71eabe7253",
+    "029a5b6bba",
+    "85660a81ab"
+   ],
+   "value": "NVIDIA’s AI and GPU leadership offers elite prestige, high new-grad pay, and a fast-paced culture focused on innovation, not bureaucracy, with a mission to accelerate cutting-edge technologies."
   },
   "wlb_rating": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate-to-High. A fast technical pace but typically sane hours within a company culture that emphasizes technical excellence rather than toxic high-burnout crunch."
+   "confidence": "medium",
+   "source_ids": [
+    "71eabe7253",
+    "029a5b6bba",
+    "85660a81ab"
+   ],
+   "value": "Moderate to good, with some emphasis on work-life balance but potential for high intensity in project phases."
   }
  },
  "nvidia ai": {
