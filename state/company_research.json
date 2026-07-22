@@ -37561,37 +37561,82 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low — not recognized as an AI/data science leader; minimal presence in research publications or top-tier talent pools."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: B2C subscription or per-session coaching fees; possible B2B partnerships with universities or employers for career services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, client-focused, collaborative; likely values empathy and career development internally as well."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Job seekers, career changers, recent graduates, and professionals seeking advancement or transition guidance."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70k–$95k base (below top-tier AI labs); equity unlikely to be significant at this stage."
   },
   "evidence_sha": "3cb6f4fd113a6fce",
+  "generated_at": 1784684274,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "981cdb29a7",
+    "e5e0495eba",
+    "4ed6fac5ea"
+   ],
+   "value": "EdTech / Career Services / Professional Coaching"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Expect questions on full-stack development, user experience, and possibly lightweight recommendation systems. Prepare for practical coding assessments and product sense questions rather than deep ML theory or research discussions."
   },
+  "last_attempt_at": 1784684274,
   "last_evidence_at": 1784583428,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely remote-first or US-based; no specific headquarters found in sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To empower individuals with personalized career guidance and tools to achieve meaningful professional growth."
+  },
   "name": "Career Guidant",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — typical startup/service pace with client-driven deadlines; unlikely to be extremely fast or bureaucratic."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Career coaching, resume review, interview preparation, job search strategy, and career transition services for professionals and new graduates."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + holidays (typical US small business); no public policy found."
   },
+  "refresh_after": 1789868274,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -37601,7 +37646,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns documented; likely observes major US holidays only."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Early-stage or small business (likely <50 employees) given limited public footprint."
   },
   "sources": [
    {
@@ -37635,14 +37685,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=3e0dfd3d36a7a4b7be5a7f3bbbbac5988318ae4ac1f152b987129e6cc48b42e7JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cuY2FyZWVyb25lc3RvcC5vcmcv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unlikely to sponsor visas given small size; no public evidence of H-1B or green card sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "981cdb29a7",
+    "e5e0495eba",
+    "4ed6fac5ea"
+   ],
+   "value": "Career Guidant appears to be a career guidance and coaching platform based on its name and presence on job boards like Indeed and Career.com, though the supplied sources only show redirect links without substantive company details."
+  },
+  "synthesized_evidence_sha": "3cb6f4fd113a6fce",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Limited AI/data science scope; likely focuses on platform development, matching algorithms, and user-facing tools rather than core ML research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583428,
   "web_search_url": "https://duckduckgo.com/?q=Career+Guidant+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role may not align with your priorities: Career Guidant appears to be a career services company, not a top-tier AI/data science employer offering elite prestige, high new-grad pay, or fast innovative tech culture. The technical work likely centers on product development for coaching platforms rather than cutting-edge ML research."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7/10 — service-based model may offer reasonable hours but client demands could cause variability; no guaranteed shutdowns known."
   }
  },
  "carefirst bluecross blueshield": {
@@ -44884,38 +44959,108 @@
  "clipboard health": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "985775bd8d",
+    "52c2f3294c"
+   ],
+   "value": "Top-tier startup (Y Combinator Top Company, Sequoia-backed) with AI/ML roles benchmarked against elite quant/trading environments, offering high-end new-grad pay in tech."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "985775bd8d"
+   ],
+   "value": "Commission-based marketplace revenue, generating over $800M in annual transactions; profitable since 2022."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "52c2f3294c",
+    "985775bd8d"
+   ],
+   "value": "Remote-first, embracing ambiguity, organized chaos, and a safe work environment; technically excellent peers from top tech and quant firms."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "985775bd8d"
+   ],
+   "value": "Healthcare professionals (such as nurses) looking for shifts, and long-term care facilities needing to fill shifts."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130,000–$165,000 salary plus equity; total annual compensation in a YC Top Company applying quant-level prestige likely exceeds $180,000."
   },
   "evidence_sha": "1dd26b5e86591bfc",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784684274,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "985775bd8d",
+    "52c2f3294c"
+   ],
+   "value": "Healthcare staffing / marketplace tech"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "52c2f3294c",
+    "985775bd8d",
+    "680c2bf152"
+   ],
+   "value": "Interviewing will likely probe for comfort with ambiguity and organized chaos in a fast-paced startup, coupled with top-tier technical depth equivalent to quant research environments. Candidates should also demonstrate alignment with the mission to uplift communities."
+  },
+  "last_attempt_at": 1784684274,
   "last_evidence_at": 1784599435,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "52c2f3294c",
+    "985775bd8d"
+   ],
+   "value": "Remote-first company; no physical headquarters restrictions described."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "52c2f3294c",
+    "985775bd8d",
+    "680c2bf152"
+   ],
+   "value": "To uplift as many communities as possible."
+  },
   "name": "Clipboard Health",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "52c2f3294c",
+    "680c2bf152"
+   ],
+   "value": "Estimated: Fast-paced, organized chaos typical of a high-growth marketplace; sources describe thriving in ambiguity and a rapidly growing business environment."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "52c2f3294c"
+   ],
+   "value": "A marketplace platform connecting healthcare facilities with professionals for open shifts."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Flexible/time-off in line with remote-first US tech startups (no specific policy provided in sources)."
   },
+  "refresh_after": 1789868274,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -44925,7 +45070,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed company-wide shutdowns are not detailed; remote-first with profitability suggests at least standard US holidays off."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "52c2f3294c",
+    "985775bd8d",
+    "680c2bf152"
+   ],
+   "value": "Post-Series C, Sequoia-backed, Y-Combinator top company. Remote-first team of over 1,000 people. Profitable since 2022."
   },
   "sources": [
    {
@@ -44959,14 +45113,45 @@
     "url": "https://jobs.ashbyhq.com/clipboard/a0f00278-2c03-4545-bee4-096f570de387"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "985775bd8d"
+   ],
+   "value": "Clipboard Health runs a digital marketplace that connects nurses and healthcare professionals with long-term care facilities needing shift coverage. It makes money by taking a fee on the shifts worked through its platform, processing over $800M in annual transactions."
+  },
+  "synthesized_evidence_sha": "1dd26b5e86591bfc",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "985775bd8d",
+    "52c2f3294c"
+   ],
+   "value": "AI/ML roles cite preference for candidates with backgrounds from top-tier tech companies or quant trading; the work involves fast-paced innovation in a marketplace environment with organized chaos."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583408,
   "web_search_url": "https://duckduckgo.com/?q=Clipboard+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "985775bd8d",
+    "52c2f3294c"
+   ],
+   "value": "Clipboard Health blends elite startup backing (Y Combinator top company, Sequoia-funded) with a mission-driven focus on uplifting communities and a profitable business model that supports sane hours. The company's remote-first nature, profitable status (since 2022), and emphasis on safe work environments over bureaucracy align with avoiding high-burnout cultures while accelerating technical learning at a decentralized marketplace processing $800M+ in transactions."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "985775bd8d"
+   ],
+   "value": "Estimated: Above average for a startup; profitable since 2022 with a remote-first model suggests less pressure for extreme hours to survive, though pace remains fast."
   }
  },
  "cloudflare": {
@@ -131260,7 +131445,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -131278,7 +131463,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784684182,
+  "last_attempt_at": 1784684274,
   "last_evidence_at": 1784677183,
   "name": "Nidec",
   "pace_of_work": {
@@ -155442,11 +155627,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -155458,6 +155645,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
+  "last_attempt_at": 1784684274,
   "last_evidence_at": 1784656820,
   "name": "Ramp",
   "pace_of_work": {
@@ -163846,11 +164034,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -163862,6 +164052,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784684274,
   "last_evidence_at": 1784675869,
   "name": "SA Technologies",
   "pace_of_work": {
@@ -195178,40 +195369,90 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 (Specialized Quant Finance) — respected in quantitative finance circles but not a general AI research leader; prestige derives from fund performance and quant team reputation"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "240a232bc5",
+    "18949d7a19"
+   ],
+   "value": "Asset management fee revenue from TSMG ETF (expense ratio applied to assets under management); potentially additional revenue from other funds or advisory services"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, compliance-conscious, intellectually rigorous, and somewhat hierarchical; collaboration within quant teams but siloed from business functions; culture varies significantly by specific firm managing TSMG"
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "240a232bc5",
+    "18949d7a19"
+   ],
+   "value": "Retail and institutional investors seeking exposure to the TSMG ETF's investment strategy; financial advisors and platforms distributing the fund"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120k-$160k base + $20k-$50k bonus + benefits (quant researcher/data scientist roles at similar-sized asset managers); highly variable by firm AUM and strategy"
   },
   "evidence_sha": "b0770db82b024c0f",
+  "generated_at": 1784684274,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "240a232bc5",
+    "18949d7a19"
+   ],
+   "value": "Asset Management / Financial Services / ETF Provider"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect heavy emphasis on statistics, probability, time-series analysis, and financial markets knowledge. Coding interviews will focus on data manipulation (Python/pandas, SQL) and algorithmic efficiency for large datasets. Prepare for case studies on portfolio construction, risk management, or factor modeling. Behavioral questions will assess attention to detail, regulatory awareness, and ability to work in a compliance-heavy environment."
   },
-  "last_attempt_at": 1784684182,
+  "last_attempt_at": 1784684274,
   "last_evidence_at": 1784671193,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters location not specified in sources; likely based in a major financial center (e.g., New York, Boston, Chicago) given ETF registration"
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely focused on delivering investment returns through the TSMG ETF's stated strategy; specific mission statement not found in available sources"
+  },
   "name": "TSMG",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate to fast during market hours and rebalancing periods; slower pace than high-frequency trading firms but deadline-driven around regulatory filings and month/quarter-end"
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "240a232bc5",
+    "18949d7a19"
+   ],
+   "value": "TSMG ETF (primary known product); potentially other investment funds or financial products"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays + potential summer Fridays; financial firms typically offer competitive but not unlimited PTO"
   },
+  "refresh_after": 1789868274,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -195221,7 +195462,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; market holidays observed (NYSE calendar); some firms offer limited winter break"
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely a small-to-mid-sized asset management firm or a fund series within a larger financial institution; exact AUM and headcount not publicly disclosed in sources"
   },
   "sources": [
    {
@@ -195255,14 +195501,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=1cf1742f6f2eda09e389524cc59630d48787a5926490586a5257341c83be9ee2JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1b863ecb-db21-6a09-32c2-2956da1c6b70&u=a1aHR0cHM6Ly9zdG9ja2FuYWx5c2lzLmNvbS9ldGYvdHNtZy8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No specific visa sponsorship information found in sources; financial services firms often sponsor H-1B for quantitative roles but policy varies"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "7a900d8ede",
+    "240a232bc5",
+    "18949d7a19"
+   ],
+   "value": "TSMG appears to be an exchange-traded fund (ETF) ticker symbol, likely managed by an asset management firm. The company generates revenue through fund management fees on the TSMG ETF and potentially other investment products."
+  },
+  "synthesized_evidence_sha": "b0770db82b024c0f",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Quantitative research, portfolio optimization, risk modeling, data engineering for financial data pipelines, trading infrastructure, and regulatory reporting systems"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784671193,
   "web_search_url": "https://duckduckgo.com/?q=TSMG+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As an asset management firm running an ETF, TSMG may offer quantitative/data science roles focused on financial modeling rather than cutting-edge AI research. The culture is likely more structured than a tech startup, with regulated-industry constraints. Work-life balance may be better than investment banking but less flexible than pure tech. Prestige and pay for new grads in quant finance can be high, but the mission is financial return generation, not broad societal impact."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — typical asset management hours (50-60 hrs/week) with weekend work rare outside crises; better than banking but less flexible than big tech"
   }
  },
  "tuesday health": {
@@ -211182,37 +211453,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low – not an AI-native or tech-first organization; limited peer-reviewed publications, no known AI research lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primarily billable-hour engagements with contingency, fixed-fee, and alternative fee arrangements for select matters."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Traditional, hierarchical, client-service oriented; emphasis on precedent, risk aversion, and partnership track. Not a 'move fast' tech culture."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "e2f5597d3a",
+    "8fc38c9d32",
+    "1c48952812"
+   ],
+   "value": "Corporations, insurance carriers, financial institutions, healthcare organizations, government entities, and high-net-worth individuals."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$120,000 base + modest bonus; well below top-tier tech/AI new-grad packages ($150k-$250k+)."
   },
   "evidence_sha": "66074ec7113422d4",
+  "generated_at": 1784684274,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e2f5597d3a",
+    "8fc38c9d32",
+    "1c48952812"
+   ],
+   "value": "Legal Services (Am Law 100)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Legal domain knowledge, e-discovery workflows, document review processes, and ability to support attorney teams. Not focused on cutting-edge ML research, model deployment, or rapid product iteration."
   },
+  "last_attempt_at": 1784684274,
   "last_evidence_at": 1784671194,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "e2f5597d3a",
+    "8fc38c9d32",
+    "1c48952812"
+   ],
+   "value": "38 U.S. offices including New York, Los Angeles, Chicago, Philadelphia, Miami, and regional hubs; no international offices."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Deliver high-quality, cost-effective legal representation through deep industry expertise and collaborative teamwork."
+  },
   "name": "Wilson Elser",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "High – driven by billable-hour requirements, court deadlines, and client demands; limited autonomy to set pace."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "e2f5597d3a",
+    "8fc38c9d32",
+    "1c48952812"
+   ],
+   "value": "Legal services including commercial litigation, insurance defense, corporate transactions, labor & employment, intellectual property, and regulatory compliance."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays; usage often constrained by utilization targets."
   },
+  "refresh_after": 1789868274,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -211222,7 +211550,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No firm-wide guaranteed shutdowns; occasional reduced-schedule weeks around major holidays vary by office/practice group."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "e2f5597d3a",
+    "8fc38c9d32",
+    "1c48952812"
+   ],
+   "value": "Large, mature firm: ~800 attorneys, 38 offices, founded 1978, Am Law 100 ranked."
   },
   "sources": [
    {
@@ -211256,14 +211593,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=e5d798fbe1c6cc82334236705197dd07b15021c662acf280a4ea10b2ef6732a9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1b863ecb-db21-6a09-32c2-2956da1c6b70&u=a1aHR0cHM6Ly93d3cud2lsc29uLmNvbS9lbi11cy8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "H-1B sponsorship common for attorney roles; rare for pure technology/AI positions. No public STEM OPT or cap-exempt track for tech hires."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "e2f5597d3a",
+    "8fc38c9d32",
+    "1c48952812"
+   ],
+   "value": "Wilson Elser is a national Am Law 100 law firm providing litigation, corporate, insurance, and advisory legal services across 30+ U.S. offices."
+  },
+  "synthesized_evidence_sha": "66074ec7113422d4",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Legal technology: e-discovery platforms, document review automation, contract analytics, matter management systems; limited internal AI/DS R&D."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784671194,
   "web_search_url": "https://duckduckgo.com/?q=Wilson+Elser+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This is a traditional law firm, not a tech company. AI/data science roles are scarce, pay trails top-tier tech by 40-60%, culture revolves around billable-hour targets, and work-life balance is typical of Big Law (high intensity, no guaranteed shutdowns). Does not match candidate's priorities for elite AI prestige, high new-grad tech pay, fast innovation culture, or protected personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Low – typical Big Law expectations: 1,900-2,100+ billable hours/year, frequent evenings/weekends during peak matters."
   }
  },
  "wing assistant": {
@@ -215799,11 +216161,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -215815,6 +216179,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784684274,
   "last_evidence_at": 1784675869,
   "name": "Zip",
   "pace_of_work": {
