@@ -27761,39 +27761,100 @@
  },
  "booz allen hamilton": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "b485f95c37"
+   ],
+   "value": "High Tier: Not a FAANG pure AI lab, but holds significant prestige within the defense and intelligence community for deploying AI at national-scale missions."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "1f88b766fe"
+   ],
+   "value": "Primarily operates on long-term, multi-year government services contracts providing billed staff augmentation and complex project-based solutions."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "5ee18b5465"
+   ],
+   "value": "A 'mission-driven think tank' atmosphere emphasizing collaboration, professional development, and stamina over speed. Lean toward formal but inclusive, enhanced by internal upskilling and ethics."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "1f88b766fe"
+   ],
+   "value": "Primarily US federal government agencies, including defense, intelligence, and civil sectors; also serves Fortune 500 companies and not-for-profit organizations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75,000 - $95,000 base salary for entry-level software engineers in the Washington, DC metro area, officially accompanied by robust 401(k) matching rather than equity."
   },
   "evidence_sha": "4fba9734afbf4193",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784681538,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "1f88b766fe"
+   ],
+   "value": "Government Technology Services / National Security Consulting"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "b485f95c37",
+    "837ae18089"
+   ],
+   "value": "Expect a hybrid assessment focusing on systems-thinking, model-based systems engineering concepts, and agile iterative methodology rather than purely LeetCode algorithmic puzzles. Cultural fit questions will probe mission alignment and ability to navigate cleared, collaborative environments."
+  },
+  "last_attempt_at": 1784681538,
   "last_evidence_at": 1784673569,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "1f88b766fe"
+   ],
+   "value": "Headquartered in McLean, Virginia, with major tech hubs in the Washington DC metro area, Colorado, Texas, and other proximity sites to government installations."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "1f88b766fe"
+   ],
+   "value": "To empower people to change the world by combining technology, ingenuity, and partnership to solve the most complex client challenges."
+  },
   "name": "Booz Allen Hamilton",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady 'sustainable sprint' pace. Driven by federal contract deliverables, which resists the chaotic startup speed, but requires proactive technical advancement to avoid stagnation."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "1f88b766fe",
+    "b485f95c37"
+   ],
+   "value": "Provides technical consulting services including AI and machine learning, cybersecurity, data science, cloud computing, systems engineering, and digital transformation."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Approximately 21-28 days of Paid Time Off annually, in flux for new grads with standard federal holidays observed."
   },
+  "refresh_after": 1789865538,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -27802,8 +27863,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "5ee18b5465"
+   ],
+   "value": "Estimated: Guaranteed winter holiday shutdowns and periodic 'floating' days off triggered by mission timing. Predatory federal holidays always observed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "1f88b766fe"
+   ],
+   "value": "Large, mature public company with approximately 14,000+ employees; stable but driving internal modernization."
   },
   "sources": [
    {
@@ -27857,14 +27927,48 @@
     "url": "https://jobright.ai/jobs/info/69e0963a9564e855a25de479?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Sponsorship is generally not available for roles requiring US security clearances, which is the bulk of new grad technical positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1f88b766fe"
+   ],
+   "value": "Booz Allen Hamilton is a leading management and technology consulting firm that primarily serves US government agencies. It generates revenue by delivering advanced services in AI, cybersecurity, and digital transformation, essentially pairing deep mission knowledge with next-generation technical talent to solve complex federal problems."
+  },
+  "synthesized_evidence_sha": "4fba9734afbf4193",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "b485f95c37",
+    "1db9db9c4d"
+   ],
+   "value": "Candidates work on mission-critical AI, scalable cloud architectures, and agile software delivery for national security, often requiring US security clearances. Roles involve model-based systems engineering and building data pipelines rather than generic IT support."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673569,
   "web_search_url": "https://duckduckgo.com/?q=Booz+Allen+Hamilton+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "1f88b766fe",
+    "b485f95c37",
+    "5ee18b5465"
+   ],
+   "value": "It offers a rare intersection of elite federal prestige and fast-emerging AI consulting, enabling high-impact mission work with predictable boundaries. As a government contractor, it enforces billable-hour discipline that supports elusive shutdowns and argues against the 24/7 sprint culture found at private Silicon Valley tech firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "5ee18b5465"
+   ],
+   "value": "Estimated: Very good for the tech sector. Government contract labor hour norms enforce a strict ceiling on overwork, creating a culture that values output during standard hours rather than heroics."
   }
  },
  "bosch group": {
@@ -31901,7 +32005,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -31919,7 +32023,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784681447,
+  "last_attempt_at": 1784681538,
   "last_evidence_at": 1784661276,
   "name": "CACI",
   "pace_of_work": {
@@ -57888,39 +57992,95 @@
  },
  "elevenlabs": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "ee8b28c761"
+   ],
+   "value": "Tier 1 (Well-funded, world-class vocal AI pioneer, comparable to top-tier hyperscaler AI divisions and elite research entities in niche domain authority)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "732ccffcb5",
+    "ee8b28c761"
+   ],
+   "value": "B2B and B2C SaaS model with freemium access, paid subscription plans based on usage limits, and enterprise licensing for high-volume commercial projects."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "High ownership, engineering-first, and curiosity-driven. Formal checkpoints are minimized so that the pace comes from excitement, not bureaucracy."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "ee8b28c761"
+   ],
+   "value": "Users range from individual content creators, authors, and indie game developers to large enterprises in media, publishing, education, and entertainment seeking scalable, realistic AI narration and dubbing."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Total compensation of $175,000–$235,000 (base + equity + bonus) for a new-grad AI role in a high-cost U.S. location."
   },
   "evidence_sha": "9cd363aa64440cb6",
+  "generated_at": 1784681538,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ee8b28c761"
+   ],
+   "value": "Generative AI / Synthetic Voice & Audio AI"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+   "value": "Expect rigorous technical screenings on deep learning fundamentals, real-time audio modeling, and scalable API design, balanced with culture discussions verifying mission-alignment and comfort with high-autonomy, low-bureaucracy pace."
   },
+  "last_attempt_at": 1784681538,
   "last_evidence_at": 1784583509,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "ee8b28c761"
+   ],
+   "value": "Co-headquartered in London and New York, with distributed teams across Europe and the US. Remote-first culture is noted as heavily referenced in public discussions."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "ee8b28c761"
+   ],
+   "value": "To make all content universally accessible in any language and any voice, breaking down communication barriers instantly."
+  },
   "name": "ElevenLabs",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast and iterative, fueled by passionate R&D, but described as sustainable with explicit leadership respect for boundaries and avoiding fire drills."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "ee8b28c761"
+   ],
+   "value": "Core offerings include a text-to-speech API, voice cloning (both instant and professional), a speech-to-speech voice changer, and an AI dubbing tool for translating audio/video across languages while preserving original speaker characteristics."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25 days of flexible PTO annually, plus local public holidays."
   },
+  "refresh_after": 1789865538,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -57930,7 +58090,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: An annual end-of-year company-wide shutdown of at least one week between Christmas and New Year's is referenced, potentially longer."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "ee8b28c761"
+   ],
+   "value": "Rapidly scaling Series C startup, estimated at a few hundred employees globally, with significant recent funding to accelerate R&D and commercial expansion."
   },
   "sources": [
    {
@@ -57964,14 +58131,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=60ba660d9fa826ebec955a97d98a29a7af31ee0a0121fc5d8e63aaffdc797172JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRWxldmVuTGFicw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "ee8b28c761"
+   ],
+   "value": "ElevenLabs is a AI research and product company specializing in realistic, versatile speech synthesis and voice cloning technology. It makes money primarily through tiered subscriptions for its text-to-speech and voice generation API, alongside usage-based fees for enterprise-scale audio content creation."
+  },
+  "synthesized_evidence_sha": "9cd363aa64440cb6",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "ee8b28c761"
+   ],
+   "value": "Work spans novel generative AI model research, low-latency inference optimization, multilingual speech synthesis, voice security/verification, and productionizing state-of-the-art audio ML pipelines."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583509,
   "web_search_url": "https://duckduckgo.com/?q=ElevenLabs+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "ee8b28c761"
+   ],
+   "value": "ElevenLabs aligns with the candidate's appetite for elite AI prestige and top pay while actively rejecting slow bureaucracy. Public chatter from employees emphasizes a mission-driven, remote-first culture with exceptionally sane hours and protected weekends, directly matching the need for high-impact learning without burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Well Above Average. Consistent internal reports cite well-protected working hours, little weekend work, and cultural disdain for burnout/overwork."
   }
  },
  "eliseai": {
@@ -67981,34 +68175,89 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "0a1eaf4f96"
+   ],
+   "value": "Ford primarily operates on a vehicle manufacturing and sales model, divided into three customer-facing segments: Blue (iconic ICE vehicles), Model e (electric vehicles and digital platforms), and Ford Pro (commercial services and hardware). Profit is increasingly tied to after-sales services, subscriptions for connected vehicle features, and software platforms that manage fleet operations."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "0a1eaf4f96",
+    "65f7dc3112"
+   ],
+   "value": "Ford serves individual consumers and families globally with personal vehicles, as well as large-scale commercial fleets, governments, and rental car companies. Its Ford Pro division specifically targets businesses of all sizes for commercial vehicles, fleet electrification, and vehicle lifecycle management."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $100,000 - $135,000 base salary, likely with a robust annual bonus and equity, targeting a total compensation range in the low $120,000 to $150,000 range for AI/DS roles in high-cost locations like Palo Alto."
   },
   "evidence_sha": "3e60a79b7784f658",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784681538,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0a1eaf4f96"
+   ],
+   "value": "Automotive & Mobility Technology"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784681538,
   "last_evidence_at": 1784674431,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "b603a3ab74"
+   ],
+   "value": "Ford's global headquarters and core tech strategy arm is located in Dearborn, Michigan. Major technical hubs and R&D centers exist in Palo Alto, CA (Greenfield Labs), Detroit, MI, and various global locations including software offices in Chennai, India, and Tel Aviv, Israel."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "0a1eaf4f96"
+   ],
+   "value": "Ford's mission is to build a better world where every person is free to move and pursue their dreams. Its current strategy, Ford+, focuses on leveraging digital technologies to create always-on customer relationships, build higher-margin recurring revenue streams, and lead the transition to electrification."
+  },
   "name": "Ford Motor Company",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Medium. A typical 40-45 hour week is standard in software units. The cadence is methodical rather than frenetic, distinguishing it from a chaotic startup pace while still moving faster than many legacy automotive counterparts due to the Ford+ restructuring."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "0a1eaf4f96",
+    "65f7dc3112"
+   ],
+   "value": "Ford's product portfolio includes internal combustion engine (ICE) vehicles like the F-Series trucks and Mustang, as well as electric vehicles such as the Mustang Mach-E, F-150 Lightning, and E-Transit. It also sells commercial vehicle solutions through Ford Pro, which bundles telematics, charging, and fleet management software, alongside financial services via Ford Credit."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: A standard annual leave offering of 15-20 days for new hires, possibly calculated as an accrual. The exact band may increase with voluntary leave; this estimate excludes the established Christmas-to-New-Year slowdown."
   },
+  "refresh_after": 1789865538,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -68018,7 +68267,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: An institutionally guaranteed year-end shutdown between Christmas and New Year's Day where the vast majority of technology, salaried employees are strongly encouraged to disconnect without using PTO days."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "b603a3ab74"
+   ],
+   "value": "Ford is a large, publicly traded global enterprise with over 170,000 employees worldwide and a mature, blue-chip stage. It is undergoing a significant digital transformation, incubating tech talent internally rather than functioning as a high-growth startup, with vast resources for R&D in artificial intelligence and data science."
   },
   "sources": [
    {
@@ -68052,14 +68308,40 @@
     "url": "https://www.bing.com/ck/a?!&&p=0ed92a3384b499678f5b086ed440ebc9fb660ed5e9422d3fc47f1d190ef930d2JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=17b15538-f6ae-67cc-2d9b-42a5f755668d&u=a1aHR0cHM6Ly93d3cuZm9yZC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "0a1eaf4f96",
+    "65f7dc3112"
+   ],
+   "value": "Ford Motor Company is a storied American automaker that designs, manufactures, and sells a full line of cars, trucks, SUVs, and electrified vehicles globally. It makes money primarily through vehicle sales, but is increasingly focused on software-enabled services, fleet solutions like Ford Pro, and recurring digital subscriptions tied to its next-generation connected vehicles."
+  },
+  "synthesized_evidence_sha": "3e60a79b7784f658",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "0a1eaf4f96"
+   ],
+   "value": "AI and data science teams at Ford work on machine learning models for autonomous driving systems (BlueCruise), predictive maintenance algorithms for connected vehicles, and supply chain logistics optimization. Data work spans real-time telematics streams, computer vision for manufacturing plants, and natural language processing for vehicle voice assistants."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674431,
   "web_search_url": "https://duckduckgo.com/?q=Ford+Motor+Company+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Ford offers a balance of elite brand legacy and high-tech new-grad pay (estimated at $110k-$130k base) without the extreme pressure of high-burnout environments. Its mission translates to tangible, real-world AI products like safety systems and autonomy that provide strong case studies; while the estimated 40-45 hour week culture and high company respect for boundaries offer a sustainable path for aggressive technical learning."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4 out of 5. Strong work life balance is reported within its tech divisions, with a culture that supports leaving on time. Technologists looking for a sustainable workplace often cite Ford's respect for personal time, especially when compared to extreme-burnout Silicon Valley firms."
   }
  },
  "fort myer construction corporation": {
@@ -71390,52 +71672,116 @@
  },
  "ge healthcare": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "4aee2ecf4c"
+   ],
+   "value": "With its massive real-world medical data access, strong safety-critical AI brand, and global scale, GE Healthcare sits in a high tier for applied AI, just below elite, research-pure industry labs like DeepMind or OpenAI."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "4aee2ecf4c"
+   ],
+   "value": "Sells high-margin medical imaging equipment as a capital expense, plus a growing recurring revenue stream from software, AI-enabled analytics, and servicing contracts on installed machines."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "4aee2ecf4c"
+   ],
+   "value": "Mission-oriented, collaborative, and focused on patient impact over raw coding velocity; a corporate environment that feels less like a 24/7 hackathon and more like a team of committed engineers with a collective purpose."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "4aee2ecf4c"
+   ],
+   "value": "Hospitals, clinics, academic medical centers, pharmaceutical companies for imaging in clinical trials, and large healthcare delivery networks globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated base salary $115,000 - $135,000, with target bonus of 10-15% and equity or long-term performance grants for PhD engineering hires, pushing total compensation to $140,000 - $170,000."
   },
   "evidence_sha": "3649ca895ed01a4b",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784681538,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784681447,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "4aee2ecf4c"
+   ],
+   "value": "Healthcare Technology (MedTech)"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "4aee2ecf4c"
+   ],
+   "value": "Interviews likely balance a rigorous practical coding and ML fundamentals screen with a strong behavioral component probing experience with regulated environments, cross-functional collaboration, and mission alignment over an unsustainable 'hustle' culture. Expect case studies on applying tech to clinical problems with an emphasis on safety and efficiency, not just raw speed."
+  },
+  "last_attempt_at": 1784681538,
   "last_evidence_at": 1784645371,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "4aee2ecf4c",
+    "f9798dc106"
+   ],
+   "value": "Major hubs in Chicago, IL (HQ), Milwaukee, WI, and research/engineering centers in San Ramon, CA, and international sites like Bangalore, India."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "4aee2ecf4c"
+   ],
+   "value": "To create a world where healthcare has no limits, seeking solutions for a healthier world with smarter, more efficient care and better patient outcomes."
+  },
   "name": "GE Healthcare",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: The pace is predictable and methodical due to medical device compliance and clinical safety needs, creating a far less frantic rhythm than consumer software, though deadlines accompany product milestones."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "4aee2ecf4c"
+   ],
+   "value": "Diagnostic cardiology devices, maternal-infant care and patient monitoring solutions, medical imaging (MRI, CT, ultrasound, X-ray systems), plus digital platforms like Edison Health Services and command center software for hospital operations."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of combined vacation and sick time, plus roughly 10 company holidays, increasing with tenure."
   },
+  "refresh_after": 1789865538,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research"
+   "value": "GE Healthcare Edison Engineering Development Program (EEDP) is a well-known rotational program for early-career software/engineers, though a dedicated `AI Fellowship` was not cited in this research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No guaranteed full-company shutdowns outside recognized holidays, but managers in healthcare tech often respect quiet periods for deep technical work during end-of-year lows in clinical activity."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "f9798dc106"
+   ],
+   "value": "Mature public company, part of GE, with a large, global workforce focused on medical technology innovation. Fits an innovation-at-scale stage rather than a fast-moving startup."
   },
   "sources": [
    {
@@ -71469,14 +71815,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=c6db35e011fdbf261b1ae47a0f54c2a8ff53457e3e0571da540d61d9b87dbad8JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cuZ2VhcHBsaWFuY2VzLmNvbS9nZS1hcHBsaWFuY2VzLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "GE Healthcare typically sponsors H-1B visas for specialized AI engineering and data scientist roles, especially at the master's/PhD level, as a large multinational with a history of hiring international talent for its R&D functions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "f9798dc106"
+   ],
+   "value": "GE Healthcare is a global medical technology and digital solutions company that provides diagnostic imaging, patient monitoring systems, and AI-powered software to hospitals and clinics. It makes money by selling these imaging machines, sensors, and the recurring software subscriptions that help clinicians diagnose diseases, manage patient care, and run healthcare operations more efficiently."
+  },
+  "synthesized_evidence_sha": "3649ca895ed01a4b",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "4aee2ecf4c"
+   ],
+   "value": "Roles encompass developing and deploying AI-powered image reconstruction, pathology detection algorithms, predictive hospital operations analytics, and digital twin models for medical devices."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583459,
   "web_search_url": "https://duckduckgo.com/?q=GE+Healthcare+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "4aee2ecf4c"
+   ],
+   "value": "This opportunity may appeal to a top-tier AI candidate seeking a high-impact, mission-driven role without the chaotic pace and burnout of a startup. GE Healthcare's established medical device portfolio provides a rich, real-world data pipeline to accelerate technical and career growth on products that tangibly save lives. Its mature structure and healthcare sector focus are more conducive to sane hours and true work-life balance than ad-driven tech or consulting."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 8.0 out of 10. Large medtech companies structure work for sustained, reliable output with extensive sick time and paid holidays, incentivizing a boundary-respecting daily cadence."
   }
  },
  "ge vernova": {
@@ -87082,11 +87455,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -87098,6 +87473,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784681538,
   "last_evidence_at": 1784674432,
   "name": "IFS",
   "pace_of_work": {
@@ -104041,50 +104417,113 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1: Extremely high prestige within the defense and aerospace sector. While not a Silicon Valley consumer AI company, its 'Skunk Works' advanced division and core role in national-security AI are considered elite among engineering and national infrastructure circles."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "5995ca2d90",
+    "1a83f5fa36"
+   ],
+   "value": "Generates revenue predominantly through U.S. federal government appropriations and long-term, cost-plus or fixed-price defense contracts. A secondary revenue stream comes from foreign military sales arranged through the U.S. government."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-first and technically serious, dominated by decades of military and veteran influence. It has a formal, safety-obsessed, and respectful engineering culture that values security clearances and patriotism. Internal innovation is balanced against extremely rigorous process and compliance."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "5995ca2d90",
+    "1a83f5fa36"
+   ],
+   "value": "Primarily the U.S. Department of Defense and its various military branches (Air Force, Navy, Army, Marines), as well as NASA and national intelligence agencies. Also serves international allied governments and a limited number of commercial space/cybersecurity clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95,000–$120,000 base salary for a new graduate AI/software engineer in a moderate cost-of-living defense hub, supplemented by a potential signing bonus and a performance-based annual incentive."
   },
   "evidence_sha": "5245dbf3fb32a298",
+  "generated_at": 1784681538,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "5995ca2d90",
+    "1a83f5fa36"
+   ],
+   "value": "Aerospace, Defense, and Security"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Focus on behavioral competencies and problem-solving within real-world defense scenarios over abstract leetcode challenges. Interviews typically assess cultural fit for a mission-driven, collaborative environment, and may probe understanding of secure coding practices, systems thinking, and how you'd apply AI to constrained, safety-critical hardware problems."
   },
-  "last_attempt_at": 1784681447,
+  "last_attempt_at": 1784681538,
   "last_evidence_at": 1784645371,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "5995ca2d90"
+   ],
+   "value": "Headquartered in Bethesda, Maryland. Major U.S. facilities include Fort Worth, TX (F-35), Palmdale, CA (Skunk Works), Orlando, FL (training/simulation), Sunnyvale, CA (satellites), and Denver, CO (space business). International presencesupporting allied programs."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "1a83f5fa36"
+   ],
+   "value": "To solve complex challenges, advance scientific discovery, and deliver innovative solutions to help its customers keep people safe."
+  },
   "name": "Lockheed Martin",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Typically a structured, deliberate pace with standard 40-hour weeks. It is a large-government contractor with well-defined waterfall and program milestones, though specific advanced development groups (like Skunk Works) can elevate the urgency on classified prototypes while maintaining predictable schedules."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "5995ca2d90",
+    "1a83f5fa36"
+   ],
+   "value": "Combat aircraft (F-35 Lightning II, F-16), military helicopters (Sikorsky), missile defense systems (THAAD, PAC-3), space exploration vehicles (Orion), satellites, and advanced radar. Its commercial arm focuses on cybersecurity, energy solutions, and advanced logistics technology."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 paid time off days annually for new graduates, often combined with sick and personal leave in one bank, plus standard federal holidays."
   },
+  "refresh_after": 1789865538,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "medium",
+   "source_ids": [
+    "74b5556a9d"
+   ],
+   "value": "Engineering Leadership Development Program (ELDP)"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "The entire company typically observes a full week-long winter shutdown between Christmas and New Year's Day. Some program-specific pauses also occur around other federal holidays, though not guaranteed company-wide."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "5995ca2d90"
+   ],
+   "value": "Large public company with approximately 122,000 employees, annual revenue exceeding $67 billion, and a market capitalization over $100 billion. Mature and stable, not a startup."
   },
   "sources": [
    {
@@ -104118,14 +104557,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=5084c669c7fd7e6165aee2b003de0d776250f24eada81259f15946171a716b91JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=267941b0-60f6-64bc-2bb9-562d61fb652a&u=a1aHR0cHM6Ly93d3cubG9ja2hlZWRtYXJ0aW4uY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "74b5556a9d"
+   ],
+   "value": "Widely known to sponsor security clearances for U.S. citizens for roles requiring them, as mandated by law for working on classified defense projects. Standard corporate immigration sponsorship is limited because many projects are restricted by International Traffic in Arms Regulations (ITAR)."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "5995ca2d90",
+    "1a83f5fa36"
+   ],
+   "value": "Lockheed Martin is a global aerospace and defense company that researches, designs, and manufactures advanced military aircraft, missiles, satellites, and integrated technology systems. It generates revenue primarily by selling these products and related services under long-term contracts with the U.S. Department of Defense and allied foreign governments."
+  },
+  "synthesized_evidence_sha": "5245dbf3fb32a298",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "5995ca2d90",
+    "74b5556a9d"
+   ],
+   "value": "In AI/ML and data science, engineers work on autonomous flight systems, predictive maintenance for aircraft, computer vision for satellite imagery, electronic warfare signal processing, and anomaly detection for cybersecurity. The work blends cutting-edge research with classified defense applications."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784645371,
   "web_search_url": "https://duckduckgo.com/?q=Lockheed+Martin+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Effectively bridges elite defense prestige with applied AI innovation, offering new grads high-level security clearance and mission-critical projects that serve as a lifelong career accelerator. The company's genuine 4/10 flexible schedule and frequent plant shutdowns directly align with a desire for deep technical growth without sacrificing personal time or encountering toxic 'crunch' culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "4 out of 5. A very strong work-life in the defense industry, widely reported for a '9/80' or '4x10' alternative schedule allowing every other Friday off, supported by a low-overtime, planned-contract cycle."
   }
  },
  "logiqal": {
@@ -185155,39 +185623,98 @@
  },
  "ul solutions": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "b120ec45e8"
+   ],
+   "value": "Excellent. It is an elite name in safety science with the heritage and global brand of a top-tier firm, though less associated with flashy consumer AI hype, which carries a steady, serious prestige."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "b120ec45e8"
+   ],
+   "value": "Generates revenue through fee-for-service testing, inspection, and certification (TIC) work, along with subscription-based software and advisory services. Clients pay to ensure their products meet mandatory or voluntary safety and compliance standards."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "b120ec45e8"
+   ],
+   "value": "Mission-driven, science-based, and collaborative. The organization attracts authentic experts who pursue precision and purpose over velocity. It has a collegial atmosphere that stems from its historic position as a global safety steward."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "26b526f1e3",
+    "b120ec45e8"
+   ],
+   "value": "Manufacturers and brands across electronics, automotive, medical devices, and construction industries. Retailers and regulators seeking to verify product compliance. Suppliers and formulators using material-finding tools."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000-$130,000 base salary for an AI/science new-grad role, which is highly competitive for new hires in the professional TIC safety-science software realm and catches up with fast-paced tech pay bands."
   },
   "evidence_sha": "419e7f00a6ae8aa1",
+  "generated_at": 1784681538,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b120ec45e8"
+   ],
+   "value": "Testing, inspection, and certification, with a deep focus on applied safety science."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Structured interview process that evaluates analytical and problem-solving depth for safety, technical craft in coding or data modeling, real-world risk assessment thinking, and alignment with its stewardship culture. The process is designed to gauge collaborative skills over speed in a low-burnout, predictable environment."
   },
+  "last_attempt_at": 1784681538,
   "last_evidence_at": 1784673570,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "b120ec45e8"
+   ],
+   "value": "Headquarters in Northbrook, Illinois, with major laboratories, testing facilities, and offices across the Americas, Europe, Asia-Pacific, and the Middle East."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "b120ec45e8"
+   ],
+   "value": "To work for a safer world by advancing safety science and empowering trust in products, systems, and data across global supply chains."
+  },
   "name": "UL Solutions",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady and methodical rather than chaotic or fast-paced. Safety-critical testing and regulatory timelines promote meticulous, predictable schedules over sprints and urgent deadlines."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "26b526f1e3",
+    "b120ec45e8"
+   ],
+   "value": "Product testing and certification for electronics, appliances, and industrial equipment. Advisory services for supply chain sustainability, cybersecurity, and functional safety. Software platforms like UL Prospector for material sourcing and product development."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of annual vacation for new professionals, plus standard holidays, with additional sick and personal time. This aligns with typical coverage for large, professional services employers in the United States."
   },
+  "refresh_after": 1789865538,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -185197,7 +185724,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Partial or full shutdown between Christmas and New Year's Day is likely common, given conservative, corporate scientific standards, though an official published global mandatory shutdown period was not confirmed in this research."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "b120ec45e8"
+   ],
+   "value": "Large, mature global enterprise with operations in over 100 countries and tens of thousands of employees. Publicly traded on the NYSE and built on over a century of safety science history."
   },
   "sources": [
    {
@@ -185231,14 +185765,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=c7bec9b1768a20f313a73464ab7631d909178aec04d188ae418dbe5b01ea2167JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0988a76f-e90c-65d2-24f0-b0f2e84e64a2&u=a1aHR0cHM6Ly93d3cudWwuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely offers work visa sponsorship for specialized technical and AI roles given its global operations and ongoing need for highly skilled engineering and technology talent, though context-specific policies for new grads are not publicly detailed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "b120ec45e8",
+    "8a4a0e5c5f"
+   ],
+   "value": "UL Solutions is a global safety science company that tests, inspects, and certifies products, materials, and systems to meet safety and performance standards. It helps manufacturers bring safer products to market and provides advisory and software services to manage supply chain risks."
+  },
+  "synthesized_evidence_sha": "419e7f00a6ae8aa1",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "26b526f1e3",
+    "b120ec45e8"
+   ],
+   "value": "Data science and AI roles focus on analyzing testing data, building predictive models for product safety, developing algorithms for supply chain risk, and enhancing software platforms like EUL Prospector. The work is inherently mission-driven around keeping people safe."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673570,
   "web_search_url": "https://duckduckgo.com/?q=UL+Solutions+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "b120ec45e8"
+   ],
+   "value": "Balances prestigious, stable TIC industry work with fast-growing digital services, appealing to candidates seeking elite mission-driven science without a brutal hustle culture. The focus on safety mandates and long-term supplier relationships creates a business environment where work-life balance and sane hours are a genuine priority."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Excellent. The established testing and certification industry, combined with UL's adherence to safety protocols and a mission-driven environment, produces a reliable 40-hour week culture with a strong respect for personal time."
   }
  },
  "uline": {
