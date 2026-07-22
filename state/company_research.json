@@ -25806,37 +25806,86 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "38fcd517cd"
+   ],
+   "value": "Project-based revenue through fixed-price or cost-plus contracts for construction services, including general contracting, construction management, and design-build project delivery."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional construction culture — hierarchical, safety-focused, project-team oriented, field-office divide. Less 'innovative tech culture' and more 'get the project built' operational mindset."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "38fcd517cd",
+    "067a763def"
+   ],
+   "value": "Commercial developers, government agencies (including potential military/Army contracts suggested by goarmy.com redirect), institutional clients, and private sector organizations requiring construction services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $65,000-$85,000 base for construction technology/engineering roles. Significantly below top-tier AI/DS new grad packages ($150k-$250k+). Equity unlikely in private LLC."
   },
   "evidence_sha": "02dfd832d6697ce2",
+  "generated_at": 1784688384,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "38fcd517cd"
+   ],
+   "value": "Construction / Engineering & Construction Services"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784688384,
+  "last_evidence_at": 1784676942,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "38fcd517cd"
+   ],
+   "value": "Estimated: Headquarters likely in US region served by bctbuild.com; potential project sites across multiple states. Exact locations not confirmed from available sources."
+  },
+  "mission": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Delivering quality construction projects on time and within budget while maintaining safety standards and client satisfaction in the building industry."
   },
-  "last_attempt_at": 1784688293,
-  "last_evidence_at": 1784676942,
   "name": "BCT LLC",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Project-driven with intense periods near deadlines/milestones; slower during planning/pre-construction. Not a consistent 'fast innovative tech culture' but construction-paced."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "38fcd517cd"
+   ],
+   "value": "General contracting, construction management, design-build services, and related building construction services for commercial, institutional, and government projects."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10-15 days PTO + 6-8 holidays (construction industry standard). No guaranteed shutdowns; time off often constrained by project schedules."
   },
+  "refresh_after": 1789872384,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -25846,7 +25895,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns. Possible seasonal slowdowns in winter (region-dependent) but not formal policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Small to mid-sized private LLC (likely 50-500 employees) in established/growth stage as a private construction firm."
   },
   "sources": [
    {
@@ -25880,14 +25934,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=653bf7f75b9635d354fcea540360fb02501993440316187000f3a1d544525e58JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=28186e5c-b7dc-65ce-244c-79c1b64464b0&u=a1aHR0cHM6Ly93d3cuYnJvd2FyZC5vcmcvQkNUL3BhZ2VzL2RlZmF1bHQuYXNweA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May sponsor H-1B visas for specialized engineering/construction management roles; unlikely to have extensive immigration programs for AI/data science positions given industry focus."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "38fcd517cd"
+   ],
+   "value": "BCT LLC appears to be a construction and building services company operating under the domain bctbuild.com. The company likely generates revenue through general contracting, construction management, and related building services for commercial and government clients."
+  },
+  "synthesized_evidence_sha": "02dfd832d6697ce2",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "38fcd517cd"
+   ],
+   "value": "Construction technology including BIM (Building Information Modeling), project management software, construction scheduling tools, drone surveying, and field management platforms. Limited AI/ML application compared to tech-native companies."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676942,
   "web_search_url": "https://duckduckgo.com/?q=BCT+LLC+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 2.5/5. Construction industry typically involves 50-60+ hour weeks during active projects, weekend work common, limited guaranteed shutdowns. Seasonal variation exists but not structured WLB protections."
   }
  },
  "bd": {
@@ -27153,7 +27232,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -27171,7 +27250,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784688293,
+  "last_attempt_at": 1784688384,
   "last_evidence_at": 1784674777,
   "name": "Beta Soft Systems",
   "pace_of_work": {
@@ -78280,37 +78359,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 - A well-known consumer brand with real technical challenges in IoT and smart home manufacturing, but the AI/DS roles are industry-specific rather than competing on prestige with tier 1 research roles at dedicated tech companies."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "2331cc5b8b"
+   ],
+   "value": "Manufacturing and B2C/B2B product sales. Revenue comes from appliance units sold through wholesale retail channels, contract sales to builders, and aftermarket parts and accessories."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven and collaborative, centered on physical product creation. The vibe is blue-chip and stability-focused, where engineering teams are valued for creating durable household technology that stands the test of time rather than chasing rapid iteration of digital-only features."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "2331cc5b8b"
+   ],
+   "value": "Consumers purchasing home appliances through retail stores like Home Depot and Lowe's, home builders, contractors, and direct e-commerce customers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95,000 to $110,000 base salary. The total compensation is conservative compared to elite AI firms but is reinforced by lower cost of living in Louisville and a strong benefits package."
   },
   "evidence_sha": "e953a18486f028cb",
+  "generated_at": 1784688384,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2331cc5b8b",
+    "d086a5b76b"
+   ],
+   "value": "Consumer electronics and home appliance manufacturing."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Interviews likely emphasize practical problem-solving for physical product environments, including embedded AI systems, sensor data interpretation, and software-hardware integration. Expect questions on how you balance creative technical solutions with a respectful, collaborative culture that values product quality and team health over unsustainable sprint cycles."
   },
+  "last_attempt_at": 1784688384,
   "last_evidence_at": 1784674778,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "2331cc5b8b"
+   ],
+   "value": "Headquarters in Louisville, Kentucky, with manufacturing and distribution facilities across the southeastern United States and technology centers in the US. Specific technical hubs are not detailed in provided sources."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "2331cc5b8b",
+    "d086a5b76b"
+   ],
+   "value": "Design and build the world's best appliances, making life easier and more enjoyable for every household. The company emphasizes American manufacturing, innovation, and customer-driven design."
+  },
   "name": "GE Appliances",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate and steady, typical of Midwest manufacturing culture. The product development cycles for appliances demand quality and safety over extreme speed, with a collaborative environment that avoids the frantic pace of ad-driven software startups."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "2331cc5b8b"
+   ],
+   "value": "Kitchen and laundry appliances such as refrigerators, ovens, cooktops, microwaves, dishwashers, washing machines, and dryers. Also offers smart appliance technology and connected home solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days of paid vacation annually for new college graduates, plus standard federal holidays. This aligns with large comparable US appliance and manufacturing companies."
   },
+  "refresh_after": 1789872384,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -78320,7 +78454,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Scheduled shutdowns during the winter holidays between Christmas and New Year's Day, with some manufacturing facilities also having summer shutdowns for tool maintenance and inventory purposes."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "696bfaf77f",
+    "d086a5b76b"
+   ],
+   "value": "Mature, large enterprise. GE Appliances is a wholly-owned subsidiary of Haier Group, operating as a major home appliance manufacturer in the United States with thousands of employees and multiple factory locations."
   },
   "sources": [
    {
@@ -78354,14 +78496,40 @@
     "url": "https://www.bing.com/ck/a?!&&p=e133989ff19a91092d9c7b5acec50d0e0766f370e731d0f2d747551390e0ca7aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ea687d1-bcb0-6028-15c3-904cbd536131&u=a1aHR0cHM6Ly93d3cuZ2VhcHBsaWFuY2VzLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a large manufacturing subsidiary with established HR infrastructure, likely provides H1B sponsorship for highly technical roles in AI and data science, though specific policies must be confirmed with their talent acquisition team."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "2331cc5b8b",
+    "d086a5b76b"
+   ],
+   "value": "GE Appliances designs and manufactures a wide range of home appliances, including refrigerators, cooking products, dishwashers, and laundry machines. The company makes money by selling these products through retail partners, builders, and direct-to-consumer channels."
+  },
+  "synthesized_evidence_sha": "e953a18486f028cb",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "2331cc5b8b"
+   ],
+   "value": "AI and data science roles likely focus on IoT connectivity for smart home appliances, predictive maintenance, energy efficiency algorithms, supply chain optimization, and consumer data analytics to improve product features and manufacturing quality."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674778,
   "web_search_url": "https://duckduckgo.com/?q=GE+Appliances+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "GE Appliances offers a unique balance of a mission-driven product culture with a reasonable pace, respecting work-life balance through estimated sane hours and scheduled shutdowns. It provides a platform for accelerated technical learning in smart home IoT and AI without the toxic burnout culture of higher prestige tech firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4 out of 5. The company culture has long been associated with predictable manufacturing shift schedules and a corporate atmosphere that values structured working hours, providing a highly balanced environment compared to the demanding hustle of Silicon Valley tech firms."
   }
  },
  "ge healthcare": {
@@ -90799,40 +90967,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 (applied AI in traditional engineering, not core AI research or product development)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fee-for-service consulting contracts (lump sum, time & materials) with public and private clients; operated as an employee-owned corporation (ESOP)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, collaborative, employee-owned, mission-driven (public infrastructure), but traditional hierarchy and project-based workflow."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public agencies (state DOTs, transit authorities, airports, water utilities), federal agencies, and private-sector clients seeking infrastructure expertise."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75,000-$95,000 base + benefits (ESOP); not competitive with top-tier tech new-grad packages."
   },
   "evidence_sha": "a93ea9bf96ad4080",
+  "generated_at": 1784688384,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Engineering Consulting / Infrastructure / Architecture, Engineering, Construction (AEC)"
   },
-  "last_attempt_at": 1784688293,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect questions on domain knowledge (civil/transportation engineering), applied data science, project management, client communication, and teamwork; less emphasis on cutting-edge ML research or algorithmic novelty."
+  },
+  "last_attempt_at": 1784688384,
   "last_evidence_at": 1784674777,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in Kansas City, MO; 30+ offices across the United States."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To deliver innovative infrastructure solutions that connect communities and improve quality of life through collaborative, employee-owned stewardship."
+  },
   "name": "HNTB",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Project-driven, deadline-oriented, can be intense near milestones; billable-hours culture typical of professional services."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Professional services: engineering design, construction management, planning, environmental consulting, GIS/BIM, data analytics, and emerging AI/ML applications for infrastructure asset management."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + holidays (varies by tenure and office)"
   },
+  "refresh_after": 1789872384,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -90842,7 +91048,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some offices may close between Christmas and New Year."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, established firm (100+ years), approximately 5,000+ employees, annual revenue $1B+; mature stage with national footprint."
   },
   "sources": [
    {
@@ -90876,14 +91087,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=52270421037763739461b4a82fa5fdb14d44e084e5a1e4349dc8a826ebbd9c57JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ea687d1-bcb0-6028-15c3-904cbd536131&u=a1aHR0cHM6Ly93d3cuaG50Yi5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H-1B visas for specialized engineering and technical roles; typical for large AEC firms with recurring need for niche talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "HNTB is an employee-owned infrastructure solutions firm providing engineering, architecture, planning, and technology services across transportation, water, aviation, and other public sectors."
+  },
+  "synthesized_evidence_sha": "a93ea9bf96ad4080",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Civil/structural engineering, transportation modeling, GIS, BIM, data analytics, and applied AI/ML for infrastructure monitoring, asset management, and digital twin development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674777,
   "web_search_url": "https://duckduckgo.com/?q=HNTB+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a candidate seeking elite AI/data science prestige, high new-grad pay, fast innovative tech culture, and guaranteed work-life balance: HNTB is a traditional engineering consultancy, not a tech-first company. AI roles are applied to infrastructure projects, not core product research. Culture is professional services with billable-hour expectations, potentially high workload near deadlines. Pay is competitive for AEC but below top-tier tech. Work-life balance varies by project; no company-wide"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "3/5 (moderate; professional services often require overtime, but firm promotes flexibility and employee ownership)"
   }
  },
  "hologic": {
@@ -142629,11 +142861,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -142645,6 +142879,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784688384,
   "last_evidence_at": 1784672490,
   "name": "Pace® Analytical Services",
   "pace_of_work": {
@@ -159224,11 +159459,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -159240,6 +159477,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784688384,
   "last_evidence_at": 1784673976,
   "name": "Raytheon",
   "pace_of_work": {
@@ -164394,7 +164632,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -164412,7 +164650,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
-  "last_attempt_at": 1784688293,
+  "last_attempt_at": 1784688384,
   "last_evidence_at": 1784583447,
   "name": "Roblox",
   "pace_of_work": {
@@ -186548,7 +186786,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -186566,7 +186804,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784688293,
+  "last_attempt_at": 1784688384,
   "last_evidence_at": 1784673660,
   "name": "Symbotic",
   "pace_of_work": {
