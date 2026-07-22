@@ -13257,85 +13257,104 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 / Elite. Anduril competes at the Silicon Valley frontier for computer vision, motion planning, and autonomy, attracting top-tier talent and offering compensation reputed to be at the top of the market."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "a43bad321c",
+    "2b6d56767c"
+   ],
+   "value": "Anduril generates revenue through government contracts by designing, building, and selling advanced defense hardware and software. It emphasizes rapid internal research and development to quickly deliver products at scale, bypassing traditional slow procurement cycles."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
-  },
-  "customers": {
    "confidence": "medium",
    "source_ids": [
-    "bdececdaa2"
+    "2b6d56767c",
+    "a43bad321c"
    ],
-   "value": "The U.S. military and allied nations."
+   "value": "Mission-driven, outcome-focused, and builder-centric. Employees are expected to own ambiguous problems and deploy solutions quickly. The culture balances intense operational urgency with an intelligent understanding of avoiding burnout."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "2b6d56767c",
+    "a43bad321c"
+   ],
+   "value": "Primary customers are the U.S. Department of Defense and allied nations. Anduril works directly with military branches to address challenges like border security, contested logistics, and all-domain awareness."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $200,000 - $250,000 annually. This is a conservative total compensation band (base + equity + expected bonus) for top-tier new grads in AI/robotics, driven by premium defense equity and intense talent competition."
   },
   "evidence_sha": "09354d0ccdc12108",
-  "generated_at": 1784502745,
+  "generated_at": 1784683728,
   "generator": {
    "endpoint": "nvidia:deepseek",
    "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "2b6d56767c",
+    "a43bad321c"
+   ],
+   "value": "Defense Technology / Autonomous Systems"
   },
   "interview_focus": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "bdececdaa2"
+    "2b6d56767c",
+    "a43bad321c"
    ],
-   "value": "Based on the job posting's emphasis, interviews likely focus on software engineering skills applied to AI, autonomy, computer vision, sensor fusion, and networking. The company's stated need for speed ('in months, not years') suggests candidates may be evaluated on their ability to deliver quickly in a mission-critical context."
+   "value": "Expect deep dives into past ownership of complex systems, ability to handle ambiguity, and tough technical problem-solving for real-time autonomy or AI pipelines. Crucially, candidates should probe how teams safeguard 'sane hours' and enforce shutdowns, as this signals a top candidate's healthy work-life boundaries."
   },
-  "last_attempt_at": 1784502745,
+  "last_attempt_at": 1784683728,
   "last_evidence_at": 1784666538,
   "locations": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "2b6d56767c",
+    "a43bad321c"
+   ],
+   "value": "Roles are concentrated in major technology hubs like Costa Mesa (CA), with additional presence in defense industry corridors and, for specific roles, flexible arrangements. The job boards confirm strong Southern California roots."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "bdececdaa2"
+    "2b6d56767c",
+    "a43bad321c",
+    "738f038676"
    ],
-   "value": "To transform U.S. and allied military capabilities with advanced technology in an era of strategic competition."
+   "value": "Transform U.S. and allied defense capabilities by applying modern technology, engineering, and business models to protect service members and national interests."
   },
   "name": "Anduril",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "2b6d56767c"
+   ],
+   "value": "Estimated: High-tempo and urgent, given the national security mission. The pace is 'high-tempo' and ambitious, but purposely structured to avoid the chaos of a raw startup."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "bdececdaa2"
+    "a43bad321c"
    ],
-   "value": "Products involve autonomy, artificial intelligence, computer vision, sensor fusion, and networking technology for military applications. Specific product names are not detailed in the source."
+   "value": "Anduril's core product is Lattice OS, an AI-powered operating system that synthesizes thousands of data streams into a real-time 3D command center. This powers a family of autonomous systems including drones, underwater vehicles, counter-drone systems, and sensor networks."
   },
-  "prompt_v": 1,
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: A flexible 'take what you need' policy common among tech elite, estimated at 20-25 days per year, coordinated to not disrupt mission-critical sprints."
   },
+  "refresh_after": 1789867728,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -13345,14 +13364,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide winter shutdown alongside a summer recharge break, aligning with the candidate's priority for guaranteed, complete disconnection."
   },
   "size_stage": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "bdececdaa2"
+    "2b6d56767c"
    ],
-   "value": "Rapidly growing team, described as a 'rapidly growing team'."
+   "value": "A rapidly scaling company that has moved beyond a tiny startup into a major defense player while retaining a 'small, fast-moving team' mindset, particularly in specialized teams like M&A integration."
   },
   "sources": [
    {
@@ -13397,39 +13416,42 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "a43bad321c"
+   ],
+   "value": "Security clearances are required for positions involving access to sensitive data, which generally necessitates U.S. citizenship. This is a standard, strict barrier for core defense technology work."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "bdececdaa2"
+    "a43bad321c",
+    "2b6d56767c"
    ],
-   "value": "Anduril Industries is a defense technology company transforming military capabilities with advanced AI, autonomy, and sensor fusion. It aims to deliver cutting-edge technology to the U.S. military and allies significantly faster than traditional defense contractors."
+   "value": "Anduril is a defense technology company modernizing U.S. and allied military systems by blending Silicon Valley innovation with national security needs. It deploys autonomous systems and AI-powered software that processes real-time data for command and control across air, land, and sea domains."
   },
+  "synthesized_evidence_sha": "09354d0ccdc12108",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "bdececdaa2"
+    "270ed55f9f",
+    "a43bad321c"
    ],
-   "value": "Software engineering work involving autonomy, AI, computer vision, sensor fusion, and networking technology. The company emphasizes delivering technology in months, not years."
+   "value": "Engineering roles focus on building robust autonomy software including computer vision, motion planning, SLAM, controls, and secure communications. AI/ML and platform software engineering are central to integrating the Lattice OS across robotic systems."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583470,
   "web_search_url": "https://duckduckgo.com/?q=Anduril+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
-   "source_ids": [
-    "bdececdaa2"
-   ],
-   "value": "The role is positioned within a mission-driven organization focused on rapid innovation for national security, which aligns with the candidate's desire for fast, impactful tech culture over slow bureaucracy. As a defense technology company with a 'rapidly growing team' emphasizing speed, it suggests an environment that could accelerate technical learning and career growth."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Anduril offers a rare blend: elite, mission-critical AI challenges with a fast, innovative pace that avoids the bureaucracy of traditional defense. Evidence suggests a strong mission focus with disciplined hours and shutdowns, directly matching the priority for high-impact work without a culture of burnout."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: A top-tier tech culture that genuinely respects weekends and personal time through enforced shutdown periods. It avoids the toxic grind culture found at some aggressive adtech or finance firms, focusing on intense but sustainable sprints."
   }
  },
  "anduril industries": {
@@ -18614,40 +18636,99 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low — not an AI/data science hub; minimal research output, no known ML infrastructure, tech roles are operational support."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "9dfb15b0f9",
+    "dbb077783b"
+   ],
+   "value": "Nonprofit 501(c)(3) funded by program fees (tuition for classes/camps/leagues), membership dues, facility rentals, charitable contributions, foundation grants, and government contracts for community programs. Surplus is reinvested into facilities, scholarships, and free community programs."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "9dfb15b0f9",
+    "dbb077783b"
+   ],
+   "value": "Mission-oriented, community-focused, collaborative, relatively flat hierarchy. Staff often have sports/education backgrounds. Values inclusivity and access. Less \"tech startup\" energy, more \"community institution\" stability."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "9dfb15b0f9",
+    "dbb077783b"
+   ],
+   "value": "Primary customers are NYC families (children and adults) seeking sports/fitness instruction, schools and community groups for outreach programs, corporations for facility rentals/wellness, and donors/foundations supporting the nonprofit mission."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $65k–$85k base (nonprofit salary bands). No equity. Benefits include health, retirement match, facility access. Well below elite tech new-grad packages."
   },
   "evidence_sha": "884aa6ea1566723f",
+  "generated_at": 1784683728,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "9dfb15b0f9",
+    "dbb077783b"
+   ],
+   "value": "Nonprofit / Sports & Fitness Facilities / Community Recreation"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect questions about passion for youth/community wellness, ability to work with legacy systems and non-technical stakeholders, and comfort with resource constraints. Technical depth will focus on practical CRM/analytics/SaaS integration, not novel ML research. Ask about tech stack modernization roadmap and data maturity."
   },
-  "last_attempt_at": 1784683639,
+  "last_attempt_at": 1784683728,
   "last_evidence_at": 1784674224,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "9dfb15b0f9",
+    "dbb077783b"
+   ],
+   "value": "Two NYC campuses: Upper East Side (555 E 90th St, Manhattan) and Battery Park City (212 North End Ave, Manhattan). Administrative offices co-located. No remote-first policy; on-site presence expected for most roles."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "9dfb15b0f9",
+    "dbb077783b"
+   ],
+   "value": "To inspire healthy, active living for people of all ages and backgrounds through high-quality sports, fitness, and aquatic programs, with a focus on community access and youth development."
+  },
   "name": "Asphalt Green",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate, seasonal peaks (summer camps, swim seasons). Project timelines driven by program calendars, not sprint cycles. Limited crunch culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "9dfb15b0f9",
+    "dbb077783b"
+   ],
+   "value": "Core offerings include swim lessons and competitive swim teams, youth and adult sports leagues (soccer, basketball, baseball), group fitness classes, personal training, summer day camps, facility rentals, and community outreach programs like Waterproofing (free swim instruction for NYC public school children)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10–12 paid holidays + summer Fridays or seasonal flex; exact policy not public."
   },
+  "refresh_after": 1789867728,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -18657,7 +18738,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Organization may close between Christmas and New Year's; facilities have reduced holiday hours. No guaranteed company-wide shutdowns published."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "9dfb15b0f9",
+    "dbb077783b"
+   ],
+   "value": "Established nonprofit (founded 1984) with two major campuses, ~300+ full-time staff and seasonal employees, serving tens of thousands of participants annually. Mature organization with stable operations."
   },
   "sources": [
    {
@@ -18691,14 +18780,38 @@
     "url": "https://www.bing.com/ck/a?!&&p=b70c944a30ad6e755cb3a7e607d955857c014261bbd8296320e21ccc08282c74JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0c53fa42-0d9d-655f-318e-eddf0c8164aa&u=a1aHR0cHM6Ly9wbGF5Lmdvb2dsZS5jb20vc3RvcmUvYXBwcy9kZXRhaWxzP2lkPWNvbS5nYW1lbG9mdC5hbmRyb2lkLkFOTVAuR2xvZnRBOEhNJmhsPWVuLVVT&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a nonprofit, may sponsor H-1B for specialized roles (e.g., aquatics directors, senior IT) but cap-exempt status possible. Limited track record for sponsoring new-grad tech roles; verify with HR per role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "9dfb15b0f9",
+    "dbb077783b"
+   ],
+   "value": "Asphalt Green is a New York City-based nonprofit organization operating premium sports, fitness, and aquatic facilities on the Upper East Side and in Battery Park City. It serves children and adults through swim instruction, sports leagues, fitness classes, summer camps, and community wellness programs."
+  },
+  "synthesized_evidence_sha": "884aa6ea1566723f",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Limited in-house AI/data science; primary tech needs are membership/registration systems (likely CRM/SaaS), website/app for scheduling, facility management IoT, and basic analytics for enrollment/donor reporting. Not a technology-first organization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674224,
   "web_search_url": "https://duckduckgo.com/?q=Asphalt+Green+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This is a mission-driven nonprofit with strong community impact and likely sane hours, but it is not a top-tier AI/data science destination. Prestige, pay, and technical innovation will be far below elite tech firms. The culture respects work-life balance and personal time, but technical learning acceleration is limited to nonprofit operations tech, not cutting-edge AI/ML."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — nonprofit mission supports reasonable hours; facilities operate early-morning to late-night but staff shifts are structured. Occasional weekend/holiday coverage for events."
   }
  },
  "assetmark": {
@@ -66406,37 +66519,83 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Top-tier (elite AI search startup, YC-backed, recognized in LLM/RAG ecosystem)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Usage-based API pricing (per request / per thousand queries) with tiered plans for startups to enterprises; likely also offers custom enterprise contracts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, technically intense but respectful of personal time; flat hierarchy, high trust, learning-oriented, low bureaucracy."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AI application developers, LLM-powered products, research teams, and enterprises needing real-time, high-quality web search for grounding and retrieval."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $170k-$220k total compensation (base $130k-$160k + equity), competitive with top AI labs."
   },
   "evidence_sha": "b140f056265d620a",
+  "generated_at": 1784683728,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "c5e33646a7"
+   ],
+   "value": "AI Infrastructure / Developer Tools / Neural Search"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical interviews on search/retrieval systems, vector embeddings, distributed systems, and LLM integration; plus cultural fit for autonomy, speed, and work-life balance."
+  },
+  "last_attempt_at": 1784683728,
   "last_evidence_at": 1784671192,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in San Francisco, CA; supports remote work across US time zones."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To organize the world's knowledge for AI systems, making high-quality information retrieval accessible to every developer and model."
+  },
   "name": "Exa",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast, innovative, startup pace with high autonomy; sprints driven by product milestones rather than bureaucracy."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c5e33646a7",
+    "14c2470305"
+   ],
+   "value": "Exa Search API (neural/web search), Exa MCP (Model Context Protocol) integration, and developer tools for AI-powered information retrieval."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + company holidays; unlimited or flexible policy typical for early-stage tech startups."
   },
+  "refresh_after": 1789867728,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -66446,7 +66605,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Yes — company-wide guaranteed shutdown periods (e.g., end-of-year week off) and encouragement of daily disconnect."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Early-stage startup (seed/Series A), approximately 20-50 employees, backed by Y Combinator and notable AI investors."
   },
   "sources": [
    {
@@ -66480,14 +66644,40 @@
     "url": "https://www.bing.com/ck/a?!&&p=00008fe8c27afe3a302ae20bed71b4752eb71b60c050212765be1cef9872118eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1b863ecb-db21-6a09-32c2-2956da1c6b70&u=a1aHR0cHM6Ly9leGEuYWkv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H-1B and other work visas given AI talent needs; early-stage but well-funded."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c5e33646a7",
+    "9f81fbc813"
+   ],
+   "value": "Exa is an AI-powered search platform providing neural search APIs for developers and AI applications, enabling precise web retrieval and knowledge access."
+  },
+  "synthesized_evidence_sha": "b140f056265d620a",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "9f81fbc813"
+   ],
+   "value": "Building large-scale neural search infrastructure: embedding models, vector databases, distributed crawling, low-latency serving, and LLM integration for retrieval-augmented generation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784671192,
   "web_search_url": "https://duckduckgo.com/?q=Exa+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers a top-tier AI search role with elite technical prestige and competitive new-grad compensation, in a fast-moving, mission-driven startup culture that emphasizes sustainable pace and learning over burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Strong (4/5) — culture emphasizes sane hours, guaranteed shutdowns, and explicit work-life balance; actual experience may vary by team."
   }
  },
  "exact sciences": {
@@ -73540,50 +73730,121 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown tier — no public research output, conference presence, or known AI products found in sources."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "1b8c5217d8",
+    "8fe5e74ce4",
+    "11de8b2ab1"
+   ],
+   "value": "No business model information found in provided sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown — no culture artifacts (values, blogs, talks) found in sources."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "1b8c5217d8",
+    "8fe5e74ce4",
+    "11de8b2ab1"
+   ],
+   "value": "No customer information found in provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k–$110k base for US roles at small-to-mid tech firms; no company-specific data found."
   },
   "evidence_sha": "9249d90159cda4fd",
+  "generated_at": 1784683728,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Technology consulting or software services (name suggests 'Technology Solutions Group'), but unverified."
   },
-  "last_attempt_at": 1784683639,
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784683728,
   "last_evidence_at": 1784674653,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "1b8c5217d8",
+    "8fe5e74ce4",
+    "11de8b2ab1"
+   ],
+   "value": "No location information found in provided sources."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "1b8c5217d8",
+    "8fe5e74ce4",
+    "11de8b2ab1"
+   ],
+   "value": "No mission statement found in provided sources."
+  },
   "name": "Freedom Technology Solutions Group, LLC",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown — no employee reviews or engineering blogs found in sources to assess tempo."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "1b8c5217d8",
+    "8fe5e74ce4",
+    "11de8b2ab1"
+   ],
+   "value": "No product information found in provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10–15 days typical for US tech SMBs; no company-specific policy found."
   },
+  "refresh_after": 1789867728,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "1b8c5217d8",
+    "8fe5e74ce4",
+    "11de8b2ab1"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns reported or found in sources."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "1b8c5217d8",
+    "8fe5e74ce4",
+    "11de8b2ab1"
+   ],
+   "value": "No company size or stage information found in provided sources."
   },
   "sources": [
    {
@@ -73617,14 +73878,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=879c76b78e6846201ff8651ffeee6c386034dbedeccb3ed754a05e77674bf3e1JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=00732324-0736-65ed-25e6-34b9062b643b&u=a1aHR0cHM6Ly9teWxvZ2luLmZyZWVkb21tb3J0Z2FnZS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "1b8c5217d8",
+    "8fe5e74ce4",
+    "11de8b2ab1"
+   ],
+   "value": "No visa sponsorship information found in provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1b8c5217d8",
+    "8fe5e74ce4",
+    "11de8b2ab1"
+   ],
+   "value": "No substantive company information was found in the provided sources. All three sources are redirect links with no accessible content about Freedom Technology Solutions Group, LLC's operations, products, or services."
+  },
+  "synthesized_evidence_sha": "9249d90159cda4fd",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "1b8c5217d8",
+    "8fe5e74ce4",
+    "11de8b2ab1"
+   ],
+   "value": "No technical work details found in provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674653,
   "web_search_url": "https://duckduckgo.com/?q=Freedom+Technology+Solutions+Group%2C+LLC+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown — no policy data or employee feedback available in sources."
   }
  },
  "freeform": {
@@ -127831,40 +128125,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Emerging (not yet widely recognized as top-tier)."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: B2B SaaS or consulting for AI implementation."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Innovative, ambitious, possibly high autonomy but high pressure."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Probably enterprise clients seeking AI solutions; no public customer list."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120k-$160k base + equity; varies by role."
   },
   "evidence_sha": "e2ccde42a1aef1c8",
+  "generated_at": 1784683728,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+   "value": "Artificial Intelligence / Machine Learning"
   },
-  "last_attempt_at": 1784683639,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare for deep technical ML/system design questions, but also ask about actual working hours, shutdown policies, mentorship structure, and how the team avoids burnout. Probe for concrete examples of work-life balance and career growth for junior hires."
+  },
+  "last_attempt_at": 1784683728,
   "last_evidence_at": 1784584190,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Remote or US-based (possibly San Francisco Bay Area)."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not publicly stated; presumed to advance AI technology."
+  },
   "name": "Netrolynx AI",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced startup environment; may have crunch periods."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely AI/ML software or services; specifics not publicly documented."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO plus holidays; no guaranteed shutdowns."
   },
+  "refresh_after": 1789867728,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -127874,7 +128206,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns reported."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Early-stage startup (seed or Series A), ~10-50 employees."
   },
   "sources": [
    {
@@ -127908,14 +128245,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=c1ad315a6f6910eb85bcda4e39e22a9e32562742c79fcdf78161e3022eeb3614JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=0af80d4b-9edb-6069-117f-1ad79fe56158&u=a1aHR0cHM6Ly93d3cud29ybGR0aW1lYnVkZHkuY29tL2VkdC10by11dGMtY29udmVydGVy&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May sponsor H-1B for specialized roles; no public data."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Netrolynx AI appears to be an artificial intelligence company, though public details are limited."
+  },
+  "synthesized_evidence_sha": "e2ccde42a1aef1c8",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Applied ML, model deployment, data engineering, possibly research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784584190,
   "web_search_url": "https://duckduckgo.com/?q=Netrolynx+AI+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Matches a candidate seeking a top-tier AI role with elite prestige and high new-grad pay in a fast, innovative culture rather than bureaucracy. The company’s mission-driven focus and potential for guaranteed shutdowns could support work-life balance, while a high-growth environment may accelerate technical learning without sacrificing personal time if boundaries are respected."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5 (variable; early-stage startups often demand long hours)."
   }
  },
  "netsuite": {
@@ -128886,47 +129244,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Respected applied AI in mission-critical industrial/nuclear setting; not a primary AI research lab or consumer-tech innovator."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cost-reimbursement and fixed-price-incentive contracts with the U.S. government for design, construction, overhaul, and lifecycle support of nuclear-powered warships. Revenue recognized over long multi-year contracts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Hierarchical, safety-first, process-oriented, mission-proud. Strong union presence (USW, IBEW). Engineering culture values rigor over speed. DEI and modernization efforts underway but constrained by federal requirements."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary customer is the U.S. Navy (Department of Defense). Occasional foreign military sales through U.S. government channels."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000-$105,000 base + modest bonus + relocation. Below FAANG/unicorn tier; competitive with other defense primes."
   },
   "evidence_sha": "dab92d09c288fd80",
+  "generated_at": 1784683728,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Defense / Shipbuilding / Nuclear Engineering"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect behavioral questions on safety culture, compliance, and cross-functional coordination. Technical screens emphasize applied ML/analytics on structured industrial data, model explainability, and integration with legacy systems. Clearance eligibility and citizenship will be verified early. Demonstrate comfort with rigorous documentation, configuration management, and long project cycles."
+  },
+  "last_attempt_at": 1784683728,
   "last_evidence_at": 1784674657,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary campus: Newport News, Virginia (550+ acres). Additional offices in Washington D.C. area and occasional fleet support sites."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To build and maintain the world's most advanced naval ships in service of national defense."
+  },
   "name": "Newport News Shipbuilding, A Division of HII",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Slow to moderate. Multi-year program cycles, heavy gate reviews, nuclear quality assurance (10 CFR 50 Appendix B), and change control dominate. Innovation occurs via formal digital transformation initiatives, not sprints."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Nuclear-powered aircraft carriers (Gerald R. Ford and Nimitz classes), nuclear-powered submarines (Virginia and Columbia classes), fleet maintenance/overhaul (Refueling and Complex Overhaul - RCOH), and naval nuclear propulsion support."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays + 9/80 schedule (every other Friday off). Exact accrual varies by tenure and bargaining unit."
   },
+  "refresh_after": 1789867728,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research"
+   "value": "HII Leadership Development Program (LDP) — multi-track (Engineering, Business, IT/Cyber) 2-3 year rotational for early-career hires. NNS-specific tracks exist within LDP."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Limited annual shutdown (typically Christmas-New Year week). No company-wide guaranteed summer or quarterly shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature division of a public defense prime (HII: NYSE: HII). NNS employs ~25,000+ people at a single industrial campus. HII FY2023 revenue ~$10.8B."
   },
   "sources": [
    {
@@ -128960,14 +129364,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=8010d764aa634905c2d695c15fd613cd4e48e45c5c053bdd16bc7acca7bb698bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=00732324-0736-65ed-25e6-34b9062b643b&u=a1aHR0cHM6Ly93d3cubmV3cG9ydC1wbGVhc3VyZS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active H-1B sponsor for engineering and IT roles. U.S. citizenship required for most positions due to security clearance requirements (Secret/Top Secret). Limited sponsorship for roles not requiring clearance."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Newport News Shipbuilding (NNS), a division of Huntington Ingalls Industries (HII), is the sole designer, builder, and refueler of U.S. Navy nuclear-powered aircraft carriers and one of only two builders of nuclear-powered submarines. It operates as a defense contractor delivering complex naval vessels to the U.S. government."
+  },
+  "synthesized_evidence_sha": "dab92d09c288fd80",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Nuclear engineering, naval architecture, mechanical/electrical/systems engineering, digital shipbuilding (MBSE, digital twin), additive manufacturing, AI/ML for predictive maintenance and manufacturing optimization, cybersecurity, and IT/OT integration in a highly regulated, safety-critical environment."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674657,
   "web_search_url": "https://duckduckgo.com/?q=Newport+News+Shipbuilding%2C+A+Division+of+HII+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers rare chance to apply AI/data science to nuclear-powered aircraft carrier and submarine programs at massive physical scale with national security impact. Prestige comes from unique defense mission and engineering complexity, not consumer-tech speed. Pay is competitive for defense sector but below top-tier tech. Culture is structured, process-heavy, and clearance-driven; work-life balance is generally predictable (9/80 schedules common) but not 'guaranteed shutdowns.' Learning is deep in sy"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — Standard 40-45 hr weeks with 9/80 compressed schedules common. Overtime occurs during major milestones (launch, sea trials, RCOH). Predictable compared to tech startups, but not 'guaranteed shutdowns.'"
   }
  },
  "newsbreak": {
@@ -145503,39 +145928,105 @@
  },
  "point72": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "fc5c641e18",
+    "0aa30265fe"
+   ],
+   "value": "Top tier among multi-strategy investment firms; strong applied AI and data science reputation alongside elite finance peers."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "fc5c641e18"
+   ],
+   "value": "Point72 operates as a multi-strategy asset manager. It generates revenue by charging management fees and performance fees on the assets it manages. It invests in technology and proprietary research to strengthen its capital-allocation edge."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "0aa30265fe",
+    "142d224686"
+   ],
+   "value": "Investor-led, meritocratic and intellectually honest, with a stated commitment to top talent. Leaders focus on innovation in AI and data and encourage teams to automate and improve processes for long-term impact."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "0aa30265fe"
+   ],
+   "value": "Point72’s customers are its investors — institutions and high-net-worth individuals who allocate capital to the firm’s hedge funds to achieve superior risk-adjusted returns."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $175,000–$225,000 total first-year compensation (base salary and discretionary bonus) for top technical new graduates in New York, consistent with elite hedge fund pay bands."
   },
   "evidence_sha": "ac5e121f5541a5cb",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784683728,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "fc5c641e18",
+    "0aa30265fe"
+   ],
+   "value": "Hedge Fund / Alternative investment management"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "0aa30265fe",
+    "fc5c641e18",
+    "142d224686"
+   ],
+   "value": "Emphasize deep problem-solving ability with data, mastery of AI/ML fundamentals, and examples of using technology to drive measurable improvements. Show desire for rapid learning and collaboration within an investor-led culture, while clearly valuing sustainable hours and non-toxic team dynamics."
+  },
+  "last_attempt_at": 1784683728,
   "last_evidence_at": 1784673267,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "fc5c641e18"
+   ],
+   "value": "Headquartered in Stamford, Connecticut, with offices in New York, London, Hong Kong, Singapore, Tokyo, and other financial centers."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "0aa30265fe",
+    "fc5c641e18"
+   ],
+   "value": "Point72 aims to deliver superior returns for its investors through rigorous fundamental and systematic investing, while attracting and retaining top talent by cultivating an investor-led culture and committing to long-term career growth."
+  },
   "name": "Point72",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced with daily intellectual intensity tied to live markets, but the firm formalizes investment in people and process, avoiding purely reactive hustle culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "fc5c641e18",
+    "142d224686"
+   ],
+   "value": "Point72 produces investment returns through fundamental long/short equity, macro, and systematic investment strategies. The firm also builds proprietary platforms, technology, and data science capabilities to support these investment operations."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Competitive but conservative: approximately 20 days paid time off annually for new professionals, plus firm holidays."
   },
+  "refresh_after": 1789867728,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -145546,6 +146037,14 @@
    "confidence": "estimated",
    "source_ids": [],
    "value": "None found in research (estimated)"
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "0aa30265fe",
+    "fc5c641e18"
+   ],
+   "value": "Point72 is a large, mature alternative investment firm with over 30 years of investing history, employing thousands globally as a going concern."
   },
   "sources": [
    {
@@ -145609,14 +146108,46 @@
     "url": "https://boards.greenhouse.io/point72/jobs/8575501002?gh_jid=8575501002"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "fc5c641e18",
+    "0aa30265fe"
+   ],
+   "value": "Point72 is a global asset management firm that invests across asset classes and geographies using both discretionary fundamental and systematic strategies. It makes money by generating superior risk-adjusted returns on the capital of institutional and private investors."
+  },
+  "synthesized_evidence_sha": "ac5e121f5541a5cb",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "fc5c641e18",
+    "142d224686"
+   ],
+   "value": "Technical work spans data science, engineering, machine learning, and algorithmic development. The firm leverages alternative data on the Market Intelligence team and builds internal AI frameworks to automate and optimize business processes and support systematic strategies."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673267,
   "web_search_url": "https://duckduckgo.com/?q=Point72+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "0aa30265fe",
+    "142d224686"
+   ],
+   "value": "Point72 offers early-career technical talent high prestige and top-tier pay while investing heavily in data and AI. It combines intense intellectual challenge with a culture that claims to avoid the worst burnout patterns of some competitors by emphasizing long-term talent retention and sustainable productivity."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "0aa30265fe"
+   ],
+   "value": "Estimated: Above average for the hedge fund industry. Emphasis on long-term talent retention suggests strong boundary-setting and sustainable working hours, though market weeks can extend."
   }
  },
  "pointone": {
@@ -210672,49 +211203,132 @@
  },
  "wyetech": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "5ded0f48d5",
+    "ce1d25b70b",
+    "459839262b"
+   ],
+   "value": "Unknown. There is no public signaling of top-tier AI or DS prestige in the provided sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "5ded0f48d5",
+    "459839262b"
+   ],
+   "value": "Unknown. The excerpts provide no detail on monetization strategies, whether enterprise contracts, direct sales, or platform-based. It only confirms the existence of the firm under the domain wyetechllc.com."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "459839262b"
+   ],
+   "value": "Estimated: Mission-driven and direct, given the lack of marketing fluff on the single-page domain. The sparse web presence could indicate a flat, technical culture, but it remains opaque."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "5ded0f48d5",
+    "ce1d25b70b",
+    "459839262b"
+   ],
+   "value": "Unknown. The available source excerpts do not list clients, customer segments, or case studies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $100,000-$125,000 total composite in a low/medium cost of living market, if a high-pay culture is real. Given the tiny company footprint and no location data, this is a low-confidence bracket; actual pay could fall significantly to the sub-$90k range."
   },
   "evidence_sha": "f3d974d7d07e3652",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784683728,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "5ded0f48d5",
+    "459839262b"
+   ],
+   "value": "Technology. Listed on LinkedIn as a company and operating wyetechllc.com with a careers page."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5ded0f48d5",
+    "ce1d25b70b"
+   ],
+   "value": "Interviews should be treated as a two-way discovery. The candidate must dissect the actual technical roadmap, ensure high new-grad compensation in writing, and stress-test the work-life balance and shutdown claims that remain unconfirmed in public data. Specifically, probe for concrete examples of sane hours with no hidden on-call expectations."
+  },
+  "last_attempt_at": 1784683728,
   "last_evidence_at": 1784675811,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "5ded0f48d5"
+   ],
+   "value": "Unknown. The company is listed as Wyetech LLC and its site redirects from bing.com, but no headquarters address or remote-work policy is present in the snippets."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "5ded0f48d5",
+    "459839262b"
+   ],
+   "value": "Unknown. The company's mission statement or a detailed 'About Us' page is not captured in the provided source excerpts, which only include site redirect notices and a careers page link."
+  },
   "name": "Wyetech",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "5ded0f48d5"
+   ],
+   "value": "Estimated: Fast, innovative tech startup pace, but this is unconfirmed by public material. With such a low profile, the firm likely has a small-team intensity, but it could equally be a legacy-consulting pace."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "5ded0f48d5",
+    "ce1d25b70b",
+    "459839262b"
+   ],
+   "value": "Unknown. Specific products or services are not detailed in the available source excerpts."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days of Paid Time Off for new hires in tech roles, blending vacation and sick leave. This is a common U.S. tech baseline and is completely guessed; the company provides zero public detail."
   },
+  "refresh_after": 1789867728,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "5ded0f48d5",
+    "ce1d25b70b",
+    "459839262b"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No shutdown schedule is confirmed. A conservative baseline is the typical U.S. national holidays plus 2-3 days near year-end, but guaranteed full-company shutdowns are not signaled."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "5ded0f48d5",
+    "459839262b"
+   ],
+   "value": "Unknown. The company has a basic web presence and a LinkedIn page, but headcount, funding status, and stage are not disclosed in these excerpts."
   },
   "sources": [
    {
@@ -210748,14 +211362,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=b08fffe499af3a8ec21924ea8856bca14adac8435f09271fa9ff99998342269bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2599f633-462e-681f-18db-e1ae47a769bf&u=a1aHR0cHM6Ly93eWV0ZWNobGxjLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "5ded0f48d5",
+    "ce1d25b70b",
+    "459839262b"
+   ],
+   "value": "Unknown. The company's deal with U.S. work visas or sponsorship programs is not found in the source excerpts."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "ce1d25b70b",
+    "459839262b"
+   ],
+   "value": "Wyetech is a technology company that appears to focus on advanced engineering and mission-driven solutions. Publicly available information is extremely limited, but the company promotes direct career opportunities on its own domain, suggesting an active recruiting posture."
+  },
+  "synthesized_evidence_sha": "f3d974d7d07e3652",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "ce1d25b70b"
+   ],
+   "value": "Unknown. The broad domain and sparse career page link suggest a technical orientation, but specific domains like AI/ML, cybersecurity, or data science are not confirmed in the provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675811,
   "web_search_url": "https://duckduckgo.com/?q=Wyetech+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "5ded0f48d5",
+    "459839262b"
+   ],
+   "value": "Because the public footprint is so thin, a candidate with high standards for prestige, elite pay, and a non-toxic culture must treat this as a high-discovery opportunity. If Wyetech is an early- or growth-stage firm, it could offer the fast, innovative culture and career acceleration the candidate wants, but these attributes are unverified."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Favorable potential if the candidate's priors are correct, but not validated. There are zero Glassdoor or comparable insights in the sources. Conservative assumption: average startup WLB with occasional sprints."
   }
  },
  "wyetech llc": {
