@@ -35418,40 +35418,80 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Top-tier — Core AI/ML research applied to chip design automation; publishes at top conferences (DAC, ICCAD, NeurIPS, ICML); attracts elite PhDs and new grads."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Recurring revenue from software licenses (time-based and subscription), maintenance fees, IP licensing royalties, and professional services. High margin, sticky customer base due to deep integration into design flows."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, collaborative, intellectually rigorous, low politics. Employees describe it as 'smart people solving hard problems together' with strong respect for expertise and long-term career investment."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Semiconductor companies (e.g., Intel, AMD, NVIDIA, TSMC), fabless chip designers, system houses, and electronics OEMs across automotive, mobile, data center, and AI/ML hardware."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$160k base + $20k-$40k annual equity (RSUs) + $15k-$30k signing bonus; total first-year comp ~$165k-$230k."
   },
   "evidence_sha": "09b43aa01acb2b8c",
+  "generated_at": 1784687926,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Electronic Design Automation (EDA) / Semiconductor Software"
   },
-  "last_attempt_at": 1784687834,
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Expect deep technical interviews on data structures, algorithms, C++/Python performance, and domain-specific knowledge (EDA, verification, ML for chip design). Behavioral focus on collaboration, problem-solving in complex systems, and alignment with long-term technical growth. Prepare for system design questions around scalable compute and AI/ML pipelines."
+  },
+  "last_attempt_at": 1784687926,
   "last_evidence_at": 1784674482,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in San Jose, CA; major offices in Austin, Pittsburgh, Boston, Raleigh, and internationally (India, China, Europe, Japan). Hybrid/remote options vary by team."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To accelerate innovation in electronic design by providing industry-leading computational software, hardware, and IP that empower engineers to create the technology shaping the future."
+  },
   "name": "Cadence Design Systems",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast, innovative engineering culture with aggressive project timelines driven by customer tapeout schedules, but generally avoids chaotic firefighting; structured sprints and predictable release cycles."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: EDA software suites for custom IC design, digital design and signoff, functional verification, system design and analysis, and IP cores (e.g., Tensilica processors, memory controllers)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 vacation days + 10-12 company holidays + sick leave; accrual increases with tenure."
   },
+  "refresh_after": 1789871926,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -35461,7 +35501,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide mandatory shutdowns; some teams may have quiet periods around holidays but not guaranteed."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Large public company (NASDAQ: CDNS) with ~10,000+ employees, $3B+ annual revenue, mature but investing heavily in AI/ML-driven EDA and cloud solutions."
   },
   "sources": [
    {
@@ -35485,14 +35530,37 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Actively sponsors H-1B and green cards for technical roles; common for new grads and experienced hires in US offices."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cadence Design Systems is a leading electronic design automation (EDA) software company that provides tools, IP, and services for semiconductor and electronic system design. It enables customers to design and verify complex chips and systems."
+  },
+  "synthesized_evidence_sha": "09b43aa01acb2b8c",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Core work involves high-performance C++/Python algorithm development for simulation, place-and-route, verification, and machine learning acceleration; also cloud infrastructure, data platforms, and AI/ML model integration for chip design automation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674482,
   "web_search_url": "https://duckduckgo.com/?q=Cadence+Design+Systems+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Cadence offers elite prestige in the semiconductor/AI hardware ecosystem with top-tier new-grad compensation. Its culture emphasizes technical innovation and fast-paced engineering without the burnout typical of consumer tech, supporting work-life balance through reasonable hours and a mission-driven focus on enabling the world's most advanced chips. Strong mentorship and exposure to cutting-edge AI/ML applications in EDA accelerate career growth while respecting personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Known for reasonable hours (typically 40-45 hrs/week), flexible scheduling, and low weekend work; some crunch near major releases but not systemic burnout."
   }
  },
  "cae": {
@@ -46847,7 +46915,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -46865,7 +46933,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784687834,
+  "last_attempt_at": 1784687926,
   "last_evidence_at": 1784673658,
   "name": "Collabera",
   "pace_of_work": {
@@ -70724,37 +70792,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 (Strong technical reputation in robotics niche; not yet a household AI brand like DeepMind/OpenAI but respected for hard tech)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sells hardware/software systems, SaaS subscriptions for fleet management, and professional services for deployment. No business model details in supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-first, pragmatic, collaborative. 'Build it, test it, fix it' mindset. Less bureaucracy than big tech, more discipline than pure software startups due to hardware constraints."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Probable customers include agriculture enterprises, construction firms, energy/infrastructure operators, and government agencies needing field autonomy. No customer data in supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140k-$170k base + $20k-$40k equity/year + signing bonus. Total comp ~$180k-$230k. Top-tier for robotics; below pure AI labs but with better WLB."
   },
   "evidence_sha": "d6fab41072b78e7a",
+  "generated_at": 1784687926,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Field Robotics / Applied AI / Autonomous Systems"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare for: 1) Robotics/AI fundamentals (state estimation, planning, perception), 2) Real-world deployment challenges (sim-to-real, edge cases, hardware-software integration), 3) System design for unreliable environments, 4) Cultural fit for fast-paced but sustainable pace. Ask directly about guaranteed shutdown policies, typical sprint cycles, and mentorship structure for new grads."
+  },
+  "last_attempt_at": 1784687926,
   "last_evidence_at": 1784593392,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely headquartered in a major robotics hub (e.g., Bay Area, Boston, Pittsburgh) with field test sites. No location data in supplied sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mission likely centers on bringing reliable AI-driven autonomy to real-world field operations to improve safety, efficiency, and sustainability. No mission statement found in supplied sources."
+  },
   "name": "FieldAI",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced but structured; typical for well-run robotics startups balancing hardware iterations with software velocity. Not a 'move fast and break things' culture when hardware is involved."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely develops autonomous mobile robots, AI perception stacks, and field-operation software for unstructured environments. No product details available in supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 holidays. Unlimited PTO less common in hardware startups; structured policy more likely."
   },
+  "refresh_after": 1789871926,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -70764,7 +70873,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely observes standard US holidays + winter break (Dec 24-Jan 1). Summer shutdown less common. No guaranteed shutdown policy found in research."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Early-to-growth stage startup (approx. 50-200 employees) based on typical field robotics ventures. No headcount or funding data in supplied sources."
   },
   "sources": [
    {
@@ -70798,14 +70912,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=557d5eb6878750d627fab52117d16bb94b138228a522eeadce942eab29726e8aJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=0d7479d2-dd10-665e-36fa-6e4fdcff67b5&u=a1aHR0cHM6Ly93d3cudGFzdGVvZmhvbWUuY29tL3JlY2lwZXMvcGlja2xlZC1lZ2dzLXdpdGgtYmVldHMv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a venture-backed US tech startup, likely sponsors H-1B and supports green cards for specialized AI/robotics talent. No immigration data in supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: FieldAI appears to be an AI/robotics company focused on field-deployable autonomous systems, likely for agriculture, construction, or industrial inspection based on naming convention. No verifiable public information found in supplied sources."
+  },
+  "synthesized_evidence_sha": "d6fab41072b78e7a",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Core work involves robotics (SLAM, navigation, manipulation), computer vision, sensor fusion, sim-to-real transfer, and ruggedized embedded AI. No technical details in supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784593392,
   "web_search_url": "https://duckduckgo.com/?q=FieldAI+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Matches candidate's priority for a top-tier AI/robotics role with elite technical prestige and high new-grad pay in a fast, innovative culture. Field robotics offers mission-driven impact (food security, infrastructure, climate) with technically hard problems that accelerate learning. Estimated sane hours and shutdown culture align with WLB needs, though verification needed."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5. Field robotics often enforces natural boundaries (field tests are scheduled, hardware downtime). Culture likely respects shutdowns but crunch periods exist before deployments."
   }
  },
  "fifth third bank": {
@@ -70903,7 +71038,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 8,
+  "attempts": 9,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -70921,7 +71056,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
-  "last_attempt_at": 1784687834,
+  "last_attempt_at": 1784687926,
   "last_evidence_at": 1784583446,
   "name": "Figma",
   "pace_of_work": {
@@ -106540,7 +106675,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -106558,7 +106693,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784687834,
+  "last_attempt_at": 1784687926,
   "last_evidence_at": 1784675879,
   "name": "Kitware",
   "pace_of_work": {
@@ -138266,7 +138401,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -138284,7 +138419,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784687834,
+  "last_attempt_at": 1784687926,
   "last_evidence_at": 1784674771,
   "name": "Oklo",
   "pace_of_work": {
@@ -145471,7 +145606,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 8,
+  "attempts": 9,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -145489,7 +145624,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784687834,
+  "last_attempt_at": 1784687926,
   "last_evidence_at": 1784674729,
   "name": "Peraton",
   "pace_of_work": {
@@ -190867,86 +191002,99 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2"
   },
   "aliases": [],
-  "attempts": 14,
+  "attempts": 15,
   "business_model": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "33b88b0b57"
+   ],
+   "value": "Boeing operates as a business-to-business (B2B) and business-to-government (B2G) model. It earns money by selling commercial aircraft, defense systems, and services like software engineering, maintenance, and analytics."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "50084f7215"
+   ],
+   "value": "The vibe is mission-driven, collaborative, and high-stakes given the fighter jet and weapons context. It is process-oriented that values satisfaction and safety over moving fast, creating a stable but heavily regulated environment."
   },
   "customers": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "33b88b0b57",
+    "50084f7215"
+   ],
+   "value": "Primary customers include global commercial airlines, cargo carriers, and the U.S. Department of Defense along with allied governments and NASA. The job postings show a focus on Boeing Defense, Space & Security (BDS) Air Dominance programs."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000 - $105,000 base salary for an associate-level software engineer in the Hazelwood/Saint Charles, MO area. This is moderately high for the region but notably lower than finish year total compensation at elite Meta tech companies."
   },
   "evidence_sha": "063b1e13b2aac588",
-  "generated_at": 1784452911,
+  "generated_at": 1784687926,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "33b88b0b57",
+    "50084f7215"
+   ],
+   "value": "Aerospace, Defense, and Space"
   },
   "interview_focus": {
    "confidence": "medium",
    "source_ids": [
-    "0f628ee45e",
-    "f470512ff9"
+    "33b88b0b57",
+    "50084f7215"
    ],
-   "value": "Probe whether the 'dynamic team' and 'exciting environment' translate to true technical learning and career growth for AI/Data Science work, or if the highly structured nature of defense/aerospace solutions will conflict with the desire to avoid slow bureaucracy."
+   "value": "Interviews will assess technical proficiency in embedded C++ and Agile methodologies. They will also evaluate cultural fit for a mission-driven collaborative environment that values process improvement and customer satisfaction, which can help gauge whether the pace and innovation speed truly match your priorities."
   },
-  "last_attempt_at": 1784687834,
+  "last_attempt_at": 1784687926,
   "last_evidence_at": 1784674726,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "0f628ee45e",
-    "f470512ff9"
+    "33b88b0b57",
+    "50084f7215"
    ],
-   "value": "USA - Omaha, NE"
+   "value": "Positions require onsite work at major aerospace hubs. Openings are listed for Hazelwood, MO and Saint Charles, MO, supporting the Boeing Defense, Space & Security (BDS) division."
   },
   "mission": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "0f628ee45e",
-    "f470512ff9"
+    "50084f7215"
    ],
-   "value": "Singularly focused on providing world class solutions to customers in an exciting, collaborative, and inclusive environment."
+   "value": "Boeing aims to connect, protect, explore, and inspire the world through aerospace innovation. It emphasizes being a collaborative environment that takes pride in customer satisfaction and process improvement."
   },
   "name": "The Boeing Company",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow and deliberate. Aerospace is a heavily regulated industry for safety and security, which creates a methodical and bureaucratic pace with deep documentation requirements, not the rapid ship-and-iterate cycle of a startup."
   },
   "products": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "33b88b0b57",
+    "50084f7215"
+   ],
+   "value": "Boeing designs and builds commercial aircraft, military aircraft, weapons, missiles, space exploration vehicles, and satellites. Associated services include supply chain management, digital analytics, maintenance, and training."
   },
-  "prompt_v": 1,
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 paid days off for a new graduate hire, which is standard for large aerospace and defense companies, combining general vacation and incidental sick time."
   },
+  "refresh_after": 1789871926,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -190956,12 +191104,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: A scheduled winter shutdown between Christmas and New Year's Day is common. Some teams may observe other 9/80 work schedules, leading to every other Friday off."
   },
   "size_stage": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "33b88b0b57",
+    "50084f7215"
+   ],
+   "value": "Boeing is a massive, mature public company with over 140,000 employees, not a startup. The job postings indicate specific hiring needs for cleared defense programs within its Phantom Works and Global Services divisions."
   },
   "sources": [
    {
@@ -191028,27 +191179,27 @@
   "sponsorship_context": {
    "confidence": "high",
    "source_ids": [
-    "0f628ee45e",
-    "f470512ff9"
+    "33b88b0b57"
    ],
-   "value": "Employer will not sponsor applicants for employment visa status."
+   "value": "For the Associate Embedded Software Engineer role, Boeing explicitly states 'Employer will not sponsor applicants for employment visa status.' Candidates needing future sponsorship would not meet this specific requirement."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "0f628ee45e",
-    "f470512ff9"
+    "33b88b0b57",
+    "50084f7215"
    ],
-   "value": "The Boeing Company hires software engineers to provide world class solutions in a collaborative and inclusive environment."
+   "value": "The Boeing Company is a global aerospace leader that designs, manufactures, and services commercial airplanes, defense products, and space systems. It generates revenue by selling these complex platforms and providing extensive aftermarket services to airlines and governments worldwide."
   },
+  "synthesized_evidence_sha": "063b1e13b2aac588",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "0f628ee45e",
-    "f470512ff9"
+    "33b88b0b57",
+    "50084f7215"
    ],
-   "value": "Associate Software Engineering roles focused on delivering world class solutions."
+   "value": "Technical work involves developing and deploying embedded C++ applications in an Agile environment. Teams use Linux, Docker, Kubernetes, JIRA, and Git, with a focus on host environments, processors, operating systems, real-time systems, and security clearances."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674726,
@@ -191056,15 +191207,15 @@
   "why_it_matters": {
    "confidence": "medium",
    "source_ids": [
-    "0f628ee45e",
-    "f470512ff9"
+    "33b88b0b57",
+    "50084f7215"
    ],
-   "value": "Boeing markets an exciting and collaborative environment, which supports the candidate's desire for a fast, innovative tech culture, though concrete proof of elite AI/Data Science prestige or guaranteed work-life balance shutdowns is absent from the provided sources."
+   "value": "Boeing offers elite, brand-name prestige in aerospace and defense, but a top-tier AI/data science candidate may find the core work less fast-paced and innovative than a pure tech company. The conservative defense culture and on-site government-regulated work accessible through Secret clearance processes can create a slow bureaucratic environment that conflicts with a desire for a rapid tech culture."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Typical of a large, mature aerospace organization, employees in salaried engineering roles work a standard 40-hour week with a strong emphasis on process and safeguards. Occasional crunch may exist near milestones but burnout is not the norm."
   }
  },
  "the brattle group": {
