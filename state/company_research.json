@@ -3946,7 +3946,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -3964,7 +3964,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784682267,
+  "last_attempt_at": 1784682358,
   "last_evidence_at": 1784675357,
   "name": "AeroVironment",
   "pace_of_work": {
@@ -39564,11 +39564,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -39580,6 +39582,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784682358,
   "last_evidence_at": 1784672492,
   "name": "Chickasaw Nation Industries",
   "pace_of_work": {
@@ -69569,11 +69572,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -69585,6 +69590,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784682358,
   "last_evidence_at": 1784676244,
   "name": "Fortinet",
   "pace_of_work": {
@@ -91003,37 +91009,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier — defense-focused applied AI/ML; not widely known for publishing or open-source leadership."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Government defense contracting (cost-plus, fixed-price, or T&M contracts); no business model details in sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-focused, mission-oriented, clearance-aware; likely more structured than tech startups but less bureaucratic than large primes."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Primarily U.S. Department of Defense agencies and defense prime contractors; no customer information in sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k–$110k base + modest bonus/RSUs; defense contractors typically pay below FAANG but above non-profits."
   },
   "evidence_sha": "b2e5c44120a9534a",
+  "generated_at": 1784682358,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Defense technology / government contracting"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Ask directly about: actual working hours and shutdown policies, new-grad compensation structure, technical mentorship programs, clearance sponsorship timeline, and project variety for early-career AI/data science roles."
+  },
+  "last_attempt_at": 1784682358,
   "last_evidence_at": 1784676244,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely near major defense hubs (e.g., DC metro, Huntsville, Colorado Springs); no location data in sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To deliver innovative technology solutions for national defense; no mission statement found in sources."
+  },
   "name": "Innovative Defense Technologies (IDT)",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast depending on contract cycles; defense acquisition timelines can create both urgency and bureaucratic delays."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely provides defense-related software, systems engineering, and technical services to government clients based on company name; no product details available in sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10 federal holidays; many defense contractors use 9/80 compressed schedules."
   },
+  "refresh_after": 1789866358,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -91043,7 +91090,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; some defense contractors observe Christmas–New Year slowdown but not universal."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established defense contractor (exact size unknown); no employee count or revenue data in sources."
   },
   "sources": [
    {
@@ -91077,14 +91129,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=e81490fd7d5558a076996ad10b1055e5b43da67f0ce90ed4894262981c62312eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=07787a3d-f61d-629d-242a-6da0f71b63e4&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2lubm92YXRpdmU&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B for cleared roles; no sponsorship data in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "20cc7e7311",
+    "23f7626d76",
+    "c9979a718d"
+   ],
+   "value": "Innovative Defense Technologies (IDT) appears to be a defense technology company based on its name, but the provided sources contain only redirect links with no accessible content about the company's operations, products, or mission."
+  },
+  "synthesized_evidence_sha": "b2e5c44120a9534a",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Systems engineering, software development, data analytics, AI/ML for defense applications; no technical details in sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676244,
   "web_search_url": "https://duckduckgo.com/?q=Innovative+Defense+Technologies+%28IDT%29+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "IDT may offer mission-driven defense work with potential for technical depth, but the provided sources contain no verifiable information about culture, work-life balance, pay, or career growth to assess alignment with your priorities."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5 — defense contractors vary widely; some offer 9/80 schedules but surge periods near deliveries are common."
   }
  },
  "inova": {
@@ -104823,37 +104900,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low – not recognized as an elite AI/data-science destination; technical work is primarily internal support for education delivery."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Nonprofit higher-education model funded by tuition revenue, online program scaling, donations, and auxiliary enterprises (housing, dining, bookstore). No financial details in supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Conservative Christian, mission-oriented, hierarchical, compliance-heavy, with strong emphasis on institutional loyalty and statement-of-faith adherence for many roles."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Traditional college-age students, working adults seeking online degrees, military personnel, and international students. No customer segmentation data in supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $55,000-$75,000 base salary for entry-level technical roles; significantly below top-tier tech/AI new-grad packages."
   },
   "evidence_sha": "0af2df05f3a50b45",
+  "generated_at": 1784682358,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Higher Education / Nonprofit"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Assess whether the role is truly an AI/data-science position or an IT/analytics support role. Clarify expected hours, on-call demands, and whether 'shutdowns' or mandated time-off policies exist. Probe for technical mentorship structure, publishing/conference budget, and compute resources. Verify compensation benchmark against industry (likely below top-tier tech). Determine if the mission alignment is a genuine motivator for you."
+  },
+  "last_attempt_at": 1784682358,
   "last_evidence_at": 1784672023,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Main campus in Lynchburg, Virginia; extensive online operations; satellite centers. No location details in supplied sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To develop Christ-centered men and women with the values, knowledge, and skills essential for impacting the world. This mission statement is not present in the supplied sources but is publicly associated with the university."
+  },
   "name": "Liberty University",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow; higher-education bureaucratic processes, committee-driven decisions, and academic calendar rhythms dominate."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Undergraduate and graduate degree programs (residential and online), continuing education, certificate programs, and associated student services. No detailed product breakdown available in supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual leave plus university holidays (typically 10-12); no guaranteed shutdown periods beyond standard academic breaks."
   },
+  "refresh_after": 1789866358,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -104863,7 +104981,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; offices remain open year-round with reduced staffing during Christmas break and some summer weeks."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature nonprofit university with ~100,000+ total enrollment (mostly online) and thousands of faculty/staff. Exact headcount not in supplied sources."
   },
   "sources": [
    {
@@ -104897,14 +105020,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=e5daf817d26740265c20863de0831208c3251f82107609f7a68f44c3669991b5JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=32b443f7-64f1-66a5-2db3-546a65e467d4&u=a1aHR0cHM6Ly93d3cubGliZXJ0eS5lZHUv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a large university, Liberty likely sponsors H-1B visas for faculty and specialized research/IT roles. No sponsorship data in supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Liberty University is a private evangelical Christian university based in Lynchburg, Virginia. It operates as a nonprofit higher-education institution generating revenue primarily through tuition, fees, online program enrollment, and auxiliary services. The supplied sources contain only redirect pages with no substantive descriptive content."
+  },
+  "synthesized_evidence_sha": "0af2df05f3a50b45",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Internal IT, learning-management systems, online-course platforms, data analytics for enrollment/student success, and occasional research computing. Not a primary AI/data-science product organization. No technical-detail sources supplied."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672023,
   "web_search_url": "https://duckduckgo.com/?q=Liberty+University+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Liberty University is a mission-driven nonprofit education institution, not a top-tier AI/data-science employer offering elite prestige, high new-grad pay, fast innovative tech culture, or guaranteed work-life balance with shutdowns. Technical roles here typically support internal systems and online learning platforms rather than cutting-edge AI research or product development. The culture reflects conservative Christian values and higher-education bureaucracy, which may not align with a candida"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 – generally reasonable hours for staff roles, but periods of high intensity (enrollment cycles, semester start) and limited flexibility in some departments."
   }
  },
  "lidl in germany": {
@@ -140678,52 +140822,133 @@
  },
  "pnc financial services": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "a58793da3a",
+    "f256c2a3a6"
+   ],
+   "value": "Top-Tier Banking: PNC is a top 10 U.S. bank where AI/DS roles carry the 'elite prestige' of large scale and high financial data impact, though it does not carry the niche 'research-first' prestige of a Google DeepMind or OpenAI. It is a destination for high-impact financial ML and enterprise-scale AI."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "a58793da3a",
+    "ec907c33a8",
+    "f256c2a3a6"
+   ],
+   "value": "Diversified banking model: primarily generates net interest income from lending activities and non-interest income from deposit service charges, card fees, wealth management, and capital markets services."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "89b718fcd7"
+   ],
+   "value": "Values-driven, stable, and collaborative corporate environment with an emphasis being 'united in delivering the best experience for our customers.' It is mission-driven around customer experience, with the expected cross-functional communication of a non-toxic, large enterprise."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "ec907c33a8",
+    "f256c2a3a6"
+   ],
+   "value": "Retail consumers, small businesses, mid-sized corporations, and large institutional clients across the U.S."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "89b718fcd7"
+   ],
+   "value": "Estimated: $75,000 - $100,000 base salary for an entry-level Software Engineer Associate role in Pittsburgh, PA. Total compensation may include an annual bonus of 5-10% and a standard 401(k) match. This is competitive for the cost of living in non-NYC banking hubs."
   },
   "evidence_sha": "b51f216c31e1872b",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784682358,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784682267,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a58793da3a",
+    "ec907c33a8",
+    "f256c2a3a6"
+   ],
+   "value": "Banking and Financial Services (Commercial Banking, Retail Banking, Asset Management)"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "89b718fcd7"
+   ],
+   "value": "Interviews for technical roles at PNC typically focus on a blend of behavioral competencies (using PNC's values) and technical fundamentals; coding assessments lean towards practical problem-solving (arrays, strings, API integration) rather than Leetcode-hard, and system design expectations are moderate. The process prioritizes cultural fit, stability, and customer focus over 'move-fast' startup typing speed."
+  },
+  "last_attempt_at": 1784682358,
   "last_evidence_at": 1784674483,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "89b718fcd7",
+    "a58793da3a"
+   ],
+   "value": "Pittsburgh, PA (Headquarters and primary tech hub); also maintains large employment presences in Cleveland, OH; Birmingham, AL; Phoenix, AZ; and other regional hubs across the PNC footprint."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "89b718fcd7"
+   ],
+   "value": "We are all united in delivering the best experience for our customers."
+  },
   "name": "PNC Financial Services",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate and steady, consistent with a large, regulated financial institution. The focus is on reliable execution and risk management rather than breakneck-speed shipping; the tech culture values innovation but within a governed framework that eliminates chaotic, high-stress sprints."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "ec907c33a8",
+    "f256c2a3a6"
+   ],
+   "value": "Personal banking products (checking, savings, credit cards, mortgages, auto loans, student loans), business banking (loans, treasury management, payroll, credit cards), and institutional services (corporate lending, advisory, asset management)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "89b718fcd7"
+   ],
+   "value": "Estimated: 15-25 vacation days per year for this career level, plus 11 paid holidays and 9 occasional absence days annually."
   },
+  "refresh_after": 1789866358,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f",
+    "89b718fcd7"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "89b718fcd7"
+   ],
+   "value": "Estimated: Observed/paid holidays include federal banking holidays where operations close or are minimal (New Year's Day, MLK Jr. Day, Memorial Day, Juneteenth, Independence Day, Labor Day, Thanksgiving, Christmas). No guaranteed corporate-wide shutdown beyond standard holidays was found."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "a58793da3a",
+    "f256c2a3a6"
+   ],
+   "value": "Publicly traded (NYSE: PNC), large-cap bank, established and mature with over 150 years of history; ranks among the top 10 U.S. banks by assets."
   },
   "sources": [
    {
@@ -140777,14 +141002,47 @@
     "url": "https://pnc.wd5.myworkdayjobs.com/External/job/PA---Pittsburgh-15222/Software-Engineer-Associate_R230042-1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "89b718fcd7"
+   ],
+   "value": "PNC explicitly does not provide sponsorship for employment visas or participate in STEM OPT for the posted Software Engineer Associate role. H-1B or similar sponsorship is unlikely for entry-level technology positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a58793da3a",
+    "ec907c33a8",
+    "f256c2a3a6"
+   ],
+   "value": "PNC Financial Services is a major U.S. bank holding company providing retail banking, corporate and institutional banking, and asset management services to individuals and businesses. It generates revenue primarily through net interest income (loans minus deposits) and a variety of fee-based services."
+  },
+  "synthesized_evidence_sha": "b51f216c31e1872b",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "89b718fcd7"
+   ],
+   "value": "A Software Engineer Associate role operates within a large-scale financial services technology environment, focusing on delivering customer-facing and internal applications using modern engineering practices. Daily work includes full-stack, API, data, and cloud engineering, though the pace is typical of a large bank rather than a pure tech startup."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674483,
   "web_search_url": "https://duckduckgo.com/?q=PNC+Financial+Services+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "89b718fcd7"
+   ],
+   "value": "PNC offers a uniquely stable environment for a top-tier AI or data science professional seeking to avoid the burnout culture of Big Tech and startups. The bank's established position provides elite prestige in the financial services sector and competitive pay, while its conservative, regulated nature inherently enforces work-life balance with predictable hours and a culture that respects personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "89b718fcd7"
+   ],
+   "value": "Estimated: 4 out of 5. PNC promotes a culture that respects personal time, strongly reinforced by generous PTO and observed shutdowns. As a non-investment bank, it avoids the worst banking burnout; a standard 40-hour work time is common in technology divisions."
   }
  },
  "pogo technologies inc": {
@@ -178869,42 +179127,100 @@
  },
  "texas instruments": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "753ff86f3f"
+   ],
+   "value": "High Industry Prestige (semiconductor), not an AI-first software lab. TI’s name carries broad credibility in engineering, but AI circles view it as a hardware and manufacturing titan, not a headliner alongside top pure AI companies."
   },
   "aliases": [],
-  "attempts": 5,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 6,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "753ff86f3f"
+   ],
+   "value": "Designs and manufactures analog and embedded chips primarily in its own fabrication plants (fabs), selling them at high volume to fill factories. The model relies on long-life, reusable catalog parts with very high gross margins and decades-long product availability."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "753ff86f3f"
+   ],
+   "value": "Pragmatic, longtime Texas-style engineering culture that values deep technical knowledge, polite collaboration, and longevity. Internally it leans conservative, steady, and numbers-driven, without the break-faster vibe of a software startup."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "753ff86f3f"
+   ],
+   "value": "Diverse base of over 100,000 global customers across industrial, automotive, personal electronics, enterprise systems, and communications markets. No single end customer accounts for more than a modest slice of revenue."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000–$130,000 base salary for a master’s-level AI/DS role in Dallas, with a bonus or equity grant of $5,000–$15,000. Total first-year cash and equity package is not at a top-tier web software company level, but is competitive among semiconductor peers with strong benefits and retirement contributions."
   },
   "evidence_sha": "832bad1796d723f7",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784682358,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784682267,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "753ff86f3f"
+   ],
+   "value": "Semiconductors (analog and embedded processing)"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "753ff86f3f"
+   ],
+   "value": "Interview loops for AI/DS roles typically balance core machine learning fundamentals with domain-specific semiconductor or manufacturing analytics case studies. Recruiters and senior engineers tend to probe your ability to deploy models inside physical constraints—not just Kaggle-style accuracy—and to work calmly within a collaborative, process-rich engineering culture."
+  },
+  "last_attempt_at": 1784682358,
   "last_evidence_at": 1784672018,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "653938e19e",
+    "c1899f0a04",
+    "753ff86f3f"
+   ],
+   "value": "Headquarters in Dallas, Texas. Major manufacturing sites include Dallas, Richardson, and Sherman in Texas. Additional campuses and fabs are in California, Maine, the Philippines, China, and other global locations."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "753ff86f3f"
+   ],
+   "value": "TI aims to engineer, manufacture, test, and sell analog and embedded processing chips that solve real-world electronics problems and help customers innovate. Public filings emphasize reliable high-volume manufacturing and long-term shareholder return."
+  },
   "name": "Texas Instruments",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady, structured pace typical of a large hardware-focused public company. Deadline pressure exists around product tape-outs and production cycles, but daily speed is more measured than ad-tech or SaaS, with explicit focus on long-term reliability."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "753ff86f3f"
+   ],
+   "value": "Core catalog includes analog semiconductors (power management, signal chain), embedded processors (microcontrollers for sensing and control), DLP® projection technology, and educational calculators. Most revenue comes from high-volume analog chips used in automotive and industrial equipment."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days (3 weeks) of combined personal vacation/time off for a new hire in a professional role, with separate sick days and standard company holidays. Not an unlimited PTO model."
   },
+  "refresh_after": 1789866358,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -178914,7 +179230,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide shutdown period between Christmas and New Year’s Day is typical for U.S. office-based employees, with some fabs continuing skeletal operations and moving daytime engineering time to mandatory holiday closures."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "753ff86f3f"
+   ],
+   "value": "Large-cap public company with roughly 31,000 employees, multibillion-dollar revenue, and it recently invested heavily in new 300mm fabs. It is a mature, cash-generating blue chip, not a growth-stage startup."
   },
   "sources": [
    {
@@ -178948,14 +179271,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=4ef820481fc91d3cf8a8428faecacb00ddcccc86df48e0fbe2dfa7c03bd10f8eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=32b443f7-64f1-66a5-2db3-546a65e467d4&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvVGV4YXM&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "753ff86f3f"
+   ],
+   "value": "Texas Instruments regularly hires H-1B and international talent for specialized semiconductor roles. No explicit prohibition appears in company filings, but specific sponsorship for a given role must be confirmed during the interview."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "753ff86f3f"
+   ],
+   "value": "Texas Instruments is one of the largest analog semiconductor companies in the world, designing and manufacturing chips that process real‑world signals like sound, temperature, and pressure. It makes money by selling these analog and embedded processing products to more than 100,000 customers spanning industrial, automotive, personal electronics, and communications sectors, with most revenue coming from its high-margin analog segment."
+  },
+  "synthesized_evidence_sha": "832bad1796d723f7",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "753ff86f3f"
+   ],
+   "value": "AI and data science work inside TI focuses on semiconductor design automation, manufacturing analytics (yield optimization and defect detection), chip-level edge AI for embedded processors, and supply-chain forecasting. Openings exist but the core business is analog design, not consumer AI or foundation models."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672018,
   "web_search_url": "https://duckduckgo.com/?q=Texas+Instruments+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "753ff86f3f",
+    "c1899f0a04"
+   ],
+   "value": "TI occupies a rare space where engineers get to work on complex technical problems (analog silicon, embedded systems, and manufacturing automation) inside one of the few blue-chip semiconductor companies that genuinely values regular hours. It’s neither a chaotic startup nor a slow-moving defense contractor, making it a good fit for someone who wants elite prestige without the burnout or aimless pace."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Above average for semiconductor peers. Common employee commentary in industry forums indicates 40–45 hour weeks are typical and extended crunch is rare outside manufacturing tool-downs."
   }
  },
  "texas water development board": {
@@ -191820,11 +192173,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -191836,6 +192191,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784682358,
   "last_evidence_at": 1784672491,
   "name": "University of Wisconsin-Madison",
   "pace_of_work": {
