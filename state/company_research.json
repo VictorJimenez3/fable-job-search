@@ -12708,47 +12708,44 @@
    "confidence": "high",
    "source_ids": [
     "54ce385fc7",
-    "e82df07bce"
+    "3a6f764c45"
    ],
-   "value": "Elite tier, considered a top destination equivalent to OpenAI or DeepMind for LLM researchers. Compensation and mission draw top-of-market talent, though there are reports of an exclusionary elite-school culture."
+   "value": "Tier 1 (elite). Directly comparable to OpenAI, DeepMind, and FAANG advanced AI labs; pioneers in frontier model safety, often cited in foundational alignment research."
   },
   "aliases": [],
-  "attempts": 10,
+  "attempts": 11,
   "business_model": {
-   "confidence": "medium",
-   "source_ids": [
-    "e82df07bce",
-    "54ce385fc7"
-   ],
-   "value": "B2B and B2C monetization through usage-based API pricing, Claude.ai subscription tiers, and enterprise licensing of its large language models."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "culture_vibe": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "54ce385fc7",
-    "e82df07bce"
+    "e82df07bce",
+    "3a6f764c45"
    ],
-   "value": "Mission-obsessed, high-ownership research culture that attracts elite talent; highly rated for compensation and values, with a noted edge of being exclusionary, biased toward prestigious academic backgrounds."
+   "value": "Mission-driven, safety-first, academic-meets-startup. Strong emphasis on elite credential peers, philosopher-researcher ethos, and responsible development. Some glassdoor reviews indicate an elitism slightly exclusionary feel, but Blind reviews still highly saturate compensation and actual team mission."
   },
   "customers": {
    "confidence": "medium",
    "source_ids": [
-    "e82df07bce",
-    "54ce385fc7"
+    "cd62e31bec"
    ],
-   "value": "Businesses and developers integrating conversational AI into products, enterprises seeking safe AI deployment, and individual users of the Claude assistant spanning the U.S., UK, and Canada."
+   "value": "Enterprise businesses, software developers, and end-users who leverage API access for building applications, as well as individual and team subscribers to Claude's premium plans."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
     "54ce385fc7",
-    "e82df07bce"
+    "3a6f764c45"
    ],
-   "value": "Estimated: Total compensation for new grad technical roles (AI/Risk/Engineering) invents a conservative range of $240,000–$320,000, given the consistent payoff among top-tier AI labs."
+   "value": "Estimated: Base pay $175,000–$210,000, plus substantial equity/options and bonuses in competitive sphere; typical annualized value first-year could $250,000–$350,000+ depending on preferable performance and stock appreciation."
   },
   "evidence_sha": "68fd504b3136ff9c",
-  "generated_at": 1784673262,
+  "generated_at": 1784681004,
   "generator": {
    "endpoint": "nvidia:deepseek",
    "model": "deepseek-ai/deepseek-v4-pro",
@@ -12757,33 +12754,38 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "e82df07bce"
+    "a7c5740a80",
+    "b8b89dc01f"
    ],
-   "value": "Artificial intelligence—particularly safety-focused large language model development and deployment."
+   "value": "Artificial Intelligence / Generative AI / AI Safety & Research."
   },
   "interview_focus": {
    "confidence": "medium",
    "source_ids": [
-    "e82df07bce",
-    "54ce385fc7"
+    "a7c5740a80",
+    "cd62e31bec",
+    "3a6f764c45"
    ],
-   "value": "Expect rigorous coding challenges, deep ML research discussions, and behavioral alignment with the safety mission, plus probes on versatility outside a 9-to-6 pattern. Candidates will want to emphasize their ability to produce at a high pace with efficiency to guard their own weekends."
+   "value": "Interview processes emphasize technical depth (ML systems design, model alignment coding), safety mindset, and founder culture. Expect algorithmic problem-solving, infrastructure design focused on mitigating real misuse, and behavioral style assessing mission alignment, high agency, and respect for an elite, academic environment. Ask how the team balances launch velocity with Responsible Scaling Policy commitments."
   },
-  "last_attempt_at": 1784680912,
+  "last_attempt_at": 1784681004,
   "last_evidence_at": 1784580810,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "e82df07bce"
+    "e82df07bce",
+    "3a6f764c45"
    ],
-   "value": "Headquartered in San Francisco, CA with a remote-first culture allowing distributed work across the U.S., UK, and Canada."
+   "value": "Headquartered in San Francisco, California, with a remote-first culture allowing distributed work across the U.S., United Kingdom, and Canada."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "e82df07bce"
+    "cd62e31bec",
+    "a7c5740a80",
+    "b8b89dc01f"
    ],
-   "value": "Building frontier AI systems that are steered toward safety and remain aligned with human values, with a core focus on AI safety research and its real-world application."
+   "value": "To create reliable, interpretable, and steerable AI systems that are beneficial and safe, moving the industry toward responsible development."
   },
   "name": "Anthropic",
   "pace_of_work": {
@@ -12792,15 +12794,15 @@
     "54ce385fc7",
     "e82df07bce"
    ],
-   "value": "Fast and intense; an estimated 45-50 hours is typical, but 60-80+ hours are regularly reported during peak periods, deployments, and specific technical and nontechnical roles, which exceeds the ruthlessly slow bureaucratic style."
+   "value": "Estimated: Fast and demanding; reports from staff describe 60-80+ hour weeks normalize in critical periods, with 45–50 hours typical. Few refs mention commonplace 'peak' sprints and always-on velocity."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "e82df07bce",
-    "54ce385fc7"
+    "cd62e31bec",
+    "a7c5740a80"
    ],
-   "value": "Claude (a conversational AI assistant and family of large language models), API access for developers, and enterprise-grade deployment options for organizations."
+   "value": "Claude, a family of foundational AI models (large language models), and API access for developers and enterprises to integrate conversational and reasoning capabilities into their own applications."
   },
   "prompt_v": 2,
   "pto_days": {
@@ -12808,9 +12810,9 @@
    "source_ids": [
     "e82df07bce"
    ],
-   "value": "Estimated: Flexible PTO is offered, often interpreted in the sector as uncapped, though the heavy workload culture can make taking it challenging; specific day counts are not published."
+   "value": "Estimated: Flexible (unlimited) PTO policy, common among tier-1 peers, aligned with Anthropic's stated flexible leave language."
   },
-  "refresh_after": 1789857262,
+  "refresh_after": 1789865004,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -12819,15 +12821,20 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No guaranteed company-wide shutdowns, recharges, or mandatory time off were identified in published research. The fast-paced environment with reported 60-80+ hour weeks suggests limited formal shutdowns."
+   "source_ids": [
+    "e82df07bce",
+    "54ce385fc7",
+    "3a6f764c45"
+   ],
+   "value": "Estimated: No assured all-company mandatory shutdown or guaranteed hard control documented in provided research—candidates advise clarifying explicit team slowdown periods to ensure genuine rechargers."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "3a6f764c45"
+    "3a6f764c45",
+    "e82df07bce"
    ],
-   "value": "Approximately 2,500 total employees, late-stage growth company with disclosed openings peaking in 2026, headquartered in San Francisco."
+   "value": "Approximately 2,500 total employees, rapidly growing with a remote-first culture across the U.S., UK, and Canada."
   },
   "sources": [
    {
@@ -12900,38 +12907,41 @@
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "e82df07bce",
-    "54ce385fc7"
+    "cd62e31bec",
+    "a7c5740a80",
+    "b8b89dc01f"
    ],
-   "value": "Anthropic is an AI safety company that builds large language models (like Claude) designed to be helpful, honest, and harmless. It makes money by selling API access and enterprise subscriptions to its AI models and chatbot products."
+   "value": "Anthropic is an AI research and safety company that builds large language models, most notably the Claude family of AI assistants. It generates revenue by selling API access to these models and through enterprise and consumer subscriptions to its AI products."
   },
-  "synthesized_evidence_sha": "469f9d222454ca2b",
+  "synthesized_evidence_sha": "68fd504b3136ff9c",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "e82df07bce",
-    "54ce385fc7"
+    "cd62e31bec",
+    "a7c5740a80",
+    "b8b89dc01f"
    ],
-   "value": "Heavily R&D-focused with emphasis on LLM research, alignment, safety engineering, and large-scale infrastructure; top-tier, peer-reviewed-caliber output expected."
+   "value": "Roles span core ML research, infrastructure engineering for scalable model training/inference, safeguards against misuse (adversarial testing, policy violation detection), recruiting solutions engineering with Claude, and IT operations. High demand for elite technical talent working on novel model capabilities, safety alignment, and scaling systems."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784580810,
   "web_search_url": "https://duckduckgo.com/?q=Anthropic+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "e82df07bce",
-    "54ce385fc7"
+    "a7c5740a80",
+    "54ce385fc7",
+    "e82df07bce"
    ],
-   "value": "Offers a rare intersection of elite AI-safety prestige and top-tier compensation while being remote-first, meeting the dual need for status and location flexibility. The mission is genuinely safety-driven, but the demanding culture means a candidate who requires strictly 40-hour weeks should validate workload expectations for their specific team."
+   "value": "Anthropic offers elite AI prestige and top-of-market new-grad pay, coupled with a mission-driven safety culture rather than a products-first team. While competitive and fast-paced, external reports indicate the team is committed to RSPs and internal guardrails; Explicit alignment on consumable hours vs. burnout remains pressure point—ask about sustainable workloads and specific shutdown triad."
   },
   "wlb_rating": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
     "54ce385fc7",
     "e82df07bce"
    ],
-   "value": "Blind rating of 3.6/5, the lowest-rated dimension, with work-life balance frequently called out as the weakest area compared to pay and culture."
+   "value": "Estimated: Rated around 3.6 out of 5 on Blind, the lowest rated dimension at the company; compensation and culture score much higher."
   }
  },
  "anyscale": {
@@ -28828,37 +28838,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "High academic prestige (top-tier CS graduate program, strong publication record in ML venues), but not an industry elite brand like FAANG or top AI labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Non-profit educational institution funded primarily by tuition (heavily subsidized by the sponsoring church), tithing contributions, endowment returns, research grants, and auxiliary enterprises. Tuition is significantly below market rate for comparable private universities due to church subsidy."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Faith-centered, collaborative, conservative, family-oriented. Strong emphasis on honor code (no alcohol, tobacco, coffee, tea; dress/grooming standards; chastity). Community service and missionary service common. Can feel insular to those not sharing the faith."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary customers are students (domestic and international) seeking higher education, research funding agencies (federal, state, private), and donors. Employers who hire graduates are also key stakeholders."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $65,000-$85,000 base for research/engineering staff roles; PhD graduates targeting faculty roles start $90k-$120k (9-month). Significantly below industry new-grad offers ($150k+). Benefits include subsidized tuition for dependents, strong retirement (TIAA/CREF), and low-cost health plans."
   },
   "evidence_sha": "a21b53649368d29b",
+  "generated_at": 1784681004,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Higher Education / Research"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect questions about research experience, alignment with BYU's mission and honor code, teaching philosophy (for faculty roles), and technical depth in ML/DS. Behavioral questions may explore integrity, service, and fit with the religious environment. Technical interviews will emphasize fundamentals and research potential over rapid prototyping."
+  },
+  "last_attempt_at": 1784681004,
   "last_evidence_at": 1784675127,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Main campus in Provo, Utah. Additional locations include BYU–Hawaii, BYU–Idaho, BYU–Pathway Worldwide (online), and various study abroad centers. Most technical roles are based in Provo."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To assist individuals in their quest for perfection and eternal life by providing a university education that is spiritually strengthening, intellectually enlarging, character building, and leading to lifelong learning and service."
+  },
   "name": "Brigham Young University",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate academic pace. Research cycles are measured in quarters/semesters; deadlines are driven by conferences and grants. Not a 'move fast and break things' culture."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary products are accredited degree programs (bachelor's, master's, doctoral), research output, and continuing education. The university also operates auxiliary services such as housing, dining, and a broadcast network (BYUtv)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 vacation days + 10-12 university holidays + sick leave. Generous compared to US private sector, but varies by employee class (faculty vs staff)."
   },
+  "refresh_after": 1789865004,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -28868,7 +28919,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: University closes for major holidays (Thanksgiving week, Christmas/New Year's week, Spring Break). Summer terms optional. No guaranteed 'shutdown' periods beyond academic calendar."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature university with ~35,000 students (full-time equivalent) and ~5,000 full-time faculty and staff. Operates a single main campus in Provo, Utah, with satellite centers and online programs."
   },
   "sources": [
    {
@@ -28902,14 +28958,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=486a3506cf6a8afc1cdc7a3bee60fcbbb64baf9bd6ccdc8fc926231f524ed1abJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=12c18078-a65a-610c-2521-97e5a7b360e2&u=a1aHR0cHM6Ly93d3cuYnJpZ2hhbWFuZHdvbWVucy5vcmcv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a major research university, BYU routinely sponsors H-1B visas for faculty and research positions. OPT and CPT are available for international students. Sponsorship for staff engineering roles may be less common than for faculty."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Brigham Young University (BYU) is a private research university owned by The Church of Jesus Christ of Latter-day Saints. It provides undergraduate and graduate education across a wide range of disciplines, with a strong emphasis on integrating faith and learning."
+  },
+  "synthesized_evidence_sha": "a21b53649368d29b",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AI and data science work occurs within academic departments (Computer Science, Statistics, Electrical & Computer Engineering) and interdisciplinary research labs. Focus includes machine learning theory, applications in healthcare, linguistics, robotics, and family history. Opportunities for new grads are typically research assistantships, postdocs, or faculty-track positions rather than industry-style engineering roles."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675127,
   "web_search_url": "https://duckduckgo.com/?q=Brigham+Young+University+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "BYU offers a mission-driven environment with a strong honor code and religious foundation, which can provide a unique sense of community and work-life balance through structured expectations. For a candidate seeking elite academic prestige in AI research with sane hours and a culture that respects personal time, BYU's academic calendar and institutional values may align well. However, pay is significantly below industry rates, and the pace is academic rather than fast-paced tech innovation."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 8/10. Academic calendar provides natural breaks (summer, holidays). Faculty/staff often have autonomy but face pressure for tenure/research output. Honor code and cultural norms encourage boundaries."
   }
  },
  "brinc drones": {
@@ -102568,49 +102645,120 @@
  },
  "logiqal": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "5ce1fdcf8e"
+   ],
+   "value": "Niche Elite (Quantum Computing Hardware). The founding team's pedigree at Princeton, Harvard, MIT, and Google Quantum places it in a high-prestige, research-heavy tier comparable to top AI labs, but focused specifically on quantum architecture instead of general AI/DS."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "5ce1fdcf8e"
+   ],
+   "value": "B2B hardware sales: developing and selling proprietary quantum computing systems and associated control software."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "5ce1fdcf8e"
+   ],
+   "value": "Research-driven, intellectually rigorous, and collaborative. Scientists and engineers working closely at the intersection of physics and software. Mission-oriented environment with low tolerance for politics, a far step from the bureaucratic style the candidate wants to avoid."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "5ce1fdcf8e"
+   ],
+   "value": "Likely research institutions and advanced computing enterprises; founded by a team with backgrounds at Princeton, Harvard, Yale, MIT, and Google Quantum."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $150,000 - $180,000 base salary. Reflects high new-grad pay for elite quantum/hardware engineering roles in the Princeton NJ, area, typically including equity but few public figures exist for Logiqal."
   },
   "evidence_sha": "0c70d3f624360140",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784681004,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "5ce1fdcf8e"
+   ],
+   "value": "Quantum Computing / Deep Tech Hardware."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "5ce1fdcf8e"
+   ],
+   "value": "Strong emphasis on working across the software/hardware boundary. Experts in hardware-in-the-loop testing, data pipelines for calibration, distributed infrastructure control, and likely knowledge of quantum physics or photonics. Assesses ability to thrive in a fast-moving, research-intensive startup without requiring slow, bureaucratic processes."
+  },
+  "last_attempt_at": 1784681004,
   "last_evidence_at": 1784673260,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "5ce1fdcf8e"
+   ],
+   "value": "Princeton, NJ, USA."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "5ce1fdcf8e"
+   ],
+   "value": "To advance computing by building quantum systems from a novel hardware-software architecture, making scalable quantum machines a reality."
+  },
   "name": "Logiqal",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "5ce1fdcf8e"
+   ],
+   "value": "Estimated: Intense and intellectually demanding with rapid iteration needed, but driven by physics research milestones rather than dot-com style agile crunch. Less bureaucratic than a large corp."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "5ce1fdcf8e"
+   ],
+   "value": "Scalable computing systems composed of manufacturable sub-modules, controlled by CMOS optoelectronics and a unique computer architecture."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO plus sick days. A conservative market estimate for an early-stage tech startup in the Princeton area."
   },
+  "refresh_after": 1789865004,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "5ce1fdcf8e",
+    "dbc3b9e88f"
+   ],
+   "value": "None found in research. No evidence of a formal rotational program found in the job posting or company source."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely a company-wide year-end holiday break. A common practice in deep-tech startups, but no explicit public policy was found in source."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "5ce1fdcf8e"
+   ],
+   "value": "Early-stage startup; led by a founding physics team, hiring for core engineering roles in Princeton, NJ."
   },
   "sources": [
    {
@@ -102664,14 +102812,46 @@
     "url": "https://jobs.ashbyhq.com/logiqal/b4a0ea91-2939-4614-8499-cab2e790989b"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "5ce1fdcf8e",
+    "dbc3b9e88f"
+   ],
+   "value": "Not specified in available sources; given its early-stage startup status, immigration sponsorship is not guaranteed and should be clarified during the interview."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "5ce1fdcf8e"
+   ],
+   "value": "Logiqal builds scalable computing systems using novel hardware-software co-design, focusing on a unique computer architecture with state-of-the-art CMOS optoelectronics. It generates revenue by selling these high-performance computing systems, likely to research labs and enterprises needing advanced computation."
+  },
+  "synthesized_evidence_sha": "0c70d3f624360140",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "5ce1fdcf8e"
+   ],
+   "value": "Cross-disciplinary work at the software/hardware boundary: hardware-in-the-loop testing, data pipelines for calibration and operations, and distributed infrastructure monitoring and control for quantum systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673260,
   "web_search_url": "https://duckduckgo.com/?q=Logiqal+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "5ce1fdcf8e"
+   ],
+   "value": "Perfect fit for the candidate's priorities: an elite quantum computing startup at the prestige level of MIT/Google Quantum pedigree. It offers an extremely fast, innovative tech culture with deep hardware/software co-design, not a slow bureaucracy. As a mission-driven deep-tech company led by research scientists, it likely respects genuine work-life balance with sane hours, avoiding the burnout culture of typical software-only firms. The cross-disciplinary work accelerates technical learning and"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "5ce1fdcf8e"
+   ],
+   "value": "Estimated: Strong. Deep-tech startups founded by academics often prioritize genuine down-time and sustainable thinking over 24/7 on-call culture. A healthy work-life balance is expected, though likely combined with intense, focused work on-site."
   }
  },
  "logistic services international inc": {
@@ -102764,49 +102944,125 @@
  },
  "logos space": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "22e68ecb9f",
+    "2da309d90f"
+   ],
+   "value": "Niche/Tier 3. Logos Space is not an AI/ML company, but develops complex embedded and ground software for aerospace systems, which emphasizes real-time computing and reliability over data science."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "22e68ecb9f"
+   ],
+   "value": "B2B and B2G satellite connectivity provider, generating revenue through service contracts with enterprise and government clients."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "22e68ecb9f",
+    "2da309d90f"
+   ],
+   "value": "Mission-driven and owner-operator style. Culture values turning ambiguous requirements into practical solutions, with an emphasis on rapid iteration and reliable infrastructure. Shares qualities with the broader new-space ideals of moving fast and avoiding heavy bureaucracy."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "22e68ecb9f"
+   ],
+   "value": "Enterprise and government users worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000 - $135,000 USD base salary. Represents a conservative estimate for space startup navigation/embedded software roles in moderate to high cost-of-living areas."
   },
   "evidence_sha": "93e1ce2f95891137",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784681004,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "22e68ecb9f"
+   ],
+   "value": "Space technology / Satellite communications"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "22e68ecb9f",
+    "2da309d90f"
+   ],
+   "value": "Emphasize strong ownership mindset and comfort with ambiguity. Candidates should demonstrate their ability to turn incomplete requirements into reliable, operational software for flight or ground systems, and articulate why they thrive in a mission-critical, fast-paced technical environment."
+  },
+  "last_attempt_at": 1784681004,
   "last_evidence_at": 1784675042,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "22e68ecb9f"
+   ],
+   "value": "Not explicitly stated, but the company operates in the space technology sector and lists positions on AshbyHQ, suggesting a US-based office."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "22e68ecb9f"
+   ],
+   "value": "To deliver resilient, high-performance connectivity to enterprise and government users worldwide through a proliferated LEO constellation."
+  },
   "name": "Logos Space",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "22e68ecb9f",
+    "2da309d90f"
+   ],
+   "value": "Estimated: Fast-paced execution-oriented environment, typical of startup satellite companies. The job description explicitly looks for engineers who work well in a 'fast-paced environment'."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "22e68ecb9f"
+   ],
+   "value": "Proliferated Low Earth Orbit (pLEO) satellite constellation delivering global connectivity services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of PTO for new grads. Based on typical US startup standards."
   },
+  "refresh_after": 1789865004,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None guaranteed, though some space startups observe a December holiday shutdown."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f",
+    "22e68ecb9f",
+    "2da309d90f"
+   ],
+   "value": "Growth-stage startup actively hiring new graduates. The company is listed in new-grad position aggregators, indicating ongoing early-career hiring."
   },
   "sources": [
    {
@@ -102870,14 +103126,41 @@
     "url": "https://jobs.ashbyhq.com/logos-space/119da23a-2cc2-4b62-8b12-ac22b9ea4ba5"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "22e68ecb9f",
+    "2da309d90f"
+   ],
+   "value": "Logos Space is an aerospace company building a proliferated Low Earth Orbit satellite constellation to provide resilient, high-performance connectivity for enterprise and government users. They develop both ground and flight software to support constellation-scale navigation operations."
+  },
+  "synthesized_evidence_sha": "93e1ce2f95891137",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "22e68ecb9f",
+    "2da309d90f"
+   ],
+   "value": "Navigation and flight software engineering, including embedded systems, ground infrastructure for constellation-scale operations, and reliable software for orbital environments. Requires experience with embedded Linux, RTOS, bare-metal, and deterministic execution under flight constraints."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675042,
   "web_search_url": "https://duckduckgo.com/?q=Logos+Space+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Logos Space offers a startup pace that accelerates technical growth and learning without the inertia of large aerospace or legacy tech firms. As a mission-driven space connectivity company, it provides tangible purpose alongside an estimated culture of sane hours and shutdowns, directly meeting the candidate's need for high-impact work, work-life balance, and avoidance of burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4 out of 5. Young space startups tend to offer strong mission-driven culture with more sustainable hours than large aerospace bureaucracies, though launch periods may cause occasional spikes."
   }
  },
  "loma linda university health": {
@@ -104325,37 +104608,87 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "3b8a41405f"
+   ],
+   "value": "The company operates a traditional B2B embedded software licensing model, anchored by royalty-free development licenses and per-device production royalties, alongside recurring support and maintenance contracts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "3b8a41405f"
+   ],
+   "value": "Customers are primarily in aerospace, defense, avionics, and industrial controls—companies like Boeing, Lockheed Martin, and Raytheon that rely on long-lifecycle, safety-certifiable systems."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $115,000 - $130,000 base salary for a new-graduate software engineer in San Jose. The specialized defense/embedded niche typically pays slightly below hyper-scale AI software engineer base salaries but offers significant bonus stability."
   },
   "evidence_sha": "11153e3f3c8a1ec1",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784681004,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784680703,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "3b8a41405f"
+   ],
+   "value": "Embedded Safety-Critical Software and Cybersecurity"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784681004,
   "last_evidence_at": 1784630054,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "3b8a41405f"
+   ],
+   "value": "Headquartered in San Jose, California, with additional offices in Pittsburgh and Dallas, plus distributed remote teams."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "3b8a41405f"
+   ],
+   "value": "To provide a secure, certifiable, and deterministic computing foundation for mission-critical edge applications where lives and livelihoods depend on software reliability."
+  },
   "name": "Lynx Software Technologies, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Deliberate and methodical. The overhead of safety certification (DO-178C, ISO 26262) prevents the 'move fast and break things' approach. Code changes require traceability, rigorous review, and testing, resulting in a predictable, lower-than-SaaS pace."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "3b8a41405f"
+   ],
+   "value": "Flagship products include the LynxOS real-time operating system (RTOS) and the LynxSecure separation kernel hypervisor. These provide deterministic, high-reliability foundations for complex embedded systems requiring safety certification."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20 days of combined paid time off (vacation and sick) for new graduates, aligning with mid-sized, defense-adjacent technical companies."
   },
+  "refresh_after": 1789865004,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -104365,7 +104698,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: A paid end-of-year company shutdown lasting roughly one week between Christmas and New Year's Day."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "3b8a41405f"
+   ],
+   "value": "Lynx Software Technologies is a mid-sized, privately held niche technology company that has been operating for decades. It is not a high-growth consumer startup but maintains a stable, mature business in a specialized field."
   },
   "sources": [
    {
@@ -104399,14 +104739,41 @@
     "url": "https://www.rippling.com/products/hr/recruiting"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "3b8a41405f"
+   ],
+   "value": "Due to heavy involvement in defense and aerospace ITAR/EAR-regulated projects, employment often requires U.S. citizenship or permanent residency. Work visa sponsorship is typically infeasible for roles touching controlled technical data."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "3b8a41405f"
+   ],
+   "value": "Lynx Software Technologies develops foundational, safety-critical real-time operating systems (RTOS) and hypervisors for mission-critical edge computing. The company makes money by licensing its software and providing support services to manufacturers building products where failure is not an option."
+  },
+  "synthesized_evidence_sha": "11153e3f3c8a1ec1",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "3b8a41405f"
+   ],
+   "value": "Engineering focuses on low-level systems programming, kernel development, security separation, RTOS optimization, and safety certification evidence generation (e.g., DO-178C for avionics). Recent AI/ML work involves optimizing inference at the edge on LynxOS platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784630054,
   "web_search_url": "https://duckduckgo.com/?q=Lynx+Software+Technologies%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Strong. Mature embedded industries typically operate on standard 40-hour weeks. Crunch time is rare and tied to concrete certification auditor deadlines rather than arbitrary product exec demands, though final certification pushes can require focused overtime."
   }
  },
  "lyra health": {
@@ -129065,37 +129432,100 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Emerging — early-stage, pre-Series A likely; prestige derives from investor pedigree and category potential, not yet established AI brand."
   },
   "aliases": [],
-  "culture_vibe": {
+  "attempts": 1,
+  "business_model": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Likely transaction fees, marketplace commissions, or primary sales of digital collectibles; not explicitly disclosed in sources."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "2d2d7a78f3",
+    "e35a616fc0"
+   ],
+   "value": "Small, highly hands-on, founding-team energy; builder culture with high autonomy; backed by elite consumer/investor network."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "2d2d7a78f3"
+   ],
+   "value": "Collectors and enthusiasts in the digital collectibles market; targeting a $100B+ category."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "2d2d7a78f3",
+    "e35a616fc0"
+   ],
+   "value": "Estimated: $130k-$170k base + equity (early-stage, elite investors); competitive with top-tier new-grad offers given backing."
   },
   "evidence_sha": "96fc9eb0d4e5eeee",
+  "generated_at": 1784681004,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2d2d7a78f3",
+    "e35a616fc0"
+   ],
+   "value": "Digital collectibles / gamified marketplace / consumer mobile app"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "2d2d7a78f3",
+    "e35a616fc0"
+   ],
+   "value": "Expect deep iOS/systems questions (Swift, concurrency, architecture) and product sense for collectibles UX. For AI/data roles, prepare for recommender systems, real-time personalization, anomaly detection, and scaling ML in a mobile-first, high-engagement app. Demonstrate ownership mindset — they hire \"founding\" roles who define direction."
+  },
+  "last_attempt_at": 1784681004,
+  "last_evidence_at": 1784675041,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Not specified in sources; likely remote or major tech hub given investor backing."
   },
-  "last_evidence_at": 1784675041,
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "2d2d7a78f3",
+    "e35a616fc0"
+   ],
+   "value": "Build the future of the Packz app as a best-in-class gamified collectibles platform."
+  },
   "name": "Packz",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "2d2d7a78f3"
+   ],
+   "value": "Estimated: Fast — early-stage, small team, \"highly hands-on\", building in a $100B+ category implies urgency and iteration speed."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "2d2d7a78f3",
+    "e35a616fc0"
+   ],
+   "value": "Packz mobile app (iOS) — a gamified platform for buying, selling, and trading digital collectibles."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: No public policy found; typical early-stage startups offer 10-15 days flexible PTO."
   },
+  "refresh_after": 1789865004,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -129105,7 +129535,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed shutdowns documented; early-stage culture unlikely to enforce formal shutdowns."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "2d2d7a78f3",
+    "e35a616fc0"
+   ],
+   "value": "Early-stage startup; small, highly hands-on team; hiring first full-time designer and iOS engineer."
   },
   "sources": [
    {
@@ -129169,14 +129607,45 @@
     "url": "https://jobs.ashbyhq.com/packz/32053bcc-1d29-4034-ac1e-08ebe2870ab5"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No information found in sources regarding visa sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "2d2d7a78f3",
+    "e35a616fc0"
+   ],
+   "value": "Packz is a gamified collectibles platform building a best-in-class mobile app for digital collectibles trading, backed by investors with experience in companies like DraftKings and StockX."
+  },
+  "synthesized_evidence_sha": "96fc9eb0d4e5eeee",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "2d2d7a78f3",
+    "e35a616fc0"
+   ],
+   "value": "iOS app development (Swift/SwiftUI), product design, backend for collectibles marketplace, real-time gaming mechanics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675041,
   "web_search_url": "https://duckduckgo.com/?q=Packz+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "2d2d7a78f3",
+    "e35a616fc0",
+    "dbc3b9e88f"
+   ],
+   "value": "Packz offers a rare early-stage opportunity in a $100B+ collectibles category with elite investor backing (DraftKings, StockX, The Athletic backers). The small, hands-on team means high ownership and fast technical growth for AI/data roles — gamified platforms demand real-time personalization, recommendation, and fraud detection. Early hires shape product and culture directly, avoiding big-company bureaucracy while still commanding top-tier new-grad compensation."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate — early-stage startups often demand intensity; no public policy on hours/shutdowns found. Candidate should probe directly."
   }
  },
  "palantir": {
@@ -130099,34 +130568,98 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "d0ac2fb688",
+    "5d88adf79d"
+   ],
+   "value": "Employee-owned professional services firm generating revenue through billing clients for consulting and technology project work."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "5d88adf79d"
+   ],
+   "value": "Employee-owned and mission-driven, with a strong emphasis on personal growth, teamwork, and aligned behaviors they call Findaments. Culture highlights development tracks and feedback."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "d0ac2fb688"
+   ],
+   "value": "Clients across multiple industries in North America, likely ranging from mid-market to large enterprises. Specific named clients are not disclosed in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75,000 - $85,000 USD base salary for technical consultant or junior developer roles in North America. Employee ownership may add profit-sharing or equity compensation beyond base."
   },
   "evidence_sha": "32de9e9c994137fc",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784681004,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d0ac2fb688",
+    "5d88adf79d"
+   ],
+   "value": "Information Consulting and Professional Services"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "d0ac2fb688",
+    "5d88adf79d"
+   ],
+   "value": "Recruitment process emphasizes alignment with culture and the firm's Findaments behaviors. Candidates should expect behavioral and situational sessions assessing fit, problem-solving, and learning mindset, rather than algorithmically intense whiteboard sessions."
+  },
+  "last_attempt_at": 1784681004,
   "last_evidence_at": 1784677287,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "d0ac2fb688",
+    "5d88adf79d"
+   ],
+   "value": "Headquartered in North America according to postings, with at least one technical consulting position located in Bogota, Colombia."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "5d88adf79d"
+   ],
+   "value": "Focused on developing people and delivering client impact. The firm emphasizes culture and foundational behaviors known as 'Findamentals' that define who they are."
+  },
   "name": "Pariveda Solutions",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast technical and client-facing pace typical of consulting delivery without the extreme hours of MBB firms. Structured time-off and culture suggest sustainable intensity"
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "d0ac2fb688",
+    "5d88adf79d"
+   ],
+   "value": "Strategy and technology professional services including custom application support and development, technical consulting, and business strategy. Pariveda sells project-based expertise, not off-the-shelf software."
+  },
+  "prompt_v": 2,
   "pto_days": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "5d88adf79d"
+   ],
+   "value": "Estimated: at least 42 days (20 vacation + 10 sick, + 10 holidays + 1 floating holiday). Policy includes paid sabbatical after 5 years of service."
   },
+  "refresh_after": 1789865004,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -130135,8 +130668,18 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "5d88adf79d"
+   ],
+   "value": "Estimated: Scheduled 10 company holidays and 1 floating holiday likely include end-of-year/summer breaks aligned with client slowdowns, though formalized office-wide shutdowns are not explicitly confirmed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "5d88adf79d",
+    "d0ac2fb688"
+   ],
+   "value": "North American-based, operating multiple offices; mature enough to offer a paid sabbatical after 5 years. Specific employee headcount is not provided in the sources."
   },
   "sources": [
    {
@@ -130190,14 +130733,45 @@
     "url": "https://jobs.ashbyhq.com/pariveda/0019ad6c-4bf7-4240-a270-f5807b8b92a2"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "d0ac2fb688",
+    "5d88adf79d"
+   ],
+   "value": "Pariveda Solutions is a North American-based employee-owned professional services firm that delivers strategy and technology consulting across industries. The company makes money by helping clients solve business problems and improve outcomes, from ideas through to implementation. It is not a product company—revenue comes from client project engagements."
+  },
+  "synthesized_evidence_sha": "32de9e9c994137fc",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "d0ac2fb688",
+    "5d88adf79d"
+   ],
+   "value": "Includes application support and development, strategy, and technical consulting. One posted role targets custom application support and development, suggesting hands-on software engineering and technical problem-solving."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677287,
   "web_search_url": "https://duckduckgo.com/?q=Pariveda+Solutions+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "5d88adf79d"
+   ],
+   "value": "Pariveda is known for an employee-owned structure and cultural infrastructure that prioritizes professional development and explicit downtime. The documented 4-week vacation, 10 sick days, 10 holidays and a floating holiday, combined with a paid sabbatical after 5 years, meets the requirement for top-tier balance and time off, while mission-driven culture and focus on people development help avoid toxic burnout."
+  },
   "wlb_rating": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "5d88adf79d"
+   ],
+   "value": "Estimated: Strong. Policy includes 4 weeks vacation, 10 sick days, and 11 holidays which supports substantial recovery and personal time. Employee ownership reinforces protected boundaries."
   }
  },
  "parkdepot": {
@@ -164439,40 +165013,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Respected applied AI/ML in production (anomaly detection, NLP for corporate actions, predictive settlement), but not a primary research lab. Strong engineering brand; publications at KDD, ICAIF, internal conferences."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue comes primarily from fee-based servicing (custody, fund administration, ETF services) tied to asset values and transaction volumes, plus asset management fees from SSGA. The model is capital-light relative to commercial banks, with recurring, sticky revenue streams and low credit risk."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, collaborative, low-ego. Engineers are respected as first-class citizens. Strong DEI and ERG presence. Decision-making can be deliberate due to regulatory oversight, but leadership actively funds tech debt reduction and innovation sprints."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Institutional clients: mutual fund and ETF complexes, pension plans, insurance companies, sovereign wealth funds, foundations, endowments, and asset managers. State Street services roughly $46 trillion in assets under custody/administration and manages ~$4 trillion (via SSGA)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Base $115-130k, sign-on $15-25k, RSU $30-50k over 4 years (total Year 1 ~$170-200k). Boston/NY premium ~5-10%. Competitive with Tier 1 banks, slightly below FAANG."
   },
   "evidence_sha": "d1b6f86b4ec664bd",
+  "generated_at": 1784681004,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Financial Services — Custody Banking & Asset Servicing"
   },
-  "last_attempt_at": 1784680912,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect LeetCode Medium/Hard (arrays, graphs, system design) plus deep dives on distributed systems, data consistency, and cloud architecture. Domain questions may cover transaction processing, reconciliation, or ETF creation/redemption mechanics. Behavioral rounds emphasize collaboration, regulatory awareness, and ownership of end-to-end delivery. Prepare a concise story about a complex data-intensive project you shipped."
+  },
+  "last_attempt_at": 1784681004,
   "last_evidence_at": 1784675878,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Boston, MA. Major tech hubs: Boston, New York, Raleigh (NC), Chicago, Toronto, London, Dublin, Munich, Pune, Hyderabad, Singapore, Hong Kong, Sydney. Hybrid work model common."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To be the trusted partner for institutional investors by delivering reliable custody, accurate data, and scalable technology that helps clients navigate complexity and create long-term value."
+  },
   "name": "State Street",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Sustainable, project-driven cadence with quarterly planning cycles. Major releases on predictable schedules; on-call rotations exist but are light (typically one week per quarter). Not a ‘move fast and break things’ culture; emphasis on correctness and auditability."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core offerings include custody and asset servicing (safekeeping, settlement, corporate actions), fund administration, ETF servicing, investment management (via State Street Global Advisors, issuer of SPDR ETFs), and the AlphaSM data/analytics platform. The firm also provides outsourcing solutions for middle- and back-office operations."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days accrual + 10-11 company holidays + 2 volunteer days. Unlimited sick leave. Carryover up to 5 days. New grads start at 15 days."
   },
+  "refresh_after": 1789865004,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -164482,7 +165094,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full week shutdown between Christmas and New Year; additional 'recharge days' (1-2 per quarter) introduced post-2022. No guaranteed summer shutdown."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public company (NYSE: STT); ~40,000 employees globally; Fortune 500; founded 1792, headquartered in Boston. Mature, highly regulated financial infrastructure firm."
   },
   "sources": [
    {
@@ -164526,14 +165143,37 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B visas and supports STEM OPT extensions for new grads; green-card sponsorship typically starts after 12-18 months. Strong track record hiring international talent in US and Canada tech centers."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "State Street Corporation is a global financial services and custodial banking firm that provides investment servicing, investment management, and investment research to institutional investors. It acts as a backbone for the financial system by safeguarding assets, processing transactions, and providing data and analytics for asset managers, pension funds, and sovereign wealth funds."
+  },
+  "synthesized_evidence_sha": "d1b6f86b4ec664bd",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Heavy investment in platform modernization: cloud migration (AWS, Azure), Kubernetes, event-driven architectures, data lakes, and AI/ML for predictive analytics, anomaly detection, and client insights. Teams work on Alpha platform, ETF ecosystem tooling, and large-scale data pipelines processing millions of transactions daily."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675878,
   "web_search_url": "https://duckduckgo.com/?q=State+Street+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "State Street offers a rare mix: elite prestige as a systemically important financial institution, top-quartile new-grad compensation, and a genuine technology transformation agenda (cloud-native platforms, AI-driven analytics) without the grind of a trading desk or Big Tech on-call culture. The custodial model means predictable, recurring workloads rather than quarter-end fire drills, enabling sustainable hours and protected weekends. You’ll build production-grade systems that move trillions dai"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Core hours ~9-5 with flexibility; protected weekends; minimal paging outside on-call week. Culture explicitly discourages after-hours email. Hybrid 3-days-office typical."
   }
  },
  "stc an arcfield company": {
