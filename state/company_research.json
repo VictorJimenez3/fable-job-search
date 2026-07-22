@@ -48798,40 +48798,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Respected applied ML at scale within a profitable public company; not a pure AI research lab but strong publication record in systems/ML conferences (USENIX, FAST, VLDB) and real exabyte-scale data."
   },
   "aliases": [],
-  "attempts": 3,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 4,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "cec8685104",
+    "ff35d290a3"
+   ],
+   "value": "Revenue from software licenses, subscription (term licenses and SaaS/Metallic), maintenance/support renewals, and professional services. Transitioning toward recurring subscription and SaaS revenue."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "124e0110ba"
+   ],
+   "value": "Engineering-first, collaborative, low-politics; long-tenured talent (many 10+ yr veterans) mixed with newer cloud/SaaS hires. Values \"do the right thing\" and customer obsession. Diversity initiatives active (ERGs, partnership with AnitaB.org)."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "cec8685104"
+   ],
+   "value": "Enterprise and mid-market organizations across industries including finance, healthcare, government, education, and technology; thousands of global customers managing petabytes of data."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $125k-$145k base + 10-15% target bonus + RSU grant (~$30k-$50k over 4 years) for SWE/ML roles in US hubs (CO, NJ); Hyderabad base ₹18-25 LPA + RSUs."
   },
   "evidence_sha": "342ad0190eef9573",
+  "generated_at": 1784689344,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "cec8685104"
+   ],
+   "value": "Enterprise Software / Data Management / Cybersecurity (Data Protection)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep systems questions (distributed consensus, storage semantics), ML-applied-to-infrastructure problems (time-series anomaly detection, classification at scale), and practical coding (Go/Python/Java). Prepare to discuss how you'd productionize a model inside a backup pipeline with strict SLAs. Cultural fit: collaboration, ownership, and evidence of self-directed learning."
   },
-  "last_attempt_at": 1784689220,
+  "last_attempt_at": 1784689344,
   "last_evidence_at": 1784599680,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "cec8685104",
+    "124e0110ba"
+   ],
+   "value": "Headquarters: Tinton Falls, NJ. Major engineering hubs: Colorado (Boulder/Denver), Hyderabad (India), Prague (Czech Republic), Beijing, Singapore, Australia. Remote/hybrid options vary by role."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "124e0110ba"
+   ],
+   "value": "To help organizations protect, manage, and activate their data so they can focus on innovation and business outcomes."
+  },
   "name": "Commvault",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Sustainable, quarterly-planned cadence with explicit \"no-meeting Fridays\" and protected focus time; faster during SaaS feature pushes but generally avoids death-march culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "cec8685104",
+    "ff35d290a3"
+   ],
+   "value": "Commvault Platform (data protection, backup & recovery, archive, disaster recovery), Metallic (SaaS backup-as-a-service), Hedvig (software-defined storage), and related professional services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days accrued PTO + 10-12 company holidays + 2-3 recharge days (company-wide shutdown); unlimited not offered."
   },
+  "refresh_after": 1789873344,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -48841,7 +48896,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Yes — Company-wide \"Recharge Days\" (typically 2-3 per year, often around July 4 and year-end) where all non-critical ops pause; plus standard holiday calendar."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "cec8685104"
+   ],
+   "value": "Public company (NASDAQ: CVLT); ~2,700 employees globally; FY2024 revenue ~$840M. Mature, profitable, mid-cap enterprise software vendor."
   },
   "sources": [
    {
@@ -48875,14 +48937,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=c03e05244409ff5b9e67c44c9b69138f363e640f21eef748d74157728db147cdJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=2845ca80-6695-6d76-09f2-dd1d67e26cec&u=a1aHR0cHM6Ly93d3cuY29tbXZhdWx0LmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active H-1B sponsor with history of cap-subject and cap-exempt filings; supports GC processing (PERM) for tenured employees. Large engineering presence in India facilitates global mobility."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "cec8685104",
+    "124e0110ba",
+    "ff35d290a3"
+   ],
+   "value": "Commvault is a publicly traded enterprise software company specializing in data protection, backup, recovery, and cloud data management. It helps organizations secure, manage, and derive value from their data across on-premises, hybrid, and multi-cloud environments."
+  },
+  "synthesized_evidence_sha": "342ad0190eef9573",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "cec8685104",
+    "ff35d290a3"
+   ],
+   "value": "Distributed systems, cloud-native services (Kubernetes, microservices), data plane engineering, AI/ML for anomaly detection and ransomware defense, storage/filesystem internals, SaaS platform (Metallic), automation and orchestration."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784599680,
   "web_search_url": "https://duckduckgo.com/?q=Commvault+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Commvault offers a rare blend for a new-grad AI/data scientist: a profitable, public company with elite-scale data (exabytes under management) feeding real ML problems (ransomware detection, anomaly detection, capacity forecasting), a modern cloud-native stack (Metallic SaaS, Kubernetes), and a culture that publicly emphasizes sustainable pace and \"no-meeting Fridays\" — avoiding the burnout typical of hyper-growth unicorns while still paying competitive new-grad packages."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Industry reputation for reasonable hours, guaranteed shutdowns (company-wide recharge days), and management support for boundaries; on-call rotations exist but are compensated and rotated."
   }
  },
  "compassion international": {
@@ -83576,7 +83666,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -83594,7 +83684,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784689220,
+  "last_attempt_at": 1784689344,
   "last_evidence_at": 1784673987,
   "name": "Global Lending Services",
   "pace_of_work": {
@@ -86337,37 +86427,108 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (niche applied defense domain). While technically deep in SIGINT/ELINT, roles appear focused on training/instruction rather than core AI/ML research or model development. Prestige derives from clearance level and domain specificity, not general AI leadership."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "a57a5e98f0",
+    "5f8527587b",
+    "5dd0a7b470"
+   ],
+   "value": "Government contracting and professional services model providing specialized technical training and instructional support to defense and intelligence agencies."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "a57a5e98f0",
+    "5f8527587b",
+    "5dd0a7b470"
+   ],
+   "value": "Mission-driven, employee-centric, professional services culture. Emphasis on well-being, continued education, and family support suggests a people-first orientation uncommon in cleared defense work. Likely structured, compliant, and collaborative rather than chaotic or 'move fast and break things'."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "a57a5e98f0",
+    "5f8527587b",
+    "5dd0a7b470"
+   ],
+   "value": "Government and defense organizations seeking technical training and expertise in signals intelligence, electronic intelligence, and related technical collection disciplines."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$110,000 base + benefits. Defense training roles with clearance requirements typically pay above commercial entry-level but below top-tier AI labs. Exact figures not public."
   },
   "evidence_sha": "8a71afa6f19605c8",
+  "generated_at": 1784689344,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a57a5e98f0",
+    "5f8527587b",
+    "5dd0a7b470"
+   ],
+   "value": "Defense contracting / Government services / Technical training & education"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "a57a5e98f0",
+    "5f8527587b",
+    "5dd0a7b470"
+   ],
+   "value": "Probe for concrete evidence of work-life balance: ask about typical weekly hours, on-call expectations, and whether 'guaranteed shutdowns' or core hours exist. Ask how continued education benefits are used in practice (e.g., time allocated for certifications). Clarify clearance sponsorship timeline and whether the role involves operational tempo spikes. Assess if technical work includes R&D or is purely curriculum delivery."
+  },
+  "last_attempt_at": 1784689344,
+  "last_evidence_at": 1784674830,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Likely located near major defense/intelligence hubs (e.g., DC metro area, military bases) given customer base; specific locations not disclosed in sources."
   },
-  "last_evidence_at": 1784674830,
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "a57a5e98f0",
+    "5f8527587b",
+    "5dd0a7b470"
+   ],
+   "value": "To partner with customers to overcome challenges in technology and defense while fostering an environment where employees thrive, believing that employee success drives company success."
+  },
   "name": "GRVTY",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. Government contract delivery cycles and training schedule dependencies suggest structured timelines rather than startup-style urgency, but surge periods around exercise/deployment cycles may occur."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "a57a5e98f0",
+    "5f8527587b",
+    "5dd0a7b470"
+   ],
+   "value": "Training content development and instruction services for technical domains including FISINT (Foreign Instrumentation Signals Intelligence), ELINT (Electronic Intelligence), and technical collection. Specific product offerings not detailed in public sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "5dd0a7b470"
+   ],
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays. Job postings mention 'Annual Paid Time Off and Paid Holidays' but no specific number; government contractors typically align with federal standards."
   },
+  "refresh_after": 1789873344,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -86377,7 +86538,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns mentioned. Federal contractors may observe federal holidays and possible winter break, but not explicit in sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Small to mid-sized government contractor (likely 50-500 employees) based on niche technical training focus and Greenhouse job board usage."
   },
   "sources": [
    {
@@ -86441,14 +86607,51 @@
     "url": "https://job-boards.greenhouse.io/grvty/jobs/4323146009"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely requires US citizenship and security clearance eligibility given defense/intelligence customer base; visa sponsorship unlikely for cleared roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "a57a5e98f0",
+    "5f8527587b",
+    "5dd0a7b470"
+   ],
+   "value": "GRVTY is a technology and defense contractor that partners with customers to solve complex technical challenges. The company emphasizes employee well-being and work-life balance as core to its operational philosophy."
+  },
+  "synthesized_evidence_sha": "8a71afa6f19605c8",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "a57a5e98f0",
+    "5f8527587b",
+    "5dd0a7b470"
+   ],
+   "value": "Development and delivery of advanced technical training curricula for signals intelligence (SIGINT), electronic intelligence (ELINT), and foreign instrumentation signals intelligence (FISINT) collection systems and tradecraft."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674830,
   "web_search_url": "https://duckduckgo.com/?q=GRVTY+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "a57a5e98f0",
+    "5f8527587b",
+    "5dd0a7b470"
+   ],
+   "value": "GRVTY explicitly markets strong work-life balance and employee thriving as a competitive advantage in the defense sector, which is often associated with high burnout. For a candidate prioritizing elite technical mission work without toxic hours, this stated culture — backed by benefits like continued education and family assistance — is a rare signal. The niche in advanced SIGINT/ELINT training also offers deep technical specialization that accelerates career growth in cleared spaces."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "a57a5e98f0",
+    "5f8527587b",
+    "5dd0a7b470"
+   ],
+   "value": "Estimated: 7/10. Company explicitly markets 'strong work-life balance' and 'when employees thrive, company thrives' philosophy; defense training roles typically have more predictable hours than operational units. No public employee reviews found to verify."
   }
  },
  "gsk": {
@@ -92375,37 +92578,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown - no evidence of AI research publications, conference presence, talent density, or industry recognition in sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "6ff3ace72a",
+    "8f6235913e"
+   ],
+   "value": "No business model identifiable for 'Horizon Technologies' as an AI company. Sources show a video game franchise (software sales) and a landscape supply retailer (B2B/B2C sales)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown - no cultural artifacts, values, or team dynamics described in sources."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "6ff3ace72a",
+    "8f6235913e"
+   ],
+   "value": "No customer information found for an AI/data science company. Sources reference gamers (PlayStation) and landscape professionals, not enterprise AI clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown - no compensation data for new-grad AI/tech roles in sources."
   },
   "evidence_sha": "9d05a44892b5566a",
+  "generated_at": 1784689344,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "6ff3ace72a",
+    "8f6235913e"
+   ],
+   "value": "Estimated: Cannot be determined from sources. Conflicting signals: video gaming (Source 6ff3ace72a) and landscape supply (Source 8f6235913e). No AI/data science industry evidence."
   },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784689344,
   "last_evidence_at": 1784676253,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6ff3ace72a",
+    "8f6235913e"
+   ],
+   "value": "Estimated: Unknown - sources reference a PlayStation web page (global) and a Vista, CA landscape store, but no HQ or engineering hubs for an AI company."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Horizon Technologies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown - no engineering culture or velocity indicators in sources."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "6ff3ace72a",
+    "8f6235913e"
+   ],
+   "value": "No AI/data science products identified in sources. Source 6ff3ace72a references the 'Horizon' video game series (PlayStation). Source 8f6235913e references landscape supplies. No technical product portfolio found."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown - no PTO policy found in sources."
   },
+  "refresh_after": 1789873344,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -92415,7 +92674,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown - no company-wide shutdown policy found in sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown - no reliable headcount or funding data for an AI company named Horizon Technologies in sources."
   },
   "sources": [
    {
@@ -92449,14 +92713,39 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown - no visa sponsorship policy or history found in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "6ff3ace72a",
+    "8f6235913e",
+    "f16eec2a6f"
+   ],
+   "value": "The provided sources do not contain verifiable information about a company named 'Horizon Technologies' operating in AI or data science. Source 6ff3ace72a redirects to a PlayStation page for the 'Horizon' game franchise. Source 8f6235913e points to a landscape supply store (Horizon Online). Source f16eec2a6f is a generic SmartRecruiters job board. No cohesive company profile for an AI-focused 'Horizon Technologies' can be built from these sources."
+  },
+  "synthesized_evidence_sha": "9d05a44892b5566a",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676253,
   "web_search_url": "https://duckduckgo.com/?q=Horizon+Technologies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown - no work-hour policies, shutdown practices, or employee reviews in sources."
   }
  },
  "hospital for special surgery hss": {
@@ -106563,11 +106852,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -106579,6 +106870,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784689344,
   "last_evidence_at": 1784674830,
   "name": "KBR",
   "pace_of_work": {
@@ -107337,7 +107629,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -107355,7 +107647,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784689220,
+  "last_attempt_at": 1784689344,
   "last_evidence_at": 1784677400,
   "name": "Keysight Technologies",
   "pace_of_work": {
@@ -148430,7 +148722,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 9,
+  "attempts": 10,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -148448,7 +148740,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784689220,
+  "last_attempt_at": 1784689344,
   "last_evidence_at": 1784676244,
   "name": "Perpay",
   "pace_of_work": {
@@ -188132,40 +188424,81 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 — Peer to Jane Street, Citadel Securities, Two Sigma. Publishes at NeurIPS/ICML, runs internal ML research labs, and hires from top PhD programs."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "SIG earns revenue primarily from bid-ask spreads and trading profits as a market maker and proprietary trader. It deploys capital across equities, options, futures, and fixed income, using statistical models and low-latency infrastructure to capture small edges at massive scale."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Meritocratic, intellectually honest, poker-influenced decision culture. Flat hierarchy, traders and engineers sit together, emphasis on 'betting on yourself' and learning from losses. Collaborative but highly competitive at the individual level."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Exchanges, institutional investors, asset managers, broker-dealers, and retail platforms that benefit from SIG's liquidity provision and execution services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $175k-$200k base + $100k-$200k+ year-end bonus + signing bonus ($25k-$50k). Total first-year comp frequently $300k-$400k. Among the highest in the industry."
   },
   "evidence_sha": "bc19d4b8827d6ce4",
+  "generated_at": 1784689344,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "85938542ea",
+    "e8eff2f87b"
+   ],
+   "value": "Quantitative Trading / Proprietary Trading / Market Making"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep probability/stats questions, mental math, algorithmic coding (C++/Python), systems design for low-latency environments, and case studies on options pricing or market microstructure. They test how you think under uncertainty more than specific framework knowledge."
   },
-  "last_attempt_at": 1784689220,
+  "last_attempt_at": 1784689344,
   "last_evidence_at": 1784674488,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Bala Cynwyd, PA. Major offices: New York, Chicago, Dublin, London, Hong Kong, Shanghai. Remote/hybrid flexibility varies by team."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To be the world's leading liquidity provider through quantitative rigor, technological innovation, and a culture of continuous learning."
+  },
   "name": "Susquehanna International Group (SIG)",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast-paced during market hours with hard deadlines; project cycles measured in weeks not quarters. Intellectual intensity is high but bureaucracy is low. Estimated: high intensity during trading hours, protected downtime after close."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Proprietary trading strategies, market-making services, options pricing technology, ETF creation/redemption, and institutional brokerage services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 market holidays + flexible sick time. Unlimited not offered; accrual-based with carryover caps."
   },
+  "refresh_after": 1789873344,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -188175,7 +188508,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Yes — guaranteed daily shutdown after market close (4 PM ET) for most roles; weekend work rare and typically planned. No 'always on' expectation outside market hours."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Private partnership with 2,000+ employees globally; founded 1987; profitable every year since inception; offices in US, Europe, and Asia."
   },
   "sources": [
    {
@@ -188209,14 +188547,38 @@
     "url": "https://careers-sig.icims.com/jobs/intro?hashed=-435770333"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B and green cards for quantitative researchers, software engineers, and data scientists. Strong track record with STEM OPT extensions. Cap-exempt status through university partnerships for some roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "85938542ea",
+    "e8eff2f87b"
+   ],
+   "value": "Susquehanna International Group (SIG) is a global quantitative trading firm and one of the largest liquidity providers in the world. It uses proprietary technology and quantitative models to trade equities, options, futures, and ETFs across major exchanges."
+  },
+  "synthesized_evidence_sha": "bc19d4b8827d6ce4",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Low-latency trading systems (C++, FPGA), quantitative research platforms (Python, statistical modeling), machine learning for signal generation, massive-scale data pipelines, options pricing engines, and real-time risk management systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674488,
   "web_search_url": "https://duckduckgo.com/?q=Susquehanna+International+Group+%28SIG%29+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "SIG offers elite prestige and top-tier new-grad compensation comparable to the highest-paying tech firms, but with a culture built on quantitative rigor and engineering excellence rather than ad-driven bureaucracy. It balances intense intellectual challenge with a reputation for more sustainable hours than many peers, guaranteed market-hours shutdowns, and a genuine apprenticeship model that accelerates technical growth without requiring 80-hour weeks."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7.5/10 — Market hours create natural boundaries; weekends generally protected; on-call rotations exist but are managed. Better than investment banking or big-tech on-call, more structured than early-stage startups."
   }
  },
  "swbc": {
