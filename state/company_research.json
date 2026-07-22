@@ -47023,40 +47023,89 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Staffing vendor; prestige derives from client brand, not Collabera itself. AI/DS roles exist but are implementation-focused at client sites."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue from markup on placed contractors' bill rates, managed services fees (fixed or T&M), and project consulting fees. Typical staffing margins 25–35%; managed services higher."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Sales-driven, metrics-oriented internal culture; consultant experience mirrors client culture. Strong Indian delivery center presence influences collaboration norms (overlap hours, hierarchical communication)."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "aaffeafde5",
+    "86dd402ec3"
+   ],
+   "value": "Fortune 500 and Global 2000 enterprises across financial services, healthcare, life sciences, retail, technology, and telecom sectors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70k–$95k base + minimal bonus for internal associate roles; contract placements bill $45–$65/hr (W-2) depending on skill and market. No equity."
   },
   "evidence_sha": "a55163a30d3e83fb",
+  "generated_at": 1784688110,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "aaffeafde5",
+    "86dd402ec3"
+   ],
+   "value": "IT Staffing & Professional Services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect client-facing behavioral screens plus technical assessments tailored to the specific client role (LeetCode-style for dev, case studies for data science). Ask explicitly about the client’s team culture, on-call expectations, and bench policy before accepting an assignment."
   },
-  "last_attempt_at": 1784688018,
+  "last_attempt_at": 1784688110,
   "last_evidence_at": 1784673658,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Basking Ridge, NJ. Delivery centers in India (Pune, Hyderabad), Philippines, Canada, UK, Singapore. Remote/hybrid options for many contract roles."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "86dd402ec3"
+   ],
+   "value": "To connect exceptional talent with transformative opportunities, delivering technology solutions that drive client innovation and business outcomes."
+  },
   "name": "Collabera",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Client-dependent. Typical enterprise project pace: moderate to fast with sprint cycles; some clients have bureaucratic change control. Internal recruiting roles: high volume, metrics-driven."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "aaffeafde5",
+    "86dd402ec3"
+   ],
+   "value": "IT staffing (contract, contract-to-hire, direct placement), managed services, application development, data & analytics, cloud & infrastructure, cybersecurity, and digital transformation consulting."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10–15 days PTO + 6–8 US holidays for internal employees; contractors typically receive no PTO from Collabera (client-dependent)."
   },
+  "refresh_after": 1789872110,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -47066,7 +47115,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns. Some clients observe holiday weeks (Dec 25–Jan 1) but not mandated by Collabera."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Privately held; ~10,000+ employees globally; mature stage (founded 1991). Owned by private equity (H.I.G. Capital)."
   },
   "sources": [
    {
@@ -47100,14 +47154,40 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B for contract and internal roles (top 50 H-1B sponsor historically). Green card support varies by client contract and internal policy."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "aaffeafde5",
+    "86dd402ec3"
+   ],
+   "value": "Collabera is a global IT staffing and professional services firm that places technology talent with enterprise clients. It makes money primarily through contingent staffing fees, managed services contracts, and project-based consulting engagements."
+  },
+  "synthesized_evidence_sha": "a55163a30d3e83fb",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "aaffeafde5"
+   ],
+   "value": "Staff augmentation roles at client sites: software engineering, data science/ML, cloud architecture, DevOps, QA, BA/PM. Internal tech team builds recruiting/platform tools (Salesforce, custom portals)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673658,
   "web_search_url": "https://duckduckgo.com/?q=Collabera+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Collabera offers exposure to elite enterprise tech stacks across industries, which accelerates learning, but it is a staffing model — your day-to-day culture, hours, and WLB are dictated by the client site, not Collabera. Prestige and pay depend on the specific assignment; bench time between projects can affect income stability."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5 — Highly variable by client assignment. Some clients enforce 40h weeks; others expect 50h+. No company-wide shutdowns."
   }
  },
  "collective": {
@@ -70575,7 +70655,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -70593,7 +70673,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784688018,
+  "last_attempt_at": 1784688110,
   "last_evidence_at": 1784673659,
   "name": "Fidelity National Information Services",
   "pace_of_work": {
@@ -71152,7 +71232,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 10,
+  "attempts": 11,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -71170,7 +71250,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
-  "last_attempt_at": 1784688018,
+  "last_attempt_at": 1784688110,
   "last_evidence_at": 1784583446,
   "name": "Figma",
   "pace_of_work": {
@@ -123037,42 +123117,118 @@
  },
  "mercor": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "402e004f9a",
+    "19d9a34e3d",
+    "8c2c8abd36"
+   ],
+   "value": "Tier 2 Elite Startup (Top-tier AI-centric unicorn). Not a legacy research lab like DeepMind, but a high-growth, well-funded ($10B) unicorn that directly serves the top AI native companies, offering elite deal flow and brand recognition."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "402e004f9a",
+    "19d9a34e3d",
+    "8c2c8abd36"
+   ],
+   "value": "B2B service model. Mercor charges AI labs and enterprises for delivering human data and expert evaluation. The company is currently profitable, indicating strong unit economics."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "402e004f9a",
+    "19d9a34e3d",
+    "8c2c8abd36"
+   ],
+   "value": "High-ownership and innovative 0-to-1 culture. The environment is demanding, but for engineers who want to define core systems from scratch without typical corporate bureaucracy."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "402e004f9a",
+    "19d9a34e3d",
+    "8c2c8abd36"
+   ],
+   "value": "Leading AI labs (companies building frontier foundation models) and enterprises that need human intelligence to train, fine-tune, or evaluate their AI systems."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "402e004f9a"
+   ],
+   "value": "Estimated: The total compensation package for a new grad software engineer is likely competitive with top AI unicorns, estimated between $170,000 and $220,000, including a base salary, equity in the $10B company, and a performance bonus."
   },
   "evidence_sha": "d2815e18ac1bc95d",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784688110,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784688018,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "402e004f9a",
+    "19d9a34e3d",
+    "8c2c8abd36"
+   ],
+   "value": "Generative AI Data and Infrastructure; the critical human-data supply chain for large language models (LLMs)."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "19d9a34e3d",
+    "8c2c8abd36"
+   ],
+   "value": "Interviews will likely test high-throughput system design and coding ability, with a strong focus on a candidate's ability to operate in a fast, 0-to-1 engineering environment. Candidates should highlight how they scale backend services and maintain quality in assessment pipelines."
+  },
+  "last_attempt_at": 1784688110,
   "last_evidence_at": 1784673660,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "d9c8b07c9d"
+   ],
+   "value": "Based on the generic domain and job platform (AshbyHQ), Mercor appears to operate as a remote-first or distributed company, though not all job postings specify a physical office. No single headquarters city is confirmed in the provided sources."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "402e004f9a",
+    "19d9a34e3d",
+    "8c2c8abd36"
+   ],
+   "value": "To provide the essential human intelligence that supports the development of advanced artificial intelligence, by building the infrastructure that connects domain experts with the world's top AI organizations."
+  },
   "name": "Mercor",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "402e004f9a",
+    "8c2c8abd36"
+   ],
+   "value": "Ambitious and fast-paced. The company self-describes as a 0 repository to 1 environment requiring a deeply committed team to define technical direction."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "402e004f9a",
+    "19d9a34e3d",
+    "8c2c8abd36"
+   ],
+   "value": "Mercor's core product is a platform that sources, vets, and manages a large-scale network of human experts to provide data annotation, model evaluation, and domain-specific feedback. A dedicated full-stack assessment team owns the quality and throughput of the expert evaluation pipelines that underpin this network."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Flexible vacation policy, typical of profitable, remote-friendly tech unicorns."
   },
+  "refresh_after": 1789872110,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -123080,9 +123236,20 @@
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "8c2c8abd36"
+   ],
+   "value": "The company's model relies on a 24/7 expert network, so full-company shutdowns are unlikely. Internal engineering may informally slow down during major holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "402e004f9a",
+    "19d9a34e3d",
+    "8c2c8abd36"
+   ],
+   "value": "Profitable Series C startup, valued at $10 billion. The company is past the early-product risk stage and is now scaling its operations and technical infrastructure."
   },
   "sources": [
    {
@@ -123146,14 +123313,48 @@
     "url": "https://jobs.ashbyhq.com/mercor/a0afa08a-5448-4432-bc61-a5fe3a73b4de"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "402e004f9a",
+    "19d9a34e3d",
+    "8c2c8abd36"
+   ],
+   "value": "Mercor provides the human intelligence layer that helps top AI labs and enterprises train and evaluate their models. The company connects a vetted network of tens of thousands of domain experts to AI developers, and generates revenue by selling this expert human feedback as a service."
+  },
+  "synthesized_evidence_sha": "d2815e18ac1bc95d",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "19d9a34e3d",
+    "8c2c8abd36"
+   ],
+   "value": "Engineers build systems to scale a network of tens of thousands of experts: core backend services, data models, APIs, and infrastructure patterns. Roles like Fullstack Engineer, Assessment own critical pipelines where quality improvements compound across the entire company."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673660,
   "web_search_url": "https://duckduckgo.com/?q=Mercor+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "402e004f9a",
+    "8c2c8abd36"
+   ],
+   "value": "Offers elite prestige as a fast-growing, $10B Series C company at the center of the AI boom, providing a high-leverage, mission-driven role. The culture is described as ambitious and fast-paced by the company, but as a profitable startup it relies on a deeply committed team rather than burnout-inducing panic, potentially allowing for intense but sane working rhythms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "19d9a34e3d",
+    "402e004f9a"
+   ],
+   "value": "Estimated: Good for a high-growth startup. The team is praised as deeply committed, but the mission is structured around steady tooling (assessments, infrastructure) rather than fire-fighting, suggesting sustainable work-life balance."
   }
  },
  "merqube": {
@@ -138607,7 +138808,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -138625,7 +138826,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784688018,
+  "last_attempt_at": 1784688110,
   "last_evidence_at": 1784674771,
   "name": "Oklo",
   "pace_of_work": {
@@ -145809,50 +146010,101 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Top-tier within defense/intelligence sector; works on classified AI/ML at scale but less visible in open research community vs. Big Tech or elite labs."
   },
   "aliases": [],
-  "attempts": 10,
+  "attempts": 11,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue comes almost entirely from U.S. federal contracts (cost-plus, fixed-price, and IDIQ vehicles) as a prime and subcontractor on large-scale, multi-year government programs."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, engineering-respectful, and process-heavy; culture differs by heritage company and program — generally professional, low-drama, but bureaucratic compared to commercial tech."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "U.S. Department of Defense, intelligence community agencies, civilian federal agencies (e.g., NASA, DHS, State Dept.), and allied governments."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k-$115k base + $5k-$15k sign-on + RSU/401k match; cleared roles and high-cost areas trend higher."
   },
   "evidence_sha": "52f62d81cfd3c61b",
+  "generated_at": 1784688110,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "3e7e14dcdb"
+   ],
+   "value": "Defense & Government Services / Federal IT Contracting"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect clearance verification, domain-aware coding (Python, C++, Java), ML model deployment in constrained environments, and scenario questions on handling classified data, compliance, and stakeholder management. Ask about the specific program's sprint cadence, on-call expectations, and clearance sponsorship timeline."
   },
-  "last_attempt_at": 1784688018,
+  "last_attempt_at": 1784688110,
   "last_evidence_at": 1784674729,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Herndon, VA; major hubs in MD, CO, CA, FL, AL, and remote options on many contracts; work often requires security clearance and on-site presence at government facilities."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "3e7e14dcdb"
+   ],
+   "value": "Deliver innovative, reliable, and secure solutions to protect national security and advance critical government missions."
+  },
   "name": "Peraton",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate to fast depending on program; some Agile/DevSecOps teams ship rapidly, while others follow strict government milestone gates and documentation cycles."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "5c089ecba5"
+   ],
+   "value": "Digital modernization, space & intelligence systems, cyber operations, enterprise IT, mission support services, and advanced analytics/AI for defense and intelligence agencies."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays; some contracts allow flexible schedules or 9/80 compressions."
   },
+  "refresh_after": 1789872110,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "medium",
+   "source_ids": [
+    "8c31fed99c"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No company-wide guaranteed shutdowns; some programs observe holiday breaks between Christmas and New Year, but not universal."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature private company (~20,000+ employees) owned by Veritas Capital; formed from mergers of Perspecta, Vencore, and other govcon firms."
   },
   "sources": [
    {
@@ -145886,14 +146138,40 @@
     "url": "https://careers-peraton.icims.com/jobs/intro?hashed=-626007088"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Sponsors H-1B and green cards for cleared roles; many positions require active or obtainable U.S. security clearance (Secret/TS/SCI), limiting eligibility for non-citizens."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "5c089ecba5",
+    "3e7e14dcdb"
+   ],
+   "value": "Peraton is a major U.S. government services contractor providing mission-critical solutions in national security, space, intelligence, cyber, and digital modernization. The company operates primarily as a prime contractor on large federal programs."
+  },
+  "synthesized_evidence_sha": "52f62d81cfd3c61b",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "5c089ecba5"
+   ],
+   "value": "AI/ML for ISR and analytics, cloud migration, DevSecOps, cyber defense, space ground systems, software engineering, data engineering, and digital transformation on classified and unclassified programs."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674729,
   "web_search_url": "https://duckduckgo.com/?q=Peraton+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Peraton offers elite prestige in national-security AI/data science with high new-grad compensation, but it operates in a regulated government-contractor environment where pace, WLB, and bureaucracy vary sharply by program. Candidates prioritizing mission impact and clearance-accelerated career growth will find strong alignment; those seeking pure commercial tech speed or guaranteed shutdowns should probe specific program culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — varies by contract; many roles are 40-45 hrs/week with telework, but surge periods, on-call rotations, and clearance duties can extend hours."
   }
  },
  "peregrine": {
@@ -189935,37 +190213,89 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low to Moderate (testing services firm; AI/data science not evident in public sources)"
   },
   "aliases": [],
-  "culture_vibe": {
+  "attempts": 1,
+  "business_model": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Presumed B2B services model charging for testing engagements (project-based, managed services, or staff augmentation); revenue details not in sources."
   },
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [
+    "19dbb99a3b"
+   ],
+   "value": "Estimated: Professional services culture; likely process-oriented with emphasis on certification standards (ISTQB, etc.)"
+  },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Organizations requiring software testing and QA services; specific client names or segments not found in research."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70k-$95k base (testing/qa services market rate); AI/DS premium unknown"
   },
   "evidence_sha": "e58c68ee114efd11",
+  "generated_at": 1784688110,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "19dbb99a3b",
+    "c4a5f7942c"
+   ],
+   "value": "Software Testing / Quality Assurance Services"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "19dbb99a3b",
+    "c4a5f7942c"
+   ],
+   "value": "Expect testing fundamentals, automation frameworks (Selenium, Cypress, Playwright), CI/CD integration, and possibly performance/security testing. AI/data science roles would need evidence of ML model testing, data validation, or test data generation expertise."
+  },
+  "last_attempt_at": 1784688110,
+  "last_evidence_at": 1784674776,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Headquarters and office locations not specified in provided sources."
   },
-  "last_evidence_at": 1784674776,
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No explicit mission statement found in provided sources; likely focused on delivering reliable software testing solutions."
+  },
   "name": "Testing Xperts",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate (client-driven project deadlines typical of services firms)"
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "19dbb99a3b",
+    "c4a5f7942c"
+   ],
+   "value": "Software testing and quality assurance services (inferred from company name and generic testing content in sources); specific service lines not documented in provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + holidays (typical for US-based services firms); no public policy found"
   },
+  "refresh_after": 1789872110,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -189975,7 +190305,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns documented"
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Size and stage unknown; no headcount, funding, or growth metrics found in research."
   },
   "sources": [
    {
@@ -190009,14 +190344,41 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Visa sponsorship policy not found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "19dbb99a3b",
+    "c4a5f7942c"
+   ],
+   "value": "Testing Xperts appears to be a software testing services company, though the provided sources only reference general software testing educational content rather than company-specific details. The company likely provides QA and testing services to software development organizations."
+  },
+  "synthesized_evidence_sha": "e58c68ee114efd11",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "19dbb99a3b",
+    "c4a5f7942c"
+   ],
+   "value": "Likely involves test automation, performance testing, security testing, and QA process improvement; specific tech stack or AI/data science focus not documented."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674776,
   "web_search_url": "https://duckduckgo.com/?q=Testing+Xperts+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a candidate seeking elite AI/data science prestige with high new-grad pay and fast innovation culture, Testing Xperts' focus on software testing services may not align unless the company has a dedicated AI/ML testing or data science division not visible in sources. Work-life balance and learning culture are unverified."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate (services work can involve crunch periods near releases)"
   }
  },
  "testlio": {
@@ -206178,37 +206540,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Top-tier within medtech; recognized for pioneering AI in radiation oncology (e.g., Ethos adaptive therapy, auto-contouring). Not a general AI research lab but elite in applied clinical AI."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "B2B medical device sales (capital equipment), recurring revenue from software licenses, maintenance contracts, and professional services; regulated market with long sales cycles and high switching costs."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, engineering-centric, collaborative, with strong emphasis on patient safety and quality. Employees often stay long-term; culture blends startup-like innovation in advanced therapy groups with big-company stability."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Hospital radiation oncology departments, standalone cancer clinics, academic medical centers, and proton therapy centers globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120,000-$145,000 base + 10-15% annual bonus + RSU grant (vesting over 4 years); total first-year comp ~$150k-$180k. Higher in Bay Area."
   },
   "evidence_sha": "b22bc95899210177",
+  "generated_at": 1784688110,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Medical Devices / Radiation Oncology / Health Tech"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical questions on C++/C# systems, medical imaging algorithms, ML model deployment in regulated settings, and software safety processes. Behavioral interviews emphasize collaboration, patient safety mindset, and ability to navigate FDA/ISO regulatory constraints. Prepare for system-design scenarios involving real-time treatment delivery."
+  },
+  "last_attempt_at": 1784688110,
   "last_evidence_at": 1784677184,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Palo Alto, CA; major sites: Atlanta GA, Salt Lake City UT, Las Vegas NV, Baden (Switzerland), Chennai (India), Beijing (China), and dozens of sales/service offices worldwide."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Creating a world without fear of cancer."
+  },
   "name": "Varian",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate to fast in R&D; regulated environment requires rigorous verification but teams ship innovative features (e.g., adaptive RT) on aggressive timelines. Less bureaucratic than core Siemens, but compliance gates add structure."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Linear accelerators (TrueBeam, Edge, Halcyon), proton therapy systems (ProBeam), brachytherapy afterloaders, treatment planning software (Eclipse), oncology information systems (Aria), AI-based auto-contouring and adaptive therapy tools, and associated services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual PTO plus 10-12 company holidays; additional sick leave and parental leave per Siemens Healthineers policy."
   },
+  "refresh_after": 1789872110,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -206218,7 +206621,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically Dec 24-Jan 1) and possible summer shutdown week; varies by site and business unit."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature subsidiary of Siemens Healthineers (~10,000+ employees globally); public company until 2021 acquisition, now part of a Fortune 500 conglomerate."
   },
   "sources": [
    {
@@ -206252,14 +206660,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=83c3c7ddd7b14b7310e9f4c5e30dfed3a9497e85dc5172cf6d6f00da39e662daJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0b35a25d-ffe7-6b72-3428-b5c0fe9e6aff&u=a1aHR0cHM6Ly9jYW5jZXJjYXJlLnNpZW1lbnMtaGVhbHRoaW5lZXJzLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active H-1B sponsor (as Varian and Siemens Healthineers); supports STEM OPT and green card processing for eligible roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Varian, a Siemens Healthineers company, is a leading global provider of radiation oncology treatments and software, including linear accelerators, proton therapy systems, and AI-driven treatment planning platforms. It makes money by selling high-value medical hardware, recurring software licenses, and services to hospitals and cancer centers worldwide."
+  },
+  "synthesized_evidence_sha": "b22bc95899210177",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Medical physics algorithm development, C++/C#/.NET desktop and cloud software for treatment planning and delivery, AI/ML for auto-segmentation, dose prediction, adaptive radiotherapy, imaging processing, regulatory-compliant software engineering (IEC 62304), hardware-software integration."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677184,
   "web_search_url": "https://duckduckgo.com/?q=Varian+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Varian offers elite prestige in medtech AI with a direct cancer-care mission, high new-grad compensation, and a regulated but innovative R&D culture. As a Siemens Healthineers subsidiary, it provides stability and resources while maintaining a focused, engineering-driven environment that respects work-life balance more than typical high-burnout tech giants."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5. Medtech culture generally supports reasonable hours; core hours with flexibility, limited on-call for field-facing roles. Occasional crunches near regulatory submissions or product launches."
   }
  },
  "varsity brands": {
