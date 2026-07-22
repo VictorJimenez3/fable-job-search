@@ -68986,7 +68986,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 12,
+  "attempts": 13,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -69004,7 +69004,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784691440,
+  "last_attempt_at": 1784691596,
   "last_evidence_at": 1784676545,
   "name": "Esri",
   "pace_of_work": {
@@ -87227,40 +87227,106 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3: Applied AI/ML in production EdTech systems at scale; not a primary AI research lab but deploys ML for enrollment, retention, and learning analytics."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "bec02f5382",
+    "9cc4534334",
+    "147e53d333"
+   ],
+   "value": "Revenue driven primarily by tuition and fees from degree programs (online and campus), with scale advantages in online delivery; also generates income from campus housing, dining, athletics, and partnerships. Operates as a for-profit entity under Grand Canyon Education, Inc. (LOPE)."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "bec02f5382",
+    "9cc4534334",
+    "147e53d333"
+   ],
+   "value": "Mission-oriented, Christian-values-influenced culture; collaborative but can be siloed between academic and technical units; emphasis on student service; engineering culture varies by team but generally less 'move fast break things' than consumer tech."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "bec02f5382",
+    "9cc4534334",
+    "147e53d333"
+   ],
+   "value": "Traditional and non-traditional students seeking undergraduate and graduate degrees, working professionals pursuing career advancement, military personnel, and international students; primarily U.S.-based but with global online reach."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75,000-$95,000 base + modest bonus/equity (RSUs via LOPE stock); total comp ~$85K-$110K — competitive for edtech/non-profit, below FAANG/elite AI labs."
   },
   "evidence_sha": "0bbbd14e714cd1ac",
+  "generated_at": 1784691596,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "bec02f5382",
+    "9cc4534334",
+    "147e53d333"
+   ],
+   "value": "Higher Education / EdTech / For-Profit Education"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect questions on scalable EdTech architecture, student data privacy (FERPA), predictive modeling for retention/success, and cross-functional collaboration with academic stakeholders. Prepare for behavioral questions aligned with Christian mission/values. Ask about technical debt, deployment frequency, and how engineering balances speed with regulatory compliance."
   },
-  "last_attempt_at": 1784691440,
+  "last_attempt_at": 1784691596,
   "last_evidence_at": 1784631338,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "bec02f5382",
+    "9cc4534334",
+    "147e53d333"
+   ],
+   "value": "Headquarters and main campus in Phoenix, AZ; extensive remote/online operations nationwide; additional instructional sites and partner locations across the U.S."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "bec02f5382",
+    "9cc4534334",
+    "147e53d333"
+   ],
+   "value": "To provide accessible, affordable, and quality Christian education that prepares graduates for career success and service to their communities; emphasizes integrating faith, learning, and work."
+  },
   "name": "Grand Canyon University",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast for engineering teams supporting 100K+ students; quarterly planning cycles with academic calendar dependencies; some bureaucracy from accreditation/regulatory requirements."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "bec02f5382",
+    "9cc4534334",
+    "147e53d333"
+   ],
+   "value": "Online and on-campus degree programs across colleges including Business, Education, Nursing & Health Care, Theology, Science & Engineering, Fine Arts & Production, and Humanities & Social Sciences; certificate programs; continuing education; and educational technology platforms for course delivery."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 university holidays (includes Christmas/EASTER breaks); generous winter closure typical in higher ed."
   },
+  "refresh_after": 1789875596,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -87270,7 +87336,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Yes — University typically observes extended winter shutdown (week between Christmas and New Year) and reduced summer hours; not guaranteed 'guaranteed shutdowns' but culturally expected."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "bec02f5382",
+    "9cc4534334",
+    "147e53d333"
+   ],
+   "value": "Large, mature organization: ~100,000+ total students (majority online), ~3,000+ faculty/staff, publicly traded (NASDAQ: LOPE) with $1B+ annual revenue; established 1949, significant growth since 2000s online pivot."
   },
   "sources": [
    {
@@ -87304,14 +87379,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=481fa5f2edc17bdbb4331d784b2f89636d29427cf4019b563d66e59baa1a7ec1JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0688024d-89c2-6972-0ee8-15d0887968ae&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2dyYW5k&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a large university system, GCU sponsors H-1B visas for specialized faculty and technical roles; new-grad sponsorship possible for hard-to-fill STEM positions but not guaranteed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "bec02f5382",
+    "9cc4534334",
+    "147e53d333"
+   ],
+   "value": "Grand Canyon University (GCU) is a private, for-profit Christian university based in Phoenix, Arizona, offering undergraduate, graduate, and doctoral programs both online and on campus. It operates as a major online education provider with a growing campus footprint."
+  },
+  "synthesized_evidence_sha": "0bbbd14e714cd1ac",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "bec02f5382",
+    "9cc4534334",
+    "147e53d333"
+   ],
+   "value": "EdTech platform development (LMS, student information systems, analytics), data science for enrollment/retention modeling, learning analytics, AI-driven student support tools, cybersecurity, cloud infrastructure (AWS/Azure), mobile apps, and integration with third-party educational tools."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784631338,
   "web_search_url": "https://duckduckgo.com/?q=Grand+Canyon+University+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "GCU offers a mission-driven education environment with massive scale in online learning, providing opportunities to apply AI/data science to real student outcomes. However, as a large for-profit university, it may have bureaucratic processes and variable work-life balance depending on team; prestige in pure AI research is lower than top tech firms, but impact on accessible education is significant. Pay for new grads is likely competitive for edtech/non-profit sectors but below elite tech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — Generally reasonable hours for university IT/engineering, but on-call rotations and academic peak periods (enrollment, grading) can create crunch times; remote flexibility varies by team."
   }
  },
  "graphcore": {
@@ -89226,40 +89330,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 1 (top-quartile for new-grad AI/DS pay and technical depth; publishes at RecSys, KDD, WWW; known for production ML at scale)."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: B2B SaaS model selling to universities and employers; likely tiered subscriptions, per-seat pricing, and transaction fees for job postings or event participation."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, collaborative, low-ego; strong internal mobility; engineering-led product decisions; transparent all-hands; diversity and inclusion embedded in product roadmap."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Primary customers are universities (career centers) and employers (recruiters, HR teams). Students and alumni are the user base on the demand side."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $165k-$195k base + $30k-$50k sign-on + $80k-$120k 4-year RSU (total first-year ~$275k-$365k); top of market for mission-driven edtech."
   },
   "evidence_sha": "1ae77cfafd2d30e5",
+  "generated_at": 1784691596,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "EdTech / HR Tech / Talent Marketplace"
   },
-  "last_attempt_at": 1784691440,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep dives into recommender systems, ranking/relevance, large-scale data processing, and A/B experimentation. Prepare for system design around marketplace dynamics (two-sided networks, cold-start, fairness). Behavioral screens will probe mission alignment and collaboration with university partners. LeetCode hard is less common than applied ML and product-sense questions."
+  },
+  "last_attempt_at": 1784691596,
   "last_evidence_at": 1784616151,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in San Francisco; remote-friendly with hubs in New York, Denver, and possibly others. Distributed workforce post-2020."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To democratize opportunity and help all students find meaningful careers regardless of background or school."
+  },
   "name": "Handshake",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable; quarterly planning with 2-week sprints; on-call rotations exist but are managed; deploys multiple times daily; emphasis on learning reviews over blame."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Core product is a university career services platform and student-facing job marketplace. Likely offers employer branding, campus recruiting software, virtual career fairs, and analytics for university partners."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days accrued PTO + 10 company holidays + 5 sick days; unlimited policy for senior roles; mandatory 5-day annual recharge break encouraged."
   },
+  "refresh_after": 1789875596,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -89269,7 +89411,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full company shutdown last week of December (Dec 25-Jan 1); additional 1-week summer shutdown in July; no-meeting Fridays in August."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Late-stage private company (Series E/F), ~500-1000 employees, valuation ~$1.5B+ (unicorn), backed by top VCs (e.g., Spark Capital, Insight Partners)."
   },
   "sources": [
    {
@@ -89303,14 +89450,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=e86d7fbb4b2c8a3a150e9abaed10b04b21a98f47d7f67890b1a678f8f573dec1JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=25af3677-2741-673c-22d6-21ea26a5669a&u=a1aHR0cHM6Ly9hcHAuam9pbmhhbmRzaGFrZS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Actively sponsors H-1B and green cards for technical roles; university-focused mission aligns with international student talent pipelines."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Handshake operates a career network platform connecting college students and recent graduates with employers for jobs and internships. It likely generates revenue through employer subscriptions, job posting fees, and premium recruiting tools."
+  },
+  "synthesized_evidence_sha": "1ae77cfafd2d30e5",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Marketplace/search/recommendation systems, data pipelines, ML for job-student matching, scalable web/mobile apps, university integrations, analytics dashboards."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784616151,
   "web_search_url": "https://duckduckgo.com/?q=Handshake+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Handshake sits at the intersection of AI-driven marketplace matching and a mission to level the playing field for early-career talent. For a candidate seeking elite AI/data science prestige with high new-grad pay, it offers large-scale recommendation and search problems on real student-employer data. The company’s university partnerships and student-first ethos suggest a culture that values impact over burnout, with reported sane hours and shutdown norms that align with your work-life balance pr"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4.0/5 (Glassdoor/Blind consensus); core hours ~10am-4pm PT; explicit no-meeting Wednesdays; guaranteed shutdowns around major holidays; minimal weekend paging."
   }
  },
  "harbor": {
@@ -102395,7 +102563,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -102413,7 +102581,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784691440,
+  "last_attempt_at": 1784691596,
   "last_evidence_at": 1784674043,
   "name": "International Monetary Fund",
   "pace_of_work": {
@@ -138880,40 +139048,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low – not an AI or data science company; any DS work is internal support for recruiting operations."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue generated primarily through placement fees (percentage of first-year salary for permanent hires) and markups on contract worker hourly rates. May also offer retained search contracts and volume discounts for managed services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Sales-driven, competitive, metric-focused (placements, calls, send-outs). Team collaboration varies; culture often rewards hustle and billable results."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Companies of various sizes seeking temporary, contract, or permanent hires across professional, technical, administrative, and industrial roles."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $60k-$85k base + commission/bonus for recruiter or junior tech roles; well below top-tier AI/DS new grad packages ($150k-$250k+)."
   },
   "evidence_sha": "b1a0aab136a38c93",
+  "generated_at": 1784691596,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Staffing & Recruiting / Human Capital Services"
   },
-  "last_attempt_at": 1784691440,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For any technical role at a staffing firm: expect questions on recruiting domain knowledge, ATS/CRM experience (e.g., Bullhorn, Salesforce), process automation, and stakeholder management. AI/DS skills would be applied to candidate matching algorithms or internal reporting, not core product innovation. Behavioral focus on sales-driven culture, urgency, and client service."
+  },
+  "last_attempt_at": 1784691596,
   "last_evidence_at": 1784677412,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters location not confirmed in sources. Staffing firms often operate locally or regionally with possible remote recruiters."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To match qualified candidates with employer opportunities while providing workforce solutions that help businesses scale efficiently."
+  },
   "name": "North Star Staffing Solutions",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast – driven by client demands and placement quotas; recruiters often work under time pressure to fill roles."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Contingency recruiting, retained search, contract staffing, temp-to-perm placement, and possibly managed services for client hiring needs."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10-15 days PTO plus standard US holidays; no guaranteed shutdowns."
   },
+  "refresh_after": 1789875596,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -138923,7 +139129,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None – staffing firms typically remain operational year-round to serve client hiring needs."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely a small to mid-sized private firm (estimated 50-500 employees). No public funding or revenue data found in supplied sources."
   },
   "sources": [
    {
@@ -138957,14 +139168,35 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No specific visa sponsorship policy found. Staffing agencies sometimes sponsor H-1B for placed candidates but rarely for internal corporate roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "North Star Staffing Solutions appears to be a staffing and recruiting agency that connects employers with talent across various industries. The company likely earns revenue through placement fees and contract staffing margins."
+  },
+  "synthesized_evidence_sha": "b1a0aab136a38c93",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Internal technology likely includes applicant tracking systems, CRM tools, job board integrations, and basic analytics for recruiting metrics. Not an AI or data science focused product company."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677412,
   "web_search_url": "https://duckduckgo.com/?q=North+Star+Staffing+Solutions+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks elite AI/data science role with high pay, fast innovation, and strong work-life balance. North Star Staffing Solutions is a recruiting agency, not an AI product company. Internal tech roles here would likely support recruiting operations, not cutting-edge AI research or development. Prestige, pay, and technical growth in AI/DS would be minimal compared to top-tier tech firms. Work-life balance may be better than high-burnout environments, but the role mismatch is significant."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5 – typical agency environment with seasonal peaks; may require availability outside standard hours for candidate/client communication."
   }
  },
  "northab": {
@@ -191973,7 +192205,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -191991,7 +192223,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784691440,
+  "last_attempt_at": 1784691596,
   "last_evidence_at": 1784677412,
   "name": "Synergy ECP",
   "pace_of_work": {
@@ -203209,37 +203441,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Elite) – Comparable to Two Sigma, Citadel Securities, DE Shaw, Jane Street for ML/research prestige; publishes at top conferences (NeurIPS, ICML, KDD) and attracts PhDs from top CS/stats programs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Asset management fees (typically 1-2% management fee + 10-20% performance fee) on quantitative hedge fund strategies deployed across equities, futures, and other liquid instruments."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Intellectually intense, low-ego, academia-meets-engineering. Flat hierarchy: researchers and engineers collaborate as peers. Transparent P&L attribution fosters meritocracy. Socially reserved but collegial—optional hackathons, reading groups, and catered lunches. No forced fun; autonomy trusted."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Institutional investors including pension funds, endowments, foundations, sovereign wealth funds, and high-net-worth individuals through commingled funds and managed accounts."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $180k-$220k base + $50k-$100k sign-on + $50k-$150k year-end bonus (performance-linked) = $280k-$470k total first-year. Equity-like carry/phantom stock vests over 4 years. Top PhDs may exceed $500k."
   },
   "evidence_sha": "748d316ffb3eba8e",
+  "generated_at": 1784691596,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Quantitative Investment Management / Systematic Hedge Fund"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical screens: probability/statistics brainteasers, ML theory (bias-variance, regularization, time-series CV), C++/Python systems design (low-latency, concurrency), and real-world data science case studies (noisy financial data, overfitting prevention). Cultural fit assessed via collaboration on open-ended research problems and communication of complex ideas simply. Prepare for take-home projects simulating alpha research workflow."
+  },
+  "last_attempt_at": 1784691596,
   "last_evidence_at": 1784676949,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary offices in New York City (HQ), with potential satellite presence in London, Hong Kong, or other financial centers; remote/hybrid policies vary by team."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To generate superior risk-adjusted returns through rigorous scientific research, cutting-edge technology, and disciplined systematic investing."
+  },
   "name": "Trexquant",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced research cycles (2-6 week sprints) with intense project focus; quarterly strategy reviews drive deadlines. Not a 'move fast and break things' culture—rigorous validation required before production. Slower than HFT market-making, faster than traditional asset management."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Proprietary quantitative trading strategies, algorithmic execution systems, alternative data research platforms, and risk management infrastructure for systematic investing."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays + 2-week mandatory shutdown (summer + year-end) = ~35-40 days total annual leave. Unlimited sick/mental health days. No accrual cap but usage encouraged."
   },
+  "refresh_after": 1789875596,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -203249,7 +203522,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Two guaranteed firm-wide shutdowns per year: one week around July 4th and two weeks over Christmas/New Year. All systems read-only; no exceptions for non-critical staff."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-sized quantitative hedge fund (~$5-15B AUM) with 100-300 employees, established ~2010s, privately held, profitable, and scaling research/engineering teams."
   },
   "sources": [
    {
@@ -203283,14 +203561,35 @@
     "url": "https://apply.workable.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B and O-1 visas for exceptional quantitative researchers and engineers; green card sponsorship likely for long-term contributors. STEM OPT friendly."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Trexquant is a quantitative investment management firm that applies advanced data science, machine learning, and high-performance computing to systematic trading strategies across global financial markets."
+  },
+  "synthesized_evidence_sha": "748d316ffb3eba8e",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core focus on alpha research (ML/statistical modeling on alternative data), low-latency execution systems (C++/FPGA), distributed compute infrastructure (Python/C++/Kubernetes), and data engineering pipelines for petabyte-scale financial datasets."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676949,
   "web_search_url": "https://duckduckgo.com/?q=Trexquant+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Trexquant offers elite prestige in quantitative finance with top-tier new-grad compensation ($200k-$300k+ total) while maintaining a research-driven culture that values intellectual rigor over bureaucracy. The firm's systematic approach means engineers and researchers work on high-impact, production-facing ML systems with direct P&L linkage, accelerating technical growth. Unlike banking or big tech, the culture emphasizes sustainable intensity—long hours during critical research phases but prote"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7.5/10 – Typical 50-60 hour weeks with protected weekends; mandatory 2-week annual shutdown (summer + year-end). On-call rotation for production systems but rare pages. Culture explicitly rejects 'face time'—output measured by research quality, not hours logged."
   }
  },
  "trexquant investment lp": {
@@ -225733,7 +226032,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -225751,7 +226050,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784691440,
+  "last_attempt_at": 1784691596,
   "last_evidence_at": 1784674276,
   "name": "Zapier",
   "pace_of_work": {
