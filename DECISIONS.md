@@ -823,3 +823,13 @@ research, and usage results are additive evidence caches. On a rejected push it
 resets to current production, merges only those caches, and runs deterministic
 `rescore` to regenerate derived jobs/docs. Neither path force-pushes, silently
 drops production state, or attempts to text-merge generated JSON.
+
+## 60. Dossier backlog uses quota-aware parallel work (2026-07-21)
+
+Company dossiers are independent per employer. The long-running backfill now
+starts a bounded concurrent batch instead of waiting for one 2,200-token
+response at a time. The global request budget remains authoritative; each
+logical task races the configured API providers and uses the first
+schema-valid response. Provider failures are circuit-broken with exponential
+cooldowns, so 429s and timeouts stop consuming subsequent company slots while
+recovered or alternate providers can take the work.

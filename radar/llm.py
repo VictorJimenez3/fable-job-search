@@ -92,6 +92,7 @@ _logical_calls = 0
 _requests = 0
 _task_calls: dict[str, int] = {}
 _cooldowns: dict[str, float] = {}
+_failures: dict[str, int] = {}
 _events: list[dict] = []
 _counter_lock = threading.Lock()
 
@@ -113,6 +114,7 @@ def reset_runtime() -> None:
     _requests = 0
     _task_calls.clear()
     _cooldowns.clear()
+    _failures.clear()
     _events.clear()
 
 
@@ -323,12 +325,24 @@ def _record(task: str, ep: Endpoint | None, status: str, started: float,
 
 
 def _cooldown(ep: Endpoint, status: int | None) -> None:
-    seconds = 60
-    if status in {401, 403, 404}:
-        seconds = 30 * 60
-    elif status == 429:
-        seconds = 2 * 60
-    _cooldowns[ep.name] = time.monotonic() + seconds
+    """Circuit-break unhealthy endpoints without wasting the next batch."""
+    with _counter_lock:
+        failures = _failures[ep.name] = _failures.get(ep.name, 0) + 1
+        if status in {401, 403, 404}:
+            seconds = 30 * 60
+        elif status == 429:
+            seconds = min(15 * 60, 60 * (2 ** (failures - 1)))
+        elif status is None:  # timeout, invalid schema, or empty response
+            seconds = min(30 * 60, 2 * 60 * (2 ** (failures - 1)))
+        else:
+            seconds = min(10 * 60, 60 * (2 ** (failures - 1)))
+        _cooldowns[ep.name] = time.monotonic() + seconds
+
+
+def _mark_healthy(ep: Endpoint) -> None:
+    with _counter_lock:
+        _failures.pop(ep.name, None)
+        _cooldowns.pop(ep.name, None)
 
 
 def complete(prompt: str, max_tokens: int = 2000, timeout: int = 180,
@@ -366,7 +380,8 @@ def complete(prompt: str, max_tokens: int = 2000, timeout: int = 180,
     # slower calls continue only long enough to record telemetry. This avoids
     # serially waiting behind a flaky free-tier provider while preserving
     # deterministic schema validation and cooldowns.
-    candidates = [ep for ep in eps if _cooldowns.get(ep.name, 0) <= time.monotonic()]
+    with _counter_lock:
+        candidates = [ep for ep in eps if _cooldowns.get(ep.name, 0) <= time.monotonic()]
     if not candidates:
         return None
 
@@ -380,6 +395,7 @@ def complete(prompt: str, max_tokens: int = 2000, timeout: int = 180,
                 _cooldown(ep, None)
                 return None, event
             if text:
+                _mark_healthy(ep)
                 return text, _record(task, ep, "ok", started, prompt, max_tokens, usage)
             event = _record(task, ep, "empty", started, prompt, max_tokens, usage)
             _cooldown(ep, None)

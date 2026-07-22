@@ -12,6 +12,7 @@ import html as html_lib
 import json
 import re
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from urllib.parse import parse_qs, quote_plus, urlparse
 
 from . import llm, state
@@ -517,8 +518,7 @@ def enrich(jobs_state: dict, applied: list | None = None, web: dict | None = Non
             continue
         queue.append((_priority(record, jobs, priority_ids, now), key, record))
     queue.sort(reverse=True, key=lambda row: row[0])
-    made = 0
-    for _, key, record in queue[:limit]:
+    def synthesize(key: str, record: dict) -> bool:
         ids = {s.get("id") for s in record.get("sources") or [] if s.get("id")}
         prompt = _prompt(record)
         # The dossier has a fixed 20-field schema. 900 tokens truncates valid
@@ -536,7 +536,7 @@ def enrich(jobs_state: dict, applied: list | None = None, web: dict | None = Non
         claims = parse_synthesis(raw, ids)
         if claims is None:
             record["error"] = "provider unavailable or response was not source-grounded"
-            continue
+            return False
         record.update(claims)
         # A model may omit a non-public policy even when the rest of its JSON
         # is valid. Keep every Company-tab column populated with an explicitly
@@ -556,7 +556,24 @@ def enrich(jobs_state: dict, applied: list | None = None, web: dict | None = Non
         record["generator"].update({"endpoint": event.get("endpoint", ""),
                                     "model": event.get("model", "")})
         records[key] = record
-        made += 1
+        return True
+
+    # Dossiers are independent by employer. A bounded parallel batch lets the
+    # backfill actually use provider RPM while llm.py remains the single hard
+    # budget/circuit-breaker boundary for every HTTP request.
+    selected = queue[:limit]
+    if not selected:
+        save(records)
+        return 0
+    workers = min(len(selected), max(1, int(env("RADAR_COMPANY_RESEARCH_WORKERS", "1"))))
+    if workers == 1:
+        made = sum(bool(synthesize(key, record)) for _, key, record in selected)
+    else:
+        made = 0
+        with ThreadPoolExecutor(max_workers=workers, thread_name_prefix="company-dossier") as pool:
+            futures = [pool.submit(synthesize, key, record) for _, key, record in selected]
+            for future in as_completed(futures):
+                made += bool(future.result())
     save(records)
     return made
 

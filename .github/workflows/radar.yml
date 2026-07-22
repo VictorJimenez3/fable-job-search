@@ -38,24 +38,53 @@ jobs:
         run: |
           git config user.name "job-radar[bot]"
           git config user.email "radar@users.noreply.github.com"
+          commit_state() {
+            git add state docs
+            git diff --cached --quiet && return 1
+            git commit -m "radar: crawl $(date -u +'%Y-%m-%d %H:%M')"
+          }
           for i in 1 2 3 4; do
             python -m radar.main crawl
-            git add state docs
-            if git diff --cached --quiet; then
+            if ! commit_state; then
               echo "crawl: no generated-state changes"
               exit 0
             fi
-            git commit -m "radar: crawl $(date -u +'%Y-%m-%d %H:%M')"
             if git push; then
               echo "crawl: published on attempt $i"
               exit 0
             fi
-            # A crawl rewrites jobs/docs from a point-in-time source snapshot.
-            # Never rebase that generated state.  Start over from current
-            # production so neither side's discoveries or scores are dropped.
-            echo "crawl: upstream moved; rebuilding from fresh production"
+            # Preserve additive discoveries from the completed crawl. Existing
+            # upstream jobs win; then rescore/rebuild all derived state. This
+            # avoids both unsafe JSON rebases and starvation from a frequent
+            # research-backfill checkpoint writer.
+            echo "crawl: upstream moved; reconciling completed discoveries"
+            checkpoint_dir="$(mktemp -d)"
+            git show HEAD:state/jobs.json > "$checkpoint_dir/jobs.json"
+            git show HEAD:state/companies.json > "$checkpoint_dir/companies.json"
+            git show HEAD:state/alert_history.json > "$checkpoint_dir/alerts.json"
+            git show HEAD:state/runs.json > "$checkpoint_dir/runs.json"
+            git show HEAD:state/company_research.json > "$checkpoint_dir/research.json" || printf '{}' > "$checkpoint_dir/research.json"
+            git show HEAD:state/ai_usage.json > "$checkpoint_dir/usage.json" || printf '{}' > "$checkpoint_dir/usage.json"
+            printf '{}' > "$checkpoint_dir/empty.json"
             git fetch origin "${GITHUB_REF_NAME}"
             git reset --hard "origin/${GITHUB_REF_NAME}"
+            MERGE_JOBS="$checkpoint_dir/jobs.json" \
+            MERGE_CULTURE="$checkpoint_dir/empty.json" \
+            MERGE_RESEARCH="$checkpoint_dir/research.json" \
+            MERGE_AI_USAGE="$checkpoint_dir/usage.json" \
+              python scripts/mac-companion/merge_state.py
+            MERGE_CRAWL_JOBS="$checkpoint_dir/jobs.json" \
+            MERGE_CRAWL_COMPANIES="$checkpoint_dir/companies.json" \
+            MERGE_CRAWL_ALERT_HISTORY="$checkpoint_dir/alerts.json" \
+            MERGE_CRAWL_RUNS="$checkpoint_dir/runs.json" \
+              python scripts/mac-companion/merge_crawl_state.py
+            rm -rf "$checkpoint_dir"
+            python -m radar.main rescore
+            commit_state || { echo "crawl: production already contains reconciled state"; exit 0; }
+            if git push; then
+              echo "crawl: reconciled and published on attempt $i"
+              exit 0
+            fi
             sleep $((i * 2))
           done
 
