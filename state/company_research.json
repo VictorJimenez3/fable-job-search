@@ -10720,7 +10720,7 @@
    "value": "Tier 1 (Elite). Amazon is a pioneer in production AI and cloud infrastructure globally, rivaling Google, Meta, and Microsoft in AI talent branding."
   },
   "aliases": [],
-  "attempts": 15,
+  "attempts": 16,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -10770,7 +10770,7 @@
    "source_ids": [],
    "value": "Amazon interviews emphasize its Leadership Principles with behavioral questions, plus technical screening covering data structures, system design, algorithms, and coding proficiency. Storytelling about ownership, bias for action, and customer obsession is crucial. For AI and data science roles, expect deep dives into machine learning theory, statistical analysis, and deployment experience."
   },
-  "last_attempt_at": 1784710040,
+  "last_attempt_at": 1784710191,
   "last_evidence_at": 1784636762,
   "locations": {
    "confidence": "high",
@@ -70941,7 +70941,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 26,
+  "attempts": 27,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -70959,7 +70959,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784710040,
+  "last_attempt_at": 1784710191,
   "last_evidence_at": 1784676545,
   "name": "Esri",
   "pace_of_work": {
@@ -105106,7 +105106,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 18,
+  "attempts": 19,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -105124,7 +105124,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784710040,
+  "last_attempt_at": 1784710191,
   "last_evidence_at": 1784674043,
   "name": "International Monetary Fund",
   "pace_of_work": {
@@ -131485,7 +131485,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 12,
+  "attempts": 13,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -131503,7 +131503,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784710040,
+  "last_attempt_at": 1784710191,
   "last_evidence_at": 1784693223,
   "name": "Micron Technology",
   "pace_of_work": {
@@ -147587,41 +147587,97 @@
  "omnicom": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "0c4121745a"
+   ],
+   "value": "Established agency hiring for applied data analytics; not a top-tier AI research destination. Prestige derives from client roster and scale, not ML innovation leadership."
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c4121745a"
+   ],
+   "value": "Agency/holding company model: earns fees and commissions from clients for marketing strategy, creative execution, media buying, and data analytics services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, client-service oriented, collaborative across creative and strategy teams; performance measured by client results and billable utilization. Can be politically complex due to holding-company structure."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c4121745a"
+   ],
+   "value": "Brands and companies seeking to build enduring customer relationships through marketing, advertising, and data-driven strategies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "medium",
+   "source_ids": [
+    "0c4121745a"
+   ],
+   "value": "Estimated: $45,000–$160,000 base salary range for entry-level Data Analyst (per posting); wide band suggests variation by agency brand, location, and negotiation. Bonus and benefits not specified."
   },
   "evidence_sha": "4ddf17e3c97f9b15",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784710191,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784710040,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0c4121745a"
+   ],
+   "value": "Advertising, Marketing & Public Relations / Marketing Services"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c4121745a"
+   ],
+   "value": "Expect questions on Python/SQL proficiency, statistical concepts, Google Analytics/Tag Manager experience, marketing analytics use cases (attribution, segmentation, campaign measurement), and ability to translate data insights for non-technical stakeholders. Prepare for case studies on marketing data problems and behavioral questions about managing competing client priorities."
+  },
+  "last_attempt_at": 1784710191,
   "last_evidence_at": 1784701765,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c4121745a"
+   ],
+   "value": "New York, NY (hybrid); estimated global presence across major markets through agency networks."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "0c4121745a"
+   ],
+   "value": "Building enduring brand relationships through modern relationship marketing."
+  },
   "name": "Omnicom",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced, client-driven deadlines typical of agency environments; project cycles can be intense around campaign launches and reporting periods."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c4121745a"
+   ],
+   "value": "Relationship marketing services, brand strategy, data analytics, digital marketing, advertising campaigns, and customer engagement solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + US federal holidays; typical for large US professional services firms. Not publicly confirmed."
   },
+  "refresh_after": 1789894191,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -147631,7 +147687,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; some agency networks may observe reduced hours between Christmas and New Year but not policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Large global marketing holding company (Fortune 500 scale) with thousands of employees across multiple agency networks worldwide."
   },
   "sources": [
    {
@@ -147685,14 +147746,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=8e4c06214000d902d613267574c235c3c98b756ece12f0bdb167b387d8d4f9a3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=17b15538-f6ae-67cc-2d9b-42a5f755668d&u=a1aHR0cHM6Ly93d3cuYWxtYWFkLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not specified in available sources; typical for large US employers to sponsor H-1B for specialized technical roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c4121745a"
+   ],
+   "value": "Omnicom is a modern relationship marketing agency focused on building enduring brand relationships for clients. It generates revenue by providing marketing, advertising, and data-driven relationship marketing services to brands."
+  },
+  "synthesized_evidence_sha": "4ddf17e3c97f9b15",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "0c4121745a"
+   ],
+   "value": "Data analysis using Python, SQL, statistical concepts, Google Tag Manager, Google Analytics; digital marketing measurement, campaign optimization, and marketing data infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674432,
   "web_search_url": "https://duckduckgo.com/?q=Omnicom+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c4121745a"
+   ],
+   "value": "Offers an entry point into marketing data science at a global agency brand with hybrid flexibility and a wide salary band ($45K–$160K). The role emphasizes Python, SQL, and analytics tools, providing practical data experience in a client-facing, fast-paced environment. However, agency cultures often involve client-driven deadlines that can challenge work-life balance, and the prestige tier for pure AI/ML research is lower than dedicated tech firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate to challenging (3/10–5/10). Agency roles often require responsiveness to client needs outside standard hours; hybrid policy offers some flexibility but guaranteed shutdowns are uncommon."
   }
  },
  "one brief": {
@@ -173992,7 +174080,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 10,
+  "attempts": 11,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -174010,7 +174098,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784710040,
+  "last_attempt_at": 1784710191,
   "last_evidence_at": 1784677413,
   "name": "Roku",
   "pace_of_work": {
@@ -195684,7 +195772,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 14,
+  "attempts": 15,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -195702,7 +195790,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784710040,
+  "last_attempt_at": 1784710191,
   "last_evidence_at": 1784677412,
   "name": "Synergy ECP",
   "pace_of_work": {
@@ -209464,7 +209552,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 9,
+  "attempts": 10,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -209482,7 +209570,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784693034,
+  "last_attempt_at": 1784710191,
   "last_evidence_at": 1784677414,
   "name": "Twitch Interactive, Inc.",
   "pace_of_work": {
