@@ -48801,7 +48801,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -48819,7 +48819,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784689037,
+  "last_attempt_at": 1784689129,
   "last_evidence_at": 1784599680,
   "name": "Commvault",
   "pace_of_work": {
@@ -61982,37 +61982,82 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 — published at NeurIPS/ICML/ACL, production LLMs at scale, dedicated research team, strong academic ties (CMU, Pitt)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Freemium: free ad-supported lessons plus subscription tiers (Super Duolingo, Duolingo Max) for ad-free, offline, and AI features; revenue also from Duolingo English Test fees and enterprise/education licenses."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-obsessed, data-driven, quirky (owl mascot culture), low ego, high psychological safety; \"learn constantly\" value applied internally via hackathons, reading groups, and tuition reimbursement."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Individual learners (free and paid subscribers), educational institutions (Duolingo for Schools), and organizations using the Duolingo English Test for admissions/hiring."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $185k-$210k base + $40k-$70k RSU (4-yr) + $15k-$25k sign-on; total Year 1 ~$240k-$305k (Pittsburgh/remote adjusted)."
   },
   "evidence_sha": "2ed7b2aec3662897",
+  "generated_at": 1784689129,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Edtech / technology (estimated)"
+   "value": "EdTech / Consumer Internet / Applied AI"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect ML system design (personalization, ranking, evaluation), production ML engineering (feature stores, model serving, monitoring), heavy experimentation/statistics questions, and product sense for education; LeetCode medium-hard for general SWE rounds."
+  },
+  "last_attempt_at": 1784689129,
   "last_evidence_at": 1784583329,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in Pittsburgh, PA; offices in New York, Seattle, Beijing, Berlin; remote-friendly for many roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To develop the best education in the world and make it universally available."
+  },
   "name": "Duolingo",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast but sustainable: 2-week sprints, quarterly OKRs, frequent A/B test cycles; leadership emphasizes shipping without heroics."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "133e9e5ea0",
+    "036d33bd43",
+    "85d347e3ed"
+   ],
+   "value": "Duolingo language-learning app (iOS, Android, web), Duolingo English Test, Duolingo for Schools, Duolingo Max (AI-powered premium tier), and Duolingo ABC (literacy for kids)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days accrual + 10 company holidays + 5 \"wellness days\"; unlimited sick; sabbatical after 5 years."
   },
+  "refresh_after": 1789873129,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -62022,7 +62067,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide \"Winter Recharge\" (last week of Dec) and \"Summer Recharge\" (first week of Jul) — full shutdown, no on-call expected."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public company (NASDAQ: DUOL); ~800-1000 employees; profitable with growing revenue."
   },
   "sources": [
    {
@@ -62056,14 +62106,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=d5451c84cf4259abe57e62beac9ee25e2c1cba823d776f320d6b7eb3bd439ca0JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9hcHBzLmFwcGxlLmNvbS91cy9hcHAvZHVvbGluZ28tbGFuZ3VhZ2UtbGVzc29ucy9pZDU3MDA2MDEyOA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "H-1B sponsor (cap-subject and cap-exempt via university partnerships); supports Green Card sponsorship for eligible roles; TN/E-3/O-1 visas common for Canadian/Australian/specialty talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "133e9e5ea0",
+    "036d33bd43",
+    "85d347e3ed"
+   ],
+   "value": "Duolingo is a language-learning platform offering free and subscription-based courses via web and mobile apps. It gamifies education to make learning accessible and engaging."
+  },
+  "synthesized_evidence_sha": "2ed7b2aec3662897",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Consumer-facing ML/AI (personalized spaced repetition, Birdbrain model, LLM-powered roleplay), large-scale A/B experimentation, cross-platform mobile/web engineering, data infrastructure, and educational content tooling."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583329,
   "web_search_url": "https://duckduckgo.com/?q=Duolingo+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Duolingo offers elite AI/ML prestige (published research, Birdbrain, LLM integration) with top-of-market new-grad compensation, a mission-driven product used by 100M+ monthly learners, and a culture known for sane hours, explicit shutdown norms, and low burnout — rare in high-paying consumer tech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "4.2/5 — explicit \"no-meeting Wednesdays\", protected weekends, on-call rotation limited and compensated; Glassdoor/Blind consistently cite strong WLB for compensation level."
   }
  },
  "dutch": {
@@ -83402,11 +83477,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -83418,6 +83495,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784689129,
   "last_evidence_at": 1784673987,
   "name": "Global Lending Services",
   "pace_of_work": {
@@ -107160,11 +107238,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -107176,6 +107256,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784689129,
   "last_evidence_at": 1784677400,
   "name": "Keysight Technologies",
   "pace_of_work": {
@@ -137269,7 +137350,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -137287,7 +137368,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784689037,
+  "last_attempt_at": 1784689129,
   "last_evidence_at": 1784677399,
   "name": "Northwestern Mutual",
   "pace_of_work": {
@@ -138118,41 +138199,111 @@
  "novartis": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "5a36c557c0",
+    "6af93ec36e",
+    "5a5874b1f0"
+   ],
+   "value": "Top-tier within pharma/life sciences; recognized for AI in drug discovery (e.g., Novartis AI Innovation Center, partnerships with Microsoft, NVIDIA), but not a pure-tech 'AI-first' brand like FAANG."
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "5a36c557c0",
+    "6af93ec36e",
+    "5a5874b1f0"
+   ],
+   "value": "Revenue from sales of patented innovative medicines (high-margin), generic/biosimilar drugs (volume-driven), and licensing collaborations; heavy R&D investment funded by operating profits."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "5a36c557c0",
+    "6af93ec36e",
+    "5a5874b1f0"
+   ],
+   "value": "Science-driven, collaborative, process-oriented, and increasingly digital-first; values integrity, diversity, and patient focus; hierarchical but with growing agile/flat pockets in AI/digital units."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "5a36c557c0",
+    "6af93ec36e",
+    "5a5874b1f0"
+   ],
+   "value": "Healthcare providers, hospitals, pharmacies, governments, and patients worldwide; also partners with biotech firms and academic institutions for R&D collaborations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$160k base + 10-15% bonus + RSUs (total comp ~$160k-$200k) for AI/data science roles in US hubs; competitive with top pharma, below top tech."
   },
   "evidence_sha": "997445f9e994a647",
+  "generated_at": 1784689129,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "5a36c557c0",
+    "6af93ec36e",
+    "5a5874b1f0"
+   ],
+   "value": "Pharmaceuticals / Life Sciences / Biotechnology"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical assessments in ML/statistics (especially for biology/chemistry applications), case studies on drug development pipelines, behavioral questions on cross-functional collaboration, and emphasis on regulatory/quality mindset; prepare for domain-adaptation questions (tech → life sciences)."
   },
-  "last_attempt_at": 1784689037,
+  "last_attempt_at": 1784689129,
   "last_evidence_at": 1784673977,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "5a36c557c0",
+    "6af93ec36e",
+    "5a5874b1f0"
+   ],
+   "value": "Headquarters in Basel, Switzerland; major R&D hubs in Cambridge (MA), San Diego, Shanghai; global offices in 140+ countries; key US sites in East Hanover (NJ), Cambridge (MA), and remote/hybrid options."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "5a36c557c0",
+    "6af93ec36e",
+    "5a5874b1f0"
+   ],
+   "value": "To reimagine medicine to improve and extend people's lives, combining innovative science with digital technologies to address unmet medical needs."
+  },
   "name": "Novartis",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — structured R&D cycles with regulatory milestones create predictable sprints; faster in digital/AI incubation teams, slower in core clinical development; less chaotic than tech startups."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "5a36c557c0",
+    "6af93ec36e",
+    "5a5874b1f0"
+   ],
+   "value": "Prescription medicines across therapeutic areas (oncology, immunology, neuroscience, cardiovascular, etc.), generic pharmaceuticals and biosimilars (via Sandoz division), and emerging cell/gene therapies."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual vacation + 10-12 company holidays (US); additional wellness/sick days; varies by country/role."
   },
+  "refresh_after": 1789873129,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -138162,7 +138313,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically Dec 24-Jan 1) for most non-critical functions; some teams rotate coverage."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "5a36c557c0",
+    "6af93ec36e",
+    "5a5874b1f0"
+   ],
+   "value": "Large multinational public company (NYSE: NVS); ~100,000+ employees globally; mature, stable, and highly regulated industry."
   },
   "sources": [
    {
@@ -138196,14 +138356,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=e6ee23fc1b633ecb2d262076ed8c1aac1e73170ce9a0482e919e6bb9d045d2c2JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=26baeef9-727a-6b43-20f5-f964738b6a1e&u=a1aHR0cHM6Ly93d3cubm92YXJ0aXMuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5a36c557c0",
+    "6af93ec36e",
+    "5a5874b1f0"
+   ],
+   "value": "Established H-1B and green card sponsor for STEM roles; global mobility programs for internal transfers; immigration support typical for large pharma."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "5a36c557c0",
+    "6af93ec36e",
+    "5a5874b1f0"
+   ],
+   "value": "Novartis is a global pharmaceutical company headquartered in Basel, Switzerland, focused on researching, developing, manufacturing, and marketing innovative prescription medicines, generic pharmaceuticals, and biosimilars."
+  },
+  "synthesized_evidence_sha": "997445f9e994a647",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "5a36c557c0",
+    "6af93ec36e",
+    "5a5874b1f0"
+   ],
+   "value": "AI/data science applied to drug discovery (molecular design, target identification), clinical trial optimization, real-world evidence, manufacturing analytics, digital health platforms, and commercial analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673977,
   "web_search_url": "https://duckduckgo.com/?q=Novartis+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Novartis offers elite pharma prestige with massive real-world health impact, top-tier new-grad compensation for AI/data science, and a structured yet innovative R&D culture that balances scientific rigor with digital transformation — avoiding pure tech burnout while accelerating technical growth in a mission-driven environment."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — strong institutional support for work-life balance (flexible hours, remote options, protected time off); pharma culture generally avoids 'crunch' but on-call may exist for critical systems."
   }
  },
  "noviam inc": {
@@ -147925,7 +148118,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -147943,7 +148136,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784689037,
+  "last_attempt_at": 1784689129,
   "last_evidence_at": 1784676244,
   "name": "Perpay",
   "pace_of_work": {
@@ -187630,7 +187823,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -187648,7 +187841,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784689037,
+  "last_attempt_at": 1784689129,
   "last_evidence_at": 1784674488,
   "name": "Susquehanna International Group (SIG)",
   "pace_of_work": {
