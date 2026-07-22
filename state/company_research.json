@@ -2019,7 +2019,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -2037,7 +2037,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784682730,
+  "last_attempt_at": 1784682821,
   "last_evidence_at": 1784673987,
   "name": "Acorns",
   "pace_of_work": {
@@ -7356,11 +7356,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -7372,6 +7374,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784682821,
   "last_evidence_at": 1784674490,
   "name": "Albertsons Companies",
   "pace_of_work": {
@@ -24938,11 +24941,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -24954,6 +24959,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784682821,
   "last_evidence_at": 1784672884,
   "name": "Berkeley Industrial Engineering & Operations Research",
   "pace_of_work": {
@@ -49995,7 +50001,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -50038,7 +50044,7 @@
    ],
    "value": "Probe whether the AI Engineer role truly follows a fast, innovative tech culture or if it operates under slow bureaucracy. Ask about guaranteed shutdowns and sane hours to confirm respect for personal time and the avoidance of high burnout, as these are not detailed in the job posting."
   },
-  "last_attempt_at": 1784682730,
+  "last_attempt_at": 1784682821,
   "last_evidence_at": 1784582963,
   "locations": {
    "confidence": "high",
@@ -82199,7 +82205,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -82217,7 +82223,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784682730,
+  "last_attempt_at": 1784682821,
   "last_evidence_at": 1784677408,
   "name": "Harvey",
   "pace_of_work": {
@@ -104247,41 +104253,102 @@
  "leidos": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "c3886b83cb",
+    "1652efb05f"
+   ],
+   "value": "B-tier for AI/data-science prestige. Leidos is a recognizable defense-tech prime that offers mission-critical classified work, but it is not viewed as a top-tier AI lab or a household name in commercial machine-learning research. It is prestigious within the federal and military-contracting community, though less so compared to big-tech AI labs."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "1652efb05f"
+   ],
+   "value": "Leidos operates as a government contractor with a cost-plus and fixed-price contract mix. It competes for multi-year defense and civilian agency contracts, earning revenue through long-term service performance, R&D, and systems sustainment, drawing on deep domain expertise to win re-competes and sole-source extensions tied to sensitive national security work."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "1652efb05f"
+   ],
+   "value": "Professional and mission-centric with an engineering-driven identity. Employee experiences reflect pride in national security contributions and a collaborative internal environment, tempered by the structural dependency on procurement rules that can create process overhead. The culture tends to reward long-term program dedication rather than a short-term hackathon intensity."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "1652efb05f"
+   ],
+   "value": "Primary customers are the U.S. Department of Defense (including the Air Force and intelligence community), Department of Homeland Security, and federal civilian agencies. Leidos also serves select commercial and international allied-government clients, but the U.S. national-security and public-sector market is the core."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "c3886b83cb"
+   ],
+   "value": "$57,850 - $104,575 base salary, based on the published Data Scientist range. The hiring range for a new graduate likely falls on the lower to middle end of this band, around $68,000 to $82,000, with benefits and clearance bonuses possibly adding value beyond the base."
   },
   "evidence_sha": "3e55ba07c3610e20",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784682821,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784682730,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "1652efb05f"
+   ],
+   "value": "Government technology and defense services"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c3886b83cb"
+   ],
+   "value": "Interviews for data science roles test practical scripting and database fluency, experience with Python or R, data visualization, and ability to apply analytical methodologies to evaluate system performance. Candidates should prepare to discuss how they connect exploratory analysis to mission impact, navigate structured problem-solving within a security-aware culture, and ask about team work rhythms, average weekly hours, and PTO-with-shutdown specifics to verify work-life expectations."
+  },
+  "last_attempt_at": 1784682821,
   "last_evidence_at": 1784591793,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "c3886b83cb",
+    "1652efb05f"
+   ],
+   "value": "Headquartered in Reston, Virginia, with significant technical presence in Valparaiso, Florida (visible in data-science openings), as well as hubs near Washington, D.C., and on military bases. Additional domestic offices support federal civilian work."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "c3886b83cb"
+   ],
+   "value": "To outthink, outbuild, and outpace the status quo, making the world safer, healthier, and more efficient through technology and engineering, as demanded by national security and critical government missions."
+  },
   "name": "Leidos",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate but mission-driven tempo. Government contract deadlines and compliance processes create a rhythmical pace, faster than pure civil-service settings but considerably slower than rapid-release consumer tech. Expect structured sprints tied to program deliverables, not a chaotic Hack-Week urgency."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c3886b83cb",
+    "1652efb05f"
+   ],
+   "value": "Leidos provides technical services, systems integration, and enterprise IT for domains like command-and-control systems, cybersecurity, data analytics, biometrics, and autonomous systems. Its focus is on tailored government solutions, including sensor-to-cloud data pipelines, operational modeling, and decision-support tools, rather than off-the-shelf software products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of combined PTO for new graduates, including vacation and sick leave, with additional military leave for reservists; no precise new-hire policy found, but this aligns with standard large defense contractor practice."
   },
+  "refresh_after": 1789866821,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -104291,7 +104358,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Leidos may observe federal holidays and planned end-of-year furloughs if government customers institute them, though a guaranteed company-wide shutdown beyond federal holiday schedule is not confirmed. Interviews should confirm whether the specific contract or department enforces a winter break."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "1652efb05f"
+   ],
+   "value": "Large-cap public company (post-2013 spin-off from SAIC) with a market capitalization in the tens of billions of dollars and approximately 45,000+ employees, listing on the New York Stock Exchange. It is a mature, scaled government contractor, not a growth-stage startup."
   },
   "sources": [
    {
@@ -104325,14 +104399,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=82ed648f2e3e6ba9310f7e9475757dab713d070ad357aad2178f22d739b0a543JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=0af80d4b-9edb-6069-117f-1ad79fe56158&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTGVpZG9z&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "c3886b83cb"
+   ],
+   "value": "Due to the sensitive nature of government contracts, candidates are typically required to be U.S. citizens and may need an active or able-to-obtain security clearance. This makes sponsorship for student or work visas unlikely for clearance-required roles, though select commercial-division or unclassified roles may occasionally be open."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1652efb05f"
+   ],
+   "value": "Leidos is a major American defense, aviation, and IT services company that spun off from SAIC in 2013. It generates revenue by securing and managing large-scale government contracts, particularly with the U.S. Department of Defense and intelligence agencies, applying technology and data science to mission-critical national security and health challenges."
+  },
+  "synthesized_evidence_sha": "3e55ba07c3610e20",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "c3886b83cb"
+   ],
+   "value": "Work spans applied data science, operational analysis, and mission-software engineering. Scientists use Python, R, relational databases, data visualization, and cloud-based environments to conduct qualitative and quantitative performance analysis in complex operational settings, evaluating real-world system effectiveness."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784584189,
   "web_search_url": "https://duckduckgo.com/?q=Leidos+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "c3886b83cb",
+    "1652efb05f"
+   ],
+   "value": "Leidos can offer a high-stakes, mission-driven environment where new-grad data scientists immediately contribute to operational national defense rather than product-ad optimizations. The company's government contracting rhythm often includes mandated hours and occasional planned furloughs, which may translate to more predictable shutdowns and less 24/7 grind than consumer tech. While a defense-contractor setting is not immune to procedures, it tends to offer structured career progression, enabli"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Above average for a commercial AI or quant firm, but varies by contract and clearance urgency. The norm in cleared government IT work tends toward a standard 40-hour week with funded overtime on rare deliverable crunches, though culture can drift into occasional extra hours during key reviews."
   }
  },
  "leidos australia": {
@@ -164422,37 +164526,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier One – widely recognized as an elite aerospace and defense prime where working on sovereign-level mission AI confers rare, top-tier cachet in the industry."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "02f212ef6a",
+    "e0b2180ad4"
+   ],
+   "value": "B2G platform integrator and services firm. Revenue is generated through cost-plus and fixed-price contracts with the U.S. federal government, focused on long-cycle development programs and on-site operational support."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven ownership culture that balances deep technical pride with a pace that respects personal time; teams collaborate in flat, cross-functional engineering forums, and the company actively avoids the burnout-inducing pressures of permanent fire-drill production environments."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "02f212ef6a"
+   ],
+   "value": "The core customer is the U.S. Department of Defense—particularly U.S. Special Operations Command and the Air Force—along with NASA and allied international governments."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $105,000–$125,000 base salary for new-grad AI/Data Science roles, with a performance bonus of 5–10% and comprehensive benefits that push total compensation into the $115K–$140K range."
   },
   "evidence_sha": "adaa777bdc3f4b6a",
+  "generated_at": 1784682821,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "02f212ef6a",
+    "e0b2180ad4"
+   ],
+   "value": "Aerospace and Defense"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect a technical deep-dive into machine learning fundamentals, Python, and sensor data pipelines, alongside a behavioral assessment probing mission alignment, ownership, and judgment under ambiguity. Candidates are evaluating whether the work is genuinely bleeding-edge AI and whether the moderate pace reliably holds, ultimately screening the inbound team’s collaboration style for signs of sustainability over intensity."
   },
+  "last_attempt_at": 1784682821,
   "last_evidence_at": 1784672884,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "02f212ef6a"
+   ],
+   "value": "Headquarters in Sparks, Nevada, with major engineering sites in Centennial and Englewood, Colorado; Dayton, Ohio; Huntsville, Alabama; and Herndon, Virginia."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "02f212ef6a"
+   ],
+   "value": "To deliver game-changing, high-reliability solutions for the world’s most critical missions, while embodying the entrepreneurial speed and ownership culture of a privately held company."
+  },
   "name": "Sierra Nevada Corporation",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady and deliberate, shaped by government program cadences, security accreditation, and rigorous flight-worthiness processes; closer to consistent 40–45 hour engineering weeks than startup-style sprints."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "02f212ef6a"
+   ],
+   "value": "Primary products include the RAPCON-X and MC-145B multi-mission aircraft, the Dream Chaser spaceplane for International Space Station resupply, satellites, electronic warfare systems, communications gateways, and advanced mission software."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 18 days of combined PTO plus 5 sick days per year for new graduates, structured to buffer federal holiday shutdowns with flexible block leave."
   },
+  "refresh_after": 1789866821,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -164462,7 +164621,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Two company-wide paid shutdowns annually, typically a full week in July aligned with the Independence Day holiday and the last week of December through New Year’s Day."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "02f212ef6a",
+    "e0b2180ad4"
+   ],
+   "value": "Mature private company with approximately 5,000 employees and billions in annual revenue; operates as one of the largest privately held aerospace and defense primes in the U.S."
   },
   "sources": [
    {
@@ -164506,14 +164673,42 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "da16527bc5"
+   ],
+   "value": "U.S. citizenship or permanent residency is required for virtually all technical roles due to ITAR and access to classified environments; the company does not provide new-grad visa sponsorship for data science positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "02f212ef6a"
+   ],
+   "value": "Sierra Nevada Corporation (SNC) is a privately held aerospace and defense contractor that develops advanced aircraft, spacecraft, and mission systems for national security. It makes money by winning federal contracts to engineer and deliver bespoke platforms—from surveillance planes to satellites—alongside the sensors, AI, and data links that turn them into intelligence-gathering nodes."
+  },
+  "synthesized_evidence_sha": "adaa777bdc3f4b6a",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "02f212ef6a",
+    "17f8c9c419"
+   ],
+   "value": "Engineers apply AI, machine learning, and data science to on-board autonomous systems, real-time sensor fusion, predictive maintenance, and cyber resilience for aircraft and spacecraft missions. The work spans edge-computing on airborne platforms, computer vision for ISR payloads, and simulation-driven test environments."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672884,
   "web_search_url": "https://duckduckgo.com/?q=Sierra+Nevada+Corporation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "SNC combines elite defense prestige with genuinely innovative rapid-development cycles, sidestepping the bureaucratic drag of traditional defense primes. The company’s private ownership enables a culture that protects work-life boundaries—predictable shutdowns and a 40-45 hour baseline—while offering complex, mission-driven AI work that accelerates technical growth without demanding personal sacrifice."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4.2 out of 5 – Most technical staff report tight scope control, minimal overnight work, and frequent block leave around launch or test cycles, resulting in genuinely sustainable schedules."
   }
  },
  "sift": {
@@ -182827,40 +183022,101 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Elite Brand): A household name in digital transformation, consistently winning awards for data journalism and digital product design. Equivalent in resume prestige to top tech companies, particularly within the New York ecosystem."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "8ddb9bda1b"
+   ],
+   "value": "Subscription-first business model. Revenue is primarily generated through digital and print reader subscriptions, supplemented by advertising and commercial services, with the goal of making journalism so good it is worth paying for."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "8ddb9bda1b",
+    "238ad01ae1"
+   ],
+   "value": "Mission-oriented, intellectually curious, and inclusive but structured. The culture blends a serious dedication to editorial integrity with a 'craftsmanship' approach in the tech organization. It is a largely unionized environment that encourages respectful debate and standardization to avoid toxic, high-burnout politics."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "8ddb9bda1b"
+   ],
+   "value": "A global audience of over 10 million paying subscribers. These include individual digital news, print, and Games subscribers, as well as corporate and educational institutions that purchase group access."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $125,000 – $150,000 base salary with an annual equity grant and robust bonus target (10-15%). A minimum competitive offer for AI/Data Science new grads in NYC would not exceed the top-tier publishing structure, aligning with this balance."
   },
   "evidence_sha": "21aced551c64a47a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784682821,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784682730,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8ddb9bda1b"
+   ],
+   "value": "Digital Media / Subscription Services"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "8ddb9bda1b",
+    "238ad01ae1"
+   ],
+   "value": "Interviews rigorously test technical ability (likely SQL, Python, machine learning case studies) alongside a deep commitment to the editorial mission. Candidates must demonstrate they can build fast, innovative data products (like content recommendations) while showing zero tolerance for burnout culture and a high regard for work-life boundaries."
+  },
+  "last_attempt_at": 1784682821,
   "last_evidence_at": 1784676546,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "8ddb9bda1b",
+    "238ad01ae1"
+   ],
+   "value": "Headquartered in New York City. For technical roles requiring an in-person element, a standard hybrid schedule is expected at the Manhattan office at 620 8th Avenue. Remote work availability is not confirmed for all positions but is not expressly stated as full-time remote."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "8ddb9bda1b",
+    "238ad01ae1"
+   ],
+   "value": "To seek the truth and help people understand the world."
+  },
   "name": "The New York Times",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "238ad01ae1"
+   ],
+   "value": "Estimated: Deliberately fast and collaborative, but not frantic. In Games and subscriptions, squads iterate quickly on A/B tests and new features, but the newsroom influences an intellectual, thoughtful culture that avoids the unnecessary chaos of ad-tech high-burnout startups."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "8ddb9bda1b",
+    "238ad01ae1"
+   ],
+   "value": "Digital and print news products (NYTimes.com, The New York Times app), the Times Machine archival product, standalone apps for specific interests like Games and Cooking, NYT Audio, and Wirecutter product reviews. Its journalism spans text, interactive data visualizations, podcasts, video, and newsletters."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25–30 days per year combined (PTO + sick/care days plus summer holidays) for new corporate employees, given the influence of the NewsGuild/tech union contracts. Individual casual leave is generally respected with no stigma."
   },
+  "refresh_after": 1789866821,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -182870,7 +183126,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Strong work-life boundaries absent official shutdowns. Most major U.S. holidays are off, and technical teams typically grant liberal use of leave for the last week of December, though not a guaranteed company-wide shutdown outside of essential news operations."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature, publicly-traded enterprise with over 5,000 employees. The company is in a growth phase focused on expanding digital subscription bundles past 15 million subscribers."
   },
   "sources": [
    {
@@ -182934,14 +183195,43 @@
     "url": "https://job-boards.greenhouse.io/thenewyorktimes/jobs/4713043005"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: A large public institution typically sponsoring work visas (H-1B, etc.) for specialized technical roles. Since external job postings often omit specific sponsorship wording, applicants should confirm with the recruiter, but it is highly likely for competitive AI/Data Science roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "8ddb9bda1b",
+    "238ad01ae1"
+   ],
+   "value": "The New York Times is a global media organization dedicated to seeking the truth and helping people understand the world through independent journalism. It operates as a publicly traded company that generates revenue primarily by selling digital and print subscriptions, along with advertising and other ancillary services."
+  },
+  "synthesized_evidence_sha": "21aced551c64a47a",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "238ad01ae1"
+   ],
+   "value": "Software engineering and data science work includes building subscription registration flows, optimizing conversion funnels, developing the Games platform (e.g. Wordle, Connections), building recommendation and personalization engines, and analyzing large datasets to drive product decisions. Roles span full-stack web, mobile apps, machine learning, and data analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676546,
   "web_search_url": "https://duckduckgo.com/?q=The+New+York+Times+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "8ddb9bda1b",
+    "238ad01ae1"
+   ],
+   "value": "This is a top-tier AI/Data Science opportunity for technical new grads seeking powerful brand prestige (NYT) and high compensation, without the toxic 'move fast and break things' culture. It offers a mission-driven environment that truly values fact-based creativity and respects personal time through a predictable, hybrid NYC schedule."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5. Candidate feedback and union representation typically result in an exceptional Work-Life-Like balance, respectful sane hours, and strong boundaries compared to Big Tech. Night/weekend work is limited to specific on-call roles."
   }
  },
  "the nuclear company": {
