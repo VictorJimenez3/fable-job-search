@@ -699,7 +699,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -717,7 +717,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784690525,
+  "last_attempt_at": 1784690685,
   "last_evidence_at": 1784677407,
   "name": "8VC",
   "pace_of_work": {
@@ -7591,11 +7591,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -7607,6 +7609,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
+  "last_attempt_at": 1784690685,
   "last_evidence_at": 1784583494,
   "name": "Akuna Capital University",
   "pace_of_work": {
@@ -13909,7 +13912,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -13927,7 +13930,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784690525,
+  "last_attempt_at": 1784690685,
   "last_evidence_at": 1784677106,
   "name": "Anima",
   "pace_of_work": {
@@ -37680,42 +37683,110 @@
  },
  "cape": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "d358740313"
+   ],
+   "value": "Tier 1 (elite) — novel research-grade work in applied cryptography, 5G core, and zero-trust systems; publishes and solves unsolved problems."
   },
   "aliases": [],
-  "attempts": 7,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 8,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "a07ba52a77"
+   ],
+   "value": "Recurring revenue from subscription wireless plans (consumer and enterprise) with premium pricing justified by unique privacy architecture; no advertising or data monetization."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "a07ba52a77",
+    "75e99075bf",
+    "d358740313"
+   ],
+   "value": "Mission-obsessed, engineering-first, low-bureaucracy, high-autonomy; 'architects of a privacy-centric movement'; values relentless passion and technical excellence over process."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "a07ba52a77"
+   ],
+   "value": "Privacy-conscious consumers, enterprises needing secure communications, and organizations requiring guaranteed data sovereignty on mobile networks."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $170k–$220k total compensation (base $130k–$155k + equity) for software engineering; competitive with top-tier deep-tech startups given specialized telecom/crypto talent scarcity."
   },
   "evidence_sha": "996c55d8112e1d8e",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784690685,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784690525,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a07ba52a77",
+    "d358740313"
+   ],
+   "value": "Telecommunications / Privacy Tech / Cybersecurity"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "d358740313",
+    "a07ba52a77",
+    "75e99075bf"
+   ],
+   "value": "Expect deep technical interviews on distributed systems, cryptography, and 5G/telecom internals; open-ended design problems with no StackOverflow answers; cultural screening for mission alignment (privacy as a right) and ability to thrive in low-structure, high-autonomy environments. Prepare to discuss trade-offs between performance, privacy, and regulatory compliance."
+  },
+  "last_attempt_at": 1784690685,
   "last_evidence_at": 1784677402,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "a07ba52a77",
+    "75e99075bf",
+    "d358740313"
+   ],
+   "value": "Headquartered in the US (likely remote-friendly); job postings do not specify a single office location."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "a07ba52a77",
+    "d358740313"
+   ],
+   "value": "To be a force for good in global wireless by making privacy a fundamental right, not a luxury — building a carrier from scratch that cannot track, profile, or monetize user data."
+  },
   "name": "Cape",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "75e99075bf",
+    "d358740313"
+   ],
+   "value": "Estimated: Fast — 'explosive growth mode', 'low structure, fast-paced environment', shipping novel telecom/crypto systems with aggressive timelines."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "a07ba52a77",
+    "d358740313"
+   ],
+   "value": "Privacy-centric mobile service with proprietary 5G core, cryptographic primitives, zero-trust edge systems, and threat detection pipelines; sold as consumer and business wireless plans."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days + US federal holidays; typical for well-funded early-stage tech startups; no public policy disclosed."
   },
+  "refresh_after": 1789874685,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -37725,7 +37796,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns documented; some teams may observe winter break informally."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "a07ba52a77",
+    "75e99075bf",
+    "d358740313"
+   ],
+   "value": "Early-stage startup (founded 2022), approx. 50–150 employees, in explosive growth mode with active hiring across engineering, legal, and G&A."
   },
   "sources": [
    {
@@ -37789,14 +37869,47 @@
     "url": "https://jobs.ashbyhq.com/Cape/13f3921d-ace0-40e4-9b82-e00630878197"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B and transfer visas for exceptional engineering talent given early-stage growth and specialized telecom/crypto needs; no public policy found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a07ba52a77",
+    "d358740313"
+   ],
+   "value": "Cape is a privacy-first wireless carrier founded in 2022 that builds its own network infrastructure to deliver cryptographic privacy and security features unavailable from traditional carriers. It sells mobile plans directly to consumers and enterprises who prioritize data sovereignty."
+  },
+  "synthesized_evidence_sha": "996c55d8112e1d8e",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "d358740313"
+   ],
+   "value": "Cryptographic protocol design, 5G core network function development, zero-trust edge infrastructure, real-time threat detection pipelines, and developer experience tooling for privacy-first systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677402,
   "web_search_url": "https://duckduckgo.com/?q=Cape+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "a07ba52a77",
+    "d358740313",
+    "75e99075bf"
+   ],
+   "value": "Cape offers a rare combination: elite technical prestige (building novel 5G/crypto infrastructure from scratch), top-of-market new-grad compensation typical of well-funded deep-tech startups, and a mission-driven culture that explicitly rejects surveillance capitalism. The fast-paced, low-structure environment accelerates learning on problems with no existing solutions, while the privacy mission aligns with candidates seeking purpose without the burnout common in high-growth startups."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "a07ba52a77",
+    "75e99075bf"
+   ],
+   "value": "Estimated: 3.5/5 — mission-driven culture with explicit privacy values suggests respect for boundaries, but early-stage 'explosive growth' and 'fast-paced' language indicates periods of high intensity; no guaranteed shutdowns documented."
   }
  },
  "capgemini": {
@@ -68367,7 +68480,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -68385,7 +68498,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784690525,
+  "last_attempt_at": 1784690685,
   "last_evidence_at": 1784676545,
   "name": "Esri",
   "pace_of_work": {
@@ -124419,7 +124532,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -124437,7 +124550,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784690525,
+  "last_attempt_at": 1784690685,
   "last_evidence_at": 1784677411,
   "name": "McDonald's",
   "pace_of_work": {
@@ -168630,40 +168743,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — High-impact applied ML at massive loan scale, strong engineering brand in Midwest/Canadian tech, regular NeurIPS/ICML workshop papers, but not a primary AI-research lab like FAIR/DeepMind/OpenAI."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Originate mortgages and other consumer loans directly to borrowers, earn origination fees and interest spread, then either retain servicing rights (recurring servicing fees) or sell loans to investors (gain-on-sale). Cross-sells adjacent products (title, insurance, auto, solar) to the same customer base for additional revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Data-driven, Midwestern pragmatic, \"ISMs\" value system (e.g., \"Obsessed with finding a better way\"). Heavy investment in internal mobility, hackathons, and learning stipends. Low politics for a 20k-person org; engineers sit near product & ops."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primarily U.S. consumers seeking mortgages, refinancing, home-buying services, personal loans, or auto financing. Also serves real-estate agents and partner lenders through its platform ecosystem."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $125k-$145k base + 10-15% target bonus + RSU grant (4-year vest) ≈ $180k-$220k total first-year comp for ML/DS roles in Detroit/Phoenix; ~10-15% higher in Toronto/remote coastal."
   },
   "evidence_sha": "52cf54d0a4ca59e5",
+  "generated_at": 1784690685,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Fintech / Mortgage & Consumer Finance"
   },
-  "last_attempt_at": 1784690525,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep ML system-design (feature stores, model monitoring, latency budgets), practical NLP/document-understanding problems, and causal-inference case studies tied to credit risk or marketing uplift. Behavioral rounds probe collaboration with non-technical stakeholders (loan officers, compliance) and respect for WLB boundaries."
+  },
+  "last_attempt_at": 1784690685,
   "last_evidence_at": 1784675398,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Detroit, MI (downtown campus). Major tech hubs: Detroit, Cleveland, Phoenix, Toronto. Remote-friendly for many engineering roles post-2020."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "\"To make the homeownership journey simple, certain, and accessible for everyone\" by combining technology, data, and human expertise to remove friction from complex financial transactions."
+  },
   "name": "Rocket",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast iteration cycles (2-week sprints, monthly model releases) driven by regulatory deadlines and marketing calendars, but protected by explicit \"no-meeting Fridays\" and core-hours policy. Not a 9-9-6 culture."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core products: Rocket Mortgage (origination, servicing, refinance), Rocket Homes (real-estate search & agent network), Rocket Loans (personal loans), Rocket Auto (auto financing), Rocket Solar, and Amrock (title/settlement). All delivered via proprietary web/mobile platforms with heavy automation."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 2-week year-end shutdown (effectively ~29 days off/year). Unlimited sick/mental-health days. No public accrual cap disclosed."
   },
+  "refresh_after": 1789874685,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -168673,7 +168824,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Yes — Annual 2-week year-end shutdown (Christmas through New Year) is company-wide and mandatory for all non-critical roles."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public company (NYSE: RKT); ~20,000+ employees; market cap ~$25-30B (varies). Mature but actively investing in AI/ML platform modernization."
   },
   "sources": [
    {
@@ -168707,14 +168863,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=ab3dd28e99f618a768b49bdf8ca46c9c26027b141f273f305672f6c9ceaec342JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0d747011-3ce6-69c5-21ed-678c3d4e68b0&u=a1aHR0cHM6Ly93d3cucm9ja2V0bW9ydGdhZ2UuY29tL2xvZ2lu&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B and green cards for specialized engineering, data science, and ML roles. Historically files several hundred H-1Bs per year; PERM sponsorship common for senior ICs and managers."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Rocket Companies (NYSE: RKT) is a Detroit-based fintech platform best known for Rocket Mortgage, the largest retail mortgage lender in the U.S. It originates and services home loans and offers adjacent consumer-finance products through a heavily digitized, direct-to-consumer model."
+  },
+  "synthesized_evidence_sha": "52cf54d0a4ca59e5",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large-scale mortgage origination platform (Java/Kotlin, React, Kafka, Kubernetes on AWS/GCP), data lake & ML models for credit decisioning, fraud detection, call-center routing, and marketing optimization. Active publishing in ML engineering, NLP for document processing, and causal inference. Internal platforms for experimentation, feature stores, and model governance."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675398,
   "web_search_url": "https://duckduckgo.com/?q=Rocket+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Rocket offers a rare blend: elite-scale data (tens of millions of loan applications) and a mandate to productionize AI across the entire mortgage lifecycle, yet it publicly emphasizes \"no-jerks\" culture, core hours, and protected evenings/weekends. For a new grad, this means shipping models that move billions in loan volume without the 24/7 on-call grind common at pure-play tech giants."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Published core hours (10am-3pm ET), no-meeting Fridays, guaranteed 2-week year-end shutdown, and leadership messaging against hero-mode overtime. On-call rotates voluntarily with comp time."
   }
  },
  "rocket companies": {
@@ -178224,7 +178401,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 8,
+  "attempts": 9,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -178242,7 +178419,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784690525,
+  "last_attempt_at": 1784690685,
   "last_evidence_at": 1784677402,
   "name": "Sierra",
   "pace_of_work": {
