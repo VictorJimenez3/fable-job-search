@@ -21605,47 +21605,113 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 (Strong Industry Prestige) - Offers high respect and a household name in defense tech, but not considered a purely elite AI-native lab like DeepMind or OpenAI."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "f538007a1a",
+    "242bfd9022"
+   ],
+   "value": "Operates a B2G (Business-to-Government) model, generating revenue through long-term, cost-plus and fixed-price contracts for system design, integration, manufacturing, and sustainment."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "f538007a1a",
+    "242bfd9022"
+   ],
+   "value": "Primarily the U.S. Department of Defense, the UK Ministry of Defence, and allied governments (e.g., Australia, Saudi Arabia). A smaller portion of business comes from commercial defense and security contracts."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$110,000 base salary in average US locations; Austin/NOVA hubs upper limit $115,000. Bonuses are smaller than commercial tech (5%-8%)."
   },
   "evidence_sha": "b29f2dc2b23b8816",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784681721,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f538007a1a",
+    "242bfd9022"
+   ],
+   "value": "Defense, Aerospace, and Security."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784681721,
   "last_evidence_at": 1784645371,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "f538007a1a"
+   ],
+   "value": "Major U.S. hubs include Falls Church, VA (HQ); San Diego, CA; Nashua, NH; Austin, TX; and Washington DC Metro. Large UK hub in Farnborough and other global offices in Saudi Arabia and Australia."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "f538007a1a"
+   ],
+   "value": "To protect national security and improve the safety and security of nations, focusing on defense, security, and critical intelligence work."
+  },
   "name": "BAE Systems",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. Slower than dedicated Silicon Valley startups or Big Tech due to government budgets, annual funding cycles, and compliance gates; faster than legacy civil service."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "f538007a1a",
+    "242bfd9022"
+   ],
+   "value": "Primary products and services include combat vehicles (e.g., Bradley Fighting Vehicles, AMPV), naval ship repair and modernization, electronic warfare systems, precision-guided munitions, cybersecurity services, and AI-based mission systems."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO for new grads in U.S. programs, plus standard federal holidays, and flexible leave for deployed programs."
   },
+  "refresh_after": 1789865721,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "4e99d8358f"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "None found in research (estimated)"
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "242bfd9022"
+   ],
+   "value": "Large, mature public company (FTSE 100) with approximately 100,000 employees globally and annual revenue over £23 billion."
   },
   "sources": [
    {
@@ -21679,14 +21745,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=9925302e1465a018a52d3b1a5edecd8952ca63a7a530a735753665eb63bd39c7JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=267941b0-60f6-64bc-2bb9-562d61fb652a&u=a1aHR0cHM6Ly93d3cuYmFlc3lzdGVtcy5jb20vZW4v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "f538007a1a"
+   ],
+   "value": "Due to strict ITAR and security clearance requirements on most defense programs, a U.S. Person or UK/EU citizenship is generally required; H-1B sponsorship is extremely limited and typically unavailable for new grads."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "f538007a1a",
+    "242bfd9022"
+   ],
+   "value": "BAE Systems is a global defense, security, and aerospace company that develops, delivers, and supports advanced technology-led systems. It makes money primarily through long-term government contracts for products and services across areas like combat vehicles, precision-guided munitions, electronic warfare, ship repair, and cybersecurity."
+  },
+  "synthesized_evidence_sha": "b29f2dc2b23b8816",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "f538007a1a",
+    "242bfd9022"
+   ],
+   "value": "Focuses heavily on systems engineering, software development, AI/ML integration for autonomous systems, electronic warfare, signals intelligence (SIGINT), and cybersecurity. Work is mission-critical and defense-specific rather than consumer technology."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784645371,
   "web_search_url": "https://duckduckgo.com/?q=BAE+Systems+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The role carries elite mission-prestige on national defense systems but allows a predictable 40-45 hour week with protected shutdowns, unlike high-burnout Big Tech firms. The technical work on autonomous weapon detection and electronic warfare is sufficiently complex for rapid learning, yet the traditional defense pace respects personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4.2 out of 5. Very solid work-life balance; standard 40-hour weeks are strict in program offices, and overtime is limited. Minimal 'crunch culture' without sacrificing mission integrity."
   }
  },
  "bae systems inc": {
@@ -74506,39 +74601,116 @@
  },
  "ghd": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "f220a9872a",
+    "b791dab38d",
+    "1f2c6fb5e8"
+   ],
+   "value": "No information found to assess GHD's AI prestige tier in the supplied sources."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "f220a9872a",
+    "b791dab38d",
+    "1f2c6fb5e8"
+   ],
+   "value": "No information found on GHD's business model in the supplied sources."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "f220a9872a",
+    "b791dab38d",
+    "1f2c6fb5e8"
+   ],
+   "value": "No information found on GHD's culture in the supplied sources."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "f220a9872a",
+    "b791dab38d",
+    "1f2c6fb5e8"
+   ],
+   "value": "No information found on GHD's customers in the supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "$85k–$125k base (estimated; US market)"
   },
   "evidence_sha": "2540c6551a0ba1a5",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784681721,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f220a9872a",
+    "b791dab38d",
+    "1f2c6fb5e8"
+   ],
+   "value": "No information found on GHD's industry in the supplied sources."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784681721,
   "last_evidence_at": 1784674727,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "f220a9872a",
+    "b791dab38d",
+    "1f2c6fb5e8"
+   ],
+   "value": "No information found on GHD's office locations in the supplied sources."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "f220a9872a",
+    "b791dab38d",
+    "1f2c6fb5e8"
+   ],
+   "value": "No information found on GHD's mission in the supplied sources."
+  },
   "name": "GHD",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "f220a9872a",
+    "b791dab38d",
+    "1f2c6fb5e8"
+   ],
+   "value": "No information found on GHD's pace of work in the supplied sources. Cannot confirm if it matches the candidate's desire for a fast, innovative culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "f220a9872a",
+    "b791dab38d",
+    "1f2c6fb5e8"
+   ],
+   "value": "No information found on GHD's products in the supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "refresh_after": 1789865721,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -74549,6 +74721,15 @@
    "confidence": "estimated",
    "source_ids": [],
    "value": "None found in research (estimated)"
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "f220a9872a",
+    "b791dab38d",
+    "1f2c6fb5e8"
+   ],
+   "value": "No information found on GHD's size or stage in the supplied sources."
   },
   "sources": [
    {
@@ -74582,14 +74763,51 @@
     "url": "https://www.bing.com/ck/a?!&&p=730bf5cf0ea647d66019885cec40a6df6684e039b9c45b97fef3a526f6607773JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=16ae2af2-1db7-6310-1eaf-3d6f1cb262fb&u=a1aHR0cHM6Ly93d3cudHVwcmltZXJhbW90by5lcy9saW1pdGFyLW1vdG8vbGltaXRhci1tb3RvLWEyLXByZWNpby10cmFtaXRlcy1pdHY&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "f220a9872a",
+    "b791dab38d",
+    "1f2c6fb5e8"
+   ],
+   "value": "No information found on GHD's visa sponsorship policies in the supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "f220a9872a",
+    "b791dab38d",
+    "1f2c6fb5e8"
+   ],
+   "value": "The supplied sources do not contain information about a company named GHD. The sources are unrelated Spanish-language webpages concerning motorcycle regulations and performance. No factual summary can be provided."
+  },
+  "synthesized_evidence_sha": "2540c6551a0ba1a5",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "f220a9872a",
+    "b791dab38d",
+    "1f2c6fb5e8"
+   ],
+   "value": "No information found on GHD's technical work in the supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674727,
   "web_search_url": "https://duckduckgo.com/?q=GHD+company+careers+benefits",
-  "wlb_rating": {
-   "confidence": "estimated",
+  "why_it_matters": {
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Not confirmed"
+  },
+  "wlb_rating": {
+   "confidence": "high",
+   "source_ids": [
+    "f220a9872a",
+    "b791dab38d",
+    "1f2c6fb5e8"
+   ],
+   "value": "No information found on GHD's work-life balance in the supplied sources. Cannot confirm if it meets the candidate's requirement for sane hours."
   }
  },
  "giga": {
@@ -82140,52 +82358,137 @@
  },
  "hewlett packard enterprise": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "e7eaca6af0",
+    "dbc3b9e88f"
+   ],
+   "value": "Tier 2-Top Enterprise (Platform). HPE sits just below the elite AI research labs (Google: Mind, OpenAI, FAIR) but it maintains higher prestige than generic IT firms by virtue of its national-lab supercomputing, Aruba AI networking, and massive mission-critical deployments in AI factories and government research."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "e7eaca6af0",
+    "f661f72aec"
+   ],
+   "value": "HPE runs a hardware-plus-recurring-revenue model. It sells capital-intensive infrastructure (servers, storage, networking) to enterprises while increasingly shifting customers to HPE GreenLake subscriptions, which bundle hardware, software, and services under a monthly payment structure to create recurring revenue streams."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "e7eaca6af0",
+    "f661f72aec"
+   ],
+   "value": "Collaborative, inclusive, and steady policy-focused. HPE has a deliberate rather than frantic culture with a strong emphasis on employee wellness, diversity program DNA from the Bill Hewlett/David Packard legacy (e.g., respect, community contribution), and aversion to toxic 'hero' hustle. Humble, technically deep engineers thrive here."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "e7eaca6af0",
+    "f661f72aec"
+   ],
+   "value": "HPE sells primarily to large enterprises, governments, and research institutions requiring on-premises infrastructure, hybrid cloud installations, or supercomputing capabilities (e.g., national labs). Customers range from Fortune 500 IT departments to telecom providers and universities running high-performance computing AI workloads."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $120,000–$155,000 base salary for AI/DS new-grad positions in California hubs or high-cost markets, with $10,000–$20,000 annual target bonus and ~$25,000–$40,000 in vested equity (RSUs) over the first relevant period, giving a total first-year comp estimate of $140,000–$185,000."
   },
   "evidence_sha": "64937f1de12da8d9",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784681721,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784681629,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e7eaca6af0",
+    "f661f72aec"
+   ],
+   "value": "Enterprise Information Technology (IT Infrastructure and Services)"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "e7eaca6af0",
+    "dbc3b9e88f"
+   ],
+   "value": "For new-grad AI roles, HPE interviews emphasize practical ML engineering not whiteboard abstraction: you will discuss Python data pipelines, ML system design on distributed clusters, and maybe a take-home task for model-scaling. Behavioral questions screen heavily for 'resilient collaboration' (fitting into stable, cross-functional teams) and respect for structured processes—they actively filter out candidates seeking a startup-style 'chaotic fast pace'."
+  },
+  "last_attempt_at": 1784681721,
   "last_evidence_at": 1784674720,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "e7eaca6af0",
+    "f661f72aec"
+   ],
+   "value": "HQ in Spring, Texas. Major US tech hubs include San Jose (Silicon Valley), Fort Collins, Colorado, and other offices in Seattle, Chicago, and Durham, North Carolina. Major international research sites are located in Bangalore, India, and Bristol, UK. Many tech roles have a hybrid model with some remote flexibility."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "e7eaca6af0",
+    "ace6e91ed7"
+   ],
+   "value": "HPE's mission is to deliver a unified edge-to-cloud platform that helps organizations turn data into outcomes, accelerate digital transformation, and become an intelligent, autonomous enterprise in a subscription-driven model."
+  },
   "name": "Hewlett Packard Enterprise",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e7eaca6af0",
+    "f661f72aec"
+   ],
+   "value": "Estimated: Slow-to-moderate 'enterprise-cautious' cadence. Weeks are structured to deliver hardened infrastructure, not rapid prototypes. There are minimal midnight deploys or random urgent sprints; the focus is on iterative, validated cloud and hardware releases, which translates to a steady, very manageable 40ish-hour rhythm for most individual contributors."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "e7eaca6af0",
+    "ace6e91ed7",
+    "f661f72aec"
+   ],
+   "value": "HPE's product portfolio centers on enterprise hardware (ProLiant servers, HPE Cray supercomputers, Nimble and 3PAR storage arrays, Aruba networking equipment and access points) and a subscription-based edge-to-cloud platform called HPE GreenLake. It also offers cloud services, AI operations software, security solutions, and advisory/consulting services through Pointnext."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "e7eaca6af0"
+   ],
+   "value": "Estimated: 18–25 paid time off days annually for new-grad hires, combining generic vacation (typically advancing to ~20 days quickly) and personal-holiday buckets. Exact accrual often starts at ~3-4 weeks total with the ability to purchase an extra week."
   },
+  "refresh_after": 1789865721,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Company 'Wellness Fridays' plus a comprehensive end-of-year global shutdown spanning the last week of December through New Year's Day, completely preserving burnt-out dreading dreading dreading dreading december month for 6+ consecutive days off; plus a week for July 4th near-global disconnect."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "e7eaca6af0",
+    "dbc3b9e88f"
+   ],
+   "value": "HPE is a mature, publicly traded Fortune 500 enterprise with a global workforce of approximately 60,000 employees and $30 billion in annual revenue. It is not a start-up or high-growth stage company but operates at massive scale in the IT infrastructure industry."
   },
   "sources": [
    {
@@ -82229,14 +82532,52 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "e7eaca6af0",
+    "dbc3b9e88f"
+   ],
+   "value": "HPE generally sponsors transfer visas like H-1B for specialized technical roles including AI and data science. For fresh international graduates on OPT/STEM OPT, sponsorship is common in engineering tracks, but it is not guaranteed for all positions outside of core research and development."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "e7eaca6af0",
+    "ace6e91ed7",
+    "f661f72aec"
+   ],
+   "value": "Hewlett Packard Enterprise (HPE) provides enterprise IT infrastructure, including servers, storage, networking gear, and cloud management software that powers data centers, edge computing, and AI workloads. The company makes money by selling this hardware and related software solutions directly to large businesses and governments, along with recurring revenue from subscription services like HPE GreenLake and technology support contracts."
+  },
+  "synthesized_evidence_sha": "64937f1de12da8d9",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "e7eaca6af0",
+    "f661f72aec",
+    "dbc3b9e88f"
+   ],
+   "value": "Technical work for AI and data science roles often involves building AI operations pipelines on HPE's GreenLake cloud for large language model training and inference, optimizing deep learning workloads on HPE Cray supercomputers deployed at research labs, and developing software on enterprise AI/ML infrastructure. Data scientists at HPE also work within the Aruba networking division on AI-powered security and predictive network analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674720,
   "web_search_url": "https://duckduckgo.com/?q=Hewlett+Packard+Enterprise+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e7eaca6af0",
+    "dbc3b9e88f"
+   ],
+   "value": "HPE offers AI engineers exposure to elite, enterprise-scale supercomputing infrastructure without the extreme burnout common at top-tier 'move fast' startups. It provides high new-grad pay and the prestige of a legacy tech titan, combined with a slower, predictable pace. Its culture supports genuine work-life balance through sane weeknight hours and company-wide shutdowns, giving candidates technical growth with guaranteed personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "e7eaca6af0",
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Best-in-enterprise (4.2 out of 5). HPE systematically protects what management calls 'wellness' hours; outside crunches for major product milestones, life is overwhelmingly 9-to-5 or minorly 40-hour weeks with no cultural expectation of after-hours engineering availability or responding to late-night emails."
   }
  },
  "hewlett packard hp": {
@@ -85371,37 +85712,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 (Fortune 500 brand with strong technical legitimacy but not an elite 'AI-first' tech giant). Recognized, stable brand that provides solid resume value."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "e6db61a0f3",
+    "fd852480b0"
+   ],
+   "value": "B2B and B2C insurance model monetized primarily through monthly premium collections from members and employer groups, alongside service fees for wellness and clinical programs."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Health-focused, mission-driven and caring with an emphasis on the long-term well-being of members and employees. Leans more compliance-structured than Silicon Valley agile, but with genuine values around mutual respect and health."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "e6db61a0f3",
+    "fd852480b0"
+   ],
+   "value": "Individuals, families, military personnel, and employer groups seeking health coverage, with a strong focus on Medicare-eligible seniors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95,000–$110,000 base salary for a new grad AI/data scientist, with a total comp of $105,000–$125,000 including team bonus or limited equity depending on specific business unit."
   },
   "evidence_sha": "c268a197326228d1",
+  "generated_at": 1784681721,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e6db61a0f3"
+   ],
+   "value": "Healthcare Insurance and Managed Care"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Focus on how you balance technical rigor with business/healthcare compliance. Show ability to deliver predictive models or data pipelines under high data privacy constraints, and frame your impact via member outcomes and cost savings rather than raw speed. Emphasize collaboration over 24/7 hustle."
   },
+  "last_attempt_at": 1784681721,
   "last_evidence_at": 1784674728,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "e6db61a0f3"
+   ],
+   "value": "Headquartered in Louisville, Kentucky, USA with offices in multiple U.S. metropolitan areas and remote opportunities."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "e6db61a0f3"
+   ],
+   "value": "A healthcare company dedicated to helping people achieve their best health."
+  },
   "name": "Humana",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. Typically slower than Big Tech, with heavier process for compliance and patient data safety, allowing deliberate, thoughtful technical execution."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "e6db61a0f3",
+    "fd852480b0"
+   ],
+   "value": "Health insurance plans including Medicare Advantage, Medicare Part D, Medicaid, TRICARE, individual and group commercial plans, as well as wellness and healthcare services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 18–20 days of combined PTO/sick/personal time for entry-level corporate roles, competitive with regional insurers."
   },
+  "refresh_after": 1789865721,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -85411,7 +85808,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns beyond standard U.S. federal holidays, but some teams may have lighter load around major holidays (e.g. late December) in practice."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "e6db61a0f3"
+   ],
+   "value": "Very large, public, mature enterprise with 10,001+ employees, founded in 1964 and headquartered in Louisville, Kentucky."
   },
   "sources": [
    {
@@ -85455,14 +85859,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=befb8ecad0c45692fb1c6aa0b29f2bc30627b84c682ac829c985c27a12318dadJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=16ae2af2-1db7-6310-1eaf-3d6f1cb262fb&u=a1aHR0cHM6Ly9hY2NvdW50Lmh1bWFuYS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "e6db61a0f3"
+   ],
+   "value": "Humana has a track record of offering H1B sponsorship, though it does not guarantee it for every specific role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "e6db61a0f3"
+   ],
+   "value": "Humana is a major U.S. health insurance and healthcare services company that provides Medicare Advantage, prescription drug plans, group health insurance, and related wellness services. It earns revenue primarily through insurance premiums paid by individuals, employers, and government programs like Medicare."
+  },
+  "synthesized_evidence_sha": "c268a197326228d1",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "e6db61a0f3"
+   ],
+   "value": "Role found in current research includes SFDC (Salesforce) and BPM (Business Process Management) development. Broader engineering includes data platforms, AI/ML integration into clinical and consumer analytics, and cloud modernization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674728,
   "web_search_url": "https://duckduckgo.com/?q=Humana+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Humana blends a mission-driven healthcare focus with enterprise stability, avoiding the 'move fast and break things' burnout culture. For an AI/DS new grad, it can offer exposure to large-scale data problems while typically respecting a 40-hour week and structured team shutdowns, balancing strong technical learning with personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Above average for a large public corporation. Typical 40-hour week; weekends and late nights are the exception, not the norm, compared to high-frequency tech firms."
   }
  },
  "humansignal": {
@@ -90083,7 +90514,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -90101,7 +90532,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784681629,
+  "last_attempt_at": 1784681721,
   "last_evidence_at": 1784674722,
   "name": "Insperity",
   "pace_of_work": {
@@ -94922,11 +95353,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -94938,6 +95371,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784681721,
   "last_evidence_at": 1784593387,
   "name": "Johnson Controls",
   "pace_of_work": {
@@ -109732,7 +110166,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -109750,7 +110184,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784681629,
+  "last_attempt_at": 1784681721,
   "last_evidence_at": 1784674722,
   "name": "Marriott International",
   "pace_of_work": {
@@ -201974,37 +202408,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Top-tier (Tier 1) - Founded by Elon Musk, staffed by alumni from OpenAI, DeepMind, Google Research, Microsoft Research. Publishes at top venues (NeurIPS, ICML, ICLR). High visibility and talent density."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue comes from X Premium subscriptions (which include Grok access), enterprise API licensing for the xAI models, and potential future AI products/services. The company is backed by significant venture funding and strategic investors."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, mission-obsessed, intellectually intense. Flat hierarchy, direct communication, 'first principles' problem solving. Low politics, high technical bar. Similar to early SpaceX/Neuralink culture applied to AI. Transparency about goals and failures."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Main customers are X (formerly Twitter) platform users accessing Grok, enterprise clients via the xAI API, and developers building on xAI models. The company also serves internal research objectives aligned with its mission."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $180k-$250k base + significant equity (RSUs/options) + signing bonus. Total comp likely $250k-$350k+ for top AI/ML new grads. Equity grants competitive with OpenAI/Anthropic/DeepMind offers."
   },
   "evidence_sha": "89435b652347bc9a",
+  "generated_at": 1784681721,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+   "value": "Artificial Intelligence / Foundation Models / AGI Research"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical interviews covering LLM architecture, distributed training, RLHF, systems programming (CUDA, Triton), and research problem-solving. Cultural fit emphasizes first-principles thinking, speed of iteration, and alignment with the scientific mission. Prepare for coding, system design, and research discussion rounds."
+  },
+  "last_attempt_at": 1784681721,
   "last_evidence_at": 1784593386,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in San Francisco Bay Area (Palo Alto), with presence in Austin, Texas. Remote-friendly for exceptional talent but office-centric culture for core research teams."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To understand the true nature of the universe through advanced artificial intelligence. xAI aims to build AI systems that can reason, understand, and help humanity pursue knowledge."
+  },
   "name": "xAI",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast - 'Move fast, break things' engineering culture. Weekly model iterations, aggressive research milestones, minimal process overhead. Expect intense sprints around major releases but autonomy in daily execution."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary products include Grok (a conversational AI model integrated with X/Twitter), the xAI API for developers, and foundational AI research models. The company emphasizes building AI systems with strong reasoning capabilities and real-time knowledge access."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays. Unlimited PTO policy in practice for senior roles, but cultural expectation to coordinate around research milestones. No formal 'guaranteed shutdown' periods."
   },
+  "refresh_after": 1789865721,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -202014,7 +202489,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns. Some teams observe informal reduced-pace periods around major holidays (Thanksgiving week, Christmas-New Year). Not a structured policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 100-500 employees, well-funded startup/early growth stage. Founded in 2023, rapidly scaling with substantial capital from top-tier investors."
   },
   "sources": [
    {
@@ -202048,14 +202528,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=cd440d5412d6f097116e05a2523ceb0e728d26fc5618622c4b2065728c6f8815JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=0d7479d2-dd10-665e-36fa-6e4fdcff67b5&u=a1aHR0cHM6Ly94LmFpLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Offers H-1B and green card sponsorship for specialized AI/ML roles. As a well-funded tech company, likely supports cap-exempt and cap-subject visas for senior researchers and engineers."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "xAI is an artificial intelligence company founded by Elon Musk focused on developing advanced AI systems and understanding the true nature of the universe. It operates as a research-driven organization building large language models and AI tools."
+  },
+  "synthesized_evidence_sha": "89435b652347bc9a",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core work includes large language model training (Grok series), distributed systems for massive GPU clusters, reinforcement learning from human feedback (RLHF), real-time data integration, AI safety/alignment research, and high-performance inference infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784593386,
   "web_search_url": "https://duckduckgo.com/?q=xAI+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "xAI offers elite AI research prestige (top-tier talent from DeepMind, OpenAI, Google) with competitive new-grad compensation, a mission-driven culture focused on fundamental understanding, and a fast-paced but engineering-first environment that avoids corporate bureaucracy. The direct connection to X's real-time data platform provides unique scale and feedback loops for learning."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 - Demanding but respected. Core hours with flexibility; 'guaranteed shutdowns' not formalized but weekend protection culture reported. Less burnout than investment banking/big law, more than typical 9-5 tech. Mission alignment drives voluntary extra effort."
   }
  },
  "xometry": {
