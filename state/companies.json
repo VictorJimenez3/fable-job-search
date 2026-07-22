@@ -7215,6 +7215,19 @@
   "status": "active",
   "token": "shieldai"
  },
+ "lever:shyftlabs": {
+  "ats": "lever",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1784694799,
+  "last_ok": 1784694801,
+  "name": "ShyftLabs",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "shyftlabs"
+ },
  "lever:solopulseco": {
   "ats": "lever",
   "extra": {},
@@ -9399,7 +9412,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1784682416,
+  "last_ok": 1784694818,
   "name": "3M",
   "origin": "seed",
   "probe_attempts": 1,
@@ -9777,7 +9790,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1784682418,
+  "last_ok": 1784694820,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
@@ -11524,7 +11537,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1784682412,
+  "last_ok": 1784694812,
   "name": "Dow",
   "origin": "seed",
   "probe_attempts": 1,
@@ -11617,7 +11630,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1784682406,
+  "last_ok": 1784694807,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -12160,7 +12173,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1784682412,
+  "last_ok": 1784694815,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -12755,6 +12768,22 @@
   "sector": "",
   "status": "active",
   "token": "jci"
+ },
+ "workday:jd:Campus_Career_Site": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd103",
+   "site": "Campus_Career_Site"
+  },
+  "failures": 0,
+  "first_seen": 1784694799,
+  "last_ok": 1784694801,
+  "name": "JINGDONG",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "jd"
  },
  "workday:jeffersonhealth:ThomasJeffersonExternal": {
   "ats": "workday",
@@ -13478,7 +13507,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1784682406,
+  "last_ok": 1784694809,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -14028,6 +14057,23 @@
   "sector": "",
   "status": "active",
   "token": "osu"
+ },
+ "workday:osv-cci:CCICareers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "CCICareers"
+  },
+  "failures": 0,
+  "first_seen": 1784694799,
+  "invalidated_at": 1784694801,
+  "last_ok": 0,
+  "name": "Castleton Commodities International",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "invalid",
+  "token": "osv-cci"
  },
  "workday:osv-edf:Confidential": {
   "ats": "workday",
@@ -14680,6 +14726,22 @@
   "status": "active",
   "token": "rockwellautomation"
  },
+ "workday:rockwoolgroup:ROCKWOOL": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd3",
+   "site": "ROCKWOOL"
+  },
+  "failures": 0,
+  "first_seen": 1784694799,
+  "last_ok": 1784694800,
+  "name": "ROCKWOOL Group",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "rockwoolgroup"
+ },
  "workday:rogersbh:rbhcareer": {
   "ats": "workday",
   "extra": {
@@ -14919,7 +14981,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1784682412,
+  "last_ok": 1784694815,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
