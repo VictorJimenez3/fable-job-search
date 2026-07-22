@@ -47565,40 +47565,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Top-tier — NVIDIA strategic partner, NeurIPS/ICML publications, dedicated research org publishing on clinical LLMs, and recruitment from FAIR, Google Health, and Stanford AIMI."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "SaaS and platform revenue: subscription fees for CommureOS modules, per-seat pricing for Scribe and StrongLine, plus implementation and integration services. Targets enterprise health system contracts with multi-year agreements."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, clinician-adjacent, mission-obsessed. Transparent leadership (weekly AMAs), heavy investment in mentorship (structured 6-month new-grad ramp), and a 'no heroes' ethos that rewards sustainable shipping over heroics. Diverse, inclusive, and unusually candid about healthcare's complexity."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Health systems, academic medical centers, and physician groups across the U.S., including notable deployments at HCA Healthcare, Tenet Health, and various regional health networks."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $170K–$195K base + $30K–$50K sign-on + $80K–$120K 4-year RSU (vesting quarterly). Total Year 1: ~$280K–$365K. Top of market for health AI; comparable to FAANG AI/ML new-grad bands."
   },
   "evidence_sha": "5b260be62fb190a9",
+  "generated_at": 1784684457,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Healthcare Technology / Health AI / Clinical Informatics"
   },
-  "last_attempt_at": 1784684365,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical screens: distributed systems design (FHIR at scale), ML model evaluation for clinical NLP, and pragmatic coding (Go/Python). Behavioral rounds probe ownership in ambiguous, regulated environments. Prepare for a live debugging exercise with real de-identified HL7 data. Demonstrate fluency in healthcare data standards and a clear point of view on AI safety in clinical workflows."
+  },
+  "last_attempt_at": 1784684457,
   "last_evidence_at": 1784583427,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Mountain View, CA. Major hubs: San Francisco, New York, Boston, Denver, and remote-first across U.S. Some roles require proximity to health system clients."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To accelerate healthcare innovation by giving builders the infrastructure they need to create modern, connected care experiences — reducing administrative burden so clinicians can focus on patients."
+  },
   "name": "Commure",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast — weekly releases, 2-week sprints, blameless postmortems. Engineers own services end-to-end. Less bureaucracy than EHR incumbents; more rigor than early-stage startups."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Commure's platform includes CommureOS (health data infrastructure), Commure Scribe (ambient AI clinical documentation), StrongLine (staff safety wearables), and a suite of APIs for patient access, scheduling, and revenue cycle management."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 5 'wellness days' (use-it-or-lose-it). Unlimited sick leave. 12 weeks paid parental leave (all genders). Sabbatical after 4 years (4 weeks paid)."
   },
+  "refresh_after": 1789868457,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -47608,7 +47646,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide shutdown last week of December (paid). Summer 'slow-down' (last two weeks of July) with optional PTO encouraged. No mandatory work during shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Late-stage private (~1,000–1,500 employees). Raised $500M+ across Series A–C; last known valuation ~$3.5B (2024). Backed by General Catalyst, Sequoia, NVIDIA, and health system strategic investors."
   },
   "sources": [
    {
@@ -47642,14 +47685,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=9aa259af814c82bd0ecddf4934258ebeaed2bc987435903f2c08be796cc42ea5JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9jb21tdXJlYWdlbnRzLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B and green cards for engineering and data science roles. Cap-exempt through university-affiliated research collaborations. STEM OPT friendly."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Commure is a healthcare technology company building an AI-powered operating system for healthcare providers, combining data infrastructure, clinical workflow tools, and ambient AI to modernize care delivery operations."
+  },
+  "synthesized_evidence_sha": "5b260be62fb190a9",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large-scale FHIR data platform, real-time HL7/CDA ingestion, ambient AI (LLM fine-tuning for clinical notes), wearable IoT firmware, and high-availability cloud infrastructure (Kubernetes, Kafka, Spark). Strong emphasis on healthcare interoperability standards and compliance (HIPAA, SOC2, HITRUST)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583427,
   "web_search_url": "https://duckduckgo.com/?q=Commure+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Commure offers elite AI prestige (NVIDIA-backed, publishing at top venues) and top-decile new-grad compensation in a mission-driven healthcare context. Its fast, engineering-led culture ships to production weekly, not quarterly, while leadership publicly champions sustainable pace — no mandatory weekends, protected 'no-meeting' blocks, and a track record of avoiding the burnout common in both big tech and health IT consulting."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Core hours 10am–4pm PT, no-meeting Wednesdays, explicit 'shutdown at 6pm' norm for non-on-call. On-call rotation ~1 week/month with 15-min response SLA; compensated with comp time. Quarterly 'recharge weeks' with reduced scope."
   }
  },
  "commvault": {
@@ -120857,7 +120921,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -120875,7 +120939,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784684365,
+  "last_attempt_at": 1784684457,
   "last_evidence_at": 1784674719,
   "name": "Merative",
   "pace_of_work": {
@@ -131451,7 +131515,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -131469,7 +131533,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784684365,
+  "last_attempt_at": 1784684457,
   "last_evidence_at": 1784677183,
   "name": "Nidec",
   "pace_of_work": {
@@ -142390,39 +142454,100 @@
  },
  "pathai": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "2ab5075590",
+    "8909a0e1e7"
+   ],
+   "value": "Top-tier health AI company with strong academic and venture pedigree, frequently ranked alongside elite private AI innovators; brand cachet is high but one step below FAANG-level public prestige because it remains tech-vertical in private markets."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "2ab5075590",
+    "8909a0e1e7"
+   ],
+   "value": "B2B technology and service model that earns money through platform licensing, algorithm co-development fees, and laboratory service revenue via biopharma and diagnostic partnerships."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "2ab5075590"
+   ],
+   "value": "Science-first and heavy on intellectual humility: clinicians guide AI research, and incremental improvement over flashy demos defines success. The Boston-linked medical academic flavor promotes quiet excellence rather than stereotypical startup hypergrowth aggression."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "8909a0e1e7"
+   ],
+   "value": "Primarily biopharmaceutical companies, clinical research organizations, and reference laboratories conducting drug development and clinical trials. Roche is a prominent strategic collaborator as of the 2026 media release."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "$85k–$125k base (estimated; US market)"
   },
   "evidence_sha": "a286999cfb936c3d",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784684457,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2ab5075590"
+   ],
+   "value": "Healthcare technology and AI-enabled diagnostics, roughly categorized as Digital Pathology / Health-AI."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "unknown"
+  },
+  "last_attempt_at": 1784684457,
   "last_evidence_at": 1784583474,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "2ab5075590",
+    "8909a0e1e7"
+   ],
+   "value": "Headquartered in Boston, Massachusetts, with additional US locations and a globally distributed laboratory presence to support the Roche companion diagnostics development."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "2ab5075590"
+   ],
+   "value": "Improve patient outcomes by advancing AI-powered pathology to make diagnoses more accurate and accessible globally."
+  },
   "name": "PathAI",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Average pace: Faster than a bureaucratic pharma incs but slower and safer than a seed-stage startup; regulated diagnostic constraints and corporate partnerships impose reasonable planning cycles."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "2ab5075590",
+    "8909a0e1e7"
+   ],
+   "value": "AI-driven pathology platforms for tissue image management and analysis, including quantitative digital pathology algorithms and lab services. In 2026, PathAI launched expanded capabilities through a partnership with Roche to develop AI-enabled companion diagnostics."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of paid time off annually for a full-time US employee, consistent with competitive Boston biotech-pharma-adjacent tech companies of comparable size."
   },
+  "refresh_after": 1789868457,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -142432,7 +142557,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: End of quarterly year winter slowdown (roughly Dec 24–Jan 1) plus a few additional days around major US holidays, but no rigid published year-wide company shutdown policy could be confirmed in the provided sources."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "d8ed404ca2",
+    "2ab5075590"
+   ],
+   "value": "Late-stage private growth company; employs approximately 500-600 people with substantial backing from high-profile investors such as General Atlantic, making it post-Series C and well capitalized but not disclosed as public per the provided fragment."
   },
   "sources": [
    {
@@ -142466,14 +142599,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=ef4ea249548d328415a5705aa220cbb2251c6c3eb4304d568c5040caaa16dbd8JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cucm9jaGUuY29tL21lZGlhL3JlbGVhc2VzL21lZC1jb3ItMjAyNi0wNS0wNw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "2ab5075590",
+    "8909a0e1e7"
+   ],
+   "value": "PathAI builds AI-powered pathology platforms that help biopharma companies and labs analyze tissue samples more accurately. It commercializes this through software and services for drug development and diagnostics, generating revenue via platform fees and partnerships like the integrated Roche companion diagnostics deal."
+  },
+  "synthesized_evidence_sha": "a286999cfb936c3d",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "2ab5075590",
+    "8909a0e1e7"
+   ],
+   "value": "Engineers work on computer vision and deep learning models applied to petabyte-scale histopathology images, MLOps infrastructure for diagnostic accuracy, and collaborative algorithm development with clinical and regulatory compliance constraints."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583474,
   "web_search_url": "https://duckduckgo.com/?q=PathAI+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "PathAI sits squarely at the intersection of top-tier AI prestige and life-saving mission, where work translates directly into faster, more precise cancer diagnosis. The well-capitalized, partnership-driven model minimizes the chaos of pure startup grind, while the medical domain and Boston hub prioritize sustainable, collaborative schedules and off-switches for personal time rather than always-on hustle."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Good (4 out of 5, estimated). Industry reputation suggests mission-driven colleagues at health-care AI companies typically work manageable hours; the high profile Roche partnership requires deadline discipline but avoids the perpetual 80-hour consumer social sprints."
   }
  },
  "pattern data": {
@@ -164119,42 +164279,112 @@
  },
  "sa technologies": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "2ce35ad33b",
+    "eaefa11dbd",
+    "f16eec2a6f"
+   ],
+   "value": "Cannot be rated as no evidence of AI or Data Science work was found."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "2ce35ad33b",
+    "eaefa11dbd",
+    "f16eec2a6f"
+   ],
+   "value": "The business model cannot be determined from the available information as the company's operations are not described."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown. The company culture cannot be characterized from the sources."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "2ce35ad33b",
+    "eaefa11dbd",
+    "f16eec2a6f"
+   ],
+   "value": "Unable to determine a customer base from the research material."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unable to provide an estimate. No compensation data or similar roles could be identified to form a basis."
   },
   "evidence_sha": "1fb8e63f7ded8a67",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784684457,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784684365,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "2ce35ad33b",
+    "eaefa11dbd",
+    "f16eec2a6f"
+   ],
+   "value": "The industry for SA Technologies is unidentifiable from the provided sources."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "2ce35ad33b",
+    "eaefa11dbd",
+    "f16eec2a6f"
+   ],
+   "value": "Candidates should be prepared to ask probing questions about core business stability, specific technical challenges, on-call expectations, and formal shutdown policies, as these critical details could not be verified through initial research."
+  },
+  "last_attempt_at": 1784684457,
   "last_evidence_at": 1784675869,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "2ce35ad33b",
+    "eaefa11dbd",
+    "f16eec2a6f"
+   ],
+   "value": "Office locations or headquarters are unknown from the research."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "2ce35ad33b",
+    "eaefa11dbd",
+    "f16eec2a6f"
+   ],
+   "value": "No mission statement was found in the supplied sources."
+  },
   "name": "SA Technologies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown. The pace of work could not be inferred from the available information."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "2ce35ad33b",
+    "eaefa11dbd",
+    "f16eec2a6f"
+   ],
+   "value": "No specific products or services could be identified from the provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: No PTO policy could be found in research."
   },
+  "refresh_after": 1789868457,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -164164,7 +164394,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No information on company-wide shutdowns was found."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "2ce35ad33b",
+    "eaefa11dbd",
+    "f16eec2a6f"
+   ],
+   "value": "Company size and stage are unknown based on the provided research."
   },
   "sources": [
    {
@@ -164198,14 +164437,51 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "2ce35ad33b",
+    "eaefa11dbd",
+    "f16eec2a6f"
+   ],
+   "value": "Unable to determine sponsorship practices from the available information."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "2ce35ad33b",
+    "eaefa11dbd",
+    "f16eec2a6f"
+   ],
+   "value": "SA Technologies appears to be a redirect or placeholder entity with no discernible operational business, products, or revenue model found in the provided research sources. The sources only offered generic redirect prompts and a job board homepage, revealing no substantive company activity."
+  },
+  "synthesized_evidence_sha": "1fb8e63f7ded8a67",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "2ce35ad33b",
+    "eaefa11dbd",
+    "f16eec2a6f"
+   ],
+   "value": "The nature of technical work at SA Technologies is not described in the available sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675869,
   "web_search_url": "https://duckduckgo.com/?q=SA+Technologies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "2ce35ad33b",
+    "eaefa11dbd",
+    "f16eec2a6f"
+   ],
+   "value": "Given the lack of substantive information on SA Technologies' business, culture, or work-life balance, there is no evidence that it meets the candidate's priorities for elite prestige, high new-grad pay, an innovative culture, or a mission-driven environment with sane hours and guaranteed shutdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown. No data on work-life balance, hours, or employee satisfaction is available."
   }
  },
  "saalex solutions a saalex company": {
@@ -173949,7 +174225,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -173991,7 +174267,7 @@
    ],
    "value": "Technical skills in AI research, agents, and reinforcement learning, with emphasis on innovation and problem-solving in a fast-paced environment."
   },
-  "last_attempt_at": 1784684365,
+  "last_attempt_at": 1784684457,
   "last_evidence_at": 1784656820,
   "locations": {
    "confidence": "unknown",
@@ -204762,11 +205038,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -204778,6 +205056,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784684457,
   "last_evidence_at": 1784583415,
   "name": "Verse Medical",
   "pace_of_work": {
@@ -216318,7 +216597,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -216336,7 +216615,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784684365,
+  "last_attempt_at": 1784684457,
   "last_evidence_at": 1784675869,
   "name": "Zip",
   "pace_of_work": {
