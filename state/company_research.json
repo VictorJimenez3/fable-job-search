@@ -27559,11 +27559,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -27575,6 +27577,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784688751,
   "last_evidence_at": 1784583331,
   "name": "Beth Israel Lahey Health",
   "pace_of_work": {
@@ -56709,11 +56712,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -56725,6 +56730,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784688751,
   "last_evidence_at": 1784676245,
   "name": "Decagon",
   "pace_of_work": {
@@ -102115,7 +102121,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -102133,7 +102139,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784688660,
+  "last_attempt_at": 1784688751,
   "last_evidence_at": 1784673980,
   "name": "Jabil",
   "pace_of_work": {
@@ -137619,7 +137625,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -137637,7 +137643,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784688660,
+  "last_attempt_at": 1784688751,
   "last_evidence_at": 1784673977,
   "name": "Novartis",
   "pace_of_work": {
@@ -147422,7 +147428,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -147440,7 +147446,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784688660,
+  "last_attempt_at": 1784688751,
   "last_evidence_at": 1784676244,
   "name": "Perpay",
   "pace_of_work": {
@@ -159919,7 +159925,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -159937,7 +159943,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784688660,
+  "last_attempt_at": 1784688751,
   "last_evidence_at": 1784673976,
   "name": "Raytheon",
   "pace_of_work": {
@@ -197485,42 +197491,86 @@
  },
  "torch technologies": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "66dfbe3694"
+   ],
+   "value": "Top-tier if core PyTorch; elite open-source AI infrastructure reputation."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Unclear from sources. Could be open-source foundation support, enterprise support/services, or commercial PyTorch-based products."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Technical, collaborative, mission-driven (democratizing AI), transparent (open governance), low bureaucracy. Remote-friendly, contributor meritocracy."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Unknown from sources. Potentially AI researchers, developers, enterprises adopting PyTorch if aligned with PyTorch Foundation/Linux Foundation ecosystem."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$170k base + equity/bonus (aligned with AI infra roles at top nonprofits/foundations; below FAANG but competitive for mission-driven orgs)."
   },
   "evidence_sha": "8cb56fa5547ff706",
+  "generated_at": 1784688751,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "66dfbe3694"
+   ],
+   "value": "Artificial Intelligence / Machine Learning Infrastructure / Open Source Software"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe for: actual WLB (on-call, release cycles), contributor vs. maintainer scope, open-source vs. proprietary balance, mentorship structure, and whether hours are truly sane. Ask about PyTorch governance involvement and career path for framework engineers."
   },
-  "last_attempt_at": 1784688660,
+  "last_attempt_at": 1784688751,
   "last_evidence_at": 1784674823,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not specified in sources. PyTorch Foundation is remote-first; member companies global."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not stated in sources. PyTorch mission generally: accelerate AI research and production deployment via open-source framework."
+  },
   "name": "Torch Technologies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced but project-driven (open-source release cycles), not chaotic. Major releases every few months; sustainably paced for maintainers."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "66dfbe3694"
+   ],
+   "value": "Likely related to PyTorch ecosystem (deep learning framework, tools, or services) based on domain pytrch.org, but no product details found in sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days PTO + holidays (typical for Linux Foundation/tech nonprofits). No public policy found."
   },
+  "refresh_after": 1789872751,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -197530,7 +197580,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely observes standard US holidays + winter break (common in open-source orgs). No guaranteed company-wide shutdowns documented."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Unknown from sources. PyTorch Foundation (Linux Foundation) has dozens of member companies; Torch Technologies size/stage not identifiable."
   },
   "sources": [
    {
@@ -197564,14 +197619,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=fe98d3591868fc376fe9f907fb7752ec9b05c20b861b53433b15b0332ba58d78JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1652f470-e9a6-6726-1fef-e3ede8396625&u=a1aHR0cHM6Ly9weXRvcmNoLm9yZy8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No data in sources. Many AI/ML companies sponsor H-1B; assume possible but unverified."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "4cd58f020a",
+    "eb2c5f8630",
+    "66dfbe3694"
+   ],
+   "value": "Torch Technologies appears to be associated with PyTorch (pytrch.org), suggesting involvement in machine learning/AI frameworks, but the provided sources contain only redirect pages with no substantive company information."
+  },
+  "synthesized_evidence_sha": "8cb56fa5547ff706",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "66dfbe3694"
+   ],
+   "value": "Likely involves deep learning framework development, CUDA/kernel optimization, distributed training, model deployment tooling, or PyTorch ecosystem contributions."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674823,
   "web_search_url": "https://duckduckgo.com/?q=Torch+Technologies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "If this is a core PyTorch contributor role, it offers elite AI prestige, open-source impact, and cutting-edge framework work. Candidate prioritizes mission-driven culture with work-life balance; open-source foundations often have sane hours and technical depth over bureaucracy. Fast innovation in AI infra aligns with learning/growth goals."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5. Open-source foundation roles typically respect boundaries, asynchronous work, no mandatory crunch. Verify on-call expectations."
   }
  },
  "total expert": {
@@ -198281,40 +198363,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Travelers sits in the 'High' prestige tier for corporate AI roles—below pure-play tech giants like Google or OpenAI but at or above the top of non-tech F500 companies. Its Dow Jones status provides strong resume credibility and name recognition."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Travelers operates a traditional insurance carrier business model. Revenue is generated primarily through premiums paid by policyholders, with profitability dependent on underwriting discipline and the return earned on the investment of premium float."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "The culture is mature, professional, and stable, prioritizing actuarial rigor and institutional expertise over moving fast or breaking things. It avoids the high-burnout 'hustle' vibe colloquially associated with some tech ecosystems."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The company serves a mix of individual consumers, families, and businesses ranging from small enterprises to large corporations, all seeking financial protection against property, liability, and workplace injury risks."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $115,000 base salary for a new graduate in a high-cost data science or AI location. This is a conservative figure reflecting an above-average non-big-tech corporate package, prioritized to enable significant near-term liquidity."
   },
   "evidence_sha": "4b42bb6a86648032",
+  "generated_at": 1784688751,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
-  "last_attempt_at": 1784688660,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Interviews likely probe competency in applied statistics, programming (Python, SQL, R), and insurance-specific business cases. Expect fewer whiteboard puzzles than top tech companies, with more emphasis on practical problem-solving and cultural fit for a collaborative, steady-paced enterprise."
+  },
+  "last_attempt_at": 1784688751,
   "last_evidence_at": 1784583462,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Major corporate hubs include Saint Paul, Minnesota (headquarters); Hartford, Connecticut; and New York City. Other offices are located across the U.S. and internationally, offering potential for multi-region placement."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Travelers' mission centers on protecting customers’ assets and minimizing risk through extensive claim and safety expertise, rather than pursuing social or environmental missions as its core focus."
+  },
   "name": "Travelers",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: The pace is slower and more deliberate than at a tech startup or Big Tech firm, with the rhythm set by quarterly business cycles and regulated insurance processes rather than continuous software deployment. It is methodical and planning-heavy."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Travelers offers a broad suite of property and casualty insurance products, including personal auto, homeowners, renters, and various commercial coverages such as workers’ compensation, general liability, and specialty business insurance."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 18 days of combined PTO and sick time for a new graduate, increasing progressively with tenure. This is a conservative estimate reflective of the insurance industry standard for an entry-level position."
   },
+  "refresh_after": 1789872751,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -198324,7 +198444,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Travelers observes all standard U.S. stock-market holidays and likely includes a limited holiday break or a few floating days, but does not advertise a formal, company-wide, multi-week shutdown program."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Travelers is a large, mature public company and a component of the Dow Jones Industrial Average. It has tens of thousands of employees, indicating it has long since passed the startup and rapid-scaling phase."
   },
   "sources": [
    {
@@ -198358,14 +198483,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=8478d23b135e2bb42c2d0c0c91f2a3fdbcca094721dfae4aaf3efb4cffcf1a17JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cuaW1kYi5jb20vdGl0bGUvdHQ1NjUxODQ0&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Travelers is a leading U.S. property and casualty insurance company that underwrites policies for auto, home, and business. It makes money by collecting premiums from policyholders and investing those premiums, paying out only when covered losses occur."
+  },
+  "synthesized_evidence_sha": "4b42bb6a86648032",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Data science and AI roles focus on risk modeling, pricing optimization, claims triage, and process automation within an actuarial-science-driven organization. The tech stack likely balances modern tools with established enterprise-scale systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583462,
   "web_search_url": "https://duckduckgo.com/?q=Travelers+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Travelers can be the rare environment where a Fortune 500 pedigree and strong compensation meet genuinely sustainable working hours, unlike high-growth tech startups. Its long-standing, mission-focused business allows domain mastery in AI risk modeling without demanding the 24/7 always-online culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Work-life balance is generally very good for a large corporation, comparable to 'A-' on a qualitative scale. Sane, predictable hours are the norm, with significant pressure limited to quarterly or catastrophe-driven events rather than constant crunch."
   }
  },
  "tree top inc": {
