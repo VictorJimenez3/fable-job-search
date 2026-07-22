@@ -35421,7 +35421,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -35439,7 +35439,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784687650,
+  "last_attempt_at": 1784687742,
   "last_evidence_at": 1784674482,
   "name": "Cadence Design Systems",
   "pace_of_work": {
@@ -43019,7 +43019,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -43037,7 +43037,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784687650,
+  "last_attempt_at": 1784687742,
   "last_evidence_at": 1784674768,
   "name": "Circle",
   "pace_of_work": {
@@ -50805,37 +50805,84 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (Services/Consulting) – AI/DS work exists but not primary identity; limited research publication or cutting-edge innovation visibility."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "b89228b043",
+    "c32a182246"
+   ],
+   "value": "B2B services model: project-based fees, time-and-materials contracts, and recurring managed services revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, client-focused, process-oriented; collaborative but hierarchical; emphasis on billable utilization and certifications."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-to-large enterprises across industries such as finance, healthcare, retail, and manufacturing seeking digital transformation and operational efficiency."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75,000-$95,000 base + modest bonus; below elite AI lab offers ($120k+)."
   },
   "evidence_sha": "01290146049f7a93",
+  "generated_at": 1784687742,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "b89228b043",
+    "c32a182246"
+   ],
+   "value": "IT Services & Consulting / Business Process Outsourcing"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect behavioral questions on client management, technical assessments on core engineering skills (algorithms, system design), and scenario-based questions on handling ambiguous requirements. AI/data science interviews may include ML fundamentals, model deployment, and data pipeline design. Emphasis on communication and adaptability."
   },
+  "last_attempt_at": 1784687742,
   "last_evidence_at": 1784675880,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in the US (likely Texas or California) with delivery centers in India, Philippines, and Eastern Europe."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To deliver innovative, scalable technology solutions that enable clients to achieve business objectives while fostering employee growth and work-life balance."
+  },
   "name": "CoServe Global Solutions",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast – project deadlines and client demands drive pace; periods of high intensity during deliveries, slower between engagements."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: IT consulting, application development, cloud migration, managed infrastructure services, data analytics, and business process outsourcing."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 8-10 US holidays; accrual-based; unlimited PTO not typical for services firms."
   },
+  "refresh_after": 1789871742,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -50845,7 +50892,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; occasional holiday week off between Christmas and New Year."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-stage private company (200-1,000 employees) with global delivery centers."
   },
   "sources": [
    {
@@ -50879,14 +50931,38 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B visas for specialized technical roles given global delivery model; green card sponsorship possible for senior contributors."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "b89228b043",
+    "c32a182246"
+   ],
+   "value": "CoServe Global Solutions appears to be a global IT services and consulting firm offering technology solutions, managed services, and business process outsourcing to enterprise clients. Revenue is generated through project-based contracts, managed service agreements, and consulting engagements."
+  },
+  "synthesized_evidence_sha": "01290146049f7a93",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Full-stack development, cloud architecture (AWS/Azure/GCP), data engineering, AI/ML model deployment, DevOps automation, and legacy modernization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675880,
   "web_search_url": "https://duckduckgo.com/?q=CoServe+Global+Solutions+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks elite AI/data science prestige, high new-grad pay, fast innovation culture, mission-driven environment, and guaranteed work-life balance. CoServe is primarily an IT services firm; AI/data science roles may exist but are not the core focus. Prestige tier is likely lower than top-tier AI labs. Pay may be competitive for services but below elite product companies. Culture may be project-driven with variable WLB depending on client engagements. Fast learning possible due to diverse p"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5 – Variable by project; some roles offer reasonable hours, others require on-call or extended hours for client deliverables. No guaranteed shutdowns known."
   }
  },
  "costar group": {
@@ -70746,7 +70822,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -70764,7 +70840,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
-  "last_attempt_at": 1784687650,
+  "last_attempt_at": 1784687742,
   "last_evidence_at": 1784583446,
   "name": "Figma",
   "pace_of_work": {
@@ -106383,7 +106459,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -106401,7 +106477,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784687650,
+  "last_attempt_at": 1784687742,
   "last_evidence_at": 1784675879,
   "name": "Kitware",
   "pace_of_work": {
@@ -138109,11 +138185,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -138125,6 +138203,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784687742,
   "last_evidence_at": 1784674771,
   "name": "Oklo",
   "pace_of_work": {
@@ -145311,7 +145390,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -145329,7 +145408,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784687650,
+  "last_attempt_at": 1784687742,
   "last_evidence_at": 1784674729,
   "name": "Peraton",
   "pace_of_work": {
@@ -190710,7 +190789,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 12,
+  "attempts": 13,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -190752,7 +190831,7 @@
    ],
    "value": "Probe whether the 'dynamic team' and 'exciting environment' translate to true technical learning and career growth for AI/Data Science work, or if the highly structured nature of defense/aerospace solutions will conflict with the desire to avoid slow bureaucracy."
   },
-  "last_attempt_at": 1784687650,
+  "last_attempt_at": 1784687742,
   "last_evidence_at": 1784674726,
   "locations": {
    "confidence": "high",
