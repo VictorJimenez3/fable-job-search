@@ -126,6 +126,13 @@ companies:
   - {name: SpaceX,            ats: greenhouse, token: spacex,          sector: big_tech}
   - {name: Snowflake,         ats: greenhouse, token: snowflakecomputing, sector: big_tech}
 
+  # ---- sports: Fanatics intentionally runs separate public boards per business ----
+  # Keep all verified boards: an opening may appear on only one of them.
+  - {name: Fanatics,          ats: greenhouse, token: fanaticsinc,          sector: sports}
+  - {name: Fanatics,          ats: greenhouse, token: fanaticsfbg,          sector: sports}
+  - {name: Fanatics,          ats: greenhouse, token: fanaticscommerce,     sector: sports}
+  - {name: Fanatics,          ats: greenhouse, token: fanaticscollectibles, sector: sports}
+
   # ---- big pharma / med device (user priority: healthtech) ----
   # workday tokens are best-effort guesses; the probe validates each one
   - {name: Johnson & Johnson,  ats: phenom,  token: jnj,   sector: healthtech,

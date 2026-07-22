@@ -42,6 +42,16 @@ def test_harvest_and_seed_registry():
     assert reg["lever:plaid"]["status"] == "new"
 
 
+def test_multiple_fanatics_department_boards_can_be_seeded():
+    reg = {}
+    boards = [
+        {"name": "Fanatics", "ats": "greenhouse", "token": token, "sector": "sports"}
+        for token in ("fanaticsinc", "fanaticsfbg", "fanaticscommerce", "fanaticscollectibles")
+    ]
+    assert seed_registry(reg, boards) == 4
+    assert {e["token"] for e in reg.values()} == {b["token"] for b in boards}
+
+
 def test_hygiene_retries_prunes_and_parks():
     from radar.discovery import hygiene
     NOW = 10_000_000_000

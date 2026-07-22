@@ -54,6 +54,8 @@ every ~30 min (GitHub Actions cron)
 ├─ 3. SPEED: poll every active registry company's ATS API directly
 │     → catches postings minutes-to-hours after they go live,
 │       days before they show up anywhere else
+│     · Fanatics is covered board-by-board (corporate, Betting & Gaming,
+│       Commerce, and Collectibles), because it does not use one universal feed
 │
 ├─ 4. RANK: verified new-grad/early-career fit first, then AI/ML and data
 │     science, then general SWE, then data engineering and systems; sector, company tier,

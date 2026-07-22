@@ -6,6 +6,15 @@ from radar.discovery import extract
 from radar.sources import ats, bigco
 
 
+def test_greenhouse_records_the_official_board_source():
+    payload = {"jobs": [{"title": "AI Engineer", "absolute_url": "https://example.test/job/1",
+                           "location": {"name": "New York, NY"}, "content": ""}]}
+    entry = {"name": "Fanatics", "ats": "greenhouse", "token": "fanaticsinc"}
+    with patch.object(ats, "get_json", return_value=payload):
+        job = ats.fetch_greenhouse(entry)[0]
+    assert job.source_url == "https://job-boards.greenhouse.io/fanaticsinc"
+
+
 def test_eightfold_parses_positions():
     payload = {"positions": [
         {"id": 1, "name": "Software Engineer, New Grad", "location": "Los Gatos, CA",

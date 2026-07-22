@@ -854,3 +854,16 @@ idempotent, and stores a visible `manual_added` marker. Manual items are forced
 dashboard-only (`alert_ok=false`, `explicit_new_grad=false`) so they never
 become fabricated new-grad alerts or alter alert delivery; an already-crawled
 posting retains its existing authoritative score and provenance.
+
+## 63. Multi-board employers are explicit coverage, not one guessed feed (2026-07-22)
+
+Some employers partition recruiting by business unit. Fanatics currently uses
+separate official Greenhouse boards for corporate, Betting & Gaming, Commerce,
+and Collectibles, so treating its Oracle board or a single Greenhouse token as
+the whole employer silently misses openings. Curated registry entries may
+therefore share the same employer name and sector while polling distinct,
+verified ATS tokens. Greenhouse records retain their official board URL as
+discovery provenance. If a user manually captures a role before the crawl sees
+the same stable company/title/location identity, official ATS data replaces the
+manual placeholder while preserving its Pipeline/Notion tracking marker; this
+gains real description-based gates without fabricating new-grad evidence.

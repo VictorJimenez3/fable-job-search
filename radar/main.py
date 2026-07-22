@@ -135,13 +135,18 @@ def crawl() -> int:
 
     # ---- normalize, dedupe, score ----
     new_jobs: list[Job] = []
+    # A Pipeline manual entry can precede discovery of the exact same official
+    # ATS posting. Keep its tracking marker and stable ID, but replace the
+    # manual placeholder with official source/description/eligibility data.
+    manual_upgrades: dict[str, dict] = {}
     dropped = 0
     seen_this_run: set[str] = set()
     for j in agg_jobs + ats_jobs:
         if not j.company or not j.title or not j.url:
             continue
         jid = j.id
-        if jid in seen_this_run or jid in jobs_state:
+        existing = jobs_state.get(jid)
+        if jid in seen_this_run or (existing is not None and existing.get("source") != "manual"):
             continue
         seen_this_run.add(jid)
         if not j.sector:
@@ -153,6 +158,8 @@ def crawl() -> int:
         j.alert_ok = alert_eligible
         score(j, fb, now)
         j.score_reasons += reasons
+        if existing is not None:
+            manual_upgrades[jid] = existing
         new_jobs.append(j)
 
     # ---- posting scrape: real description text, no LLM needed ----
@@ -185,7 +192,10 @@ def crawl() -> int:
     # ---- persist ----
     for j in new_jobs:
         rec = j.to_record()
-        rec["first_seen"] = now
+        old_manual = manual_upgrades.get(j.id)
+        rec["first_seen"] = old_manual.get("first_seen", now) if old_manual else now
+        if old_manual:
+            rec["manual_added"] = True
         rec["rules_v"] = RULES_VERSION
         rec["explicit_new_grad"] = explicit_new_grad(j.title) or source_new_grad(j)
         jobs_state[j.id] = rec

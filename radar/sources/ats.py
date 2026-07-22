@@ -51,6 +51,7 @@ def fetch_greenhouse(entry: dict) -> list[Job]:
         out.append(Job(
             company=entry["name"], title=j.get("title", ""), url=j.get("absolute_url", ""),
             source="greenhouse", ats="greenhouse",
+            source_url=f"https://job-boards.greenhouse.io/{entry['token']}",
             locations=[loc] if loc else [],
             posted_at=_iso_epoch(j.get("first_published") or j.get("updated_at")),
             description=_plain(j.get("content"))[:4000],

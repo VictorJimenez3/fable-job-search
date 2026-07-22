@@ -110,6 +110,11 @@ Before changing the radar, read these in order:
   the employer link is a separate primary action. Authenticated `open
   application` also saves a new role to To apply, but Applied remains explicit.
   Track/applied writes are idempotent.
+- **Fanatics coverage (DECISIONS #63):** Fanatics is a multi-board employer,
+  not a single Oracle feed: the curated registry polls its official Greenhouse
+  corporate (`fanaticsinc`), Betting & Gaming (`fanaticsfbg`), Commerce, and
+  Collectibles boards. A manually saved posting is upgraded to official ATS
+  evidence once the crawler finds the same stable company/title/location ID.
 - **Manual Pipeline additions (DECISIONS #62):** Pipeline—not the main Jobs
   tab—contains an owner-authenticated form for a company, role, live URL, and
   optional location. It adds a stable manual record to To apply and the same
