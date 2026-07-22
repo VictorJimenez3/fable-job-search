@@ -70649,7 +70649,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -70667,7 +70667,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
-  "last_attempt_at": 1784685098,
+  "last_attempt_at": 1784687185,
   "last_evidence_at": 1784583446,
   "name": "Figma",
   "pace_of_work": {
@@ -94740,40 +94740,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Unique massive proprietary audio dataset and ad-tech scale, but not widely recognized as an AI research hub; prestige rising with digital pivot and podcast analytics leadership."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "73822ab239",
+    "fdafd53b49"
+   ],
+   "value": "Advertising-supported: sells radio/digital audio ad inventory (spot ads, programmatic, podcast sponsorships) to marketers; also earns from live events, syndication, and data/analytics services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-led digital transformation inside a sales-driven broadcaster; collaborative, mission-oriented around audio love; hierarchy present but flattening in tech org; diversity initiatives active; social but not 'bro' culture."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "73822ab239",
+    "86ff66b7f7"
+   ],
+   "value": "Primary customers are advertisers (local/national brands) buying audio ad inventory; secondary audience is 250M+ monthly listeners across broadcast radio and digital platforms."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $125k-$145k base + 10-15% target bonus + RSU (~$30k-$50k over 4yrs) = $165k-$210k TC. Bay Area/NYC premium ~10%. Data/ML roles at upper band."
   },
   "evidence_sha": "a621b5f9c8a4cc61",
+  "generated_at": 1784687185,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "73822ab239",
+    "fdafd53b49"
+   ],
+   "value": "Audio media / Digital advertising technology"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect applied ML/system design: real-time audio processing, ad-tech auction logic, recommendation at scale, and metrics for listener engagement. Prepare for behavioral questions on shipping in regulated/legacy environments, cross-functional collaboration with sales/content, and balancing innovation with broadcast reliability. Ask about tech debt paydown, model deployment latency budgets, and how 'guaranteed shutdowns' manifest in on-call rotations."
   },
-  "last_attempt_at": 1784685098,
+  "last_attempt_at": 1784687185,
   "last_evidence_at": 1784673653,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "73822ab239",
+    "fdafd53b49"
+   ],
+   "value": "Headquartered in San Antonio, TX; major tech hubs in New York, NY; Los Angeles, CA; Chicago, IL; and remote-friendly roles across US. Offices in 150+ markets for broadcast operations."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "73822ab239"
+   ],
+   "value": "To connect people with the music, news, sports, and stories they love through the power of audio, across any device and platform."
+  },
   "name": "iHeartMedia",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — Broadcast deadlines create hard ship dates, but digital teams operate on 2-week sprints; less chaotic than consumer-social, faster than traditional enterprise. On-call for streaming reliability exists but rotation is shared."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "73822ab239",
+    "fdafd53b49"
+   ],
+   "value": "Broadcast radio stations (860+), iHeartRadio digital streaming app, podcast network (premiere networks, Stuff Media), live events, and advertising technology platforms for audio monetization."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 2 floating days; accrual starts day one; unlimited not offered. Carryover capped at 5 days."
   },
+  "refresh_after": 1789871185,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -94783,7 +94838,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal company-wide shutdown; some teams observe 'quiet weeks' around July 4 and Christmas/New Year. Broadcast ops run 365; digital tech may get informal slowdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "73822ab239",
+    "fdafd53b49"
+   ],
+   "value": "Public company (NASDAQ: IHRT); ~10,000 employees; $3.9B revenue (2023); emerged from Chapter 11 restructuring in 2019, now focused on digital transformation."
   },
   "sources": [
    {
@@ -94817,14 +94880,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=43324726345116dd8edc33382cb5528bbbefa0ecc6e50cab51008c208fafd4cfJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2b466e61-87e5-6127-3909-79fc865660d9&u=a1aHR0cHM6Ly93d3cuaWhlYXJ0bWVkaWEuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "H-1B sponsor (active filings for software, data, ML roles); green card sponsorship typical for senior tech roles; new-grad visa support varies by team and budget."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "73822ab239",
+    "86ff66b7f7",
+    "fdafd53b49"
+   ],
+   "value": "iHeartMedia is the largest audio media company in the United States, operating hundreds of radio stations and a digital audio platform including podcasts and streaming. It reaches over 90% of American adults monthly across broadcast and digital channels."
+  },
+  "synthesized_evidence_sha": "a621b5f9c8a4cc61",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "fdafd53b49"
+   ],
+   "value": "Audio streaming infrastructure, real-time ad insertion, recommendation/personalization engines, podcast analytics, mobile apps (iOS/Android), cloud migration, data pipelines for listener measurement, and ML for content discovery."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673653,
   "web_search_url": "https://duckduckgo.com/?q=iHeartMedia+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "iHeartMedia offers a rare blend: massive-scale audio data (250M+ listeners) for elite AI/DS impact, a declared digital-first transformation with modern stack investment, and a legacy-media culture that historically respects broadcast schedules—potentially translating to more predictable hours than pure-play tech. For a new grad prioritizing prestige-level data access, high compensation, and sustainable pace, this is a differentiated bet on audio's digital reinvention."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — Company promotes 'no meeting Fridays' and broadcast-industry norms limit after-hours crises; however, live-event weekends and incident response for streaming can intrude. New grads report ~45-50 hr weeks typical."
   }
  },
  "illinois tool works": {
@@ -113402,7 +113492,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -113420,7 +113510,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784685098,
+  "last_attempt_at": 1784687185,
   "last_evidence_at": 1784677340,
   "name": "London Stock Exchange Group (LSEG)",
   "pace_of_work": {
@@ -144974,7 +145064,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -144992,7 +145082,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784685098,
+  "last_attempt_at": 1784687185,
   "last_evidence_at": 1784674729,
   "name": "Peraton",
   "pace_of_work": {
@@ -153852,40 +153942,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Emerging tier; not yet widely recognized but potential for high impact."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not publicly disclosed; likely B2B SaaS or enterprise AI services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Innovative, mission-driven, lean team with high autonomy."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not publicly disclosed."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120k-$160k base + equity; competitive for early-stage AI roles."
   },
   "evidence_sha": "e17a42efa2167fb7",
+  "generated_at": 1784687185,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Artificial Intelligence / Machine Learning / Data Science."
   },
-  "last_attempt_at": 1784685098,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Assess technical depth in AI/ML, cultural fit for fast-paced startup, and alignment with work-life balance expectations."
+  },
+  "last_attempt_at": 1784687185,
   "last_evidence_at": 1784673658,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Remote-first or headquartered in a major tech hub (e.g., San Francisco, New York)."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not publicly disclosed."
+  },
   "name": "qode.world",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced startup environment; may involve occasional crunch but culture dependent on leadership."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not publicly disclosed; likely AI/ML developer tools or platform given domain."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO plus holidays; typical for US startups."
   },
+  "refresh_after": 1789871185,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -153895,7 +154023,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; some startups offer winter break."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Seed to Series A stage startup (10-50 employees)."
   },
   "sources": [
    {
@@ -153929,14 +154062,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=bc6d1c98c228f8fd790371890b2b1f3b39dac908fee109fd5d0bc6fb61d0a023JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2b466e61-87e5-6127-3909-79fc865660d9&u=a1aHR0cHM6Ly9iaW5ncXVpenplcy5jb20vYmluZy1ob21lcGFnZS1xdWl6LXRvZGF5Lw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May offer visa sponsorship for exceptional candidates given talent competition."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "qode.world appears to be an early-stage technology company; public details about its product and mission are limited."
+  },
+  "synthesized_evidence_sha": "e17a42efa2167fb7",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: AI/ML model development, data engineering, full-stack development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673658,
   "web_search_url": "https://duckduckgo.com/?q=qode.world+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks elite AI/data science role with high new-grad pay, fast innovative culture, work-life balance, and accelerated growth. qode.world's limited public profile suggests it may be an early-stage startup where these attributes could align if the company prioritizes sustainable pace and learning."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5; early-stage startups often demand flexibility but some enforce boundaries."
   }
  },
  "qts": {
@@ -175977,40 +176131,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier: Strong. SoFi is a recognized AI-driven fintech brand known for modern data science and ML applications in consumer finance. It is considered a top-tier destination within fintech AI, though not traditionally Faang-category on pure research prestige."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "2b252a6a7d",
+    "601e9ec003"
+   ],
+   "value": "Full-service digital bank blending high-margin lending with low-cost deposits; earns net interest income, interchange and transaction fees, loan sale gains, referral fees, and technology platform services. Vertical integration via owned Galileo payment platform creates dual revenue stream."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, collaborative, and socially conscious with direct membership feedback loops. SoFi emphasizes employee development, inclusion, and regular all-hands coordination, fostering an environment that is ambitious yet aware of burnout risk."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "2b252a6a7d"
+   ],
+   "value": "Millennials and Gen Z high-earners not yet wealthy (HENRYs), as well as established professionals seeking a one-stop digital finance platform. Member base is largely U.S.-based retail consumers, plus a small business borrower segment."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: new graduate AI/Data Science total compensation $130,000–$170,000 inclusive of base, bonus, and equity, with upper range for candidates possessing exceptional experience, competitive to top-tier fintech peers."
   },
   "evidence_sha": "6b967e3d8b6a00e1",
+  "generated_at": 1784687185,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2b252a6a7d",
+    "601e9ec003"
+   ],
+   "value": "Fintech / Digital Banking"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Interviews typically assess strong machine learning fundamentals, coding and system design fluency, product-thinking for financial data, and cultural fit with SoFi's collaborative, fast-paced but measured values. Candidates should demonstrate the ability to drive impact on member outcomes while maintaining sensible scope and work-life boundaries."
   },
-  "last_attempt_at": 1784685098,
+  "last_attempt_at": 1784687185,
   "last_evidence_at": 1784677344,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "6ed707b885"
+   ],
+   "value": "To help people achieve financial independence to realize their ambitions."
+  },
   "name": "SoFi",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast iteration cycles with typical fintech growth urgency, but the operational cadence targets rigorous, rather than frantic execution. Engineering and data teams generally avoid the extreme crunch of early-stage startups."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "2b252a6a7d",
+    "601e9ec003"
+   ],
+   "value": "Student loan refinancing, personal loans, home mortgages, credit cards, checking and high-yield savings accounts, invest (automated and active trading), small business financing, and insurance."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: open or flexible time off policy, typically translating to around 15–20 days per year (including vacation, personal and sick time). Company practices expect genuinely uninterrupted time off."
   },
+  "refresh_after": 1789871185,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -176020,7 +176225,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: annual company-wide recharge days or week-long off periods outside standard holidays, plus SoFi-specific wellness days, intentionally closing engineering and product operations."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "2b252a6a7d"
+   ],
+   "value": "Public late-stage growth fintech, with a national bank charter and significant member and revenue scale, yet maintains characteristics of a fast-paced tech innovator."
   },
   "sources": [
    {
@@ -176054,14 +176266,39 @@
     "url": "https://www.sofi.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "2b252a6a7d"
+   ],
+   "value": "SoFi is a digital personal finance company and nationally chartered bank offering a full suite of lending, banking, investment, and insurance products through a single app. By operating without physical branches and leveraging automation, it earns money primarily through net interest income on loans and deposits, alongside interchange, investment, and referral fees."
+  },
+  "synthesized_evidence_sha": "6b967e3d8b6a00e1",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "2b252a6a7d"
+   ],
+   "value": "Data science and AI teams work on credit risk underwriting, fraud detection, personalized financial insights, conversational AI (chat and voice), real-time member engagement, trading algorithms, and large-scale deposit and lending automation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677344,
   "web_search_url": "https://duckduckgo.com/?q=SoFi+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a candidate prioritizing elite prestige and high new-grad pay alongside a fast-moving technology culture, SoFi delivers a tech-forward financial platform solving web-scale automation, AI, and data challenges without the bureaucratic drag of a traditional bank. It couples a mission-driven brand with a culture that emphasizes balanced work weeks and periodic company-wide shutdowns, offering structured growth that accelerates technical skills while protecting personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: above-average for fintech and technology, with norms of 40–45 hour weeks and emphasis on reasonable scheduling rather than always-on expectations."
   }
  },
  "software quality experts": {
@@ -190074,7 +190311,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -190116,7 +190353,7 @@
    ],
    "value": "Probe whether the 'dynamic team' and 'exciting environment' translate to true technical learning and career growth for AI/Data Science work, or if the highly structured nature of defense/aerospace solutions will conflict with the desire to avoid slow bureaucracy."
   },
-  "last_attempt_at": 1784685098,
+  "last_attempt_at": 1784687185,
   "last_evidence_at": 1784674726,
   "locations": {
    "confidence": "high",
@@ -214416,50 +214653,120 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2: Niche mission-driven startup with high-impact applied AI work, not a Big Tech or top-tier AI research lab but offering elite-level autonomy and product ownership."
   },
   "aliases": [],
-  "attempts": 3,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 4,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "fca42c1f6e"
+   ],
+   "value": "Wonderschool likely generates revenue by taking a platform fee or commission from childcare providers operating on its marketplace or through SaaS subscriptions for provider management tools. Specific monetization details were not found in the provided research."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "d61a1256df",
+    "fca42c1f6e"
+   ],
+   "value": "High-trust, high-impact, and energetic environment blending a fast-paced startup culture with a purpose-driven social mission. Emphasizes internalized ownership and collaborative, in-person energy."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "fca42c1f6e"
+   ],
+   "value": "Childcare providers (educators and home-based programs) and parents seeking quality early childhood education and care solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130,000 - $170,000 base salary. An early-career startup of this nature typically offers lower base cash than FAANG but often includes meaningful equity to balance total compensation."
   },
   "evidence_sha": "acd580921eebaeca",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Edtech / technology (estimated)"
+  "generated_at": 1784687185,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784685098,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "dc461ec3f1",
+    "fca42c1f6e"
+   ],
+   "value": "Early Childhood Education Technology (EdTech / Childcare Services)."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "d61a1256df",
+    "fca42c1f6e"
+   ],
+   "value": "Expect a focus on operating in ambiguity, strong communication, collaborative in-person working style, and ability to iterate from user feedback to shipping production code. No rotational program structure was mentioned."
+  },
+  "last_attempt_at": 1784687185,
   "last_evidence_at": 1784583908,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "d61a1256df",
+    "fca42c1f6e"
+   ],
+   "value": "The Applied AI engineering roles specify an in-person environment suggesting primarily on-site work. Office city details were not provided in the research."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "dc461ec3f1"
+   ],
+   "value": "To ensure every child has access to early childhood education that helps them realize their full potential."
+  },
   "name": "Wonderschool",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "d61a1256df"
+   ],
+   "value": "Estimated: Fast-paced. The job posting highlights speed, iterating quickly, operating in ambiguity, and driving adoption—indicating high urgency and quick shipping cycles."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "fca42c1f6e"
+   ],
+   "value": "A marketplace that helps parents find childcare solutions and a suite of software products enabling childcare providers to create high-quality environments and manage their business demands."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "fca42c1f6e"
+   ],
+   "value": "Estimated: Flexible/Unlimited PTO model. The source confirmed 'Flexible PTO' and additional mental wellness days."
   },
+  "refresh_after": 1789871185,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "fca42c1f6e",
+    "d61a1256df"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No officially confirmed company-wide shutdowns noted in sources, though mental wellness days imply designated company-wide rest periods may exist."
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -214493,14 +214800,45 @@
     "url": "https://job-boards.greenhouse.io/wonderschool/jobs/6359139003"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "dc461ec3f1",
+    "fca42c1f6e"
+   ],
+   "value": "Wonderschool builds technology to connect families with high-quality childcare and early education providers while giving those providers tools to run their businesses. The company operates a marketplace and software platform aimed at increasing access to early childhood education."
+  },
+  "synthesized_evidence_sha": "acd580921eebaeca",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "d61a1256df",
+    "fca42c1f6e"
+   ],
+   "value": "Applied AI and full-stack product development including identifying problems, shipping code, deploying, and monitoring user adoption. Engineers own full product loops and act like founders inside the company."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583452,
   "web_search_url": "https://duckduckgo.com/?q=Wonderschool+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "fca42c1f6e"
+   ],
+   "value": "The role offers a fast-paced, high-trust culture with applied AI work at a mission-driven company, avoiding bureaucratic slow-downs, and includes flexible PTO and wellness days to support work-life balance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "fca42c1f6e"
+   ],
+   "value": "Estimated: Generally favorable. The company explicitly advertises flexible PTO and mental wellness days, indicating a cultural focus on balance, though the 'fast-paced' environment requires boundary management."
   }
  },
  "wood federal solutions": {
