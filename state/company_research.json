@@ -2999,7 +2999,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -3017,7 +3017,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
-  "last_attempt_at": 1784682082,
+  "last_attempt_at": 1784682175,
   "last_evidence_at": 1784583355,
   "name": "Adobe",
   "pace_of_work": {
@@ -3882,7 +3882,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -3900,7 +3900,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784682082,
+  "last_attempt_at": 1784682175,
   "last_evidence_at": 1784675357,
   "name": "AeroVironment",
   "pace_of_work": {
@@ -39771,37 +39771,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 (strong applied ML in networking niche; not a primary AI research lab; publishes at OFC, ECOC, SIGCOMM, some NeurIPS workshops)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "0e1d7086c1"
+   ],
+   "value": "Hardware sales (optical/packet platforms) + software licenses (Blue Planet, MCP) + professional services + maintenance/support contracts. Recurring revenue growing via software/subscription shift."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, low-politics, collaborative across HW/SW boundary. Long-tenured staff (10+ yr common) create deep institutional knowledge. Diversity initiatives active but representation still industry-typical. Remote-friendly hybrid (2-3 days office)."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "439574f7c2"
+   ],
+   "value": "Tier-1 telecom carriers (e.g., Verizon, AT&T, BT, NTT), webscale/cloud providers (e.g., AWS, Microsoft Azure, Google Cloud), cable/MSOs, utilities, governments, and large enterprises building private networks."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130,000-$155,000 base + $25,000-$40,000 RSU (4-yr) + 10% target bonus (US R&D). Canada/India adjusted to local bands."
   },
   "evidence_sha": "afe1d13d9e110181",
+  "generated_at": 1784682175,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "439574f7c2"
+   ],
+   "value": "Telecommunications equipment / Networking hardware & software"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep systems questions: Python/C++ concurrency, Linux kernel networking stack, time-series anomaly detection, distributed consensus (Raft/gRPC), and hardware-aware ML (model quantization for embedded DSP). Prepare a 15-min talk on a past project where you optimized throughput/latency under resource constraints. LeetCode Hard is rare; instead, design a telemetry pipeline that ingests 10M PM counters/sec with <1s alerting."
   },
+  "last_attempt_at": 1784682175,
   "last_evidence_at": 1784674483,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "439574f7c2"
+   ],
+   "value": "HQ: Hanover, MD (DC metro). Major R&D: Ottawa, Toronto, Vancouver (Canada); Gurgaon, Bangalore (India); Berlin, Warsaw; San Jose, Austin, Atlanta. Sales/support in 30+ countries."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "439574f7c2"
+   ],
+   "value": "To enable network operators to unlock the full potential of their networks through adaptive, programmable infrastructure that delivers bandwidth on demand."
+  },
   "name": "Ciena",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate-fast: quarterly hardware/software release trains, scheduled integration windows, limited fire-drills. Not a 'move fast and break things' culture; reliability > velocity."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "c3cecc3b8a",
+    "439574f7c2"
+   ],
+   "value": "Optical networking platforms (WaveLogic coherent optics, 6500/5170/3000 series), packet networking (8700/5000/3000 series), Blue Planet automation/orchestration software, Manage Control Plan (MCP) domain controller, and professional services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days vacation + 10 company holidays + 5 sick/personal days (US); accrues from day one; carryover capped at 1.5x annual."
   },
+  "refresh_after": 1789866175,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -39811,7 +39865,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 24-Jan 1) + optional summer Friday half-days (Memorial Day-Labor Day) in some sites."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "0e1d7086c1"
+   ],
+   "value": "Public (NYSE: CIEN); ~7,500 employees globally; FY2024 revenue ~$4B; mature, profitable, mid-cap networking vendor."
   },
   "sources": [
    {
@@ -39845,14 +39906,40 @@
     "url": "https://www.bing.com/ck/a?!&&p=71029dd5a3aae5c5a457c1b666a16a83eb21d6509e7d8580c1ec85d1a5f584f7JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=26a4c2ce-575e-61a8-27ca-d553565360e2&u=a1aHR0cHM6Ly93d3cuY2llbmEuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active H-1B sponsor (consistent top-100 filer); supports STEM OPT extensions; green card process (PERM/EB-2/EB-3) for qualifying roles; Canadian intra-company transfers common via Ottawa hub."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "439574f7c2"
+   ],
+   "value": "Ciena is a global networking systems, services, and software company that provides optical, packet, and automation solutions for telecommunications carriers, cloud providers, and enterprises. It enables high-capacity data transport and network programmability across metro, long-haul, and submarine networks."
+  },
+  "synthesized_evidence_sha": "afe1d13d9e110181",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "c3cecc3b8a",
+    "439574f7c2"
+   ],
+   "value": "Coherent DSP/ASIC design, optical systems engineering, embedded Linux/C++ for network OS, distributed systems for Blue Planet automation, Python/Go for telemetry/analytics, ML for network optimization/traffic prediction, release automation, hardware/software co-simulation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674483,
   "web_search_url": "https://duckduckgo.com/?q=Ciena+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Ciena sits at the physical layer of the internet—every AI training cluster, cloud region, and 5G core rides on its coherent optics and automation software. For a new-grad AI/DS engineer, this means production-scale network telemetry (petabytes/day), real-time optimization problems with hard latency constraints, and a path to publish at SIGCOMM/OSDI while shipping code that runs on Tier-1 carrier gear. Pay is strong for networking (est. $130-155k base + RSU), WLB is structurally better than hyper"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "4/5 — core hours 10-3, rare weekend work, explicit no-meeting Fridays in some orgs, on-call rotation light (1 week/quarter, mostly automated alerts)."
   }
  },
  "cimarron inc": {
@@ -44225,7 +44312,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -44243,7 +44330,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784682082,
+  "last_attempt_at": 1784682175,
   "last_evidence_at": 1784674273,
   "name": "Comcast",
   "pace_of_work": {
@@ -69680,7 +69767,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -69698,7 +69785,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784682082,
+  "last_attempt_at": 1784682175,
   "last_evidence_at": 1784593393,
   "name": "FOX",
   "pace_of_work": {
@@ -113164,11 +113251,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -113180,6 +113269,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784682175,
   "last_evidence_at": 1784651027,
   "name": "Mayo Clinic Rochester",
   "pace_of_work": {
@@ -127083,7 +127173,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -127101,7 +127191,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784682082,
+  "last_attempt_at": 1784682175,
   "last_evidence_at": 1784666846,
   "name": "Northrop Grumman Australia",
   "pace_of_work": {
@@ -178364,7 +178454,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -178382,7 +178472,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784682082,
+  "last_attempt_at": 1784682175,
   "last_evidence_at": 1784672018,
   "name": "Texas Instruments",
   "pace_of_work": {
