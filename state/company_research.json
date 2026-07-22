@@ -8405,47 +8405,125 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 — Respected applied-AI team inside a Fortune 500 industrial leader; publishes at CVPR/ICCV workshops and holds patents in access-control analytics, but not a primary AI research lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "a804cd9bce",
+    "17550432b0",
+    "451218fa1a"
+   ],
+   "value": "Designs, manufactures, and sells physical and electronic security hardware and software through direct sales, distributors, and OEM channels; growing recurring revenue from cloud-managed access and subscription services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-first safety culture; collaborative, low-ego, documentation-heavy; strong internal mobility and mentorship; diversity initiatives tracked at board level."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "a804cd9bce",
+    "17550432b0",
+    "451218fa1a"
+   ],
+   "value": "Commercial builders, facility managers, institutional campuses (education, healthcare, government), multifamily residential developers, and security integrators worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k–$125k base + 10–15% target bonus + RSU grant ($25k–$35k vesting over 4 yrs); total first-year comp ~$145k–$170k."
   },
   "evidence_sha": "743955ae908773dd",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784688018,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "a804cd9bce",
+    "17550432b0",
+    "451218fa1a"
+   ],
+   "value": "Security technology / Smart building / Industrial IoT"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a804cd9bce",
+    "17550432b0",
+    "451218fa1a"
+   ],
+   "value": "Expect practical system-design questions around constrained embedded devices, secure OTA updates, and cloud-edge data pipelines. Prepare for behavioral probes on cross-functional collaboration with hardware, manufacturing, and product teams. Ask about the 'Allegion Operating System' for product development cadence, dedicated learning time, and how on-call rotations are bounded."
+  },
+  "last_attempt_at": 1784688018,
   "last_evidence_at": 1784672486,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "a804cd9bce",
+    "17550432b0",
+    "451218fa1a"
+   ],
+   "value": "Headquartered in Dublin, Ireland (corporate); operational HQ in Carmel, Indiana, USA; R&D centers in Indianapolis, Vancouver, Munich, and Shanghai; manufacturing in US, Mexico, Europe, Asia."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "a804cd9bce",
+    "17550432b0",
+    "451218fa1a"
+   ],
+   "value": "Keeping people safe where they live, work, and visit by pioneering safety and security solutions."
+  },
   "name": "Allegion",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — Quarterly hardware-influenced release cycles; two-week sprints for software; limited crunch due to safety-certification gates."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "a804cd9bce",
+    "17550432b0",
+    "451218fa1a"
+   ],
+   "value": "Mechanical and electronic locks, access control systems, door closers, exit devices, biometric readers, and cloud-based security platforms under brands including Schlage, Von Duprin, LCN, Falcon, and Steelcraft."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days accrued PTO + 10 company holidays + 2 volunteer days; unlimited sick; new hires start at 15 days."
   },
+  "refresh_after": 1789872018,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research"
+   "value": "Allegion Technology Leadership Program (ATLP) — 2-year, 3-rotation early-career program for software, data, and embedded engineers."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual winter shutdown (Dec 24–Jan 1) plus one summer floating week; offices closed, non-essential systems offline."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "a804cd9bce",
+    "17550432b0",
+    "451218fa1a"
+   ],
+   "value": "Public company (NYSE: ALLE); ~11,000 employees globally; ~$3.5B annual revenue; mature industrial/technology hybrid."
   },
   "sources": [
    {
@@ -8479,14 +8557,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=cb157a51f74fc524c3b28f506f274c41e3c94e1df38cc71c8e299ecd3ea0b5ceJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=068da0dd-8eee-6028-1b01-b7408fbe61eb&u=a1aHR0cHM6Ly91cy5hbGxlZ2lvbi5jb20vZW4vaG9tZS5odG1s&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors H-1B and green cards for specialized engineering roles; typical for global industrial-technology firms of this scale."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "a804cd9bce",
+    "17550432b0",
+    "451218fa1a"
+   ],
+   "value": "Allegion is a global security products company specializing in mechanical and electronic locks, access control systems, and door hardware for commercial and residential markets. It operates brands such as Schlage, Von Duprin, and LCN, generating revenue through product sales and integrated security solutions."
+  },
+  "synthesized_evidence_sha": "743955ae908773dd",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "a804cd9bce",
+    "17550432b0",
+    "451218fa1a"
+   ],
+   "value": "Embedded firmware, IoT device connectivity, cloud backend for access management, mobile apps, data analytics for building utilization, and ML for anomaly detection in access patterns."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672486,
   "web_search_url": "https://duckduckgo.com/?q=Allegion+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a804cd9bce",
+    "17550432b0",
+    "451218fa1a"
+   ],
+   "value": "Allegion offers a rare blend: a century-old industrial leader aggressively investing in AI/IoT for smart access, providing elite prestige and competitive new-grad pay without the burnout culture of pure-play tech giants. Its mission—securing the spaces where life happens—is tangible and safety-critical. The company emphasizes sustainable pace, predictable hours, and structured learning rotations, aligning with your priority for technical growth that respects personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Core hours 9-5 with flexible start/stop; explicit no-meeting Fridays in several orgs; on-call rotation capped at one week per quarter with compensatory time off."
   }
  },
  "allen control systems": {
@@ -46915,7 +47026,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -46933,7 +47044,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784687926,
+  "last_attempt_at": 1784688018,
   "last_evidence_at": 1784673658,
   "name": "Collabera",
   "pace_of_work": {
@@ -70464,11 +70575,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -70480,6 +70593,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784688018,
   "last_evidence_at": 1784673659,
   "name": "Fidelity National Information Services",
   "pace_of_work": {
@@ -71038,7 +71152,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 9,
+  "attempts": 10,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -71056,7 +71170,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
-  "last_attempt_at": 1784687926,
+  "last_attempt_at": 1784688018,
   "last_evidence_at": 1784583446,
   "name": "Figma",
   "pace_of_work": {
@@ -106675,37 +106789,93 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 7,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 8,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "d93e0a1652",
+    "0d56413557"
+   ],
+   "value": "Hybrid model combining government R&D funding with commercial professional services. The company blends non-dilutive research contracts with client-funded engineering projects."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "d93e0a1652",
+    "0d56413557"
+   ],
+   "value": "Academically curious, engineer-centric, and deeply collaborative. Employees are described as having unique opportunities to interact directly with customers and participate in live field tests, emphasizing trust and professional autonomy."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "d93e0a1652",
+    "0d56413557"
+   ],
+   "value": "Government agencies (through research contracts) and commercial entities ranging from startups to Fortune 500 companies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $105,000 - $140,000 base salary for a new-grad ML or Software Engineer role, with additional employee-ownership profit-sharing potentially adding 5-15%. Base pay intentionally lags Silicon Valley to top-tier tech but total compensation widely."
   },
   "evidence_sha": "eb35ff7f34342640",
+  "generated_at": 1784688018,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0d56413557"
+   ],
+   "value": "Artificial Intelligence, Computer Vision, Scientific Software, Government R&D Contracting."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Focus will likely be on deep-dive fundamentals in machine learning, computer vision, and NLP rather than Leetcode speed-games. Prepare to discuss collaborative R&D experience, complex algorithm design, and how you handle direct customer interaction and field testing."
   },
-  "last_attempt_at": 1784687926,
+  "last_attempt_at": 1784688018,
   "last_evidence_at": 1784675879,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "d93e0a1652",
+    "0d56413557"
+   ],
+   "value": "Advance cutting-edge research and build meaningful, long-lasting software through open collaboration. The company does not publish a formal corporate mission statement in the provided sources, but job postings emphasize creating software that 'will stand the test of time' through direct customer collaboration and field testing."
+  },
   "name": "Kitware",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderately fast and innovation-focused without the hectic crunch of venture-funded startups. The R&D contract model promotes steady, project-based milestones rather than 24/7 release cycles."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "ee38ff5662",
+    "d93e0a1652",
+    "0d56413557"
+   ],
+   "value": "Custom AI algorithm development, open-source software platforms (e.g., CMake, ParaView, VTK), and data science solutions across computer vision, NLP, and scientific computing. The company also provides professional services for building scalable, mission-critical software."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of annual paid time off, plus separate sick time and standard federal holidays. As an employee-owned contractor in the technical services space, PTO tends to be competitive but not unlimited."
   },
+  "refresh_after": 1789872018,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -106716,6 +106886,11 @@
    "confidence": "estimated",
    "source_ids": [],
    "value": "None found in research (estimated)"
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -106779,10 +106954,38 @@
     "url": "https://jobs.lever.co/kitware/2b798a3f-0c54-4ff9-8c3f-3d5144706939"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "d93e0a1652",
+    "0d56413557"
+   ],
+   "value": "Kitware is an employee-owned research and software development company that creates custom AI, computer vision, and scientific computing solutions. It generates revenue by blending publicly funded R&D contracts with commercial services and software support for a wide range of clients."
+  },
+  "synthesized_evidence_sha": "eb35ff7f34342640",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "ee38ff5662",
+    "0d56413557",
+    "d93e0a1652"
+   ],
+   "value": "Advanced R&D and algorithm development in artificial intelligence, including computer vision (CV), natural language processing (NLP), vision-language models (VLMs), and generative AI. Work involves direct client collaboration, site visits, and live field tests. Infrastructure roles support R&D engineers across diverse projects."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675879,
   "web_search_url": "https://duckduckgo.com/?q=Kitware+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Kitware blends rigorous academic-level R&D with a mission-backed, non-profit-like structure, offering the prestige of AI innovation without the burnout of ad-tech. It matches your criteria by prioritizing deliberate engineering and work-life balance over rapid scaling, proving elite technical work can exist alongside sane hours and structured time off."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
@@ -122839,11 +123042,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -122855,6 +123060,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784688018,
   "last_evidence_at": 1784673660,
   "name": "Mercor",
   "pace_of_work": {
@@ -138401,7 +138607,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -138419,7 +138625,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784687926,
+  "last_attempt_at": 1784688018,
   "last_evidence_at": 1784674771,
   "name": "Oklo",
   "pace_of_work": {
@@ -145606,7 +145812,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 9,
+  "attempts": 10,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -145624,7 +145830,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784687926,
+  "last_attempt_at": 1784688018,
   "last_evidence_at": 1784674729,
   "name": "Peraton",
   "pace_of_work": {
