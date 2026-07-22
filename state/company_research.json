@@ -18373,40 +18373,89 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Medium-Prestige, High-Stability FinTech. The company has high brand recognition and credibility in the wealth-tech sector, though not as an elite AI research lab. For data science roles, it offers the prestige of working on large-scale, real-world financial data within a publicly environment, but the core value proposition is stability and domain depth over pure-tech celebrity."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "f888cfd455"
+   ],
+   "value": "AssetMark earns revenue through asset-based fees from the assets held and managed on its platform by advisors. As assets under management (AUM) grow, the company's recurring fee income grows correspondingly."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, collaborative, and consultative. The culture reflects its business: serving thoughtful, process-oriented financial advisors. Hierarchical but respectful, valuing real expertise without elitism. Work environment emphasizes stability and long-term client relationships, which tends to create a workplace with respectful boundaries."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "f888cfd455"
+   ],
+   "value": "Registered Investment Advisors (RIAs) and independent financial advisors who manage money on behalf of individual investors and institutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000 to $140,000 base salary for a new-grad AI or data science role at a California location, with total annual compensation (base with bonus and RSUs/options) likely in the $135,000 to $170,000 range. This a conservative estimate for a public FinTech firm balancing the candidate's requests for elite and high new-grad pay."
   },
   "evidence_sha": "9bdb4f9afdd5c474",
+  "generated_at": 1784683276,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f888cfd455"
+   ],
+   "value": "Financial Technology (FinTech), Wealth Management Technology"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+   "value": "Probe the team's specific maturity in data science and AI. Ask about current ML pipelines in production, specific business problems being solved with AI, and how technical strategy is set. Crucially, ask for specific examples of the team's reaction to a late-stage project issue—did it trigger a mandatory weekend sprint or a reprioritization during regular hours?"
   },
-  "last_attempt_at": 1784683187,
+  "last_attempt_at": 1784683276,
   "last_evidence_at": 1784674341,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "f888cfd455"
+   ],
+   "value": "To help financial advisors build thriving businesses and make a difference in the lives of their clients by delivering a powerful wealth management platform and consultative support."
+  },
   "name": "AssetMark",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady and purposeful, with a focus on reliability and compliance. Pace is likely faster than a traditional bank due to its technology-centric platform nature, but slower and more structured than a venture-backed startup."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "f888cfd455",
+    "21839e1c68"
+   ],
+   "value": "A platform offering portfolio management, performance reporting, billing, risk assessment, and client communication tools. It also provides model portfolios, third-party investment manager strategies, and a turnkey asset management program (TAMP)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days of paid vacation per year for new, full-time professional employees, plus standard holidays. This is a conservative estimate for the corporate office of an established public company in this sector."
   },
+  "refresh_after": 1789867276,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -18416,7 +18465,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdown outside of standard US federal holidays. Potential for a limited number of company-appointed days beyond those. A year-end shutdown is not standard across the FinTech sector."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "f888cfd455"
+   ],
+   "value": "Publicly traded (NYSE: AMK), established financial services firm. Over 1,000 employees. Its platform supports over $100 billion in assets."
   },
   "sources": [
    {
@@ -18450,14 +18506,37 @@
     "url": "https://www.bing.com/ck/a?!&&p=8761cd1c3d26a9c0f0fb77deef93dc5531c562bbc5a2922520fbb013593f8158JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=320ae8cc-8f07-6077-0b51-ff518e3e6197&u=a1aHR0cHM6Ly93d3cuYXNzZXRtYXJrLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "f888cfd455"
+   ],
+   "value": "AssetMark is a wealth management technology platform that provides investment solutions, technology, and consulting to independent financial advisors. The company helps these advisors manage client assets, streamline their operations, and grow their businesses."
+  },
+  "synthesized_evidence_sha": "9bdb4f9afdd5c474",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674341,
   "web_search_url": "https://duckduckgo.com/?q=AssetMark+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers a potential 'compromise destination' for candidates who value prestige but not at the cost of burnout. In the FinTech sector, which itself tends toward faster pace than traditional banking, AssetMark's established, recurring-revenue model creates more predictable demand, often shielding tech staff from the extreme volatility of B2C or startup environments. This can translate to the coveted combination of elite-level compensation and intelligent but sane work rhythms, alongside the mission"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Above average for the FinTech and overall tech industry. The recurring fee-based model reduces 'crunch-time' pressure common in transactional or ad-based tech firms."
   }
  },
  "assured information security ais": {
@@ -50388,37 +50467,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 enterprise AI consultancy, equivalent to top technology firms but inside a consulting and services brand that carries strong cachet in data and AI engineering communities. The role signals elite capability and rubs shoulders with hyper-scale tech but from a business-solution angle."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "54f22607b2",
+    "2c7db9381c"
+   ],
+   "value": "Project-based professional services and long-term managed technology engagements. Cumulus earns revenue from consulting fees, solution delivery, and ongoing system stewardship, leveraging proprietary AI accelerators developed in its internal tech centers."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "e9457d3c44"
+   ],
+   "value": "Human-centered, expert-driven, and collaborative. Combines intense curiosity with a growth mindset, emphasizing what employees describe as “care” — genuine concern for well-being and professional development. There is an inclusive 'come as you are' feel paired with a strong bias for execution."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "e9457d3c44"
+   ],
+   "value": "Large enterprises, government agencies, and global organizations seeking end-to-end AI and data transformation. The client base spans cross-industry sectors where trusted, secure, and highly integrated AI systems are business-critical."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120,000–$145,000 base salary plus bonus, equity, and substantial benefits in US tier-1 cities. The total comp likely lands in the top quartile for new-grad AI consulting roles in consulting."
   },
   "evidence_sha": "004c1914f9883c32",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784683276,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "54f22607b2",
+    "2c7db9381c"
+   ],
+   "value": "Enterprise AI and Professional Services"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784683276,
   "last_evidence_at": 1784677034,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "e9457d3c44"
+   ],
+   "value": "Global. The operations span internal technology hubs and client sites in multiple regions. Specific office locations and remote arrangements are confirmed through the hiring process."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "e9457d3c44"
+   ],
+   "value": "To help organizations transform data into value by weaving AI directly into the fabric of their work—augmenting human expertise and accelerating business outcomes through trusted, responsible technology. The mission is to create innovation that empowers rather than replaces people."
+  },
   "name": "Cumulus",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast, intellectually demanding rhythm that orbits around high-stakes solution delivery. Work moves at the speed of enterprise deadlines and innovation cycles, not chaotic startup churn, and prioritizes thoughtful engineering over rushed deployments."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "54f22607b2",
+    "2c7db9381c"
+   ],
+   "value": "AI-powered business solutions, data and AI transformation services, and advanced analytics platforms. Cumulus combines strategic consulting with hands-on engineering to build custom solutions that translate complex data into actionable business insights."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days standard PTO plus personal days and holidays; US new grads typically start with a generous time-off package that matches top enterprise tech employers."
   },
+  "refresh_after": 1789867276,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -50428,7 +50565,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed company-wide seasonal shutdowns (likely full-week closures in winter and summer) — a signature benefit that protects collective rest, such as a mandatory year-end disconnect. Internally resources call this a protected recharge period."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "e9457d3c44"
+   ],
+   "value": "Large, established organization operating at global scale through a dedicated internal technology division. It functions with the brand agility of a specialized AI firm backed by immense infrastructure, indicating a mature and deeply resourced stage."
   },
   "sources": [
    {
@@ -50462,14 +50606,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=413342162f5b3914d391e3c819c9a61680d17410682441ff7dd1b816c4462836JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=085f50d9-7325-609a-08c7-4744729461bb&u=a1aHR0cHM6Ly9jYXJlZXJzLm1pY3Jvc29mdC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "e9457d3c44"
+   ],
+   "value": "Supported for specialized technical roles with critical global expertise. Work authorization and visa sponsorship availability depends on the candidate's location, chosen role, and prevailing regulations."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "54f22607b2",
+    "2c7db9381c",
+    "e9457d3c44"
+   ],
+   "value": "Cumulus is the professional services brand that designs, builds, and runs AI-powered systems and advanced data foundations for enterprises. It generates revenue by creating high-impact business solutions that integrate artificial intelligence with business strategy, industry expertise, and a global network of internal technology centers."
+  },
+  "synthesized_evidence_sha": "004c1914f9883c32",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "2c7db9381c"
+   ],
+   "value": "Designing and engineering AI solutions, large-scale data architectures, machine learning models, and advanced analytics; this is an applied AI role with direct client and stakeholder exposure. Work includes model development, data science, solution architecture, and AI strategy."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677034,
   "web_search_url": "https://duckduckgo.com/?q=Cumulus+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Very good for AI professional services — sustainably designed with protected personal time infrastructure. The culture explicitly supports Microsoft-level boundaries, where working consistently extended hours is the exception, not the expectation."
   }
  },
  "curinos": {
@@ -55671,37 +55844,98 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Prestige Tier 2: Highly respected enterprise security domain leader, not a general consumer tech brand. Elite within PKI and cryptographic infrastructure, but lacks Big Tech AI labs' broad name recognition."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "3ea38d69eb",
+    "da34eadc86"
+   ],
+   "value": "B2B subscription-based model generating recurring revenue through certificate sales and enterprise software licenses for automated certificate management and PKI solutions."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "03d3dbfd85"
+   ],
+   "value": "Security-first, highly professional, and low-drama environment; the culture is driven by the reliability demand of global internet security. Technically serious but office-centric in nature for US Sunnyvale with an onsite-first approach."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "3ea38d69eb"
+   ],
+   "value": "Primarily large-scale enterprises, governments, financial institutions, and technology companies that require high-assurance digital certificate authority services to secure internet-facing systems and devices."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "03d3dbfd85"
+   ],
+   "value": "Estimated: $100,000 - $105,000 base salary for Associate Backend Engineer in Sunnyvale, CA, consistent with published entry-level range."
   },
   "evidence_sha": "e66dc1e96759154c",
+  "generated_at": 1784683276,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "03d3dbfd85",
+    "3ea38d69eb"
+   ],
+   "value": "Enterprise Cybersecurity / Digital Trust"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect interviews balancing backend domain knowledge, algorithm logic, and behavioral depth about engineering resilience. The tech culture values reliability and security over 'growth hacks', so showcase how you ship high-quality code for critical systems while communicating deliberately in a collaborative, low-ego engineering org—matches your preference for a culture without burnout toxicity."
   },
+  "last_attempt_at": 1784683276,
   "last_evidence_at": 1784680810,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "03d3dbfd85"
+   ],
+   "value": "Global headquarters in Lindon (Utah, USA) with major engineering offices in Sunnyvale, CA. The specific entry-level role cited is based in Sunnyvale, California."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "03d3dbfd85"
+   ],
+   "value": "To deliver intelligent digital trust, ensuring the security, privacy, and authenticity of a safer digital interactions."
+  },
   "name": "DigiCert",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Structured and methodical development pace typical of critical security infrastructure; stability and zero-bugs delivery are prioritized over 'move fast and break things'."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "3ea38d69eb",
+    "0df0e85ae2",
+    "da34eadc86"
+   ],
+   "value": "DigiCert provides digital trust solutions including TLS/SSL certificates for websites, PKI (Public Key Infrastructure) management software, IoT device identity security, and enterprise certificate lifecycle management automation."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 vacation days annually for an entry-level associate, and is a conservative Utah-headquartered mature company with standard industry benefits."
   },
+  "refresh_after": 1789867276,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -55711,7 +55945,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed major holiday and Christmas-week shutdown, standard for a secure enterprise that enforces global signing blackout maintenance windows."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "03d3dbfd85"
+   ],
+   "value": "Established private company with 1001-5000 employees; late-stage mature business with steady revenue driven by the critical nature of internet security infrastructure."
   },
   "sources": [
    {
@@ -55765,14 +56006,42 @@
     "url": "https://jobright.ai/jobs/info/6a5fd4e5193b51130967aed2?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "03d3dbfd85"
+   ],
+   "value": "DigiCert has a track record of offering H1B sponsorships, though eligibility is role-specific. Active full-time postings for engineering roles in US exist as of 2026."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "03d3dbfd85",
+    "3ea38d69eb"
+   ],
+   "value": "DigiCert is a global cybersecurity company that acts as a digital notary for the internet. It issues and manages digital certificates (TLS/SSL, IoT, PKI) that verify website identities and encrypt data, essentially providing trust for online transactions. The company makes money by selling these certificate subscriptions and managed security services to businesses and governments."
+  },
+  "synthesized_evidence_sha": "e66dc1e96759154c",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "03d3dbfd85"
+   ],
+   "value": "Engineers at DigiCert work on robust backend systems for certificate lifecycle management, high-availability cryptographic infrastructure, and scaling trust platform. Associate Backend Engineer roles emphasize backend languages and security fundamentals with zero years of professional experience required."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680810,
   "web_search_url": "https://duckduckgo.com/?q=DigiCert+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Targets a high-pay engineering role at the intersection of security and data science that matches your new-grad salary floor. DigiCert's critical PKI engineering moves at a sustainable infrastructure speed, allowing deep technical learning without extreme startup volatility or bureaucratic stagnation, hitting the 'mission-critical but calm' pace you prioritize."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Generally positive work-life balance due to mature infrastructure build cycles; lack of typical startup crunch aligns with company stability over hustle intensity."
   }
  },
  "digital foundry inc": {
@@ -69250,42 +69519,110 @@
  },
  "fitch ratings": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "e40ee18fe4",
+    "cca0811340",
+    "c019a7f44d"
+   ],
+   "value": "Tier 1 (Top-tier): Big Three brand, massive proprietary financial datasets, published ML research, and direct impact on global capital markets."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "e40ee18fe4",
+    "cca0811340",
+    "c019a7f44d"
+   ],
+   "value": "Issuer-pay model for credit ratings (fees based on debt size/complexity) plus subscription and license revenue from Fitch Solutions data, analytics, and research products sold to buy-side and sell-side firms."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, intellectual, low-ego; strong emphasis on analytical rigor and regulatory compliance. Fitch Solutions tech teams operate with more autonomy and modern engineering practices than the traditional rating committees."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "e40ee18fe4",
+    "cca0811340",
+    "c019a7f44d"
+   ],
+   "value": "Debt issuers (governments, corporations, banks), institutional investors (asset managers, pension funds, insurers), regulators, and financial intermediaries who rely on independent credit opinions for investment and regulatory decisions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $115k-$135k base + 10-15% bonus + RSU (~$20k-$30k/yr vest) = ~$150k-$185k total Year 1 in NY/London/Dallas."
   },
   "evidence_sha": "81c8b92f36d549d6",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784683276,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784683187,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e40ee18fe4",
+    "cca0811340",
+    "c019a7f44d"
+   ],
+   "value": "Financial Services — Credit Rating Agencies / Financial Data & Analytics"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Expect rigorous coding (LeetCode medium/hard), system design for data-intensive pipelines, and deep questions on ML/NLP applied to financial text. Prepare for domain questions on credit risk basics, structured finance, or ESG data challenges. Behavioral interviews will probe ownership, cross-functional collaboration, and ability to ship reliable production systems in a regulated environment."
+  },
+  "last_attempt_at": 1784683276,
   "last_evidence_at": 1784676690,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "e40ee18fe4",
+    "cca0811340",
+    "c019a7f44d"
+   ],
+   "value": "Headquarters: New York, London. Major hubs: Dallas, Chicago, San Francisco, Hong Kong, Singapore, Tokyo, Frankfurt, Paris, Milan, Madrid, Dubai, and others across 30+ countries."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "e40ee18fe4",
+    "cca0811340",
+    "c019a7f44d"
+   ],
+   "value": "To provide forward-looking credit opinions and data that enhance transparency and efficiency in global credit markets."
+  },
   "name": "Fitch Ratings",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast — product cycles in Fitch Solutions move at modern SaaS speed; core rating processes are deliberate and regulated. Overall less frantic than quant trading or early-stage startups."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "e40ee18fe4",
+    "cca0811340",
+    "c019a7f44d"
+   ],
+   "value": "Credit ratings for sovereigns, corporates, financial institutions, insurance, structured finance, and public finance; Fitch Solutions data/analytics platforms; credit research and commentary; ESG and climate risk assessments."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days PTO + 10-12 US/UK holidays; competitive with large financial firms."
   },
+  "refresh_after": 1789867276,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -69295,7 +69632,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some teams observe quiet periods around year-end holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "e40ee18fe4",
+    "cca0811340",
+    "c019a7f44d"
+   ],
+   "value": "Large, mature public subsidiary of Fitch Group (owned by Hearst); ~3,000+ employees globally across 30+ offices; established 1914."
   },
   "sources": [
    {
@@ -69339,14 +69685,43 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors H-1B and green cards for specialized tech/quant roles; typical for large financial data firms. New-grad roles open to candidates with work authorization; STEM OPT friendly."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "e40ee18fe4",
+    "cca0811340",
+    "c019a7f44d"
+   ],
+   "value": "Fitch Ratings is one of the three major global credit rating agencies (alongside Moody's and S&P Global) that assesses the creditworthiness of governments, corporations, and structured finance products. It generates revenue primarily by charging issuers for rating services and selling research, data, and analytics to investors and financial institutions."
+  },
+  "synthesized_evidence_sha": "81c8b92f36d549d6",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Data engineering and platforming for massive financial datasets; ML/NLP for credit document processing, ESG scoring, and rating drivers; quantitative modeling for risk analytics; cloud infrastructure (AWS/Azure) modernization; low-latency data delivery APIs."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676690,
   "web_search_url": "https://duckduckgo.com/?q=Fitch+Ratings+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Fitch offers elite prestige as a Big Three credit rating agency with high new-grad compensation, while its Fitch Solutions division operates with a faster, product-focused tech culture than traditional analyst groups. The mission—bringing transparency to global credit markets—is tangible and data-driven. Historical financial-sector norms suggest reasonable hours and low burnout risk compared to investment banking or high-frequency trading shops, supporting work-life balance and sustained technic"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — financial data/analytics culture typically respects boundaries; core hours ~9-6 with rare weekends; guaranteed shutdowns not formalized but weekends generally protected."
   }
  },
  "five rings": {
@@ -109731,11 +110106,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -109747,6 +110124,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784683276,
   "last_evidence_at": 1784672022,
   "name": "Louisiana Economic Development",
   "pace_of_work": {
@@ -137428,11 +137806,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -137444,6 +137824,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784683276,
   "last_evidence_at": 1784677480,
   "name": "Parafin",
   "pace_of_work": {
@@ -151151,47 +151532,117 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown – no evidence of AI/data science presence, publications, or talent density in sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "b1298f19e4",
+    "b32f2e84ec",
+    "bdfffdb904"
+   ],
+   "value": "Unknown – revenue model not described in accessible source content."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown – no culture signals in sources."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "b1298f19e4",
+    "b32f2e84ec",
+    "bdfffdb904"
+   ],
+   "value": "Unknown – no customer or market information available in sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown – no compensation data in sources."
   },
   "evidence_sha": "4257a235495fd072",
+  "generated_at": 1784683276,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "b1298f19e4",
+    "b32f2e84ec",
+    "bdfffdb904"
+   ],
+   "value": "Unknown – insufficient source data to classify industry."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidate should probe: actual engineering/AI team size and pedigree, concrete WLB policies (core hours, on-call, shutdowns), new-grad compensation structure, mentorship and learning budget, and mission alignment. Sources provide no data to pre-answer these."
   },
+  "last_attempt_at": 1784683276,
   "last_evidence_at": 1784677107,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely US-based (English-language site), possibly remote-friendly; no office locations confirmed."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "b1298f19e4",
+    "b32f2e84ec",
+    "bdfffdb904"
+   ],
+   "value": "Unknown – no mission statement found in supplied sources."
+  },
   "name": "Ralliant",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown – no cultural indicators in sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "b1298f19e4",
+    "b32f2e84ec",
+    "bdfffdb904"
+   ],
+   "value": "Unknown – sources are redirect pages with no product information."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown – no PTO policy found."
   },
+  "refresh_after": 1789867276,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "b1298f19e4",
+    "b32f2e84ec",
+    "bdfffdb904"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown – no company-wide shutdown policy found."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Early-to-growth stage (likely <500 employees) based on limited public footprint."
   },
   "sources": [
    {
@@ -151225,14 +151676,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=a270f213f063dd64dc0596b9bc6fcc4ea3cf99f49e1eb55767b070a3a62143b5JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=34ea19f9-c3ba-6d41-3fe5-0e64c2596c4f&u=a1aHR0cHM6Ly9yYWxsaWFudC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown – no visa sponsorship policy found in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "b1298f19e4",
+    "b32f2e84ec",
+    "bdfffdb904"
+   ],
+   "value": "Ralliant appears to be a company with a public web presence, but the provided sources are redirect links without accessible content. No verifiable description of the company's purpose, products, or operations could be extracted from the supplied sources."
+  },
+  "synthesized_evidence_sha": "4257a235495fd072",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely involves software engineering, data science, or AI given candidate context, but no technical details in sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677107,
   "web_search_url": "https://duckduckgo.com/?q=Ralliant+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks elite AI/data science role with high new-grad pay, fast innovative culture, mission-driven focus, strong work-life balance (sane hours, guaranteed shutdowns), and accelerated technical growth without burnout. Ralliant's fit cannot be assessed from available sources."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown – no work-life balance data in sources."
   }
  },
  "ramboll": {
@@ -172591,37 +173067,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 (Enterprise/Industry-Specific). SS&C is a dominant force in financial operations but lacks the tech-first prestige of Big Tech or elite AI labs, and its brand is not built on groundbreaking public machine learning research."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Hybrid model combining software-as-a-service (SaaS) subscription fees and on-premise licensing with recurring outsourcing and revenue from fund administration services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Corporate, risk-averse, and acquisition-driven finance culture. The environment values stability, compliance, and integration work over sanctioned hacker-day competitions or free-wheeling innovation."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Banks, insurance companies, hedge funds, private equity firms, and asset managers. The company states it serves over 20,000 financial services organizations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95,000 - $115,000 base for AI/data science roles in a medium cost office, consistent with non-big-tech fintech enterprise pay; total done comp not aggressively equity-heavy."
   },
   "evidence_sha": "82af441294b163f1",
+  "generated_at": 1784683276,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Interviews will likely test practical data structures, system design relevant to financial data scale, and domain knowledge in automation; culture fit is heavily measured against a professional, non-hyperbolic pace."
+  },
+  "last_attempt_at": 1784683276,
   "last_evidence_at": 1784674531,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Windsor, Connecticut, with major offices in New York, London, and extensive global delivery centers in India and other regions."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To deliver innovative technology and services that enable financial services firms to run their operations effectively and grow their businesses."
+  },
   "name": "SS&C Technologies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to medium. Pace is steady, driven by financial service quarterly cycles rather than breakneck consumer-tech iteration, and modulated by a large, matrixed org structure."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Financial services software and business process outsourcing. Core platforms include SS&C Singularity (cloud-based trading and accounting), Blue Prism (robotic process automation), and specialized systems for fund administration, wealth management, and insurance."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days per year standard for new exempt-level tech employees, with separate sick time, following standard large-cap enterprise financial norms."
   },
+  "refresh_after": 1789867276,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -172631,7 +173148,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns beyond standard U.S. public holidays, though individual managers may quietly respect time off."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large publicly traded company (NASDAQ: SSNC), widely known for aggressive acquisition-driven growth rather than organic startup expansion. Very mature, global post-IPO firm."
   },
   "sources": [
    {
@@ -172665,14 +173187,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=5ece082692be65fa4194857c47e16e8d62263797436c78f7ec96d490e0d18507JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=099e55db-8735-67f2-3d1e-424686216698&u=a1aHR0cHM6Ly93d3cuc3NhLmdvdi8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a large, established U.S. public company with a history of H-1B visa sponsorship, it likely sponsors for highly specialized AI, RPA, and financial engineering roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "SS&C Technologies provides software and services that automate complex financial operations. It makes money by charging asset managers, banks, and insurance firms subscription and licensing fees for its platforms, along with revenue from outsourcing their back-office processes."
+  },
+  "synthesized_evidence_sha": "82af441294b163f1",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Engineering roles here heavily center on fintech automation, including AI-enhanced robotic process automation (RPA) via the Blue Prism acquisition, data integration from acquired companies, cloud migration, and algorithmic trading operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674531,
   "web_search_url": "https://duckduckgo.com/?q=SS%26C+Technologies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The firm provides a deeply stable, enterprise-grade environment which generally respects 9-5 boundaries more than a high-burnout startup; not cutting-edge prestige in a tech-first sense, but a place where an AI specialist can drive real fintech automation without sacrificing personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Above average for fintech/enterprise. While not immune to crunch during regulatory deadlines or quarterly closes, teams often operate with a strict-sane hours culture, especially compared to high-growth startups."
   }
  },
  "st joseph center": {
