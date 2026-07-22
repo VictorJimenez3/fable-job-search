@@ -36174,37 +36174,90 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Top-tier in open-source and cloud-native AI infrastructure; less flashy than FAANG consumer AI but highly esteemed among Linux, infrastructure, and HPC data science communities."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "b19a28e74a"
+   ],
+   "value": "Canonical makes money by selling commercial support, managed services, and enterprise-grade tools on top of its free, open-source Ubuntu operating system. Revenue comes primarily from annual support and service subscriptions."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Intellectually rigorous, mission-driven, and refreshingly pragmatic. Remote-first, text-heavy communication rewards writing, deep thinking, and autonomy. Ego-light and notably anti-toxic for the tech industry."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "b19a28e74a"
+   ],
+   "value": "Enterprises and public sector organizations worldwide, from startups to Fortune 500 companies, that rely on Ubuntu servers and cloud instances. Major cloud providers like AWS, Azure, and Google Cloud also offer Ubuntu as a standard option to their customers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000-$145,000 USD base for AI/data science remote roles depending on residence and specialization, plus standard benefits but no public equity plan."
   },
   "evidence_sha": "44c691da1c3214ec",
+  "generated_at": 1784683999,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b19a28e74a"
+   ],
+   "value": "Enterprise Open-Source Technology and Cloud Infrastructure"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Emphasize contributions to open-source projects, strong Linux fundamentals, and system-level AI or data engineering skills. Demonstrate curiosity, self-direction, and ability to collaborate asynchronously across time zones—qualities Canonical values over pedigree."
   },
+  "last_attempt_at": 1784683999,
   "last_evidence_at": 1784674427,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "b19a28e74a"
+   ],
+   "value": "Fully remote-first with no headquarters requirement; employees work from home globally, with optional office hubs in London, Taipei, Montreal, and other major cities."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "b19a28e74a"
+   ],
+   "value": "To deliver the world's free software platform and support services that make open source accessible and secure for every computing environment."
+  },
   "name": "Canonical",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: steady and deliberate engineering pace grounded in open-source and community-focused development processes rather than ad-hoc death marches."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "b19a28e74a"
+   ],
+   "value": "Ubuntu Desktop, Ubuntu Server, Ubuntu Cloud, and managed infrastructure services. Also includes commercial support for Kubernetes, OpenStack, and a portfolio of open-source security and compliance tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 annual vacation days plus local public holidays; policy typically tracks with UK-influenced global norms."
   },
+  "refresh_after": 1789867999,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -36214,7 +36267,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: annual company-wide year-end shutdown around late December through early January; may include additional periodic whole-company wellness days."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "b19a28e74a"
+   ],
+   "value": "Mature private company with over 1,000 employees distributed globally, growing steadily through enterprise open-source adoption rather than venture capital hypergrowth."
   },
   "sources": [
    {
@@ -36248,14 +36308,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=b2c05f043329ef2729bb52e576518432e022ae1e47895bce76cf9acf836e9ad0JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=17b15538-f6ae-67cc-2d9b-42a5f755668d&u=a1aHR0cHM6Ly9jYW5vbmljYWwuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "b19a28e74a"
+   ],
+   "value": "Canonical is the company behind Ubuntu, the world's most popular cloud operating system. They provide enterprise support, consulting, and managed services for open-source infrastructure, helping businesses deploy and manage Ubuntu at scale across cloud, server, desktop, and IoT."
+  },
+  "synthesized_evidence_sha": "44c691da1c3214ec",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "b19a28e74a"
+   ],
+   "value": "Core work spans Linux kernel engineering, cloud and edge infrastructure, AI/ML model deployment tooling, Kubernetes, and advanced automation. Data science roles would focus on optimizing AI workloads on Ubuntu and building data pipelines for open source tooling."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674427,
   "web_search_url": "https://duckduckgo.com/?q=Canonical+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Canonical offers a top-tier AI infrastructure brand with a mission-driven culture that prizes deep technical learning over bureaucracy. The remote-first model and established open-source norms support sane hours and annual company-wide shutdowns, giving you elite prestige and genuine work-life balance without the typical big-tech burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4 out of 5. Strong work-life balance driven by remote-first, global team structure and mandated shutdown periods; occasional on-call or release crunch peaks typical of infrastructure roles."
   }
  },
  "cantor fitzgerald": {
@@ -59088,41 +59173,99 @@
  "drw": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "2292afc482"
+   ],
+   "value": "Top-tier (peer to Jane Street, Two Sigma, Citadel Securities for ML/applied research)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "2292afc482"
+   ],
+   "value": "Proprietary trading: DRW deploys its own capital across systematic and discretionary strategies, earning profits from bid-ask spreads, statistical arbitrage, and directional positions. Non-trading arms (real estate, venture, crypto) provide diversification and strategic optionality."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "2292afc482"
+   ],
+   "value": "Engineering-first, intellectually honest, flat hierarchy. 'Challenge consensus' is a stated value. Low bureaucracy, high autonomy. Dress code casual. Strong peer learning culture."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "2292afc482"
+   ],
+   "value": "Global financial markets (exchanges, ECNs, liquidity venues), institutional counterparties, and DRW's own capital. The firm operates as a principal trader, not an agent for external clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $200k-$250k base + $100k-$200k sign-on/bonus + equity/RSU (vesting 4-5 yrs). Total first-year ~$350k-$450k, competitive with top quant firms."
   },
   "evidence_sha": "07a826dec30eb236",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784683999,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784683910,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2292afc482"
+   ],
+   "value": "Proprietary Trading / Quantitative Finance / Fintech"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2292afc482"
+   ],
+   "value": "Expect rigorous C++/Python systems questions, low-latency design, probability/stats, and ML fundamentals applied to time-series data. Prepare for open-ended research discussions and coding under time pressure. Ask about team-specific on-call rotations, shutdown policies, and how research transitions to production."
+  },
+  "last_attempt_at": 1784683999,
   "last_evidence_at": 1784675818,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2292afc482"
+   ],
+   "value": "Headquarters: Chicago, IL. Major offices: New York, London, Singapore, Austin, Green Bay. Remote/hybrid options vary by team."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "2292afc482"
+   ],
+   "value": "To bring sophisticated technology and exceptional people together to operate in markets around the world with high expectations, integrity, innovation, and a willingness to challenge consensus."
+  },
   "name": "DRW",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "2292afc482"
+   ],
+   "value": "Fast, deadline-driven during market hours; project cycles measured in weeks not quarters. Intensity varies by team—core latency-critical paths are highest pressure."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "2292afc482"
+   ],
+   "value": "Proprietary trading strategies, market-making algorithms, quantitative research platforms, cryptoasset trading infrastructure, real estate investments, venture capital portfolio."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 US holidays + flexible sick leave. Unlimited policy not confirmed; accrual-based typical for trading firms."
   },
+  "refresh_after": 1789867999,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -59132,7 +59275,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No firm-wide guaranteed shutdowns. Some teams observe quiet periods around major holidays; market-closed days (weekends, exchange holidays) are de facto shutdowns for trading-facing roles."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2292afc482"
+   ],
+   "value": "Established private firm (founded 1992), ~2,000+ employees globally, profitable and self-funded with no outside investors."
   },
   "sources": [
    {
@@ -59176,14 +59326,43 @@
     "url": "https://job-boards.greenhouse.io/drweng/jobs/8066969"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Actively sponsors H-1B, OPT STEM extensions, and green cards for technical roles; dedicated immigration team. No public cap-exempt status."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "2292afc482"
+   ],
+   "value": "DRW is a diversified proprietary trading firm with over three decades of experience combining sophisticated technology and quantitative research to trade across global markets. The firm generates revenue through market-making, arbitrage, and systematic strategies across equities, fixed income, cryptoassets, and other asset classes, while also investing in real estate and venture capital."
+  },
+  "synthesized_evidence_sha": "07a826dec30eb236",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2292afc482"
+   ],
+   "value": "Low-latency trading systems (C++, FPGA, kernel bypass), distributed data pipelines, ML/AI for signal generation and risk management, crypto/blockchain infrastructure, quantitative research platforms, cloud and on-prem compute grids."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675818,
   "web_search_url": "https://duckduckgo.com/?q=DRW+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2292afc482"
+   ],
+   "value": "DRW offers elite AI/data science prestige (top-tier quant trading) with new-grad compensation rivaling FAANG, but in a faster-paced, engineering-first culture that values innovation over bureaucracy. The firm emphasizes sustainable hours for a trading shop—market hours bound core work, and many teams protect weekends—while providing deep technical mentorship and rapid skill acceleration."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "2292afc482"
+   ],
+   "value": "Estimated: 3.5/5 for trading-adjacent roles (market hours + on-call); 4/5 for research/infrastructure teams with protected weekends. Better than most hedge funds, but not a 9-5."
   }
  },
  "dtcc": {
@@ -105840,39 +106019,101 @@
  },
  "krg technologies": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "de8d77b8d3",
+    "51351845ae"
+   ],
+   "value": "Niche Services (tier 3). It is an IT services firm, not an elite tech product company or AI research lab, and lacks top-tier prestige or brand recognition for AI."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "de8d77b8d3",
+    "51351845ae"
+   ],
+   "value": "B2B services model earning revenue from client projects and contract staffing placements."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Likely formal and client-service oriented. The innovation culture may be limited to delivering value for customers rather than pure R&D, creating a potential disconnect with the candidate's desire for a mission-driven, non-bureaucratic tech culture."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "de8d77b8d3",
+    "51351845ae"
+   ],
+   "value": "Likely mid-market to large enterprises requiring technical consulting and staffing support; specific client names are not detailed in provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000 - $90,000. IT services base salaries are generally lower than top-tier tech product companies in high-cost-of-living areas."
   },
   "evidence_sha": "f6086ed777af03a3",
+  "generated_at": 1784683999,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "de8d77b8d3",
+    "51351845ae"
+   ],
+   "value": "Information Technology Services and Consulting."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Likely a routine corporate structure. The candidate needs to probe whether daily work involves cutting-edge model development or legacy integration, and if the consulting culture truly supports the mandated shutdowns and sane hours they prioritize."
   },
+  "last_attempt_at": 1784683999,
   "last_evidence_at": 1784675349,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "de8d77b8d3",
+    "51351845ae"
+   ],
+   "value": "Specific headquarters or office locations are not detailed in the provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "de8d77b8d3",
+    "51351845ae"
+   ],
+   "value": "The provided sources do not state a specific mission statement. Given its staffing nature, it is likely focused on delivering technology solutions and talent."
+  },
   "name": "KRG Technologies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast-paced consulting environment driven by billable hours and client deadlines."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "de8d77b8d3",
+    "51351845ae"
+   ],
+   "value": "Technology consulting and IT staff augmentation services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10-15 days PTO (standard US services firm), with the candidate strongly advising to verify true disconnect policies."
   },
+  "refresh_after": 1789867999,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -105882,7 +106123,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns beyond typical US holidays. Forced shutdowns are uncommon in client-focused staffing agencies."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "de8d77b8d3"
+   ],
+   "value": "The company appears to be a small-to-mid-sized public firm with the ticker KRG, though specific employee count or revenue is not sourced."
   },
   "sources": [
    {
@@ -105916,14 +106164,44 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "de8d77b8d3",
+    "51351845ae"
+   ],
+   "value": "IT consulting and staffing firms frequently sponsor H-1B visas for specialized technical roles, but specific 2026 sponsorship data is not provided."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "de8d77b8d3",
+    "51351845ae"
+   ],
+   "value": "KRG Technologies is an IT services and staffing firm. It connects skilled technology professionals with client companies, generating revenue through consulting and placement fees."
+  },
+  "synthesized_evidence_sha": "f6086ed777af03a3",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "de8d77b8d3",
+    "51351845ae"
+   ],
+   "value": "As a services and staffing company, technical work focuses on fulfilling client requirements, which can include data, AI, and software projects depending on the end client."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675349,
   "web_search_url": "https://duckduckgo.com/?q=KRG+Technologies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This opportunity may offer exposure to diverse technical projects, but it may not satisfy the candidate's desire for a top-tier, AI-focused product company with elite prestige or guaranteed tech-culture innovation."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Poor to Fair. Work-life balance in staffing firms depends on client demands, but consulting generally does not guarantee the 'guaranteed shutdowns' and 'sane hours' the candidate requires."
   }
  },
  "kroll": {
@@ -108896,37 +109174,85 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "15170f8bc6"
+   ],
+   "value": "Financial institutions (banks, insurers), government agencies, law enforcement, healthcare, and legal professionals across 150+ countries."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $100,000-$125,000 base salary, plus a performance bonus, for technical roles like Data Scientist or Software Engineer in the Atlanta metro area."
   },
   "evidence_sha": "c305d975aebfb83f",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784683999,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784683910,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "15170f8bc6"
+   ],
+   "value": "Data Analytics / Risk Management / Insurtech / RegTech / Financial Services"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784683999,
   "last_evidence_at": 1784677297,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "15170f8bc6"
+   ],
+   "value": "Global headquarters in Alpharetta, Georgia (Atlanta metro). Major hubs include London, Dublin, and multiple locations across the US, with a significant technology presence in Atlanta and Alpharetta."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "15170f8bc6"
+   ],
+   "value": "To provide data-driven insights and analytics that help clients manage and mitigate risk across people, businesses, and assets."
+  },
   "name": "LexisNexis Risk Solutions",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate and deliberate. Work is project-based with a focus on accuracy, regulatory compliance, and enterprise-grade solutions, as opposed to typical 'move fast and break things' consumer-tech velocity."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "15170f8bc6"
+   ],
+   "value": "Products focus on identity management, fraud and financial crime detection, credit risk assessment, compliance analytics, and insurance underwriting tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO for a new grad, likely combined with standard US federal holidays and floating holidays."
   },
+  "refresh_after": 1789867999,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -108936,7 +109262,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdown outside of major US federal holidays (e.g., Christmas Day, New Year's Day), though team-specific quiet periods are common."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "15170f8bc6"
+   ],
+   "value": "Mature, enterprise-level subsidiary of RELX Group (FTSE 100). Global scale with thousands of employees and billions in annual revenue."
   },
   "sources": [
    {
@@ -108970,14 +109303,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=7f58ec3cfa6b348362c3551754da52ba602aa006cfea223fd211e1af138b9f26JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3e64e231-5a75-6518-36ef-f5ac5b2264b9&u=a1aHR0cHM6Ly93d3cubGV4aXNuZXhpcy5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "15170f8bc6"
+   ],
+   "value": "LexisNexis Risk Solutions provides data, analytics, and technology to help businesses and governments assess and manage risk. By leveraging vast datasets and advanced AI, it delivers insights for fraud detection, identity verification, compliance, and underwriting."
+  },
+  "synthesized_evidence_sha": "c305d975aebfb83f",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "15170f8bc6"
+   ],
+   "value": "AI, machine learning, and data science applied to massive, proprietary datasets for predictive modeling, graph analytics, entity resolution, and natural language processing. Engineering roles focus on high-availability data pipelines and cloud platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677297,
   "web_search_url": "https://duckduckgo.com/?q=LexisNexis+Risk+Solutions+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4 out of 5. The scale and stability of the parent company generally encourage a culture of manageable hours, with teams respecting personal time to maintain the high-precision output required for risk applications."
   }
  },
  "lg electronics": {
@@ -116682,41 +117040,91 @@
  "mass general brigham": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "ec38a98a8d"
+   ],
+   "value": "Tier 1 among academic medical centers. The combined MGH/BWH research ecosystem is globally elite in biomedical AI, though total comp and pure-tech prestige are lower than FAANG firms and top proprietary AI labs."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "ec38a98a8d"
+   ],
+   "value": "Non-profit health system investing all revenues back into community care, research, and education. It generates surplus from its insurance plans and clinical services, then reinvests those funds into workforce initiatives, technology, and scientific discovery rather than distributing profit to shareholders."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-oriented, collegial, and academic medical. The vibe is a lab-coat culture that values evidence, humility, and peer-reviewed impact above moving fast or breaking things. It is strictly bureaucratic on administrative tasks but has minimal tolerance for burnout-by-shouting or swell-work death marches."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Patients in the greater Boston area and beyond who seek specialty care, as well as individuals covered under its own health insurance plans."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $105,000 - $120,000 base salary for a new-grad AI / Data Science position within the computational medicine or IT division. Research post-doc pay is far lower, while specialized machine learning engineering roles in the data-science team can reach toward $125,000 with no long-term incentive."
   },
   "evidence_sha": "58a1bd391663a035",
+  "generated_at": 1784683999,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ec38a98a8d"
+   ],
+   "value": "Hospital & Health Care"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect technical rounds to dive into statistics, Python or R data-wrangling, and causal inference methods, with a strong emphasis on communicating complex modeling concepts to doctors who lack a tech background. Behavioral rounds focus on mission alignment, handling ambiguous clinical time series data, and working within IRB constraints without requiring round-the-clock availability."
   },
-  "last_attempt_at": 1784683910,
+  "last_attempt_at": 1784683999,
   "last_evidence_at": 1784673559,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "ec38a98a8d"
+   ],
+   "value": "Headquartered in Somerville, Massachusetts, with primary research and teaching hubs in Boston and clinical sites in multiple suburban towns."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "ec38a98a8d"
+   ],
+   "value": "Serving the community, caring for patients, discovering new treatments, and training the next generation of doctors."
+  },
   "name": "Mass General Brigham",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Deliberate and measured, paced more like an academic research lab than a SaaS startup. The work revolves around grant cycles and clinical meetings, with careful validation required before any model touches patient-care protocols."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "ec38a98a8d"
+   ],
+   "value": "It provides a range of healthcare delivery and health-insurance products. The non-profit receives NIH funding for biomedical research and trains future physicians."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 combined days annually for a new grad hire, blending vacation, personal, and sick time in a single rich accrual, plus standard Massachusetts fixed paid holidays."
   },
+  "refresh_after": 1789867999,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -116726,7 +117134,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed institutional shutdowns typically occur on major federal holidays and often a half-week winter break closure in late December when non-essential tech and research IT operations freeze."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "ec38a98a8d"
+   ],
+   "value": "The largest hospital-based research enterprise and the second-largest non-profit institution in the U.S. It represents a state-wide, mature organization with roughly 82,000 employees across the system."
   },
   "sources": [
    {
@@ -116760,14 +117175,37 @@
     "url": "https://www.bing.com/ck/a?!&&p=d74fe026f6c8d5a56e2a63ba4e600f90d6ff46bbaf2455efb302156a21f9403cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0988a76f-e90c-65d2-24f0-b0f2e84e64a2&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9NYXNz&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "ec38a98a8d"
+   ],
+   "value": "Mass General Brigham is a not-for-profit integrated healthcare system that combines the clinical, research, and educational power of Brigham and Women’s Hospital, Massachusetts General Hospital, and other top-tier institutions. It makes money by billing for advanced patient care and surgical procedures, and by winning massive federal research grants that fuel its academic medical centers and data-science initiatives."
+  },
+  "synthesized_evidence_sha": "58a1bd391663a035",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673559,
   "web_search_url": "https://duckduckgo.com/?q=Mass+General+Brigham+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This system places a new grad inside an elite institution with immediate access to patient data that is rare for a tech giant, offsetting the slower pace of a massive academic medical center with mission-focused, truly meaningful work such as curing cancer with machine learning. It actively protects personal time through sane academic hours and scheduled breaks, avoiding the toxic burnout found in many startup or wear-a-pager corporate rotation cultures."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Respectfully paced. Clinical research environments typically enforce a standard structured week, and on-call is generally zero for pure AI roles. The non-profit hospital culture strongly discourages the late-night crunch mode common in tech desks."
   }
  },
  "massmutual": {
@@ -122387,7 +122825,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -122405,7 +122843,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784683910,
+  "last_attempt_at": 1784683999,
   "last_evidence_at": 1784674658,
   "name": "Mindlance",
   "pace_of_work": {
@@ -130727,42 +131165,98 @@
  },
  "nightwing intelligence solutions": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "efc959c982"
+   ],
+   "value": "Tier 2 - Elite within the niche cleared intelligence community; top-tier mission impact and technical rigor, but less broad brand recognition outside national security compared to Big Tech or top commercial AI labs. High prestige for those targeting national security-focused AI and data science careers."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "efc959c982"
+   ],
+   "value": "Government services contractor providing specialized technical expertise and solutions to intelligence and defense agencies. Generates revenue through contract awards and task orders for mission support."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "efc959c982"
+   ],
+   "value": "A blend of a newly independent tech entity and an established group of mission-driven cleared professionals. Vibe is likely disciplined and secure given the intelligence community setting with an agile, collaborative development methodology. Building on a legacy from a Fortune 100 company, it likely maintains a mature, high-security culture while seeking fresh, fast-paced innovation."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "efc959c982"
+   ],
+   "value": "U.S. government agencies and organizations involved in the nation's most mission impactful initiatives, specifically within the intelligence and defense communities."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000 - $115,000 base salary in Annapolis Junction, MD. Total compensation with a 401k plan, medical, vision, dental, and PTO adds substantial value. This range is characteristic for a Software Engineer 1 in an elite cleared defense contractor in the DC metro area."
   },
   "evidence_sha": "6b37a2ad04381207",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+  "generated_at": 1784683999,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784683910,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "efc959c982"
+   ],
+   "value": "Defense and Intelligence Contracting"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "efc959c982"
+   ],
+   "value": "Expect interview topics covering the software product lifecycle in an agile environment, proficiency in data structures and algorithms, and understanding of cyber, data operations, or related systems. Critically, you must demonstrate U.S. citizenship and ability to obtain or hold a Tier 2 background investigation or security clearance. Behavioral questions may probe your comfort with the structure of a cleared, mission-focused environment and your ability to produce high-quality work within defi"
+  },
+  "last_attempt_at": 1784683999,
   "last_evidence_at": 1784621687,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "efc959c982"
+   ],
+   "value": "Headquartered in Dulles, VA. Active job postings in Annapolis Junction, MD (near Fort Meade). Likely additional cleared facilities in the Washington D.C. metropolitan area given the intelligence community focus."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "efc959c982"
+   ],
+   "value": "To meet customers' most demanding challenges by providing technically advanced intelligence mission support services and supporting the nation's most mission impactful initiatives."
+  },
   "name": "Nightwing Intelligence Solutions",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady and mission-focused. The agile lifecycle demands consistent delivery, but the structured, client-funded nature of intelligence contracting typically avoids the chaotic crunch of venture-funded startups."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "efc959c982"
+   ],
+   "value": "Technical services including full-spectrum cyber operations, data operations, systems integration, and intelligence mission support. Software development follows an agile product lifecycle."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of paid time off annually for a new graduate, aligning with a standard defense contractor PTO bank combining vacation and sick leave."
   },
+  "refresh_after": 1789867999,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -130772,7 +131266,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Typical for cleared intelligence contractors to observe all 10-11 U.S. federal holidays as guaranteed paid shutdown days, with possible additional holiday shutdown periods (e.g., between Christmas and New Year) dictated by the client contract."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "efc959c982"
+   ],
+   "value": "Privately held independent company, newly spun off in 2024 from a Fortune 100 parent. Headquartered in Dulles, Virginia with major office presence in Annapolis Junction, Maryland."
   },
   "sources": [
    {
@@ -130806,14 +131307,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=e716918064edfbf1186a5845e2ce72c7e18508df781ff5a1ea7b708cf0bc38a8JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=2355962d-b9fc-6fa1-2f05-81b1b8e06e8c&u=a1aHR0cHM6Ly93d3cuZGMuY29tL2NoYXJhY3RlcnMvbmlnaHR3aW5n&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "efc959c982"
+   ],
+   "value": "As a U.S. intelligence community contractor requiring a security clearance, Nightwing is highly unlikely to sponsor visas. All technical roles will require U.S. citizenship and the ability to obtain a TS/SCI clearance with polygraph."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "efc959c982"
+   ],
+   "value": "Nightwing Intelligence Solutions delivers full-spectrum cyber, data operations, systems integration, and intelligence mission support to U.S. government clients. The company, which became independent in 2024 after previously operating as part of a Fortune 100 firm, helps these customers solve their most demanding national security challenges."
+  },
+  "synthesized_evidence_sha": "6b37a2ad04381207",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "efc959c982"
+   ],
+   "value": "Software engineering within an agile environment following the full software product lifecycle. Work spans cyber operations, data operations, systems integration, and intelligence mission support."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784586002,
   "web_search_url": "https://duckduckgo.com/?q=Nightwing+Intelligence+Solutions+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "efc959c982"
+   ],
+   "value": "Nightwing operates in an elite segment of AI and data science, applying advanced technologies directly to high-stakes intelligence missions. As a newly independent entity, it offers the prestige of a top-tier cleared contractor with the potential for a faster, less bureaucratic culture than legacy defense primes. The mission-critical nature of the work commands strong new-grad pay, while cleared contractor roles typically feature structured hours that respect personal time more than commercial t"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Above Average. Cleared contractor roles in the defense sector typically feature a respect for 40-hour workweeks due to the combined factors of secure facility requirements, strict billing structures, and long-term mission tempo. This promotes a strong separation between work and personal life."
   }
  },
  "njm insurance group": {
@@ -150639,39 +151169,110 @@
  },
  "pure storage": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "5b1eabfd39",
+    "7a7afcb60f"
+   ],
+   "value": "Tier 2+ Infrastructure Leader: High‑demand niche esports physically hardware‑based AI pipelines with strong Wall Street credibility. Slightly below hyperscaler AI labs in corporate prestige, but provides unique data‑adjacent engineering influence."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "5b1eabfd39"
+   ],
+   "value": "Designs and sells proprietary all‑flash storage arrays via direct sales and channel partners. Makes money primarily from hardware sales plus Evergreen subscriptions that provide continuous hardware and software upgrades over time."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "12c56638bf",
+    "d52f97ab98"
+   ],
+   "value": "Warm‑office with “we build each other up” disregard ego. Perks managed to keep a healthy balance with company‑sponsored socials, communicated as professional yet mission‑driven and purpose‑friendly."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "5b1eabfd39"
+   ],
+   "value": "Global enterprises with demanding AI, analytics, database, and virtualization workloads; includes cloud‑native DevOps teams, SaaS providers, and large financial services firms."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: US$115,000–140,000 base salary for technical new‑grad roles in Santa Clara, with sign‑on bonus and performance equity, placing it at argued pay level for AI‑adjacent hardware firms."
   },
   "evidence_sha": "611bea9b1347b491",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784683999,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "5b1eabfd39"
+   ],
+   "value": "Enterprise Data Storage, Cloud Infrastructure, AI‑infrastructure enablement"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "12c56638bf",
+    "e270942f89",
+    "d52f97ab98"
+   ],
+   "value": "Panel expects deep system design or algorithmic coding, validation of billing architecture automation, and a collaborative style. Emphasizes AI awareness adoption and E‑go‑less team building."
+  },
+  "last_attempt_at": 1784683999,
   "last_evidence_at": 1784675819,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "e270942f89",
+    "12c56638bf",
+    "d52f97ab98"
+   ],
+   "value": "Headquartered in Santa Clara, CA, with primary in‑office environments also required in Prague, Czech Republic, and other global offices mentioned in job postings."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "5b1eabfd39",
+    "abf4bde469"
+   ],
+   "value": "Unleash innovators by delivering a simpler, more efficient, and more reliable data storage experience, with a strong stated commitment to sustainability and reducing energy waste."
+  },
   "name": "Pure Storage",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e270942f89",
+    "d52f97ab98"
+   ],
+   "value": "Estimated: Fast and evolving enterprise pace in‑office, described as “fast‑paced enterprise environment,” balanced by perks for healthy balance and flexible time off."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "5b1eabfd39"
+   ],
+   "value": "FlashArray (unified fast file and block), FlashBlade (unified fast file and object), Pure Fusion (SaaS management), Portworx (Kubernetes data services), and Evergreen subscription services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "d52f97ab98"
+   ],
+   "value": "Estimated: 15 days per year for new grad hires, plus rolling company holidays and “flexible time off” mentioned in 2026 job postings."
   },
+  "refresh_after": 1789867999,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -150681,7 +151282,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual company‑wide shut down over 4‑5 days for the US Christmas‑New Year period, based on typical enterprise hardware sector practice."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "5b1eabfd39",
+    "7a7afcb60f"
+   ],
+   "value": "Publicly traded, multi‑billion dollar revenue company established in 2009. Operates at enterprise scale with thousands of employees globally."
   },
   "sources": [
    {
@@ -150745,14 +151354,45 @@
     "url": "https://job-boards.greenhouse.io/purestorage/jobs/7930600"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "5b1eabfd39"
+   ],
+   "value": "Pure Storage develops all‑flash data storage hardware and software for enterprise data centers. The company sells its FlashArray, FlashBlade, and Evergreen subscription services directly to large organizations, generating primarily recurring and subscription revenue."
+  },
+  "synthesized_evidence_sha": "611bea9b1347b491",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "12c56638bf",
+    "d52f97ab98"
+   ],
+   "value": "Roles span engineering to product data. A System Software Engineer opening designs low‑level storage solutions; a Talent Sourcer posting notes continuous adoption of AI-based recruitment tools across teams. The company develops speed-focused, resilient platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675819,
   "web_search_url": "https://duckduckgo.com/?q=Pure+Storage+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "d52f97ab98"
+   ],
+   "value": "Balances elite‑level caliber, high new‑grad tech pay, and innovation with a “best self to work” culture. Explicitly offers flexible time off, wellness perks, and team events to support wellbeing alongside threshold engineering challenges."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "d52f97ab98",
+    "12c56638bf"
+   ],
+   "value": "Estimated: 3.8/5. Official postings emphasize flexible time off, wellness resources, and after‑one‑self activities. Company website positions culture as egoless and collaborative."
   }
  },
  "pylon": {
