@@ -37572,7 +37572,7 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -37590,7 +37590,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784689566,
+  "last_attempt_at": 1784689917,
   "last_evidence_at": 1784677402,
   "name": "Cape",
   "pace_of_work": {
@@ -68071,11 +68071,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -68087,6 +68089,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784689917,
   "last_evidence_at": 1784676545,
   "name": "Esri",
   "pace_of_work": {
@@ -80930,11 +80933,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -80946,6 +80951,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784689917,
   "last_evidence_at": 1784674834,
   "name": "General Dynamics Mission Systems",
   "pace_of_work": {
@@ -157279,7 +157285,7 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -157297,7 +157303,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784689566,
+  "last_attempt_at": 1784689917,
   "last_evidence_at": 1784672492,
   "name": "Publicis Montr\u00e9al",
   "pace_of_work": {
@@ -158722,37 +158728,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (elite) \u2014 recognized in AI hardware circles; publishes at ISCA/MICRO/MLSys; backed by top-tier VCs; competes with Nvidia/Intel/Google TPU for edge mindshare."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Licensing processor IP (Chimera GPNPU) and associated software toolchain to chipmakers and system OEMs; revenue from upfront licensing fees, royalties per chip/device, and support contracts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, low-ego, high-autonomy; 'build it once, build it right' mindset; cross-functional (architects, compiler, RTL, product) collaboration daily; transparent roadmap; celebrated for technical depth over hype."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Semiconductor companies, SoC designers, and OEMs building edge devices (e.g., cameras, robots, industrial IoT, automotive) that need on-device AI inference."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: $130k\u2013$160k base + 0.05%\u20130.15% equity (4-yr vest) + sign-on $10k\u2013$25k; total comp ~$160k\u2013$200k year 1 depending on role (architect/compiler/RL)."
   },
   "evidence_sha": "145c43be7f34f3bb",
+  "generated_at": 1784689917,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "AI semiconductor / edge computing / processor IP licensing"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical loops: computer architecture (pipelines, memory hierarchy), compiler internals (MLIR/LLVM passes), kernel optimization for tensor ops, and quantitative performance analysis. Prepare to discuss real trade-offs in mapping diverse neural nets to a single programmable dataflow engine. Cultural screen emphasizes ownership, speed of iteration, and collaboration across HW/SW boundaries."
+  },
+  "last_attempt_at": 1784689917,
   "last_evidence_at": 1784616149,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Burlingame, CA (SF Bay Area); remote-friendly roles reported."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Enable ubiquitous on-device AI by providing a single, programmable processor architecture that runs any neural network workload efficiently at the edge."
+  },
   "name": "Quadric",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast \u2014 tape-out driven milestones, quarterly IP drops, customer integration sprints; startup urgency with engineering rigor."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Chimera GPNPU processor IP, Quadric SDK/software stack for model compilation and deployment, and development tools for edge AI inference."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + flexible sick/unpaid; unlimited policy not confirmed."
   },
+  "refresh_after": 1789873917,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -158762,7 +158809,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 24\u2013Jan 1) observed; no other guaranteed company-wide shutdowns documented."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: ~50-150 employees; Series B/C-stage venture-backed startup (investors include Tiger Global, Linley Group, others)."
   },
   "sources": [
    {
@@ -158796,14 +158848,35 @@
     "url": "https://apply.workable.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B and green cards for senior/unique skill roles; new-grad sponsorship likely case-by-case given startup size."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Quadric develops a general-purpose neural processing unit (GPNPU) architecture and software stack designed to run entire AI/ML workloads on a single processor for edge computing. The company sells its Chimera GPNPU IP and SDK to semiconductor and OEM customers who embed it in their own chips and devices."
+  },
+  "synthesized_evidence_sha": "145c43be7f34f3bb",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Processor architecture design (RISC-V based), compiler/runtime development (MLIR/LLVM), kernel optimization, AI model quantization/mapping, RTL/verification, SDK/toolchain engineering, customer integration support."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784616149,
   "web_search_url": "https://duckduckgo.com/?q=Quadric+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Quadric sits at the intersection of elite AI hardware prestige (custom silicon for edge AI) and a fast-moving startup culture where new grads own significant compiler/architecture scope. The mission\u2014making on-device AI ubiquitous\u2014is technically deep and commercially consequential. Unlike hyperscaler labs, you ship silicon IP that reaches millions of edge devices, accelerating learning without the bureaucratic drag of big tech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7/10 \u2014 intense around tape-outs and customer deliveries, but leadership emphasizes sustainable pace; core hours ~10am-4pm with flexibility; minimal weekend expectation outside crunch."
   }
  },
  "qualcomm": {
@@ -177331,7 +177404,7 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -177349,7 +177422,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784689914,
+  "last_attempt_at": 1784689917,
   "last_evidence_at": 1784677402,
   "name": "Sierra",
   "pace_of_work": {
