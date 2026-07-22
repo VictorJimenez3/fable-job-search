@@ -17550,37 +17550,90 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Not a recognized top-tier AI institution; insufficient public data to evaluate prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "c08f1d0199",
+    "f3334e4e12",
+    "f16eec2a6f"
+   ],
+   "value": "The business model is unclear from the available redirect pages and job board presence, but it is likely based on B2B technology services or staff augmentation."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: A base salary of $65,000 - $75,000 is typical for a new grad in a general IT services role without specific AI/data science prestige indicators."
   },
   "evidence_sha": "64ce5c958d801d21",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784683910,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "c08f1d0199",
+    "f3334e4e12",
+    "f16eec2a6f"
+   ],
+   "value": "Information Technology Services / Staffing"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784683910,
   "last_evidence_at": 1784675817,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Arka Infotech",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Typical pace for an IT services firm, which can vary greatly by client project, ranging from moderate to high intensity."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "c08f1d0199",
+    "f3334e4e12",
+    "f16eec2a6f"
+   ],
+   "value": "The company's specific products or services are not described in the available sources. Based on its name and recruitment presence, it likely offers technology services such as IT consulting, custom software development, or staffing solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: No public data. A conservative estimate for a small US-based IT firm would be 10-15 total days per year, including sick and vacation."
   },
+  "refresh_after": 1789867910,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -17590,7 +17643,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No policy is public. A company-wide shutdown between Christmas and New Year's would be at the discretion of management."
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -17624,14 +17682,39 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "c08f1d0199",
+    "f3334e4e12",
+    "f16eec2a6f"
+   ],
+   "value": "Arka Infotech appears to be a technology services or staffing firm, but its public web presence is currently limited to redirect landing pages and generic recruitment platform entries, preventing a clear determination of its specific products or services. It likely generates revenue through IT consulting, software development, or talent placement."
+  },
+  "synthesized_evidence_sha": "64ce5c958d801d21",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675817,
   "web_search_url": "https://duckduckgo.com/?q=Arka+Infotech+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Work-life balance is not publicly rated for Arka Infotech specifically; small IT firms can vary widely, with some offering flexible environments and others driven by client demands."
   }
  },
  "arkansas blue cross": {
@@ -59009,11 +59092,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -59025,6 +59110,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784683910,
   "last_evidence_at": 1784675818,
   "name": "DRW",
   "pace_of_work": {
@@ -89698,40 +89784,86 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier unknown; no evidence of AI/data science prestige in sources."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
+   "value": "Estimated: Business model not documented in sources; sources reference a job board (SmartRecruiters) and Reddit discussions about DuckDuckGo."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Culture not described in sources; candidate seeks mission-driven, low-burnout environment with accelerated learning."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Customer base unknown; sources do not mention HSSSoft customers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: New grad tech compensation not found in sources; candidate targets high new-grad pay."
   },
   "evidence_sha": "6efb9a31f14aec1c",
+  "generated_at": 1784683910,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "a921ec57c4",
+    "b92cbaa1aa"
+   ],
+   "value": "Estimated: Software/technology (inferred from name); sources reference browser/privacy sector for DuckDuckGo, not HSSSoft."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Interview process unknown; candidate should prepare for standard AI/data science technical assessments and cultural fit questions around work-life balance and learning culture."
   },
-  "last_attempt_at": 1784683819,
+  "last_attempt_at": 1784683910,
   "last_evidence_at": 1784675812,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Office locations not mentioned in sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mission statement not found in provided sources."
+  },
   "name": "HSSSoft",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Pace unknown; candidate prefers fast, innovative culture over bureaucracy."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "a921ec57c4",
+    "b92cbaa1aa"
+   ],
+   "value": "Estimated: No product information for HSSSoft found in the supplied sources; sources reference DuckDuckGo browser and privacy discussions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: PTO policy not publicly documented in sources."
   },
+  "refresh_after": 1789867910,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -89741,7 +89873,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide shutdowns not mentioned in research."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Company size and stage unknown; no data in sources."
   },
   "sources": [
    {
@@ -89775,14 +89912,39 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Visa sponsorship policy not found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "a921ec57c4",
+    "b92cbaa1aa",
+    "f16eec2a6f"
+   ],
+   "value": "Estimated: HSSSoft appears to be a software company; however, the provided sources discuss DuckDuckGo browser options and privacy rather than HSSSoft, so no verifiable description is available."
+  },
+  "synthesized_evidence_sha": "6efb9a31f14aec1c",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Technical focus unclear; sources do not describe HSSSoft engineering or data science work."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675812,
   "web_search_url": "https://duckduckgo.com/?q=HSSSoft+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The candidate seeks a top-tier AI/data science role with elite prestige, high new-grad pay, fast innovative culture, strong work-life balance with sane hours and guaranteed shutdowns, and accelerated technical growth without personal time sacrifice. Without verified company data, fit cannot be assessed."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Work-life balance rating unknown; candidate prioritizes sane hours and guaranteed shutdowns."
   }
  },
  "hub international": {
@@ -108734,7 +108896,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -108752,7 +108914,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784683819,
+  "last_attempt_at": 1784683910,
   "last_evidence_at": 1784677297,
   "name": "LexisNexis Risk Solutions",
   "pace_of_work": {
@@ -116524,11 +116686,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -116540,6 +116704,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784683910,
   "last_evidence_at": 1784673559,
   "name": "Mass General Brigham",
   "pace_of_work": {
@@ -122222,11 +122387,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -122238,6 +122405,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784683910,
   "last_evidence_at": 1784674658,
   "name": "Mindlance",
   "pace_of_work": {
@@ -130564,7 +130732,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -130582,7 +130750,7 @@
    "source_ids": [],
    "value": "Ai Lab / technology (estimated)"
   },
-  "last_attempt_at": 1784683819,
+  "last_attempt_at": 1784683910,
   "last_evidence_at": 1784621687,
   "name": "Nightwing Intelligence Solutions",
   "pace_of_work": {
@@ -183696,34 +183864,84 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "85589c0602"
+   ],
+   "value": "Professional services and consulting firm generating revenue through time-and-materials service contracts, fixed-price project delivery, and talent placement contracts served by its network of technologists."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000–$110,000 total annual compensation (salary and allowances) for an entry-level AI or data science role in a median-cost US region, varying with project allocation."
   },
   "evidence_sha": "1ac8e03d3e2db8e1",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784683910,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "85589c0602"
+   ],
+   "value": "Information Technology Services and Consulting"
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
+   "value": "The process typically emphasizes hands-on data science skills such as coding and algorithm design, ML case studies, consulting-style client scenario discussions, and eliciting collaboration and communication evidence under project constraints. Look for opportunities to ask about average weekly team hours, reused asset libraries that reduce after-hours fire drills, and formal mentorship programs that speed up career growth without requiring personal-time sacrifice."
+  },
+  "last_attempt_at": 1784683910,
   "last_evidence_at": 1784673559,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Tech Tammina",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate and project-driven, with utilization targets and client delivery cadences setting the rhythm rather than an always-on product release cycle."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "85589c0602",
+    "dcb07b384d"
+   ],
+   "value": "IT consulting, custom software and application development, AI and data analytics solutions, cloud infrastructure management, digital transformation services, and technical talent staffing."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days per year of combined paid time off for new grads, aligning with typical US professional services peers."
   },
+  "refresh_after": 1789867910,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -183733,7 +183951,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide paid shutdowns beyond US observed public holidays; some teams may observe low-demand periods around the holiday season."
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -183767,14 +183990,43 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: The company frequently sponsors H-1B and other employment-based visas for technical positions, consistent with a staffing and consulting model that places workers across varying client environments."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "85589c0602"
+   ],
+   "value": "Tech Tammina is a digital transformation and talent solutions firm that builds AI-powered enterprise applications and provides IT staffing and consulting. It makes money by delivering project-based technology services, custom software development, and placing technical talent for clients across multiple industries."
+  },
+  "synthesized_evidence_sha": "1ac8e03d3e2db8e1",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "85589c0602",
+    "dcb07b384d"
+   ],
+   "value": "Engineers work on client-facing AI and data science projects such as building predictive models, machine learning pipelines, computer vision systems, recommendation engines, and interactive dashboards, in addition to cloud-native full-stack development and robotic process automation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673559,
   "web_search_url": "https://duckduckgo.com/?q=Tech+Tammina+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "85589c0602",
+    "dcb07b384d"
+   ],
+   "value": "The role provides exposure to enterprise AI and data science delivery across varied industries, which can accelerate hands-on learning without the extreme work pace of a consumer-tech scale-up. It offers a path to work with modern tech stacks in a professional-services model that often respects client-led timelines and project scopes rather than demanding permanent crunch. This helps fulfill the desire for healthy hours, innovation exposure, and fast technical growth while steering clear of toxi"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Above average for technical delivery roles, with boundary-respecting practices expected in a project services model, though spikes can occur around client go-lives."
   }
  },
  "tel": {
