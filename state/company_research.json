@@ -1320,7 +1320,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -1338,7 +1338,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784730215,
+  "last_attempt_at": 1784748944,
   "last_evidence_at": 1784711510,
   "name": "AAR",
   "pace_of_work": {
@@ -11403,7 +11403,7 @@
    "value": "Tier 1 (Elite). Amazon is a pioneer in production AI and cloud infrastructure globally, rivaling Google, Meta, and Microsoft in AI talent branding."
   },
   "aliases": [],
-  "attempts": 29,
+  "attempts": 30,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -11453,7 +11453,7 @@
    "source_ids": [],
    "value": "Amazon interviews emphasize its Leadership Principles with behavioral questions, plus technical screening covering data structures, system design, algorithms, and coding proficiency. Storytelling about ownership, bias for action, and customer obsession is crucial. For AI and data science roles, expect deep dives into machine learning theory, statistical analysis, and deployment experience."
   },
-  "last_attempt_at": 1784748808,
+  "last_attempt_at": 1784748944,
   "last_evidence_at": 1784732707,
   "locations": {
    "confidence": "high",
@@ -25043,7 +25043,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -25061,7 +25061,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784716477,
+  "last_attempt_at": 1784748944,
   "last_evidence_at": 1784716480,
   "name": "AXS",
   "pace_of_work": {
@@ -44113,41 +44113,106 @@
  "cgi": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "ed263ef88e",
+    "c05e5be646"
+   ],
+   "value": "Tier 2 — Respected enterprise practitioner; not an AI research lab but operates large-scale data platforms for government and finance where applied ML is production-critical."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "c05e5be646",
+    "1d8156c220"
+   ],
+   "value": "Project-based and recurring-revenue model: sells consulting expertise and managed services on time-and-materials, fixed-price, and outcome-based contracts. Revenue scales with headcount utilization and long-term managed-services annuities."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "e0b0598ce9",
+    "1d8156c220"
+   ],
+   "value": "Estimated: Collaborative, process-oriented, client-first; diverse global workforce with strong emphasis on professional development, certifications, and internal mobility. Less 'move fast break things', more 'deliver reliably together'."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "c05e5be646",
+    "1d8156c220"
+   ],
+   "value": "Large enterprises and government agencies worldwide, including federal/state/provincial governments, banks, insurers, healthcare providers, telecoms, utilities, and transportation authorities."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: US base $75k-$95k + signing bonus $5k-$10k + RSU/PSU grant $5k-$15k vesting over 3-4 years; Canadian base CAD $60k-$75k + shares. Varies significantly by metro market and role specialty."
   },
   "evidence_sha": "bb5c5a31e181e624",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784748944,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784748808,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c05e5be646",
+    "1d8156c220"
+   ],
+   "value": "IT Services / Consulting / Systems Integration"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "ed263ef88e",
+    "1db9db9c4d"
+   ],
+   "value": "Expect practical Java/Spring/Angular coding exercises, REST API design, SQL query optimization, and scenario questions about scaling enterprise applications. Behavioral interviews emphasize client-facing communication, handling ambiguous requirements, and teamwork in distributed project settings. Prepare to discuss how you would apply ML or data science techniques to real-world public-sector or financial use cases."
+  },
+  "last_attempt_at": 1784748944,
   "last_evidence_at": 1784747329,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "1d8156c220",
+    "c05e5be646"
+   ],
+   "value": "Headquartered in Montreal, Canada; offices across North America, Europe, Asia-Pacific. Major US hubs include Fairfax VA, Lafayette LA, Chicago, and numerous client-site locations."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "1d8156c220",
+    "e0b0598ce9"
+   ],
+   "value": "To help clients achieve their digital transformation goals by delivering high-quality, secure, and sustainable technology solutions while fostering a culture of ownership and long-term partnership."
+  },
   "name": "CGI",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — project sprints with defined deliverables; crunch periods around go-lives but generally predictable compared to product startups."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "ed263ef88e",
+    "1d8156c220"
+   ],
+   "value": "IT consulting, systems integration, managed services, application development and maintenance, infrastructure management, cybersecurity, cloud migration, and business process services. The Junior Java Developer role highlights Java, Angular, Spring framework, RESTful web services, and SQL stack."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual vacation + 10-12 company holidays (varies by country/state; US new grads typically start at 15 days PTO)."
   },
+  "refresh_after": 1789932944,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -44157,7 +44222,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide mandatory shutdowns; some business units observe reduced hours between Christmas and New Year."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "c05e5be646",
+    "1d8156c220"
+   ],
+   "value": "Publicly traded (TSX: GIB.A, NYSE: GIB); ~90,000 employees globally; mature, profitable, large-cap enterprise."
   },
   "sources": [
    {
@@ -44211,14 +44284,48 @@
     "url": "https://www.bing.com/ck/a?!&&p=c1a1fe352ee8f53244998077b03defd78058180d14502a5c7735810cdbcd03eeJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0a5391a8-206b-65df-2328-8635211464e1&u=a1aHR0cHM6Ly93d3cuY2dpLmNvbS9lbg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d",
+    "ed263ef88e"
+   ],
+   "value": "Actively sponsors H-1B and green cards for professional roles; large global footprint supports intra-company transfers (L-1). New grad offers in the US typically include visa sponsorship where eligible."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c05e5be646",
+    "1d8156c220"
+   ],
+   "value": "CGI is a global IT and business consulting services firm that helps clients design, build, and run mission-critical systems across government, financial services, health, and communications sectors. It makes money primarily through time-and-materials consulting contracts, managed services agreements, and fixed-price system integration projects."
+  },
+  "synthesized_evidence_sha": "bb5c5a31e181e624",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "ed263ef88e",
+    "1db9db9c4d"
+   ],
+   "value": "Enterprise application development (Java/Spring/Angular), legacy modernization, cloud migration (AWS/Azure), DevOps automation, data engineering, cybersecurity implementation, and managed infrastructure operations. New grads typically join project teams building or maintaining mission-critical systems for government and financial clients."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675468,
   "web_search_url": "https://duckduckgo.com/?q=CGI+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "ed263ef88e",
+    "1db9db9c4d",
+    "e0b0598ce9"
+   ],
+   "value": "CGI offers new grads a prestigious, stable brand with structured mentorship and exposure to massive, mission-critical systems in government and finance—domains where AI and data science are rapidly being adopted. Its consulting model provides variety across projects and clients, accelerating technical breadth without the burnout culture of pure-product tech giants. Work-life balance is explicitly managed through project-level governance and a professional-services cadence that generally respects"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — professional-services culture encourages boundary-setting; utilization targets exist but overtime is typically planned and compensated or banked."
   }
  },
  "cgs federal contact government services": {
@@ -75642,7 +75749,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 8,
+  "attempts": 9,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -75660,7 +75767,7 @@
    "source_ids": [],
    "value": "Sports / technology (estimated)"
   },
-  "last_attempt_at": 1784748808,
+  "last_attempt_at": 1784748944,
   "last_evidence_at": 1784725192,
   "name": "Fanatics",
   "pace_of_work": {
@@ -90484,7 +90591,7 @@
    "value": "Tier 1 (Elite) - Google is known as an absolute top destination alongside DeepMind and a handful of other leading AI labs, offering unmatched scale, talent density, and research credibility."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -90509,7 +90616,7 @@
    ],
    "value": "Google’s primary customers are the billions of individual users who use its free products and the millions of advertisers and businesses that pay to reach those users. On the enterprise side, Google Cloud serves organizations of all sizes needing computing, storage, and AI/ML services."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -90536,7 +90643,7 @@
    "source_ids": [],
    "value": "Google places high emphasis on general cognitive ability, technical depth in machine learning algorithms and system design, clear coding skills, and leadership/role-related behaviors. AI-specific roles will dig into modern NLP, deep learning system design, data pipeline reasoning, and model-centric product design. Across all loops, “Googleyness” and culture-fit checks for collaboration and humility are a constant."
   },
-  "last_attempt_at": 1784681359,
+  "last_attempt_at": 1784748944,
   "last_evidence_at": 1784737782,
   "locations": {
    "confidence": "high",
@@ -126826,7 +126933,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -126844,7 +126951,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784716477,
+  "last_attempt_at": 1784748944,
   "last_evidence_at": 1784711509,
   "name": "MANTECH",
   "pace_of_work": {
@@ -134485,7 +134592,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 17,
+  "attempts": 18,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -134503,7 +134610,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784730215,
+  "last_attempt_at": 1784748944,
   "last_evidence_at": 1784693223,
   "name": "Micron Technology",
   "pace_of_work": {
