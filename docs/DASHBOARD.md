@@ -1,11 +1,12 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-22 17:43 UTC** · companies polled directly: **1252** (registry 1421) · jobs tracked: **19981** · new this run: **46** · alerts this run: **0**_
+_Last run: **2026-07-22 17:52 UTC** · companies polled directly: **1253** (registry 1422) · jobs tracked: **20052** · new this run: **71** · alerts this run: **2**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
 | Score | Age | Company | Role | Location | Sector | Src |
 |---|---|---|---|---|---|---|
+| 100 🔥 | 17h | Circuit Clinical | [Data Analyst](https://jobright.ai/jobs/info/6a60d89e193c4d692385fd0f?utm_campaign=Data%20Analysis&utm_source=1103) | New York, United States | healthtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 100 🔥 | 1d | NVIDIA | [Compiler Engineer, Infrastructure  - New College Grad 2026](https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/Compiler-Engineer--Infrastructure----New-College-Grad-2026_JR2021228) | 6 Locations | big_tech | [Direct company / ATS monitoring](https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/Compiler-Engineer--Infrastructure----New-College-Grad-2026_JR2021228) |
 | 100 🔥 | 1d | NVIDIA | [Compiler Engineer, Infrastructure - New College Grad 2026](https://jobright.ai/jobs/info/6a5f391ed5c3a14fb34ec780?utm_campaign=Software%20Engineering&utm_source=1103) | Austin, TX, United States | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 100 🔥 | 1d | Amazon | [Software Dev Engineer I - Graviton Software, Annapurna Labs](https://jobright.ai/jobs/info/6a5fee3b6e0c3c7c7d3d9efe?utm_campaign=Software%20Engineering&utm_source=1103) | Austin, TX, United States | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
@@ -155,6 +156,5 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 86 🔥 | 21d | Oracle | [Software Developer](https://jobright.ai/jobs/info/6a365f5a1232144fb15658f0?utm_campaign=Software%20Engineering&utm_source=1103) | Kansas City, MO, United States | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 86 🔥 | 29d | ZOLL Medical Corporation | [Software Engineer](https://zoll.wd5.myworkdayjobs.com/en-US/ZOLLMedicalCorp/job/Chelmsford-MA/Software-Engineer_R19423) | Lowell, MA | healthtech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 85 🔥 | 17h | NYCM Insurance | [Software Developer (Hybrid)](https://jobright.ai/jobs/info/6a60b0b5a4c799127e993b38?utm_campaign=Software%20Engineering&utm_source=1103) | Edmeston, NY, United States | fintech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
-| 85 🔥 | 17h | Optimum Media | [Data Analyst](https://jobright.ai/jobs/info/6a60a51671c79e639619c155?utm_campaign=Data%20Analysis&utm_source=1103) | New York, NY, United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
