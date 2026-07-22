@@ -113396,11 +113396,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -113412,6 +113414,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784685007,
   "last_evidence_at": 1784677340,
   "name": "London Stock Exchange Group (LSEG)",
   "pace_of_work": {
@@ -155929,40 +155932,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2: Strong applied AI/DS team with real production impact at scale, but not a primary research lab or top-tier brand like FAANG/DeepMind. Recognized in healthcare AI circles."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "R1 RCM operates on a variable-fee model tied to client net patient revenue (typically a percentage of collections) and also offers fixed-fee and hybrid arrangements. Revenue scales with client volume and performance improvements driven by their technology and operational expertise."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, process-oriented, and increasingly tech-forward. Culture blends healthcare domain expertise with modern engineering practices. Collaborative but hierarchical; strong emphasis on compliance, security, and client satisfaction."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Healthcare providers: large health systems, academic medical centers, community hospitals, and physician group practices across the United States."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000-$135,000 base + 10-15% annual bonus + RSUs (vesting over 4 years). Total comp ~$130k-$160k. Varies by location (higher in NYC/Chicago)."
   },
   "evidence_sha": "dd40fb7d501e3bee",
+  "generated_at": 1784685007,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Healthcare Technology / Revenue Cycle Management (RCM) / Business Process Outsourcing (BPO) with heavy tech enablement"
   },
-  "last_attempt_at": 1784684915,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect emphasis on applied machine learning for healthcare data (claims, EHR), scalable data engineering, and domain knowledge of revenue cycle processes. Behavioral questions will assess alignment with healthcare mission and ability to navigate complex stakeholder environments. Technical depth in Python, SQL, cloud, and ML model lifecycle is key."
+  },
+  "last_attempt_at": 1784685007,
   "last_evidence_at": 1784593387,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Murray, Utah (Salt Lake City area). Major offices in Chicago, New York, Dallas, Atlanta, and offshore delivery centers in India (Bangalore, Hyderabad) and the Philippines."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To simplify healthcare revenue cycle management so providers can focus on patient care, using technology and expertise to improve financial outcomes and patient experience."
+  },
   "name": "R1 RCM",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate: Corporate enterprise pace with quarterly planning cycles. Faster than traditional healthcare IT vendors, slower than early-stage startups. Some on-call rotations for production systems."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core offerings include end-to-end revenue cycle management (patient access, coding, billing, collections, denial management), physician advisory services, and proprietary technology platforms that automate workflows and apply analytics to improve cash flow and reduce administrative burden."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 US holidays + sick leave. Accrual-based; seniority increases allocation. Unlimited PTO not offered."
   },
+  "refresh_after": 1789869007,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -155972,7 +156013,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns. Some teams observe reduced operations between Christmas and New Year, but not a formal policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Publicly traded (NASDAQ: RCM), ~25,000+ employees globally, mature large-cap company with established market position in healthcare RCM."
   },
   "sources": [
    {
@@ -156006,14 +156052,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=7e57f4eb57e4f23b8f908a3855b7e9e0efa5ea83b37bce98aa3bbef35b93c8c6JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=0d7479d2-dd10-665e-36fa-6e4fdcff67b5&u=a1aHR0cHM6Ly93d3cuYW1hem9uLmNvbS9raW5kbGUtYm9va3N0b3JlL3M_az1raW5kbGUrYm9va3N0b3Jl&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B visas and green cards for technical roles, particularly at US offices and offshore centers. Large employer of international talent in engineering and data science."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "R1 RCM is a leading provider of technology-driven revenue cycle management (RCM) services for healthcare providers across the US. The company helps hospitals, health systems, and physician groups optimize their financial performance by managing patient registration, billing, collections, and payer interactions."
+  },
+  "synthesized_evidence_sha": "dd40fb7d501e3bee",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Engineering focuses on building scalable platforms for revenue cycle automation, data integration (EHR/payer systems), analytics, machine learning for denial prediction and coding assistance, and patient-facing digital tools. Stack includes cloud (AWS/Azure), microservices, data lakes, and AI/ML pipelines."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784593387,
   "web_search_url": "https://duckduckgo.com/?q=R1+RCM+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "R1 RCM offers a mission-driven role in healthcare technology with massive real-world impact on hospital finances and patient experience. The scale of data (billions of claims) provides elite AI/DS challenges, while the company's public-company stability and investment in modern tech stacks allow for technical growth without the burnout typical of hyper-growth startups. Work-life balance is more structured than in many tech-first firms, with corporate policies supporting reasonable hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "7/10: Generally respected work-life balance with core hours, limited weekend work, and growing remote/hybrid flexibility. Occasional crunch around major releases or client go-lives."
   }
  },
  "racetrac": {
@@ -171611,40 +171678,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Top-tier): Production ML at massive scale, strong research publications (Shopify AI blog, RecSys, KDD), elite talent density, and central role in company strategy."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Subscription SaaS revenue (monthly plans), transaction fees via Shopify Payments, merchant solutions (capital, fulfillment, shipping), and partner/app ecosystem revenue share."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Entrepreneurial, merchant-obsessed, low-meeting, writing-heavy (RFCs), high autonomy. 'Trust by default' with strong engineering craft values. Remote-first since 2020."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Millions of merchants globally ranging from solo entrepreneurs and SMBs to large brands (e.g., Allbirds, Gymshark, Kylie Cosmetics) across retail, DTC, wholesale, and omnichannel."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $170,000-$220,000 total compensation (base $120-145K + RSU $40-60K/yr + sign-on). Canada bands slightly lower in USD terms. Top of market for non-FAANG."
   },
   "evidence_sha": "1a757884deb88a30",
+  "generated_at": 1784685007,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
+   "value": "E-commerce SaaS / Fintech / Developer Platform"
   },
-  "last_attempt_at": 1784684915,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect rigorous technical loops: system design (scalable commerce systems), ML fundamentals (ranking, retrieval, evaluation), coding (Ruby/Python/Go), and behavioral alignment with 'merchant-first' values. AI roles emphasize productionizing models, experimentation culture, and data quality at scale."
+  },
+  "last_attempt_at": 1784685007,
   "last_evidence_at": 1784583450,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in Ottawa, Canada; major hubs in Toronto, Montreal, Vancouver, San Francisco, New York, London, Berlin, Singapore; remote-first culture with 'Digital by Design' model."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To make commerce better for everyone by reducing barriers to business ownership and empowering independent entrepreneurs."
+  },
   "name": "Shopify",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast but sustainable: 6-week cycles ('projects not tickets'), quarterly planning, emphasis on shipping merchant value. Less bureaucracy than FAANG, but high ownership expectations."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core platform (online store builder, POS, checkout), Shopify Payments, Shopify Capital, Shopify Fulfillment Network, Shopify Audiences, Hydrogen/Remix for headless commerce, and developer APIs/apps ecosystem."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20 days vacation + 10 statutory holidays (Canada) / 15 days + 10 holidays (US) + unlimited sick/mental health days. Flexible 'take what you need' culture."
   },
+  "refresh_after": 1789869007,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -171654,7 +171759,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically Dec 24-Jan 3, ~2 weeks paid). Summer 'recharge' week in July (varies by year). No guaranteed weekly shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public company (NYSE: SHOP), ~11,000+ employees (post-2023 layoffs), profitable, mature growth stage with focus on AI/commerce integration."
   },
   "sources": [
    {
@@ -171688,14 +171798,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=2a36a7b5c7ee650a9cd53ee91992014cff3959db842ec0e7e265734551f844caJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cuc2hvcGlmeS5jb20vb25saW5l&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active H-1B sponsor (US), Global Talent Stream (Canada), and other work visa programs globally. Supports internal transfers and new grad sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Shopify is a leading global commerce platform that enables merchants to build online stores, manage sales across channels, and handle payments, shipping, and marketing. It serves millions of businesses from small entrepreneurs to large enterprises."
+  },
+  "synthesized_evidence_sha": "1a757884deb88a30",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large-scale Ruby on Rails monolith being modularized; React/TypeScript frontend; GraphQL APIs; data platform (Kafka, Flink, ClickHouse); ML/AI for recommendations, fraud, search, merchant insights; developer platform (Shopify Functions, Hydrogen)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583450,
   "web_search_url": "https://duckduckgo.com/?q=Shopify+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Shopify offers elite AI/data prestige (massive commerce dataset, production ML at scale) with top-tier new-grad compensation (~$170-220K total) while maintaining a remote-first, low-bureaucracy culture. Its 'Digital by Design' model and focus on merchant empowerment align with mission-driven work, and the company has publicly emphasized sustainable pace over burnout, though intensity varies by team."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5. Remote-first, core collaboration hours, no official on-call for most roles, generous parental leave. Some teams (infra, payments) have higher operational load."
   }
  },
  "shyftlabs": {
@@ -175837,11 +175968,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -175853,6 +175986,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784685007,
   "last_evidence_at": 1784677344,
   "name": "SoFi",
   "pace_of_work": {
@@ -189928,7 +190062,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -189970,7 +190104,7 @@
    ],
    "value": "Probe whether the 'dynamic team' and 'exciting environment' translate to true technical learning and career growth for AI/Data Science work, or if the highly structured nature of defense/aerospace solutions will conflict with the desire to avoid slow bureaucracy."
   },
-  "last_attempt_at": 1784684915,
+  "last_attempt_at": 1784685007,
   "last_evidence_at": 1784674726,
   "locations": {
    "confidence": "high",
@@ -209045,37 +209179,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Emerging — early-stage consumer app applying ML to itinerary optimization and recommendations; not yet a recognized AI research hub but high technical ownership for new grads."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Freemium SaaS with premium subscription for advanced features (offline access, unlimited collaborators, AI suggestions). Possible affiliate revenue from bookings."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Estimated: Builder-oriented, product-obsessed, low-process; typical YC 'default alive' mindset with emphasis on user feedback loops. Likely flat hierarchy, direct founder access."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "a6888f339b"
+   ],
+   "value": "Consumer travelers seeking collaborative trip planning tools; likely freemium model with premium subscription tiers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Estimated: $120k-$160k base + 0.1%-0.5% equity (typical YC early-stage new grad package); cash may be below Big Tech but equity upside significant if company scales."
   },
   "evidence_sha": "cda147b8eeb688ee",
+  "generated_at": 1784685007,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a6888f339b"
+   ],
+   "value": "Travel technology / Consumer SaaS"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Assess: 1) Real-world shipping velocity (ask for recent feature cycle time), 2) WLB reality (ask about on-call, weekend work, shutdown rituals), 3) AI/ML roadmap authenticity (ask for specific models in production vs. exploration), 4) Mentorship structure (ask how new grads are onboarded and reviewed)."
   },
+  "last_attempt_at": 1784685007,
   "last_evidence_at": 1784675877,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Likely remote-friendly or San Francisco Bay Area based on YC ecosystem; specific office policy not public."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Simplify and enhance travel planning through intuitive, collaborative technology."
+  },
   "name": "Wanderlog",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Estimated: Fast — typical YC startup velocity with weekly/biweekly releases; high autonomy but risk of scope creep without strong PM discipline."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "a6888f339b"
+   ],
+   "value": "Travel planning application for creating, organizing, and sharing trip itineraries with collaborative features."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + holidays (typical early-stage startup); unlimited policy common but actual usage varies."
   },
+  "refresh_after": 1789869007,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -209085,7 +209274,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns documented; may observe standard US holidays only."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Early-stage startup (YC-backed); estimated 10-50 employees based on typical YC company size at hiring stage."
   },
   "sources": [
    {
@@ -209119,14 +209315,40 @@
     "url": "https://www.workatastartup.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May sponsor H-1B for exceptional candidates given YC network and technical needs; no public policy disclosed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "a6888f339b",
+    "e792064df7"
+   ],
+   "value": "Wanderlog is a Y Combinator-backed startup building a collaborative travel planning app. The company operates a consumer-facing platform for trip itinerary creation and sharing."
+  },
+  "synthesized_evidence_sha": "cda147b8eeb688ee",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Full-stack development (React/React Native, Node.js/TypeScript), real-time collaboration infrastructure, mapping/geospatial APIs, potential ML for itinerary optimization and recommendations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675877,
   "web_search_url": "https://duckduckgo.com/?q=Wanderlog+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "YC-backed travel tech startup offers elite early-career prestige with direct product impact. Small team means high autonomy, fast shipping, and exposure to full stack + AI/ML for itinerary intelligence — aligning with desire for technical acceleration without enterprise bureaucracy. Consumer product with viral growth potential provides tangible portfolio value."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7/10 — early-stage startup often demands intensity, but small team and mission focus may enable reasonable boundaries if leadership prioritizes sustainability; no public data on shutdown policies."
   }
  },
  "wanderlog w19": {
@@ -210513,40 +210735,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low – not an AI/data science research hub; primary focus is automotive technology education and applied industry training."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public university academic department funded by state appropriations, tuition revenue, research grants, industry partnerships, and donations. Not a commercial entity; revenue supports educational operations, labs, faculty, and student services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Collaborative, mission-driven, hands-on technical culture with strong industry ties. Faculty/staff focused on student success and workforce readiness. Less bureaucratic than central admin but still subject to university policies."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Students seeking automotive technology degrees/certifications, automotive industry employers hiring graduates, industry partners sponsoring research or training, and government/workforce agencies funding technical education."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $45,000–$60,000 for entry-level staff/instructor roles; tenure-track faculty start ~$65,000–$80,000 (9-month). Significantly below industry AI/data science new-grad offers."
   },
   "evidence_sha": "5f43063e5d3fee48",
+  "generated_at": 1784685007,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Higher Education / Automotive Technical Education"
   },
-  "last_attempt_at": 1784684915,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect questions on automotive technology pedagogy, industry curriculum alignment, hands-on lab instruction, accreditation standards (ASE/NATEF), and industry partnership management. Limited emphasis on AI/ML depth; prepare to discuss teaching philosophy, student outcomes, and technical currency in EV/hybrid systems."
+  },
+  "last_attempt_at": 1784685007,
   "last_evidence_at": 1784674481,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary campus in Ogden, Utah (Weber State University). Possible satellite locations or industry training sites in northern Utah."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare students for careers in the automotive industry through hands-on technical education, industry-aligned curriculum, and applied research; support regional workforce needs and automotive technology advancement."
+  },
   "name": "Weber State University Department of Automotive Technology",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate, semester-structured pace with predictable academic cycles; summers lighter. Not fast-paced tech innovation culture; bureaucracy typical of public university."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Undergraduate degree programs (BS in Automotive Technology, possibly associate degrees), professional certification training, industry-partnered research and development, and workforce development programs for automotive sector."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–22 days annual leave + 10–12 university holidays + winter/spring breaks (academic calendar). Exact accrual depends on appointment type (faculty vs staff) and years of service."
   },
+  "refresh_after": 1789869007,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -210556,7 +210816,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: University closes for winter break (~2 weeks), spring break (1 week), and major federal holidays. No formal guaranteed shutdown policy beyond published academic calendar."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Small academic department (10–30 faculty/staff, hundreds of students) within a mid-sized public university (~30,000 students). Mature, stable organization with decades of operation."
   },
   "sources": [
    {
@@ -210590,14 +210855,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=1539e97671b8fcc40c5d99e3d307bc65fec421782a39618299ae3623b48ff30bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=26a4c2ce-575e-61a8-27ca-d553565360e2&u=a1aHR0cHM6Ly93d3cud2ViZXIuY29tL1VTL2VuL2hvbWUv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a public university department, can sponsor H-1B visas for faculty/research roles; less common for staff or student positions. Cap-exempt H-1B eligibility likely for tenure-track or research faculty."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Weber State University Department of Automotive Technology is an academic department within a public university, focused on automotive technology education, training, and industry partnerships. It does not operate as a for-profit company; funding comes from university allocations, tuition, grants, and industry collaborations."
+  },
+  "synthesized_evidence_sha": "5f43063e5d3fee48",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Curriculum development for modern automotive systems (EV/hybrid, ADAS, diagnostics, telematics), applied research with industry partners, lab/shop instruction, and potential data analytics for vehicle systems. Not a primary AI/data science research center."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674481,
   "web_search_url": "https://duckduckgo.com/?q=Weber+State+University+Department+of+Automotive+Technology+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role offers academic stability, work-life balance aligned with university calendars, and meaningful impact on automotive workforce development. However, it lacks elite AI/data science prestige, high new-grad pay, or fast-paced innovative tech culture; pace is semester-driven, pay follows public university scales, and technical focus is applied automotive education rather than cutting-edge AI research."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good – standard academic work-life balance with semester breaks, holidays, and reasonable expectations (40–45 hrs/week typical). No guaranteed shutdowns but university closures provide extended time off."
   }
  },
  "webfx": {
@@ -214121,7 +214407,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -214139,7 +214425,7 @@
    "source_ids": [],
    "value": "Edtech / technology (estimated)"
   },
-  "last_attempt_at": 1784684915,
+  "last_attempt_at": 1784685007,
   "last_evidence_at": 1784583908,
   "name": "Wonderschool",
   "pace_of_work": {
