@@ -3946,7 +3946,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -3964,7 +3964,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784682358,
+  "last_attempt_at": 1784682450,
   "last_evidence_at": 1784675357,
   "name": "AeroVironment",
   "pace_of_work": {
@@ -39561,40 +39561,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 – Respected niche player in defense/civilian analytics, not a headline AI lab."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue comes from federal contract awards (cost-plus, firm-fixed-price, IDIQ) and commercial contracts; profits flow to the Chickasaw Nation for community reinvestment."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-oriented, tribal-values driven (respect, stewardship), process-heavy due to compliance (CMMI, NIST 800-171), collaborative but hierarchical."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary customers are U.S. federal government agencies (DoD, civilian agencies) via contract vehicles; some commercial-sector clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75k–$95k base + modest bonus/RSU; clearance-eligible roles may start higher."
   },
   "evidence_sha": "2cdf934f530d5e3f",
+  "generated_at": 1784682450,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Federal government contracting / IT services / Advanced manufacturing"
   },
-  "last_attempt_at": 1784682358,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Ask about: 1) concrete examples of ML models deployed in production for DoD/civilian missions, 2) data pipeline maturity and cloud platform (AWS GovCloud/Azure Gov), 3) typical sprint cadence and on-call expectations, 4) tuition reimbursement and certifications for continued learning, 5) how program managers protect team capacity against scope creep."
+  },
+  "last_attempt_at": 1784682450,
   "last_evidence_at": 1784672492,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Norman, OK; major offices in Arlington, VA, Huntsville, AL, and other federal customer sites nationwide. Some remote/hybrid eligibility."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To strengthen the Chickasaw Nation’s economic sovereignty by delivering high-quality services that create jobs and fund tribal programs."
+  },
   "name": "Chickasaw Nation Industries",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate – project milestones driven by contract deliverables; less \"move fast and break things\" than consumer tech, but steady delivery pressure."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "IT services (cybersecurity, software development, cloud), engineering & technical services, advanced manufacturing, logistics & supply chain, construction, and professional services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10 federal holidays; may vary by contract."
   },
+  "refresh_after": 1789866450,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -39604,7 +39642,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some contracts allow holiday downtime between Christmas–New Year."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 1,500–2,500 employees; mature, profitable government contractor (not a startup)."
   },
   "sources": [
    {
@@ -39638,14 +39681,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=e73a1d08e84838fe0cf2cba2a7d848b57e3efd7a11e867eac9d241fa2c49473dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=068da0dd-8eee-6028-1b01-b7408fbe61eb&u=a1aHR0cHM6Ly9jaGlja2FzYXcubmV0Lw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a federal contractor, CNI can sponsor security clearances; H-1B/GC sponsorship is case-by-case and less common than at big tech firms."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Chickasaw Nation Industries (CNI) is a tribally-owned enterprise of the Chickasaw Nation providing diversified services to federal government agencies and commercial clients. The company operates across multiple sectors including IT, engineering, logistics, and manufacturing."
+  },
+  "synthesized_evidence_sha": "2cdf934f530d5e3f",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cybersecurity operations, secure software development, DevSecOps, data analytics, cloud migration, systems engineering, and advanced manufacturing R&D."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672492,
   "web_search_url": "https://duckduckgo.com/?q=Chickasaw+Nation+Industries+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "CNI offers a mission-driven, tribally-owned environment where AI/data-science work directly supports national defense and community welfare. Government contracting provides stable funding and clear work scopes, which can enable better work-life boundaries than commercial high-burnout shops, while still exposing you to large-scale, regulated data problems."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 – Government contracts often define hours/charge codes, enabling predictable schedules; occasional surge near proposal deadlines."
   }
  },
  "chipotle mexican grill": {
@@ -69569,40 +69633,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong applied ML for threat detection (FortiAI, FortiGuard Labs) with large-scale telemetry data; publishes research but not a primary AI research lab like FAIR or Google Brain."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "241ff71fc8",
+    "4a79b5382b"
+   ],
+   "value": "Hardware appliance sales (FortiGate) plus recurring revenue from subscription services (threat intelligence, cloud management, SaaS) and professional services. High attach rates and renewal-driven model."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, pragmatic, security-obsessed, collaborative across geos; low bureaucracy for a large corp; promotion based on technical impact; diverse international teams."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "241ff71fc8",
+    "4a79b5382b"
+   ],
+   "value": "Enterprises, service providers, government agencies, and small-to-mid businesses across industries including finance, healthcare, retail, manufacturing, and education."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$155k base + 10-15% bonus + RSU (~$30k-$50k/yr vesting); total ~$170k-$210k first year (US, non-coastal hubs higher)."
   },
   "evidence_sha": "1c4847ee96280cea",
+  "generated_at": 1784682450,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "241ff71fc8"
+   ],
+   "value": "Cybersecurity / Network Security / Enterprise Software"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical screens on networking protocols, OS internals, C/C++/Go, distributed systems, and machine learning for anomaly detection. Behavioral emphasis on ownership, rapid iteration, and customer-first problem solving. Prepare for system design around high-throughput security appliances."
   },
-  "last_attempt_at": 1784682358,
+  "last_attempt_at": 1784682450,
   "last_evidence_at": 1784676244,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "241ff71fc8",
+    "4a79b5382b"
+   ],
+   "value": "Headquartered in Sunnyvale, CA; major R&D centers in Canada (Ottawa, Vancouver), France, Israel, China, India; sales/support offices in 50+ countries."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "241ff71fc8",
+    "4a79b5382b"
+   ],
+   "value": "To secure the largest enterprise, service provider, and government organizations worldwide through continuous innovation and a unified security fabric."
+  },
   "name": "Fortinet",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast — driven by daily threat landscape changes, quarterly product cycles, and competitive pressure; sprint-based but with sustained intensity during major releases."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4a79b5382b",
+    "aafe454de0"
+   ],
+   "value": "FortiGate firewalls, FortiAnalyzer, FortiManager, FortiClient, FortiSIEM, FortiSOAR, FortiAI, cloud security (FortiCNP), SASE/SD-WAN, and a broad fabric of integrated security solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays (US); varies by region and tenure; unlimited not standard."
   },
+  "refresh_after": 1789866450,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -69612,7 +69731,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; some teams observe reduced schedules during year-end holidays but not formal policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "241ff71fc8"
+   ],
+   "value": "Large public company (NASDAQ: FTNT); ~13,000+ employees; $5B+ annual revenue; mature growth stage with consistent profitability."
   },
   "sources": [
    {
@@ -69646,14 +69772,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=1dde38f0851d31ae2757be1d5e4c7de2c774be6c205cc04674347edaf4102a27JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=07787a3d-f61d-629d-242a-6da0f71b63e4&u=a1aHR0cHM6Ly93d3cuZm9ydGluZXQuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B visas for engineering and research roles; green card support common for senior talent; university recruiting includes OPT/CPT pathways."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "241ff71fc8",
+    "4a79b5382b"
+   ],
+   "value": "Fortinet is a global cybersecurity company that develops and sells network security hardware, software, and services. It makes money primarily through appliance sales, subscription licenses for threat intelligence and cloud services, and professional services."
+  },
+  "synthesized_evidence_sha": "1c4847ee96280cea",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4a79b5382b",
+    "aafe454de0"
+   ],
+   "value": "Core engineering in network security, threat research, AI/ML for threat detection, distributed systems, embedded firmware, cloud-native security, and automation/orchestration platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676244,
   "web_search_url": "https://duckduckgo.com/?q=Fortinet+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fortinet offers elite cybersecurity prestige with high new-grad compensation, a fast-paced innovation culture driven by real-time threat intelligence, and a mission to protect critical infrastructure. It balances technical depth with structured career growth while maintaining reasonable work-life boundaries compared to many high-burnout security vendors."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — Generally sane hours (45-50 hrs/week typical), on-call rotations for critical services, but crunch periods around major releases; better than many security peers."
   }
  },
  "fortress information security": {
@@ -126789,11 +126942,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -126805,6 +126960,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784682450,
   "last_evidence_at": 1784643843,
   "name": "North Carolina Department of Agriculture and Consumer Services",
   "pace_of_work": {
@@ -147080,37 +147236,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "High tier within Fintech. While not FAANG, it is a dominant, tech-forward player in a complex, data-dense industry, offering an elite reputation in the Detroit/Seattle markets for applied AI. The new-grad pay aligns with tech industry standards, reinforcing its prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "512d515b01"
+   ],
+   "value": "A direct-to-consumer, client-centric mortgage lending model. The company originates loans online and via a network of mortgage bankers, then mostly sells the closed loans on the secondary market to entities like Fannie Mae and Freddie Mac, while retaining a servicing portfolio for recurring revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven and intensely entrepreneurial. The culture is defined by a set of core 'ISMs' which emphasize innovation, client focus, and urgency, but strictly within disciplined schedules. It avoids toxic burnout through its shutdown policy while pushing technical growth."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "512d515b01"
+   ],
+   "value": "Individual home buyers and homeowners seeking to refinance existing mortgages in the United States."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "1ca2049046"
+   ],
+   "value": "Estimated: $119,000 - $145,000 base salary, based on a Seattle-based entry-level SWE I posting."
   },
   "evidence_sha": "7aa5c50522d9cf6d",
+  "generated_at": 1784682450,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "512d515b01"
+   ],
+   "value": "Fintech (Financial Technology) and Mortgage Lending"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "The interview process emphasizes 'ISMs' (cultural pillars) alongside technical depth. A candidate should visibly align with the fast, innovative, mission-driven, and well-balanced culture, showcasing strong fundamentals in software engineering, system design, and a proven drive to quickly deliver business value without sacrificing work-life boundaries."
   },
+  "last_attempt_at": 1784682450,
   "last_evidence_at": 1784675358,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "1ca2049046"
+   ],
+   "value": "Headquartered in Detroit, Michigan, with a major technology presence in Seattle, Washington, and additional offices in Phoenix, Arizona, and Cleveland, Ohio."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "512d515b01"
+   ],
+   "value": "To be America's largest and most trusted home loan lender by leveraging technology, data, and a strong client-focused culture to simplify the mortgage process."
+  },
   "name": "Quicken Loans",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "A high-propulsive 'hard-working culture' but with a strong focus on efficiency. The company is known for an intense, fast-paced environment during working hours, offset by a structured shutdown to prevent burnout."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "512d515b01"
+   ],
+   "value": "Home mortgage loans including conventional fixed-rate, adjustable-rate, FHA, VA, and jumbo loans. The flagship product is Rocket Mortgage, a fully online, self-serve mortgage application platform."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-18 days of paid time off for new hires, which is competitive but not unlimited."
   },
+  "refresh_after": 1789866450,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -147120,7 +147331,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "The culture famously guarantees an 8 p.m. daily shutdown for all non-essential operations to protect work-life balance."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "1ca2049046"
+   ],
+   "value": "A mature, large-cap company with over 10,000 employees, founded in 1985 in Detroit, Michigan. It is a major subsidiary of Rocket Companies, Inc. (NYSE: RKT)."
   },
   "sources": [
    {
@@ -147164,14 +147382,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=04443659f15fd320181b2684e324d6e75593859573c721bd16e9e12fa7c8f5e8JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=03c602d4-0670-6465-2e80-154907296505&u=a1aHR0cHM6Ly93d3cucXVpY2tlbi5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "1ca2049046"
+   ],
+   "value": "Quicken Loans has a track record of offering H1B visa sponsorships, as noted on their job postings."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "512d515b01"
+   ],
+   "value": "Quicken Loans is the largest retail mortgage lender in the U.S., operating primarily through its online platform, Rocket Mortgage. It makes money by originating, processing, and servicing home loans, earning revenue from interest, loan origination fees, and the sale of mortgages on the secondary market."
+  },
+  "synthesized_evidence_sha": "7aa5c50522d9cf6d",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "1ca2049046",
+    "512d515b01"
+   ],
+   "value": "Engineering areas include full-stack development, data engineering, and machine learning for credit risk analysis, real-time underwriting models, and automation of document and title verification. Entry-level roles like Software Developer I involve building and maintaining components of the Rocket Mortgage loan servicing platform."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675358,
   "web_search_url": "https://duckduckgo.com/?q=Quicken+Loans+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Quicken Loans offers a rare combination of a top-tier data science environment and a non-elitist, results-driven culture that actively avoids burnout through guarantees like the 8 p.m. shutdown. A candidate who prioritizes high-impact AI work, fast-paced technical learning, and elite pay without the toxic 'always-on' culture of traditional tech and finance firms would find this a uniquely aligned destination."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Above average for tech and finance. Work-life balance is good, anchored by sane hours and a guaranteed shutdown that prevents 'always-on' culture,"
   }
  },
  "quince": {
@@ -147992,11 +148238,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -148008,6 +148256,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784682450,
   "last_evidence_at": 1784674487,
   "name": "Radionix",
   "pace_of_work": {
@@ -169237,37 +169486,90 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong applied ML in production (reconciliation, anomaly detection, NLP for docs), but not an AI research lab. Prestige comes from fintech scale, not publication record."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "b2cdbcccfb"
+   ],
+   "value": "Recurring revenue from software licenses (SaaS/term), maintenance, and managed services/outsourcing contracts. Also earns transaction-based and asset-based fees from fund administration and processing services. High retention due to mission-critical nature of systems."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Established, process-oriented, acquisition-driven. Engineering culture ranges from modern cloud-native teams to legacy maintainers. Decision-making can be hierarchical. Strong domain expertise respected. Less 'startup energy,' more 'institutional knowledge.'"
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "b2cdbcccfb"
+   ],
+   "value": "Asset managers, hedge funds, private equity firms, pension funds, insurance companies, banks, and wealth management firms globally. Also serves healthcare payers and providers through its health solutions division."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$135k base + 10-15% target bonus + RSUs ($15k-$30k/yr vesting). Total comp ~$130k-$165k. Higher in NY/SF hubs. Data science/ML roles at upper band."
   },
   "evidence_sha": "30aaf37f803af1f9",
+  "generated_at": 1784682450,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b2cdbcccfb"
+   ],
+   "value": "Financial Technology / Financial Services Software / Fund Administration"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect domain-heavy questions: portfolio accounting, trade lifecycle, reconciliation, regulatory reporting. System design for high-throughput, audit-critical financial pipelines. SQL/ETL proficiency. Behavioral focus on handling ambiguity in large orgs and cross-team coordination. LeetCode medium/hard for core engineering; lighter for data science/applied roles."
   },
+  "last_attempt_at": 1784682450,
   "last_evidence_at": 1784676249,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "b2cdbcccfb"
+   ],
+   "value": "Headquartered in Windsor, CT. Major hubs: New York, Boston, Chicago, San Francisco, London, Edinburgh, Hong Kong, Singapore, Sydney, Pune, Chennai, and remote across US/Canada/Europe/APAC."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "b2cdbcccfb"
+   ],
+   "value": "To deliver innovative, technology-driven solutions that help financial institutions and investment managers reduce complexity, improve efficiency, and manage risk across the investment lifecycle."
+  },
   "name": "SS&C",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — Enterprise release cycles (quarterly/semi-annual) with regulated delivery gates. Faster in cloud-native product groups; slower in legacy maintenance teams. Not 'move fast and break things.'"
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "b2cdbcccfb"
+   ],
+   "value": "Core platforms include SS&C Advent (portfolio management), SS&C Geneva (investment accounting), SS&C Eze (front-to-back office), SS&C Salentica (CRM), and SS&C Primatics (risk/analytics). Also provides fund administration, tax, compliance, and BPO services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays (US). Accrual-based. Unlimited not offered. Carryover limits apply."
   },
+  "refresh_after": 1789866450,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -169277,7 +169579,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No company-wide guaranteed shutdowns. Some teams observe informal slowdowns between Christmas/New Year. Not a formal policy."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "b2cdbcccfb"
+   ],
+   "value": "Publicly traded (NASDAQ: SSNC), ~25,000+ employees globally, $5B+ annual revenue. Mature, acquisitive conglomerate with 30+ years operating history."
   },
   "sources": [
    {
@@ -169311,14 +169620,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=b9a41d6f630471e9c56d79c2012f8189f8bceda2c7113a1ec85b3dc6e5d6b986JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=07787a3d-f61d-629d-242a-6da0f71b63e4&u=a1aHR0cHM6Ly93d3cuc3NhLmdvdi8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active H-1B sponsor for technical roles (software engineering, data science, cloud, DevOps). Green card sponsorship (PERM) typical for full-time hires after 6-12 months. Global mobility program supports internal transfers."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "b2cdbcccfb"
+   ],
+   "value": "SS&C Technologies is a global financial technology and services provider serving the investment management, financial services, and healthcare industries. The company offers software platforms, outsourcing, and data solutions for asset managers, hedge funds, insurers, and pension funds."
+  },
+  "synthesized_evidence_sha": "30aaf37f803af1f9",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "b2cdbcccfb"
+   ],
+   "value": "Large-scale financial data processing, portfolio accounting engines, cloud migration (AWS/Azure), API integration layers, regulatory reporting automation, AI/ML for reconciliation/anomaly detection, and modernizing legacy C++/Java stacks to microservices."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676249,
   "web_search_url": "https://duckduckgo.com/?q=SS%26C+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "SS&C offers elite fintech prestige with massive-scale financial data (trillions in assets on platform) and high new-grad compensation, but operates as a mature acquisitive conglomerate — not a fast-moving innovator. Culture varies by acquired business unit; some teams move quickly on modernization, others maintain legacy systems. Work-life balance is generally reasonable for enterprise software (limited on-call), but 'guaranteed shutdowns' are not a formal policy. Technical growth comes from exp"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — Standard corporate hours (40-45/wk typical). Limited on-call for core platforms. Some crunch during regulatory deadlines or major releases. Varies significantly by acquired business unit and manager."
   }
  },
  "ss c technologies": {
@@ -192169,41 +192503,113 @@
  "university of wisconsin madison": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "464a962988"
+   ],
+   "value": "Tier 3 (Regional/National Expertise, Not Top-Tier AI). The role is an educational research analyst position in social science, not a leading commercial AI or data science research role, and lacks the prestige of top tech firms or elite AI labs."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "464a962988",
+    "00c24c6506",
+    "591d6a89b8"
+   ],
+   "value": "Non-profit public institution funded by a combination of state appropriations, tuition and fees, federal research grants, and philanthropic contributions. IRP research is supported by sponsored projects and contracts."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "464a962988",
+    "00c24c6506"
+   ],
+   "value": "Inclusive, progressive, and mission-driven with a focus on public service. Strong emphasis on diversity, equity, and research integrity, but inherently bureaucratic and process-heavy compared to a commercial tech startup."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "464a962988",
+    "00c24c6506",
+    "591d6a89b8"
+   ],
+   "value": "Undergraduate and graduate students, federal and state government agencies, research funding bodies, and the public of Wisconsin and the United States."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "464a962988"
+   ],
+   "value": "Estimated: $50,000 - $75,000 per year. University and state-funded research roles typically pay substantially below the $120K+ compensation found at top-tier tech firms, even for quantitative analyst positions."
   },
   "evidence_sha": "8fe954c344e0eb3b",
+  "generated_at": 1784682450,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "464a962988",
+    "00c24c6506"
+   ],
+   "value": "Higher Education / Academic Research"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe for evidence of tolerance for a slower, process-heavy pace. Candidate seeks elite AI prestige; interviewers should emphasize the mission-driven, stable, low-burnout nature of the role rather than making false claims of a fast-moving tech startup culture."
   },
-  "last_attempt_at": 1784682358,
+  "last_attempt_at": 1784682450,
   "last_evidence_at": 1784672491,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "464a962988",
+    "00c24c6506",
+    "591d6a89b8"
+   ],
+   "value": "Headquarters in Madison, Wisconsin, United States."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "464a962988",
+    "00c24c6506"
+   ],
+   "value": "To create and disseminate knowledge through teaching, research, and public service, fostering an inclusive environment where diversity is a source of strength."
+  },
   "name": "University of Wisconsin-Madison",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "464a962988",
+    "00c24c6506"
+   ],
+   "value": "Steady and deliberate. Highly bureaucratic due to state institution governance with significant process overhead. Sane hours are normal, with little expectation of 'tech startup speed'."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "464a962988",
+    "00c24c6506",
+    "591d6a89b8"
+   ],
+   "value": "Higher education degrees, fundamental and applied research, and public service outreach. The Institute for Research on Poverty (IRP) produces non-partisan policy analysis and social science research to inform government decision-making."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "00c24c6506"
+   ],
+   "value": "Estimated: 15-18 days of vacation leave plus 11-12 paid holidays, and up to 6-8 days of personal/holiday leave annually for exempt academic staff, providing a conservative total of 35+ combined days off. Exact accrual depends on role classification and tenure."
   },
+  "refresh_after": 1789866450,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -192212,8 +192618,18 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "00c24c6506"
+   ],
+   "value": "Estimated: Guaranteed shutdown during the period between Christmas and New Year’s Day, with campus closing and employees using paid legal holidays or floating time, ensuring a forced, collective break to avoid burnout."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "00c24c6506",
+    "591d6a89b8"
+   ],
+   "value": "Large, mature institution with tens of thousands of employees and students. The university is a major economic engine for the state of Wisconsin."
   },
   "sources": [
    {
@@ -192257,14 +192673,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=168d93945be04b535385558d834ce1696f1a50937108154afba8ee4613f465f0JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=068da0dd-8eee-6028-1b01-b7408fbe61eb&u=a1aHR0cHM6Ly9ldmVyZXR0LndzdS5lZHUv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "464a962988"
+   ],
+   "value": "Candidates must be U.S. citizens, lawful permanent residents, or otherwise authorized to work in the United States without employer sponsorship on or before the appointment date. This role does not offer immigration sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "00c24c6506",
+    "591d6a89b8"
+   ],
+   "value": "The University of Wisconsin–Madison is a public land-grant research university that generates revenue primarily through tuition, government and private research grants, state appropriations, and auxiliary services. It employs thousands of researchers and analysts to support its academic and public-service missions."
+  },
+  "synthesized_evidence_sha": "8fe954c344e0eb3b",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "464a962988"
+   ],
+   "value": "Roles like IRP Research Analyst involve processing and analyzing large datasets using statistical tools to create data visualizations and inform policy. Work touches on social science data infrastructure but is not explicitly a top-tier commercial AI lab role."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672491,
   "web_search_url": "https://duckduckgo.com/?q=University+of+Wisconsin-Madison+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "464a962988",
+    "00c24c6506"
+   ],
+   "value": "The university offers a mission-driven environment with strong institutional support for work-life balance, including estimated 36+ days of combined PTO, sick leave, and legal holidays, plus a guaranteed end-of-year shutdown that prevents burnout. However, the pace and bureaucratic structure of a large public institution are the opposite of a fast, innovative tech culture, and the estimated new grad pay of $55,000 is far below top-tier AI industry market rates."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "00c24c6506"
+   ],
+   "value": "Excellent. Roles are typically capped at 40 hours per week with generous paid leave and shutdown periods. The environment is low-burnout and structurally protects personal time, aligning perfectly with the candidate's desire for sane hours."
   }
  },
  "university of wisconsin system": {
