@@ -256,37 +256,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Unknown - no information in provided sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No information found in provided sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Unknown - no information in provided sources."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No information found in provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown - no compensation data in provided sources."
   },
   "evidence_sha": "e8b11f293f311172",
+  "generated_at": 1784691725,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Unknown - no information in provided sources."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cannot determine interview focus areas without company information. Candidate should independently verify company legitimacy and request detailed role specifics before investing interview time."
+  },
+  "last_attempt_at": 1784691725,
   "last_evidence_at": 1784672886,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No information found in provided sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No information found in provided sources."
+  },
   "name": "3Red Partners",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Unknown - no information in provided sources."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No information found in provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown - no policy information in provided sources."
   },
+  "refresh_after": 1789875725,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -296,7 +337,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown - no policy information in provided sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No information found in provided sources."
   },
   "sources": [
    {
@@ -330,14 +376,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=1dc6699974f1b6265dfc77abae3f47d7f4f57fe8e577ca44ad886434909e0b9dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=248b06f2-01fc-6a8d-2cac-116f00e36b12&u=a1aHR0cHM6Ly9kZXRhaWwuY2hpZWJ1a3Vyby55YWhvby5jby5qcC9xYS9xdWVzdGlvbl9kZXRhaWwvcTExMjA3ODM1MzY&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No information found in provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No verifiable information about 3Red Partners was found in the provided sources. The supplied links appear to be unrelated redirect pages (German IT site and Yahoo Japan Q&A) rather than company information."
+  },
+  "synthesized_evidence_sha": "e8b11f293f311172",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No information found in provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672886,
   "web_search_url": "https://duckduckgo.com/?q=3Red+Partners+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cannot assess alignment with candidate priorities (elite AI/data science role, work-life balance, technical growth) due to complete lack of verifiable company information in sources."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Unknown - no information in provided sources."
   }
  },
  "3redpartners": {
@@ -68986,7 +69053,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 13,
+  "attempts": 14,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -69004,7 +69071,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784691596,
+  "last_attempt_at": 1784691725,
   "last_evidence_at": 1784676545,
   "name": "Esri",
   "pace_of_work": {
@@ -102563,7 +102630,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -102581,7 +102648,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784691596,
+  "last_attempt_at": 1784691725,
   "last_evidence_at": 1784674043,
   "name": "International Monetary Fund",
   "pace_of_work": {
@@ -128037,11 +128104,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -128053,6 +128122,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784691725,
   "last_evidence_at": 1784674902,
   "name": "MetroStar",
   "pace_of_work": {
@@ -170646,11 +170716,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -170662,6 +170734,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784691725,
   "last_evidence_at": 1784677413,
   "name": "Roku",
   "pace_of_work": {
@@ -192205,7 +192278,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -192223,7 +192296,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784691596,
+  "last_attempt_at": 1784691725,
   "last_evidence_at": 1784677412,
   "name": "Synergy ECP",
   "pace_of_work": {
@@ -205965,11 +206038,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -205981,6 +206056,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784691725,
   "last_evidence_at": 1784677414,
   "name": "Twitch Interactive, Inc.",
   "pace_of_work": {
@@ -226032,7 +226108,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -226050,7 +226126,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784691596,
+  "last_attempt_at": 1784691725,
   "last_evidence_at": 1784674276,
   "name": "Zapier",
   "pace_of_work": {
