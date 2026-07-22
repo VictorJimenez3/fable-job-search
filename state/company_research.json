@@ -40804,47 +40804,113 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Established enterprise tier — large-scale data and automation opportunities in regulated healthcare, but not a primary AI research lab; prestige comes from Fortune 500 impact and specialized health-tech domain."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "8dd9322eb9"
+   ],
+   "value": "Revenue from pharmaceutical wholesale distribution margins, specialty distribution fees, manufacturer service contracts, and technology-enabled pharmacy solutions."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "8dd9322eb9"
+   ],
+   "value": "Mission-driven, inclusive, purpose-oriented corporate culture in a highly regulated healthcare distribution environment; emphasizes team member well-being and patient impact."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "8dd9322eb9"
+   ],
+   "value": "Retail and hospital pharmacies, healthcare systems, pharmaceutical manufacturers, and specialty therapy providers across the U.S. and internationally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$110,000 base + benefits for Automation Developer I in Dallas metro area; large enterprise bands with relocation possible."
   },
   "evidence_sha": "aa4d7a0f3df994cb",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784692689,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8dd9322eb9"
+   ],
+   "value": "Healthcare distribution / Pharmaceutical wholesale / Health technology"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "8dd9322eb9"
+   ],
+   "value": "Expect questions on automation scripting, system monitoring/troubleshooting, prioritization in fast-paced environments, and alignment with healthcare mission. Prepare examples of optimizing reliability, working on-site when needed, and cross-functional collaboration in regulated settings."
+  },
+  "last_attempt_at": 1784692689,
   "last_evidence_at": 1784675400,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "8dd9322eb9"
+   ],
+   "value": "Headquartered in Conshohocken, PA; major tech hubs in Carrollton, TX and other U.S. sites; global operations in 50+ countries."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "8dd9322eb9"
+   ],
+   "value": "To create healthier futures by uniting in the responsibility to deliver pharmaceutical products and services that improve patient access and outcomes."
+  },
   "name": "Cencora",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "8dd9322eb9"
+   ],
+   "value": "Estimated: Fast-paced operational environment with regulated delivery deadlines; automation role emphasizes monitoring, troubleshooting, and optimization cycles."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "8dd9322eb9"
+   ],
+   "value": "Pharmaceutical wholesale distribution, specialty drug distribution, manufacturer commercialization services, pharmacy automation solutions, and healthcare business consulting."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 holidays typical for large U.S. healthcare enterprises; exact policy not public."
   },
+  "refresh_after": 1789876689,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns publicly documented; large healthcare distributor likely operates year-round with standard holiday closures."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public company (NYSE: COR), Fortune 500, ~46,000 employees globally, mature stage with established market position in healthcare distribution."
   },
   "sources": [
    {
@@ -40898,14 +40964,44 @@
     "url": "https://myhrabc.wd5.myworkdayjobs.com/Global/job/Carrollton-TX/Automation-Developer-I_R2521185"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H-1B and green cards given large enterprise scale and tech hiring; specific new-grad sponsorship policy not publicly confirmed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "8dd9322eb9"
+   ],
+   "value": "Cencora (formerly AmerisourceBergen) is a global pharmaceutical sourcing and distribution services company that connects manufacturers, pharmacies, and healthcare providers to improve medication access. It generates revenue through wholesale drug distribution, specialty pharmaceutical services, and commercialization support for pharma manufacturers."
+  },
+  "synthesized_evidence_sha": "aa4d7a0f3df994cb",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "8dd9322eb9"
+   ],
+   "value": "Automation development, pharmacy technology systems, supply chain optimization, data platforms for pharmaceutical distribution, and digital health solutions."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675400,
   "web_search_url": "https://duckduckgo.com/?q=Cencora+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "8dd9322eb9",
+    "dbc3b9e88f"
+   ],
+   "value": "Cencora offers a mission-driven healthcare impact role at a Fortune 500 scale with stated inclusive culture and purpose-driven work. The Automation Developer role suggests investment in modern tech (automation, optimization) within a fast-paced but established enterprise, potentially balancing prestige and stability with meaningful patient impact."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "8dd9322eb9"
+   ],
+   "value": "Estimated: Moderate — on-site requirements as needed, fast-paced expectations, but company highlights inclusive culture and purpose-driven support; large enterprise may offer more structure than startups."
   }
  },
  "censys": {
@@ -40915,7 +41011,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -40933,7 +41029,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784692548,
+  "last_attempt_at": 1784692689,
   "last_evidence_at": 1784674523,
   "name": "Censys",
   "pace_of_work": {
@@ -69240,7 +69336,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 19,
+  "attempts": 20,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -69258,7 +69354,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784692548,
+  "last_attempt_at": 1784692689,
   "last_evidence_at": 1784676545,
   "name": "Esri",
   "pace_of_work": {
@@ -102817,7 +102913,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 11,
+  "attempts": 12,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -102835,7 +102931,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784692548,
+  "last_attempt_at": 1784692689,
   "last_evidence_at": 1784674043,
   "name": "International Monetary Fund",
   "pace_of_work": {
@@ -171087,7 +171183,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -171105,7 +171201,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784692548,
+  "last_attempt_at": 1784692689,
   "last_evidence_at": 1784677413,
   "name": "Roku",
   "pace_of_work": {
@@ -192649,7 +192745,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 9,
+  "attempts": 10,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -192667,7 +192763,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784692548,
+  "last_attempt_at": 1784692689,
   "last_evidence_at": 1784677412,
   "name": "Synergy ECP",
   "pace_of_work": {
@@ -206409,7 +206505,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -206427,7 +206523,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784692548,
+  "last_attempt_at": 1784692689,
   "last_evidence_at": 1784677414,
   "name": "Twitch Interactive, Inc.",
   "pace_of_work": {
@@ -226550,7 +226646,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 10,
+  "attempts": 11,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -226568,7 +226664,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784692548,
+  "last_attempt_at": 1784692689,
   "last_evidence_at": 1784674276,
   "name": "Zapier",
   "pace_of_work": {
