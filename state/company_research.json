@@ -10503,7 +10503,7 @@
    "value": "Tier 1 (Elite). Amazon is a pioneer in production AI and cloud infrastructure globally, rivaling Google, Meta, and Microsoft in AI talent branding."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -10553,7 +10553,7 @@
    "source_ids": [],
    "value": "Amazon interviews emphasize its Leadership Principles with behavioral questions, plus technical screening covering data structures, system design, algorithms, and coding proficiency. Storytelling about ownership, bias for action, and customer obsession is crucial. For AI and data science roles, expect deep dives into machine learning theory, statistical analysis, and deployment experience."
   },
-  "last_attempt_at": 1784693225,
+  "last_attempt_at": 1784693370,
   "last_evidence_at": 1784636762,
   "locations": {
    "confidence": "high",
@@ -28940,7 +28940,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -28958,7 +28958,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
-  "last_attempt_at": 1784693225,
+  "last_attempt_at": 1784693370,
   "last_evidence_at": 1784692850,
   "name": "BlackEdge Capital",
   "pace_of_work": {
@@ -56957,11 +56957,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -56973,6 +56975,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784693370,
   "last_evidence_at": 1784680196,
   "name": "Darktrace",
   "pace_of_work": {
@@ -62741,7 +62744,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -62759,7 +62762,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784693225,
+  "last_attempt_at": 1784693370,
   "last_evidence_at": 1784680412,
   "name": "Dow Jones",
   "pace_of_work": {
@@ -130425,7 +130428,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -130443,7 +130446,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784693225,
+  "last_attempt_at": 1784693370,
   "last_evidence_at": 1784693223,
   "name": "Micron Technology",
   "pace_of_work": {
@@ -134350,121 +134353,111 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Low. As a staffing consultancy, it lacks the elite AI/data science prestige of a top-tier tech company."
+   "value": "Tier 3 (Solid entry-level deployment into branded finance programs; not a core AI research lab)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
-    "137efcee5a",
-    "d982529713",
-    "15e2775f1b"
+    "2531311a8e"
    ],
-   "value": "B2B talent-as-a-service. Revenue is generated through long-term contracts with corporate clients who fund the recruitment and training of mthree's deployed graduates."
+   "value": "Recruit, train, and deploy early-career technologists to client sites on a contract or contract-to-hire basis; revenue from client bill rates minus trainee compensation."
   },
   "culture_vibe": {
-   "confidence": "medium",
-   "source_ids": [
-    "137efcee5a",
-    "d982529713"
-   ],
-   "value": "Collegial and mentorship-driven during the training academy, shifting to match the culture of the hiring client upon deployment."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Structured, programmatic, early-career focused; cohort-based training then dispersed to client sites. Culture at client site dominates day-to-day experience."
   },
   "customers": {
    "confidence": "medium",
    "source_ids": [
-    "137efcee5a",
-    "d982529713",
-    "15e2775f1b"
+    "2531311a8e"
    ],
-   "value": "Large enterprise clients, particularly in the investment banking, financial services, and technology sectors seeking entry-level talent pipelines."
+   "value": "Enterprise clients in banking and financial services (e.g., Wiley Edge banking team), likely extending to other sectors needing entry-level tech talent."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $60,000 - $70,000 base salary for US-based software engineering placements, often with a basic benefits package."
+   "source_ids": [
+    "2531311a8e"
+   ],
+   "value": "Estimated: CA$85K base (per posting) for Canada remote Junior Data Scientist; US equivalent likely $70K-$90K + benefits. No equity typical for deployment model."
   },
   "evidence_sha": "dbe5a66c4fdd7a90",
-  "generated_at": 1784676246,
+  "generated_at": 1784693370,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
   "industry": {
    "confidence": "medium",
    "source_ids": [
-    "137efcee5a",
-    "15e2775f1b"
+    "2531311a8e"
    ],
-   "value": "Staffing and Recruiting"
+   "value": "Technology talent deployment / IT consulting / FinTech enablement"
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Prioritize determining exit opportunities and the specific AI/tech stack of the assigned client. Ask how the role guarantees sane hours and avoids high-burnout, and whether the placement will genuinely accelerate your data science skills or simply place you in a slow corporate environment."
+   "confidence": "medium",
+   "source_ids": [
+    "2531311a8e"
+   ],
+   "value": "Expect practical assessments in Python (pandas, NumPy), ML algorithm fundamentals, and NLP basics. Prepare for scenario questions about deploying models in regulated banking environments and adapting to client-team workflows. Ask about typical client engagement length, mentorship structure, and conversion rates to direct hire."
   },
-  "last_attempt_at": 1784693225,
+  "last_attempt_at": 1784693370,
   "last_evidence_at": 1784583504,
   "locations": {
    "confidence": "medium",
    "source_ids": [
-    "137efcee5a",
-    "15e2775f1b"
+    "2531311a8e"
    ],
-   "value": "Headquartered in Morristown, NJ, with a global presence including offices across North America, Europe, and Asia."
+   "value": "Global deployment model; specific posting mentions Canada (remote). Likely operates in US, UK, Canada, and other major financial hubs."
   },
   "mission": {
-   "confidence": "medium",
-   "source_ids": [
-    "137efcee5a",
-    "d982529713",
-    "15e2775f1b"
-   ],
-   "value": "To create endless possibilities for early-career talent by launching outstanding graduates into lasting careers, while delivering highly capable and trained professionals to enterprise clients."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "name": "mthree",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Varies heavily by the placed client. While mthree's academy is fast-paced, actual work is often at the pace of a large, bureaucratic bank."
+   "value": "Estimated: Fast-paced during training/deployment ramp; then dictated by client banking team (can be intense, deadline-driven)."
   },
   "products": {
    "confidence": "medium",
    "source_ids": [
-    "137efcee5a",
-    "d982529713",
-    "15e2775f1b"
+    "2531311a8e"
    ],
-   "value": "Proprietary graduate placement programs, specialized upskilling academies for technology and business roles, and outsourced talent management services."
+   "value": "Talent deployment services (e.g., placing trained junior data scientists, software engineers) and associated training programs (e.g., Wiley Edge)."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 10 standard vacation days plus company holidays for the first year, scaling up with tenure."
+   "value": "Estimated: 10-15 days PTO + holidays (varies by employment contract and client site policy); not publicly documented."
   },
-  "refresh_after": 1789860246,
+  "refresh_after": 1789877370,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "medium",
+   "source_ids": [
+    "2531311a8e"
+   ],
+   "value": "Wiley Edge (referenced in job posting as the banking team deployment program)"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No guaranteed company-wide shutdowns, though public holidays are observed."
+   "value": "Estimated: No company-wide guaranteed shutdowns; dependent on client banking calendar (e.g., may follow market holidays)."
   },
   "size_stage": {
    "confidence": "medium",
    "source_ids": [
-    "137efcee5a",
-    "15e2775f1b"
+    "2531311a8e"
    ],
-   "value": "Established global enterprise operating as a subsidiary of the Wiley group."
+   "value": "Established private company (part of Wiley Edge ecosystem), operating globally with structured graduate deployment programs."
   },
   "sources": [
    {
@@ -134509,46 +134502,40 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "medium",
-   "source_ids": [
-    "137efcee5a",
-    "d982529713",
-    "15e2775f1b"
-   ],
-   "value": "Has a track record of offering visa sponsorship for high-performing alumni transitioning to permanent roles with enterprise clients."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "status": "ready",
   "summary": {
    "confidence": "medium",
    "source_ids": [
-    "137efcee5a",
-    "d982529713",
-    "15e2775f1b"
+    "2531311a8e"
    ],
-   "value": "mthree is a global emerging talent consultancy that partners with enterprise organizations to bridge critical skill gaps by deploying trained recent graduates into technology, business operations, and banking roles. They make money by providing recruitment, specialized training, and ongoing placement services to corporate clients."
+   "value": "mthree appears to be a talent deployment and training company that places early-career technology professionals, such as junior data scientists, into client teams like the Wiley Edge banking program. It likely generates revenue by recruiting, training, and contracting out talent to enterprise clients in financial services and other sectors."
   },
-  "synthesized_evidence_sha": "c5a83a684b4b3e72",
+  "synthesized_evidence_sha": "dbe5a66c4fdd7a90",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "137efcee5a",
-    "d982529713",
-    "15e2775f1b"
+    "2531311a8e"
    ],
-   "value": "Roles for placed candidates typically include software engineering, DevOps, data analysis, and software testing."
+   "value": "Entry-level data science and engineering roles involving Python, pandas, NumPy, machine learning algorithms, and NLP, deployed into client banking/finance teams."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583504,
   "web_search_url": "https://duckduckgo.com/?q=mthree+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "While this offers structured entry into elite enterprises, it fundamentally conflicts with a desire for elite AI/data prestige and a fast, innovative tech culture. Placed candidates often encounter slow corporate bureaucracy, and the agency model may not deliver the top-tier pay or accelerated technical learning scoped for cutting-edge data science."
+   "confidence": "medium",
+   "source_ids": [
+    "2531311a8e"
+   ],
+   "value": "Offers a structured entry point into high-stakes finance/tech environments (Wiley Edge banking) with a defined salary (CA$85K) and remote flexibility. The deploy-to-client model accelerates exposure to real production ML/NLP work without traditional corporate bureaucracy, but work-life balance depends heavily on the client site culture."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Moderate to Good. mthree boundaries and support are strong relative to the industry, but actual WLB depends on the specific client team."
+   "value": "Estimated: 3/5 — Variable by client assignment; banking clients may demand long hours, but mthree programs often emphasize structured hours during training."
   }
  },
  "multicare health system": {
@@ -139546,7 +139533,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -139564,7 +139551,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784693225,
+  "last_attempt_at": 1784693370,
   "last_evidence_at": 1784693224,
   "name": "Niagara Bottling",
   "pace_of_work": {
@@ -173446,7 +173433,7 @@
    "value": "RTX sits in the high-prestige aerospace tier for embedded engineering but is low tier for commercial AI/data science innovation. The technical stack cited is exclusively C++ embedded software, not modern cloud AI."
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -173491,7 +173478,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "last_attempt_at": 1784693225,
+  "last_attempt_at": 1784693370,
   "last_evidence_at": 1784666538,
   "locations": {
    "confidence": "medium",
