@@ -52013,7 +52013,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -52031,7 +52031,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784692219,
+  "last_attempt_at": 1784692380,
   "last_evidence_at": 1784675399,
   "name": "Corning",
   "pace_of_work": {
@@ -69145,7 +69145,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 17,
+  "attempts": 18,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -69163,7 +69163,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784692219,
+  "last_attempt_at": 1784692380,
   "last_evidence_at": 1784676545,
   "name": "Esri",
   "pace_of_work": {
@@ -102722,7 +102722,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 9,
+  "attempts": 10,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -102740,7 +102740,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784692219,
+  "last_attempt_at": 1784692380,
   "last_evidence_at": 1784674043,
   "name": "International Monetary Fund",
   "pace_of_work": {
@@ -170992,7 +170992,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -171010,7 +171010,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784692219,
+  "last_attempt_at": 1784692380,
   "last_evidence_at": 1784677413,
   "name": "Roku",
   "pace_of_work": {
@@ -192554,7 +192554,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -192572,7 +192572,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784692219,
+  "last_attempt_at": 1784692380,
   "last_evidence_at": 1784677412,
   "name": "Synergy ECP",
   "pace_of_work": {
@@ -206314,7 +206314,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -206332,7 +206332,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784692219,
+  "last_attempt_at": 1784692380,
   "last_evidence_at": 1784677414,
   "name": "Twitch Interactive, Inc.",
   "pace_of_work": {
@@ -207986,37 +207986,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Unknown — insufficient public data to assess AI/data science reputation or prestige tier."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No business model details found in the supplied sources. The name suggests B2B intelligence/communications services, possibly government or enterprise contracts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Likely professional, mission-oriented, possibly security-cleared environment. No cultural signals in sources."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No customer information found in the supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k–$120k base + possible bonus/equity (range for cleared-entry roles in DC/VA/MD corridor), but no public data for this company."
   },
   "evidence_sha": "61706fe2a1eaadab",
+  "generated_at": 1784692380,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+   "value": "Intelligence & Communications (likely defense, government services, or enterprise tech)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Interview process unknown. Candidate should probe for: actual AI/DS project scope and impact, team velocity and bureaucracy levels, explicit WLB policies (core hours, shutdown rituals), mentorship structure, and compensation transparency."
+  },
+  "last_attempt_at": 1784692380,
   "last_evidence_at": 1784663559,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters location not specified in sources. The ultra.com domain does not reveal geographic base."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No mission statement found in the supplied sources."
+  },
   "name": "Ultra Intelligence & Communications",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast — typical for intelligence/communications tech contractors, but no source confirmation."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No product information found in the supplied sources. The company name suggests intelligence and communications technology, but specific offerings are undocumented."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + federal holidays (typical for US govt contractors), but no policy documented."
   },
+  "refresh_after": 1789876380,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -208026,7 +208067,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research. Some defense contractors observe holiday breaks; not universal."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Company size and stage unknown from supplied sources. The ultra.com domain suggests an established web presence."
   },
   "sources": [
    {
@@ -208060,14 +208106,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=eed6973625949c9f84454c888e4977f29e35442f0b0d8327176ecbfbda84b46cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=13b3f972-4586-6ee0-3e25-eeef44316f9a&u=a1aHR0cHM6Ly93d3cudWx0YS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No visa sponsorship information found in supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "b90c0bdd59",
+    "a71e30cbda",
+    "473b904b16"
+   ],
+   "value": "Ultra Intelligence & Communications appears to be a company with a web presence at ultra.com, but the provided sources contain only redirect notices without substantive content about the company's operations, mission, or business."
+  },
+  "synthesized_evidence_sha": "61706fe2a1eaadab",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technical focus unclear from sources. Name implies work in intelligence analysis, communications systems, data processing, or related technical domains."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784663559,
   "web_search_url": "https://duckduckgo.com/?q=Ultra+Intelligence+%26+Communications+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks a top-tier AI/data science role balancing elite prestige, high new-grad pay, fast innovative culture, mission-driven work, strong work-life balance with sane hours and guaranteed shutdowns, and accelerated technical growth without personal time sacrifice. This company's fit cannot be assessed from available sources."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown — no employee reviews or policy data in sources. Government contractors vary widely; some have strict 40-hour weeks, others surge around contracts."
   }
  },
  "uncountable": {
@@ -226384,7 +226455,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 8,
+  "attempts": 9,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -226402,7 +226473,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784692219,
+  "last_attempt_at": 1784692380,
   "last_evidence_at": 1784674276,
   "name": "Zapier",
   "pace_of_work": {
