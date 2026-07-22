@@ -40915,11 +40915,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -40931,6 +40933,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784692548,
   "last_evidence_at": 1784674523,
   "name": "Censys",
   "pace_of_work": {
@@ -52010,50 +52013,116 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — respected applied AI/ML in manufacturing and materials informatics; not a pure AI research lab but high-impact industrial deployment."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "2beefd8fc1",
+    "f12fd0b358"
+   ],
+   "value": "B2B manufacturer selling specialty materials and components to OEMs and end-market integrators; revenue driven by high-margin proprietary glass/ceramic formulations and long-term supply agreements."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Established, engineering-centric, collaborative, safety-first, low-politics; values long tenure and deep expertise over rapid promotion."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "2beefd8fc1",
+    "f12fd0b358"
+   ],
+   "value": "Major smartphone OEMs (Apple, Samsung), telecom carriers (Verizon, AT&T), automotive manufacturers, pharmaceutical/biotech companies, and data center operators."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k-$115k base + 10-15% target bonus + RSU (~$15k-25k/yr vesting); total comp ~$120k-$150k."
   },
   "evidence_sha": "3d294e047b656f9a",
+  "generated_at": 1784692548,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2beefd8fc1",
+    "f12fd0b358"
+   ],
+   "value": "Specialty Materials / Advanced Manufacturing / Industrial Technology"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical assessment in materials modeling, statistical process control, ML for manufacturing data, and cross-functional collaboration; prepare for behavioral questions on long-term project ownership and safety/quality mindset."
   },
-  "last_attempt_at": 1784692380,
+  "last_attempt_at": 1784692548,
   "last_evidence_at": 1784675399,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "ea5b2ae1f7",
+    "2beefd8fc1"
+   ],
+   "value": "Headquartered in Corning, NY; major R&D/manufacturing in NY, NC, MA, CA, TX; global sites across Asia Pacific (China, Korea, Japan, Taiwan), EMEA (Germany, France, Poland), and CALA regions."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "2beefd8fc1",
+    "f12fd0b358"
+   ],
+   "value": "To innovate in materials science to create products that transform industries and improve lives, guided by 'One Corning' values of quality, integrity, performance, and leadership."
+  },
   "name": "Corning",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Measured, project-driven cadence with quarterly planning cycles; manufacturing integration requires disciplined iteration, not firefighting."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "2beefd8fc1",
+    "f12fd0b358"
+   ],
+   "value": "Gorilla Glass (cover glass for mobile devices), optical fiber and cable (telecom networks), automotive glass and ceramics, life sciences labware, and advanced display technologies."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual PTO + 10-11 company holidays; additional volunteer/time-off programs vary by site."
   },
+  "refresh_after": 1789876548,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "ea5b2ae1f7"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically Christmas–New Year week); some sites observe summer floating holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "2beefd8fc1",
+    "f12fd0b358"
+   ],
+   "value": "Publicly traded (NYSE: GLW), ~$14B annual revenue, ~57,000 employees globally, founded 1851 — mature industrial technology leader."
   },
   "sources": [
    {
@@ -52087,14 +52156,40 @@
     "url": "https://corningjobs.corning.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B visas for specialized technical roles (materials scientists, process engineers, data scientists); global mobility programs exist for internal transfers across regions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "2beefd8fc1",
+    "f12fd0b358"
+   ],
+   "value": "Corning Incorporated is a materials science company specializing in glass, ceramics, and optical physics innovations for consumer electronics, telecommunications, automotive, and life sciences markets."
+  },
+  "synthesized_evidence_sha": "3d294e047b656f9a",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "ea5b2ae1f7"
+   ],
+   "value": "Materials R&D (glass/ceramic composition, optical physics), process engineering for high-volume manufacturing, data science for process control/yield optimization, software for manufacturing execution and simulation, AI/ML for materials discovery and quality prediction."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675399,
   "web_search_url": "https://duckduckgo.com/?q=Corning+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Corning offers elite materials-science prestige with high-impact AI/ML applications in manufacturing and R&D, competitive new-grad compensation, and a culture rooted in long-term innovation rather than short sprints — aligning with a desire for technical depth, mission-driven work, and sustainable pace."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — strong emphasis on safety, predictable schedules in R&D/manufacturing; limited on-call outside production support roles."
   }
  },
  "corning incorporated": {
@@ -69145,7 +69240,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 18,
+  "attempts": 19,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -69163,7 +69258,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784692380,
+  "last_attempt_at": 1784692548,
   "last_evidence_at": 1784676545,
   "name": "Esri",
   "pace_of_work": {
@@ -102722,7 +102817,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 10,
+  "attempts": 11,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -102740,7 +102835,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784692380,
+  "last_attempt_at": 1784692548,
   "last_evidence_at": 1784674043,
   "name": "International Monetary Fund",
   "pace_of_work": {
@@ -170992,7 +171087,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -171010,7 +171105,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784692380,
+  "last_attempt_at": 1784692548,
   "last_evidence_at": 1784677413,
   "name": "Roku",
   "pace_of_work": {
@@ -192554,7 +192649,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 8,
+  "attempts": 9,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -192572,7 +192667,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784692380,
+  "last_attempt_at": 1784692548,
   "last_evidence_at": 1784677412,
   "name": "Synergy ECP",
   "pace_of_work": {
@@ -206314,7 +206409,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -206332,7 +206427,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784692380,
+  "last_attempt_at": 1784692548,
   "last_evidence_at": 1784677414,
   "name": "Twitch Interactive, Inc.",
   "pace_of_work": {
@@ -226455,7 +226550,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 9,
+  "attempts": 10,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -226473,7 +226568,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784692380,
+  "last_attempt_at": 1784692548,
   "last_evidence_at": 1784674276,
   "name": "Zapier",
   "pace_of_work": {
