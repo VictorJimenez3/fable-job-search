@@ -48987,39 +48987,96 @@
  },
  "constellis": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "79a02de71e"
+   ],
+   "value": "Low. Not recognized as a data science or AI engineering employer. It is an operations-focused security contractor."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "79a02de71e"
+   ],
+   "value": "B2G/B2B contract-based revenue model centered on outsourced security, intelligence, and training services. Revenue is generated through defined-scope government contracts and commercial service agreements."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "79a02de71e"
+   ],
+   "value": "Paramilitary, hierarchical, and formal. Culture is driven by operational readiness and compliance, with a heavy presence of ex-military personnel. A far cry from a casual, tech-centric, innovative environment."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "79a02de71e"
+   ],
+   "value": "U.S. government agencies, international governments, and multinational corporations operating in complex or high-risk environments."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75,000 - $90,000 base salary for a junior data analyst. Aligns with low-margin government services billing scales and is far below top-tier consumer tech or gen AI startup compensation."
   },
   "evidence_sha": "dcfc2d3e0e43a4b8",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784687375,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "79a02de71e"
+   ],
+   "value": "Security & Defense"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784687375,
   "last_evidence_at": 1784593390,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "79a02de71e"
+   ],
+   "value": "Headquartered in Herndon, Virginia, USA, with operational hubs in the Middle East, Europe, and Africa to support international task orders."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "79a02de71e"
+   ],
+   "value": "To provide mission-critical security and risk management solutions with a focus on safeguarding people, assets, and operations in challenging environments."
+  },
   "name": "Constellis",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow-to-moderate, dictated by strict operational protocols and government contract compliance rather than agile tech development. High inertia."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "79a02de71e"
+   ],
+   "value": "Protective services, risk management, security training, crisis response, mission support, and logistics for high-threat environments."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days for corporate technical professionals, with standard federal holidays. Tends to follow the lower, more conservative end of government contracting benefits."
   },
+  "refresh_after": 1789871375,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -49029,7 +49086,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns beyond federal holidays. Any pauses are billing-dependent, lacking a plannable tech-style recharge period."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "79a02de71e"
+   ],
+   "value": "Large, established global enterprise with over 15,000 employees. The company is mature and firmly in an operations/maintenance phase rather than a high-growth startup mode."
   },
   "sources": [
    {
@@ -49063,14 +49127,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=c9be8cefece36d99278593552dc6ebace7041b8a86b07904c34d3888568048a3JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=0d7479d2-dd10-665e-36fa-6e4fdcff67b5&u=a1aHR0cHM6Ly9jb25zdGVsbGlzLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "79a02de71e"
+   ],
+   "value": "Due to the security-sensitive nature of government contracts, many positions require U.S. citizenship and security clearance eligibility. Sponsorship for non-citizens is highly unlikely for cleared or compliance-related roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "79a02de71e"
+   ],
+   "value": "Constellis is a global security and risk management company providing mission support, protective services, and training to government and commercial clients. It makes money through long-term government contracts and commercial security service agreements."
+  },
+  "synthesized_evidence_sha": "dcfc2d3e0e43a4b8",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "79a02de71e"
+   ],
+   "value": "Strong focus on physical security, logistics, and training operations. AI/Data Science roles are almost certainly limited to back-office functions such as geospatial risk analytics, threat intelligence modeling, and operational logistics optimization, rather than core product development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784593390,
   "web_search_url": "https://duckduckgo.com/?q=Constellis+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Average-to-poor for technical staff. Contracted field operations typically respect structured shifts, but corporate staff may face reactive crisis ops demands. No specific policy data found."
   }
  },
  "consultadd public services": {
@@ -70649,7 +70740,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -70667,7 +70758,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
-  "last_attempt_at": 1784687185,
+  "last_attempt_at": 1784687375,
   "last_evidence_at": 1784583446,
   "name": "Figma",
   "pace_of_work": {
@@ -106219,11 +106310,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -106235,6 +106328,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784687375,
   "last_evidence_at": 1784675879,
   "name": "Kitware",
   "pace_of_work": {
@@ -113492,7 +113586,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -113510,7 +113604,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784687185,
+  "last_attempt_at": 1784687375,
   "last_evidence_at": 1784677340,
   "name": "London Stock Exchange Group (LSEG)",
   "pace_of_work": {
@@ -145064,7 +145158,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -145082,7 +145176,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784687185,
+  "last_attempt_at": 1784687375,
   "last_evidence_at": 1784674729,
   "name": "Peraton",
   "pace_of_work": {
@@ -153593,11 +153687,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -153609,6 +153705,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784687375,
   "last_evidence_at": 1784677346,
   "name": "Pylon",
   "pace_of_work": {
@@ -164995,37 +165092,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Respected NLP/ML engineering brand in Europe with production scale (200+ languages, billions of words), academic partnerships (Charles University, DFKI), and conference presence (ACL, EMNLP, WMT). Not a household AI lab name like DeepMind/OpenAI, but recognized for applied NLP excellence."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue from project-based language services (translation, localization), recurring SaaS subscriptions for language technology platforms, and intellectual property consulting/management fees."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-led, multicultural, pragmatic. Long-tenured workforce (many 10+ year veterans) creates deep domain knowledge but can mean slower adoption of cutting-edge frameworks. Prague/Berlin hubs have strong dev community presence (meetups, open source). Management accessible; low politics for a public company. Diversity genuinely international."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Enterprise clients across technology, life sciences, legal, financial services, manufacturing, and public sector organizations requiring multilingual content and IP management."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: UK: £38-45k base + 5-10% bonus + RSUs (vesting 3-4 yrs). Germany/Czechia: €45-55k base + bonus. US (NY/SF): $110-130k base + 10-15% bonus + RSUs. Prague hub pays ~70% of London for same level. Signing bonuses rare for new grads."
   },
   "evidence_sha": "c0594fb86a972eee",
+  "generated_at": 1784687375,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Language Services & Technology / AI-powered Localization / NLP SaaS"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect: (1) ML system design for translation/language tasks (scaling, latency, quality evaluation), (2) NLP fundamentals (tokenization, alignment, evaluation metrics like BLEU/COMET), (3) Production ML: model serving, A/B testing, data drift monitoring, (4) Software engineering: Python, cloud (AWS/Azure), CI/CD, testing, (5) Domain awareness: low-resource languages, domain adaptation, human-in-the-loop workflows. Prepare concrete examples of shipping ML models to production or handling multiling"
+  },
+  "last_attempt_at": 1784687375,
   "last_evidence_at": 1784655992,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Chalfont St Peter, UK; major offices in Prague, Berlin, Shanghai, Tokyo, New York, San Francisco, and 30+ countries. Hybrid/remote options vary by role and location."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To unlock global understanding by combining human expertise with AI-powered language technology, enabling organizations to communicate effectively across languages and cultures."
+  },
   "name": "RWS",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — Quarterly delivery cycles for platform features; services side follows client project timelines. Not 'move fast and break things'; emphasis on quality, compliance (ISO 27001, ISO 17100), and enterprise reliability. Sprint-based with predictable release trains."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Language translation and localization services, AI-driven language technology platforms (including Trados Studio, Language Weaver), content management, and intellectual property support services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-30 days annual leave (UK/EU statutory minimums + company supplement) + 8-10 public holidays. US: 15-20 days PTO + 10 holidays. Carryover and buy-back policies vary by jurisdiction."
   },
+  "refresh_after": 1789871375,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -165035,7 +165173,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide mandated shutdowns. Some European offices observe reduced hours between Christmas/New Year (local custom). Team-level 'focus weeks' occasionally scheduled post-release."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public company (FTSE 250), ~6,500 employees globally, £600M+ annual revenue, mature stage with established market position in language services and technology."
   },
   "sources": [
    {
@@ -165069,14 +165212,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=7e031f4c59a9c56f86e179a48137e79a212ab42be4197841d1559b8abae6e493JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=260a9729-c6c2-672f-23e1-80b4c77d665c&u=a1aHR0cHM6Ly93d3cucndzLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established visa sponsorship program (UK Skilled Worker, EU Blue Card, US H-1B) for technical and linguist roles; global mobility team supports international transfers."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "RWS is a global language services and technology company providing translation, localization, and AI-powered language solutions. It operates as a publicly traded company (LSE: RWS) serving enterprise clients across industries."
+  },
+  "synthesized_evidence_sha": "c0594fb86a972eee",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "NLP/ML engineering for neural machine translation, language AI platform development (Trados, Language Weaver), large-scale multilingual data pipelines, cloud infrastructure, and AI model training/deployment for 200+ languages."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784655992,
   "web_search_url": "https://duckduckgo.com/?q=RWS+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "RWS sits at the intersection of language AI and enterprise SaaS, offering new grads exposure to production NLP at massive multilingual scale (200+ languages) with a mature engineering culture. The company's pivot to AI-driven language technology (Language Weaver, Trados) means real ML engineering work, not just labeling. As a public company with 60+ year history, it offers stability and structured growth paths lacking in early-stage startups, while its Prague and Berlin hubs are recognized Europ"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.8/5 — European offices benefit from strong labor protections (25-30 days statutory leave, works councils). US/UK roles report typical enterprise expectations (40-45 hrs/wk). On-call rotations exist for platform teams but are compensated and bounded. Low burnout reputation vs. ad-tech or fintech peers."
   }
  },
  "rx": {
@@ -190311,7 +190475,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 8,
+  "attempts": 9,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -190353,7 +190517,7 @@
    ],
    "value": "Probe whether the 'dynamic team' and 'exciting environment' translate to true technical learning and career growth for AI/Data Science work, or if the highly structured nature of defense/aerospace solutions will conflict with the desire to avoid slow bureaucracy."
   },
-  "last_attempt_at": 1784687185,
+  "last_attempt_at": 1784687375,
   "last_evidence_at": 1784674726,
   "locations": {
    "confidence": "high",
