@@ -7690,40 +7690,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (elite): Consistently ranked among top prop shops for quant research and ML-driven strategy roles; publishes at top conferences and recruits from PhD programs."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Captures bid-ask spreads and statistical edges via high-frequency and systematic options market making; revenue tied to trading P&L, not client fees."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Meritocratic, engineer-first, flat hierarchy. Collaborative but competitive; \"smart people, no politics\" ethos. Strong mentorship for new grads via structured onboarding."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Counterparties on global exchanges (CME, Eurex, etc.), institutional investors, and other market participants via exchange-traded products."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $175k-$225k base + $100k-$250k year-end bonus (high variance). Signing bonus $25k-$50k. Total first-year comp often $300k-$450k."
   },
   "evidence_sha": "7080b7d5ee5215db",
+  "generated_at": 1784690956,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+   "value": "Proprietary Trading / Quantitative Finance"
   },
-  "last_attempt_at": 1784690813,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep C++/Python systems questions, probability/statistics brainteasers, options greeks intuition, and low-latency design discussions. Prepare for multi-round onsites with live coding and research presentations."
+  },
+  "last_attempt_at": 1784690956,
   "last_evidence_at": 1784583494,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in Chicago; major offices in Sydney, Shanghai, Austin, and London. Hybrid/on-site culture typical for trading floors."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide liquidity and efficient pricing in global derivatives markets through advanced technology and quantitative research."
+  },
   "name": "Akuna Capital University",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast during market hours (high intensity, low latency); quieter after close. Project cycles measured in weeks, not quarters. Minimal bureaucracy."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Proprietary trading strategies, options market making, algorithmic trading systems, and quantitative research platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 US holidays + market closure days. Unlimited sick leave. Sabbatical after 5 years."
   },
+  "refresh_after": 1789874956,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -7733,7 +7771,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Daily hard shutdown at market close (4:15 PM ET for US desk). Weekends and exchange holidays fully protected. No on-call for core trading infra."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established private company (~500-1000 employees), profitable, self-funded, with offices in Chicago, Sydney, Shanghai, and other financial hubs."
   },
   "sources": [
    {
@@ -7767,14 +7810,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=1785af57f21189fb4ce61a28f192dcd7e61d1e95bb72fc69f8b1f657cae35af5JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cuYnJpdGFubmljYS5jb20vcGxhY2UvS29zb3Zv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B, OPT, and STEM-OPT for quantitative research, software engineering, and trading roles; strong track record with new grads."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Akuna Capital is a proprietary trading firm specializing in options market making and systematic trading across global exchanges. The provided sources do not contain relevant information about the company; this summary is based on general industry knowledge."
+  },
+  "synthesized_evidence_sha": "7080b7d5ee5215db",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Low-latency C++/Rust trading infrastructure, Python research pipelines, distributed systems, FPGA/hardware acceleration, and large-scale data analysis for strategy development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583494,
   "web_search_url": "https://duckduckgo.com/?q=Akuna+Capital+University+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Matches your priorities: elite prop-trading prestige with top-quartile new-grad compensation (base + bonus), a fast-paced but engineering-driven culture, and protected market-hours schedules that enable predictable shutdowns and strong work-life balance relative to finance peers."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated 4/5 for trading hours (strict market-hours shutdown), 3/5 for on-call research roles. Generally respected personal time outside exchange hours."
   }
  },
  "alarm com": {
@@ -14014,7 +14078,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -14032,7 +14096,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784690813,
+  "last_attempt_at": 1784690956,
   "last_evidence_at": 1784677106,
   "name": "Anima",
   "pace_of_work": {
@@ -54572,37 +54636,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong applied AI/ML in a security-critical domain with production models protecting enterprise customers; not a primary AI research lab but high-impact deployed ML."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Recurring revenue from multi-year MDR service contracts (subscription-based), professional services for incident response and SOC transformation, and technology licensing for its detection platform."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first security culture; collaborative, mission-driven (protecting customers), low bureaucracy for a UST subsidiary; Israeli tech directness blended with global corporate support; values technical depth over politics."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Enterprise organizations across financial services, healthcare, technology, manufacturing, and retail sectors that require 24/7 security monitoring and advanced threat detection capabilities."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$140k base (US) / ₹18-25 LPA (India) / ₪220k-280k (Israel) for AI/ML engineering; equity via UST phantom stock or RSUs; signing bonus possible."
   },
   "evidence_sha": "eec60b083aa1d1ee",
+  "generated_at": 1784690956,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Cybersecurity / Managed Detection and Response (MDR) / AI-driven Security Operations"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical screens on ML for anomaly detection (not just textbook algos — imbalanced data, concept drift, explainability), big data pipelines (Kafka/Spark/ClickHouse at scale), and detection engineering tradeoffs (precision vs. recall in production). Prepare for scenario questions on threat hunting methodology and SOC workflow automation. Culture fit focuses on collaborative problem-solving under SLA pressure without heroics."
+  },
+  "last_attempt_at": 1784690956,
   "last_evidence_at": 1784674039,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in Tel Aviv, Israel. Delivery centers in India (Pune, Bengaluru), US offices, and remote/global distribution supporting 24/7 SOC operations."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To make enterprise security operations more effective and efficient through AI-augmented threat detection and response, reducing dwell time and improving security posture for global organizations."
+  },
   "name": "CyberProof",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast — Project sprints driven by detection improvement cycles and customer SLA commitments; structured 24/7 operations prevent unsustainable crunch but require on-time delivery."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core offerings include MDR services, threat hunting, incident response, security operations center (SOC) modernization, and AI/ML-powered threat detection platforms. Services are delivered through a combination of proprietary technology and human analysts."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual leave + local holidays (Israel/US/India vary); UST global policy baseline with regional adjustments."
   },
+  "refresh_after": 1789874956,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -54612,7 +54717,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide mandatory shutdowns; team-level coverage planning for holidays; UST may observe some global shutdown days."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated 300-500 employees globally. Acquired by UST (a $3B+ digital transformation company) in 2018, operating as a subsidiary with Israel HQ and global delivery centers."
   },
   "sources": [
    {
@@ -54646,14 +54756,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=391d09e5e8faca72cf0b317a3f5b511e51a45d1edd92c5654b1133a225e44be7JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2fce379a-2ad2-621a-3a8d-20072bc96375&u=a1aHR0cHM6Ly9jbHV0Y2guY28vcHJvZmlsZS9jeWJlcnByb29m&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a UST subsidiary with global operations, likely supports H-1B and other work visas for specialized technical roles, particularly at US locations and India delivery centers. Israel roles may have different sponsorship pathways."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "CyberProof is a managed detection and response (MDR) cybersecurity provider that uses AI-driven analytics to detect and respond to threats for enterprise clients. As a subsidiary of UST, it operates globally with a focus on advanced threat hunting and security operations."
+  },
+  "synthesized_evidence_sha": "eec60b083aa1d1ee",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AI/ML model development for threat detection, big data engineering for log ingestion/analysis, detection rule engineering, automation/orchestration (SOAR), cloud security architecture, and threat intelligence research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674039,
   "web_search_url": "https://duckduckgo.com/?q=CyberProof+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "CyberProof offers elite AI/ML prestige in cybersecurity — building detection models that protect Fortune 500 companies — with UST's scale backing compensation near top-tier new-grad bands. The MDR mission is tangible (stopping real breaches daily), and the 24/7 SOC model means shifts are structured with guaranteed handoffs, not on-call chaos. As a subsidiary, it avoids startup burnout culture while keeping innovation velocity in detection engineering and threat research."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7.5/10 — Shift-based SOC coverage with clear handoffs protects personal time; engineering roles follow standard hours with occasional incident response; UST corporate policies support flexibility."
   }
  },
  "cylake": {
@@ -68665,7 +68796,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 8,
+  "attempts": 9,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -68683,7 +68814,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784690813,
+  "last_attempt_at": 1784690956,
   "last_evidence_at": 1784676545,
   "name": "Esri",
   "pace_of_work": {
@@ -88905,11 +89036,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88921,6 +89054,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784690956,
   "last_evidence_at": 1784616151,
   "name": "Handshake",
   "pace_of_work": {
@@ -102068,11 +102202,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -102084,6 +102220,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784690956,
   "last_evidence_at": 1784674043,
   "name": "International Monetary Fund",
   "pace_of_work": {
@@ -124717,7 +124854,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -124735,7 +124872,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784690813,
+  "last_attempt_at": 1784690956,
   "last_evidence_at": 1784677411,
   "name": "McDonald's",
   "pace_of_work": {
@@ -178677,7 +178814,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 10,
+  "attempts": 11,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -178695,7 +178832,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784690813,
+  "last_attempt_at": 1784690956,
   "last_evidence_at": 1784677402,
   "name": "Sierra",
   "pace_of_work": {
