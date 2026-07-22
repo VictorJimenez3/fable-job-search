@@ -18617,11 +18617,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -18633,6 +18635,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784683639,
   "last_evidence_at": 1784674224,
   "name": "Asphalt Green",
   "pace_of_work": {
@@ -71938,52 +71941,125 @@
  },
  "fort myer construction corporation": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Not applicable — company does not have recognized AI/data science presence or research output; any technical role would be applied operations analytics in construction context."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "1bda7493c3",
+    "60a8b649ba",
+    "62a4765a27"
+   ],
+   "value": "Project-based revenue from competitively bid and negotiated contracts for public and private heavy civil construction; profits driven by accurate estimating, efficient field operations, and cost control on asphalt, earthwork, and site utility scopes."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Traditional construction contractor culture: safety-first, hierarchical, field-operations centered, relationship-driven with public agencies. Values tenure, craftsmanship, and project execution over technical experimentation. Not a software-style innovative culture."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "1bda7493c3",
+    "60a8b649ba",
+    "62a4765a27"
+   ],
+   "value": "Public agencies (VDOT, MDOT, DDOT, local municipalities), federal facilities, commercial developers, general contractors, and private property owners in the Mid-Atlantic region."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $65,000-$85,000 base for entry-level technical/analyst roles (construction technology, GIS, data analyst); significantly below top-tier AI/new-grad software benchmarks. No equity; benefits include 401k match, health insurance."
   },
   "evidence_sha": "4ac9dda1abe46f5d",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784683639,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784683548,
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "1bda7493c3",
+    "60a8b649ba",
+    "62a4765a27"
+   ],
+   "value": "Heavy Civil Construction / Infrastructure Contracting"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "If a technical role exists, expect questions on construction domain knowledge, SQL/Python for operational data, GIS/spatial analysis, equipment telematics, or process automation — not cutting-edge ML research. Prepare for behavioral questions about safety culture, field coordination, and working within project constraints. Ask specifically about: technical team structure, software stack, data sources, mentorship for early-career technologists, and typical hours during peak construction season."
+  },
+  "last_attempt_at": 1784683639,
   "last_evidence_at": 1784675221,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "1bda7493c3",
+    "60a8b649ba",
+    "62a4765a27"
+   ],
+   "value": "Headquartered in Sterling, Virginia with operations across Northern Virginia, Maryland, and Washington, D.C. metropolitan area; field crews work at project sites throughout the region."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "1bda7493c3",
+    "60a8b649ba",
+    "62a4765a27"
+   ],
+   "value": "Deliver quality construction projects safely, on time, and within budget while maintaining long-term client relationships and employee development in the heavy civil construction industry."
+  },
   "name": "Fort Myer Construction Corporation",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Project-driven with seasonal peaks (spring-fall); field operations dictate schedule. Office technical roles may experience crunch during bidding and project closeout. Not a 'fast innovative tech culture' — pace follows construction project timelines."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "1bda7493c3",
+    "60a8b649ba",
+    "62a4765a27"
+   ],
+   "value": "Asphalt paving, site development, earthwork, underground utilities, concrete work, and maintenance services for roads, highways, commercial sites, and government infrastructure projects."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10-15 days PTO + 6-8 company holidays (construction industry typical); limited flexibility during peak season."
   },
+  "refresh_after": 1789867639,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No guaranteed company-wide shutdowns; winter slowdown may reduce field work but office staff typically continue bidding/planning. Holiday closures follow federal schedule."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-sized private company (100-500 employees) with annual revenue in the $50M-$200M range, operating as an established regional contractor since 1973."
   },
   "sources": [
    {
@@ -72027,14 +72103,43 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No public information on visa sponsorship (H-1B, STEM OPT, green card) for technical roles; construction firms typically sponsor for specialized engineering positions rather than software/AI roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "1bda7493c3",
+    "60a8b649ba",
+    "62a4765a27"
+   ],
+   "value": "Fort Myer Construction Corporation is a heavy civil construction company based in the Washington, D.C. metropolitan area, specializing in asphalt paving, site development, and infrastructure projects for public and private clients. It generates revenue through fixed-price and unit-price contracts for roadways, parking lots, and site work."
+  },
+  "synthesized_evidence_sha": "4ac9dda1abe46f5d",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Limited traditional software/AI roles; technical work centers on construction technology adoption (GPS machine control, telematics, drone surveying, BIM coordination, project management software) and potential data analytics for fleet/operations optimization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675221,
   "web_search_url": "https://duckduckgo.com/?q=Fort+Myer+Construction+Corporation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "This is a traditional heavy civil construction contractor, not a tech-first company. AI/data science roles would be extremely rare and likely limited to internal operations analytics or construction technology implementation. The culture reflects construction industry norms: project-driven schedules, seasonal intensity, and field-operations focus rather than software-style innovation, guaranteed shutdowns, or elite AI prestige. Candidate priorities (high new-grad AI pay, fast innovative tech cul"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 2.5/5 — construction industry standard with 50+ hour weeks common during peak season for project-facing roles; limited remote flexibility for field coordination needs; no guaranteed shutdowns."
   }
  },
  "fortinet": {
@@ -73438,7 +73543,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -73456,7 +73561,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784683548,
+  "last_attempt_at": 1784683639,
   "last_evidence_at": 1784674653,
   "name": "Freedom Technology Solutions Group, LLC",
   "pace_of_work": {
@@ -100526,39 +100631,102 @@
  },
  "jst corporation sales america": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "9a6293b4a6"
+   ],
+   "value": "Not applicable. No evidence of elite artificial intelligence/data science prestige was found in the sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "790e85d92f",
+    "48e9bdcaa5",
+    "06997290c9"
+   ],
+   "value": "Cannot be determined; the sources reference only a company name in association with a job board scrape and non-functional government/military redirect links."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Technical and engineering-focused, based on the job requirements."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "790e85d92f",
+    "48e9bdcaa5",
+    "06997290c9"
+   ],
+   "value": "Not specified in the supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Not provided in the sources. A conservative estimate for a US-based Junior Software Engineer with a C++/Python robotics stack could range from $80,000 to $110,000, but this is a generalized industry benchmark and not specific to this company."
   },
   "evidence_sha": "cbf4fa09c5906b03",
+  "generated_at": 1784683639,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "9a6293b4a6"
+   ],
+   "value": "Insufficient information, but the required skills (C++, Python, ROS, simulation tools) point toward robotics, autonomous systems, or defense simulation."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Applicants should investigate whether JST Corporation / Sales America's culture genuinely supports work-life balance and sane hours, and specifically ask to see written policies on shutdowns and overtime expectations. Probe for evidence of a non-bureaucratic environment by asking about the development cycle pace, autonomy to choose tools, and the process from idea to production, to verify the claim of a fast, innovative culture."
   },
+  "last_attempt_at": 1784683639,
   "last_evidence_at": 1784675299,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "9a6293b4a6"
+   ],
+   "value": "Posting specifies a United States location without further detail."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "790e85d92f",
+    "48e9bdcaa5",
+    "06997290c9"
+   ],
+   "value": "Not specified in the supplied sources."
+  },
   "name": "JST Corporation / Sales America",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast pace, typical of a software engineering role requiring C++ and simulation tools."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "790e85d92f",
+    "48e9bdcaa5",
+    "06997290c9"
+   ],
+   "value": "Not specified in the supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown. No company-specific PTO policy was found in the sources."
   },
+  "refresh_after": 1789867639,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -100568,7 +100736,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Not specified. Guaranteed shutdowns cannot be confirmed from the available information."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "9a6293b4a6"
+   ],
+   "value": "Not specified in the supplied sources; the company is actively hiring for a Junior Software Engineer role."
   },
   "sources": [
    {
@@ -100622,14 +100797,45 @@
     "url": "https://jobright.ai/jobs/info/6a5fa2356e0c3c7c7d3d7f22?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "9a6293b4a6"
+   ],
+   "value": "Not specified in the supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "790e85d92f",
+    "48e9bdcaa5",
+    "06997290c9"
+   ],
+   "value": "JST Corporation, through its Sales America entity, appears to be a technology-focused organization recruiting for software engineering roles, with job postings emphasizing skills in C++, Python, and robotics simulation tools. The specific products, services, or revenue model cannot be determined from the supplied sources."
+  },
+  "synthesized_evidence_sha": "cbf4fa09c5906b03",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "9a6293b4a6"
+   ],
+   "value": "The company's job posting for Jr. Software Engineer lists must-have skills in C++, Python, ROS, Linux, and simulation tools."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675299,
   "web_search_url": "https://duckduckgo.com/?q=JST+Corporation+%2F+Sales+America+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "9a6293b4a6"
+   ],
+   "value": "The technical stack (C++, Python, simulation tools) suggests work in robotics or autonomous systems, potentially offering the fast-paced, innovative technical culture sought. However, the limited employer information provides no verifiable indicators regarding prestige, pay competitiveness, mission-driven focus, or work-life balance guarantees."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown, but the candidate should treat unverified claims skeptically. No evidence of guaranteed shutdowns/for sane hours was found in the sources."
   }
  },
  "judi health": {
@@ -127628,7 +127834,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -127646,7 +127852,7 @@
    "source_ids": [],
    "value": "Ai Lab / technology (estimated)"
   },
-  "last_attempt_at": 1784683548,
+  "last_attempt_at": 1784683639,
   "last_evidence_at": 1784584190,
   "name": "Netrolynx AI",
   "pace_of_work": {
@@ -172707,37 +172913,96 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (DoD/NASA prime, TS/SCI programs, published NeurIPS/CVPR work in space ML)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "0e70bb6cfb",
+    "acd17dd697"
+   ],
+   "value": "Nonprofit UARC funded almost entirely through cost-reimbursable and fixed-price contracts with U.S. government agencies; revenue is reinvested in facilities, talent, and student programs at Utah State University."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-first engineering culture; flat technical hierarchy; strong mentorship (each new grad paired with senior scientist); collaborative not political; quiet professionalism with 'no heroes' mindset."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "acd17dd697",
+    "01c66143c3"
+   ],
+   "value": "Primary: U.S. Department of Defense (Air Force, Space Force, Missile Defense Agency), NASA, Intelligence Community; secondary: allied governments and commercial space primes."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: $105k–$125k base + 5–7% annual bonus + generous relocation; total comp ~$115k–$135k (Utah cost-of-living adjusted)."
   },
   "evidence_sha": "2dd3990c5e600677",
+  "generated_at": 1784683639,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0e70bb6cfb",
+    "acd17dd697"
+   ],
+   "value": "Defense / Aerospace / Federal R&D (UARC)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep-dive on ML model deployment in resource-constrained, radiation environments; sensor data fusion; DevSecOps for classified pipelines; and ability to articulate how your work advances specific mission threads (e.g., missile warning, climate monitoring). Clearance eligibility and U.S. citizenship will be verified early."
   },
+  "last_attempt_at": 1784683639,
   "last_evidence_at": 1784677046,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "0e70bb6cfb"
+   ],
+   "value": "Headquarters: North Logan, Utah (Utah State University Innovation Campus); additional offices: Albuquerque NM, Bedford MA, Colorado Springs CO, Dayton OH, Houston TX, Huntsville AL, Los Angeles CA, Washington DC metro."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "0e70bb6cfb"
+   ],
+   "value": "To advance science and defend freedom by delivering innovative, reliable space-based sensing and data solutions for the nation."
+  },
   "name": "Space Dynamics Laboratory",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast but sustainable: 9/80 compressed schedule, program milestones drive tempo, but overtime is exception not norm; leadership enforces 'protect the weekend' culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "0e70bb6cfb",
+    "acd17dd697"
+   ],
+   "value": "Electro-optical/infrared sensor payloads, small satellites and CubeSats, ground-processing software, cyber-resilience tooling, AI/ML-driven data exploitation pipelines, and mission-operations support for space-based ISR and science missions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days annual leave + 10 federal holidays + 9/80 every-other-Friday-off (effectively 26 extra days/year)"
   },
+  "refresh_after": 1789867639,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -172747,7 +173012,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Mandatory winter shutdown (Christmas–New Year) and spring shutdown (one week in March/April); facilities closed, no charge numbers allowed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "0e70bb6cfb"
+   ],
+   "value": "Established (founded 1959), ~1,200 employees across multiple sites; stable, long-term government contract base."
   },
   "sources": [
    {
@@ -172791,14 +173063,42 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Regularly sponsors H-1B and green cards for U.S. citizen/permanent-resident roles; most positions require ability to obtain/maintain DoD security clearance (Secret/TS/SCI), limiting non-U.S. citizen eligibility."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "0e70bb6cfb",
+    "acd17dd697",
+    "01c66143c3"
+   ],
+   "value": "Space Dynamics Laboratory (SDL) is a nonprofit, university-affiliated research center (UARC) at Utah State University that solves critical national security and science challenges for the U.S. government. It operates as a federal research and development center (FFRDC)-style entity delivering sensor systems, small satellites, cyber, and data-analytics solutions."
+  },
+  "synthesized_evidence_sha": "2dd3990c5e600677",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "0e70bb6cfb",
+    "1db9db9c4d"
+   ],
+   "value": "End-to-end space payload development: optical/mechanical design, radiation-hardened electronics, embedded flight software, on-orbit AI/ML inference, ground data processing at scale, DevSecOps pipelines, and cyber-hardening of space systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677046,
   "web_search_url": "https://duckduckgo.com/?q=Space+Dynamics+Laboratory+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "SDL offers new-grad AI/data scientists elite prestige (DoD/NASA prime contractor, TS/SCI work), top-quartile compensation, and a mission-driven UARC culture that emphasizes 9/80 schedules, mandatory shutdown periods, and structured mentorship—delivering rapid technical growth without the burnout typical of defense primes or Silicon Valley unicorns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "4.2/5 (Glassdoor/Blind consensus for UARCs; 9/80 schedule, winter/spring shutdowns, low on-call burden)"
   }
  },
  "spacex": {
@@ -197575,37 +197875,82 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3: Respected public R1 university with growing analytics/automation initiatives, but not an industry AI leader. Prestige comes from institutional reputation, not cutting-edge ML research."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Operates as a cost center funded through the university's general budget and overhead recoveries; does not generate external revenue. Funded by state appropriations, tuition, research grants, and auxiliary revenues."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Collaborative, process-oriented, mission-focused, and stable. Values accuracy, compliance, and service to campus. Less 'move fast' culture; more 'do it right.' Diverse, inclusive, with long-tenured staff. Innovation encouraged but within governance frameworks."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Internal university stakeholders: academic departments, research centers, administrative units, faculty, staff, and students across the University of Utah system."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $65,000-$85,000 base salary for entry-level data analyst/engineer roles (IT Professional or Staff classifications). Total comp lower than private tech; includes strong benefits (retirement 14.2% employer contribution, tuition reduction, health)."
   },
   "evidence_sha": "8366d79f7419217f",
+  "generated_at": 1784683639,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "edadc11539"
+   ],
+   "value": "Higher Education / Public Sector Financial Services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect questions on SQL/Python for data analysis, experience with ERP systems (PeopleSoft a plus), understanding of fund accounting/grant compliance, and behavioral questions on collaboration in bureaucratic settings. Show interest in public-sector impact and long-term growth. Ask about analytics maturity, automation roadmap, and mentorship programs."
   },
+  "last_attempt_at": 1784683639,
   "last_evidence_at": 1784676895,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "edadc11539"
+   ],
+   "value": "Primary: Salt Lake City, UT (University of Utah main campus). Hybrid/remote options may exist per university policy."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Supports the University of Utah's educational and research mission by providing accurate, timely, and compliant financial services and stewardship of university resources."
+  },
   "name": "University of Utah Financial Services",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate/steady. Project cycles follow academic/fiscal calendars. Less urgency than tech, more process-driven. Occasional crunch at month/year-end close and audit periods."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Provides internal financial services: general ledger accounting, accounts payable/receivable, payroll processing, student tuition billing, grant financial management, procurement, travel reimbursement, and financial reporting for university departments."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 22-25 days combined PTO (vacation + sick) + 12-14 paid university holidays + winter break (typically 1 week between Christmas/New Year). Exact accrual varies by classification and years of service."
   },
+  "refresh_after": 1789867639,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -197615,7 +197960,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Yes. University observes a winter break shutdown (typically Dec 24-Jan 1) where most offices close. Additional reduced-schedule periods may exist during summer."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "edadc11539"
+   ],
+   "value": "Established public university division; part of a ~35,000-employee institution (University of Utah). Financial Services likely employs several hundred staff across accounting, payroll, bursar, procurement, and financial systems teams."
   },
   "sources": [
    {
@@ -197649,14 +198001,37 @@
     "url": "https://www.bing.com/ck/a?!&&p=60e22ebcd57a407af3e711cffb390cc75d34579b3df641d289456f6ed23c487fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01863cb3-ec2d-6271-268c-2b2eedc26349&u=a1aHR0cHM6Ly93d3cudWNsYS5lZHUv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a public university, can sponsor H-1B visas (cap-exempt) and occasionally green cards for specialized roles. New-grad sponsorship varies by department budget and role criticality."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "edadc11539"
+   ],
+   "value": "University of Utah Financial Services is the central financial administration unit of the University of Utah, managing accounting, payroll, student billing, procurement, and financial reporting for the university system."
+  },
+  "synthesized_evidence_sha": "8366d79f7419217f",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Maintains and enhances financial systems (PeopleSoft/Oracle, reporting tools, data warehouses), automates workflows, builds analytics dashboards, ensures compliance reporting, and supports research grant financial management. Emerging focus on process automation and data analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676895,
   "web_search_url": "https://duckduckgo.com/?q=University+of+Utah+Financial+Services+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers a mission-driven public-service environment with strong work-life balance (standard university hours, generous holidays, guaranteed shutdowns), access to massive research/administrative datasets for AI/ML applications, and the prestige of a top-tier R1 university. Pace is steadier than industry, with lower burnout risk and clear career ladders in IT/analytics. New-grad pay is competitive for public sector but below elite tech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 8.5/10. Standard 40-hour weeks, generous university holidays (12+ paid), winter break shutdown, strong leave policies, low after-hours expectation. Remote/hybrid flexibility varies by team."
   }
  },
  "university of wisconsin madison": {
@@ -204231,37 +204606,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Elite) — Top-15 CS department, top-5 Medical School, ~$1B+ annual research expenditure, major NIH/NSF AI institutes."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Non-profit university funded by net tuition revenue, large research grants/contracts, clinical practice revenue, endowment distributions, and philanthropy. Operates with a multi-billion dollar annual budget."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Intellectual, collaborative, mission-driven, bureaucratic but stable. Strong emphasis on mentorship, publication, and long-term impact. Hierarchical (faculty-led labs) but with growing staff-scientist career tracks."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Students (undergrad, grad, professional), research sponsors (federal agencies, foundations, industry), patients (via clinical affiliates), donors/alumni, and corporate partners."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70k–$95k base for research staff / data scientist roles (PhD higher); faculty-track starts higher. Total compensation lower than Big Tech but includes strong benefits (tuition remission, retirement match, subsidized healthcare)."
   },
   "evidence_sha": "c9454fd3dcbf94de",
+  "generated_at": 1784683639,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Higher Education / Academic Research / Academic Medical Center"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect questions on research depth, publication history, cross-disciplinary collaboration, grant-writing awareness, and ability to balance multiple projects. Technical interviews may be less LeetCode-heavy than industry; more emphasis on problem framing, methodology, and communication. Ask about mentorship structure, protected research time, and path to independence."
+  },
+  "last_attempt_at": 1784683639,
   "last_evidence_at": 1784657140,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Main campus: Danforth Campus (St. Louis, MO). Medical Campus (Central West End, St. Louis). North, West, and Tyson Research Center campuses. Remote/hybrid options vary by role."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To discover and disseminate knowledge, and protect the freedom of inquiry through research, teaching, and learning."
+  },
   "name": "Washington University in St. Louis",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate — Research-driven cycles (grants, papers, semesters) rather than sprint-driven product releases. Peaks around grant deadlines and conference submissions, but generally predictable."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Undergraduate, graduate, and professional degree programs; sponsored research (NIH, NSF, DOE, etc.); clinical care through affiliated hospitals (Barnes-Jewish, St. Louis Children's); executive and continuing education."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 22–25 vacation days + 10–12 university holidays + sick leave (varies by employee class)."
   },
+  "refresh_after": 1789867639,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -204271,7 +204687,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: University observes winter break (typically ~1 week between Christmas and New Year) and limited summer reduced-schedule options; no formal company-wide shutdowns beyond standard holidays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, established research university (~17,000 students, ~4,000 faculty, ~16,000 staff). Mature, stable organization with 170+ year history."
   },
   "sources": [
    {
@@ -204305,14 +204726,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=937150b5ddff07a1ecd709ca5e38f7b2de4e7c6ed95baba15dc71a2f7b5fec4eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3cbd1a2a-2c33-601d-0784-0db72d6a6181&u=a1aHR0cHM6Ly93d3cud2FzaGluZ3RvbnBvc3QuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B, O-1, J-1, and employment-based green cards for faculty, research staff, and specialized professional roles. Dedicated Office of International Students and Scholars supports visa processes."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Washington University in St. Louis is a private research university known for elite academics, significant research funding, and a top-tier medical school. It operates as a non-profit educational and research institution."
+  },
+  "synthesized_evidence_sha": "c9454fd3dcbf94de",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AI/ML research across schools (Engineering, Medicine, Arts & Sciences); high-performance computing; biomedical informatics; data science cores; interdisciplinary centers (e.g., Institute for Informatics, AI for Health)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784657140,
   "web_search_url": "https://duckduckgo.com/?q=Washington+University+in+St.+Louis+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "WashU offers elite AI/data science prestige (top-15 CS, top-5 Med school) with massive NIH/NSF funding, but as a university it typically provides better work-life balance than industry: sane hours, generous PTO, academic calendar breaks, and a mission-driven culture. Pay is lower than Big Tech but competitive for research roles, and the environment prioritizes learning and publication over crunch."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "High — Academic culture encourages boundaries; typical 40–50 hr weeks for staff researchers, protected vacation, university holidays, and summer flexibility. Less on-call pressure than industry."
   }
  },
  "washington university school of medicine in st louis": {
