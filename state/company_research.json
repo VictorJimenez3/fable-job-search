@@ -14073,42 +14073,101 @@
  },
  "anima": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "4229584009"
+   ],
+   "value": "High – publishes at SIGGRAPH/ICCV-adjacent venues, builds proprietary layout understanding models, integrates LLMs for code synthesis; recognized in frontend/design-tool community."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "8c843380f3",
+    "b39d985e95"
+   ],
+   "value": "SaaS subscription model: free tier for individuals, paid Pro/Team plans per seat/month, and custom Enterprise contracts with SSO, dedicated support, and on-premise options."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-centric, design-obsessed, transparent, remote-first with strong async communication; values craft, learning, and developer experience; low ego, high autonomy."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "8c843380f3",
+    "b39d985e95"
+   ],
+   "value": "Frontend developers, product designers, design agencies, and enterprise product teams who want to accelerate handoff and reduce manual coding from design files."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$140k base + equity (0.05-0.15%) for US remote; ILS 280k-350k base + options for Tel Aviv; competitive with top-tier dev-tool startups."
   },
   "evidence_sha": "01c6a4829e67786c",
+  "generated_at": 1784691112,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "8c843380f3",
+    "b39d985e95",
+    "4229584009"
+   ],
+   "value": "Developer tools / Design-to-code / Generative AI for software engineering"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical screens on TypeScript/React internals, compiler/transpiler concepts, AST manipulation, and geometric layout algorithms. AI/ML rounds may cover diffusion models for design understanding or LLM fine-tuning for code generation. System design will focus on real-time collaboration, plugin architecture, and scalable rendering pipelines. Behavioral questions will probe autonomy, design empathy, and ability to ship in a fast-moving, low-bureaucracy environment."
   },
-  "last_attempt_at": 1784690956,
+  "last_attempt_at": 1784691112,
   "last_evidence_at": 1784677106,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "8c843380f3",
+    "b39d985e95"
+   ],
+   "value": "Tel Aviv (HQ), remote-friendly across Israel, Europe, and US time zones."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "8c843380f3",
+    "b39d985e95"
+   ],
+   "value": "Bridge the gap between design and development by automating the translation of visual designs into clean, maintainable code, enabling faster product iteration."
+  },
   "name": "Anima",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast, iterative product cycles with bi-weekly releases; low bureaucracy, engineer-driven roadmap; occasional crunches before major launches but generally sustainable."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "8c843380f3",
+    "b39d985e95"
+   ],
+   "value": "Anima App (design-to-code converter for Figma/Sketch/Adobe XD), Anima Frontier (AI-assisted code generation), component library sync, and design system automation tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days annual leave + local holidays; unlimited sick days; flexible unpaid leave for personal projects."
   },
+  "refresh_after": 1789875112,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -14118,7 +14177,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide winter shutdown (last week of December), summer 'recharge' week optional; no-meeting Fridays encouraged."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8c843380f3",
+    "b39d985e95"
+   ],
+   "value": "Estimated: 50-150 employees, Series A/B stage, headquartered in Tel Aviv with distributed team."
   },
   "sources": [
    {
@@ -14152,14 +14219,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=296f217fe570c18d170ac6189dfadbed83a7c50dc4903a30a79c849d98e280a0JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=34ea19f9-c3ba-6d41-3fe5-0e64c2596c4f&u=a1aHR0cHM6Ly93d3cuYW5pbWFhcHAuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor visas for exceptional talent, particularly for roles in Tel Aviv; remote contracts possible for international candidates."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "8c843380f3",
+    "b39d985e95"
+   ],
+   "value": "Anima is a design-to-code platform that converts designs from Figma, Sketch, and Adobe XD into production-ready React, Vue, and HTML code, targeting frontend developers and design teams. The company monetizes through subscription tiers for individuals and teams, plus enterprise plans with advanced collaboration and handoff features."
+  },
+  "synthesized_evidence_sha": "01c6a4829e67786c",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "8c843380f3",
+    "b39d985e95",
+    "4229584009"
+   ],
+   "value": "Full-stack TypeScript/React, compiler engineering (design-to-code translation), AI/ML for layout understanding and code generation, Figma/Sketch plugin development, cloud infrastructure for rendering and collaboration."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677106,
   "web_search_url": "https://duckduckgo.com/?q=Anima+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Anima sits at the intersection of developer tools and generative AI, offering a high-impact role building compiler-like technology that directly accelerates frontend development. The company's focus on design-system automation and AI-assisted coding aligns with elite technical prestige while its product-led SaaS model supports sustainable pacing. For a candidate seeking top-tier AI/data science work with guaranteed shutdowns and fast learning cycles, Anima's technical depth (layout engines, code"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 – core hours 10am-4pm local, no weekend expectation, explicit 'shutdown' culture encouraged; on-call rotation limited to infra team."
   }
  },
  "annapurna labs": {
@@ -68796,7 +68891,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 9,
+  "attempts": 10,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -68814,7 +68909,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784690956,
+  "last_attempt_at": 1784691112,
   "last_evidence_at": 1784676545,
   "name": "Esri",
   "pace_of_work": {
@@ -89036,7 +89131,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -89054,7 +89149,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784690956,
+  "last_attempt_at": 1784691112,
   "last_evidence_at": 1784616151,
   "name": "Handshake",
   "pace_of_work": {
@@ -102202,7 +102297,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -102220,7 +102315,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784690956,
+  "last_attempt_at": 1784691112,
   "last_evidence_at": 1784674043,
   "name": "International Monetary Fund",
   "pace_of_work": {
@@ -124854,7 +124949,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -124872,7 +124967,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784690956,
+  "last_attempt_at": 1784691112,
   "last_evidence_at": 1784677411,
   "name": "McDonald's",
   "pace_of_work": {
@@ -152507,39 +152602,94 @@
  },
  "pingwind": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "11ad2597b2"
+   ],
+   "value": "Low — no public AI/ML research, products, or hiring signals; roles are infrastructure and support oriented."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "11ad2597b2"
+   ],
+   "value": "Government contracting / professional services firm providing staffed IT support and system management on federal contracts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, process-driven, compliance-focused; typical of mid-size federal integrators rather than a tech-first innovator."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "11ad2597b2"
+   ],
+   "value": "U.S. federal government agencies, primarily the Department of Veterans Affairs (VA)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $60k–$80k base for entry-level support roles; unlikely to match top-tier AI/new-grad packages ($120k+)."
   },
   "evidence_sha": "6091e2b63b49c6bd",
+  "generated_at": 1784691112,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "11ad2597b2"
+   ],
+   "value": "Federal IT services / Government contracting"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "11ad2597b2"
+   ],
+   "value": "Ask about: contract stability and recompete risk; actual daily tasks vs. job description; opportunities for technical growth beyond help desk; whether any AI/ML projects exist on the VA contract; typical overtime and on-call expectations; career path for technologists in a services model."
+  },
+  "last_attempt_at": 1784691112,
+  "last_evidence_at": 1784677412,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Remote or on-site at VA facilities nationwide; headquarters location not disclosed in sources."
   },
-  "last_evidence_at": 1784677412,
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "11ad2597b2"
+   ],
+   "value": "Delivering outstanding services to the federal government."
+  },
   "name": "PingWind",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow to moderate; government contract environments emphasize compliance, documentation, and stability over rapid iteration."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "11ad2597b2"
+   ],
+   "value": "IT help desk support, PC troubleshooting, browser optimization, network issue resolution, and Veterans Benefits Management System maintenance for federal clients."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10–15 days PTO + 10 federal holidays; no public policy details."
   },
+  "refresh_after": 1789875112,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -152549,7 +152699,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; federal contractors generally operate year-round."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Small-to-medium federal contractor (likely 100–500 employees) focused on niche VA support contracts."
   },
   "sources": [
    {
@@ -152593,14 +152748,41 @@
     "url": "https://jobs.lever.co/pingwind/966bcf6b-2a77-42ef-9f27-4b7993da705a"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not mentioned in available sources; typical for federal contractors to require U.S. citizenship or green card for cleared positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "11ad2597b2"
+   ],
+   "value": "PingWind is a federal government IT services contractor that delivers technical support and system management for agencies like the Department of Veterans Affairs. It makes money primarily through government contracts for professional services such as help desk operations and veterans benefits system maintenance."
+  },
+  "synthesized_evidence_sha": "6091e2b63b49c6bd",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "11ad2597b2"
+   ],
+   "value": "End-user support, PC/browser/network troubleshooting, remote tooling, and maintenance of the Veterans Benefits Management System. No public evidence of AI/ML, data science, or advanced R&D roles."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677412,
   "web_search_url": "https://duckduckgo.com/?q=PingWind+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "11ad2597b2"
+   ],
+   "value": "Candidate seeks elite AI/data science prestige, high new-grad pay, fast innovation, and guaranteed work-life balance. PingWind appears to be a traditional government IT services shop with help-desk-level roles, not an AI-driven product company. The work is mission-adjacent (veterans benefits) but likely bureaucratic, slow-paced, and not aligned with top-tier AI career acceleration or premium compensation."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate (3.5/5); federal contracting often offers predictable hours but may include on-call rotations and limited flexibility."
   }
  },
  "pinterest": {
@@ -178814,7 +178996,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 11,
+  "attempts": 12,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -178832,7 +179014,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784690956,
+  "last_attempt_at": 1784691112,
   "last_evidence_at": 1784677402,
   "name": "Sierra",
   "pace_of_work": {
@@ -225268,11 +225450,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -225284,6 +225468,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784691112,
   "last_evidence_at": 1784674276,
   "name": "Zapier",
   "pace_of_work": {
