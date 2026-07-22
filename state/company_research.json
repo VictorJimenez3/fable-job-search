@@ -1320,7 +1320,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -1338,7 +1338,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784748944,
+  "last_attempt_at": 1784749117,
   "last_evidence_at": 1784711510,
   "name": "AAR",
   "pace_of_work": {
@@ -11403,7 +11403,7 @@
    "value": "Tier 1 (Elite). Amazon is a pioneer in production AI and cloud infrastructure globally, rivaling Google, Meta, and Microsoft in AI talent branding."
   },
   "aliases": [],
-  "attempts": 30,
+  "attempts": 31,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -11453,7 +11453,7 @@
    "source_ids": [],
    "value": "Amazon interviews emphasize its Leadership Principles with behavioral questions, plus technical screening covering data structures, system design, algorithms, and coding proficiency. Storytelling about ownership, bias for action, and customer obsession is crucial. For AI and data science roles, expect deep dives into machine learning theory, statistical analysis, and deployment experience."
   },
-  "last_attempt_at": 1784748944,
+  "last_attempt_at": 1784749117,
   "last_evidence_at": 1784732707,
   "locations": {
    "confidence": "high",
@@ -25043,7 +25043,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -25061,7 +25061,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784748944,
+  "last_attempt_at": 1784749117,
   "last_evidence_at": 1784716480,
   "name": "AXS",
   "pace_of_work": {
@@ -75749,7 +75749,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 9,
+  "attempts": 10,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -75767,7 +75767,7 @@
    "source_ids": [],
    "value": "Sports / technology (estimated)"
   },
-  "last_attempt_at": 1784748944,
+  "last_attempt_at": 1784749117,
   "last_evidence_at": 1784725192,
   "name": "Fanatics",
   "pace_of_work": {
@@ -90591,7 +90591,7 @@
    "value": "Tier 1 (Elite) - Google is known as an absolute top destination alongside DeepMind and a handful of other leading AI labs, offering unmatched scale, talent density, and research credibility."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -90643,7 +90643,7 @@
    "source_ids": [],
    "value": "Google places high emphasis on general cognitive ability, technical depth in machine learning algorithms and system design, clear coding skills, and leadership/role-related behaviors. AI-specific roles will dig into modern NLP, deep learning system design, data pipeline reasoning, and model-centric product design. Across all loops, “Googleyness” and culture-fit checks for collaboration and humility are a constant."
   },
-  "last_attempt_at": 1784748944,
+  "last_attempt_at": 1784749117,
   "last_evidence_at": 1784737782,
   "locations": {
    "confidence": "high",
@@ -106114,7 +106114,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -106132,7 +106132,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784716477,
+  "last_attempt_at": 1784749117,
   "last_evidence_at": 1784711510,
   "name": "Innovativity",
   "pace_of_work": {
@@ -126930,40 +126930,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Respected within government AI/ML community; publishes at cleared conferences; less visible in open commercial AI research."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "7bde4aa68d"
+   ],
+   "value": "Federal government contracting — primarily cost-plus, time-and-materials, and fixed-price contracts with defense and intelligence agencies."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-focused, structured, clearance-aware culture; engineering rigor valued; hierarchy present but technical leads have authority; strong veteran and civil-service alumni presence."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "7bde4aa68d"
+   ],
+   "value": "U.S. government intelligence agencies, Department of Defense, and other federal national security organizations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "medium",
+   "source_ids": [
+    "7bde4aa68d"
+   ],
+   "value": "Estimated: $85K–$115K base + modest bonus/RSU; Data Analyst posting shows $83K–$140K range."
   },
   "evidence_sha": "4fba52be7780bd20",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784749117,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784748944,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "7bde4aa68d"
+   ],
+   "value": "Defense / Federal IT Contracting / National Security"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "7bde4aa68d"
+   ],
+   "value": "Expect technical screens on Python/R statistical modeling, data pipeline design, and scenario-based problem solving for intelligence use cases. Behavioral questions will probe clearance eligibility, teamwork in regulated environments, and handling ambiguity. Prepare for questions on data ethics, model explainability, and experience with classified or sensitive data."
+  },
+  "last_attempt_at": 1784749117,
   "last_evidence_at": 1784711509,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "7bde4aa68d"
+   ],
+   "value": "Headquartered in Herndon, VA; major presence in Ashburn, VA (Hybrid), and other DoD/intelligence community hubs nationwide."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "7bde4aa68d"
+   ],
+   "value": "Delivering innovative technology solutions that protect national security and enable critical government missions."
+  },
   "name": "MANTECH",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — program-driven with sprint cycles tied to contract deliverables; surges around milestone reviews and deployment windows."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "7bde4aa68d"
+   ],
+   "value": "Advanced analytics, data science, cybersecurity, systems engineering, IT modernization, and mission-focused technology services for defense and intelligence missions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10 federal holidays; accrual increases with tenure."
   },
+  "refresh_after": 1789933117,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -126973,7 +127027,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; some programs observe winter break; mandatory time-off policies vary by contract."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large established defense contractor (acquired by Carlyle Group in 2018; ~10,000+ employees)."
   },
   "sources": [
    {
@@ -127027,14 +127086,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=f3fcbe073162eaa961b1519add9419d30336ad3d01a8095a9f7ee9c56ad5cb7aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=068da0dd-8eee-6028-1b01-b7408fbe61eb&u=a1aHR0cHM6Ly93d3cubWFudGVjaC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H-1B and green cards for cleared roles; U.S. citizenship and security clearance (often TS/SCI) required for most positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "7bde4aa68d"
+   ],
+   "value": "MANTECH is a government contractor providing advanced technology and analytics solutions to U.S. national security and intelligence agencies. It generates revenue through federal contracts for services including data analysis, cybersecurity, systems engineering, and mission-focused IT modernization."
+  },
+  "synthesized_evidence_sha": "4fba52be7780bd20",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "7bde4aa68d"
+   ],
+   "value": "Data analysis, statistical modeling, Python/R/Scala development, cloud platforms, cybersecurity tooling, and mission-critical software engineering for classified environments."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672493,
   "web_search_url": "https://duckduckgo.com/?q=MANTECH+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "7bde4aa68d"
+   ],
+   "value": "Offers elite-prestige national security mission with high new-grad pay ($83K–$140K) and exposure to cutting-edge AI/data science on classified programs. Hybrid schedule and government contracting structure can provide more predictable hours than commercial tech, but clearance requirements and program deadlines may create periodic intensity. Strong technical mentorship exists in analytics groups, though bureaucracy is inherent to federal contracting."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — Hybrid schedules common; core hours expected; overtime occurs during crunch periods but not chronic."
   }
  },
  "manulife": {
@@ -134592,7 +134678,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 18,
+  "attempts": 19,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -134610,7 +134696,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784748944,
+  "last_attempt_at": 1784749117,
   "last_evidence_at": 1784693223,
   "name": "Micron Technology",
   "pace_of_work": {
