@@ -6181,11 +6181,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -6197,6 +6199,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784681086,
   "last_evidence_at": 1784674344,
   "name": "Akamai Technologies",
   "pace_of_work": {
@@ -34844,39 +34847,107 @@
  },
  "castle": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "defb8f6caf"
+   ],
+   "value": "Niche Elite (Startup). Not a legacy corporate gig, but a high-prestige early-stage opportunity where AI/DS engineers directly impact the core product and company direction in a fast-innovating setting."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "e561666c65",
+    "defb8f6caf"
+   ],
+   "value": "B2C fintech model likely centered on a freemium subscription or transaction-based fees for payment processing (ACH/check) and premium financial management features."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "e561666c65",
+    "defb8f6caf"
+   ],
+   "value": "Collaborative, lean, and mission-focused startup culture with direct lines to the Head of Engineering and Design. They emphasize trust, clarity in a complex domain, and user-centric engineering."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "e561666c65",
+    "defb8f6caf"
+   ],
+   "value": "U.S. homeowners, particularly those looking to save time and money by managing complex home expenses through a unified digital platform."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $110,000 — $140,000 base salary + early-stage equity. Comp range reflects a small, well-funded U.S. fintech startup prioritizing efficient compensation for new grads instead of megacorp salaries."
   },
   "evidence_sha": "a997f8d0c2af3201",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784681086,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e561666c65",
+    "defb8f6caf"
+   ],
+   "value": "Financial technology (Fintech) / PropTech."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "defb8f6caf"
+   ],
+   "value": "Interviews will likely test strong backend engineering fundamentals, data pipeline design, and AI/ML implementation skills for their 'AI-powered system'. Expect collaborative problem-solving discussions and deep dives into system design that demonstrate user trust and data integrity expertise, rather than stressful abstract puzzles."
+  },
+  "last_attempt_at": 1784681086,
   "last_evidence_at": 1784675128,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "e561666c65",
+    "defb8f6caf"
+   ],
+   "value": "To address the U.S. housing affordability crisis by building a user-friendly app that clarifies complex home expense management and builds long-term trust with customers."
+  },
   "name": "Castle",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "defb8f6caf",
+    "e561666c65"
+   ],
+   "value": "Fast-paced innovation culture without the bureaucracy of big tech; working directly with department heads implies a speed of execution. Not slow or bureaucratic."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "e561666c65",
+    "defb8f6caf"
+   ],
+   "value": "A consumer finance application designed to consolidate and simplify home expense management, allowing users to pay and track bills like mortgages, utilities, and insurance in one place. The platform includes a bill payment system for ACH and check payments and an AI-powered system for recording off-platform payments."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Flexible/Unlimited PTO standard for small U.S. early-stage startups; actual usage likely respected due to the team's sane-hour culture."
   },
+  "refresh_after": 1789865086,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -34886,7 +34957,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Flexible paid holiday shutdown periods are likely but not explicitly confirmed. Company culture appears to resist burnout."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "defb8f6caf",
+    "e561666c65"
+   ],
+   "value": "Early-stage startup with a lean team, evidenced by direct collaboration with the Head of Engineering and Head of Design. Headcount is small enough that early engineers are tasked with broad ownership of cloud infrastructure and core features."
   },
   "sources": [
    {
@@ -34950,14 +35029,44 @@
     "url": "https://jobs.ashbyhq.com/castle/932f2d90-0233-4f8c-9ca6-5bf63b88d6cd"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "e561666c65",
+    "defb8f6caf"
+   ],
+   "value": "Castle is a financial technology company building a dedicated finance app to help U.S. homeowners pay for, track, and manage all their home-related expenses. The company generates revenue by streamlining bill payments, likely through transaction fees or premium financial service features."
+  },
+  "synthesized_evidence_sha": "a997f8d0c2af3201",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "defb8f6caf"
+   ],
+   "value": "Focuses on building mission-critical features like an AI-powered payment recording system and a data pipeline that transforms customer data into insights. Engineers own full-stack development cycles, collaborate directly with leadership, and manage cloud infrastructure optimization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675128,
   "web_search_url": "https://duckduckgo.com/?q=Castle+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "defb8f6caf"
+   ],
+   "value": "Castle offers a highly technical AI and data engineering role with direct ownership over core product features, bypassing the bureaucracy of big tech. The mission-driven focus on a pressing societal issue provides prestige, while the early-stage startup environment accelerates learning. It focuses on building reliable financial tools rather than growth-at-all-costs, suggesting a low-burnout engineering culture."
+  },
   "wlb_rating": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "defb8f6caf"
+   ],
+   "value": "Very High. The company builds a financial tool 'that builds long-term trust', which suggests a focus on quality and long-haul reliability typical of companies that avoid burnout-inducing fire drills."
   }
  },
  "catapult federal services": {
@@ -105533,38 +105642,97 @@
  "maigrate": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "f6158c65f8"
+   ],
+   "value": "Not a top-tier prestige brand like FAANG or OpenAI. Maigrate offers an elite-level learning environment for a junior candidate by embedding them directly with senior AI engineers on customer-facing products, which can accelerate career capital faster than a large-company rotation program."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "f6158c65f8"
+   ],
+   "value": "Maigrate generates revenue by selling AI-powered software products to mid-market businesses. The business model likely involves recurring software subscriptions or long-term service contracts, given the emphasis on lasting software and deep customer integration."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "f6158c65f8"
+   ],
+   "value": "Curiosity-driven, learning-by-doing, and collaborative. Early-career engineers are trusted with meaningful work and mentorship from AI strategists. The avoidance of 'building in a vacuum' signals a respectful, customer-partnering, and intellectually honest environment."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "f6158c65f8"
+   ],
+   "value": "Mid-market companies. Maigrate works closely with these customers to understand their workflows and pain points before building solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000-$135,000 base salary for a Junior AI Engineer. This range offers competitive new-grad tech pay without Big Tech premiums. Equity components are unknown; total compensation likely higher."
   },
   "evidence_sha": "58c8a33878f419b8",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784681086,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "f6158c65f8"
+   ],
+   "value": "AI-powered software for mid-market companies, spanning industries served by those customers rather than a single vertical."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "f6158c65f8"
+   ],
+   "value": "Interview processes are not detailed in available sources. A candidate should emphasize curiosity, initiative, and ability to understand customer problems—traits explicitly valued in the job description. Discussions should probe actual working hours, shutdown policies, and mentorship cadence to validate alignment with work-life balance priorities."
+  },
+  "last_attempt_at": 1784681086,
   "last_evidence_at": 1784631080,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "f6158c65f8"
+   ],
+   "value": "To build lasting software, not one-time deliverables, by deeply understanding customer workflows and building AI-powered products that actually move the needle for mid-market companies."
+  },
   "name": "Maigrate",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "f6158c65f8"
+   ],
+   "value": "Estimated: Fast-paced with a focus on curiosity and initiative rather than frantic output. The emphasis on lasting software suggests a deliberate quality-over-speed balance, though junior engineers are expected to grow quickly in a hands-on environment."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "f6158c65f8"
+   ],
+   "value": "AI-powered software products designed for mid-market companies. Specific product names or categories are not detailed in available sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days of paid time off annually, plus standard holidays. No policy is publicly available; this estimate assumes a software company in growth phase offering competitive but not atypically generous US tech-company PTO."
   },
+  "refresh_after": 1789865086,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -105574,7 +105742,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Not explicitly stated, but a company emphasizing 'lasting software' and avoiding one-time deliverables is more likely than a consulting-driven firm to implement periodic company-wide slowdowns, such as an end-of-year shutdown. No guaranteed shutdown is confirmed."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "f6158c65f8"
+   ],
+   "value": "Exact employee count and funding stage are not publicly detailed in available sources. The presence of a structured Junior AI Engineer role and direct mentorship from senior engineers suggests a small-to-midsize team in an active growth phase."
   },
   "sources": [
    {
@@ -105608,14 +105783,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=9c8340d0dbe8210b31b42f129dc4d620b2b3cea553c8691115568073947d9412JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=25af3677-2741-673c-22d6-21ea26a5669a&u=a1aHR0cHM6Ly93d3cuY2FsY3VsYXRvcnNvdXAuY29tL2NhbGN1bGF0b3JzL21hdGgvbWF0aC5waHA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "f6158c65f8"
+   ],
+   "value": "Maigrate builds AI-powered software products for mid-market companies, focusing on lasting solutions rather than one-off deliverables. The company embeds itself in customer operations to identify real bottlenecks, then develops tools that directly address those challenges."
+  },
+  "synthesized_evidence_sha": "58c8a33878f419b8",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "f6158c65f8"
+   ],
+   "value": "Engineers work directly alongside senior engineers and AI strategists, learning by doing rather than just executing tasks. The role involves deep engagement with customer problems and building software solutions that address real operational bottlenecks."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784616146,
   "web_search_url": "https://duckduckgo.com/?q=Maigrate+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f6158c65f8"
+   ],
+   "value": "Maigrate aligns with a candidate seeking a fast, innovative AI culture without bureaucratic drag. Junior engineers are promised real ownership and direct mentorship, enabling rapid technical growth. While exact WLB policies are unstated, the company's focus on sustainable building suggests a culture that may avoid the burnout common in delivery-mill environments."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "f6158c65f8"
+   ],
+   "value": "Estimated: 8/10. The company's explicit focus on 'lasting software' over 'one-time deliverables' and deep customer partnership suggests a sustainable work cadence, not crunch-driven consulting. This would appeal to a candidate avoiding toxic burnout environments."
   }
  },
  "maitai": {
@@ -113345,37 +113549,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Premium Industry Tech. It is not a FAANG company, but a tier-1 leader within its sector. The brand is exceptionally strong, and its aggressive technology push gives it significant prestige for applied industrial AI and IoT roles, equating to a top-tier exit/credibility in the industrial technology space."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "a5a0f5ad28"
+   ],
+   "value": "A B2B2C model focused on selling into professional trades via distribution. Revenue is generated primarily through hardware sales, with high-margin, recurring revenue from proprietary battery and accessory ecosystems that lock users into the system."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Disruptive, user-obsessed, and gritty. The culture is deeply focused on solving real-world jobsite problems, creating a sense of mission. Feedback suggests the environment is demanding but collaborative and notably free of the toxic bro-grammer culture found elsewhere, due to its mission-driven and hardware-integrated nature."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "a5a0f5ad28"
+   ],
+   "value": "Professional end-users in the construction, electrical, plumbing, automotive, and HVAC trades, rather than casual DIY consumers. Products are sold to these professionals via industrial distributors, home improvement retailers, and online channels."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95,000 to $130,000 for a new-grad AI/Data Science role in a Midwest location, with a larger total compensation package for the higher-cost offices in San Francisco. This is competitive with a non-FAANG premium industrial technology brand."
   },
   "evidence_sha": "995451a7881d52e6",
+  "generated_at": 1784681086,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a5a0f5ad28"
+   ],
+   "value": "Industrial Manufacturing & Professional Tools"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep dives into applied AI and system integration, not just theoretical knowledge. The interview will likely assess your ability to deploy machine learning models into embedded hardware constraints, your understanding of IoT data pipelines, and a genuine passion for building products for a gritty, professional end-user. They will look for a low-ego, 'get-it-done' attitude that balances elite skills with respect for the user and team."
   },
+  "last_attempt_at": 1784681086,
   "last_evidence_at": 1784643845,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "a5a0f5ad28"
+   ],
+   "value": "Global headquarters in Brookfield, Wisconsin (Milwaukee metro area). Major US engineering and design hubs exist in Greenfield and Milwaukee, WI, with additional software-focused offices in Chicago, IL, and San Francisco, CA."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "a5a0f5ad28",
+    "95a1cfeaa0"
+   ],
+   "value": "To produce the most durable, highest-performing tools on the market, focused on delivering disruptive innovation that increases productivity and safety for the professional tradesperson on the jobsite."
+  },
   "name": "Milwaukee Tool",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced with a 'disruptive innovation' mandate and aggressive product release cycles, but inherently structured by the hardware and commercial construction industry pace, avoiding the frantic, round-the-clock feeling of a consumer social app."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "a5a0f5ad28",
+    "95a1cfeaa0"
+   ],
+   "value": "Cordless power tools (drills, saws, impact drivers), hand tools, tool storage, accessories, safety gear, and lighting. A core product is the M18 and M12 cordless battery system, which powers a wide ecosystem of over 200 compatible tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20 days of paid time off for new college graduates, based on parent company TTI's standard professional-grade US benefits. This is usually a combined sick and vacation bank."
   },
+  "refresh_after": 1789865086,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -113385,7 +113644,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed paid shutdown during the week between Christmas and New Year's Day. This is a common practice among Wisconsin's major manufacturers and aligns with general TTI subsidiaries' policies."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "a5a0f5ad28"
+   ],
+   "value": "Large, mature subsidiary of Techtronic Industries (TTI), which had over $13 billion in global revenue. Milwaukee Tool is TTI's fastest-growing and most profitable brand, operating with the agility of a focused business unit rather than a slow-moving conglomerate."
   },
   "sources": [
    {
@@ -113419,14 +113685,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=1073c11f5641751527c87ff749fc723f8dfc352db6a50e3cccd7077d7d8bb615JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1b7e6636-68a1-6781-39ed-71ab69546607&u=a1aHR0cHM6Ly93d3cubWlsd2F1a2VldG9vbC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and permanent residency for high-skill AI and data science roles, given the scale of TTI and the specialized nature of industrial IoT, but candidates should confirm during the interview process."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a5a0f5ad28"
+   ],
+   "value": "Milwaukee Tool is a leading manufacturer of heavy-duty power tools, hand tools, accessories, and personal protective equipment, primarily serving the professional construction trades. The company makes money by selling these innovative, durable, and cordless products through a network of distributors and retailers to professional end-users, with a strong emphasis on its proprietary battery system driving repeat purchases."
+  },
+  "synthesized_evidence_sha": "995451a7881d52e6",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "5acb2bd4e6"
+   ],
+   "value": "AI and data science roles likely focus on embedded AI for power tool performance (predictive maintenance, brushless motor optimization), data-driven IoT applications for equipment tracking over the ONE-KEY platform, computer vision for jobsite safety, and supply chain analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784643845,
   "web_search_url": "https://duckduckgo.com/?q=Milwaukee+Tool+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Milwaukee Tool offers a rare blend of elite prestige and stability; you get a brand with huge market success without the burnout culture of typical 'prestige' tech firms. The company's fast-growing, disrupt-or-die innovation mandate creates a rapid tech culture, but as the backbone of the massive TTI corporation, it operates with professional, sane hours. They invest heavily in R&D which accelerates learning, and the business model supports a genuine work-life balance so you can grow your career"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Above average. Employee feedback often cites 'sane hours' compared to tech firms. The culture is intense around project milestones, but widely supports a 40-45 hour standard week, particularly in engineering, with a respect for time off."
   }
  },
  "mindlance": {
@@ -115675,37 +115966,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown; no AI/data science reputation data in supplied sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No business model information found for Morris Health Technologies Inc. in supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown; no culture information in supplied sources."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No customer information found for Morris Health Technologies Inc. in supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown; no compensation data in supplied sources."
   },
   "evidence_sha": "38583c21103e04f0",
+  "generated_at": 1784681086,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Estimated: Health technology (per company name), but unconfirmed by sources."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No basis for interview preparation guidance; no technical, cultural, or process information available from supplied sources."
+  },
+  "last_attempt_at": 1784681086,
   "last_evidence_at": 1784612309,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No location information found for Morris Health Technologies Inc. in supplied sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No mission statement found for Morris Health Technologies Inc. in supplied sources."
+  },
   "name": "Morris Health Technologies Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown; no work pace information in supplied sources."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No product information found for Morris Health Technologies Inc. in supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown; no PTO policy information in supplied sources."
   },
+  "refresh_after": 1789865086,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -115715,7 +116047,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown; no guaranteed shutdown policy information in supplied sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown size and stage; no verifiable data in supplied sources."
   },
   "sources": [
    {
@@ -115749,14 +116086,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=c55fa1ed2a7c48f41c3739e97e10c497e31e2f970ba58bbe657c0cee92af1193JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=091470bb-7dd9-6cfe-3454-67267ce06d8a&u=a1aHR0cHM6Ly9iZXRhLm1vcnJpc3Byb2R1Y3RzLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No visa sponsorship information available from supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Morris Health Technologies Inc. does not appear in the provided sources. The supplied sources reference Morris Motors (automotive), Morris Stockholm (furniture), and Morris Products (lighting/electrical), but no health technology company by this name. No factual information about this employer could be verified from the given materials."
+  },
+  "synthesized_evidence_sha": "38583c21103e04f0",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No technical work details available from supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784612309,
   "web_search_url": "https://duckduckgo.com/?q=Morris+Health+Technologies+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cannot assess alignment with candidate priorities (elite AI/data science prestige, high new-grad pay, fast innovative culture, mission-driven with strong WLB guarantees, accelerated learning without burnout) due to complete absence of verifiable company information in supplied sources."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown; no work-life balance data in supplied sources."
   }
  },
  "mortenson": {
@@ -127734,79 +128092,106 @@
  },
  "openai": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Tier 1 (Elite) — Considered one of the most prestigious AI labs in the industry."
   },
   "aliases": [],
-  "attempts": 9,
+  "attempts": 10,
   "business_model": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "6deb785fab",
+    "3957e367e3"
+   ],
+   "value": "OpenAIs revenue is driven through subscription tiers like ChatGPT Plus/Pro, enterprise licensing of its state-of-the-art models, and API usage fees for models and tools provided to developers and businesses globally."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "899b392f6d",
+    "3957e367e3"
+   ],
+   "value": "Mission-focused, technically elite, and safety-conscious. The culture promotes operational speed and reliability with a serious commitment to responsible deployment, explicitly valuing platforms that avoid burnout through structured rest."
   },
   "customers": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "6deb785fab",
+    "3957e367e3"
+   ],
+   "value": "A broad range of individual users and enterprise clients adopting AI responsibly, including high-stakes security environments that purchase ChatGPT and API-based products for tangible business value."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $175,000 - $230,000+ annual total compensation, consisting of a high base salary and equity grants."
   },
   "evidence_sha": "0a76ac5c901a83d8",
-  "generated_at": 1784546065,
+  "generated_at": 1784681086,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "6deb785fab"
+   ],
+   "value": "Artificial Intelligence Research and Deployment"
   },
   "interview_focus": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "899b392f6d",
+    "3957e367e3"
+   ],
+   "value": "Expect rigorous technical interviews evaluating end-to-end engineering, AI application design, or customer-centric solutions architecture, without sacrificing the expectation of working within a culture that values sane hours and structured rest."
   },
-  "last_attempt_at": 1784546065,
+  "last_attempt_at": 1784681086,
   "last_evidence_at": 1784677182,
   "locations": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "3957e367e3",
+    "899b392f6d"
+   ],
+   "value": "Global presence with a headquarters in San Francisco, California, and opportunities ranging from internal engineering to field-based customer-facing roles."
   },
   "mission": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "899b392f6d",
+    "3957e367e3"
+   ],
+   "value": "To ensure that artificial general intelligence (AGI) benefits all of humanity."
   },
   "name": "OpenAI",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and highly innovative with a focus on high output and speed, yet balanced by a culture that reportedly commits to structured shutdowns to avoid burnout."
   },
   "products": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "8b0689fc7f",
+    "6deb785fab",
+    "3957e367e3"
+   ],
+   "value": "ChatGPT, enterprise API platform, and custom model solutions. The company also builds internal productivity and security applications for business functions like Finance and Supply Chain."
   },
-  "prompt_v": 1,
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20+ days per year (conservative estimate for a top-tier AI firm competitive with Bayesian benefits)."
   },
+  "refresh_after": 1789865086,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -127816,12 +128201,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Formal shutdown periods are offered as a counter-balance to prevent burnout, aligning with the candidate's need for guaranteed disconnection."
   },
   "size_stage": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "A large, heavily-funded private organization in the growth and scaling stage, deploying advanced AI and expanding enterprise capabilities globally."
   },
   "sources": [
    {
@@ -127886,41 +128271,43 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Sponsorship information is not detailed in the provided sources, but top-tier AI companies of this scale often provide visa sponsorship for highly specialized technical roles."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "f6b5edbfee",
-    "0af07774ac",
-    "843e2ed34c"
+    "a186b901c2",
+    "6deb785fab"
    ],
-   "value": "OpenAI is hiring for multiple engineering roles, including AI Deployment Engineer for Government and AWS, and Machine Learning Engineer for Robotics."
+   "value": "OpenAI is an artificial intelligence research and deployment company best known for ChatGPT. It builds large-scale AI models and APIs that power products for both consumers and enterprises across the world."
   },
+  "synthesized_evidence_sha": "0a76ac5c901a83d8",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "f6b5edbfee",
-    "0af07774ac",
-    "843e2ed34c"
+    "899b392f6d",
+    "3957e367e3"
    ],
-   "value": "Roles include AI Deployment Engineer (Government and AWS partnerships) and Machine Learning Engineer (Distributed Data Systems - Robotics)."
+   "value": "Work includes building internal enterprise applications end-to-end for functions like Finance and Supply Chain, as well as creating repeatable security reference architectures, demos, and pilots that help customers adopt AI safely."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677182,
   "web_search_url": "https://duckduckgo.com/?q=OpenAI+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Offers a top-tier AI role with elite prestige and high compensation that balances innovation and mission-focus with a guaranteed shutdown culture, directly respecting the candidate's need for technical growth and work-life balance over toxic bureaucracy."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "899b392f6d",
+    "3957e367e3"
+   ],
+   "value": "Estimated: High — The company mission explicitly balances operational speed with care, and demands for downtime (like guaranteed shutdowns) are flagged as a cultural fit, pushing beyond typical Silicon Valley burnout cycles."
   }
  },
  "openevidence": {
@@ -166284,39 +166671,98 @@
  },
  "strada": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "bf33545ebe"
+   ],
+   "value": "Top-tier (Y Combinator backed, production AI agents at scale, 1M+ automated interactions, high new-grad impact)"
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "bf33545ebe"
+   ],
+   "value": "B2B SaaS/platform model: sells AI automation platform to insurance carriers, MGAs, and brokers, likely via subscription or usage-based pricing tied to automated interactions."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "bf33545ebe"
+   ],
+   "value": "High-agency, mission-driven, low-bureaucracy startup culture; values ownership, rapid learning, and direct impact. YC-backed, founder-led, with a focus on building production AI systems that solve real insurance problems."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "bf33545ebe"
+   ],
+   "value": "Leading insurers, managing general agents (MGAs), and brokers collectively representing $10B+ in annual premiums."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$160k base + meaningful equity (YC top-tier startup range for new grad AI/ML roles); total comp potentially $180k-$220k+. Verify offer details."
   },
   "evidence_sha": "d5b7d7ef04a4e93a",
+  "generated_at": 1784681086,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "bf33545ebe"
+   ],
+   "value": "Insurtech / Applied AI / Enterprise SaaS"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "bf33545ebe"
+   ],
+   "value": "Expect deep technical assessment on AI/ML systems, production engineering, and scaling real-time multimodal agents (voice, text, email). Prepare to discuss shipping production code quickly, debugging live systems, and designing for reliability in regulated domains. Cultural fit will probe ownership, speed of learning, and alignment with mission-driven, low-bureaucracy values."
+  },
+  "last_attempt_at": 1784681086,
+  "last_evidence_at": 1784675134,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Not specified in sources; likely remote-friendly or Bay Area given YC backing. Estimated: primary hub in San Francisco Bay Area with remote flexibility."
   },
-  "last_evidence_at": 1784675134,
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "bf33545ebe"
+   ],
+   "value": "Automate and accelerate insurance front-office operations through expert AI agents, reducing manual workload and improving speed and accuracy for carriers and brokers."
+  },
   "name": "Strada",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "bf33545ebe"
+   ],
+   "value": "Fast; 'ship production code from day one', 'learn fast', 'adoption accelerating' — typical of early-stage YC startup with high velocity."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "bf33545ebe"
+   ],
+   "value": "AI agent platform that automates customer interactions (calls, texts, emails, chat) for core insurance front-office workflows including policy servicing and claims intake."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + standard US holidays; early-stage startups often offer flexible/unlimited PTO but actual usage varies. Confirm policy directly."
   },
+  "refresh_after": 1789865086,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -166326,7 +166772,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns disclosed; typical early-stage startup may observe major holidays only. Ask about winter break / recharge periods."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "bf33545ebe"
+   ],
+   "value": "Early-stage startup (Y Combinator backed); already processing 1M+ automated interactions, indicating early traction and rapid growth phase."
   },
   "sources": [
    {
@@ -166380,14 +166833,41 @@
     "url": "https://jobs.ashbyhq.com/stradahq/626411c6-808e-4eb2-b28d-76f5d88e0af6"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not specified in sources. Estimated: As a YC-backed early-stage startup, may sponsor H-1B but likely limited resources for complex immigration cases; confirm directly."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "bf33545ebe"
+   ],
+   "value": "Strada is a Y Combinator-backed insurtech startup that deploys expert AI agents to automate front-office insurance workflows — policy servicing, claims intake, and customer communications across calls, texts, emails, and chat — for insurers, MGAs, and brokers representing over $10B in annual premiums."
+  },
+  "synthesized_evidence_sha": "d5b7d7ef04a4e93a",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "bf33545ebe"
+   ],
+   "value": "Building and scaling production AI agents for voice, text, email, and chat; integrating with insurance core systems; shipping code from day one in a high-velocity environment."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675134,
   "web_search_url": "https://duckduckgo.com/?q=Strada+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "bf33545ebe"
+   ],
+   "value": "Strada offers a rare combination: elite YC-backed prestige with high new-grad pay, a fast-paced AI/engineering culture shipping production code from day one, and a mission to transform a massive, archaic industry (insurance) — all while emphasizing rapid learning and growth. The role promises high impact without the bureaucracy of big tech, aligning with your desire for technical acceleration, mission-driven work, and a culture that respects personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7/10 — early-stage startup pace but explicit emphasis on 'grow alongside the company' without burnout language; no guaranteed shutdowns mentioned. Verify in interviews."
   }
  },
  "strada education foundation": {
@@ -170819,44 +171299,119 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "47880550d0",
+    "f59ad9b5de"
+   ],
+   "value": "Unknown. The company identity 'Tavern Research' does not match the content of the provided sources, making it impossible to determine how it makes money."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven and innovative, harshly rejecting bureaucratic and toxic norms. This is a speculative assessment based solely on the candidate's stated priorities for a positive culture."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "47880550d0",
+    "f59ad9b5de"
+   ],
+   "value": "Unknown. No customer base can be inferred from the restaurant listings and HR software page provided."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $180,000 - $220,000 total annual target compensation (base + bonus + equity) for a top-tier AI firm in a high-cost market. This is a candidate-goal-driven estimate with no Tavern Research-specific data."
   },
   "evidence_sha": "41ab53f844728952",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784681086,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "47880550d0",
+    "f59ad9b5de",
+    "bfda074b6a"
+   ],
+   "value": "Unconfirmed. The source IDs point to the tavern/restaurant industry and HR technology, none of which correspond to an entity named Tavern Research."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784681086,
   "last_evidence_at": 1784616148,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "47880550d0",
+    "f59ad9b5de"
+   ],
+   "value": "Unknown for Tavern Research. Sources reference Pasadena, CA for unrelated restaurants, with no corporate office locations provided."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "47880550d0",
+    "f59ad9b5de",
+    "bfda074b6a"
+   ],
+   "value": "Unknown. No mission statement is present in any of the three source documents supplied."
+  },
   "name": "Tavern Research",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced but sustainable. In lieu of company-specific data, a hypothetical 'top-tier AI or data science role' environment would necessitate a fast-paced workflow that avoids bureaucratic slowness, consistent with the candidate's utopian requirements."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "47880550d0",
+    "f59ad9b5de",
+    "bfda074b6a"
+   ],
+   "value": "Unknown. The provided sources do not describe any technology products, services, or research outputs from an entity called Tavern Research."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: No specific data available; could be an upper-quartile 'tech-company' number like 15–20 days to meet work-life balance needs. This is an estimation for the target archetype, not Tavern Research reality."
   },
+  "refresh_after": 1789865086,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "47880550d0",
+    "f59ad9b5de",
+    "bfda074b6a"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed company-wide shutdowns are a core candidate priority, suggesting end-of-year or quarterly breaks. No shutdown policy can be confirmed from the restaurant and HR platform sources."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "47880550d0",
+    "f59ad9b5de",
+    "bfda074b6a"
+   ],
+   "value": "Unknown. The provided sources are for a Yelp listing and a separate HR SaaS company (Rippling), not for Tavern Research."
   },
   "sources": [
    {
@@ -170890,14 +171445,43 @@
     "url": "https://www.rippling.com/products/hr/recruiting"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "47880550d0",
+    "f59ad9b5de",
+    "bfda074b6a"
+   ],
+   "value": "Tavern Research appears to be a misdirected or incorrectly labeled entity. All supplied sources redirect to Yelp pages for taverns/restaurants and a generic HR software site, providing no information about a technology, AI, or data science company. No factual business summary can be derived from the given material."
+  },
+  "synthesized_evidence_sha": "41ab53f844728952",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "47880550d0",
+    "f59ad9b5de",
+    "bfda074b6a"
+   ],
+   "value": "Unknown. The sources describe a restaurant and an HR platform, offering no insight into AI/DS technical work at Tavern Research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784616148,
   "web_search_url": "https://duckduckgo.com/?q=Tavern+Research+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: High. The candidate targets a healthy work-life balance with 'sane hours' and minimized burnout, but no source data confirms Tavern Research possesses this quality."
   }
  },
  "tax relief advocates": {
