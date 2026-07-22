@@ -22225,49 +22225,120 @@
  },
  "avnet": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "f002c4bf32",
+    "5636a44eb0"
+   ],
+   "value": "Low. Avnet is a Fortune 500 titan in the electronic components distribution industry, not a core technology creator or AI research-driven company."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "f002c4bf32",
+    "5636a44eb0"
+   ],
+   "value": "Avnet generates revenue through the high-volume distribution and value-added resale of electronic components and computing solutions. The company makes money by earning a margin on the components it sells and by charging for engineering, logistics, and supply chain services layered on top of the hardware."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "The culture is likely stable, collaborative, and process-driven, supporting a global industrial supply chain. The organizational structure will feel more coordinative and measured than the 'move fast and break things' startup culture, focused on reliability and strong customer relationships rather than rapid iteration."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "f002c4bf32",
+    "5636a44eb0"
+   ],
+   "value": "Avnet serves a broad ecosystem ranging from startups to large enterprises, primarily hardware engineers, product designers, and procurement teams creating or maintaining electronics products. The company positions itself as a guide for technology innovators and supply chain professionals across the product lifecycle."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000 - $100,000 base salary for an entry-level data scientist or AI role in Phoenix, AZ."
   },
   "evidence_sha": "807a043c5d77adbb",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784684824,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f002c4bf32",
+    "5636a44eb0"
+   ],
+   "value": "Technology Supply Chain & Electronic Components Distribution"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784684824,
   "last_evidence_at": 1784674728,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "f002c4bf32",
+    "5636a44eb0"
+   ],
+   "value": "Avnet has a global footprint with its corporate headquarters located in Phoenix, Arizona. It maintains a significant presence throughout the Americas, Europe, and Asia with offices, distribution centers, and engineering support hubs in major technology markets."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "f002c4bf32"
+   ],
+   "value": "Avnet’s guiding mission is to guide today’s ideas into tomorrow’s technology, acting as a strategic partner from design to delivery for technology companies. Its purpose as detailed on its corporate overview is 'making technology easier, faster, and more reliable for our customers'."
+  },
   "name": "Avnet",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: The pace of work is typical of an enterprise supply chain corporation, with methodical execution, standard business hours, but likely slower than a tech startup. The innovation cycle is driven by the logistics and distribution side, meaning technical changes are steady but not rapid, or cutting-edge as a product-focused tech."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "f002c4bf32",
+    "5636a44eb0"
+   ],
+   "value": "Avnet sources and sells a wide array of electronic components (semiconductors, connectors, passives) and integrated computing solutions, including embedded systems and single-board computers. Beyond logistics, it provides value-added engineering design, development, and supply chain services to help customers bring products to market."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days of annual paid time off plus standard corporate holidays for a new graduate corporate hire."
   },
+  "refresh_after": 1789868824,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns beyond standard US holidays. Any true shutdown would be a rare or ad-hoc occurrence."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "f002c4bf32",
+    "5636a44eb0"
+   ],
+   "value": "Avnet is a large publicly traded Fortune 500 corporation with a mature, established global presence and thousands of employees. As a public company, it is in a stable growth phase rather than an early-stage startup."
   },
   "sources": [
    {
@@ -22301,14 +22372,41 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "f002c4bf32",
+    "5636a44eb0"
+   ],
+   "value": "Avnet is a global technology distributor and solutions provider that helps companies design, build, and deliver electronic components and computing products. It sits at the center of the technology supply chain, connecting component manufacturers with a vast range of enterprise and industrial customers."
+  },
+  "synthesized_evidence_sha": "807a043c5d77adbb",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Internal technical AI and data science work likely centers on supply chain optimization, demand forecasting, and internal analytics rather than building a commercial AI product. Roles would involve applying machine learning to logistics, inventory management, and e-commerce personalization for the components distribution business."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674728,
   "web_search_url": "https://duckduckgo.com/?q=Avnet+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "f002c4bf32",
+    "5636a44eb0"
+   ],
+   "value": "Avnet does not align with the top-tier AI elite prestige priority as it is fundamentally a distribution and supply chain company, not a tech-native pillar like a top AI lab or Big N. While it provides the stability and mature processes typical of a Fortune 500 company that may offer regular hours, its core business will likely yield a slower innovation pace than a venture-backed tech startup focused on AI."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good Work-Life Balance. As an established logistics and distribution company powered by traditional corporate operations, it likely operates on a scheduled, predictable calendar with standard 40-hour weeks."
   }
  },
  "axalta": {
@@ -25442,7 +25540,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -25460,7 +25558,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784684732,
+  "last_attempt_at": 1784684824,
   "last_evidence_at": 1784675870,
   "name": "BCforward",
   "pace_of_work": {
@@ -97160,34 +97258,84 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "f5340a55af",
+    "2c737845b0"
+   ],
+   "value": "Cannot be determined. The sources define the adjective 'integrated' but not a company's business model."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "$85k–$125k base (estimated; US market)"
   },
   "evidence_sha": "c8fe13c8f9b295bd",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784684824,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f5340a55af",
+    "2c737845b0"
+   ],
+   "value": "Unknown. Not a known technology company according to the provided sources."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784684824,
   "last_evidence_at": 1784672483,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Integrated Resources",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Moderate-to-fast (estimated)"
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "f5340a55af",
+    "2c737845b0"
+   ],
+   "value": "No products could be identified. The provided sources point to dictionary definitions of the word 'integrated', not a company's offerings."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "refresh_after": 1789868824,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -97198,6 +97346,11 @@
    "confidence": "estimated",
    "source_ids": [],
    "value": "None found in research (estimated)"
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -97231,10 +97384,34 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "f5340a55af",
+    "2c737845b0"
+   ],
+   "value": "Integrated Resources appears to be a general term or concept (meaning 'united' or 'combined') rather than a specific technology or AI company. Based on the provided sources, there is no factual evidence of a company named 'Integrated Resources' operating in AI, data science, or technology, nor any details on its products, revenue, or employer brand. The job candidate's desired profile cannot be matched to this entity."
+  },
+  "synthesized_evidence_sha": "c8fe13c8f9b295bd",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672483,
   "web_search_url": "https://duckduckgo.com/?q=Integrated+Resources+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
@@ -131999,40 +132176,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Respected industrial AI leader with massive proprietary motor/operation data, but not a primary AI research brand like FAIR or Google Brain."
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Designs, manufactures, and sells precision motors and drive systems across automotive, industrial, and consumer segments; revenue from component sales, system integration, and aftermarket services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, hierarchical but meritocratic, long-term orientation, strong kaizen/continuous improvement mindset. Cross-cultural teams common. Innovation driven by manufacturing excellence."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Major automotive OEMs (Tesla, Toyota, etc.), consumer electronics brands, industrial equipment manufacturers, and data center operators."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Japan ¥4.5-6M base + bonus; US $90-120K base + bonus/RSU; EU €50-70K. High for industrial sector, below top-tier pure software/AI labs."
   },
   "evidence_sha": "a10e9e9da07db1c1",
+  "generated_at": 1784684824,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Precision Motors / Motion Control / Automotive Components / Industrial Automation"
   },
-  "last_attempt_at": 1784684732,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare for deep technical questions on motor physics, control theory (FOC, MPC), embedded C/C++, real-time systems, and Python for data pipelines. Expect behavioral questions on cross-cultural collaboration, long-term project ownership, and balancing innovation with manufacturing rigor. Ask specifically about: AI/DS team structure, deployment cycles, overtime norms in your target division, and guaranteed shutdown policies."
+  },
+  "last_attempt_at": 1784684824,
   "last_evidence_at": 1784677183,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Kyoto, Japan; major R&D and manufacturing sites across Japan, China, Vietnam, Thailand, Mexico, USA, Europe (Germany, Serbia, UK, etc.)."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To be the world's leading comprehensive motor manufacturer, contributing to society through innovative motor technology that saves energy and improves quality of life."
+  },
   "name": "Nidec",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate to Fast — Automotive and EV programs run on aggressive timelines; R&D cycles can be multi-year but with frequent milestones. Varies significantly by division (corporate R&D vs. business unit)."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Precision small motors (HDD spindle motors, fan motors, vibration motors), automotive motors (EV traction motors, EPS motors), industrial motors, robotics components, and home appliance motors."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual leave + 10-15 Japanese national holidays (varies by country/entity); US sites typically 15 days PTO + 8-10 holidays."
   },
+  "refresh_after": 1789868824,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -132042,7 +132257,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; Japanese entities observe Golden Week, Obon, New Year (often 5-10 days each). US sites may have winter break."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public company (TSE: 6594); ~110,000 employees globally; ¥2.2T+ annual revenue; mature multinational with extensive R&D and manufacturing footprint."
   },
   "sources": [
    {
@@ -132076,14 +132296,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=a683c8e65f69c97dd3332bccb8824bffd7966c268615b9668d01077e6c2b81ffJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0b35a25d-ffe7-6b72-3428-b5c0fe9e6aff&u=a1aHR0cHM6Ly93d3cubmlkZWMuY29tL2VuLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a large Japanese multinational, likely sponsors H-1B and other work visas for specialized engineering roles in US entities (Nidec Motor Corporation, Nidec America); candidate should confirm with recruiter for specific role and location."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Nidec Corporation is a Japanese multinational manufacturer of precision motors and related components, serving automotive, industrial, and consumer electronics markets globally. It operates through a diversified portfolio of motor technologies and motion control solutions."
+  },
+  "synthesized_evidence_sha": "a10e9e9da07db1c1",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Motor design, control algorithms, power electronics, embedded systems, simulation (FEA/CFD), materials science, manufacturing automation, and increasingly AI/ML for predictive maintenance, motor optimization, and autonomous systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677183,
   "web_search_url": "https://duckduckgo.com/?q=Nidec+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Nidec offers elite engineering prestige as the world's #1 precision motor maker, with massive scale for high new-grad compensation. Its pivot to EV traction motors and robotics creates fast-moving, innovative AI/DS work in motor control, predictive analytics, and autonomous systems — not slow bureaucracy. Japanese corporate culture traditionally emphasizes stability and reasonable hours, potentially aligning with your work-life balance priority, though intensity varies by division and region."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — Japanese HQ culture values stability; overtime exists but often managed. US/EU sites may have better boundaries. No public guaranteed shutdown policy found."
   }
  },
  "nielsen": {
@@ -174846,49 +175087,57 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 8,
+  "attempts": 9,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
    "value": "Not confirmed"
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "ab00bb44f2",
+    "0e460c22e2"
+   ],
+   "value": "Low-ego, experimental, and inclusive; values excitement about reinventing database space and demands flexibility. Team members are equals to rapidly test capabilities to discover simpler, more powerful ways to deliver results."
   },
   "customers": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "fef77a2c88"
+   ],
+   "value": "Major enterprises globally; the job description notes that every major customer interacts with the platform through AppEx surfaces, indicating a large, deployment-heavy customer base central to revenue growth."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $160k–$200k USD total compensation (base + annual equity + sign-on) for a standard high-demand U.S. market for a Software Engineer or AI-adjacent role."
   },
   "evidence_sha": "71b25efc7419ed06",
-  "generated_at": 1784403469,
+  "generated_at": 1784684824,
   "generator": {
-   "endpoint": "local",
-   "model": "qwen3:30b",
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "0e460c22e2",
+    "fef77a2c88"
+   ],
+   "value": "Cloud data platform, AI, and enterprise software infrastructure."
   },
   "interview_focus": {
    "confidence": "high",
    "source_ids": [
-    "73c2db6c38",
-    "43f7a82e39"
+    "0e460c22e2",
+    "ab00bb44f2"
    ],
-   "value": "Technical skills in AI research, agents, and reinforcement learning, with emphasis on innovation and problem-solving in a fast-paced environment."
+   "value": "Expect technical deep-dives into database concepts, SQL and AI/ML fundamentals, plus behavior-based questioning that tests the ability to thrive in a fast-paced, low-ego, experimental environment that challenges ordinary thinking. Heavy emphasis on problem-solving and cultural alignment with the innovation pace."
   },
-  "last_attempt_at": 1784684732,
+  "last_attempt_at": 1784684824,
   "last_evidence_at": 1784656820,
   "locations": {
    "confidence": "unknown",
@@ -174896,30 +175145,38 @@
    "value": "Not confirmed"
   },
   "mission": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "0e460c22e2",
+    "ab00bb44f2"
+   ],
+   "value": "To reinvent the database and data platform space while powering the era of the agentic enterprise. Internally, they aim to redefine how work gets done by challenging ordinary thinking and pushing the pace of innovation."
   },
   "name": "Snowflake",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "0e460c22e2",
+    "fef77a2c88",
+    "ab00bb44f2"
+   ],
+   "value": "Fast-paced and dynamic; the official language explicitly asks employees to 'push the pace of innovation' and thrive in a fast-moving environment. This suggests a high energy culture. However there is a corresponding focus on building a future for oneself, suggesting rapid growth does not necessarily equate to all-nighters."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "73c2db6c38",
-    "43f7a82e39"
+    "fef77a2c88",
+    "0e460c22e2"
    ],
-   "value": "Cloud data platform"
+   "value": "A multi-cloud data platform spanning storage, governance, data sharing, data science, and AI capabilities. Recent emphasis includes building an AI‑first user experience platform (AppEx) and powering the era of the agentic enterprise."
   },
-  "prompt_v": 1,
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Flexible / unlimited PTO policy for exempt salaried employees, accompanied by a culture that enables taking full advantage of time off without stigma. The standard for this tier normally translates to about 20-25 days total per year."
   },
+  "refresh_after": 1789868824,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -174929,7 +175186,7 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed company-wide winter shutdown (year-end holidays) and periodic wellness days are typical at this tier of cloud enterprise, though a specific 'Fridays off' company policy is not public."
   },
   "size_stage": {
    "confidence": "unknown",
@@ -174979,42 +175236,46 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Estimated: Snowflake sponsors employment-based visas for specialized technical roles such as software engineering and solution engineering, subject to standard qualifying criteria like expertise and job level."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "73c2db6c38",
-    "43f7a82e39"
+    "0e460c22e2",
+    "fef77a2c88",
+    "ab00bb44f2"
    ],
-   "value": "Snowflake is a cloud data platform company offering a top-tier AI research role for new graduates with a focus on agents and reinforcement learning, emphasizing innovation and technical growth."
+   "value": "Snowflake provides a cloud-based data platform that lets organizations store, govern, and analyze massive amounts of structured and semi-structured data using SQL, Python, and AI workloads, all without managing the underlying infrastructure. It is powering the 'agentic enterprise' by enabling AI-first applications that run directly on governed data."
   },
+  "synthesized_evidence_sha": "71b25efc7419ed06",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "73c2db6c38",
-    "43f7a82e39"
+    "0e460c22e2",
+    "fef77a2c88",
+    "ab00bb44f2"
    ],
-   "value": "Research in agents and reinforcement learning for AI"
+   "value": "Roles emphasize solving complex customer problems, closing large deals, reinventing the database space, and building an AI-first platform. Work is dynamic and fast-moving with an experimental mindset, rapidly testing emerging capabilities to deliver simpler, more powerful results."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583351,
   "web_search_url": "https://duckduckgo.com/?q=Snowflake+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "low",
+   "confidence": "medium",
    "source_ids": [
-    "73c2db6c38",
-    "43f7a82e39"
+    "0e460c22e2",
+    "fef77a2c88",
+    "ab00bb44f2"
    ],
-   "value": "The role balances elite prestige with high new-grad pay in a fast, innovative tech culture, avoiding slow bureaucracy. It offers mission-driven work with respect for work-life balance through sane hours and guaranteed shutdowns, preventing toxic burnout environments."
+   "value": "Offers a prestigious AI and data platform environment with new‑grad pay in the top tier of enterprise tech. The dynamic, fast‑moving culture provides accelerated learning, while their official messaging states that working at Snowflake means building a future for yourself, suggesting growth without mandated excessive personal sacrifice."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Better than the most notorious grind cultures and very competitive for cloud infrastructure; likely closer to structured office hours. However, the posted innovation pace implies intermittent spikes of higher pressure rather than completely laid-back days."
   }
  },
  "soci": {
@@ -182727,39 +182988,104 @@
  },
  "suno": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "6bcac68489",
+    "99103b9051",
+    "bb743d265f"
+   ],
+   "value": "Top-tier. Suno is the fastest growing consumer entertainment AI company and leader in AI music, backed by premier VCs including NVIDIA's venture arm."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "99103b9051"
+   ],
+   "value": "Suno monetizes through user subscriptions that unlock activation, song generation, and commercial use rights. The growth marketing team runs A/B tests on landing pages specifically to drive user activation and subscriptions."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "bb743d265f",
+    "99103b9051"
+   ],
+   "value": "Creative, inclusive, and missionizing. The company promotes music as a universal joy-maker, from grandmothers to Grammy winners. Engineering culture values ownership and rapid learning loops."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "bb743d265f"
+   ],
+   "value": "Suno serves a broad user base from grandmothers creating songs for loved ones to Grammy-winning artists using Suno Studio for hit production. The platform is designed so that music is for everyone."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130,000–$175,000 base plus equity package, competitive with top-tier San Francisco/Boston AI startups."
   },
   "evidence_sha": "97c73df55a948cd9",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784684824,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "6bcac68489",
+    "bb743d265f"
+   ],
+   "value": "AI music generation / creative entertainment technology."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "99103b9051"
+   ],
+   "value": "Include reverse questions about the \"ship it, measure it, learn from it\" build loop to confirm engineering agility and ownership. Inquire how the team protects sane hours/guaranteed shutdowns despite being backed by top-tier investors, and ask for examples of recent rapid career acceleration for new grad engineers/data scientists to verify growth without sacrifice."
+  },
+  "last_attempt_at": 1784684824,
   "last_evidence_at": 1784677340,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "6bcac68489",
+    "bb743d265f"
+   ],
+   "value": "To build the world's first creative entertainment platform where the entire world can feel the joy and fulfillment of making music."
+  },
   "name": "Suno",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "99103b9051"
+   ],
+   "value": "Estimated: Fast-paced, rapid iteration heavy. Marketing engineering job description emphasizes shipping, measuring, and iterating quickly to drive subscription growth."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "bb743d265f",
+    "6bcac68489"
+   ],
+   "value": "Suno offers a consumer AI music-generation application and Suno Studio, a power tool used by Grammy-winning professionals. Users create original songs from text descriptions, spanning casual personal use to commercial music production."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Competitive, likely 15-20 days per year plus public holidays consistent with well-funded VC-backed startup norms."
   },
+  "refresh_after": 1789868824,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -182769,7 +183095,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No defined policy found in research. A top-tier tech startup is likely to have an end-of-year holiday week shutdown or similar premium perks."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "99103b9051",
+    "6bcac68489",
+    "bb743d265f"
+   ],
+   "value": "Late-stage startup backed by top-tier investors including Bond Capital, Menlo Ventures, Lightspeed Venture Partners, IVP, Forerunner, Union Square Ventures, and NVentures (NVIDIA's venture arm)."
   },
   "sources": [
    {
@@ -182833,14 +183168,47 @@
     "url": "https://jobs.ashbyhq.com/suno/4bf71557-1cb1-4722-88ec-e401adc0b75a"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "6bcac68489",
+    "bb743d265f",
+    "99103b9051"
+   ],
+   "value": "Suno is building a creative entertainment platform that uses AI to let anyone make music from text prompts. The company generates revenue through a subscription model that grants users access to its music generation tools and commercial usage rights."
+  },
+  "synthesized_evidence_sha": "97c73df55a948cd9",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "99103b9051",
+    "bb743d265f",
+    "6bcac68489"
+   ],
+   "value": "Engineering roles involve building and optimizing growth infrastructure for landing page A/B testing to drive user subscriptions. Marketing Data Science focuses on campaign analytics. Trust & Safety is designated P0 priority."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677340,
   "web_search_url": "https://duckduckgo.com/?q=Suno+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "99103b9051",
+    "6bcac68489",
+    "bb743d265f"
+   ],
+   "value": "Suno is a mission-driven, elite AI company at hyper-growth backed by top Silicon Valley investors and NVIDIA, offering the prestige of a market leader without the toxic burnout. For a new grad craving fast innovation, engineering roles emphasize ownership and rapid iteration (build, measure, learn), while the consumer-creative mission naturally attracts a culture that respects personal time and creative balance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Above average for hyper-growth startups. The consumer creative category and emphasis on 'joy and fulfillment' in the external mission suggest better boundaries than ad-tech or fintech peers."
   }
  },
  "sunsweet growers inc": {
@@ -189302,7 +189670,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -189344,7 +189712,7 @@
    ],
    "value": "Probe whether the 'dynamic team' and 'exciting environment' translate to true technical learning and career growth for AI/Data Science work, or if the highly structured nature of defense/aerospace solutions will conflict with the desire to avoid slow bureaucracy."
   },
-  "last_attempt_at": 1784684732,
+  "last_attempt_at": 1784684824,
   "last_evidence_at": 1784674726,
   "locations": {
    "confidence": "high",
@@ -215924,40 +216292,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Global Elite) — Ivy League university with top-ranked CS, statistics, biostatistics, and biomedical informatics programs; consistent NeurIPS/ICML/ICLR publications; attracts world-leading faculty and PhD talent."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "f5f630bd17",
+    "44222295ef"
+   ],
+   "value": "Non-profit university funded by net tuition revenue, endowment distributions (largest revenue source), sponsored research grants (federal/private), clinical practice revenue, philanthropy, and auxiliary enterprises. Endowment ~$42B (FY2023) provides long-term financial stability."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Intellectual, collaborative, mission-driven, decentralized. Faculty and researchers operate with high autonomy. Culture varies by school/lab: some are fast-paced and well-funded (like hospital-affiliated institutes), others more traditional. Strong emphasis on rigor, ethics, and societal impact. Bureaucracy exists (IRB, procurement, HR) but is navigated with administrative support."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "44222295ef"
+   ],
+   "value": "Students (undergraduate, graduate, professional), patients and families seeking clinical care, research sponsors (federal agencies, foundations, industry), alumni and donors, and the broader academic community."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k-$110k base for research assistant/associate or data scientist roles (varies by school/department and grant funding). Total comp with benefits (health, retirement ~10-12% employer contribution, tuition remission for degree programs) adds ~$25k-$35k value. Significantly below top-tier industry offers ($150k-$250k+)."
   },
   "evidence_sha": "36def7c9acff7fa2",
+  "generated_at": 1784684824,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f5f630bd17"
+   ],
+   "value": "Higher Education / Academic Research / Academic Medical Center"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect academic-style interviews: research depth, problem formulation, methodology rigor, and communication of complex ideas to mixed audiences. Coding assessments may occur for research software engineer roles but are less LeetCode-heavy than industry. Prepare to discuss past projects in detail, reproducibility practices, and how your work advances a scientific or clinical domain. Ask about compute resources, data access governance, mentorship structure, and path to independent research or prom"
   },
-  "last_attempt_at": 1784684732,
+  "last_attempt_at": 1784684824,
   "last_evidence_at": 1784675872,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "44222295ef",
+    "f5f630bd17"
+   ],
+   "value": "Primary campus in New Haven, CT; West Campus (research institutes) in Orange/West Haven, CT; Yale New Haven Hospital campuses across southern CT; global programs and field stations worldwide."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "f5f630bd17"
+   ],
+   "value": "To improve the world today and for future generations through outstanding research and scholarship, education, preservation, and practice, while educating aspiring leaders worldwide."
+  },
   "name": "Yale University",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate, project-driven academic pace. Research cycles (grant writing, experiments, publication) create natural rhythms; no sprints or release trains. Periodic intensity around conference deadlines and grant submissions. Generally slower than product-focused tech companies."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "44222295ef",
+    "f5f630bd17"
+   ],
+   "value": "Undergraduate and graduate education across 14 schools; faculty and student research across sciences, humanities, engineering, and medicine; clinical care via Yale Medicine and Yale New Haven Hospital; cultural assets including Yale University Art Gallery, Yale Center for British Art, and Peabody Museum."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 22 vacation days + ~14 university holidays + winter recess (approx. 10 days between Christmas and New Year) = ~46 days total annual paid time off for staff. Faculty have different academic-year arrangements."
   },
+  "refresh_after": 1789868824,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -215967,7 +216388,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Yes — University-wide winter shutdown (typically Dec 24 - Jan 1) where most offices close and staff are not expected to work. Summer flexibility common but not a formal shutdown."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "f5f630bd17"
+   ],
+   "value": "Mature institution: ~14,500 faculty/staff, ~13,500 students, $5.5B+ annual operating budget. Not a startup; operates as a large, decentralized research university with medical enterprise."
   },
   "sources": [
    {
@@ -216001,14 +216429,40 @@
     "url": "https://www.bing.com/ck/a?!&&p=2d9f5dfea9f17787f53ec8b0efae6ebe9934e6cf8533ecd0c55671c0b8bd3aeeJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0f446203-d0c3-62fc-3d75-759ed14763ba&u=a1aHR0cHM6Ly93d3cueWFsZS5lZHUv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Regularly sponsors H-1B, J-1 (scholar/student), and O-1 visas for faculty, postdocs, research staff, and specialized technical roles. Green card sponsorship common for tenure-track and long-term research positions. Compliance through Office of International Students & Scholars."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "44222295ef",
+    "f5f630bd17"
+   ],
+   "value": "Yale University is a private Ivy League research university founded in 1701, dedicated to education, research, and patient care through its academic schools, libraries, museums, and the Yale New Haven Health System."
+  },
+  "synthesized_evidence_sha": "36def7c9acff7fa2",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "44222295ef"
+   ],
+   "value": "AI/ML research in computer science, statistics, biomedical informatics, engineering, and interdisciplinary centers (e.g., Yale Institute for Network Science, Center for Research Computing). Roles include research scientists, data scientists, ML engineers, research software engineers, and faculty. Compute via HPC clusters and cloud partnerships."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675872,
   "web_search_url": "https://duckduckgo.com/?q=Yale+University+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Yale offers elite global prestige and a mission-driven environment focused on advancing knowledge and human health. AI/data science roles sit within world-class research groups with access to unique datasets (clinical, scientific) and massive compute. Work-life balance is generally respected with academic calendar rhythms, generous holidays, and no 'on-call' product culture, though grant deadlines create periodic intensity. Total compensation for new grads trails top tech firms but includes stro"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5. Strong institutional culture around work-life balance: university-wide holidays (approx. 14-16 days), winter recess, summer flexibility for many roles, no expectation of evening/weekend work for most research staff. Clinical and hospital-adjacent roles may have shift demands."
   }
  },
  "yes energy": {
