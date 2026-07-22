@@ -154,6 +154,15 @@ Before changing the radar, read these in order:
   validated requested work during the active task and must report the exact
   production commit/PR and visible surface. Any other AI agent needs Victor's
   explicit permission before pushing, merging, or deploying.
+- **Generated-state writers:** crawls, enrichment, and the company-dossier
+  backfill may all be active. Never resolve a rejected generated-state push
+  with `git pull --rebase`. A crawl preserves stable-ID discoveries and alert
+  history, resets to fresh production, merges those additions, then rescoring
+  rebuilds derived state/docs. Enrichment/backfill merge only additive AI
+  evidence caches. The dossier backfill uses eight bounded concurrent company
+  tasks with global request budgets and exponential provider circuit breakers;
+  `state/ai_usage.json` is the evidence for actual usage versus configured
+  quota.
 - **Notification cadence:** individual alert issues are silent tracking
   surfaces. `alert-batch.yml` sends up to 15 unsent roles every four hours,
   ranked by score and recency, as the normal alert email. It records delivered IDs in
