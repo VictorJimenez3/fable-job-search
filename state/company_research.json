@@ -10720,7 +10720,7 @@
    "value": "Tier 1 (Elite). Amazon is a pioneer in production AI and cloud infrastructure globally, rivaling Google, Meta, and Microsoft in AI talent branding."
   },
   "aliases": [],
-  "attempts": 12,
+  "attempts": 13,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -10770,7 +10770,7 @@
    "source_ids": [],
    "value": "Amazon interviews emphasize its Leadership Principles with behavioral questions, plus technical screening covering data structures, system design, algorithms, and coding proficiency. Storytelling about ownership, bias for action, and customer obsession is crucial. For AI and data science roles, expect deep dives into machine learning theory, statistical analysis, and deployment experience."
   },
-  "last_attempt_at": 1784709553,
+  "last_attempt_at": 1784709719,
   "last_evidence_at": 1784636762,
   "locations": {
    "confidence": "high",
@@ -39974,40 +39974,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 1–2 (top-quartile for applied ML in life sciences; publishes in Nature/Cell, presents at ASCO/AACR, collaborates with top academic centers)."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "ff9b70487c",
+    "ae5a7070b6"
+   ],
+   "value": "Fee-for-service clinical lab testing reimbursed by insurance/Medicare, plus biopharma subscription and data licensing revenue from de-identified molecular datasets."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, scientifically rigorous, interdisciplinary (wet-lab + dry-lab + clinical). Engineering culture values reproducibility and documentation. Less ‘bro-grammer’, more ‘publish-or-perish’ meets ‘ship-to-clinic’."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "ae5a7070b6"
+   ],
+   "value": "Oncologists and health systems ordering tumor profiling, biopharma companies for biomarker-driven drug development, and payers/insurers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $130k–$160k base + 10–15% target bonus + RSU grant ($40k–$80k over 4 years) for AI/ML/data science roles in TX/AZ; top of band for PhDs with publications."
   },
   "evidence_sha": "2910b6b9172c74fa",
+  "generated_at": 1784709719,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ae5a7070b6"
+   ],
+   "value": "Precision oncology / molecular diagnostics / health tech / AI-driven life sciences."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical screens on ML for genomics (variant calling, biomarker classification), production-grade bioinformatics pipelines, and cloud data engineering. Prepare for behavioral questions on cross-functional collaboration with wet-lab scientists and clinical teams, and be ready to discuss how you balance speed with regulatory/compliance constraints."
   },
-  "last_attempt_at": 1784709553,
+  "last_attempt_at": 1784709719,
   "last_evidence_at": 1784693223,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "ae5a7070b6"
+   ],
+   "value": "Headquarters: Irving, TX (Dallas metro). Major labs in Phoenix, AZ and Irving, TX. Remote/hybrid roles common for data science and engineering."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "ae5a7070b6"
+   ],
+   "value": "To improve patient outcomes through precision oncology by combining comprehensive molecular profiling with AI and machine learning."
+  },
   "name": "Caris",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but regulated — sprint cycles for model development, but release gates tied to CLIA/CAP validation and clinical utility studies. Not a ‘move fast and break things’ culture; more ‘move fast with evidence’."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "ae5a7070b6"
+   ],
+   "value": "Molecular profiling assays (MI GPS, MI Tumor Seek), AI/analytics platform (Caris Precision Oncology Alliance), clinical trial matching, and biopharma data partnerships."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10 company holidays; unlimited sick time; no public policy confirming mandatory shutdowns."
   },
+  "refresh_after": 1789893719,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -40017,7 +40070,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns publicly documented; some teams observe informal year-end slowdown."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Late-stage private / pre-IPO (~3,000–5,000 employees); valued ~$7–8B in last known funding rounds."
   },
   "sources": [
    {
@@ -40051,14 +40109,40 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors H-1B and green cards for specialized AI/bioinformatics roles; new-grad sponsorship likely on a case-by-case basis."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "ff9b70487c",
+    "ae5a7070b6"
+   ],
+   "value": "Caris Life Sciences is a precision oncology company that provides molecular profiling and AI-driven analytics to guide cancer treatment decisions. It generates revenue by selling clinical laboratory testing services (including genomic, transcriptomic, and proteomic assays) and associated data/analytics to healthcare providers, biopharma partners, and payers."
+  },
+  "synthesized_evidence_sha": "2910b6b9172c74fa",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "ae5a7070b6"
+   ],
+   "value": "Bioinformatics pipelines, ML models for biomarker discovery, clinical-grade NGS data processing, cloud infrastructure (AWS/Azure), and full-stack platforms for clinician/pharma portals."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784693223,
   "web_search_url": "https://duckduckgo.com/?q=Caris+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Caris sits at the intersection of high-impact clinical AI and large-scale molecular data, offering elite technical prestige and competitive new-grad compensation in a mission-driven precision oncology setting. The company’s rapid growth and biopharma partnerships signal a fast-paced, innovative culture, while its clinical laboratory roots impose regulatory discipline that can moderate pure tech-speed chaos."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — core hours expectations with on-call rotations for production pipelines; leadership publicly emphasizes sustainable pace, but crunch periods occur around assay launches and regulatory submissions."
   }
  },
  "carnegie mellon university": {
@@ -63484,7 +63568,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 9,
+  "attempts": 10,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -63502,7 +63586,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784709553,
+  "last_attempt_at": 1784709719,
   "last_evidence_at": 1784680412,
   "name": "Dow Jones",
   "pace_of_work": {
@@ -70773,7 +70857,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 23,
+  "attempts": 24,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -70791,7 +70875,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784693796,
+  "last_attempt_at": 1784709719,
   "last_evidence_at": 1784676545,
   "name": "Esri",
   "pace_of_work": {
@@ -104938,7 +105022,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 15,
+  "attempts": 16,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -104956,7 +105040,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784693796,
+  "last_attempt_at": 1784709719,
   "last_evidence_at": 1784674043,
   "name": "International Monetary Fund",
   "pace_of_work": {
@@ -131317,7 +131401,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 9,
+  "attempts": 10,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -131335,7 +131419,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784709553,
+  "last_attempt_at": 1784709719,
   "last_evidence_at": 1784693223,
   "name": "Micron Technology",
   "pace_of_work": {
@@ -147423,7 +147507,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -147441,7 +147525,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784709553,
+  "last_attempt_at": 1784709719,
   "last_evidence_at": 1784701765,
   "name": "Omnicom",
   "pace_of_work": {
@@ -229578,7 +229662,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 13,
+  "attempts": 14,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -229596,7 +229680,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784693034,
+  "last_attempt_at": 1784709719,
   "last_evidence_at": 1784674276,
   "name": "Zapier",
   "pace_of_work": {
