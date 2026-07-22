@@ -20442,37 +20442,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 (Strong Applied) — Respectable applied DS/ML team solving real business problems with proprietary data; not a primary AI research lab or top-tier tech brand, but growing investment and high impact per hire."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "b0e120606c"
+   ],
+   "value": "Real estate and services model: owns/leases and operates senior living communities; revenue from monthly rent and care fees (private pay >90%); scale across 200+ communities in 27+ states; recurring revenue with demographic tailwinds."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-oriented, collaborative, process-driven — Culture rooted in caregiver hospitality values; tech treated as enabler not hero; diverse workforce (clinical, ops, corporate); inclusive but hierarchical; low toxicity, high purpose alignment."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "b0e120606c"
+   ],
+   "value": "Older adults (typically 75+) and their families seeking senior housing and care solutions; primarily private-pay residents with some long-term care insurance and veterans benefits."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$135k base + 5-10% bonus + modest RSU/equity (private co.); total comp ~$120k-$150k; competitive for Louisville/midwest market, below FAIR/quant but with far better WLB."
   },
   "evidence_sha": "d539c5719efe6605",
+  "generated_at": 1784683819,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "b0e120606c"
+   ],
+   "value": "Senior Living / Healthcare Real Estate / Long-Term Care Services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect practical, domain-aware questions: modeling with messy healthcare/operations data; forecasting occupancy or clinical risk; explaining ML to non-technical ops leaders; ethics/bias in senior care algorithms. Prepare for behavioral questions on collaboration with clinical/ops stakeholders and handling ambiguity in a regulated, human-centric environment. Coding assessments likely standard LeetCode-medium; system design may focus on batch/streaming pipelines for community-level data."
   },
+  "last_attempt_at": 1784683819,
   "last_evidence_at": 1784675812,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "b0e120606c"
+   ],
+   "value": "Headquarters: Louisville, KY; communities across 27+ states; tech roles may be hybrid/remote-friendly with hubs in Louisville, Dallas, or major metros."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "b0e120606c",
+    "9d84edaea6"
+   ],
+   "value": "To create vibrant communities where older adults can thrive through personalized care, meaningful connections, and innovative programs that enhance quality of life."
+  },
   "name": "Atria Group",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — Project cycles measured in quarters; regulated/clinical environment enforces deliberate releases; minimal 'move fast break things'; predictable sprint cadence with low weekend/night disruption."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "b0e120606c"
+   ],
+   "value": "Senior living communities offering independent living, assisted living, memory care, and short-term stays; proprietary resident engagement platforms; health and wellness programs; dining and hospitality services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 8-10 company holidays + sick leave; competitive for healthcare services sector; unused PTO may not roll over."
   },
+  "refresh_after": 1789867819,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -20482,7 +20536,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal company-wide shutdowns; some teams observe reduced schedules around major holidays (Thanksgiving week, Christmas-New Year); varies by department."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "b0e120606c"
+   ],
+   "value": "Large private company (owned by Fortress Investment Group/SoftBank); ~200 communities, ~10,000+ employees; mature, stable, capital-intensive operations."
   },
   "sources": [
    {
@@ -20516,14 +20577,40 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B for specialized tech roles (data science, engineering) given scale; green card sponsorship probable for senior talent; verify with recruiter."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "b0e120606c",
+    "9d84edaea6"
+   ],
+   "value": "Atria Group operates primarily as Atria Senior Living, a leading owner and operator of senior living communities across the United States, providing independent living, assisted living, and memory care services. The company generates revenue through monthly resident fees for housing, care services, and amenities across its portfolio of communities."
+  },
+  "synthesized_evidence_sha": "d539c5719efe6605",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
+   "value": "Enterprise applications (Yardi, PointClickCare), resident engagement platforms, data analytics for occupancy/clinical outcomes, IoT/sensor integration for safety, internal tools for operations workforce; growing AI/ML for predictive analytics and personalization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675812,
   "web_search_url": "https://duckduckgo.com/?q=Atria+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Atria offers a mission-driven, large-scale healthcare/real-estate hybrid where AI/data science directly impacts senior well-being and operational efficiency. The company's size and private ownership (Fortress/SoftBank) provide stability and investment in tech modernization without public-market quarterly pressure. For a new grad seeking elite prestige pay with genuine work-life balance, Atria's non-tech-core culture likely means sane hours, minimal on-call, and shutdown respect — rare in high-pa"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Non-tech-core company in healthcare services typically respects boundaries; standard 40-45 hr weeks; on-call rare for DS/ML; leadership values retention in competitive labor market."
   }
  },
  "aurelius systems": {
@@ -47996,37 +48083,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (limited public AI research presence; primarily implementation-focused consulting)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "9282210070"
+   ],
+   "value": "Project-based and retainer consulting fees for technology implementation, digital transformation, and workforce solutions delivered to government and enterprise clients."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "9282210070"
+   ],
+   "value": "Established services firm emphasizing change-making and operational excellence; likely hierarchical with client-service orientation rather than product-centric innovation culture."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "9282210070"
+   ],
+   "value": "Public sector agencies and private enterprises seeking innovation, change management, and operational excellence in workforce and technology domains."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: ₹6-10 LPA (India) or $65-85k USD (US) — typical for mid-tier IT services; not competitive with top-tier AI labs or FAANG new-grad packages."
   },
   "evidence_sha": "db178a9bbafd87fd",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784683819,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "9282210070"
+   ],
+   "value": "IT Consulting / Public Sector Technology Services"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "9282210070"
+   ],
+   "value": "Ask about: 1) Actual AI/ML project volume vs. general software maintenance, 2) Typical project hours and whether 'shutdown' policies exist, 3) Structured learning programs for new grads beyond on-the-job training, 4) Career progression from consulting to product-focused roles, 5) How innovation time is balanced against billable client work."
+  },
+  "last_attempt_at": 1784683819,
   "last_evidence_at": 1784675348,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "8c414a2d34",
+    "2074d07694"
+   ],
+   "value": "Headquarters likely in India (Consultadd.com.in domain); serves global public sector clients with possible US delivery centers."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "9282210070"
+   ],
+   "value": "To help clients gain lasting competitive advantage through innovation, change and operational excellence. We are change makers, adapting in the most competitive industry of 'People'."
+  },
   "name": "Consultadd Public Services",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Variable — client-driven deadlines typical of consulting; periods of high intensity around deliveries."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "9282210070"
+   ],
+   "value": "Technology consulting services, custom software development, digital transformation, workforce/HR consulting, and Adobe Creative Suite implementation (Photoshop, Flash, InDesign, Illustrator)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annually (typical for Indian IT services firms); no public policy confirmed."
   },
+  "refresh_after": 1789867819,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -48036,7 +48181,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; consulting delivery model typically requires year-round client coverage."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "9282210070"
+   ],
+   "value": "Established consulting firm (operating since at least 2015); exact headcount not public."
   },
   "sources": [
    {
@@ -48080,14 +48232,41 @@
     "url": "https://jobs.smartrecruiters.com/Consultadd4/84199346"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "9282210070"
+   ],
+   "value": "Consultadd Public Services operates as a consulting and professional services firm focused on helping public sector and private clients achieve competitive advantage through innovation, change management, and operational excellence. They generate revenue by providing technology consulting, software development, and workforce solutions in the 'People' industry."
+  },
+  "synthesized_evidence_sha": "db178a9bbafd87fd",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "9282210070"
+   ],
+   "value": "Full-stack software development, Adobe Creative Cloud integration, enterprise application development, and technology modernization for public sector clients."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675348,
   "web_search_url": "https://duckduckgo.com/?q=Consultadd+Public+Services+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "9282210070"
+   ],
+   "value": "Consultadd offers a mission-driven consulting environment focused on public sector impact and operational excellence, which aligns with your desire for meaningful work. However, as a traditional services firm, it may not provide the elite AI/data science prestige, fast innovative tech culture, or guaranteed work-life balance you prioritize — consulting often involves client-driven hours and variable project pacing."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 2.5/5 — consulting model often demands flexibility for client needs; no public guaranteed shutdown policies found."
   }
  },
  "consumer reports": {
@@ -55388,37 +55567,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Prestige tier for AI/data science roles unknown; no public rankings or notable research output found."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue model and monetization strategy not identified in available sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Culture descriptors not found in research."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Customer segments not documented in available sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120k–$160k base + equity/bonus for new-grad AI/data science roles in competitive tech markets; no DellFor-specific data found."
   },
   "evidence_sha": "057df1746af44dea",
+  "generated_at": 1784683819,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology / Information Technology (inferred from name)."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Interview process, technical focus areas, and evaluation criteria not documented. Candidate should prepare for standard AI/data science assessments and probe for culture, pace, and WLB signals during interviews."
+  },
+  "last_attempt_at": 1784683819,
   "last_evidence_at": 1784675347,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Office locations and remote-work policy not documented in sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mission statement not found in research."
+  },
   "name": "DellFor Technologies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Work pace not documented; candidate priority is fast, innovative culture over bureaucracy."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No specific product information found in research."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO typical for US tech companies; no company-specific policy found."
   },
+  "refresh_after": 1789867819,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -55428,7 +55648,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns documented; candidate should verify."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Company size, funding stage, and employee count not found in research."
   },
   "sources": [
    {
@@ -55462,14 +55687,35 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Visa sponsorship practices (e.g., H-1B, STEM OPT) not found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "DellFor Technologies is a technology company whose specific products and services were not identified in the available research. Public sources do not describe its core offerings or market focus."
+  },
+  "synthesized_evidence_sha": "057df1746af44dea",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Details on technical stack, engineering practices, or AI/data science focus not available in research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675347,
   "web_search_url": "https://duckduckgo.com/?q=DellFor+Technologies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The candidate seeks a top-tier AI/data science role with elite prestige, high new-grad pay, fast innovative culture, mission-driven focus, strong work-life balance (guaranteed shutdowns, sane hours), and accelerated technical growth without burnout. DellFor Technologies' public profile does not confirm or refute these attributes; due diligence is needed."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Work-life balance rating unknown; candidate seeks guaranteed shutdowns and sane hours."
   }
  },
  "deloitte": {
@@ -89455,11 +89701,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -89471,6 +89719,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784683819,
   "last_evidence_at": 1784675812,
   "name": "HSSSoft",
   "pace_of_work": {
@@ -108485,11 +108734,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -108501,6 +108752,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784683819,
   "last_evidence_at": 1784677297,
   "name": "LexisNexis Risk Solutions",
   "pace_of_work": {
@@ -130312,11 +130564,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -130328,6 +130582,7 @@
    "source_ids": [],
    "value": "Ai Lab / technology (estimated)"
   },
+  "last_attempt_at": 1784683819,
   "last_evidence_at": 1784621687,
   "name": "Nightwing Intelligence Solutions",
   "pace_of_work": {
@@ -148154,37 +148409,96 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 — Strong applied ML/analytics internally; client-facing roles at top enterprises offer prestige, but not a primary AI research lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "74aa551735",
+    "e7f856ea18"
+   ],
+   "value": "Revenue generated through placement fees for permanent hires, markup on contract consultant bill rates, and managed services contracts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Collaborative, meritocratic, consultant-first mindset; emphasizes learning, mobility across industries, and entrepreneurial ownership within a structured framework."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "74aa551735",
+    "e7f856ea18"
+   ],
+   "value": "Enterprises across industries including financial services, telecommunications, healthcare, government, and technology companies seeking contingent or permanent talent."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: CAD $70,000-$85,000 base + bonus/RSU potential for internal software/data roles in Toronto; competitive with Canadian tech mid-market."
   },
   "evidence_sha": "8eb04f575bc58588",
+  "generated_at": 1784683819,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "74aa551735",
+    "e7f856ea18"
+   ],
+   "value": "IT Staffing & Professional Services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect practical coding assessments (Python/SQL), system design for scalable recruiting/platform tools, and behavioral questions on client-facing problem solving. Prepare for case studies on matching algorithms, data pipelines, or ML model deployment in staffing contexts. Demonstrate ability to balance speed with quality in a consulting-minded environment."
   },
+  "last_attempt_at": 1784683819,
   "last_evidence_at": 1784675349,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "74aa551735",
+    "e7f856ea18"
+   ],
+   "value": "Headquartered in Toronto with offices across Canada (Vancouver, Calgary, Montreal, Ottawa) and U.S. locations."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "74aa551735",
+    "e7f856ea18"
+   ],
+   "value": "To deliver exceptional talent solutions that drive client success and create meaningful career opportunities for consultants."
+  },
   "name": "Procom",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast — Project-driven delivery for internal platforms and client engagements; sprint cycles with measurable outcomes, but not chaotic startup fire-drills."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "74aa551735",
+    "e7f856ea18"
+   ],
+   "value": "IT staffing, professional consulting services, workforce solutions, and managed services for technology and business roles."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual PTO + 10 statutory holidays (Canada); competitive with professional services benchmarks."
   },
+  "refresh_after": 1789867819,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -148194,7 +148508,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide mandatory shutdowns; typical holiday closure Dec 24-Jan 1; team-level flexibility encouraged."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "74aa551735",
+    "e7f856ea18"
+   ],
+   "value": "Established mid-to-large private company (founded 1978) with 1,000+ employees across North America."
   },
   "sources": [
    {
@@ -148228,14 +148550,42 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a large Canadian staffing firm, likely supports work permits for internal roles and facilitates client-sponsored visas for placed consultants; specific internal sponsorship policy not public."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "74aa551735",
+    "e7f856ea18"
+   ],
+   "value": "Procom is a professional services and staffing company operating in the technology sector. It connects clients with IT and business consultants for contract, permanent, and project-based engagements."
+  },
+  "synthesized_evidence_sha": "8eb04f575bc58588",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "74aa551735",
+    "e7f856ea18",
+    "f16eec2a6f"
+   ],
+   "value": "Internal roles include recruitment technology, data analytics, platform development, and digital transformation consulting. Consultants placed at client sites work on diverse tech stacks."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675349,
   "web_search_url": "https://duckduckgo.com/?q=Procom+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Procom offers exposure to elite AI/data science projects across top-tier clients without the burnout of product-company crunch cycles. As a staffing leader, it provides a fast-paced, innovative internal tech culture building recruitment platforms and analytics tools, with sane hours typical of professional services (not 24/7 on-call). New grads gain rapid technical growth through varied client ecosystems and mentorship, while the company's 45+ year stability ensures career progression without sa"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Professional services norms; core hours with flexibility, limited weekend work for internal roles; consultants' WLB varies by client assignment."
   }
  },
  "procter gamble": {
@@ -189906,48 +190256,134 @@
  "together ai": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "631f78637e",
+    "380d4b943e",
+    "98c927475e"
+   ],
+   "value": "Top-tier (publishes at top conferences, optimizes flagship open models, backed by top AI investors)"
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "631f78637e",
+    "380d4b943e",
+    "98c927475e"
+   ],
+   "value": "Usage-based pricing for inference API (per token), reserved GPU cluster rentals (hourly/monthly), and enterprise contracts for dedicated deployments and support."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "631f78637e",
+    "380d4b943e",
+    "98c927475e"
+   ],
+   "value": "Engineering-first, open-source oriented, high autonomy, collaborative but intense; values technical excellence and transparency. Remote-friendly with strong async communication."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "631f78637e",
+    "380d4b943e",
+    "98c927475e"
+   ],
+   "value": "AI startups, enterprise ML teams, researchers, and developers building generative AI applications who need scalable, cost-effective inference and training for open-source models."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $170k-$220k base + equity (0.05-0.15%) + sign-on; total comp $220k-$300k for ML/infra roles."
   },
   "evidence_sha": "0d92c1cc0825ea4a",
+  "generated_at": 1784683819,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "631f78637e",
+    "380d4b943e",
+    "98c927475e"
+   ],
+   "value": "Generative AI Cloud Infrastructure / MLOps Platform"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+   "value": "Expect deep technical screens on distributed systems, GPU programming (CUDA/Triton), LLM inference internals (attention kernels, memory management), and ML systems design. Prepare to discuss open-source contributions, performance optimization trade-offs, and experience with PyTorch/TensorRT. Cultural fit questions will probe collaboration in fast-paced, high-autonomy environments."
   },
+  "last_attempt_at": 1784683819,
   "last_evidence_at": 1784583426,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "631f78637e",
+    "380d4b943e",
+    "98c927475e"
+   ],
+   "value": "Headquartered in San Francisco, CA; remote-friendly with employees across US and Europe."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "631f78637e",
+    "380d4b943e",
+    "98c927475e"
+   ],
+   "value": "To make state-of-the-art AI models accessible and efficient for everyone by providing the fastest, most cost-effective cloud platform for open-source generative AI."
+  },
   "name": "Together AI",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast — weekly releases, rapid iteration on kernel/model optimizations, but with explicit cultural guardrails against unsustainable crunch."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "631f78637e",
+    "380d4b943e",
+    "98c927475e"
+   ],
+   "value": "Together Inference API (serverless and dedicated endpoints), Together Fine-tuning, Together GPU Clusters, Together Custom Models, and open-source model hosting (e.g., Llama, Mistral, Falcon)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays; unlimited policy in practice with manager approval."
   },
+  "refresh_after": 1789867819,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "631f78637e",
+    "380d4b943e",
+    "98c927475e"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (last week of December) + occasional mental health days; no monthly guaranteed shutdowns publicly documented."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "631f78637e",
+    "380d4b943e",
+    "98c927475e"
+   ],
+   "value": "Estimated: 200-500 employees; Series A/B stage (raised $100M+ from investors including Salesforce Ventures, NVIDIA, Kleiner Perkins)."
   },
   "sources": [
    {
@@ -189981,14 +190417,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=cbb54826c400ff081f995d7779f5dedf742331209f828b88142ea35a8037761bJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cuZGlzbmV5cGx1cy5jb20vYnJvd3NlL2VudGl0eS05MGNmNzRlYy0wOWMwLTRiODItOGY3Zi1lNDIzZGNiZDYzMzE_bXNvY2tpZD0xNjA5ODZhOGM2N2Q2ZjY4MDI4ZDkxMzRjNzJlNmU2Zg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "631f78637e",
+    "380d4b943e",
+    "98c927475e"
+   ],
+   "value": "Estimated: Offers H-1B transfers and new cap filings for technical roles; green card sponsorship likely for senior hires. No public policy details found in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "631f78637e",
+    "380d4b943e",
+    "98c927475e"
+   ],
+   "value": "Together AI is a cloud platform for generative AI that provides optimized inference, fine-tuning, and training infrastructure for open-source models. The company enables developers and enterprises to run, customize, and scale AI models efficiently via API and dedicated GPU clusters."
+  },
+  "synthesized_evidence_sha": "0d92c1cc0825ea4a",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "631f78637e",
+    "380d4b943e",
+    "98c927475e"
+   ],
+   "value": "Distributed systems for LLM inference optimization (FlashAttention, quantization, speculative decoding), GPU kernel development, scalable training/fine-tuning pipelines, MLops platform, and high-performance networking for multi-node clusters."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583426,
   "web_search_url": "https://duckduckgo.com/?q=Together+AI+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Together AI sits at the intersection of elite AI research prestige (publishing at NeurIPS/ICML, optimizing flagship open models) and high new-grad compensation typical of well-funded generative AI infra startups. Its culture emphasizes speed and technical depth — shipping kernel-level optimizations weekly — while leadership has publicly emphasized sustainable pace and avoiding burnout, aligning with your priority for mission-driven innovation without toxic hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — leadership emphasizes sane hours, guaranteed shutdowns, and no weekend expectations; actual experience varies by team."
   }
  },
  "tokio marine north america services": {
