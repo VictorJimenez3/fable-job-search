@@ -6181,37 +6181,92 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "316ec93304"
+   ],
+   "value": "Akamai makes money by charging customers for bandwidth usage and added security or compute services on its global edge platform. Revenue is recurring, based on contracts where clients pay for traffic delivery, cloud security subscriptions, and compute cycles."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "bd7ef18b6d"
+   ],
+   "value": "The culture is technically deep, collaborative, and mission-oriented around keeping the internet running. The environment is described as team-focused, transparent, and inclusive, with a healthy respect for schedule and time away from work supported by family-friendly benefits and mental health resources."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "316ec93304"
+   ],
+   "value": "Akamai serves many of the world's largest enterprises, including major media companies, financial institutions, e-commerce giants, and gaming firms. It claims to serve multiple segments ranging from Fortune 500 enterprises to web-native startups needing global distribution."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: New grad technology roles in Cambridge with an AI/Data Science focus generally command a total compensation package in the range of $130,000 to $180,000+, consisting of base salary, a performance-linked bonus, and an annual RSU grant with a standard four-year vesting schedule."
   },
   "evidence_sha": "fefbfa94aa4e4dc6",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784681178,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784681086,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "316ec93304"
+   ],
+   "value": "Internet Infrastructure, Cloud Computing, and Cybersecurity"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784681178,
   "last_evidence_at": 1784674344,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "bd7ef18b6d",
+    "316ec93304"
+   ],
+   "value": "Global headquarters in Cambridge, Massachusetts, with major offices in Bangalore, Israel, and Poland, and smaller engineering hubs worldwide. The referenced new grad software engineering role is based in Cambridge, MA."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "bd7ef18b6d",
+    "316ec93304"
+   ],
+   "value": "Akamai's mission is to power and protect life online, so that billions of people can live, work, and connect without friction. It emphasizes making the internet fast, reliable, and secure for users everywhere."
+  },
   "name": "Akamai Technologies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: The pace is generally fast by engineering standards but sustainable; being a mature public company means fewer all-night crunches and more emphasis on reliability and code quality compared to a early-stage startup. Teams move deliberately when managing global infrastructure that cannot fail."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "bd7ef18b6d",
+    "316ec93304"
+   ],
+   "value": "Akamai provides content delivery network (CDN) services, web and API security solutions, DDoS protection, and edge computing capabilities. Its expanding products include cloud infrastructure for building, securing, and scaling AI-native applications."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: The vacation policy is a traditional PTO bank of 15-20 days per year for new hires, alongside company-designated holidays and sick time."
   },
+  "refresh_after": 1789865178,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -6221,7 +6276,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Akamai observes a wide range of official company holidays and often has a reduced-hours or shutdown week late in the year. This creates guaranteed niche periods of company-wide disconnection."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "316ec93304",
+    "42315a3ef4"
+   ],
+   "value": "Akamai is a large, mature public company with over 10,000 employees and roughly $4 billion in annual revenue. It is well past the startup stage but operates through a period of aggressive expansion into cloud computing and AI services."
   },
   "sources": [
    {
@@ -6285,14 +6348,43 @@
     "url": "https://fa-extu-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/2668"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "bd7ef18b6d",
+    "42315a3ef4"
+   ],
+   "value": "Akamai Technologies powers and protects online experiences by running the world’s largest edge delivery and cloud security platform. It ensures websites, apps, and media load fast and stay secure from cyberattacks. The company increasingly focuses on helping customers deploy, secure, and scale AI-driven applications on its massively distributed network."
+  },
+  "synthesized_evidence_sha": "fefbfa94aa4e4dc6",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "bd7ef18b6d"
+   ],
+   "value": "A software engineer works on massively distributed systems handling enormous global traffic volumes. For an AI-focused role, the work involves enabling customers to build, secure, and scale AI-native applications on the company's edge platform, solving complex latency, security, and computational challenges."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674344,
   "web_search_url": "https://duckduckgo.com/?q=Akamai+Technologies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "bd7ef18b6d",
+    "316ec93304"
+   ],
+   "value": "Akamai is a publicly traded tech leader with high prestige in internet infrastructure, offering competitive new grad pay while helping embed AI into the fabric of the web. The company culture is known for a balanced, mature engineering environment without the burnout pace of a hyper-growth startup, and it respects personal time through defined PTO and shutdowns to support sustainability, not slog."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4 out of 5. Employees generally report very reasonable working hours with a strong emphasis on actual work-life balance, utilizing formal PTO and wellness days rather than just lip service."
   }
  },
  "akina inc": {
@@ -26767,40 +26859,82 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong applied AI/ML in risk, operations, and client analytics with massive proprietary financial datasets; publishes at top conferences but not a primary AI research lab."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fee-based revenue from assets under custody/administration (AUC/AUA) and assets under management (AUM), plus net interest revenue from client deposit balances; low credit risk, high recurring revenue tied to market levels and volumes."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, collaborative, engineering-led in tech org; strong emphasis on compliance/ethics; hierarchical but with growing agile/product culture; diverse global workforce; low tolerance for toxicity."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Institutional investors (pension funds, sovereign wealth funds, insurance companies), asset managers, corporations, financial intermediaries, and high-net-worth individuals/families globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $115k–$135k base + 10–15% target bonus + RSU (~$20k–$40k/yr vesting) = ~$150k–$190k total Year 1; higher in NYC/SF hubs."
   },
   "evidence_sha": "d54b9b5277916708",
+  "generated_at": 1784681178,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d5962c1feb"
+   ],
+   "value": "Financial Services / Custody Banking / Asset Servicing / FinTech"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect system design (scalable data pipelines, low-latency systems), ML fundamentals (risk modeling, anomaly detection), SQL/data modeling, and behavioral questions on stakeholder management in regulated environments. Prepare for domain questions on securities lifecycle, settlement, or fund accounting."
   },
-  "last_attempt_at": 1784678371,
+  "last_attempt_at": 1784681178,
   "last_evidence_at": 1784673558,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d5962c1feb"
+   ],
+   "value": "Headquartered in New York, NY; major hubs in Pittsburgh, London, Dublin, Pune, Chennai, Singapore, Hong Kong; offices in 35+ countries."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To help clients manage and service their financial assets across the investment lifecycle, powering capital markets through trusted custody, data, and technology solutions."
+  },
   "name": "BNY",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — structured sprints with regulatory gates; faster in innovation labs/cloud teams, slower in core platform migrations requiring change-control approvals."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Asset servicing (custody, fund administration, securities lending), investment management, wealth management, issuer services (corporate trust, depositary receipts), clearance and collateral management, and technology/data analytics platforms for institutional clients."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20–25 days PTO + 10–12 company holidays (US); accrual-based; unused days may carry over up to a cap; volunteer time off offered."
   },
+  "refresh_after": 1789865178,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -26810,7 +26944,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide mandatory shutdowns; some teams observe reduced coverage between Christmas/New Year; business continuity required for custody operations year-round."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f8de82da9a"
+   ],
+   "value": "Large-cap public company (NYSE: BK); ~$50T+ AUC/AUA, ~$2T+ AUM; ~50,000 employees globally; founded 1784, modern entity from 2007 merger."
   },
   "sources": [
    {
@@ -26844,14 +26985,37 @@
     "url": "https://www.bing.com/ck/a?!&&p=02cf3cac18f9c0152c6878b8a20592555104f54b677608ca691c841d741aea63JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0988a76f-e90c-65d2-24f0-b0f2e84e64a2&u=a1aHR0cHM6Ly93d3cuYm55LmNvbS9jb3Jwb3JhdGUvZ2xvYmFsL2VuLmh0bWw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active H-1B sponsor for technology and quantitative roles; supports STEM OPT extensions; green card sponsorship for experienced hires; university recruiting targets top CS/DS programs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d5962c1feb"
+   ],
+   "value": "BNY (Bank of New York Mellon) is a global financial services company and the world's largest custodian bank, providing asset servicing, investment management, and wealth management to institutions and high-net-worth individuals."
+  },
+  "synthesized_evidence_sha": "d54b9b5277916708",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large-scale data engineering, cloud migration (AWS/Azure), AI/ML for risk analytics and client insights, distributed systems for settlement/clearing, cybersecurity, API platforms, and legacy modernization (mainframe to cloud)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673558,
   "web_search_url": "https://duckduckgo.com/?q=BNY+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "BNY offers elite prestige as the world's top custody bank with massive data assets, competitive new-grad pay, and a stated focus on tech modernization — but as a regulated financial institution, it balances innovation with compliance rigor, meaning pace and bureaucracy vary by team. Work-life boundaries are generally respected in tech roles compared to front-office finance, though on-call rotations exist for critical platforms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.8/5 — Generally reasonable hours (40–50/wk) for tech roles; protected weekends in many teams; on-call rotations for production systems; quarterly crunch around regulatory reporting."
   }
  },
  "boeing": {
@@ -62253,37 +62417,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong applied AI reputation in insurance/healthcare analytics; publishes at top conferences (KDD, NeurIPS workshops) and builds proprietary platforms, but not a primary AI research lab like FAIR/DeepMind."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "05a7bb9556",
+    "cd87962120"
+   ],
+   "value": "Project-based and managed-services contracts billed on time-and-materials, fixed-price, or outcome-based models; revenue comes from multi-year digital transformation engagements, analytics platform subscriptions, and consulting fees."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first within a consulting wrapper: technical depth respected, flat hierarchy in delivery pods, strong peer learning (guilds, hackathons), but client-facing polish expected. Diversity & inclusion metrics published annually."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "05a7bb9556",
+    "cd87962120"
+   ],
+   "value": "Fortune 500 and Global 1000 companies primarily in insurance, healthcare, banking & financial services, utilities, retail, and technology sectors seeking data-driven operational improvement."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k–$130k base + $10k–$20k sign-on + RSUs ($15k–$25k/yr vesting) for Data Scientist / ML Engineer roles in US metros. Total comp ~$135k–$175k Year 1."
   },
   "evidence_sha": "76c35b4160327c41",
+  "generated_at": 1784681178,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "05a7bb9556",
+    "cd87962120"
+   ],
+   "value": "Professional Services / Data Analytics & AI Consulting"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect case-style problem solving with messy client data, ML system design for regulated environments, and behavioral questions on stakeholder management. Prepare to discuss end-to-end model lifecycle (not just modeling), cloud cost optimization, and how you balance technical rigor with delivery deadlines. Ask about 'utilization guardrails' and 'innovation time allocation' to gauge WLB reality."
   },
+  "last_attempt_at": 1784681178,
   "last_evidence_at": 1784673558,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "05a7bb9556",
+    "cd87962120"
+   ],
+   "value": "Headquartered in New York, NY; major delivery centers in London, Dallas, Bangalore, Mumbai, Pune, Chennai, Manila, Shanghai, Prague, and remote/hybrid options across US, UK, EU, APAC."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "05a7bb9556"
+   ],
+   "value": "To help clients unlock growth and improve outcomes through the power of data, analytics, AI, and deep domain knowledge — delivering measurable impact at scale."
+  },
   "name": "EXL",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-to-fast project cadence (2–6 week sprints) with defined utilization targets (~75–85% billable); slower than pure tech product companies, faster than traditional IT consulting. Peak periods around client go-lives."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "05a7bb9556",
+    "cd87962120"
+   ],
+   "value": "Data analytics, AI/ML solutions, digital transformation services, cloud migration, customer experience platforms, risk & compliance analytics, and industry-specific solutions for insurance, healthcare, banking & financial services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10–12 company holidays (US); accrues monthly, carryover limited. Varies by country/tenure."
   },
+  "refresh_after": 1789865178,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -62293,7 +62515,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide mandatory shutdowns; some business units observe 'low utilization weeks' around year-end. Team-level flexibility encouraged."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "05a7bb9556",
+    "cd87962120"
+   ],
+   "value": "Publicly traded (NASDAQ: EXLS), ~45,000+ employees globally, $1.5B+ annual revenue, mature growth-stage professional services firm with 20+ year history."
   },
   "sources": [
    {
@@ -62327,14 +62557,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=e6f1f00f8bfc01be72990a32fa10dd3852e22aba3135c7706a92b2a0aa6b8661JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0988a76f-e90c-65d2-24f0-b0f2e84e64a2&u=a1aHR0cHM6Ly93d3cuZXhsc2VydmljZS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B visas and green cards for technical roles (data science, ML engineering, analytics); large global workforce with established immigration support processes."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "05a7bb9556",
+    "cd87962120"
+   ],
+   "value": "EXL is a global analytics and digital solutions company that partners with enterprises to improve business outcomes through data, AI, and domain expertise. It operates as a professional services firm delivering data-led transformation across insurance, healthcare, banking, and other industries."
+  },
+  "synthesized_evidence_sha": "76c35b4160327c41",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "05a7bb9556",
+    "cd87962120"
+   ],
+   "value": "Building production ML pipelines, NLP/LLM applications, cloud data platforms (AWS/Azure/GCP), MLOps, advanced analytics products, and scalable data engineering for enterprise clients — mix of client-facing delivery and internal platform development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673558,
   "web_search_url": "https://duckduckgo.com/?q=EXL+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "EXL offers a rare blend: elite AI/data science work at Fortune 500 scale with a professional-services pace that is more predictable than hyperscaler crunch cycles. You get exposure to massive, real-world datasets across regulated industries, a clear technical career ladder (Analyst → Senior → Lead → Principal), and a culture that explicitly tracks utilization targets to protect personal time — aligning with your priorities for prestige, growth, and sustainable hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.8/5 — Company tracks 'utilization caps' and promotes 'protected weekends'; most teams report 45–50 hr weeks average with occasional spikes. Better than Big 4 consulting, variable by client account."
   }
  },
  "expedia group": {
@@ -68109,38 +68366,105 @@
  "freedom technology solutions group": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Tier 3 — Appears on curated new-grad DS job board but roles are applied ML/analytics within GovCon delivery, not core AI research; prestige derives from prime-contract scale, not AI fame."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "77d3cca6c0",
+    "a9ae606bc7"
+   ],
+   "value": "Government contracting (prime contracts) delivering professional IT services — web development, software engineering, application sustainment/modernization — billed via federal contract vehicles (likely T&M, FP, or cost-reimbursement)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "77d3cca6c0",
+    "a9ae606bc7"
+   ],
+   "value": "Professional, mission-focused, engineering-pragmatic; small-to-mid prime-contractor feel — less bureaucracy than Tier-1 integrators, more process than startups. Emphasis on delivery, clearance compliance, and training-domain expertise."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "77d3cca6c0",
+    "a9ae606bc7"
+   ],
+   "value": "U.S. federal government agencies (prime contracts); Government Corporate Management Services (CMS) enterprise; sponsors requiring adult learning/training solutions and classroom support."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k-$105k base (DC metro GovCon new-grad band for software/web roles); no equity; potential for overtime/bonus on T&M contracts."
   },
   "evidence_sha": "01781f78ce7a4089",
+  "generated_at": 1784681178,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "77d3cca6c0",
+    "a9ae606bc7"
+   ],
+   "value": "Government IT Services / Federal Consulting (GovCon)"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "77d3cca6c0",
+    "a9ae606bc7"
+   ],
+   "value": "Expect practical full-stack / DevOps questions (Linux, Docker, CI/CD, deployment troubleshooting), adult-learning / training-domain scenarios, and clearance/citizenship verification. Prepare for behavioral questions on working in dynamic, compliance-heavy environments and supporting classroom/training tech. Ask about specific contract modernisation roadmap, tech-debt ratio, and on-call expectations."
+  },
+  "last_attempt_at": 1784681178,
+  "last_evidence_at": 1784674658,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Likely Washington DC metro area / government corridor (typical for GovCon prime contractors); remote/hybrid possible but not specified in postings."
   },
-  "last_evidence_at": 1784674658,
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "77d3cca6c0",
+    "a9ae606bc7"
+   ],
+   "value": "Support essential services and mission-critical activities across the enterprise through full life-cycle IT services, enabling training readiness and modernizing government corporate applications."
+  },
   "name": "Freedom Technology Solutions Group",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "77d3cca6c0",
+    "a9ae606bc7"
+   ],
+   "value": "Moderate — project-driven with sprint cycles; GovCon compliance & documentation add overhead but prime-contract autonomy avoids subcontractor churn. Estimated: sustainable cadence with occasional surge near delivery milestones."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "77d3cca6c0",
+    "a9ae606bc7"
+   ],
+   "value": "Web-based training and learning management solutions; full life-cycle sustainment, modernization, and transformation of enterprise corporate applications (CMS); media elements and interactive assessments for adult learning; application deployments in Linux/Docker environments."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays (typical GovCon baseline); no public policy found."
   },
+  "refresh_after": 1789865178,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -68150,7 +68474,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; federal holiday schedule observed; project-level downtime between contract years possible."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "77d3cca6c0",
+    "a9ae606bc7"
+   ],
+   "value": "Established government contractor (exact headcount not public); operates prime contracts and posts roles via Greenhouse (freedomconsulting), suggesting structured hiring."
   },
   "sources": [
    {
@@ -68214,14 +68546,48 @@
     "url": "https://job-boards.greenhouse.io/freedomconsulting/jobs/5174198007"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "77d3cca6c0",
+    "a9ae606bc7"
+   ],
+   "value": "Government prime contracts often require U.S. citizenship/clearance eligibility; sponsorship for new grads unlikely for cleared roles, but may exist for unclassified software positions — verify per requisition."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "77d3cca6c0",
+    "a9ae606bc7"
+   ],
+   "value": "Freedom Technology Solutions Group (operating as Freedom Consulting) is a government IT services contractor providing web development, software engineering, and enterprise application modernization for federal agencies, with a focus on training/learning solutions and corporate management systems."
+  },
+  "synthesized_evidence_sha": "01781f78ce7a4089",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "77d3cca6c0",
+    "a9ae606bc7"
+   ],
+   "value": "Full-stack web development (media, interactions, assessments for learning platforms); enterprise Java/.NET/modern stack application sustainment & modernization; Linux/Docker deployment pipelines; CI/CD; training-environment integration; adult-learning UX."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674658,
   "web_search_url": "https://duckduckgo.com/?q=Freedom+Technology+Solutions+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419",
+    "77d3cca6c0",
+    "a9ae606bc7"
+   ],
+   "value": "Offers new-grad AI/data-science adjacent roles (surfaced in 2027 new-grad DS list) on real government prime contracts with modern stacks (Linux/Docker, full life-cycle modernization). Balances mission-driven public-sector impact with structured engineering practices — less bureaucracy than huge integrators, but still GovCon pace and compliance constraints. Good fit if you want meaningful work, clear tech growth, and can accept federal-project rhythms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — Government contracts often enforce 40-hr weeks and limited on-call; however, training-support roles may need occasional after-hours alignment with classroom schedules. No public policy data."
   }
  },
  "freedom technology solutions group llc": {
@@ -74855,7 +75221,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -74873,7 +75239,7 @@
    ],
    "value": "Schools, companies, government agencies"
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -74898,7 +75264,7 @@
    ],
    "value": "Demonstrate passion for Google products like Google Workspace and Chrome; showcase ability to perform financial analysis, budgeting, and strategic planning; highlight innovative approaches to identifying business opportunities and connecting them to sales teams."
   },
-  "last_attempt_at": 1784519570,
+  "last_attempt_at": 1784681178,
   "last_evidence_at": 1784583317,
   "locations": {
    "confidence": "unknown",
@@ -85085,47 +85451,125 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 - Respected in government analytics but not an elite AI research destination; strong applied data science practice."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4743d3588d",
+    "979d10c299",
+    "d809417702"
+   ],
+   "value": "Estimated: Project-based consulting contracts (time-and-materials, fixed-price) with government and commercial clients; technology implementation and managed services. Revenue derived from professional services fees. No financial details available from supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, mission-oriented, process-driven; collaborative but hierarchical; values expertise and compliance; less 'tech startup' vibe, more 'professional services firm'."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4743d3588d",
+    "979d10c299",
+    "d809417702"
+   ],
+   "value": "Estimated: U.S. federal agencies (DOE, EPA, HHS, FEMA), state/local governments, international governments, and commercial clients in energy, health, and infrastructure sectors. No customer details available from supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$105,000 base + modest bonus (5-10%); below top-tier tech but competitive for consulting. No compensation data found in sources."
   },
   "evidence_sha": "47a80bba7cee2b35",
+  "generated_at": 1784681178,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "4743d3588d",
+    "979d10c299",
+    "d809417702"
+   ],
+   "value": "Management consulting / Government technology services"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare for case-style questions on public-sector problems, technical assessments in Python/R/SQL, and behavioral questions about stakeholder management. Emphasize experience with messy real-world data, regulatory constraints, and cross-functional collaboration. Ask about project staffing model, typical hours, and learning budget."
+  },
+  "last_attempt_at": 1784681178,
   "last_evidence_at": 1784605607,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4743d3588d",
+    "979d10c299",
+    "d809417702"
+   ],
+   "value": "Estimated: Headquarters in Reston, VA; offices across U.S. (DC metro, Colorado, California, etc.) and internationally (UK, Canada, India, Brazil). No location details available from supplied sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4743d3588d",
+    "979d10c299",
+    "d809417702"
+   ],
+   "value": "Estimated: To provide evidence-based consulting and technology solutions that improve public outcomes and address complex societal challenges. No mission statement available from supplied sources."
+  },
   "name": "ICF",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to high - Project-driven with deadline cycles; slower than startup pace but faster than pure bureaucracy. Government contracting adds compliance overhead."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4743d3588d",
+    "979d10c299",
+    "d809417702"
+   ],
+   "value": "Estimated: Consulting services in energy, environment, health, disaster management, and digital modernization; technology implementation and data analytics solutions. No product details available from supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays; may increase with tenure. No official policy found in sources."
   },
+  "refresh_after": 1789865178,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
+   "source_ids": [
+    "4743d3588d",
+    "979d10c299",
+    "d809417702"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; some offices may close between Christmas/New Year. No policy found in sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4743d3588d",
+    "979d10c299",
+    "d809417702"
+   ],
+   "value": "Estimated: Large public company (NASDAQ: ICFI) with ~9,000 employees globally, mature stage. No size data available from supplied sources."
   },
   "sources": [
    {
@@ -85159,14 +85603,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=bd7baa42efbdcec31265f1e9b946bd5a7886f5f4ad635173e8de102e41ba782fJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=165ea6bb-a541-6b46-1de7-b126a4346a1d&u=a1aHR0cHM6Ly9jb2FjaGluZ2ZlZGVyYXRpb24ub3JnLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4743d3588d",
+    "979d10c299",
+    "d809417702"
+   ],
+   "value": "Estimated: Likely sponsors H-1B visas for specialized technical roles given size and government contracting; may have restrictions on certain federal contracts requiring U.S. citizenship. No sponsorship details available from supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "4743d3588d",
+    "979d10c299",
+    "d809417702"
+   ],
+   "value": "ICF is a global consulting services and technology solutions firm serving government and commercial clients. The provided sources contain only redirect links with no accessible content about the company's operations."
+  },
+  "synthesized_evidence_sha": "47a80bba7cee2b35",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4743d3588d",
+    "979d10c299",
+    "d809417702"
+   ],
+   "value": "Estimated: Data science, AI/ML, digital transformation, cybersecurity, cloud migration, GIS, statistical modeling, and software development for government missions. No technical details available from supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784605607,
   "web_search_url": "https://duckduckgo.com/?q=ICF+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "ICF offers a mission-driven consulting environment with government-scale impact, but as a large public-sector contractor it likely involves structured processes rather than a fast, innovative tech culture. Work-life balance may be better than pure consulting firms but project deadlines can drive periods of high intensity. Prestige and pay are solid for new grads but not elite-tier compared to top tech companies."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 - Generally reasonable hours (40-50/week) with some crunch periods; government contracts often have defined scopes limiting scope creep."
   }
  },
  "icf international": {
@@ -92924,7 +93401,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -92940,7 +93417,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -92963,7 +93440,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "last_attempt_at": 1784483202,
+  "last_attempt_at": 1784681178,
   "last_evidence_at": 1784645371,
   "locations": {
    "confidence": "high",
@@ -186828,37 +187305,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 Academic: Strong in specific research niches (particularly within flagship campus UW-Madison) but outside the top-tier AI industry prestige bracket (e.g., FAANG, OpenAI)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "1e21141679",
+    "900943321e"
+   ],
+   "value": "Publicly funded higher education supported by a mix of state appropriations, tuition and fees, federal research grants, and auxiliary operations."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, collegial, and stable public-sector environment with heavy emphasis on work-life balance but subject to state funding bureaucracy."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "900943321e"
+   ],
+   "value": "Approximately 161,000 students annually, plus state residents, government agencies, and organizations benefiting from research and outreach."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000 - $95,000 base salary. Note: Tier system not designed to match Big Tech $100k+ new grad offers."
   },
   "evidence_sha": "3e2cbd0210649191",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784681178,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "900943321e"
+   ],
+   "value": "Higher Education / Public Research University"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784681178,
   "last_evidence_at": 1784673558,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "900943321e"
+   ],
+   "value": "Headquartered in Madison, WI, with campuses in Madison, Milwaukee, Green Bay, Kenosha, Platteville, Eau Claire, River Falls, Menomonie, La Crosse, Oshkosh, Stevens Point, Whitewater, and Superior."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "900943321e"
+   ],
+   "value": "To develop human resources, discover and disseminate knowledge, and serve the State of Wisconsin and beyond through teaching, research, and public service."
+  },
   "name": "University of Wisconsin System",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow and deliberate with secure, 9-month or 12-month academic cycle paces predominating."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "1e21141679",
+    "900943321e"
+   ],
+   "value": "Undergraduate and graduate degree programs, academic research, public service, and community engagement across 13 campuses including UW-Madison and UW-Milwaukee."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Approximately 21-30+ combined vacation/sick/personal days annually, aligned with generous public-employee University Staff benefits."
   },
+  "refresh_after": 1789865178,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -186868,7 +187400,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed reduced operations or shutdowns aligned with the academic calendar, including winter break, spring break, and all state/federal holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "900943321e"
+   ],
+   "value": "Large, mature state university system with 13 campuses, approximately 40,000 faculty and staff, and an operating budget in the billions of dollars."
   },
   "sources": [
    {
@@ -186902,14 +187441,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=679612efd0b2ee9c6991b1666c20b9e08b2422e4eeea5704f7984aa658b10791JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0988a76f-e90c-65d2-24f0-b0f2e84e64a2&u=a1aHR0cHM6Ly9ldmVyZXR0LndzdS5lZHUv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1e21141679",
+    "616d5d2741",
+    "900943321e"
+   ],
+   "value": "The University of Wisconsin System is a public higher education institution comprising 13 universities across Wisconsin. It operates as a state-funded academic and research enterprise, generating revenue primarily through state appropriations, tuition, federal research grants, and auxiliary services."
+  },
+  "synthesized_evidence_sha": "3e2cbd0210649191",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673558,
   "web_search_url": "https://duckduckgo.com/?q=University+of+Wisconsin+System+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "900943321e"
+   ],
+   "value": "As a major public research university system, UW offers AI and data science work within a mission-driven, ultra-stable environment with lower burnout risk and exceptionally predictable shutdowns. However, it sits squarely opposite a fast, innovative tech culture and cannot match elite new-grad pay or the prestige tier of top-tier product companies."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Excellent. Strong adherence to standard schedules, extremely limited on-call, university-wide holidays observed."
   }
  },
  "university system of new hampshire": {
