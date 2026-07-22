@@ -68891,7 +68891,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 10,
+  "attempts": 11,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -68909,7 +68909,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784691112,
+  "last_attempt_at": 1784691284,
   "last_evidence_at": 1784676545,
   "name": "Esri",
   "pace_of_work": {
@@ -89131,7 +89131,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -89149,7 +89149,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784691112,
+  "last_attempt_at": 1784691284,
   "last_evidence_at": 1784616151,
   "name": "Handshake",
   "pace_of_work": {
@@ -102297,7 +102297,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -102315,7 +102315,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784691112,
+  "last_attempt_at": 1784691284,
   "last_evidence_at": 1784674043,
   "name": "International Monetary Fund",
   "pace_of_work": {
@@ -124946,40 +124946,80 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 — respected applied AI/ML at scale, but not a primary research hub; publications occur but are not the core engine."
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Revenue comes from company-operated restaurant sales, franchise fees, royalties, and rent from franchisees; heavy emphasis on real estate and franchising."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Large-corp bureaucracy balanced by a recent 'digital transformation' push; collaborative but matrixed; emphasis on 'Scale for Good' social impact; franchisee influence adds unique stakeholder complexity."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Broad consumer base seeking affordable, convenient meals; franchisees who operate restaurants under the brand."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$135k base + 10-15% target bonus + RSU (~$20k-$30k/yr vesting); total comp ~$140k-$180k; varies by hub (Chicago/Dallas vs. satellite)."
   },
   "evidence_sha": "31ba0c0a7f75c37c",
+  "generated_at": 1784691284,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Quick-service restaurant (QSR) / Hospitality / Food service"
   },
-  "last_attempt_at": 1784691112,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect behavioral questions on stakeholder management across franchise/corporate lines, system design for high-throughput/low-latency ordering, ML for demand forecasting or personalization, and cultural fit with a 'bias for action' ethos; prepare for case studies on menu optimization or drive-thru efficiency."
+  },
+  "last_attempt_at": 1784691284,
   "last_evidence_at": 1784677411,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "9f9928dd8d"
+   ],
+   "value": "Global headquarters in Chicago, IL; major tech hubs in Chicago, Dallas, and international offices; supports remote/hybrid for many corporate roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To be the world's best quick-service restaurant experience, focusing on quality, service, cleanliness, and value."
+  },
   "name": "McDonald's",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-to-fast; product cycles tied to marketing calendars and franchise rollouts, with periods of intense delivery before major launches (e.g., loyalty program updates)."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Core products include hamburgers, chicken sandwiches, french fries, breakfast items, beverages, and desserts, delivered via dine-in, drive-thru, and digital ordering channels."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual PTO + 10-12 company holidays; accrual increases with tenure; unlimited not offered."
   },
+  "refresh_after": 1789875284,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -124989,7 +125029,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some teams observe reduced schedules during major holidays (Thanksgiving/Christmas week) but not formal policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mature public company (NYSE: MCD) with ~200,000 corporate employees and >2 million including franchisees; ~$25B annual revenue; global footprint in 100+ countries."
   },
   "sources": [
    {
@@ -125023,14 +125068,35 @@
     "url": "https://jobs.mcdonalds.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Actively sponsors H-1B and other work visas for specialized technical roles; global mobility programs exist for transfers."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: McDonald's is a global fast-food restaurant chain operating through franchised and company-owned locations, serving standardized menus at scale."
+  },
+  "synthesized_evidence_sha": "31ba0c0a7f75c37c",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Technology focuses on digital ordering platforms, mobile app, loyalty programs, kitchen automation, supply chain optimization, and data analytics for personalization and operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677411,
   "web_search_url": "https://duckduckgo.com/?q=McDonald%27s+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "McDonald's offers a massive-scale data and AI playground (millions of daily transactions, global supply chain, digital customer touchpoints) with the resources of a Fortune 50 company, but its tech culture is evolving from legacy IT to product-driven engineering, meaning early-career impact can be high if you navigate the franchise complexity."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — corporate tech roles generally respect 40-45 hr weeks with flexible hybrid schedules; on-call rotations exist for critical platforms but are managed; franchise operations run 24/7 but corporate tech is not on the grill."
   }
  },
  "mcdonald s corporation": {
@@ -138719,11 +138785,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -138735,6 +138803,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784691284,
   "last_evidence_at": 1784677412,
   "name": "North Star Staffing Solutions",
   "pace_of_work": {
@@ -178991,42 +179060,114 @@
  },
  "sierra": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "c92d750ec7",
+    "1d61c2e1c7"
+   ],
+   "value": "Top-tier: Founded by Bret Taylor (ex-Salesforce co-CEO, OpenAI Board Chair); blue-chip financial customers; elite talent density; cutting-edge agent production work."
   },
   "aliases": [],
-  "attempts": 12,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 13,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "1d61c2e1c7",
+    "c92d750ec7"
+   ],
+   "value": "B2B SaaS/enterprise software: sells AI agent platform and implementation services to large financial institutions and insurers."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "0b86e35ac6",
+    "c92d750ec7",
+    "1d61c2e1c7"
+   ],
+   "value": "High-trust, craftsmanship-driven, in-person collaborative culture with stated values of Trust, Customer Obsession, Craftsmanship, Intensity, and Family. Elite technical bar; mission-driven around transforming enterprise CX with AI."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "1d61c2e1c7"
+   ],
+   "value": "Systemically important banks, neobanks, insurers, and vertically integrated financial ecosystems like Rocket Companies; claimed 1 in 3 of world's leading banks use Sierra."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $170k-$220k base + equity (top-of-market for AI/ML new grads given prestige and SF/NY locations); no public data."
   },
   "evidence_sha": "37ac068e064ac762",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784691284,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784691112,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "1d61c2e1c7",
+    "c92d750ec7"
+   ],
+   "value": "Enterprise AI / Conversational AI platforms for financial services and insurance"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "0b86e35ac6",
+    "c92d750ec7",
+    "1d61c2e1c7"
+   ],
+   "value": "Probe for concrete WLB signals: typical weekly hours, on-call expectations, weekend work frequency, and whether 'Family' value translates to protected personal time. Ask about agent evaluation/deployment processes, guardrails for regulated domains, and how 'Intensity' is balanced with sustainable practices. Clarify remote/hybrid flexibility despite 'primarily in-person' stance."
+  },
+  "last_attempt_at": 1784691284,
   "last_evidence_at": 1784677402,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "0b86e35ac6",
+    "c92d750ec7",
+    "1d61c2e1c7"
+   ],
+   "value": "Primarily in-person in San Francisco (HQ); growing offices in Atlanta, New York, London, Paris, Madrid, Munich, Singapore, Tokyo, Sydney."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "0b86e35ac6",
+    "c92d750ec7",
+    "1d61c2e1c7"
+   ],
+   "value": "To empower enterprises with AI agents that transform customer experience, guided by values of Trust, Customer Obsession, Craftsmanship, Intensity, and Family."
+  },
   "name": "Sierra",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "0b86e35ac6",
+    "c92d750ec7",
+    "1d61c2e1c7"
+   ],
+   "value": "Estimated: Fast-paced ('Intensity' is a core value); enterprise delivery deadlines plus rapid AI iteration; likely high but not chaotic."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "c92d750ec7",
+    "1d61c2e1c7"
+   ],
+   "value": "AI agents for customer experience automation in financial services and insurance; conversational AI platform for enterprise deployment."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + US holidays; no public policy disclosed."
   },
+  "refresh_after": 1789875284,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -179036,7 +179177,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns publicly documented; 'Family' value may allow team-level flexibility."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 200-500 employees; well-funded startup (Series B/C stage) with high-profile leadership and blue-chip customers."
   },
   "sources": [
    {
@@ -179100,14 +179246,50 @@
     "url": "https://jobs.ashbyhq.com/Sierra/ab98160c-9918-483c-af74-310535448972"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and green cards given global offices and elite talent needs; no public policy disclosed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "c92d750ec7",
+    "1d61c2e1c7",
+    "0b86e35ac6"
+   ],
+   "value": "Sierra is an AI agent platform company founded by Bret Taylor (OpenAI Board Chair) that builds conversational AI agents for enterprise customers, primarily in financial services and insurance. The company sells AI-powered customer experience solutions to major banks, insurers, and financial institutions."
+  },
+  "synthesized_evidence_sha": "37ac068e064ac762",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "c92d750ec7",
+    "1d61c2e1c7"
+   ],
+   "value": "Building production LLM-powered agents for high-stakes enterprise domains; involves RAG, tool use, evaluation frameworks, latency optimization, and strict compliance/guardrails for regulated industries."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677402,
   "web_search_url": "https://duckduckgo.com/?q=Sierra+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "0b86e35ac6",
+    "c92d750ec7",
+    "1d61c2e1c7"
+   ],
+   "value": "Sierra offers a top-tier AI/agent engineering role at a prestigious, well-funded startup led by Bret Taylor (OpenAI Board Chair) with elite customer traction (1/3 of leading banks). The culture emphasizes craftsmanship and intensity but also 'Family' as a core value, suggesting potential for sustainable pace. However, 'Intensity' as a stated value and primarily in-person expectations may conflict with guaranteed shutdowns and strong WLB."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "0b86e35ac6",
+    "c92d750ec7",
+    "1d61c2e1c7"
+   ],
+   "value": "Estimated: 3/5 – 'Intensity' value and in-person culture suggest demanding periods; 'Family' value may mitigate but no public policies on shutdowns/hours."
   }
  },
  "sierra nevada corporation": {
@@ -191693,11 +191875,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -191709,6 +191893,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784691284,
   "last_evidence_at": 1784677412,
   "name": "Synergy ECP",
   "pace_of_work": {
@@ -225450,7 +225635,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -225468,7 +225653,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784691112,
+  "last_attempt_at": 1784691284,
   "last_evidence_at": 1784674276,
   "name": "Zapier",
   "pace_of_work": {
