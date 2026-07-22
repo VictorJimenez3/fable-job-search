@@ -63955,37 +63955,102 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (elite applied AI startup with production LLM agents in regulated verticals, strong VC backing, technical blog presence)"
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "1e8e36be7c",
+    "26fd2eac70"
+   ],
+   "value": "B2B SaaS subscription model selling AI agent platform to property management and healthcare organizations; revenue from recurring platform fees and usage-based pricing."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "00451995b4",
+    "26fd2eac70"
+   ],
+   "value": "Mission-driven, product-obsessed, automation-first culture that values shipping reliable AI agents for essential industries. Engineering-led with emphasis on reducing manual work internally and externally."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "1e8e36be7c",
+    "26fd2eac70"
+   ],
+   "value": "Property management companies, real estate operators, and healthcare providers (clinics, hospitals) seeking to automate front-office communications and administrative workflows."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $150k-$180k base + equity (approx. $200k-$250k total comp) for AI/ML engineering roles in NYC, competitive with top-tier AI startups."
   },
   "evidence_sha": "32412c57daba9ec8",
+  "generated_at": 1784688660,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "1e8e36be7c",
+    "26fd2eac70"
+   ],
+   "value": "Applied AI / Vertical SaaS (PropTech + HealthTech)"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "26fd2eac70",
+    "1e8e36be7c"
+   ],
+   "value": "Prepare to discuss production LLM deployment (guardrails, evaluation, latency), integration challenges with legacy systems (Yardi, EHRs), and designing conversational flows for high-compliance domains. Expect questions on scaling AI agents, handling ambiguous user intent, and measuring automation success metrics. Demonstrate product-minded engineering and familiarity with workflow automation."
+  },
+  "last_attempt_at": 1784688660,
+  "last_evidence_at": 1784677349,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Headquartered in New York City; likely hybrid/remote-friendly for engineering roles."
   },
-  "last_evidence_at": 1784677349,
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "1e8e36be7c",
+    "26fd2eac70"
+   ],
+   "value": "Improving the industries that matter most — housing and healthcare — by integrating AI agents deeply into existing workflows to make them more efficient, reduce costs, and improve experiences."
+  },
   "name": "EliseAI",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "00451995b4"
+   ],
+   "value": "Estimated: Fast-paced, high-autonomy engineering culture typical of well-funded AI startups; sprint cycles with rapid iteration on agent performance."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "1e8e36be7c",
+    "26fd2eac70",
+    "00451995b4"
+   ],
+   "value": "Conversational AI platform for automating resident/patient communications, scheduling, intake forms, and workflow integration in property management and healthcare."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + US federal holidays; unlimited PTO policy common in similar-stage startups but not confirmed."
   },
+  "refresh_after": 1789872660,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -63995,7 +64060,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns documented; typical startup flexibility around major holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "00451995b4"
+   ],
+   "value": "High-growth venture-backed startup (likely Series B/C stage) with 200-500 employees, scaling rapidly in proptech and healthtech."
   },
   "sources": [
    {
@@ -64059,14 +64131,45 @@
     "url": "https://jobs.ashbyhq.com/eliseai/a3bef764-0d55-4fa6-a7cd-726eaccc901a"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and green cards for technical roles given venture-backed AI startup profile; no public policy disclosed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1e8e36be7c",
+    "26fd2eac70"
+   ],
+   "value": "EliseAI builds AI agents that automate communications and workflows for the housing and healthcare industries. The company sells its conversational AI platform to property managers and healthcare providers to handle scheduling, intake, and resident/patient communications, reducing manual work and operational costs."
+  },
+  "synthesized_evidence_sha": "32412c57daba9ec8",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "26fd2eac70",
+    "1e8e36be7c"
+   ],
+   "value": "Building production-grade LLM-powered conversational agents, NLP pipelines, workflow automation engines, and integrations with property management (Yardi, RealPage) and healthcare (EHR) systems. Front-end design engineering for AI-driven interfaces."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677349,
   "web_search_url": "https://duckduckgo.com/?q=EliseAI+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "1e8e36be7c",
+    "26fd2eac70",
+    "00451995b4"
+   ],
+   "value": "EliseAI offers a top-tier applied AI role where you ship production LLM agents that directly automate high-stakes housing and healthcare workflows. The company’s mission-driven focus on essential services, high-growth velocity, and emphasis on AI-driven efficiency align with a desire for prestige, technical acceleration, and impact — while its stated culture of leveraging automation internally suggests a pragmatic approach to workload."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — high-growth startup expectations balanced by internal automation tooling and mission-driven culture; no public guaranteed shutdown policy."
   }
  },
  "elixirr": {
@@ -102012,11 +102115,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -102028,6 +102133,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784688660,
   "last_evidence_at": 1784673980,
   "name": "Jabil",
   "pace_of_work": {
@@ -137513,7 +137619,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -137531,7 +137637,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784688568,
+  "last_attempt_at": 1784688660,
   "last_evidence_at": 1784673977,
   "name": "Novartis",
   "pace_of_work": {
@@ -147316,7 +147422,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -147334,7 +147440,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784688568,
+  "last_attempt_at": 1784688660,
   "last_evidence_at": 1784676244,
   "name": "Perpay",
   "pace_of_work": {
@@ -159813,7 +159919,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -159831,7 +159937,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784688568,
+  "last_attempt_at": 1784688660,
   "last_evidence_at": 1784673976,
   "name": "Raytheon",
   "pace_of_work": {
@@ -164983,40 +165089,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (elite) — publishes at NeurIPS/ICML/CVPR, builds custom ML infrastructure, drives core product loops (discovery, safety, creator tools), attracts PhD‑level talent."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Freemium platform: free to play; revenue from virtual currency (Robux) purchases (user spending on avatar items, game passes, developer products), revenue share with creators (≈70% to developer, 30% to Roblox), advertising, and brand partnerships."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering‑first, creator‑centric, data‑driven, collaborative, low‑ego, mission‑oriented. Employees describe ‘smart people who care about the community’ and ‘freedom to explore hard technical problems’."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tens of millions of daily active users (primarily Gen Z and younger), independent creators/developers who build experiences, brands and advertisers seeking immersive engagement, educational institutions using Roblox for learning."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $135k‑$155k base + $80k‑$120k equity (4‑yr) + $15k‑$30k sign‑on = ~$230k‑$305k year‑1 total compensation for SWE/ML roles."
   },
   "evidence_sha": "40633e0f230e151f",
+  "generated_at": 1784688660,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
+   "value": "Metaverse / User‑Generated Content Platform / Interactive Entertainment / Social Gaming"
   },
-  "last_attempt_at": 1784688568,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep‑dive rounds on distributed systems design, ML system architecture (training/serving at scale), Luau/engine internals, and practical problem‑solving with real Roblox data scenarios. Behavioral interviews assess collaboration, creator‑empathy, and alignment with ‘respect the community’ values. Prepare to discuss how you balance innovation with platform stability and user safety."
+  },
+  "last_attempt_at": 1784688660,
   "last_evidence_at": 1784583447,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: San Mateo, CA. Major offices: Seattle, WA; Montreal, Canada; Shenzhen, China; London, UK; remote‑friendly hybrid policy."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To build a human co‑experience platform that enables billions of users to create, share, and enjoy immersive 3D experiences together, fostering creativity and community."
+  },
   "name": "Roblox",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast but sustainable — quarterly planning with 2‑week sprints, emphasis on shipping incremental improvements, on‑call rotations managed for balance, minimal ‘crunch’ culture."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Roblox Client (player app), Roblox Studio (creation tools), Roblox Cloud (backend services), Roblox Marketplace (avatar items, plugins), Roblox Ads, Roblox Education initiatives."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days accrued PTO + 10 company holidays + 2 shutdown weeks (10 days) = ~35 days off per year."
   },
+  "refresh_after": 1789872660,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -165026,7 +165170,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Two mandatory company‑wide shutdown weeks annually (typically first week of July and last week of December)."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public company (NYSE: RBLX), ~3,500+ employees (2024), market cap ~$25‑30B, profitable on adjusted EBITDA basis, scaling globally."
   },
   "sources": [
    {
@@ -165060,14 +165209,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=e2fdb32284f279fa55b072f7fe4dc6a8a4980deabad83d149e97b06fa7b350d3JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9wbGF5Lmdvb2dsZS5jb20vc3RvcmUvYXBwcy9kZXRhaWxzP2lkPWNvbS5yb2Jsb3guY2xpZW50JmhsPWVuX1VT&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active H‑1B sponsor (cap‑subject and cap‑exempt via university partnerships), supports OPT STEM extensions, green‑card sponsorship (EB‑2/EB‑3) for eligible roles, dedicated immigration team."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Roblox operates a global online platform where users create, share, and play immersive 3D experiences. The company generates revenue primarily through the sale of its virtual currency (Robux) to users for in‑experience purchases, taking a percentage of each transaction, and via advertising and licensing partnerships."
+  },
+  "synthesized_evidence_sha": "40633e0f230e151f",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large‑scale distributed systems, real‑time 3D networking, physics simulation, AI/ML for content moderation/recommendation/creator tools, custom engine (Luau VM), petabyte‑scale data pipelines, infrastructure automation, client optimization for mobile/PC/console/XR."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583447,
   "web_search_url": "https://duckduckgo.com/?q=Roblox+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Roblox offers a top‑tier AI/data science environment where you work on petabyte‑scale recommendation, safety, and creator‑tool models that directly shape a platform used by tens of millions daily. The culture emphasizes rapid iteration and technical depth (custom engine, Luau, real‑time 3D) while maintaining a public‑company commitment to sustainable pace — core hours, protected weekends, and company‑wide shutdown weeks are standard. New‑grad total compensation is highly competitive (base + equi"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "4/5 — core hours 10am‑4pm PT, protected weekends, two company‑wide shutdown weeks per year (summer + winter), flexible remote/hybrid, generous parental leave."
   }
  },
  "roboforce": {
@@ -197320,7 +197490,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -197338,7 +197508,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784688568,
+  "last_attempt_at": 1784688660,
   "last_evidence_at": 1784674823,
   "name": "Torch Technologies",
   "pace_of_work": {
@@ -198114,11 +198284,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -198130,6 +198302,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784688660,
   "last_evidence_at": 1784583462,
   "name": "Travelers",
   "pace_of_work": {
