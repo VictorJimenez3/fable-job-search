@@ -8841,52 +8841,132 @@
  },
  "allen control systems": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "17091bd572",
+    "376d169fca"
+   ],
+   "value": "Top-tier niche: defense AI startup with elite founding team and hard problem set in autonomous systems; strong prestige within defense tech, comparable to premier early-stage robotics startups rather than FAANG-scale, with significant ownership scope mid-level."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "17091bd572",
+    "376d169fca",
+    "6b9a5bdf6e"
+   ],
+   "value": "ACS designs, builds, and sells hardware-software integrated autonomous turret systems directly to defense and government customers. The company likely generates revenue through defense procurement contracts, development agreements, and system sales."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "17091bd572",
+    "6b9a5bdf6e",
+    "376d169fca"
+   ],
+   "value": "Engineering-first, founded by Navy engineers with proven robotics credibility. Values technical excellence, innovation, and ownership without excessive hierarchy."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "17091bd572",
+    "376d169fca"
+   ],
+   "value": "Defense and national security customers, likely including the U.S. Department of Defense, military branches, and allied defense organizations seeking counter-drone capabilities."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140,000–$180,000 base plus equity for technical new grads in defense startup AI roles, with flexibility depending on funding stage and location."
   },
   "evidence_sha": "55c3976fc9046ffc",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784709398,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784693796,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "17091bd572",
+    "376d169fca",
+    "6b9a5bdf6e"
+   ],
+   "value": "Defense technology / autonomous weapons systems"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "17091bd572",
+    "376d169fca"
+   ],
+   "value": "Strong problem-solving skills and ability to work in a fast-paced startup environment, likely evaluated through technical depth in computer vision, control algorithms, real-time systems, and mission-critical software integration."
+  },
+  "last_attempt_at": 1784709398,
   "last_evidence_at": 1784680916,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "17091bd572",
+    "376d169fca"
+   ],
+   "value": "Location not explicitly stated in available sources, but likely U.S.-based aligned with defense work and founding background."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "17091bd572",
+    "376d169fca",
+    "6b9a5bdf6e"
+   ],
+   "value": "To protect personnel and critical assets from drone threats by delivering an autonomous, precise, and innovative counter-drone defense system built with engineering-first technical excellence."
+  },
   "name": "Allen Control Systems",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "17091bd572"
+   ],
+   "value": "Fast-paced engineering startup environment with value on technical ability to ship quickly under defense deadlines."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "17091bd572",
+    "376d169fca",
+    "6b9a5bdf6e"
+   ],
+   "value": "An autonomous gun turret system employing advanced computer vision, AI-driven control systems, and precision targeting to detect, track, and neutralize small enemy drones and loitering munitions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO annually, typical for early-stage defense startups with competitive flexibility in benefits."
   },
+  "refresh_after": 1789893398,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research"
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide holiday shutdown between Christmas and New Year’s as well as likely federal-holiday-aligned shutdown days common in defense startups; may also include occasional unofficial slow weeks between contracts."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "17091bd572",
+    "6b9a5bdf6e"
+   ],
+   "value": "Venture-backed defense startup with an engineering-first culture and multiple open technical roles, indicating a small to mid-sized team actively growing. Exact headcount not disclosed."
   },
   "sources": [
    {
@@ -8950,14 +9030,50 @@
     "url": "https://jobs.ashbyhq.com/allen-control-systems/c878297f-ba09-45ce-8475-83ddb7207858"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "17091bd572",
+    "376d169fca"
+   ],
+   "value": "U.S. defense startup likely handles ITAR and/or security clearance material, meaning U.S. person status and citizenship may be required per National Industrial Security Program regulations for many roles. Sponsorship is unlikely."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "17091bd572",
+    "376d169fca",
+    "6b9a5bdf6e"
+   ],
+   "value": "Allen Control Systems (ACS) is a defense startup building an autonomous gun turret that uses computer vision and AI to detect, track, and shoot down enemy drones. Founded by two former Navy electrical engineers, ACS designs weapon systems to counter the growing threat of small drones and loitering munitions on the battlefield."
+  },
+  "synthesized_evidence_sha": "55c3976fc9046ffc",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "17091bd572",
+    "376d169fca"
+   ],
+   "value": "AI-heavy applied computer vision for real-time detection, tracking, and targeting; advanced control systems for precision gimbals and turret actuation; software-hardware integration for mission systems and autonomous decision-making."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680916,
   "web_search_url": "https://duckduckgo.com/?q=Allen+Control+Systems+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "17091bd572",
+    "376d169fca"
+   ],
+   "value": "Provides a rare high-tech defense AI role where applied machine learning and robotics meet urgent real-world impact in counter-drone missions, while ACS' startup structure promises faster technical ownership and less process-heavy oversight than large prime contractors, appealing to candidates seeking a tight knit mission-driven environment."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "17091bd572"
+   ],
+   "value": "Estimated: Typical defense startup balance, likely better than Big Tech but more variable with deployment cycles. Engineering-first culture suggests protecting focus time and avoiding burnout, with sustainable work rhythm."
   }
  },
  "alliancebernstein": {
@@ -10604,7 +10720,7 @@
    "value": "Tier 1 (Elite). Amazon is a pioneer in production AI and cloud infrastructure globally, rivaling Google, Meta, and Microsoft in AI talent branding."
   },
   "aliases": [],
-  "attempts": 10,
+  "attempts": 11,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -10654,7 +10770,7 @@
    "source_ids": [],
    "value": "Amazon interviews emphasize its Leadership Principles with behavioral questions, plus technical screening covering data structures, system design, algorithms, and coding proficiency. Storytelling about ownership, bias for action, and customer obsession is crucial. For AI and data science roles, expect deep dives into machine learning theory, statistical analysis, and deployment experience."
   },
-  "last_attempt_at": 1784709251,
+  "last_attempt_at": 1784709398,
   "last_evidence_at": 1784636762,
   "locations": {
    "confidence": "high",
@@ -35692,7 +35808,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -35743,7 +35859,7 @@
    "source_ids": [],
    "value": "Interview processes are intensely pragmatic, focusing on high-signal coding, system design, and deep-dive AI/ML fundamentals to test raw technical speed and problem-solving ability. Candidates should be prepared for a direct and demanding evaluation style that reflects the company's high-velocity culture, but also conveys a mature recognition that sustainable performance comes from hard, focused work, not performative burnout."
   },
-  "last_attempt_at": 1784709251,
+  "last_attempt_at": 1784709398,
   "last_evidence_at": 1784701765,
   "locations": {
    "confidence": "high",
@@ -60223,11 +60339,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -60239,6 +60357,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784709398,
   "last_evidence_at": 1784701765,
   "name": "Deluxe",
   "pace_of_work": {
@@ -63251,7 +63370,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -63269,7 +63388,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784709251,
+  "last_attempt_at": 1784709398,
   "last_evidence_at": 1784680412,
   "name": "Dow Jones",
   "pace_of_work": {
@@ -131084,7 +131203,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -131102,7 +131221,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784709251,
+  "last_attempt_at": 1784709398,
   "last_evidence_at": 1784693223,
   "name": "Micron Technology",
   "pace_of_work": {
@@ -147190,7 +147309,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -147208,7 +147327,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784709251,
+  "last_attempt_at": 1784709398,
   "last_evidence_at": 1784701765,
   "name": "Omnicom",
   "pace_of_work": {
@@ -215292,7 +215411,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -215310,7 +215429,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
-  "last_attempt_at": 1784709251,
+  "last_attempt_at": 1784709398,
   "last_evidence_at": 1784701765,
   "name": "UTHealth Houston",
   "pace_of_work": {
