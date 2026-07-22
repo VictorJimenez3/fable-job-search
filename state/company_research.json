@@ -2016,40 +2016,101 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 (strong niche/sector powerhouse): Well-regarded in the fintech space for its brand and mission-driven user base, though not a 'Big Tech' or frontier AI lab, it offers high prestige within consumer fintech and robust data-science opportunities."
   },
   "aliases": [],
-  "attempts": 4,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 5,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "dd62c8cd61",
+    "d8f88ccae1"
+   ],
+   "value": "Subscription-based revenue model with tiered plans (e.g., Personal, Family) priced at flat monthly rates; generates income primarily from these recurring membership fees."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "9739b6ecb7"
+   ],
+   "value": "Optimistic, adventurous, and courageous, per their own values description. Inclusive and supportive, with a strong family-budget focus that permeates the product and internal team culture, promoting a low-ego, mission-aligned collaboration."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "dd62c8cd61",
+    "9739b6ecb7"
+   ],
+   "value": "Retail consumers in the United States seeking an automated, low-barrier entry to saving and investing; includes families using Acorns Early and GoHenry for financial literacy."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "9739b6ecb7"
+   ],
+   "value": "Estimated: For a new-grad Data/AI role at this late-stage fintech, total compensation like set in the typical range of $120,000 - $165,000, which includes competitive base salary, stock options (equity), and a probable annual bonus. The job posting specifically commits to 'Competitive salary and stock options'."
   },
   "evidence_sha": "b8d276586a88f3fa",
+  "generated_at": 1784682913,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "dd62c8cd61",
+    "d8f88ccae1"
+   ],
+   "value": "Financial Technology (Fintech), with specific focus on Automated Investing and Personal Savings"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Given the candidate's goals, explore how AI and data are used to personalize savings and educational content, the team's weekly sprint pace, and concrete examples of enforced work-life balance like shutdowns. Assess opportunities for rapid technical ownership and career development while verifying the sanity of daily schedules."
   },
-  "last_attempt_at": 1784682821,
+  "last_attempt_at": 1784682913,
   "last_evidence_at": 1784673987,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "9739b6ecb7"
+   ],
+   "value": "Remote-first organization with optional office space in Irvine, CA. Listed job posting for \"Data Analyst I\" indicates a remote work location within the United States."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "d8f88ccae1",
+    "9739b6ecb7"
+   ],
+   "value": "To help everyday Americans build long-term wealth by making investing accessible, automated, and embedded in daily life."
+  },
   "name": "Acorns",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: The pace is deliberate yet focused, combining the mission of a financial services company with the iterative, data-driven speed of a startup. Not a hypergrowth 'move fast and break things' culture, nor a slow bureaucratic bank."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "dd62c8cd61",
+    "d8f88ccae1"
+   ],
+   "value": "The core product is a micro-investing app with Round-Ups® that automatically invests spare change from linked card purchases. The platform also offers Acorns Invest (taxable brokerage), Acorns Later (IRAs), Acorns Early (UTMA/UGMA), and a checking account with a debit card."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "9739b6ecb7"
+   ],
+   "value": "Estimated: Based on the description of 'flexible' paid time off, this is often an 'unlimited PTO' model customary for remote-friendly US startups. If unlimited, the culture to take days off will be crucial; expect support for around 15-20+ days without issue in a mission-driven, respected-wlb culture."
   },
+  "refresh_after": 1789866913,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -2059,7 +2120,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: As a remote-first, wellness-focused company, it's likely they offer company-wide days off at the end of the year or long weekends. The emphasis on flexibility and mindfulness supports this practice, but a specific guaranteed shutdown could not be confirmed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "dd62c8cd61",
+    "dbc3b9e88f"
+   ],
+   "value": "Late-stage private fintech company with significant venture backing and over 10 million sign-ups; pre-IPO stage."
   },
   "sources": [
    {
@@ -2113,14 +2182,42 @@
     "url": "https://jobs.ashbyhq.com/Acorns/89e8c629-36d6-48a3-9b64-0a48d290f36c"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "dd62c8cd61",
+    "d8f88ccae1"
+   ],
+   "value": "Acorns is a financial technology company that helps users automatically save and invest spare change from everyday purchases. It makes money primarily through monthly subscription fees for tiers that include investment, retirement, and banking accounts."
+  },
+  "synthesized_evidence_sha": "b8d276586a88f3fa",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "9739b6ecb7"
+   ],
+   "value": "Technical roles involve building data pipelines, personalization algorithms for financial guidance, and analytics for user growth and retention. Data analysts work on making financial insights accessible and actionable across product, marketing, and operations teams."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673987,
   "web_search_url": "https://duckduckgo.com/?q=Acorns+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Acorns offers a uniquely mission-driven fintech environment tackling financial literacy with AI and data science, balancing high-impact technical work with a genuinely remote-first, flexible culture. Its focus on sane hours aligns with avoiding toxic burnout while still providing competitive pay and stock options in a prestigious, innovative tech setting."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "9739b6ecb7"
+   ],
+   "value": "Estimated: Excellent for a startup. The formally-articulated remote-first flexibility, flexible hours, and emphasis on 'Wellness resources' like Headspace suggest a strong intentionality to avoid burnout, likely translating to consistent 40-hour weeks."
   }
  },
  "acrisure": {
@@ -7356,7 +7453,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -7374,7 +7471,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784682821,
+  "last_attempt_at": 1784682913,
   "last_evidence_at": 1784674490,
   "name": "Albertsons Companies",
   "pace_of_work": {
@@ -24941,7 +25038,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -24959,7 +25056,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784682821,
+  "last_attempt_at": 1784682913,
   "last_evidence_at": 1784672884,
   "name": "Berkeley Industrial Engineering & Operations Research",
   "pace_of_work": {
@@ -49996,87 +50093,105 @@
  },
  "cvs health": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "05a52f0a73",
+    "0da047a303"
+   ],
+   "value": "Top-tier corporate: Not a pure tech company, but an elite AI and data science destination due to rare combined access to insurance claims, PBM and clinical data at nation-wide scale, highly respected in healthcare AI."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "05a52f0a73",
+    "0da047a303"
+   ],
+   "value": "Makes money primarily through Aetna (health insurance premiums), Caremark (pharmacy benefits management fees and rebates), and retail pharmacy/consumer wellness sales. The company aims to reduce overall medical costs by integrating insurance, benefits management, and direct care delivery."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "0da047a303",
+    "637ff70961"
+   ],
+   "value": "Mission-driven and collaborative, with principles of mutual respect and mindfulness permeating internal teams. The priority is consumer health, not rapid iteration, embedded through the Aetna and CVS brands."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "b0fd9ca822"
+    "05a52f0a73"
    ],
-   "value": "Customers, patients, members, and communities served by the company's health offerings."
+   "value": "Over 100 million individuals annually, including Aetna medical members, Caremark PBM plan sponsors and members, and retail pharmacy patients. Serves a wide demographic, including underserved communities."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000 to $130,000 base salary plus an annual bonus and separate equity/stock package, pushing total compensation into the competitive upper-tier for non-FAANG tech roles."
   },
   "evidence_sha": "1043f8e1d6d8102b",
-  "generated_at": 1784532644,
+  "generated_at": 1784682913,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "05a52f0a73",
+    "0da047a303"
+   ],
+   "value": "Healthcare: Digitally integrated health insurance, pharmacy benefits, and retail pharmacy."
   },
   "interview_focus": {
    "confidence": "medium",
    "source_ids": [
-    "b0fd9ca822"
+    "05a52f0a73",
+    "637ff70961"
    ],
-   "value": "Probe whether the AI Engineer role truly follows a fast, innovative tech culture or if it operates under slow bureaucracy. Ask about guaranteed shutdowns and sane hours to confirm respect for personal time and the avoidance of high burnout, as these are not detailed in the job posting."
+   "value": "Expect a heavy blend of real-world healthcare impact, analytical rigor, and a collaborative style that respects mutual boundaries. They screen for mission alignment and and the ability to navigate a huge organization ethically, not for 'move fast and break things' hyper-competition."
   },
-  "last_attempt_at": 1784682821,
+  "last_attempt_at": 1784682913,
   "last_evidence_at": 1784582963,
   "locations": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "b0fd9ca822"
+    "0da047a303"
    ],
-   "value": "Has a presence in Richardson, TX (TX---Richardson)."
+   "value": "Corporate HQ is in Woonsocket, Rhode Island, with major corporate tech and innovation hubs also in Hartford, CT, New York, NY, and Dallas, TX. MinuteClinics and role-specific positions are spread nationally in every major metro."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "b0fd9ca822"
+    "0da047a303",
+    "05a52f0a73"
    ],
-   "value": "Building a world of health around every individual and shaping a more connected, convenient, and compassionate health experience."
+   "value": "The corporate mission is 'Supporting people on their journey to better health.' This centralizes the strategy for making care, cost, and outcomes better for over 100 million customers."
   },
   "name": "CVS Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Deliberate and compliance-aware, structured around rigorous patient safety and multi-stakeholder sign-offs rather than manic speed. Impact is measured over quarters, not daily sprints."
   },
   "products": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "05a52f0a73",
+    "0da047a303"
+   ],
+   "value": "Health insurance through Aetna, pharmacy benefits management via Caremark, retail pharmacy and over-the-counter products at CVS Pharmacy, walk-in primary care at MinuteClinic, and specialty pharmacy services."
   },
-  "prompt_v": 1,
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 standard company days for new professionals, plus multiple personal and floating holidays. Increases with tenure."
   },
+  "refresh_after": 1789866913,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -50086,12 +50201,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed major calendar holidays plus an expected end-of-year slowdown, but the company does not publicly mandate a formal company-wide winter shutdown week."
   },
   "size_stage": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "05a52f0a73"
+   ],
+   "value": "Public, Fortune 4 giant with an annual revenue exceeding $360 billion, with operations that are mature and scaled across the entire United States."
   },
   "sources": [
    {
@@ -50134,16 +50251,18 @@
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "b0fd9ca822"
+    "05a52f0a73",
+    "0da047a303"
    ],
-   "value": "A healthcare company building a connected, convenient, and compassionate health experience for the individuals it serves, with a culture committed to fostering workplace belonging and valuing every colleague."
+   "value": "CVS Health is a massive healthcare conglomerate that owns Aetna health insurance, Caremark pharmacy benefits, and a national network of retail pharmacies and clinics. Its goal is to make healthcare more accessible and affordable by connecting the entire patient journey, from insurance to prescription delivery to in-person care."
   },
+  "synthesized_evidence_sha": "1043f8e1d6d8102b",
   "technical_work": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "b0fd9ca822"
+    "05a52f0a73"
    ],
-   "value": "Hires for roles such as AI Engineer."
+   "value": "Work spans AI-driven claims analysis, digital health apps for consumers, pharmacy benefit algorithms, and data science to improve clinical outcomes. Analytics teams focus on reducing cost and personalizing patient experience across its massive insurance and retail data sets."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784582963,
@@ -50151,14 +50270,17 @@
   "why_it_matters": {
    "confidence": "medium",
    "source_ids": [
-    "b0fd9ca822"
+    "05a52f0a73",
+    "637ff70961"
    ],
-   "value": "Aligns with the desire for a mission-driven environment by explicitly focusing on compassion and shaping health experiences, while claiming a commitment to colleague value and inclusion. Fast, innovative tech culture, WLB, sane hours, and high new-grad pay are not confirmed."
+   "value": "Sits at an elite intersection of massive scale and mission, offering high new-grad pay that competes with top tech firms while retaining a genuinely humane pace. Its diverse data sets accelerate AI learning without demanding the brutal hours of a fast-moving startup, preserving personal health."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "637ff70961"
+   ],
+   "value": "Estimated: Good to Excellent. A culture of 'mutual respect and mindfulness' suggests strict 40-ish hour boundaries as the norm, significantly less burnout than most tech disruptors."
   }
  },
  "cw": {
@@ -64306,37 +64428,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (Applied AI/ML for cybersecurity analytics, not core AI research). Prestige comes from high-assurance systems engineering, not AI publication record."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "56fcd54385"
+   ],
+   "value": "Government defense contracting (likely DoD/IC) providing high-assurance cybersecurity software and secure connectivity solutions through federal procurement vehicles."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "56fcd54385"
+   ],
+   "value": "Mission-focused, engineering-centric, cohesive small teams. 'Self-starter' culture with emphasis on learning across stack. Less bureaucratic than large primes, but high accountability due to 'failure not an option' environments."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "56fcd54385"
+   ],
+   "value": "U.S. defense, intelligence, and federal civilian agencies requiring high-assurance cybersecurity and trusted connectivity for sensitive data and decision advantage."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k-$115k base + modest bonus/RSU. Cleared roles often pay premium over commercial; Richardson TX COL adjustment applied."
   },
   "evidence_sha": "5abe5db8d6b8e440",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784682913,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "56fcd54385"
+   ],
+   "value": "Defense Cybersecurity / High-Assurance Computing / Government Contracting"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "56fcd54385"
+   ],
+   "value": "Expect deep technical questions on Linux internals, networking (IP routing), virtualization/remote desktop protocols, secure software development practices, and debugging complex distributed systems. Behavioral focus on self-starting in cohesive teams, handling 'failure not an option' pressure, and desire for continuous learning across the stack. Clearance eligibility (U.S. citizenship) is a hard gate."
+  },
+  "last_attempt_at": 1784682913,
   "last_evidence_at": 1784674897,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "56fcd54385"
+   ],
+   "value": "Richardson, TX (Dallas metro area) confirmed; likely additional offices near major defense hubs (e.g., DC metro, Colorado Springs, San Antonio)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "56fcd54385"
+   ],
+   "value": "Deliver absolute confidence in environments where failure is not an option by providing trusted connectivity to protect the world's most critical environments and safeguard sensitive data powering decision advantage."
+  },
   "name": "Everfox",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast. Driven by contract milestones and security compliance, but not 'move fast and break things' startup pace. Predictable sprint cycles around government delivery schedules."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "56fcd54385"
+   ],
+   "value": "Secure Linux desktop environments, enterprise IT operations and management tools, IP networking/routing solutions, remote/virtual desktop deployment platforms, and trusted connectivity solutions for critical infrastructure."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays. Typical for mid-tier defense contractors."
   },
+  "refresh_after": 1789866913,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -64346,7 +64525,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns. Some defense contractors observe winter break (Dec 24-Jan 1) but not universal."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-stage defense contractor (200-1,000 employees) with established federal contracts but not a prime-tier integrator."
   },
   "sources": [
    {
@@ -64400,14 +64584,42 @@
     "url": "https://evergreenix.wd1.myworkdayjobs.com/external-careers2/job/USA_TX_Richardson/Software-Engineer-I_JR500751"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B for cleared roles given defense contractor status; new-grad sponsorship may be limited to U.S. citizens due to security clearance requirements."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "56fcd54385",
+    "dbc3b9e88f"
+   ],
+   "value": "Everfox is a defense-focused cybersecurity company that delivers trusted connectivity and secure computing solutions for mission-critical environments. It appears to generate revenue primarily through government contracts providing secure Linux desktop environments, enterprise IT operations, IP networking, and remote/virtual desktop deployments for defense and intelligence customers."
+  },
+  "synthesized_evidence_sha": "5abe5db8d6b8e440",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "56fcd54385"
+   ],
+   "value": "Software engineering for secure Linux desktop environments, enterprise IT operations tooling, IP networking/routing, remote/virtual desktop deployments, testing/debugging/support across operational tools, and high-assurance cybersecurity development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674897,
   "web_search_url": "https://duckduckgo.com/?q=Everfox+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "56fcd54385"
+   ],
+   "value": "Offers a mission-driven defense cybersecurity role with elite technical prestige (high-assurance systems, cleared environments) and competitive new-grad pay. The culture emphasizes cohesive teams, self-starter growth, and learning across a wide technical stack (Linux, networking, virtualization) without the bureaucracy of large primes. Work-life balance is likely structured around contract delivery cycles rather than crunch culture, with sane hours typical of cleared government work."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7/10. Cleared defense work typically enforces boundaries (no after-hours access to classified systems), but surge periods around delivery dates occur. Guaranteed shutdowns unlikely formalized."
   }
  },
  "everlaw": {
@@ -74695,47 +74907,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 (Elite Defense/Aerospace) — Fielded autonomy on 5M+ flight hours; publishes at CVPR/ICRA/AIAA; DARPA/AFRL prime on multiple AI efforts; not a consumer-AI brand but top-tier for deployed defense ML."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prime defense contractor: wins DoD programs of record (development, production, sustainment) and FMS contracts; revenue from aircraft delivery, sensor payloads, ground stations, logistics support, and training services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-centric, mission-proud, process-disciplined (CMMI/AS9100). Hierarchical but accessible technical leadership; strong internal mobility across airframe, sensors, ground, autonomy. Diversity initiatives growing; clearance culture creates insider/outsider dynamic."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "U.S. Air Force, Army, Marine Corps, Navy, Department of Homeland Security, NATO allies, and partnered nations via Foreign Military Sales."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $105k–$125k base + 5–10% target bonus + RSU-equivalent phantom stock (vest 4 yrs) + relocation $5k–$10k. Total first-year $120k–$145k. Clearance-eligible candidates may start at upper band."
   },
   "evidence_sha": "8050c7d8d032b766",
+  "generated_at": 1784682913,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Defense / Aerospace — Unmanned Aircraft Systems & ISR Sensors"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep C++/embedded fundamentals, DO-178C/DO-254 awareness, sensor-fusion/estimation theory (Kalman, particle filters), real-time Linux/RTOS debugging, and system-safety articulation. Prepare for scenario questions on autonomy safety, multi-sensor latency budgets, and ITAR-compliant software architecture. Behavioral emphasis on cross-functional collaboration (systems, hardware, test) and documentation rigor."
+  },
+  "last_attempt_at": 1784682913,
   "last_evidence_at": 1784674039,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Poway, CA (San Diego area). Major sites: Gray Butte Flight Operations (CA), El Mirage (CA), Centennial (CO), Huntsville (AL), Dallas (TX), Washington DC metro. Remote/hybrid options vary by program and clearance."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Provide persistent, multi-mission remotely piloted aircraft and sensor solutions that deliver decisive ISR and strike capability for U.S. and allied forces."
+  },
   "name": "General Atomics Aeronautical Systems",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate–Fast — Program milestones (PDR/CDR/flight test) drive sprints; sustained crunch around flight demonstrations, but institutional processes (Earned Value, DO-178C) limit ad-hoc fire drills."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "MQ-9 Reaper, MQ-1C Gray Eagle, MQ-20 Avenger, Predator series UAS; Lynx multi-mode radar; EO/IR sensors; ground control stations; satellite communications links; detect-and-avoid systems."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 federal holidays + 5 floating days (accrual starts day 1); additional sick bank; partial carryover up to 240 hrs."
   },
+  "refresh_after": 1789866913,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual full shutdown week between Christmas and New Year; occasional 3-day holiday weekends (July 4, Thanksgiving) with minimal on-call."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 7,000–9,000 employees at GA-ASI; parent General Atomics ~15,000+. Mature, profitable, privately held; no public equity."
   },
   "sources": [
    {
@@ -74779,14 +75039,35 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established H-1B sponsor; many roles require U.S. Person status (citizen/GC) due to ITAR/EAR and DoD clearance requirements. Limited sponsorship for new-grad roles unless candidate already holds clearance eligibility."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "General Atomics Aeronautical Systems (GA-ASI) is a leading designer and manufacturer of unmanned aircraft systems (UAS), radar systems, and related electro-optical sensors. It operates as a subsidiary of General Atomics, a privately held defense and energy conglomerate."
+  },
+  "synthesized_evidence_sha": "8050c7d8d032b766",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Embedded flight software (C/C++, DO-178C), autonomy/ATR algorithms, sensor fusion, radar signal processing, satcom networking, DevSecOps pipelines, model-based systems engineering (MBSE), simulation/test infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674039,
   "web_search_url": "https://duckduckgo.com/?q=General+Atomics+Aeronautical+Systems+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "GA-ASI fields the world’s most operationally proven UAS fleet, offering AI/ML engineers rare access to real-flight sensor data and deployed autonomy stacks. As a privately held prime, it can invest in long-horizon R&D (e.g., collaborative combat aircraft, AI-driven ISR) without quarterly pressure, while defense budgets provide compensation competitive with top tech. Culture skews engineering-first with clearer program boundaries than many Silicon Valley shops, supporting the candidate’s desire f"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — Core hours ~9/80 or flex 4/10 common; surge periods near flight test (2–4 weeks/quarter) may push 50–55 hrs; limited weekend work; shutdowns between Christmas–New Year."
   }
  },
  "general dynamics": {
@@ -82200,42 +82481,110 @@
  },
  "harvey": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "403c178abe"
+   ],
+   "value": "Tier 1A. Harvey competes directly with elite AI research labs and top-tier startups for talent. It hires from the most prestigious law firms and demands a rare breed of legal-plus-AI expertise, giving its technical roles strong signaling value in the AI field."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "403c178abe"
+   ],
+   "value": "B2B SaaS. Harvey commercializes its platform through recurring software subscriptions sold directly to law firms and enterprise legal departments. Revenue scales with seat expansion, product utilization, and long-term renewals across customer accounts."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "91d6a69217",
+    "27d3aba138",
+    "403c178abe"
+   ],
+   "value": "Mission-obsessed, high-ownership, and customer-centric with a strong peer-accountability culture. Foundations of the culture are elite professional standards—recruiting from top firms reinforces a belief in mastery, depth, and craftsmanship over speed for its own sake."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "403c178abe"
+   ],
+   "value": "Top-tier global law firms and Fortune 500 corporate legal departments. The company actively hires experienced lawyers from elite firms to serve as Product Specialists and drive adoption within these customer accounts."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $155,000–$175,000 base salary plus potentially significant equity (0.05%–0.15%) for early technical hires. Based on comparable AI-first startups in San Francisco that compete with FAANG offer. No compensation data found in research."
   },
   "evidence_sha": "4d5779750d42b55e",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784682913,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784682821,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "91d6a69217",
+    "27d3aba138"
+   ],
+   "value": "Legal technology (LegalTech), with direct expansion into broader professional services including tax, consulting, and compliance."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "91d6a69217",
+    "27d3aba138"
+   ],
+   "value": "Expect a multi-round process that probes deep ML/AI fundamentals, legal-domain reasoning and product engineering aptitude, and culture fit for a 'fast-paced, high-ownership' environment. Prospective hires should ask how the company balances 'operating with intensity' with true sustainable workload, and explicitly request details on weekend or after-hours expectations."
+  },
+  "last_attempt_at": 1784682913,
   "last_evidence_at": 1784677408,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "91d6a69217",
+    "27d3aba138",
+    "403c178abe"
+   ],
+   "value": "San Francisco, California (headquarters), with remote-friendly or hybrid arrangements visible across multiple job listings for business and product roles."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "91d6a69217",
+    "27d3aba138"
+   ],
+   "value": "Transforming how legal and professional services operate by delivering an AI platform that augments and accelerates complex knowledge work."
+  },
   "name": "Harvey",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "91d6a69217",
+    "27d3aba138"
+   ],
+   "value": "Estimated: Fast and intense. Job descriptions explicitly state the team 'moves fast, takes ownership, and is deeply committed to the mission — operating with intensity.' However, the work involves steady relationship expansion cycles rather than consumer-style viral loops, which may moderate the pace relative to pure-play B2C startups."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "91d6a69217",
+    "403c178abe",
+    "916f03d47a"
+   ],
+   "value": "A configurable AI assistant that integrates into legal workflows for contract analysis, due diligence, regulatory compliance, legal research, and drafting. The product is built on top of large language models but specialized for the nuance and accuracy required in high-stakes legal work."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days of PTO annually for new grads, based on standard early-stage startup market practice in San Francisco. Not confirmed in any provided source."
   },
+  "refresh_after": 1789866913,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -82245,7 +82594,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns have been confirmed. The legal industry typically aligns around end that of year holidays, but a formal week-long closure policy is not documented in the research."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "91d6a69217",
+    "27d3aba138",
+    "403c178abe"
+   ],
+   "value": "Growth-stage startup describing itself as “a rare chance to help build a generational company at a true inflection point.” Significant hiring across recruiting, engineering, and go-to-market signals rapid scaling. Exact headcount and funding not provided in sources."
   },
   "sources": [
    {
@@ -82309,14 +82667,48 @@
     "url": "https://jobs.ashbyhq.com/harvey/5f2e05de-e876-4a90-a609-ce17e4f2a3d4"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "91d6a69217",
+    "403c178abe"
+   ],
+   "value": "Harvey is an AI platform purpose-built for legal and professional services, delivering domain-specific models that assist with research, drafting, analysis, and complex legal workflows. The company generates revenue by selling its AI assistant directly to elite law firms and corporate legal departments on a subscription or licensing basis."
+  },
+  "synthesized_evidence_sha": "4d5779750d42b55e",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "916f03d47a",
+    "403c178abe"
+   ],
+   "value": "Engineers work on fine-tuning large language models, prompt engineering, retrieval-augmented generation, and building domain-specific AI features that must handle complex, high-stakes legal logic. Roles also involve designing human-in-the-loop systems and workflow automation for professional service environments."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677408,
   "web_search_url": "https://duckduckgo.com/?q=Harvey+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "91d6a69217",
+    "27d3aba138",
+    "403c178abe"
+   ],
+   "value": "Offers a high-prestige AI engineering role at a well-funded startup applying cutting-edge models to an elite professional domain—law—without the bureaucratic inertia of big tech. The company moves fast and operates with intensity yet focuses on long-term relationship building through adoption and expansion, suggesting a less volatile tempo than consumer-scale hypergrowth. Early-stage inflection point gives a new grad outsized role in shaping product and culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "91d6a69217",
+    "27d3aba138"
+   ],
+   "value": "Estimated: 6/10. Language around 'operating with intensity' and 'pushing each other for excellence' suggests a hard-working environment typical of top-tier marketplaces startups. The professional services customer base and emphasis on long-term customer partnerships may limit weekend sprints compared to consumer apps, but official protections like shutdown weeks are not confirmed."
   }
  },
  "hatch": {
@@ -85953,34 +86345,92 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "3b2aa622d1"
+   ],
+   "value": "It operates a hybrid business-to-business (B2B) and business-to-government (B2G) industrial model, heavily driven by aftermarket services. Revenue is highly recurring, sourced from long-term service contracts on installed equipment and multi-year defense platform agreements, across four units: Aerospace Technologies, Industrial Automation, Building Automation, and Energy & Sustainability Solutions."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "825a251366",
+    "0d18358438"
+   ],
+   "value": "We culture is 'Old Guard Discipline meets Digital Transformation.' It is a buttoned-down, formal engineering giant that heavily invests in diversity and sustainability, fostering a respectful, safety-obsessed environment—void of startup ping-pong tables but equally void of uncontrolled panic fires."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "3b2aa622d1"
+   ],
+   "value": "Its primary customers are corporate and government entities. Key buyers include commercial airlines, the U.S. Department of Defense, building operators such as hospitals and hotels, oil and gas refineries, and supply chain distribution centers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $100,000 - $115,000 base salary, with a ~$12,000 annual bonus and ~$25,000 total in equity value packages, bringing maximum first-year total comp (TC) near ~$140,000 for high-cost-of-living (HCL) aerospace hubs."
   },
   "evidence_sha": "6c1f94d89bdfece8",
+  "generated_at": 1784682913,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "3b2aa622d1"
+   ],
+   "value": "Industrial Conglomerate / Aerospace & Defense Technology"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should prepare for a heavy behavioral loop that often outweighs pure LeetCode due to a massive emphasis on safety culture and integrity. Highly technical AI/DS interviews will ask about this real-world constraint—modeling for hardware limitations, sensor fusion with noisy data, and explainability for regulated industries like aerospace rather than traditional whiteboard speed-coding puzzles alone."
   },
+  "last_attempt_at": 1784682913,
   "last_evidence_at": 1784676949,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "3b2aa622d1"
+   ],
+   "value": "The global headquarters is in Charlotte, North Carolina. It maintains a massive physical footprint, including major tech hubs in Phoenix (Arizona), Atlanta (Georgia), Houston (Texas), and major international engineering centers in Brno (Czech Republic) and Bangalore (India)."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "825a251366",
+    "0d18358438"
+   ],
+   "value": "Honeywell's stated mission is to solve the world's toughest challenges in areas like automation, the future of aviation, and the energy transition. It emphasizes a commitment to integrity, innovation, and workplace inclusion while delivering for shareholders."
+  },
   "name": "Honeywell",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate and methodical pace driven by strict physical safety adherence, regulatory checkpoints, and rigorous stage-gate validation processes, which significantly decelerate the typical software sprint speed."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "3b2aa622d1",
+    "825a251366"
+   ],
+   "value": "The product portfolio is vast and includes aircraft engines, avionics, control systems for buildings, industrial automation equipment, warehouse robotics, personal protective equipment, barcode scanners, and specialty chemicals."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days of vacation standard for new engineering graduates in the U.S., with a separate bank of approximately 5 sick days, typically converting to a flexible 'gifted' pot system."
   },
+  "refresh_after": 1789866913,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -85990,7 +86440,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed week-long winter holiday shutdown between Christmas and New Year's Day, with an additional typical U.S. manufacturing shutdown around the July 4th holiday."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "3b2aa622d1"
+   ],
+   "value": "Honeywell is a mature, public, Fortune 100 company with a massive global scale. It has approximately 95,000 employees and reported $37.3 billion in revenue."
   },
   "sources": [
    {
@@ -86024,14 +86481,40 @@
     "url": "https://www.bing.com/ck/a?!&&p=d6437184d59fdef9a53d4420b77d87f14dcbfa19357f95a46e7f77b5340c9c44JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=28186e5c-b7dc-65ce-244c-79c1b64464b0&u=a1aHR0cHM6Ly93d3cuaG9uZXl3ZWxsLmNvbS91cy9lbg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "3b2aa622d1"
+   ],
+   "value": "Honeywell is a multinational industrial conglomerate that produces a wide range of commercial and consumer products, engineering services, and aerospace systems. It generates revenue by selling these technology-intensive physical products, software, and services to other businesses (B2B) and governments across four major operating segments."
+  },
+  "synthesized_evidence_sha": "6c1f94d89bdfece8",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "3b2aa622d1",
+    "0d18358438"
+   ],
+   "value": "Technical staff work on industrial AI, data-driven predictive maintenance engineering, and enterprise data science supporting the business's core segments. Challenges include computer vision for autonomous flight, digital twins for oil refineries, IoT analytics for smart cities, and supply chain AI engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676949,
   "web_search_url": "https://duckduckgo.com/?q=Honeywell+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Honeywell offers a rare compromise for new grads: the elite prestige and high pay of a Fortune 100 company paired with real work in industrial AI and autonomy rather than typical consumer ad-tech. The company's heavy focus on predictable engineering cycles and mission-critical safety systems translates to a stable, 40-hour-week culture that mandates holiday shutdowns, protecting personal time with genuinely sane hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 8.5/10 for standard commercial AI/IT teams. Work-life balance is rooted in a deep-rooted safety obsession, physically impossible crunches on flight hardware, and strictly enforced time windows."
   }
  },
  "hong kong exchanges": {
