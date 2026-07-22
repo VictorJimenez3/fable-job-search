@@ -10852,7 +10852,7 @@
    "value": "Tier 1 (Elite). Amazon is a pioneer in production AI and cloud infrastructure globally, rivaling Google, Meta, and Microsoft in AI talent branding."
   },
   "aliases": [],
-  "attempts": 21,
+  "attempts": 22,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -10902,7 +10902,7 @@
    "source_ids": [],
    "value": "Amazon interviews emphasize its Leadership Principles with behavioral questions, plus technical screening covering data structures, system design, algorithms, and coding proficiency. Storytelling about ownership, bias for action, and customer obsession is crucial. For AI and data science roles, expect deep dives into machine learning theory, statistical analysis, and deployment experience."
   },
-  "last_attempt_at": 1784729335,
+  "last_attempt_at": 1784729479,
   "last_evidence_at": 1784636762,
   "locations": {
    "confidence": "high",
@@ -47736,7 +47736,7 @@
    "value": "Tier 3: Early-stage tier startup. Prestige comes from being a foundational team member building novel AI matching systems, not from a massive corporate brand name. Offers high potential career growth if the platform scales."
   },
   "aliases": [],
-  "attempts": 9,
+  "attempts": 10,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -47790,7 +47790,7 @@
    ],
    "value": "Given the candidate's priorities and Clera's stage, the interview process will heavily assess culture-add for a fast, innovation-driven, yet s culture. Prepare to discuss your technical approach to building AI/ML systems, your interest in the concept of a 'candidate-first' mission, and how you balance getting a high volume of quality work done while defining your own personal boundaries to prevent burnout. Early whiteboard sessions should demonstrate full-stack thinking."
   },
-  "last_attempt_at": 1784729335,
+  "last_attempt_at": 1784729479,
   "last_evidence_at": 1784719450,
   "locations": {
    "confidence": "low",
@@ -73836,7 +73836,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -73854,7 +73854,7 @@
    "source_ids": [],
    "value": "Sports / technology (estimated)"
   },
-  "last_attempt_at": 1784729335,
+  "last_attempt_at": 1784729479,
   "last_evidence_at": 1784725192,
   "name": "Fanatics",
   "pace_of_work": {
@@ -114334,7 +114334,7 @@
    "value": "Tier 1 (elite) — KLA's AI/ML work is applied to mission-critical semiconductor manufacturing at atomic scales; publications at top venues (SPIE, IEEE) and direct impact on every advanced node."
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -114381,7 +114381,7 @@
    ],
    "value": "Expect deep technical screens on algorithms, data structures, and domain-specific knowledge (optics, signal processing, ML for vision, real-time C++/Python). Prepare for system-design questions around high-throughput inspection pipelines and cross-disciplinary collaboration with physicists and mechanical engineers. Behavioral rounds will probe ownership, rigor, and ability to ship reliable hardware/software systems."
   },
-  "last_attempt_at": 1784729335,
+  "last_attempt_at": 1784729479,
   "last_evidence_at": 1784724909,
   "locations": {
    "confidence": "high",
@@ -149967,40 +149967,98 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2–3 (strong new-grad pay and real production data, but not a primary AI research lab or household-name tech brand)."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "415c73d0fc"
+   ],
+   "value": "Revenue generated through advertising sales commissions/fees and media consultancy service fees from brands running multiscreen campaigns."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "415c73d0fc"
+   ],
+   "value": "Estimated: Commercial, collaborative, and metrics-driven; sales-engineering partnership culture where data directly informs revenue decisions. Likely meritocratic with visible impact."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "415c73d0fc"
+   ],
+   "value": "Brands and advertisers looking to execute multiscreen advertising campaigns and media strategy consulting."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "415c73d0fc"
+   ],
+   "value": "Estimated: $77K–$127K base (per Data Analyst posting); total comp likely near top of band with bonus given sales-adjacent role."
   },
   "evidence_sha": "a5d7d9c94a2a55e4",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784729479,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784729335,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "415c73d0fc"
+   ],
+   "value": "Advertising Technology / Media Consultancy / Multiscreen Ad Sales"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "415c73d0fc"
+   ],
+   "value": "Expect heavy emphasis on applied analytics: SQL window functions, experiment design for ad-campaign lift, time-series forecasting for inventory yield, and storytelling with Tableau/Looker. Prepare a case study where you translated messy, multi-source ad-server/log data into a revenue-impacting insight. Be ready to discuss how you balance statistical rigor with the speed demands of a sales-driven consultancy."
+  },
+  "last_attempt_at": 1784729479,
   "last_evidence_at": 1784725192,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "415c73d0fc"
+   ],
+   "value": "Long Island City, NY (onsite per job posting); potential additional offices not confirmed in sources."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "415c73d0fc"
+   ],
+   "value": "To deliver innovative multiscreen advertising sales and media consultancy solutions that connect brands with target audiences effectively."
+  },
   "name": "Optimum Financial Group",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "415c73d0fc"
+   ],
+   "value": "Estimated: Fast—client-driven deadlines and real-time campaign optimization cycles; faster than traditional corporate but with more structure than early-stage startups."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "415c73d0fc"
+   ],
+   "value": "Multiscreen advertising sales services and media consultancy for brands seeking cross-platform audience reach."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + standard US holidays; no public policy documented."
   },
+  "refresh_after": 1789913479,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -150010,7 +150068,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns documented; typical US corporate holiday calendar observed."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "415c73d0fc",
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Growth-stage company actively hiring entry-level data/analytics roles; exact headcount not publicly disclosed."
   },
   "sources": [
    {
@@ -150064,14 +150130,41 @@
     "url": "https://jobright.ai/jobs/info/6a608c382a30b85637874553?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May consider visa sponsorship for technical roles given NYC location and competitive entry-level pay band; no explicit policy found in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "415c73d0fc"
+   ],
+   "value": "Optimum Financial Group operates as an innovative multiscreen advertising sales and media consultancy business, connecting brands with audiences across multiple screens and platforms."
+  },
+  "synthesized_evidence_sha": "a5d7d9c94a2a55e4",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "415c73d0fc"
+   ],
+   "value": "Data analysis for advertising performance measurement, audience insights, and multiscreen campaign optimization; likely involves SQL, Python/R, visualization tools, and ad-tech data pipelines."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784725192,
   "web_search_url": "https://duckduckgo.com/?q=Optimum+Financial+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "415c73d0fc"
+   ],
+   "value": "Offers a rare combination of elite-tier compensation ($77K–$127K for new-grad data roles) in a fast-moving ad-tech/media consultancy that values innovation over bureaucracy. The multiscreen advertising domain provides high-impact, real-time data challenges—audience measurement, cross-platform attribution, and yield optimization—without the burnout culture of pure quant finance or big-tech grind. Onsite NYC location accelerates mentorship and career velocity while the consultancy model ensures va"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5—onsite NYC hours with occasional campaign-launch crunches; consultancy model implies some client-driven variability but no evidence of systemic burnout culture."
   }
  },
  "optiver": {
@@ -160108,7 +160201,7 @@
    "value": "Estimated: High crypto-startup prestige due to massive public visibility, but not traditional FAANG-tier AI/data science prestige."
   },
   "aliases": [],
-  "attempts": 9,
+  "attempts": 10,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -160162,7 +160255,7 @@
    ],
    "value": "Probe deeply into actual day-to-day working hours, on-call expectations, and the company's commitment to sane work-life balance to ensure the demanding startup pace does not lead to burnout, while confirming that the technical learning curve justifies the potential lack of traditional slow-bureaucracy stability."
   },
-  "last_attempt_at": 1784729335,
+  "last_attempt_at": 1784729479,
   "last_evidence_at": 1784724909,
   "locations": {
    "confidence": "low",
@@ -175927,7 +176020,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -175945,7 +176038,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784729335,
+  "last_attempt_at": 1784729479,
   "last_evidence_at": 1784676785,
   "name": "Royal Caribbean Group",
   "pace_of_work": {
@@ -210449,37 +210542,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown – no public AI/data science reputation found in supplied sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No business model details found in the supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown – no culture information found in supplied sources."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No customer information available in the supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: No compensation data found in supplied sources."
   },
   "evidence_sha": "427435802134c8f7",
+  "generated_at": 1784729479,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Estimated: Health technology / digital health (inferred from name)."
   },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784729479,
   "last_evidence_at": 1784612308,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No location information found in the supplied sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No mission statement found in the supplied sources."
+  },
   "name": "Tuesday Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown – no work pace data found in supplied sources."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No product information available in the supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: No PTO policy found in supplied sources."
   },
+  "refresh_after": 1789913479,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -210489,7 +210623,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide shutdown policy found in supplied sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Company size and stage unknown from supplied sources."
   },
   "sources": [
    {
@@ -210523,14 +210662,35 @@
     "url": "https://www.rippling.com/products/hr/recruiting"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No visa sponsorship information found in the supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Tuesday Health appears to be a health technology company; however, no verifiable details about its products, mission, or business model were found in the supplied sources."
+  },
+  "synthesized_evidence_sha": "427435802134c8f7",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No technical work details found in the supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784612308,
   "web_search_url": "https://duckduckgo.com/?q=Tuesday+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown – no work-life balance data found in supplied sources."
   }
  },
  "tulane university": {
