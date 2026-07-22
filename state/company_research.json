@@ -18606,39 +18606,96 @@
  },
  "ask it consulting": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "bdfdf06893"
+   ],
+   "value": "Tier 2 — Strong applied AI prestige (production LLM search product iAsk.ai, petabyte-scale search index), but not a primary research lab like DeepMind or FAIR. Respected for engineering rigor in retrieval-augmented generation at scale."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "b2c256a4f9",
+    "bdfdf06893"
+   ],
+   "value": "Search advertising revenue (pay-per-click, display ads on search results), partner distribution deals, and potential enterprise licensing of search/AI technology."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-centric, pragmatic, pivot-driven. Culture blends veteran search engineers with newer AI talent; likely less political than large corps but with legacy tech debt friction. Mission-focused on 'answering questions' rather than pure research."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "b2c256a4f9",
+    "bdfdf06893"
+   ],
+   "value": "General internet users seeking search services, advertisers bidding on search placements, and enterprise partners licensing search technology."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$160k base + equity (modest, pre-IPO style) + bonus ~10-15%; Bay Area anchor. Below FAANG top-tier but competitive for mid-sized AI-applied shops."
   },
   "evidence_sha": "ed18324926f68403",
+  "generated_at": 1784684732,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b2c256a4f9",
+    "bdfdf06893"
+   ],
+   "value": "Internet Search / AI-Powered Information Retrieval / AdTech"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "bdfdf06893"
+   ],
+   "value": "Expect deep technical screens on search relevance, distributed systems, and LLM integration (RAG, fine-tuning, latency optimization). Behavioral focus on shipping speed vs. quality trade-offs, handling ambiguity in a pivot environment, and cross-functional collaboration between legacy search and new AI teams. Prepare for system design around low-latency ranking and ad auction logic."
+  },
+  "last_attempt_at": 1784684732,
+  "last_evidence_at": 1784675871,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Headquartered in Oakland, California (historical Ask.com base); likely remote/hybrid options given modern tech hiring practices."
   },
-  "last_evidence_at": 1784675871,
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide accurate, efficient search experiences powered by AI and traditional search technology, helping users find information quickly."
+  },
   "name": "Ask IT Consulting",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast — Active AI pivot (iAsk.ai) creates urgency to ship; legacy search maintenance adds steady workload. Less bureaucratic than FAANG but revenue dependence on ads drives quarterly intensity."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "b2c256a4f9",
+    "bdfdf06893"
+   ],
+   "value": "Ask.com (general web search engine), iAsk.ai (AI-powered search assistant), and related search/advertising technology platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays (US standard for mid-sized tech); unlimited policy not confirmed."
   },
+  "refresh_after": 1789868732,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -18648,7 +18705,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns publicly documented; typical tech holiday breaks (Dec 24-Jan 1) likely but not contractual."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established mid-sized company (legacy search brand with modern AI pivot); likely 200-1,000 employees given Ask.com's history and current AI initiatives."
   },
   "sources": [
    {
@@ -18682,14 +18744,43 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and green cards for specialized AI/search engineering roles given technical talent demands; confirm with recruiter."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "b2c256a4f9",
+    "bdfdf06893"
+   ],
+   "value": "Ask IT Consulting operates the Ask.com search engine and iAsk.ai AI search platform, generating revenue primarily through search advertising and partnerships. The company leverages its long-standing search infrastructure and newer AI capabilities to serve consumer queries and monetize traffic."
+  },
+  "synthesized_evidence_sha": "ed18324926f68403",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "bdfdf06893"
+   ],
+   "value": "Search ranking algorithms, large-scale indexing, NLP/LLM integration for iAsk.ai, distributed systems for low-latency query serving, advertising auction systems, and data pipeline engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675871,
   "web_search_url": "https://duckduckgo.com/?q=Ask+IT+Consulting+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "b2c256a4f9",
+    "bdfdf06893"
+   ],
+   "value": "Offers a rare blend of elite search/AI prestige (decades of search infrastructure + cutting-edge LLM product iAsk.ai) with a mid-sized company's agility. The candidate's priority for fast innovation without bureaucracy aligns with a legacy brand actively pivoting to AI. Work-life balance potential is higher than FAANG due to smaller scale, though search advertising revenue pressures can drive intensity. Strong technical learning curve in ranking, NLP, and high-scale systems."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — Better than typical big-tech search orgs due to smaller size, but on-call rotations for search uptime and ad-revenue critical paths can disrupt evenings/weekends. No public guaranteed-shutdown policy found."
   }
  },
  "asml": {
@@ -25351,7 +25442,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -25369,7 +25460,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784684641,
+  "last_attempt_at": 1784684732,
   "last_evidence_at": 1784675870,
   "name": "BCforward",
   "pace_of_work": {
@@ -54452,37 +54543,75 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $175,000-$220,000 total annual compensation (base + bonus + equity), reflecting market-leading positioning for standardized new-grad offers."
   },
   "evidence_sha": "3c064ca9a0650ab0",
+  "generated_at": 1784684732,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
-  "last_attempt_at": 1784684641,
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784684732,
   "last_evidence_at": 1784583369,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Databricks",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast, execution-driven tempo similar to a hyper-growth unicorn, but more structured than an early-stage seed startup because of heavy product scope; speed is measured by architectural output, not meeting-count."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The Databricks Platform (often called the Data Intelligence Platform) is a cloud service that combines data engineering, data warehousing, streaming, and AI/ML capabilities underpinned by a 'lakehouse' architecture. It is built on open-source projects like Apache Spark and Delta Lake."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Flexible (discretionary) policy; candidates typically take ~20-25 days per year without a strict accrued pool."
   },
+  "refresh_after": 1789868732,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -54492,7 +54621,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide week-long summer and winter recharge shutdowns are informally enforced by teams rather than systematized globally."
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -54526,14 +54660,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=5df14407aeb1ee35ee8d91ee8d2aaf99239eadc00ad6756ea1068bf6a5c08da5JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L3F1ZXJ5&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Databricks provides a unified data and AI platform that helps organizations process massive datasets and build machine learning models on a single collaborative system. The company makes money by charging customers a cloud consumption fee based on the compute resources they use on its platform."
+  },
+  "synthesized_evidence_sha": "3c064ca9a0650ab0",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583369,
   "web_search_url": "https://duckduckgo.com/?q=Databricks+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Average to strong for Big Tech/Cloud. Generally regarded as better than 24/7 on-call AWS cultures, with respect for engineering capacity planning. Hard problems are expected to be solved during normal working hours without the performative 'hero culture' traps."
   }
  },
  "datadog": {
@@ -131847,7 +132002,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -131865,7 +132020,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784684641,
+  "last_attempt_at": 1784684732,
   "last_evidence_at": 1784677183,
   "name": "Nidec",
   "pace_of_work": {
@@ -174691,7 +174846,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -174733,7 +174888,7 @@
    ],
    "value": "Technical skills in AI research, agents, and reinforcement learning, with emphasis on innovation and problem-solving in a fast-paced environment."
   },
-  "last_attempt_at": 1784684641,
+  "last_attempt_at": 1784684732,
   "last_evidence_at": 1784656820,
   "locations": {
    "confidence": "unknown",
@@ -189147,7 +189302,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -189189,7 +189344,7 @@
    ],
    "value": "Probe whether the 'dynamic team' and 'exciting environment' translate to true technical learning and career growth for AI/Data Science work, or if the highly structured nature of defense/aerospace solutions will conflict with the desire to avoid slow bureaucracy."
   },
-  "last_attempt_at": 1784684641,
+  "last_attempt_at": 1784684732,
   "last_evidence_at": 1784674726,
   "locations": {
    "confidence": "high",
@@ -215772,11 +215927,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -215788,6 +215945,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784684732,
   "last_evidence_at": 1784675872,
   "name": "Yale University",
   "pace_of_work": {
@@ -217171,41 +217329,110 @@
  "zip": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "358bb12406",
+    "bc8fd96093"
+   ],
+   "value": "Zip is considered a top-tier product-focused AI company in the procurement space, backed by marquee investors, with strong graduate pay and the ability to attract competitive students from elite programs, though it is slightly less iconic than the largest AI research labs."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "140f70a6bd",
+    "358bb12406"
+   ],
+   "value": "Zip is a B2B SaaS company charging subscription fees for access to its procurement, accounts payable, and AI-powered workflow automation platform."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "7d639306f3",
+    "358bb12406"
+   ],
+   "value": "Learning-driven, growth-oriented, and high-autonomy culture. People are given full ownership of outcomes, supported through learning, and expected to execute but not at the expense of reasonable personal boundaries. This mix appeals to candidates who want intensity, without toxicity."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "358bb12406",
+    "bc8fd96093"
+   ],
+   "value": "Zip sells to enterprise organizations across procurement, legal, and finance functions. The AI Forward Deployed Engineer roles specifically mention owning a small book of enterprise accounts end-to-end."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "358bb12406",
+    "bc8fd96093"
+   ],
+   "value": "Estimated: For AI forward-deployed or data science roles, median base salary of $140,000-$160,000 with significant equity annual and performance bonus that can level total compensation to $190,000-$230,000, consistent with high-growth AI startups targeting top-tier talent."
   },
   "evidence_sha": "5078e1bbb77524c4",
+  "generated_at": 1784684732,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "140f70a6bd"
+   ],
+   "value": "FinTech and Procurement Technology, specifically B2B SaaS for enterprise procurement, accounts payments, and AP automation."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Based on the candidate's priorities, interviews should emphasize speed of ownership for AI agent deployment, the scope of technical decision-making, and how the team maintains boundaries on work-life balance. Candidates should ask concrete questions about typical working hours, actual project pacing, and whether shutdown periods protect weekends and evenings, ensuring the culture lives up to promises of a low-burnout, high-autonomy environment."
   },
-  "last_attempt_at": 1784684641,
+  "last_attempt_at": 1784684732,
   "last_evidence_at": 1784675869,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "140f70a6bd",
+    "7d639306f3",
+    "358bb12406"
+   ],
+   "value": "Zip's headquarters is in the United States with a URL indicating zip.co/us. Job postings do not enforce a single location requirement, suggesting remote or hybrid work possible across the U.S. One job post emphasizes onboarding, provisioning, shipping, and receiving hardware, implying a physical office presence in at least one major location."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "7d639306f3",
+    "358bb12406"
+   ],
+   "value": "Zip's public hiring materials indicate a focus on providing a fast-paced environment that pushes employees to learn while doing, with an emphasis on deploying AI solutions that expand the scope of value delivered to enterprises."
+  },
   "name": "Zip",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "7d639306f3",
+    "358bb12406"
+   ],
+   "value": "Estimated: Fast-paced, high-ownership environment where engineers are expected to move quickly on deployment and learn through execution, but sources suggest this intensity is coupled with a growth mindset, not a culture of aimless crunch."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "140f70a6bd",
+    "358bb12406",
+    "bc8fd96093"
+   ],
+   "value": "Zip's core platform offers intake-to-procure, accounts payable, and vendor management solutions. The company also provides AI-powered tools like AppStudio and an AI infrastructure for building and deploying custom AI agents configured to customer environments."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Typical for early-to-mid stage VC-backed SaaS companies, likely around 15-20 days of PTO per year, plus sick time, with flexible but competitive norms that discourage overuse."
   },
+  "refresh_after": 1789868732,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -217215,7 +217442,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Zip likely offers a company-wide winter holiday shutdown between Christmas and New Year's, and occasional extended long weekends. No formal sabbatical or lengthy shutdown research verified."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "358bb12406",
+    "bc8fd96093",
+    "7d639306f3"
+   ],
+   "value": "Zip is a venture-backed private technology company that has raised significant funding and is in its high-growth scaling stage, as indicated by fast-paced hiring, broad-scope technical roles, and expanding product surface area into AI agents and enterprise deployment."
   },
   "sources": [
    {
@@ -217279,14 +217515,43 @@
     "url": "https://jobs.ashbyhq.com/zip/91c7cbf9-29a3-4d79-9f86-1d4851ac6908"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "140f70a6bd"
+   ],
+   "value": "Zip provides an intake-to-procure and accounts payable platform that helps enterprises streamline purchasing, vendor management, and payments. The company generates revenue through subscription fees for its SaaS platform, enabling organizations to digitize and automate procurement workflows."
+  },
+  "synthesized_evidence_sha": "5078e1bbb77524c4",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "358bb12406",
+    "bc8fd96093",
+    "7d639306f3"
+   ],
+   "value": "AI and data science work involves building AI agent solutions using Zip's App AI and AI infrastructure, deployed into enterprise customer environments. Roles include Forward Deployed Engineers, while IT roles encompass systems administration and automation. Infrastructure spans AI, procurement, legal, and AP workflows."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675869,
   "web_search_url": "https://duckduckgo.com/?q=Zip+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "7d639306f3"
+   ],
+   "value": "Zip offers a path to elite-tier enterprise AI compensation and hands-on learning in a fast-moving tech environment, aligned with candidate's goal of immediate high impact without bureaucratic slowdown. The company's culture literature emphasizes growth while doing the job, not through heroic hours—meeting the candidate's request for accelerated technical learning and career growth without sacrificing personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Above average for early-stage AI startups. The explicit language about learning while doing and the absence of known burnout memes suggest a rhythm that respects recovery, though rapid scaling inevitably creates some peaks."
   }
  },
  "zocdoc": {
