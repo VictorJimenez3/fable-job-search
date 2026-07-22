@@ -35421,7 +35421,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -35439,7 +35439,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784687558,
+  "last_attempt_at": 1784687650,
   "last_evidence_at": 1784674482,
   "name": "Cadence Design Systems",
   "pace_of_work": {
@@ -43019,7 +43019,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -43037,7 +43037,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784687558,
+  "last_attempt_at": 1784687650,
   "last_evidence_at": 1784674768,
   "name": "Circle",
   "pace_of_work": {
@@ -70746,7 +70746,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -70764,7 +70764,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
-  "last_attempt_at": 1784687558,
+  "last_attempt_at": 1784687650,
   "last_evidence_at": 1784583446,
   "name": "Figma",
   "pace_of_work": {
@@ -96114,37 +96114,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low to Medium – primarily applied AI/ML implementation for clients rather than fundamental research; limited publication record or conference presence."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue generated from placement fees for contract and permanent staffing, time-and-materials consulting contracts, fixed-price project engagements, and managed services agreements."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, entrepreneurial, and client-centric; culture emphasizes responsiveness, billability, and team collaboration across distributed project teams."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Federal, state, and local government agencies, as well as commercial enterprises in healthcare, finance, and technology sectors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000-$90,000 base salary for entry-level technical consultants; bonuses and benefits may add 10-15%."
   },
   "evidence_sha": "b0fed1b3547bb4f2",
+  "generated_at": 1784687650,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "IT Staffing & Consulting / Professional Services"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect emphasis on consulting aptitude, adaptability to varied tech stacks, client communication, and problem-solving in ambiguous environments. Technical interviews will assess core CS fundamentals and relevant domain skills (e.g., Python, SQL, cloud platforms) rather than cutting-edge AI research depth."
+  },
+  "last_attempt_at": 1784687650,
   "last_evidence_at": 1784675879,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Columbia, Maryland with additional offices in major US metros including Washington DC, New York, Chicago, Dallas, and Atlanta; supports remote and hybrid arrangements per client requirements."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To deliver high-quality talent and technology solutions that enable client success through innovation and partnership."
+  },
   "name": "Infojini",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast-paced, project-based consulting environment; workload varies by client engagement and can include tight deadlines and travel."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "IT staffing, consulting, managed services, and technology solutions including software development, data analytics, and cloud services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual PTO plus federal holidays; accrual-based and may vary by role and tenure."
   },
+  "refresh_after": 1789871650,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -96154,7 +96195,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide mandated shutdowns; time off between projects depends on bench status and client schedules."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Private company with approximately 500-1,000 employees; established player in the government contracting and commercial staffing market."
   },
   "sources": [
    {
@@ -96188,14 +96234,35 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active H-1B sponsor for consulting roles; green card sponsorship available for long-term employees on a case-by-case basis, typically after 1-2 years of tenure."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Infojini is a mid-sized IT staffing and consulting firm that provides technology talent solutions and professional services to government and commercial clients across the United States."
+  },
+  "synthesized_evidence_sha": "b0fed1b3547bb4f2",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Consultants work on client-site or remote projects involving full-stack development, data engineering, AI/ML model deployment, cloud migration, cybersecurity, and ERP implementations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675879,
   "web_search_url": "https://duckduckgo.com/?q=Infojini+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Infojini offers exposure to diverse, high-impact projects across government and commercial sectors, which can accelerate technical breadth and client-facing skills. However, as a staffing/consulting firm, it may not provide the elite AI research prestige, guaranteed work-life shutdowns, or top-tier new-grad compensation that the candidate prioritizes; the pace is project-driven and can be demanding."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Moderate (estimated 3/5) – consulting roles often require flexibility to meet client needs; limited guaranteed shutdowns or strict hour caps."
   }
  },
  "ing": {
@@ -106316,7 +106383,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -106334,7 +106401,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784687558,
+  "last_attempt_at": 1784687650,
   "last_evidence_at": 1784675879,
   "name": "Kitware",
   "pace_of_work": {
@@ -145244,7 +145311,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -145262,7 +145329,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784687558,
+  "last_attempt_at": 1784687650,
   "last_evidence_at": 1784674729,
   "name": "Peraton",
   "pace_of_work": {
@@ -190643,7 +190710,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 11,
+  "attempts": 12,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -190685,7 +190752,7 @@
    ],
    "value": "Probe whether the 'dynamic team' and 'exciting environment' translate to true technical learning and career growth for AI/Data Science work, or if the highly structured nature of defense/aerospace solutions will conflict with the desire to avoid slow bureaucracy."
   },
-  "last_attempt_at": 1784687558,
+  "last_attempt_at": 1784687650,
   "last_evidence_at": 1784674726,
   "locations": {
    "confidence": "high",
@@ -212380,40 +212447,90 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Respected within insurance/actuarial analytics but not a recognized AI research leader; prestige derives from company scale, not tech brand."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "ce9f5206ef"
+   ],
+   "value": "Traditional insurance holding company model: collect premiums, invest float, manage assets, and distribute through agents/advisors across subsidiary brands."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "ce9f5206ef"
+   ],
+   "value": "Conservative, tenure-rich, process-oriented. Mutual-company ownership fosters long-term thinking and employee loyalty. Low politics but high bureaucracy. Diversity improving slowly."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "ce9f5206ef"
+   ],
+   "value": "Individual consumers seeking life insurance and retirement products, families (via Gerber Life), and employer groups for benefits solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95,000–$115,000 base + 5–10% target bonus + RSU/phantom stock (vesting 3–5 yr). Total comp ~$105k–$130k."
   },
   "evidence_sha": "227cab90c65a83e3",
+  "generated_at": 1784687650,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ce9f5206ef"
+   ],
+   "value": "Insurance & Financial Services (Life/Annuity/Asset Management)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect behavioral-heavy loops testing cultural fit and regulatory awareness. Technical screens cover Python/SQL, statistical modeling, and insurance domain basics (loss ratios, reserving). Ask about AI governance model, model risk management (SR 11-7), and how DS teams partner with actuaries. Probe for concrete WLB examples: on-call rotation, sprint cadence, and shutdown adherence."
   },
-  "last_attempt_at": 1784687558,
+  "last_attempt_at": 1784687650,
   "last_evidence_at": 1784672485,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "ce9f5206ef"
+   ],
+   "value": "Headquartered in Cincinnati, OH; major offices in Columbus, OH; Fort Washington, PA; and remote/hybrid roles nationally."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To help individuals and families achieve financial security through insurance and investment solutions (inferred from industry context)."
+  },
   "name": "Western & Southern Financial Group",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Slow–moderate. Multi-month release cycles, heavy compliance gates, and committee-driven prioritization. Estimated 2–4 major model deployments per year."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "ce9f5206ef"
+   ],
+   "value": "Life insurance, annuities, investment products, financial planning services, and group benefits through subsidiaries like Gerber Life Insurance."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10 company holidays + 2 volunteer days. Accrual-based; unlimited not offered."
   },
+  "refresh_after": 1789871650,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -212423,7 +212540,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full week shutdown between Christmas–New Year; optional summer half-day Fridays (Memorial–Labor Day). No guaranteed monthly/quarterly shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, established mutual holding company (Fortune 500) with $60B+ assets; mature, low-growth stage."
   },
   "sources": [
    {
@@ -212457,14 +212579,39 @@
     "url": "https://careers-westernsouthern.icims.com/jobs/search?hashed=-625978161"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors H-1B for specialized tech/actuarial roles; green card sponsorship likely for senior talent. No public policy details found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "ce9f5206ef"
+   ],
+   "value": "Western & Southern Financial Group is a Cincinnati-based financial services and insurance holding company that operates through multiple subsidiaries including Gerber Life Insurance. It makes money primarily through insurance premiums, investment management, and financial planning services across its family of companies."
+  },
+  "synthesized_evidence_sha": "227cab90c65a83e3",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ce9f5206ef"
+   ],
+   "value": "Core insurance systems modernization, actuarial modeling, data analytics for underwriting/claims, legacy mainframe migration, and emerging AI/ML for risk scoring and customer personalization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672485,
   "web_search_url": "https://duckduckgo.com/?q=Western+%26+Southern+Financial+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers elite insurance-industry prestige and competitive new-grad pay (~$95–115k base) with a slower, stable pace than big tech. Culture emphasizes tenure and work-life boundaries (estimated 40–45 hr weeks, rare weekends), aligning with your desire for sanity over burnout. However, innovation speed is bureaucratic—AI/DS roles focus on actuarial modernization, not cutting-edge research."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5. Strong cultural norm of 40–45 hr weeks, protected weekends, and minimal on-call for DS roles. Occasional quarter-end crunches."
   }
  },
  "western union": {
