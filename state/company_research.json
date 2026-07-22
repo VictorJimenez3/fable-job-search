@@ -25806,11 +25806,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -25822,6 +25824,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784688293,
   "last_evidence_at": 1784676942,
   "name": "BCT LLC",
   "pace_of_work": {
@@ -27150,7 +27153,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -27168,7 +27171,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784688201,
+  "last_attempt_at": 1784688293,
   "last_evidence_at": 1784674777,
   "name": "Beta Soft Systems",
   "pace_of_work": {
@@ -33229,37 +33232,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong applied ML/DS in telematics, predictive maintenance, and digital fitness personalization; not a primary AI research lab but high-impact production deployments."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Designs, manufactures, and sells marine propulsion, boats, fitness, and bowling equipment through dealer networks, direct sales, and aftermarket parts/service. Revenue driven by new unit sales, recurring parts/accessories, and service contracts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, pragmatic, low-politics. Teams are cross-functional (ME/EE/CS) and collaborative. Leadership accessible; promotion path transparent but slower than hyper-growth tech. Strong loyalty—many 15+ yr veterans. Diversity initiatives active but still male-dominated in core engineering."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Recreational boaters, commercial marine operators, boat builders (OEMs), fitness clubs, hotels, corporate wellness centers, bowling centers, and consumers purchasing home fitness or game-room equipment."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k–$115k base + 10–15% target bonus + RSU grant ($15k–$25k vesting over 4 yrs) for software/embedded roles in Midwest locations. Coastal/high-COL sites ~10% higher."
   },
   "evidence_sha": "b49441ae1948916f",
+  "generated_at": 1784688293,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Marine propulsion & boats; Fitness equipment; Bowling & recreation — Discrete manufacturing + IoT/digital services"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep C/C++ embedded questions (RTOS, CAN bus, memory-constrained optimization), system-design for telematics/IoT pipelines, and practical coding (Python/Go) for data pipelines. Domain knowledge in marine or fitness is a plus but not required; they test fundamentals and ability to ship reliable firmware/software that interacts with hardware. Behavioral emphasis on cross-functional collaboration with mechanical/electrical teams and dealer-facing reliability."
+  },
+  "last_attempt_at": 1784688293,
   "last_evidence_at": 1784676942,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in Mettawa, IL (Chicago area). Major engineering/manufacturing in Fond du Lac, WI (Mercury); Knoxville, TN; multiple US plants; global operations in Europe, Asia, and Mexico."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To inspire people to enjoy life on the water and in recreation through innovative, high-quality products and experiences."
+  },
   "name": "Brunswick",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate — Quarterly hardware-driven release trains; sprints aligned to model-year cycles. Crunch periods before boat-show season (Jan–Mar) but predictable; limited fire-drill culture."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mercury Marine outboard and sterndrive engines; boats (Sea Ray, Boston Whaler, Bayliner, Lund, Crestliner); fitness equipment (Life Fitness, Hammer Strength, Cybex); bowling centers equipment and consumer bowling/billiards products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 2 floating days; accrues from day one. Additional winter shutdown (approx. 5 business days) between Christmas and New Year at most sites."
   },
+  "refresh_after": 1789872293,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -33269,7 +33313,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Annual winter shutdown (last week of December) observed at most manufacturing and office locations; paid, not drawn from PTO."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public company (NYSE: BC); ~$6.5B annual revenue; ~17,000 employees globally; mature, cyclical manufacturing business."
   },
   "sources": [
    {
@@ -33303,14 +33352,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=e66df48ccd4ecf7f4f7232dbc1132374424f642c181a6516df6def2b257ae614JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=28186e5c-b7dc-65ce-244c-79c1b64464b0&u=a1aHR0cHM6Ly9icnVuc3dpY2tib3dsaW5nLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established H-1B sponsor for engineering and IT roles; green card sponsorship typical for senior/specialized positions. New-grad roles often eligible for sponsorship depending on visa cap and role criticality."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Brunswick Corporation is a global manufacturer of marine propulsion systems, boats, and recreational products including fitness equipment and bowling gear. It operates through segments like Mercury Marine (engines), Boat Group (Sea Ray, Boston Whaler), and Fitness (Life Fitness)."
+  },
+  "synthesized_evidence_sha": "b49441ae1948916f",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Embedded systems and controls for marine propulsion (Mercury), IoT/telematics for connected boats, digital fitness platforms (Life Fitness OnDemand), manufacturing automation, materials science, and data analytics for product telemetry and dealer networks."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676942,
   "web_search_url": "https://duckduckgo.com/?q=Brunswick+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Brunswick offers elite engineering prestige in marine propulsion and connected fitness—domains with hard real-time constraints and massive install bases—while paying above-market new-grad compensation for the Midwest. The culture leans practical and product-driven rather than hype-driven, with reasonable hours typical of mature manufacturing (core 40–45 hrs, rare weekend pages). You’ll own features end-to-end on physical+digital products that ship to millions, accelerating technical depth withou"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "7.5/10 — Core hours 8–5 with flexibility; on-call rotation for cloud/telematics services (1 week/month, light paging). Summer Fridays at some sites. Manufacturing shutdowns provide natural downtime."
   }
  },
  "brunswick corporation": {
@@ -90732,11 +90802,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -90748,6 +90820,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784688293,
   "last_evidence_at": 1784674777,
   "name": "HNTB",
   "pace_of_work": {
@@ -157224,38 +157297,95 @@
  "quinstreet": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "782a3c5421"
+   ],
+   "value": "Tier 2 — Strong applied ML at scale with proprietary data; not a primary research lab but elite production engineering."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "782a3c5421"
+   ],
+   "value": "Performance marketing / lead generation: revenue from cost-per-lead, cost-per-click, or cost-per-acquisition fees paid by brands for matched consumer prospects delivered through owned-and-operated media properties and partner networks."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Data-driven, pragmatic, results-oriented; engineering respected as revenue engine; low bureaucracy for a public co; collaborative but accountable."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "782a3c5421"
+   ],
+   "value": "Product and service providers (brands, insurers, universities, lenders) seeking high-intent consumer leads; consumers researching and comparing products."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$160k base + 10-15% bonus + RSU (~$20k-40k/yr vesting); total comp ~$160k-$210k; competitive for Tier 2 applied ML roles outside FAANG."
   },
   "evidence_sha": "a0745d56427c292c",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784688293,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "782a3c5421"
+   ],
+   "value": "Performance Marketing / AdTech / Lead Generation"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "782a3c5421"
+   ],
+   "value": "Prepare for: (1) ML system design for real-time bidding/matching at scale, (2) Feature engineering for consumer intent prediction with sparse/noisy data, (3) A/B testing and causal inference for campaign optimization, (4) Data pipeline architecture for high-throughput event processing, (5) Business-case reasoning: how does your model lift revenue per click? Ask about: model deployment frequency, experiment velocity, on-call rotation, and guaranteed shutdown policies."
+  },
+  "last_attempt_at": 1784688293,
   "last_evidence_at": 1784674778,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "782a3c5421"
+   ],
+   "value": "Headquartered in Foster City, CA; additional offices in major US metros (estimated); remote-friendly roles likely."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "782a3c5421"
+   ],
+   "value": "Help product or service providers reach 'Research and Compare' customer prospects in the world's largest channel using industry-leading segmentation and AI-driven matching technologies."
+  },
   "name": "QuinStreet",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced, experiment-driven; quarterly revenue cycles create urgency but not crisis-mode; focus on measurable iteration over death marches."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "782a3c5421"
+   ],
+   "value": "AI-driven consumer matching platforms, campaign-results-driven decision engines, optimization algorithms, and vertical-specific marketplaces (insurance, education, financial services, home services)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 holidays; typical for mid-size public tech co; no unlimited PTO policy found."
   },
+  "refresh_after": 1789872293,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -157265,7 +157395,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns publicized; likely standard holiday breaks; team-level flexibility for recharge periods."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "782a3c5421"
+   ],
+   "value": "Public company (NASDAQ: QNST); ~20+ years operating history; ~600-800 employees (estimated from public filings)."
   },
   "sources": [
    {
@@ -157299,14 +157436,41 @@
     "url": "https://www.quinstreet.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B for specialized AI/ML and engineering roles given public company status and technical needs; no public policy details found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "782a3c5421"
+   ],
+   "value": "QuinStreet is a performance marketing and lead generation company that uses AI-driven matching technologies to connect consumers researching products with relevant brands. They operate large online marketplaces across verticals like insurance, education, and financial services."
+  },
+  "synthesized_evidence_sha": "a0745d56427c292c",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "782a3c5421"
+   ],
+   "value": "Large-scale real-time bidding and matching systems, ML/AI for consumer intent prediction and segmentation, optimization algorithms for campaign performance, data pipelines processing billions in media spend data, vertical-specific marketplace platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674778,
   "web_search_url": "https://duckduckgo.com/?q=QuinStreet+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "782a3c5421"
+   ],
+   "value": "QuinStreet offers a rare blend: a profitable public company with 20+ years of proprietary consumer intent data, applying AI/ML at scale to real-time matching problems. For a new grad, this means access to massive, high-quality datasets and production ML systems that directly drive revenue — elite technical prestige without the bureaucracy of big tech. The performance-marketing model aligns engineering impact with business outcomes, creating clear career acceleration. Culture emphasizes measurabl"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Public company with mature processes; performance marketing rewards outcomes not hours; likely sane on-call and shutdown norms."
   }
  },
  "quora": {
@@ -164230,11 +164394,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -164246,6 +164412,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
+  "last_attempt_at": 1784688293,
   "last_evidence_at": 1784583447,
   "name": "Roblox",
   "pace_of_work": {
@@ -169000,37 +169167,96 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 (Staffing/Consulting) — not an AI research or product organization; prestige derives from client brand names, not Saxon's own IP."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "43c41173a5",
+    "e00fb8f310"
+   ],
+   "value": "Services revenue from billable consultant hours on client engagements (staff augmentation, statement-of-work projects, managed services) plus placement fees for direct hires."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Sales-driven, metrics-focused culture emphasizing utilization and placement speed. Consultant experience varies by client; limited cohort community. Internal teams collaborative but lean."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "43c41173a5",
+    "e00fb8f310"
+   ],
+   "value": "Mid-to-large enterprises across financial services, healthcare, retail, technology, and government sectors seeking contract, contract-to-hire, and direct placement technology talent."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75k–$95k base + modest bonus for US internal roles; consultant bill-rate varies by skill/location (AI/DS premium ~$65–$90/hr bill rate, take-home ~$55k–$75k equivalent). Not competitive with top-tier AI product labs ($150k–$250k+ total)."
   },
   "evidence_sha": "c19e82d1d3e5e8af",
+  "generated_at": 1784688293,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "43c41173a5",
+    "e00fb8f310"
+   ],
+   "value": "IT Staffing & Consulting / Professional Services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Ask: (1) What percentage of AI/DS consultants are on long-term strategic engagements vs. short staff-aug roles? (2) How does Saxon support skill development when client work doesn't align with growth goals? (3) What are benchmarked WLB policies for consultants on-site at clients? (4) Are there internal R&D or innovation lab roles not tied to billable hours?"
   },
+  "last_attempt_at": 1784688293,
   "last_evidence_at": 1784676243,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "43c41173a5",
+    "e00fb8f310"
+   ],
+   "value": "Headquartered in Somerset, New Jersey, USA. Delivery centers and offices across the US (multiple states) and offshore presence in India."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "43c41173a5",
+    "e00fb8f310"
+   ],
+   "value": "Connecting skilled technology professionals with organizations to deliver business outcomes through talent solutions."
+  },
   "name": "Saxon Global",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Variable by client engagement; often fast-paced delivery pressure to meet billable utilization targets (typically 85–95%). Internal roles more moderate."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "43c41173a5",
+    "e00fb8f310"
+   ],
+   "value": "IT staff augmentation, managed services, project-based consulting, and workforce solutions across cloud, data, AI/ML, cybersecurity, and enterprise applications."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10–15 days PTO + 6–8 US holidays for US employees; accrual-based. No unlimited PTO policy reported."
   },
+  "refresh_after": 1789872293,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -169040,7 +169266,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns. Some clients may have holiday breaks; consultants follow client calendars."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-sized private company (approximately 500–2,000 employees globally), mature stage, profitable services business."
   },
   "sources": [
    {
@@ -169074,14 +169305,41 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Actively sponsors H-1B visas for consultant roles; green card sponsorship available for select long-term employees. Common in IT staffing sector."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "43c41173a5",
+    "e00fb8f310"
+   ],
+   "value": "Saxon Global is an IT staffing and consulting firm that places technology professionals across industries. It operates as a services business, earning revenue by contracting consultants to client projects and managing workforce solutions."
+  },
+  "synthesized_evidence_sha": "c19e82d1d3e5e8af",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "43c41173a5",
+    "e00fb8f310"
+   ],
+   "value": "Consultants work on client-site or remote engagements spanning cloud migration, data engineering, AI/ML model development, DevOps, full-stack development, and ERP implementations. Internal tech roles focus on recruiting platforms, delivery management, and sales enablement tools."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676243,
   "web_search_url": "https://duckduckgo.com/?q=Saxon+Global+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a new grad seeking elite AI/data science prestige and high pay with sane hours: Saxon Global is a staffing firm, not a product company. You would be placed at client sites where culture, WLB, and technical depth vary wildly by engagement. Prestige and learning depend entirely on the client project, not Saxon itself. Fast pace is client-driven; shutdowns and PTO are not guaranteed firm-wide. Consider product-focused AI labs or tech giants instead for your stated priorities."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 2.5/5 for consultants (client-dependent, high utilization pressure); 3.5/5 for internal corporate roles. No firm-wide guaranteed shutdowns."
   }
  },
  "sayvo ai": {
@@ -186290,7 +186548,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -186308,7 +186566,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784688201,
+  "last_attempt_at": 1784688293,
   "last_evidence_at": 1784673660,
   "name": "Symbotic",
   "pace_of_work": {
