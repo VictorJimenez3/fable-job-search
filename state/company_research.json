@@ -3879,7 +3879,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -3897,7 +3897,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784681898,
+  "last_attempt_at": 1784681990,
   "last_evidence_at": 1784675357,
   "name": "AeroVironment",
   "pace_of_work": {
@@ -5312,37 +5312,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 or 3. AHEAD is a solid, reputable IT services company but not a top-tier AI lab or Big Tech firm. Prestige comes via a strong consulting and client platform focus rather than in-house AI product fame."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "711df3d3fe"
+   ],
+   "value": "The company generates revenue through professional and managed technology services, consulting clients on cloud infrastructure, automation, analytics, and software delivery."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "711df3d3fe"
+   ],
+   "value": "Inclusive, empowering, and respectful. AHEAD actively promotes a culture of belonging where all voices are heard and empowered to drive change."
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 - $105,000 base salary for a new-grad technical role in the United States. This is a conservative estimate for an IT service company outside of the top-tier Big Tech or finance salary bracket."
   },
   "evidence_sha": "a5e5009b38682e29",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784681990,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "711df3d3fe"
+   ],
+   "value": "Information Technology Services and Consulting"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "711df3d3fe",
+    "7f04cda5bb"
+   ],
+   "value": "Interview preparation should highlight how you integrate cloud, analytics, and automation to solve enterprise problems, aligning with AHEAD's platform-building mission. Be ready to discuss your technical skills (like ServiceNow or data platforms) and your commitment to a collaborative, respectful culture, as a candidate from a top-tier background can show how they choose impact and learning velocity over a pure product-company badge."
+  },
+  "last_attempt_at": 1784681990,
   "last_evidence_at": 1784676942,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "75283bbf2d"
+   ],
+   "value": "Specific office locations are not detailed in the provided sources, but the company is present enough to host an annual conference."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "711df3d3fe"
+   ],
+   "value": "To help enterprises deliver on the promise of digital transformation and create a culture of belonging where all perspectives are valued, respected, and heard."
+  },
   "name": "AHEAD",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "711df3d3fe"
+   ],
+   "value": "Estimated: Fast-paced, client-driven consultancy environment, but the company's emphasis on culture and work-life balance suggests it's not a manic, high-burnout pace."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "711df3d3fe"
+   ],
+   "value": "Professional and managed services for cloud infrastructure, automation, analytics, and software delivery. AHEAD integrates these capabilities to build comprehensive digital business platforms for enterprises."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of paid time off annually, a typical, conservative figure for a US-based IT services firm at this level."
   },
+  "refresh_after": 1789865990,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -5352,7 +5410,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns beyond US public holidays (approx. 7-8 days) have been publicly identified."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "75283bbf2d"
+   ],
+   "value": "Mature enough to host annual conferences and operate across multiple locations, but specific employee count, founding date, and funding stage are not provided in the sources."
   },
   "sources": [
    {
@@ -5406,14 +5471,44 @@
     "url": "https://jobs.lever.co/thinkahead/3bb0676e-69c4-49fc-b563-be19d0f58100"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "711df3d3fe"
+   ],
+   "value": "AHEAD is an IT services and consulting company that helps enterprises modernize their technology through cloud infrastructure, automation, analytics, and software delivery. They design and build digital business platforms to enable digital transformation."
+  },
+  "synthesized_evidence_sha": "a5e5009b38682e29",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "711df3d3fe",
+    "7f04cda5bb"
+   ],
+   "value": "Work involves weaving advances in cloud infrastructure, automation, analytics, and software delivery. Specific roles include technical consulting for ServiceNow CMDB, Discovery, and Integrations, as well as incident and problem management."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676942,
   "web_search_url": "https://duckduckgo.com/?q=AHEAD+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "711df3d3fe"
+   ],
+   "value": "AHEAD is a mission-driven company that explicitly prioritizes work-life balance and a respectful, empowering culture. For a candidate seeking elite-level AI/data science work without the bureaucracy and burnout of a pure tech giant, a services firm like AHEAD offers exposure to cutting-edge cloud, analytics, and automation projects across client enterprises, potentially leading to faster technical skill growth and varied experience while maintaining sane hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "711df3d3fe"
+   ],
+   "value": "Estimated: Above average for IT services. The company explicitly prioritizes culture and empowerment, suggesting a sustainable environment, though client deadlines can still create busy periods."
   }
  },
  "aig": {
@@ -6397,11 +6492,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -6413,6 +6510,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784681990,
   "last_evidence_at": 1784676942,
   "name": "Akina, Inc",
   "pace_of_work": {
@@ -44000,7 +44098,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -44018,7 +44116,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784681898,
+  "last_attempt_at": 1784681990,
   "last_evidence_at": 1784674273,
   "name": "Comcast",
   "pace_of_work": {
@@ -49208,11 +49306,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -49224,6 +49324,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784681990,
   "last_evidence_at": 1784674482,
   "name": "Cybernetic Labs",
   "pace_of_work": {
@@ -69362,11 +69463,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -69378,6 +69481,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784681990,
   "last_evidence_at": 1784593393,
   "name": "FOX",
   "pace_of_work": {
@@ -126762,11 +126866,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -126778,6 +126884,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784681990,
   "last_evidence_at": 1784666846,
   "name": "Northrop Grumman Australia",
   "pace_of_work": {
@@ -178040,7 +178147,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -178058,7 +178165,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784681898,
+  "last_attempt_at": 1784681990,
   "last_evidence_at": 1784672018,
   "name": "Texas Instruments",
   "pace_of_work": {
