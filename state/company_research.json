@@ -10852,7 +10852,7 @@
    "value": "Tier 1 (Elite). Amazon is a pioneer in production AI and cloud infrastructure globally, rivaling Google, Meta, and Microsoft in AI talent branding."
   },
   "aliases": [],
-  "attempts": 20,
+  "attempts": 21,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -10902,7 +10902,7 @@
    "source_ids": [],
    "value": "Amazon interviews emphasize its Leadership Principles with behavioral questions, plus technical screening covering data structures, system design, algorithms, and coding proficiency. Storytelling about ownership, bias for action, and customer obsession is crucial. For AI and data science roles, expect deep dives into machine learning theory, statistical analysis, and deployment experience."
   },
-  "last_attempt_at": 1784729170,
+  "last_attempt_at": 1784729335,
   "last_evidence_at": 1784636762,
   "locations": {
    "confidence": "high",
@@ -33227,40 +33227,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 (strong technical bar, mission-driven deployed work, but not a widely known AI research lab)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2ebdeac1e6"
+   ],
+   "value": "B2B enterprise AI engagements — likely project-based contracts or platform subscriptions for deploying and scaling ML in regulated, mission-critical environments."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, deployment-focused, lean and urgent; likely low bureaucracy but high intensity."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "2ebdeac1e6"
+   ],
+   "value": "Advanced energy production operators, core government agencies, and public healthcare systems."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $150k–$190k base + equity (aligned with top-tier deployed-ML roles at well-funded startups); no public data."
   },
   "evidence_sha": "fcf7d34f7e488b50",
+  "generated_at": 1784729335,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "2ebdeac1e6"
+   ],
+   "value": "Applied AI / Enterprise ML for regulated sectors (energy, gov, healthcare)"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "2ebdeac1e6"
+   ],
+   "value": "Expect heavy emphasis on production ML: scalable data pipelines, model optimization, MLOps, and handling competing priorities/deadlines. Prepare for system-design around real-world deployment constraints in regulated domains. Ask directly about on-call expectations, shutdown policies, and mentorship structure to gauge WLB and growth support."
+  },
+  "last_attempt_at": 1784729335,
+  "last_evidence_at": 1784719450,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Not specified in sources; likely US-based with remote/hybrid options given Ashby hiring platform usage."
   },
-  "last_attempt_at": 1784729170,
-  "last_evidence_at": 1784719450,
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "2ebdeac1e6"
+   ],
+   "value": "Optimize the world's most advanced energy production systems, modernize core government workflows, and improve patient outcomes in advanced public healthcare systems."
+  },
   "name": "Brain Co.",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "2ebdeac1e6"
+   ],
+   "value": "Fast-paced; posting explicitly calls for thriving where priorities and deadlines compete."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "2ebdeac1e6"
+   ],
+   "value": "Production AI/ML models, scalable data pipelines, and model optimization tooling for energy, government, and healthcare sectors."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + US federal holidays (typical for VC-backed growth startups); no public policy found."
   },
+  "refresh_after": 1789913335,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -33270,7 +33322,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns documented; candidate should ask about seasonal slowdowns or mandatory time-off policies."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Growth-stage startup (likely 50–200 employees) hiring for deployed AI engineering roles."
   },
   "sources": [
    {
@@ -33314,14 +33371,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=5d54d687d160ac8797304664c336b63c88a711e4e42ce916ce994d32996dcceaJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9zY2llbmNlbm90ZXMub3JnL3BhcnRzLW9mLXRoZS1icmFpbi1hbmQtdGhlaXItZnVuY3Rpb25zLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No explicit mention in job posting; assume standard tech-company willingness to sponsor H-1B/GC for strong candidates."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "2ebdeac1e6"
+   ],
+   "value": "Brain Co. builds and deploys AI/ML solutions for high-stakes domains including energy production, government workflows, and public healthcare. The company appears to generate revenue by delivering production-grade models and scalable data pipelines to enterprise and public-sector clients."
+  },
+  "synthesized_evidence_sha": "fcf7d34f7e488b50",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "2ebdeac1e6"
+   ],
+   "value": "Building scalable data pipelines, optimizing models for performance/accuracy, and preparing them for production deployment in fast-paced, deadline-driven settings."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583664,
   "web_search_url": "https://duckduckgo.com/?q=Brain+Co.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "2ebdeac1e6"
+   ],
+   "value": "Matches a candidate seeking elite AI prestige and high new-grad pay in a fast, innovative culture (explicitly fast-paced per posting) with a clear mission across energy, government, and healthcare. The deployed-engineer focus suggests rapid learning without the bureaucracy of big tech, though work-life boundaries are not documented and should be probed."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5 — fast-paced with competing deadlines suggests potential for spillover; no public policy on shutdowns or guaranteed hours."
   }
  },
  "brain corp": {
@@ -47652,7 +47736,7 @@
    "value": "Tier 3: Early-stage tier startup. Prestige comes from being a foundational team member building novel AI matching systems, not from a massive corporate brand name. Offers high potential career growth if the platform scales."
   },
   "aliases": [],
-  "attempts": 8,
+  "attempts": 9,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -47706,7 +47790,7 @@
    ],
    "value": "Given the candidate's priorities and Clera's stage, the interview process will heavily assess culture-add for a fast, innovation-driven, yet s culture. Prepare to discuss your technical approach to building AI/ML systems, your interest in the concept of a 'candidate-first' mission, and how you balance getting a high volume of quality work done while defining your own personal boundaries to prevent burnout. Early whiteboard sessions should demonstrate full-stack thinking."
   },
-  "last_attempt_at": 1784729170,
+  "last_attempt_at": 1784729335,
   "last_evidence_at": 1784719450,
   "locations": {
    "confidence": "low",
@@ -73752,7 +73836,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -73770,7 +73854,7 @@
    "source_ids": [],
    "value": "Sports / technology (estimated)"
   },
-  "last_attempt_at": 1784729170,
+  "last_attempt_at": 1784729335,
   "last_evidence_at": 1784725192,
   "name": "Fanatics",
   "pace_of_work": {
@@ -114250,7 +114334,7 @@
    "value": "Tier 1 (elite) — KLA's AI/ML work is applied to mission-critical semiconductor manufacturing at atomic scales; publications at top venues (SPIE, IEEE) and direct impact on every advanced node."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -114297,7 +114381,7 @@
    ],
    "value": "Expect deep technical screens on algorithms, data structures, and domain-specific knowledge (optics, signal processing, ML for vision, real-time C++/Python). Prepare for system-design questions around high-throughput inspection pipelines and cross-disciplinary collaboration with physicists and mechanical engineers. Behavioral rounds will probe ownership, rigor, and ability to ship reliable hardware/software systems."
   },
-  "last_attempt_at": 1784729170,
+  "last_attempt_at": 1784729335,
   "last_evidence_at": 1784724909,
   "locations": {
    "confidence": "high",
@@ -149886,11 +149970,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -149902,6 +149988,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784729335,
   "last_evidence_at": 1784725192,
   "name": "Optimum Financial Group",
   "pace_of_work": {
@@ -160021,7 +160108,7 @@
    "value": "Estimated: High crypto-startup prestige due to massive public visibility, but not traditional FAANG-tier AI/data science prestige."
   },
   "aliases": [],
-  "attempts": 8,
+  "attempts": 9,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -160075,7 +160162,7 @@
    ],
    "value": "Probe deeply into actual day-to-day working hours, on-call expectations, and the company's commitment to sane work-life balance to ensure the demanding startup pace does not lead to burnout, while confirming that the technical learning curve justifies the potential lack of traditional slow-bureaucracy stability."
   },
-  "last_attempt_at": 1784729170,
+  "last_attempt_at": 1784729335,
   "last_evidence_at": 1784724909,
   "locations": {
    "confidence": "low",
@@ -175840,7 +175927,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -175858,7 +175945,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784729170,
+  "last_attempt_at": 1784729335,
   "last_evidence_at": 1784676785,
   "name": "Royal Caribbean Group",
   "pace_of_work": {
