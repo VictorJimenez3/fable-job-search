@@ -699,7 +699,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -717,7 +717,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784690082,
+  "last_attempt_at": 1784690231,
   "last_evidence_at": 1784677407,
   "name": "8VC",
   "pace_of_work": {
@@ -37575,7 +37575,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -37593,7 +37593,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784690082,
+  "last_attempt_at": 1784690231,
   "last_evidence_at": 1784677402,
   "name": "Cape",
   "pace_of_work": {
@@ -54802,42 +54802,96 @@
  },
  "d3 global inc": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "ca459a311d"
+   ],
+   "value": "Low — company focus is blockchain/domain infrastructure, not AI/ML research or production."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "ca459a311d"
+   ],
+   "value": "Revenue from initial domain minting/registration fees, ongoing renewal fees, marketplace transaction fees, and potential token utility/appreciation."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "ca459a311d"
+   ],
+   "value": "Technical, builder-oriented, decentralized ethos; values censorship resistance, open-source contributions, and owner mentality. Likely flat hierarchy with high autonomy."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "ca459a311d"
+   ],
+   "value": "Web3 projects, blockchain developers, domain investors, and individuals seeking decentralized domain ownership."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120k-$160k base + token grant (high variance); total comp potentially competitive with mid-tier tech but below top AI labs."
   },
   "evidence_sha": "325d697d3b1fbbf7",
+  "generated_at": 1784690231,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ca459a311d"
+   ],
+   "value": "Web3 / Blockchain Infrastructure / Decentralized Domain Name Services"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "ca459a311d"
+   ],
+   "value": "Prepare for deep technical discussions on blockchain architecture, smart contract security, consensus mechanisms, and distributed systems. Expect questions on tokenomics design and domain name system (DNS) internals. Cultural fit will emphasize autonomy, rapid iteration, and alignment with decentralized web values. Ask about sprint cadence, on-call expectations, and how the team protects work-life balance during protocol upgrades or launches."
+  },
+  "last_attempt_at": 1784690231,
+  "last_evidence_at": 1784676546,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Remote-first or headquartered in a major tech hub (e.g., San Francisco, New York, or Lisbon); no public office locations disclosed."
   },
-  "last_attempt_at": 1784690082,
-  "last_evidence_at": 1784676546,
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "ca459a311d"
+   ],
+   "value": "To create the Internet's Domain Layer, Tokenized — bringing domain infrastructure onto blockchain for censorship-resistant, programmable ownership."
+  },
   "name": "D3 Global Inc",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast — early-stage protocol development demands rapid iteration, but likely avoids extreme crunch through async, remote-friendly culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "ca459a311d"
+   ],
+   "value": "Tokenized domain name registration and management platform; blockchain-based domain registry; possible secondary marketplace for domain trading."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + holidays; unlimited or flexible policy common in early-stage Web3."
   },
+  "refresh_after": 1789874231,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -54847,7 +54901,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal company-wide shutdowns; team may observe crypto conference breaks (e.g., Devcon, ETHGlobal) as de facto slowdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Early-stage startup (likely seed to Series A), small team (10-50 employees)."
   },
   "sources": [
    {
@@ -54881,14 +54940,41 @@
     "url": "https://d3.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely supports H-1B and other work visas given early-stage tech hiring needs, but no public policy documented."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "ca459a311d"
+   ],
+   "value": "D3 Global Inc (d3.com) is building a tokenized domain name layer for the internet, aiming to bring domain registration and management onto blockchain infrastructure. The company likely generates revenue through domain minting/registration fees, secondary marketplace transactions, and associated token economics."
+  },
+  "synthesized_evidence_sha": "325d697d3b1fbbf7",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "ca459a311d"
+   ],
+   "value": "Smart contract development (Solidity/Rust), blockchain protocol design, decentralized identity systems, domain name resolution infrastructure, tokenomics engineering, high-throughput distributed systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676546,
   "web_search_url": "https://duckduckgo.com/?q=D3+Global+Inc+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "ca459a311d"
+   ],
+   "value": "D3 operates at the cutting edge of Web3 infrastructure, offering a fast-paced, innovative environment where you can shape foundational internet technology. The mission-driven, tokenized domain focus aligns with a culture that values technical ambition and ownership, potentially providing steep learning curves in blockchain systems without the bureaucracy of big tech. However, it is not an AI/data science-centric role, so elite AI prestige and high new-grad AI pay are unlikely to match top-tier A"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — mission-driven startup with likely sane hours and shutdown norms, but on-call rotations for protocol incidents may occur."
   }
  },
  "daily management resorts": {
@@ -68171,7 +68257,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -68189,7 +68275,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784690082,
+  "last_attempt_at": 1784690231,
   "last_evidence_at": 1784676545,
   "name": "Esri",
   "pace_of_work": {
@@ -81033,7 +81119,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -81051,7 +81137,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784690082,
+  "last_attempt_at": 1784690231,
   "last_evidence_at": 1784674834,
   "name": "General Dynamics Mission Systems",
   "pace_of_work": {
@@ -95647,37 +95733,102 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 1 (elite) – publishes at NeurIPS/ICML, collaborates with top academic labs, attracts PhDs from Stanford/MIT/Caltech; recognized leader in generative AI for chemistry."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "0f79637728",
+    "d3edd824c8",
+    "30b11a5e25"
+   ],
+   "value": "Platform biotech model: generate revenue through strategic partnerships (upfront payments, milestones, royalties) while advancing proprietary pipeline. Capital-intensive R&D funded by venture capital (Series B ~$100M+) and partnership revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Intellectually rigorous, collaborative across ML/chemistry/biology, mission-oriented, transparent, low-ego. Values scientific excellence and speed to clinic. Flat-ish hierarchy with direct access to leadership."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "0f79637728",
+    "d3edd824c8",
+    "30b11a5e25"
+   ],
+   "value": "Pharmaceutical partners (e.g., AstraZeneca collaboration), academic collaborators, and internal pipeline programs. No commercial products yet; primary 'customers' are partnership agreements and investors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140k-$170k base + equity (0.05%-0.15% for AI/ML roles) + bonus; total comp ~$180k-$230k. Competitive with top AI labs and big tech new-grad offers."
   },
   "evidence_sha": "e9478dce3f29ea01",
+  "generated_at": 1784690231,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "0f79637728",
+    "d3edd824c8",
+    "30b11a5e25"
+   ],
+   "value": "AI-driven drug discovery / computational biotechnology"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Expect deep technical interviews on generative modeling (diffusion, VAEs), molecular representation learning, physics-based ML, and ML systems/MLOps. Prepare for cross-disciplinary questions linking ML to chemical validity, synthesizability, and biological relevance. Behavioral focus on collaboration with wet-lab scientists, iteration speed, and handling ambiguity in early-stage R&D."
   },
+  "last_attempt_at": 1784690231,
   "last_evidence_at": 1784583317,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "0f79637728",
+    "d3edd824c8",
+    "30b11a5e25"
+   ],
+   "value": "Headquarters: San Diego, CA (Torrey Pines area). Possible remote/hybrid flexibility for computational roles."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "0f79637728",
+    "d3edd824c8",
+    "30b11a5e25"
+   ],
+   "value": "To transform drug discovery by integrating AI, physics, and experimental biology to deliver breakthrough medicines to patients faster."
+  },
   "name": "Iambic Therapeutics",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced but structured – iterative ML/experiment cycles (weeks not months), sprint-based, with clear milestones driven by partnership deliverables and pipeline decisions. Less bureaucracy than big pharma; more directed than pure research labs."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "0f79637728",
+    "d3edd824c8",
+    "30b11a5e25"
+   ],
+   "value": "AI-powered drug discovery platform (generative models, physics-based simulations); pipeline includes oncology and immunology programs (e.g., IAM1363, HER2/HDAC programs). Revenue currently from partnerships and grants; future revenue from milestone payments, royalties, and potential product sales."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays; flexible/unlimited policy for senior roles; encourages actual usage."
   },
+  "refresh_after": 1789874231,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -95687,7 +95838,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal company-wide shutdowns; typical biotech holiday observance (Dec 24-Jan 1 reduced ops). Some teams may have summer slowdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 100-250 employees; clinical-stage biotech (Series B, ~$100M+ raised). Founded 2018, headquartered in San Diego, CA."
   },
   "sources": [
    {
@@ -95721,14 +95877,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=29cad8ec2555740cc91ebb6e37f1fe6866fa1378ee7a5994031412020a7fe951JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2lhbWJpYw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B and green cards for specialized AI/ML and computational chemistry roles; typical for venture-backed biotech in San Diego."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "0f79637728",
+    "d3edd824c8",
+    "30b11a5e25"
+   ],
+   "value": "Iambic Therapeutics is an AI-driven biotechnology company that uses generative AI and physics-based modeling to discover and develop novel small-molecule therapeutics. The company combines deep learning with experimental validation to accelerate drug discovery across multiple therapeutic areas."
+  },
+  "synthesized_evidence_sha": "e9478dce3f29ea01",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "0f79637728",
+    "d3edd824c8",
+    "30b11a5e25"
+   ],
+   "value": "Generative AI for molecular design (diffusion models, VAEs, transformers); physics-based modeling (free energy calculations, molecular dynamics); large-scale GPU computing; automated synthesis/assay loops; cloud/HPC infrastructure; MLOps for model deployment; data pipelines for multi-omics and chemical data."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583317,
   "web_search_url": "https://duckduckgo.com/?q=Iambic+Therapeutics+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Iambic sits at the intersection of elite AI research (generative models, physics-informed ML) and high-impact drug discovery, offering top-tier technical prestige comparable to leading AI labs. As a well-funded Series B startup, it likely offers competitive new-grad compensation (equity + salary) with a faster, less bureaucratic culture than big pharma or large tech. The mission-driven focus on patient outcomes and a platform approach provides accelerated learning across AI, chemistry, and biolo"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7.5/10 – startup intensity balanced by mission focus and computational-role flexibility; core hours with reasonable expectations; no guaranteed shutdowns but culture respects boundaries for sustainable innovation."
   }
  },
  "ibm": {
@@ -117849,39 +118034,96 @@
  },
  "lumenalta": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "7f33c82859"
+   ],
+   "value": "High – proprietary AI-native OS, 3–5× delivery acceleration claim, enterprise AI/ML implementations."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "7f33c82859"
+   ],
+   "value": "Project-based and advisory consulting services for digital transformation, AI/ML implementation, cloud migration, and application development; likely supplemented by retainer engagements."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "7f33c82859"
+   ],
+   "value": "Innovative, engineering-centric, mission-driven, respects personal time, avoids toxic bureaucracy; 25+ year track record suggests stability."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "7f33c82859"
+   ],
+   "value": "Enterprise clients in capital markets (front, middle, back office operations) and other sectors; example client Arbol (global climate intelligence platform)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $100,000–$130,000 base + bonus/equity (competitive for top-tier AI/data science new grads in consultancy)."
   },
   "evidence_sha": "1d2dd4dfbef4cc43",
+  "generated_at": 1784690231,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "7f33c82859"
+   ],
+   "value": "Digital transformation consulting, AI/ML services, cloud & application development."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "7f33c82859"
+   ],
+   "value": "Expect deep technical assessments in AI/ML, cloud, and data systems; case studies on digital transformation; cultural fit questions around fast delivery, collaboration, and work-life boundaries."
+  },
+  "last_attempt_at": 1784690231,
+  "last_evidence_at": 1784676546,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Headquarters not explicitly stated; operates globally with remote/distributed teams (common for digital transformation firms)."
   },
-  "last_evidence_at": 1784676546,
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "7f33c82859"
+   ],
+   "value": "To accelerate innovation and modernization through digital transformation, leveraging AI-native technology to deliver results faster."
+  },
   "name": "Lumenalta",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced project delivery cycles (consulting norm) but with emphasis on sustainable pace and 3–5× acceleration via tooling, not burnout."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "7f33c82859"
+   ],
+   "value": "AI/ML/LLM solutions, cloud & infrastructure, application development, tech strategy & advisory, data modernization, UX/UI design, and an AI-native OS that accelerates delivery 3–5×."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + holidays (typical for US mid-size tech consultancies)."
   },
+  "refresh_after": 1789874231,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -117891,7 +118133,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide year-end shutdown (common in consulting); possible summer break."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7f33c82859"
+   ],
+   "value": "Established, 25+ years in business; estimated 200–500 employees (mid-size consultancy)."
   },
   "sources": [
    {
@@ -117925,14 +118174,41 @@
     "url": "https://lumenalta.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H-1B and other work visas given enterprise client base and technical hiring needs, but no public policy details found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "7f33c82859"
+   ],
+   "value": "Lumenalta is a digital transformation consultancy with over 25 years of experience, delivering custom AI-native solutions, cloud infrastructure, application development, data modernization, and UX/UI design. They claim to accelerate delivery 3–5× through their proprietary AI-native operating system."
+  },
+  "synthesized_evidence_sha": "1d2dd4dfbef4cc43",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "7f33c82859"
+   ],
+   "value": "Heavy focus on AI/ML/LLM, cloud architecture, data engineering, full-stack application development, and UX/UI design; uses proprietary AI-native OS to speed delivery."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676546,
   "web_search_url": "https://duckduckgo.com/?q=Lumenalta+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "7f33c82859"
+   ],
+   "value": "Offers elite AI/data science work with a proprietary AI-native OS, fast-paced innovative culture without bureaucracy, mission-driven digital transformation for enterprise clients, and a reputation for respecting work-life balance—aligning with your priorities for prestige, growth, and sustainable hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good – company highlights ‘sane hours’ and ‘guaranteed shutdowns’ in messaging; consultancy travel may vary by project."
   }
  },
  "lumentum": {
@@ -177608,7 +177884,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -177626,7 +177902,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784690082,
+  "last_attempt_at": 1784690231,
   "last_evidence_at": 1784677402,
   "name": "Sierra",
   "pace_of_work": {
