@@ -8846,11 +8846,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -8862,6 +8864,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784693675,
   "last_evidence_at": 1784680916,
   "name": "Allen Control Systems",
   "pace_of_work": {
@@ -10503,7 +10506,7 @@
    "value": "Tier 1 (Elite). Amazon is a pioneer in production AI and cloud infrastructure globally, rivaling Google, Meta, and Microsoft in AI talent branding."
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -10553,7 +10556,7 @@
    "source_ids": [],
    "value": "Amazon interviews emphasize its Leadership Principles with behavioral questions, plus technical screening covering data structures, system design, algorithms, and coding proficiency. Storytelling about ownership, bias for action, and customer obsession is crucial. For AI and data science roles, expect deep dives into machine learning theory, statistical analysis, and deployment experience."
   },
-  "last_attempt_at": 1784693514,
+  "last_attempt_at": 1784693675,
   "last_evidence_at": 1784636762,
   "locations": {
    "confidence": "high",
@@ -39736,11 +39739,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -39752,6 +39757,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784693675,
   "last_evidence_at": 1784693223,
   "name": "Caris",
   "pace_of_work": {
@@ -54173,37 +54179,80 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown — no public research output, conference presence, or AI product announcements found."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown — no culture deck, values page, or employee testimonials found."
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown — no salary data, levels.fyi reports, or offer letters surfaced in research."
   },
   "evidence_sha": "0cafe0f51af8e422",
+  "generated_at": 1784693675,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Technology / Software (inferred from new-grad software engineer hiring)."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Ask directly about: AI/data science project scope and publication record, exact compensation bands, typical weekly hours and shutdown policies, mentorship structure for new grads, and team pacing. Public sources insufficient to confirm alignment with candidate priorities."
+  },
+  "last_attempt_at": 1784693675,
   "last_evidence_at": 1784693223,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Crown Point Technologies, LLC",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown — no employee reviews or engineering blog posts found to assess velocity."
   },
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown — no published PTO policy found."
   },
+  "refresh_after": 1789877675,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -54213,7 +54262,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown — no mention of company-wide shutdowns or guaranteed disconnect periods."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Early-stage or growth-stage technology company (actively hiring new grads)."
   },
   "sources": [
    {
@@ -54257,14 +54313,39 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Crown Point Technologies, LLC appears to be a technology company hiring software engineering new graduates, but public information about its specific products, mission, or business model is extremely limited in available sources. The company was identified through a monitored new-grad job board."
+  },
+  "synthesized_evidence_sha": "0cafe0f51af8e422",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Software engineering roles for new graduates; specific tech stack and AI/data science focus not documented publicly."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784693223,
   "web_search_url": "https://duckduckgo.com/?q=Crown+Point+Technologies%2C+LLC+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks elite AI/data science prestige with high new-grad pay, fast innovative culture, genuine work-life balance with sane hours/shutdowns, and accelerated technical growth without burnout. Crown Point Technologies appears on new-grad hiring lists but lacks public data to verify these attributes."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown — no public data on hours, on-call, or shutdown policies."
   }
  },
  "csx": {
@@ -62946,7 +63027,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -62964,7 +63045,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784693514,
+  "last_attempt_at": 1784693675,
   "last_evidence_at": 1784680412,
   "name": "Dow Jones",
   "pace_of_work": {
@@ -130769,7 +130850,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -130787,7 +130868,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784693514,
+  "last_attempt_at": 1784693675,
   "last_evidence_at": 1784693223,
   "name": "Micron Technology",
   "pace_of_work": {
@@ -139871,40 +139952,96 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (solid applied industrial ML, not a known research hub or FAANG-level brand for AI)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "12b3a7f429",
+    "4cc921a446"
+   ],
+   "value": "Contract manufacturing for retailer private-label brands: Niagara designs, bottles, and distributes beverages at high volume and low cost, earning margin on volume throughput and supply-chain efficiency."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Established, family-owned, metrics-driven, cost-conscious, practical. Engineering respected but subordinate to plant Ops. Less 'tech-company' perks, more 'industrial excellence' mindset. Low bureaucracy for a company this size, but hierarchical."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "12b3a7f429"
+   ],
+   "value": "Major U.S. retailers (grocery, club, mass, discount, and convenience chains) that sell Niagara's beverages under their own private labels."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k-$110k base + modest bonus/RSU (private co.); total comp ~$95k-$125k. Varies by location (CA higher). Not FAANG-level."
   },
   "evidence_sha": "93a51f4f91c01ee4",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784693675,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784693514,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "12b3a7f429",
+    "4cc921a446"
+   ],
+   "value": "Beverage manufacturing / Private-label bottled water / Consumer packaged goods (CPG)"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Expect practical ML/system-design questions tied to manufacturing: time-series forecasting, anomaly detection on sensor streams, optimization (line scheduling, changeover reduction), and deploying models to edge/SCADA environments. Brush up on SQL, Python, basic control theory, and be ready to discuss how you translate a notebook model into a reliable pipeline that plant engineers trust. Behavioral focus on ownership, cross-functional influence (OT/IT), and handling ambiguous, messy industrial d"
+  },
+  "last_attempt_at": 1784693675,
   "last_evidence_at": 1784693224,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "12b3a7f429",
+    "4cc921a446"
+   ],
+   "value": "Headquartered in Ontario, CA; 30+ bottling plants across the U.S. (CA, TX, FL, PA, AZ, GA, IN, etc.). Some corporate/IT roles may be hybrid in Ontario, CA or remote."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "12b3a7f429"
+   ],
+   "value": "To be the leading low-cost, high-quality private-label beverage manufacturer through operational excellence, speed, and scale."
+  },
   "name": "Niagara Bottling",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced manufacturing cadence (daily/weekly KPIs, continuous improvement cycles); corporate DS projects move at business speed, not academic research speed."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "4cc921a446",
+    "12b3a7f429"
+   ],
+   "value": "Private-label bottled water (purified, spring, distilled), sparkling waters, sports drinks, and ready-to-drink teas/coffees produced for major retailers' store brands."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10-15 days PTO + 6-8 company holidays (typical U.S. manufacturing private-co baseline); no public unlimited or mandated shutdown policy."
   },
+  "refresh_after": 1789877675,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -139914,7 +140051,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "None found in research; no public guaranteed company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "12b3a7f429"
+   ],
+   "value": "Large, mature, privately held company (family-owned) with 30+ plants and ~3,000+ employees; not a startup, not public."
   },
   "sources": [
    {
@@ -139958,14 +140102,41 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H-1B for specialized engineering/IT roles; new-grad sponsorship possible but not guaranteed. Check specific requisition."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "4cc921a446",
+    "12b3a7f429"
+   ],
+   "value": "Niagara Bottling is a large private-label bottled water and beverage manufacturer in the U.S., producing water, sparkling water, and other drinks for retailer brands. It operates numerous high-speed bottling plants across the country."
+  },
+  "synthesized_evidence_sha": "93a51f4f91c01ee4",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Industrial automation, PLC/SCADA, high-speed bottling line control, MES/ERP integration, IoT sensor data, predictive maintenance, supply-chain optimization, and some data science for demand forecasting and quality control."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784693224,
   "web_search_url": "https://duckduckgo.com/?q=Niagara+Bottling+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f",
+    "12b3a7f429"
+   ],
+   "value": "Niagara offers a rare mix for a new-grad AI/DS candidate: massive scale (30+ plants, petabytes of sensor data), real industrial-IoT problems, and a private, family-owned structure that can move faster than public-company bureaucracy. The SimplifyJobs listing (source dbc3b9e88f) confirms active new-grad hiring. However, it is a manufacturing-first culture—expect plant visits, shift-aware schedules, and a focus on OEE/downtime reduction rather than pure research prestige. Work-life balance will hi"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5 – corporate roles ~45-50 hrs/wk with some flexibility; plant-adjacent roles may require shift coverage, weekends, or on-call. No public guaranteed shutdown policy."
   }
  },
  "nidec": {
@@ -173774,7 +173945,7 @@
    "value": "RTX sits in the high-prestige aerospace tier for embedded engineering but is low tier for commercial AI/data science innovation. The technical stack cited is exclusively C++ embedded software, not modern cloud AI."
   },
   "aliases": [],
-  "attempts": 9,
+  "attempts": 10,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -173819,7 +173990,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "last_attempt_at": 1784693514,
+  "last_attempt_at": 1784693675,
   "last_evidence_at": 1784666538,
   "locations": {
    "confidence": "medium",
