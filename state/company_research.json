@@ -18376,11 +18376,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -18392,6 +18394,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
+  "last_attempt_at": 1784683187,
   "last_evidence_at": 1784674341,
   "name": "AssetMark",
   "pace_of_work": {
@@ -32667,39 +32670,101 @@
  },
  "buxton": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "4a1b9a61b4"
+   ],
+   "value": "Tier 3: Specialist Industry Leader. As a 30-year-old market leader in a crucial but non-software native space, Buxton commands respect in specialized data analytics circles. It lacks the brand cachet of a Google or OpenAI but offers a more stable and high-impact environment than many generic tech firms."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "a00107896d",
+    "4a1b9a61b4"
+   ],
+   "value": "B2B SaaS and consulting hybrid. Revenue is derived from annual platform subscriptions for the SCOUT analytics tool, along with fees for custom consulting engagements, such as market analysis and customer segmentation studies."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Relationship-centric and analytical. The culture is likely collaborative and focused on delivering rigorous value to long-term clients. The vibe is more likely to be `team dinner on a Tuesday` rather than `midnight hackathon`."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "4a1b9a61b4"
+   ],
+   "value": "Buxton serves over 4,000 clients, primarily in the retail, restaurant, healthcare, and public sector industries, who rely on data to drive location-based decisions and targeted marketing."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000 to $115,000 base salary for an entry-level data scientist, with competitive performance bonuses. While top-tier Silicon Valley firms may offer higher total comp with liquid equity, axton's private equity-backed structure provides extremely competitive cash pay in the low-cost-of-life Dallas Metroplex."
   },
   "evidence_sha": "b5e4db643281a681",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784683187,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a00107896d",
+    "4a1b9a61b4"
+   ],
+   "value": "Retail / Saas Analytics"
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "a00107896d",
+    "4a1b9a61b4"
+   ],
+   "value": "Rather than LeetCode hard puzzles, expect a focus on applied data intuition: case studies on site selection, SQL for consumer segmentation, and deep dives into regression or classification models. The interview process will likely probe a candidate’s ability to explain complex analytics to non-technical business stakeholders and their interest in the company's stable, relationship-driven culture over rapid iteration."
+  },
+  "last_attempt_at": 1784683187,
   "last_evidence_at": 1784591793,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "a00107896d",
+    "4a1b9a61b4"
+   ],
+   "value": "Headquarters are located in Fort Worth, Texas. Remote work options are not detailed in the provided sources."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "a00107896d"
+   ],
+   "value": "To enable organizations to make smarter, data-driven growth decisions by providing clarity on who their customers are, where they are located, and how to reach them."
+  },
   "name": "Buxton",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Mature and steady. As an established company selling to traditional industries (retail, healthcare), the tech development cycle likely avoids volatile pivots and promotes a project-based pace with reasonable deadlines rather than chaotic sprints."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "a00107896d",
+    "4a1b9a61b4"
+   ],
+   "value": "Buxton's core platform is SCOUT, a proprietary customer analytics tool that ingests client data and enriches it with a vast consumer database. Key analytical applications include predictive site selection modeling, trade area analysis, household segmentation, and marketing campaign targeting. These solutions help retailers, healthcare systems, and restaurant chains choose expansion sites and understand their customers."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of Paid Time Off per year, consistent with comparable professional services tech firms in the region."
   },
+  "refresh_after": 1789867187,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -32709,7 +32774,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Holiday shutdowns are not confirmed but common in the industry; a sensible expectation is a quiet company around the week between Christmas and New Year’s Day, along with standard federal holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "4a1b9a61b4"
+   ],
+   "value": "Established mid-market company. Founded in 1994; based on industry data for similar analytics firms, the estimated employee count is between 200 and 500. The company is mature and privately held, operating with a stable and profitable growth mindset rather than a venture-backed 'hyper-growth' mentality."
   },
   "sources": [
    {
@@ -32743,14 +32815,44 @@
     "url": "https://www.rippling.com/products/hr/recruiting"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a00107896d",
+    "4a1b9a61b4"
+   ],
+   "value": "Buxton is a customer analytics company that helps consumer-facing businesses make smarter growth decisions. It leverages advanced data science and a proprietary consumer data platform (SCOUT) to analyze customer behavior and identify ideal locations, target audiences, and expansion opportunities. The company generates revenue by providing its analytics platform and consulting services to enterprise clients on a subscription or project basis."
+  },
+  "synthesized_evidence_sha": "b5e4db643281a681",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "a00107896d",
+    "4a1b9a61b4"
+   ],
+   "value": "Technical work centers on geospatial data analysis, predictive modeling, and clustering algorithms to solve consumer behavior problems. Data scientists likely work heavily with traditional machine learning (scikit-learn, XGBoost), SQL, and Python to maintain the SCOUT platform's analytics engines. A small AI/ML team might explore integrating modern natural language processing for data enrichment, but the primary focus is on classic applied analytics with high business impact."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784591793,
   "web_search_url": "https://duckduckgo.com/?q=Buxton+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "a00107896d",
+    "4a1b9a61b4"
+   ],
+   "value": "Buxton offers a unique intersection of hard data science and a conservative industry (retail/real estate), providing a stable, low-burnout environment ideal for a candidate who wants top-tier compensation without the toxicity of Silicon Valley startups. The mature business model and 30-year history suggest respectful work-life boundaries. Since analytics is the core product, data science teams are profit centers, not cost centers, which typically translates to high respect and competitive pay fo"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Excellent. A history spanning decades in a Texas-based, business-focused industry typically implies a culture of standard working hours and low burnout risk, as opposed to the 24/7 pace of consumer-tech consumer firms."
   }
  },
  "buyers edge platform": {
@@ -69153,7 +69255,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -69171,7 +69273,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784683096,
+  "last_attempt_at": 1784683187,
   "last_evidence_at": 1784676690,
   "name": "Fitch Ratings",
   "pace_of_work": {
@@ -147427,37 +147529,96 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong enterprise AI practice with real production deployments; respected in applied ML circles but not a primary research lab like FAIR/Google Brain/OpenAI."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "415fd8f5c9",
+    "7748a93646"
+   ],
+   "value": "Project-based and retainer consulting fees for digital transformation engagements; revenue from strategy, build, and run phases of client programs. Part of Publicis Groupe's consolidated revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first consultancy: pragmatic, collaborative, and delivery-obsessed. Less hierarchy than traditional firms; strong craft community (guilds, tech talks). Can feel transactional due to client-service model. Diversity and inclusion actively promoted."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "415fd8f5c9",
+    "7748a93646"
+   ],
+   "value": "Fortune 500 and Global 2000 companies across financial services, retail, consumer goods, healthcare, telecommunications, energy, and government sectors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $105k–$125k base + $10k–$20k signing bonus + RSUs (vesting 4 yrs) in major US hubs; total comp ~$125k–$155k. Varies by role (DS/ML vs SWE) and location."
   },
   "evidence_sha": "8c4c8f04a392d35c",
+  "generated_at": 1784683187,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "415fd8f5c9",
+    "7748a93646"
+   ],
+   "value": "Digital consulting / IT services / Professional services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect multi-round loops: coding/algorithms (LeetCode medium-hard), system design (scalable ML/data platforms), case studies (digital transformation scenarios), and behavioral interviews assessing consulting mindset (client-facing communication, ambiguity navigation). AI/DS roles add ML fundamentals, MLOps, and applied modeling questions. Prepare for 'how would you architect this for a Fortune 500 client' framing."
   },
+  "last_attempt_at": 1784683187,
   "last_evidence_at": 1784674529,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "415fd8f5c9",
+    "7748a93646"
+   ],
+   "value": "Global offices across North America (US, Canada), Europe (UK, Germany, France, Nordics), APAC (India, Singapore, Australia), and LATAM; major hubs in Boston, New York, London, Bangalore, and Singapore."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "415fd8f5c9",
+    "f0b89a29e1"
+   ],
+   "value": "To help established organizations become digitally enabled and data-driven by combining strategy, consulting, and engineering to deliver measurable business outcomes."
+  },
   "name": "Publicis Sapient",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast — Project-driven delivery cycles (2-week sprints), frequent client demos, and billable utilization targets create sustained intensity; varies by account and role."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "415fd8f5c9",
+    "7748a93646"
+   ],
+   "value": "Digital transformation consulting, custom software engineering, data & AI platforms, cloud migration, customer experience design, agile coaching, and product strategy for enterprise clients."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10–12 company holidays (US); varies by region and tenure. No unlimited PTO policy."
   },
+  "refresh_after": 1789867187,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -147467,7 +147628,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns. Some offices observe reduced hours between Christmas–New Year; project-dependent."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "415fd8f5c9",
+    "7748a93646"
+   ],
+   "value": "Large, mature subsidiary (20,000+ employees globally) of Publicis Groupe (Euronext: PUB), a multinational advertising and communications holding company."
   },
   "sources": [
    {
@@ -147501,14 +147670,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=af8a55030c8e9a5cc3c247dd0ed8457bef5aaf6b1872ac2082787d9e92ebb35bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=099e55db-8735-67f2-3d1e-424686216698&u=a1aHR0cHM6Ly93d3cucHVibGljaXNncm91cGUuY29tL2VuL3RoZS1ncm91cGUvYWJvdXQtcHVibGljaXMtZ3JvdXBl&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B visas for technical roles in the US; global mobility programs enable transfers between offices. Green card sponsorship typically available for senior and high-performing roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "415fd8f5c9",
+    "7748a93646",
+    "f0b89a29e1"
+   ],
+   "value": "Publicis Sapient is a digital business transformation consultancy that helps large enterprises modernize through technology, data, and AI. It operates as a wholly owned subsidiary of Publicis Groupe, delivering end-to-end digital services across strategy, consulting, engineering, and experience design."
+  },
+  "synthesized_evidence_sha": "8c4c8f04a392d35c",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "415fd8f5c9",
+    "7748a93646"
+   ],
+   "value": "Full-stack engineering, cloud architecture (AWS/Azure/GCP), data engineering, ML/AI model development and deployment, DevOps, platform modernization, and agile delivery at enterprise scale."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674529,
   "web_search_url": "https://duckduckgo.com/?q=Publicis+Sapient+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Publicis Sapient offers elite AI/data science work on enterprise-scale transformations with the backing of a global holding company, balancing prestige and competitive new-grad pay. Its engineering-led culture emphasizes modern tech stacks and agile delivery, while its consulting model provides exposure to diverse industries and complex problems — accelerating technical growth. However, consulting demands (client travel, billable hours, project crunches) can challenge work-life balance; the firm"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "6/10 — Consulting baseline: 45–55 hrs/week typical, spikes to 60+ during go-lives. Flexible remote/hybrid options post-COVID; no firm-wide guaranteed shutdowns. Team and account dependent."
   }
  },
  "puget sound energy": {
@@ -153997,51 +154194,129 @@
  "replit": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "85521b2502",
+    "bcedd47acb",
+    "d73047c51b"
+   ],
+   "value": "Elite Tier 1.5 (Top AI Startup). Backed by Andreessen Horowitz and other top VCs, Replit sits at the apex of the Agentic Agentic space, challenging enterprise incumbents like Microsoft through democratic AI."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "85521b2502",
+    "d73047c51b"
+   ],
+   "value": "Freemium SaaS model. The platform is free to start with feature and power limitations, while revenue is generated via recurring subscriptions (Hacker, Teams Pro plans) and enterprise deals. An AI agent add-on likely represents a key upsell vector."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "d73047c51b"
+   ],
+   "value": "Intellectual and anti-status. Replit has a curiosity-driven, down-to-earth environment where logic and building quality matter undeniably more than résumé prestige. The culture is product-native, highly supportive, and focused on empowering external makers."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "85521b2502",
+    "bcedd47acb"
+   ],
+   "value": "The platform serves a broad spectrum of over 30 million users, ranging from absolute beginners learning to code to professional developers building production software. The company seeks product-minded GTM and G+A professionals to help expand this user base."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $145,000 - $175,000 annual salary, plus equity. Located in the San Francisco Bay Area for specialized AI AI-science roles, this is competitive with top-tier Series C/D startups."
   },
   "evidence_sha": "53058c31eca6ae21",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784683187,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784683096,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "85521b2502",
+    "bcedd47acb"
+   ],
+   "value": "Cloud AI Developer Tools"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "d73047c51b",
+    "bcedd47acb"
+   ],
+   "value": "Replit explicitly values curiosity, clear reasoning, and practical building ability over pedigree. Interviews emphasize thoughtful problem breakdown and product-thinking. Given GTM sourcer criteria, expect a business-acumen check to ensure you understand the AI pain landscape."
+  },
+  "last_attempt_at": 1784683187,
   "last_evidence_at": 1784676553,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "d73047c51b"
+   ],
+   "value": "San Francisco / Peninsula Bay Area. The official headquarters is in Foster City, CA, and Product Engineer roles explicitly require candidates located there or willing to relocate."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "d73047c51b",
+    "bcedd47acb"
+   ],
+   "value": "To democratize access to software creation by enabling anyone to turn ideas into applications. The company aims to bridge the gap between human creativity and code through agentic AI, making software development extremely accessible."
+  },
   "name": "Replit",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "d73047c51b",
+    "bcedd47acb"
+   ],
+   "value": "Fast and meticulously execution-focused, akin to a high-growth startup with individual collections of high impact. The standard prioritizes speed and innovation, but avoids unnecessary administrative hyper-growth and big-tech bureaucracy."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "d73047c51b",
+    "85521b2502"
+   ],
+   "value": "An Agentic software creation platform that converts natural language prompts into working applications. The product includes an online IDE, collaborative Repls for multiplayer coding, an AI agent for software development, and a one-click deployment service for hosting applications from the browser."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Flexible/Unlimited PTO, standard for San Francisco growth-stage engineering roles. Realistic usage estimated at 15–20 days yearly, given the team's focus on execution."
   },
+  "refresh_after": 1789867187,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419",
+    "d73047c51b"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide winter office closure. While unwritten, many venture-backed SF startups in this act ensure a mandatory 5–7 day year-end sabbatical without execution penalty, strictly preserving this boundary."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "d73047c51b",
+    "85521b2502"
+   ],
+   "value": "Growth-stage startup with significant scale. The company is post-Series B (notable investors include A.Capital and Andreessen Horowitz), operating at a large scale with millions of users, while consciously maintaining a 'small, collaborative team' culture."
   },
   "sources": [
    {
@@ -154105,14 +154380,40 @@
     "url": "https://jobs.ashbyhq.com/replit/657a90d2-23cc-4c86-b9ed-a21900efee0d"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "d73047c51b",
+    "85521b2502"
+   ],
+   "value": "Replit is an AI-powered software creation platform that allows anyone to build applications using natural language. It runs on a cloud-based infrastructure, combining an online IDE with Agentic AI tools that handle setup, coding, and deployment. The company generates revenue through a freemium subscription model, offering paid plans like Hacker and Teams Pro."
+  },
+  "synthesized_evidence_sha": "53058c31eca6ae21",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "d73047c51b"
+   ],
+   "value": "AI/DS roles would likely focus on generative models for code synthesis, NLP translation from natural language to code, and agentic agentic AI. Work requires strong reasoning, a focus on user-facing product thinking, and bridging research with scalable production software."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676553,
   "web_search_url": "https://duckduckgo.com/?q=Replit+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Replit offers a high-prestige, mission-driven AI role with fast-paced product innovation, sidestepping bureaucratic enterprise slowness. As a growth-stage startup prioritizing a small, high-output team, it provides the high new-grad pay and elite AI culture you seek without a toxic grind, accelerating technical growth while maintaining respect for personal boundaries."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4.0 / 5.0. The required in-office presence and start-up pace exhibit high expectations, yet the specific emphasis on a small, cared-for team and control-free building suggests a lack of unhealthy bravado; deliberate sabbaticals and PTO usage are observed in similar funding cohorts."
   }
  },
  "repsol": {
@@ -181171,37 +181472,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2: Strong applied ML in test optimization, robotic perception, and predictive analytics; publishes at ICRA/IROS/TEST; not a primary AI research lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Capital equipment sales (test systems, robots) with recurring revenue from software licenses, services, spare parts, and application support. High upfront system prices ($1M–$10M+) drive multi-year customer relationships."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, data-driven, low-politics. Long tenures common. Collaborative across HW/SW/test. Safety-critical mindset from test/robotics heritage. Diverse globally. Less 'move fast break things', more 'measure twice cut once'."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Major semiconductor companies (Intel, TSMC, Samsung, Qualcomm, NVIDIA), fabless chip designers, OSATs, consumer electronics OEMs, automotive Tier 1s, and factory automation integrators."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $115k–$135k base + 10–15% target bonus + RSU ($25k–$40k over 4 years). Total ~$150k–$185k year 1. Higher in SF/Bay Area robotics roles."
   },
   "evidence_sha": "69bd091b39947453",
+  "generated_at": 1784683187,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Semiconductor capital equipment & industrial automation robotics"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical screens: mixed-signal circuits, signal integrity, Python/C++ coding, real-time control loops, robotics kinematics/perception, and ML model deployment on edge hardware. System-design questions focus on test throughput, reliability, and scaling. Behavioral emphasis on cross-functional collaboration (apps, hardware, software, manufacturing). Prepare for 'how would you debug a flaky test at 3 AM?' scenarios."
+  },
+  "last_attempt_at": 1784683187,
   "last_evidence_at": 1784669633,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: North Reading, MA. Major sites: San Jose, CA; Austin, TX; Portland, OR; Singapore; Tokyo; Shanghai; Munich; Odense, Denmark (Universal Robots). Hybrid office/lab model."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Bringing quality innovations to market faster through advanced test and automation solutions that enable customers to deliver high-quality electronic products."
+  },
   "name": "Teradyne",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate–Fast: Semiconductor test cycles drive quarterly/annual milestones; robotics sprints run 2–4 weeks. Crunch periods around tape-outs and product launches, but generally predictable compared to consumer software."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Semiconductor test systems (J750, UltraFLEX, Magnum), system-level test (Eagle), wireless test (LitePoint), industrial collaborative robots (Universal Robots), mobile industrial robots (MiR), and robotic software (AutoGuide, Energy Robotics)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days annual PTO + 10–12 company holidays + 5 sick days. Accrual increases with tenure. Unlimited not offered."
   },
+  "refresh_after": 1789867187,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -181211,7 +181553,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: One week year-end shutdown (Christmas–New Year) typical; some sites add July 4th week. Not guaranteed annually."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public (NASDAQ: TER), ~$3.5B annual revenue, ~6,500 employees globally. Mature, profitable, cyclical semiconductor capital equipment company."
   },
   "sources": [
    {
@@ -181245,14 +181592,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=eafec88b5299eab90a38b8b78bada1c223a56d0b26799fa5b068cda6afa39f31JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=03fea5e8-08f3-6be6-1d93-b27509a66a96&u=a1aHR0cHM6Ly93d3cudGVyYWR5bmUuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established H-1B sponsor (cap-subject and cap-exempt via university partnerships). Green card sponsorship (PERM) for senior roles. STEM OPT friendly. Immigration support varies by division."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Teradyne designs and manufactures automatic test equipment (ATE) for semiconductors and wireless products, plus industrial automation robotics. It sells hardware, software, and services to chipmakers and electronics manufacturers worldwide."
+  },
+  "synthesized_evidence_sha": "69bd091b39947453",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mixed-signal IC design, FPGA/embedded firmware, real-time motion control, robotics perception/planning, high-speed signal integrity, Python/C++ test software, ML for test optimization and predictive maintenance, cloud data platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784669633,
   "web_search_url": "https://duckduckgo.com/?q=Teradyne+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Teradyne sits at the intersection of semiconductors, robotics, and AI-driven test/automation—offering elite hardware/ML prestige with a mature, profitable business that funds serious R&D. Unlike pure-play AI startups, it provides stability, structured career ladders, and a culture shaped by engineering rigor rather than hype cycles. The robotics divisions (Universal Robots, MiR) add applied AI/ML opportunities in perception, planning, and fleet analytics. Work-life balance is generally respected"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.8/5. Core hours 9–5 with flexibility; test division has seasonal peaks; robotics teams see higher variance. Limited weekend work outside launch windows."
   }
  },
  "terex": {
@@ -203469,47 +203837,106 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Top-Tier Hardware & AI Infrastructure; it is a critical supplier for large AI computing clusters and is considered prestigious in systems and data infrastructure circles, though it is not a pure AI research lab or premium consumer software giant."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2c038372db"
+   ],
+   "value": "The company operates on a hardware product supply model, generating income through the design, fabrication, and volume sale of storage components and devices to B2B and B2C channels. It invests heavily in R&D and advanced manufacturing scale to maintain cost and technology leadership."
+  },
   "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "2c038372db"
+   ],
+   "value": "A collaborative and engineering-driven American multinational culture, with a focus on mission-critical quality and cross-team integration. The environment values strong written communication, deliberate technical decisions, and respect for personal time, rather than hustle-porn hypergrowth."
+  },
+  "customers": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "The customer base spans PC and Mac manufacturers, major cloud and enterprise data center operators, consumer electronics brands, and direct retail consumers who purchase external drives and memory cards."
   },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: A typical new-grad Software Engineer near the San Jose, CA location can expect annual total compensation ranging from $130,000 to $160,000 in base salary, with additional equity or bonuses. This reflects top-tier hardware pay rather than unprofitable startup equity hype or the highest big-tech pure software offers."
   },
   "evidence_sha": "67fd0998ecb90c18",
+  "generated_at": 1784683187,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2c038372db"
+   ],
+   "value": "Data Storage and Computer Hardware, with a strong overlap in AI infrastructure"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "2c038372db"
+   ],
+   "value": "The interview process emphasizes rigorous collaborative system design and debugging skills, along with clear communication and ability to work closely with adjacent hardware and quality teams. It seeks candidates who value deep technical growth on long-cycle platforms without the all-consuming on-call demands of high-intensity consumer apps."
+  },
+  "last_attempt_at": 1784683187,
+  "last_evidence_at": 1784674978,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Western Digital maintains major U.S. engineering and R&D sites in cities such as San Jose, Irvine, Rochester, and Colorado Springs, typically based near its core product divisions."
   },
-  "last_evidence_at": 1784674978,
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Western Digital’s mission is to unlock the potential of data by providing innovative storage solutions that help store, protect, and transform data into value."
+  },
   "name": "Western Digital",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady and driven; the pace reflects a mature hardware and long-cycle software engineering environment with methodical coordination and less viral shipping chaos than typical pure-play SaaS."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2c038372db"
+   ],
+   "value": "Western Digital offers a broad portfolio of data storage devices including high-capacity HDDs, flash-based SSDs, and embedded storage chips. These products are integrated into personal computers, servers, gaming consoles, and IoT devices to store and access massive amounts of data."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Competitive for a large publicly held American hardware company, likely starting at approximately 15-20 days per year of flexible time off. An exact uniform policy is not publicly itemized."
   },
+  "refresh_after": 1789867187,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "f16eec2a6f",
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Planned holiday seasonal leave or summer and winter shutdown weeks are typical for hardware firms to cover manufacturing and design lock periods. Exact observance varies by division."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Western Digital is a mature, publicly traded large-cap global corporation that maintains a stable and established market presence, rather than a startup or growth-stage venture."
   },
   "sources": [
    {
@@ -203563,14 +203990,39 @@
     "url": "https://jobs.smartrecruiters.com/WesternDigital/744000138717897"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Western Digital typically sponsors employment visas for deeply technical, specialized roles, as is common for large hardware/software OEMS. Specific sponsorship requirements are determined per requisition and hiring manager."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "2c038372db"
+   ],
+   "value": "Western Digital designs, manufactures, and sells data storage solutions such as hard disk drives (HDDs) and flash-based solid state drives (SSDs). The company generates revenue by selling these products into client computing, data centers, and consumer electronics markets."
+  },
+  "synthesized_evidence_sha": "67fd0998ecb90c18",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "2c038372db"
+   ],
+   "value": "Engineering roles involve developing and optimizing system-level software and firmware that controls proprietary storage products. Software Engineers are expected to troubleshoot and debug performance, collaborate on whole-system design and integration, and contribute deeply to manufacturing and product performance optimization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674978,
   "web_search_url": "https://duckduckgo.com/?q=Western+Digital+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Relevant for candidates seeking elite AI or Data Science roles because Western Digital builds foundational hardware that makes massive-scale AI model training inference possible, yet operates with a more predictable manufacturing-oriented rhythm than chaotic a AI startup. The company has a reputation for mature yet innovative engineering culture that respects work-life balance through stable hours and team shutdowns, avoiding the extreme burnout of high-stakes consumer software firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Strong; industry consensus and internal culture indicate adherence to standard working hours with limited weekend or late-night emergencies, maintaining a high prioritization on sustainable operations."
   }
  },
  "western governors university": {
@@ -204321,38 +204773,96 @@
  "whatnot": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Emerging top-tier for consumer AI/ML among private high-growth companies. It commands strong external recognition due to its market size, scale of real-time streaming data, and investor backing, sitting just below the largest public firms."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "c75dd10574"
+   ],
+   "value": "Whatnot earns money by taking a commission or transaction fee on sales made during live streams. It operates a two-sided marketplace connecting sellers with an engaged community of buyers."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Collector-first and community-driven, high ownership, and transparent. Employees describe it as ambitious and fun, valuing creativity and speed without a toxic grind."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "c75dd10574"
+   ],
+   "value": "Collectors in niche enthusiast communities such as sports cards, trading card games, comics, sneakers, luxury goods, and vintage toys looking for a trusted, live auction experience."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130,000–$170,000 base salary with competitive equity and signing bonus for AI/ML roles in California, placing it squarely within elite new-grad comp bands."
   },
   "evidence_sha": "7fcb0bcf66396a92",
+  "generated_at": 1784683187,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c75dd10574"
+   ],
+   "value": "E-commerce and consumer marketplaces, with a specific focus on live-streaming video commerce and collectibles."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect a practical blend of model-design problem-solving, product-sense case studies tied to live marketplace safety and personalization, and coding focused on distributed data systems. Culture questions will likely explore ownership in a fast-but-not-burnout environment."
   },
+  "last_attempt_at": 1784683187,
   "last_evidence_at": 1784675401,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "c75dd10574",
+    "17f8c9c419"
+   ],
+   "value": "Headquarters in Los Angeles, California, with remote and hybrid roles across the United States, Canada, and Europe as the company expands."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "c75dd10574"
+   ],
+   "value": "Celebrate and power the businesses of collectors and enthusiasts by building a community-first marketplace that reimagines live commerce."
+  },
   "name": "Whatnot",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast. Team ships quickly around live-auction events and seasonal spikes in buying activity, demanding rapid iteration. Hustle is present but capped by cultural respect for shutdowns."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c75dd10574"
+   ],
+   "value": "A mobile marketplace app for live, community-driven selling. Sellers go live to auction authentic items like trading cards, comics, toys, and collectibles in a fast, social format."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days of annual paid time off plus holidays. Typically a flexible PTO policy is available for salaried positions."
   },
+  "refresh_after": 1789867187,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -204362,7 +204872,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide holiday shutdown during the last week of December, plus additional recharge days around major holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Late-stage private company valued at $5 billion as of mid-2025; a fast-growing platform that has scaled rapidly and is backed by prominent venture investors."
   },
   "sources": [
    {
@@ -204406,14 +204923,40 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c75dd10574"
+   ],
+   "value": "Whatnot is the largest independent live-streaming marketplace in North America, designed around community and real-time interaction. It lets passionate sellers broadcast live auctions and sell items directly to buyers, combining entertainment with instant shopping."
+  },
+  "synthesized_evidence_sha": "7fcb0bcf66396a92",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "c75dd10574",
+    "17f8c9c419"
+   ],
+   "value": "AI and data science roles will likely focus on building real-time recommendations, trust and safety automation, live-stream analysis, search relevance, and fraud detection models in a fast-moving product environment."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675401,
   "web_search_url": "https://duckduckgo.com/?q=Whatnot+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Missions-driven collector commerce with top-tier new-grad pay and a high-growth culture matches your dual need for elite market credibility and a stimulating, fast-moving AI environment. Early evidence suggests the live format requires real-time model delivery, accelerating technical skills without the bureaucracy of large public tech firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Above average for a high-growth startup. Claims it respects work-life rhythm and has a 4.3/5 rating on Glassdoor as of 2025; team leads emphasize sanity and sustainable pace despite fast cycles."
   }
  },
  "wheely": {
