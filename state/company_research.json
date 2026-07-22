@@ -2011,11 +2011,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -2027,6 +2029,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784682541,
   "last_evidence_at": 1784673987,
   "name": "Acorns",
   "pace_of_work": {
@@ -3941,42 +3944,109 @@
  },
  "aerovironment": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "a109fe07e2",
+    "17373769ec"
+   ],
+   "value": "High (Elite Niche). Not a consumer-tech FAANG, but holds top-tier prestige in the defense-tech autonomy domain, often compared to firms like Anduril and Shield AI for AI/DS career credentials."
   },
   "aliases": [],
-  "attempts": 7,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 8,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "a109fe07e2",
+    "17373769ec"
+   ],
+   "value": "Sells high-margin proprietary unmanned systems, loitering munitions, and support services directly to sovereign governments. Revenue is contract-based, combining product sales and ongoing service/logistics contracts."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "a109fe07e2",
+    "17373769ec"
+   ],
+   "value": "Mission-obsessed engineering-first culture mixing a startup's creative velocity with the stodgy foundry and stable funding of a major defense operation. Collaborative, pragmatic, and patriotic."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "a109fe07e2",
+    "3aed5274d2"
+   ],
+   "value": "Primary customer is the U.S. Department of Defense, including the Army, Marine Corps, and Special Operations Command. Also serves international allied governments and other federal agencies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated base salary range: $115,000-$135,000, with total first-year compensation (bonus + sign-on) reaching $140,000-$165,000. Pay is competitive with mid-tier elite tech and structured to retain top security-clearance talent."
   },
   "evidence_sha": "e2ea24f1af17a690",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784682541,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784682450,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a109fe07e2",
+    "17373769ec"
+   ],
+   "value": "Defense Technology & Unmanned Systems"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "a109fe07e2",
+    "dbc3b9e88f"
+   ],
+   "value": "Emphasize the desire for end-to-end ownership of cutting-edge AI in a mission-critical, real-world context (autonomous systems) where personal impact is visible quickly. Frame preference as, \"I build best when working intensely but 40-45 hours a week, supported by a culture that protects bandwidth and resets through full team shutdowns.\""
+  },
+  "last_attempt_at": 1784682541,
   "last_evidence_at": 1784675357,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "3aed5274d2",
+    "17373769ec"
+   ],
+   "value": "Headquarters in Arlington, Virginia. Major California offices are in Simi Valley and Moorpark. Additional sites in Huntsville, AL, Lawrence, KS, and Petaluma, CA."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "a109fe07e2"
+   ],
+   "value": "To secure lives and advance sustainability through transformative, intelligent solutions that deliver actionable intelligence and decisive effects."
+  },
   "name": "AeroVironment",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "a109fe07e2",
+    "17373769ec"
+   ],
+   "value": "Fast and iterative, driven by direct military feedback and urgent operational needs. Tempo is closer to a funded tech start-up than to a legacy person bureaucracy, with rapid prototyping encouraged."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "a109fe07e2",
+    "17373769ec"
+   ],
+   "value": "Unmanned aircraft systems (like the Raven, Puma, and VAPOR helicopters), Switchblade loitering munitions, and the T-20C Coyote Block 2 counter-UAS system. The company also provides support training, spare parts, and product repair."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days accrued annually (combined vacation, sick, and personal time) plus 10-12 recognized holidays."
   },
+  "refresh_after": 1789866541,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -3986,7 +4056,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed seasonal shutdown is not confirmed, but defense contractors often have the option of time-off alignment around Christmas (often via 4-day weekends) tied to contract cycles."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "a109fe07e2",
+    "3aed5274d2",
+    "17373769ec"
+   ],
+   "value": "Large, publicly traded defense contractor (NASDAQ: AVAV) with over 1,000 employees. Mature stage, but actively growing its AI-embedded autonomy and next-generation loitering munition portfolios."
   },
   "sources": [
    {
@@ -4030,14 +4109,50 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "17373769ec"
+   ],
+   "value": "As a defense contractor, roles typically require U.S. citizenship or permanent residency due to ITAR security clearance needs. Limited ability to support standard U.S. work visas for non-citizens."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a109fe07e2",
+    "17373769ec"
+   ],
+   "value": "AeroVironment designs and manufactures unmanned aircraft systems (UAS), loitering munition systems, and tactical missile systems for defense and commercial customers. It makes money primarily through government contracts and direct commercial sales of these robotic systems and related support services."
+  },
+  "synthesized_evidence_sha": "e2ea24f1af17a690",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "a109fe07e2",
+    "17373769ec"
+   ],
+   "value": "AI/DS teams work on computer vision for autonomous navigation, target recognition, object tracking, sensor fusion, path planning, and embedded ML. Roles often involve end-to-end model development and integration directly onto flight hardware."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675357,
   "web_search_url": "https://duckduckgo.com/?q=AeroVironment+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "a109fe07e2",
+    "17373769ec",
+    "dbc3b9e88f"
+   ],
+   "value": "AeroVironment offers a rare equilibrium of elite defense-tech prestige and fast, in-the-field innovation to rival elite tech hubs, without the notorious 60-hour-week burnout common at startups. Its mission is tangible (protecting soldiers and citizens), providing intrinsic purpose alongside high new-grad compensation and sane, predictable WLB."
+  },
   "wlb_rating": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "a109fe07e2",
+    "17373769ec"
+   ],
+   "value": "Very good for defense-tech. Standard weekly estimates are 40-45 hours with rare weekend work. Significant cultural respect for the fact that long, continuous slides reduce mission effectiveness."
   }
  },
  "aevex aerospace": {
@@ -11146,37 +11261,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Top-tier within financial services; elite for applied ML at scale with proprietary closed-loop data. Recognized for fraud/risk ML leadership."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Closed-loop network earning revenue from discount fees paid by merchants, net interest income on revolving balances, annual card fees, foreign exchange conversions, and travel service commissions."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, collaborative, customer-obsessed, and inclusive. 'Blue Box' values (customer commitment, quality, integrity, teamwork, respect, accountability). Low ego, high support. Diverse workforce with strong ERGs. Not a 'bro culture'."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Individual consumers (premium/affluent segments), small to large businesses, merchants accepting Amex cards, and corporate travel clients worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Base $115-135K, Signing $15-30K, RSU $40-80K over 4 years. Total Year 1 ~$170-220K. Higher for PhD/ML specialist roles. Annual refreshers ~$20-40K."
   },
   "evidence_sha": "625b06350744ba5a",
+  "generated_at": 1784682541,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Financial Services / Payments / FinTech"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep ML system design (fraud detection, ranking, risk), production ML lifecycle questions, SQL/analytics case studies, and behavioral alignment with 'customer obsession' and 'integrity' values. LeetCode medium/hard for DS roles; emphasis on clean code, testing, and scalability. Prepare for 'how would you build X for Amex' product sense questions."
+  },
+  "last_attempt_at": 1784682541,
   "last_evidence_at": 1784676250,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in New York, NY. Major tech hubs in New York, Phoenix, Sunrise (FL), London, Bangalore, Singapore, Mexico City. Remote/hybrid options vary by role."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To provide the world's best customer experience every day, backed by a commitment to trust, security, and service excellence across payments and financial services."
+  },
   "name": "American Express",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Deliberate and measured. Regulatory/compliance constraints enforce thoroughness. Not 'move fast break things'; sprints are 2 weeks with planning overhead. Innovation happens via hackathons, research partnerships, and dedicated labs."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Consumer and commercial credit/charge cards, payment processing network, travel booking and services, banking products (savings, loans), merchant services, and digital payment solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days PTO + 10-12 company holidays + 2-3 mental health/wellness days. Unlimited sick leave. Accrual starts day one. Carryover up to 5 days."
   },
+  "refresh_after": 1789866541,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -11186,7 +11342,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full company shutdown between Christmas and New Year (typically Dec 24-Jan 1). Summer 'recharge' week in July for some regions. No guaranteed monthly shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Large public company (NYSE: AXP) with ~64,000 employees globally (2023), mature stage, Fortune 500, market cap ~$150B+."
   },
   "sources": [
    {
@@ -11220,14 +11381,35 @@
     "url": "https://aexp.okta.com/app/americanexpressproduction_hrmatchingtechnology_1/exkmxv5288Bc42B6a0x7/sso/saml?SAMLRequest=fZJNc9owEIbv%2FAqP7%2FgLYzsaTAdCkjJDwRNoD70wQpKxJrbkamXq%2FPtIzlfTmUQ3afd9d%2FdZzQA3dYsWna7EPfvTMdAjx%2BmbWgAaQrnbKYEkBg5I4IYB0gTtFz82KPIC1CqpJZG1%2B0H0tQYDMKW5FFa0XuXubnuz2d2tt8dkkiXTCYlpWmbxFKdlSTIa04ySqzJIrk4pLSmOyMkKfzEFxiN3jaW9O06h5IVTpramYu7e8HOlS1nToQpAx9YCNBbaKIIoGQfpOAoP0QRFMQrD3zZrZYbnAuvBttK6BeT7mPWtJx809ohsfNy2vrFXnGBhAooBGAS0I1Z0rFSDNam4OGtGKiFreX48hj7rH5r%2BMo2ybEniaJngoE99AOlbVrZw8UJxyQU14q%2FxnZ6TAH0%2FHIpxsdsfrMXiFeq1FNCZDvdMXThhP%2B83%2F83CXsF4mNsujtjs%2FhsmkA9hM6U7H3jObHtoQKfmn1rM%2FH%2FT3oUtsntYrwpZc%2FI4vNtzKy2jzycMvXB44XRcDqmoE9AywkvOqPtms6hr%2BfdaMazNqrXqmOv489HouZmP33n%2BBA%3D%3D&RelayState=http%3A%2F%2Faexp.eightfold.ai%2Fhome"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Actively sponsors H-1B visas for technical roles; green card support common for high-performing employees. University recruiting targets top CS/DS programs globally."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: American Express is a global financial services company known for its charge and credit card products, payment network, and travel services. It operates a closed-loop network connecting cardmembers, merchants, and partners."
+  },
+  "synthesized_evidence_sha": "625b06350744ba5a",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Heavy investment in AI/ML for fraud detection, risk modeling, personalization, credit underwriting, NLP for customer service, and real-time payment analytics. Cloud migration, platform engineering, and data platform modernization are active."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676250,
   "web_search_url": "https://duckduckgo.com/?q=American+Express+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "American Express offers elite prestige in financial services AI with a closed-loop data advantage (card + merchant + spend data). New-grad total compensation is top-tier (~$170-220K). Culture emphasizes 'win as a team' and 'embrace diversity' with documented focus on work-life integration (flexible schedules, mental health resources). Technical learning is accelerated through massive-scale fraud/risk ML, real-time streaming architecture, and a structured engineering career ladder. Avoids the 'mo"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5. Strong culture of respecting boundaries: core hours, meeting-free Fridays in some orgs, generous mental health days, 'Amex Flex' hybrid model. On-call rotations exist for critical platforms but are managed. Rare weekend work outside incidents."
   }
  },
  "american institutes for research": {
@@ -26753,37 +26935,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Mid-tier: respected applied analytics at scale, but not a primary AI research destination."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Nonprofit mutual insurance model: collects premiums from members/employers, pays claims, reinvests surplus into reserves, community programs, and lowering costs. Revenue primarily from premium income and investment returns."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, mission-oriented, process-conscious. Values stability and compliance; innovation encouraged within governance frameworks."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Over 4.5 million members in Michigan, including individuals, small/large employers, Medicare/Medicaid beneficiaries, and union groups."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$100,000 base + 5-10% bonus + comprehensive benefits (health, 401k match, tuition assistance)."
   },
   "evidence_sha": "00d7531c290e4246",
+  "generated_at": 1784682541,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Health Insurance / Managed Care"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect behavioral questions on collaboration, healthcare domain interest, and handling ambiguity. Technical screens cover SQL, Python, statistics, and system design for data pipelines. Emphasize experience with large datasets, cloud platforms, and communicating insights to non-technical stakeholders. Prepare for case studies on claims fraud, member retention, or cost prediction."
+  },
+  "last_attempt_at": 1784682541,
   "last_evidence_at": 1784673988,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Detroit, MI. Major offices: Grand Rapids, Lansing, Marquette, and remote/hybrid options across Michigan."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide affordable, high-quality healthcare coverage and improve the health of Michigan residents through community-focused, nonprofit stewardship."
+  },
   "name": "Blue Cross Blue Shield of Michigan",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate: project-driven with planned sprints; occasional crunch around regulatory deadlines, but generally predictable."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Health insurance plans (HMO, PPO, Medicare Advantage, Medicaid, individual/family, employer-sponsored), wellness programs, dental/vision coverage, and related healthcare services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays, varying by tenure."
   },
+  "refresh_after": 1789866541,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -26793,7 +27016,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No guaranteed company-wide shutdowns; some teams observe reduced hours between Christmas and New Year."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature enterprise (~8,500 employees, $10B+ annual revenue). Established 1939; headquarters in Detroit, MI."
   },
   "sources": [
    {
@@ -26827,14 +27055,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=19e2c8e9b3af2038715ff699798f015be6529cf5d52981210747d110c35504aeJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=26baeef9-727a-6b43-20f5-f964738b6a1e&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQmx1ZQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active H-1B sponsor for technology roles; green card sponsorship common for experienced hires. University recruiting targets Midwest schools."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Blue Cross Blue Shield of Michigan (BCBSM) is a nonprofit, mutual health insurance company that provides coverage to individuals, employers, and government programs across Michigan. It operates as an independent licensee of the Blue Cross Blue Shield Association."
+  },
+  "synthesized_evidence_sha": "00d7531c290e4246",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Enterprise data platforms, claims processing systems, member portals, analytics/AI for fraud detection, care management, predictive modeling, and digital transformation initiatives. Tech stack includes cloud (Azure/AWS), Python, SQL, Spark, Tableau, and modern data engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673988,
   "web_search_url": "https://duckduckgo.com/?q=Blue+Cross+Blue+Shield+of+Michigan+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "BCBSM offers a mission-driven, stable environment with strong work-life balance and solid benefits, but its tech culture is more enterprise-paced than elite AI labs. New-grad pay is competitive for the region but below top-tier tech firms. Prestige in AI/data science is moderate; the focus is on applied analytics at scale rather than cutting-edge research. Good fit for candidates prioritizing balance, mission, and steady growth over high-intensity innovation."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Good: typical 40-45 hour weeks, flexible hybrid schedules, low on-call burden for most data roles."
   }
  },
  "blue cross of idaho": {
@@ -41644,37 +41893,96 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 – Emerging/Local: Some innovative pilots (SmartCityPHL, open data) but not a recognized AI research hub; publications and conference presence minimal compared to elite labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "08bdaea868",
+    "a214aa5261"
+   ],
+   "value": "Government entity funded by local taxes (wage, property, sales), state/federal grants, and user fees; no profit motive."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Civic-minded, process-oriented, collaborative, risk-averse. Diverse workforce with long tenures; culture varies widely by department. OIT/innovation teams feel more modern but still operate within government guardrails."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "08bdaea868",
+    "a214aa5261"
+   ],
+   "value": "Residents, businesses, and visitors of Philadelphia (population ~1.6M); also interfaces with state/federal agencies and regional partners."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $65k–$85k base (GS-7/9 equivalent or civil-service entry grades) + pension + benefits; no equity or signing bonus. Significantly below top-tier private-sector AI/DS new-grad packages ($150k–$250k+)."
   },
   "evidence_sha": "8a58b3c40f340ab6",
+  "generated_at": 1784682541,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "08bdaea868",
+    "a214aa5261"
+   ],
+   "value": "Government / Public Administration"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect structured civil-service panels: behavioral questions on equity, public stewardship, and collaboration; technical assessments in SQL, Python, GIS, or stats; less emphasis on cutting-edge ML systems design. Prepare for questions on handling ambiguous policy constraints and stakeholder management."
   },
+  "last_attempt_at": 1784682541,
   "last_evidence_at": 1784674825,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "08bdaea868",
+    "a214aa5261"
+   ],
+   "value": "Headquartered in Philadelphia, PA (City Hall, Municipal Services Building, and satellite offices); hybrid/remote policies vary by department post-COVID."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "08bdaea868",
+    "a214aa5261"
+   ],
+   "value": "To deliver efficient, equitable, and transparent public services that improve quality of life for all Philadelphians."
+  },
   "name": "City of Philadelphia",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Slow/Methodical: Procurement, compliance, and multi-stakeholder approvals dominate; sprints measured in quarters. Innovation exists but is constrained by process."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "08bdaea868",
+    "a214aa5261"
+   ],
+   "value": "Municipal services: police, fire, EMS, public health, streets & sanitation, water/sewer (via Philadelphia Water Department), licensing & inspections, parks & recreation, libraries, human services, and administrative functions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 vacation days + 12–13 paid holidays + 10–12 sick days annually (accrual-based, increases with tenure)."
   },
+  "refresh_after": 1789866541,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -41684,7 +41992,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Observed: City offices closed on 12–13 federal/state holidays; some departments encourage full shutdown between Christmas and New Year."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "08bdaea868",
+    "a214aa5261"
+   ],
+   "value": "Large municipal employer: ~25,000–30,000 civilian employees across dozens of departments; mature, stable organization."
   },
   "sources": [
    {
@@ -41718,14 +42034,41 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Can sponsor H-1B for specialized IT/data roles (cap-exempt as government entity), but process is slow and tied to civil-service rules; green-card sponsorship rare for entry-level."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "08bdaea868",
+    "a214aa5261"
+   ],
+   "value": "The City of Philadelphia is the municipal government of the sixth-largest U.S. city, providing public services including public safety, health, streets, licensing, and community programs to over 1.5 million residents. It operates on tax revenue and state/federal funding rather than commercial profit."
+  },
+  "synthesized_evidence_sha": "8a58b3c40f340ab6",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "08bdaea868",
+    "a214aa5261"
+   ],
+   "value": "IT infrastructure, cybersecurity, data analytics, GIS, open data portal, digital services, and emerging AI/ML pilots (e.g., predictive analytics for service delivery). Most roles are civil-service classified; newer 'SmartCityPHL' and Office of Innovation & Technology (OIT) teams drive modernization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674825,
   "web_search_url": "https://duckduckgo.com/?q=City+of+Philadelphia+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers mission-driven public-impact work with genuine work-life balance (standard 40-hour weeks, strong union protections, generous leave) and stable benefits. However, AI/data science prestige and new-grad pay lag top-tier tech firms; pace is bureaucratic, not fast/innovative by industry standards. Best for candidates prioritizing mission and balance over elite compensation or rapid technical velocity."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "4/5 – Strong: Standard 37.5–40 hour weeks, rare on-call outside ops, generous accruals, union-backed protections. Shutdowns observed for holidays."
   }
  },
  "civic nation": {
@@ -120507,39 +120850,98 @@
  },
  "motorola": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "acbc2d44ac"
+   ],
+   "value": "Niche Top-Tier within Public Safety. It lacks the consumer-AI hype of FAANG but offers elite prestige in the mission-critical applied video-data ecosystem; known inside the defense and government technology sector for premier AI-driven surveillance analytics."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "acbc2d44ac"
+   ],
+   "value": "Motorola Solutions generates revenue through a land-and-expand model that pairs high-margin proprietary hardware sales with long-term, recurring software and cloud subscription contracts for managed services and analytics."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "acbc2d44ac"
+   ],
+   "value": "Mission-first, technology-proud: a veteran embedded-engineering and networking culture with intense loyalty to user-life safety, demographic skews stable over college hustle, prioritizing rational design reviews and human life accountability over scrappy fail-fast pivoting."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "acbc2d44ac"
+   ],
+   "value": "Primary customers are national governments, state and local law enforcement agencies, fire departments, emergency medical services, and large industrial enterprises like utilities and transportation hubs."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000–$140,000 base, plus annual bonus and restricted stock units (TC ~$130,000–$170,000). Chicago suburb indexed; shadow under top FAANG base but topped up by heavy bonus stability related to government vehicle margins."
   },
   "evidence_sha": "8fb6e2931b7ac893",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784682541,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "acbc2d44ac"
+   ],
+   "value": "Public Safety / Defense Tech / Land Mobile Radio & Command-Center Software."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784682541,
   "last_evidence_at": 1784583623,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "acbc2d44ac"
+   ],
+   "value": "Global headquarters in Chicago, Illinois, with major R&D centers in the US, Canada, Poland, Israel, and India."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "acbc2d44ac"
+   ],
+   "value": "To help people be their best in the moments that matter and to develop technologies that help first responders focus on their mission by de-escalating incidents and reducing manual workflows."
+  },
   "name": "Motorola",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Deliberate and structured; heavily regulated release cycles due to safety-certified hardware validation windows and federal contracting standards, resulting in zero-rushed quarter-end cowboy coding."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "3d798e118b",
+    "12e6b1904b",
+    "acbc2d44ac"
+   ],
+   "value": "Land-mobile-radio (LMR) devices, body cameras and in-car video systems, 911 call-handling software, TETRA and ASTRO 25 networks, command center command and control software, Artificial Intelligence analytics, and managed security services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20–25 combined paid time off days for a new graduate, incremental with tenure, scaled to average large-cap U.S. defense-contractor norms."
   },
+  "refresh_after": 1789866541,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -120549,7 +120951,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed full company-wide winter break shutdown of approximately 4–5 days fakely aligned with statutory holidays; limited on-call exceptions for critical security operations roles."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "acbc2d44ac"
+   ],
+   "value": "Very large-cap public company on NYSE; annual revenues exceeding $9.5 billion with thousands of global employees in a steady-state rather than hyper-growth stage."
   },
   "sources": [
    {
@@ -120583,14 +120992,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=afdcbd9398f9690637e81be1ae19a620d9bda05ba7d9784168243c9fdd7faef9JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTW90b3JvbGE&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "acbc2d44ac"
+   ],
+   "value": "Motorola Solutions is a major federal contractor, frequently sponsoring clearance-level roles; standard H-1B and permanent residency sponsorship for specialized technical roles like software engineering is broadly documented."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "acbc2d44ac"
+   ],
+   "value": "Motorola Solutions is a global leader in public safety and enterprise security, providing mission-critical communications, video security, and command center software. Unlike the consumer-focused Motorola Mobility, this company serves first responders and large enterprises by integrating hardware like two-way radios and body cameras with a cloud-based intelligence platform."
+  },
+  "synthesized_evidence_sha": "8fb6e2931b7ac893",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "acbc2d44ac"
+   ],
+   "value": "Technical work involves end-to-end systems spanning device firmware, edge network infrastructure, backend cloud platforms, and applied AI/ML for object detection, natural language transcribing, and predictive operational mapping. Includes proprietary silicon development and embedded low-latency software for mission-critical environments."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583623,
   "web_search_url": "https://duckduckgo.com/?q=Motorola+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Highly rated above a Big Tech benchmark; strict test and certification windows enforce predictability, and mission-critical dry runs reduce the allowance for continuous death-march sprint cycles."
   }
  },
  "motorola solutions": {
@@ -126942,37 +127378,75 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a state government department, it makes money through taxpayer funding, legislative appropriations, federal grants, and user fees derived from inspection, licensing, and regulatory services rather than commercial profit."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Stable, stable, and heavily regulated. Hierarchical top-down structure with focus on public service, stability, and consistency. Low toxicity but inherently slow and change-averse."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "North Carolina residents, farmers, agribusinesses, food processors, retailers, and consumers seeking accurate product standards and safe food supplies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $60,000 – $78,000 based on standard state government IT/analyst band for early-career roles. Heavily defined by strict pay grades based on state salary bands and prevents the high new-grad pay found at top tech companies."
   },
   "evidence_sha": "eefbed9d89892417",
+  "generated_at": 1784682541,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
-  "last_attempt_at": 1784682450,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect behavioral questions emphasizing public service motivation, process-following, and stability rather than elite algorithmic challenges or portfolio reviews. Focus will likely be on regulatory compliance, data integrity, and long-term maintenance instead of fast-paced tech growth."
+  },
+  "last_attempt_at": 1784682541,
   "last_evidence_at": 1784643843,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in Raleigh, North Carolina. Multiple field offices, agricultural research stations, markets, and testing laboratories located throughout the state."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To improve the state of North Carolina by connecting consumers with local food, ensuring food safety, and protecting the state's natural resources for sustainable agriculture and economic growth."
+  },
   "name": "North Carolina Department of Agriculture and Consumer Services",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Moderate-to-fast (estimated)"
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Regulatory services (food safety inspections, pesticide regulation, weights and measures), consumer protection programs, agricultural research and development, conservation programs, forest management, and marketing services for North Carolina farm products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 12–15 paid vacation days annually for new hires, growing with tenure; also 12 paid sick days. Exact number set by the State Human Resources Act."
   },
+  "refresh_after": 1789866541,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -126982,7 +127456,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Guaranteed on all official State of North Carolina holidays (usually 11–12 guaranteed days per year). No extended winter break beyond state holidays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature government agency with thousands of employees across multiple divisions. Established a long time ago, certainly not in a growth-stage or startup phase."
   },
   "sources": [
    {
@@ -127016,14 +127495,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=c12dfa3b8d3c3d3064eea3574356a32d104e21335f2bf62a21d61e9f79272308JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1b7e6636-68a1-6781-39ed-71ab69546607&u=a1aHR0cHM6Ly93d3cubm9ydGhpdGFsaWEuY29tL2xvY2F0aW9ucy9iaXJrZGFsZS1uYy8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Typically does not sponsor H-1B or other employment visas for technical roles; continuous employment authorization possibly required given standard public sector hiring restrictions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The North Carolina Department of Agriculture and Consumer Services (NCDA&CS) is a state government agency responsible for promoting and regulating agriculture, ensuring food safety, and protecting consumers across North Carolina. It operates research stations, manages state farmers markets, inspects products, and enforces agricultural laws."
+  },
+  "synthesized_evidence_sha": "eefbed9d89892417",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely involves data analysis for agricultural trends, food safety inspection databases, environmental monitoring systems, and consumer complaint management. Predominately maintains regulatory and operational IT systems rather than cutting-edge AI research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784643843,
   "web_search_url": "https://duckduckgo.com/?q=North+Carolina+Department+of+Agriculture+and+Consumer+Services+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role likely does not match the candidate's top-tier AI focus or fast, innovative tech culture. However, as a mission-driven state agency, it naturally enforces strict work hours and serious vacation advantages, eliminating high-burnout environments. Exceptionally respects work-life balance through mandatory shutdowns and government holidays."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Excellent. 9/10. Standard 37.5–40 hour weeks are strictly enforced with minimal overtime expected, especially for non-essential technical staff."
   }
  },
  "north star staffing solutions": {
@@ -148238,7 +148738,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -148256,7 +148756,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784682450,
+  "last_attempt_at": 1784682541,
   "last_evidence_at": 1784674487,
   "name": "Radionix",
   "pace_of_work": {
