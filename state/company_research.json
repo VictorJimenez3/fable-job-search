@@ -7450,40 +7450,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Mid-Prestige. Albertsons is well-regarded in enterprise retail AI/DS circles because of authentic large-scale optimization and personalization problems, though it does not have the elite academic cachet of a Big Tech lab."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "528b32ad02",
+    "14673d8d3f"
+   ],
+   "value": "The company follows a B2C retail model with high-volume, low-margin transactions driven by a physical store footprint complemented by last-mile digital delivery services. Key revenue streams include in-store purchases, pharmacy services, and targeted advertising via the loyalty program."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "34c14336d1"
+   ],
+   "value": "Inclusive, community-centered, and steady. The culture is driven by core values of service and belonging, with a supportive team environment that values reliability and consistent contribution over 24/7 hustle."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "528b32ad02",
+    "da8f2e1b29"
+   ],
+   "value": "Individual consumers and families represent the primary customer base, shopping in-store and online for groceries, pharmacy, and everyday essentials. The broad multi-banner portfolio attracts diverse demographics across urban, suburban, and rural markets in the U.S."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: For a new grad AI/ML or Software Engineer in a corporate tech hub, the base salary likely ranges from $100,000 to $130,000, with a potential total compensation (bonus + equity) bracket of $115,000 to $150,000. This reflects a competitive non-Big Tech public company pay, significantly above the front-end entry level compensation tier."
   },
   "evidence_sha": "27b86858e710cfb0",
+  "generated_at": 1784683004,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "34c14336d1"
+   ],
+   "value": "Food and Drug Retail"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Interviews likely prioritize a lean, practical engineering culture focused on deploying scalable solutions in retail and supply chain tech—expect discussions that test real-world problem-solving for logistics optimization, ML pipeline robustness, or high-scale e-commerce reliability, rather than abstract algorithm puzzles. The pace is fast for retail tech but respects guardrails to minimize work-life-wreckers like weekend on-call crises."
   },
-  "last_attempt_at": 1784682913,
+  "last_attempt_at": 1784683004,
   "last_evidence_at": 1784674490,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "528b32ad02",
+    "34c14336d1"
+   ],
+   "value": "Headquartered in Boise, Idaho, with major corporate and technology hubs in Pleasanton, California, and other regional offices. Retail operations span across 34 states and the District of Columbia."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "34c14336d1",
+    "528b32ad02"
+   ],
+   "value": "Albertsons Companies fosters a culture of belonging and aims to bring people together around the joys of food and to inspire well-being. The official job postings reflect a commitment to innovation and community-focused service."
+  },
   "name": "Albertsons Companies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Structured and project-driven with operational predictability typical of retail operations; not the chaotic 'move fast and break things' sprint of a start-up, but subject to seasonal demand peaks and digital transformation pressures."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "528b32ad02",
+    "14673d8d3f"
+   ],
+   "value": "Albertsons operates retail grocery stores, in-store pharmacies, and fuel centers across multiple banners. Beyond physical goods, the company offers e-commerce services, grocery delivery, and prescription fulfillment, supported by its loyalty and rewards programs."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard for large enterprise retailers, typically starting at 12-18 days of combined vacation/sick time in the first year, plus personal holidays."
   },
+  "refresh_after": 1789867004,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -7493,7 +7550,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide tech shutdowns are standard in retail. However, traditional federal holidays usually see significant downtime at corporate levels, with skeletal staff only for essential digital operations."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "528b32ad02",
+    "34c14336d1"
+   ],
+   "value": "As a mature, publicly traded Fortune 500 enterprise, Albertsons Companies employs tens of thousands of associates across over 2,200 retail stores and multiple banners nationwide."
   },
   "sources": [
    {
@@ -7547,14 +7612,42 @@
     "url": "https://jobright.ai/jobs/info/6a5db1b363a8f619507d06de?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "34c14336d1"
+   ],
+   "value": "Specific sponsorship for new grad tech positions is not detailed in the analyzed sources. As a large, established U.S. corporation, standard H-1B restrictions likely apply."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "34c14336d1",
+    "528b32ad02"
+   ],
+   "value": "Albertsons Companies is one of the largest food and drug retailers in the United States, operating well-known grocery banners such as Safeway, Vons, Jewel-Osco, and Shaw's. The company generates revenue primarily through the sale of food, pharmaceuticals, general merchandise, and fuel across its extensive network of physical stores and e-commerce platforms."
+  },
+  "synthesized_evidence_sha": "27b86858e710cfb0",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "14673d8d3f"
+   ],
+   "value": "Technical roles may involve data-driven optimization of a massively complex supply chain and logistics network, AI/ML modeling for inventory and promotion personalization, and full-stack engineering for e-commerce sites and customer-facing digital experiences for millions of users."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674490,
   "web_search_url": "https://duckduckgo.com/?q=Albertsons+Companies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This firm offers a rare intersection of elite-level data complexity (grocery supply chain, pharmacy personalization) within a stable, non-toxic industry. Unlike ad-dependent tech firms, the business model is mission-driven around sustenance and health, often correlating with a sustainable pace. You can innovate with extensive resources and huge offline-plus-online data crosswalks without the constant burnout of high-churn consumer marketplaces."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Above Average - The mission-critical nature of grocery ensures stability, and the corporate culture is described with a focus on belonging rather than hyper-growth aggression. Long hours are the exception, not the expectation."
   }
  },
  "aledade": {
@@ -25033,52 +25126,121 @@
  },
  "berkeley industrial engineering operations research": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "a5aac5ce40",
+    "1db9db9c4d"
+   ],
+   "value": "Tier 1 (Elite). UC Berkeley is consistently ranked in the global top 5 for AI, data science, and operations research. Faculty include world-leading principal investigators in foundational machine learning."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "a5aac5ce40"
+   ],
+   "value": "As a public university department, its operating budget comes from state funding, student tuition and fees, and indirect cost recovery on sponsored research projects."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "a5aac5ce40"
+   ],
+   "value": "Intellectual, rigorous, and deeply collaborative within a public university environment. Strikes a balance between elite expectations and a collegial culture, with less extrinsic pressure towards aggressive profit-growth than corporate tech."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "c89ec17213",
+    "a5aac5ce40"
+   ],
+   "value": "The primary customers are admitted undergraduate and graduate students, peer academic institutions, government research bodies like the NSF, and industry partners seeking optimization and data science talent."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: For an entry-level research engineer or post-doc position within the department, compensation likely ranges from $85,000 to $110,000 total cost; this is conservative due to public university pay schedules, but provides elite non-monetary prestige."
   },
   "evidence_sha": "893728adea76d110",
+  "generated_at": 1784683004,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a5aac5ce40"
+   ],
+   "value": "Higher Education / Academic Research"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "For a staff research role, interviews would likely assess deep mathematical maturity (optimization, probability, stochastic processes), research independence, and teaching ability rather than product metrics. For a tech-heavy campus unit, questions emphasize methodological rigor and long-term vision over speed-to-market."
   },
-  "last_attempt_at": 1784682913,
+  "last_attempt_at": 1784683004,
   "last_evidence_at": 1784672884,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "a5aac5ce40",
+    "9d5070bce3"
+   ],
+   "value": "Berkeley, California. The department is housed primarily in Etcheverry Hall on the northeast side of the main UC Berkeley campus."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "a5aac5ce40",
+    "9d5070bce3"
+   ],
+   "value": "To advance knowledge at the intersection of data, decisions, and systems, preparing leaders who design and transform complex technological and socio-technical systems to solve global problems."
+  },
   "name": "Berkeley Industrial Engineering & Operations Research",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow to moderate. Governed by academic semester calendars, peer-review cycles, and grant deadlines rather than rapid week-based sprints. Some pressure to publish top-tier results exists, but it is self-paced."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "a5aac5ce40",
+    "1db9db9c4d"
+   ],
+   "value": "The department's products are academic degrees (B.S., M.S., M.Eng., Ph.D.), research outputs such as algorithms and optimization models, and non-degree executive education. Tangible research areas include supply chain management, risk analysis, machine learning, and robotics."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: For a full-time research or academic staff role, standard UC policy likely provides around 15–18 paid vacation days annually, separate from university holidays and annual winter-curtailment shutdown."
   },
+  "refresh_after": 1789867004,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed shutdown between Christmas and the day after New Year's Day per official UC Berkeley academic and business calendar. Additional time off occurs during spring break and public holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "9d5070bce3",
+    "a5aac5ce40"
+   ],
+   "value": "A mature, established department within a large public R1 university with over 45,000 students; the department has core tenure-track faculty, lecturers, and researchers, supporting several hundred declared undergraduate majors and graduate students."
   },
   "sources": [
    {
@@ -25122,14 +25284,43 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "a5aac5ce40"
+   ],
+   "value": "Routine for academic roles: the University of California sponsors H-1B visas for tenure-track faculty and postdocs and supports J-1 and F-1 student visas. As a non-profit, it is cap-exempt for H-1B processing."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "9d5070bce3",
+    "a5aac5ce40",
+    "c89ec17213"
+   ],
+   "value": "Berkeley Industrial Engineering & Operations Research (IEOR) is an academic department at the University of California, Berkeley, not a for-profit company. It generates revenue through education, offering undergraduate and graduate degrees, and by conducting sponsored research funded by government grants and industry partnerships."
+  },
+  "synthesized_evidence_sha": "893728adea76d110",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "a5aac5ce40"
+   ],
+   "value": "Research spans optimization, stochastic models, data science, machine learning, autonomous systems, and financial engineering and involves rigorous mathematical modeling, algorithm design, and simulation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672884,
   "web_search_url": "https://duckduckgo.com/?q=Berkeley+Industrial+Engineering+%26+Operations+Research+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This opportunity is mission-driven with a primary focus on education and high-impact research, not profit. Academic culture naturally enforces a slower, less-bureaucratic rhythm with fixed semester cycles, providing strong intellectual prestige alongside work-life balance and realistic shutdown periods."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Excellent. Academic roles typically offer high autonomy and avoid structured overtime. The likelihood of frequent late-night or weekend crisis is low outside of rare conference-submission deadlines."
   }
  },
  "berkshire hathaway energy": {
@@ -42084,11 +42275,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -42100,6 +42293,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784683004,
   "last_evidence_at": 1784674522,
   "name": "City of New York",
   "pace_of_work": {
@@ -77490,37 +77684,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Niche Government/Defense. Low prestige in commercial AI/tech hubs but elite in the cleared defense contracting sector with high barrier to entry."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "30e15251bc"
+   ],
+   "value": "Business-to-government (B2G) consulting model, staffing technical contracts requiring high-level security clearances."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "30e15251bc"
+   ],
+   "value": "Mission-focused and stable, with hierarchical structures tied to government roles. Innovation exists within highly structured parameters, attracting veterans and engineers seeking purpose-driven national security work rather than startup perks."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "30e15251bc"
+   ],
+   "value": "U.S. Intelligence Community (IC) and Department of Defense (DoD) agencies, as indicated by standard clearance requirements."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 - $110,000 base, plus extensive bonuses for cleared personnel. Total compensation premium compared to commercial non-cleared junior roles is guaranteed."
   },
   "evidence_sha": "f3fa2f57d84a74ca",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784683004,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "30e15251bc"
+   ],
+   "value": "Defense Technology & Government Services"
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "30e15251bc"
+   ],
+   "value": "Given the junior role, interviews likely focus on core Java and JavaScript fundamentals (Angular, React, Vue), basic data structures, and behavioral questions aimed at reliability and cultural fit for long-term government projects. Emphasis on ability to obtain and maintain a TS/SCI clearance is paramount."
+  },
+  "last_attempt_at": 1784683004,
   "last_evidence_at": 1784674522,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "30e15251bc"
+   ],
+   "value": "Likely based in the Maryland/Washington D.C. metro area, heavily concentrated near Fort Meade and other intelligence community hubs."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "30e15251bc"
+   ],
+   "value": "To deliver advanced software solutions addressing national security challenges, combining mission expertise with technical innovation for government clients."
+  },
   "name": "GliaCell Technologies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow to moderate. Pace is constrained by government timelines and security procedures rather than venture capital-driven growth or product shipping rhythms."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "30e15251bc"
+   ],
+   "value": "Secure software engineering services focusing on cloud solutions, big data analytics, and full-stack development for defense and intelligence applications."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 3 weeks standard, including sick time. Time off must be negotiated around classified responsibilities and sprints, and is not unlimited."
   },
+  "refresh_after": 1789867004,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -77530,7 +77781,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Federal holidays observed. The specific guaranteed shutdowns might include weekends and a required block leave or furlough schedule for government employees, which may mirror the entire contractor workforce."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mature small-to-medium enterprise (SME) government contractor, not a startup."
   },
   "sources": [
    {
@@ -77584,14 +77840,43 @@
     "url": "https://jobright.ai/jobs/info/6a5e64dbf3674a0545d28ae8?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "30e15251bc"
+   ],
+   "value": "U.S. Citizenship is required. The company cannot sponsor visas due to the TS/SCI with polygraph security clearance mandate, which also prevents non-citizens from employment."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "30e15251bc"
+   ],
+   "value": "GliaCell Technologies is a software engineering company that specializes in building secure, mission-critical solutions primarily for U.S. Intelligence Community and Department of Defense clients. The company generates revenue by providing cleared software development and consulting services, particularly in big data, analytics, and cloud engineering, on government contracts."
+  },
+  "synthesized_evidence_sha": "f3fa2f57d84a74ca",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "30e15251bc"
+   ],
+   "value": "Modern full-stack development using Java, AngularJS, jQuery, React, and Vue. Work often requires maintaining legacy systems alongside cloud and analytics projects. All work is tied to classified environments requiring TS/SCI clearance with polygraph."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674522,
   "web_search_url": "https://duckduckgo.com/?q=GliaCell+Technologies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "30e15251bc"
+   ],
+   "value": "Provides a stable, mission-driven alternative with guaranteed work hours tied to government schedules and strict security protocols, potentially offering a strong work-life balance for security-cleared candidates. The pay is competitive for cleared new grads and the work provides rapid exposure to advanced systems in a non-corporate environment."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Culture is bound by strict government contracting hours, leading to predictable 40-hour work weeks with full weekends off."
   }
  },
  "glide": {
@@ -100641,37 +100926,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 for AI/DS prestige. It is a Fortune 500 financial firm where technical work is a cost-center enabler rather than the profit-center product. AI applications exist but the brand is not a top-technology destination like FAANG or leading AI labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "730eaa7fdf",
+    "a77ea3bb6a"
+   ],
+   "value": "Operates a traditional insurance model: collects premiums from policyholders, manages risk through underwriting, and invests the float in conservative assets. Uses both independent agents and direct-to-consumer channels for distribution."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, stable, and risk-averse corporate financial culture. Emphasis is on compliance, serving middle-America, and operational reliability, which naturally counter-acts the 'move-fast' burnout style."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "eacbdb3a98",
+    "730eaa7fdf"
+   ],
+   "value": "Primarily middle-income individuals and families across the United States. Policyholders access services via kemper.com and agency partners."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 - $105,000 for an entry-level data analyst/scientist in a moderate cost-of-living U.S. office. Significantly below FAANG but above regional average for non-tech companies, complimented by a robust 401k match and stable bonus structure."
   },
   "evidence_sha": "edf7d5af5fd03d44",
+  "generated_at": 1784683004,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "730eaa7fdf"
+   ],
+   "value": "Property & Casualty Insurance, and Life Insurance."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should probe for the team's deployment velocity versus regulatory approval cycles, the specific tech stack's modernity, and whether the culture truly honors a '47 hours a week and hard stop' ethos and scheduled shutdowns during the claims off-season, not just mandated holidays."
   },
+  "last_attempt_at": 1784683004,
   "last_evidence_at": 1784591793,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "730eaa7fdf"
+   ],
+   "value": "Headquartered in Chicago, IL. Major offices also likely across the U.S., including Birmingham, AL and Jacksonville, FL, supporting claims, IT, and corporate functions."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "730eaa7fdf"
+   ],
+   "value": "To provide protection and peace of mind to middle-income American families through affordable, easy-to-understand insurance solutions."
+  },
   "name": "Kemper",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Consistent 40-45 hour weeks typical of a large corporate insurer. Slower than a startup or big tech due to stringent regulatory, actuarial, and quarterly closing cycles."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "730eaa7fdf"
+   ],
+   "value": "Personal auto, homeowner, renters, and life insurance products. Offered under brands like Kemper Auto, Kemper Personal Insurance, and Kemper Life."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 18 days of combined vacation/sick time for a new grad, plus 2 floating holidays. This is a conservative benchmark for a large, traditional U.S. insurer."
   },
+  "refresh_after": 1789867004,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -100681,7 +101021,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No official company-wide winter break shutdown noted in insurance industry standard practices, though there are guaranteed corporate holidays. Some insurance teams may observe a quiet period between Christmas and New Year's."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "730eaa7fdf"
+   ],
+   "value": "Publicly traded Fortune 500 company. Mature, large-cap insurance enterprise with thousands of employees, not a hyper-growth startup."
   },
   "sources": [
    {
@@ -100715,14 +101062,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=d8a71c44d7f386f9649d7189fe03545c8542114db7ae33c82a95e2e9f7724d69JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=2225a6cc-e520-6aea-0cb3-b150e4cf6b90&u=a1aHR0cHM6Ly93d3cua2VtcGVyLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "A large, established corporation like Kemper likely offers H-1B transfers or sponsorships for niche technical talent, but this is never guaranteed for entry-level roles. No explicitly published policy was found in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "730eaa7fdf"
+   ],
+   "value": "Kemper is a U.S. insurance holding company providing auto, home, and life insurance, primarily to middle-income families. It generates revenue through premiums paid by policyholders and by investing those premiums before paying out claims."
+  },
+  "synthesized_evidence_sha": "edf7d5af5fd03d44",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "730eaa7fdf"
+   ],
+   "value": "Insurtech modernization efforts, including predictive modeling for underwriting risks, claims AI/automation, and data engineering. The technical environment is likely stable and process-driven given the regulated industry, but is actively investing in data science capabilities."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784591793,
   "web_search_url": "https://duckduckgo.com/?q=Kemper+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Kemper provides an actuarially-driven and risk-focused AI/DS sandbox that is mission-driven (protecting middle-income families), respects predictable hours inherent to a heavily regulated, non-tech-native industry, and offers an elite-anchor name for a resume early in a career."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4.5 out of 5 by tech-industry standards. Insurance giants are traditionally associated with strong work-life separation, remote flexibility, and low risk of weekend on-call compared to SaaS or Big Tech."
   }
  },
  "keybank": {
@@ -140248,39 +140620,102 @@
  },
  "pgtek": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "f0179a1074"
+   ],
+   "value": "Low/Traditional Consulting. PGTEK is not an AI or data science company; it is an HPC infrastructure staffing firm. There is no elite AI prestige associated with this brand."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "f0179a1074"
+   ],
+   "value": "Staffing-based consulting model where PGTEK places engineers at client sites for full-time contract work, often requiring extensive national travel. The posted role is fixed-salaried at $70K/year for full-time onsite client work, indicating billable-hour or fixed-price contracts are the core revenue driver."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "f0179a1074"
+   ],
+   "value": "Field-engineer, client-services culture driven by travel and on-site delivery. The environment prioritizes customer mission support and project deployment success over technological innovation or employee-centric perks."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "f0179a1074"
+   ],
+   "value": "Organizations that require specialized HPC infrastructure support, including government agencies, research institutions, and enterprises with complex computing environments. The posted role mentions Dayton, OH, suggesting a strong customer presence near Wright-Patterson Air Force Base."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "f0179a1074"
+   ],
+   "value": "$70,000 per year, fixed salary for the Junior HPC Infrastructure Engineer role. This is a direct public posting value and significantly below the candidate's target AI/new-grad tier"
   },
   "evidence_sha": "2dfb520b30bae0af",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784683004,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f0179a1074"
+   ],
+   "value": "IT Consulting and Staffing focusing on High-Performance Computing and Enterprise Infrastructure."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "f0179a1074"
+   ],
+   "value": "Expect a highly practical, skills-heavy interview process focused on hardware troubleshooting, system deployment fundamentals, and willingness to travel nationally. There will be little to no testing on advanced AI or data science concepts, and culture-fit questions will screen for tolerance of constant on-site travel and client-facing expectations."
+  },
+  "last_attempt_at": 1784683004,
   "last_evidence_at": 1784674045,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "f0179a1074"
+   ],
+   "value": "Headquarters not specified, but job postings reference Dayton, OH, with additional national locations for travel-based roles."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "f0179a1074"
+   ],
+   "value": "To help clients achieve their business and technology objectives by providing expert consulting and engineering talent."
+  },
   "name": "PGTEK",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "f0179a1074"
+   ],
+   "value": "Estimated: High-paced and travel-heavy. The role requires full-time on-site client work with constant travel to multiple locations, leaving no room for a relaxed or flexible schedule."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "f0179a1074"
+   ],
+   "value": "Technology consulting services focused on HPC solution deployment, system support, hardware troubleshooting, and infrastructure engineering. The specific product is the on-site expertise of its engineers, who integrate into client environments to deliver business and technology objectives."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10-15 days standard for a small consulting firm, but actual utilization is difficult for travel staff. Often client commitments override formal PTO availability."
   },
+  "refresh_after": 1789867004,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -140290,7 +140725,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns. Travel roles depend on client contracts and critical infrastructure uptimes, making mandatory company rest periods unlikely."
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -140344,14 +140784,43 @@
     "url": "https://jobright.ai/jobs/info/6a5ea692050c423c792f0a7d?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "f0179a1074"
+   ],
+   "value": "PGTEK is a specialized technology consulting firm that deploys engineers to design, implement, and support high-performance computing (HPC) and enterprise IT infrastructure for client organizations. The company generates revenue by billing clients for the on-site technical services its consultants provide, typically on a full-time travel basis."
+  },
+  "synthesized_evidence_sha": "2dfb520b30bae0af",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "f0179a1074"
+   ],
+   "value": "Roles involve hands-on technical work: deploying HPC solutions, performing system support, and troubleshooting hardware in production environments. The posted Junior HPC Infrastructure Engineer role is an entry-level position requiring on-site travel and infrastructure engineering skills."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674045,
   "web_search_url": "https://duckduckgo.com/?q=PGTEK+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "f0179a1074"
+   ],
+   "value": "PGTEK does not align with the candidate's priorities. The posted entry-level role pays a fixed $70K, which falls significantly below top-tier new grad AI/data science compensation, and focuses on hardware infrastructure rather than AI innovation. The full-time travel requirement eliminates any possibility of work-life balance or sane hours, clashing directly with a desire for guaranteed shutdowns and avoiding burnout environments."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "f0179a1074"
+   ],
+   "value": "Estimated: Poor. The full-time onsite travel requirement inherently conflicts with work-life balance, making consistent personal time, guaranteed shutdowns, or sane hours practically impossible."
   }
  },
  "pharo management": {
@@ -153201,11 +153670,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -153217,6 +153688,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784683004,
   "last_evidence_at": 1784676553,
   "name": "Replit",
   "pace_of_work": {
@@ -201667,11 +202139,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -201683,6 +202157,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784683004,
   "last_evidence_at": 1784676554,
   "name": "WD",
   "pace_of_work": {
