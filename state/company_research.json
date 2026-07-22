@@ -88,12 +88,82 @@
   }
  },
  "2u": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
   "aliases": [],
-  "evidence_sha": "a523002561d98018",
-  "last_evidence_at": 1784578610,
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "0c7e4b623397c49e",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784680917,
   "name": "2U",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "89d2f754e9",
+    "kind": "company_web",
+    "publisher": "2U",
+    "retrieved_at": 1784680917,
+    "title": "2U public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=4b3839bdee114b7d89453dbeff40d259aefab0e8409ba72f3902ec624e44a1bcJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g_dj0zWDN4dFJOYjIwcw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "e3841c2f98",
+    "kind": "company_web",
+    "publisher": "2U",
+    "retrieved_at": 1784680917,
+    "title": "2U public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=603820d44141024e8ca5e1a77aa40852dfe110b64f9e993dcc2ff8175257b08fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvMlVfKGNvbXBhbnkp&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "58ccf4519b",
+    "kind": "company_web",
+    "publisher": "2U",
+    "retrieved_at": 1784680917,
+    "title": "2U public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=c15f57de1ef9c10d650acc5ef52c9331016c147d511fc8ef1a69732407fbca74JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly8ydS5jb20v&ntb=1"
+   },
    {
     "content_sha": "e0670094e3f2efef",
     "excerpt": "We are motivated by our mission – to make learning limitless– and connected by our shared passion to deliver world-class higher education at scale. As the parent company of edX, a leading online learning platform, 2U powers thousands of &nbsp;higher education offerings – from free courses to full degrees. Prefer experience with modern experimentation platforms (e.g., Statsig, Eppo, Optimizely, LaunchDarkly).",
@@ -105,7 +175,15 @@
     "url": "https://job-boards.greenhouse.io/2u/jobs/8551048002"
    }
   ],
-  "status": "evidence_only"
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784680917,
+  "web_search_url": "https://duckduckgo.com/?q=2U+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
  },
  "3red partners": {
   "ai_ds_prestige_tier": {
@@ -4836,40 +4914,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "National Security/Defense Tech (Moderate-High Prestige). Perceived as a stable and mission-critical domain but less glamorous in AI circles than prominent commercial research labs."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "6f41afff9c"
+   ],
+   "value": "Business-to-government (B2G) professional services firm funded through long-term federal IT contracts and task orders."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "6f41afff9c"
+   ],
+   "value": "Mission-first and team-oriented with an emphasis on serving national security. There is an expectation to deliver tangible value to government clients using collaborative engineering discipline rather than a freewheeling tech culture."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "6f41afff9c"
+   ],
+   "value": "U.S. Department of Defense and other federal civilian agencies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000–$105,000 base salary for a technical new grad in the Washington D.C. metro area, which is competitive for cleared contractor roles but below top-tier commercial AI labs."
   },
   "evidence_sha": "d71b7320a6bbf53c",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784680912,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784680812,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "6f41afff9c"
+   ],
+   "value": "Defense and Government IT Services."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "6f41afff9c"
+   ],
+   "value": "Interviews likely emphasize technical proficiency, culture fit with mission-focus, and ability to align with government work rather than Silicon Valley-style rapid iteration. Expect questions on structured problem-solving, agile values, and clear communication over flexible perks or pure AI model design."
+  },
+  "last_attempt_at": 1784680912,
   "last_evidence_at": 1784675820,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "6f41afff9c"
+   ],
+   "value": "Headquartered in Reston, Virginia with work performed on-site at government facilities or remotely depending on contract requirements."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "6f41afff9c"
+   ],
+   "value": "To deliver innovative and adaptive digital solutions that empower federal and defense agencies to overcome complex national security challenges."
+  },
   "name": "Agile Defense",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. Government contracting environments typically prioritize disciplined sprints and compliance over chaotic startup speed, keeping a structured cadence rather than raw hustle."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "6f41afff9c"
+   ],
+   "value": "Agile Defense delivers government-focused IT services including cybersecurity operations, cloud migration, software development, data analytics, and enterprise IT management. The company uses modern DevSecOps practices to build and secure mission platforms for defense clients."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days Paid Time Off (PTO) plus 10 federal holidays. This is a conservative estimate common for mid-tier federal contractors."
   },
+  "refresh_after": 1789864912,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -4879,7 +5011,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: May offer one company-wide holiday shutdown week; no further guaranteed full-firm suspensions beyond floating bank holidays."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "6f41afff9c"
+   ],
+   "value": "Established mid-tier federal contractor beyond startup stage; exact revenue or headcount not available in sources."
   },
   "sources": [
    {
@@ -4923,14 +5062,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=f210ca1fc3a068db29a3a17d47a8c88652aa33d0c2488f6d70f618f4af4bde38JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2599f633-462e-681f-18db-e1ae47a769bf&u=a1aHR0cHM6Ly93d3cuYWdpbGVhbGxpYW5jZS5vcmcvYWdpbGUxMDEv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "6f41afff9c"
+   ],
+   "value": "Agile Defense provides digital transformation and cybersecurity services to U.S. defense and federal agencies, helping modernize legacy systems and strengthen mission-critical networks. They make money by competing for and winning government IT contracts, delivering tailored solutions in areas like cloud engineering, DevSecOps, and advanced analytics."
+  },
+  "synthesized_evidence_sha": "d71b7320a6bbf53c",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "6f41afff9c"
+   ],
+   "value": "Work involves software and systems engineering using modern paradigms like Agile and DevSecOps alongside data engineering and cybersecurity operations. Roles span cloud migration, secure application development, and mission IT support tailored to federal standards."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675820,
   "web_search_url": "https://duckduckgo.com/?q=Agile+Defense+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "6f41afff9c"
+   ],
+   "value": "Aligns with the candidate’s desire for a mission-driven role in national security where modern agile practices may replace slow bureaucracy. The company’s government work often includes fixed delivery deadlines which can foster more predictable schedules, potentially respecting personal time better than ad-hoc commercial startups."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Above Average to Good (3.5/4 out of 5). Defense contractors commonly maintain a standard 40-hour week with predictable cycles, though deadlines near proposal submissions or live events can temporarily spike."
   }
  },
  "agility pr solutions": {
@@ -7233,12 +7399,82 @@
   }
  },
  "allen control systems": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
   "aliases": [],
-  "evidence_sha": "45ac213915a69a4c",
-  "last_evidence_at": 1784583908,
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "55c3976fc9046ffc",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784680916,
   "name": "Allen Control Systems",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "015dab1029",
+    "kind": "company_web",
+    "publisher": "Allen Control Systems",
+    "retrieved_at": 1784680916,
+    "title": "Allen Control Systems public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=37bf1c119ee62ac2c4f34bdb3fe76da3054971c5057f07f316c3fd07e6b0e299JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9jbGVya29mY291cnRzLmFsbGVuY291bnR5b2hpby5jb20v&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "9560f0a77d",
+    "kind": "company_web",
+    "publisher": "Allen Control Systems",
+    "retrieved_at": 1784680916,
+    "title": "Allen Control Systems public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=50f10d5dc2b8b5a4a4544ada57fd3d26b2d02fd492278df512ea3779fea55543JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9ieWFsbGVuLmNvbS8&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "10cb75d968",
+    "kind": "company_web",
+    "publisher": "Allen Control Systems",
+    "retrieved_at": 1784680916,
+    "title": "Allen Control Systems public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=0c51fb7fe9bc5a53899ccc1c606e486ff218c4960a9a1624e64e70c959053345JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9hbGxlbi5pbi8&ntb=1"
+   },
    {
     "content_sha": "08d1b5849e8480ac",
     "excerpt": "Strong problem-solving skills and ability to work in a fast-paced environment. Software Engineer Company Overview: Allen Control Systems (ACS) is a cutting-edge defense startup founded by two former Navy electrical engineers with a proven track record in robotics and software. We are developing an autonomous gun turret using advanced computer vision and control systems to precisely detect, track, and neutralize enemy drones. With an engineering-first culture, ACS values technical excellence and innovation.",
@@ -7270,7 +7506,15 @@
     "url": "https://jobs.ashbyhq.com/allen-control-systems/c878297f-ba09-45ce-8475-83ddb7207858"
    }
   ],
-  "status": "evidence_only"
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784680916,
+  "web_search_url": "https://duckduckgo.com/?q=Allen+Control+Systems+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
  },
  "alliancebernstein": {
   "ai_ds_prestige_tier": {
@@ -9492,6 +9736,94 @@
   "web_research_status": "sources captured",
   "web_researched_at": 1784678105,
   "web_search_url": "https://duckduckgo.com/?q=Amazon+Web+Services%2C+Inc.+-+A97+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
+ "amca": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "14e209631de4a1ec",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784680915,
+  "name": "Amca",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "7dce764daa",
+    "kind": "company_web",
+    "publisher": "Amca",
+    "retrieved_at": 1784680915,
+    "title": "Amca public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=1e926e96c083311a49274d9341385f3d66996e273f6079a949385e1aee2b4641JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuYW50aXF1ZW1vdG9yY3ljbGUub3JnLw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "4f98a2f443",
+    "kind": "company_web",
+    "publisher": "Amca",
+    "retrieved_at": 1784680915,
+    "title": "Amca public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=46987c6d402dc047aa940b5a5c8198b476adeb6245b1197a3a3fe26507f94fcbJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuYW1jYWV4YW1zLmNvbS9jZXJ0aWZpY2F0aW9ucy8&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "134b6d930e",
+    "kind": "company_web",
+    "publisher": "Amca",
+    "retrieved_at": 1784680915,
+    "title": "Amca public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=b751a5c8ec948bf70149b4e55580c553e2336b2965857eba9e0ce4f43668a0e8JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuYW1jYWV4YW1zLmNvbS8&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784680915,
+  "web_search_url": "https://duckduckgo.com/?q=Amca+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
@@ -12381,7 +12713,7 @@
    "value": "Elite tier, considered a top destination equivalent to OpenAI or DeepMind for LLM researchers. Compensation and mission draw top-of-market talent, though there are reports of an exclusionary elite-school culture."
   },
   "aliases": [],
-  "attempts": 9,
+  "attempts": 10,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -12437,7 +12769,7 @@
    ],
    "value": "Expect rigorous coding challenges, deep ML research discussions, and behavioral alignment with the safety mission, plus probes on versatility outside a 9-to-6 pattern. Candidates will want to emphasize their ability to produce at a high pace with efficiency to guard their own weekends."
   },
-  "last_attempt_at": 1784680812,
+  "last_attempt_at": 1784680912,
   "last_evidence_at": 1784580810,
   "locations": {
    "confidence": "high",
@@ -16547,6 +16879,94 @@
    "value": "3/5 (estimated)"
   }
  },
+ "ascendant program services llc": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "0176c3d378671b7a",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784680915,
+  "name": "Ascendant Program Services, LLC",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "337512b4cd",
+    "kind": "company_web",
+    "publisher": "Ascendant Program Services, LLC",
+    "retrieved_at": 1784680915,
+    "title": "Ascendant Program Services, LLC public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=384924a0e4082f86e0066e2734e6cdab8c9d7ae3b0cde8f8d5adab318bd428a9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9jYWZlYXN0cm9sb2d5LmNvbS93aGF0cy1teS1hc2NlbmRhbnQtc2lnbi5odG1s&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "00a791d27e",
+    "kind": "company_web",
+    "publisher": "Ascendant Program Services, LLC",
+    "retrieved_at": 1784680915,
+    "title": "Ascendant Program Services, LLC public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=eb21656287045a990f60d24a9d50a75f42b0e1b7761a85366cf65f442f0bdcb7JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuYWNpY29tcGFuaWVzLmNvbS8&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "8871df6999",
+    "kind": "company_web",
+    "publisher": "Ascendant Program Services, LLC",
+    "retrieved_at": 1784680915,
+    "title": "Ascendant Program Services, LLC public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=08ab436f54017515e32a001ea6062e3228cc94d6e6eb5f87ad49865dd8dbd14aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2FzY2VuZGFudA&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784680915,
+  "web_search_url": "https://duckduckgo.com/?q=Ascendant+Program+Services%2C+LLC+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
  "ask it consulting": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
@@ -18435,12 +18855,82 @@
   }
  },
  "aurelius systems": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
   "aliases": [],
-  "evidence_sha": "4785ccfc9da01ef6",
-  "last_evidence_at": 1784631080,
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "d7121ff98befc05f",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784680917,
   "name": "Aurelius Systems",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "fab27eb59c",
+    "kind": "company_web",
+    "publisher": "Aurelius Systems",
+    "retrieved_at": 1784680917,
+    "title": "Aurelius Systems public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=cb80c58c750b5ee1f37140201c10cd92de0afae9e064633285f48b2d84a6562aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuYnJpdGFubmljYS5jb20vYmlvZ3JhcGh5L01hcmN1cy1BdXJlbGl1cy1Sb21hbi1lbXBlcm9y&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "ab052dffbd",
+    "kind": "company_web",
+    "publisher": "Aurelius Systems",
+    "retrieved_at": 1784680917,
+    "title": "Aurelius Systems public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=c7c9e438612b13d510885bec8cbd36780c403b76312ea8e81d25466c3c0260ffJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuYXVyZWxpdXMtZ3JvdXAuY29tLw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "bd0c17038a",
+    "kind": "company_web",
+    "publisher": "Aurelius Systems",
+    "retrieved_at": 1784680917,
+    "title": "Aurelius Systems public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=9c2ff7988c9c2dc7f867d968489dde488e42bf9084d107df10478fb7c18e9d63JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTWFyY3VzX0F1cmVsaXVz&ntb=1"
+   },
    {
     "content_sha": "df619b99725ef54f",
     "excerpt": "Who We Are: Aurelius Systems is a VC backed defense tech startup building autonomous, edge deployed directed energy systems for counter-UAS. We build laser weapons to shoot down drones. Marcus Aurelius wrote about doing the work in front of you, every day, without excuses.",
@@ -18452,7 +18942,15 @@
     "url": "https://jobs.ashbyhq.com/aureliussystems/81fca3a4-7f50-4730-9a18-55c0da74130c"
    }
   ],
-  "status": "evidence_only"
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784680917,
+  "web_search_url": "https://duckduckgo.com/?q=Aurelius+Systems+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
  },
  "auria space": {
   "ai_ds_prestige_tier": {
@@ -18808,39 +19306,109 @@
  },
  "auto owners insurance": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "76916ae90e"
+   ],
+   "value": "Low. It is an established insurance carrier with a technology stack rooted in COBOL, and the research did not surface any dedicated AI or data science research hubs."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "617486b8e9",
+    "55bd1d67d3",
+    "76e193128f"
+   ],
+   "value": "Mutual insurance company (owned by policyholders) distributing policies through independent agents, earning income from underwriting premiums and investment returns."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "55bd1d67d3",
+    "76916ae90e"
+   ],
+   "value": "Conservative, stable, and relationship-focused; centered on long-term financial security and independent agent partnerships rather than rapid innovation."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "617486b8e9",
+    "55bd1d67d3",
+    "76e193128f"
+   ],
+   "value": "Individuals and businesses purchasing property & casualty insurance through a network of independent agencies, primarily in the United States."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "76916ae90e"
+   ],
+   "value": "Estimated: $65,000 - $80,000 base in Lansing, MI, well below top-tier Big Tech new-grad packages that exceed $110,000."
   },
   "evidence_sha": "725f71d28c705cb0",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+  "generated_at": 1784680912,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "617486b8e9",
+    "55bd1d67d3",
+    "76e193128f"
+   ],
+   "value": "Property & Casualty Insurance"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "76916ae90e"
+   ],
+   "value": "Interview process likely screens for stability, long-term career commitment, and proficiency with procedural programming such as COBOL, contrasting with the candidate's desire for a modern, elite technical environment and fast learning curve."
+  },
+  "last_attempt_at": 1784680912,
   "last_evidence_at": 1784680810,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "76916ae90e"
+   ],
+   "value": "Headquarters in Lansing, Michigan; not hiring fully remote positions for the Math Major Software Developer role."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Auto-Owners Insurance",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow to moderate; typical of a mature, risk-averse insurance organization that prioritizes stability over rapid iteration."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "617486b8e9",
+    "55bd1d67d3",
+    "76e193128f"
+   ],
+   "value": "Personal and commercial insurance including auto, home, life, and business coverage, sold exclusively through independent agents."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "76916ae90e"
+   ],
+   "value": "Estimated: 15 days of vacation, 5 sick days, plus paid holidays—typical for an established mutual insurance company in the Midwest."
   },
+  "refresh_after": 1789864912,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -18850,7 +19418,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No evidence of formal, company-wide extended shutdowns beyond standard holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "617486b8e9",
+    "55bd1d67d3",
+    "76e193128f"
+   ],
+   "value": "Large, mature Fortune 500 mutual insurance carrier with a stable financial position; not a startup."
   },
   "sources": [
    {
@@ -18904,14 +19481,46 @@
     "url": "https://aoins.wd5.myworkdayjobs.com/AutoOwners/job/Lansing-MI/Math-Major-Software-Developer_R_1008"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "76916ae90e"
+   ],
+   "value": "Current or future work visa sponsorship is not available for the Math Major Software Developer role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "617486b8e9",
+    "55bd1d67d3",
+    "76e193128f"
+   ],
+   "value": "Auto-Owners Insurance is a mutual insurance company that sells property and casualty insurance products through independent agents. It generates revenue primarily through underwriting premiums and investment income."
+  },
+  "synthesized_evidence_sha": "725f71d28c705cb0",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "76916ae90e"
+   ],
+   "value": "Technology roles maintain and modernize core backend systems, often using COBOL, combined with web and mobile application development for agency interfaces. The company is not a Big Tech firm and does not market an AI-first culture."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680810,
   "web_search_url": "https://duckduckgo.com/?q=Auto-Owners+Insurance+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "76916ae90e",
+    "dbc3b9e88f"
+   ],
+   "value": "This company likely clashes with the candidate's priorities: it emphasizes legacy insurance technology (COBOL) rather than a fast, innovative tech culture, and it is not known for top-tier AI prestige or the highest new-grad tech salaries, making it a poor fit for a cutting-edge data science career path."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Sane work hours with a strong respect for personal time, in line with a midwestern mutual insurance culture."
   }
  },
  "autodesk": {
@@ -35777,6 +36386,94 @@
    "value": "3/5 (estimated)"
   }
  },
+ "cgs immersive": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "4cef21a4e9b79baa",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784680916,
+  "name": "CGS Immersive",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "bbf23f2850",
+    "kind": "company_web",
+    "publisher": "CGS Immersive",
+    "retrieved_at": 1784680916,
+    "title": "CGS Immersive public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=fde3c091794a8d8120a64e4f745eabd708d1923337b61cd391c4a70d59eb8ee1JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cub25saW5lcHJvdmlkZXJzZXJ2aWNlcy5jb20vY2dzX29wcy9pbml0TG9naW5WMi5kbw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "63b1b4c359",
+    "kind": "company_web",
+    "publisher": "CGS Immersive",
+    "retrieved_at": 1784680916,
+    "title": "CGS Immersive public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=95c94e12c3c8b3f481fa5d514078025d161beb66c134565f027d0a4475205537JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9teWNnc3BvcnRhbC5jb20vTXlDR1MvQ0dTQWNjb3VudC9Mb2dpbg&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "e2b33133ad",
+    "kind": "company_web",
+    "publisher": "CGS Immersive",
+    "retrieved_at": 1784680916,
+    "title": "CGS Immersive public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=69fa9ea267d459264d00a6db639bee31c8f64d85964fd303fc5c2e61368bb16bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuY2dzbWVkaWNhcmUuY29tLw&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784680916,
+  "web_search_url": "https://duckduckgo.com/?q=CGS+Immersive+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
  "chamber cardio": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
@@ -42644,6 +43341,94 @@
    "value": "3/5 (estimated)"
   }
  },
+ "compassion international": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "661b128461c9f451",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784680910,
+  "name": "Compassion International",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "cfb3eabf0a",
+    "kind": "company_web",
+    "publisher": "Compassion International",
+    "retrieved_at": 1784680910,
+    "title": "Compassion International public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=fc821824ab0267585e3da43e6bdeaaa0b374cfaf8f28cb3317becccf68a5d756JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuY29tcGFzc2lvbi5jb20vYWNjb3VudC9sb2dpbi5odG0&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "1898706690",
+    "kind": "company_web",
+    "publisher": "Compassion International",
+    "retrieved_at": 1784680910,
+    "title": "Compassion International public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=d40034cf7d9e76eff1c064e0193aec3aa4fa49edc0440cea07cf46be61639260JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuY29tcGFzc2lvbi5jb20v&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "5ac1b3916c",
+    "kind": "company_web",
+    "publisher": "Compassion International",
+    "retrieved_at": 1784680910,
+    "title": "Compassion International public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=9dffd01dd12509022f68b10a2bee7eef1344aa73d39fed84684770afd0111c7cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2NvbXBhc3Npb24&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784680910,
+  "web_search_url": "https://duckduckgo.com/?q=Compassion+International+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
  "comtech llc": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
@@ -48936,6 +49721,94 @@
   "web_research_status": "sources captured",
   "web_researched_at": 1784630052,
   "web_search_url": "https://duckduckgo.com/?q=DataVisor+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
+ "dave busters": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "c1962e0526104226",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784680910,
+  "name": "Dave & Busters",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "6a68ec0259",
+    "kind": "company_web",
+    "publisher": "Dave & Busters",
+    "retrieved_at": 1784680910,
+    "title": "Dave & Busters public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=09e594d3652ed1684d960cce9b48e30de39af4d31432c1f9aee11b1205776726JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9wbGF5Lmdvb2dsZS5jb20vc3RvcmUvYXBwcy9kZXRhaWxzP2lkPWNvbS5kYXZlJmhsPWVuLVVT&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "e541963497",
+    "kind": "company_web",
+    "publisher": "Dave & Busters",
+    "retrieved_at": 1784680910,
+    "title": "Dave & Busters public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=3f5814a17d1695cf4f707832411f092ebb05233c1594202c3434225d3f25e9a2JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9kYXZlLmNvbS9tYWNhaXM&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "24b18a8220",
+    "kind": "company_web",
+    "publisher": "Dave & Busters",
+    "retrieved_at": 1784680910,
+    "title": "Dave & Busters public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=c0f404cdcbd4e81c0bb65a3ac976cecc6889dead885fc777bf03022c9ed53716JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9kYXZlLmNvbS8&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784680910,
+  "web_search_url": "https://duckduckgo.com/?q=Dave+%26+Busters+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
@@ -55760,6 +56633,94 @@
    "value": "3/5 (estimated)"
   }
  },
+ "elekta": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "b3ed7cf58a944236",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784680907,
+  "name": "Elekta",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "3f654ef731",
+    "kind": "company_web",
+    "publisher": "Elekta",
+    "retrieved_at": 1784680907,
+    "title": "Elekta public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=59c72b545df2c62180dd64b2f88aaacd5a8c4759b4ff947cc0bbddf4f79c2433JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRWxla3Rh&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "6f186ff70a",
+    "kind": "company_web",
+    "publisher": "Elekta",
+    "retrieved_at": 1784680907,
+    "title": "Elekta public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=e1bead45bc3e6c1fa308ed41bc69ef8ae8ea5cf3f611d43df8f13220f35b36faJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuZWxla3RhLmNvbS9jb21wYW55Lw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "d3cd3acdd5",
+    "kind": "company_web",
+    "publisher": "Elekta",
+    "retrieved_at": 1784680907,
+    "title": "Elekta public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=ced5ce50cc799b546edaab33c2abdc344eee44701e5fd1150522eb5d546571bcJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuZWxla3RhLmNvbS8&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784680907,
+  "web_search_url": "https://duckduckgo.com/?q=Elekta+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
  "elevance health": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
@@ -56058,6 +57019,94 @@
   "web_research_status": "sources captured",
   "web_researched_at": 1784677349,
   "web_search_url": "https://duckduckgo.com/?q=EliseAI+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
+ "elixirr": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "262a897d2e81ec71",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784680917,
+  "name": "Elixirr",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "d329ee7610",
+    "kind": "company_web",
+    "publisher": "Elixirr",
+    "retrieved_at": 1784680917,
+    "title": "Elixirr public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=48a53f1b111dc08115fca1953a36933cf7c9d03cc94ebba6a8f65b7b9acb0566JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9zdGFja292ZXJmbG93LmNvbS9xdWVzdGlvbnMvNDkxMTg1NzkvYWxwaW5lLWRvY2tlcmZpbGUtYWR2YW50YWdlcy1vZi1uby1jYWNoZS12cy1ybS12YXItY2FjaGUtYXBr&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "f92cf3d382",
+    "kind": "company_web",
+    "publisher": "Elixirr",
+    "retrieved_at": 1784680917,
+    "title": "Elixirr public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=dfc54b8fcaa234dd94d43e625a4ba4cb845af2cfff83b919e313e558907eba20JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9zdGFja292ZXJmbG93LmNvbS9xdWVzdGlvbnMvODY2ODIyL3doeS1ib3RoLW5vLWNhY2hlLWFuZC1uby1zdG9yZS1zaG91bGQtYmUtdXNlZC1pbi1odHRwLXJlc3BvbnNl&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "7e07c37a77",
+    "kind": "company_web",
+    "publisher": "Elixirr",
+    "retrieved_at": 1784680917,
+    "title": "Elixirr public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=f9a0d5d26796f17675a89606ea26658f96c007bca1f198a71e6f18fea716fb08JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9zdGFja292ZXJmbG93LmNvbS9xdWVzdGlvbnMvMzgzMzM1NjkvYWRkaW5nLW5vY2FjaGUtMS10by1ldmVyeS11cmwtaW5jbHVkaW5nLXRoZS1hc3NldHMtbGlrZS1zdHlsZXNoZWV0LWJlaGluZC10aGU&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784680917,
+  "web_search_url": "https://duckduckgo.com/?q=Elixirr+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
@@ -70955,6 +72004,94 @@
    "value": "3/5 (estimated)"
   }
  },
+ "gentex corporation": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "7f8aa2d843ba0fe5",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784680916,
+  "name": "Gentex Corporation",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "fa8a7676d9",
+    "kind": "company_web",
+    "publisher": "Gentex Corporation",
+    "retrieved_at": 1784680916,
+    "title": "Gentex Corporation public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=c3d607cfe026e769fbbbf17c024e48644913fab27104bacc5452714c18b620d8JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9zaG9wLmdlbnRleGNvcnAuY29tLw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "a1742e8dbb",
+    "kind": "company_web",
+    "publisher": "Gentex Corporation",
+    "retrieved_at": 1784680916,
+    "title": "Gentex Corporation public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=ea3462e01fa5681e67fb7d6f89b1ad1b1c0c82eb060185e5584ca9284bc697f6JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuZ2VudGV4Y29ycC5jb20v&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "ace7946afa",
+    "kind": "company_web",
+    "publisher": "Gentex Corporation",
+    "retrieved_at": 1784680916,
+    "title": "Gentex Corporation public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=04037af71c2eb32a00188af86d8313417866a8f98c44758a2440b4a8d34e284aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuZ2VudGV4LmNvbS8&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784680916,
+  "web_search_url": "https://duckduckgo.com/?q=Gentex+Corporation+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
  "genuine parts company": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
@@ -71842,6 +72979,94 @@
   "web_research_status": "sources captured",
   "web_researched_at": 1784680818,
   "web_search_url": "https://duckduckgo.com/?q=Gimlet+Labs+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
+ "givewell": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "773929e25b797c40",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784680911,
+  "name": "GiveWell",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "fbe4e35a6c",
+    "kind": "company_web",
+    "publisher": "GiveWell",
+    "retrieved_at": 1784680911,
+    "title": "GiveWell public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=f5861e916a22a8fd99623eedfa18e0d1477089973ce2eb0ebb267bae52e954cdJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvR2l2ZXdlbGw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "0c51c6e8ae",
+    "kind": "company_web",
+    "publisher": "GiveWell",
+    "retrieved_at": 1784680911,
+    "title": "GiveWell public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=1be088cbff0bcfd9ef5c313af74f710e786eaac0a3b279c6d793b59c2c3843e1JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuZ2l2ZXdlbGwub3JnL2Fib3V0&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "bf1b5b34f2",
+    "kind": "company_web",
+    "publisher": "GiveWell",
+    "retrieved_at": 1784680911,
+    "title": "GiveWell public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=4621dca39cd1bd8f56c82cd2662a1db32d7b61ebfcd83fc8c4c95acf371f124cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuZ2l2ZXdlbGwub3JnLw&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784680911,
+  "web_search_url": "https://duckduckgo.com/?q=GiveWell+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
@@ -76717,6 +77942,94 @@
    "value": "3/5 (estimated)"
   }
  },
+ "harris beach murtha": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "c7855788853da290",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784680911,
+  "name": "Harris Beach Murtha",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "f599c8fc83",
+    "kind": "company_web",
+    "publisher": "Harris Beach Murtha",
+    "retrieved_at": 1784680911,
+    "title": "Harris Beach Murtha public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=6686adb35e3bd548b21fc3a109980ba3a9a36f80d3e8044d3afdafa84d8871edJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cubDNoYXJyaXMuY29tLw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "42e4c0733a",
+    "kind": "company_web",
+    "publisher": "Harris Beach Murtha",
+    "retrieved_at": 1784680911,
+    "title": "Harris Beach Murtha public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=3afe2f34ac4c2cf49a552de38af48010e861ce2c512239b003e4b51e2c035705JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvS2FtYWxhX0hhcnJpcw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "48aeb16ec4",
+    "kind": "company_web",
+    "publisher": "Harris Beach Murtha",
+    "retrieved_at": 1784680911,
+    "title": "Harris Beach Murtha public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=7fda02d954f99ce415798eea6248c3ea5b4a77d4ff62da2d1a4c1932bbef853cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuaGFycmlzdGVldGVyLmNvbS8&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784680911,
+  "web_search_url": "https://duckduckgo.com/?q=Harris+Beach+Murtha+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
  "harvard university": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
@@ -77708,6 +79021,94 @@
   "web_research_status": "sources captured",
   "web_researched_at": 1784675221,
   "web_search_url": "https://duckduckgo.com/?q=HDR+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
+ "headway": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "785d36788d6a0732",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Healthtech / technology (estimated)"
+  },
+  "last_evidence_at": 1784680916,
+  "name": "Headway",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "96613a6c54",
+    "kind": "company_web",
+    "publisher": "Headway",
+    "retrieved_at": 1784680916,
+    "title": "Headway public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=5720d8a2587eccc8241f2ac2fea0419a857d946bd07fd7f292ac1fc993e2e099JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuY2hvb3Npbmd0aGVyYXB5LmNvbS9oZWFkd2F5LXJldmlldy8&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "11a9ffa699",
+    "kind": "company_web",
+    "publisher": "Headway",
+    "retrieved_at": 1784680916,
+    "title": "Headway public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=733a64221e60e501212e52eac00e6905636df3ede1706798de4be3feeb92ad6cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9oZWFkd2F5LmNvL2Fib3V0LXVz&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "df3adb4a77",
+    "kind": "company_web",
+    "publisher": "Headway",
+    "retrieved_at": 1784680916,
+    "title": "Headway public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=52c961ff90a44d9d765f7c699abdf9f5352e58eccfc603b33ab22a5aefa210aaJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9oZWFkd2F5LmNvLw&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784680916,
+  "web_search_url": "https://duckduckgo.com/?q=Headway+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
@@ -91236,6 +92637,94 @@
   "web_research_status": "sources captured",
   "web_researched_at": 1784593387,
   "web_search_url": "https://duckduckgo.com/?q=Johnson+Controls+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
+ "johnson electric": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "28707563080dfcb5",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784680909,
+  "name": "Johnson Electric",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "460d1a1674",
+    "kind": "company_web",
+    "publisher": "Johnson Electric",
+    "retrieved_at": 1784680909,
+    "title": "Johnson Electric public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=8045c924b66ab420e48426771fbcce5dfb6b7246d951c70cd01d97df123e9ba8JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuam5qLmNvbS9vdXItY29tcGFueQ&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "5cf2dba131",
+    "kind": "company_web",
+    "publisher": "Johnson Electric",
+    "retrieved_at": 1784680909,
+    "title": "Johnson Electric public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=e59bad00756cb54c1393341f240dfecdd3220e2b3258e255a91613e101046dfdJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvSm9obnNvbl8lMjZfSm9obnNvbg&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "1c60ffb054",
+    "kind": "company_web",
+    "publisher": "Johnson Electric",
+    "retrieved_at": 1784680909,
+    "title": "Johnson Electric public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=951ad2563e30a14b996e393ef8bf4db1d53dd8ae69bbfa826dc414fb6e003c63JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuam5qLmNvbS8&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784680909,
+  "web_search_url": "https://duckduckgo.com/?q=Johnson+Electric+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
@@ -122849,104 +124338,105 @@
   "ai_ds_prestige_tier": {
    "confidence": "high",
    "source_ids": [
-    "197d20b440",
-    "f6fa431ced"
+    "f6fa431ced",
+    "197d20b440"
    ],
-   "value": "Tier 1. NVIDIA is the foundational hardware and software layer for the modern AI and Deep Learning boom, making it one of the most prestigious companies for AI professionals."
+   "value": "Tier 1 - NVIDIA is widely regarded as an essential AI company, occupying a dominant position in the industry second to none. It is considered elite due to its central role as the hardware engine powering the modern AI revolution."
   },
   "aliases": [],
-  "attempts": 14,
+  "attempts": 15,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "197d20b440",
+    "ff09a3aa14",
     "f6fa431ced"
    ],
-   "value": "Designing and selling hardware (GPUs) and associated software infrastructure (like compute compilers) for advanced AI, deep learning, and visual computing workloads."
+   "value": "Generates revenue through the sale of high-performance GPU hardware, networking equipment, and system-on-chip products, combined with licensing and selling specialized software and development ecosystems. A recurring theme is using industry-leading hardware as a foundation, enhanced by proprietary, highly optimized internal software tools."
   },
   "culture_vibe": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "197d20b440",
     "f6fa431ced"
    ],
-   "value": "Mission-driven, elite, and highly technical. The company prides itself on hiring the 'smartest people in the world' and fostering an environment of rapid innovation in visual and AI computing."
+   "value": "Intellectual, militant, deeply technical, and collaborative. The tone is mission-driven with teams of brilliant, hardworking people aiming to solve imposing problems in cutting-edge fields, balanced by policies that provide a safety net against burnout."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
+    "f6fa431ced",
     "197d20b440"
    ],
-   "value": "Developers and organizations building state-of-the-art technology in fields like virtual reality, artificial intelligence, deep learning, and autonomous vehicles."
+   "value": "Serves a diverse range of enterprises: cloud providers, data center operators, automotive manufacturers for self-driving cars, game developers, professional visualization studios, and AI research institutions. Individuals also purchase GeForce gaming GPUs."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $150,000 - $200,000+ total compensation (base + equity) for Santa Clara-based new grad software and compiler roles, reflecting top-tier market rates."
+   "value": "Estimated: $170,000 to $220,000 annually in total compensation for a new-grad engineering role in Santa Clara. This typically consists of a highly competitive base salary (around $130k-$160k), an annual bonus, and a substantial multi-year RSU equity grant with early vesting."
   },
   "evidence_sha": "ed3634cb0b01cb98",
-  "generated_at": 1784672487,
+  "generated_at": 1784680912,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "f6fa431ced"
+    "f6fa431ced",
+    "197d20b440"
    ],
-   "value": "Computer Hardware and Software / Semiconductors / AI Computing."
+   "value": "Semiconductors and Accelerated Computing, with deep integration into Artificial Intelligence, Autonomous Vehicles, and Computer Graphics."
   },
   "interview_focus": {
    "confidence": "medium",
    "source_ids": [
-    "f6fa431ced",
+    "ff09a3aa14",
     "197d20b440"
    ],
-   "value": "To secure a role here, you must demonstrate exceptional technical chops and the ability to work alongside some of the smartest people in the world. Emphasize your passion for their specific mission in AI computing and your ability to thrive in a fast-growing, innovative environment rather than waiting for slow bureaucracy."
+   "value": "Will assess deep algorithmic knowledge in areas like RTL synthesis and multi-stage logic optimization, or compiler infrastructure and developer toolchain productivity. Expect rigorous coding, system design, and domain-specific problem-solving, balanced with culture-add questions checking for mission alignment and the ability to work with brilliant, hardworking teams."
   },
-  "last_attempt_at": 1784680812,
+  "last_attempt_at": 1784680912,
   "last_evidence_at": 1784666538,
   "locations": {
    "confidence": "high",
    "source_ids": [
+    "ff09a3aa14",
     "197d20b440",
     "f6fa431ced"
    ],
-   "value": "US-CA-Santa- Clara (based on listed new grad roles)."
+   "value": "Global presence; the sourced new-grad roles are located in Santa Clara, California, which is a primary corporate headquarters site."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
     "f6fa431ced"
    ],
-   "value": "Dedicated to a computing model focused on visual and AI computing, pioneering the art and science of computer graphics."
+   "value": "To pioneer a computing model dedicated to visual and AI computing, with GPU technology serving as the brains of computers, robots, and self-driving cars that perceive and understand the world."
   },
   "name": "NVIDIA",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [
-    "197d20b440"
-   ],
-   "value": "Estimated: Extremely fast-paced and innovative. Product lines are growing rapidly in the hottest state-of-the-art fields, requiring high performance and adaptability."
+   "source_ids": [],
+   "value": "Estimated: Intense and very fast-paced with ambitious product deadlines tied to industry 'state of the art' fields. However, work is driven by technical mission and passion rather than facetime or bureaucratic process, permitting flexibility around individual working styles."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "197d20b440",
-    "f6fa431ced"
+    "f6fa431ced",
+    "197d20b440"
    ],
-   "value": "GPUs, compute compilers, and computing model hardware/software focused on visual, AI, and deep learning applications."
+   "value": "Graphics Processing Units (GPUs) like GeForce and Quadro, data center accelerators (Tesla), networking interconnects (Mellanox), system-on-chip designs (Tegra), and CUDA software for AI and high-performance computing. Products power virtual reality, deep learning, autonomous vehicles, and computer graphics."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days of standard PTO, not including company holidays, though exact policies are not stated in the sources."
+   "value": "Estimated: Flexible PTO policy common at elite tech companies, typically translating to around 15-20 days of annual vacation for new hires, with an expectation of actual usage."
   },
-  "refresh_after": 1789856487,
+  "refresh_after": 1789864912,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -122956,14 +124446,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Likely offers standard corporate holiday shutdowns, but no specific guaranteed shutdown periods are mentioned in the provided sources."
+   "value": "Estimated: Formal company-wide week-long shutdowns, likely around July 4th and a longer winter week break, are a known and respected cultural norm that is not 'optional'."
   },
   "size_stage": {
-   "confidence": "high",
-   "source_ids": [
-    "197d20b440"
-   ],
-   "value": "Large, established global technology leader with rapidly growing product lines in state-of-the-art fields."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large-cap, publicly traded mega-cap technology company with a market capitalization exceeding one trillion dollars, experiencing rapid growth fueled by the AI boom."
   },
   "sources": [
    {
@@ -123008,26 +124496,28 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "As a premier U.S. technology employer that regularly fills specialized new-grad roles, NVIDIA is expected to routinely sponsor H-1B visas, permanent residency, and other work authorization for highly specialized technical candidates."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "f6fa431ced"
+    "f6fa431ced",
+    "197d20b440"
    ],
-   "value": "NVIDIA is a technology company that pioneered the GPU and specializes in visual and AI computing. They make money by designing and selling the hardware and software that act as the brains for computers, robots, self-driving cars, and deep learning algorithms."
+   "value": "NVIDIA is a pioneer in accelerated computing, having invented the GPU and now building platforms that power artificial intelligence, deep learning, and the metaverse. The company designs and sells GPUs, networking hardware, and full-stack software for data centers, gaming, professional visualization, and automotive applications, generating revenue primarily from hardware sales and software ecosystems."
   },
-  "synthesized_evidence_sha": "a09527506d384ec7",
+  "synthesized_evidence_sha": "ed3634cb0b01cb98",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "ff09a3aa14",
     "197d20b440",
     "f6fa431ced"
    ],
-   "value": "Aligning compiler codebases with open-source ecosystems, improving developer productivity at scale, and building hardware tools and methodology. The compiler organization impacts every GPU produced."
+   "value": "Roles span RTL logic synthesis for optimizing digital logic and power, compiler infrastructure engineering with a focus on open-source alignment and developer productivity, and building hardware tools for GPU advancements. Work directly impacts AI, deep learning, autonomous vehicles, and virtual reality."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784580766,
@@ -123035,12 +124525,12 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "NVIDIA aligns highly with your desire for elite AI prestige and top-tier new grad pay. Working here places you at the absolute frontier of AI and deep learning hardware/software, which will deeply accelerate your technical learning. While historically fast-paced, many teams offer flexible work environments to help manage burnout while maintaining high impact."
+   "value": "Fits the candidate's need for a top-tier AI/data science role at an elite company with high new-grad pay, while providing an innovation-focused culture that serves as an alternative to slower, bureaucratic organizations. NVIDIA's founder-led engineering culture is known to balance its high-intensity pace with a mission-driven focus and a respect for personal time."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Moderate. Known for a fast-paced, mission-driven culture which can lean intense during crunch periods, but generally offers flexible work arrangements that help avoid the highest tiers of toxicity."
+   "value": "Estimated: Average to good for its tier. While the engineering pace is demanding, the culture does not glorify burnout and supports a sustainable routine with periodic rest. Scheduled shutdowns make planned time off truly detached."
   }
  },
  "nvidia ai": {
@@ -123658,6 +125148,94 @@
   "web_research_status": "sources captured",
   "web_researched_at": 1784680600,
   "web_search_url": "https://duckduckgo.com/?q=O%27Reilly+Auto+Parts+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
+ "observable space": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "b903445b66367541",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784680917,
+  "name": "Observable Space",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "4ec92279f6",
+    "kind": "company_web",
+    "publisher": "Observable Space",
+    "retrieved_at": 1784680917,
+    "title": "Observable Space public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=6694333415d585aa6252198f8b9e4e0d02a164c3bd445703a63dd485bebe5431JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9vYnNlcnZhYmxlaHEuY29tL3RvcA&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "31a56f7ac3",
+    "kind": "company_web",
+    "publisher": "Observable Space",
+    "retrieved_at": 1784680917,
+    "title": "Observable Space public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=900f1f9020f85939529eb6538505cf9b7496ff387c6f532ceb430122e883ee41JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9uZXcub2JzZXJ2YWJsZWhxLmNvbS8&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "7f62aee37f",
+    "kind": "company_web",
+    "publisher": "Observable Space",
+    "retrieved_at": 1784680917,
+    "title": "Observable Space public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=649b8bd5ccb09072d68de9ad35bd2799d3eeab9b71b5e8dc03eb4880ff646072JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9vYnNlcnZhYmxlaHEuY29tLw&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784680917,
+  "web_search_url": "https://duckduckgo.com/?q=Observable+Space+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
@@ -124402,37 +125980,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low: Non-tech traditional insurance industry with no public evidence of advanced AI/DS innovation."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Operates as a predominantly fee-for-service business generating revenue through title insurance premiums and transaction settlement fees."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, stable, and hierarchical but potentially lacking the innovative tech culture and flat structures desired for fast learning."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Home buyers and sellers, commercial property investors, mortgage lenders, real estate agents, and developers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $65,000 - $90,000 base salary. Total compensation likely below top-tier pure-tech competitors."
   },
   "evidence_sha": "907507c53341608d",
+  "generated_at": 1784680912,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Title Insurance / Real Estate Services"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare for a cultural fit and stability-oriented environment. Ask directly about tech stack modernity, AI/data project roadmaps, and whether team culture rewards innovation versus operational maintenance. Probe work-life balance structure and guaranteed shutdowns explicitly."
+  },
+  "last_attempt_at": 1784680912,
   "last_evidence_at": 1784674991,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Tampa, Florida with hundreds of branch offices across the United States."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Old Republic Title",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slower, deliberate pace typical of large, regulated insurance carriers with structured underwriting cycles."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Title insurance policies, escrow services, real estate transaction closing and settlement services, property search and examination reports."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10-15 days vacation, plus standard sick leave and holidays typical of a large traditional employer."
   },
+  "refresh_after": 1789864912,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -124442,7 +126061,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Major federal holidays; no public information indicates company-wide seasonal shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, established public subsidiary of Old Republic International, a Fortune 500 company."
   },
   "sources": [
    {
@@ -124476,14 +126100,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=00fff4bf006cd7f7caae2732a51ff5207c0f2d60ef57fc3f43ca626f0254920bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1c06e9b4-2be8-6be3-03a0-fe292a286ab8&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvT2xkXyhmaWxtKQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Old Republic Title provides title insurance and real estate settlement services for residential and commercial property transactions. It earns revenue primarily through title insurance premiums and related service fees collected when properties change ownership or are refinanced."
+  },
+  "synthesized_evidence_sha": "907507c53341608d",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Internal systems likely focus on property data management, risk analysis algorithms, and transaction automation platforms. No AI or data science initiatives identified in research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674991,
   "web_search_url": "https://duckduckgo.com/?q=Old+Republic+Title+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Old Republic Title is an unlikely fit for top-tier AI or data science. It is a traditional insurance institution, not a tech-first company, suggesting slower pace and potentially limited cutting-edge technical mentorship compared to elite tech hubs. While likely stable with sane hours, the conservative industry may not accelerate bleeding-edge technical learning."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Above average overall; likely standard business hours with less weekend pressure than startups or trading firms, but potential for occasional crunch around month-end closings."
   }
  },
  "old world industries": {
@@ -129573,12 +131218,92 @@
   }
  },
  "pdt partners": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
   "aliases": [],
-  "evidence_sha": "cfbc5681e557956c",
-  "last_evidence_at": 1784680484,
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "85193866175f8d4f",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784680911,
   "name": "PDT Partners",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "008cf97b47",
+    "kind": "company_web",
+    "publisher": "PDT Partners",
+    "retrieved_at": 1784680911,
+    "title": "PDT Partners public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=8c17916dffdf5c658799c2bcc451319b214de92b6123a42348254b027e38fc9bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly90aW1lLm5vdy90aW1lem9uZXMvcGR0Lw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "e59c811eef",
+    "kind": "company_web",
+    "publisher": "PDT Partners",
+    "retrieved_at": 1784680911,
+    "title": "PDT Partners public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=35c5b0305de0f644002919b9b5078891756ce61e284a6c64fd8b451af2bb956eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cudGltZWFuZGRhdGUuY29tL3RpbWUvem9uZXMvcGR0&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "fa1a0a83ff",
+    "kind": "company_web",
+    "publisher": "PDT Partners",
+    "retrieved_at": 1784680911,
+    "title": "PDT Partners public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=5809b24ea4e2cc3ea6f23a8f66a0970df41c2c9bf1e6367e470e4eba4e3be98fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly90aW1lLmlzL1BEVA&ntb=1"
+   },
+   {
+    "content_sha": "fae40f6513d4a1de",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/jobright-ai/2026-Software-Engineer-New-Grad.",
+    "id": "1db9db9c4d",
+    "kind": "discovery_feed",
+    "publisher": "PDT Partners",
+    "retrieved_at": 1784680911,
+    "title": "Discovery source for PDT Partners",
+    "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
+   },
    {
     "content_sha": "1094ae1e95e0a31e",
     "excerpt": "Founded in 1993 New York, New York, USA 51-200 employees https://www.pdtpartners.com/ H1B Sponsorship PDT Partners has a track record of offering H1B sponsorships. Please note that this does not guarantee sponsorship for this specific role. The role involves collaborating with senior researchers and conducting independent research in a dynamic and intellectually stimulating environment. Your Score - Top Applicants Must-Have Skills for This Role Mathematics Modeling Python R Matlab Optimize my Resume Get Referral Via linkedIn FREE 3× Higher Response via Email Outreach S Shawn T.",
@@ -129590,7 +131315,15 @@
     "url": "https://jobright.ai/jobs/info/6a53343d8576ec69c014efc3?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784680911,
+  "web_search_url": "https://duckduckgo.com/?q=PDT+Partners+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
  },
  "peloton": {
   "ai_ds_prestige_tier": {
@@ -135189,6 +136922,94 @@
   "web_research_status": "sources captured",
   "web_researched_at": 1784672886,
   "web_search_url": "https://duckduckgo.com/?q=PreludeSys+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
+ "priceline": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "bf86536e774a8089",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784680908,
+  "name": "Priceline",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "f38e9fc58a",
+    "kind": "company_web",
+    "publisher": "Priceline",
+    "retrieved_at": 1784680908,
+    "title": "Priceline public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=e375eccdd48d781bca99a1caf8a8ab8a7f120e837349fa497495f64c8759f1c3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuaG90d2lyZS5jb20v&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "d5ae53f989",
+    "kind": "company_web",
+    "publisher": "Priceline",
+    "retrieved_at": 1784680908,
+    "title": "Priceline public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=8f0970f69b475493e697313b23f1259dfb7066ca675c26a44bbb5adb64baf16bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cucHJpY2VsaW5lLmNvbS9zaG9wL3NlYXJjaC8_bXNvY2tpZD0xMjcwNTgxZTU4YmU2MzQzMzMwMzRmODA1OWI1NjI0OQ&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "9f91059383",
+    "kind": "company_web",
+    "publisher": "Priceline",
+    "retrieved_at": 1784680908,
+    "title": "Priceline public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=9306b63d7e55b665395bf7f730857ae351378a948e64f8a1f14bb29fde99a3eeJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cucHJpY2VsaW5lLmNvbS8_bXNvY2tpZD0xMjcwNTgxZTU4YmU2MzQzMzMwMzRmODA1OWI1NjI0OQ&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784680908,
+  "web_search_url": "https://duckduckgo.com/?q=Priceline+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
@@ -151534,6 +153355,94 @@
    "value": "3/5 (estimated)"
   }
  },
+ "science and technology corporation stc": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "6d933763b47f632b",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784680916,
+  "name": "Science and Technology Corporation (STC)",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "1e27cf0b0f",
+    "kind": "company_web",
+    "publisher": "Science and Technology Corporation (STC)",
+    "retrieved_at": 1784680916,
+    "title": "Science and Technology Corporation (STC) public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=a214654c312f73c2ea01a0ddfa1393811ab6dedb8b0b0fdf473f50cb87b34b9aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9TY2llbmNl&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "94b904dcf2",
+    "kind": "company_web",
+    "publisher": "Science and Technology Corporation (STC)",
+    "retrieved_at": 1784680916,
+    "title": "Science and Technology Corporation (STC) public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=c0da64d7c1f9a2dded20f837ddb280bcbca6fc5246231ec629410f8cbf7ef747JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuc2NpZW5jZW5ld3Mub3JnLw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "c4a0ac4677",
+    "kind": "company_web",
+    "publisher": "Science and Technology Corporation (STC)",
+    "retrieved_at": 1784680916,
+    "title": "Science and Technology Corporation (STC) public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=60f6a803b6e7ccffbcedcfc153da22fec032940d21b246518bc67b1e47e871e5JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuc2NpZW5jZS5vcmcv&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784680916,
+  "web_search_url": "https://duckduckgo.com/?q=Science+and+Technology+Corporation+%28STC%29+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
  "sciton": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
@@ -160648,6 +162557,94 @@
    "value": "3/5 (estimated)"
   }
  },
+ "sportradar": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "061f7fbb35c3b1c0",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784680909,
+  "name": "Sportradar",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "8ab15a197a",
+    "kind": "company_web",
+    "publisher": "Sportradar",
+    "retrieved_at": 1784680909,
+    "title": "Sportradar public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=2751212a0c32adb68609d22896eba86439c33012ee9e001b45f0a7a94878f23dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9zcG9ydHJhZGFycy5jb20v&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "4185677e33",
+    "kind": "company_web",
+    "publisher": "Sportradar",
+    "retrieved_at": 1784680909,
+    "title": "Sportradar public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=d07187c7f5a2a0ab41760eb17f38f9f612a9ea155847e089856c0cd1c63d4992JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9zcG9ydHJhZGFyLmNvbS8_bGFuZz1lbi11cw&ntb=1"
+   },
+   {
+    "content_sha": "638b6293e0aefdb9",
+    "excerpt": "SmartRecruiters Job Search SmartRecruiters Jobs Powered by",
+    "id": "f16eec2a6f",
+    "kind": "company_careers_or_benefits",
+    "publisher": "Sportradar",
+    "retrieved_at": 1784680909,
+    "title": "SmartRecruiters Job Search",
+    "url": "https://jobs.smartrecruiters.com/"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784680909,
+  "web_search_url": "https://duckduckgo.com/?q=Sportradar+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
  "spot tango": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
@@ -162445,11 +164442,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -162461,6 +164460,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784680912,
   "last_evidence_at": 1784675878,
   "name": "State Street",
   "pace_of_work": {
@@ -186196,40 +188196,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Mid-tier utility innovator. It is a globally respected environmental leader applying advanced analytics, not a top-tier pure technology or AI research lab. Its name is prestigious in critical infrastructure and sustainability circles rather than the elite AI product or FAANG cluster."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "368bc7b077",
+    "573bbd1d73"
+   ],
+   "value": "B2G and B2B utility and services company earning revenue through operation-and-maintenance contracts, public-private partnerships, and service fee agreements. Income is generated by treating and delivering water, managing waste streams, and optimizing energy use for clients globally."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, safe, and formal. The culture emphasises ethical environmental stewardship, worker safety above speed, and long-tenured career development. It lacks a disruptive founder-centric culture and feels more like a civic institution transitionally moving into modern digital technologies."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "368bc7b077",
+    "573bbd1d73"
+   ],
+   "value": "Municipalities, local governments, and industrial clients including those in the food and beverage, pharmaceuticals, oil and gas, and manufacturing sectors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: USD 85,000–110,000 base salary for a U.S. data science/AI new graduate role, with lower bonuses than pure tech. This is very solid pay for a stable utility but 20-50% below the top-tier inflated AI packages from pure tech firms."
   },
   "evidence_sha": "338486b36b15fe11",
+  "generated_at": 1784680912,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "368bc7b077"
+   ],
+   "value": "Environmental Services / Utilities (Water, Waste, and Energy Management)."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Interviews will likely probe deep technical competences balanced with cultural fit for a safe, process-rich environment. Expect questions about developing robust, sustainable models under regulatory and operational constraints, not just raw innovation speed, along with a focus on practical project management, communication with non-technical stakeholders, and a long-term dedication to mission impact rather than speculative R&D."
   },
-  "last_attempt_at": 1784680703,
+  "last_attempt_at": 1784680912,
   "last_evidence_at": 1784674071,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "368bc7b077",
+    "573bbd1d73"
+   ],
+   "value": "Headquartered in Aubervilliers, France with major operational hubs in Boston (North America HQ), London, and Singapore. Operates on five continents, with a very strong presence across North America and Western Europe."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "368bc7b077"
+   ],
+   "value": "To become the benchmark company for ecological transformation, tackling pollution, resource depletion, and climate change through decisive environmental solutions."
+  },
   "name": "Veolia",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate and deliberate, driven by municipal contract cycles, strict health and safety policies, and physical infrastructure constraints. More bilaterally planned than agile sprints."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "368bc7b077",
+    "573bbd1d73"
+   ],
+   "value": "Water treatment and distribution, wastewater collection and reuse, municipal and hazardous waste collection, sorting, recycling and incineration, industrial cleaning, and energy efficiency services including district heating and cooling."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-30 days base annual leave plus public holidays, in line with established European-headquartered utility-sector norms for salaried employees in Western markets."
   },
+  "refresh_after": 1789864912,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -186239,7 +188293,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Region-dependent but a very widespread practice of guaranteed seasonal office shutdowns (e.g., a full week between Christmas and New Year) and limited weekend work, mirroring its industrial client base."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "368bc7b077"
+   ],
+   "value": "Large-cap publicly listed multinational with over 220,000 employees worldwide and EUR 45 billion in annual revenue. It is a mature, established organization, not a start-up."
   },
   "sources": [
    {
@@ -186273,14 +188334,41 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "368bc7b077",
+    "573bbd1d73"
+   ],
+   "value": "Veolia is a global environmental services company that designs and provides water, waste, and energy management solutions to improve efficiency and sustainability. It makes money by operating municipal water and wastewater systems, managing solid and hazardous waste, and delivering energy efficiency services to cities and industries under long-term contracts."
+  },
+  "synthesized_evidence_sha": "338486b36b15fe11",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "368bc7b077",
+    "573bbd1d73"
+   ],
+   "value": "Technical roles exist for optimizing utility operations. AI and data science teams work on predictive maintenance for infrastructure, waste sorting robotics, energy consumption forecasting, and water quality anomaly detection using IoT sensor networks, though cutting-edge AI is a support function, not the central product."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674071,
   "web_search_url": "https://duckduckgo.com/?q=Veolia+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Veolia offers a mission-driven environment focused on ecological impact, delivering strong work-life balance and job stability far removed from the volatile, high-burnout tech-startup culture. It provides a rare platform to apply advanced AI to critical infrastructure at enormous scale without the constant demand for overtime, though the pace and prestige are that of a stable utility and not an elite Silicon Valley research lab."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Very Strong. The unionized and municipal foundation generally guarantees fixed, stable hours and a strict respect for leave, with intense on-call limited to indispensable operational plant roles rather than data and corporate jobs."
   }
  },
  "veolia environnement sa": {
@@ -188166,6 +190254,94 @@
   "web_research_status": "sources captured",
   "web_researched_at": 1784678956,
   "web_search_url": "https://duckduckgo.com/?q=Vishay+Intertechnology+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
+ "visionist": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "b602973f3fd1e38b",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784680910,
+  "name": "Visionist",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "b919d0f0d6",
+    "kind": "company_web",
+    "publisher": "Visionist",
+    "retrieved_at": 1784680910,
+    "title": "Visionist public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=29069f688b5c1f8ebe3885b6632e5b0e821461e85101c98db8a9fd3a62d697c7JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9oZWxsb3Zpc2lvbmlzdC5jb20v&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "f8250ba8c0",
+    "kind": "company_web",
+    "publisher": "Visionist",
+    "retrieved_at": 1784680910,
+    "title": "Visionist public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=b0afd645876d738ea01d0c1e83023786e0b298be996e76dec247b72dc004e690JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cudmlzaW9uaXN0aW5jLmNvbS8&ntb=1"
+   },
+   {
+    "content_sha": "29567ce4a583f229",
+    "excerpt": "What pricing options does Jobvite offer? Terms and conditions, features, support, pricing, and service options subject to change without notice.",
+    "id": "5eeaf06148",
+    "kind": "company_careers_or_benefits",
+    "publisher": "Visionist",
+    "retrieved_at": 1784680910,
+    "title": "Simplify Complex Hiring with Recruitment Software | Jobvite",
+    "url": "https://www.jobvite.com/"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784680910,
+  "web_search_url": "https://duckduckgo.com/?q=Visionist+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
@@ -191535,39 +193711,111 @@
  },
  "westinghouse electric company": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "c3939cef95",
+    "458d07b954"
+   ],
+   "value": "Elite industry-specific (Tier 2). It is a world leader in nuclear energy, on par with top aerospace/defense firms for engineering prestige, but not a pure-play AI lab or Big Tech company. The mission and safety-critical work elevate its status considerably within its domain."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "d7b702faab",
+    "c3939cef95"
+   ],
+   "value": "A business-to-business model earning revenue through long-cycle capital projects (new reactor builds), recurring fuel supply contracts with existing plants, and ongoing plant engineering, maintenance, and modernization services."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "458d07b954",
+    "b75f11dd54"
+   ],
+   "value": "Mission-centric, stable, and disciplined. The climate-focused mission provides a sense of purpose. The culture is shaped by safety regulation and the long-term lifecycle of nuclear technology, rewarding precision, reliability, and deep expertise over rapid disruption."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "458d07b954"
+   ],
+   "value": "The primary customers are public electric utilities, local governments, and large industrial power consumers globally that operate or are building nuclear power generation capacity."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "b75f11dd54",
+    "1f800bde34"
+   ],
+   "value": "Estimated: $80,000 - $95,000 USD base salary in the Pittsburgh area. This reflects highly competitive pay for an engineering corporation, typical for specialized, high-quality, engineering new graduates, though not at Big Tech 'AI' compensation levels."
   },
   "evidence_sha": "cff5ab621fde5f5f",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784680912,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "458d07b954"
+   ],
+   "value": "Nuclear Energy / Clean Technology"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "b75f11dd54",
+    "1f800bde34",
+    "458d07b954"
+   ],
+   "value": "Look for evidence that their hiring process emphasizes rigorous, methodical problem-solving and strict adherence to process, rather than the 'move fast and break things' tech culture. The interview will likely assess cultural fit for steady, meticulous work on safety systems, not rapid feature iteration, making the assurance of work-life balance credible."
+  },
+  "last_attempt_at": 1784680912,
   "last_evidence_at": 1784677185,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "b75f11dd54",
+    "1f800bde34"
+   ],
+   "value": "Global headquarters in Cranberry Township (Pittsburgh), Pennsylvania. The job postings researched correspond to an office in Warrendale, PA."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "458d07b954"
+   ],
+   "value": "To help the world address the challenge of a changing climate by enabling public utilities and local governments to deliver clean, safe, reliable, and carbon-free energy."
+  },
   "name": "Westinghouse Electric Company",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "b75f11dd54",
+    "1f800bde34"
+   ],
+   "value": "Estimated: Predictable and methodical. The highly regulated, safety-critical nature of the work enforces rigorous processes, extensive documentation, and thorough testing, leading to a steady, well-planned pace rather than rapid, unstructured sprints."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "d7b702faab",
+    "c3939cef95"
+   ],
+   "value": "Westinghouse provides nuclear reactor designs (including the AP1000 and AP300 small modular reactor), nuclear fuel fabrication, digital instrumentation and control systems, engineering services, plant maintenance and upgrades, and decommissioning solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: A competitive corporate package for new graduates, likely around 15-20 days of vacation plus standard public holidays and additional personal/sick days consistent with a large, established engineering company."
   },
+  "refresh_after": 1789864912,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -191578,6 +193826,13 @@
    "confidence": "estimated",
    "source_ids": [],
    "value": "None found in research (estimated)"
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "c3939cef95"
+   ],
+   "value": "A large, mature, privately held company with thousands of employees globally that provides critical infrastructure. It operates at a massive scale in a stable, long-term, and highly regulated industry."
   },
   "sources": [
    {
@@ -191631,14 +193886,44 @@
     "url": "https://careers.westinghousenuclear.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "d7b702faab",
+    "c3939cef95"
+   ],
+   "value": "Westinghouse Electric Company supplies advanced nuclear energy technology, fuel, and services to power plants worldwide. The company generates revenue by designing, licensing, installing, and servicing nuclear reactors and providing the nuclear fuel that keeps them running."
+  },
+  "synthesized_evidence_sha": "cff5ab621fde5f5f",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "b75f11dd54",
+    "1f800bde34"
+   ],
+   "value": "Involves safety-critical software development, integration, testing, and debugging for human-machine interface (HMI) systems under a highly regulated environment. The business and its technologies are deeply data and engineering-driven, but the term 'AI' is not explicitly featured in the researched sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677185,
   "web_search_url": "https://duckduckgo.com/?q=Westinghouse+Electric+Company+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "458d07b954",
+    "1f800bde34"
+   ],
+   "value": "This role uniquely satisfies the need for a mission-driven organization focused on climate change, alongside the prestige of an elite industry leader. The safety-critical, regulated environment and government-utility customer base enforce sane, predictable hours with no crunch-time culture, directly addressing the need for work-life balance and avoiding burnout. You gain deep, specialized technical skills in a unique domain, accelerating your career growth without sacrificing personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Excellent. The regulated, utility-driven project cycles enforce sane hours and discourage a crunch-time culture, creating a stable 40-hour work week likely rarely exceeded."
   }
  },
  "westlake": {
