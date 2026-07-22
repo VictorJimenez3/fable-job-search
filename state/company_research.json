@@ -79896,37 +79896,98 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — respected for applied AI/ML at scale in classified environments, but not a primary research lab; prestige comes from mission impact and clearance access rather than academic publishing."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ec056d1cb",
+    "327d69f3a1"
+   ],
+   "value": "Government contracting model: wins prime contracts and subcontracts through competitive bidding (IDIQ, GWAC, GSA schedules), then staffs projects with cleared personnel; revenue is almost entirely fee-for-service and cost-reimbursable task orders from federal clients."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-first, process-oriented, hierarchical; strong emphasis on security clearance compliance, teaming with government counterparts, and long-term program loyalty; less \"move fast\" culture, more \"deliver reliably\" culture."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ec056d1cb",
+    "327d69f3a1"
+   ],
+   "value": "U.S. federal government agencies — Department of Defense, intelligence community, Department of Homeland Security, Health and Human Services, Veterans Affairs, and other civilian agencies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$110,000 base + modest sign-on bonus + relocation; total comp ~$95k-$125k; varies by clearance level, location, and contract funding."
   },
   "evidence_sha": "34da002e7326a03f",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784688568,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8ec056d1cb",
+    "327d69f3a1"
+   ],
+   "value": "Federal IT services / Government contracting / Defense technology"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Expect behavioral questions tied to federal mission values, technical screens on Python/SQL/cloud fundamentals, and scenario-based discussions about handling classified data, compliance constraints, and cross-team coordination; prepare to explain how you balance innovation with strict security and regulatory requirements."
+  },
+  "last_attempt_at": 1784688568,
   "last_evidence_at": 1784673980,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ec056d1cb",
+    "327d69f3a1"
+   ],
+   "value": "Headquartered in Falls Church, VA; major hubs in Washington DC metro, San Antonio, TX, Huntsville, AL, and 100+ offices near military bases and federal campuses nationwide; remote/hybrid options vary by contract and clearance level."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ec056d1cb",
+    "327d69f3a1"
+   ],
+   "value": "Deliver trusted, innovative technology solutions that advance the missions of U.S. government customers and protect national security."
+  },
   "name": "General Dynamics Information Technology",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate to variable — driven by contract delivery cycles, compliance gates, and government fiscal calendars; slower than consumer tech but with intense sprint periods around major milestones."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ec056d1cb",
+    "327d69f3a1"
+   ],
+   "value": "IT modernization, cybersecurity, cloud computing, data analytics, AI/ML solutions, enterprise IT services, digital consulting, and mission support services for federal agencies."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays + sick leave; accrual increases with tenure; unused PTO may carry over up to contract-specific caps."
   },
+  "refresh_after": 1789872568,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -79936,7 +79997,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some contracts observe federal holiday weekends or program-specific stand-downs, but not a universal policy."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ec056d1cb",
+    "327d69f3a1"
+   ],
+   "value": "Large, mature subsidiary (~30,000 employees) of General Dynamics (Fortune 100); operates as an established federal integrator with multi-year contract backlog."
   },
   "sources": [
    {
@@ -79980,14 +80049,44 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Sponsors H-1B and green cards for select roles, but most positions require active U.S. security clearance (Secret/TS/SCI), which generally limits eligibility to U.S. citizens."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ec056d1cb",
+    "327d69f3a1",
+    "d851af9d98"
+   ],
+   "value": "General Dynamics Information Technology (GDIT) is a subsidiary of General Dynamics that provides IT services, consulting, and mission-critical solutions to U.S. federal government agencies, including defense, intelligence, and civilian departments. It generates revenue primarily through long-term government contracts and task orders for technology modernization, cybersecurity, cloud migration, and data analytics."
+  },
+  "synthesized_evidence_sha": "34da002e7326a03f",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ec056d1cb",
+    "327d69f3a1"
+   ],
+   "value": "Cloud migration (AWS GovCloud, Azure Government), DevSecOps, zero-trust cybersecurity, data engineering, AI/ML model deployment, software factories, agile development, and legacy system modernization for classified and unclassified environments."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673980,
   "web_search_url": "https://duckduckgo.com/?q=General+Dynamics+Information+Technology+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "GDIT offers new-grad AI/data science roles on high-impact national security missions with top-tier clearance sponsorship and competitive pay, but the federal contracting model brings structured processes, compliance overhead, and project-based pacing that can feel bureaucratic compared to commercial tech; work-life balance varies by contract, with some programs enforcing strict 40-hour weeks and others demanding surge effort around delivery milestones."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — many contracts enforce 40-hour weeks and comp time, but surge deployments and clearance onboarding can create temporary crunches; guaranteed shutdowns are not standard policy."
   }
  },
  "general dynamics mission systems": {
@@ -137414,7 +137513,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -137432,7 +137531,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784688476,
+  "last_attempt_at": 1784688568,
   "last_evidence_at": 1784673977,
   "name": "Novartis",
   "pace_of_work": {
@@ -142979,40 +143078,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 – Applied analytics in a regulated lab-services firm; not an AI research hub."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fee-for-service analytical testing: clients submit samples; Pace runs accredited methods (EPA, ASTM, proprietary) and sells certified reports. Revenue scales with sample volume, method complexity, and turnaround-time premiums. Private-equity owned (Leonard Green & Partners), so growth is driven by acquisition and geographic expansion."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Compliance-first, safety-obsessed, collaborative but hierarchical; PE ownership adds metric-driven pressure. DEI initiatives exist but vary by site."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Industrial manufacturers, energy companies, environmental consulting firms, municipal utilities, state/federal agencies (EPA, state DEQs), and pharmaceutical/food producers needing regulatory-grade analytical data."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70k-$85k base + 5-10% bonus for data-science/LIMS engineering roles in Midwest hubs; $80k-$95k in coastal hubs. Equity rare (PE-owned)."
   },
   "evidence_sha": "f6e924ca171b9256",
+  "generated_at": 1784688568,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Environmental & life-sciences analytical testing services (NAICS 541380 / 541715)"
   },
-  "last_attempt_at": 1784688476,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect practical questions on LIMS data integrity, EPA method validation statistics, and Python/SQL for pipeline automation. Prepare to discuss how you balance rigorous QA/QC with delivery speed. Ask about instrument-to-dashboard latency projects, PFAS method rollout timelines, and whether data-science hires sit in IT or report into lab operations."
+  },
+  "last_attempt_at": 1784688568,
   "last_evidence_at": 1784672490,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Minneapolis, MN; major hubs in Pittsburgh, Green Bay, Tampa, Seattle, and 45+ other U.S. sites. Limited remote flexibility for bench roles; hybrid possible for corporate IT/data functions."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To protect public health and the environment by delivering defensible, high-quality analytical data that enables clients to meet compliance obligations and make informed decisions."
+  },
   "name": "Pace® Analytical Services",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate – steady sample-throughput deadlines with periodic regulatory surge periods; not a move-fast-break-things culture."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Environmental testing (air, water, soil, sediment), PFAS and emerging-contaminant analysis, drinking-water compliance, stack emissions, laboratory information-management systems (LIMS), and field sampling services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 8-10 holidays + 2 floating days (accrues with tenure); lab staff may have separate shift-PTO banks."
   },
+  "refresh_after": 1789872568,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -143022,7 +143159,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some sites close Dec 24-Jan 1 voluntarily, but 24/7 labs maintain skeleton crews."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "~5,000 employees across 50+ laboratories nationwide; mature, private-equity-backed platform in consolidation phase."
   },
   "sources": [
    {
@@ -143056,14 +143198,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=31f5a25e19c51921250485081de1b5b9b232a22c24997cff29db9b23ce55267eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=068da0dd-8eee-6028-1b01-b7408fbe61eb&u=a1aHR0cHM6Ly93d3cuZHNocy53YS5nb3YvYWx0c2EvcHJvZ3JhbS1hbGwtaW5jbHVzaXZlLWNhcmUtZWxkZXJseS1wYWNl&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established H-1B sponsor for specialized scientific and IT roles; PERM/green-card support for senior chemists and data engineers. Cap-exempt status via university-affiliated research collaborations is rare."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Pace® Analytical Services is a large U.S.-based network of environmental and life-sciences testing laboratories. It provides regulatory-compliant analytical testing, sampling, and data-delivery services to industrial, government, and consulting clients."
+  },
+  "synthesized_evidence_sha": "f6e924ca171b9256",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core work is wet-lab chemistry, chromatography, mass spectrometry, and LIMS data pipelines. Emerging data-science initiatives focus on instrument automation, quality-control analytics, and customer-facing data portals—not primary AI research. Stack includes Python/SQL for internal tooling, but the culture is lab-operations-first, not software-product-first."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672490,
   "web_search_url": "https://duckduckgo.com/?q=Pace%C2%AE+Analytical+Services+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Pace offers a stable, mission-driven laboratory-services career with clear regulatory impact, but it is not an elite AI/data-science destination. Pay is solid for lab-informatics roles yet below top-tier tech. Work-life balance is generally respectable for a 24/7 lab network—shutdowns are not guaranteed—and bureaucracy from PE ownership and compliance requirements can slow innovation. Best fit if you want applied data work in environmental health without the burnout of high-frequency trading or "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 – Bench roles have shift rotations; corporate data roles average 45-50 hrs/wk with occasional weekend on-call for LIMS outages. No company-wide guaranteed shutdowns."
   }
  },
  "pacific medical centers": {
@@ -147153,7 +147316,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -147171,7 +147334,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784688476,
+  "last_attempt_at": 1784688568,
   "last_evidence_at": 1784676244,
   "name": "Perpay",
   "pace_of_work": {
@@ -154652,40 +154815,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong industry reputation and scale, with genuine AI investment (Marcel, Sapient AI labs), but perceived as marketing-services-first rather than pure research/tech-first. Prestige high within marketing analytics; moderate in broader AI research community."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue comes from client retainers, project fees, and media commissions across its agency network. The ANZ division contributes to the global group's ~€13B+ annual revenue through localized service delivery and regional account management."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, polished, and client-obsessed. Strong emphasis on awards, thought leadership, and industry reputation. Diverse, inclusive, and socially active (DEI, sustainability). Can feel corporate-hierarchical at holding-company level; agency brands retain distinct subcultures. Networking and visibility matter for progression."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Major enterprise clients across industries including financial services, telecommunications, automotive, retail, government, FMCG, and technology sectors in Australia and New Zealand."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: AUD $75,000–$95,000 base + super (11.5%) + potential bonus (5–10%). Publicis Sapient grad programs may reach $85,000–$105,000. Below top-tier pure-tech (Canva, Atlassian, Google) but competitive for marketing-tech hybrid."
   },
   "evidence_sha": "4658ed2c01343740",
+  "generated_at": 1784688568,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Marketing services / Advertising technology / Management consulting (hybrid)"
   },
-  "last_attempt_at": 1784688476,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect case studies blending technical rigor with business/marketing context: e.g., designing a customer lifetime value model, explaining media attribution methodology, or architecting a CDP integration. Publicis Sapient interviews lean system design, cloud architecture, and agile delivery. Behavioral questions emphasize stakeholder management, ambiguity navigation, and client-facing communication. Prepare for 'how would you explain this to a CMO?' scenarios."
+  },
+  "last_attempt_at": 1784688568,
   "last_evidence_at": 1784674487,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary hubs in Sydney, Melbourne, Brisbane, and Auckland. Hybrid work policies common post-COVID; some roles may offer remote flexibility within ANZ."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To deliver marketing transformation for clients by combining creativity, data, and technology — helping brands navigate digital disruption and build meaningful consumer connections."
+  },
   "name": "Publicis Groupe ANZ",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast, client-driven cadence with project sprints and pitch cycles. Periodic crunches around major campaigns, RFP responses, and quarterly reviews. Sapient engagements follow consulting sprint rhythms. Not a 'move fast and break things' startup pace — more structured delivery with external dependencies."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Integrated marketing services including creative advertising, media planning/buying, data analytics, digital transformation, technology consulting, and customer experience design through agency brands like Leo Burnett, Saatchi & Saatchi, Publicis Sapient, Starcom, Zenith, and Spark Foundry."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20–25 days annual leave + 10–12 public holidays (AU/NZ dependent) + 5 'Recharge' days (group initiative) + sick leave. Exact accrual varies by entity and tenure."
   },
+  "refresh_after": 1789872568,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -154695,7 +154896,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns. Some agencies observe reduced operations over Christmas/New Year (approx. 1–2 weeks) but not formal policy. 'Recharge' days are scheduled quarterly but not a full shutdown."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large enterprise (global parent ~100,000+ employees; ANZ division estimated 2,000–3,000+ across multiple agency brands). Publicly traded on Euronext Paris (PUB)."
   },
   "sources": [
    {
@@ -154729,14 +154935,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=a6e7e42c0b547f90ac392f093c18e11b7d2a041696f60abf0ed87089c4e11450JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=26a4c2ce-575e-61a8-27ca-d553565360e2&u=a1aHR0cHM6Ly93d3cucHVibGljaXNncm91cGUuY29tL2VuL3RoZS1ncm91cGUvYWJvdXQtcHVibGljaXMtZ3JvdXBl&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a large multinational, Publicis Groupe ANZ typically sponsors skilled visas (e.g., TSS 482, Employer Nomination Scheme) for specialized technical and senior roles. Graduate sponsorship less common but possible for high-demand data/AI talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Publicis Groupe ANZ is the Australia and New Zealand division of Publicis Groupe, a global communications and marketing services conglomerate. It operates as a holding company for creative, media, data, and technology agencies serving major brands across the region."
+  },
+  "synthesized_evidence_sha": "4658ed2c01343740",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Data science and AI roles focus on marketing analytics, customer data platforms, personalization engines, media mix modeling, attribution, GenAI for creative production, and digital experience platforms. Publicis Sapient ANZ leads technology consulting and platform engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674487,
   "web_search_url": "https://duckduckgo.com/?q=Publicis+Groupe+ANZ+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Publicis Groupe ANZ offers elite prestige as part of a global top-three holding company with high-visibility clients and large-scale data assets. Its Publicis Sapient arm provides genuine technology consulting depth, while the holding company invests heavily in AI (Marcel platform, partnership with Microsoft/OpenAI). However, agency-side work can involve client-driven urgency and variable hours — work-life balance depends heavily on specific agency, account, and leadership. New grad pay is compe"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "6/10 — Highly variable by agency brand, account, and team. Publicis Sapient generally reports better boundaries (consulting norms). Creative/media agencies often see 50–60+ hour weeks during peaks. Group-wide 'Recharge' days and flexibility policies exist but enforcement is manager-dependent. No guaranteed shutdowns."
   }
  },
  "publicis montr al": {
@@ -159586,7 +159813,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -159604,7 +159831,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784688476,
+  "last_attempt_at": 1784688568,
   "last_evidence_at": 1784673976,
   "name": "Raytheon",
   "pace_of_work": {
@@ -164759,7 +164986,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -164777,7 +165004,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
-  "last_attempt_at": 1784688476,
+  "last_attempt_at": 1784688568,
   "last_evidence_at": 1784583447,
   "name": "Roblox",
   "pace_of_work": {
@@ -197093,11 +197320,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -197109,6 +197338,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784688568,
   "last_evidence_at": 1784674823,
   "name": "Torch Technologies",
   "pace_of_work": {
