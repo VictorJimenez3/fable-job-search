@@ -10503,7 +10503,7 @@
    "value": "Tier 1 (Elite). Amazon is a pioneer in production AI and cloud infrastructure globally, rivaling Google, Meta, and Microsoft in AI talent branding."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -10553,7 +10553,7 @@
    "source_ids": [],
    "value": "Amazon interviews emphasize its Leadership Principles with behavioral questions, plus technical screening covering data structures, system design, algorithms, and coding proficiency. Storytelling about ownership, bias for action, and customer obsession is crucial. For AI and data science roles, expect deep dives into machine learning theory, statistical analysis, and deployment experience."
   },
-  "last_attempt_at": 1784693370,
+  "last_attempt_at": 1784693514,
   "last_evidence_at": 1784636762,
   "locations": {
    "confidence": "high",
@@ -28936,41 +28936,107 @@
  "blackedge capital": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "ba3923c8c0"
+   ],
+   "value": "Estimated: Tier 2. While quant trading is highly technical and prestigious, this firm seems heavily focused on low-latency systems engineering rather than pure AI or data science models."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "2baf624b05",
+    "ba3923c8c0"
+   ],
+   "value": "Proprietary trading firm that generates revenue through market making and capturing the bid-ask spread in the options market."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "ba3923c8c0"
+   ],
+   "value": "Deeply collaborative, ambitious, and ownership-driven. Valued by those energized by building systems from the ground up with a direct impact on trading outcomes."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "2baf624b05",
+    "ba3923c8c0"
+   ],
+   "value": "Institutional participants, broker-dealers, and other market participants in the financial options ecosystem."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "ba3923c8c0",
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $150,000 - $250,000+ base. As an elite quant market maker, new grad tech pay likely features a high base salary plus significant performance bonuses."
   },
   "evidence_sha": "9e6d63998c3684f1",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+  "generated_at": 1784693514,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784693370,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2baf624b05",
+    "ba3923c8c0"
+   ],
+   "value": "Financial Services / Proprietary Trading"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ba3923c8c0",
+    "2baf624b05"
+   ],
+   "value": "Probe deeply into their actual work hours, on-call expectations, and uncompensated overtime to ensure the environment respects personal time. Ask about their technical mentorship structure and how they balance aggressive low-latency system shipping with supportive, sustainable team practices."
+  },
+  "last_attempt_at": 1784693514,
   "last_evidence_at": 1784692850,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "ba3923c8c0"
+   ],
+   "value": "Chicago-based, with remote work supported."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "ba3923c8c0"
+   ],
+   "value": "To build a leading market-making initiative in the treasury options space through industry-leading technology, custom hardware, and a deeply collaborative culture."
+  },
   "name": "BlackEdge Capital",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "ba3923c8c0"
+   ],
+   "value": "Estimated: Extremely fast-paced. The firm explicitly states it is early-stage and focused on the intersection of low-level systems and custom hardware where nanoseconds matter."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "2baf624b05",
+    "ba3923c8c0"
+   ],
+   "value": "Industry-leading proprietary trading systems and market-making services specifically focused on treasury options."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days. Standard for boutique quant trading firms, though not explicitly stated."
   },
+  "refresh_after": 1789877514,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -28979,8 +29045,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "2baf624b05"
+   ],
+   "value": "Estimated: Likely market holidays only. No explicit mention of guaranteed firm-wide shutdowns like those seen in big tech."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "ba3923c8c0"
+   ],
+   "value": "An early-stage, focused, and ambitious initiative where employees have real ownership and the chance to shape systems from the ground up."
   },
   "sources": [
    {
@@ -29044,14 +29119,45 @@
     "url": "https://job-boards.greenhouse.io/blackedgecapital/jobs/4707865005"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "2baf624b05",
+    "ba3923c8c0"
+   ],
+   "value": "BlackEdge Capital is a proprietary options market maker primarily operating in the treasury options space. The firm makes money by providing liquidity to financial markets, earning profits from the spread between buy and sell orders and capitalizing on market inefficiencies."
+  },
+  "synthesized_evidence_sha": "9e6d63998c3684f1",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "ba3923c8c0"
+   ],
+   "value": "High-performance, low-latency systems programming, custom hardware optimization, and applied research. Heavy emphasis on low-level systems where every nanosecond on the path from signal to order matters."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784692850,
   "web_search_url": "https://duckduckgo.com/?q=BlackEdge+Capital+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ba3923c8c0",
+    "2baf624b05"
+   ],
+   "value": "Matches your desire for a fast, innovative tech culture without bureaucracy, allowing you to claim real ownership over core systems. While it promises high prestige and strong new-grad compensation typical of elite quant firms, you must carefully evaluate if the aggressive low-latency trading environment and early-stage scaling pressure conflict with your need for sane hours and a low-burnout work-life balance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "ba3923c8c0"
+   ],
+   "value": "Estimated: Medium. The company states it has a deeply collaborative culture, but the early-stage nature and high-frequency trading focus typically demand high intensity."
   }
  },
  "blackhawk network": {
@@ -56952,42 +57058,101 @@
  },
  "darktrace": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "6598b79fb9",
+    "c138c63b4f"
+   ],
+   "value": "Tier 1 (elite) — Founded by Cambridge mathematicians, pioneering self-learning AI for cyber, publishes at top venues (NeurIPS, ICML, USENIX Security), widely cited in enterprise AI literature."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "6598b79fb9",
+    "c138c63b4f"
+   ],
+   "value": "Subscription-based software revenue (SaaS and on-premises licenses) with multi-year contracts. Revenue streams: platform subscriptions, professional services, and threat intelligence feeds. Publicly traded on LSE (DARK)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, intellectually intense, low-politics. 'Smart people, hard problems' vibe. Strong Cambridge academic heritage. Transparent leadership (weekly AMAs). Diversity improving but still male-dominated in core R&D. Socially mission-driven (protecting hospitals, power grids)."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "6598b79fb9",
+    "c138c63b4f"
+   ],
+   "value": "Over 8,800 organizations globally across critical infrastructure, financial services, healthcare, manufacturing, and government sectors. Notable customers include major airlines, utilities, and multinational corporations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: UK £60k–£75k base + 10–15% bonus + RSUs (£15k–£25k/yr vesting). US $130k–$160k base + 15% bonus + RSUs ($40k–$60k/yr). Signing bonus £10k–£20k / $20k–$30k. Top of market for UK AI, competitive with US Tier 1."
   },
   "evidence_sha": "f72f11ff9f00dcac",
+  "generated_at": 1784693514,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "6598b79fb9",
+    "c138c63b4f"
+   ],
+   "value": "Cybersecurity / Enterprise AI / Autonomous Defense"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep ML fundamentals (probabilistic modeling, unsupervised learning), systems design for low-latency inference, and practical coding (Python/Go). Prepare for: 'How would you detect novel anomalies without labels?' and 'Design a system that autonomously responds to threats in <100ms.' Behavioral questions probe ownership, cross-team collaboration, and handling ambiguity — reflecting the fast-paced, high-autonomy culture."
   },
-  "last_attempt_at": 1784693370,
+  "last_attempt_at": 1784693514,
   "last_evidence_at": 1784680196,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "c138c63b4f",
+    "92df7a4d82"
+   ],
+   "value": "HQ: Cambridge, UK. Major offices: London, San Francisco, Singapore, Tokyo, Sydney, Munich, Paris, New York, Toronto, Amsterdam, Dubai. Hybrid work model with office hubs."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "c138c63b4f",
+    "92df7a4d82"
+   ],
+   "value": "To free the world of cyber disruption by building AI that learns each organization's unique 'pattern of life' to detect threats that rule-based systems miss."
+  },
   "name": "Darktrace",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast — Quarterly release cycles, rapid experimentation culture, 'ship to learn' mindset. Some on-call rotations for production AI systems. Less bureaucracy than Big Tech, but high autonomy means self-driven pace."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c138c63b4f",
+    "92df7a4d82"
+   ],
+   "value": "Core platform: Darktrace DETECT (anomaly detection), Darktrace RESPOND (autonomous response), Darktrace PREVENT (attack surface management), and Darktrace HEAL (post-breach recovery). All powered by the Self-Learning AI engine."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25 days annual leave + 8 UK bank holidays (pro-rated globally). Unlimited sick days. No public policy on 'guaranteed shutdowns'."
   },
+  "refresh_after": 1789877514,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -56997,7 +57162,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide mandatory shutdowns. Some teams observe quiet periods between Christmas–New Year informally. Not a formal policy."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "6598b79fb9"
+   ],
+   "value": "Public company (LSE: DARK) with ~2,400 employees globally. FY2024 revenue ~$700M. Post-IPO growth stage, profitable on adjusted EBITDA basis."
   },
   "sources": [
    {
@@ -57031,14 +57203,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=d1c78ad658dd3f933ad0a907bdaff54ec5fca481bf897a8be9d6804ab39b5afaJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=116f296a-6e32-64de-2aa8-3ef46ffa65a8&u=a1aHR0cHM6Ly93d3cuZGFya3RyYWNlLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "c138c63b4f"
+   ],
+   "value": "Active sponsor for UK Skilled Worker visas, US H-1B/E-3, Singapore EP, and other global work permits. Dedicated immigration team for relocation support."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "6598b79fb9",
+    "c138c63b4f",
+    "92df7a4d82"
+   ],
+   "value": "Darktrace is a UK-based cybersecurity company that uses self-learning AI to detect and respond to novel cyber threats in real time. It protects enterprise digital estates across cloud, network, IoT, and email."
+  },
+  "synthesized_evidence_sha": "f72f11ff9f00dcac",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "c138c63b4f",
+    "92df7a4d82"
+   ],
+   "value": "Core R&D in unsupervised/self-supervised ML for anomaly detection, graph neural networks, NLP for threat intelligence, distributed systems at scale, and autonomous response logic. Heavy Python, Go, Rust, Kubernetes, cloud-native architecture."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680196,
   "web_search_url": "https://duckduckgo.com/?q=Darktrace+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Darktrace offers elite AI prestige (founded by mathematicians from Cambridge, backed by Invoke Capital) with top-tier new-grad compensation. Its self-learning AI is technically differentiated in a mission-critical domain (cyber defense). Culture emphasizes rapid innovation cycles over bureaucracy, and the company publicly advocates sustainable pace — though actual WLB varies by team. Strong technical mentorship and exposure to production ML at scale accelerate career growth without the burnout t"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — Generally respected hours (core 10am–4pm), flexible hybrid, no mandatory weekends. On-call ~1 week/month for some teams. Occasional crunch before major releases. Better than average for high-growth AI, but not a '9–5 guarantee'."
   }
  },
  "dassault syst mes": {
@@ -62744,7 +62946,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -62762,7 +62964,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784693370,
+  "last_attempt_at": 1784693514,
   "last_evidence_at": 1784680412,
   "name": "Dow Jones",
   "pace_of_work": {
@@ -87999,49 +88201,151 @@
  },
  "government tactical solutions llc": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "2de15dd9a0",
+    "b5ec43cd3e",
+    "94603633ba"
+   ],
+   "value": "No factual prestige information was found in the provided sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2de15dd9a0",
+    "b5ec43cd3e",
+    "94603633ba"
+   ],
+   "value": "Estimated to generate revenue through government contracts and consulting services, though specific details were absent from the sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "2de15dd9a0",
+    "b5ec43cd3e",
+    "94603633ba"
+   ],
+   "value": "No factual culture information was found in the provided sources. Estimated: Structured and mission-oriented, prioritizing government compliance over fast-paced tech innovation."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2de15dd9a0",
+    "b5ec43cd3e",
+    "94603633ba"
+   ],
+   "value": "Based on the company name and the general government URLs provided, customers are estimated to be U.S. federal or state government agencies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "2de15dd9a0",
+    "b5ec43cd3e",
+    "94603633ba"
+   ],
+   "value": "Estimated: $80,000 to $110,000, typical for defense and government tech contractors depending on clearance level."
   },
   "evidence_sha": "8e5e98726bd70a24",
+  "generated_at": 1784693514,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "2de15dd9a0",
+    "b5ec43cd3e",
+    "94603633ba"
+   ],
+   "value": "Estimated to be in the Defense or Government Contracting industry based on the company name."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The candidate should probe the team's actual pace of work, autonomy, and modern tech stack usage. Questions should focus on whether the AI/data science work is cutting-edge or constrained by slow government procurement, and if sane hours and guaranteed shutdowns are truly enforced to prevent burnout."
+  },
+  "last_attempt_at": 1784693514,
   "last_evidence_at": 1784677768,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "2de15dd9a0",
+    "b5ec43cd3e",
+    "94603633ba"
+   ],
+   "value": "No factual location data was found in the provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "2de15dd9a0",
+    "b5ec43cd3e",
+    "94603633ba"
+   ],
+   "value": "No factual mission statement was found in the provided sources."
+  },
   "name": "Government Tactical Solutions, LLC",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "2de15dd9a0",
+    "b5ec43cd3e",
+    "94603633ba"
+   ],
+   "value": "Estimated: Moderate to slow, largely dependent on rigid government contract deadlines and compliance requirements."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "2de15dd9a0",
+    "b5ec43cd3e",
+    "94603633ba"
+   ],
+   "value": "No factual product information was available in the provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "2de15dd9a0",
+    "b5ec43cd3e",
+    "94603633ba"
+   ],
+   "value": "Estimated: 15 to 20 days annually, standard for government consulting roles."
   },
+  "refresh_after": 1789877514,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "2de15dd9a0",
+    "b5ec43cd3e",
+    "94603633ba"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "2de15dd9a0",
+    "b5ec43cd3e",
+    "94603633ba"
+   ],
+   "value": "Estimated: Potential holiday shutdowns between Christmas and New Year, though not guaranteed."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "2de15dd9a0",
+    "b5ec43cd3e",
+    "94603633ba"
+   ],
+   "value": "No factual data regarding company size or founding stage was found in the provided sources."
   },
   "sources": [
    {
@@ -88075,14 +88379,51 @@
     "url": "https://www.bing.com/ck/a?!&&p=f1e563836caded84e3db967bc657d2a5e3da2cd42002b8a236e39a25ac49a8faJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=16ae291e-3ee3-6c70-0417-3e833f4b6d41&u=a1aHR0cHM6Ly93d3cudXNhLmdvdi8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "2de15dd9a0",
+    "b5ec43cd3e",
+    "94603633ba"
+   ],
+   "value": "No factual information regarding visa sponsorship was found in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "2de15dd9a0",
+    "b5ec43cd3e",
+    "94603633ba"
+   ],
+   "value": "Specific factual information regarding the operations and revenue streams of Government Tactical Solutions, LLC could not be retrieved from the supplied sources, as they only contained redirect notices to general government domains."
+  },
+  "synthesized_evidence_sha": "8e5e98726bd70a24",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "2de15dd9a0",
+    "b5ec43cd3e",
+    "94603633ba"
+   ],
+   "value": "No factual technical work details were available in the provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677768,
   "web_search_url": "https://duckduckgo.com/?q=Government+Tactical+Solutions%2C+LLC+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "As a government contractor, the company likely offers a stable, mission-driven environment. However, the candidate's desire for elite AI prestige, top-tier new-grad pay, and a fast, innovative tech culture may conflict with the standard bureaucracy and slower compliance-bound pace typically associated with government tactical solutions."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2de15dd9a0",
+    "b5ec43cd3e",
+    "94603633ba"
+   ],
+   "value": "Estimated: Average to good; government contractors generally maintain standard federal hours, though specific project surges can occur."
   }
  },
  "gradient robotics": {
@@ -130428,7 +130769,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -130446,7 +130787,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784693370,
+  "last_attempt_at": 1784693514,
   "last_evidence_at": 1784693223,
   "name": "Micron Technology",
   "pace_of_work": {
@@ -139533,7 +139874,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -139551,7 +139892,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784693370,
+  "last_attempt_at": 1784693514,
   "last_evidence_at": 1784693224,
   "name": "Niagara Bottling",
   "pace_of_work": {
@@ -173433,7 +173774,7 @@
    "value": "RTX sits in the high-prestige aerospace tier for embedded engineering but is low tier for commercial AI/data science innovation. The technical stack cited is exclusively C++ embedded software, not modern cloud AI."
   },
   "aliases": [],
-  "attempts": 8,
+  "attempts": 9,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -173478,7 +173819,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "last_attempt_at": 1784693370,
+  "last_attempt_at": 1784693514,
   "last_evidence_at": 1784666538,
   "locations": {
    "confidence": "medium",
