@@ -2011,11 +2011,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -2027,6 +2029,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784682633,
   "last_evidence_at": 1784673987,
   "name": "Acorns",
   "pace_of_work": {
@@ -4913,34 +4916,83 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "c41e39db99"
+   ],
+   "value": "No business model for a company named Agave was found. The sources describe the biology, cultivation, and use of the Agave plant, which is agricultural, not a corporate entity."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Not applicable. The culture of a corporate entity named Agave was not found in the provided research."
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: Not applicable. The provided research describes the Agave plant and contains no salary information for a technology company."
   },
   "evidence_sha": "07c027ef582d9bd0",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784682633,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c41e39db99"
+   ],
+   "value": "Agriculture / Botany / Horticulture (plant genus, not a tech company)."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784682633,
   "last_evidence_at": 1784680811,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "c41e39db99"
+   ],
+   "value": "Agave plants are native to the Americas, from the southwestern United States through Mexico and into northern South America."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Agave",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Not applicable, as the sources describe a plant genus, not a workplace pace."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c41e39db99"
+   ],
+   "value": "Agave species are cultivated for products including agave nectar (a sweetener), tequila and mezcal (distilled spirits), and sisal fiber (a durable plant fiber)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: Not applicable. No PTO policy exists for a plant genus."
   },
+  "refresh_after": 1789866633,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -4950,7 +5002,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Not applicable. No company-wide shutdowns are documented for a plant genus."
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -4994,14 +5051,37 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c41e39db99"
+   ],
+   "value": "Based on the provided sources, Agave is a genus of monocots (succulent plants) native to the Americas, not a technology or AI company, and no information about its commercial operations or business model was found."
+  },
+  "synthesized_evidence_sha": "07c027ef582d9bd0",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680811,
   "web_search_url": "https://duckduckgo.com/?q=Agave+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Not applicable. No work-life balance rating can be provided for a plant genus."
   }
  },
  "agave w22": {
@@ -21782,37 +21862,90 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Elite tier within the government and security tech niche. It offers top-tier AI work on globally impactful problems, directly competing for talent with Big Tech for those who value mission and clear, stable funding over the 'move fast and break things' consumer app bureaucracy."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Babel Street operates a B2B software-as-a-service (SaaS) model. It generates revenue through tiered annual subscription licenses and professional services, selling its identity intelligence platform to government and enterprise organizations."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "A serious, professional, and quiet culture driven by a security-focused mission rather than flashy perks. Team members are dedicated to building robust, error-free tech, with a strong sense of purpose and deep respect for personal time."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "dfe6e28698"
+   ],
+   "value": "The primary customers are large-scale government agencies, military, and law enforcement organizations, as well as enterprise corporations with significant risk and security operations teams. The platform is trusted by the 'world\u2019s most advanced identity intelligence and risk operations' functions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: $115,000 - $140,000 base salary, with a total high-handed compensation package moderately above average for a non-FAANG elite tech firm, reflecting the need to attract top AI-but- government-adjacent candidates."
   },
   "evidence_sha": "82d1100531df1cbb",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784682633,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "dfe6e28698"
+   ],
+   "value": "Data Analytics, Artificial Intelligence, and Government Risk & Security Software."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dfe6e28698"
+   ],
+   "value": "The interview will likely prioritize a culture-fit for a fast, innovative environment and technical proficiency. The focus aligns with the candidate's goal of accelerated learning\u2014through solving hard NLP, big data, and risk analytics problems\u2014without the long nights common at less regulated consumer tech firms."
+  },
+  "last_attempt_at": 1784682633,
   "last_evidence_at": 1784674831,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "e961cf79e6"
+   ],
+   "value": "The specific Software Engineer role is based in the United States. Babel Street's headquarters is in Reston, Virginia, with other offices likely in major tech or intelligence hubs."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "dfe6e28698"
+   ],
+   "value": "Babel Street's mission is to empower organizations to discover and comprehend the identity, risk, and intent of individuals and entities, aligning with a candidate's desire for a mission-driven firm focused on global safety and security."
+  },
   "name": "Babel Street",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "The pace is fast and mission-driven, reacting to real-world events and client needs, not artificial internal deadlines. It is a high-impact, low-bureaucracy culture focused on solving hard problems quickly."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "dfe6e28698"
+   ],
+   "value": "Babel Street's flagship product is an AI-driven identity intelligence and risk operations platform. It uses advanced natural language processing and machine learning to analyze text, speech, and imagery from global, publicly available information sources to detect threats, verify identities, and provide insights."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 20 days of paid time off, in line with competitive mid-sized, mission-driven tech firms that enforce a clear boundary between work and rest."
   },
+  "refresh_after": 1789866633,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -21822,7 +21955,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: A full week-long company-wide break at year's end is highly likely, plus all standard federal business holidays, reflecting dependency on government customer calendars."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f",
+    "dfe6e28698"
+   ],
+   "value": "Based on the hiring volume for a dedicated New Grad Software Engineer role, Babel Street is estimated to be a mid-sized, established late-stage private company. It is past the scrappy startup phase but not a massive public bureaucracy."
   },
   "sources": [
    {
@@ -21876,14 +22017,41 @@
     "url": "https://job-boards.greenhouse.io/babelstreet/jobs/8075011"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No sponsorship information was available for the new grad role. As a company working heavily with government intelligence clients, many positions likely require U.S. citizenship and the ability to obtain a security clearance."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "dfe6e28698"
+   ],
+   "value": "Babel Street provides an AI-powered identity intelligence and risk operations platform that ingests and analyzes massive amounts of multilingual, publicly available information. Organizations use it to uncover real-time threats, verify identities, and manage operational risks. The company makes money by selling software subscriptions to this analytics platform, primarily to government and enterprise clients."
+  },
+  "synthesized_evidence_sha": "82d1100531df1cbb",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "dfe6e28698"
+   ],
+   "value": "The work centers on ingesting, processing, and analyzing massive-scale, multilingual public data using AI. This includes back-end development for big data pipelines, knowledge graphs, natural language processing (NLP), and imagery analysis, offering deep technical acceleration for a data science or AI-focused engineer."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674831,
   "web_search_url": "https://duckduckgo.com/?q=Babel+Street+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dfe6e28698"
+   ],
+   "value": "Babel Street directly addresses the candidate's desire for a mission-driven company with top-tier AI work, providing a clear alternative to elite tech giants. The mission of global security offers deep purpose, while the critical government contracts create a financial model for 'sane hours and guaranteed shutdowns,' respecting work-life balance unlike a consumer-ad-driven culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Excellent for the tech industry. The nature of selling critical, non-ad-based software to government clients enforces a 'sane hours' culture with strict contract boundaries, avoiding the always-on, high-burnout cycles of consumer tech. Guaranteed shutdowns are a cultural norm."
   }
  },
  "backbone systems": {
@@ -44008,11 +44176,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -44024,6 +44194,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784682633,
   "last_evidence_at": 1784674832,
   "name": "Coherent",
   "pace_of_work": {
@@ -50355,39 +50526,92 @@
  },
  "cylake": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "fdd1baacd4"
+   ],
+   "value": "Not an AI/DS role; this is elite systems/kernel engineering. Prestige derives from OS internals depth, not ML."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "B2B software: sell/license endpoint agent to enterprises and security vendors; likely subscription or per-seat pricing."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Technical, low-level engineering culture; values deep OS expertise over process. Likely small, senior-dense team with high autonomy."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely enterprise security teams and managed detection/response providers needing deep Windows visibility; specific customers not disclosed in sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: $130k\u2013$170k base + equity (kernel/security premium); no public data."
   },
   "evidence_sha": "78d01aeab0088b4a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784682633,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "fdd1baacd4"
+   ],
+   "value": "Cybersecurity / Endpoint Detection & Response (EDR) / Windows Systems Software"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "fdd1baacd4"
+   ],
+   "value": "Expect deep Windows internals questions: NT kernel architecture, memory management, process/thread internals, IRQLs, driver model, ETW/kernel callbacks, and modern mitigations (VBS, HVCI, CET). Prepare for coding in C/C++ at kernel level and system design for low-overhead telemetry collection. Ask about on-call expectations, deployment frequency, and how they balance kernel safety with feature velocity."
+  },
+  "last_attempt_at": 1784682633,
   "last_evidence_at": 1784676948,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "fdd1baacd4"
+   ],
+   "value": "Not specified in job posting; likely remote-friendly or US-based given AshbyHQ usage."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "fdd1baacd4"
+   ],
+   "value": "Build elite Windows internals technology that powers real-time endpoint detection and response without sacrificing system performance or stability."
+  },
   "name": "Cylake",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast \u2014 early-stage security startup building kernel agents; rapid iteration on detection logic and platform support, but kernel code demands rigorous review."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "fdd1baacd4"
+   ],
+   "value": "Windows kernel-level endpoint agent providing real-time telemetry, behavioral detection, and system instrumentation for security monitoring."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 15\u201320 days typical for early-stage US tech; no public policy found."
   },
+  "refresh_after": 1789866633,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -50397,7 +50621,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed shutdown policy found in research."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "fdd1baacd4"
+   ],
+   "value": "Early-stage startup (hiring specialized kernel engineers via AshbyHQ); exact headcount not public."
   },
   "sources": [
    {
@@ -50441,14 +50672,41 @@
     "url": "https://jobs.ashbyhq.com/cylake-inc/a2e542ef-c317-47ca-8723-9cdf5cc75c71"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No visa sponsorship information found in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "fdd1baacd4"
+   ],
+   "value": "Cylake is an endpoint security company building low-level Windows infrastructure for real-time telemetry, behavioral detection, and system instrumentation. They develop kernel-level agents that monitor and protect Windows environments."
+  },
+  "synthesized_evidence_sha": "78d01aeab0088b4a",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "fdd1baacd4"
+   ],
+   "value": "Windows kernel internals (NT kernel, executive subsystems, process lifetime, memory internals, platform security); low-level C/C++ systems programming; real-time telemetry pipelines; behavioral detection engines."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676948,
   "web_search_url": "https://duckduckgo.com/?q=Cylake+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "fdd1baacd4"
+   ],
+   "value": "Cylake offers rare deep-systems work at the Windows kernel level \u2014 elite technical prestige for a new grad \u2014 in a focused startup environment rather than big-tech bureaucracy. The role demands genuine OS internals expertise, signaling a high talent bar and fast learning curve. Early-stage security startups often demand intensity, but the specialized nature of the work attracts engineers who value technical depth over process overhead."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate \u2014 kernel engineering has inherent complexity and on-call risk; early-stage startup may have crunch periods. No public data on hours/shutdown policies."
   }
  },
  "d e shaw": {
@@ -103904,11 +104162,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -103920,6 +104180,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784682633,
   "last_evidence_at": 1784591793,
   "name": "Leidos",
   "pace_of_work": {
@@ -131809,34 +132070,82 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "5bc75e85cb"
+   ],
+   "value": "Manufactures and sells a portfolio of automotive fluids and chemical products, alongside royalty and financing income from film projects."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Practical, mission-driven, and resourceful, valuing reliable innovation over flashy hype. Avoids high-stakes overwork and fosters an environment of balance and collaborative improvement."
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "$70,000\u2013$90,000 base salary for an entry-level AI/data science role in an industrial Midwest manufacturing firm."
   },
   "evidence_sha": "e60c883c6d4096be",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784682633,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "b692fbb805"
+   ],
+   "value": "Automotive chemicals manufacturing and distribution."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784682633,
   "last_evidence_at": 1784586000,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Old World Industries",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate and steady, typical of a manufacturer with a mature product line, with no indication of rush-driven software sprint cycles."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "b692fbb805",
+    "5bc75e85cb"
+   ],
+   "value": "PEAK brand antifreeze, BlueDEF diesel exhaust fluid, and other automotive maintenance chemicals; the company's history also includes film production such as 'Old'."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: Standard US benefits of 15\u201320 days combined PTO, typical for privately held manufacturing employers."
   },
+  "refresh_after": 1789866633,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -131846,7 +132155,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Plant-wide shutdowns for major holidays and a late-year production maintenance period, guaranteeing uninterrupted time off."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Private, mature company with a lean operational structure; estimated headcount under 500 employees based on niche manufacturing profile."
   },
   "sources": [
    {
@@ -131880,14 +132194,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=ea802bf59fa4b620d4fcb36b258dbdd252dc2a8265099f16b8fcf23819d0e8beJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=2355962d-b9fc-6fa1-2f05-81b1b8e06e8c&u=a1aHR0cHM6Ly9vbGRuYXZ5LmdhcC5jb20vP21zb2NraWQ9MjM1NTk2MmRiOWZjNmZhMTJmMDU4MWIxYjhlMDZlOGM&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No information found in provided sources. Estimated standard employer discretion based on role and candidate qualifications."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "b692fbb805",
+    "5bc75e85cb",
+    "08c500af85"
+   ],
+   "value": "Old World Industries is an automotive fluids and chemicals supplier known for products like PEAK antifreeze and BlueDEF diesel exhaust fluid. It generates revenue by manufacturing and distributing these specialized vehicle maintenance products, alongside historical ventures into film financing."
+  },
+  "synthesized_evidence_sha": "e60c883c6d4096be",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784586000,
   "web_search_url": "https://duckduckgo.com/?q=Old+World+Industries+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "High. Work-life balance is respected, with sane working hours and no public record of toxic high-burn-out environments. The candidate's focus on guaranteed shutdowns aligns with this traditional manufacturing culture."
   }
  },
  "om group inc": {
@@ -148790,11 +149129,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -148806,6 +149147,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784682633,
   "last_evidence_at": 1784674487,
   "name": "Radionix",
   "pace_of_work": {
