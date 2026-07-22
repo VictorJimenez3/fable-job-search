@@ -11196,7 +11196,7 @@
    "value": "Tier 1 (Elite). Amazon is a pioneer in production AI and cloud infrastructure globally, rivaling Google, Meta, and Microsoft in AI talent branding."
   },
   "aliases": [],
-  "attempts": 26,
+  "attempts": 27,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -11246,7 +11246,7 @@
    "source_ids": [],
    "value": "Amazon interviews emphasize its Leadership Principles with behavioral questions, plus technical screening covering data structures, system design, algorithms, and coding proficiency. Storytelling about ownership, bias for action, and customer obsession is crucial. For AI and data science roles, expect deep dives into machine learning theory, statistical analysis, and deployment experience."
   },
-  "last_attempt_at": 1784748360,
+  "last_attempt_at": 1784748506,
   "last_evidence_at": 1784732707,
   "locations": {
    "confidence": "high",
@@ -20945,11 +20945,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -20961,6 +20963,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784748506,
   "last_evidence_at": 1784747329,
   "name": "Astranis Space Technologies",
   "pace_of_work": {
@@ -36732,37 +36735,99 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Non-tech industry prestige; high domain relevance for supply chain AI, but not recognized as an elite, top-tier tech brand."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "991c179c49",
+    "21e23b0588"
+   ],
+   "value": "B2B platform that drives revenue by aggregating a massive $50 billion of spend volume across its operator network to optimize procurement and supply chain logistics."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Strategic and partnership-oriented, heavily focused on optimizing cost and efficiency in the foodservice sector."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "991c179c49",
+    "21e23b0588"
+   ],
+   "value": "Foodservice operators, encompassing over 200,000 operator locations across North America."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000 - $110,000 base salary, aligned with non-tech-industry enterprise software roles."
   },
   "evidence_sha": "d7888f0e4f06b3b1",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784748506,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "991c179c49",
+    "21e23b0588"
+   ],
+   "value": "Foodservice supply chain and procurement technology."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "991c179c49",
+    "21e23b0588"
+   ],
+   "value": "Probe the pace of technical innovation and learning acceleration within their data teams to ensure the culture aligns with elite, fast-moving tech environments rather than slower enterprise bureaucracy. Ask about workload expectations and work-life balance to verify if sane hours and burnout prevention are truly respected."
+  },
+  "last_attempt_at": 1784748506,
   "last_evidence_at": 1784732392,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "991c179c49",
+    "21e23b0588"
+   ],
+   "value": "North America."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "991c179c49",
+    "21e23b0588"
+   ],
+   "value": "To reduce costs, streamline the foodservice supply chain, and propel the industry from manual to automated processes."
+  },
   "name": "Buyers Edge Platform",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast-paced, driven by aggressive industry automation goals and large-scale supply chain demands."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "991c179c49",
+    "21e23b0588"
+   ],
+   "value": "Supply chain automation and procurement software solutions, offered through a diverse portfolio of over a dozen brands."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard PTO, consistent with mid-to-large enterprise norms."
   },
+  "refresh_after": 1789932506,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -36772,7 +36837,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No publicly guaranteed company-wide shutdowns found."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "991c179c49",
+    "21e23b0588"
+   ],
+   "value": "Established, large-scale platform operating as one of the largest players in the foodservice industry with a massive North American footprint."
   },
   "sources": [
    {
@@ -36826,14 +36899,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=c39587c3147de7c0461c312de4dbfb27c8130f5653e7f8e4c5d2ff069e902b39JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2a7b1ce1-283e-6477-218e-0b7c29fe652e&u=a1aHR0cHM6Ly93d3cuYnV5ZXJzcHJvZHVjdHMuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "991c179c49",
+    "21e23b0588"
+   ],
+   "value": "The company does not offer sponsorship for work authorization for its roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "991c179c49",
+    "21e23b0588"
+   ],
+   "value": "Buyers Edge Platform is a B2B foodservice technology and procurement company that operates a diverse portfolio of over a dozen brands. It makes money by aggregating the spend volume of over 200,000 operator locations across North America to reduce costs and streamline the foodservice supply chain."
+  },
+  "synthesized_evidence_sha": "d7888f0e4f06b3b1",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "991c179c49",
+    "21e23b0588"
+   ],
+   "value": "Development of automation software and data platforms designed to handle large-scale procurement and supply chain optimization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674274,
   "web_search_url": "https://duckduckgo.com/?q=Buyers+Edge+Platform+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "991c179c49",
+    "21e23b0588"
+   ],
+   "value": "Handling $50 billion in aggregated spend volume offers the raw data scale needed for impactful AI and data science work. The stated mission to automate a manual industry provides a mission-driven framework for technical innovation, fitting a candidate who wants fast, impactful tech development over slow bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate, typical of a rapidly scaling B2B platform pushing for industry automation."
   }
  },
  "bytedance": {
@@ -46663,47 +46769,119 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Not a recognized top-tier AI/DS prestige employer based on available information; likely a standard healthcare tech product role."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "34806b8424",
+    "d55e497bcb",
+    "0e004da64f"
+   ],
+   "value": "Specific business model details were not available in the provided sources, but it likely operates on a B2B software and services model for the clinical research industry."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Likely mission-driven and impact-focused due to the clinical research nature, but specifics on tech culture and toxicity/burnout were not available."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "d55e497bcb"
+   ],
+   "value": "Clinical trial research sites, sponsors, and academic medical institutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unlikely to match elite-tier new grad pay (e.g., $180k+ total compensation); expect competitive local market rates for a standard healthcare tech company."
   },
   "evidence_sha": "b72f3fc96baa44ca",
+  "generated_at": 1784748506,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d55e497bcb",
+    "0e004da64f"
+   ],
+   "value": "Healthcare Technology / Clinical Research Software."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Candidates should probe the team's deployment velocity and tech stack modernization to ensure the day-to-day culture matches a fast, innovative environment rather than slow healthcare bureaucracy. It is also critical to clarify work-life balance expectations, on-call duties, and actual hours worked, since guaranteed shutdowns and sane hours are top priorities."
   },
+  "last_attempt_at": 1784748506,
   "last_evidence_at": 1784742765,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "34806b8424",
+    "d55e497bcb",
+    "0e004da64f"
+   ],
+   "value": "Specific office locations were not available in the provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "34806b8424",
+    "d55e497bcb",
+    "0e004da64f"
+   ],
+   "value": "Mission information was not available in the provided sources, which primarily contained redirect notices and metadata regarding the company's clinical trial software."
+  },
   "name": "Circuit Clinical",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate pace typical of healthcare tech, which may include compliance and regulatory steps that slow down the fast innovative tech culture desired by the candidate."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "d55e497bcb",
+    "0e004da64f"
+   ],
+   "value": "eConsent platforms and clinical trial management/construction kits."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard tech PTO (15-20 days) likely, but exact policy is not public."
   },
+  "refresh_after": 1789932506,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown if they offer guaranteed company-wide shutdowns to prevent burnout."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "34806b8424",
+    "d55e497bcb",
+    "0e004da64f"
+   ],
+   "value": "Specific company size and funding stage details were not available in the provided sources."
   },
   "sources": [
    {
@@ -46747,14 +46925,44 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Information regarding visa sponsorship for new graduates was not found in the provided sources, despite a new grad posting being monitored."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "d55e497bcb",
+    "0e004da64f"
+   ],
+   "value": "Circuit Clinical is a healthcare technology company that builds electronic consent solutions and software for clinical trials. While specific revenue models are not detailed in the provided sources, companies in this space typically monetize by providing SaaS platforms and operational services to sponsors and research sites running clinical studies."
+  },
+  "synthesized_evidence_sha": "b72f3fc96baa44ca",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "d55e497bcb",
+    "0e004da64f",
+    "1db9db9c4d"
+   ],
+   "value": "Technical work involves building software solutions for clinical trial construction and eConsent, as indicated by their product offerings and a recent software engineer new grad posting."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784742765,
   "web_search_url": "https://duckduckgo.com/?q=Circuit+Clinical+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role offers a strong mission-driven environment focused on improving clinical trials, which aligns with the candidate's desire for meaningful work. However, as a healthcare-adjacent tech company, it may carry more bureaucratic constraints and slower tech culture than elite consumer AI firms, potentially conflicting with the preference for fast-paced innovation and elite new-grad pay."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown, though startups in this space can be volatile. Must be verified to ensure it meets the candidate's strict work-life balance and low-burnout requirements."
   }
  },
  "cisco": {
@@ -46935,39 +47143,100 @@
  },
  "citadel": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "6f77ea1605"
+   ],
+   "value": "Top-tier (Ultra-prestigious within quantitative finance and algorithmic trading)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "6f77ea1605"
+   ],
+   "value": "Alternative investment management firm that generates revenue through management fees and performance fees based on the profitability of its quantitative trading strategies."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "6f77ea1605"
+   ],
+   "value": "Estimated: Intense, results-driven, and highly analytical, prioritizing performance and returns over personal time and bureaucracy."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "6f77ea1605"
+   ],
+   "value": "Institutional investors, pension funds, and high-net-worth individuals seeking alternative investment management."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "6f77ea1605"
+   ],
+   "value": "$300K/yr - $350K/yr"
   },
   "evidence_sha": "bb38583523bfd682",
+  "generated_at": 1784748506,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "6f77ea1605"
+   ],
+   "value": "Finance / Alternative Investment Management / Quantitative Trading"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Be prepared for intense technical interviews centered on mathematical modeling, statistics, and coding (Python/C++). Highlight your ability to thrive in a fast, innovative tech culture; however, to address your priorities, ask probing questions about daily hours, weekend expectations, and how the team mitigates burnout to ensure it aligns with your need for sane hours."
   },
+  "last_attempt_at": 1784748506,
   "last_evidence_at": 1784747330,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "6f77ea1605"
+   ],
+   "value": "New York, NY (Onsite) for the Quantitative Researcher role, with a global presence as a leading alternative investment manager."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "6f77ea1605"
+   ],
+   "value": "To be the world's leading alternative investment manager by delivering exceptional returns through quantitative research and trading."
+  },
   "name": "Citadel",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "6f77ea1605"
+   ],
+   "value": "Estimated: Extremely fast-paced, highly competitive, and demanding with tight deadlines and significant pressure to perform."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "6f77ea1605"
+   ],
+   "value": "Alternative investment management products and quantitative trading strategies (specifically through their Global Quantitative Strategies team)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard accrued PTO, though taking time off can be culturally discouraged or difficult to coordinate due to market hours and project demands."
   },
+  "refresh_after": 1789932506,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -46977,7 +47246,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; time off is typically coordinated around market closures and individual project timelines."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "6f77ea1605"
+   ],
+   "value": "Large, established global financial institution and one of the most prominent quantitative trading firms in the world."
   },
   "sources": [
    {
@@ -47021,14 +47297,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=a5b5de8bbbaa8b98488d508614ad98b16d3c3353103b2dc8c155cb6f95755bc5JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=068da0dd-8eee-6028-1b01-b7408fbe61eb&u=a1aHR0cHM6Ly93d3cuY2l0YWRlbC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "6f77ea1605"
+   ],
+   "value": "None found in research"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "6f77ea1605"
+   ],
+   "value": "Citadel is one of the world's leading alternative investment managers. It makes money by executing quantitative trading strategies and generating returns for its investment fund clients."
+  },
+  "synthesized_evidence_sha": "bb38583523bfd682",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "6f77ea1605"
+   ],
+   "value": "Quantitative research involving mathematical modeling, statistical modeling, machine learning, and implementation in Python and C++."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672484,
   "web_search_url": "https://duckduckgo.com/?q=Citadel+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "While Citadel offers elite prestige and top-tier new-grad pay, it is notorious for its high-pressure, fast-paced environment and demanding hours, which fundamentally conflicts with a desire for guaranteed work-life balance and a non-toxic culture. The role provides unparalleled learning in quantitative AI, but candidates must weigh if the extreme performance expectations and high burnout risk are worth sacrificing personal time."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6f77ea1605"
+   ],
+   "value": "Estimated: Poor. Frequently requires long hours and weekend work, leading to a high burnout risk that contradicts a healthy work-life balance."
   }
  },
  "citadel securities": {
@@ -75773,51 +76078,121 @@
  "fhlbank topeka": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "684d322890"
+   ],
+   "value": "Estimated: Tier 3 (regional financial institution). Likely does not compete with top-tier elite tech firms for AI/Data Science prestige."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "684d322890"
+   ],
+   "value": "Issues debt and lends to member institutions at a spread."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "684d322890"
+   ],
+   "value": "Estimated: Traditional, steady, mission-driven, community-oriented."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "684d322890"
+   ],
+   "value": "Member financial institutions (banks, credit unions, insurance companies, CDFIs)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "684d322890",
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $70,000 to $90,000 for Quantitative Analyst I; below FAANG-level compensation."
   },
   "evidence_sha": "e3a2e8e3a963f94b",
+  "generated_at": 1784748506,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "684d322890"
+   ],
+   "value": "Banking / Financial Services."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+   "value": "Probe whether the Quantitative Analyst role or similar data science positions provide accelerated technical learning and career growth. Ask about daily innovation versus slow bureaucracy, because a traditional financial institution may not match the candidate's desire for a fast, elite tech culture."
   },
-  "last_attempt_at": 1784742126,
+  "last_attempt_at": 1784748506,
   "last_evidence_at": 1784732707,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "684d322890"
+   ],
+   "value": "Headquartered in Topeka, Kansas, with telecommute options available anywhere in the U.S."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "684d322890"
+   ],
+   "value": "Enable financial institutions to effectively lend to homebuyers and communities."
+  },
   "name": "FHLBank Topeka",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "684d322890"
+   ],
+   "value": "Estimated: Steady, methodical; research and reporting follow a structured cadence typical of traditional financial institutions."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "684d322890"
+   ],
+   "value": "Liquidity, market risk measurement, and funding solutions for member institutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "684d322890"
+   ],
+   "value": "Estimated: 20 to 25 days annually plus holidays."
   },
+  "refresh_after": 1789932506,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research"
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "684d322890"
+   ],
+   "value": "Estimated: May follow standard federal holiday calendar; likely limited formal shutdowns beyond traditional holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "684d322890"
+   ],
+   "value": "Established regional wholesale bank."
   },
   "sources": [
    {
@@ -75871,14 +76246,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=e51334be467da95ab4bc97eec34baf3499ffdb7ea8d4de0be169b1386afedadbJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=248b06f2-01fc-6a8d-2cac-116f00e36b12&u=a1aHR0cHM6Ly9naXRodWIuY29tLzB4azFoMC9DaGF0R1BUX0RBTg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "684d322890",
+    "dbc3b9e88f"
+   ],
+   "value": "FHLBank Topeka is a Federal Home Loan Bank that provides liquidity and funding to member financial institutions. It makes money by issuing debt in the capital markets and lending those funds to members at a spread."
+  },
+  "synthesized_evidence_sha": "e3a2e8e3a963f94b",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "684d322890"
+   ],
+   "value": "Generate analyses and reporting of the sensitivity of the FHLBank’s market risk measurement metrics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672886,
   "web_search_url": "https://duckduckgo.com/?q=FHLBank+Topeka+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Strongly aligns with the candidate's need for sane hours, guaranteed shutdowns, and a mission-driven organization that respects work-life balance. However, a regional bank may lack the elite prestige, fast-paced innovative tech culture, and high new-grad pay the candidate desires."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "684d322890"
+   ],
+   "value": "Estimated: High. Traditional regional banks typically offer good work-life balance and manageable hours."
   }
  },
  "fidelity international": {
@@ -136780,41 +137183,108 @@
  "morgan stanley": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "0177856b09",
+    "ffb1ce2200"
+   ],
+   "value": "Estimated: Top-tier within the financial sector, though not generally classified as a tier-1 innovative tech culture compared to leading tech companies."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "0177856b09",
+    "ffb1ce2200"
+   ],
+   "value": "Global financial services firm generating revenue through asset management fees, institutional trading, and financial advisory services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "ffb1ce2200"
+   ],
+   "value": "Mission-driven and client-first with a focus on community and employee support, but traditional and corporate within the high-stakes financial sector."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "ffb1ce2200"
+   ],
+   "value": "Individual investors, corporations, governments, and institutional clients across 42 countries."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "0177856b09"
+   ],
+   "value": "Estimated: $80K - $100K base salary for entry-level data roles, with potential for bonuses typical in the financial sector to supplement total compensation."
   },
   "evidence_sha": "57796ec6dd63d91e",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784748506,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784742126,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0177856b09",
+    "ffb1ce2200"
+   ],
+   "value": "Financial Services / Investment Management"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0177856b09",
+    "ffb1ce2200"
+   ],
+   "value": "Prepare to probe deeply into the team's specific tech stack and deployment cycles to ensure the group operates like a fast, innovative tech unit rather than a slow, bureaucratic cost-center. Ask explicit questions about average working hours, weekend expectations, and on-call policies to verify if their claimed work-life balance aligns with your need for sane hours."
+  },
+  "last_attempt_at": 1784748506,
   "last_evidence_at": 1784732392,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "0177856b09",
+    "ffb1ce2200"
+   ],
+   "value": "1,200 offices across 42 countries, including Dallas, TX and Boston, MA for specific data and quant roles."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "ffb1ce2200"
+   ],
+   "value": "To do what's best for clients and communities by putting clients first, doing the right thing, leading with exceptional ideas, committing to diversity and inclusion, and giving back."
+  },
   "name": "Morgan Stanley",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "0177856b09",
+    "ffb1ce2200"
+   ],
+   "value": "Estimated: Fast-paced and demanding, driven by financial market hours and client needs, which may feature bureaucratic bottlenecks rather than the agile tech culture you prefer."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "0177856b09",
+    "ffb1ce2200"
+   ],
+   "value": "Institutional securities sales and trading, wealth management, investment management, and quantitative portfolio management."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days annually, typical for large financial institutions, though exact policies vary."
   },
+  "refresh_after": 1789932506,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -136824,7 +137294,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed firm-wide shutdowns, though standard bank holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "0177856b09",
+    "ffb1ce2200"
+   ],
+   "value": "Large enterprise with over 80,000 employees and 1,200 offices globally; founded in 1935."
   },
   "sources": [
    {
@@ -136888,14 +137366,50 @@
     "url": "https://ms.wd5.myworkdayjobs.com/External/job/Boston-Massachusetts-United-States-of-America/MSIM--Emerging-Markets--Quantitative-Portfolio-Analyst_JR034714"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "0177856b09",
+    "ffb1ce2200"
+   ],
+   "value": "Has a track record of offering H1B sponsorships and supporting employees throughout their work-life journey, though sponsorship is not guaranteed for every role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "0177856b09",
+    "ffb1ce2200"
+   ],
+   "value": "Morgan Stanley is a global leader in financial services, providing investment management, wealth management, and institutional securities services. It makes money by charging fees for managing client assets, advising on mergers and acquisitions, and executing trades."
+  },
+  "synthesized_evidence_sha": "57796ec6dd63d91e",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "0177856b09",
+    "ffb1ce2200"
+   ],
+   "value": "Roles include data analysis, quantitative portfolio management, and technical innovation aimed at supporting financial services and client solutions."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674267,
   "web_search_url": "https://duckduckgo.com/?q=Morgan+Stanley+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0177856b09",
+    "ffb1ce2200"
+   ],
+   "value": "You are seeking an elite, fast-paced AI role with great new-grad pay and work-life balance. Morgan Stanley is a prestigious institution, but as a massive legacy financial firm, it inherently carries bureaucratic processes and demanding financial industry hours that may conflict with your desire for a fast, highly innovative tech culture or guaranteed shutdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "0177856b09",
+    "ffb1ce2200"
+   ],
+   "value": "Estimated: Moderate to low, as financial services typically require long hours; the company claims to offer comprehensive benefits to support work-life balance, but actual hours may be intensive without guaranteed shutdowns."
   }
  },
  "morris health technologies inc": {
@@ -147611,104 +148125,107 @@
   "ai_ds_prestige_tier": {
    "confidence": "high",
    "source_ids": [
-    "f6fa431ced",
     "197d20b440"
    ],
-   "value": "Tier 1 - NVIDIA is widely regarded as an essential AI company, occupying a dominant position in the industry second to none. It is considered elite due to its central role as the hardware engine powering the modern AI revolution."
+   "value": "Tier 1 - The dominant industry leader in AI hardware and infrastructure, making its mark on every GPU produced globally."
   },
   "aliases": [],
-  "attempts": 17,
+  "attempts": 18,
   "business_model": {
    "confidence": "high",
    "source_ids": [
     "ff09a3aa14",
-    "f6fa431ced"
+    "197d20b440"
    ],
-   "value": "Generates revenue through the sale of high-performance GPU hardware, networking equipment, and system-on-chip products, combined with licensing and selling specialized software and development ecosystems. A recurring theme is using industry-leading hardware as a foundation, enhanced by proprietary, highly optimized internal software tools."
+   "value": "Builds industry-leading hardware and combines the best of external EDA with highly optimized internal tools, pairing cutting-edge GPUs with proprietary compilers and software ecosystems to power AI, deep learning, and autonomous systems."
   },
   "culture_vibe": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "197d20b440",
     "f6fa431ced"
    ],
-   "value": "Intellectual, militant, deeply technical, and collaborative. The tone is mission-driven with teams of brilliant, hardworking people aiming to solve imposing problems in cutting-edge fields, balanced by policies that provide a safety net against burnout."
+   "value": "A mission-driven environment populated by brilliant and hardworking people, focused on growing rapidly while maintaining a culture of elite technical innovation."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "f6fa431ced",
-    "197d20b440"
+    "197d20b440",
+    "f6fa431ced"
    ],
-   "value": "Serves a diverse range of enterprises: cloud providers, data center operators, automotive manufacturers for self-driving cars, game developers, professional visualization studios, and AI research institutions. Individuals also purchase GeForce gaming GPUs."
+   "value": "A broad base of enterprise technology companies, AI researchers, automotive manufacturers, and developers working on the hottest state-of-the-art fields such as virtual reality, AI, deep learning, and autonomous vehicles."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $170,000 to $220,000 annually in total compensation for a new-grad engineering role in Santa Clara. This typically consists of a highly competitive base salary (around $130k-$160k), an annual bonus, and a substantial multi-year RSU equity grant with early vesting."
+   "source_ids": [
+    "af7e7615f7",
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Elite top-tier new-grad pay ranging from $180,000 to $230,000 total compensation (base + equity) for technical roles."
   },
   "evidence_sha": "7eca5291784d4cc5",
-  "generated_at": 1784680912,
+  "generated_at": 1784748506,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "f6fa431ced",
-    "197d20b440"
+    "197d20b440",
+    "f6fa431ced"
    ],
-   "value": "Semiconductors and Accelerated Computing, with deep integration into Artificial Intelligence, Autonomous Vehicles, and Computer Graphics."
+   "value": "Artificial Intelligence Hardware and Software / Deep Learning / Semiconductors"
   },
   "interview_focus": {
-   "confidence": "medium",
-   "source_ids": [
-    "ff09a3aa14",
-    "197d20b440"
-   ],
-   "value": "Will assess deep algorithmic knowledge in areas like RTL synthesis and multi-stage logic optimization, or compiler infrastructure and developer toolchain productivity. Expect rigorous coding, system design, and domain-specific problem-solving, balanced with culture-add questions checking for mission alignment and the ability to work with brilliant, hardworking teams."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
-  "last_attempt_at": 1784748360,
+  "last_attempt_at": 1784748506,
   "last_evidence_at": 1784732707,
   "locations": {
    "confidence": "high",
    "source_ids": [
     "ff09a3aa14",
-    "197d20b440",
-    "f6fa431ced"
+    "197d20b440"
    ],
-   "value": "Global presence; the sourced new-grad roles are located in Santa Clara, California, which is a primary corporate headquarters site."
+   "value": "US-CA-Santa-Clara (HQ) and globally distributed technical hubs."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
     "f6fa431ced"
    ],
-   "value": "To pioneer a computing model dedicated to visual and AI computing, with GPU technology serving as the brains of computers, robots, and self-driving cars that perceive and understand the world."
+   "value": "Dedicated to a computing model focused on visual and AI computing, simulating human intelligence to act as the brain of computers, robots, and self-driving cars that can perceive and understand the world."
   },
   "name": "NVIDIA",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Intense and very fast-paced with ambitious product deadlines tied to industry 'state of the art' fields. However, work is driven by technical mission and passion rather than facetime or bureaucratic process, permitting flexibility around individual working styles."
+   "source_ids": [
+    "197d20b440",
+    "f6fa431ced"
+   ],
+   "value": "Estimated: Fast-paced and highly innovative culture, actively avoiding slow bureaucracy, focused on rapidly growing some of the hottest tech fields."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "f6fa431ced",
-    "197d20b440"
+    "ff09a3aa14",
+    "197d20b440",
+    "f6fa431ced"
    ],
-   "value": "Graphics Processing Units (GPUs) like GeForce and Quadro, data center accelerators (Tesla), networking interconnects (Mellanox), system-on-chip designs (Tegra), and CUDA software for AI and high-performance computing. Products power virtual reality, deep learning, autonomous vehicles, and computer graphics."
+   "value": "GPUs, internal and external EDA tools, deep learning algorithms, compute compilers aligned with open-source ecosystems, and AI brains for robots and self-driving cars."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Flexible PTO policy common at elite tech companies, typically translating to around 15-20 days of annual vacation for new hires, with an expectation of actual usage."
+   "value": "Estimated: 15-20 days of standard PTO, plus holidays."
   },
+  "refresh_after": 1789932506,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -147718,12 +148235,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Formal company-wide week-long shutdowns, likely around July 4th and a longer winter week break, are a known and respected cultural norm that is not 'optional'."
+   "value": "Estimated: Typically features holiday closures and occasional shutdown days, though specific guaranteed shutdowns are not explicitly publicized."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Large-cap, publicly traded mega-cap technology company with a market capitalization exceeding one trillion dollars, experiencing rapid growth fueled by the AI boom."
+   "confidence": "high",
+   "source_ids": [
+    "197d20b440",
+    "f6fa431ced"
+   ],
+   "value": "A large, rapidly growing, industry-dominating public technology company that states its product lines are growing fast and teams are expanding with top talent."
   },
   "sources": [
    {
@@ -147778,19 +148298,23 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "As a premier U.S. technology employer that regularly fills specialized new-grad roles, NVIDIA is expected to routinely sponsor H-1B visas, permanent residency, and other work authorization for highly specialized technical candidates."
+   "confidence": "medium",
+   "source_ids": [
+    "f6fa431ced"
+   ],
+   "value": "NVIDIA actively recruits and sponsors top technical talent globally, fueling its rapid growth."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "f6fa431ced",
-    "197d20b440"
+    "ff09a3aa14",
+    "197d20b440",
+    "f6fa431ced"
    ],
-   "value": "NVIDIA is a pioneer in accelerated computing, having invented the GPU and now building platforms that power artificial intelligence, deep learning, and the metaverse. The company designs and sells GPUs, networking hardware, and full-stack software for data centers, gaming, professional visualization, and automotive applications, generating revenue primarily from hardware sales and software ecosystems."
+   "value": "NVIDIA is a foundational technology company that pioneered the GPU and focuses on visual, AI, and deep learning computing. They make money by designing and selling high-performance hardware and developing the internal and external software ecosystems required to run complex workloads."
   },
+  "synthesized_evidence_sha": "7eca5291784d4cc5",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
@@ -147798,20 +148322,20 @@
     "197d20b440",
     "f6fa431ced"
    ],
-   "value": "Roles span RTL logic synthesis for optimizing digital logic and power, compiler infrastructure engineering with a focus on open-source alignment and developer productivity, and building hardware tools for GPU advancements. Work directly impacts AI, deep learning, autonomous vehicles, and virtual reality."
+   "value": "New grads work on highly optimized internal EDA tools, RTL logic synthesis algorithms, and compiler infrastructure aligned with open-source ecosystems. Work impacts every GPU produced and spans AI, deep learning, and autonomous vehicle projects."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784580766,
   "web_search_url": "https://duckduckgo.com/?q=NVIDIA+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "Fits the candidate's need for a top-tier AI/data science role at an elite company with high new-grad pay, while providing an innovation-focused culture that serves as an alternative to slower, bureaucratic organizations. NVIDIA's founder-led engineering culture is known to balance its high-intensity pace with a mission-driven focus and a respect for personal time."
+   "value": "Not confirmed"
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Average to good for its tier. While the engineering pace is demanding, the culture does not glorify burnout and supports a sustainable routine with periodic rest. Scheduled shutdowns make planned time off truly detached."
+   "value": "Estimated: Moderate-to-High. A fast technical pace but typically sane hours within a company culture that emphasizes technical excellence rather than toxic high-burnout crunch."
   }
  },
  "nvidia ai": {
