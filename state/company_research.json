@@ -25351,11 +25351,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -25367,6 +25369,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784684641,
   "last_evidence_at": 1784675870,
   "name": "BCforward",
   "pace_of_work": {
@@ -27776,39 +27779,100 @@
  },
  "blackrock": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "ca35ca1d16"
+   ],
+   "value": "Elite (top-tier financial institution expanding aggressively into AI/tech; the scale of proprietary data and impact commands a very high level of prestige, comparable to leading big tech AI jobs)."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "ca35ca1d16"
+   ],
+   "value": "Earns revenue primarily through investment advisory and administration fees, which are typically a percentage of assets under management, and through licensing and service fees for its Aladdin technology platform."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "ca35ca1d16"
+   ],
+   "value": "Mission-driven, principled, and grounded in collective responsibility to clients. The vibe is professional, inclusive, and intellectually curious, with emphasis on being fiduciary partners rather than solely profit-driven traders."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "ca35ca1d16"
+   ],
+   "value": "Institutional and individual investors globally, including pension funds, governments, corporations, and financial advisors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $280,000 USD total annual compensation range for an elite AI or data scientist new graduate based in a high-cost technology hub. This is composed of a base salary plus a discretionary year-end bonus."
   },
   "evidence_sha": "dec2fea7660ea6ec",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784684641,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ca35ca1d16"
+   ],
+   "value": "Financial Services (Asset Management and Financial Technology)."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "ca35ca1d16"
+   ],
+   "value": "Expect a rigorous process that balances elite technical screening in AI and data science fundamentals with a strong culture fit assessment centered on its principles. Candidates should demonstrate high-impact problem-solving skill while articulating a desire for a balanced, collaborative environment over a high-burnout, move-fast-and-break-things startup culture."
+  },
+  "last_attempt_at": 1784684641,
   "last_evidence_at": 1784672017,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "ca35ca1d16"
+   ],
+   "value": "Global office network with a principal executive office in New York City and significant tech hubs in London, Edinburgh, San Francisco, and Gurgaon, among others, as part of operations across more than 30 countries."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "ca35ca1d16"
+   ],
+   "value": "To help everyone experience financial well-being by serving as a fiduciary to its clients, acting as both an asset manager and a leading provider of financial technology."
+  },
   "name": "BlackRock",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "ca35ca1d16"
+   ],
+   "value": "Estimated: Structured and steady. Pace is driven by market hours and project milestones rather than the frantic, reactive intensity of a consumer startup. Innovation within large data sets and platforms is expected but executed with rigor."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "ca35ca1d16"
+   ],
+   "value": "Investment management services (active, passive, alternatives) and the Aladdin financial technology platform, which integrates risk analysis and portfolio management tools for institutional investors."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 24 days, a standard and competitive policy for large financial services firms in a new-grad's first three years, combining vacation and personal days."
   },
+  "refresh_after": 1789868641,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -27818,7 +27882,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed shutdown days are observed for all major U.S. public holidays and the end-of-year week (December week during Christmas and New Year's), mimicking standard financial institution protection."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "392ffd6de1",
+    "ca35ca1d16"
+   ],
+   "value": "Very large, global, publicly traded, established enterprise with approximately $11.5 trillion in assets under management (estimated for period end 2025)."
   },
   "sources": [
    {
@@ -27852,14 +27924,43 @@
     "url": "https://careers.blackrock.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "ca35ca1d16"
+   ],
+   "value": "BlackRock is the world's largest asset manager and a leading provider of financial technology. It helps a wide range of clients invest money across various asset classes, offering both investment management and the Aladdin technology platform that underpins portfolio decision-making."
+  },
+  "synthesized_evidence_sha": "dec2fea7660ea6ec",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "ca35ca1d16"
+   ],
+   "value": "AI and data science teams at BlackRock work on algorithmic strategies, risk modeling, natural language processing for investment insights, and enhancing the Aladdin platform through machine learning engineering and data engineering at scale."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672017,
   "web_search_url": "https://duckduckgo.com/?q=BlackRock+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "ca35ca1d16"
+   ],
+   "value": "For a candidate seeking elite prestige and fast tech innovation without toxic burnout, BlackRock offers a rarity: a stable finance giant investing heavily in AI and financial technology. Its mission-driven culture and established firm boundaries provide the 'sane hours' and regular shutdowns a top-tier AI role demands."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "ca35ca1d16"
+   ],
+   "value": "Estimated: 4 out of 5. Strong focus on personal responsibility and wellness is communicated; predictable financial market schedules and a mature operating model reinforce boundaries, though critical production support for technology platforms can require occasional out-of-hours work."
   }
  },
  "blackstone": {
@@ -54351,11 +54452,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -54367,6 +54470,7 @@
    "source_ids": [],
    "value": "Ai Lab / technology (estimated)"
   },
+  "last_attempt_at": 1784684641,
   "last_evidence_at": 1784583369,
   "name": "Databricks",
   "pace_of_work": {
@@ -58937,37 +59041,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Top-tier consumer tech (silicon valley elite peer), comparable to Uber, Airbnb, or Stripe in talent market recognition for AI and data roles."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "286645cb50",
+    "9f25e22691"
+   ],
+   "value": "DoorDash generates revenue by charging commissions to merchants on each order, delivery and service fees to consumers, and subscription fees from DashPass members. Drivers receive a portion of the delivery fees, with the company retaining a margin on each transaction."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Data-driven, entrepreneurial, and operationally focused. Engineering culture balances autonomy with cross-functional collaboration, and leadership promotes values like 'Make Room at the Table' and 'One Team One Fight,' with a bias for action and operational rigor."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "286645cb50",
+    "9f25e22691"
+   ],
+   "value": "The platform serves three-sided marketplace participants: consumers placing delivery orders, local businesses ranging from restaurants to convenience stores, and independent Dashers who fulfill deliveries. Consumers are the company's most directly marketed user base."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $160,000 - $205,000 total annual first-year compensation, including base, equity, and estimated performance bonus, for high-demand AI/data science new-grad roles in San Francisco."
   },
   "evidence_sha": "ea2dd874e4e82e12",
+  "generated_at": 1784684641,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "286645cb50"
+   ],
+   "value": "On-demand delivery, local logistics, and food-tech / marketplace"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "A DoorDash AI or data science interview process emphasizes hands-on problem-solving, case studies rooted in logistics and marketplace dynamics, and robust coding or architecture design. Candidates should expect deep dives into experimentation, A/B testing, ML system design, and behavioral interviews that test collaboration and autonomy."
   },
+  "last_attempt_at": 1784684641,
   "last_evidence_at": 1784675351,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "286645cb50"
+   ],
+   "value": "Headquarters in San Francisco, CA, with major engineering offices in the Bay Area and distributed presence in other U.S. cities including Seattle, New York, and Los Angeles, as well as international locations."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "286645cb50"
+   ],
+   "value": "DoorDash aims to grow and empower local economies by connecting consumers with businesses and Dashers through reliable, efficient technology."
+  },
   "name": "DoorDash",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast and iterative, with weekly product cycles and a high ownership standard. While pace can be intense around big launches, engineering culture emphasizes sustainable speed over constant crunch and has instituted recurring resets."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "286645cb50",
+    "9f25e22691"
+   ],
+   "value": "DoorDash offers an online marketplace and mobile app for delivery from restaurants, grocery stores, and retail stores. The platform also includes DashPass (a subscription offering free delivery and reduced fees), white-label fulfillment for merchants, and a suite of tools for restaurants to manage online orders."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Flexible/discretionary PTO with typical annual usage expected between 15 and 20 days"
   },
+  "refresh_after": 1789868641,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -58977,7 +59137,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual summer and winter end-of-year company-wide shutdowns, as well as periodic monthly recharge or monthly mental-health days established in certain teams."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "286645cb50"
+   ],
+   "value": "Public company (NYSE: DASH) with thousands of employees operating in more than 25 countries. Financials show growing annual revenue in the billions and a large market capitalization, placing it in the mature, large-cap stage."
   },
   "sources": [
    {
@@ -59001,14 +59168,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=fee72a370eca5fb2710d6cd5752c3f2b2fd4bf17cffb319f07647e30d01ec29cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=03c602d4-0670-6465-2e80-154907296505&u=a1aHR0cHM6Ly93d3cuZG9vcmRhc2guY29tLz9tc29ja2lkPTAzYzYwMmQ0MDY3MDY0NjUyZTgwMTU0OTA3Mjk2NTA1&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "286645cb50"
+   ],
+   "value": "As a U.S.-based public technology company, DoorDash typically sponsors employment visas (H-1B, etc.) and permanent residence for qualifying technical roles, though policies are team-specific and subject to business need."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "286645cb50",
+    "9f25e22691"
+   ],
+   "value": "DoorDash is a logistics platform that connects consumers with local businesses for on-demand delivery. Customers order food, groceries, and retail items through a mobile app, and independent contractors ('Dashers') fulfill those deliveries."
+  },
+  "synthesized_evidence_sha": "ea2dd874e4e82e12",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "286645cb50"
+   ],
+   "value": "Technical work spans data science, machine learning, and AI applied to logistics optimization, demand forecasting, personalization, fraud detection, and real-time dispatch algorithms. Engineers and data scientists work on core platform infrastructure, search ranking, pricing models, and Dasher efficiency."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675351,
   "web_search_url": "https://duckduckgo.com/?q=DoorDash+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "DoorDash offers a strong blend of elite tech compensation, a recognized brand, and real-world AI applied at massive scale. The culture is known for faster decision-making and lower bureaucracy relative to older tech giants, and the company has implemented structured approaches to downtime that support work-life balance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Above average for high-growth tech, with dedicated no-meeting time, team-level flexible hours, and periodic enforced shutdowns that protect rest."
   }
  },
  "dotdash": {
@@ -131652,7 +131847,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -131670,7 +131865,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784684549,
+  "last_attempt_at": 1784684641,
   "last_evidence_at": 1784677183,
   "name": "Nidec",
   "pace_of_work": {
@@ -174496,7 +174691,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -174538,7 +174733,7 @@
    ],
    "value": "Technical skills in AI research, agents, and reinforcement learning, with emphasis on innovation and problem-solving in a fast-paced environment."
   },
-  "last_attempt_at": 1784684549,
+  "last_attempt_at": 1784684641,
   "last_evidence_at": 1784656820,
   "locations": {
    "confidence": "unknown",
@@ -188952,7 +189147,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -188968,7 +189163,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -188994,7 +189189,7 @@
    ],
    "value": "Probe whether the 'dynamic team' and 'exciting environment' translate to true technical learning and career growth for AI/Data Science work, or if the highly structured nature of defense/aerospace solutions will conflict with the desire to avoid slow bureaucracy."
   },
-  "last_attempt_at": 1784452911,
+  "last_attempt_at": 1784684641,
   "last_evidence_at": 1784674726,
   "locations": {
    "confidence": "high",
@@ -216980,7 +217175,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -216998,7 +217193,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784684549,
+  "last_attempt_at": 1784684641,
   "last_evidence_at": 1784675869,
   "name": "Zip",
   "pace_of_work": {
