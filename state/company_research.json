@@ -45993,11 +45993,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -46009,6 +46011,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784797128,
   "last_evidence_at": 1784677043,
   "name": "Cellular Sales",
   "pace_of_work": {
@@ -60101,7 +60104,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -60119,7 +60122,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784796959,
+  "last_attempt_at": 1784797128,
   "last_evidence_at": 1784643844,
   "name": "Cresta",
   "pace_of_work": {
@@ -69151,11 +69154,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -69167,6 +69172,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784797128,
   "last_evidence_at": 1784677533,
   "name": "Disney",
   "pace_of_work": {
@@ -108877,40 +108883,90 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Respected applied AI/autonomy within defense (DARPA/ONR partnerships, unmanned fleets), but not a primary AI research lab; publications and open-source contributions are limited by classification."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "b5e301845c"
+   ],
+   "value": "Prime defense contractor model: long-term cost-plus and fixed-price-incentive contracts for ship construction (multi-year procurement), plus sustainment/maintenance contracts and technology services. Revenue ~$11.5B (FY2023), heavily U.S. government funded."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, patriotic, process-oriented. Strong craft/union culture at shipyards; Mission Technologies feels more like a tech contractor (collaborative, less hierarchical). Diversity initiatives growing but workforce skews traditional. 'Shipbuilders' identity dominates — pride in tangible hardware."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "b5e301845c"
+   ],
+   "value": "Primary customer is the U.S. Navy; also serves U.S. Coast Guard, allied navies (via FMS), and other U.S. defense/intelligence agencies through Mission Technologies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$105,000 base + 5-10% annual bonus + RSU (vesting 3-4 yrs) + relocation. Total first-year ~$95k-$115k. Varies by location (DC/CA higher) and clearance level."
   },
   "evidence_sha": "2ad9820fbd7a4ed2",
+  "generated_at": 1784797128,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b5e301845c"
+   ],
+   "value": "Defense / Shipbuilding / Aerospace & Defense Technology"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect behavioral questions on collaboration in regulated environments, technical depth in your specialty (ML ops, autonomy, cyber, digital twin), and clearances/citizenship verification. Prepare for: 'How do you handle shifting requirements on a 5-year program?', 'Describe a time you balanced innovation with safety/compliance.', and domain-specific coding/architecture exercises. Ask about: AI/autonomy roadmap in Mission Technologies, digital shipbuilding tooling, 9/80 schedule reality, and clea"
   },
-  "last_attempt_at": 1784796959,
+  "last_attempt_at": 1784797128,
   "last_evidence_at": 1784676848,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "b5e301845c"
+   ],
+   "value": "Headquarters: McLean, VA. Major shipyards: Newport News, VA (aircraft carriers/submarines) and Pascagoula, MS (surface combatants/amphibs). Mission Technologies hubs: VA, MD, CA, FL, AL, and remote-eligible roles."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "b5e301845c"
+   ],
+   "value": "To build and deliver the world's most capable ships and all-domain defense technologies that protect national security and advance freedom worldwide."
+  },
   "name": "Huntington Ingalls Industries",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate-Slow — Multi-year ship programs and DoD acquisition cycles enforce rigorous V&V, configuration management, and milestone reviews. Mission Technologies moves faster (agile sprints, prototype-to-field), but still gated by security and compliance."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "b5e301845c"
+   ],
+   "value": "Nuclear-powered aircraft carriers (Gerald R. Ford class), Virginia-class and Columbia-class submarines, Arleigh Burke-class destroyers, amphibious assault ships, national security cutters, and Mission Technologies solutions including unmanned systems, cyber, AI/ML, and fleet sustainment services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days annual leave + 10 federal holidays + 5 sick days (accrual increases with tenure). New hires typically start at 15 days PTO."
   },
+  "refresh_after": 1789981128,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -108920,7 +108976,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No guaranteed company-wide shutdowns. Some sites observe reduced ops between Christmas/New Year (few days) but not policy."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "b5e301845c"
+   ],
+   "value": "Public company (NYSE: HII), ~44,000 employees (2023), mature/large-cap defense industrial base incumbent with two major shipyards and a growing technology services division."
   },
   "sources": [
    {
@@ -108954,14 +109017,39 @@
     "url": "https://careers.huntingtoningalls.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "H-1B sponsor (cap-subject) for specialized engineering/tech roles; many positions require U.S. citizenship and ability to obtain Secret/Top Secret clearance due to defense work. Green card sponsorship possible for critical skills but clearance eligibility is the primary filter."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "b5e301845c"
+   ],
+   "value": "Huntington Ingalls Industries (HII) is America's largest military shipbuilder and a major defense technology provider, designing, building, and maintaining nuclear-powered aircraft carriers, submarines, and surface combatants for the U.S. Navy and Coast Guard. It operates through three segments: Ingalls Shipbuilding, Newport News Shipbuilding, and Mission Technologies."
+  },
+  "synthesized_evidence_sha": "2ad9820fbd7a4ed2",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "b5e301845c"
+   ],
+   "value": "Naval architecture, nuclear engineering, mechanical/electrical/systems engineering, digital shipbuilding (MBSE, digital twins), unmanned/autonomous systems, cybersecurity, AI/ML for ISR and predictive maintenance, software-defined warfare, advanced manufacturing (additive, robotics)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676848,
   "web_search_url": "https://duckduckgo.com/?q=Huntington+Ingalls+Industries+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "HII offers mission-driven work at massive scale — your code sails on carriers and submarines defending the nation. The Mission Technologies division is investing heavily in AI, autonomy, and digital engineering, creating elite technical challenges. However, it remains a defense prime: clearance requirements, export controls, and program governance create bureaucracy that slows iteration vs. pure tech firms. Work-life balance is generally respected (9/80 schedules common, limited mandatory overti"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "7/10 — 9/80 compressed schedule (every other Friday off) standard at shipyards; Mission Technologies often offers flex/remote. Limited mandatory overtime; surge periods around ship deliveries or contract milestones can require 50-60 hr weeks for weeks at a time. No company-wide shutdowns."
   }
  },
  "huntington national bank": {
@@ -154809,7 +154897,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -154827,7 +154915,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784796959,
+  "last_attempt_at": 1784797128,
   "last_evidence_at": 1784643844,
   "name": "Nextdoor",
   "pace_of_work": {
@@ -173099,11 +173187,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -173115,6 +173205,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
+  "last_attempt_at": 1784797128,
   "last_evidence_at": 1784675467,
   "name": "Plaid",
   "pace_of_work": {
@@ -233478,42 +233569,106 @@
  },
  "uncountable": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "df0ef47a65"
+   ],
+   "value": "Top-tier: Building production LLM applications for Fortune 500 scientific R&D; direct impact on AI-first platform transformation; publishes and deploys at the frontier of generative AI in science."
   },
   "aliases": [],
-  "attempts": 4,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 5,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac30dfee33",
+    "df0ef47a65"
+   ],
+   "value": "SaaS platform subscription for R&D organizations; likely tiered pricing for SMB, mid-market, and enterprise (Fortune 500) customers."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac30dfee33",
+    "df0ef47a65",
+    "be7b27b404"
+   ],
+   "value": "Engineering-centric, science-respecting, collaborative across functions (engineers work closely with scientists), pragmatic innovation over hype, low bureaucracy, high ownership."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "ac30dfee33",
+    "df0ef47a65"
+   ],
+   "value": "World-leading chemists, material scientists, and biologists; Fortune 500 companies; SMB and mid-market accounts in scientific R&D."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140k–$170k base + equity (top-tier for scientific AI/ML roles); competitive with AI labs and top SaaS."
   },
   "evidence_sha": "489831a065e8e058",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784797128,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784796959,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ac30dfee33",
+    "df0ef47a65"
+   ],
+   "value": "SaaS / Scientific Software / AI for R&D / Materials Informatics"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "df0ef47a65",
+    "be7b27b404"
+   ],
+   "value": "Expect deep technical assessments: full-stack system design, LLM deployment challenges (RAG, eval, latency), Python data pipeline engineering, and scientific domain fluency. Prepare to discuss trade-offs in building AI tools for non-technical scientists, handling messy real-world R&D data, and scaling for enterprise. Behavioral focus on cross-functional collaboration with researchers, owning end-to-end features, and balancing speed with reliability in a regulated-adjacent domain."
+  },
+  "last_attempt_at": 1784797128,
   "last_evidence_at": 1784677287,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "df0ef47a65"
+   ],
+   "value": "Hybrid roles indicated; headquarters likely in San Francisco Bay Area (common for Ashby-hosted jobs), but remote/hybrid flexibility suggested."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "ac30dfee33"
+   ],
+   "value": "Accelerate how new products are discovered, developed, and brought to market by giving scientists tools that keep up with their brilliance."
+  },
   "name": "Uncountable",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast, innovative tech culture — startup speed with enterprise-grade reliability demands; iterative shipping for AI features, but disciplined engineering for regulated-adjacent scientific workflows."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "ac30dfee33",
+    "df0ef47a65",
+    "be7b27b404"
+   ],
+   "value": "Unified R&D platform for scientific data management, experiment tracking, and collaboration; AI-first features including LLM applications for generative AI in research; data engineering tools for ETL pipelines and data transformation."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + holidays; typical for well-funded growth-stage tech companies."
   },
+  "refresh_after": 1789981128,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -233523,7 +233678,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns publicized; likely observes standard US holidays and flexible time off."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac30dfee33",
+    "df0ef47a65",
+    "be7b27b404"
+   ],
+   "value": "Growth-stage startup serving Fortune 500 clients; exact headcount not public but hiring across engineering, data, and support roles."
   },
   "sources": [
    {
@@ -233587,14 +233751,45 @@
     "url": "https://jobs.ashbyhq.com/uncountable/48cbdfbc-c377-49bd-b39b-4c2d77357135"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "ac30dfee33",
+    "df0ef47a65"
+   ],
+   "value": "Uncountable builds a unified R&D platform that helps chemists, material scientists, and biologists accelerate product discovery and development. The platform serves Fortune 500 companies and SMB customers, and the company is actively transforming it into an AI-first ecosystem using generative AI."
+  },
+  "synthesized_evidence_sha": "489831a065e8e058",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "df0ef47a65",
+    "be7b27b404"
+   ],
+   "value": "Full-stack engineering, LLM/AI application development, Python data engineering, ETL pipeline construction, scientific data transformation, platform scaling for enterprise customers."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677287,
   "web_search_url": "https://duckduckgo.com/?q=Uncountable+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "ac30dfee33",
+    "df0ef47a65",
+    "be7b27b404"
+   ],
+   "value": "Uncountable offers a rare blend: elite AI/data science work transforming a scientific R&D platform into an AI-first ecosystem for Fortune 500 clients, with a mission to accelerate real-world discovery. The hybrid, engineering-focused culture suggests fast innovation without the bureaucracy of big tech, while the domain (scientific R&D) provides meaningful impact. For a new grad prioritizing prestige, pay, learning velocity, and work-life balance, this hits all marks — high technical bar, direct "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Strong — hybrid model, mission-driven but not heroic-culture; scientific domain attracts pragmatic engineers; no public signals of crunch or burnout."
   }
  },
  "uneekor": {
@@ -236665,7 +236860,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -236683,7 +236878,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784796959,
+  "last_attempt_at": 1784797128,
   "last_evidence_at": 1784675132,
   "name": "University of Texas - Austin",
   "pace_of_work": {
