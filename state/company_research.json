@@ -2166,7 +2166,7 @@
    "value": "High. Accenture is a brand-name 'Tier 2' innovator widely recognized for scaled AI implementation and consultancy breadth, carrying strong industry prestige, though it sits just below the elite pure-product research labs."
   },
   "aliases": [],
-  "attempts": 10,
+  "attempts": 11,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -2215,7 +2215,7 @@
    "source_ids": [],
    "value": "Candidates should expect rigorous questioning on advanced SQL, Python, and applied modeling, plus scenario-driven consultancy techniques. Equally probe how managers set scope and distribute workload during government project sprints to confirm environments that respect shutdowns and deep learning time rather than high-burnout hero worship."
   },
-  "last_attempt_at": 1784837296,
+  "last_attempt_at": 1784837457,
   "last_evidence_at": 1784826805,
   "locations": {
    "confidence": "high",
@@ -3133,37 +3133,102 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "High — elite technical team, publications, conference presence, complex real-world ML deployment in healthcare. Recognized in medtech AI niche; not a household name like FAANG but respected among practitioners."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "41ed15460f",
+    "8b425c51e3",
+    "1bbfb56906"
+   ],
+   "value": "B2B SaaS subscription model selling annual contracts to medical device companies. Pricing based on number of users, modules, and data scope. High retention driven by workflow integration into sales and marketing operations."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, intellectually honest, low-ego. Engineers respect clinical complexity. Transparent leadership (regular AMAs, shared metrics). Diverse team (many PhDs, ex-FAANG, ex-academia). Social but not forced. 'Build cool stuff that matters' energy."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "41ed15460f",
+    "8b425c51e3",
+    "1bbfb56906"
+   ],
+   "value": "Medical device manufacturers (medtech companies) ranging from large enterprises to emerging startups, including orthopedic, cardiovascular, spine, and surgical robotics companies. Sales, marketing, and market access teams use the platform for commercial strategy."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140k-170k base + equity (0.05-0.15%) + bonus ~10-15% → ~$170k-220k TC. Competitive with top-tier Series B/C, below FAANG peak but with better WLB and faster growth trajectory."
   },
   "evidence_sha": "761a8987ffcfa1aa",
+  "generated_at": 1784837457,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "41ed15460f",
+    "8b425c51e3",
+    "1bbfb56906"
+   ],
+   "value": "Healthcare technology / Medtech commercial intelligence / B2B SaaS"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect: (1) Data engineering depth — pipeline design, quality, scale; (2) ML/applied modeling — not just algorithms but evaluation, deployment, monitoring in a regulated-adjacent domain; (3) Product sense — how does your work help a sales rep prioritize a surgeon?; (4) Collaboration — cross-functional with sales, customer success, clinicians. Prepare for take-home or live coding on realistic data problems, not LeetCode puzzles. Ask about: data freshness SLAs, model retraining cadence, how engine"
+  },
+  "last_attempt_at": 1784837457,
   "last_evidence_at": 1784655990,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "41ed15460f",
+    "8b425c51e3",
+    "1bbfb56906"
+   ],
+   "value": "Headquartered in Boston, MA. Hybrid-friendly with office hubs in Boston and potentially NYC/SF. Remote-friendly for senior roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "41ed15460f",
+    "8b425c51e3",
+    "1bbfb56906"
+   ],
+   "value": "To accelerate the adoption of life-changing medical technology by giving medtech companies the intelligence they need to reach the right physicians and patients."
+  },
   "name": "AcuityMD",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast but sustainable. Quarterly planning with 2-week sprints. Shipping velocity high for a data-heavy product. Low bureaucracy; engineers own features end-to-end. Occasional crunches around major releases, not chronic."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "41ed15460f",
+    "8b425c51e3",
+    "1bbfb56906"
+   ],
+   "value": "Commercial intelligence platform for medical device companies, featuring physician targeting, procedure analytics, territory planning, and market access insights. Uses claims data, affiliation mapping, and machine learning to identify high-value providers and track product adoption."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + flexible sick/mental health. Unlimited policy in practice for senior roles; tracked for compliance. Encouraged to take 3+ weeks/year."
   },
+  "refresh_after": 1790021457,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -3173,7 +3238,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal company-wide shutdowns. Informal slowdowns around July 4 and Christmas/New Year (many take extended leave). Leadership encourages full disconnect."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "41ed15460f",
+    "8b425c51e3",
+    "1bbfb56906"
+   ],
+   "value": "Estimated: ~200-400 employees, Series B/C stage. Backed by top-tier VCs (Benchmark, Redpoint, etc.). Growing rapidly but past early-stage chaos."
   },
   "sources": [
    {
@@ -3207,14 +3281,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=8ad42d83097411d1c6ac2e76f52c70639ae91379dacb8768add737061071452eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=260a9729-c6c2-672f-23e1-80b4c77d665c&u=a1aHR0cHM6Ly93d3cuYWN1aXR5bWQuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B and green cards for strong technical candidates, especially at senior levels. No public policy details found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "41ed15460f",
+    "8b425c51e3",
+    "1bbfb56906"
+   ],
+   "value": "AcuityMD is a healthcare technology company that provides a commercial intelligence platform for medical device manufacturers. It helps medtech companies understand how their products are used in clinical practice by leveraging data analytics and AI to map physician procedures, adoption patterns, and market dynamics."
+  },
+  "synthesized_evidence_sha": "761a8987ffcfa1aa",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "41ed15460f",
+    "8b425c51e3",
+    "1bbfb56906"
+   ],
+   "value": "Data engineering at scale (claims, affiliation, procedure data), ML/NLP for physician profiling and procedure classification, search/ranking systems, geospatial analytics, modern web stack (React, TypeScript, Python, Postgres, cloud). Strong emphasis on data quality and product-driven ML."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784655990,
   "web_search_url": "https://duckduckgo.com/?q=AcuityMD+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AcuityMD sits at the intersection of elite technical challenge (large-scale healthcare data + ML) and tangible mission impact (accelerating life-changing medtech adoption). It offers top-tier AI/DS prestige and competitive new-grad pay (~$170-220k TC) within a Series B/C company that has moved past bureaucratic drag but retains fast innovation velocity. Culture emphasizes sustainable pace — sane hours, respected boundaries, and genuine WLB — rare in high-growth tech. Technical learning is accele"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5. Core hours ~10am-4pm, flexible outside. No weekend expectation. On-call rotation light (data pipelines, not 24/7 user-facing). Leadership models boundaries. 'Guaranteed shutdowns' not formal policy but culturally real."
   }
  },
  "acumen solutions": {
@@ -76234,7 +76337,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -76252,7 +76355,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784837296,
+  "last_attempt_at": 1784837457,
   "last_evidence_at": 1784674263,
   "name": "e.Republic",
   "pace_of_work": {
@@ -117686,37 +117789,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 – Respected applied analytics shop within insurance/benefits niche; not an AI research lab or household-name tech brand."
   },
   "aliases": [],
-  "culture_vibe": {
+  "attempts": 1,
+  "business_model": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "b0f46b0002"
+   ],
+   "value": "Insurance brokerage commissions (placement and renewal), fee-based consulting for benefits design and risk management, and recurring service fees for ongoing analytics, compliance, and HR technology advisory."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "b0f46b0002"
+   ],
+   "value": "Collaborative, service-oriented, community-focused, low-ego; 'generosity and energy' cited as core values; employee-owned mindset encourages long-term thinking over heroics."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "b0f46b0002"
+   ],
+   "value": "Mid-market to large employers across diverse industries seeking to design, procure, and manage employee benefits, insurance programs, and workplace strategy."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k–$105k base + 5–10% bonus + RSU/ESOP allocation (vesting 3–5 yrs); total comp ~$95k–$115k year 1."
   },
   "evidence_sha": "ac0cc34305090195",
+  "generated_at": 1784837457,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b0f46b0002"
+   ],
+   "value": "Insurance brokerage / Employee benefits consulting / Financial services"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "b0f46b0002"
+   ],
+   "value": "Ask about: (1) concrete examples of ML models deployed for benefits prediction or claims analytics, (2) typical sprint cadence and on-call expectations for data-science team, (3) how 'generosity' culture translates to guaranteed disconnect time (e.g., no-email weekends, mandatory PTO), (4) mentorship structure for new-grad hires and path to senior IC vs. management."
+  },
+  "last_attempt_at": 1784837457,
+  "last_evidence_at": 1784674660,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Headquartered in Denver, CO; additional offices across the U.S. including major metros (estimated 20+ locations). Remote/hybrid flexibility common post-2020."
   },
-  "last_evidence_at": 1784674660,
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "b0f46b0002"
+   ],
+   "value": "To create environments where employees thrive by delivering top-tier options, service, and analytics that help clients stay ahead of workforce trends and policies, grounded in a culture of generosity and community impact."
+  },
   "name": "IMA Financial Group",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady, project-based cadence with seasonal peaks (open enrollment Q4); minimal fire-drills outside client emergencies."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "b0f46b0002"
+   ],
+   "value": "Employee benefits consulting, property & casualty insurance brokerage, risk management advisory, workplace analytics and trends analysis, HR technology integration support, and philanthropy/community engagement program design."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 8–10 company holidays; volunteer time off (VTO) common given philanthropy focus."
   },
+  "refresh_after": 1790021457,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -117726,7 +117884,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full week shutdown between Christmas–New Year; summer half-day Fridays in some offices; no-email weekends encouraged."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established mid-market private firm (estimated 1,000–2,500 employees) with national U.S. presence; mature, profitable, and employee-owned/ESOP-structured typical for large independent brokerages."
   },
   "sources": [
    {
@@ -117760,14 +117923,43 @@
     "url": "https://imacorp.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B for specialized analytics/actuarial roles; less common for pure software engineering. Green card support likely case-by-case for senior hires."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "b0f46b0002"
+   ],
+   "value": "IMA Financial Group is an insurance brokerage and financial services firm that partners with businesses across multiple sectors to design employee benefits, risk management, and workplace analytics solutions. It makes money primarily through brokerage commissions, consulting fees, and service retainers for helping clients optimize their workforce programs and insurance spend."
+  },
+  "synthesized_evidence_sha": "ac0cc34305090195",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b0f46b0002"
+   ],
+   "value": "Data analytics for benefits utilization and cost modeling, HRIS/benefits platform integration, actuarial support tools, client-facing dashboards, and internal automation for brokerage workflows. AI/ML use cases likely limited to predictive modeling for claims and retention rather than core product R&D."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674660,
   "web_search_url": "https://duckduckgo.com/?q=IMA+Financial+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "b0f46b0002"
+   ],
+   "value": "IMA offers a mission-driven, people-first culture with explicit focus on employee thriving and community generosity—aligned with your desire for sane hours and low burnout. Its analytics and workplace-trends work gives real data-science exposure without the 'move fast and break things' pressure of big tech. As a mature, private brokerage, it avoids quarterly-release crunch and typically respects shutdown norms, while still paying competitively for new-grad technical talent in insurance-tech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "b0f46b0002"
+   ],
+   "value": "Estimated: 4/5 – Culture emphasizes employee thriving and generosity; industry norm of 40–45 hr weeks with protected evenings/weekends."
   }
  },
  "imagetrend": {
@@ -132784,7 +132976,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -132802,7 +132994,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784837296,
+  "last_attempt_at": 1784837457,
   "last_evidence_at": 1784673567,
   "name": "Kong",
   "pace_of_work": {
@@ -150176,7 +150368,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 10,
+  "attempts": 11,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -150217,7 +150409,7 @@
    ],
    "value": "The job posting highlights equal employment opportunity and benefits, but does not explicitly address work-life balance, high new-grad pay, or fast tech culture. However, the statistical programming role indicates technical focus on data analysis and clinical trials, suggesting a collaborative, mission-driven environment."
   },
-  "last_attempt_at": 1784837296,
+  "last_attempt_at": 1784837457,
   "last_evidence_at": 1784677667,
   "locations": {
    "confidence": "high",
@@ -204259,7 +204451,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -204275,7 +204467,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -204302,7 +204494,7 @@
    ],
    "value": "Candidates should be prepared to discuss object-oriented programming, Java, Python, JavaScript, and HTML. Expect questions around architecture, design, implementation, and testing to build stable and scalable products. The candidate should emphasize a desire for quality and customer-valued features."
   },
-  "last_attempt_at": 1784502745,
+  "last_attempt_at": 1784837457,
   "last_evidence_at": 1784801025,
   "locations": {
    "confidence": "high",
@@ -259069,7 +259261,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 8,
+  "attempts": 9,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -259120,7 +259312,7 @@
    ],
    "value": "Clarify whether the role is a full-time W-2 position or part of the gig contributor network. Ask about compensation structure, actual working hours, and technical learning opportunities to ensure it fits your elite tech role and WLB priorities."
   },
-  "last_attempt_at": 1784837296,
+  "last_attempt_at": 1784837457,
   "last_evidence_at": 1784737480,
   "locations": {
    "confidence": "unknown",
