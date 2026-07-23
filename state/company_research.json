@@ -25638,7 +25638,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
-  "last_attempt_at": 1784778254,
+  "last_attempt_at": 1784778363,
   "last_evidence_at": 1784663560,
   "name": "Axos Bank",
   "pace_of_work": {
@@ -87990,7 +87990,7 @@
    "source_ids": [],
    "value": "Ai Lab / technology (estimated)"
   },
-  "last_attempt_at": 1784778254,
+  "last_attempt_at": 1784778363,
   "last_evidence_at": 1784599435,
   "name": "Gecko Robotics",
   "pace_of_work": {
@@ -174987,7 +174987,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
-  "last_attempt_at": 1784778254,
+  "last_attempt_at": 1784778363,
   "last_evidence_at": 1784672895,
   "name": "Qualcomm Technologies, Inc.",
   "pace_of_work": {
@@ -195298,7 +195298,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784778254,
+  "last_attempt_at": 1784778363,
   "last_evidence_at": 1784677479,
   "name": "Sigma Computing",
   "pace_of_work": {
@@ -205135,40 +205135,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 \u2014 High technical bar with NASA partnership and novel reuse problem, but not yet a widely recognized AI brand like Tier 1 labs."
   },
   "aliases": [],
   "attempts": 5,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "dfef671684"
+   ],
+   "value": "Launch service contracts for the Nova vehicle; potential revenue from Boltline offerings; government partnerships and contracts (e.g., NASA)."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "dfef671684"
+   ],
+   "value": "Engineering-first, mission-driven, transparent, and collaborative; avoids defense-contractor bureaucracy; values environmental stewardship and technical excellence."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "dfef671684"
+   ],
+   "value": "Commercial satellite operators, government agencies (e.g., NASA), and other payload customers seeking low-cost, responsive access to orbit."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: $120k\u2013$150k base + equity (ISO/RSU) + signing bonus; total comp ~$140k\u2013$190k. Space startup premium but below FAANG Tier 1."
   },
   "evidence_sha": "c91e0f64eeafc095",
+  "generated_at": 1784778363,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "dfef671684"
+   ],
+   "value": "Aerospace / Space Launch / Reusable Launch Vehicles"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "dfef671684"
+   ],
+   "value": "Expect deep technical interviews on ML/DS fundamentals applied to aerospace problems: time-series anomaly detection for telemetry, reinforcement learning for guidance/control, uncertainty quantification for re-entry, and data pipelines for rapid test-to-flight iteration. Be ready to discuss how you balance model performance with safety-critical constraints and limited labeled data. Cultural fit questions will probe alignment with sustainable space mission and ability to thrive in a fast, collabo"
+  },
+  "last_attempt_at": 1784778363,
+  "last_evidence_at": 1784677034,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Headquarters and primary development in Kent, Washington (Seattle area); test facilities in Moses Lake, Washington."
   },
-  "last_attempt_at": 1784778254,
-  "last_evidence_at": 1784677034,
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "dfef671684"
+   ],
+   "value": "Foster a booming space economy that propels human ambition with an unwavering commitment to environmental stewardship, making space access sustainable and scalable."
+  },
   "name": "Stoke Space",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast \u2014 hardware-rich, test-driven development with rapid iteration cycles; intensity spikes around test campaigns but generally structured around vehicle milestones rather than perpetual crunch."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "dfef671684"
+   ],
+   "value": "Nova \u2014 a 100% reusable medium-lift launch vehicle; Boltline (referenced as a product/service line on website)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 15\u201320 days PTO + 10 federal holidays; unlimited not indicated."
   },
+  "refresh_after": 1789962363,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -205178,7 +205230,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically 1\u20132 weeks between Christmas and New Year); no public policy on mandatory summer shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Early-stage, venture-backed space startup; headcount likely 100\u2013300 employees based on typical aerospace startup scale at this development phase."
   },
   "sources": [
    {
@@ -205212,14 +205269,41 @@
     "url": "https://www.stokespace.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely supports H-1B and green card sponsorship for specialized engineering roles; exact policy not publicly documented."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "dfef671684"
+   ],
+   "value": "Stoke Space is developing Nova, a fully reusable launch vehicle designed to provide affordable, sustainable access to space with a 20x cost reduction to orbit. The company generates revenue through launch services contracts and partnerships, including a NASA partnership to advance upper stage re-entry capabilities."
+  },
+  "synthesized_evidence_sha": "c91e0f64eeafc095",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "dfef671684"
+   ],
+   "value": "Full-stack rocket development: propulsion, structures, avionics, guidance/navigation/control, re-entry thermal protection, rapid refurbishment, and launch operations. Software includes flight software, simulation, test infrastructure, and mission planning tools."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677034,
   "web_search_url": "https://duckduckgo.com/?q=Stoke+Space+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "dfef671684"
+   ],
+   "value": "Stoke Space offers a rare combination: elite aerospace prestige (NASA-partnered, fully reusable rocket) with a startup\u2019s speed and a mission focused on sustainable space access. The culture emphasizes technical ambition without the bureaucratic drag of legacy contractors, and the company\u2019s public commitment to environmental stewardship aligns with a values-driven career. For an AI/data science candidate, the opportunity lies in applying ML to real-time flight systems, vehicle health monitoring, "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "7/10 \u2014 Estimated reasonable for a space startup; leadership emphasizes sustainable pace, but launch campaigns and test operations require periodic surge effort."
   }
  },
  "str": {
@@ -244990,7 +245074,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784778254,
+  "last_attempt_at": 1784778363,
   "last_evidence_at": 1784672895,
   "name": "Zello",
   "pace_of_work": {
