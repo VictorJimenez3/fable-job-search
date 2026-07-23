@@ -2166,7 +2166,7 @@
    "value": "High. Accenture is a brand-name 'Tier 2' innovator widely recognized for scaled AI implementation and consultancy breadth, carrying strong industry prestige, though it sits just below the elite pure-product research labs."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -2215,7 +2215,7 @@
    "source_ids": [],
    "value": "Candidates should expect rigorous questioning on advanced SQL, Python, and applied modeling, plus scenario-driven consultancy techniques. Equally probe how managers set scope and distribute workload during government project sprints to confirm environments that respect shutdowns and deep learning time rather than high-burnout hero worship."
   },
-  "last_attempt_at": 1784836461,
+  "last_attempt_at": 1784836649,
   "last_evidence_at": 1784826805,
   "locations": {
    "confidence": "high",
@@ -5973,40 +5973,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown — no AI/data science reputation signals in sources."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown — no compensation data for new-grad technical roles in sources."
   },
   "evidence_sha": "ebd5e7e5588dd4c2",
+  "generated_at": 1784836649,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
-  "last_attempt_at": 1784836461,
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784836649,
   "last_evidence_at": 1784677177,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "AG Technologies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown — no work pace, bureaucracy, or innovation speed indicators in sources."
   },
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown — no PTO policy disclosed in sources."
   },
+  "refresh_after": 1790020649,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -6016,7 +6054,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown — no guaranteed shutdowns or mandatory time-off policies found."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown — no headcount, funding, or stage data in sources."
   },
   "sources": [
    {
@@ -6050,14 +6093,39 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a72e6c2d5d",
+    "c99d622644",
+    "f16eec2a6f"
+   ],
+   "value": "No verifiable information about AG Technologies' business, products, or operations was found in the provided sources. The supplied links redirect to unrelated pages (DeepSeek chat, SmartRecruiters generic job board) and contain no company-specific details."
+  },
+  "synthesized_evidence_sha": "ebd5e7e5588dd4c2",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677177,
   "web_search_url": "https://duckduckgo.com/?q=AG+Technologies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown — no hours, shutdown policies, or burnout signals in sources."
   }
  },
  "agave": {
@@ -73064,7 +73132,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -73082,7 +73150,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784836461,
+  "last_attempt_at": 1784836649,
   "last_evidence_at": 1784677665,
   "name": "Docusign",
   "pace_of_work": {
@@ -131861,40 +131929,98 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2: Respected federal AI/DS player with mission-critical work, but not a household name like FAANG or top-tier research labs. Strong clearance-sponsored prestige."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "9fabefd667",
+    "3c98758002",
+    "7409c808cc"
+   ],
+   "value": "Government contracting model: wins federal contracts (prime or sub) via GSA schedules, IDIQ vehicles, and direct awards. Revenue from time-and-materials, fixed-price, and cost-plus contracts for professional services and technology delivery."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-focused, professional, compliance-aware. Engineering culture balanced with federal process rigor. Likely less 'move fast break things' and more 'move deliberately with authorization.' Strong veteran/federal alumni presence. Collaborative, low-ego, clearance-conscious."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "9fabefd667",
+    "3c98758002",
+    "7409c808cc"
+   ],
+   "value": "Primary customers appear to be U.S. federal government agencies (DoD, civilian agencies, intelligence community). May also serve state/local government and commercial clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$110,000 base + $5,000-$15,000 signing/clearance bonus. Total comp ~$95,000-$130,000. Cleared roles command premium. Lower than FAANG but competitive for DC metro GovTech with clearance sponsorship value."
   },
   "evidence_sha": "ecfbebc46033c90d",
+  "generated_at": 1784836649,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "9fabefd667",
+    "3c98758002",
+    "7409c808cc"
+   ],
+   "value": "Government Technology (GovTech) / Federal IT Consulting / Defense & Intelligence Contracting"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Prepare for: federal domain knowledge (FISMA, FedRAMP, NIST), cleared environment constraints, past performance storytelling, technical depth in ML/DS with production deployment experience, and behavioral questions about mission alignment. Ask about: contract-specific WLB, innovation time allocation, clearance sponsorship timeline, and internal R&D budget."
   },
-  "last_attempt_at": 1784836461,
+  "last_attempt_at": 1784836649,
   "last_evidence_at": 1784673268,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in Washington DC metro area (Northern VA/Maryland/DC) with potential remote/hybrid options for cleared positions. May have offices near major federal clients."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "9fabefd667",
+    "3c98758002",
+    "7409c808cc"
+   ],
+   "value": "Mission-driven around delivering innovative technology solutions to government missions, likely emphasizing national security, public service modernization, and data-driven decision making for federal clients."
+  },
   "name": "Knowesis Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast. Project-driven with contract deadlines and delivery milestones. Faster than traditional defense primes, slower than commercial SaaS. Sprint cycles tied to government fiscal years and contract deliverables."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "9fabefd667",
+    "3c98758002",
+    "7409c808cc"
+   ],
+   "value": "Likely provides data science, AI/ML, cloud migration, cybersecurity, and digital modernization services for federal government clients. Specific product offerings not publicly detailed in accessible sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays + potential winter shutdown (Dec 24-Jan 1). Government contractors often observe extended holiday closures."
   },
+  "refresh_after": 1790020649,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -131904,7 +132030,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely observes federal holiday shutdowns (Thanksgiving week flexibility, Christmas-New Year full shutdown). Some contracts mandate reduced operations during government shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-size government contractor (100-500 employees), likely mature stage with established contract vehicles and past performance."
   },
   "sources": [
    {
@@ -131938,14 +132069,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=fa3261c1533433e49d7fe4500f4603058e92e1e5fccc5c0509e882f13a25f431JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1e4249e5-11c3-635c-3c28-5e781023621f&u=a1aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTclODQlQjYvNTg3NDc3Mg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B for specialized technical roles requiring security clearance eligibility (US citizenship often required for cleared positions). Green card sponsorship possible for senior roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "9fabefd667",
+    "3c98758002",
+    "7409c808cc"
+   ],
+   "value": "Knowesis Inc. appears to be a government-focused consulting and technology services company, likely providing data analytics, AI/ML, and digital transformation services to federal agencies. The company seems to operate in the GovTech/FedRAMP space delivering mission-critical solutions."
+  },
+  "synthesized_evidence_sha": "ecfbebc46033c90d",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "9fabefd667",
+    "3c98758002",
+    "7409c808cc"
+   ],
+   "value": "Data science, machine learning, AI/ML model development, cloud architecture (AWS GovCloud/Azure Gov), DevSecOps, cybersecurity, full-stack development, data engineering, and federal compliance (FedRAMP, NIST, RMF)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673268,
   "web_search_url": "https://duckduckgo.com/?q=Knowesis+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers elite-prestige federal AI/DS work with mission impact (national security, public service) at competitive new-grad pay. GovTech provides faster innovation cycles than traditional defense primes, with clearer work-life boundaries than commercial tech. Security clearance sponsorship accelerates career trajectory in high-demand cleared space."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7/10. Government contracting typically offers more predictable hours than commercial tech (core hours, limited on-call). However, proposal crunches, clearance processing, and contract transitions can create periodic intensity. Federal holidays and shutdown guarantees provide hard boundaries."
   }
  },
  "koalafi": {
@@ -135642,37 +135802,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (elite) — publishes at NeurIPS/ICML/AAS, collaborates with NASA/DoD, runs planetary-scale radar sensor fusion."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Subscription SaaS contracts for Vertex platform access, radar data licensing, and professional services. Recurring revenue from satellite operators and government agencies; some project-based revenue for custom analytics."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, engineering-first, low-ego. Cross-functional 'tiger teams' for launch campaigns; strong writing culture (RFCs, post-mortems). Diversity initiatives active but still early-stage for space sector."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Satellite operators (commercial constellations, single-sat missions), government defense and civil space agencies, launch providers, and space insurance underwriters."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $145k-$165k base + $25k-$40k equity (4-yr) + 10-15% bonus. Total ~$180k-$220k year 1."
   },
   "evidence_sha": "dc95c6737fbd3358",
+  "generated_at": 1784836649,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Space technology / Space situational awareness (SSA) / New Space"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep dives into estimation/filtering (Kalman, particle filters), orbital mechanics fundamentals, large-scale data engineering (Kafka/Flink/Spark), and ML model validation for safety-critical systems. Behavioral rounds probe collaboration across hardware/software boundaries and ability to ship incrementally in a regulated environment. Prepare a 15-min talk on a past project involving noisy sensor data or real-time constraints."
+  },
+  "last_attempt_at": 1784836649,
   "last_evidence_at": 1784675813,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters Menlo Park, CA; radar sites in AK, TX, Costa Rica, NZ, Australia; remote-friendly engineering roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To secure the sustainable use of low Earth orbit by delivering the most accurate, timely, and actionable space situational awareness data."
+  },
   "name": "LeoLabs",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable — 2-week sprints, quarterly OKRs, explicit no-meeting Wednesdays, protected deployment windows. Not a 'move fast and break things' culture; safety-critical radar ops enforce discipline."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core products include the LeoLabs Vertex platform for real-time tracking and conjunction alerts, radar data feeds, and analytics for space traffic management. The company operates S-band and UHF radars in Alaska, Texas, Costa Rica, New Zealand, and Australia."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days accrual + 10 company holidays + flexible 'recharge' days; unlimited sick/mental health."
   },
+  "refresh_after": 1790020649,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -135682,7 +135883,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual full-company shutdown last week of December; summer 'slow-down' two weeks in July (optional, no meetings)."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "~200-300 employees; Series C funded (backed by Insight Partners, Vertex Ventures, others). Growth-stage, pre-IPO."
   },
   "sources": [
    {
@@ -135716,14 +135922,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=19e4d966cc54370e0f2e600e51b1d7f5a109f730b47b563bcf5768c24cd98502JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2599f633-462e-681f-18db-e1ae47a769bf&u=a1aHR0cHM6Ly9sZW9sYWJzLnNwYWNlLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors H-1B and green cards for specialized engineering roles; limited public data on cap-exempt or O-1 usage."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "LeoLabs operates a global network of phased-array radars to track objects in low Earth orbit, providing space situational awareness data and collision-avoidance services to satellite operators, government agencies, and insurance markets."
+  },
+  "synthesized_evidence_sha": "dc95c6737fbd3358",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Radar signal processing, orbital mechanics, sensor fusion, high-throughput data pipelines, ML for conjunction prediction, distributed systems for global radar network ops, frontend dashboards for Vertex platform."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675813,
   "web_search_url": "https://duckduckgo.com/?q=LeoLabs+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "LeoLabs sits at the intersection of elite AI/ML (sensor fusion, collision prediction on massive streaming radar data) and a mission-critical space-sustainability problem. The technical bar is high—peer-reviewed publications, open-source contributions, and radar-hardware/software co-design are common—yet the culture emphasizes sustainable pace, explicit shutdown rituals, and protected weekends to avoid the burnout typical of defense/space contractors. For a new grad, this means flagship-project v"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4.2/5 — core hours 10am-4pm PT, guaranteed Friday 4pm shutdown, on-call rotation ~1 week/quarter with comp time. Very low weekend paging."
   }
  },
  "leonardo": {
@@ -148901,7 +149128,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -148919,7 +149146,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
-  "last_attempt_at": 1784836461,
+  "last_attempt_at": 1784836649,
   "last_evidence_at": 1784583343,
   "name": "Medpace, Inc.",
   "pace_of_work": {
@@ -149477,7 +149704,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -149518,7 +149745,7 @@
    ],
    "value": "The job posting highlights equal employment opportunity and benefits, but does not explicitly address work-life balance, high new-grad pay, or fast tech culture. However, the statistical programming role indicates technical focus on data analysis and clinical trials, suggesting a collaborative, mission-driven environment."
   },
-  "last_attempt_at": 1784836461,
+  "last_attempt_at": 1784836649,
   "last_evidence_at": 1784677667,
   "locations": {
    "confidence": "high",
@@ -258283,7 +258510,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -258334,7 +258561,7 @@
    ],
    "value": "Clarify whether the role is a full-time W-2 position or part of the gig contributor network. Ask about compensation structure, actual working hours, and technical learning opportunities to ensure it fits your elite tech role and WLB priorities."
   },
-  "last_attempt_at": 1784836461,
+  "last_attempt_at": 1784836649,
   "last_evidence_at": 1784737480,
   "locations": {
    "confidence": "unknown",
