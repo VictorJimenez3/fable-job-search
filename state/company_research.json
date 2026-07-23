@@ -2166,7 +2166,7 @@
    "value": "High. Accenture is a brand-name 'Tier 2' innovator widely recognized for scaled AI implementation and consultancy breadth, carrying strong industry prestige, though it sits just below the elite pure-product research labs."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -2215,7 +2215,7 @@
    "source_ids": [],
    "value": "Candidates should expect rigorous questioning on advanced SQL, Python, and applied modeling, plus scenario-driven consultancy techniques. Equally probe how managers set scope and distribute workload during government project sprints to confirm environments that respect shutdowns and deep learning time rather than high-burnout hero worship."
   },
-  "last_attempt_at": 1784836128,
+  "last_attempt_at": 1784836291,
   "last_evidence_at": 1784826805,
   "locations": {
    "confidence": "high",
@@ -73061,7 +73061,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -73079,7 +73079,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784836128,
+  "last_attempt_at": 1784836291,
   "last_evidence_at": 1784677665,
   "name": "Docusign",
   "pace_of_work": {
@@ -96692,37 +96692,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Cannot assess - no evidence found of AI/data science presence or prestige tier for 'General Matter'."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No business model information found for 'General Matter' in the provided sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown - no culture information available from provided sources."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No customer information found for 'General Matter' in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown - no compensation data available for 'General Matter'."
   },
   "evidence_sha": "929fa32078a4b658",
+  "generated_at": 1784836291,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Industry unknown - sources do not identify a 'General Matter' company in AI, data science, or technology sectors."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate should focus on verifying: 1) Company legitimacy and actual AI/data science work, 2) Real work-life balance policies (shutdowns, hours), 3) Technical learning opportunities vs. burnout risk, 4) Compensation transparency. Ask for specific examples of project autonomy, mentorship, and sustainable pace."
+  },
+  "last_attempt_at": 1784836291,
   "last_evidence_at": 1784676941,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No location information found for 'General Matter' in provided sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No mission statement found for 'General Matter' in the provided sources."
+  },
   "name": "General Matter",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown - no culture or pace information available from sources."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No specific product information found for 'General Matter' in the provided sources. The sources do not contain relevant company product details."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown - no PTO policy information found."
   },
+  "refresh_after": 1790020291,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -96732,7 +96773,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown - no information on company shutdowns or guaranteed time-off policies."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown size and stage due to lack of verifiable company information in sources."
   },
   "sources": [
    {
@@ -96766,14 +96812,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=35d0c7cdfcfe6e0532be8c37bcb3d6bc2be8f0670a380c7d1033f701282caacdJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=28186e5c-b7dc-65ce-244c-79c1b64464b0&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2dlbmVyYWw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No visa sponsorship information available for 'General Matter' from provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "98a8d92747",
+    "861778ee69",
+    "01734eb099"
+   ],
+   "value": "General Matter appears to be a company with limited public information available in the provided sources. The sources reference general topics (U.S. Army generals, The General insurance, dictionary definition) rather than a specific 'General Matter' company. Further research would be needed to confirm the company's actual business, products, and operations."
+  },
+  "synthesized_evidence_sha": "929fa32078a4b658",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No technical work details available from provided sources for 'General Matter'."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676941,
   "web_search_url": "https://duckduckgo.com/?q=General+Matter+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Based on candidate priorities: If General Matter is a top-tier AI/data science company, it could offer elite prestige and high new-grad pay with innovative culture. However, the provided sources do not verify this company's existence, mission, work-life balance practices, or technical culture. Candidate should independently verify company legitimacy and culture before pursuing."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown - no work-life balance data found for 'General Matter'."
   }
  },
  "general motors": {
@@ -131723,11 +131794,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -131739,6 +131812,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784836291,
   "last_evidence_at": 1784673268,
   "name": "Knowesis Inc.",
   "pace_of_work": {
@@ -148757,7 +148831,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -148775,7 +148849,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
-  "last_attempt_at": 1784836128,
+  "last_attempt_at": 1784836291,
   "last_evidence_at": 1784583343,
   "name": "Medpace, Inc.",
   "pace_of_work": {
@@ -149333,7 +149407,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -149374,7 +149448,7 @@
    ],
    "value": "The job posting highlights equal employment opportunity and benefits, but does not explicitly address work-life balance, high new-grad pay, or fast tech culture. However, the statistical programming role indicates technical focus on data analysis and clinical trials, suggesting a collaborative, mission-driven environment."
   },
-  "last_attempt_at": 1784836128,
+  "last_attempt_at": 1784836291,
   "last_evidence_at": 1784677667,
   "locations": {
    "confidence": "high",
@@ -218915,40 +218989,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Emerging tier — not a known AI research hub, but applies ML in production for personalization and ops; prestige derives from product impact not publications."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "db636001d0"
+   ],
+   "value": "Direct-to-consumer subscription e-commerce: recurring revenue from personalized fresh dog food meal plans shipped on a scheduled basis."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "db636001d0"
+   ],
+   "value": "Mission-driven, pet-obsessed, transparent, lean teams with high autonomy; 'made simple' ethos extends to internal processes."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "db636001d0"
+   ],
+   "value": "Dog owners seeking premium, human-grade nutrition delivered via subscription; health-conscious pet parents willing to pay a premium for fresh ingredients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$140k base + equity (0.05-0.15%); total comp ~$130k-$170k depending on role and funding stage."
   },
   "evidence_sha": "ac7986f15b2af1a8",
+  "generated_at": 1784836291,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "db636001d0"
+   ],
+   "value": "Pet tech / Fresh pet food / DTC e-commerce"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "db636001d0"
+   ],
+   "value": "Expect emphasis on end-to-end product thinking, data-driven decision making for subscription businesses, and ability to move fast in a resource-constrained environment. Prepare for case studies on personalization/recommendation systems, A/B testing for retention, and scaling fresh-food logistics. Cultural fit around mission alignment and work-life boundaries will be probed."
+  },
+  "last_attempt_at": 1784836291,
+  "last_evidence_at": 1784677664,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Headquartered in New York, NY; likely remote/hybrid options for engineering roles."
   },
-  "last_attempt_at": 1784836128,
-  "last_evidence_at": 1784677664,
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "db636001d0"
+   ],
+   "value": "Wholesome food for dogs, made simple for their humans."
+  },
   "name": "Spot & Tango",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast, iterative startup pace with quarterly planning cycles; shipping velocity valued over process."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "db636001d0"
+   ],
+   "value": "Fresh human-grade dog food (UnKibble FreshDry™), personalized fresh meal plans, and subscription-based delivery service."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 company holidays; unlimited policy not confirmed."
   },
+  "refresh_after": 1790020291,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -218958,7 +219084,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns publicized; typical startup may observe week between Christmas/New Year."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Growth-stage startup (Series A/B), ~100-300 employees, venture-backed."
   },
   "sources": [
    {
@@ -218992,14 +219123,39 @@
     "url": "https://www.spotandtango.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely supports H-1B transfers and new grad sponsorship given venture-backed tech hiring needs; no public policy disclosed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "db636001d0"
+   ],
+   "value": "Spot & Tango is a direct-to-consumer pet food company that produces fresh, human-grade dog food including a proprietary FreshDry™ product called UnKibble. They operate on a subscription delivery model, shipping personalized meal plans to dog owners nationwide."
+  },
+  "synthesized_evidence_sha": "ac7986f15b2af1a8",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "E-commerce platform, subscription management, personalization algorithms for meal plans, supply chain/logistics optimization, data analytics for customer retention and nutrition modeling."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677664,
   "web_search_url": "https://duckduckgo.com/?q=Spot+%26+Tango+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "db636001d0"
+   ],
+   "value": "Spot & Tango offers a mission-driven consumer brand with real technical challenges in personalization, supply chain, and subscription analytics. As a growth-stage company, it can provide faster shipping velocity and broader ownership than big tech, with a tangible product that improves pet health. The culture appears oriented around simplicity and quality, aligning with a desire for purposeful work without the bureaucracy of large enterprises."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7/10 — growth-stage DTC typically demands intensity but mission-driven culture and lack of 24/7 on-call (vs. infra-heavy companies) supports sustainable hours."
   }
  },
  "spotify": {
@@ -239304,40 +239460,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2—strong federal mission AI work with production deployment at scale, but less public research visibility than top-tier labs or FAANG."
   },
   "aliases": [],
-  "attempts": 3,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 4,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "83c7ed777c"
+   ],
+   "value": "Federal government contracting (B2G) providing health solutions, systems integration, and AI-enabled services to federal health and public safety agencies."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "83c7ed777c"
+   ],
+   "value": "Mission-driven, disciplined, technically serious, compliance-aware; likely lower toxicity than commercial high-growth startups due to federal oversight and contract stability."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "83c7ed777c"
+   ],
+   "value": "Federal health agencies and public safety organizations (specific agencies not named in public sources)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k-$120k base + modest bonus/RSU; federal contractor new-grad bands typically trail FAANG but exceed general defense contracting."
   },
   "evidence_sha": "8176ede72b820163",
+  "generated_at": 1784836291,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "83c7ed777c"
+   ],
+   "value": "Federal Health IT / Government Contracting (GovCon)"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "83c7ed777c"
+   ],
+   "value": "Probe for: (1) concrete examples of AI/ML models deployed in production federal health systems, not just prototypes; (2) how 'disciplined execution' translates to sprint cadence, technical debt management, and on-call expectations; (3) evidence of guaranteed shutdowns or comp-time policies for overtime; (4) career progression paths for new grads—mentorship, rotation across clinical/financial/operational domains, and publication/conference support; (5) how the company balances innovation speed wi"
+  },
+  "last_attempt_at": 1784836291,
+  "last_evidence_at": 1784674229,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Headquarters likely in Washington DC metro area (typical for federal health contractors); exact locations not specified in sources."
   },
-  "last_attempt_at": 1784836128,
-  "last_evidence_at": 1784674229,
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "83c7ed777c"
+   ],
+   "value": "Minimize cost, improve quality, and expand access to care in environments where failure is not an option, delivering measurable mission performance through resilient systems, disciplined execution, and an AI-enabled workforce."
+  },
   "name": "Tria Federal",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast—mission-critical federal delivery demands discipline and speed, but contracting oversight and compliance gates can introduce pauses; not a 'move fast and break things' culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "83c7ed777c"
+   ],
+   "value": "AI-enabled workforce solutions, resilient systems integration, disciplined execution frameworks, and measurable program oversight for federal health platforms. Specific product names not disclosed in public sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-11 federal holidays; federal contractors often match GS leave accrual schedules."
   },
+  "refresh_after": 1790020291,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -239347,7 +239555,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Observes all federal holidays; may offer optional winter shutdown between Christmas and New Year depending on contract requirements."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established federal contractor (exact employee count and revenue not public)."
   },
   "sources": [
    {
@@ -239381,14 +239594,41 @@
     "url": "https://www.triafed.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H-1B and green cards given federal contracting nature and technical workforce needs; no public policy details found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "83c7ed777c"
+   ],
+   "value": "Tria Federal is a health solutions company that integrates clinical, financial, and operational environments to make federal health systems work at scale, on time, and under pressure. They operate at the center of the healthcare trilemma—minimizing cost, improving quality, and expanding access—in mission-critical federal health and public safety environments."
+  },
+  "synthesized_evidence_sha": "8176ede72b820163",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "83c7ed777c"
+   ],
+   "value": "AI/ML enablement for federal health systems, clinical/financial/operational data integration, resilient system architecture, measurable program oversight analytics, and mission-critical platform engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674229,
   "web_search_url": "https://duckduckgo.com/?q=Tria+Federal+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "83c7ed777c"
+   ],
+   "value": "Tria Federal sits at the intersection of high-stakes federal health missions and AI-enabled innovation, offering a chance to work on measurable, life-impacting problems at scale. For a candidate seeking elite prestige and high new-grad pay with a fast, innovative culture, the company's explicit focus on an 'AI-enabled workforce' and 'disciplined execution' in complex environments suggests serious technical depth. Its mission-driven posture—minimizing cost, improving quality, expanding access—ali"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5—federal contracting typically enforces 40-hr weeks and comp-time for overtime, but surge periods around contract deliverables or ATO milestones can spike hours; guaranteed shutdowns likely follow federal holiday calendar."
   }
  },
  "trimble": {
