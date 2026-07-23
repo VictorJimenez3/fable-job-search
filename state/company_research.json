@@ -2166,7 +2166,7 @@
    "value": "High. Accenture is a brand-name 'Tier 2' innovator widely recognized for scaled AI implementation and consultancy breadth, carrying strong industry prestige, though it sits just below the elite pure-product research labs."
   },
   "aliases": [],
-  "attempts": 14,
+  "attempts": 15,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -2215,7 +2215,7 @@
    "source_ids": [],
    "value": "Candidates should expect rigorous questioning on advanced SQL, Python, and applied modeling, plus scenario-driven consultancy techniques. Equally probe how managers set scope and distribute workload during government project sprints to confirm environments that respect shutdowns and deep learning time rather than high-burnout hero worship."
   },
-  "last_attempt_at": 1784837897,
+  "last_attempt_at": 1784842178,
   "last_evidence_at": 1784826805,
   "locations": {
    "confidence": "high",
@@ -84276,7 +84276,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -84294,7 +84294,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784837897,
+  "last_attempt_at": 1784842178,
   "last_evidence_at": 1784677184,
   "name": "Everpure",
   "pace_of_work": {
@@ -122106,7 +122106,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -122124,7 +122124,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784837897,
+  "last_attempt_at": 1784842178,
   "last_evidence_at": 1784673652,
   "name": "Intelliswift - An LTTS Company",
   "pace_of_work": {
@@ -145038,11 +145038,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -145054,6 +145056,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784842178,
   "last_evidence_at": 1784593385,
   "name": "Mariana Minerals",
   "pace_of_work": {
@@ -177948,109 +177951,21 @@
   }
  },
  "pekin insurance": {
-  "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Tier 3 (traditional insurance analytics, not elite AI research)."
-  },
   "aliases": [],
   "attempts": 1,
-  "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Earns revenue from insurance premiums and investment income; pays claims and operating expenses; retains underwriting profit and investment returns as earnings."
-  },
-  "culture_vibe": {
-   "confidence": "medium",
-   "source_ids": [
-    "bda929b211"
-   ],
-   "value": "Community-focused, employee-empowering, traditional Midwestern insurer; collaborative but not a 'move fast and break things' tech culture."
-  },
-  "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Individuals, families, farms, and small-to-mid-sized businesses primarily in the Midwest, served through a network of independent insurance agents."
-  },
   "error": "",
-  "estimated_new_grad_tech_pay": {
-   "confidence": "medium",
-   "source_ids": [
-    "bda929b211"
-   ],
-   "value": "Estimated: $66K-$90K base (per Data Analyst I posting); bonus/equity unlikely at this level."
-  },
-  "evidence_sha": "a0ae1fbac2dbab3b",
+  "evidence_sha": "1fb74e0679715c33",
   "generated_at": 1784828841,
   "generator": {
    "endpoint": "nvidia:nemotron",
    "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
-  "industry": {
-   "confidence": "high",
-   "source_ids": [
-    "bda929b211"
-   ],
-   "value": "Insurance (Property/Casualty & Life)"
-  },
-  "interview_focus": {
-   "confidence": "high",
-   "source_ids": [
-    "bda929b211"
-   ],
-   "value": "Expect heavy emphasis on SQL proficiency, Snowflake experience, data cleaning/transformation pipelines, and insurance domain knowledge (claims, policy, actuarial). Behavioral questions will likely probe community focus and work-life balance alignment."
-  },
   "last_attempt_at": 1784828841,
   "last_evidence_at": 1784822154,
-  "locations": {
-   "confidence": "medium",
-   "source_ids": [
-    "bda929b211"
-   ],
-   "value": "Headquarters in Pekin, IL; onsite roles expected. Additional regional offices possible but not detailed in sources."
-  },
-  "mission": {
-   "confidence": "medium",
-   "source_ids": [
-    "bda929b211"
-   ],
-   "value": "To provide financial security and peace of mind to policyholders while empowering employees and supporting the communities where they operate."
-  },
   "name": "Pekin Insurance",
-  "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate; regulated industry with quarterly/annual cycles, not a high-velocity tech culture."
-  },
-  "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Personal and commercial auto, home, farm, business, and life insurance policies; annuity products; and related financial services."
-  },
   "prompt_v": 2,
-  "pto_days": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15-20 days PTO + 8-10 holidays (typical for regional insurers); no public policy details."
-  },
-  "refresh_after": 1790012841,
-  "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
-  },
   "schema_v": 1,
-  "shutdowns": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No guaranteed company-wide shutdowns reported; standard holiday schedule only."
-  },
-  "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: ~1,000-2,000 employees; privately held, mature regional insurer (founded 1921)."
-  },
   "sources": [
    {
     "content_sha": "35f1aee2ad38d195",
@@ -178091,56 +178006,12 @@
     "retrieved_at": 1784822154,
     "title": "Discovery source for Pekin Insurance",
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
-   },
-   {
-    "content_sha": "358c940db34d5074",
-    "excerpt": "Jobright.ai Data Analyst I jobs in United States Overview Company Apply on Employer Site APPLY NOW Pekin Insurance · 22 minutes ago Data Analyst I Pekin, IL Full-time Onsite Entry Level $66K/yr - $90K/yr 0+ years exp Pekin Insurance is a community-focused company that values and empowers its employees. Your Score - Top Applicants Must-Have Skills for This Role SQL Snowflake Data cleaning Data transformation Data wrangling Optimize my Resume Get Referral Via linkedIn FREE 3× Higher Response via Email Outreach C Cindy B.",
-    "id": "bda929b211",
-    "kind": "official_job",
-    "publisher": "Pekin Insurance",
-    "retrieved_at": 1784821848,
-    "title": "Official job posting — Data Analyst I",
-    "url": "https://jobright.ai/jobs/info/6a6217cb1e089c0cc884a7ae?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: May sponsor H-1B for specialized data/actuarial roles; no public policy details found."
-  },
-  "status": "ready",
-  "summary": {
-   "confidence": "medium",
-   "source_ids": [
-    "bda929b211"
-   ],
-   "value": "Pekin Insurance is a mid-sized, community-focused property/casualty and life insurance carrier headquartered in Pekin, Illinois. It sells policies through independent agents and manages its own claims and investments."
-  },
-  "synthesized_evidence_sha": "a0ae1fbac2dbab3b",
-  "technical_work": {
-   "confidence": "medium",
-   "source_ids": [
-    "bda929b211"
-   ],
-   "value": "Data analysis, SQL querying, Snowflake data warehousing, data cleaning/transformation/wrangling for reporting, actuarial support, and claims analytics. Limited public evidence of advanced AI/ML research."
-  },
+  "status": "evidence_only",
   "web_research_status": "sources captured",
   "web_researched_at": 1784822154,
-  "web_search_url": "https://duckduckgo.com/?q=Pekin+Insurance+company+careers+benefits",
-  "why_it_matters": {
-   "confidence": "high",
-   "source_ids": [
-    "bda929b211"
-   ],
-   "value": "Offers a stable, mission-driven insurance environment with entry-level data roles ($66K-$90K) and exposure to SQL/Snowflake stacks. However, it is a traditional onsite insurer—not a fast-paced, elite AI research shop—and may not match the candidate’s desire for high prestige, rapid innovation, or guaranteed shutdowns."
-  },
-  "wlb_rating": {
-   "confidence": "estimated",
-   "source_ids": [
-    "bda929b211"
-   ],
-   "value": "Estimated: 3.5/5; onsite expectation and insurance cycles may limit flexibility, but company touts employee empowerment."
-  }
+  "web_search_url": "https://duckduckgo.com/?q=Pekin+Insurance+company+careers+benefits"
  },
  "peloton": {
   "ai_ds_prestige_tier": {
@@ -204975,7 +204846,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -205018,7 +204889,7 @@
    ],
    "value": "Candidates should be prepared to discuss object-oriented programming, Java, Python, JavaScript, and HTML. Expect questions around architecture, design, implementation, and testing to build stable and scalable products. The candidate should emphasize a desire for quality and customer-valued features."
   },
-  "last_attempt_at": 1784837897,
+  "last_attempt_at": 1784842178,
   "last_evidence_at": 1784801025,
   "locations": {
    "confidence": "high",
@@ -255240,7 +255111,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -255258,7 +255129,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784837897,
+  "last_attempt_at": 1784842178,
   "last_evidence_at": 1784675871,
   "name": "Vestmark",
   "pace_of_work": {
@@ -259798,7 +259669,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 12,
+  "attempts": 13,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -259849,7 +259720,7 @@
    ],
    "value": "Clarify whether the role is a full-time W-2 position or part of the gig contributor network. Ask about compensation structure, actual working hours, and technical learning opportunities to ensure it fits your elite tech role and WLB priorities."
   },
-  "last_attempt_at": 1784837897,
+  "last_attempt_at": 1784842178,
   "last_evidence_at": 1784737480,
   "locations": {
    "confidence": "unknown",
@@ -264646,7 +264517,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -264664,7 +264535,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784837897,
+  "last_attempt_at": 1784842178,
   "last_evidence_at": 1784677339,
   "name": "Woven",
   "pace_of_work": {
