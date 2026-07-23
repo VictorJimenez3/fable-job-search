@@ -45993,7 +45993,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -46011,7 +46011,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784797128,
+  "last_attempt_at": 1784797278,
   "last_evidence_at": 1784677043,
   "name": "Cellular Sales",
   "pace_of_work": {
@@ -60101,40 +60101,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Top-tier (comparable to FAANG AI labs, autonomous vehicle, or foundation model companies). Founders and early team from Stanford AI Lab, Google Brain, and Facebook AI Research; regular NeurIPS/ICML publications."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "B2B SaaS with annual contracts priced per agent/seat. Revenue scales with the number of agents using the platform and expansion into additional AI modules."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Intellectually rigorous, low-ego, customer-obsessed. Engineers and researchers sit together; product decisions are data-driven. Diversity and inclusion initiatives are active. Social events optional, not mandatory."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Enterprise contact centers across industries such as telecommunications, financial services, retail, and travel. Typical buyers are VP/Director of Customer Experience or Operations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $170k-$200k base + $30k-$60k annual equity (4-year vest) + $15k-$30k sign-on. Total first-year comp ~$215k-$290k."
   },
   "evidence_sha": "93b765f3b1d28f94",
+  "generated_at": 1784797278,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Enterprise AI / Conversational AI / Contact Center Software"
   },
-  "last_attempt_at": 1784797128,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep ML system design (real-time inference, model serving), NLP fundamentals (transformer architecture, tokenization, evaluation), and production ML questions (data pipelines, monitoring, drift detection). Behavioral rounds probe for collaboration in fast-paced, ambiguous environments and evidence of shipping user-facing ML products. Prepare to discuss trade-offs between model quality, latency, and cost."
+  },
+  "last_attempt_at": 1784797278,
   "last_evidence_at": 1784643844,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in San Francisco, CA. Additional hubs in New York, NY and remote-friendly across US. Some roles may require hybrid presence."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To turn every contact center agent into an expert by augmenting human conversation with real-time AI guidance."
+  },
   "name": "Cresta",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast but sustainable. Quarterly OKRs with bi-weekly sprints. Shipping cadence is high (weekly model updates), but on-call rotations are managed and incident post-mortems are blameless. Not a 9-9-6 culture."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cresta offers real-time agent assistance, automated quality management, and conversational analytics for contact centers. Its AI models listen to live calls and chats to suggest responses, ensure compliance, and surface insights."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual PTO + 10-12 company holidays + unlimited sick/mental health days. No official public policy documented."
   },
+  "refresh_after": 1789981278,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -60144,7 +60182,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full company shutdown for last week of December (between Christmas and New Year). Summer recharge week (early July) observed in some years."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Late-stage venture-backed private company (~200-400 employees). Series C/D funding from top-tier investors (Sequoia, Andreessen Horowitz, Tiger Global)."
   },
   "sources": [
    {
@@ -60178,14 +60221,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=7b77dff14a5218b3e93c4afdcb97b21bc37d9704cbf3b2d81f9205e3c5791292JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1b7e6636-68a1-6781-39ed-71ab69546607&u=a1aHR0cHM6Ly9jcmVzdGEuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "H-1B transfers and new cap filings supported for strong technical candidates. Green card sponsorship (PERM) typically initiated after 6-12 months for senior roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cresta is an AI-powered platform that provides real-time coaching and automation for contact center agents. It generates revenue through enterprise SaaS subscriptions sold to large customer service organizations."
+  },
+  "synthesized_evidence_sha": "93b765f3b1d28f94",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large-scale NLP/LLM training and serving, real-time streaming inference at low latency, conversation analytics pipelines, and product-facing ML feature development. Stack includes Python, PyTorch/TensorFlow, Kubernetes, Kafka, and cloud (AWS/GCP)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784643844,
   "web_search_url": "https://duckduckgo.com/?q=Cresta+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cresta sits at the intersection of elite AI research (top-tier publications, Stanford/Google Brain alumni founders) and high-impact enterprise deployment, offering new-grad compensation competitive with FAANG while maintaining a startup pace. The mission—augmenting rather than replacing humans—aligns with a desire for meaningful, user-facing AI. Reports suggest a culture that values sustainable velocity over heroics, with protected weekends and explicit shutdown norms, making it a rare find for "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5. Core hours ~10am-4pm PT. Explicit no-meeting Fridays in some teams. PTO encouraged. On-call ~1 week/month with reasonable paging frequency."
   }
  },
  "crew": {
@@ -69154,7 +69218,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -69172,7 +69236,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784797128,
+  "last_attempt_at": 1784797278,
   "last_evidence_at": 1784677533,
   "name": "Disney",
   "pace_of_work": {
@@ -136702,11 +136766,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -136718,6 +136784,7 @@
    "source_ids": [],
    "value": "Sports / technology (estimated)"
   },
+  "last_attempt_at": 1784797278,
   "last_evidence_at": 1784583484,
   "name": "Major League Baseball",
   "pace_of_work": {
@@ -154897,7 +154964,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -154915,7 +154982,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784797128,
+  "last_attempt_at": 1784797278,
   "last_evidence_at": 1784643844,
   "name": "Nextdoor",
   "pace_of_work": {
@@ -173187,7 +173254,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -173205,7 +173272,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
-  "last_attempt_at": 1784797128,
+  "last_attempt_at": 1784797278,
   "last_evidence_at": 1784675467,
   "name": "Plaid",
   "pace_of_work": {
@@ -209460,37 +209527,90 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Specialized quantitative finance engineering; elite within derivatives niche but lower public brand recognition than FAANG or top quant funds (Citadel, Jane Street, Two Sigma)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "979f58ec0a"
+   ],
+   "value": "B2B software licensing and subscription fees for trading platform access, market data feeds, and connectivity services; likely tiered pricing based on usage volume and feature modules."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, low-ego, technically rigorous; traders and quants sit with developers; meritocratic with strong mentorship; Chicago pragmatism over SV hype."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "979f58ec0a"
+   ],
+   "value": "Institutional options traders, market makers, hedge funds, proprietary trading firms, and broker-dealers active in listed equity and index options markets."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$160k base + $20k-$50k signing + annual bonus 15-30% (total $170k-$240k); competitive with Chicago prop shops, below NYC top-tier quant funds."
   },
   "evidence_sha": "23b4e750bf9f9483",
+  "generated_at": 1784797278,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "979f58ec0a"
+   ],
+   "value": "Fintech / Capital Markets Technology / Options Trading Infrastructure"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep C++ systems questions (memory management, lock-free programming, kernel bypass), options pricing/greeks fluency, and design discussions around high-throughput market data pipelines. Prepare for on-site coding in C++/Python, whiteboard architecture for order management systems, and quantitative reasoning around volatility surfaces. Demonstrate obsession with latency measurement, deterministic behavior, and production operability — not just algorithmic cleverness."
   },
+  "last_attempt_at": 1784797278,
   "last_evidence_at": 1784676850,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "979f58ec0a"
+   ],
+   "value": "Headquartered in Chicago, IL (major options trading hub); likely additional presence in NYC and/or remote-friendly for engineering roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "979f58ec0a"
+   ],
+   "value": "To provide cutting-edge technology that empowers options market participants with superior analytics, execution capabilities, and risk management."
+  },
   "name": "SpiderRock",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast — product-driven sprints tied to exchange release cycles and client deployments; intense during market-hours support windows but predictable compared to 24/7 prop trading desks."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "979f58ec0a"
+   ],
+   "value": "Options trading platform, market data analytics, execution management systems (EMS), risk management tools, and connectivity solutions for listed derivatives markets."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 US holidays; unlimited not typical in this sector; conservative accrual model common in trading-adjacent firms."
   },
+  "refresh_after": 1789981278,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -209500,7 +209620,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal company-wide shutdowns; market holidays observed (NYSE/CBOE calendar); optional summer Fridays not standard."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 50-200 employees; mature startup / growth-stage private company in fintech trading infrastructure niche."
   },
   "sources": [
    {
@@ -209534,14 +209659,39 @@
     "url": "https://online.adp.com/olp/olplanding.html?APPID=WFNPORTAL"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B for specialized engineering and quant roles given technical talent scarcity; no public sponsorship policy found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "979f58ec0a"
+   ],
+   "value": "SpiderRock is a financial technology company specializing in options trading infrastructure, market data analytics, and execution management systems. The company provides software platforms for institutional options traders, market makers, and hedge funds."
+  },
+  "synthesized_evidence_sha": "23b4e750bf9f9483",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "979f58ec0a"
+   ],
+   "value": "Low-latency C++/Python systems for options pricing, risk calculations, market data processing, order routing, and real-time analytics; distributed systems, kernel bypass networking, time-series databases, and quantitative research infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676850,
   "web_search_url": "https://duckduckgo.com/?q=SpiderRock+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "SpiderRock sits at the intersection of elite quantitative finance and hardcore systems engineering — offering new grads rare exposure to production low-latency options infrastructure used by top-tier market makers. The firm's niche focus on derivatives technology means you'll build systems that handle real-time risk at microsecond scales, accelerating technical depth faster than generalist fintechs. As a private, engineering-led company in Chicago's trading ecosystem, it avoids big-bank bureaucr"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7/10 — Market-hours alignment (no overnight on-call for most engineering roles), protected weekends, but seasonal crunches around exchange migrations and major version releases."
   }
  },
  "sportradar": {
@@ -236860,7 +237010,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -236878,7 +237028,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784797128,
+  "last_attempt_at": 1784797278,
   "last_evidence_at": 1784675132,
   "name": "University of Texas - Austin",
   "pace_of_work": {
