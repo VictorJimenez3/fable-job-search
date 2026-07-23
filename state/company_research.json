@@ -105131,11 +105131,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -105147,6 +105149,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784834265,
   "last_evidence_at": 1784827102,
   "name": "HaystackID",
   "pace_of_work": {
@@ -150575,12 +150578,92 @@
   }
  },
  "mixpanel": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
   "aliases": [],
-  "evidence_sha": "b4adb7f4d2d306de",
-  "last_evidence_at": 1784832208,
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "c87c7104b7b005e4",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784834268,
   "name": "Mixpanel",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "87c7de4376",
+    "kind": "company_web",
+    "publisher": "Mixpanel",
+    "retrieved_at": 1784834268,
+    "title": "Mixpanel public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=65ee6f429425872580a84120c1387b7d69d7fcb97e8fc0f247beed07f81ed43cJmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=0065c192-98e6-6bb5-2915-d60d99f26a0e&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTWl4cGFuZWw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "1bad3de8ab",
+    "kind": "company_web",
+    "publisher": "Mixpanel",
+    "retrieved_at": 1784834268,
+    "title": "Mixpanel public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=f853496496a751a9688115d3a7f0630dd8b17bef6acbc963fbf23bc02713ddc9JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=0065c192-98e6-6bb5-2915-d60d99f26a0e&u=a1aHR0cHM6Ly9taXhwYW5lbC5jb20vbG9naW4v&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "7446781b39",
+    "kind": "company_web",
+    "publisher": "Mixpanel",
+    "retrieved_at": 1784834268,
+    "title": "Mixpanel public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=f44136429f58152baca31dc4b327a96c08814a3639f8b1f79ff0ae35d23af217JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=0065c192-98e6-6bb5-2915-d60d99f26a0e&u=a1aHR0cHM6Ly9taXhwYW5lbC5jb20vaG9tZS8&ntb=1"
+   },
+   {
+    "content_sha": "e77ae70171601f5d",
+    "excerpt": "This company posting was surfaced through the monitored source: https://job-boards.greenhouse.io/mixpanel.",
+    "id": "efb7301e56",
+    "kind": "discovery_feed",
+    "publisher": "Mixpanel",
+    "retrieved_at": 1784834268,
+    "title": "Discovery source for Mixpanel",
+    "url": "https://job-boards.greenhouse.io/mixpanel"
+   },
    {
     "content_sha": "e8cd401d0d230406",
     "excerpt": "Trusted by more than 29,000 companies, including Workday, Pinterest, LG, and Rakuten Viber, Mixpanel’s AI-first digital analytics help teams accelerate adoption, improve retention, and ship with confidence. About the Team The Proactive Insights team is a newly formed team at the center of Mixpanel's AI-first analytics vision. This is a high-impact role on a small, fast-moving team where your work will define a new product category for Mixpanel. About Mixpanel Mixpanel turns data clarity into innovation.",
@@ -150592,7 +150675,15 @@
     "url": "https://job-boards.greenhouse.io/mixpanel/jobs/7941930"
    }
   ],
-  "status": "evidence_only"
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784834268,
+  "web_search_url": "https://duckduckgo.com/?q=Mixpanel+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
  },
  "mixrank yc s11": {
   "ai_ds_prestige_tier": {
@@ -176978,49 +177069,50 @@
  },
  "pinterest": {
   "ai_ds_prestige_tier": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "e6008dc280"
+    "4353d9c6d0"
    ],
-   "value": "Top mid-tier FAANG-adjacent US consumer tech firm; very high prestige for applied AI, recommendation, and visual search experts, stronger than advertising-only businesses but just below the elite research labs (Google Brain, OpenAI, FAIR)."
+   "value": "Top-tier (prestigious within the AI/DS industry, with a strong focus on scalable ML infrastructure)."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "e6008dc280",
     "ee0515fa73"
    ],
-   "value": "Advertising-based revenue model: sponsored pins, shopping ads, and brand partnerships account for nearly all revenue, leveraging AI to serve intent-powered, native ads that perform better than traditional social media ads."
+   "value": "Advertising revenue from businesses targeting Pinterest users, with premium features for advertisers."
   },
   "culture_vibe": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "e6008dc280",
-    "260d65ec9b"
+    "e915b71d2c"
    ],
-   "value": "Relaxed, kind, and creativity-centric; the internal spirit prizes craftsmanship, user empathy, and inclusion, resulting in a quiet, mature, and highly collaborative environment that intentionally contrasts with aggressive corporate cultures."
+   "value": "Innovative, mission-driven, and collaborative, with a focus on creative problem-solving and respect for personal time."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "e6008dc280",
-    "ee0515fa73"
+    "4353d9c6d0",
+    "e6008dc280"
    ],
-   "value": "Primary end users include global consumers seeking creative inspiration and DIY ideas; core demographic skews toward Millennials and Gen Z women, with growing male and international audiences. Monetization customers are brands, retailers, and performance advertisers aiming to reach high-intent shoppers."
+   "value": "Individual users seeking creative ideas and inspiration, and businesses advertising to reach engaged audiences."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $180,000–$220,000 total first-year compensation for San Francisco AI/data science roles, comprised of $130,000–$150,000 base, meaningful equity vesting, and an annual performance bonus; total is commensurate with top but not absolute highest FAANG pay bands."
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated $170,000 - $200,000 base salary + bonuses for new-grad AI/DS roles."
   },
   "evidence_sha": "5611f763d50dd90e",
-  "generated_at": 1784676548,
+  "generated_at": 1784834265,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "local",
+   "model": "qwen3:30b",
    "task": "company_research"
   },
   "industry": {
@@ -177029,50 +177121,55 @@
     "e6008dc280",
     "ee0515fa73"
    ],
-   "value": "Social media, internet content, and interactive online advertising; precisely sits at the intersection of computer vision, e-commerce recommendation, and visual discovery."
+   "value": "Social media and visual discovery platform."
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Interview loops for AI, data science, and ML engineering roles reflect Pinterest's collaborative yet fast-moving culture: expect rigorous modeling, system design, and coding assessments balanced by behavioral interviews that actively probe whether you thrive in highly autonomous, low-bureaucracy environments and respect work-life contours."
-  },
-  "last_attempt_at": 1784676548,
-  "last_evidence_at": 1784832497,
-  "locations": {
    "confidence": "high",
    "source_ids": [
-    "ee0515fa73"
+    "4353d9c6d0"
    ],
-   "value": "Global headquarters in San Francisco, California, with additional engineering hubs including Seattle, Toronto, and increasingly distributed US remote roles; Berlin, London, and Dublin for EMEA operations."
+   "value": "Technical problem-solving, ML pipeline development, and collaboration on scaling data science workflows in production environments."
+  },
+  "last_attempt_at": 1784834265,
+  "last_evidence_at": 1784832497,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "e915b71d2c"
+   ],
+   "value": "Headquartered in San Francisco, with offices in New York, Seattle, and other major cities."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "e6008dc280",
-    "260d65ec9b"
+    "4353d9c6d0"
    ],
-   "value": "To bring everyone the inspiration to create a life they love."
+   "value": "To help people discover and save creative ideas for projects, events, and inspiration."
   },
   "name": "Pinterest",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Lean, project-based culture with rapid iteration and high psychological safety, but deliberately opposes burnout cycles; teams push high-quality work in consistent sprints with structured planning, not chaotic firefighting."
+   "confidence": "medium",
+   "source_ids": [
+    "4353d9c6d0"
+   ],
+   "value": "Fast-paced with a focus on innovation and rapid iteration in product development."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "e6008dc280",
-    "ee0515fa73"
+    "4353d9c6d0"
    ],
-   "value": "Visual discovery engine with image and video pinning, algorithmic recommendation feeds, curated topic boards, shopping and product tagging tools, and full-funnel advertising placements (catalog, video, and shopping ads)."
+   "value": "Pinterest app and website, featuring a visual feed of pins (images or videos) organized by boards for inspiration and planning."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Flexible 'take what you need' vacation policy common among internet tech firms for exempt engineers, typically translating to 20–25 days per year taken in practice; no hard accrual cap is enforced."
+   "source_ids": [
+    "e915b71d2c"
+   ],
+   "value": "15 days of PTO for new graduates, increasing with tenure."
   },
+  "refresh_after": 1790018265,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -177081,15 +177178,18 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "e915b71d2c"
+   ],
+   "value": "Guaranteed shutdowns during major holidays and a company-wide pause for reflection."
   },
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "e6008dc280"
+    "e6008dc280",
+    "ee0515fa73"
    ],
-   "value": "Public company (NYSE: PINS), mid-cap to large-cap, with 4,000+ employees and 500M+ monthly active users; categorized as a mature growth company scaling its monetization and AI capabilities."
+   "value": "Publicly traded company (NASDAQ: PINS) with a global user base of millions."
   },
   "sources": [
    {
@@ -177154,26 +177254,28 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "e915b71d2c"
+   ],
+   "value": "Sponsorship available for H-1B visas and OPT/CPT for eligible candidates."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "e6008dc280",
-    "ee0515fa73"
+    "e915b71d2c",
+    "4353d9c6d0"
    ],
-   "value": "Pinterest is a visual discovery and inspiration platform where users browse, save (\"pin\"), and share images, videos, and ideas across categories like home decor, fashion, and recipes. The company makes money by embedding highly relevant, native shopping and brand advertisements directly into users' feeds and search results, allowing advertisers to reach consumers with strong purchase intent."
+   "value": "Pinterest is a visual discovery platform where users find and save creative ideas for projects, events, and inspiration. It generates revenue primarily through advertising and premium services."
   },
+  "synthesized_evidence_sha": "5611f763d50dd90e",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "e6008dc280",
-    "ee0515fa73"
+    "4353d9c6d0"
    ],
-   "value": "AI and data science work centers on on-device and cloud-based visual search, recommendation systems, deep learning for content understanding, natural language processing for query intent, and large-scale real-time advertising ranking models. Engineers build proprietary ML infrastructure handling millions of embeddings and real-time inference at Pinterest scale."
+   "value": "Developing and scaling machine learning pipelines, optimizing recommendation systems, and building infrastructure for real-time data processing."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583391,
@@ -177181,14 +177283,17 @@
   "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [
-    "e6008dc280"
+    "4353d9c6d0",
+    "e915b71d2c"
    ],
-   "value": "Pinterest offers a rare intersection of iconic consumer tech prestige, premier AI/ML capability, and a genuine, values-driven work-life balance. The company combines elite new-grad compensation with a non-bureaucratic, swift engineering culture, plus a proven commitment to predictable hours and company-wide recharge days, distancing itself from the 24/7 expectations at many big tech competitors."
+   "value": "A top-tier AI/DS role at Pinterest offers elite prestige, high new-grad pay, and a fast, innovative culture without excessive bureaucracy, aligning with a mission-driven environment that prioritizes work-life balance."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Strongly above average for Big Tech; internal employee sentiment and public policy consistently place Pinterest in the top-tier of work-life balance among tech peers."
+   "source_ids": [
+    "e915b71d2c"
+   ],
+   "value": "Strong emphasis on work-life balance with structured shutdowns and reasonable hours."
   }
  },
  "pioneer data systems": {
@@ -179608,12 +179713,82 @@
   }
  },
  "poshmark": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
   "aliases": [],
-  "evidence_sha": "e586ebd6667985bc",
-  "last_evidence_at": 1784832208,
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "25fccbab8372920c",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784834269,
   "name": "Poshmark",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "220e990354",
+    "kind": "company_web",
+    "publisher": "Poshmark",
+    "retrieved_at": 1784834269,
+    "title": "Poshmark public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=01e4c4484c911cd1a98e7bc32bb8ca3b45692819bfa52fab74d8aa372ca0049bJmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=0065c192-98e6-6bb5-2915-d60d99f26a0e&u=a1aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL1Bvc2htYXJrLw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "bf37be957a",
+    "kind": "company_web",
+    "publisher": "Poshmark",
+    "retrieved_at": 1784834269,
+    "title": "Poshmark public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=a905c99e1f6f5aa7fd2b575fe4f37804744523a0aa9e7552c74038d67e311052JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=0065c192-98e6-6bb5-2915-d60d99f26a0e&u=a1aHR0cHM6Ly9hcHBzLmFwcGxlLmNvbS91cy9hcHAvcG9zaG1hcmstc2hvcC1zZWxsLWZhc2hpb24vaWQ0NzA0MTIxNDc&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "d41396f1a5",
+    "kind": "company_web",
+    "publisher": "Poshmark",
+    "retrieved_at": 1784834269,
+    "title": "Poshmark public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=ba211363ada8665bf287eb4a5ac9069f30f017a91c12b260b068cd40d79d1d22JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=0065c192-98e6-6bb5-2915-d60d99f26a0e&u=a1aHR0cHM6Ly9wb3NobWFyay5jb20vP21zb2NraWQ9MDA2NWMxOTI5OGU2NmJiNTI5MTVkNjBkOTlmMjZhMGU&ntb=1"
+   },
    {
     "content_sha": "10b3fa2d9815bfdf",
     "excerpt": "Our mission is to build a world-class machine learning platform to bring value out of data for us and for our customers. ABOUT POSHMARK Poshmark is the leading fashion marketplace where style comes alive through discovery, self-expression, and human connection. Our AI / Machine Learning team is a central player in the Poshmark organization. Powered by a vibrant community of 165 million members, Poshmark brings real people and taste to shopping through a social experience shaped by shared discovery.",
@@ -179625,7 +179800,15 @@
     "url": "https://jobs.ashbyhq.com/poshmark/1bdf7b14-1a68-4c3b-ab64-4a3a2793b937"
    }
   ],
-  "status": "evidence_only"
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784834269,
+  "web_search_url": "https://duckduckgo.com/?q=Poshmark+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
  },
  "power3 solutions": {
   "ai_ds_prestige_tier": {
@@ -189540,6 +189723,104 @@
   "web_research_status": "sources captured",
   "web_researched_at": 1784679088,
   "web_search_url": "https://duckduckgo.com/?q=Real+Chemistry+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
+ "reality defender": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "8e1adc3a9e65e68a",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784834267,
+  "name": "Reality Defender",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "74fad8ef03",
+    "kind": "company_web",
+    "publisher": "Reality Defender",
+    "retrieved_at": 1784834267,
+    "title": "Reality Defender public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=ed40c62acf1f690d588072ae4fa32e9a9ef20cfa733dcffbf94ee2ed84eef2eeJmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=0065c192-98e6-6bb5-2915-d60d99f26a0e&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L3JlYWxpdHk&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "8757f373f4",
+    "kind": "company_web",
+    "publisher": "Reality Defender",
+    "retrieved_at": 1784834267,
+    "title": "Reality Defender public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=2e1c0d0f754a96e4c84d9d6eeb6bf792be90c5dd26c96d965867c5383e965f59JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=0065c192-98e6-6bb5-2915-d60d99f26a0e&u=a1aHR0cHM6Ly93d3cucmVhbGl0eXRlYS5jb20v&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "160731a4c7",
+    "kind": "company_web",
+    "publisher": "Reality Defender",
+    "retrieved_at": 1784834267,
+    "title": "Reality Defender public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=23f9454e7c06db92e29f987c58264579144d12b4b2a72624735d90de0f92768bJmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=0065c192-98e6-6bb5-2915-d60d99f26a0e&u=a1aHR0cHM6Ly9yZWFsaXR5LmFwcC8_bGFuZz1lbg&ntb=1"
+   },
+   {
+    "content_sha": "59bda2899fd8987f",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027.",
+    "id": "17f8c9c419",
+    "kind": "discovery_feed",
+    "publisher": "Reality Defender",
+    "retrieved_at": 1784834267,
+    "title": "Discovery source for Reality Defender",
+    "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784834267,
+  "web_search_url": "https://duckduckgo.com/?q=Reality+Defender+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
@@ -230074,39 +230355,98 @@
  },
  "the nuclear company": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "ef0176960e"
+   ],
+   "value": "High-tier within the nuclear energy and clean tech sectors, with a focus on innovative AI applications for safe and reliable energy systems."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "ef0176960e"
+   ],
+   "value": "Sells nuclear energy systems and infrastructure to utilities and government partners, leveraging a 'design-once, build-many' approach to scale deployment and reduce costs."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "ef0176960e"
+   ],
+   "value": "Innovative, mission-driven, and collaborative, with a safety culture built on trust, intellectual honesty, accountability, and open communication."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "ef0176960e"
+   ],
+   "value": "Energy utilities, government agencies, and private sector partners focused on clean energy transitions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140,000 - $180,000 base salary for new grad AI/data science roles."
   },
   "evidence_sha": "09f27ade631d6b39",
+  "generated_at": 1784834265,
+  "generator": {
+   "endpoint": "local",
+   "model": "qwen3:30b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ef0176960e"
+   ],
+   "value": "Nuclear energy and clean technology."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technical problem-solving, alignment with company values (trust, urgency, humility, resilience), and mission-driven collaboration in a fast-paced, innovative environment."
   },
+  "last_attempt_at": 1784834265,
   "last_evidence_at": 1784832208,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "ef0176960e"
+   ],
+   "value": "Headquartered in the United States, with engineering and operations teams in multiple locations; specific cities not publicly disclosed."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "ef0176960e"
+   ],
+   "value": "To accelerate the global transition to clean energy by deploying safe, reliable, and affordable nuclear energy systems."
+  },
   "name": "The Nuclear Company",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "ef0176960e"
+   ],
+   "value": "Fast-paced, with a focus on accelerating deployment of nuclear energy systems through innovative technology and data-driven decision-making."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "ef0176960e"
+   ],
+   "value": "Nuclear energy systems and infrastructure for safe, reliable, and affordable clean energy deployment."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of PTO annually."
   },
+  "refresh_after": 1790018265,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -230116,7 +230456,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Guaranteed shutdowns during critical periods (e.g., holidays, company-wide breaks) to support work-life balance."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "ef0176960e"
+   ],
+   "value": "Pre-IPO startup with a focus on scaling toward a public-company operating model."
   },
   "sources": [
    {
@@ -230160,14 +230507,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=76c747837114a7df96542d5f9db19f6eb6a734ebc63897d0a26151ce5d097300JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=0d7479d2-dd10-665e-36fa-6e4fdcff67b5&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9UaGU&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "ef0176960e"
+   ],
+   "value": "Sponsorship for visa applications is available for eligible technical roles, though specific policies are not publicly detailed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "ef0176960e"
+   ],
+   "value": "The Nuclear Company designs and deploys safe, reliable, and affordable nuclear energy systems using a 'design-once, build-many' model to accelerate the global transition to clean energy."
+  },
+  "synthesized_evidence_sha": "09f27ade631d6b39",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "ef0176960e"
+   ],
+   "value": "AI and data science roles focus on optimizing nuclear energy system design, automation, and data-driven decision-making for safe, reliable, and affordable energy deployment."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784593389,
   "web_search_url": "https://duckduckgo.com/?q=The+Nuclear+Company+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "A top-tier AI or data science role at The Nuclear Company offers elite prestige in a mission-driven environment, with high new-grad pay and a fast, innovative tech culture that prioritizes work-life balance through sane hours and guaranteed shutdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Strong, with a focus on avoiding toxic or high-burnout environments through sane hours and guaranteed shutdowns for work-life balance."
   }
  },
  "the swift group llc": {
