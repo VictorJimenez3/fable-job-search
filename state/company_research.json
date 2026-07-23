@@ -23643,11 +23643,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -23659,6 +23661,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784778735,
   "last_evidence_at": 1784677284,
   "name": "Aurora",
   "pace_of_work": {
@@ -82823,7 +82826,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -82841,7 +82844,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784778628,
+  "last_attempt_at": 1784778735,
   "last_evidence_at": 1784677481,
   "name": "FlexAI",
   "pace_of_work": {
@@ -88240,7 +88243,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88258,7 +88261,7 @@
    "source_ids": [],
    "value": "Ai Lab / technology (estimated)"
   },
-  "last_attempt_at": 1784778628,
+  "last_attempt_at": 1784778735,
   "last_evidence_at": 1784599435,
   "name": "Gecko Robotics",
   "pace_of_work": {
@@ -90266,39 +90269,110 @@
  },
  "geneva trading": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "8b8a61ee89",
+    "66f0226739"
+   ],
+   "value": "Elite — top-tier HFT firm with global reach, known for cutting-edge quantitative research and low-latency ML applications."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "8b8a61ee89",
+    "66f0226739"
+   ],
+   "value": "Principal trading firm: deploys its own capital to execute high-frequency, algorithmic trading strategies across global markets, profiting from bid-ask spreads, arbitrage, and short-term price movements."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "8b8a61ee89",
+    "66f0226739"
+   ],
+   "value": "Collaborative, integrity-driven, entrepreneurial, and technically rigorous — flat hierarchy with emphasis on personal excellence and team progress."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "8b8a61ee89",
+    "66f0226739"
+   ],
+   "value": "Global exchanges, electronic trading venues, and market participants who benefit from the liquidity and price discovery Geneva provides as a principal trader."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $175k-$225k base + significant bonus (total $250k-$350k+), competitive with top HFT peers."
   },
   "evidence_sha": "2fee618b08412284",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+  "generated_at": 1784778735,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8b8a61ee89",
+    "66f0226739"
+   ],
+   "value": "Proprietary trading / High-frequency trading (HFT) / Quantitative finance"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "66f0226739",
+    "8b8a61ee89"
+   ],
+   "value": "Expect deep technical assessments in C++, Linux internals, networking, and low-latency architecture; quantitative problem-solving; and cultural fit for collaborative, fast-paced, entrepreneurial teams. Prepare to discuss real-time systems, performance optimization, and how you balance innovation with reliability."
+  },
+  "last_attempt_at": 1784778735,
   "last_evidence_at": 1784674078,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "8b8a61ee89",
+    "66f0226739"
+   ],
+   "value": "Chicago (headquarters), Dublin, London."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "8b8a61ee89",
+    "66f0226739"
+   ],
+   "value": "Rooted in a culture of integrity, collaboration, and an unwavering passion for progress, fostering an environment of personal and professional excellence."
+  },
   "name": "Geneva Trading",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "8b8a61ee89",
+    "66f0226739"
+   ],
+   "value": "Fast — high-impact, entrepreneurial environment with rapid iteration cycles driven by market hours and competitive pressure."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "8b8a61ee89",
+    "66f0226739"
+   ],
+   "value": "Proprietary trading strategies and market-making services across equities, futures, options, and other asset classes; low-latency trading infrastructure and quantitative research platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days + market holidays; competitive with peer HFT firms."
   },
+  "refresh_after": 1789962735,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -90308,7 +90382,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Daily hard shutdown after market close; weekend and holiday shutdowns standard; limited on-call for critical infrastructure."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "8b8a61ee89",
+    "66f0226739"
+   ],
+   "value": "Established, mid-sized global firm (founded 1999) with offices in Chicago, Dublin, and London; operates as a private partnership."
   },
   "sources": [
    {
@@ -90362,14 +90444,44 @@
     "url": "https://job-boards.greenhouse.io/genevatrading/jobs/5088592007"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H-1B and other work visas for specialized technical roles given global offices and competitive talent needs; confirm with recruiter."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "8b8a61ee89",
+    "66f0226739"
+   ],
+   "value": "Geneva Trading is a proprietary trading firm founded in 1999 that trades its own capital across global financial markets. It makes money by providing liquidity and capturing small pricing inefficiencies through high-frequency, low-latency trading strategies powered by advanced technology and quantitative research."
+  },
+  "synthesized_evidence_sha": "2fee618b08412284",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "66f0226739",
+    "8b8a61ee89"
+   ],
+   "value": "Ultra-low-latency systems engineering (C++, Linux kernel tuning, FPGA, networking), quantitative research and model development, real-time data pipelines, high-performance computing, and infrastructure automation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674078,
   "web_search_url": "https://duckduckgo.com/?q=Geneva+Trading+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "8b8a61ee89",
+    "66f0226739"
+   ],
+   "value": "Geneva offers elite HFT prestige and top-tier new-grad compensation in a fast, innovative engineering culture without the bureaucracy of big banks. Its collaborative, integrity-driven environment and market-hours-aligned schedule support sustainable work-life balance, while the technical depth of low-latency systems and quantitative research accelerates career growth for AI/data science talent."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — market-hours alignment provides predictable intensity; collaborative culture and guaranteed shutdowns around trading hours support balance, but on-call rotations and release deadlines exist."
   }
  },
  "gentex corporation": {
@@ -98851,7 +98963,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -98869,7 +98981,7 @@
    "source_ids": [],
    "value": "Ai Lab / technology (estimated)"
   },
-  "last_attempt_at": 1784778628,
+  "last_attempt_at": 1784778735,
   "last_evidence_at": 1784599435,
   "name": "Hayden AI",
   "pace_of_work": {
@@ -115394,7 +115506,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -115412,7 +115524,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784778628,
+  "last_attempt_at": 1784778735,
   "last_evidence_at": 1784677233,
   "name": "Jacobs",
   "pace_of_work": {
@@ -166486,7 +166598,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -166504,7 +166616,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784778628,
+  "last_attempt_at": 1784778735,
   "last_evidence_at": 1784677232,
   "name": "Pierre Fabre",
   "pace_of_work": {
@@ -195653,7 +195765,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -195671,7 +195783,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784778628,
+  "last_attempt_at": 1784778735,
   "last_evidence_at": 1784677479,
   "name": "Sigma Computing",
   "pace_of_work": {
