@@ -1,13 +1,66 @@
 {
  "micron": {
   "aliases": [],
-  "attempts": 1,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "d5fccf6276"
+   ],
+   "value": "Manufacturing and operational excellence to deliver memory and storage products."
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "d0d9d98e69f5a170",
-  "last_attempt_at": 1784714927,
+  "generated_at": 1784801220,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "d5fccf6276"
+   ],
+   "value": "Ask about safety culture, mentorship structure, exposure to labs or scale-up processes, sustainability initiatives, work-life balance, and details on work authorization/relocation expectations."
+  },
+  "last_attempt_at": 1784801220,
   "last_evidence_at": 1784704856,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "d5fccf6276"
+   ],
+   "value": "Fab 10NX, Singapore (based on the internship posting URL and job ID context, though not explicitly excerpted)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "d5fccf6276"
+   ],
+   "value": "Pursuing innovation fueled by delivering solutions that help make everything from virtual reality experiences to breakthroughs in neural networks possible, enabled by a relentless focus on customers, technology leadership, and operational excellence."
+  },
   "name": "Micron",
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "d5fccf6276"
+   ],
+   "value": "High-performance DRAM, NAND, and NOR memory and storage products through Micron® and Crucial® brands."
+  },
+  "prompt_v": 1,
+  "refresh_after": 1789985220,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "a9555d1506696f92",
@@ -20,7 +73,34 @@
     "url": "https://micron.wd1.myworkdayjobs.com/en-US/External/job/Fab-10NX-Singapore/Advanced-Engineering---Manufacturing-Internship_JR106775"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "d5fccf6276"
+   ],
+   "value": "Micron delivers a rich portfolio of high-performance DRAM, NAND, and NOR memory and storage products with a focus on technology leadership and manufacturing and operational excellence."
+  },
+  "synthesized_evidence_sha": "d0d9d98e69f5a170",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "d5fccf6276"
+   ],
+   "value": "Internship involves supporting equipment optimisation and reliability initiatives within advanced engineering and manufacturing."
+  },
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "d5fccf6276"
+   ],
+   "value": "This internship offers meaningful technical work in equipment optimisation and reliability, exposing you to real manufacturing processes and advanced engineering environments."
+  }
  },
  "neuralink": {
   "aliases": [],
