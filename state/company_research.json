@@ -16544,7 +16544,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -16562,7 +16562,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784778028,
+  "last_attempt_at": 1784778147,
   "last_evidence_at": 1784672894,
   "name": "Anything",
   "pace_of_work": {
@@ -87857,7 +87857,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -87875,7 +87875,7 @@
    "source_ids": [],
    "value": "Ai Lab / technology (estimated)"
   },
-  "last_attempt_at": 1784778028,
+  "last_attempt_at": 1784778147,
   "last_evidence_at": 1784599435,
   "name": "Gecko Robotics",
   "pace_of_work": {
@@ -105451,40 +105451,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 — world-class autonomy (Motional L4), robotics (Boston Dynamics), and hydrogen/fuel-cell AI; publishes at CVPR, NeurIPS, ICRA; attracts top PhD talent."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "f3f2b40e33",
+    "df4238fb39"
+   ],
+   "value": "Traditional automotive OEM: revenue from vehicle wholesale/retail sales, captive finance (Hyundai Motor Finance), parts/service, and growing software/subscription services (connected car, EV charging)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, hierarchical but modernizing; strong Korean corporate roots blended with Silicon Valley-style autonomy in US R&D centers. High psychological safety in research groups; emphasis on 'challenger spirit' and long-term thinking. Diversity improving but still male-dominated in senior tech roles."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "f3f2b40e33",
+    "df4238fb39"
+   ],
+   "value": "Global retail consumers, fleet operators, and commercial businesses across North America, Europe, Asia, and other markets; also serves mobility-service providers and government fleets."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $115k-$135k base + 10-15% target bonus + RSU ($30k-$50k over 4 years) for AI/ML engineering roles in US R&D centers (Ann Arbor, Silicon Valley). Total comp ~$160k-$200k year 1."
   },
   "evidence_sha": "47feeff71760d34c",
+  "generated_at": 1784778147,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f3f2b40e33",
+    "df4238fb39"
+   ],
+   "value": "Automotive / Mobility / AI & Robotics"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical screens: ML systems design (autonomy/perception), embedded/real-time constraints, battery/energy optimization, and large-scale simulation. Behavioral questions probe mission alignment ('Progress for Humanity') and cross-cultural collaboration. Prepare for take-home projects on sensor fusion or EV range prediction. Ask about team-level sprint cadence, on-call expectations, and internal mobility to gauge WLB and growth."
   },
-  "last_attempt_at": 1784778028,
+  "last_attempt_at": 1784778147,
   "last_evidence_at": 1784674070,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "f3f2b40e33",
+    "df4238fb39",
+    "49910f0fae"
+   ],
+   "value": "Global HQ in Seoul; major R&D centers in Namyang (Korea), Ann Arbor (US), Frankfurt (Germany), Tokyo (Japan); manufacturing plants in US (Alabama, Georgia, new Georgia EV plant), Korea, Europe, India, Brazil, Indonesia; Americas careers hub supports US/Canada/Latin America roles."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "f3f2b40e33",
+    "df4238fb39"
+   ],
+   "value": "Progress for Humanity — advancing sustainable mobility through innovation in electrification, hydrogen, robotics, and autonomous technology to create a better future."
+  },
   "name": "Hyundai Motor Company",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-to-fast in AI/autonomy pods (2-week sprints, quarterly milestones); slower in core vehicle programs (3-5 year cycles). Software-defined vehicle shift accelerating pace in platform teams."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "f3f2b40e33",
+    "df4238fb39"
+   ],
+   "value": "Passenger cars (sedans, hatchbacks), SUVs/crossovers, electric vehicles (IONIQ, Kona Electric), commercial vehicles, and emerging mobility solutions (robotics, AAM, hydrogen fuel cell)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual PTO + 10-12 US holidays; accrual increases with tenure. Unlimited sick leave; parental leave 12-16 weeks paid (varies by state/country)."
   },
+  "refresh_after": 1789962147,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -105494,7 +105551,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; some teams observe voluntary 'recharge weeks' in July/December. Plant shutdowns for model changeovers (1-2 weeks) do not apply to R&D."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "f3f2b40e33",
+    "df4238fb39"
+   ],
+   "value": "Large public company (KRX: 005380); ~120,000+ employees globally; mature, profitable, investing heavily in EV/AI transformation."
   },
   "sources": [
    {
@@ -105528,14 +105593,41 @@
     "url": "https://careers-americas.hyundai.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established H-1B sponsor for specialized engineering/AI roles; global mobility program supports internal transfers; new-grad hires often eligible for visa support at US R&D centers."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "f3f2b40e33",
+    "df4238fb39"
+   ],
+   "value": "Hyundai Motor Company is a global automotive manufacturer headquartered in South Korea, designing, manufacturing, and selling passenger vehicles, SUVs, and commercial vehicles worldwide. It operates through a traditional OEM model: revenue comes from vehicle sales, financing, and after-sales services across global markets."
+  },
+  "synthesized_evidence_sha": "47feeff71760d34c",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "f3f2b40e33",
+    "df4238fb39"
+   ],
+   "value": "AI/ML for autonomous driving (HTWO, Motional JV), battery management, vehicle connectivity, robotics (Boston Dynamics), manufacturing AI, simulation, and cloud/platform engineering for software-defined vehicles."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674070,
   "web_search_url": "https://duckduckgo.com/?q=Hyundai+Motor+Company+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Hyundai offers elite AI/autonomy prestige (Motional, Boston Dynamics, HTWO) with top-tier new-grad compensation, while its 'Progress for Humanity' mission drives real-world impact in EVs and robotics. The company is shifting from traditional auto cadence to faster software cycles, but retains corporate structure — so pace varies by team. Work-life balance is generally respected in R&D with flexible policies, though shutdowns aren't guaranteed. Strong technical mentorship and global mobility acce"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.8/5 — R&D roles typically 40-45 hrs/week with flexible hybrid; no company-wide shutdowns but team-level 'focus weeks' occur. Manufacturing/production roles have stricter schedules."
   }
  },
  "i3": {
@@ -174695,7 +174787,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -174713,7 +174805,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
-  "last_attempt_at": 1784778028,
+  "last_attempt_at": 1784778147,
   "last_evidence_at": 1784672895,
   "name": "Qualcomm Technologies, Inc.",
   "pace_of_work": {
@@ -195006,7 +195098,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -195024,7 +195116,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784778028,
+  "last_attempt_at": 1784778147,
   "last_evidence_at": 1784677479,
   "name": "Sigma Computing",
   "pace_of_work": {
@@ -204864,7 +204956,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -204882,7 +204974,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784778028,
+  "last_attempt_at": 1784778147,
   "last_evidence_at": 1784677034,
   "name": "Stoke Space",
   "pace_of_work": {
@@ -244698,7 +244790,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -244716,7 +244808,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784778028,
+  "last_attempt_at": 1784778147,
   "last_evidence_at": 1784672895,
   "name": "Zello",
   "pace_of_work": {
@@ -244805,38 +244897,95 @@
  "zettabyte": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "c70b608518"
+   ],
+   "value": "Estimated: Unknown - no AI/data science roles identified in available sources. Company appears focused on frontend/product engineering."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c70b608518"
+   ],
+   "value": "Business model not disclosed in available sources. Likely a venture-backed technology company given Palo Alto location and equity compensation."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "c70b608518"
+   ],
+   "value": "Estimated: Lean, product-focused, in-office collaboration culture (3 days onsite). Equity emphasis suggests ownership mindset. No data on diversity, rituals, or management style."
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "c70b608518"
+   ],
+   "value": "Estimated: $120k-$160k base + equity (typical Palo Alto early-stage frontend new grad range). Job posting states 'competitive salary and equity based on experience and skillset' with no figures."
   },
   "evidence_sha": "c2380d129d8d182e",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784778147,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "c70b608518"
+   ],
+   "value": "Technology / Software (specific vertical not identified)"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "c70b608518"
+   ],
+   "value": "Prepare for frontend/UI/UX technical assessments. Demonstrate ability to work in hybrid environment and align with early-stage pace. Be ready to discuss US work authorization status. Equity compensation suggests interest in long-term commitment and growth."
+  },
+  "last_attempt_at": 1784778147,
   "last_evidence_at": 1784677480,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "c70b608518"
+   ],
+   "value": "Palo Alto, California (hybrid: 3 days in-office, 2 days remote). Must be authorized to work in US without visa sponsorship."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Zettabyte",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast - early-stage startup in Palo Alto with equity compensation typically indicates high velocity, but no direct evidence in sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "c70b608518"
+   ],
+   "value": "Specific product details not disclosed in available sources. The company appears to be building technology products requiring frontend engineering expertise with UI/UX focus."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Not disclosed. Typical early-stage startups offer 10-15 days PTO plus holidays, but no policy published."
   },
+  "refresh_after": 1789962147,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -244846,7 +244995,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed shutdowns mentioned. Unlikely at early-stage startup."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c70b608518"
+   ],
+   "value": "Early-stage startup (inferred from hiring individual contributors directly via AshbyHQ and equity compensation). Exact headcount not disclosed."
   },
   "sources": [
    {
@@ -244890,14 +245046,45 @@
     "url": "https://jobs.ashbyhq.com/zettabyte-space/3b4f91c8-9f00-40a1-a59b-8f6fc7217a61"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "c70b608518"
+   ],
+   "value": "No visa sponsorship offered. Candidates must be authorized to work in the United States without need for visa sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "c70b608518"
+   ],
+   "value": "Zettabyte (zettabyte-space) is a technology company based in Palo Alto hiring for engineering roles including Frontend Engineer with UI/UX focus. The company offers hybrid work arrangements and competitive compensation packages with equity."
+  },
+  "synthesized_evidence_sha": "c2380d129d8d182e",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "c70b608518"
+   ],
+   "value": "Frontend engineering with UI/UX focus. Tech stack details not specified in job posting. Role involves building user-facing products."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677480,
   "web_search_url": "https://duckduckgo.com/?q=Zettabyte+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "c70b608518"
+   ],
+   "value": "Offers a Palo Alto-based hybrid role with equity at an early-stage company, aligning with desire for fast-paced innovative culture and high new-grad pay potential. The 3/2 hybrid schedule and lack of visa sponsorship suggest a lean, focused team rather than bureaucratic structure. Equity component provides upside if company scales."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "c70b608518"
+   ],
+   "value": "Estimated: Moderate - hybrid 3/2 schedule suggests some structure, but early-stage startups often demand long hours. No public data on hours or burnout."
   }
  },
  "ziff davis shopping": {
