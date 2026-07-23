@@ -2166,7 +2166,7 @@
    "value": "High. Accenture is a brand-name 'Tier 2' innovator widely recognized for scaled AI implementation and consultancy breadth, carrying strong industry prestige, though it sits just below the elite pure-product research labs."
   },
   "aliases": [],
-  "attempts": 12,
+  "attempts": 13,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -2215,7 +2215,7 @@
    "source_ids": [],
    "value": "Candidates should expect rigorous questioning on advanced SQL, Python, and applied modeling, plus scenario-driven consultancy techniques. Equally probe how managers set scope and distribute workload during government project sprints to confirm environments that respect shutdowns and deep learning time rather than high-burnout hero worship."
   },
-  "last_attempt_at": 1784837613,
+  "last_attempt_at": 1784837771,
   "last_evidence_at": 1784826805,
   "locations": {
    "confidence": "high",
@@ -24105,40 +24105,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2–3 (strong applied ML in industrial setting, not a primary AI research lab)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Revenue from sand sales, transportation, and integrated logistics contracts with E&P operators; likely asset-heavy with rail terminals and truck fleets."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-first, pragmatic, safety-conscious; ‘get it done’ attitude with growing investment in digital transformation; less perks-focused than big tech, more mission-aligned on energy reliability."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Presumably exploration and production (E&P) companies and oilfield service providers in major U.S. basins such as the Permian."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k–$140k base + 10–15% bonus + equity (RSUs/options) ≈ $130k–$165k total first-year compensation for AI/DS roles."
   },
   "evidence_sha": "d6945099f0c633af",
+  "generated_at": 1784837771,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Energy / Oilfield Services / Logistics & Supply Chain"
   },
-  "last_attempt_at": 1784837613,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Probe for: (1) real ML/Ops maturity—ask about model deployment pipelines and data infrastructure; (2) work-life boundaries—ask about on-call rotations, shutdown policies, and typical weekly hours; (3) career growth—ask about mentorship, project ownership, and promotion timeline for new grads."
+  },
+  "last_attempt_at": 1784837771,
   "last_evidence_at": 1784672482,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in Austin, TX; major operations in Permian Basin (Midland/Odessa), with terminals and logistics hubs across Texas and New Mexico."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No public mission statement located in the supplied sources; typical for energy logistics firms to emphasize safe, reliable, and efficient supply-chain solutions."
+  },
   "name": "Atlas Energy Solutions",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced during drilling seasons; project-driven with quarterly planning cycles; less bureaucracy than hyperscalers but operational urgency can create crunch periods."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely provides frac sand, logistics, and last-mile delivery for hydraulic fracturing operations; exact product suite not confirmed by sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 8–10 company holidays; unlimited not typical for industrial sector."
   },
+  "refresh_after": 1790021771,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -24148,7 +24186,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns reported; some teams may observe Christmas/New Year slowdown voluntarily."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-to-large private or public company (several hundred to a few thousand employees) operating in multiple basins."
   },
   "sources": [
    {
@@ -24182,14 +24225,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=9bee6774d088265c69169689196b6f14a7a868677cd042d7d2f05db98454b910JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=068da0dd-8eee-6028-1b01-b7408fbe61eb&u=a1aHR0cHM6Ly9hdGxhcy5oZWFydC5vcmcvaG9tZQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B visas for specialized technical roles; no public data on green-card sponsorship frequency."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Atlas Energy Solutions appears to be an energy-sector company, likely focused on oilfield services or energy logistics, but no verifiable details were found in the provided sources."
+  },
+  "synthesized_evidence_sha": "d6945099f0c633af",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Data science and AI roles likely focus on supply-chain optimization, demand forecasting, logistics routing, and real-time operations analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672482,
   "web_search_url": "https://duckduckgo.com/?q=Atlas+Energy+Solutions+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Matches candidate priorities: an energy-tech company where AI/data science can directly impact physical operations, offering elite technical challenges and high new-grad pay without the bureaucracy of mega-cap tech. Mission-driven in modernizing energy logistics, with potential for sane hours and guaranteed shutdowns if culture follows industry leaders."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 – field-adjacent roles may require occasional site visits; corporate/tech roles generally 45–50 hrs/week with protected weekends if culture is enforced."
   }
  },
  "atlassian": {
@@ -76337,40 +76401,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 – Applied analytics and audience intelligence in a niche media company; not an elite AI research lab."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "B2B media model: advertising and sponsorships in print/digital publications, paid research subscriptions and custom analytics, event registrations and sponsorships, and awards/benchmarking programs."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Established, mission-oriented, collaborative; long-tenure employees; low politics; emphasizes public-service impact over hyper-growth."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "State and local government officials (CIOs, CTOs, elected leaders), education administrators, and vendors selling into the public sector."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k–$105k base + modest bonus; equity unlikely (private)."
   },
   "evidence_sha": "7b57d6e7a49f1435",
+  "generated_at": 1784837771,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "B2B Media / GovTech / Government Intelligence"
   },
-  "last_attempt_at": 1784837613,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Demonstrate ability to translate messy public-sector data into actionable insights; show experience with .NET/Python/SQL stack; ask about WLB guardrails, shutdown policies, and learning budget."
+  },
+  "last_attempt_at": 1784837771,
   "last_evidence_at": 1784674263,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in Folsom, CA (Sacramento metro); remote-friendly roles across US; occasional travel for events."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To strengthen state and local government by providing trusted information, research, and communities that help public servants solve problems and modernize services."
+  },
   "name": "e.Republic",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate – deadline-driven around publication/event cycles but without 24/7 on-call; predictable sprint cadence."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Government Technology magazine, Governing magazine, e.Republic Research (data/benchmarks), Center for Digital Government (surveys/awards), and numerous public-sector events and webinars."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 company holidays; flexible sick/personal time."
   },
+  "refresh_after": 1790021771,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -76380,7 +76482,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Christmas–New Year); possible summer half-day Fridays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Private, profitable, ~200-300 employees; mature company founded in 1984, headquartered in Folsom, CA."
   },
   "sources": [
    {
@@ -76414,14 +76521,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=a1a5da687f0499bc0d76c79e407504b17494747bfa70302a9e65b22fdffc0a65JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2a7b1ce1-283e-6477-218e-0b7c29fe652e&u=a1aHR0cHM6Ly93d3cuZW9ubGluZS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Limited public record of H-1B or green-card sponsorship; assume case-by-case for senior specialized roles only."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "e.Republic is a media, research, and events company focused on state and local government and education sectors. It produces publications, digital content, data intelligence, and events for public sector leaders."
+  },
+  "synthesized_evidence_sha": "7b57d6e7a49f1435",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Content management platforms, data pipelines for government benchmarks, survey/analytics tooling, event tech, and internal ML for audience insights; stack includes .NET, Python, SQL, AWS."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674263,
   "web_search_url": "https://duckduckgo.com/?q=e.Republic+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers a mission-driven public-sector focus with stable, profitable business model; likely provides sane hours and low burnout versus high-pressure tech, while still applying data science to meaningful government problems."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 – Mature private company with reasonable hours, limited weekend work, and respect for personal time."
   }
  },
  "east west bank": {
@@ -150447,7 +150575,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 12,
+  "attempts": 13,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -150488,7 +150616,7 @@
    ],
    "value": "The job posting highlights equal employment opportunity and benefits, but does not explicitly address work-life balance, high new-grad pay, or fast tech culture. However, the statistical programming role indicates technical focus on data analysis and clinical trials, suggesting a collaborative, mission-driven environment."
   },
-  "last_attempt_at": 1784837613,
+  "last_attempt_at": 1784837771,
   "last_evidence_at": 1784677667,
   "locations": {
    "confidence": "high",
@@ -178405,37 +178533,82 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3–4 (applied/HR-tech focus) unless evidence shows core ML research. No prestige signals in supplied sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely talent acquisition, recruiting, HR consulting, or people operations services based on company name. No business model details in supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional services / people-first consulting culture. No culture data in supplied sources."
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k–$120k base (US HR-tech/consulting range). No compensation data in supplied sources."
   },
   "evidence_sha": "c7850fddbde8008b",
+  "generated_at": 1784837771,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Human Capital / Talent Acquisition / HR Technology (estimated from name)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Ask for concrete evidence of: AI/data science project scope and publication record; exact working hours and shutdown policies; new-grad compensation bands; technical mentorship structure; and whether the role is core ML engineering or HR-tech applied work. Verify the company actually builds AI products versus implementing vendor tools."
+  },
+  "last_attempt_at": 1784837771,
   "last_evidence_at": 1784677098,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely US-based given name convention. No location data in supplied sources."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "People Culture Talent",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate (consulting/services typical). No pace data in supplied sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "43f9ec7e4f",
+    "1456b7adb5",
+    "bc4cb1d56e"
+   ],
+   "value": "No product or service details found in the supplied sources. The sources reference People Magazine web properties, not People Culture Talent offerings."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + US holidays (typical US private co.). No PTO policy in supplied sources."
   },
+  "refresh_after": 1790021771,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -178445,7 +178618,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns documented. Typical consulting firms do not mandate full shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Small to mid-sized private company (likely <200 employees). No size or funding data in supplied sources."
   },
   "sources": [
    {
@@ -178479,14 +178657,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=554058c7fbc4dfeea8e9a75806e962f235eba78fa411a8569a85c45c1f8fec32JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=34ea19f9-c3ba-6d41-3fe5-0e64c2596c4f&u=a1aHR0cHM6Ly9wZW9wbGUuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown visa sponsorship policy. No immigration data in supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "43f9ec7e4f",
+    "1456b7adb5",
+    "bc4cb1d56e"
+   ],
+   "value": "People Culture Talent appears to be a talent acquisition, HR consulting, or people operations firm based on its name. The supplied sources reference People Magazine digital properties rather than this company, so no verifiable business description is available from the provided materials."
+  },
+  "synthesized_evidence_sha": "c7850fddbde8008b",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May involve HR tech, applicant tracking systems, people analytics, or recruiting automation. No technical stack details in supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677098,
   "web_search_url": "https://duckduckgo.com/?q=People+Culture+Talent+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a candidate seeking elite AI/data science prestige with high new-grad pay, fast innovation culture, genuine work-life balance with guaranteed shutdowns, and accelerated technical growth without burnout: this company's alignment is unverifiable from available sources. The name suggests HR/talent focus rather than core AI research, so prestige tier and technical depth may not match top-tier AI labs. Culture claims around WLB and learning velocity cannot be validated."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 (services/consulting norm). No WLB data in supplied sources."
   }
  },
  "pepsico": {
@@ -204530,7 +204733,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -204573,7 +204776,7 @@
    ],
    "value": "Candidates should be prepared to discuss object-oriented programming, Java, Python, JavaScript, and HTML. Expect questions around architecture, design, implementation, and testing to build stable and scalable products. The candidate should emphasize a desire for quality and customer-valued features."
   },
-  "last_attempt_at": 1784837613,
+  "last_attempt_at": 1784837771,
   "last_evidence_at": 1784801025,
   "locations": {
    "confidence": "high",
@@ -254785,11 +254988,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -254801,6 +255006,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784837771,
   "last_evidence_at": 1784675871,
   "name": "Vestmark",
   "pace_of_work": {
@@ -259340,7 +259546,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 10,
+  "attempts": 11,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -259391,7 +259597,7 @@
    ],
    "value": "Clarify whether the role is a full-time W-2 position or part of the gig contributor network. Ask about compensation structure, actual working hours, and technical learning opportunities to ensure it fits your elite tech role and WLB priorities."
   },
-  "last_attempt_at": 1784837613,
+  "last_attempt_at": 1784837771,
   "last_evidence_at": 1784737480,
   "locations": {
    "confidence": "unknown",
