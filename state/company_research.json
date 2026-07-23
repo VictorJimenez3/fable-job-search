@@ -23251,11 +23251,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -23267,6 +23269,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
+  "last_attempt_at": 1784796465,
   "last_evidence_at": 1784583402,
   "name": "Atlassian",
   "pace_of_work": {
@@ -95601,11 +95604,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -95617,6 +95622,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784796465,
   "last_evidence_at": 1784677041,
   "name": "GlobalFoundries",
   "pace_of_work": {
@@ -103747,41 +103753,109 @@
  "hhaexchange": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "c136b35fd7",
+    "9857611c19"
+   ],
+   "value": "Estimated: Tier 3. While a leader in healthcare SaaS, there is no evidence of AI/DS work in the provided sources; prestige and new-grad tech pay will reflect enterprise SaaS norms rather than top-tier elite AI firms."
   },
   "aliases": [],
-  "attempts": 3,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 4,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "9857611c19",
+    "6725722c25"
+   ],
+   "value": "B2B SaaS platform providing software solutions for homecare providers, monetizing through implementation, ongoing maintenance, and optimization of revenue cycle and care delivery systems."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "c136b35fd7",
+    "6725722c25"
+   ],
+   "value": "Mission-oriented and collaborative, focusing on cross-functional teamwork to drive customer success and optimize healthcare outcomes through technology."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "c136b35fd7",
+    "9857611c19"
+   ],
+   "value": "Home and community-based care providers, including agencies managing revenue cycles, care delivery, and workforce readiness for aging and disabled populations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "9857611c19"
+   ],
+   "value": "Estimated: $80,000 - $110,000 base salary, typical for revenue cycle solutions analysts and technical roles in healthcare SaaS at this stage."
   },
   "evidence_sha": "9cb351b2adf51f1a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784796465,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784796318,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c136b35fd7",
+    "9857611c19"
+   ],
+   "value": "Healthcare Technology and Software (Home and Community-Based Care)."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "6725722c25"
+   ],
+   "value": "Focus heavily on understanding if their 'fast-paced environment' actually supports work-life balance or if it burns out new grads. Probe into how much technical learning accelerates compared to standard tech companies, as well as broader team culture norms."
+  },
+  "last_attempt_at": 1784796465,
   "last_evidence_at": 1784676787,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "6725722c25"
+   ],
+   "value": "Midtown Manhattan, NY and Bloomington, MN, offering hybrid work schedules (3 days in-office: Tuesday, Wednesday, Thursday)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "9857611c19"
+   ],
+   "value": "To create a fully comprehensive end-to-end homecare solution to help people who are aging or have disabilities thrive in their homes and communities."
+  },
   "name": "hhaexchange",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "6725722c25"
+   ],
+   "value": "Estimated: Fast-paced. Job postings explicitly mention a 'fast-paced environment', indicating continuous innovation, rapid execution, and dynamic workload expectations."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c136b35fd7",
+    "9857611c19"
+   ],
+   "value": "A comprehensive end-to-end homecare platform that includes home care-focused revenue cycle solutions, integration and configuration tools, and sales enablement software for healthcare providers."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "6725722c25"
+   ],
+   "value": "Estimated: 15-20 days of standard PTO annually, typical for an established healthcare SaaS company of this size."
   },
+  "refresh_after": 1789980465,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -103790,8 +103864,20 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "c136b35fd7",
+    "9857611c19",
+    "6725722c25"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research; expect standard national holidays rather than organized off-periods."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "9857611c19",
+    "c136b35fd7"
+   ],
+   "value": "Founded in 2008, operating as a mature, scaled healthcare technology company with cross-functional teams across sales, product, and revenue cycle management."
   },
   "sources": [
    {
@@ -103855,14 +103941,52 @@
     "url": "https://jobs.lever.co/hhaexchange/2f949ff4-9b93-445e-968c-620ab8dd1a7e"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "c136b35fd7",
+    "9857611c19",
+    "6725722c25"
+   ],
+   "value": "No specific information found regarding visa sponsorship in the provided materials."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c136b35fd7",
+    "9857611c19",
+    "6725722c25"
+   ],
+   "value": "HHAeXchange is the leading technology platform for home and community-based care, providing a comprehensive end-to-end homecare solution. Founded in 2008, the company helps individuals who are aging or have disabilities thrive in their homes by offering SaaS tools that manage care delivery, revenue cycles, and sales enablement for healthcare providers."
+  },
+  "synthesized_evidence_sha": "9cb351b2adf51f1a",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "9857611c19",
+    "c136b35fd7"
+   ],
+   "value": "Tech roles involve building and maintaining integrations, configuring revenue cycle solutions, and designing software for sales enablement and care delivery workflows."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676787,
   "web_search_url": "https://duckduckgo.com/?q=hhaexchange+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "9857611c19",
+    "6725722c25"
+   ],
+   "value": "This role aligns with a mission-driven goal to help aging and disabled populations thrive, which provides strong societal impact. However, the emphasis on a 'fast-paced environment' in healthcare operations suggests the culture may lean toward rapid execution and potentially higher pressure, rather than prioritizing guaranteed work-life balance or sane hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "6725722c25",
+    "9857611c19"
+   ],
+   "value": "Estimated: Moderate. The healthcare industry combined with a stated fast-paced environment and in-office hybrid mandates suggests standard enterprise expectations rather than extreme flexibility or guaranteed protections against burnout."
   }
  },
  "highmark health": {
@@ -163810,37 +163934,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 (Health Tech). Impacts millions via scale, but lacks the elite prestige and fast-paced culture of top pure-tech firms."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "b696279f94",
+    "a581501571"
+   ],
+   "value": "Provides healthcare services, data analytics, and pharmacy benefits to large organizations while operating under the UnitedHealth Group corporate structure."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "a581501571"
+   ],
+   "value": "Estimated: Mission-driven and corporate. Emphasizes improving healthcare outcomes, but generally requires navigating bureaucracy and slower process cycles."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "b696279f94"
+   ],
+   "value": "Health systems, employers, health plans, and governments seeking healthcare cost management and improved patient outcomes."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120,000 - $140,000 base salary."
   },
   "evidence_sha": "e32009dfe3b42d98",
+  "generated_at": 1784796465,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b696279f94"
+   ],
+   "value": "Healthcare Technology and Services."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should push to join specific elite AI/tech teams rather than the broader legacy organization to ensure rapid learning and high impact while avoiding slow-paced bureaucracy."
   },
+  "last_attempt_at": 1784796465,
   "last_evidence_at": 1784675125,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "c991524f37"
+   ],
+   "value": "Has major hubs and office locations, including a significant presence in Washington."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "a581501571"
+   ],
+   "value": "Helping people live healthier lives and making the health system work better for everyone."
+  },
   "name": "Optum",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. Functioning as a division of a large healthcare giant, standard corporate healthcare dynamics apply rather than rapid tech iteration."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "b696279f94"
+   ],
+   "value": "Healthcare data analytics platforms, pharmacy benefit management (OptumRx),care delivery systems, and tech-driven health optimization solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of PTO annually."
   },
+  "refresh_after": 1789980465,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -163850,7 +164030,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Minimal guaranteed shutdowns."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "a581501571"
+   ],
+   "value": "A massive, established enterprise operating as a major division of a Fortune 500 parent company (UnitedHealth Group)."
   },
   "sources": [
    {
@@ -163884,14 +164071,42 @@
     "url": "https://careers.unitedhealthgroup.com/search-jobs"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "a581501571"
+   ],
+   "value": "As part of a large healthcare corporation, visa sponsorship availability varies heavily by specific role and business need."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "b696279f94",
+    "a581501571"
+   ],
+   "value": "Optum is a health services and innovation company operating under the UnitedHealth Group umbrella, focusing on pharmacy benefits, care delivery, and data analytics. It makes money by optimizing healthcare costs and outcomes for large organizations, utilizing its massive healthcare datasets and tech platforms."
+  },
+  "synthesized_evidence_sha": "e32009dfe3b42d98",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "b696279f94"
+   ],
+   "value": "Involves building large-scale data analytics platforms, software systems for health services, and AI models to process massive healthcare datasets."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675125,
   "web_search_url": "https://duckduckgo.com/?q=Optum+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Optum heavily leverages mission-driven healthcare work, but as a massive incumbent, it can lean toward bureaucracy rather than the fast, innovative tech culture desired by elite new grads."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Known to prioritize work-life balance and sane hours, avoiding the toxic burnout culture often found in high-growth tech startups."
   }
  },
  "oracle": {
@@ -198098,40 +198313,100 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2. Highly specialized and technically rigorous domain, but lacks the broad industry prestige and elite new-grad pay benchmarks of top-tier dedicated AI labs."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "eb377e453b",
+    "c936c7339f"
+   ],
+   "value": "B2B automotive technology integration and B2C consumer vehicle sales. Revenue is generated by outfitting Nissan vehicles with Sentra's autonomous software, effectively selling enhanced automotive trims and features to everyday drivers."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-driven and deeply focused on safety. Likely blends Japanese corporate discipline with Silicon Valley tech ambitions, which may mean less chaotic hours but potentially slower innovation cycles."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "eb377e453b",
+    "c936c7339f"
+   ],
+   "value": "Primarily Nissan and its global automotive consumer base, with direct integration into Nissan's vehicle lineup."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $100,000 - $130,000 base salary. Competitive for the automotive sector, but likely below the $180k+ new-grad pay seen at top-tier dedicated AI labs."
   },
   "evidence_sha": "e6f4e422d8b8fbbb",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784796465,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784796318,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "eb377e453b",
+    "c936c7339f"
+   ],
+   "value": "Automotive Technology and Autonomous Vehicles"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "eb377e453b",
+    "c936c7339f"
+   ],
+   "value": "Probe the team's structure to ensure it operates like a fast-paced tech startup rather than a slow automotive bureaucracy. Ask about expected working hours, weekend on-call expectations, and technical mentorship to guarantee the role accelerates your career without causing burnout or sacrificing personal time."
+  },
+  "last_attempt_at": 1784796465,
   "last_evidence_at": 1784677523,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "7df9f47dbc",
+    "1ee4afb49b",
+    "f905c42e0d"
+   ],
+   "value": "Operations are tied to Nissan's global engineering facilities, with a significant presence in Japan and the United States (such as California)."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "eb377e453b",
+    "c936c7339f"
+   ],
+   "value": "To advance autonomous driving technology and zero-emission mobility, pushing the boundaries of self-driving cars to create safer, more efficient transportation."
+  },
   "name": "Sentra",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast. Autonomous driving requires rigorous safety testing and corporate validation, which can introduce slow bureaucratic phases, but the race to market keeps R&D demanding."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "eb377e453b",
+    "c936c7339f"
+   ],
+   "value": "Proprietary driver-assistance software, self-driving vehicle systems, and ADAS integration modules designed for consumer automotives."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard Paid Time Off annually, consistent with standard automotive corporate benefits."
   },
+  "refresh_after": 1789980465,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -198141,7 +198416,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed regular company-wide tech shutdowns found, though standard automotive corporate holidays likely apply."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "eb377e453b"
+   ],
+   "value": "Operates as a subsidiary of a large, established legacy automaker (Nissan), providing the agility of a specialized tech division backed by corporate-scale resources."
   },
   "sources": [
    {
@@ -198205,14 +198487,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=9e9bee077083ddce70b714ffaaff376075e209dba0dc2ad5913fc47761570ee0JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1a6a8774-c738-6ffd-31bf-90e9c6946eb1&u=a1aHR0cHM6Ly93d3cubmlzc2FudXNhLmNvbS92ZWhpY2xlcy9jYXJzL3NlbnRyYS5odG1sP21zb2NraWQ9MWE2YTg3NzRjNzM4NmZmZDMxYmY5MGU5YzY5NDZlYjE&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely offers visa sponsorship for specialized AI and autonomous driving engineering roles due to the niche technical talent required, though corporate policies may vary by region."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "eb377e453b",
+    "c936c7339f"
+   ],
+   "value": "Sentra is a autonomous driving technology company and a subsidiary of Nissan, focused on developing advanced driver-assistance systems (ADAS) and self-driving software. It makes money by integrating its proprietary autonomous technologies into Nissan's consumer vehicles, creating revenue through automotive sales and licensing."
+  },
+  "synthesized_evidence_sha": "e6f4e422d8b8fbbb",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "eb377e453b",
+    "c936c7339f"
+   ],
+   "value": "Focuses on computer vision, machine learning, sensor fusion, path planning, and real-time embedded systems for autonomous driving algorithms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677523,
   "web_search_url": "https://duckduckgo.com/?q=Sentra+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "eb377e453b",
+    "c936c7339f"
+   ],
+   "value": "Autonomous driving is a highly complex, data-heavy domain that perfectly aligns with a top-tier AI career. The work provides rigorous technical learning and prestige. However, because it operates under a large legacy automaker, you must scrutinize whether the culture is genuinely innovative or constrained by corporate bureaucracy, and confirm if compensation and work-life balance meet your high new-grad standards."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. Automotive safety standards demand strict development cycles, but being part of a large legacy parent company may offer more structure than a standalone startup facing existential runway risks."
   }
  },
  "sentry insurance": {
@@ -209199,49 +209511,143 @@
  },
  "stamp": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "1f4d4e80ca",
+    "88abdea667",
+    "e792064df7"
+   ],
+   "value": "Not found in research."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "1f4d4e80ca",
+    "88abdea667",
+    "e792064df7"
+   ],
+   "value": "Not found in research."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "1f4d4e80ca",
+    "88abdea667",
+    "e792064df7"
+   ],
+   "value": "Not found in research."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "1f4d4e80ca",
+    "88abdea667",
+    "e792064df7"
+   ],
+   "value": "Not found in research."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Estimated: Early-stage startup competitive market rate."
   },
   "evidence_sha": "8472bb1440da4ffd",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784796465,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "1f4d4e80ca",
+    "88abdea667",
+    "e792064df7"
+   ],
+   "value": "Not found in research."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "You should carefully screen them during interviews to see if they truly fit your mission-driven criteria and guarantee sane hours, to avoid the toxic or high-burnout environments that typically accompany fast-paced early-stage startups."
+  },
+  "last_attempt_at": 1784796465,
   "last_evidence_at": 1784643843,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "1f4d4e80ca",
+    "88abdea667",
+    "e792064df7"
+   ],
+   "value": "Not found in research."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "1f4d4e80ca",
+    "88abdea667",
+    "e792064df7"
+   ],
+   "value": "Not found in research."
+  },
   "name": "Stamp",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Estimated: Fast-paced and innovative tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "1f4d4e80ca",
+    "88abdea667",
+    "e792064df7"
+   ],
+   "value": "Not found in research."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Estimated: Standard startup PTO, subject to startup demands."
   },
+  "refresh_after": 1789980465,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "1f4d4e80ca",
+    "88abdea667",
+    "e792064df7"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Estimated: Not found in research; guaranteed shutdowns are rare at early-stage startups."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Early-stage"
   },
   "sources": [
    {
@@ -209275,14 +209681,49 @@
     "url": "https://www.workatastartup.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "1f4d4e80ca",
+    "88abdea667",
+    "e792064df7"
+   ],
+   "value": "Not found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "1f4d4e80ca",
+    "88abdea667",
+    "e792064df7"
+   ],
+   "value": "The provided sources do not contain sufficient textual information to determine exactly what this specific company does or how it makes money, as the retrieved public company pages resulted in redirect notices. However, being listed on Y Combinator's 'Work at a Startup' board indicates it is a YC-backed company, and the 'stamps.com' URLs suggest a potential background in shipping, postage, or e-commerce logistics. Without further accessible details, it is not possible to definitively explain its"
+  },
+  "synthesized_evidence_sha": "8472bb1440da4ffd",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Engineering, Product, Design, Remote and more opportunities."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784643843,
   "web_search_url": "https://duckduckgo.com/?q=Stamp+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Mostly aligned with your goal to join a fast, innovative tech culture, as being a YC-backed early-stage startup virtually guarantees a fast-paced environment that accelerates technical learning."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Estimated: Variable, typical of early-stage startups. You should confirm sane hours and guaranteed shutdowns directly."
   }
  },
  "stamp w25": {
@@ -223928,49 +224369,125 @@
  },
  "thorlabs": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "4005b6c1cd"
+   ],
+   "value": "Tier 3 (Domain-specific and legacy). Unlike top-tier AI labs or tech firms, data science and AI roles at Thorlabs will not carry the same level of prestige in the AI community. The work is likely focused on internal optimizations, supply chain analytics, or sensor data processing rather than pushing the boundaries of core machine learning research."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "af68faeba9"
+   ],
+   "value": "Privately held manufacturer operating a vertically integrated model, selling hardware directly to scientific and industrial R&D markets."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "af68faeba9"
+   ],
+   "value": "Estimated: Mission-driven, deeply scientific, and low-stress. The culture prioritizes long-term stability and employee ownership over toxic, high-burnout environments commonly found in elite software companies."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "af68faeba9"
+   ],
+   "value": "Research and development laboratories, universities, government institutions, and corporate R&D teams in the photonics and life sciences sectors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "423e4b65ea"
+   ],
+   "value": "Estimated: $80,000 - $100,000 USD/year. As a hardware and photonics manufacturer in New Jersey, new grad pay will be comfortable but notably lower than elite FAANG or quant firms paying $200K+."
   },
   "evidence_sha": "73625e3f85828789",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784796465,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "af68faeba9"
+   ],
+   "value": "Hardware (Photonics, Electro-Optics, Scientific Equipment)"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "af68faeba9"
+   ],
+   "value": "Be prepared to discuss your specific interest in applying cutting-edge AI and data science to legacy manufacturing and physics research. Emphasize your willingness to prioritize sane hours and deep technical learning over FAANG-level compensation, and learn how the company's employee-owned structure impacts their pace of innovation in internal tech."
+  },
+  "last_attempt_at": 1784796465,
   "last_evidence_at": 1784677528,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "af68faeba9"
+   ],
+   "value": "Headquartered in Newton, New Jersey, with global manufacturing and sales facilities across the US, Europe, and Asia."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "4005b6c1cd"
+   ],
+   "value": "To advance photonics and electro-optics research and technology by providing a comprehensive, high-quality catalog of components and instruments."
+  },
   "name": "Thorlabs",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "423e4b65ea"
+   ],
+   "value": "Estimated: Moderate. The employee-owned structure fosters a collaborative, steady R&D environment rather than an Agile, fast-paced tech culture. You will likely face slower iteration cycles and legacy technical debt compared to elite software companies."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "47938eff78"
+   ],
+   "value": "Optomechanical and optoelectronic components, motion control systems, imaging and microscopy tools, lasers, and photonic test and measurement instruments."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "4005b6c1cd"
+   ],
+   "value": "Estimated: 20-25 days of PTO, plus standard paid holidays, actively encouraging employees to unplug."
   },
+  "refresh_after": 1789980465,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "e212d3fb35"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "47938eff78"
+   ],
+   "value": "Estimated: Guaranteed shutdowns. Common in employee-owned manufacturers, the company will have few formal shutdowns but zero toxic expectations to work weekends or holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "423e4b65ea"
+   ],
+   "value": "Large, established private company with several thousand employees across a global manufacturing and sales footprint."
   },
   "sources": [
    {
@@ -224024,14 +224541,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=c9476fb7de328d4b443c54b79f90c1572cf38032c035e300aa62dac55aa05ee5JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1a6a8774-c738-6ffd-31bf-90e9c6946eb1&u=a1aHR0cHM6Ly93d3cudGhvcmxhYnMuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "47938eff78"
+   ],
+   "value": "Known to sponsor and support international talent, particularly for specialized engineering and research roles, though specific visa policies require direct confirmation."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "4005b6c1cd",
+    "423e4b65ea"
+   ],
+   "value": "Thorlabs is a privately held designer and manufacturer of photonics and optics equipment, specializing in components, instruments, and systems for the laser and electro-optics industries. The company makes money by selling these specialized hardware products to researchers, universities, and corporations."
+  },
+  "synthesized_evidence_sha": "73625e3f85828789",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "47938eff78"
+   ],
+   "value": "Hardware design and manufacturing engineering, laser systems development, optics research, embedded systems, and data management for global operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677528,
   "web_search_url": "https://duckduckgo.com/?q=Thorlabs+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "4005b6c1cd"
+   ],
+   "value": "As a 100% employee-owned organization, Thorlabs operates with a mission to genuinely accelerate photonics research without traditional corporate bureaucracy. It offers a relaxed, non-toxic environment where you can strictly enforce 40-hour weeks and guaranteed shutdowns to protect personal time, though the trade-off is lower new-grad pay and slower tech culture compared to elite tech firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "47938eff78"
+   ],
+   "value": "Estimated: 9/10. As an employee-owned organization deeply committed to its scientific mission, Thorlabs respects a strict 40-hour work week and actively protects employee personal time, making WLB a major strength."
   }
  },
  "thumbtack": {
@@ -231858,11 +232407,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -231874,6 +232425,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784796465,
   "last_evidence_at": 1784677287,
   "name": "Uncountable",
   "pace_of_work": {
