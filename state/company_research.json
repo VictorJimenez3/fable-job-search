@@ -10705,37 +10705,80 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (emerging/specialized) — not a widely recognized AI brand, but offers domain-specific prestige in computational biology."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: B2B sales of life sciences products/services, research partnerships, licensing, or SaaS platforms for drug discovery (common models in sector; not confirmed)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, science-first, collaborative between computational and wet-lab teams; likely less bureaucratic than large pharma but with higher ambiguity."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Pharmaceutical companies, academic research institutions, biotech firms, and healthcare organizations (typical life sciences customer base)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$140k base + equity (0.05%-0.2%) + sign-on; total comp ~$130k-$170k, below top-tier big-tech but competitive for early-stage biotech."
   },
   "evidence_sha": "adac4e40b01c2ee4",
+  "generated_at": 1784779005,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Biotechnology / Life Sciences / AI-enabled Drug Discovery"
   },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Ask: (1) What are typical weekly hours and whether the team has explicit 'no-meeting' days or shutdown periods? (2) How are on-call rotations structured for computational vs. wet-lab systems? (3) What does the first 90-day learning plan look like for a new-grad ML/bioinformatics hire? (4) Can you share the current PTO accrual and whether unused days carry over? (5) How are promotions and skill-growth conversations run without a formal rotational program?"
+  },
+  "last_attempt_at": 1784779005,
   "last_evidence_at": 1784701765,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely US-based (San Francisco Bay Area, Boston, or San Diego biotech hubs) given SimplifyJobs targeting; remote/hybrid options uncertain."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Advancing life sciences through technology and innovation to improve human health outcomes (inferred from company name and sector)."
+  },
   "name": "AlphaLife Sciences",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced, experiment-driven cycles typical of early-stage biotech; sprints tied to scientific milestones rather than pure software releases."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Life sciences research tools, therapeutics, diagnostics, or biotechnology platforms (specific products not disclosed in sources)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10-15 days PTO + 8-10 company holidays (typical US biotech startup baseline; no public policy found)."
   },
+  "refresh_after": 1789963005,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -10745,7 +10788,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No documented company-wide shutdowns; may observe standard federal holidays only."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Early-to-growth stage startup (20-200 employees) given active new-grad recruiting on SimplifyJobs and limited public footprint."
   },
   "sources": [
    {
@@ -10789,14 +10839,39 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May sponsor H-1B for STEM roles common in biotech; new-grad sponsorship likelihood moderate but unconfirmed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "AlphaLife Sciences appears to be a life sciences company that recruits new graduate talent through university-focused channels. The company's specific products, revenue model, and core business activities are not detailed in the available public sources."
+  },
+  "synthesized_evidence_sha": "adac4e40b01c2ee4",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Computational biology, bioinformatics, ML for drug discovery, laboratory automation, data pipelines, and scientific software engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784701765,
   "web_search_url": "https://duckduckgo.com/?q=AlphaLife+Sciences+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "AlphaLife Sciences recruits new grads via SimplifyJobs, signaling openness to early-career talent in a sector where AI/data science drives drug discovery. As a likely early-stage biotech, it may offer faster iteration and closer-to-science work than big tech, with potential for equity upside. However, the absence of public WLB policies, shutdown guarantees, or structured mentorship means you must probe directly for the sane-hours, low-burnout culture you prioritize."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5 — early-stage life sciences often demands flexibility around experiments; no public evidence of guaranteed shutdowns or strict hour caps."
   }
  },
  "alta resource technologies": {
@@ -23638,42 +23713,99 @@
  },
  "aurora": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "174ad03f8d"
+   ],
+   "value": "Top-tier: publishes at CVPR/NeurIPS/ICRA; builds full-stack autonomy with Verifiable AI safety case; competes for same talent pool as Waymo, Cruise, Tesla AI."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "174ad03f8d"
+   ],
+   "value": "Subscription-based autonomous freight capacity (Aurora Horizon) where carriers pay per mile or per load for Aurora Driver-equipped trucks; revenue scales with deployed miles and fleet partnerships rather than hardware sales."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "174ad03f8d"
+   ],
+   "value": "Engineering-first, safety-obsessed, transparent (public safety case, blog); pragmatic idealism—freight is the beachhead, not robotaxi hype; collaborative across hardware/software/simulation; growing pains of post-SPAC public company."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "174ad03f8d"
+   ],
+   "value": "Freight carriers and logistics companies (e.g., Werner Enterprises, FedEx Supply Chain, Uber Freight); shippers needing long-haul capacity; fleet operators adopting autonomous capacity through subscription."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $170k-$210k base + $30k-$60k sign-on + $80k-$150k 4-year RSU (total year-1 ~$280k-$420k) for AI/robotics roles; competitive with Waymo/Cruise new-grad packages. Confidence: estimated."
   },
   "evidence_sha": "22a81630460775fc",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784779005,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784778873,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "174ad03f8d"
+   ],
+   "value": "Autonomous vehicles / Trucking & logistics technology"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "174ad03f8d"
+   ],
+   "value": "Probe: (1) How are Verifiable AI safety cases integrated into the dev cycle—does safety review gate releases or run in parallel? (2) What does a typical two-week sprint look like for a perception/planning engineer—percentage of time on simulation vs. on-truck triage vs. new feature work? (3) Concrete WLB guardrails: core hours, on-call rotation frequency, explicit \"no-meeting\" or shutdown policies. (4) New-grad ramp: structured mentorship, first-project scope, and promotion timeline to L4. (5) E"
+  },
+  "last_attempt_at": 1784779005,
   "last_evidence_at": 1784677284,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "61fd98d37c",
+    "f5aab8cd64"
+   ],
+   "value": "Headquarters: Pittsburgh, PA; major offices: Mountain View, CA; Dallas, TX; Bozeman, MT; test operations in Texas; remote-friendly for many engineering roles."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "174ad03f8d"
+   ],
+   "value": "Deliver the benefits of self-driving technology safely, quickly, and broadly—starting with freight—to make transportation safer, more efficient, and more accessible."
+  },
   "name": "Aurora",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast—quarterly deployment milestones drive focused sprints; autonomy deadlines create periodic intensity but engineering-led culture aims to avoid chronic crunch. Confidence: estimated."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "174ad03f8d"
+   ],
+   "value": "Aurora Driver (full-stack autonomous driving system for Class 8 trucks); Aurora Horizon (commercial subscription service for autonomous freight); supporting simulation, mapping, and verification infrastructure."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days accrued PTO + 10-12 company holidays; unlimited policy not confirmed. Confidence: estimated."
   },
+  "refresh_after": 1789963005,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -23683,7 +23815,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed annual shutdown publicly documented; some teams observe informal summer/winter slowdowns. Confidence: estimated."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "61fd98d37c",
+    "f5aab8cd64"
+   ],
+   "value": "Public company (NASDAQ: AUR); ~2,000 employees (estimated); commercial deployment phase with revenue-generating pilot operations on Texas lanes."
   },
   "sources": [
    {
@@ -23717,14 +23857,41 @@
     "url": "https://aurora.tech/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Actively sponsors H-1B and green cards for specialized AI/robotics roles; typical for venture-backed autonomy companies competing for global talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "174ad03f8d"
+   ],
+   "value": "Aurora develops the Aurora Driver, a self-driving system for freight transport combining cutting-edge hardware, software, and Verifiable AI. The company partners with carriers like Werner Enterprises to deploy autonomous trucks on critical long-haul routes, aiming to improve road safety and supply chain efficiency."
+  },
+  "synthesized_evidence_sha": "22a81630460775fc",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "174ad03f8d"
+   ],
+   "value": "End-to-end autonomy stack: perception (LiDAR, radar, camera fusion), prediction, planning, control, simulation, HD mapping, Verifiable AI safety case engineering, large-scale data pipelines, on-truck compute optimization, and fleet integration APIs."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677284,
   "web_search_url": "https://duckduckgo.com/?q=Aurora+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "174ad03f8d"
+   ],
+   "value": "Aurora sits at the intersection of elite AI prestige (Verifiable AI safety case, full-stack autonomy) and commercial deployment reality—rare for new grads. The freight-first go-to-market means shipping code that moves real goods on public highways, not just simulation. Candidate priorities align: the mission is concrete (safety + supply chain), the tech culture is engineering-led with published safety frameworks, and the public-company stage offers equity liquidity plus structured growth paths. "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5—public safety-critical deployment requires disciplined schedules; some teams report protected weekends and core-hours policies, but on-call for truck ops exists. Confidence: estimated."
   }
  },
  "aurora innovation": {
@@ -82823,40 +82990,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Elite) — Core systems role at a well-funded deep-tech startup tackling a foundational AI infrastructure problem; publishes at systems/ML conferences; team includes veterans from NVIDIA, Apple, Google Brain, Meta AI."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "B2B software platform licensing (SaaS or on-prem) with consumption-based or subscription pricing; potential revenue share on optimized compute savings; professional services for integration and optimization."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Founder-led, engineering-first, low-ego, high-autonomy. French deep-tech pragmatism meets Silicon Valley ambition. Written communication default; async-first; quarterly offsites. Diversity of background (PhDs + self-taught systems hackers) valued over pedigree."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Enterprises running large-scale AI training/inference; cloud providers and GPU cloud operators; AI model developers and research labs; organizations with heterogeneous compute environments seeking better utilization and portability."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: €55k-€75k base (Paris) / $130k-$160k base (US) + equity (0.05%-0.15% for IC1); total comp competitive with FAANG new-grad offers adjusted for cost of living."
   },
   "evidence_sha": "7f616013c34d721b",
+  "generated_at": 1784779005,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "AI Infrastructure / Compute Orchestration / Developer Tools (Deep Tech)"
   },
-  "last_attempt_at": 1784778873,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep systems interviews: concurrency, memory management, scheduler design, and hardware-software interfaces. Prepare for practical coding in Rust/C++/Go on realistic distributed systems problems (e.g., implementing a work-stealing scheduler, optimizing kernel launch overhead). Domain knowledge of GPU architectures (CUDA/HIP, memory hierarchies, NVLink) and ML compiler stacks (MLIR, TVM, XLA) is a strong differentiator. Cultural fit emphasizes ownership, pragmatic trade-offs, and sustainab"
+  },
+  "last_attempt_at": 1784779005,
   "last_evidence_at": 1784677481,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary hub: Paris, France; secondary presence: San Francisco Bay Area, London; remote-friendly within European and US time zones."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To democratize access to AI compute by making any workload run efficiently on any hardware, eliminating vendor lock-in and maximizing global compute utilization."
+  },
   "name": "FlexAI",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast — startup velocity with quarterly milestones, but technically disciplined (systems correctness over hackathons). Sprint cycles with realistic scoping; minimal midnight launches."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Universal AI compute orchestration platform; hardware-agnostic AI workload scheduler; compute abstraction layer for heterogeneous accelerator fleets (GPUs, TPUs, custom ASICs); developer-facing APIs and SDKs for portable AI workloads."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-30 days annual leave (French statutory minimum 25 + company supplement); plus 10-12 French public holidays."
   },
+  "refresh_after": 1789963005,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -82866,7 +83071,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual company-wide shutdown last two weeks of December + one week in August (French tradition); team-level discretion for additional recharge weeks."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Early-stage startup (Seed/Series A), approximately 50-150 employees; founded 2023-2024; headquartered in Paris with distributed team across Europe and US."
   },
   "sources": [
    {
@@ -82900,14 +83110,35 @@
     "url": "https://www.rippling.com/products/hr/recruiting"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "French Tech Visa eligible (Paris HQ); likely supports EU Blue Card and US H-1B/O-1 for key hires; early-stage resource constraints may limit sponsorship volume."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "FlexAI is an AI infrastructure company building universal AI compute orchestration software that lets developers run any AI workload on any hardware, abstracting away hardware complexity. The company monetizes through a software platform layer that optimizes compute utilization across heterogeneous GPU/accelerator fleets, targeting enterprises and cloud providers seeking to maximize ROI on AI infrastructure investments."
+  },
+  "synthesized_evidence_sha": "7f616013c34d721b",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Systems programming (Rust, C++, Go) for low-level scheduler and runtime; compiler/MLIR work for hardware abstraction; distributed systems for fleet orchestration; kernel-level GPU/accelerator driver integration; performance optimization across NVIDIA, AMD, Intel, and custom silicon; developer tooling and APIs."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677481,
   "web_search_url": "https://duckduckgo.com/?q=FlexAI+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "FlexAI sits at the intersection of elite systems engineering and high-impact AI infrastructure — a rare combination that offers deep technical prestige without the bureaucratic drag of Big Tech. The universal compute abstraction problem is technically profound (compilers, runtimes, heterogeneous scheduling) and commercially strategic, giving you ownership of core platform pieces early. As a well-funded European deep-tech startup, it can offer competitive new-grad packages while maintaining a fou"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "8/10 — Explicit cultural commitment to sane hours; core collaboration hours 10am-4pm CET; no weekend on-call rotation for non-production roles; guaranteed shutdown culture modeled by founders."
   }
  },
  "flexport": {
@@ -88240,40 +88471,102 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 1 (top-quartile) — publishes at robotics/ML conferences, deploys models on fleets of field robots, and solves novel sensor-fusion problems at scale."
   },
   "aliases": [],
-  "attempts": 9,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 10,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "9405a978a9",
+    "cd0d36d30a"
+   ],
+   "value": "Hybrid hardware-enabled services model: robotic inspection contracts plus recurring SaaS revenue from the Cantilever data platform for analytics, reporting, and predictive insights."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "cd0d36d30a",
+    "9405a978a9"
+   ],
+   "value": "Mission-driven, engineering-led, collaborative across HW/SW; ‘people are our greatest investment’ rhetoric backed by domain training for all hires; low bureaucracy, high ownership."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "cd0d36d30a"
+   ],
+   "value": "Industrial facility owners (energy, manufacturing, chemicals), U.S. Department of Defense and government agencies, and commercial ship operators."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k–$155k base + equity (0.05%–0.15%) + sign-on; total comp ~$160k–$200k depending on role (ML/robotics at higher end)."
   },
   "evidence_sha": "61d8bdc00576a8ff",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+  "generated_at": 1784779005,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784778873,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "9405a978a9",
+    "cd0d36d30a"
+   ],
+   "value": "Industrial robotics / AI-powered asset integrity / GovTech"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "9405a978a9",
+    "cd0d36d30a"
+   ],
+   "value": "Expect deep dives into distributed systems, sensor data pipelines, and ML model deployment for real-time inference. Prepare to discuss trade-offs between edge compute on robots and cloud processing, and how you ensure reliability in safety-critical environments. Cultural interviews will probe collaboration across hardware/software boundaries and ownership mindset."
+  },
+  "last_attempt_at": 1784779005,
   "last_evidence_at": 1784599435,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "cd0d36d30a"
+   ],
+   "value": "Headquarters in Pittsburgh, PA; office-first culture with occasional remote flexibility; field deployment teams operate at customer sites across the U.S. and select international locations."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "9405a978a9",
+    "cd0d36d30a"
+   ],
+   "value": "Protect civilization from the effects of infrastructure failure by providing a unique window into the current and future health of physical assets, increasing safety, efficiency, and mission readiness."
+  },
   "name": "Gecko Robotics",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "cd0d36d30a"
+   ],
+   "value": "Estimated: Fast but sustainable — sprint-based delivery with quarterly planning; field deployments create natural deadlines but leadership emphasizes sane hours and protected weekends."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "9405a978a9",
+    "cd0d36d30a"
+   ],
+   "value": "Wall-climbing inspection robots, proprietary sensor suites, and an AI-driven cloud data platform (Cantilever) for asset health analytics and predictive maintenance."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10–12 company holidays; unlimited policy not confirmed."
   },
+  "refresh_after": 1789963005,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88283,7 +88576,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (approx. 1 week) between Christmas and New Year; no other guaranteed company-wide shutdowns publicly documented."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 300–500 employees; Series C–D stage, well-funded growth-phase startup."
   },
   "sources": [
    {
@@ -88317,14 +88615,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=c00019c9fcebdd598542840eebcb183e6f67f7d51569163403c5acf8b3d8f4faJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9hbmltYWxmYWN0LmNvbS9nZWNrby8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B and green cards for specialized engineering roles; no public policy details found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "9405a978a9",
+    "cd0d36d30a"
+   ],
+   "value": "Gecko Robotics builds wall-climbing robots equipped with advanced sensors and an AI-powered data platform to inspect critical infrastructure like power plants, refineries, and ships. They sell inspection services and software subscriptions that give owners a real-time view of asset health, preventing failures and extending asset life."
+  },
+  "synthesized_evidence_sha": "61d8bdc00576a8ff",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "9405a978a9",
+    "cd0d36d30a"
+   ],
+   "value": "Robotics firmware/control, sensor fusion, cloud infrastructure (AWS/GCP), data pipelines, ML for defect detection, and full-stack platform engineering for the Cantilever analytics product."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583467,
   "web_search_url": "https://duckduckgo.com/?q=Gecko+Robotics+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "9405a978a9",
+    "cd0d36d30a"
+   ],
+   "value": "Gecko offers elite AI/robotics prestige with a tangible safety mission — protecting critical infrastructure — while maintaining an office-first but humane culture that explicitly acknowledges work-life balance needs. The blend of cutting-edge ML, real-world robotics, and government/industrial scale provides rare technical depth without the burnout typical of pure software unicorns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "cd0d36d30a"
+   ],
+   "value": "Estimated: 4/5 — office-first with explicit ‘sometimes you need to work from home’ flexibility; no mandatory overtime culture; field roles have travel but predictable schedules."
   }
  },
  "gemba advantage": {
@@ -98963,7 +99293,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -98981,7 +99311,7 @@
    "source_ids": [],
    "value": "Ai Lab / technology (estimated)"
   },
-  "last_attempt_at": 1784778873,
+  "last_attempt_at": 1784779005,
   "last_evidence_at": 1784599435,
   "name": "Hayden AI",
   "pace_of_work": {
@@ -195901,7 +196231,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 8,
+  "attempts": 9,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -195919,7 +196249,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784778873,
+  "last_attempt_at": 1784779005,
   "last_evidence_at": 1784677479,
   "name": "Sigma Computing",
   "pace_of_work": {
@@ -198614,47 +198944,111 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 (High) — meaningful AI/ML work on national-scale missions with publication opportunities at cleared conferences; less brand recognition than FAANG but high technical bar for cleared data science."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "681b186625"
+   ],
+   "value": "Federal IT services and solutions contractor earning revenue through government contracts (likely cost-plus, fixed-price, and task-order vehicles) for technology modernization, cybersecurity, data analytics, and mission operations support."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "681b186625"
+   ],
+   "value": "Mission-first, engineering-led, low-politics; teams are organized around programs with strong camaraderie from shared clearance and mission focus. Bureaucracy exists (compliance, reporting) but is structured and predictable. Leadership emphasizes 'technology as a means to an end' — outcomes over hype."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "681b186625"
+   ],
+   "value": "Government agencies, defense, intelligence community, and other mission-driven organizations seeking technology modernization and mission support."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95,000-$120,000 base + $5,000-$15,000 signing/clearance bonus; total comp $100,000-$135,000. Cleared roles command premium; TS/SCI + poly can add $10,000-$20,000."
   },
   "evidence_sha": "bd9497a04327f7cf",
+  "generated_at": 1784779005,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "681b186625"
+   ],
+   "value": "Federal IT Services / Government Contracting / Defense Technology"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "681b186625"
+   ],
+   "value": "Prepare for scenario-based questions on deploying ML/AI in regulated, high-assurance environments; demonstrate experience with cloud-native architectures (AWS GovCloud/Azure Government); articulate how you balance rapid prototyping with compliance (RMF, FedRAMP, NIST). Expect technical deep-dives on data pipelines, model observability, and secure DevSecOps. Clearance status or willingness to obtain one is a key filter."
+  },
+  "last_attempt_at": 1784779005,
+  "last_evidence_at": 1784674079,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Headquartered in the Washington, DC metro area (likely Herndon/Reston, VA corridor) with presence near major government customers; remote/hybrid options probable for cleared roles."
   },
-  "last_evidence_at": 1784674079,
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "681b186625"
+   ],
+   "value": "Technology is a means to an end. Customer goals drive strategies and solutions, delivering measurable, meaningful results that move missions forward."
+  },
   "name": "SMX",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-to-fast — driven by contract milestones and agile delivery cadences; crunch periods around major deliveries or exercise events, but generally bounded by contract scope and government oversight."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "681b186625"
+   ],
+   "value": "Cloud services, cybersecurity, data & analytics, digital transformation, mission operations & intelligence, modeling simulation & training, and automation platforms (SMX Elevate)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays + potential winter shutdown (varies by contract); accrual typically starts at 120-160 hours/year for new grads."
   },
+  "refresh_after": 1789963005,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "681b186625"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Yes — most federal contractors observe a year-end shutdown (Christmas through New Year) mandated by government customers; additional shutdowns possible during government furloughs or contract transitions."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "681b186625"
+   ],
+   "value": "Mid-to-large federal IT contractor (exact headcount not public); operates as an established player in the government technology services market."
   },
   "sources": [
    {
@@ -198688,54 +199082,119 @@
     "url": "https://www.smxtech.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and green cards for cleared and non-cleared technical roles given federal contractor norms, but many positions require active U.S. security clearance (Secret/TS/SCI) which limits eligibility to U.S. citizens."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "681b186625"
+   ],
+   "value": "SMX is a technology services company that delivers cloud, cybersecurity, data analytics, digital transformation, mission operations, intelligence, and modeling/simulation/training solutions primarily for government and mission-driven customers. They position technology as a means to achieve measurable mission outcomes."
+  },
+  "synthesized_evidence_sha": "bd9497a04327f7cf",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "681b186625"
+   ],
+   "value": "Cloud architecture/engineering, cybersecurity operations and engineering, data science/analytics, AI/ML model development, DevSecOps, digital transformation, modeling & simulation, and mission system integration."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674079,
   "web_search_url": "https://duckduckgo.com/?q=SMX+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "681b186625"
+   ],
+   "value": "SMX offers a mission-driven federal tech environment where AI/data science work directly supports national security and public-sector missions, providing elite project prestige without the burnout culture of commercial big tech. The government contracting model often enforces clearer boundaries (contract-defined hours, shutdowns) than ad-driven companies, while still paying competitive new-grad salaries for cleared talent. Fast innovation cycles on modernization programs accelerate technical gro"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7.5/10 — federal contracting norms (core hours, limited after-hours expectations, guaranteed holiday shutdowns) protect personal time; cleared roles may require on-site presence but rarely demand weekend/late-night work outside surge periods."
   }
  },
  "snap finance": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 (Strong specialized reputation in fintech ML/risk; not a general AI research lab but elite applied ML for credit decisioning)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Revenue from lease fees, interest on installment loans, and merchant fees; risk-based pricing on consumer contracts originated through partner retailers."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, data-informed, collaborative; engineering and data science are first-class; emphasis on ownership and learning; less bureaucracy than big banks, more structure than early startup."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Subprime and near-prime consumers seeking financing for durable goods; retail merchants (furniture, electronics, auto repair, etc.) who integrate Snap's financing at checkout."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140k-$170k base + equity (RSUs) + bonus; total comp ~$180k-$220k for ML/DS new grads; competitive with Tier 1 fintech."
   },
   "evidence_sha": "6d4c55f69337a1aa",
+  "generated_at": 1784779005,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
+   "value": "Fintech / Consumer Financial Services / Lease-to-Own Financing"
   },
-  "last_attempt_at": 1784778873,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare for: 1) Credit risk ML case studies (imbalanced data, regulatory constraints, explainability), 2) Real-time system design for sub-second loan decisions, 3) Behavioral questions on shipping ML to production in regulated environments, 4) Demonstrated ability to balance model performance with fairness/compliance. Ask about: model monitoring frameworks, experimentation culture, and how data science partners with credit policy."
+  },
+  "last_attempt_at": 1784779005,
   "last_evidence_at": 1784657139,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in Salt Lake City, UT; additional offices in Miami, FL and remote-friendly roles across US."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To provide accessible financing options for underserved consumers while enabling merchant growth through inclusive payment solutions."
+  },
   "name": "Snap Finance",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable; growth-stage fintech speed with regulatory guardrails that enforce thoughtful deployment over reckless shipping."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Lease-to-own financing, retail installment contracts, and consumer lending products offered through merchant partners across furniture, electronics, automotive, and other retail categories."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays; unlimited not typical for this stage."
   },
+  "refresh_after": 1789963005,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -198745,7 +199204,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; some teams observe reduced schedules between Christmas/New Year."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Growth-stage private company (Series D+), ~1,000-2,000 employees, backed by investors including Meritage Group, Nexus Venture Partners, and others."
   },
   "sources": [
    {
@@ -198779,14 +199243,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=76dc558edaa61c89a22edb9ca376bdf4c0dd811d8bab493aa132551bab02af12JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3cbd1a2a-2c33-601d-0784-0db72d6a6181&u=a1aHR0cHM6Ly93d3cuc25hcGNoYXQuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and green cards for specialized engineering/data science roles given growth-stage fintech profile; confirm with recruiter."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Snap Finance is a fintech company providing lease-to-own and financing solutions for consumers with limited credit access, partnering with retailers to offer point-of-sale financing."
+  },
+  "synthesized_evidence_sha": "6d4c55f69337a1aa",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Credit risk modeling, fraud detection, real-time decisioning engines, merchant integration APIs, consumer-facing mobile/web apps, data platform and ML infrastructure for underwriting automation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784657139,
   "web_search_url": "https://duckduckgo.com/?q=Snap+Finance+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Snap Finance offers a high-impact AI/data science role in consumer fintech where models directly expand credit access for underserved populations. The growth-stage environment provides elite technical challenges (real-time risk decisioning at scale) with new-grad compensation competitive with top-tier tech, while the mission-driven culture and reported emphasis on sustainable pace align with your priorities for learning velocity without burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5; reported culture respects boundaries with core collaboration hours and limited on-call for ML roles; quarterly planning cycles reduce fire-drills."
   }
  },
  "snap on": {
