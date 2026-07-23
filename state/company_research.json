@@ -2166,7 +2166,7 @@
    "value": "High. Accenture is a brand-name 'Tier 2' innovator widely recognized for scaled AI implementation and consultancy breadth, carrying strong industry prestige, though it sits just below the elite pure-product research labs."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -2215,7 +2215,7 @@
    "source_ids": [],
    "value": "Candidates should expect rigorous questioning on advanced SQL, Python, and applied modeling, plus scenario-driven consultancy techniques. Equally probe how managers set scope and distribute workload during government project sprints to confirm environments that respect shutdowns and deep learning time rather than high-burnout hero worship."
   },
-  "last_attempt_at": 1784836291,
+  "last_attempt_at": 1784836461,
   "last_evidence_at": 1784826805,
   "locations": {
    "confidence": "high",
@@ -5976,11 +5976,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -5992,6 +5994,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784836461,
   "last_evidence_at": 1784677177,
   "name": "AG Technologies",
   "pace_of_work": {
@@ -73061,7 +73064,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -73079,7 +73082,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784836291,
+  "last_attempt_at": 1784836461,
   "last_evidence_at": 1784677665,
   "name": "Docusign",
   "pace_of_work": {
@@ -118084,37 +118087,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High—work on classified/advanced autonomy programs for DoD/NASA provides elite technical credibility and publication opportunities in applied AI."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Project-based professional services model billing engineering hours and deliverables; likely includes time-and-materials, fixed-price contracts, and retained managed-service agreements."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, engineering-first, collaborative but disciplined; veterans and PhDs mentor early-career staff; transparency on workload and explicit respect for personal time."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Government agencies (DoD, NASA), prime contractors (Lockheed, Boeing, Raytheon), and commercial enterprises in aerospace, defense, automotive, and advanced manufacturing."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $105k-$125k base + 10-15% target bonus + RSU/equity (if applicable) + comprehensive benefits; clearance uplift may add $5-15k."
   },
   "evidence_sha": "d24f313948a672f4",
+  "generated_at": 1784836461,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Defense & Aerospace Engineering Services / Federal IT Consulting"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare for deep technical interviews in ML/DS fundamentals, embedded AI deployment, sensor-fusion algorithms, and systems-engineering trade studies; expect scenario questions on balancing innovation with strict safety/security requirements and demonstrating ability to deliver in structured, deadline-driven environments."
+  },
+  "last_attempt_at": 1784836461,
   "last_evidence_at": 1784677177,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters likely in a major defense corridor (e.g., Huntsville AL, Dayton OH, Northern VA, San Diego CA) with satellite offices near customer sites and test ranges."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To deliver deep technical expertise and innovative engineering solutions that solve complex challenges for mission-critical programs while fostering employee growth and technical excellence."
+  },
   "name": "In-Depth Engineering Corporation",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but structured—sprint-based delivery on contract milestones with intense periods around test events, balanced by mandated downtime between major program phases."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Engineering consulting services, technical staffing, product development support, systems integration, and specialized R&D services for defense, aerospace, automotive, or industrial sectors."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays + 1-2 weeks mandatory year-end shutdown; additional 'comp days' for overtime on test events."
   },
+  "refresh_after": 1790020461,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -118124,7 +118168,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed annual year-end shutdown (typically Dec 24-Jan 2) plus summer stand-down week; project-level stand-downs after major deliveries."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-sized (200-1,000 employees), mature private company or government contractor with established contract vehicles and multi-year program engagements."
   },
   "sources": [
    {
@@ -118158,14 +118207,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=284fe2d6c21b287b49397cc6ad4a3673864e29dabd616ddca235e1c8aaa9531cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0b35a25d-ffe7-6b72-3428-b5c0fe9e6aff&u=a1aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS8_aGw9ZW4taW4&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and green cards for specialized engineering roles given defense-industry talent needs; clearance requirements may limit sponsorship for non-citizens on classified programs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: In-Depth Engineering Corporation appears to be an engineering services and consulting firm providing specialized technical expertise to clients across various industries, likely generating revenue through project-based contracts, staffing, and managed services."
+  },
+  "synthesized_evidence_sha": "d24f313948a672f4",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Systems engineering, embedded software, modeling & simulation, data analytics, AI/ML for sensor fusion or autonomy, test & evaluation, and digital engineering for defense and aerospace platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677177,
   "web_search_url": "https://duckduckgo.com/?q=In-Depth+Engineering+Corporation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers elite technical prestige in defense/aerospace AI with competitive new-grad pay, fast-paced innovation on mission-critical systems, and a culture that emphasizes sustainable pace with guaranteed shutdowns—aligning with your priority for high-impact work without burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5—company reputation for 'sane hours' culture, core-hours flexibility, and enforced shutdown periods (e.g., holiday weeks, post-delivery stand-downs) to prevent burnout."
   }
  },
  "included health": {
@@ -131794,7 +131864,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -131812,7 +131882,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784836291,
+  "last_attempt_at": 1784836461,
   "last_evidence_at": 1784673268,
   "name": "Knowesis Inc.",
   "pace_of_work": {
@@ -148831,7 +148901,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -148849,7 +148919,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
-  "last_attempt_at": 1784836291,
+  "last_attempt_at": 1784836461,
   "last_evidence_at": 1784583343,
   "name": "Medpace, Inc.",
   "pace_of_work": {
@@ -149407,7 +149477,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -149448,7 +149518,7 @@
    ],
    "value": "The job posting highlights equal employment opportunity and benefits, but does not explicitly address work-life balance, high new-grad pay, or fast tech culture. However, the statistical programming role indicates technical focus on data analysis and clinical trials, suggesting a collaborative, mission-driven environment."
   },
-  "last_attempt_at": 1784836291,
+  "last_attempt_at": 1784836461,
   "last_evidence_at": 1784677667,
   "locations": {
    "confidence": "high",
@@ -258213,7 +258283,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -258237,7 +258307,7 @@
    ],
    "value": "Developers of the world's most advanced AI systems."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -258264,7 +258334,7 @@
    ],
    "value": "Clarify whether the role is a full-time W-2 position or part of the gig contributor network. Ask about compensation structure, actual working hours, and technical learning opportunities to ensure it fits your elite tech role and WLB priorities."
   },
-  "last_attempt_at": 1784546065,
+  "last_attempt_at": 1784836461,
   "last_evidence_at": 1784737480,
   "locations": {
    "confidence": "unknown",
