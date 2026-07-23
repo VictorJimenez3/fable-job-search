@@ -60101,11 +60101,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -60117,6 +60119,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784796959,
   "last_evidence_at": 1784643844,
   "name": "Cresta",
   "pace_of_work": {
@@ -108877,11 +108880,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -108893,6 +108898,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784796959,
   "last_evidence_at": 1784676848,
   "name": "Huntington Ingalls Industries",
   "pace_of_work": {
@@ -109619,41 +109625,99 @@
  "i3": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "ba72f1312d"
+   ],
+   "value": "Estimated: Tier 3. As a small defense contractor focused on GNC engineering and HWIL, it lacks the prestige of elite big-tech AI or data science roles."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "ba72f1312d"
+   ],
+   "value": "Government contract procurement, utilizing contract types such as T&M, FFP, IDIQ, and CPFF."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "ba72f1312d"
+   ],
+   "value": "Dynamic, self-motivated, and highly collaborative. Employees are expected to be flexible team players working alongside multiple contractors."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "ba72f1312d"
+   ],
+   "value": "Government and military agencies, supported through multiple contractors and teaming partners."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000 - $105,000. Likely competitive for defense engineering roles but below elite tech new-grad salaries."
   },
   "evidence_sha": "82d26064160c8603",
+  "generated_at": 1784796959,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ba72f1312d"
+   ],
+   "value": "Defense Contracting and Aerospace Engineering."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Emphasize your ability to thrive in a fast-paced, dynamic small business environment and willingness to manage multiple subcontracting partners. Ask about modern tool usage for software deployment and clarify expectations around hours and project pace to ensure they meet your work-life balance requirements."
   },
-  "last_attempt_at": 1784796793,
+  "last_attempt_at": 1784796959,
   "last_evidence_at": 1784677041,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "ba72f1312d",
+    "2573c3a1ba",
+    "d97867f179"
+   ],
+   "value": "Not explicitly stated in provided sources, though job portals and an association with BMW vehicle pages suggest potential presence in automotive and defense contractor hubs."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "ba72f1312d"
+   ],
+   "value": "Delivering innovative technical and engineering solutions for defense projects using modern development tools."
+  },
   "name": "i3",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "ba72f1312d"
+   ],
+   "value": "Estimated: Fast-paced and dynamic, typical of growing small businesses handling multiple government contracts simultaneously."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "ba72f1312d"
+   ],
+   "value": "6 degree of freedom (6DOF) missile simulations, hardware-in-the-loop (HWIL) environments, software development tracking tools, and subcontract administration services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days. Exact PTO policy is not public, but standard for mid-sized defense contractors."
   },
+  "refresh_after": 1789980959,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -109663,7 +109727,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed corporate shutdowns. Small businesses usually operate continuously based on project needs."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "ba72f1312d"
+   ],
+   "value": "Growing small business environment."
   },
   "sources": [
    {
@@ -109697,14 +109768,41 @@
     "url": "https://careers-i3-corps.icims.com/jobs/search?hashed=-626009033"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not found in research; defense contractors often require US citizenship due to government contract security clearances."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "ba72f1312d"
+   ],
+   "value": "Integration Innovation, Inc. (i3) is a defense contractor providing advanced engineering, software development, and technical solutions. It makes money by securing government and military contracts to build complex systems like missile simulations, hardware-in-the-loop environments, and subcontracts."
+  },
+  "synthesized_evidence_sha": "82d26064160c8603",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "ba72f1312d"
+   ],
+   "value": "Real-time programming, software development, testing and deployment, and hardware-in-the-loop (HWIL) development using modern tools."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677041,
   "web_search_url": "https://duckduckgo.com/?q=i3+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "i3's fast-paced small business environment offers the chance to engage in modern, innovative defense tech projects with real-world impact, aligning with the desire for technical growth. However, as a traditional defense contractor, it may lack the elite AI/data science prestige, top-tier new grad pay, and guaranteed work-life balance focused on sane hours that you are seeking."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ba72f1312d"
+   ],
+   "value": "Estimated: Moderate to Low. Defense contracting and fast-paced small business environments often require flexible, demanding schedules that may conflict with strict WLB boundaries."
   }
  },
  "ia american": {
@@ -154711,7 +154809,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -154729,7 +154827,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784796793,
+  "last_attempt_at": 1784796959,
   "last_evidence_at": 1784643844,
   "name": "Nextdoor",
   "pace_of_work": {
@@ -218056,40 +218154,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Not an AI/data science focused company; low prestige for AI/DS roles."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "B2C subscription revenue (monthly/annual plans) and possibly B2B team licenses."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, learning-oriented, transparent, remote-first."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Software engineers at all levels, from new grads to senior engineers, seeking career advancement."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120k-$150k base + equity (below top-tier FAANG but competitive for early-stage)."
   },
   "evidence_sha": "534e07d2f7428136",
+  "generated_at": 1784796959,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "EdTech / Developer Tools"
   },
-  "last_attempt_at": 1784796793,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect interviews focusing on product sense, full-stack engineering skills, and passion for developer education. May include a take-home project."
+  },
+  "last_attempt_at": 1784796959,
   "last_evidence_at": 1784677288,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fully remote, headquartered in San Francisco Bay Area."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To help software engineers grow their careers faster through structured learning and peer support."
+  },
   "name": "Taro",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast-paced startup environment with quick iteration cycles."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Subscription-based access to video courses, live events, and a private community for software engineers."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO plus holidays (typical for early-stage startups)."
   },
+  "refresh_after": 1789980959,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -218099,7 +218235,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed shutdowns; typical startup flexibility."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Early-stage startup (YC W22), approximately 10-30 employees."
   },
   "sources": [
    {
@@ -218133,14 +218276,37 @@
     "url": "https://www.workatastartup.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a small early-stage startup, unlikely to sponsor visas (H-1B) for new grads."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Taro is a career growth platform for software engineers, offering courses, community, and content to help engineers level up their careers. It operates on a subscription-based model."
+  },
+  "synthesized_evidence_sha": "534e07d2f7428136",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Full-stack web development (React, Node.js, PostgreSQL), content platform, video streaming, community features."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677288,
   "web_search_url": "https://duckduckgo.com/?q=Taro+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Taro offers a mission-driven environment focused on engineer growth, with a fast-paced innovative culture typical of YC startups, and likely respects work-life balance given its focus on sustainable career growth."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good (4/5) – startup but emphasizes sustainable growth."
   }
  },
  "tata consultancy services": {
@@ -225430,37 +225596,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 (strong applied ML reputation, known for marketplace algorithms, publishes occasionally, attracts top talent but not an AI research lab)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Marketplace model charging service professionals per lead (pay-per-quote) or subscription for enhanced visibility; may also take transaction fees on booked jobs."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, collaborative, data-informed, low ego; values diversity and inclusion; engineering culture prioritizes craftsmanship and learning; transparent leadership."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Homeowners and renters seeking local service professionals; independent contractors and small businesses in home services categories (plumbing, electrical, cleaning, landscaping, etc.)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $170k-$210k total compensation (base ~$130k-$150k, equity ~$30k-$50k, sign-on ~$10k-$20k); competitive with top marketplace peers."
   },
   "evidence_sha": "17b01a8c97a1e031",
+  "generated_at": 1784796959,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Online marketplace / Home services technology"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect emphasis on marketplace dynamics: ranking/relevance, supply-demand balancing, causal inference for experiment analysis, and ML system design for real-time bidding. Prepare for behavioral questions on collaboration with product/ops, handling ambiguous trade-offs, and shipping iteratively. Technical screens likely cover ML fundamentals, SQL/analytics, and production ML challenges (latency, monitoring, drift)."
+  },
+  "last_attempt_at": 1784796959,
   "last_evidence_at": 1784669635,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in San Francisco, CA; remote-friendly/hybrid roles across US; possible engineering hubs in other major metros."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To help homeowners effortlessly hire the right professionals for any home project, making home care simple and trustworthy."
+  },
   "name": "Thumbtack",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable; quarterly planning with bi-weekly sprints; encourages shipping MVPs and iterating; on-call rotations exist but are managed."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Consumer-facing marketplace app/website for hiring local pros (home improvement, maintenance, events, wellness); pro-facing tools for lead management, bidding, scheduling, and payments."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual PTO + 10-12 company holidays + unlimited sick/mental health days; flexible accrual."
   },
+  "refresh_after": 1789980959,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -225470,7 +225677,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically last week of December); possible summer recharge days; no guaranteed monthly shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Late-stage private company (unicorn), ~1,000-2,000 employees, significant venture backing, profitable or near-profitable."
   },
   "sources": [
    {
@@ -225504,14 +225716,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=fea6192c6574bf1aeb986c78d2c884dda8a01b7ac990dfd36ffcda78e8e31f10JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=03fea5e8-08f3-6be6-1d93-b27509a66a96&u=a1aHR0cHM6Ly93d3cudGh1bWJ0YWNrLmNvbS8_bXNvY2tpZD0wM2ZlYTVlODA4ZjM2YmU2MWQ5M2IyNzUwOWE2NmE5Ng&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and green cards for specialized engineering/AI roles; typical for late-stage tech companies of this size."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Thumbtack operates an online marketplace connecting consumers with local professionals for home services, repairs, and projects. The company generates revenue primarily through lead fees charged to service professionals who bid on customer requests."
+  },
+  "synthesized_evidence_sha": "17b01a8c97a1e031",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Marketplace matching algorithms, search/relevance, pricing optimization, fraud detection, mobile apps (iOS/Android), scalable backend, data platform, ML for lead quality and demand forecasting."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784669635,
   "web_search_url": "https://duckduckgo.com/?q=Thumbtack+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Thumbtack offers a high-impact AI/data science role in a two-sided marketplace with rich behavioral data, balancing elite technical challenges (matching, pricing, fraud) with a mission to simplify home care. The company’s late-stage scale provides prestige and competitive new-grad compensation, while its marketplace model demands fast iteration without the bureaucracy of big tech. Culture emphasizes sustainable pace and work-life balance, aligning with your priority for growth without burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5; culture emphasizes reasonable hours, flexible remote, and respect for personal time; occasional crunch around major launches."
   }
  },
  "thunderbolt solutions": {
@@ -233250,7 +233483,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -233268,7 +233501,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784796793,
+  "last_attempt_at": 1784796959,
   "last_evidence_at": 1784677287,
   "name": "Uncountable",
   "pace_of_work": {
@@ -236432,11 +236665,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -236448,6 +236683,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784796959,
   "last_evidence_at": 1784675132,
   "name": "University of Texas - Austin",
   "pace_of_work": {
