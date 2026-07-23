@@ -7489,6 +7489,20 @@
   "status": "invalid",
   "token": "careers-kimley-horn"
  },
+ "icims:careers-lmi": {
+  "ats": "icims",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1784826806,
+  "invalidated_at": 1784826807,
+  "last_ok": 0,
+  "name": "LMI",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "invalid",
+  "token": "careers-lmi"
+ },
  "icims:careers-markon": {
   "ats": "icims",
   "extra": {},
@@ -13632,6 +13646,22 @@
   "sector": "",
   "status": "active",
   "token": "capitalone"
+ },
+ "workday:capri:jimmychoocareers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "jimmychoocareers"
+  },
+  "failures": 0,
+  "first_seen": 1784826806,
+  "last_ok": 1784826817,
+  "name": "Jimmy Choo",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "capri"
  },
  "workday:cardinalhealth:EXT": {
   "ats": "workday",
