@@ -33539,47 +33539,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 1 (elite) — prop shops compete for the same ML/quant talent as top hedge funds and big-tech AI labs; compensation and technical bar are comparable."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Proprietary trading — the firm deploys its own capital to capture market inefficiencies via systematic strategies; revenue is trading P&L, not fees or commissions."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Intellectually intense, flat, engineer/researcher-led, metrics-driven — prestige comes from technical excellence and P&L contribution, not hierarchy; likely collaborative but competitively benchmarked."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: The firm trades its own capital across global financial markets (equities, futures, FX, crypto) rather than serving external clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: £70k–£100k base + substantial bonus (often 50–150% of base) → total £110k–£200k+ first year for top quant/AI hires, competitive with Tier 1 global firms."
   },
   "evidence_sha": "c46587f1a0e442f9",
+  "generated_at": 1784777283,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "2677c5035e"
+   ],
+   "value": "Proprietary Trading / Quantitative Finance"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2677c5035e"
+   ],
+   "value": "Expect deep technical screens: probability/stats brainteasers, C++/Rust latency optimization, ML model validation for non-stationary data, and system-design for exchange gateways. Prepare to discuss how you’d research a signal end-to-end — from data cleaning to risk-aware deployment — and how you measure/guard against overfitting. Ask about typical project lifecycle, on-call expectations, and whether researchers own models to production to gauge pace and WLB reality."
+  },
+  "last_attempt_at": 1784777283,
+  "last_evidence_at": 1784676554,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "2677c5035e"
+   ],
+   "value": "London, UK (headquarters per website); possible remote/hybrid flexibility for quantitative researchers."
+  },
+  "mission": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: To generate consistent alpha through cutting-edge quantitative research, low-latency engineering, and rigorous risk management."
   },
-  "last_evidence_at": 1784676554,
   "name": "Boerboel",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast — iterative research cycles, production deployments measured in days/weeks, and direct P&L feedback loops create high velocity without corporate process drag."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Proprietary trading algorithms, quantitative research platforms, and high-frequency trading infrastructure for financial markets."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25–28 days + UK bank holidays (standard for London finance); unlimited or generous sick leave common in modern prop shops."
   },
+  "refresh_after": 1789961283,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "2677c5035e"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No public guaranteed shutdown policy; however, many London prop firms observe Christmas–New Year market closure (approx. 1–2 weeks) and encourage full disconnect during PTO."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2677c5035e"
+   ],
+   "value": "Estimated: Small to mid-sized prop shop (likely 20–100 employees), privately held, growth-stage with active hiring in London."
   },
   "sources": [
    {
@@ -33613,14 +33669,39 @@
     "url": "https://www.boerboeltrading.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely offers UK Skilled Worker sponsorship given London finance talent competition; no public policy disclosed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "2677c5035e"
+   ],
+   "value": "Boerboel appears to be a proprietary trading firm based in London, operating as Boerboel Trading. The company is actively hiring for open positions, suggesting a focus on quantitative finance and technology-driven trading strategies."
+  },
+  "synthesized_evidence_sha": "c46587f1a0e442f9",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Core work includes low-latency C++/Rust systems, Python research pipelines, GPU-accelerated ML for signal generation, and exchange connectivity engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676554,
   "web_search_url": "https://duckduckgo.com/?q=Boerboel+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2677c5035e"
+   ],
+   "value": "For a candidate seeking elite AI/data science prestige with high new-grad pay in a fast, innovative culture: Boerboel is a London prop-trading shop where ML researchers and engineers build production-grade, low-latency systems that directly drive P&L — offering top-tier technical challenge and compensation without big-tech bureaucracy. The firm’s small size suggests rapid ownership and learning acceleration, while the trading-model alignment (no external clients) can enable more predictable hour"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7/10 — prop trading typically avoids client-facing fire drills; market hours bound core intensity, and many London shops protect evenings/weekends, but on-call for live systems and quarterly crunch periods exist."
   }
  },
  "boom supersonic": {
@@ -44613,7 +44694,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -44631,7 +44712,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784710337,
+  "last_attempt_at": 1784777283,
   "last_evidence_at": 1784674523,
   "name": "Censys",
   "pace_of_work": {
@@ -45113,37 +45194,90 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Industry-average prestige; primarily enterprise IT and business intelligence rather than top-tier AI research."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "268e9da0b3"
+   ],
+   "value": "Earns revenue through advisory fees, commissions on financial products, and platform or licensing fees charged to affiliated financial professionals."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, compliance-oriented corporate culture prioritizing stability and advisor support."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "b1733994b9"
+   ],
+   "value": "Independent financial advisors, broker-dealer representatives, and retail investors seeking wealth management."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000 - $110,000 base salary, typical for non-big-tech financial services in moderate cost-of-living hubs."
   },
   "evidence_sha": "2ed7d23dbbaa31f7",
+  "generated_at": 1784777283,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "268e9da0b3"
+   ],
+   "value": "Financial Services / Wealth Management / Broker-Dealer"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe whether AI and data science roles are truly innovative or focused on legacy system maintenance, and ask directly about new-grad compensation bands. Ask questions to gauge the speed of tech deployment and confirm actual work hours and PTO policies to ensure it meets your need to avoid burnout."
   },
+  "last_attempt_at": 1784777283,
   "last_evidence_at": 1784677473,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b1733994b9"
+   ],
+   "value": "Headquartered in El Segundo, California, with additional operations in St. Cloud, Minnesota."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "b1733994b9"
+   ],
+   "value": "Enabling financial professionals to provide objective advice and deliver personalized wealth management solutions to investors."
+  },
   "name": "Cetera Financial Group",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate pace typical of regulated financial services, favoring stability over rapid innovation."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "b1733994b9"
+   ],
+   "value": "Broker-dealer services, RIA support, wealth management platforms, practice management technology, and investment solutions for financial professionals."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-25 days of standard corporate PTO."
   },
+  "refresh_after": 1789961283,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -45153,7 +45287,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Standard public holidays, but no public indication of guaranteed company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b1733994b9"
+   ],
+   "value": "Large, established financial services organization operating a network of independent broker-dealers."
   },
   "sources": [
    {
@@ -45187,14 +45328,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=158cc2fc43c8dfbe9a034573abf9f0548b15494e8df99410565f3cac6b7a1098JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=33461374-d36f-6ad0-1d4c-04e9d2696ba0&u=a1aHR0cHM6Ly9jZXRlcmEuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely limited sponsorship for specialized roles as a traditional financial services firm."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "268e9da0b3",
+    "b1733994b9"
+   ],
+   "value": "Cetera Financial Group is a network of independent broker-dealers and registered investment advisers that provides wealth management and financial advisory services. It makes money by providing infrastructure, technology, compliance, and product access to financial professionals and their clients."
+  },
+  "synthesized_evidence_sha": "2ed7d23dbbaa31f7",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "268e9da0b3",
+    "c435d9657a"
+   ],
+   "value": "Maintains enterprise platforms for advisor workflows, client reporting, and online account access."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677473,
   "web_search_url": "https://duckduckgo.com/?q=Cetera+Financial+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "While Cetera is a major player in wealth management tech, it is a traditional financial services firm rather than a fast-paced AI innovator, meaning you may encounter more bureaucracy and slower tech culture than elite tech firms offer. New grad pay and work-life balance may be average for the industry, lacking the guaranteed shutdowns or elite prestige you prioritize."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Generally sane hours typical of corporate finance, but without explicit guarantees against periodic spikes."
   }
  },
  "cgi": {
@@ -104655,11 +104823,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -104671,6 +104841,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784777283,
   "last_evidence_at": 1784693224,
   "name": "Huron",
   "pace_of_work": {
@@ -170817,34 +170988,75 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown - no compensation data found in provided sources."
   },
   "evidence_sha": "0e35f4db5716eb77",
+  "generated_at": 1784777283,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784777283,
   "last_evidence_at": 1784676688,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Proximate Technologies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown - no data on work pace or engineering velocity."
   },
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown - no PTO policy information available."
   },
+  "refresh_after": 1789961283,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -170854,7 +171066,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown - no information on company-wide shutdowns or guaranteed time off."
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -170888,14 +171105,39 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "08ef4b997e",
+    "9a02d76660",
+    "f16eec2a6f"
+   ],
+   "value": "Insufficient information available in provided sources to describe Proximate Technologies' business or operations. Sources contain only redirect notices and a generic job board landing page."
+  },
+  "synthesized_evidence_sha": "0e35f4db5716eb77",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676688,
   "web_search_url": "https://duckduckgo.com/?q=Proximate+Technologies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown - no data on work-life balance policies or actual practices."
   }
  },
  "prudential financial": {
@@ -179426,48 +179668,130 @@
  "remitly": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "ac51e0f780"
+   ],
+   "value": "Estimated: Mid-to-high tier fintech prestige with competitive compensation, offering an elite alternative to出名 systemic-burnout tech giants; notable for its mission-driven AI applications in fraud and risk."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "ac51e0f780",
+    "6804fb06f1"
+   ],
+   "value": "Digital remittance platform handling international money transfers, generating revenue through transaction fees and foreign exchange margins."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "ac51e0f780"
+   ],
+   "value": "Estimated: Mission-shaped culture emphasizing servant leadership, transparency, and customer-centric innovation to help immigrants."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "ac51e0f780"
+   ],
+   "value": "Immigrants, expats, and migrant workers who need to send money across international borders to family and friends."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "ac51e0f780"
+   ],
+   "value": "Estimated: $130,000 - $160,000 base salary, aligning with elite-tier fintech new grad packages in the Seattle tech market."
   },
   "evidence_sha": "a3010973bade5395",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784777283,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ac51e0f780",
+    "6804fb06f1"
+   ],
+   "value": "Financial Technology (Fintech) / Digital Remittances"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ac51e0f780",
+    "9a283ec2b5"
+   ],
+   "value": "Candidates should expect a standard mix of data structures, algorithms, and system design questions tailored to high-scale financial transactions. Estimated: Interviewers will likely probe for bias for action and agility to ensure the candidate thrives in an innovative tech culture rather than slow bureaucracy."
+  },
+  "last_attempt_at": 1784777283,
   "last_evidence_at": 1784674904,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac51e0f780"
+   ],
+   "value": "Headquartered in Seattle, Washington, with global offices and remote work options."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac51e0f780"
+   ],
+   "value": "To transform the lives of immigrants and their families by providing reliable, affordable, and accessible financial services."
+  },
   "name": "Remitly",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "ac51e0f780",
+    "6804fb06f1"
+   ],
+   "value": "Estimated: Fast-paced, balancing public-company operational rigor with an innovative, product-focused delivery cadence."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "ac51e0f780",
+    "9a283ec2b5"
+   ],
+   "value": "Remitly app and web platform for cross-border remittances, mobile banking, and digital money transfers."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "ac51e0f780"
+   ],
+   "value": "Estimated: Likely 20 to 25 days of annual Paid Time Off for full-time staff, reflecting competitive big-tech financial benefits."
   },
+  "refresh_after": 1789961283,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "ac51e0f780",
+    "6804fb06f1"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "ac51e0f780"
+   ],
+   "value": "Estimated: May offer floating holidays or end-of-year shutdown perks, but guaranteed company-wide shutdowns are not confirmed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "ac51e0f780"
+   ],
+   "value": "Publicly traded company (NASDAQ: RELY) operating at a large global scale."
   },
   "sources": [
    {
@@ -179501,14 +179825,48 @@
     "url": "https://www.bing.com/ck/a?!&&p=9005db454cdae148e1e923369ea019be933751e996b5a1aae1760f03ae4e0225JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1fc87c60-4d5f-6869-1fee-6bfd4cab6979&u=a1aHR0cHM6Ly93d3cucmVtaXRseS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ac51e0f780"
+   ],
+   "value": "Estimated: Likely offers employment visa sponsorship for specialized technical roles due to its global engineering footprint, though specific policies are not explicitly detailed in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac51e0f780",
+    "6804fb06f1"
+   ],
+   "value": "Remitly is a digital financial services company that provides international money transfer and mobile remittance services. They make money by charging fees on transfer amounts and earning margins on foreign exchange rates across their send and receive corridors."
+  },
+  "synthesized_evidence_sha": "a3010973bade5395",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac51e0f780",
+    "9a283ec2b5"
+   ],
+   "value": "Building and scaling a high-throughput digital remittance platform, mobile applications, fraud detection, and associated financial infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674904,
   "web_search_url": "https://duckduckgo.com/?q=Remitly+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac51e0f780",
+    "9a283ec2b5"
+   ],
+   "value": "Aligns with the mission-driven criteria by directly impacting underbanked immigrant communities, offering a tech culture driven by product innovation. Estimated: Claims a strong culture of respect for sane hours, positioning itself as a departure from high-burnout environments, though this requires direct validation."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "ac51e0f780"
+   ],
+   "value": "Estimated: Conservative upper-medium. Marketed as having respect for work-life balance and sane hours, though public company volatility can create pressure spikes."
   }
  },
  "remodel health": {
@@ -195992,11 +196350,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -196008,6 +196368,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784777283,
   "last_evidence_at": 1784676950,
   "name": "Smith+Nephew",
   "pace_of_work": {
@@ -243658,11 +244019,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -243674,6 +244037,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784777283,
   "last_evidence_at": 1784692851,
   "name": "ZOLL Medical Corporation",
   "pace_of_work": {
