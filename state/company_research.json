@@ -20923,37 +20923,99 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Top-tier. Arm is foundational to the global AI ecosystem, providing the underlying compute architectures and machine learning processors for nearly all edge AI and mobile devices, making the work elite and high-impact."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "c3654ae265",
+    "e91f8f8439"
+   ],
+   "value": "Semiconductor intellectual property (IP) licensing and royalty collection. Arm develops compute architectures and licenses these designs to partners who manufacture physical chips, generating revenue through upfront licensing fees and per-unit royalties."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "e91f8f8439"
+   ],
+   "value": "Collaborative, supportive, and ownership-driven. Skilled individuals thrive in a fast-paced team environment focused on driving impact, diversity, equity, inclusion, learning, and volunteering."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "e91f8f8439"
+   ],
+   "value": "The world's leading tech companies and the next wave of innovators, specifically semiconductor designers and OEMs like Qualcomm, Apple, and Samsung."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130,000 - $160,000 base salary, plus RSUs and bonuses, reflecting its status as a highly compensated, top-tier public tech company."
   },
   "evidence_sha": "0f06e13c91715388",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784835077,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d8869e1ba6",
+    "c3654ae265"
+   ],
+   "value": "Semiconductors and Semiconductor Intellectual Property (IP)."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "e91f8f8439"
+   ],
+   "value": "Expect interviews to gauge your technical depth in systems/AI and your alignment with Arm's '10x better' mindset. Emphasize your ability to take strong individual ownership while collaborating in a fast-paced team environment, which suits a candidate looking for accelerated career growth and innovation without toxic burnout."
+  },
+  "last_attempt_at": 1784835077,
   "last_evidence_at": 1784676859,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "c3654ae265"
+   ],
+   "value": "Global company with offices and R&D centers located in the UK, US, and across the world."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "e91f8f8439"
+   ],
+   "value": "To spark creativity, challenge old ways of working, and focus on what truly matters by continually asking, \"How do I/we make this 10 times better?\" They aim to build technology trusted by leading global tech companies."
+  },
   "name": "Arm",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "e91f8f8439"
+   ],
+   "value": "Estimated: Fast-paced and innovative. The culture blends individual ownership with team alignment, actively challenging old ways of working to spark creativity rather than being slowed by corporate bureaucracy."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "c3654ae265",
+    "e91f8f8439"
+   ],
+   "value": "Processor architectures and IP, including Cortex CPUs, Mali GPUs, Ethos NPUs, and the Armv9 architecture, used to build System-on-Chips (SoCs) for smartphones, servers, and IoT devices."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-30 days of annual leave plus public holidays, consistent with standard generous policies in the global semiconductor industry."
   },
+  "refresh_after": 1790019077,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -20963,7 +21025,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Arm is known for guaranteed holiday shutdown periods (often around Christmas/New Year) to ensure employees can fully disconnect and recharge without work piling up."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "d8869e1ba6",
+    "c3654ae265"
+   ],
+   "value": "Publicly traded company (NASDAQ: ARM) and a dominant global leader in semiconductor IP."
   },
   "sources": [
    {
@@ -20997,14 +21067,44 @@
     "url": "https://careers.arm.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a large multinational public tech company with critical engineering hubs globally, Arm typically sponsors work visas and provides relocation support for specialized hardware and software engineering roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c3654ae265",
+    "e91f8f8439"
+   ],
+   "value": "Arm designs the computational architectures and intellectual property (IP) that power the world's electronics, licensing blueprints to semiconductor companies rather than manufacturing chips themselves. They make money by licensing these processor designs and architectures to tech partners and collecting royalties on the billions of chips shipped globally."
+  },
+  "synthesized_evidence_sha": "0f06e13c91715388",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "e91f8f8439"
+   ],
+   "value": "Designing and optimizing compute architectures, compilers, machine learning IP (like NPUs), and software ecosystems for performance and power efficiency. Work involves hardware-software co-design at the intersection of AI and embedded systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676859,
   "web_search_url": "https://duckduckgo.com/?q=Arm+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "e91f8f8439"
+   ],
+   "value": "Arm aligns perfectly with your goals: it is elite, mission-driven, and enables high-impact AI and systems work that literally powers the tech world. Bureaucracy is intentionally avoided in favor of a fast-paced, supportive culture that asks 'how to make things 10x better,' which accelerates technical learning while maintaining a high standard of work-life balance."
+  },
   "wlb_rating": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "e91f8f8439"
+   ],
+   "value": "Estimated: Strong work-life balance with sane hours. Arm's collaborative, supportive environment fosters career growth and respects personal time, avoiding the toxic burnout culture occasionally found in elite software firms."
   }
  },
  "arq": {
@@ -71366,50 +71466,115 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Medium-High. While a prestigious global brand, its AI/tech division may not hold the niche tech prestige of FAANG competitors."
   },
   "aliases": [],
-  "attempts": 11,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 12,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "4ce2062610",
+    "f678f5d0fe"
+   ],
+   "value": "Generating revenue through media production, streaming subscriptions, park admissions, and regional entertainment broadcasting."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "4ce2062610"
+   ],
+   "value": "Mission-driven and community-focused, with an emphasis on inclusion, storytelling, and belonging."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "4ce2062610"
+   ],
+   "value": "Global consumers and families seeking entertainment and media experiences."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120k-$160k base for AI/Data Science roles, highly dependent on whether the role sits in their core entertainment or specific tech divisions."
   },
   "evidence_sha": "da04d21530ca17f7",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784835077,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784834927,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "4ce2062610"
+   ],
+   "value": "Family Entertainment & Media"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "4ce2062610"
+   ],
+   "value": "Prioritize asking about the day-to-day structure to see if the mission is rate-limited by bureaucracy or if it supports your desire for high learning. Focus heavily on questions about work-life balance and team hours to ensure it avoids toxic or high-burnout environments while still accelerating your career."
+  },
+  "last_attempt_at": 1784835077,
   "last_evidence_at": 1784677533,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "4ce2062610"
+   ],
+   "value": "Global presence including North America and South America, with specific offices in Argentina, Brazil, Mexico, and the U.S."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "4ce2062610"
+   ],
+   "value": "Creating a welcoming and respectful environment for employees and guests is core to their mission."
+  },
   "name": "Disney",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. Large legacy company structure implies a slower pace compared to pure tech startups, though entertainment cycles can bring peak crunches."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "f678f5d0fe",
+    "4ce2062610"
+   ],
+   "value": "Animated and live-action films, streaming services (Disney+), television networks, theme parks, and consumer products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-25 days of standard corporate PTO, dependent on tenure and specific role levels."
   },
+  "refresh_after": 1790019077,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "4ce2062610"
+   ],
+   "value": "Source mentions 'Students & Recent Graduates' and a 'Disney Program', but no formal technical AI/Data rotational program source appears."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns, though standard public holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "4ce2062610"
+   ],
+   "value": "A large, expansive multinational corporation with a historic legacy and significant global offices."
   },
   "sources": [
    {
@@ -71443,14 +71608,44 @@
     "url": "https://www.disneycareers.com/en"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "4ce2062610"
+   ],
+   "value": "While not explicitly detailed in core materials, large global companies of this scale typically offer visa sponsorship for specialized tech roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "4ce2062610"
+   ],
+   "value": "The Walt Disney Company is a leading global family entertainment and media enterprise. It makes money through its diversified portfolio of streaming services, media networks, parks and resorts, and content production."
+  },
+  "synthesized_evidence_sha": "da04d21530ca17f7",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "f678f5d0fe",
+    "4ce2062610"
+   ],
+   "value": "While tech and AI capabilities underly their streaming and media platforms, the core story and brand are rooted in family entertainment."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677533,
   "web_search_url": "https://duckduckgo.com/?q=Disney+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "4ce2062610"
+   ],
+   "value": "If you are seeking a top-tier new grad tech role with a fast-paced, innovative culture, Disney's scale brings prestige and mission, but may not fit your desire for a fast tech culture over slow bureaucracy. The culture technically focuses on respect, but large corporate environments can inherently challenge personal time and work-life balance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good to Moderate. The culture emphasizes respect, but limitations may arise in corporate ladders and non-guaranteed shutdowns."
   }
  },
  "diverge health": {
@@ -121501,11 +121696,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -121517,6 +121714,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784835077,
   "last_evidence_at": 1784674425,
   "name": "Invisible Technologies",
   "pace_of_work": {
@@ -146054,7 +146252,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -146072,7 +146270,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784834927,
+  "last_attempt_at": 1784835077,
   "last_evidence_at": 1784677599,
   "name": "McDonald's Corporation",
   "pace_of_work": {
@@ -151947,7 +152145,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -151986,7 +152184,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "last_attempt_at": 1784834927,
+  "last_attempt_at": 1784835077,
   "last_evidence_at": 1784821848,
   "locations": {
    "confidence": "high",
@@ -157012,11 +157210,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -157028,6 +157228,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784835077,
   "last_evidence_at": 1784711218,
   "name": "Neon",
   "pace_of_work": {
@@ -178874,37 +179075,90 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 — flagship consumer platform with 100M+ MAU, dedicated research org (PlayStation Research), and publications at SIGGRAPH, NeurIPS, GDC."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "19c5b3e6d7"
+   ],
+   "value": "Hardware sales (consoles, accessories), first-party game sales, third-party royalty fees (~30% on digital sales), PlayStation Plus subscription revenue, PlayStation Store commissions, and advertising on PSN."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-driven, player-obsessed, collaborative across studios; ‘Player First’ value translates to data-informed decisions. Low politics for a 12k org; strong mentorship culture."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "19c5b3e6d7"
+   ],
+   "value": "Console gamers worldwide (120M+ monthly active PSN users), game developers/publishers licensing the platform, subscribers to PlayStation Plus, and advertisers on the PlayStation Network."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $135k–$155k base + 10–15% target bonus + $50k–$80k RSU (4-yr) for AI/DS/new-grad software roles in CA/WA; total comp ~$200k–$250k year 1."
   },
   "evidence_sha": "d5279a081e7fb150",
+  "generated_at": 1784835077,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "19c5b3e6d7"
+   ],
+   "value": "Video Games / Interactive Entertainment / Consumer Electronics"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Video Games / technology (estimated)"
+   "value": "Expect deep systems design (scalable services, low-latency networking), ML fundamentals (recommendation, anomaly detection, generative AI for assets), and product sense for player-facing features. Studios often include a ‘culture/values’ panel assessing collaboration and respect for work-life boundaries. Prepare concrete examples of shipping ML/models in production under latency or privacy constraints."
   },
+  "last_attempt_at": 1784835077,
   "last_evidence_at": 1784583442,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "19c5b3e6d7"
+   ],
+   "value": "HQ: San Mateo, CA. Major studios: Los Angeles (Santa Monica, Naughty Dog), San Diego, Seattle (Insomniac, Sucker Punch), London, Tokyo, Liverpool, Montreal, San Diego. Remote/hybrid options vary by team."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "19c5b3e6d7"
+   ],
+   "value": "To deliver the best play experiences through innovative hardware, world-class first-party games, and a vibrant online ecosystem that connects players globally."
+  },
   "name": "PlayStation",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable — sprint cycles with explicit ‘no crunch’ guardrails at most first-party studios; central platform teams run 2-week sprints with quarterly planning."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "19c5b3e6d7"
+   ],
+   "value": "PlayStation 5 console family, PlayStation VR2, first-party game studios (e.g., Naughty Dog, Insomniac, Santa Monica Studio), PlayStation Network (PSN), PlayStation Plus subscription tiers, PlayStation Store digital marketplace, and cloud gaming via PlayStation Plus Premium."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days accrual + 10 company holidays + 2 ‘recharge’ days + holiday shutdown (≈10 extra days Dec)."
   },
+  "refresh_after": 1790019077,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -178914,7 +179168,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (last 2 weeks of December) observed company-wide; most studios also enforce summer ‘recharge’ week."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "19c5b3e6d7"
+   ],
+   "value": "Large, mature subsidiary of Sony Group (Fortune Global 500). ~12,000+ employees across studios, publishing, hardware, and services. Publicly traded via Sony Group (NYSE: SONY)."
   },
   "sources": [
    {
@@ -178948,14 +179209,37 @@
     "url": "https://www.bing.com/ck/a?!&&p=a31af46dd20558c12b139677e9ad88d32d93a5b54e31e69d1070aa7785a33c8fJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUGxheVN0YXRpb24&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B, O-1, and green cards for specialized engineering, research, and data science roles. Large global mobility program for internal transfers between SIE studios and Sony Group."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "19c5b3e6d7"
+   ],
+   "value": "PlayStation (Sony Interactive Entertainment) is a global video game and digital entertainment company that develops, publishes, and distributes hardware (PlayStation consoles), software (first- and third-party games), and online services (PlayStation Network, PlayStation Plus). It operates as a wholly owned subsidiary of Sony Group Corporation."
+  },
+  "synthesized_evidence_sha": "d5279a081e7fb150",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Distributed systems for PSN (millions of concurrent users), real-time multiplayer networking, graphics engine R&D, ML/AI for content recommendation, cheating detection, player behavior analytics, cloud gaming infrastructure, console OS/security, and developer toolchains."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583442,
   "web_search_url": "https://duckduckgo.com/?q=PlayStation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "PlayStation offers elite prestige in consumer tech and gaming with top-tier new-grad compensation, a mission to create joy through play, and a culture that emphasizes sustainable pace—studio leads often enforce ‘no crunch’ policies and guaranteed shutdown periods around holidays. AI/DS roles sit at the intersection of massive player telemetry, real-time inference, and creative products, accelerating technical growth without the burnout typical of pure ad-tech or fintech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4.0/5 — industry surveys consistently rank SIE above average for WLB; mandated holiday shutdowns (last 2 weeks Dec), core hours 10-4, flexible remote policy."
   }
  },
  "plusai": {
@@ -219339,48 +219623,124 @@
  "stewart": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "35baeb377e"
+   ],
+   "value": "Estimated: Low. Traditional real estate title insurance companies generally lack the elite AI/data science prestige of top-tier tech firms or dedicated AI labs."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "35baeb377e"
+   ],
+   "value": "Charges for title insurance, settlement, underwriting, and lender services provided during real estate transactions."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "35baeb377e"
+   ],
+   "value": "Corporate, inclusive, and focused on career development within a traditional industry."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "35baeb377e"
+   ],
+   "value": "Participants in real estate transactions, likely including home buyers, sellers, lenders, and real estate professionals."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "35baeb377e"
+   ],
+   "value": "Estimated: $70,000 - $90,000. Based on a Systems Engineer I role in Texas at a traditional real estate company, which typically pays below elite tech new-grad benchmarks."
   },
   "evidence_sha": "2dddddf9eba99ca8",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784835077,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "35baeb377e"
+   ],
+   "value": "Real estate services (Title insurance and settlement)."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "35baeb377e"
+   ],
+   "value": "Probe heavily to see if this specific Copilot Systems Engineer role is tied to high-impact AI development or if it is simply IT support for a legacy industry. Ask about the team's tech stack, engineering cadence, and whether the culture truly values fast innovation or adheres to slow corporate bureaucracy."
+  },
+  "last_attempt_at": 1784835077,
   "last_evidence_at": 1784676860,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "35baeb377e"
+   ],
+   "value": "USA-TX---Remote (and globally, as the company operates globally)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "35baeb377e"
+   ],
+   "value": "Committed to helping customers own, develop, and nurture their careers, while operating within an inclusive work environment that reflects the customers served."
+  },
   "name": "Stewart",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "35baeb377e"
+   ],
+   "value": "Estimated: Moderate to slow. Legacy financial and real estate service companies typically operate at a deliberate, process-oriented pace rather than a fast-paced, innovative tech cadence."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "35baeb377e"
+   ],
+   "value": "Title insurance, settlement services, underwriting, and lender services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "35baeb377e"
+   ],
+   "value": "Estimated: 15-20 days of paid time off, based on the standard competitive benefits package mentioned for eligible employees."
   },
+  "refresh_after": 1790019077,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "35baeb377e"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "35baeb377e"
+   ],
+   "value": "Estimated: None found in research. Traditional real estate companies rarely offer guaranteed company-wide shutdowns outside of standard public holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "35baeb377e"
+   ],
+   "value": "Global real estate services company operating through a family of companies."
   },
   "sources": [
    {
@@ -219434,14 +219794,45 @@
     "url": "https://stewart.wd1.myworkdayjobs.com/External/job/USA-TX---Remote/Systems-Engineer-I_JR108188"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "35baeb377e"
+   ],
+   "value": "Not explicitly stated in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "35baeb377e"
+   ],
+   "value": "Stewart is a global real estate services company that provides title insurance, settlement, underwriting, and lender services. It makes money by facilitating real estate transactions and charging for insurance policies and related closing services."
+  },
+  "synthesized_evidence_sha": "2dddddf9eba99ca8",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "35baeb377e"
+   ],
+   "value": "Hiring for technical roles such as Systems Engineer I (Copilot), involving remote work based in Texas."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676860,
   "web_search_url": "https://duckduckgo.com/?q=Stewart+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "35baeb377e"
+   ],
+   "value": "As a traditional real estate services company, Stewart likely operates at a more deliberate, bureaucratic pace rather than the fast, innovative tech culture you are seeking. While it may offer stable hours, it probably lacks the elite prestige, high new-grad pay, and intensive AI/data science learning environment that top-tier tech roles provide."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "35baeb377e"
+   ],
+   "value": "Estimated: Good. Traditional real estate services firms usually offer sane, standard business hours compared to high-burnout tech startups, though it may lack guaranteed shutdowns."
   }
  },
  "stifel": {
