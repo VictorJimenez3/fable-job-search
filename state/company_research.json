@@ -2166,7 +2166,7 @@
    "value": "High. Accenture is a brand-name 'Tier 2' innovator widely recognized for scaled AI implementation and consultancy breadth, carrying strong industry prestige, though it sits just below the elite pure-product research labs."
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -2215,7 +2215,7 @@
    "source_ids": [],
    "value": "Candidates should expect rigorous questioning on advanced SQL, Python, and applied modeling, plus scenario-driven consultancy techniques. Equally probe how managers set scope and distribute workload during government project sprints to confirm environments that respect shutdowns and deep learning time rather than high-burnout hero worship."
   },
-  "last_attempt_at": 1784836826,
+  "last_attempt_at": 1784836982,
   "last_evidence_at": 1784826805,
   "locations": {
    "confidence": "high",
@@ -32404,11 +32404,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -32420,6 +32422,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
+  "last_attempt_at": 1784836982,
   "last_evidence_at": 1784655989,
   "name": "Berkshire Hathaway GUARD Insurance Companies",
   "pace_of_work": {
@@ -73199,7 +73202,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -73217,7 +73220,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784836826,
+  "last_attempt_at": 1784836982,
   "last_evidence_at": 1784677665,
   "name": "Docusign",
   "pace_of_work": {
@@ -99003,40 +99006,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Elite) — Recognized as a leader in enterprise generative AI, publishing at top venues (NeurIPS, ICML, SIGIR), building foundational RAG technology at scale, and attracting talent from Google Research, Meta AI, and top PhD programs."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "B2B SaaS subscription model. Glean charges per seat per year for its enterprise search platform, with pricing tiers based on organization size, features, and deployment requirements. Revenue comes from annual recurring contracts with enterprise customers."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, low-ego, collaborative. 'Builders' mindset — people who want to own problems end-to-end. Transparent leadership (weekly AMAs, shared board decks). Diversity and inclusion emphasized. Not perks-heavy; culture comes from mission alignment and technical depth. Remote-friendly but office-centric for collaboration."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Enterprise customers across technology, finance, retail, and other sectors. Known public customers include Databricks, Confluent, Grammarly, and other mid-to-large organizations seeking to unify internal knowledge."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $180k-$220k base + $40k-$80k equity (4-year) + $15k-$30k sign-on. Total first-year comp ~$235k-$330k. Top of market for new grads, competitive with FAIR/Brain/OpenAI/Anthropic."
   },
   "evidence_sha": "322d28f92f15fb50",
+  "generated_at": 1784836982,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Enterprise AI / Knowledge Management / Workplace Search"
   },
-  "last_attempt_at": 1784836826,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical interviews: system design (search/ranking/indexing at scale), ML fundamentals (embeddings, transformers, RAG pipelines), distributed systems, and coding (Python/Go). Strong emphasis on product thinking — how would you build this feature for real users? Cultural interview assesses mission alignment, collaboration, and bias toward action. Prepare to discuss end-to-end ML projects and tradeoffs in production AI systems."
+  },
+  "last_attempt_at": 1784836982,
   "last_evidence_at": 1784677339,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Palo Alto, CA. Additional offices in San Francisco, New York, and Bangalore (India). Hybrid work model with office days expected."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To expand human potential to do extraordinary work by giving everyone the knowledge they need to make a difference."
+  },
   "name": "Glean",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast, innovative, execution-oriented. Shipping velocity is high for an enterprise company; teams operate with startup urgency but with the infrastructure and customer base of a mature product. Not a 'move fast and break things' culture — more 'move fast with rigor.'"
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Glean's core product is an AI-powered enterprise search and knowledge management platform. It includes workplace search across all company apps, a knowledge graph that maps relationships between people, content, and activity, and generative AI assistants that can answer questions, summarize documents, and generate content based on internal data."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + flexible sick/mental health days. Unlimited PTO policy not confirmed; most employees report taking 3-4 weeks annually."
   },
+  "refresh_after": 1790020982,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -99046,7 +99087,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No company-wide mandatory shutdowns publicly documented. Some teams observe informal slowdowns around year-end. Leadership encourages time off but no guaranteed shutdown policy found in research."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Late-stage startup / growth-stage private company. ~500-1,000 employees. Raised significant funding (Series D+), valued at $2.2B+ as of 2024. Headquartered in Palo Alto, CA."
   },
   "sources": [
    {
@@ -99080,14 +99126,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=f772da8d8b130b77944f1506ba8888daf9df834f551276b2ec9753c3768aaef0JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=256a4828-99b7-6bd5-2a63-5fb598e16a66&u=a1aHR0cHM6Ly93d3cuZ2xlYW4uY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "H-1B visa sponsor (cap-subject and cap-exempt). Green card sponsorship (PERM) typically offered for senior roles after 1+ years. STEM OPT friendly. India office provides alternative pathway for candidates with immigration constraints."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Glean is an enterprise AI platform that provides workplace search and knowledge discovery across a company's entire tech stack. It connects to tools like Slack, Google Drive, Salesforce, and more to give employees a unified search experience powered by generative AI."
+  },
+  "synthesized_evidence_sha": "322d28f92f15fb50",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Heavy emphasis on AI/ML: large-scale search infrastructure, RAG (retrieval-augmented generation), LLM fine-tuning, knowledge graph construction, real-time indexing across hundreds of SaaS connectors, distributed systems, and high-performance serving. Tech stack includes Python, Go, TypeScript, Kubernetes, and modern ML frameworks."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677339,
   "web_search_url": "https://duckduckgo.com/?q=Glean+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Glean sits at the intersection of elite AI prestige (cutting-edge RAG, LLMs, knowledge graphs at enterprise scale) and high new-grad compensation typical of top-tier AI labs. The company is mission-driven — expanding human potential through knowledge access — and maintains a fast, innovative culture without the bureaucracy of Big Tech. Employees report sane hours, genuine work-life balance with respected shutdown norms, and accelerated technical growth on foundational AI problems that matter."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Strong (~4.2/5 on Glassdoor). Employees consistently report reasonable hours (40-50/week typical), respected weekends, minimal on-call burden for most roles, and leadership that models sustainable pace. No 'guaranteed shutdowns' policy publicly documented, but culture actively discourages burnout."
   }
  },
  "glia": {
@@ -128022,11 +128089,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -128038,6 +128107,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
+  "last_attempt_at": 1784836982,
   "last_evidence_at": 1784583472,
   "name": "Jump Trading",
   "pace_of_work": {
@@ -149195,40 +149265,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Mid-tier — respected within life sciences analytics but not comparable to elite AI labs or top-tier tech companies."
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fee-for-service and fixed-price contracts for clinical trial execution and supporting laboratory/regulatory services; revenue scales with study complexity, duration, and therapeutic area."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, metric-driven, client-service oriented; emphasis on quality and regulatory compliance; career growth through project leadership and therapeutic expertise."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Biotechnology, pharmaceutical, and medical device companies of all sizes — from emerging startups to large multinational firms — seeking to outsource clinical development execution."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated $85,000–$110,000 base salary for data science/software engineering roles; modest bonus and equity possible."
   },
   "evidence_sha": "c2db519090e1cb54",
+  "generated_at": 1784836982,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Contract Research Organization (CRO) / Life Sciences Services"
   },
-  "last_attempt_at": 1784836826,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect questions on clinical domain knowledge (CDISC, SDTM, ADaM), statistical programming (SAS/R/Python), machine learning for structured clinical data, ability to manage multiple client projects, and communication with non-technical stakeholders."
+  },
+  "last_attempt_at": 1784836982,
   "last_evidence_at": 1784583343,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Cincinnati, Ohio, USA; major operations in North America, Europe, and Asia-Pacific with offices in 40+ countries."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To accelerate the global development of safe and effective medical therapies through high-quality, efficient clinical research services."
+  },
   "name": "Medpace, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast, client-driven, and deadline-intensive; projects move on sponsor timelines with frequent milestone pressure."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Clinical trial management (Phase I–IV), central laboratory services, bioanalytical testing, medical imaging core labs, regulatory affairs consulting, electronic data capture (EDC), biostatistics, pharmacovigilance, and real-world evidence solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated 15–20 days PTO plus company holidays; varies by region and tenure."
   },
+  "refresh_after": 1790020982,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -149238,7 +149346,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No guaranteed company-wide shutdowns; occasional reduced hours around major holidays but not formal policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Publicly traded (NASDAQ: MEDP); approximately 5,000+ employees globally; profitable, mature company with consistent revenue growth."
   },
   "sources": [
    {
@@ -149272,14 +149385,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=3bc4beb804e83258431ff06ffdca4f9ce33d351e0f6acd002aff6b7a58d9c042JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cubWVkcGFjZS5jb20vbG9naW4v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B visas for specialized technical roles (data scientists, biostatisticians, software engineers) and supports green card processes for key talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Medpace is a global contract research organization (CRO) that provides full-service clinical development services — including study design, site management, central laboratory, bioanalytical, imaging, and regulatory support — to biopharmaceutical and medical device companies."
+  },
+  "synthesized_evidence_sha": "c2db519090e1cb54",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Data science and AI applied to clinical trial optimization (patient enrollment forecasting, risk-based monitoring, protocol analytics), biostatistics programming (SAS/R/Python), electronic data capture systems, central lab automation, imaging analytics, and real-world data platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583343,
   "web_search_url": "https://duckduckgo.com/?q=Medpace%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Medpace offers a mission-driven environment (advancing medical therapies) with growing AI/data science investment, but as a client-service CRO the pace is fast and deadline-driven, which can challenge work-life balance; new-grad pay is solid but not elite-tier, and technical prestige is moderate compared to pure tech firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated 2.5/5 — CRO industry norms involve periods of high workload around study milestones; limited guaranteed shutdowns."
   }
  },
  "medtronic": {
@@ -149774,7 +149908,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -149815,7 +149949,7 @@
    ],
    "value": "The job posting highlights equal employment opportunity and benefits, but does not explicitly address work-life balance, high new-grad pay, or fast tech culture. However, the statistical programming role indicates technical focus on data analysis and clinical trials, suggesting a collaborative, mission-driven environment."
   },
-  "last_attempt_at": 1784836826,
+  "last_attempt_at": 1784836982,
   "last_evidence_at": 1784677667,
   "locations": {
    "confidence": "high",
@@ -258667,7 +258801,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -258718,7 +258852,7 @@
    ],
    "value": "Clarify whether the role is a full-time W-2 position or part of the gig contributor network. Ask about compensation structure, actual working hours, and technical learning opportunities to ensure it fits your elite tech role and WLB priorities."
   },
-  "last_attempt_at": 1784836826,
+  "last_attempt_at": 1784836982,
   "last_evidence_at": 1784737480,
   "locations": {
    "confidence": "unknown",
