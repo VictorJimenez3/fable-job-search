@@ -2166,7 +2166,7 @@
    "value": "High. Accenture is a brand-name 'Tier 2' innovator widely recognized for scaled AI implementation and consultancy breadth, carrying strong industry prestige, though it sits just below the elite pure-product research labs."
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -2215,7 +2215,7 @@
    "source_ids": [],
    "value": "Candidates should expect rigorous questioning on advanced SQL, Python, and applied modeling, plus scenario-driven consultancy techniques. Equally probe how managers set scope and distribute workload during government project sprints to confirm environments that respect shutdowns and deep learning time rather than high-burnout hero worship."
   },
-  "last_attempt_at": 1784836649,
+  "last_attempt_at": 1784836826,
   "last_evidence_at": 1784826805,
   "locations": {
    "confidence": "high",
@@ -4297,37 +4297,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 – Respected carrier-grade applied AI/ML (network analytics, anomaly detection, predictive maintenance) with publication opportunities at SIGCOMM/NSDI/CoNEXT, but not a primary AI research lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Product-centric with recurring revenue streams: sells networking hardware (OLTs, ONTs, switches, routers), licenses software (SDN/NFV, management, analytics), and attaches professional services, support contracts, and managed-services agreements."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, collaborative, low-politics; ‘Huntsville pragmatism’ – decisions data-driven, meetings minimal, documentation valued; diverse global teams with strong mentorship culture."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier-1/2/3 telecommunications service providers, cable/MSOs, utilities, municipalities, and enterprise customers worldwide seeking to deploy and operate broadband and cloud-connected networks."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k–$115k base + $15k–$25k RSU (4-yr) + 10% target bonus (Huntsville); adjusted up 15–20% for Bay Area/Seattle hubs."
   },
   "evidence_sha": "3cb5b0c58f4ebb20",
+  "generated_at": 1784836826,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Telecommunications equipment / Networking hardware & software"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect domain-fluent loops: (1) CS fundamentals (data structures, concurrency, Linux internals); (2) specialty deep-dive (FPGA/RTL, eBPF/XDP, Kubernetes operators, or ML model serving at edge); (3) system-design of a broadband access or assurance pipeline; (4) behavioral screen for ownership, cross-team collaboration, and customer empathy. Prepare to discuss a project where you optimized latency, throughput, or reliability under hardware constraints."
+  },
+  "last_attempt_at": 1784836826,
   "last_evidence_at": 1784677338,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Huntsville, Alabama, USA. Major R&D centers: Huntsville, Plano (TX), Trier (Germany), Bangalore (India), Beijing (China). Sales/support offices across North America, EMEA, APAC, LATAM."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To connect the world by delivering innovative, open, and scalable networking solutions that empower service providers and enterprises to advance their communities and businesses."
+  },
   "name": "Adtran",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate – Structured quarterly PI planning, 2-week sprints, defined release trains; urgent customer escalations occur but are triaged, not constant fire-drills."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Broadband access platforms (fiber, copper, fixed wireless), optical transport and edge solutions, cloud-managed Wi-Fi and switching, network management software (Mosaic One), and professional/managed services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 2 floating days (US); accrual increases with tenure; unlimited not offered."
   },
+  "refresh_after": 1790020826,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -4337,7 +4378,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full company shutdown week between Christmas and New Year; additional summer Friday half-days in some locations."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public company (NASDAQ: ADTN); ~$600M–$700M annual revenue; ~1,800–2,000 employees globally; mature, profitable, and debt-light with a multi-decade operating history."
   },
   "sources": [
    {
@@ -4371,14 +4417,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=e967e76cd5bab79ce7e422430ba92a76b1fc4f7940dc0d062bc74348a419ee3cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=256a4828-99b7-6bd5-2a63-5fb598e16a66&u=a1aHR0cHM6Ly93d3cuYWR0cmFuLmNvbS9lbg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B visas for specialized engineering roles (FPGA, embedded, cloud, AI/ML); green-card sponsorship (PERM) typical for senior and critical-skill positions after 1–2 years; limited new-grad sponsorship due to cap constraints."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Adtran is a global provider of networking and communications equipment, software, and services, enabling service providers and enterprises to build and manage broadband access, optical networking, and cloud-based solutions. The company generates revenue through hardware sales, software licensing, and managed services contracts."
+  },
+  "synthesized_evidence_sha": "3cb5b0c58f4ebb20",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Embedded systems, FPGA/ASIC design, optical hardware, real-time OS, SDN/NFV platform development, cloud-native microservices (Kubernetes, Go, Python), data-plane acceleration, AI/ML for network analytics and assurance, and test automation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677338,
   "web_search_url": "https://duckduckgo.com/?q=Adtran+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Adtran offers a rare blend of deep-tech networking heritage and modern cloud/AI transformation, giving new grads exposure to carrier-grade scale without the bureaucracy of hyperscalers. The company’s shift to software-defined, open-access platforms means AI/ML talent works on real-time network optimization, predictive assurance, and intent-based automation—projects that ship to Tier-1 operators globally. Work-life balance is culturally reinforced by a Huntsville engineering mindset: core hours, "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "4/5 – Core hours 10–3, flexible remote/hybrid, rare weekends; on-call rotation ~1 week/quarter with explicit escalation policy and comp time."
   }
  },
  "advantage solutions": {
@@ -73132,7 +73199,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -73150,7 +73217,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784836649,
+  "last_attempt_at": 1784836826,
   "last_evidence_at": 1784677665,
   "name": "Docusign",
   "pace_of_work": {
@@ -98939,11 +99006,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -98955,6 +99024,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784836826,
   "last_evidence_at": 1784677339,
   "name": "Glean",
   "pace_of_work": {
@@ -149128,7 +149198,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -149146,7 +149216,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
-  "last_attempt_at": 1784836649,
+  "last_attempt_at": 1784836826,
   "last_evidence_at": 1784583343,
   "name": "Medpace, Inc.",
   "pace_of_work": {
@@ -149704,7 +149774,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -149745,7 +149815,7 @@
    ],
    "value": "The job posting highlights equal employment opportunity and benefits, but does not explicitly address work-life balance, high new-grad pay, or fast tech culture. However, the statistical programming role indicates technical focus on data analysis and clinical trials, suggesting a collaborative, mission-driven environment."
   },
-  "last_attempt_at": 1784836649,
+  "last_attempt_at": 1784836826,
   "last_evidence_at": 1784677667,
   "locations": {
    "confidence": "high",
@@ -236653,37 +236723,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 — strong applied ML opportunities in a niche marketplace, but not a primary AI research lab or top-tier brand for academic prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "16b299a086",
+    "b518a092ac"
+   ],
+   "value": "Revenue from a seller-side commission on each transaction; buyers pay a single all-in price with no separate service fees."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-centric, data-driven, and mission-aligned around fee transparency; flat-ish hierarchy with emphasis on ownership and direct customer impact; likely less political than large corp but still evolving processes."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "16b299a086",
+    "b518a092ac"
+   ],
+   "value": "Event-goers seeking transparent, no-fee ticket purchasing; secondary-market sellers (individuals and brokers) listing inventory on the platform."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$160k base + equity (0.05%-0.15%) + signing bonus; total comp ~$160k-$200k first year in NYC."
   },
   "evidence_sha": "da030c7306229bc5",
+  "generated_at": 1784836826,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "16b299a086",
+    "b518a092ac"
+   ],
+   "value": "Consumer marketplace / Ticketing / Live entertainment technology"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep dives into marketplace dynamics: ranking/recommendation systems, real-time pricing, fraud detection, and scaling search/indexing. Prepare for practical ML system design (feature stores, online inference, A/B testing) and full-stack coding (Python/Go, React/React Native, Postgres/Redis). Behavioral questions will probe ownership, speed of iteration, and alignment with the no-fee mission."
   },
+  "last_attempt_at": 1784836826,
   "last_evidence_at": 1784677338,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "e212d3fb35"
+   ],
+   "value": "Headquartered in New York, NY; remote-friendly roles listed on Workable."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "16b299a086",
+    "b518a092ac"
+   ],
+   "value": "To eliminate hidden ticket fees and provide a fair, transparent marketplace for live-event tickets."
+  },
   "name": "TickPick",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast — mid-stage marketplace with live-event seasonality drives rapid feature cycles and on-call rotations during peak periods; generally quicker than enterprise SaaS but with predictable crunch windows."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "16b299a086",
+    "b518a092ac"
+   ],
+   "value": "Consumer-facing ticket marketplace (web and mobile) for concerts, sports, theater, and other live events; seller tools for listing and managing inventory; price-tracking and recommendation features for buyers."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 US holidays; unlimited policy not confirmed."
   },
+  "refresh_after": 1790020826,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -236693,7 +236821,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; likely optional winter break between Christmas and New Year."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-stage private company (~200-500 employees), profitable or near-profitable, operating in the competitive secondary ticket market."
   },
   "sources": [
    {
@@ -236727,14 +236860,38 @@
     "url": "https://apply.workable.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely supports H-1B transfers and new cap filings for senior engineering roles; no public data on STEM OPT or green-card sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "16b299a086",
+    "b518a092ac"
+   ],
+   "value": "TickPick is a no-fee ticket marketplace that lets buyers purchase event tickets without hidden service charges. The platform aggregates inventory from sellers and charges a transparent, all-in price at checkout."
+  },
+  "synthesized_evidence_sha": "da030c7306229bc5",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Full-stack marketplace engineering: real-time inventory sync, pricing algorithms, search/recommendation systems, payment processing, fraud detection, mobile apps (iOS/Android), and data platform for analytics and ML."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677338,
   "web_search_url": "https://duckduckgo.com/?q=TickPick+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "TickPick offers a high-impact AI/data role in a transparent, mission-driven marketplace that disrupts the opaque ticket industry. The no-fee model aligns company success with customer trust, creating meaningful technical challenges in pricing, search, and fraud at scale. As a mid-stage private company, it likely provides faster iteration and ownership than big-tech bureaucracy while still compensating competitively for new grads."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — reasonable baseline hours with seasonal spikes around major event drops; remote flexibility helps, but on-call and release deadlines can intrude on evenings/weekends during peak seasons."
   }
  },
  "tiffany co": {
@@ -258510,7 +258667,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -258561,7 +258718,7 @@
    ],
    "value": "Clarify whether the role is a full-time W-2 position or part of the gig contributor network. Ask about compensation structure, actual working hours, and technical learning opportunities to ensure it fits your elite tech role and WLB priorities."
   },
-  "last_attempt_at": 1784836649,
+  "last_attempt_at": 1784836826,
   "last_evidence_at": 1784737480,
   "locations": {
    "confidence": "unknown",
