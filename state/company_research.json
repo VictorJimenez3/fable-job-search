@@ -4039,7 +4039,7 @@
    "value": "Top-tier – Adobe Research publishes at NeurIPS, CVPR, SIGGRAPH; leads in generative AI for creative tools (Firefly) and document AI."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "estimated",
    "source_ids": [],
@@ -4078,7 +4078,7 @@
    "source_ids": [],
    "value": "Expect deep technical interviews covering ML fundamentals, system design, coding (Python/C++), and applied research problems; behavioral questions tied to Adobe's core values (genuine, exceptional, innovative, involved). Prepare for portfolio/demo discussions if applying to creative AI roles."
   },
-  "last_attempt_at": 1784815914,
+  "last_attempt_at": 1784816061,
   "last_evidence_at": 1784814415,
   "locations": {
    "confidence": "estimated",
@@ -12803,7 +12803,7 @@
    "value": "Tier 1: AWS holds elite prestige in infrastructure and cloud technology, offering strong data-driven engineering roles, though AI prestige varies by specific team."
   },
   "aliases": [],
-  "attempts": 10,
+  "attempts": 11,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -12852,7 +12852,7 @@
    ],
    "value": "Candidates should weigh if AWS's accelerated technical growth and compensation justify its intense, demanding pace rather than a balanced environment with strictly sane hours. It may fit those seeking elite learning even if it sacrifices personal time, but it may not satisfy strict work-life balance or anti-burnout priorities."
   },
-  "last_attempt_at": 1784815914,
+  "last_attempt_at": 1784816061,
   "last_evidence_at": 1784807865,
   "locations": {
    "confidence": "medium",
@@ -32361,11 +32361,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -32377,6 +32379,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784816061,
   "last_evidence_at": 1784815755,
   "name": "BetMGM",
   "pace_of_work": {
@@ -47673,7 +47676,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -47691,7 +47694,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784815914,
+  "last_attempt_at": 1784816061,
   "last_evidence_at": 1784807603,
   "name": "Cerebras",
   "pace_of_work": {
@@ -60742,11 +60745,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -60758,6 +60763,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784816061,
   "last_evidence_at": 1784815755,
   "name": "COUNTRY Financial",
   "pace_of_work": {
@@ -83711,41 +83717,105 @@
  "felicity": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Emerging startup prestige. While not yet a household name like top-tier AI labs, an early-stage entry offers high learning potential and foundational impact rather than established brand prestige."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "d9a74b2490",
+    "dbc3b9e88f"
+   ],
+   "value": "Operates as a B2B SaaS startup, offering structured AI platforms to business teams to optimize and automate their workflows."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "d9a74b2490"
+   ],
+   "value": "Mission-driven and autonomous, emphasizing product thinking and front-line customer impact over rigid corporate structures."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "d9a74b2490"
+   ],
+   "value": "Business teams within enterprise organizations looking to automate and structure their processes using AI."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dbc3b9e88f",
+    "d9a74b2490"
+   ],
+   "value": "Estimated: Highly competitive startup tier, likely ranging from $130k-$170k base pay, plus equity, reflecting a premium for AI roles in NYC."
   },
   "evidence_sha": "1df034977b511aa9",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784816061,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784815914,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d9a74b2490"
+   ],
+   "value": "Artificial Intelligence / Enterprise Software."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "d9a74b2490"
+   ],
+   "value": "Investigate the work-life balance by asking how on-call rotations and customer-facing demands impact weekly hours, ensuring the fast-paced startup environment does not lead to burnout or toxic expectations. Confirm how the 'unlimited PTO' policy translates to actual guaranteed time off and whether there are formal company shutdowns."
+  },
+  "last_attempt_at": 1784816061,
   "last_evidence_at": 1784815757,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "d9a74b2490"
+   ],
+   "value": "New York City (NYC)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "d9a74b2490"
+   ],
+   "value": "To put AI in the hands of business teams, allowing them to turn complex processes into structured, reliable systems."
+  },
   "name": "Felicity",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Fast-paced and agile, typical of an early-stage tech startup prioritizing rapid iteration and customer deployment."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "d9a74b2490"
+   ],
+   "value": "An AI-driven platform that enables business teams to transform complex workflows into structured, reliable systems."
+  },
+  "prompt_v": 2,
   "pto_days": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "d9a74b2490"
+   ],
+   "value": "Estimated: Unlimited PTO. The company explicitly trusts employees to manage their own time, though actual average usage is not disclosed."
   },
+  "refresh_after": 1790000061,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -83754,8 +83824,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "d9a74b2490"
+   ],
+   "value": "Estimated: None found in research, but given unlimited PTO, it is worth asking if any formal holidays or shutdowns are universally observed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Early-stage tech startup actively recruiting new graduates."
   },
   "sources": [
    {
@@ -83809,14 +83888,44 @@
     "url": "https://jobs.ashbyhq.com/felicity/99ab4a4f-c219-42f9-9c1b-cf832634cd46"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "d9a74b2490"
+   ],
+   "value": "Felicity builds AI platforms that allow business teams to turn their processes into structured, reliable systems. The company makes money by putting AI directly into the hands of business teams to solve operational challenges."
+  },
+  "synthesized_evidence_sha": "1df034977b511aa9",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "d9a74b2490"
+   ],
+   "value": "The Forward Deployed Software Engineer (FDSE) role combines software engineering, product thinking, and customer-facing work to build customer-specific AI solutions."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784815757,
   "web_search_url": "https://duckduckgo.com/?q=Felicity+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f",
+    "d9a74b2490"
+   ],
+   "value": "As an early-stage startup actively hiring new grads, Felicity offers the fast-paced, innovative tech culture you desire without the slow bureaucracy of larger firms. The FDSE role accelerates technical learning through a mix of engineering, product, and customer-facing work, perfectly aligning with your goal of rapid career growth and elite newgrad pay."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "d9a74b2490"
+   ],
+   "value": "Estimated: Moderate to Good. The company claims unlimited PTO and a culture of trust to manage one's own time, though actual work-life balance in a fast-paced startup environment requires further interview confirmation."
   }
  },
  "ferrovial": {
@@ -101567,7 +101676,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -101585,7 +101694,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784815914,
+  "last_attempt_at": 1784816061,
   "last_evidence_at": 1784814416,
   "name": "Guardian Life",
   "pace_of_work": {
@@ -195722,7 +195831,7 @@
    "value": "Estimated: Low/Mid-tier (Niche). RTX is highly prestigious in traditional aerospace engineering, but its embedded software and defense focus places it below top-tier tech companies for general AI and Data Science prestige."
   },
   "aliases": [],
-  "attempts": 16,
+  "attempts": 17,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -195776,7 +195885,7 @@
    ],
    "value": "Be prepared to emphasize your ability to work effectively in a structured team environment and navigate bureaucracy, which contrasts with the fast-paced, independent agility you prefer. You should also clarify expectations around hours and learning curves, as the embedded, real-time C++ focus here is highly specialized rather than broad AI/DS career growth."
   },
-  "last_attempt_at": 1784815914,
+  "last_attempt_at": 1784816061,
   "last_evidence_at": 1784807603,
   "locations": {
    "confidence": "high",
