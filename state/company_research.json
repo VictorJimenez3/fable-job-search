@@ -2166,7 +2166,7 @@
    "value": "High. Accenture is a brand-name 'Tier 2' innovator widely recognized for scaled AI implementation and consultancy breadth, carrying strong industry prestige, though it sits just below the elite pure-product research labs."
   },
   "aliases": [],
-  "attempts": 9,
+  "attempts": 10,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -2215,7 +2215,7 @@
    "source_ids": [],
    "value": "Candidates should expect rigorous questioning on advanced SQL, Python, and applied modeling, plus scenario-driven consultancy techniques. Equally probe how managers set scope and distribute workload during government project sprints to confirm environments that respect shutdowns and deep learning time rather than high-burnout hero worship."
   },
-  "last_attempt_at": 1784837129,
+  "last_attempt_at": 1784837296,
   "last_evidence_at": 1784826805,
   "locations": {
    "confidence": "high",
@@ -32401,40 +32401,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Mid-tier: respected applied data science within insurance, but not a top-tier AI research lab or high-velocity tech innovator."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Earns revenue from underwriting profits (premiums minus claims and expenses) and investment income on float. Operates as a wholly owned subsidiary of Berkshire Hathaway, benefiting from its capital strength and long-term horizon."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, conservative, and stability-oriented. Collaborative but hierarchical. Strong emphasis on ethics and long-term thinking (Berkshire culture). Limited \"move fast and break things\" mentality."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Small and mid-sized businesses across various industries, primarily in the United States, served through independent agents and brokers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000–$100,000 base salary + 10–15% annual bonus + RSU/stock (Berkshire Hathaway shares rarely granted at subsidiary level). Total comp ~$90k–$115k."
   },
   "evidence_sha": "cfecf193323eb8ba",
+  "generated_at": 1784837296,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+   "value": "Insurance (Property & Casualty)"
   },
-  "last_attempt_at": 1784837129,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect behavioral questions on collaboration and ethics, technical screens on Python/SQL/modeling, and case studies on insurance problems (pricing, reserving, fraud). Demonstrate ability to translate DS into business value within a regulated environment. Ask about model deployment lifecycle, data governance, and mentorship structure."
+  },
+  "last_attempt_at": 1784837296,
   "last_evidence_at": 1784655989,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Wilkes-Barre, Pennsylvania; additional offices in major U.S. metros (e.g., New York, Chicago, Atlanta, Dallas). Limited remote flexibility for technical roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide stable, reliable insurance protection and superior service to policyholders while maintaining financial strength and disciplined underwriting."
+  },
   "name": "Berkshire Hathaway GUARD Insurance Companies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate; project cycles measured in quarters, with regulatory compliance adding overhead. Faster than government, slower than tech startups."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Commercial insurance products including workers' compensation, general liability, commercial auto, umbrella/excess, and specialty lines for small to mid-sized businesses."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO plus 8–10 paid holidays; accrual increases with tenure."
   },
+  "refresh_after": 1790021296,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -32444,7 +32482,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; observes standard federal holidays and possibly a winter break week (varies by department)."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature subsidiary of a Fortune 5 conglomerate; approximately 1,500–2,000 employees, with multi-billion dollar premium volume."
   },
   "sources": [
    {
@@ -32478,14 +32521,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=4d0f1d56287afae794cf93a6dc7b5030a4c6b3be73fd6a2b9bb6c25c8b4d76b2JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=260a9729-c6c2-672f-23e1-80b4c77d665c&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9CZXJrc2hpcmU&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H-1B visas for specialized technical and data science roles; green card sponsorship possible for high-performing employees. As a large insurer, it has established immigration processes."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Berkshire Hathaway GUARD Insurance Companies is a property and casualty insurance subsidiary of Berkshire Hathaway, focusing on commercial lines such as workers' compensation, general liability, and specialty coverages. It operates as a traditional insurer, generating revenue through underwriting premiums and investment income."
+  },
+  "synthesized_evidence_sha": "cfecf193323eb8ba",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Applied data science and AI in actuarial modeling, claims automation, fraud detection, pricing optimization, and customer analytics. Tech stack likely includes Python, SQL, cloud platforms (AWS/Azure), and legacy mainframe integration."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784655989,
   "web_search_url": "https://duckduckgo.com/?q=Berkshire+Hathaway+GUARD+Insurance+Companies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers the prestige and stability of a Berkshire Hathaway company with solid new-grad compensation, but the insurance industry pace is slower than pure tech firms. Work-life balance is generally respectable with predictable hours, though not guaranteed shutdowns. Technical growth is solid in applied DS/actuarial domains, but innovation speed is tempered by regulatory and legacy constraints."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Good; typical 40–45 hour weeks, minimal on-call for DS roles. Occasional crunch during rate filings or catastrophe events."
   }
  },
  "bernhard": {
@@ -66830,40 +66894,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "High — recognized for deploying AI/ML in regulated diagnostics and high-throughput imaging; publishes at top venues (NeurIPS, CVPR, ISMB) and acquires AI startups."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Conglomerate of autonomous operating companies unified by the Danaher Business System (DBS) — a lean, continuous-improvement framework that drives recurring revenue from instrument placements plus high-margin consumables, software, and services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, metric-driven, continuous-improvement culture (DBS). Collaboration encouraged; hierarchy varies by OpCo. Strong emphasis on compliance, quality, and documentation due to regulated markets."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Biopharmaceutical manufacturers, academic & government research labs, clinical laboratories, hospitals, water & wastewater utilities, and industrial process manufacturers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$135k base + 10-15% target bonus + RSU (vesting 4 yrs) for software/data-science roles in major hubs; top performers may exceed $180k total year-1."
   },
   "evidence_sha": "a4febc6069400d7e",
+  "generated_at": 1784837296,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Life-science tools, diagnostics, environmental & applied solutions conglomerate."
   },
-  "last_attempt_at": 1784837129,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical screens (coding, ML fundamentals, domain-specific problem solving) plus behavioral questions aligned with DBS principles (continuous improvement, standard work, respect for people). Ask hiring managers about the specific OpCo's release cadence, on-call expectations, and how DBS shapes daily workflow to gauge true WLB."
+  },
+  "last_attempt_at": 1784837296,
   "last_evidence_at": 1784655990,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Washington, DC; major R&D hubs in San Diego, Bay Area, Boston, London, Shanghai, and distributed sites across North America, Europe, and Asia."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Helping realize life's potential through science and technology innovation across the Danaher Business System."
+  },
   "name": "Danaher Corporation",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-to-fast depending on OpCo; instrument programs follow regulated release cycles (quarterly to annual), while digital/AI teams may iterate faster. DBS emphasizes standardized work to reduce fire-drills."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Portfolio includes life-science research tools (e.g., Cytiva, Pall), diagnostics platforms (e.g., Beckman Coulter, Leica, Cepheid), and environmental & applied solutions (e.g., Hach, Trojan, Videojet)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days accrued PTO + 10 company holidays (US); varies by OpCo and tenure. No public unified policy."
   },
+  "refresh_after": 1790021296,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -66873,7 +66975,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "None found in research; no company-wide guaranteed shutdown period."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large-cap public company (NYSE: DHR); ~$24B revenue, ~63,000 employees (2023)."
   },
   "sources": [
    {
@@ -66907,14 +67014,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=55b5cc17145b637fffcd9be6f1c0d75f64624aa6287131bcac4b0de7e898074aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=260a9729-c6c2-672f-23e1-80b4c77d665c&u=a1aHR0cHM6Ly93d3cuZGFuYWhlci5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Actively sponsors H-1B and green cards for specialized engineering and data-science roles across operating companies."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Danaher Corporation is a global science and technology conglomerate operating through multiple independent operating companies in life sciences, diagnostics, and environmental & applied solutions. It makes money by designing, manufacturing, and selling high-margin instruments, consumables, software, and services to biopharma, academic, clinical, and industrial customers."
+  },
+  "synthesized_evidence_sha": "a4febc6069400d7e",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Embedded software/firmware for instruments, cloud/data platforms for lab connectivity, AI/ML for image analysis & assay development, bioinformatics, sensor physics, and automation/robotics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784655990,
   "web_search_url": "https://duckduckgo.com/?q=Danaher+Corporation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Danaher offers elite prestige and high new-grad compensation within a mission-driven, science-first conglomerate that uses the Danaher Business System to enforce operational rigor — which can translate to clearer priorities and more predictable hours than pure-play tech, but bureaucracy and pace vary significantly by operating company."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 overall; core hours respected in many OpCos, but on-call rotations exist for cloud/platform teams and manufacturing-support roles. No company-wide guaranteed shutdown."
   }
  },
  "darktower": {
@@ -73202,40 +73330,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "High — dedicated AI Research group, publications at top conferences (NeurIPS, ICML), and core product integration of LLMs for contract analytics."
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Subscription-based SaaS revenue model with tiered pricing per user/seat and enterprise agreements; additional revenue from professional services and API usage."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, intellectually honest, and low-politics. Engineers own outcomes; leadership emphasizes transparency, diversity, and mental-health resources."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Serves over 1 million customers ranging from small businesses to large enterprises across industries like real estate, financial services, healthcare, and government."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $150k–$180k base + $30k–$60k RSUs (4-year) + $15k–$25k sign-on; total first-year $195k–$265k."
   },
   "evidence_sha": "0fa20bba0a4df7e8",
+  "generated_at": 1784837296,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "SaaS / LegalTech / Agreement Cloud / Digital Transaction Management"
   },
-  "last_attempt_at": 1784837129,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical assessments in ML systems design, document AI, and scalable cloud architecture. Behavioral rounds will probe collaboration, ownership, and work-life boundaries. Prepare to discuss how you balance rapid iteration with maintainability and how you’ve advocated for sustainable practices."
+  },
+  "last_attempt_at": 1784837296,
   "last_evidence_at": 1784677665,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in San Francisco, CA; major engineering hubs in Seattle, WA and Sunnyvale, CA; remote-friendly with global offices."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To accelerate the process of doing business by making agreements digital, automated, and intelligent."
+  },
   "name": "Docusign",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast but sustainable; quarterly planning with explicit capacity buffers. Teams ship frequently but are protected from death-marches by engineering-led process."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core products include eSignature, Contract Lifecycle Management (CLM), Document Generation, and AI-powered agreement analytics."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days accrued PTO + 10 company holidays + 2 floating days; unlimited sick leave."
   },
+  "refresh_after": 1790021296,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -73245,7 +73411,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual week-long company shutdown (typically last week of December) plus summer half-day Fridays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public company (NASDAQ: DOCU) with 7,000+ employees and $2.5B+ annual revenue; mature growth stage."
   },
   "sources": [
    {
@@ -73269,14 +73440,38 @@
     "url": "https://www.bing.com/ck/a?!&&p=747505553b926c978e8c3e30a765aeaed7655b0841e2cee9524151c0687aa741JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3c41252b-b38b-6729-1c82-32b6b2506626&u=a1aHR0cHM6Ly9hY2NvdW50LmRvY3VzaWduLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B visas and green cards for technical roles; common for new-grad and experienced AI/DS hires."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "73265eb544",
+    "0e8cad5420"
+   ],
+   "value": "DocuSign is a public SaaS company that provides electronic signature and agreement cloud solutions to businesses worldwide."
+  },
+  "synthesized_evidence_sha": "0fa20bba0a4df7e8",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cloud-native microservices, AI/ML for document understanding and risk scoring, high-scale transaction processing, and developer platform/APIs."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677665,
   "web_search_url": "https://duckduckgo.com/?q=Docusign+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "DocuSign offers a top-tier AI/data science environment with elite prestige (public SaaS leader, dedicated AI research) and competitive new-grad compensation. Its agreement-cloud mission drives real-world impact, while its culture emphasizes sustainable pace, guaranteed shutdowns, and respect for personal time — aligning with your priority for fast innovation without burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Strong — 4/5 typical; core hours 10am–4pm, no-meeting Fridays common, on-call rotations compensated and limited."
   }
  },
  "dollar tree distribution inc": {
@@ -76039,11 +76234,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -76055,6 +76252,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784837296,
   "last_evidence_at": 1784674263,
   "name": "e.Republic",
   "pace_of_work": {
@@ -132586,7 +132784,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -132604,7 +132802,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784837129,
+  "last_attempt_at": 1784837296,
   "last_evidence_at": 1784673567,
   "name": "Kong",
   "pace_of_work": {
@@ -149978,7 +150176,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 9,
+  "attempts": 10,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -150019,7 +150217,7 @@
    ],
    "value": "The job posting highlights equal employment opportunity and benefits, but does not explicitly address work-life balance, high new-grad pay, or fast tech culture. However, the statistical programming role indicates technical focus on data analysis and clinical trials, suggesting a collaborative, mission-driven environment."
   },
-  "last_attempt_at": 1784837129,
+  "last_attempt_at": 1784837296,
   "last_evidence_at": 1784677667,
   "locations": {
    "confidence": "high",
@@ -258871,7 +259069,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -258922,7 +259120,7 @@
    ],
    "value": "Clarify whether the role is a full-time W-2 position or part of the gig contributor network. Ask about compensation structure, actual working hours, and technical learning opportunities to ensure it fits your elite tech role and WLB priorities."
   },
-  "last_attempt_at": 1784837129,
+  "last_attempt_at": 1784837296,
   "last_evidence_at": 1784737480,
   "locations": {
    "confidence": "unknown",
