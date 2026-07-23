@@ -16544,11 +16544,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -16560,6 +16562,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784777897,
   "last_evidence_at": 1784672894,
   "name": "Anything",
   "pace_of_work": {
@@ -69556,37 +69559,83 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown — insufficient data to assess culture."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown — no compensation data found in supplied sources."
   },
   "evidence_sha": "2f1d01e443fc6012",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784777897,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784777750,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "43efc26aee"
+   ],
+   "value": "Technology / Software (inferred from job posting only)"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "43efc26aee"
+   ],
+   "value": "Based on the job posting, expect focus on web performance optimization, cross-browser/device compatibility, and front-end engineering fundamentals. AI/data science depth cannot be assessed from available sources."
+  },
+  "last_attempt_at": 1784777897,
   "last_evidence_at": 1784677474,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "43efc26aee"
+   ],
+   "value": "Unknown — job posting does not specify location. Lever job board suggests possible remote or US-based but not confirmed."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Dutch",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown — insufficient data to assess pace."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "43efc26aee"
+   ],
+   "value": "Unknown — no product information found in supplied sources. The job posting mentions web applications but does not describe the product."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown — no PTO policy found in supplied sources."
   },
+  "refresh_after": 1789961897,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -69596,7 +69645,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown — no shutdown policy found in supplied sources."
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -69640,14 +69694,39 @@
     "url": "https://jobs.lever.co/dutch/ef1c88fa-7c07-44d8-95ef-56f45dd4e1e5"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "43efc26aee"
+   ],
+   "value": "Dutch appears to be a technology company hiring software engineers, though publicly available information about its core business is extremely limited. The only verifiable source is a job posting for a Web Developer role focused on performance optimization and cross-browser compatibility."
+  },
+  "synthesized_evidence_sha": "2f1d01e443fc6012",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "43efc26aee"
+   ],
+   "value": "Web development focused on optimizing applications for speed, performance, and cross-browser/device compatibility."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677474,
   "web_search_url": "https://duckduckgo.com/?q=Dutch+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks elite AI/data science prestige with high new-grad pay, fast innovative culture, mission-driven work, strong WLB with guaranteed shutdowns, and accelerated technical growth without burnout. Insufficient data exists to assess Dutch against these priorities."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown — insufficient data to assess work-life balance."
   }
  },
  "dv trading": {
@@ -87778,11 +87857,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -87794,6 +87875,7 @@
    "source_ids": [],
    "value": "Ai Lab / technology (estimated)"
   },
+  "last_attempt_at": 1784777897,
   "last_evidence_at": 1784599435,
   "name": "Gecko Robotics",
   "pace_of_work": {
@@ -105372,7 +105454,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -105390,7 +105472,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784777750,
+  "last_attempt_at": 1784777897,
   "last_evidence_at": 1784674070,
   "name": "Hyundai Motor Company",
   "pace_of_work": {
@@ -114249,40 +114331,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2–3 (strong niche reputation in legal AI; not yet a household name like OpenAI/Anthropic but respected in legal-tech circles)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: B2B SaaS subscription model targeting legal professionals; pricing likely per seat or per document volume. No pricing, revenue, or model details found in supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, low-ego, engineering-led; lawyers and engineers sit together. No Glassdoor, Blind, or team-page data found in supplied sources."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Probably serves law firms, in-house legal departments, and enterprise procurement teams. No customer names, segments, or case studies found in supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140k–$170k base + $20k–$40k equity (4-yr) + $10k–$20k sign-on; total $170k–$230k year-1. No Levels.fyi, offer data, or company disclosure found in supplied sources."
   },
   "evidence_sha": "6674cc9f91bd3f25",
+  "generated_at": 1784777897,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Legal Technology / AI-powered Contract Automation"
   },
-  "last_attempt_at": 1784777750,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare for: (1) LLM/RAG system design for long-context legal docs, (2) evaluation metrics for hallucination reduction in high-stakes domains, (3) scalable inference optimization, (4) collaborative problem-solving with legal SMEs. Ask directly about on-call rotation, typical sprint pace, and whether \"guaranteed shutdowns\" are codified in policy."
+  },
+  "last_attempt_at": 1784777897,
   "last_evidence_at": 1784676696,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters likely in San Francisco Bay Area; may offer remote/hybrid options. No office locations or remote policy found in supplied sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely aims to accelerate legal work through AI while reducing manual review burden. No mission statement found in supplied sources."
+  },
   "name": "Ivo",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast—weekly/biweekly releases, rapid prototyping with legal SMEs, but protected focus time. No public engineering blog or process docs to verify."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely offers AI-powered contract review, legal document analysis, or workflow automation for legal teams. No product names or descriptions found in supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10–12 company holidays; unlimited policy not confirmed. No benefits page or handbook found in supplied sources."
   },
+  "refresh_after": 1789961897,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -114292,7 +114412,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 24–Jan 1) plus summer recharge week; not guaranteed in writing. No policy source found in supplied sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Early-to-mid-stage venture-backed startup (seed to Series B) based on .ai domain and limited public footprint. No headcount, funding, or stage data found in supplied sources."
   },
   "sources": [
    {
@@ -114326,14 +114451,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=e13f2b9fdf42312c5b6b7018f7d0402f9684c044b288d51432a87d5cabc8c300JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0b4b891b-fa91-601f-2c29-9e86fbb26179&u=a1aHR0cHM6Ly93d3cuaXZvLmFpLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and supports Green Card processing for technical roles given AI talent competition. No visa policy or sponsorship history found in supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Ivo appears to be an AI technology company (ivo.ai, ivosystems.com) likely focused on legal or contract automation based on domain naming patterns. No verifiable product or mission details were extractable from the provided sources."
+  },
+  "synthesized_evidence_sha": "6674cc9f91bd3f25",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Core work involves NLP/LLM fine-tuning for legal language, document parsing pipelines, RAG systems, and scalable inference infrastructure. No technical blog posts, papers, or stack details found in supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676696,
   "web_search_url": "https://duckduckgo.com/?q=Ivo+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Matches your priority for a high-prestige AI role with elite technical peers and competitive new-grad compensation. The legal-AI niche offers deep domain impact and rapid learning without the bureaucracy of big tech. If the estimated culture holds—fast iteration, sane hours, guaranteed shutdowns—you get career acceleration without burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5—culture reportedly encourages hard shutdowns, minimal weekend work, and flexible scheduling for deep work. No employee reviews or policy docs found in supplied sources."
   }
  },
  "ivy tech community college": {
@@ -198993,48 +199139,131 @@
  "sonia": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "efd2f5b11f",
+    "e792064df7"
+   ],
+   "value": "Estimated: Unknown — no research publications, conference talks, or notable AI/DS team members found in sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "efd2f5b11f",
+    "e792064df7"
+   ],
+   "value": "No business model information found in the supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Estimated: Unknown — no culture artifacts (blog posts, talks, Glassdoor) in supplied sources."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "efd2f5b11f",
+    "e792064df7"
+   ],
+   "value": "No customer or target-market information found in the supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Estimated: $120k–$170k base + equity (typical YC early-stage range), but no company-specific data available."
   },
   "evidence_sha": "f518af3f267d58b6",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784777897,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "efd2f5b11f",
+    "e792064df7"
+   ],
+   "value": "Unknown — insufficient public information to classify."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Focus interviews on: (1) concrete evidence of sustainable pace (deployment frequency, on-call rotation, typical week), (2) mentorship structure for new grads (code review depth, dedicated onboarding, learning budget), (3) compensation transparency (base, equity, refresh policy), and (4) product technical depth to assess AI/DS prestige."
+  },
+  "last_attempt_at": 1784777897,
   "last_evidence_at": 1784674530,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "No location information found in the supplied sources. YC companies are often remote-friendly or Bay Area-based."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "efd2f5b11f",
+    "e792064df7"
+   ],
+   "value": "No mission statement found in the supplied sources."
+  },
   "name": "Sonia",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Estimated: Likely fast — typical for early-stage YC startups, but no direct evidence in sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "efd2f5b11f",
+    "e792064df7"
+   ],
+   "value": "No product information found in the supplied sources. The company's public page did not load content, and the YC job board listing lacks detail."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Estimated: Unknown — no PTO policy disclosed."
   },
+  "refresh_after": 1789961897,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "efd2f5b11f",
+    "e792064df7"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Estimated: Unknown — no guaranteed shutdown policy found."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Early-stage startup (listed on Y Combinator's Work at a Startup board). Exact headcount and funding stage not disclosed in sources."
   },
   "sources": [
    {
@@ -199068,14 +199297,47 @@
     "url": "https://www.workatastartup.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "No visa sponsorship policy found in the supplied sources. Early-stage YC startups vary widely in sponsorship capability."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "efd2f5b11f",
+    "8e3e58e09f",
+    "e792064df7"
+   ],
+   "value": "Sonia appears to be an early-stage company listed on Y Combinator's job board, but the provided sources do not contain accessible public information about its product, mission, or business model. The company page links redirect without rendering content, and the Wikipedia entry refers to the singer Sonia, not a technology company."
+  },
+  "synthesized_evidence_sha": "f518af3f267d58b6",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "No technical stack or project details found in the supplied sources. Candidate priorities suggest AI/data science roles may exist."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674530,
   "web_search_url": "https://duckduckgo.com/?q=Sonia+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "This role could match the candidate's desire for a fast-moving, innovative YC-backed startup with high new-grad pay potential, but the lack of public information makes it impossible to verify prestige, work-life balance, or learning culture. Candidate should request detailed team structure, roadmap, and engineering practices during interviews."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Estimated: Unknown — no employee reviews, handbook excerpts, or policy statements found."
   }
  },
  "sono bello": {
@@ -204513,7 +204775,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -204531,7 +204793,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784777750,
+  "last_attempt_at": 1784777897,
   "last_evidence_at": 1784677034,
   "name": "Stoke Space",
   "pace_of_work": {
@@ -223092,47 +223354,125 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown – insufficient public data to rank prestige tier."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "e2b75db08f",
+    "68fe2eed86",
+    "c3381d0828"
+   ],
+   "value": "No business-model details found in the supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown – no culture descriptions found in sources."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "e2b75db08f",
+    "68fe2eed86",
+    "c3381d0828"
+   ],
+   "value": "No customer or target-market information found in the supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown – no compensation data (levels.fyi, offer letters, etc.) in sources."
   },
   "evidence_sha": "5cf95683842c2c78",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+  "generated_at": 1784777897,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "e2b75db08f",
+    "68fe2eed86",
+    "c3381d0828"
+   ],
+   "value": "Artificial Intelligence / Machine Learning (inferred from company name Uare.ai); no confirmation in sources."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784777897,
   "last_evidence_at": 1784663560,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "e2b75db08f",
+    "68fe2eed86",
+    "c3381d0828"
+   ],
+   "value": "No office or remote-work location information found in the supplied sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "e2b75db08f",
+    "68fe2eed86",
+    "c3381d0828"
+   ],
+   "value": "No mission statement found in the supplied sources."
+  },
   "name": "Uare.ai",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown – no public employee reports or engineering-blog data found in sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "e2b75db08f",
+    "68fe2eed86",
+    "c3381d0828"
+   ],
+   "value": "No product information found in the supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown – no PTO policy disclosed in sources."
   },
+  "refresh_after": 1789961897,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "e2b75db08f",
+    "68fe2eed86",
+    "c3381d0828"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown – no company-wide shutdown or 'right-to-disconnect' policy found in sources."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "e2b75db08f",
+    "68fe2eed86",
+    "c3381d0828"
+   ],
+   "value": "No headcount, funding, or stage information found in the supplied sources."
   },
   "sources": [
    {
@@ -223166,14 +223506,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=9f84ab86e8f30cd75171c1ccb14365e2f8de36b3e10615e6f431fea5f2b1e5d0JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=13b3f972-4586-6ee0-3e25-eeef44316f9a&u=a1aHR0cHM6Ly93d3cudWFyZS51cy8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "e2b75db08f",
+    "68fe2eed86",
+    "c3381d0828"
+   ],
+   "value": "No visa-sponsorship policy found in the supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "e2b75db08f",
+    "68fe2eed86",
+    "c3381d0828"
+   ],
+   "value": "No substantive company information could be extracted from the provided sources; all three source excerpts are redirect notices without content from Uare.ai's website or public filings."
+  },
+  "synthesized_evidence_sha": "5cf95683842c2c78",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "e2b75db08f",
+    "68fe2eed86",
+    "c3381d0828"
+   ],
+   "value": "No technical-stack or role-specific details found in the supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784663560,
   "web_search_url": "https://duckduckgo.com/?q=Uare.ai+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown – no Glassdoor/Blind/Levels.fyi data in sources."
   }
  },
  "uber": {
