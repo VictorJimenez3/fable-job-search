@@ -46157,7 +46157,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -46175,7 +46175,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784797800,
+  "last_attempt_at": 1784797949,
   "last_evidence_at": 1784677043,
   "name": "Cellular Sales",
   "pace_of_work": {
@@ -69382,7 +69382,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -69400,7 +69400,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784797800,
+  "last_attempt_at": 1784797949,
   "last_evidence_at": 1784677533,
   "name": "Disney",
   "pace_of_work": {
@@ -136926,41 +136926,107 @@
  "major league baseball": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "d1403be268",
+    "9bbabbc68b",
+    "1dbafaf25f"
+   ],
+   "value": "Top-tier in sports analytics; recognized publicly for Statcast and advanced metrics, but less visible in general AI research than FAANG/industry labs."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d1403be268",
+    "9bbabbc68b",
+    "1dbafaf25f"
+   ],
+   "value": "Revenue comes from national media rights fees, sponsorship deals, licensing royalties, MLB.tv subscriptions, and shared league-wide revenue streams; clubs retain local gate and local media revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, collaborative, baseball-centric; blend of traditional sports business and modern tech. Less 'move fast break things', more 'ship reliable features for clubs and fans'."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d1403be268",
+    "9bbabbc68b",
+    "1dbafaf25f"
+   ],
+   "value": "Primary customers are broadcast partners (ESPN, FOX, TBS, Apple, etc.), corporate sponsors, licensees, and fans consuming content via MLB.tv, ballpark attendance, and digital platforms."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k–$135k base + 10–15% target bonus + RSUs (vesting 4 years); total comp ~$130k–$160k first year. Below top FAANG but above typical sports industry."
   },
   "evidence_sha": "37a46c1ceebc1c25",
+  "generated_at": 1784797949,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Sports / technology (estimated)"
+   "source_ids": [
+    "d1403be268",
+    "9bbabbc68b",
+    "1dbafaf25f"
+   ],
+   "value": "Sports Media & Entertainment / Professional Sports League"
   },
-  "last_attempt_at": 1784797800,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect applied ML/system design questions around real-time sports data (Statcast), streaming scale, and fan-facing products; emphasis on collaborative problem-solving and domain curiosity over algorithmic trivia."
+  },
+  "last_attempt_at": 1784797949,
   "last_evidence_at": 1784583484,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d1403be268",
+    "9bbabbc68b",
+    "1dbafaf25f"
+   ],
+   "value": "Headquarters in New York City; major technology hub in New York and possibly remote-friendly roles; club offices across 30 U.S./Canada cities."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d1403be268",
+    "9bbabbc68b",
+    "1dbafaf25f"
+   ],
+   "value": "To grow the game of baseball globally, deliver world-class entertainment, and innovate through technology while preserving the sport's integrity and heritage."
+  },
   "name": "Major League Baseball",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast during season (April–October) with project deadlines tied to game schedule; slower off-season for R&D. Less chaotic than consumer tech crunch cycles."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d1403be268",
+    "9bbabbc68b",
+    "1dbafaf25f"
+   ],
+   "value": "Core products include live game broadcasts (MLB.tv, national TV packages), Statcast player-tracking data and analytics, licensing of team logos/merchandise, sponsorship platforms, and digital fan engagement apps."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days annual PTO plus federal holidays; some teams offer additional 'shutdown' weeks around July 4th and winter holidays."
   },
+  "refresh_after": 1789981949,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -136970,7 +137036,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual winter shutdown (late Dec–early Jan) and possible summer holiday week; not a formal company-wide 'guaranteed shutdown' policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d1403be268",
+    "9bbabbc68b",
+    "1dbafaf25f"
+   ],
+   "value": "Mature, large-scale sports league with ~1,500–2,500 central office employees (plus club staff), multi-billion dollar annual revenue, and decades of operating history."
   },
   "sources": [
    {
@@ -137004,14 +137079,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=7f749c9aa2b4df0084109b19d21a8bcad903e40e014cf85d56b624a9b8b4b4a9JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cubXltYWpvcnMuY29tL2NvbGxlZ2UtbWFqb3JzLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d1403be268",
+    "9bbabbc68b",
+    "1dbafaf25f"
+   ],
+   "value": "Active H-1B sponsor for specialized tech and data roles; typically supports cap-subject and cap-exempt petitions for advanced-degree holders."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d1403be268",
+    "9bbabbc68b",
+    "1dbafaf25f"
+   ],
+   "value": "Major League Baseball (MLB) is the governing body of professional baseball in the United States and Canada, overseeing 30 clubs and managing central league operations, media rights, licensing, and technology initiatives like Statcast."
+  },
+  "synthesized_evidence_sha": "37a46c1ceebc1c25",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d1403be268",
+    "9bbabbc68b",
+    "1dbafaf25f"
+   ],
+   "value": "Heavy investment in sports analytics (Statcast), computer vision, machine learning for player tracking, fan personalization, streaming infrastructure, and data platforms for clubs and media partners."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583484,
   "web_search_url": "https://duckduckgo.com/?q=Major+League+Baseball+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "MLB offers elite prestige in sports analytics/AI with a mission-driven culture, competitive new-grad compensation, and a pace that balances innovation with more predictable hours than big tech—ideal for candidates seeking technical growth without burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 – Generally reasonable hours (40–50/week) with seasonal peaks; league office culture tends to respect boundaries more than agency/startup environments."
   }
  },
  "major league baseball mlb": {
@@ -173499,7 +173607,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -173517,7 +173625,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
-  "last_attempt_at": 1784797800,
+  "last_attempt_at": 1784797949,
   "last_evidence_at": 1784675467,
   "name": "Plaid",
   "pace_of_work": {
@@ -177819,11 +177927,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -177835,6 +177945,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784797949,
   "last_evidence_at": 1784677597,
   "name": "Profound",
   "pace_of_work": {
@@ -190591,39 +190702,98 @@
  },
  "robert half": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "53bd4447bc"
+   ],
+   "value": "Tier 4 - Not an AI/data science destination; internal data roles support recruiting operations; Protiviti implements client AI solutions but does not drive frontier research."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "53bd4447bc"
+   ],
+   "value": "Revenue generated primarily through placement fees for permanent hires (percentage of first-year salary) and bill-rate markups on temporary/contract staffing; Protiviti generates fees from consulting engagements."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "53bd4447bc"
+   ],
+   "value": "Sales-driven, competitive, relationship-focused; strong emphasis on tenure and internal promotion; 'work hard play hard' reputation in some divisions; Protiviti culture more professional services/consulting standard."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "53bd4447bc"
+   ],
+   "value": "Businesses of all sizes seeking temporary, contract-to-hire, and permanent placement of specialized professionals; enterprises engaging Protiviti for consulting engagements."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75,000-$95,000 base + bonus/commission potential for internal tech roles; Protiviti consulting new grads ~$80,000-$100,000 base + bonus. Significantly below elite AI lab / big tech new-grad packages."
   },
   "evidence_sha": "1485ae3ef9cb5795",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784797949,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "53bd4447bc"
+   ],
+   "value": "Human resource consulting / Staffing & Workforce Solutions / Professional Services"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "53bd4447bc"
+   ],
+   "value": "Expect behavioral questions on client service, sales aptitude, and resilience; technical interviews for internal roles cover full-stack development, data engineering, or cloud infrastructure relevant to recruiting platforms; Protiviti consulting roles assess problem-solving and client-facing skills. Not focused on cutting-edge ML research or publications."
+  },
+  "last_attempt_at": 1784797949,
   "last_evidence_at": 1784677597,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "53bd4447bc"
+   ],
+   "value": "Headquartered in Menlo Park, CA; 300+ offices across North America, Europe, Asia-Pacific, and South America; remote/hybrid options vary by role and division."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "53bd4447bc"
+   ],
+   "value": "To connect skilled professionals with meaningful career opportunities and help companies build high-performing teams through specialized talent solutions."
+  },
   "name": "Robert Half",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced, metrics-driven in sales/recruiting divisions; project-based with client deadlines in Protiviti consulting; internal engineering follows standard enterprise cadence. Not a 'move fast and break things' culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "53bd4447bc"
+   ],
+   "value": "Staffing and recruitment services across specialized divisions (Robert Half Technology, Accountemps, OfficeTeam, The Creative Group, Robert Half Legal, Robert Half Management Resources); talent consulting; managed services; and Protiviti (a wholly-owned consulting subsidiary for risk, compliance, and technology consulting)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 6-10 holidays (US); accrual increases with tenure; unlimited PTO not standard."
   },
+  "refresh_after": 1789981949,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -190633,7 +190803,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No company-wide guaranteed shutdowns; some offices may close between Christmas and New Year; not a formal policy."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "53bd4447bc"
+   ],
+   "value": "Publicly traded (NYSE: RHI); ~13,000 internal employees globally; operates in 300+ locations worldwide; founded 1948; mature, stable enterprise."
   },
   "sources": [
    {
@@ -190677,14 +190854,44 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "53bd4447bc"
+   ],
+   "value": "As a large global employer, Robert Half and Protiviti sponsor visas (H-1B, green card) for qualified professional roles, particularly in technology consulting and internal engineering; sponsorship is role-dependent and not guaranteed for all positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "53bd4447bc"
+   ],
+   "value": "Robert Half is a global human resource consulting and staffing firm that places professionals in finance, accounting, technology, legal, creative, and administrative roles. It operates as a specialized talent solutions provider rather than a product-focused technology company."
+  },
+  "synthesized_evidence_sha": "1485ae3ef9cb5795",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "53bd4447bc"
+   ],
+   "value": "Internal technology roles focus on recruiting platforms, CRM/ATS systems, data analytics for talent matching, and digital marketplace tools; Protiviti hires for technology consulting (cloud, cybersecurity, data/AI implementations for clients). Not an AI/product R&D organization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677597,
   "web_search_url": "https://duckduckgo.com/?q=Robert+Half+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "53bd4447bc",
+    "dbc3b9e88f"
+   ],
+   "value": "This is a staffing and professional services firm, not a top-tier AI/data science product company. Prestige and pay for new-grad technical roles are moderate compared to elite tech employers. Culture is sales-driven and metrics-oriented with potential for high workload during peak hiring cycles; work-life balance varies by division and manager. Technical learning focuses on recruiting tech stacks and client-facing consulting, not core AI/ML research."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5 - Recruiting roles often require extended hours during peak cycles; consulting roles involve travel and client-driven schedules; internal tech roles generally more predictable but vary by team."
   }
  },
  "robinhood": {
@@ -229829,7 +230036,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -229847,7 +230054,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
-  "last_attempt_at": 1784797800,
+  "last_attempt_at": 1784797949,
   "last_evidence_at": 1784583341,
   "name": "Trinity Health",
   "pace_of_work": {
@@ -237351,7 +237558,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -237369,7 +237576,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784797800,
+  "last_attempt_at": 1784797949,
   "last_evidence_at": 1784675132,
   "name": "University of Texas - Austin",
   "pace_of_work": {
