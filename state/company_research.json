@@ -44691,40 +44691,100 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 1 for applied security data science and Internet-scale ML; elite peer group, publishing at top security conferences (USENIX, NDSS, S&P)."
   },
   "aliases": [],
-  "attempts": 6,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 7,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "a95b782979",
+    "5afc08bebd"
+   ],
+   "value": "B2B SaaS/subscription model selling Internet intelligence data, threat insights, and API access to enterprises, governments, and security vendors."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "5afc08bebd",
+    "a95b782979"
+   ],
+   "value": "Curious, collaborative, mission-driven engineers who value technical depth and sustainable pace; low bureaucracy, high autonomy, security-first mindset."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "a95b782979",
+    "5afc08bebd"
+   ],
+   "value": "Global governments, over 50% of the Fortune 500, and leading threat intelligence providers worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$160k base + equity (0.05-0.15%) + sign-on; total comp ~$160k-$200k year 1."
   },
   "evidence_sha": "41b2dc150e3663b5",
+  "generated_at": 1784777421,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a95b782979",
+    "5afc08bebd"
+   ],
+   "value": "Cybersecurity / Internet Intelligence / Threat Intelligence SaaS"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "5afc08bebd",
+    "a95b782979"
+   ],
+   "value": "Expect deep distributed systems design, high-throughput data pipeline architecture, scaling Internet-wide scanning, and practical security data science. Behavioral focus on curiosity, collaboration, and sustainable pace. Prepare for system design at petabyte scale and code quality in production environments."
+  },
+  "last_attempt_at": 1784777421,
+  "last_evidence_at": 1784674523,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Headquarters in Ann Arbor, MI; likely remote-friendly with US distributed team."
   },
-  "last_attempt_at": 1784777283,
-  "last_evidence_at": 1784674523,
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "5afc08bebd"
+   ],
+   "value": "Build high-quality datasets, APIs, and engineering foundations that turn research and detection ideas into production-ready capabilities for Internet intelligence."
+  },
   "name": "Censys",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast, innovative engineering pace driven by Internet-scale data freshness requirements; sprint-based with emphasis on sustainable delivery over heroics."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "a95b782979",
+    "5afc08bebd"
+   ],
+   "value": "Internet-wide scanning platform, real-time threat intelligence datasets, APIs for attack surface management and threat detection, actionable threat insights for security teams."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "a95b782979"
+   ],
+   "value": "Estimated: Flexible PTO policy (no fixed accrual); typical usage 15-20 days/year plus company holidays."
   },
+  "refresh_after": 1789961421,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -44734,7 +44794,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; team-level winter break coverage likely."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-stage startup (likely 200-500 employees), venture-backed, scaling go-to-market with Fortune 500 traction."
   },
   "sources": [
    {
@@ -44788,14 +44853,46 @@
     "url": "https://job-boards.greenhouse.io/censys/jobs/8499166002"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely supports H-1B transfers and new cap petitions for senior engineering roles; new-grad sponsorship case-by-case."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a95b782979",
+    "5afc08bebd"
+   ],
+   "value": "Censys provides real-time Internet intelligence and actionable threat insights by operating distributed infrastructure for Internet-wide scanning, turning research into production-ready datasets and APIs."
+  },
+  "synthesized_evidence_sha": "41b2dc150e3663b5",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "5afc08bebd",
+    "a95b782979"
+   ],
+   "value": "Distributed systems for Internet-scale scanning, high-throughput data pipelines, API development, threat detection algorithms, large-scale data storage and querying, backend core services."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674523,
   "web_search_url": "https://duckduckgo.com/?q=Censys+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "a95b782979",
+    "5afc08bebd"
+   ],
+   "value": "Censys offers elite technical prestige in Internet-scale distributed systems and security data science, serving governments and Fortune 500 with a mission to map and secure the Internet. The culture emphasizes curiosity, collaboration, and growth without glorifying burnout, and flexible PTO plus wellness benefits signal respect for work-life boundaries."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "a95b782979"
+   ],
+   "value": "Estimated: 4/5 — flexible PTO, mental health benefits, and mission-driven culture suggest strong boundaries; on-call rotations exist for scanning infrastructure but are managed."
   }
  },
  "centific": {
@@ -104819,51 +104916,129 @@
  "huron": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "7f6514a9f4"
+   ],
+   "value": "Prestige is anchored in consulting rather than elite AI or data science. It is best suited for those pursuing management consulting prestige rather than top-tier technical AI innovation."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "7f6514a9f4"
+   ],
+   "value": "Generates revenue through professional service fees, billed via consulting engagements, technology implementations, and managed services contracts with large institutions."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "7f6514a9f4"
+   ],
+   "value": "Estimated: Professional, client-focused, and structured. The culture centers on client service and institutional transformation rather than fast-paced technical innovation."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "7f6514a9f4"
+   ],
+   "value": "Organizations in the healthcare, higher education, and commercial sectors seeking to manage complex operational and technological transformations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "24672ccbef",
+    "7f6514a9f4",
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $85,000 - $110,000 base salary. Pay is aligned with consulting benchmarks rather than top-tier tech compensation packages."
   },
   "evidence_sha": "c5651d987fc645a2",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784777421,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784777283,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "24672ccbef",
+    "7f6514a9f4"
+   ],
+   "value": "Professional Services and Management Consulting."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7f6514a9f4"
+   ],
+   "value": "Probe heavily into day-to-day technicalownership versus client-facing consulting hours. Clarify expectations around billable hours, travel requirements, and weekend work to ensure the environment does not compromise your work-life balance priorities."
+  },
+  "last_attempt_at": 1784777421,
   "last_evidence_at": 1784693224,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "7f6514a9f4"
+   ],
+   "value": "Headquartered in Chicago, IL, with multiple offices globally to support their diverse institutional client base."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "7f6514a9f4"
+   ],
+   "value": "To help clients navigate complex transformations and achieve lasting results through a combination of deep industry expertise, analytical rigor, and technology solutions."
+  },
   "name": "Huron",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "7f6514a9f4"
+   ],
+   "value": "Estimated: Moderate to fast pace driven by client project deadlines, but often restricted by corporate bureaucracy rather than an innovative tech startup environment."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "7f6514a9f4"
+   ],
+   "value": "Consulting services, technology implementation, managed analytics, and digital transformation solutions tailored for complex industries."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "7f6514a9f4"
+   ],
+   "value": "Estimated: 20-25 days of Paid Time Off annually, typical for established professional services firms of this size."
   },
+  "refresh_after": 1789961421,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "7f6514a9f4",
+    "dbc3b9e88f"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "7f6514a9f4"
+   ],
+   "value": "Estimated: No guaranteed company-wide tech shutdowns found in public sources. Shutdowns are typically limited to standard public holidays rather than guaranteed rest periods."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "7f6514a9f4",
+    "dbc3b9e88f"
+   ],
+   "value": "Established publicly traded professional services firm operating on a global scale, actively hiring new graduates."
   },
   "sources": [
    {
@@ -104907,14 +105082,46 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "No specific details found in the provided sources regarding visa sponsorship for new graduate roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "24672ccbef",
+    "7f6514a9f4"
+   ],
+   "value": "Huron is a global professional services firm that provides consulting and technology solutions to help organizations navigate complex transformations. They make money by charging fees for consulting services, technology implementations, managed services, and advisory work, primarily catering to the healthcare, higher education, and commercial sectors."
+  },
+  "synthesized_evidence_sha": "c5651d987fc645a2",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "7f6514a9f4"
+   ],
+   "value": "Tech roles involve building and implementing data-driven solutions, managing analytics platforms, and executing technology transformations for institutional clients."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784693224,
   "web_search_url": "https://duckduckgo.com/?q=Huron+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7f6514a9f4"
+   ],
+   "value": "While Huron offers exposure to complex enterprise challenges, this role may not align with a fast-paced, innovative tech culture. Professional services firms typically operate with structured bureaucracy and heavy consulting hours, which contrasts with goals for top-tier AI pay, rapid tech growth, and strict work-life balance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "7f6514a9f4"
+   ],
+   "value": "Estimated: Moderate to low work-life balance. Consulting roles frequently require long hours to meet billable targets, which may conflict with personal time guarantees."
   }
  },
  "hyperexponential": {
@@ -111941,37 +112148,98 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — strong applied ML at scale across verticals, but not a primary AI research lab; respected for production impact over publications."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "88c1075130",
+    "58b41c572f"
+   ],
+   "value": "Advertising revenue, lead generation fees, and subscription/SaaS revenue from vertical-specific platforms; owned by KKR since 2014."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "88c1075130",
+    "58b41c572f"
+   ],
+   "value": "Pragmatic, metrics-driven, multi-brand portfolio culture; collaborative within teams, less 'missionary' than consumer tech, more 'mercenary' in a professional sense."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "88c1075130"
+   ],
+   "value": "Consumers seeking information and services in vertical markets; businesses (dealers, doctors, lawyers, contractors) paying for leads, advertising, and SaaS tools."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120k-$145k base + 10-15% target bonus + RSUs (4-yr vest, modest refreshers); total comp ~$150k-$180k."
   },
   "evidence_sha": "92a4b085b7bcb5c2",
+  "generated_at": 1784777421,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "88c1075130",
+    "58b41c572f"
+   ],
+   "value": "Vertical marketplaces / digital media / lead generation"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect practical ML system design (ranking, lead scoring, churn), SQL/analytics case studies tied to marketplace metrics, and behavioral questions on shipping in a multi-brand, revenue-driven org. Demonstrate ability to balance innovation with measurable business impact."
   },
+  "last_attempt_at": 1784777421,
   "last_evidence_at": 1784630052,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "88c1075130",
+    "58b41c572f"
+   ],
+   "value": "Headquartered in El Segundo, CA; additional offices in major US metros and some remote/hybrid flexibility depending on team."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "88c1075130",
+    "58b41c572f"
+   ],
+   "value": "To build and operate the leading online destinations in each vertical market, connecting consumers with professionals and information they trust."
+  },
   "name": "Internet Brands",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — quarterly OKR cycles, PE-owned discipline favors predictable delivery over heroics; faster than enterprise, slower than early-stage."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "88c1075130",
+    "58b41c572f"
+   ],
+   "value": "Vertical marketplaces and communities including CarsDirect, WebMD, Avvo, Nolo, and various niche sites in automotive, health, legal, and home services categories."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 company holidays; unlimited policy not standard."
   },
+  "refresh_after": 1789961421,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -111981,7 +112249,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some teams observe winter slowdown informally."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "88c1075130",
+    "58b41c572f"
+   ],
+   "value": "Large private-equity-backed portfolio company (~1,000-5,000 employees across portfolio brands); mature, profit-focused stage."
   },
   "sources": [
    {
@@ -112015,14 +112291,41 @@
     "url": "https://www.jobvite.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B and green cards for specialized engineering and data science roles; typical for portfolio companies of this scale."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "88c1075130",
+    "58b41c572f"
+   ],
+   "value": "Internet Brands operates a portfolio of vertical-specific online communities and marketplaces across categories like automotive, health, legal, and home services. The company monetizes primarily through advertising, lead generation, and subscription fees from businesses and consumers on its platforms."
+  },
+  "synthesized_evidence_sha": "92a4b085b7bcb5c2",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "88c1075130",
+    "58b41c572f"
+   ],
+   "value": "Full-stack web development, data engineering, ML for personalization/search/lead scoring, platform infrastructure, and vertical-specific product features across multiple brands."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784630052,
   "web_search_url": "https://duckduckgo.com/?q=Internet+Brands+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers a rare combination: large-scale consumer data and vertical monopolies (prestige/resume signal) with PE-backed discipline that can mean more predictable hours than ad-hoc startups. AI/DS roles touch high-value lead-ranking, search, and personalization problems across dozens of live properties — accelerating learning without the burnout culture of pure-play tech giants."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — generally sane hours (40-45 hrs/week typical), on-call rotation exists but manageable; varies by brand/team."
   }
  },
  "intertek": {
@@ -129593,39 +129896,105 @@
  },
  "mach industries": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "c32b3bc93f"
+   ],
+   "value": "High — cutting-edge autonomous defense platforms, real-time AI/ML on edge hardware, published work likely limited by classification but technically elite."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "f7d78db800",
+    "ed2689b934"
+   ],
+   "value": "Government defense contracting (R&D and production contracts) for autonomous weapons and defense platforms; likely includes SBIR/STTR and major prime/subcontract awards."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "f7d78db800",
+    "c32b3bc93f"
+   ],
+   "value": "Mission-driven, high-agency, technical-excellence culture; 'ownership' and 'adaptability' emphasized; likely intense but with strong shared purpose. Minimal bureaucracy, flat hierarchy typical of early-stage defense tech."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "f7d78db800",
+    "ed2689b934"
+   ],
+   "value": "U.S. Department of Defense and allied military organizations seeking autonomous, decentralized defense capabilities."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120k–$160k base + equity (potential total $150k–$220k); defense tech often pays premium over general software but below top-tier big tech. No public data; negotiate using competing offers."
   },
   "evidence_sha": "f59f0c1e44c423e7",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784777421,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f7d78db800"
+   ],
+   "value": "Defense technology / autonomous systems / aerospace & defense"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "c32b3bc93f"
+   ],
+   "value": "Probe for: (1) concrete WLB policies (core hours, guaranteed shutdowns, PTO usage), (2) deployment frequency and on-call expectations, (3) mentorship structure for new grads, (4) export-control clearance process, (5) how mission focus translates to sustainable pace. Ask for examples of recent project cycles and weekend work."
+  },
+  "last_attempt_at": 1784777421,
   "last_evidence_at": 1784677473,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c32b3bc93f"
+   ],
+   "value": "Estimated: Primary hub in the United States (likely California or Virginia given defense ecosystem); exact offices not public. Export-control restrictions imply U.S.-person-only roles onsite."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "f7d78db800",
+    "ed2689b934"
+   ],
+   "value": "Delivering scalable, decentralized defense systems that enhance the strategic capabilities of the United States and its allies, solving the next generation of warfare with lethal systems that deter kinetic conflict and protect global security."
+  },
   "name": "Mach Industries",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "c32b3bc93f"
+   ],
+   "value": "Very fast — 'fast-paced, high-iteration environment, often shipping software multiple times per day'; expects rapid execution and adaptability."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "f7d78db800",
+    "c32b3bc93f"
+   ],
+   "value": "Autonomous defense platforms and scalable decentralized defense systems; software stack for high-performance systems deployed in fast-iteration cycles."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + federal holidays; no public policy disclosed. Many early-stage defense companies offer unlimited PTO but with implicit pressure to limit usage."
   },
+  "refresh_after": 1789961421,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -129635,7 +130004,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns publicized; some defense contractors observe winter break but not assured. Ask directly."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "f7d78db800",
+    "ed2689b934",
+    "c32b3bc93f"
+   ],
+   "value": "Early-stage startup (founded 2022), rapidly growing; headcount likely 50–200 based on hiring velocity across multiple roles."
   },
   "sources": [
    {
@@ -129699,14 +130077,49 @@
     "url": "https://jobs.ashbyhq.com/mach/f55cee73-55aa-47f3-9baf-8292817c70dc"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "ed2689b934",
+    "c32b3bc93f"
+   ],
+   "value": "Roles require compliance with U.S. export control laws (ITAR/EAR) without sponsorship for an export license; effectively limited to U.S. citizens and lawful permanent residents."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "f7d78db800",
+    "ed2689b934",
+    "c32b3bc93f"
+   ],
+   "value": "Mach Industries is a defense technology startup founded in 2022 that develops next-generation autonomous defense platforms for the United States and its allies. It generates revenue through government defense contracts, building scalable, decentralized systems to deter kinetic conflict."
+  },
+  "synthesized_evidence_sha": "f59f0c1e44c423e7",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "c32b3bc93f"
+   ],
+   "value": "Full-stack software engineering for autonomous systems, high-frequency deployment (multiple ships per day), real-time embedded/control software, simulation, and integration with hardware platforms; requires adaptability and ownership across the stack."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677473,
   "web_search_url": "https://duckduckgo.com/?q=Mach+Industries+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "f7d78db800",
+    "c32b3bc93f"
+   ],
+   "value": "Matches your priorities: a mission-driven defense-tech startup with elite technical prestige (autonomous systems, high-iteration deployment) and high new-grad pay potential. The culture emphasizes speed, ownership, and innovation over bureaucracy. However, defense startups often demand intense pace; verify work-life balance claims (shutdowns, sane hours) directly during interviews."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "c32b3bc93f"
+   ],
+   "value": "Estimated: Moderate to low — defense startups with high deployment frequency often demand long hours; no public policy on shutdowns or guaranteed time off. Candidate should verify directly."
   }
  },
  "magellan health": {
@@ -183874,48 +184287,130 @@
  "rokt": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "0ced1591ad",
+    "38dd0bf1b6"
+   ],
+   "value": "Estimated: High-tier specialized. Elite, highly-competitive niche for real-time ML and prediction modeling, though not broadly recognized as fundamental research like FAIR or DeepMind."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "0ced1591ad",
+    "38dd0bf1b6"
+   ],
+   "value": "Revenue sharing and performance-based advertising fees charged to brands for presenting offers during the checkout flow."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "0ced1591ad",
+    "38dd0bf1b6"
+   ],
+   "value": "Estimated: Mission-driven scale-up culture blending high technical learning with a focus on sane hours and avoiding high-burnout environments through structured growth."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "0ced1591ad",
+    "38dd0bf1b6"
+   ],
+   "value": "E-commerce brands and retailers looking to monetize checkout, alongside advertisers seeking targeted customer acquisition."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120,000 - $150,000 USD base, with strong equity upside reflecting its late-stage scale-up status."
   },
   "evidence_sha": "9244b897e425ea80",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784777421,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0ced1591ad",
+    "38dd0bf1b6"
+   ],
+   "value": "E-commerce technology and digital marketing"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0ced1591ad",
+    "38dd0bf1b6",
+    "e212d3fb35"
+   ],
+   "value": "Probe how new grads balance rapid feature deployment against production scale to ensure the culture remains a fast-track for learning rather than a toxic sweatshop. Inquire about the technical mentorship structure to confirm elite engineering standards and validate that the team truly respects sane hours with guaranteed shutdowns."
+  },
+  "last_attempt_at": 1784777421,
   "last_evidence_at": 1784676690,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "0ced1591ad",
+    "38dd0bf1b6"
+   ],
+   "value": "Headquartered in Sydney, with offices in major global hubs including New York, London, Tokyo, and Singapore."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "0ced1591ad",
+    "38dd0bf1b6"
+   ],
+   "value": "To help brands unlock new streams of revenue by turning the transaction moment into a personalized and engaging customer experience."
+  },
   "name": "Rokt",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "0ced1591ad",
+    "38dd0bf1b6"
+   ],
+   "value": "Estimated: Extremely fast-paced and highly collaborative, requiring rapid iteration and continuous deployment."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "0ced1591ad",
+    "38dd0bf1b6"
+   ],
+   "value": "E-commerce transaction and marketing platform offering post-purchase offers and personalized messaging."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of paid time off annually, standard for senior-scale tech companies."
   },
+  "refresh_after": 1789961421,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "e212d3fb35"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely offers a few company-wide recharge days but no guaranteed end-of-year full shutdowns currently public."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "0ced1591ad",
+    "38dd0bf1b6"
+   ],
+   "value": "Established, private scale-up with a global presence."
   },
   "sources": [
    {
@@ -183949,14 +184444,51 @@
     "url": "https://apply.workable.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "e212d3fb35"
+   ],
+   "value": "Likely offers visa sponsorship for top technical talent in key global offices, though specific policies are unverified in public listings."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "0ced1591ad",
+    "38dd0bf1b6"
+   ],
+   "value": "Rokt is a technology company that builds e-commerce marketing and transactional software, enabling brands to monetize their checkout processes. It makes money by charging brands for displaying personalized offers and advertisements to consumers during the final stages of an online transaction."
+  },
+  "synthesized_evidence_sha": "9244b897e425ea80",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "0ced1591ad",
+    "38dd0bf1b6",
+    "e212d3fb35"
+   ],
+   "value": "Full-stack engineering, machine learning for personalization and offer prediction, large-scale data processing, and enterprise software integrations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676690,
   "web_search_url": "https://duckduckgo.com/?q=Rokt+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0ced1591ad",
+    "38dd0bf1b6",
+    "e212d3fb35"
+   ],
+   "value": "Rokt offers a high-growth scale-up environment where your machine learning models directly drive real-time revenue, granting new grads high-impact technical exposure and rapid learning. The fast-paced culture prioritizes functional velocity over slow bureaucracy, allowing you to accelerate your career while maintaining a healthy boundary for personal time away from high-burnout traps."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "0ced1591ad",
+    "38dd0bf1b6"
+   ],
+   "value": "Estimated: Good. Progressive tech culture focused on outcomes rather than hours, manageable stress with supportive teams."
   }
  },
  "roku": {
@@ -196350,7 +196882,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -196368,7 +196900,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784777283,
+  "last_attempt_at": 1784777421,
   "last_evidence_at": 1784676950,
   "name": "Smith+Nephew",
   "pace_of_work": {
@@ -242061,11 +242593,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -242077,6 +242611,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784777421,
   "last_evidence_at": 1784599435,
   "name": "Yotta Labs",
   "pace_of_work": {
@@ -244019,7 +244554,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -244037,7 +244572,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
-  "last_attempt_at": 1784777283,
+  "last_attempt_at": 1784777421,
   "last_evidence_at": 1784692851,
   "name": "ZOLL Medical Corporation",
   "pace_of_work": {
