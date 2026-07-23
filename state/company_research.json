@@ -12796,95 +12796,116 @@
  },
  "amazon web services aws": {
   "ai_ds_prestige_tier": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "772d527fc0"
+    "0396f0b224",
+    "1d97b2401f",
+    "d58b56a7e6"
    ],
-   "value": "Tier 1: AWS holds elite prestige in infrastructure and cloud technology, offering strong data-driven engineering roles, though AI prestige varies by specific team."
+   "value": "Top-tier (AWS is a leader in cloud-based AI/ML services, with significant industry recognition and market share.)"
   },
   "aliases": [],
-  "attempts": 13,
+  "attempts": 14,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "772d527fc0",
+    "0396f0b224",
+    "1d97b2401f",
     "d58b56a7e6"
    ],
-   "value": "Pay-as-you-go cloud computing services, providing specialized environments such as Dedicated Cloud infrastructure for secure operations."
+   "value": "AWS operates on a subscription-based model, charging customers per usage for cloud resources, with additional fees for premium services like AI tools and managed databases."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Intense and highly data-driven, utilizing structured leadership principles. Bureaucracy is present but balanced by a strong desire for rapid innovation."
-  },
-  "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "396cb216c7",
     "772d527fc0"
    ],
-   "value": "Organizations and government entities requiring robust cloud computing technologies and reliable production computing environments."
+   "value": "Innovative and customer-focused, with a strong engineering culture emphasizing speed and scalability, though some teams may have high-pressure environments."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "0396f0b224",
+    "1d97b2401f",
+    "d58b56a7e6"
+   ],
+   "value": "AWS serves businesses of all sizes, from startups to large enterprises, including Fortune 500 companies and government agencies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $160,000 - $200,000 total compensation (base + stock) per year."
+   "value": "Estimated: $140,000 - $180,000 base + bonuses"
   },
   "evidence_sha": "7820b3a0ce44eda8",
-  "generated_at": 1784776547,
+  "generated_at": 1784826845,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "local",
+   "model": "qwen3:30b",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "772d527fc0"
+    "0396f0b224",
+    "1d97b2401f",
+    "d58b56a7e6"
    ],
-   "value": "Cloud Computing and Information Technology Services."
+   "value": "Cloud Computing & AI/ML Services"
   },
   "interview_focus": {
    "confidence": "high",
    "source_ids": [
-    "772d527fc0",
-    "d58b56a7e6"
-   ],
-   "value": "Candidates should weigh if AWS's accelerated technical growth and compensation justify its intense, demanding pace rather than a balanced environment with strictly sane hours. It may fit those seeking elite learning even if it sacrifices personal time, but it may not satisfy strict work-life balance or anti-burnout priorities."
-  },
-  "last_attempt_at": 1784817218,
-  "last_evidence_at": 1784807865,
-  "locations": {
-   "confidence": "medium",
-   "source_ids": [
+    "396cb216c7",
     "772d527fc0"
    ],
-   "value": "Global operations, including specialized dedicated cloud regions requiring specific security clearances."
+   "value": "AWS prioritizes technical skills in coding, system design, and problem-solving, with a focus on real-world applications in cloud infrastructure and AI/ML development."
+  },
+  "last_attempt_at": 1784826845,
+  "last_evidence_at": 1784807865,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "396cb216c7",
+    "772d527fc0"
+   ],
+   "value": "AWS has global offices, with major hubs in Seattle, Washington; Palo Alto, California; and international locations like London and Tokyo."
   },
   "mission": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "unknown"
+   "confidence": "high",
+   "source_ids": [
+    "0396f0b224",
+    "1d97b2401f",
+    "d58b56a7e6"
+   ],
+   "value": "To be the most customer-centric company on Earth, providing reliable, scalable, and secure cloud infrastructure and services."
   },
   "name": "Amazon Web Services (AWS)",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Extremely fast-paced and demanding, emphasizing rapid innovation and high throughput, which can feel stressful."
+   "confidence": "high",
+   "source_ids": [
+    "396cb216c7",
+    "772d527fc0"
+   ],
+   "value": "Fast-paced, with rapid iteration on cloud services and AI/ML tools to meet customer demands."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "772d527fc0"
+    "0396f0b224",
+    "1d97b2401f",
+    "d58b56a7e6"
    ],
-   "value": "Cloud computing technologies, production computing environment support, Linux systems administration, and technical troubleshooting for dedicated cloud environments."
+   "value": "AWS offers a wide range of cloud services including EC2 (virtual servers), S3 (storage), Lambda (serverless computing), and AI/ML services like SageMaker."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days of vacation for new graduates, standard Amazon PTO structure."
+   "value": "Estimated: 15-20 days"
   },
+  "refresh_after": 1790010845,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -12894,15 +12915,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No widespread company-wide guaranteed shutdowns. On-call production support may require weekend or holiday availability."
+   "value": "None found in research (estimated)"
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "0396f0b224",
-    "d58b56a7e6"
+    "396cb216c7",
+    "772d527fc0"
    ],
-   "value": "Mature enterprise and large-scale public cloud provider operating under Amazon."
+   "value": "AWS is a massive division of Amazon, with over 10,000 employees and a dominant market share in cloud computing."
   },
   "sources": [
    {
@@ -12967,11 +12988,11 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "772d527fc0"
+    "396cb216c7"
    ],
-   "value": "Security clearance requirements (such as TS/SCI with polygraph) may indicate a focus on domestic personnel for specialized roles, though broader AWS sponsorship varies."
+   "value": "AWS offers H1B sponsorship for eligible roles, as noted in job postings, though it is not guaranteed for every position."
   },
   "status": "ready",
   "summary": {
@@ -12981,14 +13002,16 @@
     "1d97b2401f",
     "d58b56a7e6"
    ],
-   "value": "Amazon Web Services (AWS) is the cloud computing and infrastructure-on-demand arm of Amazon, offering compute power, storage, and networking to organizations globally. It makes money primarily through a pay-as-you-go model, charging customers for the specific computing resources and services they consume."
+   "value": "Amazon Web Services (AWS) is the cloud computing arm of Amazon, providing scalable infrastructure and services to businesses globally. It generates revenue by charging customers for cloud resources like storage, computing, and AI tools."
   },
+  "synthesized_evidence_sha": "7820b3a0ce44eda8",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "396cb216c7",
     "772d527fc0"
    ],
-   "value": "Linux systems administration, technical troubleshooting, cloud computing technologies deployment, production computing environment support, and region reliability engineering & automation."
+   "value": "Engineers work on building and maintaining cloud infrastructure, developing APIs, optimizing performance, and supporting AI/ML services like SageMaker."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583361,
@@ -12996,15 +13019,18 @@
   "why_it_matters": {
    "confidence": "high",
    "source_ids": [
-    "772d527fc0",
-    "d58b56a7e6"
+    "396cb216c7",
+    "772d527fc0"
    ],
-   "value": "Despite elite prestige and high new-grad pay, AWS is known for a fast-paced, high-pressure environment that often conflicts with desires for guaranteed work-life balance and sane hours. The deep technical learning is accelerated, but candidates prioritizing a strictly mission-driven, non-toxic, low-bureaucracy culture with guaranteed shutdowns may find the pressure challenging."
+   "value": "For a new grad aiming for an elite AI/data science role, AWS offers prestige, high compensation, and a fast-paced tech environment with strong learning opportunities, avoiding the slow bureaucracy of traditional enterprises."
   },
   "wlb_rating": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate to low. Intense project demands and on-call rotations for production environments may impact personal time."
+   "confidence": "medium",
+   "source_ids": [
+    "396cb216c7",
+    "772d527fc0"
+   ],
+   "value": "Moderate (AWS is known for some work-life balance challenges, but offers programs to support it, though not as strong as some startups.)"
   }
  },
  "amazon web services inc": {
@@ -45861,12 +45887,92 @@
   }
  },
  "caseguard": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
   "aliases": [],
-  "evidence_sha": "a7946e9aef6eb47f",
-  "last_evidence_at": 1784821848,
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "e3528b22e787049d",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784826850,
   "name": "CaseGuard",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "1f48ed690c",
+    "kind": "company_web",
+    "publisher": "CaseGuard",
+    "retrieved_at": 1784826850,
+    "title": "CaseGuard public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=7fa3fbfdb9a42d015db9fe61636f536363f6931af477f237ac348cb35c80cab3JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=2875ee6a-6183-612e-33d2-f9f560c3600c&u=a1aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL2Nhc2VndWFyZHN0dWRpby8&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "3b22808021",
+    "kind": "company_web",
+    "publisher": "CaseGuard",
+    "retrieved_at": 1784826850,
+    "title": "CaseGuard public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=88b20712575dad0e3cc7835f1f33c872f68e70f100df1e78b6cd2d082f2af581JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=2875ee6a-6183-612e-33d2-f9f560c3600c&u=a1aHR0cHM6Ly9jYXNlZ3VhcmQuY29tL2hvdy1pdC13b3Jrcy8&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "d3c83d7ff0",
+    "kind": "company_web",
+    "publisher": "CaseGuard",
+    "retrieved_at": 1784826850,
+    "title": "CaseGuard public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=df3463ff0f5d51510b0f32738aefb5170f25fa3bab127e1cd4e7c1a6ef80a95cJmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=2875ee6a-6183-612e-33d2-f9f560c3600c&u=a1aHR0cHM6Ly9jYXNlZ3VhcmQuY29tLw&ntb=1"
+   },
+   {
+    "content_sha": "1ad1d9c42288605b",
+    "excerpt": "This company posting was surfaced through the monitored source: https://job-boards.greenhouse.io/caseguard.",
+    "id": "10cadbd61d",
+    "kind": "discovery_feed",
+    "publisher": "CaseGuard",
+    "retrieved_at": 1784826850,
+    "title": "Discovery source for CaseGuard",
+    "url": "https://job-boards.greenhouse.io/caseguard"
+   },
    {
     "content_sha": "94d4a9270452da21",
     "excerpt": "Benefits: Competitive Salary Stock Option Medical, Dental, and Vision Insurance 401K Paid Vacation Ten paid holidays per year Friendly and Learning environment About CaseGuard CaseGuard is a software company that helps law enforcement agencies, federal agencies, hospitals, schools, airports, and others manage all their media redaction needs in one easy-to-use redaction software. We are seeking a highly skilled and motivated Machine Learning Engineer specializing in Computer Vision to join our team. Optimize and fine-tune deep learning algorithms for real-time performance.",
@@ -45888,7 +45994,15 @@
     "url": "https://job-boards.greenhouse.io/caseguard/jobs/5136421008"
    }
   ],
-  "status": "evidence_only"
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784826850,
+  "web_search_url": "https://duckduckgo.com/?q=CaseGuard+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
  },
  "castle": {
   "ai_ds_prestige_tier": {
@@ -75429,6 +75543,94 @@
   "web_research_status": "sources captured",
   "web_researched_at": 1784677852,
   "web_search_url": "https://duckduckgo.com/?q=Eight+Sleep+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
+ "elastic": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "82e49997b1e760d3",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784826849,
+  "name": "Elastic",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "cd1982fa59",
+    "kind": "company_web",
+    "publisher": "Elastic",
+    "retrieved_at": 1784826849,
+    "title": "Elastic public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=941ffe9641964f5504a56414c02f4b40b396193dceadc431ed55ed850167c200JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=2875ee6a-6183-612e-33d2-f9f560c3600c&u=a1aHR0cHM6Ly93d3cuYW1hem9uLmNvbS8tL2VzLw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "c5246d214b",
+    "kind": "company_web",
+    "publisher": "Elastic",
+    "retrieved_at": 1784826849,
+    "title": "Elastic public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=a6de36cf05f7af8e434d07bb030b85207a23ab17686c89aa1289387e355537f3JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=2875ee6a-6183-612e-33d2-f9f560c3600c&u=a1aHR0cHM6Ly93d3cuYW1hem9uLmNvbS8&ntb=1"
+   },
+   {
+    "content_sha": "59bda2899fd8987f",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027.",
+    "id": "17f8c9c419",
+    "kind": "discovery_feed",
+    "publisher": "Elastic",
+    "retrieved_at": 1784826849,
+    "title": "Discovery source for Elastic",
+    "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784826849,
+  "web_search_url": "https://duckduckgo.com/?q=Elastic+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
@@ -114503,6 +114705,94 @@
    "value": "3/5 (estimated)"
   }
  },
+ "illumina": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "53a65e5f8208754c",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784826847,
+  "name": "Illumina",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "2cc2a52d30",
+    "kind": "company_web",
+    "publisher": "Illumina",
+    "retrieved_at": 1784826847,
+    "title": "Illumina public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=94a5771308280696c664d58929461f4185ac76c399e0685a26e5ab308bc0432cJmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=2875ee6a-6183-612e-33d2-f9f560c3600c&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvSWxsdW1pbmEsX0luYy4&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "ab5eb1b24a",
+    "kind": "company_web",
+    "publisher": "Illumina",
+    "retrieved_at": 1784826847,
+    "title": "Illumina public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=2b551dfdfc476fcb5ddd83af6fd8c536bfd943db139db1793d95d0a93a117190JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=2875ee6a-6183-612e-33d2-f9f560c3600c&u=a1aHR0cHM6Ly93d3cuaWxsdW1pbmEuY29tL2NvbXBhbnkvYWJvdXQtdXMuaHRtbA&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "03f00dd482",
+    "kind": "company_web",
+    "publisher": "Illumina",
+    "retrieved_at": 1784826847,
+    "title": "Illumina public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=6232f033dd4cfef1d88d026d775355ab088c040bb9726dc680923603cce1f339JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=2875ee6a-6183-612e-33d2-f9f560c3600c&u=a1aHR0cHM6Ly93d3cuaWxsdW1pbmEuY29tLw&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784826847,
+  "web_search_url": "https://duckduckgo.com/?q=Illumina+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
  "illumio": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
@@ -116661,6 +116951,104 @@
   "web_research_status": "sources captured",
   "web_researched_at": 1784678866,
   "web_search_url": "https://duckduckgo.com/?q=Inova+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
+ "insight2profit": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "3a9053a2ee61345c",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784826847,
+  "name": "INSIGHT2PROFIT",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "4853dad8f7",
+    "kind": "company_web",
+    "publisher": "INSIGHT2PROFIT",
+    "retrieved_at": 1784826847,
+    "title": "INSIGHT2PROFIT public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=2be83a4a7fbddafb589bee24c2e3c7ae9ce46e14ef87efec27606bbfaa954d47JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=2875ee6a-6183-612e-33d2-f9f560c3600c&u=a1aHR0cHM6Ly93d3cuc3BvcnRjaGV2cm9sZXQuY29tL3NlYXJjaHVzZWQuYXNweA&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "caf74694c2",
+    "kind": "company_web",
+    "publisher": "INSIGHT2PROFIT",
+    "retrieved_at": 1784826847,
+    "title": "INSIGHT2PROFIT public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=fe0d8504fb767662eff9ee139e0d986e4f7dcd2956cfb408af4940346f4b23a6JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=2875ee6a-6183-612e-33d2-f9f560c3600c&u=a1aHR0cHM6Ly93d3cuc3BvcnRjaGV2cm9sZXQuY29tL3NlYXJjaG5ldy5hc3B4&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "05c53a6eb0",
+    "kind": "company_web",
+    "publisher": "INSIGHT2PROFIT",
+    "retrieved_at": 1784826847,
+    "title": "INSIGHT2PROFIT public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=fa091436683ddebd88a133cf68316cb752d6102865b8e9dc1bba5f0bc204b78dJmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=2875ee6a-6183-612e-33d2-f9f560c3600c&u=a1aHR0cHM6Ly93d3cuc3BvcnRjaGV2cm9sZXQuY29tLw&ntb=1"
+   },
+   {
+    "content_sha": "fae40f6513d4a1de",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/jobright-ai/2026-Software-Engineer-New-Grad.",
+    "id": "1db9db9c4d",
+    "kind": "discovery_feed",
+    "publisher": "INSIGHT2PROFIT",
+    "retrieved_at": 1784826847,
+    "title": "Discovery source for INSIGHT2PROFIT",
+    "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784826847,
+  "web_search_url": "https://duckduckgo.com/?q=INSIGHT2PROFIT+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
@@ -162645,110 +163033,121 @@
   "ai_ds_prestige_tier": {
    "confidence": "high",
    "source_ids": [
-    "533b73d4de",
-    "85660a81ab"
+    "eb2161a6a7",
+    "502f97a915"
    ],
-   "value": "Top-tier; NVIDIA is the global industry leader in AI hardware and inference software, making it one of the most elite and prestigious destinations for AI and data science talent."
+   "value": "Top-tier, leading company in AI and data science."
   },
   "aliases": [],
-  "attempts": 22,
+  "attempts": 23,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "85660a81ab",
-    "3f491bc8b5"
+    "b7a725288a",
+    "eb2161a6a7",
+    "502f97a915"
    ],
-   "value": "Designing and selling industry-leading hardware while providing the accompanying full software stack, libraries, and high-productivity software environments to optimize core parallel algorithms for their customers."
+   "value": "Selling GPUs, AI software, and cloud services to enterprise and consumer markets."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "029a5b6bba",
-    "71eabe7253"
+    "eb2161a6a7",
+    "502f97a915",
+    "533b73d4de"
    ],
-   "value": "Inclusive, encouraging, and designed to push the boundaries of technology, where employees are inspired to do their best work surrounded by the smartest people in the world."
+   "value": "Diverse, inclusive, and supportive environment that encourages collaboration and personal growth."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "3f491bc8b5",
-    "71eabe7253"
+    "b7a725288a",
+    "eb2161a6a7",
+    "502f97a915"
    ],
-   "value": "Key application developers, public sector entities, and enterprises needing advanced AI, data center, and graphics solutions."
+   "value": "Gaming companies, cloud providers, data centers, autonomous vehicle manufacturers, and AI researchers."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $180,000 - $240,000 total compensation (heavy on stock, standard for elite AI hardware/software roles)."
+   "source_ids": [
+    "b7a725288a",
+    "eb2161a6a7"
+   ],
+   "value": "Estimated: $150,000 - $180,000 base salary plus bonus and stock."
   },
   "evidence_sha": "d2ce9e31874d0ed4",
-  "generated_at": 1784788838,
+  "generated_at": 1784826845,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "local",
+   "model": "qwen3:30b",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "85660a81ab",
-    "533b73d4de"
+    "b7a725288a",
+    "eb2161a6a7",
+    "502f97a915"
    ],
-   "value": "Semiconductors, Artificial Intelligence Hardware, and High-Performance Computing Software."
+   "value": "Technology, specifically AI and semiconductor hardware."
   },
   "interview_focus": {
    "confidence": "high",
    "source_ids": [
-    "533b73d4de",
-    "3f491bc8b5",
-    "71eabe7253"
+    "b7a725288a",
+    "eb2161a6a7",
+    "502f97a915"
    ],
-   "value": "Demonstrate deep expertise in profiling, debugging, and code optimization, as well as architectural knowledge of CPUs and GPUs. Be prepared to discuss complex parallel algorithms, data structures, and practical experience deploying or training DL models in production, ensuring you can thrive in their fast-paced, innovative environment."
+   "value": "Technical skills in AI, data science, and software optimization, with an emphasis on real-world problem-solving and collaboration."
   },
-  "last_attempt_at": 1784788838,
+  "last_attempt_at": 1784826845,
   "last_evidence_at": 1784822154,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "3f491bc8b5",
-    "533b73d4de",
-    "85660a81ab"
+    "b7a725288a",
+    "533b73d4de"
    ],
-   "value": "US-CA-Santa Clara, US-TX-Austin, and US-CA-Remote."
+   "value": "Santa Clara, CA (headquarters) and remote options for some roles."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "3f491bc8b5",
-    "71eabe7253"
+    "eb2161a6a7",
+    "502f97a915"
    ],
-   "value": "To grow the company with the smartest people in the world to solve the current and future most challenging problems in computing."
+   "value": "To accelerate the world's progress through AI and computing solutions."
   },
   "name": "NVIDIA",
   "pace_of_work": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "533b73d4de",
-    "85660a81ab"
+    "b7a725288a",
+    "eb2161a6a7",
+    "502f97a915"
    ],
-   "value": "Estimated: Fast-paced and innovative, requiring you to focus heavily on the latest processes and advanced designs in a highly cross-collaborative environment."
+   "value": "Fast-paced, with a focus on innovation and rapid iteration."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "85660a81ab",
-    "533b73d4de",
-    "029a5b6bba"
+    "b7a725288a",
+    "eb2161a6a7",
+    "502f97a915"
    ],
-   "value": "GPUs (Graphics Processing Units), internal/external EDA tools for VLSI physical design, deep learning inference frameworks, and parallel computing libraries."
+   "value": "GPUs, AI accelerators, data center solutions, and software platforms like CUDA and TensorRT."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15-20 days of standard PTO."
+   "source_ids": [
+    "b7a725288a",
+    "eb2161a6a7"
+   ],
+   "value": "20+ days of paid time off annually."
   },
+  "refresh_after": 1790010845,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -162756,17 +163155,20 @@
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Typically includes time off around major winter holidays to ensure internal system refresh."
+   "confidence": "medium",
+   "source_ids": [
+    "eb2161a6a7",
+    "502f97a915"
+   ],
+   "value": "Guaranteed shutdowns during holidays and for company-wide events."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "533b73d4de",
-    "71eabe7253"
+    "b7a725288a",
+    "eb2161a6a7"
    ],
-   "value": "A massive, established, and highly profitable public tech corporation growing its teams with top-tier global talent."
+   "value": "Large, established company with global presence."
   },
   "sources": [
    {
@@ -162833,29 +163235,30 @@
   "sponsorship_context": {
    "confidence": "medium",
    "source_ids": [
-    "533b73d4de",
-    "3f491bc8b5",
-    "85660a81ab"
+    "b7a725288a",
+    "eb2161a6a7"
    ],
-   "value": "Explicit sponsorship details are not stated in the job postings, but NVIDIA routinely sponsors H-1B visas for top engineering talent, particularly for advanced AI and hardware roles."
+   "value": "NVIDIA sponsors H-1B visas for eligible candidates."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "85660a81ab",
-    "533b73d4de"
+    "b7a725288a",
+    "eb2161a6a7",
+    "502f97a915"
    ],
-   "value": "NVIDIA designs industry-leading hardware like GPUs and develops the extensive software stacks required to run them. The company makes money by selling these high-performance computing solutions into booming markets like AI, data centers, and autonomous vehicles."
+   "value": "NVIDIA designs and manufactures graphics processing units (GPUs) and AI computing solutions that power advanced applications in gaming, data centers, and autonomous vehicles."
   },
+  "synthesized_evidence_sha": "d2ce9e31874d0ed4",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "533b73d4de",
-    "3f491bc8b5",
-    "85660a81ab"
+    "b7a725288a",
+    "eb2161a6a7",
+    "502f97a915"
    ],
-   "value": "New grads will focus on optimizing deep learning model inference in production, crafting and optimizing core parallel algorithms, developing reference code, contributing to the full software stack, and writing highly optimized internal EDA tools."
+   "value": "Developing AI models, optimizing GPU performance, creating software for data centers, and building infrastructure for accelerated computing."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784580766,
@@ -162863,19 +163266,19 @@
   "why_it_matters": {
    "confidence": "high",
    "source_ids": [
-    "3f491bc8b5",
-    "85660a81ab",
-    "533b73d4de"
+    "b7a725288a",
+    "eb2161a6a7",
+    "502f97a915"
    ],
-   "value": "Matches your desire for an elite, highly prestigious AI role with top-tier new grad pay and a fast-paced, innovative tech culture. You will work directly on the latest processes and advanced designs alongside the 'smartest people in the world', accelerating your technical learning through cross-collaborative teams."
+   "value": "NVIDIA is a leader in AI and GPU technology, offering elite prestige with high new-grad pay in a fast-paced, innovative environment that prioritizes technical growth and work-life balance."
   },
   "wlb_rating": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "533b73d4de",
-    "029a5b6bba"
+    "eb2161a6a7",
+    "502f97a915"
    ],
-   "value": "Estimated: Respected due to an 'inclusive, encouraging environment' that supports employees. However, as a top-tier tech leader, expectations and workloads are heavily balanced against elite performance and complex technical challenges."
+   "value": "Good, with a focus on avoiding burnout through structured work hours and shutdowns."
   }
  },
  "nvidia ai": {
@@ -196009,51 +196412,51 @@
  },
  "rtx": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
     "e3146ea41d",
-    "b509b48738"
+    "363952685d"
    ],
-   "value": "Estimated: Low/Mid-tier (Niche). RTX is highly prestigious in traditional aerospace engineering, but its embedded software and defense focus places it below top-tier tech companies for general AI and Data Science prestige."
+   "value": "Top-tier (among defense/aerospace companies; not a pure AI company but has strong tech R&D focus)"
   },
   "aliases": [],
-  "attempts": 19,
+  "attempts": 20,
   "business_model": {
    "confidence": "high",
    "source_ids": [
+    "363952685d",
+    "db1957d5bf",
     "3736403079"
    ],
-   "value": "Operates three market-leading businesses, leveraging world-class operations and heavy investments in research and development to win major contracts and supply essential products."
+   "value": "Revenue from contracts with government and commercial clients for aerospace, defense, and technology solutions, supported by R&D investments."
   },
   "culture_vibe": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "3736403079",
-    "b509b48738"
+    "363952685d",
+    "db1957d5bf",
+    "3736403079"
    ],
-   "value": "Estimated: Structured, mission-driven, and team-oriented, prioritizing reliability and compliance over rapid, disruptive innovation."
+   "value": "Innovative, team-oriented, and fast-paced with a focus on mission-critical work; emphasizes collaboration and technical excellence."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
     "e3146ea41d"
    ],
-   "value": "Global market customers in the commercial aerospace industry and government defense sectors."
+   "value": "Military and government agencies, commercial aerospace companies, and global defense contractors."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [
-    "3736403079",
-    "b509b48738"
-   ],
-   "value": "Estimated: High for the industry, but lower than elite big tech. Likely around $80,000-$95,000 base salary depending on location."
+   "source_ids": [],
+   "value": "Estimated: $120,000–$140,000 base (based on industry benchmarks for new grads in aerospace/defense; not explicitly stated in sources)"
   },
   "evidence_sha": "58cfc16ecdc2a536",
-  "generated_at": 1784776547,
+  "generated_at": 1784826845,
   "generator": {
-   "endpoint": "nvidia:glm",
-   "model": "z-ai/glm-5.2",
+   "endpoint": "local",
+   "model": "qwen3:30b",
    "task": "company_research"
   },
   "industry": {
@@ -196061,83 +196464,77 @@
    "source_ids": [
     "e3146ea41d"
    ],
-   "value": "Aerospace and Defense."
+   "value": "Aerospace and defense technology"
   },
   "interview_focus": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "3736403079",
-    "b509b48738"
+    "363952685d",
+    "db1957d5bf",
+    "8a521171ea"
    ],
-   "value": "Be prepared to emphasize your ability to work effectively in a structured team environment and navigate bureaucracy, which contrasts with the fast-paced, independent agility you prefer. You should also clarify expectations around hours and learning curves, as the embedded, real-time C++ focus here is highly specialized rather than broad AI/DS career growth."
+   "value": "Agile environment experience, problem-solving in team settings, and technical skills in real-time embedded software development."
   },
-  "last_attempt_at": 1784817218,
+  "last_attempt_at": 1784826845,
   "last_evidence_at": 1784822155,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "3736403079",
-    "e3146ea41d"
+    "363952685d",
+    "db1957d5bf",
+    "3736403079"
    ],
-   "value": "Tucson, AZ and St. Petersburg, FL (Onsite)."
+   "value": "Multiple U.S. locations including Massachusetts, Arizona, Florida, and New Hampshire (Tewksbury)."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "3736403079",
     "e3146ea41d"
    ],
-   "value": "To redefine the aerospace and defense industry through world-class operations and deep technical expertise, offering capabilities and opportunities unmatched by others."
+   "value": "To provide technologically advanced, intelligent solutions that redefine the aerospace and defense industry and help customers meet global market demands."
   },
   "name": "RTX",
   "pace_of_work": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "3736403079",
-    "e3146ea41d"
+    "363952685d",
+    "db1957d5bf"
    ],
-   "value": "Estimated: Moderate to slow. Defense primes are heavily regulated and process-driven, leading to a bureaucratic work pace that lacks the rapid iteration and fast tech culture of pure software companies."
+   "value": "Fast-paced, dynamic environment with time-critical requirements and Agile/SCRUM development cycles."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "e3146ea41d",
-    "b509b48738"
+    "e3146ea41d"
    ],
-   "value": "Intelligent aerospace and defense solutions, including embedded systems, real-time multithreaded software applications, and technologically advanced avionics."
+   "value": "Advanced aerospace and defense systems, including aircraft components, missile systems, and intelligent solutions for global aerospace and defense markets."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "3736403079"
-   ],
-   "value": "Estimated: 15-20 days of annual leave, standard for established defense contractors."
+   "source_ids": [],
+   "value": "Estimated: 15-20 days (based on industry norms for large tech firms; not explicitly stated in sources)"
   },
+  "refresh_after": 1790010845,
   "rotational_program_name": {
-   "confidence": "high",
-   "source_ids": [
-    "3736403079",
-    "e3146ea41d",
-    "b509b48738"
-   ],
-   "value": "None found in research."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "3736403079"
-   ],
-   "value": "Estimated: No guaranteed company-wide shutdowns beyond standard paid holidays."
+   "source_ids": [],
+   "value": "None found in research (estimated)"
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "3736403079",
-    "e3146ea41d"
+    "363952685d",
+    "db1957d5bf",
+    "3736403079"
    ],
-   "value": "Established large-cap, multinational enterprise operating as a top-tier prime contractor in the defense industrial base."
+   "value": "Large enterprise (10,000+ employees), operating as a market leader in aerospace and defense."
   },
   "sources": [
    {
@@ -196202,48 +196599,52 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "3736403079",
-    "e3146ea41d"
+    "8a521171ea"
    ],
-   "value": "Not explicitly stated in the provided sources, though aerospace and defense prime contractors typically require candidates to possess U.S. citizenship or permanent residency due to government security clearance requirements."
+   "value": "Security clearance required (Interim Secret level for new grads); sponsorship for visa not mentioned."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "3736403079",
-    "e3146ea41d"
+    "363952685d",
+    "db1957d5bf",
+    "3736403079"
    ],
-   "value": "RTX (formerly Raytheon Technologies) is a multinational aerospace and defense conglomerate that develops advanced systems for commercial and military customers. It makes money primarily through large government contracts and commercial aerospace sales via its market-leading businesses like Collins Aerospace."
+   "value": "RTX is a leading aerospace and defense company that develops advanced technologies for military and commercial applications, with a focus on innovation and mission-critical systems."
   },
+  "synthesized_evidence_sha": "58cfc16ecdc2a536",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "b509b48738"
+    "363952685d",
+    "db1957d5bf",
+    "8a521171ea"
    ],
-   "value": "C++ embedded software development, object-oriented software design, and real-time multithreaded software applications using Agile Scrum methodology."
+   "value": "Developing software in Agile/SCRUM environments, focusing on real-time embedded systems, application development, and DevOps practices."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583338,
   "web_search_url": "https://duckduckgo.com/?q=RTX+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "3736403079",
-    "e3146ea41d",
-    "b509b48738"
+    "363952685d",
+    "db1957d5bf",
+    "3736403079"
    ],
-   "value": "While the base pay and mission-driven nature of defense work are attractive, the company's size and government contracting model inherently introduce slow bureaucracy and rigid processes. This conflicts with your desire for a fast, highly innovative tech culture, and defense work rarely offers the elite AI/DS prestige or accelerated, cutting-edge tech learning environments found in top-tier tech firms."
+   "value": "RTX offers a top-tier AI/data science role within a mission-driven aerospace/defense company that emphasizes innovation and rapid development cycles, avoiding bureaucratic delays common in legacy firms."
   },
   "wlb_rating": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "3736403079",
-    "b509b48738"
+    "363952685d",
+    "db1957d5bf",
+    "3736403079"
    ],
-   "value": "Estimated: Good. Defense contractors generally enforce sane hours without the high-burnout, 'crunch culture' often found in fast-paced tech startups, aligning with a mission-driven, balanced environment."
+   "value": "Moderate (no explicit work-life balance policies cited in sources, but mentions of 'sane hours' are not supported; inferred from industry norms and lack of burnout mentions)"
   }
  },
  "rubrik": {
@@ -206390,6 +206791,94 @@
   "web_research_status": "sources captured",
   "web_researched_at": 1784676857,
   "web_search_url": "https://duckduckgo.com/?q=Signify+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
+ "sika": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "ba82cb3a0d5b5c52",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784826848,
+  "name": "Sika",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "d8e8184f84",
+    "kind": "company_web",
+    "publisher": "Sika",
+    "retrieved_at": 1784826848,
+    "title": "Sika public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=ff9ac15b9d7bc4cabdb5700978b41b665305e7695caae974bb6d2f52f48c8a2bJmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=2875ee6a-6183-612e-33d2-f9f560c3600c&u=a1aHR0cHM6Ly93d3cuc2lrYS5jb20v&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "a8f5dc4437",
+    "kind": "company_web",
+    "publisher": "Sika",
+    "retrieved_at": 1784826848,
+    "title": "Sika public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=ce6ae7d5a1aa6ac3b0250616702db4defb7c8a62deb82ff2a0ee03bf0bdce7d5JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=2875ee6a-6183-612e-33d2-f9f560c3600c&u=a1aHR0cHM6Ly91c2Euc2lrYS5jb20v&ntb=1"
+   },
+   {
+    "content_sha": "638b6293e0aefdb9",
+    "excerpt": "SmartRecruiters Job Search SmartRecruiters Jobs Powered by",
+    "id": "f16eec2a6f",
+    "kind": "company_careers_or_benefits",
+    "publisher": "Sika",
+    "retrieved_at": 1784826848,
+    "title": "SmartRecruiters Job Search",
+    "url": "https://jobs.smartrecruiters.com/"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784826848,
+  "web_search_url": "https://duckduckgo.com/?q=Sika+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
@@ -229091,12 +229580,82 @@
   }
  },
  "theodo": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
   "aliases": [],
-  "evidence_sha": "50c122f8d6ad855e",
-  "last_evidence_at": 1784821848,
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "2299b753467de47b",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784826850,
   "name": "Theodo",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "523e5ee21a",
+    "kind": "company_web",
+    "publisher": "Theodo",
+    "retrieved_at": 1784826850,
+    "title": "Theodo public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=18da6fb8e43a75309dd85374b81242bb06031379650891974d89c7d156ae3524JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=2875ee6a-6183-612e-33d2-f9f560c3600c&u=a1aHR0cHM6Ly93d3cuYnVrLmNvL2Jsb2cvbnVldm8tcmVjYXJnby1ub2N0dXJuby1jb24tcmVmb3JtYS1sYWJvcmFs&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "ea4e0d0183",
+    "kind": "company_web",
+    "publisher": "Theodo",
+    "retrieved_at": 1784826850,
+    "title": "Theodo public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=840dfbf093f80edd58ba1b217251a852e6910e4f08a8935d73836928f9b0d0ddJmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=2875ee6a-6183-612e-33d2-f9f560c3600c&u=a1aHR0cHM6Ly93d3cucHJvd2FyZS5jb20uY28vcmVjYXJnby1ub2N0dXJuby1jb2xvbWJpYS0yMDI2Lw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "eca9b76007",
+    "kind": "company_web",
+    "publisher": "Theodo",
+    "retrieved_at": 1784826850,
+    "title": "Theodo public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=9743b62ab58d16f7d418e4425dda32919c4141c7221d97a112ae183e6d1c7705JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=2875ee6a-6183-612e-33d2-f9f560c3600c&u=a1aHR0cHM6Ly90dWxpcXVpLmNvbS5jby9yZWNhcmdvLW5vY3R1cm5vLXRhYmxhLXRhcmlmYXMtY29sb21iaWEv&ntb=1"
+   },
    {
     "content_sha": "56062f2889a6a1be",
     "excerpt": "En 2019, Nimbleways rejoint le groupe Theodo et en adopte le nom quelques années plus tard. Opening from Theodo Maroc - Casablanca L’histoire du groupe Theodo et son succès Theodo accompagne depuis 2009 les entreprises innovantes dans la conception, le développement et le déploiement de produits digitaux ingénieux - tels que la plateforme TF1+, l'application LCL Pro ou l'application France Identité Numérique - en tirant parti du meilleur de la technologie et de l’approche Lean. En 2025, le groupe Theodo génère 100M€ de CA. Aujourd’hui, Theodo compte plus de 100 Theodoers à Casablanca.",
@@ -229128,7 +229687,15 @@
     "url": "https://jobs.lever.co/theodo/31633ba7-be82-4389-9eec-f045bf258bf8"
    }
   ],
-  "status": "evidence_only"
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784826850,
+  "web_search_url": "https://duckduckgo.com/?q=Theodo+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
  },
  "thermo fisher scientific": {
   "ai_ds_prestige_tier": {
@@ -245547,12 +246114,102 @@
   }
  },
  "vercel": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
   "aliases": [],
-  "evidence_sha": "7b61b68867258586",
-  "last_evidence_at": 1784821848,
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "9fe7c5b3788d20c3",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784826848,
   "name": "Vercel",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "b0995a427e",
+    "kind": "company_web",
+    "publisher": "Vercel",
+    "retrieved_at": 1784826848,
+    "title": "Vercel public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=e8fad43f20e097eaf1a7301376a65edc349061ab967c2761b5b9617d2231577aJmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=2875ee6a-6183-612e-33d2-f9f560c3600c&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvVmVyY2Vs&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "334ef645b2",
+    "kind": "company_web",
+    "publisher": "Vercel",
+    "retrieved_at": 1784826848,
+    "title": "Vercel public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=66094da057c0817a67d2e85797ac68da265b84df13b9dc341c5743d882143cfbJmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=2875ee6a-6183-612e-33d2-f9f560c3600c&u=a1aHR0cHM6Ly92ZXJjZWwuY29tL2xvZ2lu&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "e7d85f13b6",
+    "kind": "company_web",
+    "publisher": "Vercel",
+    "retrieved_at": 1784826848,
+    "title": "Vercel public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=2ac43cff4cabd61f356b5c23fd75a0fe629138545d98f6dc89ae84cb6e62908bJmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=2875ee6a-6183-612e-33d2-f9f560c3600c&u=a1aHR0cHM6Ly92ZXJjZWwuY29tLw&ntb=1"
+   },
+   {
+    "content_sha": "12a4d5dec14f7a74",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/SimplifyJobs/New-Grad-Positions.",
+    "id": "dbc3b9e88f",
+    "kind": "discovery_feed",
+    "publisher": "Vercel",
+    "retrieved_at": 1784826848,
+    "title": "Discovery source for Vercel",
+    "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
+   },
+   {
+    "content_sha": "144ce41c0f88a751",
+    "excerpt": "This company posting was surfaced through the monitored source: https://job-boards.greenhouse.io/vercel.",
+    "id": "8521a929fc",
+    "kind": "discovery_feed",
+    "publisher": "Vercel",
+    "retrieved_at": 1784826848,
+    "title": "Discovery source for Vercel",
+    "url": "https://job-boards.greenhouse.io/vercel"
+   },
    {
     "content_sha": "07e5adf5906d3883",
     "excerpt": "You&#39;ll learn how a planet-scale CDN works from engineers who built it.&lt;/p&gt; &lt;p&gt;This is a team where infrastructure meets product: we work in close partnership with frameworks such as Next.js, bringing framework-defined infrastructure to life on Vercel&#39;s CDN, and the serving and caching behavior we ship directly shapes the performance and cost that millions of developers see. &lt;div class=&quot;content-intro&quot;&gt;&lt;h2&gt;About Vercel:&lt;/h2&gt; &lt;p&gt;&lt;span data-sheets-root=&quot;1&quot;&gt;Vercel is the agentic infrastructure company.",
@@ -245562,59 +246219,17 @@
     "retrieved_at": 1784821848,
     "title": "Official job posting — Software Engineer - CDN Content",
     "url": "https://job-boards.greenhouse.io/vercel/jobs/6105394004"
-   },
-   {
-    "content_sha": "e3b8a460eddb5b13",
-    "excerpt": "Whether you’re building our products, supporting our customers, growing our community, or shaping our story, you’ll help define what comes next. You'll work shoulder-to-shoulder with design engineers who turn design into production code, so your work lives on the real web at Vercel's bar for polish.&nbsp; This is a role for a designer who thinks in systems and sweats the details: someone equally at home setting the typographic rhythm of a landing page, and shaping how a tier-one hero feels on first load. First and foremost, this is a visual design role.",
-    "id": "7be0e5b94c",
-    "kind": "official_job",
-    "publisher": "Vercel",
-    "retrieved_at": 1784821848,
-    "title": "Official job posting — Visual Designer, Web",
-    "url": "https://job-boards.greenhouse.io/vercel/jobs/6115991004"
-   },
-   {
-    "content_sha": "967a8d883d199c54",
-    "excerpt": "Whether you’re building our products, supporting our customers, growing our community, or shaping our story, you’ll help define what comes next. We are building the platform for that future, trusted by companies like&nbsp; OpenAI, PayPal, Ramp, Supreme, and millions of developers worldwide . We are looking for engineers who are excited to work deeply on open source developer infrastructure. Learn and Grow - we provide mentorship and send you to events that help you build your network and skills.",
-    "id": "ddc99960bd",
-    "kind": "official_job",
-    "publisher": "Vercel",
-    "retrieved_at": 1784821848,
-    "title": "Official job posting — Software Engineer, Next.js",
-    "url": "https://job-boards.greenhouse.io/vercel/jobs/5993753004"
-   },
-   {
-    "content_sha": "4fbb63d9d9e512c3",
-    "excerpt": "Whether you’re building our products, supporting our customers, growing our community, or shaping our story, you’ll help define what comes next. About the role: We are looking for a Software Engineer to join the Agent Stack team and help build eve — Vercel's framework for building production-ready AI agents. We are building the platform for that future, trusted by companies like&nbsp; OpenAI, PayPal, Ramp, Supreme, and millions of developers worldwide . About Vercel: Vercel is the agentic infrastructure company.",
-    "id": "b6ff5c6e99",
-    "kind": "official_job",
-    "publisher": "Vercel",
-    "retrieved_at": 1784821848,
-    "title": "Official job posting — Software Engineer, eve",
-    "url": "https://job-boards.greenhouse.io/vercel/jobs/6098390004"
-   },
-   {
-    "content_sha": "9cd40d8784824a39",
-    "excerpt": "Whether you’re building our products, supporting our customers, growing our community, or shaping our story, you’ll help define what comes next. We are building the platform for that future, trusted by companies like&nbsp; OpenAI, PayPal, Ramp, Supreme, and millions of developers worldwide . That means we provide all the primitives to run builds, serverless functions, middleware, edge functions , secure compute and now sandboxes too. What You Will Do: Manage our fleet of clusters, running 100’s of instances, deployed in every region where our customers deploy and run their code.",
-    "id": "c215a4cac3",
-    "kind": "official_job",
-    "publisher": "Vercel",
-    "retrieved_at": 1784821848,
-    "title": "Official job posting — Software Engineer, Compute",
-    "url": "https://job-boards.greenhouse.io/vercel/jobs/5551619004"
-   },
-   {
-    "content_sha": "e5fe530f70def387",
-    "excerpt": "Whether you’re building our products, supporting our customers, growing our community, or shaping our story, you’ll help define what comes next. We are building the platform for that future, trusted by companies like&nbsp; OpenAI, PayPal, Ramp, Supreme, and millions of developers worldwide . About the Role: We are seeking a Backend leaning Software Engineer. Learn and Grow - we provide mentorship and send you to events that help you build your network and skills.",
-    "id": "3b7dbae10b",
-    "kind": "official_job",
-    "publisher": "Vercel",
-    "retrieved_at": 1784821848,
-    "title": "Official job posting — Software Engineer, Backend",
-    "url": "https://job-boards.greenhouse.io/vercel/jobs/5430088004"
    }
   ],
-  "status": "evidence_only"
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784826848,
+  "web_search_url": "https://duckduckgo.com/?q=Vercel+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
  },
  "verition fund management llc": {
   "ai_ds_prestige_tier": {
