@@ -45999,37 +45999,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 — Strong applied ML opportunities in integration intelligence, but not a primary AI research lab; prestige derives from platform scale and technical depth in distributed systems."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Subscription SaaS model with tiered pricing based on integration flows, connectors, and data volume; likely includes professional services for implementation and custom development."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-led, collaborative, low-ego culture with strong mentorship; values pragmatism over hype, invests in internal tooling and developer experience; diverse team with significant India-US collaboration."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-market and enterprise companies across retail, manufacturing, wholesale distribution, and services that need to integrate NetSuite, Salesforce, Shopify, and other cloud systems."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$155k base + $15k-$30k equity (4yr) + $10k-$20k signing bonus; total comp ~$155k-$205k; varies by location (Bay Area premium) and role (ML vs backend)."
   },
   "evidence_sha": "49e271f225a00e9a",
+  "generated_at": 1784797615,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: iPaaS (integration Platform as a Service) / Enterprise Software / Cloud Integration"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare for system design around scalable integration runtimes, event-driven architectures, and data transformation pipelines. Expect coding in Java/Scala or Python focusing on concurrency, fault tolerance, and API design. Be ready to discuss how ML could improve connector auto-mapping, anomaly detection in data flows, or natural language to integration translation. Ask about on-call rotation, incident response culture, and how the team balances feature velocity with platform stability."
+  },
+  "last_attempt_at": 1784797615,
   "last_evidence_at": 1784669635,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in San Mateo, CA; additional offices in Denver, CO; Bangalore, India; possibly remote-friendly with US and India engineering hubs."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To simplify application integration and business process automation so organizations can operate more efficiently and scale without technical complexity."
+  },
   "name": "Celigo",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable — growth-stage velocity with quarterly planning, predictable releases, and emphasis on platform reliability over heroics; not a 996 culture."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Celigo offers an integration platform (integrator.io) for connecting ERP, CRM, ecommerce, and other cloud applications, with prebuilt connectors, templates, and low-code/no-code integration tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + flexible sick leave; unlimited PTO policy not confirmed; conservative estimate based on industry norms for growth-stage SaaS."
   },
+  "refresh_after": 1789981615,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -46039,7 +46080,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns reported; likely observes standard US holiday calendar with optional winter break; check offer letter for specifics."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Growth-stage private company (Series C/D), approximately 300-600 employees, backed by venture capital including OpenView and other investors."
   },
   "sources": [
    {
@@ -46073,14 +46119,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=e70d1c58f70c4d7b0dc3a89d6f5b0dc1e3e3ba342a41412c5245b22b51215327JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=03fea5e8-08f3-6be6-1d93-b27509a66a96&u=a1aHR0cHM6Ly93d3cuY2VsaWdvLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and green cards given India engineering presence and US hiring; new grad sponsorship probable but not guaranteed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Celigo is an integration platform as a service (iPaaS) company that enables businesses to connect cloud applications and automate workflows. It likely generates revenue through subscription-based pricing for its integration platform and related professional services."
+  },
+  "synthesized_evidence_sha": "49e271f225a00e9a",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Building scalable integration runtime, connector framework, low-code workflow designer, API management, data transformation engine, and AI-assisted mapping; stack likely includes Java/Scala, React, PostgreSQL, Kafka, Kubernetes on AWS."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784669635,
   "web_search_url": "https://duckduckgo.com/?q=Celigo+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Celigo sits at the intersection of AI-enhanced integration and automation, offering a high-impact platform where data science can directly improve how thousands of businesses connect their critical systems. The company's growth-stage scale means new grads own significant features end-to-end without enterprise bureaucracy, while the integration domain provides deep, transferable expertise in APIs, data pipelines, and distributed systems. Reported culture emphasizes sustainable pace and learning, "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Reasonable hours, flexible remote options, on-call rotation shared and compensated, leadership reportedly respects boundaries; occasional crunch near major releases."
   }
  },
  "cellular sales": {
@@ -46090,7 +46157,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -46108,7 +46175,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784797446,
+  "last_attempt_at": 1784797615,
   "last_evidence_at": 1784677043,
   "name": "Cellular Sales",
   "pace_of_work": {
@@ -69315,7 +69382,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -69333,7 +69400,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784797446,
+  "last_attempt_at": 1784797615,
   "last_evidence_at": 1784677533,
   "name": "Disney",
   "pace_of_work": {
@@ -136863,7 +136930,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -136881,7 +136948,7 @@
    "source_ids": [],
    "value": "Sports / technology (estimated)"
   },
-  "last_attempt_at": 1784797446,
+  "last_attempt_at": 1784797615,
   "last_evidence_at": 1784583484,
   "name": "Major League Baseball",
   "pace_of_work": {
@@ -155061,7 +155128,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -155079,7 +155146,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784797446,
+  "last_attempt_at": 1784797615,
   "last_evidence_at": 1784643844,
   "name": "Nextdoor",
   "pace_of_work": {
@@ -173351,7 +173418,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -173369,7 +173436,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
-  "last_attempt_at": 1784797446,
+  "last_attempt_at": 1784797615,
   "last_evidence_at": 1784675467,
   "name": "Plaid",
   "pace_of_work": {
@@ -229588,7 +229655,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -229606,7 +229673,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
-  "last_attempt_at": 1784797446,
+  "last_attempt_at": 1784797615,
   "last_evidence_at": 1784583341,
   "name": "Trinity Health",
   "pace_of_work": {
@@ -237110,7 +237177,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -237128,7 +237195,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784797446,
+  "last_attempt_at": 1784797615,
   "last_evidence_at": 1784675132,
   "name": "University of Texas - Austin",
   "pace_of_work": {
