@@ -12171,7 +12171,7 @@
  },
  "amazon": {
   "aliases": [],
-  "attempts": 36,
+  "attempts": 37,
   "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "b47216983b59b6c5",
   "generated_at": 1784802932,
@@ -12180,7 +12180,7 @@
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
-  "last_attempt_at": 1784834630,
+  "last_attempt_at": 1784834780,
   "last_evidence_at": 1784800746,
   "name": "Amazon",
   "prompt_v": 2,
@@ -71026,7 +71026,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 9,
+  "attempts": 10,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -71044,7 +71044,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784802932,
+  "last_attempt_at": 1784834780,
   "last_evidence_at": 1784677533,
   "name": "Disney",
   "pace_of_work": {
@@ -140854,41 +140854,108 @@
  "makai labs": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "dbb06ccb3b",
+    "7a40cf284d"
+   ],
+   "value": "Estimated: Emerging startup tier; while they utilize best-in-class AI, they do not currently possess the widespread elite prestige of top-tier tech giants."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "7a40cf284d",
+    "dbb06ccb3b"
+   ],
+   "value": "B2B services and enterprise automation platforms, utilizing pre-built components to deliver AI-driven operational solutions."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "dbb06ccb3b",
+    "7a40cf284d"
+   ],
+   "value": "Cross-functional, collaborative, and agile, emphasizing crisp documentation and proactive communication in a dynamic setting."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "dbb06ccb3b"
+   ],
+   "value": "Businesses seeking enterprise automation, human-machine teaming, product design and development, and market intelligence solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "aae9213b4a"
+   ],
+   "value": "Estimated: $90,000 - $130,000 base salary, reflecting competitive tech rates for the Seattle metropolitan area."
   },
   "evidence_sha": "ffd369cbb24bd11b",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784834780,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784798252,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "9957b1d707"
+   ],
+   "value": "Software Development / IT Services and IT Consulting"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbb06ccb3b",
+    "7a40cf284d"
+   ],
+   "value": "To determine if the company's fast-paced environment is genuinely innovative or if it leans toxic, probe into their daily operational expectations, team structure, and how they manage cross-functional alignment. Ask about work-life balance, expected hours, and whether there are operational shutdowns to ensure personal time is truly respected."
+  },
+  "last_attempt_at": 1784834780,
   "last_evidence_at": 1784675221,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "88b5315ab2",
+    "aae9213b4a"
+   ],
+   "value": "Estimated: Headquartered in Seattle, WA with operations in Renton, WA."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "dbb06ccb3b",
+    "7a40cf284d"
+   ],
+   "value": "To use best-in-class AI and data to solve real-world operational and strategic challenges at scale."
+  },
   "name": "Makai Labs",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "dbb06ccb3b",
+    "7a40cf284d"
+   ],
+   "value": "Estimated: Fast-paced and dynamic environment requiring agility and comfort with rapid changes."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "7a40cf284d"
+   ],
+   "value": "The Makai Automation Platform, which features a library of pre-built components and modules to facilitate enterprise automation via a unified human-machine teaming interface."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard competitive PTO for a startup, likely around 15-20 days annually, though exact policy is not publicly specified."
   },
+  "refresh_after": 1790018780,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -140898,7 +140965,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No information found regarding guaranteed company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbb06ccb3b",
+    "7a40cf284d"
+   ],
+   "value": "Estimated: Startup stage, operating with a fast-paced, dynamic environment."
   },
   "sources": [
    {
@@ -140952,14 +141027,50 @@
     "url": "https://jobs.ashbyhq.com/makai-labs/e170b3c0-42c9-4bab-8afb-69c3b2f714b6"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbb06ccb3b",
+    "7a40cf284d"
+   ],
+   "value": "Estimated: No specific information found regarding visa sponsorship in current job postings."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "dbb06ccb3b",
+    "7a40cf284d"
+   ],
+   "value": "Makai Labs is an AI and data consultancy that builds automation platforms to solve operational and strategic challenges at scale for enterprises. They generate revenue by providing services in enterprise automation, human-machine teaming, product design and development, and market intelligence."
+  },
+  "synthesized_evidence_sha": "ffd369cbb24bd11b",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "7a40cf284d",
+    "dbb06ccb3b"
+   ],
+   "value": "Developing AI and data-driven solutions for enterprise automation, building pre-built components and modules, and creating human-machine teaming interfaces."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675221,
   "web_search_url": "https://duckduckgo.com/?q=Makai+Labs+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbb06ccb3b",
+    "7a40cf284d"
+   ],
+   "value": "Makai Labs offers a fast-paced, innovative environment that employs best-in-class AI, which aligns with your desire for a top-tier technical role and rapid learning without being tied down by slow bureaucracy. The company's dynamic setup and focus on human-machine teaming provide mission-driven, cutting-edge work that accelerates career growth."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "7a40cf284d",
+    "dbb06ccb3b"
+   ],
+   "value": "Estimated: Moderate to Good; while the company actively promotes a collaborative agile environment, standard startup pace may occasionally demand sustained focus."
   }
  },
  "manhattan district attorney s office": {
@@ -151378,7 +151489,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -151417,7 +151528,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "last_attempt_at": 1784834630,
+  "last_attempt_at": 1784834780,
   "last_evidence_at": 1784821848,
   "locations": {
    "confidence": "high",
@@ -177690,51 +177801,129 @@
  "plaid": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "ef51f9d321",
+    "187c8f0614"
+   ],
+   "value": "Plaid holds a strong industry-specific prestige as a top-tier fintech employer, particularly recognized for data engineering and applied machine learning, though it is less broadly known for pure AI research compared to dedicated AI labs."
   },
   "aliases": [],
-  "attempts": 9,
+  "attempts": 10,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "ef51f9d321",
+    "187c8f0614"
+   ],
+   "value": "The company operates a B2B API infrastructure model, charging fintech companies and financial institutions based on API usage and the specific data products they integrate."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "ef51f9d321"
+   ],
+   "value": "Mission-driven with a strong emphasis on innovation, security, and building trusted infrastructure, valuing technical excellence and data-driven problem solving."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "ef51f9d321",
+    "187c8f0614"
+   ],
+   "value": "Customers are primarily fintech apps (like Venmo and Robinhood), digital banks, lending platforms, and traditional financial institutions that need to access or verify user financial data."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "ef51f9d321"
+   ],
+   "value": "Estimated: Highly competitive new-grad compensation matching elite fintech standards, likely in the $130,000-$160,000 base range with sizable equity grants and performance bonuses."
   },
   "evidence_sha": "a15eb3d71b01c9e9",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+  "generated_at": 1784834780,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784802932,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ef51f9d321",
+    "187c8f0614"
+   ],
+   "value": "Financial Technology (FinTech) / API Infrastructure"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6e0b01bee2"
+   ],
+   "value": "Focus on assessing the team's actual pace, work-life balance, and technical mentorship structure for new grads. Ask questions about sane working hours, guaranteed shutdowns, the avoidance of toxic burnout culture, and how the specific AI/Data Science team accelerates learning without sacrificing personal time."
+  },
+  "last_attempt_at": 1784834780,
   "last_evidence_at": 1784675467,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "ef51f9d321"
+   ],
+   "value": "Headquartered in San Francisco, California, with additional office locations and remote work options based on team and role requirements."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "ef51f9d321"
+   ],
+   "value": "Plaid's mission is to unlock financial freedom for everyone by building the digital infrastructure that enables consumer-permissioned financial data sharing."
+  },
   "name": "Plaid",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "ef51f9d321"
+   ],
+   "value": "Estimated: Fast-paced and highly innovative tech culture emphasizing rapid iteration and problem-solving, characteristic of leading Silicon Valley fintech companies, rather than slow-moving bureaucracy."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "ef51f9d321",
+    "187c8f0614"
+   ],
+   "value": "Products include APIs for bank account linking, transaction data retrieval, identity verification, balance checks, and income verification, serving fintech and broader financial applications."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "ef51f9d321"
+   ],
+   "value": "Estimated: Flexible PTO policies standard for top-tier tech firms, typically allowing 15 to 20 days of accrued base vacation alongside company holidays."
   },
+  "refresh_after": 1790018780,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "6e0b01bee2"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "ef51f9d321"
+   ],
+   "value": "Estimated: Likely offers standard public holidays. Candidate should verify directly if guaranteed company-wide week-long shutdowns exist, as they are not confirmed in the provided sources."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "ef51f9d321"
+   ],
+   "value": "Plaid is a late-stage, well-funded private technology company operating at a massive scale, having been valued in the billions during its latest funding rounds."
   },
   "sources": [
    {
@@ -177768,14 +177957,48 @@
     "url": "https://app.ripplematch.com/v2/login"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "6e0b01bee2"
+   ],
+   "value": "Exact visa policy is not fully detailed in the provided resources, though as a large-scale fintech employer, it typically sponsors visas for specialized technical roles. Candidates should verify specifics directly with recruiters."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "ef51f9d321",
+    "187c8f0614"
+   ],
+   "value": "Plaid is a financial technology company that acts as a data network connecting consumer bank accounts to mobile apps. It makes money by charging app developers and financial institutions API usage fees for securely accessing user-permissioned financial data to power payments, lending, and wealth management features."
+  },
+  "synthesized_evidence_sha": "a15eb3d71b01c9e9",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "ef51f9d321",
+    "187c8f0614"
+   ],
+   "value": "Technical work involves building highly scalable, secure APIs and data pipelines that handle sensitive financial data parsing, risk assessment, and machine learning for data normalization and fraud prevention."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675467,
   "web_search_url": "https://duckduckgo.com/?q=Plaid+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6e0b01bee2"
+   ],
+   "value": "Plaid fits the candidate's desire for an innovative, mission-driven fintech environment where AI and data science solve complex infrastructural challenges. It provides high technical learning and career growth opportunities by working with high-volume financial data systems, though candidates must carefully screen specific teams during interviews to ensure the role meets expectations for work-life balance and sane hours away from bureaucratic slowdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "ef51f9d321",
+    "187c8f0614"
+   ],
+   "value": "Estimated: Generally respects work-life balance through sane hours and remote flexibility, but this can vary by team; candidates should investigate specific team culture to avoid high-burnout pockets."
   }
  },
  "planbase": {
@@ -220249,40 +220472,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier — respected consulting brand with growing AI practice, not a pure-play AI lab or top-tier tech giant."
   },
   "aliases": [],
-  "attempts": 3,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 4,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "e634c1be83",
+    "2cad22628f"
+   ],
+   "value": "Project-based consulting fees for AI, data, and software engineering services; likely time-and-materials or fixed-price engagements."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "e634c1be83",
+    "2cad22628f"
+   ],
+   "value": "Innovative, hands-on, client-facing consulting culture; emphasizes quick learning, adaptability, and Microsoft ecosystem expertise; Agile/Scrum team structure."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "e634c1be83",
+    "2cad22628f"
+   ],
+   "value": "Enterprise and public-sector clients seeking consulting, AI, and software engineering services on Microsoft platforms."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $100,000–$130,000 base salary for AI Engineer / Junior Software Engineer roles in NYC market, plus potential bonus and benefits."
   },
   "evidence_sha": "813aeee6423acf71",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784834780,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784834630,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e634c1be83",
+    "2cad22628f"
+   ],
+   "value": "Engineering consulting / AI & software consulting / Professional services"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "e634c1be83",
+    "2cad22628f"
+   ],
+   "value": "Demonstrated ability to learn new technologies quickly and adapt in fast-paced environments; hands-on experience building AI agents, automations, and intelligent workflows on Microsoft stack (Azure, etc.); consulting or client-facing project experience; Agile/Scrum familiarity; troubleshooting across dev, test, and production."
+  },
+  "last_attempt_at": 1784834780,
   "last_evidence_at": 1784807603,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "e634c1be83",
+    "2cad22628f"
+   ],
+   "value": "Headquartered at Empire State Building, New York, NY; likely additional offices nationwide."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "e634c1be83"
+   ],
+   "value": "Deliver innovative AI and software solutions through hands-on, client-facing consulting that accelerates digital transformation."
+  },
   "name": "STV",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "e634c1be83"
+   ],
+   "value": "Fast-paced, project-driven consulting environment with frequent client deliveries and rapid technology adoption."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "e634c1be83",
+    "2cad22628f"
+   ],
+   "value": "AI agents, intelligent workflow automations, custom software solutions, cloud application deployment and maintenance on Microsoft Azure."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO plus holidays; exact policy not public."
   },
+  "refresh_after": 1790018780,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -220292,7 +220578,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns publicized; consulting firms typically maintain client coverage year-round."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established mid-to-large engineering/consulting firm (1000+ employees) with dedicated technology practice."
   },
   "sources": [
    {
@@ -220356,14 +220647,45 @@
     "url": "https://stvinc.wd5.myworkdayjobs.com/stv/job/Empire-State-Building-New-York-New-York/Junior-Software-Engineer_JR5922"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and STEM OPT for technical roles given consulting talent needs; no explicit policy found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "e634c1be83",
+    "2cad22628f"
+   ],
+   "value": "STV is a consulting and engineering firm that builds and deploys AI agents, automations, and intelligent workflows for clients using the Microsoft technology stack. It generates revenue through project-based, client-facing consulting engagements across software and data solutions."
+  },
+  "synthesized_evidence_sha": "813aeee6423acf71",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "e634c1be83",
+    "2cad22628f"
+   ],
+   "value": "Building and deploying AI agents, automations, and intelligent workflows; full-stack software development; Azure cloud deployment and maintenance; Agile/Scrum development practices."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674652,
   "web_search_url": "https://duckduckgo.com/?q=STV+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "e634c1be83",
+    "2cad22628f",
+    "dbc3b9e88f"
+   ],
+   "value": "Offers a fast-paced, client-facing AI engineering role on modern Microsoft stack with consulting variety; balances prestige and new-grad pay potential while emphasizing rapid learning in a project-driven culture that may provide more autonomy than traditional corporate bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate — consulting projects can demand crunch periods, but firm promotes health benefits and Agile practices that may enable sustainable pacing."
   }
  },
  "subaru": {
@@ -235761,41 +236083,112 @@
  "trinity health": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "0924964c2f",
+    "1f6a52725e"
+   ],
+   "value": "Estimated: Mid-tier industry prestige for healthcare analytics, lacking the elite prestige and cutting-edge innovation found at top-tier tech companies."
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "0924964c2f"
+   ],
+   "value": "Generates revenue primarily through direct billing for patient services, private insurance reimbursements, and government healthcare programs like Medicare and Medicaid."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "0924964c2f",
+    "1fd1759612"
+   ],
+   "value": "Estimated: Traditional, mission-driven, and heavily collaborative, but encumbered by enterprise bureaucracy and legacy hierarchy."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "0924964c2f",
+    "1fd1759612"
+   ],
+   "value": "Patients requiring medical care, health insurance providers, and local communities served by regional hospital networks."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "0924964c2f",
+    "1fd1759612"
+   ],
+   "value": "Estimated: $75,000 - $95,000 per year for corporate tech or data roles, which is below big tech compensation but reflects non-profit healthcare sector standards."
   },
   "evidence_sha": "476d0476262e9010",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784834780,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784798252,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0924964c2f"
+   ],
+   "value": "Healthcare, specifically hospital systems and provider networks."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0924964c2f",
+    "1fd1759612"
+   ],
+   "value": "Probe the exact team's autonomy to ensure the role balances elite prestige and fast innovation versus slow bureaucracy. Ask specific questions about technical learning, on-call expectations, and sane hours to confirm it avoids the typical healthcare burnout culture."
+  },
+  "last_attempt_at": 1784834780,
   "last_evidence_at": 1784583341,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "0924964c2f",
+    "1fd1759612"
+   ],
+   "value": "Headquartered in Livonia, Michigan, with hospitals, outpatient clinics, and corporate offices located across multiple states nationwide."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "0924964c2f",
+    "1fd1759612"
+   ],
+   "value": "To serve as a compassionate and transforming, healing presence within the communities it serves, deeply rooted in Catholic healthcare traditions."
+  },
   "name": "Trinity Health",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "0924964c2f",
+    "1fd1759612"
+   ],
+   "value": "Estimated: Bureaucratic, deliberate, and heavily process-driven due to strict clinical regulations, which may feel slow compared to fast-paced tech startups."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "0924964c2f",
+    "1fd1759612"
+   ],
+   "value": "Inpatient and outpatient clinical care, specialized medical treatments, emergency services, and regional hospital management."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "1f6a52725e"
+   ],
+   "value": "Estimated: 20-25 days of PTO annually, with additional standard hospital holidays, though exact policies vary by role and tenure."
   },
+  "refresh_after": 1790018780,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -235804,8 +236197,18 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "1f6a52725e"
+   ],
+   "value": "Estimated: No company-wide tech shutdowns, but standard hospital holidays are observed for corporate staff."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "0924964c2f",
+    "1f6a52725e"
+   ],
+   "value": "Very large national enterprise with tens of thousands of employees, Operating a mature network of hospitals and care facilities."
   },
   "sources": [
    {
@@ -235839,14 +236242,50 @@
     "url": "https://www.bing.com/ck/a?!&&p=1d31ae3a476bec83d70a8c3b7dff2e935850a362c657dd7fc3f4fe7d5fcfdd2fJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cudHJpbml0eS1oZWFsdGgub3JnLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "0924964c2f",
+    "1f6a52725e"
+   ],
+   "value": "Large US healthcare systems often navigate strict data privacy regulations and complex domestic compliance rules, which frequently prioritizes local hiring or limits visa sponsorship for niche tech roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "0924964c2f",
+    "1fd1759612"
+   ],
+   "value": "Trinity Health is one of the largest Catholic healthcare systems in the United States, operating numerous hospitals and outpatient facilities nationwide. It makes money by charging for clinical services, acute care, and specialized medical procedures administered across its network."
+  },
+  "synthesized_evidence_sha": "476d0476262e9010",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "0924964c2f",
+    "1f6a52725e"
+   ],
+   "value": "Enterprise IT systems supporting electronic health records (EHR), clinical workflows, healthcare data analytics, and large-scale hospital administration infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583341,
   "web_search_url": "https://duckduckgo.com/?q=Trinity+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0924964c2f",
+    "1fd1759612"
+   ],
+   "value": "The mission-driven nature of healthcare offers deep societal impact and strong work-life balance compared to big tech; however, the bureaucratic structure of a massive hospital system may lack the fast-paced, elite tech innovation and top-tier new-grad pay you are aiming for."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "1f6a52725e",
+    "1fd1759612"
+   ],
+   "value": "Estimated: Good for standard corporate IT roles with predictable hours, though clinical adjacent teams may face institutional pressure, but rarely hyper-toxic tech burnout."
   }
  },
  "tripadvisor": {
@@ -239672,41 +240111,103 @@
  "ultra": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "9bd2377223"
+   ],
+   "value": "Estimated: Traditional defense engineering firm; prestige stems from critical national security mission impact rather than elite, cutting-edge AI/data science research."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "9bd2377223"
+   ],
+   "value": "B2B/B2G defense contracting, providing specialized engineering and software development services for complex defense platforms."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "9bd2377223"
+   ],
+   "value": "Estimated: Mission-driven, security-conscious, and structured. The culture emphasizes reliability, life-saving impact, and rigorous engineering standards suited for battlefield and defense applications."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "9bd2377223"
+   ],
+   "value": "Government and military defense agencies requiring intricate, mission-critical operational solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "9bd2377223"
+   ],
+   "value": "Estimated: $75,000 to $95,000 base salary for new graduate embedded software engineers in the defense sector, influenced by security clearance requirements."
   },
   "evidence_sha": "2c59eb8bd74031b3",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784834780,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784834630,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "9bd2377223"
+   ],
+   "value": "Defense and Aerospace Manufacturing / Military Technology."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "9bd2377223"
+   ],
+   "value": "Be prepared to discuss your willingness to work within structured Waterfall and Agile environments, as this contrasts with your preference for a fast, bureaucracy-free culture. You should also clarify expectations around work-life balance and on-call demands for mission-critical defense systems, as well as the availability of true AI/data science work versus embedded systems engineering."
+  },
+  "last_attempt_at": 1784834780,
   "last_evidence_at": 1784821848,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "9bd2377223"
+   ],
+   "value": "Tampa, FL, United States (based on the specific job posting location)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "9bd2377223"
+   ],
+   "value": "To engineer systems that save lives and lead programs that change the battlefield, providing innovative solutions that streamline mission-critical operations."
+  },
   "name": "Ultra",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "9bd2377223"
+   ],
+   "value": "Estimated: Moderate to deliberate. The use of Waterfall environments alongside Agile indicates a structured, compliance-heavy engineering cycle typical of defense contracting, which may move slower than modern tech companies."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "9bd2377223"
+   ],
+   "value": "Mission-critical embedded software systems and engineering platforms for defense applications."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "9bd2377223"
+   ],
+   "value": "Estimated: 15 to 20 days of standard annual paid time off for new graduates in the defense sector."
   },
+  "refresh_after": 1790018780,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -239715,8 +240216,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "9bd2377223"
+   ],
+   "value": "Estimated: While not explicitly stated for Ultra, large defense contractors typically offer minimal guaranteed corporate shutdowns beyond standard federal holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "9bd2377223"
+   ],
+   "value": "Not explicitly stated in provided sources, but operates large-scale defense programs with dedicated business units like Mission Solutions."
   },
   "sources": [
    {
@@ -239760,14 +240270,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=be6f152faacdaf0c129952c32ddc2192830769140bff7096279903ff79df5bbaJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1652f470-e9a6-6726-1fef-e3ede8396625&u=a1aHR0cHM6Ly93d3cudWx0YS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "9bd2377223"
+   ],
+   "value": "Roles require U.S. security clearance, which typically restricts employment to U.S. citizens or permanent residents and generally does not offer visa sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "9bd2377223"
+   ],
+   "value": "Ultra is a defense and aerospace engineering company that designs and develops critical mission platforms, such as embedded software for systems that save lives and shape the battlefield. They generate revenue by providing innovative, mission-critical solutions that streamline the preparation and execution of complex defense operations for government and military clients."
+  },
+  "synthesized_evidence_sha": "2c59eb8bd74031b3",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "9bd2377223"
+   ],
+   "value": "Designing, developing, and optimizing embedded software (specifically seeking Rust expertise) for critical platforms, working within both Agile and Waterfall development environments."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674824,
   "web_search_url": "https://duckduckgo.com/?q=Ultra+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "9bd2377223"
+   ],
+   "value": "While Ultra offers mission-driven work that aligns with your desire to build life-saving systems, the defense industry's reliance on Waterfall methodologies and complex government contracts suggests a more deliberate pace than the fast, innovative tech culture you prioritize. The clearance requirement also suggests a highly regulated environment that may lack the elite AI/data science focus and rapid technical acceleration of a top-tier tech firm."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "9bd2377223"
+   ],
+   "value": "Estimated: Moderate to Good. Defense contractors generally offer stable hours due to strict labor handling and government contract guidelines, though occasional mission deadlines may require flexibility."
   }
  },
  "ultra intelligence and communications": {
