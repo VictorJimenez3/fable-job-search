@@ -14165,48 +14165,124 @@
  "american systems": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "cb4cb0c52f"
+   ],
+   "value": "Estimated: Low to Non-Applicable. The company's technical work focuses on traditional IT hardware integration and Cisco collaboration rather than elite AI or data science."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "cb4cb0c52f"
+   ],
+   "value": "Government contracting and IT systems integration, providing specialized technical personnel and solutions for secure DoD environments."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "cb4cb0c52f"
+   ],
+   "value": "Estimated: Mission-driven, structured, and defense-oriented, prioritizing reliability and security over fast-paced innovative tech culture."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "cb4cb0c52f"
+   ],
+   "value": "U.S. Department of Defense (DoD) and other government entities requiring secure, mission-critical technical environments."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "cb4cb0c52f"
+   ],
+   "value": "Estimated: $70,000 - $90,000. Government contracting roles typically pay moderately but lack the elite compensation of top-tier tech firms."
   },
   "evidence_sha": "61653110ca87d4ed",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784796624,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "cb4cb0c52f"
+   ],
+   "value": "Defense Contracting, IT Services, and Systems Engineering."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "cb4cb0c52f"
+   ],
+   "value": "Given the candidate's goals, interviews should probe the actual pace of innovation versus government compliance cycles, asking how quickly new tech is adopted in their DoD environments. The candidate should also clarify expectations around on-call hours for mission-critical communications and whether the role truly supports personal time and career growth without burnout."
+  },
+  "last_attempt_at": 1784796624,
   "last_evidence_at": 1784676793,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "cb4cb0c52f"
+   ],
+   "value": "Operates within secure DoD environments and U.S. government facilities (specific physical headquarters not detailed in provided sources)."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "cb4cb0c52f"
+   ],
+   "value": "Mission-focused on supporting fast-paced, secure operational settings and mission-critical communications services for government and defense clients."
+  },
   "name": "AMERICAN SYSTEMS",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "cb4cb0c52f"
+   ],
+   "value": "Estimated: Fast-paced operational setting driven by mission-critical needs, though potentially bottlenecked by government and DoD administrative processes."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "cb4cb0c52f"
+   ],
+   "value": "Hardware designs, technical drawings, installation packages, system integration solutions for IT hardware, and secure Cisco collaboration technologies."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "cb4cb0c52f"
+   ],
+   "value": "Estimated: 15-20 days annually, standard for mid-sized government contractors."
   },
+  "refresh_after": 1789980624,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "cb4cb0c52f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "cb4cb0c52f"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found; operations likely run continuously to support mission-critical communications."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "cb4cb0c52f"
+   ],
+   "value": "Established government contractor with ongoing recruiting for technical and financial roles across defense projects."
   },
   "sources": [
    {
@@ -14240,14 +14316,45 @@
     "url": "https://careers-americansystems.icims.com/jobs/search?hashed=-625861013"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "cb4cb0c52f"
+   ],
+   "value": "Likely requires U.S. citizenship and the ability to obtain government security clearances due to DoD environment work."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "cb4cb0c52f"
+   ],
+   "value": "AMERICAN SYSTEMS is an engineering and IT services contractor that designs hardware, integrates complex technical systems, and provides secure communications for mission-critical environments. It makes money by providing expert staffing, budget management, and technical solutions—primarily to the U.S. Department of Defense and other government agencies."
+  },
+  "synthesized_evidence_sha": "61653110ca87d4ed",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "cb4cb0c52f"
+   ],
+   "value": "IT hardware design, secure Cisco collaboration technology implementation, and complex system integration; additionally includes financial technical work using Deltek Costpoint and Earned Value Management."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676793,
   "web_search_url": "https://duckduckgo.com/?q=AMERICAN+SYSTEMS+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "cb4cb0c52f"
+   ],
+   "value": "AMERICAN SYSTEMS' defense contracting focus likely conflicts with the candidate's desire for a fast, innovative AI or data science culture, as government bureaucracy and secure environments typically slow down tech deployment. Additionally, the emphasis on supporting 'fast-paced operational settings' and mission-critical systems may require rigid schedules that contrast with the guaranteed shutdowns and elite work-life balance the candidate prioritizes."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "cb4cb0c52f"
+   ],
+   "value": "Estimated: Moderate. Supporting mission-critical operations may require strict availability, contrasting with typical flexible tech environments."
   }
  },
  "american university": {
@@ -23247,51 +23354,125 @@
  "atlassian": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "a607a09507"
+   ],
+   "value": "Tier 2. Highly respected big-tech employer with massive datasets, but not exclusively focused on AI/DS like an AI-first company."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "a607a09507"
+   ],
+   "value": "Subscription-based software as a service (SaaS) via cloud deployments, alongside perpetual licensing and maintenance fees for on-premise data center products."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "a607a09507"
+   ],
+   "value": "Mission-driven, collaborative, and flexible. Known for a distributed-first mentality that respects personal boundaries and promotes continuous learning."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "a607a09507"
+   ],
+   "value": "Software development teams, IT departments, and project managers across organizations of all sizes, from small startups to large enterprises."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "a607a09507"
+   ],
+   "value": "Estimated: $160,000 - $190,000 total compensation (base + RSU equity) for top-tier AI/Data Science new grad roles."
   },
   "evidence_sha": "72176bf61152132f",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
+  "generated_at": 1784796624,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784796465,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a607a09507"
+   ],
+   "value": "Technology / Software Development."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a607a09507"
+   ],
+   "value": "Highlight any experience with large-scale distributed systems or applied machine learning, and be ready to discuss how you can leverage data to improve collaboration tools. Emphasize your ability to thrive in a fast, innovative environment without sacrificing work-life balance, aligning with their sane-hours culture and agile roots."
+  },
+  "last_attempt_at": 1784796624,
   "last_evidence_at": 1784583402,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "a607a09507"
+   ],
+   "value": "Globally distributed workforce with corporate offices in Australia, the United States, and various other countries."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "a607a09507"
+   ],
+   "value": "To help unleash the potential of every team."
+  },
   "name": "Atlassian",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "a607a09507"
+   ],
+   "value": "Estimated: Fast-paced but manageable. Innovation-driven culture that avoids the crippling bureaucracy of slower legacy enterprises."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "a0a68ae249",
+    "a607a09507"
+   ],
+   "value": "Jira, Confluence, Trello, and Bitbucket."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "a607a09507"
+   ],
+   "value": "Estimated: 20-25 days of flexible vacation, encouraging employees to actually take time off to recharge."
   },
+  "refresh_after": 1789980624,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "a607a09507"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "a607a09507"
+   ],
+   "value": "Estimated: Yes, typically offers a few company-wide shutdown days per year to guarantee uninterrupted rest."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "a607a09507"
+   ],
+   "value": "Large, publicly traded multinational technology company."
   },
   "sources": [
    {
@@ -23325,14 +23506,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=6eacf3d495e1768e9bfcb77d7191ff5f011e95e48a553fecbc60ca9660567b54JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9pZC5hdGxhc3NpYW4uY29tL2xvZ2lu&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a607a09507"
+   ],
+   "value": "Generally sponsors work visas for qualified technical roles, leveraging its global distributed workforce model."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "a607a09507",
+    "a0a68ae249"
+   ],
+   "value": "Atlassian is a software company best known for developing collaboration and development tools like Jira, Confluence, and Trello. It makes money primarily through subscription-based cloud services, as well as server and data center licenses for enterprise customers."
+  },
+  "synthesized_evidence_sha": "72176bf61152132f",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "a607a09507"
+   ],
+   "value": "Building and scaling cloud-based collaboration and developer tools, heavily utilizing large-scale distributed systems and full-stack engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583402,
   "web_search_url": "https://duckduckgo.com/?q=Atlassian+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a607a09507"
+   ],
+   "value": "Atlassian's Team Anywhere policy offers location flexibility that protects personal time, while its massive scale provides the elite technical learning and career growth of a top-tier tech firm without the burnout culture of higher-pressure environments. Though not an AI-first company, its scale ensures innovative work applying data science to massive collaboration datasets, balancing the fast, innovative culture you seek with sane hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "a607a09507"
+   ],
+   "value": "Estimated: Good. Culture highly emphasizes sane hours and outcomes over raw screen time, actively avoiding toxic burnout environments."
   }
  },
  "atomic machines": {
@@ -89388,11 +89601,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -89404,6 +89619,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784796624,
   "last_evidence_at": 1784675464,
   "name": "Gannett Fleming",
   "pace_of_work": {
@@ -95601,50 +95817,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Respected applied AI in high-stakes manufacturing; not a primary AI research lab but publishes at IEEE/ISMI conferences and drives real yield/revenue impact."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Pure-play foundry model: customers design chips; GlobalFoundries fabricates them under long-term capacity agreements and per-wafer pricing. Revenue driven by wafer volume, process mix, and long-term supply agreements."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, safety-obsessed, collaborative across process/integration/equipment teams. Low politics, high technical accountability. Diverse, global workforce. Not a 'tech bro' culture; more like a rigorous R&D lab with manufacturing discipline."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fabless semiconductor companies, IDMs, and system houses in automotive (e.g., NXP, STMicroelectronics), mobile/IoT, communications infrastructure, and government/aerospace sectors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000–$130,000 base + 10–15% annual bonus + RSUs (~$15–25k/yr vesting). Total first-year ~$135–165k. Varies by location (NY/CA premium)."
   },
   "evidence_sha": "6c3589df0c74e617",
+  "generated_at": 1784796624,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Semiconductor Foundry / Electronic Components Manufacturing"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical screens: statistics/ML for process control, semiconductor device physics fundamentals, Python/SQL for fab data pipelines, and behavioral questions on cross-functional collaboration with process engineers. Prepare for case studies on yield prediction, anomaly detection in time-series sensor data, or DOE optimization. Demonstrate ability to translate models into production constraints (cycle time, interpretability, false-alarm cost)."
   },
-  "last_attempt_at": 1784796465,
+  "last_attempt_at": 1784796624,
   "last_evidence_at": 1784677041,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Malta, NY (Fab 8). Major fabs: Dresden, Germany (Fab 1); Singapore (Fab 7); Essex Junction, VT (Fab 9). Design enablement centers in Santa Clara, CA and Bangalore, India."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To deliver differentiated feature-rich semiconductor solutions that enable customers' innovation, with a focus on essential chips for automotive, industrial, and connected devices."
+  },
   "name": "GlobalFoundries",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Measured, project-oriented cadence with quarterly planning cycles. Fab emergencies (excursions) can trigger intense short sprints, but day-to-day is methodical, not chaotic startup pace."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Semiconductor manufacturing services across multiple process nodes (12nm, 22FDX, 28nm, 40nm, 55nm, 65nm, 90nm, 130nm, 180nm) for specialty markets including automotive, industrial, IoT, 5G, and aerospace/defense."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10–12 company holidays + 2 floating days; accrual increases with tenure. Unlimited not offered."
   },
+  "refresh_after": 1789980624,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Two major fab shutdown periods annually (typically summer and winter holidays, ~1–2 weeks each) where non-essential work pauses. No weekly or monthly guaranteed shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public company (NASDAQ: GFS); ~14,000 employees globally; mature, capital-intensive manufacturing business with multi-billion dollar annual revenue."
   },
   "sources": [
    {
@@ -95688,14 +95951,37 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established H-1B sponsor; files for cap-subject and cap-exempt roles. Green card sponsorship (PERM) available for qualifying positions, typically after 6–12 months tenure."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "GlobalFoundries is a leading semiconductor foundry that manufactures integrated circuits for fabless chip companies. It operates fabrication facilities in the US, Europe, and Singapore, producing chips for automotive, IoT, mobile, and communications markets."
+  },
+  "synthesized_evidence_sha": "6c3589df0c74e617",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Process integration, device physics, yield enhancement, defect inspection, advanced process control, equipment automation, factory data science/AI for predictive maintenance and yield optimization, TCAD simulation, and PDK development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677041,
   "web_search_url": "https://duckduckgo.com/?q=GlobalFoundries+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "GlobalFoundries offers elite semiconductor manufacturing prestige and competitive new-grad pay (~$110–130k base + equity) with meaningful AI/data science impact on real silicon production. As a mature fab, it provides structured learning and clear career ladders, but 24/7 fab operations can mean on-call rotations and less predictable shutdowns than pure software firms. Culture is engineering-driven and mission-critical (essential chips), not 'move fast and break things.' WLB is decent for manufa"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "3.5/5 — Generally 40–45 hrs/wk for data science roles; on-call rotations (~1 week/month) for production models. Fab shutdowns (holiday periods) provide predictable downtime, but not weekly 'guaranteed shutdowns.'"
   }
  },
  "globetax": {
@@ -109040,11 +109326,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -109056,6 +109344,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784796624,
   "last_evidence_at": 1784677041,
   "name": "i3",
   "pace_of_work": {
@@ -126762,37 +127051,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 — Respected niche player with real ML production workloads, but not a widely recognized AI research brand; prestige comes from domain depth, not publications."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "B2B SaaS and managed services model: recurring platform subscription fees plus performance-based advertising spend management fees from automotive dealers and manufacturers."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-led, pragmatic, automotive-enthusiast friendly; private-equity owned so metrics-driven but smaller than public AdTech giants — more ownership, less process."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Automotive dealerships, automotive manufacturers (OEMs), and automotive marketing agencies across the United States."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $105k-$130k base + 10-15% target bonus + equity (likely private company RSUs/options); total comp ~$120k-$150k."
   },
   "evidence_sha": "629918eb92d76bb3",
+  "generated_at": 1784796624,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "AdTech / MarTech / Automotive Technology"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Probe for: (1) Real-time bidding latency SLAs and how ML models fit within them. (2) Data quality/volume from automotive feed integrations. (3) Team structure—centralized DS vs. embedded in product squads. (4) On-call rotation and incident response expectations. (5) Recent model deployments and A/B test velocity. (6) Work-hour norms and whether 'guaranteed shutdowns' are policy or culture."
+  },
+  "last_attempt_at": 1784796624,
   "last_evidence_at": 1784674189,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in greater Atlanta, GA area; possible remote/hybrid options for engineering roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To transform automotive marketing through data science and technology, helping dealers sell more vehicles by connecting them with the right buyers at the right time."
+  },
   "name": "L2TMedia",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast — ad-tech demands sub-100ms inference, frequent model retraining, and quarterly product cycles; less bureaucracy than enterprise software but tighter SLAs than pure research labs."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Automotive digital advertising platform, data analytics and audience targeting tools, campaign management software, and marketing attribution solutions for auto dealers and OEMs."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 8-10 company holidays; unlimited policy not confirmed."
   },
+  "refresh_after": 1789980624,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -126802,7 +127132,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdown periods publicly documented; typical US tech holiday calendar observed."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-stage private company, approximately 100-300 employees, backed by private equity or venture capital."
   },
   "sources": [
    {
@@ -126836,14 +127171,35 @@
     "url": "https://www.jazzhr.com/job-seekers"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely supports H-1B transfers and new cap filings for senior technical roles; new grad sponsorship possible but not guaranteed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "L2TMedia is a digital marketing and advertising technology company focused on the automotive industry. The company provides data-driven marketing solutions to help automotive dealers and manufacturers reach car buyers."
+  },
+  "synthesized_evidence_sha": "629918eb92d76bb3",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Ad tech platform development, real-time bidding systems, large-scale data processing, ML for audience segmentation and bid optimization, attribution modeling, and automotive data integrations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674189,
   "web_search_url": "https://duckduckgo.com/?q=L2TMedia+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "L2TMedia offers a specialized ad-tech domain where AI/data science directly impacts automotive sales outcomes—high leverage for ML work without FAANG bureaucracy. The niche focus means faster iteration cycles and ownership of end-to-end models. Private-equity backing suggests growth investment but also exit-oriented timelines; verify current runway and technical debt before joining."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — Typical ad-tech crunch around quarter-end and new vehicle model launches; engineering culture generally respects evenings/weekends outside incidents, but no published 'guaranteed shutdown' policy found."
   }
  },
  "l3harris technologies": {
@@ -186615,47 +186971,125 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier — insufficient public evidence of top-tier AI research output, conference publications, or known elite talent density."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "ffcc068ec2",
+    "e33ddd4889",
+    "961b6234ee"
+   ],
+   "value": "Business model not described in accessible sources. Likely SaaS/platform fees, consulting retainers, or per-member-per-month (PMPM) revenue from health plan administration."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-oriented, compliance-aware, likely cross-functional (clinical, product, engineering). Toxic/burnout signals not visible in sources but unverified."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "ffcc068ec2",
+    "e33ddd4889",
+    "961b6234ee"
+   ],
+   "value": "Customer segments not detailed in sources. Presumably serves employers, brokers, or health plans seeking to redesign or optimize health benefits."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k–$140k base + equity (US median for health-tech data science new grads); elite-tier firms pay $160k+. No public bands found."
   },
   "evidence_sha": "6663311cde237c26",
+  "generated_at": 1784796624,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "ffcc068ec2",
+    "e33ddd4889",
+    "961b6234ee"
+   ],
+   "value": "Health Technology / Healthcare Benefits / Insurtech"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Probe for: (1) Concrete AI/ML projects in production (not just R&D), (2) Published compensation bands for new-grad data science roles, (3) Explicit WLB policies (core hours, on-call expectations, shutdown weeks), (4) Engineering culture metrics (deployment frequency, blameless postmortems), (5) Career ladder clarity for IC growth without management track pressure."
   },
+  "last_attempt_at": 1784796624,
   "last_evidence_at": 1784583438,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "ffcc068ec2",
+    "e33ddd4889",
+    "961b6234ee"
+   ],
+   "value": "Headquarters and office locations not specified in accessible sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "ffcc068ec2",
+    "e33ddd4889",
+    "961b6234ee"
+   ],
+   "value": "Mission statement not found in supplied sources. Name suggests a focus on remodeling or improving health benefits/healthcare delivery."
+  },
   "name": "Remodel Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — health-tech regulated environments often balance speed with compliance; no source confirms 'fast, innovative' vs 'slow bureaucracy'."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "ffcc068ec2",
+    "e33ddd4889",
+    "961b6234ee"
+   ],
+   "value": "Specific products not disclosed in accessible sources. Likely offers health plan administration, benefits consulting, or related health-tech solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 8–10 holidays (US norm for mid-size tech); no public policy found."
   },
+  "refresh_after": 1789980624,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "ffcc068ec2",
+    "e33ddd4889",
+    "961b6234ee"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns documented; some health-tech firms observe winter break but not universal."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "ffcc068ec2",
+    "e33ddd4889",
+    "961b6234ee"
+   ],
+   "value": "Company size and stage not disclosed in sources. Public pages suggest an established presence but no employee count or funding stage visible."
   },
   "sources": [
    {
@@ -186689,14 +187123,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=c159aa7feea81879d4ad89b7484503879f48e3f4c5e16250cf77c06d8965848aJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cuaG91enouY29tL2lkZWFib29rcy9SZW1vZGVsaW5nP21zb2NraWQ9MTYwOTg2YThjNjdkNmY2ODAyOGQ5MTM0YzcyZTZlNmY&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Visa sponsorship policy not found in sources. Many US health-tech firms sponsor H-1B for specialized roles; confirm with recruiter."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "ffcc068ec2",
+    "e33ddd4889",
+    "961b6234ee"
+   ],
+   "value": "Remodel Health appears to be a health-focused company, though the supplied public pages did not load detailed descriptions. Based on the name, it likely operates in healthcare benefits, insurance, or health plan services."
+  },
+  "synthesized_evidence_sha": "6663311cde237c26",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "ffcc068ec2",
+    "e33ddd4889",
+    "961b6234ee"
+   ],
+   "value": "Technical stack and data science work not detailed in sources. Health-tech companies typically work on benefits platforms, claims data, eligibility APIs, and analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583438,
   "web_search_url": "https://duckduckgo.com/?q=Remodel+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "If Remodel Health is a mission-driven health-tech firm modernizing benefits, it could offer meaningful impact on healthcare affordability/access. The candidate seeks elite AI/data science prestige with high new-grad pay, fast innovation culture, guaranteed shutdowns, and strong WLB — verify if the company’s pace, pay, and culture match this profile, as sources did not confirm these attributes."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — typical for mid-size health-tech; no source confirms 'guaranteed shutdowns' or 'sane hours'."
   }
  },
  "replit": {
@@ -232407,7 +232870,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -232425,7 +232888,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784796465,
+  "last_attempt_at": 1784796624,
   "last_evidence_at": 1784677287,
   "name": "Uncountable",
   "pace_of_work": {
