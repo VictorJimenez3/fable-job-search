@@ -46154,40 +46154,96 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low – no public AI/data‑science presence, research output, or elite talent brand in this domain."
   },
   "aliases": [],
-  "attempts": 6,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 7,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "8a21d03bd4"
+   ],
+   "value": "Authorized retail partner model: Cellular Sales earns commissions and bonuses from Verizon for each activation, upgrade, and accessory sale, plus volume‑based incentives."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "8a21d03bd4"
+   ],
+   "value": "Competitive, metric‑focused sales culture with emphasis on individual performance, team contests, and career progression into management."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "8a21d03bd4"
+   ],
+   "value": "Consumer individuals and families, plus small‑business accounts seeking Verizon connectivity and device solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "8a21d03bd4"
+   ],
+   "value": "Estimated: $70,000–$90,000 base for corporate IT/analyst roles; sales consultants earn $51k–$125k variable (per job postings)."
   },
   "evidence_sha": "2f1c56e0c019f5c8",
+  "generated_at": 1784798108,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8a21d03bd4"
+   ],
+   "value": "Telecommunications retail (authorized Verizon retailer)."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "8a21d03bd4"
+   ],
+   "value": "If interviewing for a rare corporate tech role, expect questions on retail systems, POS integrations, and scaling internal tools. For sales roles, focus is on quota attainment, customer engagement, and Verizon product knowledge. AI/data‑science depth is unlikely to be assessed."
+  },
+  "last_attempt_at": 1784798108,
+  "last_evidence_at": 1784677043,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "8a21d03bd4"
+   ],
+   "value": "700+ retail stores across 40+ U.S. states; headquarters in Knoxville, TN."
+  },
+  "mission": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: To provide best‑in‑class retail experiences that connect customers to Verizon's network and grow long‑term relationships through personalized service."
   },
-  "last_attempt_at": 1784797949,
-  "last_evidence_at": 1784677043,
   "name": "Cellular Sales",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "8a21d03bd4"
+   ],
+   "value": "Fast‑paced, quota‑driven retail environment; 'fast‑paced thriving environment' highlighted in job postings."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "8a21d03bd4"
+   ],
+   "value": "Verizon wireless postpaid/prepaid plans, smartphones, tablets, wearables, home internet, and related accessories (cases, chargers, etc.)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10–15 days PTO plus holidays (typical for retail); no guaranteed shutdowns."
   },
+  "refresh_after": 1789982108,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -46197,7 +46253,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "None – retail stores operate 365 days a year; no company‑wide shutdown periods."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "8a21d03bd4"
+   ],
+   "value": "Large, privately held retailer with 1,000+ employees and 700+ locations nationwide; mature, stable stage."
   },
   "sources": [
    {
@@ -46231,14 +46294,41 @@
     "url": "https://careers-cellularsales.icims.com/jobs/search?hashed=-435589852"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsorship (H‑1B, etc.) is likely limited to corporate/IT roles; retail sales positions typically do not offer visa sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "8a21d03bd4"
+   ],
+   "value": "Cellular Sales is Verizon's largest authorized retailer, operating hundreds of stores across the U.S. to sell Verizon wireless plans, devices, and accessories. The company generates revenue primarily through commissions on new activations, upgrades, and accessory sales."
+  },
+  "synthesized_evidence_sha": "2f1c56e0c019f5c8",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "8a21d03bd4"
+   ],
+   "value": "Primarily retail sales operations; internal IT supports POS, inventory, and CRM systems. No public evidence of dedicated AI/data‑science teams or research‑oriented technical roles."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677043,
   "web_search_url": "https://duckduckgo.com/?q=Cellular+Sales+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "8a21d03bd4"
+   ],
+   "value": "This is a commission‑driven retail sales organization, not an AI/data‑science‑focused tech company. Prestige, high new‑grad tech pay, guaranteed shutdowns, and a fast‑innovation culture are not aligned with the candidate's stated priorities. The environment is fast‑paced and sales‑centric, with work‑life balance dictated by retail hours and quota pressure."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Low (2/5) – retail hours include evenings, weekends, holidays; commission pressure leads to long shifts and limited schedule control."
   }
  },
  "celonis": {
@@ -69382,7 +69472,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -69400,7 +69490,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784797949,
+  "last_attempt_at": 1784798108,
   "last_evidence_at": 1784677533,
   "name": "Disney",
   "pace_of_work": {
@@ -84161,37 +84251,88 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 – Respected domain-specific ML (surveillance, NLP for rules) but not a primary AI research lab; publishes occasionally, limited open-source footprint, compensation below FAANG/top AI labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "d4fbb6c914"
+   ],
+   "value": "Non-profit, self-funded SRO. Revenue comes from mandatory membership fees, annual assessments based on firm revenue, transaction fees (e.g., trade reporting), fines/disgorgement, and licensing/exam fees. Surplus is reinvested in operations and reserves."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, mission-oriented, process-heavy, collaborative. Long tenures common; strong internal mobility. Less \"move fast and break things,\" more \"move correctly and document everything.\" Diversity & inclusion emphasized."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "d4fbb6c914"
+   ],
+   "value": "U.S. broker-dealer firms (approx. 3,400 firms, 600k+ registered reps), capital markets participants, investors (via BrokerCheck), and the SEC (to whom FINRA reports)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$135k base + 5-10% target bonus + modest RSU/equity equivalent (non-profit phantom stock). Total comp ~$120k-$150k. Below top-tier AI labs ($200k+)."
   },
   "evidence_sha": "ccbd13186c5e0d1a",
+  "generated_at": 1784798108,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d4fbb6c914"
+   ],
+   "value": "Financial regulation / Self-regulatory organization (SRO) / FinTech (regtech)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect behavioral questions on regulatory/ethical judgment, cross-functional collaboration, and handling ambiguity in a rule-bound environment. Technical screens cover scalable data engineering, SQL, Python, ML fundamentals (anomaly detection, NLP), and system design for high-throughput pipelines. LeetCode hard is rare; practical, domain-aware problems dominate. Prepare examples of explaining technical trade-offs to non-technical stakeholders."
   },
+  "last_attempt_at": 1784798108,
   "last_evidence_at": 1784677597,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Washington, DC & New York, NY. Major offices: Rockville (MD), Chicago, San Francisco, Denver, Boca Raton, Atlanta. Hybrid work policy (typically 3 days on-site)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "d4fbb6c914"
+   ],
+   "value": "To protect investors and ensure market integrity through effective, efficient regulation of the securities industry."
+  },
   "name": "FINRA",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate – Deliberate, compliance-gated releases; quarterly planning cycles; on-call rotations exist but are bounded. Faster than federal agencies, slower than venture-backed tech."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "d4fbb6c914"
+   ],
+   "value": "Regulatory rule-writing and enforcement; broker-dealer examinations and licensing (via CRD); market surveillance and trade reporting facilities (e.g., TRACE, ORF); dispute resolution (arbitration/mediation); investor education (BrokerCheck); technology platforms for compliance and data analytics."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days PTO + 11 federal holidays + 2 personal days (accrues with tenure)."
   },
+  "refresh_after": 1789982108,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -84201,7 +84342,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full shutdown between Christmas and New Year (5-7 business days). Summer Fridays or early-close days occasionally offered."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "d4fbb6c914"
+   ],
+   "value": "Large, mature non-profit (~3,500 employees). Established 2007 (consolidation of NASD & NYSE regulation). Not a startup; operates with federal oversight."
   },
   "sources": [
    {
@@ -84235,14 +84383,37 @@
     "url": "https://www.bing.com/ck/a?!&&p=22b675cccc78e8c976395381de11f7384e44a1f1cfe692b3c76f23c43ef1833eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=304c9329-257b-6eeb-2979-84b424526fb5&u=a1aHR0cHM6Ly93d3cuZmlucmEub3JnLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cap-exempt H-1B employer (non-profit research/education nexus). Sponsors H-1B, Green Card (PERM), O-1, TN. History of approvals for tech roles; process managed by internal immigration team."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "d4fbb6c914"
+   ],
+   "value": "FINRA is a self-regulatory organization (SRO) authorized by Congress to oversee U.S. broker-dealers. It writes and enforces rules, examines firms, and runs market surveillance to protect investors and ensure market integrity."
+  },
+  "synthesized_evidence_sha": "ccbd13186c5e0d1a",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large-scale market surveillance (billions of events/day), regulatory data pipelines, BrokerCheck/CRD platforms, analytics for fraud/manipulation detection, cloud migration, AI/ML for anomaly detection and NLP on rule filings, cybersecurity, and internal tooling for examiners."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677597,
   "web_search_url": "https://duckduckgo.com/?q=FINRA+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "FINRA offers mission-driven work (investor protection) with massive, unique financial datasets and real-time surveillance scale that few private firms match. Pay is competitive for a non-profit but below top-tier tech/AI labs; culture is more structured and bureaucratic than a fast-moving startup, with stronger WLB guardrails (core hours, limited on-call) but slower innovation cycles. Good fit if you prioritize public-impact, stability, and sane hours over elite AI prestige or maximum compensati"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "7.5/10 – Core hours ~9-5, limited weekend work, generous federal holidays, hybrid flexibility. Occasional surge during rule deadlines or market events."
   }
  },
  "finvi": {
@@ -137217,11 +137388,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -137233,6 +137406,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784798108,
   "last_evidence_at": 1784675221,
   "name": "Makai Labs",
   "pace_of_work": {
@@ -173607,7 +173781,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -173625,7 +173799,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
-  "last_attempt_at": 1784797949,
+  "last_attempt_at": 1784798108,
   "last_evidence_at": 1784675467,
   "name": "Plaid",
   "pace_of_work": {
@@ -177924,40 +178098,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High — operating in cutting-edge AI search visibility with a differentiated product vision; likely attracts top-tier talent but lacks the brand recognition of FAANG or established AI labs."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "200881a2e8"
+   ],
+   "value": "B2B SaaS platform subscription model for AI search marketing and visibility optimization. Pricing tiers and exact monetization details are not publicly disclosed."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "200881a2e8"
+   ],
+   "value": "Estimated: Mission-driven, product-obsessed, technically ambitious but potentially culture-conscious given 'not your workload' positioning. Likely flat, collaborative, with high autonomy. Unknown diversity, inclusion, or management practices."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "200881a2e8"
+   ],
+   "value": "B2B marketers and brands seeking to optimize their visibility in AI-powered search experiences. No specific customer names or segments are disclosed in available sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$160k base + equity (0.05%-0.15% for early engineering hires), competitive with top-tier startup offers but below FAANG new grad total comp (~$200k+). No public data."
   },
   "evidence_sha": "624bb5bbfc17a6ce",
+  "generated_at": 1784798108,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "200881a2e8"
+   ],
+   "value": "AI-powered marketing technology (MarTech) / AI search optimization / B2B SaaS"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical interviews focused on ML/NLP for search relevance, scalable data pipelines, and full-stack product engineering. Prepare to discuss how you'd measure brand visibility in AI search, design experiments for LLM-driven ranking, and build intuitive analytics for non-technical marketers. Behavioral questions may probe ownership, speed of learning, and ability to balance ambition with sustainability — ask about typical sprint cycles, on-call expectations, and how the team protects "
   },
-  "last_attempt_at": 1784797949,
+  "last_attempt_at": 1784798108,
   "last_evidence_at": 1784677597,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquartered in the United States (likely San Francisco Bay Area or New York) with potential for remote/hybrid work. No official location data found in sources."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "200881a2e8"
+   ],
+   "value": "To provide the full-stack marketing platform for the marketer of the future, enabling brands to scale their AI search presence without scaling their workload."
+  },
   "name": "Profound",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "200881a2e8"
+   ],
+   "value": "Estimated: Fast — early-stage startup in a rapidly evolving AI category; likely emphasizes shipping speed and iteration, but 'scale your presence, not your workload' hint may indicate intentional pace management."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "200881a2e8"
+   ],
+   "value": "A full-stack marketing platform for AI search visibility that enables brands to understand, analyze, build, and measure their presence in AI search results. Specific product modules or features are not detailed in public sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 holidays (typical for well-funded US tech startups). No official policy published."
   },
+  "refresh_after": 1789982108,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -177967,7 +178193,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns (e.g., winter break) documented. Some startups implement summer/winter pauses — ask directly."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Early-stage startup (likely Seed or Series A) with a small team, given the limited public footprint and marketing-focused positioning."
   },
   "sources": [
    {
@@ -178001,14 +178232,37 @@
     "url": "https://www.tryprofound.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As an early-stage startup, visa sponsorship (H-1B, STEM OPT) may be available on a case-by-case basis but is not guaranteed. No public policy statements found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "200881a2e8"
+   ],
+   "value": "Profound is a full-stack marketing platform built for the AI search era, helping brands understand, analyze, build, and measure their visibility in AI-driven search results. The company positions itself as the platform for the 'marketer of the future' to scale presence without scaling workload."
+  },
+  "synthesized_evidence_sha": "624bb5bbfc17a6ce",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Building AI/ML systems for search visibility analysis, large-scale data processing for brand mention tracking, and a full-stack marketing analytics platform. Likely involves NLP, LLM integration, and real-time data pipelines."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677597,
   "web_search_url": "https://duckduckgo.com/?q=Profound+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Profound operates at the intersection of AI, search, and marketing analytics — a high-growth, technically rich space that offers elite prestige for new grads. As an early-stage company building the 'platform for the marketer of the future,' it likely provides fast-paced innovation, direct product impact, and steep learning curves without the bureaucracy of big tech. The mission to 'scale presence, not workload' suggests a product philosophy that may extend to internal culture, potentially suppor"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7/10 — mission and product philosophy suggest awareness of burnout risks, but early-stage demands and competitive AI market may pressure hours. No public policy data."
   }
  },
  "prosidian consulting": {
@@ -230036,7 +230290,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -230054,7 +230308,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
-  "last_attempt_at": 1784797949,
+  "last_attempt_at": 1784798108,
   "last_evidence_at": 1784583341,
   "name": "Trinity Health",
   "pace_of_work": {
@@ -237558,7 +237812,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -237576,7 +237830,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784797949,
+  "last_attempt_at": 1784798108,
   "last_evidence_at": 1784675132,
   "name": "University of Texas - Austin",
   "pace_of_work": {
