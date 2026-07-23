@@ -18954,11 +18954,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -18970,6 +18972,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784835830,
   "last_evidence_at": 1784677176,
   "name": "Apten",
   "pace_of_work": {
@@ -37381,40 +37384,96 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Established industry leader with growing AI investment; prestigious within med-tech but not a primary AI research hub like top tech labs. Strong for applied ML with clinical impact."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "ef72973c05",
+    "db94b2969c"
+   ],
+   "value": "Revenue comes from selling proprietary medical devices and associated services. High R&D investment drives product pipeline; regulatory approvals create barriers to entry. Recurring revenue from procedure volumes and service contracts supplements capital equipment sales."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Collaborative, mission-oriented, engineering-respectful, with increasing digital/agile adoption. Bureaucracy present but navigable; leadership emphasizes quality and patient safety."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "ef72973c05",
+    "db94b2969c"
+   ],
+   "value": "Primary customers are hospitals, clinics, and healthcare systems globally, with sales through direct sales forces and distributors. Physicians and interventional specialists are key decision influencers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$135k base + 10-15% target bonus + RSU ($20k-$40k over 4 years) for AI/DS roles in major hubs."
   },
   "evidence_sha": "baed4aadcfc1ede8",
+  "generated_at": 1784835830,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ef72973c05",
+    "db94b2969c"
+   ],
+   "value": "Medical Devices / MedTech"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect questions on applied ML in regulated environments (FDA/CE), model validation, edge deployment on medical devices, and cross-functional collaboration with clinical/regulatory teams. Demonstrate ability to balance innovation speed with safety/quality rigor. Highlight projects with real-world deployment, especially in healthcare or similarly constrained domains."
   },
-  "last_attempt_at": 1784835685,
+  "last_attempt_at": 1784835830,
   "last_evidence_at": 1784675295,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "ef72973c05",
+    "db94b2969c"
+   ],
+   "value": "Headquartered in Marlborough, MA. Major R&D and manufacturing hubs in Massachusetts, Minnesota, California, Ireland, Costa Rica, and China. Global sales and clinical operations."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "ef72973c05",
+    "db94b2969c"
+   ],
+   "value": "Transforming lives through innovative medical solutions that improve the health of patients around the world."
+  },
   "name": "Boston Scientific",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Measured and process-driven due to regulatory constraints; faster in digital health incubators. Not a 'move fast and break things' culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "ef72973c05",
+    "db94b2969c"
+   ],
+   "value": "Key product lines include coronary stents, pacemakers, defibrillators, catheter-based therapies, endoscopy devices, urology and pelvic health solutions, and neuromodulation systems for chronic pain and movement disorders."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual PTO + 10-12 company holidays; additional volunteer time off."
   },
+  "refresh_after": 1790019830,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -37424,7 +37483,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some sites observe reduced schedules between Christmas and New Year."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "ef72973c05",
+    "db94b2969c"
+   ],
+   "value": "Large-cap public company (NYSE: BSX) with ~45,000 employees globally, $14B+ annual revenue, and operations in 100+ countries. Mature, profitable, and acquisitive."
   },
   "sources": [
    {
@@ -37458,14 +37525,43 @@
     "url": "https://login.microsoftonline.com/b5b8b483-5597-4ae7-8e27-fcc464a3b584/saml2?SAMLRequest=jVLLbtswELz7KwTd9X5QJSwXbpy2BlxbiN0eegkoirQJSKTKpdL070sqTZMgaFDeuJyZnZ3lEsjQj3g9mYu8YT8mBmbhefdDLwHPT7U%2FaYkVAQFYkoEBNhQf1192OA1jPGplFFW9%2F4L0NocAMG2Eko603dT%2BYX%2B9O3za7m9T3uZ5XDJSkYQnSdlllCPEUVYWhPMuKVFW5CUqHfEb02A1at9KurvnNVrdiY7pve1Y%2B9fifDFc9d3cBWBiWwmGSGMZcVoGMQrS5JRmOK5wgr471MYOLyQxs%2BzFmBFwFPXqLGQ4CKoVKG6U7IVkIVVD1BZt1eZVFhTFOxTkhKGgYikKOKV5mZOsLao8cnGkTrz5k9QHITshz29H1D6AAH8%2BnZqgORxPTmL9GNyVkjANTB%2BZvhOUfb3ZPfltFViTQAWTRnBBQ%2FYYREhEBKBuid31e0KhfgW1U%2FmrOcul843n2PTqv6SX0XPKk8iI3T62m0b1gv6a6%2B58VHog5t8pJGEyV0QX8BmKJwkjo7Yv6%2Fy%2FMuu%2BVz%2BvNCPGrtzoifletFosHsy8%2FNar3w%3D%3D&RelayState=http%3A%2F%2Fbostonscientific.eightfold.ai%2Fhome"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "1b108f2a4e"
+   ],
+   "value": "Established H-1B and green card sponsor for technical roles. Global mobility programs support internal transfers. Visa sponsorship typical for specialized engineering and data science positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "ef72973c05",
+    "db94b2969c"
+   ],
+   "value": "Boston Scientific is a global medical device manufacturer that develops, manufactures, and markets devices for interventional medical specialties including cardiology, urology, endoscopy, and neuromodulation. The company generates revenue by selling innovative medical technologies to hospitals and healthcare providers worldwide."
+  },
+  "synthesized_evidence_sha": "baed4aadcfc1ede8",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "ef72973c05",
+    "db94b2969c"
+   ],
+   "value": "Engineering spans embedded systems, signal processing, materials science, robotics, data analytics, and AI/ML for diagnostics, imaging enhancement, and therapy optimization. Increasing focus on digital health platforms and connected devices."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675295,
   "web_search_url": "https://duckduckgo.com/?q=Boston+Scientific+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Boston Scientific offers a mission-driven med-tech environment where AI/data science directly impacts patient outcomes. As a large public company, it provides elite prestige, competitive new-grad compensation, and structured career ladders. The regulated industry pace is deliberate but innovation-focused in digital health, with stronger WLB norms than high-burnout tech sectors. Guaranteed shutdowns are not standard, but sane hours are culturally expected outside critical launch periods."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 – generally respected hours, limited weekend work outside launches, but on-call rotations exist for production systems."
   }
  },
  "bot auto": {
@@ -57887,11 +57983,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -57903,6 +58001,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784835830,
   "last_evidence_at": 1784677664,
   "name": "Commerce Architects",
   "pace_of_work": {
@@ -117045,39 +117144,98 @@
  },
  "imc": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "861e46ccfa"
+   ],
+   "value": "Tier 1 (elite): known for cutting-edge deep learning research, massive compute, and direct application to high-frequency trading strategies; competes for top AI/DS talent globally."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "861e46ccfa"
+   ],
+   "value": "Market-making and proprietary quantitative trading: earning bid-ask spreads and capturing short-term price inefficiencies across global asset classes using cutting-edge technology and research."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "861e46ccfa"
+   ],
+   "value": "Highly technical, collaborative, research-driven, and meritocratic; engineers and researchers work side-by-side with traders; flat hierarchy, strong peer review, and emphasis on collective problem solving."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "861e46ccfa"
+   ],
+   "value": "Financial markets broadly: exchanges, institutional counterparties, and retail participants who benefit from tight spreads and deep liquidity provided by IMC's market-making activity."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $175,000-$225,000 base + significant signing bonus + performance bonus (total comp often $250k-$350k+); highly competitive with top quant firms."
   },
   "evidence_sha": "7f80437d65980869",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784835830,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "861e46ccfa"
+   ],
+   "value": "Quantitative trading / proprietary trading / market making / financial technology"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "861e46ccfa"
+   ],
+   "value": "Expect deep technical interviews covering C++ performance engineering, probability/statistics, machine learning system design, low-latency architecture, and real-world problem solving with large datasets; prepare to discuss research-to-production pipelines and collaborative innovation."
+  },
+  "last_attempt_at": 1784835830,
   "last_evidence_at": 1784676901,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "861e46ccfa"
+   ],
+   "value": "Global offices including Amsterdam (HQ), Chicago, New York, Sydney, Hong Kong, Singapore, and others; US presence via IMC Trading Chicago and New York."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "861e46ccfa"
+   ],
+   "value": "To relentlessly innovate across high-performance computing systems, deep learning models, and massive data to solve the market's toughest problems through collective intelligence."
+  },
   "name": "IMC",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced, intellectually intense, and deadline-driven during market hours; innovation cycles are rapid but structured around market schedules, not arbitrary crunch."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "861e46ccfa"
+   ],
+   "value": "Quantitative trading strategies, market-making services, liquidity provision across equities, options, futures, and crypto (spot, perpetuals, futures, options) both on- and off-chain; high-performance computing infrastructure and deep learning model deployment."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days PTO plus market holidays; flexible personal time; no public policy details."
   },
+  "refresh_after": 1790019830,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -117087,7 +117245,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Market holidays observed; no formal company-wide shutdowns but low activity during major holiday periods (e.g., Christmas/New Year)."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "861e46ccfa"
+   ],
+   "value": "Established global firm with offices in Amsterdam, Chicago, New York, Sydney, Hong Kong, and other financial hubs; hundreds of employees; privately held, profitable, and continuously expanding into new asset classes like crypto."
   },
   "sources": [
    {
@@ -117121,14 +117286,41 @@
     "url": "https://www.imc.com/us/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Actively sponsors H-1B and other work visas for technical roles given global talent needs; specific policies not publicly detailed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "861e46ccfa"
+   ],
+   "value": "IMC is a global quantitative trading firm and market maker that uses high-performance computing, deep learning, and massive data analysis to develop trading strategies across asset classes including equities, derivatives, and cryptocurrencies. It makes money by providing liquidity to financial markets and capturing small price discrepancies through high-frequency, algorithmic trading."
+  },
+  "synthesized_evidence_sha": "7f80437d65980869",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "861e46ccfa"
+   ],
+   "value": "Core work involves high-performance computing (C++, FPGA, GPU), deep learning research and model deployment, large-scale data engineering, low-latency systems, and algorithmic strategy development across multiple asset classes including crypto."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676901,
   "web_search_url": "https://duckduckgo.com/?q=IMC+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "861e46ccfa"
+   ],
+   "value": "IMC offers elite prestige in quantitative finance and AI/DS with top-tier new-grad compensation, a culture built on technical innovation (HPC, deep learning, massive data) rather than bureaucracy, and a stated emphasis on collective intelligence and sustainable pace — aligning with your desire for high impact, fast learning, and work-life balance in a mission-driven, non-toxic environment."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — market hours provide natural boundaries; culture emphasizes sustainable pace and collective intelligence over burnout; weekends generally protected except rare incidents."
   }
  },
  "imc trading": {
@@ -162700,47 +162892,111 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Respected applied AI team with production impact at scale, but not a primary research lab. Strong for production ML engineering and analytics; less known for publishing."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "765090e7e8"
+   ],
+   "value": "Omnichannel retail: revenue from direct sales (stores and e-commerce) of owned and branded merchandise, plus services like alterations and personal styling. Operates Nordstrom (full-price) and Nordstrom Rack (off-price) banners."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "765090e7e8"
+   ],
+   "value": "Customer-obsessed, collaborative, low-ego. 'Teamwork and care make a real impact.' Values-driven (respect, integrity, empowerment). Long-tenured leadership; internal mobility encouraged."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "765090e7e8"
+   ],
+   "value": "Affluent and style-conscious consumers seeking premium and value-oriented fashion, beauty, and home products across multiple price points."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $115k–$135k base + 10–15% target bonus + RSU (~$25k–$40k/yr vesting). Total comp ~$150k–$190k. Seattle/SF premium applies."
   },
   "evidence_sha": "1b7f08522fee83c5",
+  "generated_at": 1784835830,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "765090e7e8"
+   ],
+   "value": "Retail / Fashion / E-commerce"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "765090e7e8"
+   ],
+   "value": "Expect applied ML system design (recommendations, forecasting, search), SQL/analytics case studies using retail data, and behavioral questions tied to 'customer obsession' and cross-functional collaboration. Prepare to discuss model deployment constraints in a legacy + cloud hybrid environment."
+  },
+  "last_attempt_at": 1784835830,
+  "last_evidence_at": 1784677097,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Headquartered in Seattle, WA. Tech hubs in Seattle, San Francisco, and Toronto. Stores across the U.S. and Canada. Remote-friendly for many tech roles."
   },
-  "last_evidence_at": 1784677097,
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "765090e7e8"
+   ],
+   "value": "To help customers feel good and look their best, shaping how the company works, grows, and creates a place where both careers and people thrive."
+  },
   "name": "Nordstrom",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "765090e7e8"
+   ],
+   "value": "Fast-paced but project-driven; sprints aligned to retail calendars (holiday, anniversary sale). Source describes 'fast-paced environment where teamwork and care make a real impact.'"
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "765090e7e8"
+   ],
+   "value": "Apparel, footwear, beauty products, accessories, and home furnishings sold through Nordstrom full-line stores, Nordstrom Rack, and digital channels."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10 company holidays + 2 floating days; accrual increases with tenure. No public policy detail found."
   },
+  "refresh_after": 1790019830,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "765090e7e8"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full week shutdown between Christmas and New Year; additional 'recharge days' quarterly. Not guaranteed annually."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public company (NYSE: JWN); ~60,000 employees; mature, profitable retailer with significant digital transformation underway."
   },
   "sources": [
    {
@@ -162774,14 +163030,41 @@
     "url": "https://careers.nordstrom.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors H-1B and STEM OPT for specialized tech roles; green card support for senior talent. No public policy details found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "765090e7e8"
+   ],
+   "value": "Nordstrom is a leading fashion retailer operating full-line stores, Nordstrom Rack off-price stores, and e-commerce platforms. The company makes money through retail sales of apparel, shoes, beauty, accessories, and home goods across its owned brands and third-party labels."
+  },
+  "synthesized_evidence_sha": "1b7f08522fee83c5",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "E-commerce platform, personalization/recommendation engines, inventory optimization, supply chain analytics, customer data platforms, and in-store tech (mobile POS, clienteling apps). AI/ML used for demand forecasting, search ranking, and marketing personalization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677097,
   "web_search_url": "https://duckduckgo.com/?q=Nordstrom+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "765090e7e8"
+   ],
+   "value": "Nordstrom offers a rare blend of retail-scale data (60M+ customers), genuine omnichannel complexity, and a stated culture of 'care' that prioritizes sustainable pace. For a new-grad AI/DS hire, this means elite-tier data access and production ML impact without the burnout culture of pure-play tech giants."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "765090e7e8"
+   ],
+   "value": "Estimated: 4/5 — Culture emphasizes sustainable pace and 'careers and people thrive'; retail peak periods (Nov–Dec) require extra hours but compensated with comp time/shutdowns."
   }
  },
  "norsk hydro": {
@@ -184172,48 +184455,144 @@
  "proception inc": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "1c7a3fa1ec",
+    "f519750a0e",
+    "e792064df7"
+   ],
+   "value": "Estimated: Unknown — no research publications, conference presence, or technical blog posts found in sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "1c7a3fa1ec",
+    "f519750a0e",
+    "e792064df7"
+   ],
+   "value": "No business model information found in the provided sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "1c7a3fa1ec",
+    "f519750a0e",
+    "e792064df7"
+   ],
+   "value": "Estimated: Unknown — no culture artifacts (handbook, values, team rituals) found in sources."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "1c7a3fa1ec",
+    "f519750a0e",
+    "e792064df7"
+   ],
+   "value": "No customer information found in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Estimated: Unknown — no compensation data, offer letters, or levels.fyi reports in sources. YC startups often pay $120k-$180k base + equity for new grad SWE, but AI/DS roles may command premium."
   },
   "evidence_sha": "e7855532d2685879",
+  "generated_at": 1784835830,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Technology / Software (inferred from YC job board context), but unconfirmed."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate should probe: actual AI/DS project scope and prestige markers; concrete WLB policies (shutdown rituals, on-call); mentorship structure for new grads; equity vs cash compensation transparency; team velocity vs sustainability."
+  },
+  "last_attempt_at": 1784835830,
   "last_evidence_at": 1784675304,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "1c7a3fa1ec",
+    "f519750a0e",
+    "e792064df7"
+   ],
+   "value": "No location information found in the provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "1c7a3fa1ec",
+    "f519750a0e",
+    "e792064df7"
+   ],
+   "value": "No mission statement found in the provided sources."
+  },
   "name": "Proception Inc",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "1c7a3fa1ec",
+    "f519750a0e",
+    "e792064df7"
+   ],
+   "value": "Estimated: Unknown — no employee reviews, engineering blogs, or process descriptions available."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "1c7a3fa1ec",
+    "f519750a0e",
+    "e792064df7"
+   ],
+   "value": "No product information found in the provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "1c7a3fa1ec",
+    "f519750a0e",
+    "e792064df7"
+   ],
+   "value": "Estimated: Unknown — no PTO policy documentation in sources."
   },
+  "refresh_after": 1790019830,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "1c7a3fa1ec",
+    "f519750a0e",
+    "e792064df7"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "1c7a3fa1ec",
+    "f519750a0e",
+    "e792064df7"
+   ],
+   "value": "Estimated: Unknown — no mention of company-wide shutdowns, summer/winter breaks, or mandatory disconnect policies."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Estimated: Early-stage startup (potentially YC-affiliated per source 3), but no concrete size or stage data available."
   },
   "sources": [
    {
@@ -184247,14 +184626,51 @@
     "url": "https://www.workatastartup.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "1c7a3fa1ec",
+    "f519750a0e",
+    "e792064df7"
+   ],
+   "value": "No visa sponsorship information found in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "1c7a3fa1ec",
+    "f519750a0e",
+    "e792064df7"
+   ],
+   "value": "Proception Inc appears to be a technology company, but the provided sources contain no verifiable information about its operations, products, or business model. The sources reference unrelated content (proxy server documentation, Cisco configuration guides, and a generic Y Combinator job board)."
+  },
+  "synthesized_evidence_sha": "e7855532d2685879",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "1c7a3fa1ec",
+    "f519750a0e",
+    "e792064df7"
+   ],
+   "value": "No technical work details found in the provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675304,
   "web_search_url": "https://duckduckgo.com/?q=Proception+Inc+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Candidate seeks elite AI/data science role with high new-grad pay, fast innovative culture, mission-driven work, strong WLB with guaranteed shutdowns, and accelerated learning without burnout. Cannot assess fit due to insufficient company data in sources."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1c7a3fa1ec",
+    "f519750a0e",
+    "e792064df7"
+   ],
+   "value": "Estimated: Unknown — no Glassdoor/Blind data, policy docs, or employee testimonials in sources."
   }
  },
  "procom": {
@@ -208388,7 +208804,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -208406,7 +208822,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784835685,
+  "last_attempt_at": 1784835830,
   "last_evidence_at": 1784675475,
   "name": "Sev1Tech",
   "pace_of_work": {
@@ -238482,11 +238898,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -238498,6 +238916,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784835830,
   "last_evidence_at": 1784674229,
   "name": "Tria Federal",
   "pace_of_work": {
