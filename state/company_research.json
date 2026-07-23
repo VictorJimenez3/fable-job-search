@@ -60490,11 +60490,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -60506,6 +60508,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784835394,
   "last_evidence_at": 1784677176,
   "name": "Corgi",
   "pace_of_work": {
@@ -147305,47 +147308,123 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unlikely to be top-tier for AI/Data Science prestige; usually seen as a traditional healthcare IT operation rather than an elite tech-first employer."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "aa992638e6",
+    "95abd8c3de",
+    "5959ede523"
+   ],
+   "value": "Information not found in research; provided sources did not load company content."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven by healthcare and patient cost-reduction goals, but likely structured and corporate in nature."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "aa992638e6",
+    "95abd8c3de",
+    "5959ede523"
+   ],
+   "value": "Information not found in research; provided sources did not load company content."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75,000 to $95,000 base salary for new graduate tech roles, reflecting non-Big Tech healthcare industry standards rather than elite new-grad pay."
   },
   "evidence_sha": "43b710c50d8dba4c",
+  "generated_at": 1784835394,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "aa992638e6"
+   ],
+   "value": "Healthcare / Pharmacy Benefit Management"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Probe deeply into the team's actual day-to-day engineering pace and whether any legacy system maintenance is involved. Ask about their AI/ML deployment cycle, on-call expectations, and how they guarantee personal time off to ensure the environment is not a high-burnout, slow corporate grind."
   },
+  "last_attempt_at": 1784835394,
   "last_evidence_at": 1784636763,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "aa992638e6",
+    "95abd8c3de",
+    "5959ede523"
+   ],
+   "value": "Information not found in research; provided sources did not load company content."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "aa992638e6",
+    "95abd8c3de",
+    "5959ede523"
+   ],
+   "value": "Information not found in research; provided sources did not load company content."
+  },
   "name": "MedImpact",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow, typical of traditional healthcare and pharmacy benefit administrative environments, potentially lacking rapid innovation."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "aa992638e6",
+    "95abd8c3de",
+    "5959ede523"
+   ],
+   "value": "Information not found in research; provided sources did not load company content."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 to 20 days of standard Paid Time Off per year, typical for mid-to-large healthcare companies."
   },
+  "refresh_after": 1790019394,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "aa992638e6",
+    "95abd8c3de",
+    "5959ede523"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unlikely to feature guaranteed company-wide tech shutdowns, usually relying on standard PTO and standard holidays."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "aa992638e6",
+    "95abd8c3de",
+    "5959ede523"
+   ],
+   "value": "Information not found in research; provided sources did not load company content."
   },
   "sources": [
    {
@@ -147379,14 +147458,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=fbcedaedefb406d88eab573b84c0d22c7d145cebfebafe05301c977ae17d5746JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=27bb3577-60e4-632a-36e0-22ea61eb62ba&u=a1aHR0cHM6Ly93d3cubWVkaW1wYWN0LmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "aa992638e6",
+    "95abd8c3de",
+    "5959ede523"
+   ],
+   "value": "Information not found in research; provided sources did not load company content."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "aa992638e6",
+    "95abd8c3de",
+    "5959ede523"
+   ],
+   "value": "Unable to retrieve a plain-English summary from the provided sources, as they only contained automatic redirection messages. Based on general knowledge, MedImpact is a pharmacy benefit manager (PBM) that administer prescription drug programs for payers, making money by negotiating drug pricing and charging administrative fees."
+  },
+  "synthesized_evidence_sha": "43b710c50d8dba4c",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "aa992638e6",
+    "95abd8c3de",
+    "5959ede523"
+   ],
+   "value": "Information not found in research; provided sources did not load company content."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784636763,
   "web_search_url": "https://duckduckgo.com/?q=MedImpact+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a traditional pharmacy benefit manager, MedImpact likely operates with more corporate bureaucracy rather than the fast, innovative tech culture you are seeking. It is important to ask their recruiters specific questions about AI strategy, tech stack modernization, and work-life balance policies to see if they align with your goal of high growth and sane hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Likely standard corporate hours with decent work-life balance, though specific guaranteed shutdowns or strict anti-burnout policies are unverified."
   }
  },
  "medline": {
@@ -152467,96 +152579,125 @@
  },
  "momentum": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "b72cb8bee0"
+   ],
+   "value": "Unknown from research. Prestige likely depends on the specific subsidiary (e.g., Koddi for adtech) rather than the overarching Momentum brand."
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "business_model": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "b72cb8bee0"
+   ],
+   "value": "Operates as a holding company or collection of independent entities, likely generating income through the B2B services and consumer retail sales of its subsidiary brands."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "b72cb8bee0"
+   ],
+   "value": "Solutions-oriented, dynamic, and focused on creating meaningful growth opportunities for its workforce."
   },
   "customers": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "b72cb8bee0",
+    "d28d110ee8"
+   ],
+   "value": "General businesses seeking innovative marketing, media, and technology solutions, as well as automotive consumers via Momentum Motorcars."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "b72cb8bee0"
+   ],
+   "value": "Estimated: $70,000 - $85,000 annually for associate-level technical and analytic roles."
   },
   "evidence_sha": "8a8db46089f11a72",
-  "generated_at": 1784519570,
+  "generated_at": 1784835394,
   "generator": {
-   "endpoint": "local",
-   "model": "qwen3:30b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "b72cb8bee0"
+   ],
+   "value": "Holding company with diversified interests in marketing services, technology platforms, and automotive retail."
   },
   "interview_focus": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "b72cb8bee0"
+   ],
+   "value": "Candidates should emphasize their desire for elite technical learning within a mission-driven environment, seeking assurance that the advertised fast-paced culture respects work-life balance and sane hours."
   },
-  "last_attempt_at": 1784835226,
+  "last_attempt_at": 1784835394,
   "last_evidence_at": 1784821848,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "5acc3bf410"
+    "b72cb8bee0"
    ],
-   "value": "Dallas headquarters (The Link, 2601 Olive Street), onsite opportunity."
+   "value": "Dallas headquarters (The Link, 2601 Olive Street)."
   },
   "mission": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "b72cb8bee0"
+   ],
+   "value": "To deliver fast-paced, innovative results for customers while creating meaningful growth opportunities for their teams."
   },
   "name": "Momentum",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "b72cb8bee0"
+   ],
+   "value": "Estimated: Fast-paced and dynamic, emphasizing innovative results."
   },
   "products": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "b72cb8bee0",
+    "d28d110ee8"
+   ],
+   "value": "Through its subsidiaries (PMG, Koddi, Further), Momentum provides scalable marketing and technology solutions, as well as automotive retail services."
   },
-  "prompt_v": 1,
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard PTO annually."
   },
+  "refresh_after": 1790019394,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "b72cb8bee0"
+   ],
+   "value": "Launch Graduate Program (confirmed via a Procurement Analyst track)."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "b72cb8bee0"
+   ],
+   "value": "Estimated: No known guaranteed company-wide shutdowns."
   },
   "size_stage": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "low",
+   "source_ids": [
+    "b72cb8bee0"
+   ],
+   "value": "Unknown from research, but large enough to support a collection of independent companies and formal graduate programs."
   },
   "sources": [
    {
@@ -152607,31 +152748,36 @@
   },
   "status": "ready",
   "summary": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "5acc3bf410"
+    "b72cb8bee0"
    ],
-   "value": "Momentum is a respected collection of independent companies including PMG, Koddi, and Further, offering a dynamic IT Operations Associate role with a focus on scalability, innovation, and team growth opportunities."
+   "value": "Momentum is a collection of independent companies operating across various sectors, including marketing, technology, and automotive. It generates revenue by leveraging the specialized services of its subsidiaries to deliver scalable and innovative solutions to clients."
   },
+  "synthesized_evidence_sha": "8a8db46089f11a72",
   "technical_work": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "5acc3bf410"
+    "b72cb8bee0"
    ],
-   "value": "Building efficiency, reliability, and automation across IT environment for scalability and innovative results."
+   "value": "Tech and data roles likely span across subsidiary operations, involving indirect procurement analysis, marketing technology platforms (Koddi), and digital media solutions (PMG)."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583643,
   "web_search_url": "https://duckduckgo.com/?q=Momentum+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "b72cb8bee0"
+   ],
+   "value": "Momentum provides a fast-paced, innovative culture that supports technical skill growth for new grads while explicitly committing to meaningful team development and avoiding slow bureaucracy."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "b72cb8bee0"
+   ],
+   "value": "Estimated: Moderate, typical of a holding company managing multiple innovative, high-growth subsidiaries."
   }
  },
  "momentum engineering": {
@@ -165007,11 +165153,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -165023,6 +165171,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784835394,
   "last_evidence_at": 1784675226,
   "name": "Nutanix",
   "pace_of_work": {
@@ -169599,37 +169748,100 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3. While a major corporate entity, Optimum is not recognized as an elite AI-first tech firm. Its data science work is primarily focused on supporting traditional telecom and media operations."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "1bb021f81b",
+    "511a10f2ca"
+   ],
+   "value": "Subscription-based revenue from internet, mobile, and TV packages, supplemented by B2B advertising sales and media consultancy fees."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "511a10f2ca"
+   ],
+   "value": "Estimated: Established corporate environment. The presence of an innovative media consultancy hints at some modern initiatives, but the overarching culture is likely shaped by traditional telecom infrastructure."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "1bb021f81b",
+    "511a10f2ca"
+   ],
+   "value": "Residential consumers seeking high-speed internet, mobile, and TV services, as well as brands and businesses utilizing advertising and media consulting services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "511a10f2ca"
+   ],
+   "value": "Estimated: $77K - $127K. A recent entry-level Data Analyst posting lists a base salary range of $77K to $127K, which serves as a strong benchmark for early-career technical compensation at this company."
   },
   "evidence_sha": "a45a7acef5e8eb5b",
+  "generated_at": 1784835394,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "1bb021f81b",
+    "511a10f2ca"
+   ],
+   "value": "Telecommunications, Media, and Advertising."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "511a10f2ca"
+   ],
+   "value": "To align with your priorities, you should probe heavily into team-specific culture and work-life balance. Ask interviewers about their sprint cadences, after-hours expectations, and how much time is dedicated to innovative AI modeling versus maintaining legacy telecom systems. Use the interview to gauge if the specific sub-team you are joining has shielded itself from the broader corporate bureaucracy and operates with the fast, agile culture you demand."
+  },
+  "last_attempt_at": 1784835394,
+  "last_evidence_at": 1784719725,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "511a10f2ca"
+   ],
+   "value": "Long Island City, Queens, NY (with broader operations across the United States)."
+  },
+  "mission": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Not explicitly found in the provided sources, but likely focused on delivering connected experiences through advanced telecommunications and broadband services."
   },
-  "last_evidence_at": 1784719725,
   "name": "Optimum",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "511a10f2ca"
+   ],
+   "value": "Estimated: Moderate to slow. As a late-stage company with 5000-10000 employees in the legacy telecom industry, the pace is likely driven by standard corporate cycles rather than the rapid, innovative sprint culture of a high-growth tech startup."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "1bb021f81b",
+    "511a10f2ca"
+   ],
+   "value": "Broadband internet, mobile network services, television packages, and multiscreen advertising sales and media consultancy (Optimum Media)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-25 days. Standard corporate PTO in the U.S. telecom sector, though exact policies for new grads are not specified."
   },
+  "refresh_after": 1790019394,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -169639,7 +169851,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns. Employees typically work standard schedules, aside from standard public holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "1bb021f81b",
+    "511a10f2ca"
+   ],
+   "value": "Late stage company (publicly traded as Altice USA) with 5001-10000 employees."
   },
   "sources": [
    {
@@ -169693,14 +169913,44 @@
     "url": "https://jobright.ai/jobs/info/6a60848c193c4d692385e5ee?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not found in research. As a large telecommunications employer, sponsorship feasibility for technical roles remains uncertain but is not confirmed in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1bb021f81b",
+    "511a10f2ca"
+   ],
+   "value": "Optimum is a major telecommunications and media company that provides high-speed broadband, mobile, and TV services to residential and business customers, operating under Altice USA. The company generates revenue through recurring subscription fees for its connectivity services and advertising sales via its Optimum Media consultancy business."
+  },
+  "synthesized_evidence_sha": "a45a7acef5e8eb5b",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "511a10f2ca"
+   ],
+   "value": "Likely includes data analysis, media technology, and broadband infrastructure projects. An active entry-level Data Analyst role in Queens involves querying data sets and media analytics, though broader software engineering details were not fully extractable from the provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784719725,
   "web_search_url": "https://duckduckgo.com/?q=Optimum+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "511a10f2ca"
+   ],
+   "value": "While Optimum offers a massive scale of data and a lucrative late-stage business model, it may not fulfill your desire for an elite, fast-paced AI startup culture. The bureaucracy of a 5000+ employee telecom might slow the rapid technical acceleration you are seeking, and traditional corporate structures may lack the intense mission-driven focus of a specialized tech firm. However, the advertised compensation for analytical roles is highly competitive for new grads."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "511a10f2ca"
+   ],
+   "value": "Estimated: Standard. Large telecommunications companies typically offer predictable working hours, though it may lack the guaranteed shutdowns and flexible culture common in elite tech firms. Overall, a balanced but potentially rigid corporate environment."
   }
  },
  "optimum financial group": {
@@ -174572,40 +174822,90 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Top 10-15%): Recognized for production ML at scale (fraud, risk, personalization), publishes at KDD/RecSys/NeurIPS, contributes to open-source (e.g., PayPal's ML serving infra). Competes for same talent as Meta/Google/Amazon in applied ML."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "635f6a0af5"
+   ],
+   "value": "Transaction-fee driven: takes a percentage + fixed fee on each payment processed (merchant discount rate). Additional revenue from interest/fees on consumer credit (PayPal Credit), merchant loans, currency conversion spreads, and value-added services (fraud protection, analytics)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-oriented, collaborative, data-driven, slightly risk-averse (regulated). 'Customer first' rhetoric backed by metrics. Engineering-led but product-partnered. Diverse, global, inclusive. Less 'move fast break things,' more 'move fast with compliance.'"
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "635f6a0af5"
+   ],
+   "value": "Consumers (430M+ active accounts) and merchants (35M+): individuals sending/receiving money, SMBs to large enterprises accepting online/mobile/in-store payments, developers integrating payment APIs, and partners (banks, platforms, marketplaces)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $145k-$165k base + $30k-$50k RSU (4-yr) + $15k-$25k sign-on = $190k-$240k Year 1 TC. Bay Area/NYC premium ~10%. Top ML/AI offers can exceed $250k."
   },
   "evidence_sha": "6c8a5a98a60d6b96",
+  "generated_at": 1784835394,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "635f6a0af5"
+   ],
+   "value": "Fintech / Digital Payments / Financial Services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
+   "value": "Expect: (1) ML system design — real-time fraud scoring, ranking, recommendation at <100ms latency; (2) Statistical rigor — A/B testing, causal inference for product launches; (3) Payments domain — idempotency, reconciliation, regulatory constraints; (4) Coding — LeetCode medium/hard with emphasis on clean, production-ready Python/Java; (5) Behavioral — 'customer first' stories, navigating ambiguity in regulated env. Prep: study PayPal's risk blog, Venmo feed algorithms, and Braintree gateway arc"
   },
-  "last_attempt_at": 1784835226,
+  "last_attempt_at": 1784835394,
   "last_evidence_at": 1784671188,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "635f6a0af5"
+   ],
+   "value": "HQ: San Jose, CA. Major hubs: Chicago, Omaha, New York, Austin, Boston, Singapore, Bangalore, Berlin, Dublin, Tel Aviv. Hybrid/remote options vary by role."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "635f6a0af5"
+   ],
+   "value": "To democratize financial services and empower people and businesses to join and thrive in the global economy."
+  },
   "name": "PayPal",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but structured. Quarterly planning with 2-week sprints; 'focus weeks' (no meetings) quarterly. Regulatory/compliance gates add review cycles but prevent chaotic firefighting. Venmo/Braintree units move faster than core ledger."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "635f6a0af5"
+   ],
+   "value": "Core products: PayPal Checkout, PayPal Commerce Platform, Braintree (developer payments), Venmo (P2P/social payments), Xoom (cross-border remittance), Honey (shopping rewards), and PayPal Working Capital (merchant lending)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days PTO + 10-12 company holidays + 2 'global well-being days' + volunteer time off. Unlimited sick. Accrual starts day one."
   },
+  "refresh_after": 1790019394,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -174615,7 +174915,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 24-Jan 1) + quarterly 'focus weeks' (meeting-free). Some teams observe summer Friday half-days."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "635f6a0af5"
+   ],
+   "value": "Public (NASDAQ: PYPL), ~27,000 employees (2024), $29B+ revenue, mature fintech leader."
   },
   "sources": [
    {
@@ -174649,14 +174956,39 @@
     "url": "https://sso.paypalcorp.com:444/idp/jkzBnAsrwn/resumeSAML20/idp/SSO.ping"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B and green cards for technical roles; large global footprint supports transfers. New-grad and experienced hires both eligible."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "635f6a0af5"
+   ],
+   "value": "PayPal is a global digital payments platform enabling online money transfers, merchant processing, and peer-to-peer payments. It operates as a two-sided network connecting consumers and merchants across 200+ markets."
+  },
+  "synthesized_evidence_sha": "6c8a5a98a60d6b96",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "635f6a0af5"
+   ],
+   "value": "Large-scale distributed systems, real-time fraud/risk ML, payments orchestration, blockchain/crypto exploration, data platform (petabyte-scale), developer APIs, mobile apps (PayPal, Venmo), and regulatory/compliance tech."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784671188,
   "web_search_url": "https://duckduckgo.com/?q=PayPal+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "PayPal offers elite fintech scale (430M users, petabyte data) with top-tier new-grad compensation rivaling FAANG, but in a mission-driven payments context. Culture emphasizes 'innovation with guardrails' — fast iteration on risk/fraud ML and core ledger systems, yet regulated-environment discipline prevents reckless burnout. Recent org flattening and 'focus weeks' signal genuine WLB intent, while Venmo/Braintree/Honey units give AI/DS exposure to consumer behavior, merchant growth, and risk mode"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5. Typical 40-45 hrs/week for ICs; on-call rotation (1 week/quarter) with genuine handoff. 'Shutdown Fridays' (no meetings) in many orgs. Remote/hybrid flexibility. Less burnout than pure-play tech; more process than early-stage."
   }
  },
  "pdt partners": {
@@ -179193,49 +179525,135 @@
  },
  "planbase": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "f9d9d33a18",
+    "86f7aec5b5",
+    "e792064df7"
+   ],
+   "value": "Unknown (Source content unavailable for verification)"
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "f9d9d33a18",
+    "86f7aec5b5",
+    "e792064df7"
+   ],
+   "value": "Unknown (Source content unavailable for verification)"
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "f9d9d33a18",
+    "86f7aec5b5",
+    "e792064df7"
+   ],
+   "value": "Unknown (Source content unavailable for verification)"
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "f9d9d33a18",
+    "86f7aec5b5",
+    "e792064df7"
+   ],
+   "value": "Unknown (Source content unavailable for verification)"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown exact compensation figures from available sources; candidates should negotiate to confirm it meets high new-grad pay expectations."
   },
   "evidence_sha": "bf5cd60ec8f3bb44",
+  "generated_at": 1784835394,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "f9d9d33a18",
+    "86f7aec5b5",
+    "e792064df7"
+   ],
+   "value": "Unknown (Source content unavailable for verification)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Focus interviews on assessing the team's actual development velocity versus bureaucracy, and explicitly ask about after-hours expectations and shutdown policies to verify work-life balance claims. Additionally, seek concrete details on technical mentorship and new-grad compensation to ensure the role meets elite prestige and aggressive learning targets without leading to burnout."
   },
+  "last_attempt_at": 1784835394,
   "last_evidence_at": 1784677045,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "f9d9d33a18",
+    "86f7aec5b5",
+    "e792064df7"
+   ],
+   "value": "Unknown (Source content unavailable for verification)"
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "f9d9d33a18",
+    "86f7aec5b5",
+    "e792064df7"
+   ],
+   "value": "Unknown (Source content unavailable for verification)"
+  },
   "name": "Planbase",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown pace due to lack of verifiable sources; candidates should verify during interviews if it is a fast, innovative culture or slow bureaucracy."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "f9d9d33a18",
+    "86f7aec5b5",
+    "e792064df7"
+   ],
+   "value": "Unknown (Source content unavailable for verification)"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown exact PTO due to lack of verifiable public sources; candidates should ask specifics to ensure work-life balance aligns with personal time expectations."
   },
+  "refresh_after": 1790019394,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "f9d9d33a18",
+    "86f7aec5b5",
+    "e792064df7"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown shutdown policy availability in sources; candidates must verify if guaranteed shutdowns exist to align with burnout-avoidance priorites."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "f9d9d33a18",
+    "86f7aec5b5",
+    "e792064df7"
+   ],
+   "value": "Unknown (Source content unavailable for verification)"
   },
   "sources": [
    {
@@ -179269,14 +179687,47 @@
     "url": "https://www.workatastartup.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "f9d9d33a18",
+    "86f7aec5b5",
+    "e792064df7"
+   ],
+   "value": "Unknown (Source content unavailable for verification)"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "f9d9d33a18",
+    "86f7aec5b5",
+    "e792064df7"
+   ],
+   "value": "Specific factual information regarding Planbase's core business and revenue model could not be retrieved from the provided sources, as they resulted in redirect errors or pointed generally to Y Combinator's job board. Consequently, a reliable plain-English description of what the company does and how it makes money is currently unavailable based on the supplied texts."
+  },
+  "synthesized_evidence_sha": "bf5cd60ec8f3bb44",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "f9d9d33a18",
+    "86f7aec5b5",
+    "e792064df7"
+   ],
+   "value": "Unknown (Source content unavailable for verification)"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677045,
   "web_search_url": "https://duckduckgo.com/?q=Planbase+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Given the candidate's priorities for elite prestige, high new-grad pay, fast tech culture, and sane work-life balance, evaluating this company requires probing its exact stage, AI/DS maturity, and cultural enforcement of guaranteed shutdowns. It is crucial to determine if the innovation pace aligns with a healthy, non-toxic environment that truly respects personal time while still accelerating career growth."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown rating due to lack of verifiable sources; candidates should probe to ensure sane hours and avoid toxic, high-burnout environments."
   }
  },
  "planet": {
@@ -204839,11 +205290,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -204855,6 +205308,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784835394,
   "last_evidence_at": 1784675292,
   "name": "Scott Logic",
   "pace_of_work": {
