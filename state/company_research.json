@@ -49995,11 +49995,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -50011,6 +50013,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784779343,
   "last_evidence_at": 1784583479,
   "name": "Citizen Health",
   "pace_of_work": {
@@ -70946,7 +70949,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -70964,7 +70967,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784779233,
+  "last_attempt_at": 1784779343,
   "last_evidence_at": 1784676783,
   "name": "EBSCO",
   "pace_of_work": {
@@ -77687,7 +77690,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -77705,7 +77708,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784779233,
+  "last_attempt_at": 1784779343,
   "last_evidence_at": 1784674079,
   "name": "Eversource Energy",
   "pace_of_work": {
@@ -116108,11 +116111,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -116124,6 +116129,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784779343,
   "last_evidence_at": 1784675035,
   "name": "Jahnel Group",
   "pace_of_work": {
@@ -135717,37 +135723,89 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 — high-visibility domain with real-time data challenges, but not a primary AI research lab; prestige comes from event scale rather than ML publications."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely B2B contract/engagement model with FIFA and host-country organizers for tournament technology solutions; no public pricing or revenue details found."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-focused, collaborative, cross-cultural (global event); engineering-driven with strong PM partnership; less bureaucracy than FAANG, more structure than early startup."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "e5a7695857",
+    "fa2d32447c"
+   ],
+   "value": "Apparent primary customer is FIFA / World Cup 2026 organizing bodies; possibly national federations and broadcasters."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k–$140k base + modest bonus/RSU; premium for tournament-critical roles; below top-tier FAANG but above typical consultancy."
   },
   "evidence_sha": "7be2f2434f6fdaa3",
+  "generated_at": 1784779343,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "e5a7695857",
+    "fa2d32447c"
+   ],
+   "value": "Sports technology / Event technology / FIFA World Cup 2026 vendor"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Prepare for system-design questions at tournament scale (millions of concurrent users, low-latency fixtures/stats), cloud reliability patterns, and cross-timezone collaboration; ask about on-call rotations during match windows and post-tournament career paths."
   },
+  "last_attempt_at": 1784779343,
   "last_evidence_at": 1784675035,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bd9a245b95"
+   ],
+   "value": "Estimated: Presence in North America (Canada, Mexico, USA) for 2026 World Cup; possible HQ or delivery centers in other regions; ADP redirect suggests US payroll entity."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not stated in available sources; inferred to deliver reliable, scalable digital infrastructure for major international football tournaments."
+  },
   "name": "Mathtech",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Intense, deadline-driven sprints leading up to June–July 2026; quieter periods between tournament milestones; overall faster than enterprise IT but with defined end-date."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "e5a7695857",
+    "fa2d32447c"
+   ],
+   "value": "No specific products identified from sources; likely provides technology services or platform features for FIFA World Cup 2026 (e.g., team portals, fixture management)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + standard US holidays; possible additional 'comp days' for tournament overtime; no public policy found."
   },
+  "refresh_after": 1789963343,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -135757,7 +135815,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely mandatory shutdown period after World Cup final (mid-July 2026 onward); no regular company-wide shutdowns documented."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-size to large technology vendor (hundreds to low thousands of employees) engaged in a finite, high-visibility project; not a typical startup or public company."
   },
   "sources": [
    {
@@ -135791,14 +135854,40 @@
     "url": "https://online.adp.com/olp/olplanding.html?APPID=WFNPORTAL"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bd9a245b95"
+   ],
+   "value": "Estimated: Likely supports H-1B and other work visas given international project scope and US payroll via ADP; no public sponsorship policy found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "e5a7695857",
+    "fa2d32447c"
+   ],
+   "value": "Mathtech appears to be associated with FIFA World Cup 2026 technology initiatives based on redirect pages, but public details about its core business, products, or revenue model are not accessible from the supplied sources."
+  },
+  "synthesized_evidence_sha": "7be2f2434f6fdaa3",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Full-stack web/platform development, real-time data services, cloud infrastructure, security, and integration for global sports events; stack likely includes modern cloud-native tools."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675035,
   "web_search_url": "https://duckduckgo.com/?q=Mathtech+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers a rare chance to work on a globally televised, time-boxed mega-event with hard deadlines, which can accelerate a new grad's resume prestige and technical depth; the project-based nature may provide clearer work-life boundaries than open-ended product roles, aligning with your desire for fast innovation without chronic burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — project crunch near event dates offset by clear shutdown after tournament; guaranteed post-event downtime likely."
   }
  },
  "matillion": {
@@ -173703,7 +173792,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -173721,7 +173810,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784779233,
+  "last_attempt_at": 1784779343,
   "last_evidence_at": 1784674615,
   "name": "Publicis Canada",
   "pace_of_work": {
@@ -179978,7 +180067,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -179996,7 +180085,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784779233,
+  "last_attempt_at": 1784779343,
   "last_evidence_at": 1784677108,
   "name": "Realm",
   "pace_of_work": {
@@ -196588,7 +196677,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 11,
+  "attempts": 12,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -196606,7 +196695,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784779233,
+  "last_attempt_at": 1784779343,
   "last_evidence_at": 1784677479,
   "name": "Sigma Computing",
   "pace_of_work": {
