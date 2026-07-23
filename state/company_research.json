@@ -23275,51 +23275,124 @@
  "atoms": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "c467e6d6f7"
+   ],
+   "value": "Estimated: A growing startup-tier prestige; while not a household name in AI yet, its unique application of robotics in food tech makes it an interesting niche player for new graduates."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "c467e6d6f7"
+   ],
+   "value": "Likely generates revenue through the design, deployment, and maintenance of robotic food production systems, or by operating direct-to-customer food production facilities utilizing their proprietary robotics."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "c467e6d6f7"
+   ],
+   "value": "Estimated: Mission-driven and innovative, with a focus on creating robotic solutions that enhance efficiency and customer satisfaction. The culture likely values technical learning and direct impact."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "c467e6d6f7"
+   ],
+   "value": "Businesses or consumers in the food industry looking for automated, direct-to-customer food production capabilities."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "c467e6d6f7"
+   ],
+   "value": "Estimated: Likely competitive startup new-grad compensation, potentially in the $100,000-$130,000 range, plus equity, reflecting current market rates for data engineering roles in tech."
   },
   "evidence_sha": "b2b070e0dd83ffac",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784795874,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784795726,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c467e6d6f7"
+   ],
+   "value": "Food Robotics / Food Technology"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c467e6d6f7"
+   ],
+   "value": "Prepare to discuss your experience with data pipelines and cloud architecture, emphasizing how you can contribute to a fast-paced, innovative robotics environment. Ask questions about the company's work-life balance policies, expected hours, and career growth trajectory to ensure it meets your needs for a non-toxic, learning-accelerating environment."
+  },
+  "last_attempt_at": 1784795874,
   "last_evidence_at": 1784795724,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "c467e6d6f7"
+   ],
+   "value": "Specified in the official job posting (Greenhouse board) under the Cloud Platform Engineer - Data Engineer role."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "c467e6d6f7"
+   ],
+   "value": "To revolutionize the food industry by creating innovative robotic solutions that enhance efficiency, quality, and customer satisfaction."
+  },
   "name": "Atoms",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "c467e6d6f7"
+   ],
+   "value": "Estimated: Fast-paced and innovative, typical of a robotics startup aiming to revolutionize an established industry."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c467e6d6f7"
+   ],
+   "value": "Robotic solutions and systems designed for direct-to-customer food production."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "c467e6d6f7"
+   ],
+   "value": "Estimated: Standard startup PTO package, potentially offering 15-20 days of vacation alongside standard holidays, though exact numbers are unconfirmed."
   },
+  "refresh_after": 1789979874,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "c467e6d6f7"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "c467e6d6f7"
+   ],
+   "value": "Estimated: No explicit information found regarding guaranteed company shutdowns (e.g., holidays) in the provided sources."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "c467e6d6f7"
+   ],
+   "value": "The company appears to be in a growth or scaling phase, actively hiring for new-grad roles such as Cloud Platform Data Engineers to support its robotics infrastructure."
   },
   "sources": [
    {
@@ -23383,14 +23456,45 @@
     "url": "https://job-boards.greenhouse.io/cssmerge/jobs/8638573002"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "c467e6d6f7"
+   ],
+   "value": "Standard sponsorship policies are not explicitly mentioned in the provided sources; candidates should verify directly with the recruiting team."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c467e6d6f7"
+   ],
+   "value": "Lab37 Robotics (operating as Atoms) is a technology company focused on developing and deploying robots designed specifically for direct-to-customer food production. They aim to revolutionize the food industry by creating robotic solutions that enhance efficiency, quality, and customer satisfaction."
+  },
+  "synthesized_evidence_sha": "b2b070e0dd83ffac",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "c467e6d6f7"
+   ],
+   "value": "Involves building cloud platform infrastructure and data pipelines to support food production robots, requiring skills in data engineering, cloud architecture, and system integration."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784795724,
   "web_search_url": "https://duckduckgo.com/?q=Atoms+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c467e6d6f7"
+   ],
+   "value": "This role aligns with your priority for a mission-driven company that respects work-life balance. As an innovative robotics firm, it offers a fast-paced tech culture without the bureaucracy of legacy companies, while the mission to revolutionize food production provides a strong sense of purpose."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "c467e6d6f7"
+   ],
+   "value": "Estimated: Likely promotes a healthy work-life balance with a focus on employee satisfaction, though candidates should confirm this during interviews."
   }
  },
  "atos": {
@@ -38766,41 +38870,105 @@
  "busek": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "110564c485"
+   ],
+   "value": "Estimated: Niche/Boutique (Not top-tier AI prestige)"
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "110564c485"
+   ],
+   "value": "B2B engineering and sales of specialized spacecraft propulsion systems and advanced materials for aerospace applications."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "dca3113e8e",
+    "110564c485"
+   ],
+   "value": "Collaborative and innovative work environment over 35 years old, described as a great place to work."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "dca3113e8e"
+   ],
+   "value": "Space industry organizations requiring advanced aerospace and satellite components."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "110564c485"
+   ],
+   "value": "Estimated: $70,000 - $90,000 (typical for aerospace data roles)"
   },
   "evidence_sha": "24501672c1cc3ee2",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784795874,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784795726,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "110564c485"
+   ],
+   "value": "Aerospace hardware and advanced engineering technologies."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "110564c485"
+   ],
+   "value": "Assess work-life balance expectations and project cycle speeds to confirm they match your requirement for a fast pace. Probe the specific scope of the data role to ensure it offers the advanced technical learning you need without being bottlenecked by slow hardware-timing delays."
+  },
+  "last_attempt_at": 1784795874,
   "last_evidence_at": 1784791958,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "dca3113e8e"
+   ],
+   "value": "Not explicitly stated in sources, but job postings are accessed online."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "dca3113e8e",
+    "110564c485"
+   ],
+   "value": "To drive innovation in spacecraft hardware and advanced engineering technologies within the growing aerospace sector."
+  },
   "name": "Busek",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "110564c485"
+   ],
+   "value": "Estimated: Moderate. Aerospace hardware engineering typically features long project lifecycles."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "110564c485"
+   ],
+   "value": "Spacecraft hardware including electric propulsion systems, chemical propulsion technologies, and advanced materials."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "dca3113e8e"
+   ],
+   "value": "Estimated: Standard private-sector PTO (15-20 days)"
   },
+  "refresh_after": 1789979874,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -38809,8 +38977,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "dca3113e8e"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "dca3113e8e"
+   ],
+   "value": "Mature established company over 35 years old."
   },
   "sources": [
    {
@@ -38864,14 +39041,47 @@
     "url": "https://busek.applytojob.com/apply/lwufjJR4I4/Data-Analyst"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "dca3113e8e",
+    "110564c485"
+   ],
+   "value": "Not specified in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "dca3113e8e",
+    "110564c485"
+   ],
+   "value": "Busek is a 35-year-old company that develops advanced spacecraft hardware, specializing in electric propulsion, chemical propulsion, and advanced materials. As an aerospace contractor, it generates revenue by selling these specialized systems to organizations in the growing space industry."
+  },
+  "synthesized_evidence_sha": "24501672c1cc3ee2",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "110564c485"
+   ],
+   "value": "Hardware engineering focused on propulsion systems, alongside data analysis roles to support advanced engineering technologies."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784791958,
   "web_search_url": "https://duckduckgo.com/?q=Busek+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "110564c485"
+   ],
+   "value": "While Busek offers a collaborative, innovative environment in legacy tech, it may not align with a top-tier AI/Data Science focus craving ultra-fast tech culture and elite FAANG-level prestige. The aerospace industry involves long-project lifecycles, which rarely fit the hyper-accelerated pace some modern algorithms candidates seek."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "dca3113e8e"
+   ],
+   "value": "Estimated: Good. Bureaucracy-free legacy companies can offer sane hours."
   }
  },
  "buxton": {
@@ -50621,40 +50831,82 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High — recruiting for elite new-grad AI/DS roles with competitive pay and technical depth."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely B2B SaaS, data/analytics platform, or marketplace in healthcare; could be consumer app subscription/ad model if citizen.com."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, learning-oriented, transparent, low-bureaucracy, respects personal time."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Health systems, clinics, insurers, and/or patients if a health-tech company; otherwise consumers for safety app or watch buyers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $170k-$220k total comp (base $130k-$160k + equity/sign-on) for AI/DS new grads at top-tier health-tech startups."
   },
   "evidence_sha": "542c03f24ccea299",
+  "generated_at": 1784795874,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Health Technology / AI in Healthcare (estimated)"
   },
-  "last_attempt_at": 1784779451,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare for ML system design, clinical NLP, health data privacy (HIPAA), model evaluation for high-stakes decisions, and questions about how the team balances velocity with sustainable pace."
+  },
+  "last_attempt_at": 1784795874,
   "last_evidence_at": 1784583479,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely US-based (SF, NYC, Boston) or remote-first; no location data in sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mission-driven health technology focus per candidate context; no mission statement found in sources."
+  },
   "name": "Citizen Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast, innovative startup pace with iterative shipping; not slow bureaucracy per candidate priority."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "959fb04239",
+    "3e560b4a00",
+    "549fadb49a"
+   ],
+   "value": "No specific products for Citizen Health identified in sources. The sources reference Citizen Watch timepieces and citizen.com (likely the Citizen personal safety network app)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days + holidays; unlimited PTO common in similar startups but actual usage encouraged."
   },
+  "refresh_after": 1789979874,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -50664,7 +50916,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (1-2 weeks) and/or quarterly recharge weeks; candidate priority mentions guaranteed shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Early-to-growth stage startup (50-500 employees) given candidate context of fast innovative culture."
   },
   "sources": [
    {
@@ -50698,14 +50955,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=f1586cdbeb335d5d9c6fc5450255833f15ca051db9e60d6737c9be05b35fb416JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cuY2l0aXplbndhdGNoLmNvbS9jYS9lbi8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely supports H-1B and STEM OPT for AI/DS roles given talent competition; no public policy found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "959fb04239",
+    "3e560b4a00",
+    "549fadb49a"
+   ],
+   "value": "Citizen Health appears to be a health technology company, though the provided sources only reference Citizen Watch (a Japanese watchmaker) and citizen.com which may relate to the Citizen safety app. No substantive information about Citizen Health's products or operations was found in the supplied sources."
+  },
+  "synthesized_evidence_sha": "542c03f24ccea299",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: AI/ML for clinical decision support, health data interoperability, NLP on medical records, predictive analytics, platform engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583479,
   "web_search_url": "https://duckduckgo.com/?q=Citizen+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Matches your priority for a top-tier AI/data science role at a mission-driven health-tech startup that offers elite prestige, high new-grad pay, fast innovation culture, and genuine work-life balance with sane hours and shutdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — candidate priority emphasizes sane hours, guaranteed shutdowns, and no toxic burnout."
   }
  },
  "citizens financial group": {
@@ -67327,40 +67609,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Not specialized in AI/data science; general software engineering focus. Prestige tier unknown for AI/DS roles."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "636deb5259"
+   ],
+   "value": "Professional services and project-based software development consulting; revenue from client engagements for custom solutions."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "636deb5259"
+   ],
+   "value": "Supportive, innovative, and balanced; promotes work-life balance and cutting-edge technical work without toxic burnout culture."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "636deb5259"
+   ],
+   "value": "Enterprise clients across industries seeking custom software development and technology consulting (specific verticals not disclosed in sources)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000–$120,000 base salary for Software Engineer Associate; total compensation potentially higher with bonuses. Conservative range for growth-stage consulting firm."
   },
   "evidence_sha": "6f0c6c61926bb71d",
+  "generated_at": 1784795874,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "636deb5259"
+   ],
+   "value": "Technology consulting / custom software development services."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "636deb5259"
+   ],
+   "value": "Assess technical depth in modern software engineering, cultural fit with a supportive and balanced work environment, and alignment with client-facing consulting pace. Probe for ability to deliver cutting-edge solutions without compromising sustainable hours."
+  },
+  "last_attempt_at": 1784795874,
+  "last_evidence_at": 1784791696,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: US-based (job posting does not specify location; visa sponsorship not offered suggests domestic roles)."
   },
-  "last_attempt_at": 1784795726,
-  "last_evidence_at": 1784791696,
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "636deb5259"
+   ],
+   "value": "Creating cutting-edge software solutions for clients within a supportive work environment that values work-life balance."
+  },
   "name": "Digital Foundry, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced, client-driven project cycles typical of innovative consulting firms; emphasis on cutting-edge delivery."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "636deb5259"
+   ],
+   "value": "Custom software solutions, technology consulting services, and cutting-edge software development for clients."
+  },
+  "prompt_v": 2,
   "pto_days": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "636deb5259"
+   ],
+   "value": "Estimated: Up to 15 days (three weeks) in first year per job posting; additional holidays and policies not specified."
   },
+  "refresh_after": 1789979874,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -67370,7 +67706,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide shutdowns mentioned in sources; not a documented policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Growth-stage technology consulting firm (actively hiring associate-level engineers)."
   },
   "sources": [
    {
@@ -67414,14 +67755,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=2fdb555402a9d229e1791da3c0dbbc7b5d0511142f32343d4e5b7718ef3c9b6cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=12125881-3882-6b2e-16e0-4f1c39c36a13&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRGlnaXRhbA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "636deb5259"
+   ],
+   "value": "Does not sponsor employment visas (e.g., H-1B); candidates must already have work authorization."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "636deb5259"
+   ],
+   "value": "Digital Foundry, Inc. is a technology consulting firm that builds cutting-edge software solutions for clients. It generates revenue through professional services and custom software development engagements."
+  },
+  "synthesized_evidence_sha": "6f0c6c61926bb71d",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "636deb5259"
+   ],
+   "value": "Full-stack software engineering, modern development practices, and delivery of cutting-edge solutions for client projects."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676851,
   "web_search_url": "https://duckduckgo.com/?q=Digital+Foundry%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "636deb5259"
+   ],
+   "value": "Offers a fast-paced, innovative consulting culture with explicit work-life balance commitments (up to 3 weeks PTO first year) and no visa sponsorship bureaucracy. Aligns with a candidate seeking elite technical challenges, high new-grad compensation potential, and a supportive environment that avoids burnout."
+  },
   "wlb_rating": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "636deb5259"
+   ],
+   "value": "Estimated: Above average for consulting; explicit mention of supportive environment and up to 3 weeks PTO in first year suggests respect for personal time."
   }
  },
  "diligent corporation": {
@@ -71836,41 +72208,103 @@
  "ebsco": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "d7cfd0f07a"
+   ],
+   "value": "Estimated: Tier 2 / Niche. The company is making significant enterprise AI pushes and utilizes advanced DevOps for SaaS, but it is not a primary AI/Data Science brand name in the elite tier."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "d7cfd0f07a"
+   ],
+   "value": "B2B information services and technology. The company sells enterprise software, cloud hosting, and AI solutions to institutions, alongside accelerating commercial growth for its AI partnership offerings."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "235a022640",
+    "d7cfd0f07a"
+   ],
+   "value": "Estimated: Mission-driven and academic-adjacent. The culture appears focused on knowledge empowerment, heavy infrastructure management, and structured corporate sales."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "d7cfd0f07a"
+   ],
+   "value": "Academic institutions, libraries, corporations, and medical organizations seeking research and information management solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "d7cfd0f07a"
+   ],
+   "value": "Estimated: $80,000 - $110,000. Pay is likely competitive for the information services sector but may not hit top-tier FAANG or elite tech pay scales."
   },
   "evidence_sha": "3efa09eab3dc8103",
+  "generated_at": 1784795874,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "235a022640",
+    "d7cfd0f07a"
+   ],
+   "value": "Information Technology, Library Information Services, and SaaS."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe the specific team's engineering velocity and tech stack modernization. Ask how the AI solutions team operates to ensure the culture balances technical growth with sane hours, avoiding the typical enterprise bureaucracy you want to avoid."
   },
-  "last_attempt_at": 1784779451,
+  "last_attempt_at": 1784795874,
   "last_evidence_at": 1784676783,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "d7cfd0f07a"
+   ],
+   "value": "United States Remote (explicitly supports remote roles across the Eastern US, Canada, and broader US locations)."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "235a022640"
+   ],
+   "value": "To provide quality information resources and technology solutions that empower libraries, institutions, and researchers to discover and manage knowledge."
+  },
   "name": "EBSCO",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "d7cfd0f07a"
+   ],
+   "value": "Estimated: Moderate. Operations focus on maintaining high availability for mission-critical, large-scale platforms, suggesting a stable but structured engineering pace rather than a fast-moving startup environment."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "d7cfd0f07a"
+   ],
+   "value": "Research databases, e-journals, e-books, and multi-tenant SaaS library management platforms (such as FOLIO)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "235a022640"
+   ],
+   "value": "Estimated: 20-25 days of standard PTO annually, typical for a large-scale enterprise information services company."
   },
+  "refresh_after": 1789979874,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -71881,6 +72315,13 @@
    "confidence": "estimated",
    "source_ids": [],
    "value": "None found in research (estimated)"
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "d7cfd0f07a"
+   ],
+   "value": "A large, established enterprise-scale organization operating mission-critical, multi-tenant SaaS environments with dedicated global sales support."
   },
   "sources": [
    {
@@ -71914,14 +72355,45 @@
     "url": "https://careers-ebscoind.icims.com/jobs/search?hashed=-625886742"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "d7cfd0f07a"
+   ],
+   "value": "Not explicitly found in the provided sources, though multiple roles are listed as US-Remote which may limit immediate visa sponsorship needs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "235a022640",
+    "d7cfd0f07a"
+   ],
+   "value": "EBSCO Information Services provides research databases, e-journals, and library management software to academic, corporate, and medical institutions. It generates revenue primarily through institutional subscriptions and SaaS licensing fees for its information and library technology platforms."
+  },
+  "synthesized_evidence_sha": "3efa09eab3dc8103",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "d7cfd0f07a"
+   ],
+   "value": "Managing and scaling large-scale, cloud-based library platforms in a multi-tenant SaaS environment. Tech teams focus on building resilient infrastructure, automating operations, and ensuring high system availability."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676783,
   "web_search_url": "https://duckduckgo.com/?q=EBSCO+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "EBSCO is actively expanding into corporate AI solutions, which could offer technical learning opportunities. However, as an established B2B enterprise, it may lean towards slower bureaucracy rather than the fast, highly innovative tech culture and top-tier new-grad pay you are prioritizing."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "235a022640",
+    "d7cfd0f07a"
+   ],
+   "value": "Estimated: Good. Enterprise institutions of this type typically respect work-life balance for infrastructure roles to ensure long-term system stability, though specific WLB metrics are not public."
   }
  },
  "echo electric": {
@@ -78597,51 +79069,129 @@
  "eversource energy": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "5435224fbe"
+   ],
+   "value": "Estimated: Tier 3 (Traditional corporate IT/Data Analytics). Data roles at Eversource focus on internal business workflows, application lifecycle management, and process improvements rather than cutting-edge AI/DS research or product innovation."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "db86133156"
+   ],
+   "value": "Regulated utility model generating revenue through the transmission and distribution of electricity and natural gas."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "db86133156",
+    "5435224fbe"
+   ],
+   "value": "Estimated: Mission-driven around customer reliability and clean energy, but process-oriented. The culture favors domain expertise and process adherence over aggressive technical learning cycles."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "db86133156"
+   ],
+   "value": "Residential, commercial, and industrial energy consumers across New England."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "5435224fbe"
+   ],
+   "value": "Estimated: $70,000 - $85,000 base salary for an entry-level IT Associate Data Analyst. Utility companies typically offer lower new-grad compensation compared to top-tier tech firms, often making up the gap with strong benefits rather than elite base pay."
   },
   "evidence_sha": "9442c9495780c6a1",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784795874,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784779451,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "db86133156",
+    "5435224fbe"
+   ],
+   "value": "Utilities - Electric and Natural Gas Distribution"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "db86133156",
+    "5435224fbe"
+   ],
+   "value": "Given the candidate's priority for elite prestige and high new-grad pay, candidates should probe deeply into Eversource's compensation structure and technical learning opportunities during the interview. Additionally, ask questions to gauge whether the internal IT culture permits fast technical innovation and career acceleration, or if it is bottlenecked by traditional utility bureaucracy and strict process adherence."
+  },
+  "last_attempt_at": 1784795874,
   "last_evidence_at": 1784674079,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "5435224fbe",
+    "db86133156"
+   ],
+   "value": "Headquartered in Westwood, MA, with operations across New England (Connecticut, Massachusetts, and New Hampshire)."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "db86133156"
+   ],
+   "value": "To safely and reliably deliver energy to customers while advancing clean energy initiatives."
+  },
   "name": "Eversource Energy",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "db86133156"
+   ],
+   "value": "Estimated: Slow and steady. As a heavily regulated public utility, the organization prioritizes safety, reliability, and compliance over rapid, disruptive tech innovation, which typically results in a deliberate, slow-paced tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "db86133156"
+   ],
+   "value": "Electricity transmission and distribution, natural gas distribution, and energy efficiency programs."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "db86133156"
+   ],
+   "value": "Estimated: 15-20 days of standard Paid Time Off per year, plus paid company holidays, typical for a large legacy utility."
   },
+  "refresh_after": 1789979874,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f",
+    "5435224fbe"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "db86133156"
+   ],
+   "value": "Estimated: No guaranteed corporate-wide technology shutdowns are typical outside of standard paid public holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "db86133156"
+   ],
+   "value": "Large, established public utility company."
   },
   "sources": [
    {
@@ -78695,14 +79245,48 @@
     "url": "https://eversource.wd1.myworkdayjobs.com/ExternalSite/job/Westwood-MA/IT-Associate-Data-Analyst_R-030512"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "5435224fbe"
+   ],
+   "value": "Eversource will not offer immigration-related sponsorship for positions such as the IT Associate Data Analyst role (e.g., H-1B, O-1, J-1, TN, E-3) and will not consider applicants requiring visa sponsorship to start employment."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "db86133156",
+    "5435224fbe"
+   ],
+   "value": "Eversource Energy is New England's largest energy delivery utility, providing electric service and natural gas distribution. The company makes money by transmitting and distributing electricity and natural gas to residential, commercial, and industrial customers across its regulated service territories."
+  },
+  "synthesized_evidence_sha": "9442c9495780c6a1",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "5435224fbe"
+   ],
+   "value": "Collaborating with IT architects and delivery teams to define functional and technical requirements, evaluate workflow improvements, explore solution design options, and support the application lifecycle for development efforts."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674079,
   "web_search_url": "https://duckduckgo.com/?q=Eversource+Energy+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "db86133156",
+    "5435224fbe"
+   ],
+   "value": "As a traditional public utility, Eversource is heavily regulated and process-driven. Candidates should carefully evaluate whether the slower, bureaucratic tech culture of a utility company aligns with their desire for a fast-paced, innovative environment, despite the potential for strong work-life balance and mission-driven grid modernization work."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "db86133156",
+    "5435224fbe"
+   ],
+   "value": "Estimated: High. Regulated utilities commonly emphasize sane hours and stable work schedules for their corporate IT employees, avoiding the high-burnout trends found in tech-focused industries."
   }
  },
  "every electric": {
@@ -117127,40 +117711,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier. They are a respected custom software consultancy but lack the elite prestige and specialized focus of top-tier AI or data science firms."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "d8b0c472e6"
+   ],
+   "value": "B2B IT and staff augmentation services, billing clients for outsourced software development and cloud management."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "d8b0c472e6"
+   ],
+   "value": "Award-winning and highly regarded, focused on creating beautiful software within a positive, highly distributed team environment."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "d8b0c472e6"
+   ],
+   "value": "Client organizations seeking to scale their teams via staff augmentation or external expertise to optimize development, performance, and reduce costs."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000 - $85,000 base salary, aligned with regional upstate New York standards and consulting industry averages rather than elite FAANG-tier pay."
   },
   "evidence_sha": "f583cccf8aef8228",
+  "generated_at": 1784795874,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d8b0c472e6"
+   ],
+   "value": "IT Services and Custom Software Development"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe carefully into their AI and data science capabilities to ensure the role provides elite technical learning rather than routine staff augmentation. Ask detailed questions about expected new grad compensation, actual working hours, and how their 'top workplace' culture actively prevents burnout."
   },
-  "last_attempt_at": 1784779451,
+  "last_attempt_at": 1784795874,
   "last_evidence_at": 1784675035,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "d8b0c472e6"
+   ],
+   "value": "Headquartered at 108 State St, 5th Floor, Schenectady, NY 12305, with a distributed workforce across 27 states and 5 countries."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "d8b0c472e6"
+   ],
+   "value": "Creating beautiful software while maintaining a top-tier workplace culture."
+  },
   "name": "Jahnel Group",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "d8b0c472e6"
+   ],
+   "value": "Estimated: Fast-paced and dynamic due to client-driven project work, but potentially buffered by their strong 7-year 'top workplace' culture awards."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "d8b0c472e6"
+   ],
+   "value": "Custom software development, cloud infrastructure design and deployment, and integrated DevOps services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard tech industry PTO of 15-20 days annually, typical for a mid-sized firm recognized for high employee satisfaction."
   },
+  "refresh_after": 1789979874,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -117170,7 +117808,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No specific data found, though companies with high work-life balance ratings may offer holiday breaks."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "d8b0c472e6"
+   ],
+   "value": "Established mid-sized firm with 150 people operating across 27 states and 5 countries."
   },
   "sources": [
    {
@@ -117204,14 +117849,43 @@
     "url": "https://www.jahnelgroup.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d8b0c472e6"
+   ],
+   "value": "Estimated: As a consultancy with a globally distributed workforce across 5 countries, they likely possess the infrastructure to sponsor or transfer visas for top talent, though specific policy is not public."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "d8b0c472e6"
+   ],
+   "value": "Jahnel Group is a custom software development and cloud infrastructure consultancy that has been building software for 20 years. They generate revenue by providing services like staff augmentation and managed DevOps, seamlessly integrating their developers into clients' existing workflows to accelerate projects."
+  },
+  "synthesized_evidence_sha": "f583cccf8aef8228",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "d8b0c472e6"
+   ],
+   "value": "Designing, deploying, and managing scalable cloud environments with integrated DevOps to optimize development and reduce costs."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675035,
   "web_search_url": "https://duckduckgo.com/?q=Jahnel+Group+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "As a top workplace winner 7 years in a row, Jahnel Group likely offers the sane hours, mission-driven respect for work-life balance, and innovative culture you seek. However, as a mid-sized services consultancy rather than an elite tech giant, it may not fully deliver the top-tier new grad pay or cutting-edge AI/data science prestige you desire."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d8b0c472e6"
+   ],
+   "value": "Estimated: High. The company repeatedly emphasizes being named a 'Best place to work' and 'Top work place' for 7 consecutive years, suggesting a strong commitment to employee well-being."
   }
  },
  "jain global": {
@@ -166176,42 +166850,97 @@
  },
  "pegatron technologies llc": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "ed33bb1d26"
+   ],
+   "value": "Niche/Localized: AI infrastructure and server testing focus provides some exposure, but lacks elite AI/data science prestige."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "c0da11515b",
+    "ed33bb1d26"
+   ],
+   "value": "Engineering services and hardware testing, likely operating as a subsidiary or affiliate of Pegatron Corporation providing localized manufacturing and validation support."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Hands-on, engineering-focused culture valuing driven team members, with a localized facility feel."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "ed33bb1d26"
+   ],
+   "value": "Enterprise technology companies requiring hardware validation and AI infrastructure testing (inferred from AI infrastructure and server testing focus)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000-$85,000 base salary for entry-level test engineers in Georgetown, TX."
   },
   "evidence_sha": "1e09621f84d54b24",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784795874,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784795726,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ed33bb1d26"
+   ],
+   "value": "Electronic manufacturing and hardware engineering services."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "ed33bb1d26"
+   ],
+   "value": "Assess whether the hardware validation role offers enough AI/data science exposure to accelerate your technical learning, and ask about work hours, shutdown policies, and autonomy to ensure it avoids the slow bureaucracy and burnout you want to avoid."
+  },
+  "last_attempt_at": 1784795874,
   "last_evidence_at": 1784791958,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "c0da11515b"
+   ],
+   "value": "Georgetown, TX."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "ed33bb1d26"
+   ],
+   "value": "Not explicitly stated in the provided sources, but focuses on hiring driven, hands-on engineers for AI infrastructure and server testing."
+  },
   "name": "Pegatron Technologies LLC",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate pace typical of hardware testing and validation environments, balancing project deadlines with methodical testing cycles."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "ed33bb1d26"
+   ],
+   "value": "Hardware validation, performance testing, and AI infrastructure server testing services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10-15 days of paid time off annually, following standard regional engineering norms."
   },
+  "refresh_after": 1789979874,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -166221,7 +166950,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns observed; typical holiday closures may apply."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "c0da11515b"
+   ],
+   "value": "Small to mid-sized facility with a focused team of entry-level and experienced engineers in Georgetown, TX."
   },
   "sources": [
    {
@@ -166275,14 +167011,42 @@
     "url": "https://pegatrontechnologiesllc.applytojob.com/apply/PGNGTgapVq/Test-Engineer"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c0da11515b",
+    "ed33bb1d26"
+   ],
+   "value": "Pegatron Technologies LLC operates a hardware engineering and testing facility in Georgetown, TX, focusing on AI infrastructure and server validation. The company makes money by providing hands-on engineering roles that support broader electronic manufacturing and hardware validation operations."
+  },
+  "synthesized_evidence_sha": "1e09621f84d54b24",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "ed33bb1d26"
+   ],
+   "value": "Hands-on hardware validation, performance testing, and AI infrastructure server testing for entry-level engineers."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784791958,
   "web_search_url": "https://duckduckgo.com/?q=Pegatron+Technologies+LLC+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "ed33bb1d26"
+   ],
+   "value": "This role offers hands-on AI infrastructure and server testing experience, which provides solid technical learning and entry-level growth in a fast-paced hardware environment. However, it centers on hardware validation rather than elite AI/data science algorithm development, and the slower pace of localized testing may not fully meet your desire for fast, innovative tech culture or guaranteed shutdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate; standard engineering hours expected, but no explicit work-life balance guarantees mentioned."
   }
  },
  "peloton": {
