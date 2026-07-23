@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-07-23 19:19 UTC** · companies polled directly: **1297** (registry 1469) · jobs tracked: **20869** · new this run: **45** · alerts this run: **0**_
+_Last run: **2026-07-23 19:46 UTC** · companies polled directly: **1297** (registry 1469) · jobs tracked: **20869** · new this run: **45** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -133,7 +133,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 89 🔥 | 2d | RTX | [2027 Conversion - Software Engineer I - St. Petersburg, FL (Onsite)](https://jobright.ai/jobs/info/6a5f989f6e0c3c7c7d3d7b01?utm_campaign=Software%20Engineering&utm_source=1103) | St. Petersburg, FL, United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 89 🔥 | 4d | TikTok | [Software Engineer, C/C++ SDK Performance Optimization](https://jobright.ai/jobs/info/6a5db245856af468ab0120b2?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose, CA, United States | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 89 🔥 | 17d | Ascend Schools | [Data Analyst](https://jobright.ai/jobs/info/6a4b9814971cd25b06f97b81?utm_campaign=Data%20Analysis&utm_source=1103) | Brooklyn, NY | edtech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
-| 88 🔥 | 12h | Pegatron Technologies LLC | [Test Engineer - AI Infrastructure and Server Testing - Hardware Valida](https://pegatrontechnologiesllc.applytojob.com/apply/PGNGTgapVq/Test-Engineer) | Georgetown, TX | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 88 🔥 | 13h | Pegatron Technologies LLC | [Test Engineer - AI Infrastructure and Server Testing - Hardware Valida](https://pegatrontechnologiesllc.applytojob.com/apply/PGNGTgapVq/Test-Engineer) | Georgetown, TX | other | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 88 🔥 | 3d | RTX | [2026 Raytheon Full Time-Software Engineer I – EOIR Advanced Products a](https://jobright.ai/jobs/info/6a5df808270e3033b045b540?utm_campaign=Software%20Engineering&utm_source=1103) | McKinney, TX, United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 88 🔥 | 10d | Allstate Insurance Company | [AI Product Engineer - Copilot & Power Platform](https://allstate.wd5.myworkdayjobs.com/allstate_careers/job/US---Remote/AI-Product-Engineer--Copilot---Power-Platform---Remote---US-_R30742-1) | Remote in USA | fintech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 88 🔥 | 10d | ByteDance | [Software Development Engineer Graduate (Intent-Based Networking) - 202](https://jobright.ai/jobs/info/6a54fe00268af95237be8908?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose, CA, United States | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
