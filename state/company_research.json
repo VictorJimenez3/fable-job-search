@@ -12170,21 +12170,133 @@
   }
  },
  "amazon": {
+  "ai_ds_prestige_tier": {
+   "confidence": "high",
+   "source_ids": [
+    "20158bef7f",
+    "a6cc436e38"
+   ],
+   "value": "Top-tier. Amazon Web Services (AWS) and hardware divisions like Annapurna Labs provide foundational machine learning infrastructure and deploy generative AI at massive global scale."
+  },
   "aliases": [],
-  "attempts": 37,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 38,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "20158bef7f",
+    "a6cc436e38"
+   ],
+   "value": "E-commerce retail sales combined with enterprise cloud computing infrastructure services."
+  },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "a6cc436e38"
+   ],
+   "value": "An inclusive corporate culture that heavily emphasizes customer obsession and delivering results, typical of massive tech enterprises."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "20158bef7f",
+    "a6cc436e38"
+   ],
+   "value": "General consumers worldwide and enterprise businesses utilizing cloud infrastructure and AI computing solutions."
+  },
+  "error": "",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [
+    "20158bef7f"
+   ],
+   "value": "Estimated: $180,000 - $220,000 total target compensation (salary, signing bonus, and restricted stock units) base-level placement."
+  },
   "evidence_sha": "b47216983b59b6c5",
-  "generated_at": 1784802932,
+  "generated_at": 1784834927,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
-  "last_attempt_at": 1784834780,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "20158bef7f"
+   ],
+   "value": "E-commerce and Cloud Computing / Information Technology."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "20158bef7f",
+    "a6cc436e38"
+   ],
+   "value": "Prepare for deep systems fundamentals (C programming, memory management, network optimization). In behavioral rounds, probe the specific team's cadence and on-call expectations to see if this particular group defies Amazon's famous hustle culture and respects your non-negotiable WLB needs."
+  },
+  "last_attempt_at": 1784834927,
   "last_evidence_at": 1784800746,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "20158bef7f"
+   ],
+   "value": "Headquartered in Seattle, Washington, USA, with global corporate and tech hubs."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "a6cc436e38"
+   ],
+   "value": "To be Earth's most customer-centric company, empowering Amazonians to deliver the best results for customers."
+  },
   "name": "Amazon",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a6cc436e38"
+   ],
+   "value": "Estimated: Fast-paced and innovation-driven, though bureaucracy can vary strictly by team."
+  },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "20158bef7f",
+    "a6cc436e38"
+   ],
+   "value": "Online retail marketplace, Amazon Web Services (AWS) cloud infrastructure, and hardware devices; divisional software such as the EFA network stack for machine learning and HPC."
+  },
   "prompt_v": 2,
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a6cc436e38"
+   ],
+   "value": "Estimated: 15 days of paid time off per year for new grads, accruing with tenure."
+  },
+  "refresh_after": 1790018927,
+  "rotational_program_name": {
+   "confidence": "low",
+   "source_ids": [
+    "20158bef7f",
+    "a6cc436e38"
+   ],
+   "value": "None found in research."
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a6cc436e38"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns. Time off generally requires standard managerial approval."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "20158bef7f"
+   ],
+   "value": "Established multinational enterprise founded in 1994 with over 10,001 employees."
+  },
   "sources": [
    {
     "content_sha": "fae40f6513d4a1de",
@@ -12237,10 +12349,49 @@
     "url": "https://github.com/speedyapply/2027-SWE-College-Jobs"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "20158bef7f"
+   ],
+   "value": "Amazon has a track record of offering H1B sponsorships, though this does not guarantee sponsorship for every specific role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "20158bef7f",
+    "a6cc436e38"
+   ],
+   "value": "Amazon is a global technology and e-commerce company that sells consumer goods, cloud computing services, and digital devices. It makes money by selling products through its online marketplaces and charging businesses for scalable computing, storage, and machine learning infrastructure via Amazon Web Services (AWS)."
+  },
+  "synthesized_evidence_sha": "b47216983b59b6c5",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "20158bef7f",
+    "a6cc436e38"
+   ],
+   "value": "Opportunities include highly specialized systems programming, memory management, performance optimization, and Linux development, such as the user-space software stack for EFA in Annapurna Labs."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784582968,
-  "web_search_url": "https://duckduckgo.com/?q=Amazon+company+careers+benefits"
+  "web_search_url": "https://duckduckgo.com/?q=Amazon+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "a6cc436e38",
+    "20158bef7f"
+   ],
+   "value": "Amazon (specifically Annapurna Labs/AWS) undeniably delivers top-tier prestige, elite new-grad pay, and high-impact AI/ML infrastructure learning. However, the fast-paced environment heavily conflicts with your need for guaranteed personal time, sane hours, and a low-burnout culture."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a6cc436e38"
+   ],
+   "value": "Estimated: Moderate to Low. The fast pace is a hallmark of the culture and can lead to high burnout if boundaries are not actively maintained."
+  }
  },
  "amazon com llc": {
   "ai_ds_prestige_tier": {
@@ -16772,40 +16923,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Elite) — Core contributor to Ray ecosystem; hiring bar matches top AI labs and FAANG infra teams; papers at OSDI/SOSP/MLSys; open-source leadership."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
+  "attempts": 2,
+  "business_model": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "SaaS/subscription for Anyscale Platform (managed Ray on customer cloud or Anyscale-hosted), plus professional services and enterprise support. Revenue scales with compute usage and seat count."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "b1d97b2025"
+   ],
+   "value": "Engineering-first, low-ego, high-autonomy. Distributed-systems veterans and early-career engineers collaborate openly. Values: transparency, data-driven decisions, consistency, and 'no heroics' — sustainable delivery over crunch."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "1321b89f1a"
+   ],
+   "value": "AI/ML teams at companies of all sizes needing to scale training, inference, and data processing — from startups to large enterprises running complex AI workloads on GPU clusters."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $170k-$200k base + $40k-$80k equity (4-yr) + $10k-$20k sign-on = $220k-$300k total year 1. Top of market for AI infra startups."
   },
   "evidence_sha": "4170042647f354e5",
+  "generated_at": 1784834927,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
-  "last_attempt_at": 1784798252,
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "1321b89f1a",
+    "b1d97b2025"
+   ],
+   "value": "Expect deep distributed systems fundamentals (consistency, scheduling, fault tolerance), Python/C++ performance tuning, GPU/accelerator experience, and design discussions around scaling ML workloads (data loading, training loops, inference serving). Prepare to discuss Ray internals or similar frameworks. Behavioral screens probe collaboration, ownership, and ability to prioritize sustainably — not just speed."
+  },
+  "last_attempt_at": 1784834927,
   "last_evidence_at": 1784676859,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in San Francisco, CA; distributed/hybrid workforce across US with office hubs in SF and Seattle."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "1321b89f1a"
+   ],
+   "value": "To make distributed computing accessible so any developer or data scientist can scale ML applications from laptop to cluster without being a distributed systems expert."
+  },
   "name": "Anyscale",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast but sustainable — product-driven sprints with quarterly planning; explicit focus on reducing on-call burden and tech debt. Not a 'move fast and break things' culture; emphasis on correctness in distributed systems."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "1321b89f1a",
+    "b1d97b2025"
+   ],
+   "value": "Anyscale Platform (managed Ray service), Ray open-source framework, Ray Data (data processing engine), Ray Train, Ray Tune, Ray Serve for model serving, and distributed LLM inference tooling."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "b1d97b2025"
+   ],
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays; unlimited policy not confirmed — likely accrual-based with minimum usage encouraged."
   },
+  "refresh_after": 1790018927,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -16815,7 +17018,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal company-wide shutdowns; winter break (Dec 24-Jan 1) typically observed as low-activity period."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 200-500 employees; Series C stage (last known $99M Series C in 2022, ~$1B valuation)."
   },
   "sources": [
    {
@@ -16869,14 +17077,45 @@
     "url": "https://jobs.ashbyhq.com/anyscale/1cf38233-8aa0-47f8-9d85-65ce27bc3047"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: H-1B transfers and new cap-subject filings supported for senior engineering roles; green card sponsorship (PERM) typically after 1+ year tenure."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1321b89f1a"
+   ],
+   "value": "Anyscale is the commercial company behind Ray, an open-source unified framework for scaling AI and Python applications. They provide a managed platform (Anyscale Platform) that lets developers run Ray workloads on any cloud without managing infrastructure."
+  },
+  "synthesized_evidence_sha": "4170042647f354e5",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "1321b89f1a",
+    "b1d97b2025"
+   ],
+   "value": "Building high-performance distributed systems: Ray core scheduling, Ray Data pipeline optimization, LLM inference engines (vLLM integration), GPU kernel optimization, multi-cloud orchestration, and scalable control planes."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676859,
   "web_search_url": "https://duckduckgo.com/?q=Anyscale+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "1321b89f1a",
+    "b1d97b2025"
+   ],
+   "value": "Anyscale sits at the center of the AI infrastructure stack — commercializing Ray, the de facto standard for scalable Python/ML. For a new grad, this means elite technical prestige (core distributed systems + cutting-edge LLM inference), top-of-market compensation, and direct impact on how companies train and serve models at scale. The culture emphasizes engineering excellence without heroics: transparent, data-driven, and explicit about sustainable pace (see benefits like 99% healthcare coverage"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "b1d97b2025"
+   ],
+   "value": "Estimated: 4/5 — strong benefits (99% healthcare, wellbeing stipend, meals) and public emphasis on transparency/consistency suggest respect for boundaries; on-call exists but rotated and compensated."
   }
  },
  "anysphere cursor": {
@@ -38246,51 +38485,124 @@
  "brm": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "6a6609be84"
+   ],
+   "value": "Estimated: Mid-tier to rising elite, based on active hiring in AI and emphasis on elite technical learning."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6a6609be84"
+   ],
+   "value": "Software as a Service (SaaS) or AI-driven platform services, generating revenue through software product deployments."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "6a6609be84"
+   ],
+   "value": "Estimated: Mission-driven, eager learner environment, focusing on solving complex problems with new technologies."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "6a6609be84"
+   ],
+   "value": "Specific customer demographics are not detailed in available materials, likely targeting enterprises or users needing AI-driven solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "6a6609be84"
+   ],
+   "value": "Estimated: Competitive high new-grad pay aligning with elite AI roles, likely in the $120k-$160k range."
   },
   "evidence_sha": "c3f2221c57f490f0",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784834927,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784798252,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "6a6609be84"
+   ],
+   "value": "Artificial Intelligence and Software Development."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6a6609be84"
+   ],
+   "value": "Focus on demonstrating rapid learning capabilities, enthusiasm for new technologies, and strong programming fundamentals in JavaScript/TypeScript to match the fast-paced, high-growth environment."
+  },
+  "last_attempt_at": 1784834927,
   "last_evidence_at": 1784677289,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "6a6609be84"
+   ],
+   "value": "Specific physical office locations are not provided in the sourced materials, though hiring is managed via modern platforms like AshbyHQ."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "6a6609be84"
+   ],
+   "value": "To solve complex problems through the rapid development and learning of new AI technologies."
+  },
   "name": "BRM",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "6a6609be84"
+   ],
+   "value": "Estimated: Fast-paced and highly innovative, requiring dedication and rapid learning."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "6a6609be84"
+   ],
+   "value": "AI-driven software products and platforms, developed using modern programming languages such as JavaScript and TypeScript."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "6a6609be84"
+   ],
+   "value": "Estimated: 15-20 days of PTO, standard for growing tech companies prioritizing learning and growth."
   },
+  "refresh_after": 1790018927,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "6a6609be84"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "6a6609be84"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research, typical for standard tech operations."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "6a6609be84"
+   ],
+   "value": "Actively hiring entry-level software engineers, suggesting a growing startup or mid-size tech company stage."
   },
   "sources": [
    {
@@ -38314,14 +38626,45 @@
     "url": "https://jobs.ashbyhq.com/brm.ai/05cad7f7-2194-480d-8e70-7338cfd2a189"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "6a6609be84"
+   ],
+   "value": "No specific information regarding visa sponsorship found in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "6a6609be84"
+   ],
+   "value": "BRM is a technology company actively building AI-driven products and hiring software engineering talent to solve complex problems. While specific revenue models are not detailed in public materials, its focus on rapid technological learning and modern programming suggests it generates revenue through the development and deployment of innovative AI software solutions."
+  },
+  "synthesized_evidence_sha": "c3f2221c57f490f0",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "6a6609be84"
+   ],
+   "value": "Involves strong programming fundamentals, rapid learning of new technologies, and utilizing modern languages like JavaScript and TypeScript to solve complex technical problems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677289,
   "web_search_url": "https://duckduckgo.com/?q=BRM+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6a6609be84"
+   ],
+   "value": "Aligns with the candidate's desire for a fast, innovative tech culture that accelerates technical learning and career growth without sacrificing personal time, assuming the company respects work-life balance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "6a6609be84"
+   ],
+   "value": "Estimated: Moderate to Good, assuming sane hours are maintained despite the fast-paced learning environment."
   }
  },
  "broadcom limited": {
@@ -71026,7 +71369,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 10,
+  "attempts": 11,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -71044,7 +71387,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784834780,
+  "last_attempt_at": 1784834927,
   "last_evidence_at": 1784677533,
   "name": "Disney",
   "pace_of_work": {
@@ -118620,48 +118963,127 @@
  "integral federal": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "05b1df02d9",
+    "d72ef470a2"
+   ],
+   "value": "Estimated: Low to medium for AI/DS. As a federal contractor, prestige is tied to government impact rather than cutting-edge tech innovation. [05b1df02d9, d72ef470a2]"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "05b1df02d9"
+   ],
+   "value": "Government contractor providing specialized systems engineering and digital transformation services under federal contracts. [05b1df02d9]"
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "05b1df02d9"
+   ],
+   "value": "Estimated: Mission-oriented and traditional federal contractor culture emphasizing 'Expertise in Action' rather than fast-paced tech innovation. [05b1df02d9]"
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "05b1df02d9"
+   ],
+   "value": "Federal government agencies and national security entities. [05b1df02d9]"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "05b1df02d9"
+   ],
+   "value": "Estimated: $80,000 - $100,000 base salary. Likely lower than elite big tech due to federal contracting rates. [05b1df02d9]"
   },
   "evidence_sha": "4fe6b1e2f028fdc6",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784834927,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "05b1df02d9"
+   ],
+   "value": "IT Services and Government Consulting. [05b1df02d9]"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "05b1df02d9"
+   ],
+   "value": "Probe the technical stack to see if the work involves modern AI/data science or legacy systems. Clarify expectations around work-life balance, hours, and shutdowns, and ask about compensation to ensure it meets your high new-grad pay standards. [05b1df02d9]"
+  },
+  "last_attempt_at": 1784834927,
   "last_evidence_at": 1784674222,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "d72ef470a2",
+    "05b1df02d9"
+   ],
+   "value": "Not found in research."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "05b1df02d9"
+   ],
+   "value": "To deliver integrated solutions for national security through 'Expertise in Action'. [05b1df02d9]"
+  },
   "name": "Integral Federal",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "05b1df02d9"
+   ],
+   "value": "Estimated: Likely slower and more bureaucratic due to federal contracting constraints, rather than a fast, innovative tech culture. [05b1df02d9]"
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "05b1df02d9"
+   ],
+   "value": "Digital transformation solutions, systems engineering, and integrated solutions for national security. [05b1df02d9]"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "05b1df02d9"
+   ],
+   "value": "Estimated: 15-20 days of PTO per year, typical for mid-sized government contractors."
   },
+  "refresh_after": 1790018927,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "05b1df02d9"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "05b1df02d9"
+   ],
+   "value": "Estimated: Unlikely to have guaranteed company-wide shutdowns typical of big tech; federal contractors often operate year-round to meet contract demands. [05b1df02d9]"
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "d72ef470a2",
+    "05b1df02d9"
+   ],
+   "value": "Not specified in provided sources."
   },
   "sources": [
    {
@@ -118695,14 +119117,47 @@
     "url": "https://careers-integralfed.icims.com/jobs/intro?hashed=-435739668"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "d72ef470a2",
+    "05b1df02d9"
+   ],
+   "value": "Not found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "d72ef470a2",
+    "05b1df02d9"
+   ],
+   "value": "Integral Federal combines digital transformation and systems engineering to deliver integrated IT solutions for national security. The company generates revenue by providing advanced technical and engineering services to federal government clients. [d72ef470a2, 05b1df02d9]"
+  },
+  "synthesized_evidence_sha": "4fe6b1e2f028fdc6",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "05b1df02d9"
+   ],
+   "value": "Digital transformation, systems engineering, and IT integration for national security applications. [05b1df02d9]"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674222,
   "web_search_url": "https://duckduckgo.com/?q=Integral+Federal+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "05b1df02d9"
+   ],
+   "value": "Integral Federal offers a mission-driven environment supporting national security, which may appeal to candidates seeking impactful work. However, as a federal contractor, it likely lacks the fast-paced, elite tech culture, top-tier new-grad pay, and rapid AI innovation you prioritize, making it a potential mismatch for your goals. [05b1df02d9]"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "05b1df02d9"
+   ],
+   "value": "Estimated: Moderate to good. Government contracting often has sane hours, but specific policies should be verified. [05b1df02d9]"
   }
  },
  "integrated resources": {
@@ -145599,11 +146054,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -145615,6 +146072,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784834927,
   "last_evidence_at": 1784677599,
   "name": "McDonald's Corporation",
   "pace_of_work": {
@@ -151489,7 +151947,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -151528,7 +151986,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "last_attempt_at": 1784834780,
+  "last_attempt_at": 1784834927,
   "last_evidence_at": 1784821848,
   "locations": {
    "confidence": "high",
@@ -171960,51 +172418,134 @@
  "paramount global": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "877070890a",
+    "4bdf137202"
+   ],
+   "value": "Estimated: Mid-tier for tech overall, but relatively high-tier within the media and entertainment streaming sector."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "877070890a",
+    "4bdf137202"
+   ],
+   "value": "An integrated media model generating revenue through direct-to-consumer streaming subscriptions, advertising sales across broadcast television and cable networks, theatrical box office releases, and global content licensing."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "4f9d7c0812"
+   ],
+   "value": "Estimated: A traditional corporate environment currently undergoing significant transition due to new corporate combinations. Culture likely blends legacy Hollywood/media norms with modern tech streaming initiatives."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "877070890a",
+    "4bdf137202"
+   ],
+   "value": "Global streaming subscribers, television viewers, advertising agencies, and enterprise content distributors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "4f9d7c0812"
+   ],
+   "value": "Estimated: $110,000 to $140,000 base salary for new-grad software, AI, or data science engineering roles, typical of large non-Big-Tech media companies headquartered in NYC/LA."
   },
   "evidence_sha": "7ce33783d849e3ae",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784834927,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784798252,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "4f9d7c0812"
+   ],
+   "value": "Media and Entertainment"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "877070890a",
+    "4bdf137202",
+    "4f9d7c0812"
+   ],
+   "value": "Probe heavily into the team's specific engineering culture rather than accepting vague corporate answers. Ask direct questions to discern if sane hours are actually enforced and how much guaranteed PTO is honored versus how often evening or weekend work is expected during product launches. Assess if the technical learning curve is rapid and innovative or merely maintaining legacy media systems."
+  },
+  "last_attempt_at": 1784834927,
   "last_evidence_at": 1784643845,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "877070890a",
+    "4bdf137202"
+   ],
+   "value": "Global operations with primary corporate hubs historically located in New York and Los Angeles."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "877070890a",
+    "4bdf137202",
+    "4f9d7c0812"
+   ],
+   "value": "The provided public company pages did not contain text detailing a formal mission statement; however, as an entertainment conglomerate, its implied mission centers on creating and distributing premium global multimedia content."
+  },
   "name": "Paramount Global",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "877070890a",
+    "4bdf137202",
+    "4f9d7c0812"
+   ],
+   "value": "Estimated: Moderate to fast. Driven by competitive streaming market dynamics, though historically challenged slower bureaucracy typical of large legacy media companies."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "4f9d7c0812"
+   ],
+   "value": "Streaming services (Paramount+), film studios (Paramount Pictures), broadcast networks (CBS), cable networks (MTV, Comedy Central, Nickelodeon), and digital media properties."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "4f9d7c0812"
+   ],
+   "value": "Estimated: 15 to 20 days of standard Paid Time Off annually for salaried tech and corporate roles, accompanied by standard paid company holidays."
   },
+  "refresh_after": 1790018927,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "4f9d7c0812"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "4f9d7c0812"
+   ],
+   "value": "Estimated: No consistent public information available regarding mandatory company-wide shutdown periods beyond standard federal holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "4f9d7c0812"
+   ],
+   "value": "A large-cap, publicly traded global enterprise. Note: The careers page now references 'Paramount Skydance Corporation', suggesting a recent or pending merger/acquisition stage."
   },
   "sources": [
    {
@@ -172038,14 +172579,48 @@
     "url": "https://careers.paramount.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4f9d7c0812"
+   ],
+   "value": "Estimated: As a large legacy media and post-merger enterprise, Paramount Skydance likely offers H-1B visa sponsorship for specialized technical and data roles, but candidates should verify this with recruiters directly."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "877070890a",
+    "4bdf137202"
+   ],
+   "value": "Paramount Global is a major media and entertainment conglomerate that creates and licenses premium television programming, films, and digital content. It monetizes this content primarily through subscription fees for its streaming platforms (like Paramount+), advertising sales across its broadcast and cable networks, and content licensing to international distributors."
+  },
+  "synthesized_evidence_sha": "7ce33783d849e3ae",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "4f9d7c0812"
+   ],
+   "value": "Specific technical roles were not visible in the provided sources, but general corporate careers (including tech, data, and engineering) are hosted via their central careers portal."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784643845,
   "web_search_url": "https://duckduckgo.com/?q=Paramount+Global+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "877070890a",
+    "4bdf137202",
+    "4f9d7c0812"
+   ],
+   "value": "While media conglomerates offer massive datasets for AI personalization and recommendation engines, the organizational reality often conflicts with elite tech prestige or high new-grad pay. Candidates must weigh whether the technical learning pace is innovative or hindered by slow bureaucracy, and rigorously evaluate if the company's WLB claims are genuine or a facade for a toxic, high-burnout media cycle during product launches."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "4f9d7c0812"
+   ],
+   "value": "Estimated: Moderate. Standard corporate working hours are generally expected, but real and artificial pressure may spike during peak content release cycles."
   }
  },
  "pariveda solutions": {
