@@ -60912,39 +60912,105 @@
  },
  "danaher": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "4a1360d869"
+   ],
+   "value": "Tier 2 (Strong Industry Prestige): Fortune 500 leader in life sciences/diagnostics offering complex AI/ML applications, but lacks the pure-digital-native brand cachet of top-tier tech firms like Google DeepMind."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "4a1360d869",
+    "645763d399"
+   ],
+   "value": "Danaher operates as a diversified holding company. It grows through targeted acquisitions of market-leading businesses in attractive niches, then applies the Danaher Business System (lean manufacturing/kaizen principles) to drive margin expansion, innovation, and cash flow across its operating companies."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "645763d399",
+    "4a1360d869"
+   ],
+   "value": "Data-driven, lean, and process-oriented. Selective and professional rather than 'move fast and break things.' Associates are expected to follow DBS tools and Kaizen principles; the environment is mission-driven, stable, and respects structured problem-solving over fire-drill heroics."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "4a1360d869",
+    "645763d399"
+   ],
+   "value": "Customers range from hospitals, clinical laboratories, and pharmaceutical manufacturers to municipal water facilities, food & beverage producers, and aerospace/defense OEMs. The customer base is highly diversified across healthcare providers, industrial manufacturers, and government agencies worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000–$130,000 base salary for AI/Data Science new-grad roles, supplemented by annual bonus and equity. Some operating companies may push total compensation to ~$150,000 in high-cost HQs; specific offers vary widely by brand and location."
   },
   "evidence_sha": "cc4042446c22b75f",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784776991,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "4a1360d869",
+    "645763d399"
+   ],
+   "value": "Life Sciences, Diagnostics, and Industrial Technology conglomerate, with a strong emphasis on healthcare and environmental solutions."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "645763d399",
+    "c4a028f31e"
+   ],
+   "value": "Danaher interviews often emphasize the Danaher Business System mindset: data-driven problem-solving, continuous improvement, and root-cause analysis. Candidates should expect behavioral questions on collaboration and process improvement, plus rigorous technical assessment for AI/data science roles, but cultures vary by operating company."
+  },
+  "last_attempt_at": 1784776991,
   "last_evidence_at": 1784776546,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "645763d399",
+    "4a1360d869"
+   ],
+   "value": "Global headquarters in Washington, D.C., USA. Major operational hubs and operating company HQs are distributed across North America, Europe, and Asia, including locations in California, Massachusetts, Florida, Germany, Switzerland, and China."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "645763d399"
+   ],
+   "value": "Danaher's stated mission is to help realize life's potential by advancing science and technology to improve human health, product quality, and environmental safety."
+  },
   "name": "Danaher",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Structured, process-driven rhythm with moderate-to-fast pace during product development cycles. DBS culture values eliminating waste and inefficiency rather than rewarding heroic overtime; volatility depends greatly on the specific operating company."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "4a1360d869",
+    "645763d399"
+   ],
+   "value": "Danaher's portfolio includes water quality instrumentation, product identification systems, dental consumables, life sciences and diagnostics equipment (e.g., mass spectrometers, microscopes, gene therapy tools), and industrial automation components. Brands include Beckman Coulter, Leica, Pall, Hach, and Cepheid."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days of paid time off annually for new corporate/technical hires, plus standard US federal holidays. Actual PTO depends on the specific operating company and location."
   },
+  "refresh_after": 1789960991,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -60954,7 +61020,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual winter holiday shutdown (typically between Christmas and New Year's Day) is common across many Danaher operating companies, providing a guaranteed company-wide break. Some sites may also observe summer shutdowns."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "4a1360d869",
+    "645763d399"
+   ],
+   "value": "Danaher is a mature, publicly traded mega-cap Fortune 500 enterprise with annual revenues exceeding $30 billion and a global workforce of approximately 80,000 associates. It is a well-established public company, not a startup."
   },
   "sources": [
    {
@@ -60998,14 +61072,41 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "645763d399",
+    "4a1360d869"
+   ],
+   "value": "Danaher is a global science and technology conglomerate that designs, manufactures, and markets professional, medical, industrial, and commercial products. It makes money by acquiring niche industrial and healthcare businesses and improving their efficiency and profitability through the Danaher Business System (DBS), a proprietary continuous improvement methodology."
+  },
+  "synthesized_evidence_sha": "cc4042446c22b75f",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "4a1360d869",
+    "645763d399"
+   ],
+   "value": "Technical work spans embedded systems, instrument firmware, imaging algorithms, bioinformatics pipelines, cloud-connected IoT diagnostics, and AI/ML for clinical decision support and manufacturing optimization. Scientists and engineers collaborate on hardware-software integrated products across over 20 operating companies."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784776546,
   "web_search_url": "https://duckduckgo.com/?q=Danaher+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Danaher suits a candidate seeking elite Fortune 500 prestige and high pay while advancing science and human health in a genuinely impactful way. The DBS culture emphasizes measurable efficiency rather than chaotic firefighting, and operating company autonomy can create pockets of fast-cycle innovation within a stable corporate structure that tends to respect scheduled shutdowns over 'always-on' burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4 out of 5 for the corporate and technical divisions. Continuous improvement philosophy tends to root out systemic overwork, though specific operating companies with short-staffed clinical-support teams may experience periods of higher pressure."
   }
  },
  "danaher corporation": {
@@ -98682,38 +98783,99 @@
  "healthpartners": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "d1d7291a2a"
+   ],
+   "value": "Estimated: Mid-tier enterprise data analytics; not recognized as elite AI/Data Science prestige."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "d1d7291a2a"
+   ],
+   "value": "Operates as a non-profit healthcare organization generating revenue through integrated health insurance premiums and direct care services."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "d1d7291a2a"
+   ],
+   "value": "Inclusive environment that encourages new ways of thinking, celebrates differences, and recognizes hard work."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "d1d7291a2a"
+   ],
+   "value": "Patients, healthcare consumers, and insurance plan members."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Competitive non-profit healthcare tech salary, likely lower than big tech firms, roughly $70,000-$85,000."
   },
   "evidence_sha": "00276d2786868a2d",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784776991,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d1d7291a2a"
+   ],
+   "value": "Healthcare, Insurance, and Pharmacy Services."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d1d7291a2a"
+   ],
+   "value": "Highlight how your skills in tools like SQL, Power BI, and Tableau can drive fast, innovative improvements in healthcare data, pushing past slow bureaucracy. Emphasize your ability to technically accelerate learning while firmly respecting work-life balance and avoiding toxic, high-burnout behaviors."
+  },
+  "last_attempt_at": 1784776991,
   "last_evidence_at": 1784768808,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "d1d7291a2a"
+   ],
+   "value": "United States (specific locations not detailed in sources)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "d1d7291a2a"
+   ],
+   "value": "To improve health and well-being through an inclusive environment that encourages new ways of thinking, celebrates differences, and recognizes hard work."
+  },
   "name": "HealthPartners",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "d1d7291a2a"
+   ],
+   "value": "Estimated: Moderate pace typical of established non-profit healthcare organizations, potentially leaning toward slow bureaucracy over fast-paced tech innovation."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "d1d7291a2a"
+   ],
+   "value": "Medical insurance plans, pharmacy services, online clinic platforms, and dental plans."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard non-profit healthcare PTO package, likely around 20-25 days annually plus holidays, but exact policy not found in research."
   },
+  "refresh_after": 1789960991,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -98723,7 +98885,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely standard public holidays; no guaranteed corporate-wide shutdowns found in research."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "d1d7291a2a"
+   ],
+   "value": "Established non-profit organization with a large-scale healthcare presence."
   },
   "sources": [
    {
@@ -98777,14 +98946,45 @@
     "url": "https://jobright.ai/jobs/info/6a612e5b11edf44d7915f3c3?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "d1d7291a2a"
+   ],
+   "value": "Sponsorship details not found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "d1d7291a2a"
+   ],
+   "value": "HealthPartners is a non-profit healthcare organization that provides medical insurance, pharmacy services, online clinics, and dental plans. It generates revenue through healthcare premiums, pharmacy sales, and care delivery services."
+  },
+  "synthesized_evidence_sha": "00276d2786868a2d",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "d1d7291a2a"
+   ],
+   "value": "Data analytics and reporting utilizing Microsoft Power BI, Tableau, SQL, Relational database concepts, and Epic Clarity."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784768808,
   "web_search_url": "https://duckduckgo.com/?q=HealthPartners+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d1d7291a2a"
+   ],
+   "value": "Balancing elite tech prestige and fast-paced innovation can be difficult within a non-profit healthcare setting that traditionally relies on enterprise systems. For a candidate valuing sane hours and mission-driven work, this role offers strong work-life balance and a clear social impact, though it may require proactive effort to accelerate technical learning if the culture leans toward slow bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "d1d7291a2a"
+   ],
+   "value": "Estimated: Good work-life balance with sane hours, reflecting the company's stated celebration of hard work and inclusive culture."
   }
  },
  "hearst": {
@@ -101196,48 +101396,129 @@
  "hme": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "949f971c05"
+   ],
+   "value": "Estimated: Low. The tech stack emphasizes traditional backend and systems engineering rather than cutting-edge AI or data science."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "949f971c05",
+    "8f216fe68c"
+   ],
+   "value": "B2B sales of communication hardware and software solutions."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "949f971c05"
+   ],
+   "value": "Estimated: Traditional and established. The long history (founded 1971) and enterprise focus suggest a mature corporate environment rather than a fast-paced startup."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "949f971c05"
+   ],
+   "value": "Businesses requiring enterprise communication and software solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "949f971c05"
+   ],
+   "value": "Estimated: $80,000 - $110,000. Likely below elite FAANG-tier new-grad pay given the size, location, and traditional industry."
   },
   "evidence_sha": "0f0dad49bc4af517",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784776991,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "949f971c05",
+    "8f216fe68c"
+   ],
+   "value": "Telecommunications and Enterprise Software"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "949f971c05"
+   ],
+   "value": "Probe deeply into the team’s actual tech stack, release cadence, and engineering culture to see if the role leans modern (Node.js/Python) or legacy (C#/.NET/C++). Ask pointed questions about upskilling opportunities,exact working hours, and weekend on-call expectations to ensure the environment isn't a slow bureaucracy or a toxic, burnout-prone workplace."
+  },
+  "last_attempt_at": 1784776991,
   "last_evidence_at": 1784768504,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "949f971c05"
+   ],
+   "value": "Headquartered in Poway, California, USA."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "949f971c05",
+    "be8da2aae5",
+    "8f216fe68c"
+   ],
+   "value": "Mission details not found in the provided research."
+  },
   "name": "HME",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "949f971c05"
+   ],
+   "value": "Estimated: Moderate to slow. As an older, established company with traditional enterprise tech stacks, it likely values stability over rapid innovation."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "949f971c05",
+    "8f216fe68c"
+   ],
+   "value": "Communication systems and cloud-based platforms (hmecloud.com)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "949f971c05"
+   ],
+   "value": "Estimated: 15-20 days. Exact PTO policy is not public."
   },
+  "refresh_after": 1789960991,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "949f971c05"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "949f971c05"
+   ],
+   "value": "Estimated: None found in research."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "949f971c05"
+   ],
+   "value": "501-1000 employees; founded in 1971."
   },
   "sources": [
    {
@@ -101281,14 +101562,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=05422463a1dd024ecb6c48f8518c059ac8c165e71ece33227ff3258882abee1cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3e64e231-5a75-6518-36ef-f5ac5b2264b9&u=a1aHR0cHM6Ly93d3cuaG1lLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "949f971c05"
+   ],
+   "value": "Has a track record of offering H1B sponsorships, though it is not guaranteed for every specific role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "949f971c05"
+   ],
+   "value": "HME is a technology company founded in 1971 that appears to develop communication and software solutions. Based on its hiring profiles, it generates revenue by building and deploying enterprise-grade software applications."
+  },
+  "synthesized_evidence_sha": "0f0dad49bc4af517",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "949f971c05"
+   ],
+   "value": "Backend and systems engineering involving Node.js, Python, C#/.NET, C/C++, and Linux environments."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677297,
   "web_search_url": "https://duckduckgo.com/?q=HME+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "949f971c05"
+   ],
+   "value": "Given its 1971 founding and enterprise focus, HME may lean toward slower bureaucracy and traditional corporate pacing, which conflicts with your desire for a fast, innovative tech culture. While H1B sponsorship is available, the lack of visible modern AI/DS tech stack mentions and new-grad prestige signals suggests it might not meet your goals for elite AI career acceleration or top-tier new-grad pay."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "949f971c05"
+   ],
+   "value": "Estimated: Moderate. Traditional mid-sized companies often have standard working hours, but this varies heavily by team."
   }
  },
  "hntb": {
@@ -108425,38 +108737,98 @@
  "innodata": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "86ddebfcd6",
+    "f59287b9bc"
+   ],
+   "value": "Estimated: Mid-tier. While publicly traded and crucial to the AI supply chain, it primarily operates as a data services and pipeline engineering firm rather than a top-tier AI research lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "86ddebfcd6"
+   ],
+   "value": "B2B technology and data services, leveraging a global workforce to provide data engineering, data ingestion/transformation, and AI training platforms to enterprise clients."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven towards responsible AI, but the actual everyday culture vibe is not detailed in the provided public sources."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "86ddebfcd6"
+   ],
+   "value": "Generative AI builders and enterprise adopters of AI technologies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Likely industry-standard for data engineering new grads at public tech services firms, rather than elite big-tech AI lab pay."
   },
   "evidence_sha": "4265c7a328f831b8",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784776991,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "86ddebfcd6"
+   ],
+   "value": "Data Engineering and Artificial Intelligence Technology / Services."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "86ddebfcd6"
+   ],
+   "value": "Probe deeply into the team's engineering culture, expected working hours, and whether the pace is driven by rigid client SLAs or fast-paced innovation. Ask specific questions about new grad compensation bands and opportunities for rapid technical learning to ensure the role matches your goals for high growth and low burnout."
+  },
+  "last_attempt_at": 1784776991,
   "last_evidence_at": 1784761140,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "86ddebfcd6"
+   ],
+   "value": "Global data engineering presence (specific office locations not specified in provided sources, but indicates global operations)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "86ddebfcd6"
+   ],
+   "value": "To enable the responsible advancement of artificial intelligence by providing the data, evaluation frameworks, and human expertise required to build AI systems that can be trusted at scale."
+  },
   "name": "Innodata",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "86ddebfcd6"
+   ],
+   "value": "Estimated: Likely fast-paced due to serving enterprise clients adopting Generative AI technologies, but potentially bound by standard public company bureaucracy."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "86ddebfcd6"
+   ],
+   "value": "Data engineering solutions, data pipelines for enterprise data lakes and warehouses, evaluation frameworks, and managed human expertise platforms designed for Generative AI builders and adopters."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard corporate PTO policy (exact days not disclosed in sources)."
   },
+  "refresh_after": 1789960991,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -108466,7 +108838,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No information found in sources regarding guaranteed company shutdowns."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "86ddebfcd6",
+    "f59287b9bc"
+   ],
+   "value": "Publicly traded company (Nasdaq: INOD) operating on a global scale."
   },
   "sources": [
    {
@@ -108510,14 +108890,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=5ba10e4f8881d1170e8fd4eb12dffad97c3f4f57a78070ca243b441af58d4c7eJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=1f4f8270-2f38-6b26-14f8-95ec2ec36aec&u=a1aHR0cHM6Ly9pbm5vZGF0YS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No specific information found in the provided sources regarding visa sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "86ddebfcd6"
+   ],
+   "value": "Innodata is a global data engineering company that provides the data, evaluation frameworks, and human expertise required to build scalable and responsible AI systems. They generate revenue by offering transferable solutions, platforms, and specialized services to organizations building or adopting Generative AI."
+  },
+  "synthesized_evidence_sha": "4265c7a328f831b8",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "86ddebfcd6"
+   ],
+   "value": "Technical roles involve developing and optimizing data pipelines for ingestion, transformation, and loading into enterprise data lakes and warehouses to support large-scale AI systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784589346,
   "web_search_url": "https://duckduckgo.com/?q=Innodata+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "86ddebfcd6"
+   ],
+   "value": "Innodata offers a compelling entry into the AI industry where you will directly support the foundation of Generative AI systems through core data engineering. However, as a public data engineering services firm, it may not provide the elite prestige or top-tier compensation of a cutting-edge big-tech AI lab, and candidates should screen carefully to ensure the culture provides the technical growth and work-life balance they seek without bureaucratic drag."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unclear. Candidates should verify if teams are subjected to tight client deadlines which could impact work-life balance, as the sources do not confirm guaranteed sane hours for technical staff."
   }
  },
  "innoflight": {
@@ -110879,37 +111286,82 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 — limited public AI/research footprint; primarily applied ML in support of government analytics contracts."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Professional services and IT contracting: time-and-materials, fixed-price, and task-order contracts with government clients."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first contractor culture; emphasis on certifications, clearances, and technical mentorship. Less 'move fast break things,' more 'deliver reliably for the mission.'"
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely U.S. federal civilian and defense agencies, based on typical InterImage contracting profile."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k–$105k base + modest bonus/RSU; higher with active clearance."
   },
   "evidence_sha": "e62da4170e2b619c",
+  "generated_at": 1784776991,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Government IT services / Federal contracting"
   },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "69b92cdfba"
+   ],
+   "value": "Expect deep dives on Java 17+ and Spring Boot internals, REST API design, Oracle/MongoDB data modeling, Angular component architecture, and secure coding practices. Be ready to discuss CI/CD pipelines, containerization, and experience with government compliance (e.g., NIST, FISMA)."
+  },
+  "last_attempt_at": 1784776991,
   "last_evidence_at": 1784776545,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in the Washington, DC metro area; likely supports remote/hybrid work for cleared and non-cleared roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Deliver secure, modern technology solutions for government missions (inferred from contractor profile)."
+  },
   "name": "InterImage",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — project-based delivery with sprint cycles; surges around contract milestones but generally predictable."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "69b92cdfba"
+   ],
+   "value": "Custom software development, full-stack web applications, and IT modernization services (inferred from hiring stack)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 federal holidays + potential comp time for overtime."
   },
+  "refresh_after": 1789960991,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -110919,7 +111371,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Observes federal holiday shutdowns; some contracts enforce two-week winter shutdown and summer slowdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-size (200–1,000 employees), established government contractor."
   },
   "sources": [
    {
@@ -110973,14 +111430,43 @@
     "url": "https://jobright.ai/jobs/info/6a613d547196365a6f009a86?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May sponsor H-1B for specialized roles; government contracts often require U.S. citizenship or green card for cleared positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "69b92cdfba",
+    "1db9db9c4d"
+   ],
+   "value": "InterImage appears to be a technology services company hiring for full-stack development roles with a focus on Java/Spring Boot and modern web stacks. The company likely operates as a government contractor or IT services provider given its presence on new-grad hiring boards."
+  },
+  "synthesized_evidence_sha": "e62da4170e2b619c",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "69b92cdfba"
+   ],
+   "value": "Full-stack development using Java 17+, Spring Boot, Oracle, MongoDB, Angular; cloud migration, DevOps, and legacy modernization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784776545,
   "web_search_url": "https://duckduckgo.com/?q=InterImage+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "69b92cdfba",
+    "1db9db9c4d"
+   ],
+   "value": "Offers new-grad full-stack roles with a modern stack (Java 17, Spring Boot, Angular, MongoDB) in a mission-driven government contracting environment. The project variety can accelerate technical learning, while contract structures often enforce defined hours and shutdown periods, supporting work-life balance. Prestige comes from high-impact public-sector work rather than consumer-tech brand recognition."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — government contracts often mandate 40-hr weeks and comp time; on-call rotations exist but are typically bounded."
   }
  },
  "international": {
@@ -154406,39 +154892,108 @@
  },
  "old mission": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "9a4935907a",
+    "72414bc36f"
+   ],
+   "value": "Tier 1 (Elite quantitative trading firm; comparable to top prop shops like Jane Street, Citadel Securities, or Optiver in terms of quantitative rigor, talent density, and compensation prestige among new-grad quant roles)"
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "9a4935907a",
+    "72414bc36f"
+   ],
+   "value": "Generates revenue by capturing bid-ask spreads and pricing inefficiencies as a principal market-maker, using proprietary quantitative models and ultra-low-latency technology across global exchanges."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "9a4935907a"
+   ],
+   "value": "Outwardly competitive but internally collaborative with flat hierarchy. Entrepreneurial spirit where good ideas can come from anywhere. Teamwork and emotional intelligence are valued as much as raw brainpower."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "9a4935907a",
+    "72414bc36f"
+   ],
+   "value": "Institutional counterparties and electronic exchange participants who interact with Old Mission's liquidity as a principal market-maker; the firm does not serve retail clients directly."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "72414bc36f"
+   ],
+   "value": "Estimated: $200,000 - $300,000+ total first-year compensation for Junior Quantitative Researcher role (base salary $125,000-$175,000 plus performance bonus and sign-on), consistent with elite proprietary trading market-makers in Chicago/NYC."
   },
   "evidence_sha": "e26abb745c624f6b",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784776991,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "9a4935907a",
+    "72414bc36f"
+   ],
+   "value": "Quantitative Finance / Proprietary Trading (Market-Making)"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "9a4935907a",
+    "72414bc36f"
+   ],
+   "value": "Will likely test quantitative problem-solving, programming proficiency (Python/C++), statistical reasoning, and market microstructure intuition. Expect emphasis on emotional intelligence and cultural fit for a collaborative, flat-hierarchy team environment."
+  },
+  "last_attempt_at": 1784776991,
   "last_evidence_at": 1784719726,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "72414bc36f",
+    "9a4935907a"
+   ],
+   "value": "Headquartered in Chicago, with presence in New York. Global trading coverage across multiple electronic exchanges as noted in institutional services."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "9a4935907a"
+   ],
+   "value": "\"Building Better Markets\" through advanced technology, unique liquidity provision, and an entrepreneurial spirit that tackles the toughest challenges in global markets."
+  },
   "name": "Old Mission",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "9a4935907a"
+   ],
+   "value": "Estimated: Fast-paced and intellectually demanding, driven by real-time market dynamics and continuous technology improvement, but balanced by an emphasis on teamwork and flat hierarchy rather than aggressive internal competition."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "9a4935907a"
+   ],
+   "value": "Proprietary quantitative market-making platform providing automated liquidity and dynamic pricing for equities, options, ETFs, and other listed derivatives on global exchanges."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days PTO annually, consistent with competitive norms among elite proprietary trading firms to attract and retain top talent."
   },
+  "refresh_after": 1789960991,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -154448,7 +155003,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed shutdowns on U.S. exchange market holidays (NYSE calendar). Likelihood of additional firm-wide closure days between Christmas and New Year's, as is customary at many proprietary trading firms."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "9a4935907a",
+    "72414bc36f"
+   ],
+   "value": "Privately held, established proprietary trading firm founded 2008; operates through multiple SEC-registered broker-dealer subsidiaries (Old Mission Capital LLC, Old Mission Markets LLC) under Old Mission Group LLC. Estimated: lean headcount typical of elite quant market-makers (low hundreds), mature and stable."
   },
   "sources": [
    {
@@ -154502,14 +155065,45 @@
     "url": "https://www.oldmissioncapital.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "9a4935907a",
+    "72414bc36f"
+   ],
+   "value": "Old Mission is a proprietary quantitative market-making firm that builds advanced technology to dynamically price and trade securities and complex derivatives across global markets. The firm operates through SEC-registered broker-dealer subsidiaries, acting as a principal liquidity provider rather than an agency broker."
+  },
+  "synthesized_evidence_sha": "e26abb745c624f6b",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "9a4935907a",
+    "72414bc36f"
+   ],
+   "value": "Quantitative research, strategy development, and market microstructure analysis using advanced statistical modeling and programming (Python/C++). Build and optimize proprietary trading systems for automated pricing and execution at the speed of modern electronic markets."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674426,
   "web_search_url": "https://duckduckgo.com/?q=Old+Mission+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "9a4935907a"
+   ],
+   "value": "Old Mission offers the elite prestige and high new-grad compensation of a top-tier proprietary trading firm while emphasizing a flat, entrepreneurial culture that values ideas over hierarchy. The firm's focus on teamwork and emotional intelligence alongside raw intellectual challenge suggests a more collaborative, sustainable environment that can accelerate technical learning without the burnout culture common in finance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "9a4935907a"
+   ],
+   "value": "Estimated: Above average for elite trading firms (likely 7-8/10). Market hours provide natural boundaries; the firm's stated emphasis on emotional intelligence and collaborative culture suggests intentional avoidance of burnout-inducing practices common in high-frequency trading."
   }
  },
  "old republic title": {
@@ -226935,51 +227529,127 @@
  "valin corporation": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "9400a92fef"
+   ],
+   "value": "Estimated: Low to Medium. The company primarily focuses on IT automation and RPA development rather than elite, cutting-edge AI or data science research."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "9400a92fef"
+   ],
+   "value": "Business-to-business (B2B) IT services and consulting, providing specialized technical talent and software automation development."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "9400a92fef"
+   ],
+   "value": "Estimated: Traditional corporate IT environment focused on operational efficiency and client deliverables, lacking the mission-driven, fast-paced, elite tech culture found in top-tier AI firms."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "9400a92fef"
+   ],
+   "value": "Primary customers are enterprise businesses seeking to automate their internal workflows and optimize operational efficiency."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "9400a92fef"
+   ],
+   "value": "Estimated: $75,000 - $90,000, aligning with standard IT automation/RPA developer roles rather than elite new-grad AI compensation packages."
   },
   "evidence_sha": "877e8649d45527df",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784776991,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784776844,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "9400a92fef"
+   ],
+   "value": "Information Technology (IT) Services and Automation Consulting."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "9400a92fef"
+   ],
+   "value": "Be prepared to discuss UiPath Studio, UiPath Orchestrator, and system integration (SQL, RESTful APIs, JSON) in-depth. To screen for WLB and culture fit, prioritize questions about expected hours, shutdown policies, and whether the learning curve leans toward modern data science or remains siloed in IT automation."
+  },
+  "last_attempt_at": 1784776991,
   "last_evidence_at": 1784757916,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "cc5f3dbce2",
+    "9a19da0e86"
+   ],
+   "value": "Specific office locations were not available due to unresolved redirects on the corporate website, though they hire for RPA roles."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "9400a92fef"
+   ],
+   "value": "To deliver technical and automation solutions that help businesses streamline operations and optimize processes."
+  },
   "name": "Valin Corporation",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "9400a92fef"
+   ],
+   "value": "Estimated: Moderate to fast, driven by standard B2B IT consulting deadlines and client workflow implementations rather than a fast-paced, innovative tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "9400a92fef"
+   ],
+   "value": "Robotic Process Automation (RPA) solutions, utilizing platforms like UiPath Studio and UiPath Orchestrator, alongside integrations using SQL, RESTful APIs, and JSON."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "9400a92fef"
+   ],
+   "value": "Estimated: 15-20 days per year, reflecting standard corporate IT services allowances rather than elite tech benefits."
   },
+  "refresh_after": 1789960991,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "9400a92fef"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "9400a92fef"
+   ],
+   "value": "Estimated: No known guaranteed company-wide shutdowns; time off is likely standard PTO-based rather than structured mandatory closures."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "cc5f3dbce2",
+    "9a19da0e86",
+    "f5ef5f5799"
+   ],
+   "value": "Unknown company size or funding stage due to retrieval limitations on primary corporate pages."
   },
   "sources": [
    {
@@ -227033,14 +227703,45 @@
     "url": "https://jobright.ai/jobs/info/6a5326c78ef95364ead91357?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "9400a92fef"
+   ],
+   "value": "The company explicitly notes that employment does not guarantee visa sponsorship for certain technical roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "9400a92fef"
+   ],
+   "value": "Valin Corporation is an enterprise technology company that hires for specialized IT and automation roles. The company monetizes by providing technical solutions, such as Robotic Process Automation (RPA), to help businesses optimize their operations."
+  },
+  "synthesized_evidence_sha": "877e8649d45527df",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "9400a92fef"
+   ],
+   "value": "Involves developing and implementing Robotic Process Automation using UiPath, alongside data and system integration workflows utilizing SQL, RESTful APIs, and JSON."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784757916,
   "web_search_url": "https://duckduckgo.com/?q=Valin+Corporation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "9400a92fef"
+   ],
+   "value": "This role leans heavily toward IT automation and RPA development rather than core AI or data science, which may not fully align with a desire for top-tier AI prestige. While such roles can offer steady WLB and reasonable hours, the traditional tech consulting culture might lack the fast-paced, elite new-grad pay and deep technical innovation you are seeking."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "9400a92fef"
+   ],
+   "value": "Estimated: Moderate, typical of enterprise IT consulting. Sane hours are likely on the bench, but project deadlines may require occasional over-time, lacking guaranteed shutdowns."
   }
  },
  "valinor": {
@@ -227341,40 +228042,80 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Applied ML in portfolio companies; no centralized AI lab or top-conference publishing track record."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Roll-up acquisition model: purchases profitable vertical SaaS/software companies, centralizes back-office functions (finance, HR, IT), and reinvests in product development and sales to compound growth."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Entrepreneurial, decentralized, operator-focused; each acquired company retains its culture. Central team is lean and metrics-driven. Less bureaucracy than Big Tech, but less resource abundance."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Small to mid-sized businesses and organizations in specialized vertical markets that rely on mission-critical software for daily operations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70k–$95k CAD base (Montreal) / $80k–$110k USD (US) + modest equity; varies by portfolio company and role."
   },
   "evidence_sha": "ae1761742e6d5003",
+  "generated_at": 1784776991,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Vertical SaaS / Software Roll-up / Private Equity-backed Technology"
   },
-  "last_attempt_at": 1784716477,
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Expect practical coding (LeetCode medium), system design for scaling legacy apps, and behavioral questions on autonomy and ownership. Ask which portfolio company and team you'd join — culture, stack, and WLB differ widely. Clarify AI/ML scope: many roles are full-stack or data engineering, not pure research."
+  },
+  "last_attempt_at": 1784776991,
   "last_evidence_at": 1784711509,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Montreal, Canada; offices across North America, Europe, and Australia; remote-friendly for many engineering roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To acquire, strengthen, and grow vertical market software companies by providing operational expertise, capital, and strategic guidance while preserving their entrepreneurial culture."
+  },
   "name": "Valsoft Corporation",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast depending on integration cycles; quarterly acquisition cadence creates periodic crunches, but steady-state product work is sustainable."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Portfolio of vertical-specific software products across industries like automotive, education, healthcare, and public sector; acquired companies retain their product lines under Valsoft ownership."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days + holidays (varies by country and acquired entity policy); no unified global PTO policy found in research."
   },
+  "refresh_after": 1789960991,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -227384,7 +228125,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some portfolio companies observe winter breaks locally."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 1,000–5,000 employees globally; private equity-backed (Aspire Software/Valsoft parent), acquisition-driven growth stage."
   },
   "sources": [
    {
@@ -227428,14 +228174,39 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors H-1B and global work visas selectively for senior or hard-to-fill roles; Canadian entities support LMIA/Global Talent Stream."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Valsoft Corporation acquires and operates vertical market software businesses, providing mission-critical solutions to niche industries. The company grows by purchasing established software companies and optimizing their operations."
+  },
+  "synthesized_evidence_sha": "ae1761742e6d5003",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Maintaining and modernizing legacy codebases across diverse tech stacks; integrating acquired products; building internal tools for portfolio management; limited greenfield AI/ML work."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784711509,
   "web_search_url": "https://duckduckgo.com/?q=Valsoft+Corporation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Valsoft offers new-grad exposure to a unique roll-up model with diverse tech stacks across verticals, but AI/data science roles are likely embedded in specific portfolio companies rather than a centralized elite research group. Work-life balance varies by acquired business unit; some teams report sane hours while others face integration crunches. Fast technical learning comes from legacy modernization, not cutting-edge AI innovation."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — Varies significantly by portfolio company; some teams enforce 40h weeks, others expect burst effort during migrations."
   }
  },
  "vanderbilt health": {
