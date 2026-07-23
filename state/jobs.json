@@ -43376,7 +43376,7 @@
   ],
   "posted_at": 1776525074,
   "posting": {
-   "analyzed_at": 1784841805,
+   "analyzed_at": 1784849209,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
@@ -43388,7 +43388,7 @@
     "fetched": true,
     "sponsorship": "unknown"
    },
-   "ai_deferred_at": 1784841805,
+   "ai_deferred_at": 1784849209,
    "attempts": 0
   },
   "remote": false,
@@ -98368,7 +98368,7 @@
   "url": "https://ciena.wd5.myworkdayjobs.com/en-US/Careers/job/Remote-US/Global-Process-Owner---Sales-and-Operations-Planning_R029895"
  },
  "2297218b999709c4": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "NVIDIA",
   "description": "",
@@ -98392,19 +98392,33 @@
   ],
   "posted_at": 1772494088,
   "posting": {
-   "analyzed_at": 1784848712,
+   "analyzed_at": 1784849124,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
+   "_posting": {
+    "analyzed_at": 1784849124,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "unknown"
+   },
    "ai_deferred_at": 1784848712,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784849124,
+   "degree_required": "phd",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "no",
+   "reason": "PhD required, not new grad.",
+   "role_family": "ml",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 6,
   "salary": "",
-  "score": 100,
+  "score": 20,
   "score_reasons": [
    "base 5",
    "role:ai_ml +26",
@@ -98415,7 +98429,9 @@
    "title matches your history +6",
    "culture fit 83/100 +4",
    "SHPE 2026 exhibitor +4",
-   "verified new-grad/early-career evidence"
+   "verified new-grad/early-career evidence",
+   "quality: requires PhD (bachelor's profile) -60",
+   "quality: not new-grad (senior — LLM-verified) -20"
   ],
   "score_version": 6,
   "sector": "big_tech",
@@ -110413,7 +110429,6 @@
    "you've engaged with Amazon +8",
    "title matches your history +2",
    "SHPE 2026 exhibitor +4",
-   "verified new-grad/early-career evidence",
    "quality: not new-grad (1+ yrs — LLM-verified) -20"
   ],
   "score_version": 6,
@@ -125967,7 +125982,7 @@
   "url": "https://job-boards.greenhouse.io/canonical/jobs/3737190"
  },
  "2c1163d1e462c9e7": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Amazon Web Services (AWS)",
   "description": "",
@@ -125980,7 +125995,7 @@
   ],
   "posted_at": 1784678400,
   "posting": {
-   "analyzed_at": 1784842282,
+   "analyzed_at": 1784849194,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "no",
@@ -125988,19 +126003,27 @@
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784842282,
+    "analyzed_at": 1784849194,
     "fetch_status": "readable",
     "fetched": true,
     "sponsorship": "no",
     "sponsorship_note": "U.S. Citizen Only"
    },
    "ai_deferred_at": 1784842282,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784849194,
+   "degree_required": "unclear",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years experience required",
+   "role_family": "other-technical",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 6,
   "salary": "",
-  "score": 91,
+  "score": 71,
   "score_reasons": [
    "base 5",
    "role:swe +20",
@@ -126009,7 +126032,8 @@
    "posted <72h +3",
    "you've engaged with Amazon Web Services (AWS) +2",
    "title matches your history +6",
-   "verified new-grad/early-career evidence"
+   "verified new-grad/early-career evidence",
+   "quality: not new-grad (1+ yrs — LLM-verified) -20"
   ],
   "score_version": 6,
   "sector": "big_tech",
@@ -138332,6 +138356,11 @@
    "fetch_note": "could not retrieve the posting page/API",
    "fetch_status": "unavailable",
    "fetched": true
+  },
+  "quality": {
+   "attempts": 1,
+   "fetch_note": "could not retrieve usable posting text",
+   "fetch_status": "unavailable"
   },
   "remote": false,
   "rules_v": 6,
@@ -161919,14 +161948,12 @@
   "remote": false,
   "rules_v": 6,
   "salary": "",
-  "score": 37,
+  "score": 36,
   "score_reasons": [
    "base 5",
    "role:swe +20",
    "sector:ai_lab +11",
-   "new-grad evidence absent (below eligible roles)",
-   "posted <7d +1",
-   "off-field title (dashboard only)"
+   "new-grad evidence absent (below eligible roles)"
   ],
   "score_version": 6,
   "sector": "ai_lab",
@@ -182661,14 +182688,12 @@
   "remote": false,
   "rules_v": 6,
   "salary": "",
-  "score": 30,
+  "score": 29,
   "score_reasons": [
    "base 5",
    "role:swe +20",
    "new-grad evidence absent (below eligible roles)",
-   "posted <7d +1",
-   "title matches your history +4",
-   "off-field title (dashboard only)"
+   "title matches your history +4"
   ],
   "score_version": 6,
   "sector": "other",
@@ -205369,16 +205394,15 @@
   "remote": false,
   "rules_v": 6,
   "salary": "",
-  "score": 53,
+  "score": 50,
   "score_reasons": [
    "base 5",
    "role:ai_ml +26",
    "sector:ai_lab +11",
    "new-grad evidence absent (below eligible roles)",
-   "posted <24h +6",
+   "posted <72h +3",
    "title matches your history +2",
-   "culture fit 71/100 +3",
-   "not verified new-grad/early-career (dashboard only)"
+   "culture fit 71/100 +3"
   ],
   "score_version": 6,
   "sector": "ai_lab",
@@ -223887,6 +223911,11 @@
    "fetch_status": "unreadable",
    "fetched": true
   },
+  "quality": {
+   "attempts": 1,
+   "fetch_note": "page loaded without enough usable posting text",
+   "fetch_status": "unreadable"
+  },
   "remote": false,
   "rules_v": 6,
   "salary": "",
@@ -227689,7 +227718,7 @@
   ],
   "posted_at": 1784758126,
   "posting": {
-   "analyzed_at": 1784842279,
+   "analyzed_at": 1784849203,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
@@ -227701,7 +227730,7 @@
     "fetched": true,
     "sponsorship": "unknown"
    },
-   "ai_deferred_at": 1784842279,
+   "ai_deferred_at": 1784849203,
    "attempts": 0
   },
   "remote": false,
@@ -243519,7 +243548,7 @@
   ],
   "posted_at": 1772753293,
   "posting": {
-   "analyzed_at": 1784621687,
+   "analyzed_at": 1784849217,
    "fetch_status": "readable",
    "fetched": true,
    "intern_counts": true,
@@ -243527,6 +243556,10 @@
    "sponsorship_note": "not sponsor",
    "years_min": 0,
    "years_note": "0–2 years"
+  },
+  "quality": {
+   "ai_deferred_at": 1784849217,
+   "attempts": 0
   },
   "remote": false,
   "rules_v": 6,
@@ -253946,7 +253979,7 @@
   ],
   "posted_at": 1784764800,
   "posting": {
-   "analyzed_at": 1784841806,
+   "analyzed_at": 1784849210,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "no",
@@ -253960,7 +253993,7 @@
     "sponsorship": "no",
     "sponsorship_note": "U.S. Citizen Only"
    },
-   "ai_deferred_at": 1784841806,
+   "ai_deferred_at": 1784849210,
    "attempts": 0
   },
   "remote": false,
@@ -330569,13 +330602,17 @@
   ],
   "posted_at": 1784764800,
   "posting": {
-   "analyzed_at": 1784821848,
+   "analyzed_at": 1784849211,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "citizenship is required",
    "years_min": 0,
    "years_note": "00 years of experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784849211,
+   "attempts": 0
   },
   "remote": false,
   "rules_v": 6,
@@ -337021,8 +337058,9 @@
   "url": "https://jobs.smartrecruiters.com/ProcomServices/88427659"
  },
  "766ca3b842c04afc": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
+  "closed_at": 1784849212,
   "company": "HaystackID",
   "description": "",
   "explicit_new_grad": true,
@@ -337033,6 +337071,11 @@
    "United States"
   ],
   "posted_at": 1784764800,
+  "quality": {
+   "attempts": 1,
+   "checked_at": 1784849212,
+   "live": false
+  },
   "remote": true,
   "rules_v": 6,
   "salary": "",
@@ -337044,7 +337087,8 @@
    "posted <24h +6",
    "remote +2",
    "title matches your history +6",
-   "verified new-grad/early-career evidence"
+   "verified new-grad/early-career evidence",
+   "quality: posting gone (link checked)"
   ],
   "score_version": 6,
   "sector": "other",
@@ -375315,7 +375359,7 @@
   "url": "https://jobright.ai/jobs/info/6a448cce105260150b7222ad?utm_campaign=Software%20Engineering&utm_source=1103"
  },
  "84588f176e1bc3c5": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "Hudson Hospital & Clinic",
   "description": "",
@@ -375328,25 +375372,33 @@
   ],
   "posted_at": 1784678400,
   "posting": {
-   "analyzed_at": 1784848714,
+   "analyzed_at": 1784849145,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784842275,
+    "analyzed_at": 1784849145,
     "fetch_status": "readable",
     "fetched": true,
     "sponsorship": "unknown"
    },
    "ai_deferred_at": 1784848714,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784849145,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required.",
+   "role_family": "data",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 6,
   "salary": "",
-  "score": 98,
+  "score": 78,
   "score_reasons": [
    "base 5",
    "role:data_science +23",
@@ -375354,7 +375406,8 @@
    "trusted new-grad board priority +45",
    "posted <72h +3",
    "title matches your history +6",
-   "verified new-grad/early-career evidence"
+   "verified new-grad/early-career evidence",
+   "quality: not new-grad (1+ yrs — LLM-verified) -20"
   ],
   "score_version": 6,
   "sector": "healthtech",
@@ -426303,7 +426356,7 @@
   ],
   "posted_at": 1784787714,
   "posting": {
-   "analyzed_at": 1784841805,
+   "analyzed_at": 1784849208,
    "fetch_status": "readable",
    "fetched": true,
    "intern_counts": true,
@@ -426321,7 +426374,7 @@
     "years_min": 0,
     "years_note": "0 to 3 years"
    },
-   "ai_deferred_at": 1784841805,
+   "ai_deferred_at": 1784849208,
    "attempts": 0
   },
   "remote": false,
@@ -470783,10 +470836,14 @@
   ],
   "posted_at": 1784505600,
   "posting": {
-   "analyzed_at": 1784814111,
+   "analyzed_at": 1784849216,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784849216,
+   "attempts": 0
   },
   "remote": false,
   "rules_v": 6,
@@ -486360,13 +486417,17 @@
   ],
   "posted_at": 1784764800,
   "posting": {
-   "analyzed_at": 1784821848,
+   "analyzed_at": 1784849213,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "citizenship is required",
    "years_min": 0,
    "years_note": "00 years of experience"
+  },
+  "quality": {
+   "ai_deferred_at": 1784849213,
+   "attempts": 0
   },
   "remote": false,
   "rules_v": 6,
@@ -497809,9 +497870,11 @@
    "fetched": true
   },
   "quality": {
-   "attempts": 1,
+   "attempts": 2,
+   "checked_at": 1784849178,
    "fetch_note": "could not retrieve usable posting text",
-   "fetch_status": "unavailable"
+   "fetch_status": "unavailable",
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 6,
@@ -514833,7 +514896,6 @@
    "you've engaged with Amazon +8",
    "title matches your history +6",
    "SHPE 2026 exhibitor +4",
-   "verified new-grad/early-career evidence",
    "quality: not new-grad (1+ yrs — LLM-verified) -20"
   ],
   "score_version": 6,
@@ -527245,15 +527307,30 @@
   ],
   "posted_at": 1765926915,
   "posting": {
-   "analyzed_at": 1784848713,
+   "analyzed_at": 1784849136,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "no",
    "sponsorship_note": "must be a U.S. citizen"
   },
   "quality": {
+   "_posting": {
+    "analyzed_at": 1784849136,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "no",
+    "sponsorship_note": "must be a U.S. citizen"
+   },
    "ai_deferred_at": 1784848713,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784849136,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Bachelors degree required, new grad role, software engineering",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 6,
@@ -528859,15 +528936,14 @@
   "remote": false,
   "rules_v": 6,
   "salary": "",
-  "score": 42,
+  "score": 40,
   "score_reasons": [
    "base 5",
    "role:swe +20",
    "sector:ai_lab +11",
    "new-grad evidence absent (below eligible roles)",
-   "posted <72h +3",
-   "title matches your history +3",
-   "not verified new-grad/early-career (dashboard only)"
+   "posted <7d +1",
+   "title matches your history +3"
   ],
   "score_version": 6,
   "sector": "ai_lab",
@@ -532007,15 +532083,14 @@
   "remote": true,
   "rules_v": 6,
   "salary": "",
-  "score": 36,
+  "score": 34,
   "score_reasons": [
    "base 5",
    "role:swe +20",
    "new-grad evidence absent (below eligible roles)",
-   "posted <72h +3",
+   "posted <7d +1",
    "remote +2",
-   "title matches your history +6",
-   "not verified new-grad/early-career (dashboard only)"
+   "title matches your history +6"
   ],
   "score_version": 6,
   "sector": "other",
@@ -611952,7 +612027,7 @@
   ],
   "posted_at": 1784764800,
   "posting": {
-   "analyzed_at": 1784842281,
+   "analyzed_at": 1784849186,
    "fetch_status": "readable",
    "fetched": true,
    "intern_counts": true,
@@ -611961,7 +612036,7 @@
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784842281,
+    "analyzed_at": 1784849186,
     "fetch_status": "readable",
     "fetched": true,
     "intern_counts": true,
@@ -611969,7 +612044,15 @@
     "sponsorship_note": "H1B Sponsorship"
    },
    "ai_deferred_at": 1784842281,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784849186,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry Level, Bachelor's degree required, new grad role",
+   "role_family": "swe",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 6,
@@ -613353,15 +613436,30 @@
   ],
   "posted_at": 1784764800,
   "posting": {
-   "analyzed_at": 1784848716,
+   "analyzed_at": 1784849162,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "yes",
    "sponsorship_note": "H1B Sponsorship"
   },
   "quality": {
+   "_posting": {
+    "analyzed_at": 1784849162,
+    "fetch_status": "readable",
+    "fetched": true,
+    "sponsorship": "yes",
+    "sponsorship_note": "H1B Sponsorship"
+   },
    "ai_deferred_at": 1784848716,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784849162,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "Entry level, no experience required",
+   "role_family": "other-technical",
+   "years_required": 0
   },
   "remote": false,
   "rules_v": 6,
@@ -614487,20 +614585,28 @@
   ],
   "posted_at": 1779325430,
   "posting": {
-   "analyzed_at": 1784848716,
+   "analyzed_at": 1784849170,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784842277,
+    "analyzed_at": 1784849170,
     "fetch_status": "readable",
     "fetched": true,
     "sponsorship": "unknown"
    },
    "ai_deferred_at": 1784848716,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784849170,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role with data focus",
+   "role_family": "data",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 6,
@@ -653092,13 +653198,12 @@
   "remote": false,
   "rules_v": 6,
   "salary": "",
-  "score": 39,
+  "score": 38,
   "score_reasons": [
    "base 5",
    "role:swe +20",
    "sector:big_tech +10",
    "new-grad evidence absent (below eligible roles)",
-   "posted <7d +1",
    "culture fit 71/100 +3"
   ],
   "score_version": 6,
@@ -655635,7 +655740,7 @@
   ],
   "posted_at": 1781733708,
   "posting": {
-   "analyzed_at": 1784841803,
+   "analyzed_at": 1784849206,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "no",
@@ -655649,7 +655754,7 @@
     "sponsorship": "no",
     "sponsorship_note": "not eligible for Sponsorship"
    },
-   "ai_deferred_at": 1784841803,
+   "ai_deferred_at": 1784849206,
    "attempts": 0
   },
   "remote": false,
@@ -665214,14 +665319,12 @@
   "remote": false,
   "rules_v": 6,
   "salary": "",
-  "score": 37,
+  "score": 36,
   "score_reasons": [
    "base 5",
    "role:swe +20",
    "sector:ai_lab +11",
-   "new-grad evidence absent (below eligible roles)",
-   "posted <7d +1",
-   "off-field title (dashboard only)"
+   "new-grad evidence absent (below eligible roles)"
   ],
   "score_version": 6,
   "sector": "ai_lab",
@@ -669156,7 +669259,7 @@
   ],
   "posted_at": 1784586267,
   "posting": {
-   "analyzed_at": 1784842280,
+   "analyzed_at": 1784849202,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
@@ -669168,7 +669271,7 @@
     "fetched": true,
     "sponsorship": "unknown"
    },
-   "ai_deferred_at": 1784842280,
+   "ai_deferred_at": 1784849202,
    "attempts": 0
   },
   "remote": false,
@@ -674559,14 +674662,14 @@
   "remote": false,
   "rules_v": 6,
   "salary": "",
-  "score": 53,
+  "score": 51,
   "score_reasons": [
    "base 5",
    "role:data_eng +17",
    "sector:sports +12",
    "new-grad evidence absent (below eligible roles)",
    "company tier: marquee (competitive)",
-   "posted <72h +3",
+   "posted <7d +1",
    "you've engaged with Fanatics +4",
    "title matches your history +4"
   ],
@@ -679067,20 +679170,28 @@
   ],
   "posted_at": 1784592000,
   "posting": {
-   "analyzed_at": 1784848718,
+   "analyzed_at": 1784849179,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784842278,
+    "analyzed_at": 1784849179,
     "fetch_status": "readable",
     "fetched": true,
     "sponsorship": "unknown"
    },
    "ai_deferred_at": 1784848718,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784849179,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "yes",
+   "reason": "New grad role, B.S. required",
+   "role_family": "swe",
+   "years_required": null
   },
   "remote": false,
   "rules_v": 6,
@@ -689353,7 +689464,7 @@
   "url": "https://www.mongodb.com/careers/job/?gh_jid=7318036"
  },
  "f1f751c9947848c4": {
-  "alert_ok": true,
+  "alert_ok": false,
   "ats": "",
   "company": "HealthPartners",
   "description": "",
@@ -689366,25 +689477,33 @@
   ],
   "posted_at": 1784678400,
   "posting": {
-   "analyzed_at": 1784848715,
+   "analyzed_at": 1784849153,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
   },
   "quality": {
    "_posting": {
-    "analyzed_at": 1784842276,
+    "analyzed_at": 1784849153,
     "fetch_status": "readable",
     "fetched": true,
     "sponsorship": "unknown"
    },
    "ai_deferred_at": 1784848715,
-   "attempts": 0
+   "attempts": 1,
+   "checked_at": 1784849153,
+   "degree_required": "bachelors",
+   "fetch_status": "readable",
+   "live": true,
+   "new_grad": "no",
+   "reason": "1+ years exp required",
+   "role_family": "data",
+   "years_required": 1
   },
   "remote": false,
   "rules_v": 6,
   "salary": "",
-  "score": 98,
+  "score": 78,
   "score_reasons": [
    "base 5",
    "role:data_science +23",
@@ -689392,7 +689511,8 @@
    "trusted new-grad board priority +45",
    "posted <72h +3",
    "title matches your history +6",
-   "verified new-grad/early-career evidence"
+   "verified new-grad/early-career evidence",
+   "quality: not new-grad (1+ yrs — LLM-verified) -20"
   ],
   "score_version": 6,
   "sector": "healthtech",
@@ -711862,9 +711982,11 @@
     "years_min": 0,
     "years_note": "0–2 years"
    },
-   "attempts": 1,
+   "attempts": 2,
+   "checked_at": 1784849205,
    "fetch_note": "could not retrieve usable posting text",
-   "fetch_status": "unavailable"
+   "fetch_status": "unavailable",
+   "new_grad": "unclear"
   },
   "remote": false,
   "rules_v": 6,
@@ -722700,10 +722822,14 @@
   ],
   "posted_at": 1784844835,
   "posting": {
-   "analyzed_at": 1784847053,
+   "analyzed_at": 1784849207,
    "fetch_status": "readable",
    "fetched": true,
    "sponsorship": "unknown"
+  },
+  "quality": {
+   "ai_deferred_at": 1784849207,
+   "attempts": 0
   },
   "remote": false,
   "rules_v": 6,
