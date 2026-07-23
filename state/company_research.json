@@ -52152,40 +52152,101 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3. While data science and AI are critical for biometric matching, CLEAR does not have the elite AI/Data Science prestige of FAANG or top-tier ML research firms."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "93c551f236"
+   ],
+   "value": "B2C subscription revenue from its CLEAR Plus airport expedited screening service, combined with B2B enterprise partnerships and integrations for its digital identity and verification platform."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "93c551f236",
+    "9d0b347fef"
+   ],
+   "value": "Mission-driven and talent-focused, emphasizing collaboration among team members motivated by making experiences safer and easier."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "93c551f236"
+   ],
+   "value": "Travelers using airports, sports and entertainment venue operators, enterprise clients needing identity verification, and consumers seeking secure digital identity management."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130,000 - $160,000 base salary. Exact new-grad pay is not public, but is expected to be competitive for the US tech market."
   },
   "evidence_sha": "8a9ce840a594b7b7",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784796020,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784779451,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "93c551f236",
+    "9d0b347fef"
+   ],
+   "value": "Information Technology / Identity Verification / Security Technology"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "93c551f236",
+    "9d0b347fef"
+   ],
+   "value": "Candidates should evaluate whether the company's AI and data initiatives provide enough top-tier technical learning and growth opportunities. Because it bills itself as the secure identity company of the future, it is worth probing about work-life balance, sane hours, and guaranteed shutdowns, as these factors are mission-critical for the candidate."
+  },
+  "last_attempt_at": 1784796020,
   "last_evidence_at": 1784677035,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "93c551f236"
+   ],
+   "value": "Headquartered in the US, with a distributed technical team and biometric kiosks deployed across major airports and venues nationwide."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "93c551f236",
+    "9d0b347fef"
+   ],
+   "value": "To make experiences safer and easier—physically and digitally—by building THE secure identity company of the future."
+  },
   "name": "CLEAR",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and innovative, requiring engineers to operate in ambiguous environments, make thoughtful tradeoffs, and independently drive work forward."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "93c551f236",
+    "9d0b347fef"
+   ],
+   "value": "CLEAR offers biometric identity verification kiosks and a mobile app used for expedited airport security (CLEAR Plus), venue access, and digital identity verification. It also provides secure identity infrastructure for enterprise clients."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "93c551f236"
+   ],
+   "value": "Estimated: 20-25 days. The company offers flexible time off, but exact guaranteed day counts for new grads are not published."
   },
+  "refresh_after": 1789980020,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -52194,8 +52255,18 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "93c551f236"
+   ],
+   "value": "Estimated: No explicit mention of guaranteed company-wide shutdowns found in research."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "93c551f236",
+    "9d0b347fef"
+   ],
+   "value": "Publicly traded company (NYSE: YOU), operating at scale with millions of members and a large enterprise footprint."
   },
   "sources": [
    {
@@ -52249,14 +52320,47 @@
     "url": "https://job-boards.greenhouse.io/clear/jobs/8043865"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "93c551f236",
+    "9d0b347fef"
+   ],
+   "value": "No specific details found in research regarding visa sponsorship policies."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "93c551f236",
+    "9d0b347fef"
+   ],
+   "value": "CLEAR is a secure identity company that uses biometric data—like fingerprints and iris scans—to verify users so they can quickly bypass lines and checkpoints at airports, sports stadiums, and other venues. It makes money primarily through consumer subscription fees for its CLEAR Plus airport expedited screening service, as well as through enterprise partnerships and B2B verification integrations."
+  },
+  "synthesized_evidence_sha": "8a9ce840a594b7b7",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "93c551f236",
+    "9d0b347fef"
+   ],
+   "value": "Building and scaling a secure identity platform, including biometric data processing, mobile application development (iOS/Android), fullstack web engineering, and making architectural decisions focused on scalability, security, and maintainability."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677035,
   "web_search_url": "https://duckduckgo.com/?q=CLEAR+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "93c551f236",
+    "9d0b347fef"
+   ],
+   "value": "While CLEAR operates in a fast-paced tech environment and has a mission-driven culture centered on secure identity, it does not perfectly align with the candidate's priority for top-tier AI/Data Science prestige, as technical roles skew heavily toward software engineering, security, and mobile development."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate to Good. The company actively promotes a mission-driven culture and flexible time off, though operating in ambiguous environments may yield uneven workloads."
   }
  },
  "clearway energy": {
@@ -64940,11 +65044,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -64956,6 +65062,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784796020,
   "last_evidence_at": 1784675407,
   "name": "Dayton Freight Lines",
   "pace_of_work": {
@@ -68772,37 +68879,88 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3: Respected domain-specific player with genuine ML applications in adaptive learning and credentialing, but not a primary AI research lab. Prestige comes from global standard-setting role in marketing education."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "acb4f1650b"
+   ],
+   "value": "B2B and B2C revenue from certification exam fees, course subscriptions, corporate training contracts, and membership renewals. Likely high-margin digital product delivery with global scalability."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, professional, globally distributed, quality-focused. Values expertise, standardization, and learner outcomes. Likely low-politics, collaborative, with emphasis on professional development."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "acb4f1650b"
+   ],
+   "value": "Individual marketing professionals seeking certification, corporate teams upskilling in digital marketing, educational institutions, and enterprise clients needing marketing capability development."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: €45,000-€55,000 base (Dublin) / $85,000-$105,000 base (US) for software engineering/data science new grads; equity likely modest; total comp competitive for ed-tech but below FAIR/MAMAA tiers."
   },
   "evidence_sha": "a43ce0405de14757",
+  "generated_at": 1784796020,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "acb4f1650b"
+   ],
+   "value": "EdTech / Professional Certification / Digital Marketing Education"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect questions on scalable assessment architecture, psychometric modeling for certification validity, recommendation systems for learning paths, and data privacy/compliance (GDPR). Behavioral focus on mission alignment, collaborative problem-solving, and sustainable pace. Technical depth in ML for adaptive testing, NLP for content analysis, and platform reliability."
   },
+  "last_attempt_at": 1784796020,
   "last_evidence_at": 1784677035,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Dublin, Ireland with global operations including offices in the US, UK, and APAC regions; supports remote/hybrid work for technical roles."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "acb4f1650b"
+   ],
+   "value": "To set the global standard in digital marketing education and certification, empowering professionals and organizations with validated digital marketing competencies."
+  },
   "name": "DMI",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate, sustainable pace typical of mission-driven ed-tech; quarterly planning cycles with emphasis on quality certification delivery over feature velocity. Unlikely to have crunch culture."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "acb4f1650b"
+   ],
+   "value": "Digital marketing certification programs, professional training courses, corporate training solutions, and membership-based learning platforms for marketing professionals."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-30 days annual leave (inclusive of public holidays) aligned with Irish/EU standards; plus standard sick leave and parental policies."
   },
+  "refresh_after": 1789980020,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -68812,7 +68970,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely observes Christmas/New Year company shutdown (common in Ireland/EU) and summer slowdown; no guaranteed weekly shutdowns documented."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established global ed-tech company with international presence; likely 200-500 employees based on industry benchmarks for certification bodies."
   },
   "sources": [
    {
@@ -68836,14 +68999,37 @@
     "url": "https://www.bing.com/ck/a?!&&p=4154e7eb0192a05768a3e54c5c6fb1617c8457426a9553e50a00762ff59a8983JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=085f50d9-7325-609a-08c7-4744729461bb&u=a1aHR0cHM6Ly9kaWdpdGFsbWFya2V0aW5naW5zdGl0dXRlLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors visas (H-1B, etc.) for specialized technical roles in platform engineering and data science given global operations and Ireland/US presence, but no public policy details found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "acb4f1650b"
+   ],
+   "value": "DMI (Digital Marketing Institute) appears to be a professional education and certification provider focused on digital marketing skills training. The company offers globally recognized certifications and courses for marketing professionals."
+  },
+  "synthesized_evidence_sha": "a43ce0405de14757",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Learning platform development, certification exam delivery systems, content management, analytics dashboards for learner progress, and integration with LMS/HR systems for enterprise clients."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677035,
   "web_search_url": "https://duckduckgo.com/?q=DMI+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "DMI operates at the intersection of ed-tech and professional certification, offering a mission-driven environment focused on global skills standardization. For an AI/data science candidate, this means building products that directly impact career outcomes for millions of marketers worldwide, with the technical challenges of scalable assessment platforms, personalized learning paths, and credential verification — all in a company culture that likely values work-life balance given its educational "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — European headquarters and educational mission suggest strong work-life boundaries; hybrid/remote flexibility likely standard for tech roles."
   }
  },
  "dnv": {
@@ -78489,38 +78675,104 @@
  "eventual": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "afe4a664e2"
+   ],
+   "value": "Estimated: Niche / Emerging Prestige. Recognized strongly within the bioinformatics and academic research core facility community, rather than general Big Tech."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "afe4a664e2",
+    "4a27ecf1f7"
+   ],
+   "value": "B2B enterprise software licensing and cloud-based solutions for big data sequencing and analytics cores."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "afe4a664e2"
+   ],
+   "value": "Estimated: Impact-driven and technical, heavily focused on scientific computing and problem-solving for research clients."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "afe4a664e2",
+    "56aa174755",
+    "4a27ecf1f7"
+   ],
+   "value": "Academic research facilities, genome sequencing centers, and enterprise data science teams."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $100,000 - $130,000 base salary for new grad technical roles, varying by specific tech stack and geographic location."
   },
   "evidence_sha": "0ea171a95605b1e0",
+  "generated_at": 1784796020,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "afe4a664e2",
+    "56aa174755"
+   ],
+   "value": "Software & Technology / Big Data Analytics / Life Sciences Infrastructure."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Be prepared to discuss large-scale data pipeline architecture, parallel/federated computing concepts, and cloud optimization techniques. Highlight your desire to apply elite AI/data science skills to mission-critical research infrastructure, and ask questions about the team's tech stack, pace of deployment, and how they preserve sane hours during major product pushes."
   },
+  "last_attempt_at": 1784796020,
   "last_evidence_at": 1784677522,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "6fb0bfa6e0"
+   ],
+   "value": "Not explicitly defined in available sources."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "afe4a664e2",
+    "56aa174755"
+   ],
+   "value": "To accelerate large-scale data science and genomic research by providing a robust, efficient core facility platform for managing complex data workflows."
+  },
   "name": "Eventual",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "6fb0bfa6e0"
+   ],
+   "value": "Estimated: Moderate-to-Fast. Operating as an infrastructure provider to active research facilities likely requires an agile and innovative tech culture to meet client demands."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "6fb0bfa6e0",
+    "d603138acb",
+    "c496251c80"
+   ],
+   "value": "Arrayed, a unified enterprise data science platform."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard paid time off annually, consistent with software industry norms."
   },
+  "refresh_after": 1789980020,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -78530,7 +78782,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found in available research, likely following standard industry holidays."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "6fb0bfa6e0"
+   ],
+   "value": "Early-stage to mid-size growth software company."
   },
   "sources": [
    {
@@ -78594,14 +78853,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=38f60d8cc3ccedff88b29b84e47d60b791c5ad44dc5ddc52366e0c3dff594144JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1a6a8774-c738-6ffd-31bf-90e9c6946eb1&u=a1aHR0cHM6Ly9jbW10LnViYy5jYS9mYWNpbGl0aWVzLXNlcnZpY2VzL2RuYS1zZXF1ZW5jaW5nLWNvcmUtZmFjaWxpdHkv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "6fb0bfa6e0"
+   ],
+   "value": "Not explicitly defined in available sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "6fb0bfa6e0",
+    "d603138acb",
+    "c496251c80"
+   ],
+   "value": "Eventual is an AI software company that develops Arrayed, a big data and analytics platform designed to handle large-scale data science workflows. It makes money by licensing this platform to enterprise and academic research institutions for managing, analyzing, and executing data pipelines at scale."
+  },
+  "synthesized_evidence_sha": "0ea171a95605b1e0",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "afe4a664e2",
+    "56aa174755",
+    "4a27ecf1f7"
+   ],
+   "value": "Designing scalable architecture for big data pipelines, developing cloud infrastructure for genomic sequencing workflows, and optimizing data science execution protocols."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677522,
   "web_search_url": "https://duckduckgo.com/?q=Eventual+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Eventual provides a unique intersection of big data infrastructure and life sciences, offering mission-driven technical work that accelerates critical genomic research. For a new grad, this means tackling high-scale parallel computing challenges with direct real-world impact in a fast-moving software environment rather than slow corporate bureaucracy, ensuring rapid learning without sacrificing life balance."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4a27ecf1f7"
+   ],
+   "value": "Estimated: Moderate-to-Good. As an enterprise SaaS serving institutional clients, work cadence is likely driven by release cycles rather than toxic 24/7 consumer-facing on-call expectations."
   }
  },
  "everest clinical research": {
@@ -101096,37 +101388,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 — Large enterprise with massive proprietary healthcare data, active AI/ML investments (fraud, care management, personalization), but not known as an AI research lab; prestige from domain impact and data scale rather than publications."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not-for-profit, customer-owned health insurer; revenue from insurance premiums, government contracts (Medicare/Medicaid), and administrative services; reinvests surplus into reserves, community initiatives, and member benefits."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "58cd2def3f"
+   ],
+   "value": "Estimated: Professional, mission-oriented, collaborative, process-driven; values stability and member impact; employee tenure often long; diversity and community focus; less 'tech-bro' than pure software firms."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Individuals, families, employers (small to large), and government programs across five states (IL, MT, NM, OK, TX); serves over 17 million members."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "58cd2def3f"
+   ],
+   "value": "Estimated: $85,000-$105,000 base + bonus + pension (vesting) + 401k match; total comp ~$95k-$120k; varies by location (TX/IL) and role (DS/ML higher than mainframe)."
   },
   "evidence_sha": "e715ba54cdfd8cef",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784796020,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "58cd2def3f"
+   ],
+   "value": "Health Insurance / Managed Care"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "58cd2def3f"
+   ],
+   "value": "Expect questions on: large-scale data processing (claims, eligibility), healthcare domain knowledge (HIPAA, ICD-10, CMS regulations), mainframe-to-cloud migration experience, model explainability for regulatory compliance, and cross-functional collaboration with clinical/actuarial teams. Highlight projects demonstrating impact on member outcomes or cost savings."
+  },
+  "last_attempt_at": 1784796020,
   "last_evidence_at": 1784725193,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "58cd2def3f"
+   ],
+   "value": "Headquarters: Chicago, IL. Major hubs: Richardson/Dallas TX, Oklahoma City OK, Albuquerque NM, Billings MT, Springfield IL. Hybrid/remote options vary by role."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "58cd2def3f"
+   ],
+   "value": "To improve the health and well-being of members and communities through affordable, accessible, high-quality healthcare solutions."
+  },
   "name": "HCSC",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — Enterprise environment with regulatory constraints; modernization initiatives create pockets of faster innovation, but core systems require careful change management; not a 'move fast and break things' culture."
   },
-  "pto_days": {
+  "products": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Health insurance plans (individual, group, Medicare, Medicaid), pharmacy benefit management, dental/vision coverage, wellness programs, and health technology platforms."
   },
+  "prompt_v": 2,
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [
+    "58cd2def3f"
+   ],
+   "value": "Estimated: 15-20 days PTO + 10-12 paid holidays + sick leave; posting mentions 'paid time off' and 'paid holidays' but exact accrual not public."
+  },
+  "refresh_after": 1789980020,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -101136,7 +101483,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; standard holiday calendar; some teams may have reduced coverage between Christmas/New Year."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large enterprise (~25,000 employees); mature, stable organization with 85+ year history; not a startup."
   },
   "sources": [
    {
@@ -101190,14 +101542,44 @@
     "url": "https://hcsc.wd1.myworkdayjobs.com/en-US/HCSC_External/job/TX---Richardson/Developer---Mainframe_R0054977"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H-1B for specialized tech roles (data science, engineering); history of hiring international talent; verify with recruiter for specific role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "58cd2def3f"
+   ],
+   "value": "HCSC (Health Care Service Corporation) is the largest customer-owned health insurer in the United States, operating Blue Cross Blue Shield plans in Illinois, Montana, New Mexico, Oklahoma, and Texas. It provides health insurance coverage and related services to individuals, employers, and government programs."
+  },
+  "synthesized_evidence_sha": "e715ba54cdfd8cef",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "58cd2def3f"
+   ],
+   "value": "Mainframe systems (COBOL, DB2, JCL), claims processing platforms, data warehousing, analytics, cloud migration (AWS/Azure), API development, member/portal applications, AI/ML for fraud detection and care management."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784725193,
   "web_search_url": "https://duckduckgo.com/?q=HCSC+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "58cd2def3f",
+    "dbc3b9e88f"
+   ],
+   "value": "HCSC offers a mission-driven, not-for-profit environment with elite-scale data (17M+ members) for AI/DS impact on healthcare outcomes. The Mainframe Developer posting signals investment in modernizing core systems, creating opportunities to apply cutting-edge analytics on massive claims datasets. Candidate priorities align: purpose-driven culture, professional development investment, robust benefits (pension + 401k), and large-enterprise stability without startup burnout risk."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "58cd2def3f"
+   ],
+   "value": "Estimated: 3.5/5 — Large insurer with established policies; posting emphasizes 'robust total rewards' and professional development; pension suggests long-term retention focus; typical corporate hours with hybrid flexibility; on-call rotations possible for platform roles."
   }
  },
  "hdl companies": {
@@ -103018,11 +103400,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -103034,6 +103418,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784796020,
   "last_evidence_at": 1784676787,
   "name": "hhaexchange",
   "pace_of_work": {
@@ -120403,37 +120788,90 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High. The company is part of the current emerging AI elite, offering strong technical pedigree and high visibility within the AI/Data Science sector."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "c7bd65c4de"
+   ],
+   "value": "The company likely operates on a SaaS model, generating revenue through subscription tiers for individual and enterprise users seeking advanced AI data analysis capabilities."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Small, elite technical team focused on innovation and rapid development, prioritizing builders and mission-driven engineers over corporate management."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "c7bd65c4de"
+   ],
+   "value": "The platform is built for a broad user base seeking to leverage AI for data analysis."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Top-tier market competitive package for AI startups, likely ranging in the $180,000 - $220,000 base salary range, heavily supplemented by meaningful equity."
   },
   "evidence_sha": "20568a837efd9a4c",
+  "generated_at": 1784796020,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "cb31794f3d",
+    "c7bd65c4de"
+   ],
+   "value": "Artificial Intelligence and Data Science"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+   "value": "Highlight your ability to ship quickly and handle cutting-edge technical challenges to match their fast culture. Ask detailed questions about their engineering velocity and daily routines to verify that they actually respect work-life balance through sane hours and guaranteed shutdowns, ensuring they are mission-driven without being a toxic or high-burnout environment."
   },
+  "last_attempt_at": 1784796020,
   "last_evidence_at": 1784669633,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Tech-hub presence (e.g., San Francisco or New York) with flexible remote work options."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "c7bd65c4de"
+   ],
+   "value": "Julius AI focuses on building practical, accessible AI tools that help users solve complex data problems efficiently."
+  },
   "name": "Julius AI",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Extremely fast-paced and highly innovative, requiring frequent shipping of new features and rapid iteration."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "cb31794f3d",
+    "c7bd65c4de"
+   ],
+   "value": "An AI-powered data scientist tool that allows users to perform advanced data analysis, generate visualizations, and query data via natural language prompts."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of flexible PTO standard for emerging AI startups."
   },
+  "refresh_after": 1789980020,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -120443,7 +120881,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found; typical startups expect smaller ad-hoc breaks rather than official hard shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Early-stage, well-funded startup with a fast, iterative engineering culture."
   },
   "sources": [
    {
@@ -120477,14 +120920,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=9ab3c3c9fff0e80bdd83bf2e31ae699ae761f092a4f9adeea6863e6aa4e8e7a9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=03fea5e8-08f3-6be6-1d93-b27509a66a96&u=a1aHR0cHM6Ly9qdWxpdXMuYWkv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Typically sponsor-capable for top-tier AI/ML talent, though new-grad sponsorship should be confirmed directly with the recruiting team."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "edbe26fe49",
+    "cb31794f3d",
+    "c7bd65c4de"
+   ],
+   "value": "Julius AI develops an AI data scientist platform designed to help users analyze, visualize, and query complex datasets using natural language. The company makes money by offering subscription-based access to its premium AI tools and data analysis capabilities."
+  },
+  "synthesized_evidence_sha": "20568a837efd9a4c",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: High-impact new-grad projects involving large language model (LLM) fine-tuning, complex data pipeline engineering, AI agent architecture, and natural language to SQL/code translation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784669633,
   "web_search_url": "https://duckduckgo.com/?q=Julius+AI+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Julius AI sits at the elite intersection of top-tier new-grad pay and high-prestige AI work in a fast, highly innovative startup environment. This directly satisfies your goal for accelerated technical learning and career growth, fully bypassing the slow bureaucracy typical of larger tech firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Requires careful vetting. As a growing AI startup, it likely lacks heavy bureaucracy and promises meaningful work, but the fast-paced nature could risk work-life balance if boundaries aren't explicitly set."
   }
  },
  "jumio": {
@@ -134545,48 +135013,133 @@
  "maitai": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Estimated: Emerging prestige (backed by Y Combinator, but currently early-stage with unproven market traction)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "92f0daee89",
+    "1ac0157a78",
+    "e792064df7"
+   ],
+   "value": "Not found in research."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Estimated: Innovative, founder-led, and highly technical, prioritizing rapid product development."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "92f0daee89",
+    "1ac0157a78",
+    "e792064df7"
+   ],
+   "value": "Not found in research."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Estimated: Highly competitive YC new-grad base salary (likely $130k-$160k) plus early-stage equity, though exact figures are not public."
   },
   "evidence_sha": "eee7925e40f1327f",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784796020,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "e792064df7",
+    "92f0daee89",
+    "1ac0157a78"
+   ],
+   "value": "Technology / Startups (likely AI or Data Science based on indirect context)."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Probe for concrete evidence of sustainable work-life balance (specifically sane hours and guaranteed shutdowns) to ensure it avoids the high-burnout startup trap. Clarify the new-grad compensation structure and technical growth trajectory to confirm it balances elite prestige with high pay."
+  },
+  "last_attempt_at": 1784796020,
   "last_evidence_at": 1784677109,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Not explicitly specified, but YC startups frequently offer remote work options."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "92f0daee89",
+    "1ac0157a78",
+    "e792064df7"
+   ],
+   "value": "Not found in research."
+  },
   "name": "Maitai",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Estimated: Fast-paced, iterative, and autonomous, typical of agile Y Combinator startups."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "92f0daee89",
+    "1ac0157a78"
+   ],
+   "value": "Not explicitly found in the provided sources, though the company name and context suggest AI, data science, or machine learning tooling."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Estimated: Standard startup PTO (typically 15 days), though exact policy is not public."
   },
+  "refresh_after": 1789980020,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Estimated: Unknown. Guaranteed holiday shutdowns are rare at very early-stage startups unless explicitly structured."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Early-stage startup, listed as a Y Combinator-backed company hiring for engineering, product, and design roles."
   },
   "sources": [
    {
@@ -134620,14 +135173,49 @@
     "url": "https://www.workatastartup.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "92f0daee89",
+    "1ac0157a78",
+    "e792064df7"
+   ],
+   "value": "Not found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "e792064df7",
+    "92f0daee89",
+    "1ac0157a78"
+   ],
+   "value": "Maitai appears to be a startup associated with the Y Combinator ecosystem, likely focused on AI or machine learning technologies. While explicit business operations are obscured by non-loading public pages, its presence on YC's Work at a Startup platform indicates it is an early-stage company seeking technical talent to build data-driven or AI-oriented products."
+  },
+  "synthesized_evidence_sha": "eee7925e40f1327f",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Hiring for technical startup roles including Engineering, Product, and Design."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677109,
   "web_search_url": "https://duckduckgo.com/?q=Maitai+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "As an early-stage YC company, Maitai likely offers a fast, innovative tech culture free of slow bureaucracy, accelerating technical learning and career growth. If it meets the mission-driven, elite-prestige, and high-new-grad-pay criteria while maintaining sane hours, it would align well with your priorities."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Estimated: Unknown. Early-stage startups often demand heavy working hours, but specific WLB policies are not publicly listed."
   }
  },
  "major league baseball": {
