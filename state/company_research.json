@@ -72686,49 +72686,131 @@
  },
  "eluvio": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "332718c5af",
+    "2756025325",
+    "7fe06b6c11"
+   ],
+   "value": "Not an AI/DS-centric company; prestige derives from distributed systems and blockchain protocol engineering. Relevant for ML only if applied to content recommendation, encoding optimization, or network analytics."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "332718c5af",
+    "2756025325",
+    "7fe06b6c11"
+   ],
+   "value": "Platform fees on content transactions, licensing of the Content Fabric to enterprises, and revenue sharing on NFT/micropayment flows through the network."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Small, elite engineering team (many ex-Aspera, Google, Apple); low-ego, high-autonomy, deep-tech focus. Mission-driven around creator empowerment. Berkeley academic-adjacent vibe."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "332718c5af",
+    "2756025325",
+    "7fe06b6c11"
+   ],
+   "value": "Major media studios (MGM, Sony Pictures), film festivals, content creators, and enterprises needing secure premium video distribution with blockchain provenance."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$160k base + equity (0.05%-0.15% for early engineers); total comp ~$150k-$200k. Below top-tier FAANG new grad offers but competitive for Series A deep-tech."
   },
   "evidence_sha": "913cd64403d2cef4",
+  "generated_at": 1784778628,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "332718c5af",
+    "2756025325",
+    "7fe06b6c11"
+   ],
+   "value": "Blockchain / Web3 infrastructure, Media & Entertainment technology, Content Delivery Networks (CDN), Digital Rights Management (DRM)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep systems design questions around P2P networking, consensus, video pipeline architecture, and cryptography. Prepare to discuss tradeoffs in decentralized vs. centralized content delivery. Show curiosity about media industry pain points (rights, piracy, middlemen). Ask about engineering culture, on-call expectations, and how they balance protocol research with product shipping."
   },
+  "last_attempt_at": 1784778628,
   "last_evidence_at": 1784674531,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "332718c5af",
+    "2756025325",
+    "7fe06b6c11"
+   ],
+   "value": "Headquarters in Berkeley, CA; distributed team across US; some remote flexibility."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "332718c5af",
+    "2756025325",
+    "7fe06b6c11"
+   ],
+   "value": "To revolutionize content distribution by replacing centralized CDNs with a decentralized, blockchain-based fabric that gives creators control over rights, monetization, and audience relationships."
+  },
   "name": "Eluvio",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced startup velocity with protocol-level rigor; sprints driven by studio deployments and network upgrades. Less bureaucracy than big tech, but high technical bar."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "332718c5af",
+    "2756025325",
+    "7fe06b6c11"
+   ],
+   "value": "Eluvio Content Fabric (blockchain-based content delivery network), Eluvio Live (live streaming platform), and tools for NFT-based content distribution and rights management."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + holidays; no public policy published. Typical for well-funded early-stage startups."
   },
+  "refresh_after": 1789962628,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "332718c5af",
+    "2756025325",
+    "7fe06b6c11"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns documented; some startups in this stage observe winter break but not formalized."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "332718c5af",
+    "2756025325",
+    "7fe06b6c11"
+   ],
+   "value": "Estimated: 50-150 employees, Series A/B stage, founded 2019 by Aspera founders Michelle Munson and Serban Simu."
   },
   "sources": [
    {
@@ -72762,14 +72844,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=48e8e3c8ee66c20f3ccfab84956c7cd5b9abbaecfb42792987faa3629830fee9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=099e55db-8735-67f2-3d1e-424686216698&u=a1aHR0cHM6Ly9ldGMudXNmLmVkdS9jbGlwYXJ0LzMzOTAwLzMzOTU0L25jbG9jay0wNi0wMF8zMzk1NC5odG0&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B for specialized engineering roles given founder pedigree and technical depth; no public data on cap-exempt status or green card sponsorship timelines."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "332718c5af",
+    "2756025325",
+    "7fe06b6c11"
+   ],
+   "value": "Eluvio is a blockchain-powered content delivery and rights management platform for media and entertainment. It enables secure, decentralized distribution of premium video content with built-in DRM and micropayments."
+  },
+  "synthesized_evidence_sha": "913cd64403d2cef4",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "332718c5af",
+    "2756025325",
+    "7fe06b6c11"
+   ],
+   "value": "Distributed systems, blockchain protocol development (custom Layer 1), video encoding/streaming, P2P networking, cryptography, smart contracts, Rust/Go/TypeScript, high-scale content delivery."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674531,
   "web_search_url": "https://duckduckgo.com/?q=Eluvio+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Eluvio offers a rare intersection of elite technical prestige (founders invented Aspera/FAST protocol used by Hollywood), cutting-edge blockchain + distributed systems work, and a mission to restructure media economics. The team is small, founder-led, and avoids big-corp bureaucracy. For a new grad wanting deep technical ownership in a high-impact niche without FAANG-style grind, this is a distinctive bet on Web3 media infrastructure that actually has paying studio customers."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — founder-led culture values sustainability, but early-stage protocol work can demand intense periods around mainnet upgrades or partner launches. No public data on guaranteed shutdowns."
   }
  },
  "embedding vc": {
@@ -82712,11 +82823,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -82728,6 +82841,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784778628,
   "last_evidence_at": 1784677481,
   "name": "FlexAI",
   "pace_of_work": {
@@ -88126,7 +88240,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88144,7 +88258,7 @@
    "source_ids": [],
    "value": "Ai Lab / technology (estimated)"
   },
-  "last_attempt_at": 1784778521,
+  "last_attempt_at": 1784778628,
   "last_evidence_at": 1784599435,
   "name": "Gecko Robotics",
   "pace_of_work": {
@@ -98737,7 +98851,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -98755,7 +98869,7 @@
    "source_ids": [],
    "value": "Ai Lab / technology (estimated)"
   },
-  "last_attempt_at": 1784778521,
+  "last_attempt_at": 1784778628,
   "last_evidence_at": 1784599435,
   "name": "Hayden AI",
   "pace_of_work": {
@@ -115280,11 +115394,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -115296,6 +115412,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784778628,
   "last_evidence_at": 1784677233,
   "name": "Jacobs",
   "pace_of_work": {
@@ -166369,7 +166486,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -166387,7 +166504,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784778521,
+  "last_attempt_at": 1784778628,
   "last_evidence_at": 1784677232,
   "name": "Pierre Fabre",
   "pace_of_work": {
@@ -175124,42 +175241,102 @@
  },
  "qualcomm technologies inc": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "06a7a9b3de"
+   ],
+   "value": "Tier 2 — Highly respected for on-device AI/ML systems (Hexagon DSP, Snapdragon Neural Processing Engine), but not a primary destination for fundamental AI research like FAIR, DeepMind, or OpenAI."
   },
   "aliases": [],
-  "attempts": 5,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 6,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "0ea6066eee"
+   ],
+   "value": "Dual revenue streams: QCT (Qualcomm CDMA Technologies) sells integrated circuits and system software; QTL (Qualcomm Technology Licensing) licenses its extensive patent portfolio, collecting royalties on virtually every 3G/4G/5G device sold worldwide."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "cf9a0425f5"
+   ],
+   "value": "Engineering-first, collaborative, and technically deep. Diverse global workforce. Bureaucracy exists at scale but less than defense contractors. Strong mentorship and internal mobility."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "0ea6066eee",
+    "06a7a9b3de"
+   ],
+   "value": "Smartphone OEMs (e.g., Samsung, Xiaomi, OEMs using Android), automotive Tier 1s and OEMs, IoT device makers, network equipment vendors, and licensees of its standard-essential patent portfolio."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $135K–$160K base + $25K–$45K annual RSU refresh + 10–15% target bonus (US, 2024–25 data). Total comp ~$175K–$220K year 1."
   },
   "evidence_sha": "8637cba03d2b8c9a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
+  "generated_at": 1784778628,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784778521,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0ea6066eee",
+    "06a7a9b3de"
+   ],
+   "value": "Semiconductors / Wireless Telecommunications / Edge AI"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "cf9a0425f5"
+   ],
+   "value": "Expect rigorous technical loops: C/C++ systems coding, digital signal processing fundamentals, computer architecture, and ML model optimization for edge hardware (quantization, kernel fusion). Behavioral questions emphasize collaboration on complex, cross-functional silicon/software projects. Prepare for domain-specific depth in wireless or on-device AI."
+  },
+  "last_attempt_at": 1784778628,
   "last_evidence_at": 1784672895,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "0ea6066eee",
+    "cf9a0425f5"
+   ],
+   "value": "Headquartered in San Diego, CA; major engineering hubs in San Jose, Boulder, Austin, Raleigh, Cambridge (UK), Hyderabad, Beijing, Seoul, and others. Hybrid-friendly with office-centric culture."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "cf9a0425f5"
+   ],
+   "value": "To invent breakthrough technologies that transform how the world connects, computes, and communicates — enabling the intelligent, connected edge."
+  },
   "name": "Qualcomm Technologies, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but predictable — driven by annual silicon tape-out cycles and standards deadlines. Crunch periods exist near tape-outs but are planned and bounded."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "0ea6066eee",
+    "06a7a9b3de"
+   ],
+   "value": "Snapdragon mobile platforms, 5G modems and RF systems, automotive platforms (Snapdragon Ride), IoT chipsets, Wi-Fi/Bluetooth solutions, and a vast portfolio of wireless patents licensed to the industry."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days vacation + 10 company holidays + 5 sick days (US new grad); accrues with tenure. Unlimited not offered."
   },
+  "refresh_after": 1789962628,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -175169,7 +175346,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns. Some teams observe a winter break (Dec 25–Jan 1) but not policy."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "0ea6066eee"
+   ],
+   "value": "Large-cap public company (NASDAQ: QCOM); ~50,000 employees globally; mature, profitable, and heavily invested in R&D (~$8B+/year)."
   },
   "sources": [
    {
@@ -175203,14 +175387,43 @@
     "url": "https://careers.qualcomm.com/careers"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B, OPT STEM extensions, and green cards (PERM) for eligible roles; large international workforce and established immigration process."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "0ea6066eee",
+    "06a7a9b3de"
+   ],
+   "value": "Qualcomm is a leading fabless semiconductor company that designs and licenses wireless technology, including 5G, LTE, and mobile processors (Snapdragon). It powers most smartphones and connects billions of devices globally."
+  },
+  "synthesized_evidence_sha": "8637cba03d2b8c9a",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "06a7a9b3de",
+    "cf9a0425f5"
+   ],
+   "value": "Deep wireless systems engineering: 5G/6G modem firmware, PHY/MAC layer, RFIC design, AI/ML for on-device inference (Hexagon DSP), compiler toolchains, automotive ADAS compute, and low-power IoT software stacks."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672895,
   "web_search_url": "https://duckduckgo.com/?q=Qualcomm+Technologies%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "cf9a0425f5"
+   ],
+   "value": "Qualcomm offers elite engineering prestige in wireless and on-device AI, with new-grad total compensation competitive for hardware/semiconductor (est. $130–160K base + equity + bonus). The culture is fast-paced but structured — not a burnout shop — with defined project cycles and respect for personal time. You’ll work on technology that ships in billions of devices, accelerating deep technical growth without the chaos of consumer-software crunch."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.8/5 — Generally sane hours (40–50 avg), with team-dependent variation. No guaranteed shutdowns, but management discourages chronic overwork."
   }
  },
  "qualtrics": {
@@ -195440,7 +195653,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -195458,7 +195671,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784778521,
+  "last_attempt_at": 1784778628,
   "last_evidence_at": 1784677479,
   "name": "Sigma Computing",
   "pace_of_work": {
