@@ -2166,7 +2166,7 @@
    "value": "High. Accenture is a brand-name 'Tier 2' innovator widely recognized for scaled AI implementation and consultancy breadth, carrying strong industry prestige, though it sits just below the elite pure-product research labs."
   },
   "aliases": [],
-  "attempts": 11,
+  "attempts": 12,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -2215,7 +2215,7 @@
    "source_ids": [],
    "value": "Candidates should expect rigorous questioning on advanced SQL, Python, and applied modeling, plus scenario-driven consultancy techniques. Equally probe how managers set scope and distribute workload during government project sprints to confirm environments that respect shutdowns and deep learning time rather than high-burnout hero worship."
   },
-  "last_attempt_at": 1784837457,
+  "last_attempt_at": 1784837613,
   "last_evidence_at": 1784826805,
   "locations": {
    "confidence": "high",
@@ -24108,11 +24108,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -24124,6 +24126,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784837613,
   "last_evidence_at": 1784672482,
   "name": "Atlas Energy Solutions",
   "pace_of_work": {
@@ -76337,7 +76340,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -76355,7 +76358,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784837457,
+  "last_attempt_at": 1784837613,
   "last_evidence_at": 1784674263,
   "name": "e.Republic",
   "pace_of_work": {
@@ -132973,40 +132976,87 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 (Strong) — Emerging leader in AI Gateway category with Kong AI Gateway; publishes research on LLM traffic management; hires ML engineers for inference routing, prompt guardrails, and token analytics. Not a primary AI research lab but high-impact applied AI at infrastructure layer."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Product-led growth with open-source core (Kong Gateway) driving adoption; revenue from enterprise license subscriptions (self-managed), Kong Konnect SaaS consumption-based pricing, and professional services. Land-and-expand motion via developer adoption of open-source gateway."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-centric, open-source values, low-ego, writing-heavy (RFCs, design docs), globally distributed with strong async discipline. 'Default to transparency' — public roadmaps, open GitHub issues. Celebrates 'boring technology' done well. Diversity in senior leadership. Not a ping-pong-table startup; professionals who log off."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mid-market to large enterprises across financial services, technology, retail, healthcare, and government sectors that run distributed architectures and need scalable API management. Notable public references include Nasdaq, Samsung, Goldman Sachs, and The Home Depot."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $145K-$165K base + $25K-$40K RSUs (4-year vest) + $10K-$20K sign-on = $180K-$225K total first-year cash+equity. San Francisco/Seattle premium ~10-15% higher. AI/ML roles at top of band."
   },
   "evidence_sha": "74e6b7c8f77b5c63",
+  "generated_at": 1784837613,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "97237c9180"
+   ],
+   "value": "Cloud Infrastructure / API Management / Developer Tools (CNCF ecosystem)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical screens on distributed systems, Go/Lua/Rust internals, Kubernetes networking, and API gateway architecture. System design rounds emphasize high-throughput, low-latency data planes. Behavioral interviews assess collaboration in async/remote settings and open-source community mindset. AI/ML roles add focus on LLM routing, token-level streaming, and prompt security."
   },
-  "last_attempt_at": 1784837457,
+  "last_attempt_at": 1784837613,
   "last_evidence_at": 1784673567,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "97237c9180"
+   ],
+   "value": "Headquarters: San Francisco, CA. Major hubs: Boston, MA; Amsterdam, Netherlands; Singapore; Sydney, Australia. Remote-first culture with employees in 30+ countries."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "97237c9180"
+   ],
+   "value": "To build the world's connectivity layer — enabling every organization to reliably and securely connect APIs, services, and systems across any environment."
+  },
   "name": "Kong",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable — quarterly planning with 2-week sprints; emphasis on async communication reduces meeting load; on-call rotations are shared and compensated. Not a 'move fast and break things' culture; reliability of data plane is paramount."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "97237c9180",
+    "a497e06ec0"
+   ],
+   "value": "Kong Gateway (open-source and enterprise API gateway), Kong Konnect (managed cloud connectivity platform), Kong Mesh (service mesh based on Kuma), Kong Ingress Controller (Kubernetes-native API gateway), Kong AI Gateway (for AI/LLM traffic management), and Kong Insomnia (API design and testing client)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Flexible/unlimited PTO with 15-20 days typical usage + 10-12 company holidays + 10-day end-of-year shutdown (Dec 24-Jan 2). Minimum 15 days encouraged by managers."
   },
+  "refresh_after": 1790021613,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -133016,7 +133066,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Yes — annual end-of-year shutdown (typically Dec 24 through Jan 2) plus occasional extra wellness days (e.g., post-quarter 'recharge days')."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: ~1,000-1,500 employees globally; Series D stage (last raised $100M in 2021 at $1.4B valuation), revenue estimated $100M+ ARR, profitable or near-profitable."
   },
   "sources": [
    {
@@ -133050,14 +133105,38 @@
     "url": "https://www.bing.com/ck/a?!&&p=bf579e6e8f4fc4cab04814f563b3f939863f1dffa0d1540b7483558e39122201JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0988a76f-e90c-65d2-24f0-b0f2e84e64a2&u=a1aHR0cHM6Ly93d3cua29uZ2NvbXBhbnkuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B, H-1B transfers, and green cards (PERM) for engineering roles. Known to support O-1 and STEM OPT extensions. Visa sponsorship mentioned in job postings for US-based positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "97237c9180",
+    "6715ee03e9"
+   ],
+   "value": "Kong is a cloud connectivity company that provides API gateway and service mesh solutions to manage, secure, and orchestrate APIs and microservices across hybrid and multi-cloud environments. The company monetizes through enterprise subscriptions for Kong Gateway (formerly Kong Enterprise), its managed cloud platform Kong Konnect, and professional services/support contracts."
+  },
+  "synthesized_evidence_sha": "74e6b7c8f77b5c63",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "High-performance networking (NGINX/OpenResty, LuaJIT), distributed systems, control-plane/data-plane separation, Kubernetes operators, Go/Rust for new data-plane components, plugin architecture, AI/LLM traffic routing, observability/telemetry pipelines."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673567,
   "web_search_url": "https://duckduckgo.com/?q=Kong+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Kong offers elite technical prestige in cloud-native infrastructure and emerging AI gateway space with competitive new-grad compensation, while maintaining a remote-first, asynchronous culture that emphasizes sustainable pace. The product-led growth model and open-source roots foster engineering autonomy without the burnout typical of hypergrowth SaaS or FAANG. You'll work on core networking/AI infrastructure at scale with guaranteed shutdowns (e.g., end-of-year break) and strong WLB norms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4.2/5 — Remote-first with core collaboration hours (10am-2pm PT); no-meeting Fridays common; end-of-year shutdown (Dec 24-Jan 2); flexible PTO; on-call ~1 week/quarter with time-off-in-lieu. Glassdoor/Blind reviews consistently cite strong WLB for infrastructure company."
   }
  },
  "kranze technology solutions inc": {
@@ -150368,7 +150447,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 11,
+  "attempts": 12,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -150409,7 +150488,7 @@
    ],
    "value": "The job posting highlights equal employment opportunity and benefits, but does not explicitly address work-life balance, high new-grad pay, or fast tech culture. However, the statistical programming role indicates technical focus on data analysis and clinical trials, suggesting a collaborative, mission-driven environment."
   },
-  "last_attempt_at": 1784837457,
+  "last_attempt_at": 1784837613,
   "last_evidence_at": 1784677667,
   "locations": {
    "confidence": "high",
@@ -204451,7 +204530,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -204494,7 +204573,7 @@
    ],
    "value": "Candidates should be prepared to discuss object-oriented programming, Java, Python, JavaScript, and HTML. Expect questions around architecture, design, implementation, and testing to build stable and scalable products. The candidate should emphasize a desire for quality and customer-valued features."
   },
-  "last_attempt_at": 1784837457,
+  "last_attempt_at": 1784837613,
   "last_evidence_at": 1784801025,
   "locations": {
    "confidence": "high",
@@ -259261,7 +259340,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 9,
+  "attempts": 10,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -259312,7 +259391,7 @@
    ],
    "value": "Clarify whether the role is a full-time W-2 position or part of the gig contributor network. Ask about compensation structure, actual working hours, and technical learning opportunities to ensure it fits your elite tech role and WLB priorities."
   },
-  "last_attempt_at": 1784837457,
+  "last_attempt_at": 1784837613,
   "last_evidence_at": 1784737480,
   "locations": {
    "confidence": "unknown",
@@ -263663,47 +263742,113 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown; no AI/data science presence or reputation found in sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "10dc89d001",
+    "3ccfc312b3",
+    "fe174cee04"
+   ],
+   "value": "No business model information found in the supplied sources. The sources do not contain company-specific content."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown; no culture information found in sources."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "10dc89d001",
+    "3ccfc312b3",
+    "fe174cee04"
+   ],
+   "value": "No customer information found in the supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown; no compensation data found in sources."
   },
   "evidence_sha": "3ba2a2f32364a9bd",
+  "generated_at": 1784837613,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Professional services / consulting (inferred from name only; not verified in sources)."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Without company-specific data, interview focus cannot be determined. Candidate should verify company legitimacy, request detailed role specifics, and ask directly about AI/data science team structure, engineering culture, WLB policies, and compensation benchmarks."
+  },
+  "last_attempt_at": 1784837613,
   "last_evidence_at": 1784673570,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No location information found in sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "10dc89d001",
+    "3ccfc312b3",
+    "fe174cee04"
+   ],
+   "value": "No mission statement found in the supplied sources."
+  },
   "name": "World Wide Professional Solutions",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown; no work pace information found in sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "10dc89d001",
+    "3ccfc312b3",
+    "fe174cee04"
+   ],
+   "value": "No product or service information found in the supplied sources. The sources redirect to general world news sections rather than company pages."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown; no PTO policy found in sources."
   },
+  "refresh_after": 1790021613,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "10dc89d001",
+    "3ccfc312b3",
+    "fe174cee04"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown; no guaranteed shutdown policy found in sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown size and stage; no company data available in sources."
   },
   "sources": [
    {
@@ -263737,14 +263882,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=7b3d4cf84a86b2ab1bf55a80e6fb2de8e192bb912905dde1d9a30a412be393b6JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0988a76f-e90c-65d2-24f0-b0f2e84e64a2&u=a1aHR0cHM6Ly9hcG5ld3MuY29tL3dvcmxkLW5ld3M&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No visa sponsorship information found in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "10dc89d001",
+    "3ccfc312b3",
+    "fe174cee04"
+   ],
+   "value": "World Wide Professional Solutions appears to be a professional services or consulting firm, but the provided sources are redirects to general world news pages (BBC, NY Times, AP) rather than company-specific information. No verifiable company details were found in the supplied sources."
+  },
+  "synthesized_evidence_sha": "3ba2a2f32364a9bd",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No technical work details found in sources. Cannot assess AI/data science role specifics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673570,
   "web_search_url": "https://duckduckgo.com/?q=World+Wide+Professional+Solutions+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The candidate seeks a top-tier AI/data science role with elite prestige, high new-grad pay, fast innovative culture, mission-driven work, strong work-life balance with sane hours and guaranteed shutdowns, and accelerated technical growth without personal time sacrifice. However, the supplied sources contain no verifiable information about World Wide Professional Solutions to assess fit against these priorities."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown; no work-life balance data found in sources."
   }
  },
  "world wide technology": {
