@@ -16410,48 +16410,127 @@
  "annapurna labs": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "366314340d"
+   ],
+   "value": "Tier 1. Highly selective and prestigious due to its foundational role in designing custom AI silicon for the world's largest cloud provider."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "366314340d",
+    "04f6f79895"
+   ],
+   "value": "Develops specialized hardware and networking solutions that are monetized through integration into Amazon Web Services (AWS) cloud infrastructure."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "04f6f79895"
+   ],
+   "value": "Innovative and deeply technical, characterized by a culture of 'customer obsession', 'bold ownership', and 'fearless initiative' inherited from Amazon."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "366314340d",
+    "04f6f79895"
+   ],
+   "value": "Amazon Web Services (AWS) and its enterprise cloud customers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "04f6f79895"
+   ],
+   "value": "Estimated: Highly competitive total compensation package comparable to Amazon's top-tier tech roles, likely ranging from $160,000 to $200,000 first-year total compensation (base, equity, and signing bonus)."
   },
   "evidence_sha": "0c5820af20b328a4",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784835226,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "366314340d"
+   ],
+   "value": "Semiconductor Manufacturing and Cloud Infrastructure."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "04f6f79895"
+   ],
+   "value": "Candidates should prepared for technical depth in AI accelerators and cloud infrastructure. Given the candidate's priorities, interviewers may also probe for the ability to thrive in an innovative, fast-paced culture while maintaining efficiency to protect work-life boundaries."
+  },
+  "last_attempt_at": 1784835226,
   "last_evidence_at": 1784671190,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "366314340d"
+   ],
+   "value": "Israel (primary R&D center) and Amazon office locations globally, including the United States."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "04f6f79895"
+   ],
+   "value": "To invent and design hardware and software that accelerates the pace of cloud computing and machine learning innovation."
+  },
   "name": "Annapurna Labs",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "04f6f79895"
+   ],
+   "value": "Estimated: Fast-paced and demanding, aligning with Amazon's culture of 'bold ownership' and continuous innovation in the high-stakes cloud infrastructure market."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "366314340d"
+   ],
+   "value": "Custom silicon chips, machine learning accelerators (such as AWS Inferentia and Trainium), and high-speed networking infrastructure for cloud data centers."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "04f6f79895"
+   ],
+   "value": "Estimated: Standard Amazon corporate package, typically providing 15 days of vacation annually for new hires, accruing up to 20 days with tenure."
   },
+  "refresh_after": 1790019226,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "04f6f79895",
+    "366314340d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "04f6f79895"
+   ],
+   "value": "Estimated: No standard guaranteed company-wide shutdowns, though standard public holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "366314340d"
+   ],
+   "value": "Subsidiary of a large multinational technology company (Amazon), operating with the scale and resources of a mature enterprise."
   },
   "sources": [
    {
@@ -16485,14 +16564,46 @@
     "url": "https://www.amazon.jobs/en/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "04f6f79895"
+   ],
+   "value": "Operates under Amazon's broader corporate hiring and immigration policies, which typically support sponsorship for highly specialized hardware and data science roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "366314340d",
+    "04f6f79895"
+   ],
+   "value": "Annapurna Labs is a subsidiary of Amazon that designs custom silicon and cloud infrastructure, playing a critical role in powering AWS data centers. The company monetizes by developing specialized hardware that enhances the performance, efficiency, and scalability of Amazon's cloud computing services."
+  },
+  "synthesized_evidence_sha": "0c5820af20b328a4",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "366314340d"
+   ],
+   "value": "Hardware and silicon engineering, machine learning accelerator design, networking architecture, and software optimization for cloud-scale infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784671190,
   "web_search_url": "https://duckduckgo.com/?q=Annapurna+Labs+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "04f6f79895"
+   ],
+   "value": "Annapurna Labs holds elite prestige in AI/ML hardware, directly designing the chips that power AWS. This environment accelerates technical learning at the cutting edge of AI infrastructure, though candidates must balance this high-impact work with the typical demands of Amazon's fast-paced culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "04f6f79895"
+   ],
+   "value": "Estimated: Moderate to demanding. As an Amazon subsidiary, workloads can be intense during product launch cycles, though experiences vary heavily by specific team and manager."
   }
  },
  "annapurna labs u s inc": {
@@ -121691,42 +121802,112 @@
  },
  "invisible technologies": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "5537a97176",
+    "810cf6a269",
+    "ebd2243f94"
+   ],
+   "value": "Unknown due to a lack of accessible content in the supplied sources."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "5537a97176",
+    "810cf6a269",
+    "ebd2243f94"
+   ],
+   "value": "Unknown due to a lack of accessible content in the supplied sources."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "5537a97176",
+    "810cf6a269",
+    "ebd2243f94"
+   ],
+   "value": "Unknown due to a lack of accessible content in the supplied sources."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "5537a97176",
+    "810cf6a269",
+    "ebd2243f94"
+   ],
+   "value": "Unknown due to a lack of accessible content in the supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown based on provided redirects; candidates should request exact compensation bands to ensure it meets high new-grad pay expectations."
   },
   "evidence_sha": "06032f17d9790a8c",
+  "generated_at": 1784835226,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "5537a97176",
+    "810cf6a269",
+    "ebd2243f94"
+   ],
+   "value": "Unknown due to a lack of accessible content in the supplied sources."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe heavily for concrete examples of how they accelerate technical learning without sacrificing personal time. Ask explicit questions about expected on-call hours, after-hours expectations, and how leadership shields new grads from bureaucracy or slow processes."
   },
-  "last_attempt_at": 1784835077,
+  "last_attempt_at": 1784835226,
   "last_evidence_at": 1784674425,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "5537a97176",
+    "810cf6a269",
+    "ebd2243f94"
+   ],
+   "value": "Unknown due to a lack of accessible content in the supplied sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "5537a97176",
+    "810cf6a269",
+    "ebd2243f94"
+   ],
+   "value": "Unknown due to a lack of accessible content in the supplied sources."
+  },
   "name": "Invisible Technologies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown based on provided redirects, but candidates should verify if the environment matches a fast, innovative tech culture rather than slow bureaucracy."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "5537a97176",
+    "810cf6a269",
+    "ebd2243f94"
+   ],
+   "value": "Unknown due to a lack of accessible content in the supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown based on provided redirects; candidates should ask for exact accrual schedules."
   },
+  "refresh_after": 1790019226,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -121736,7 +121917,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown based on provided redirects; candidates should ask if guaranteed company shutdowns exist to protect personal time."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "5537a97176",
+    "810cf6a269",
+    "ebd2243f94"
+   ],
+   "value": "Unknown due to a lack of accessible content in the supplied sources."
   },
   "sources": [
    {
@@ -121770,14 +121960,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=e123f12542d1e8aa68ca770ce46372c830b3fbed5f45e841cc76c68fc393d1f8JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=17b15538-f6ae-67cc-2d9b-42a5f755668d&u=a1aHR0cHM6Ly9pbnZpc2libGV0ZWNoLmFpLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "5537a97176",
+    "810cf6a269",
+    "ebd2243f94"
+   ],
+   "value": "Unknown due to a lack of accessible content in the supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "5537a97176",
+    "810cf6a269",
+    "ebd2243f94"
+   ],
+   "value": "The provided sources solely consist of broken redirect links for Invisible Technologies and dictionary pages for the word \"invisible.\" Therefore, no factual explanation of the company's operations or monetization could be retrieved."
+  },
+  "synthesized_evidence_sha": "06032f17d9790a8c",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "5537a97176",
+    "810cf6a269",
+    "ebd2243f94"
+   ],
+   "value": "Unknown due to a lack of accessible content in the supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674425,
   "web_search_url": "https://duckduckgo.com/?q=Invisible+Technologies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Given your priority for an elite AI role with excellent work-life balance and sane hours, you must investigate this company's actual day-to-day environment. Confirm whether their fast-paced tech culture genuinely respects guaranteed shutdowns or if it masks a toxic, high-burnout environment that would conflict with your personal time constraints."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown based on provided redirects, but candidates should validate claims of sane hours and avoiding toxic burnout environments."
   }
  },
  "invisible technologies ai": {
@@ -146248,51 +146471,124 @@
  "mcdonald s corporation": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "9f9928dd8d"
+   ],
+   "value": "Estimated: Tier 3. Unlikely to be viewed as a top-tier AI or data science employer; tech is a support function for the core restaurant business."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "9f9928dd8d"
+   ],
+   "value": "A mix of direct retail sales at company-owned stores and franchising fees/rent collected from independent franchisees."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "9f9928dd8d"
+   ],
+   "value": "Traditional corporate focused on restaurant operations support."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "9f9928dd8d"
+   ],
+   "value": "General consumers globally looking for quick, affordable meals."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "9f9928dd8d"
+   ],
+   "value": "Estimated: Medium, likely below FAANG-level benchmarks."
   },
   "evidence_sha": "32be1198721a1ace",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784835226,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784835077,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "9f9928dd8d"
+   ],
+   "value": "Quick-service restaurant (QSR) / Food & Beverage."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "9f9928dd8d"
+   ],
+   "value": "Be prepared to discuss how you would adapt to a highly structured corporate tech environment. Ask interviewers about their innovation cycles and tech stack to ensure the role actually provides the rapid learning and high pay you are targeting."
+  },
+  "last_attempt_at": 1784835226,
   "last_evidence_at": 1784677599,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "9f9928dd8d"
+   ],
+   "value": "Corporate offices in the US, UK, Germany, France, Canada, Brazil, and other regions featured on their global jobs portal."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "9f9928dd8d"
+   ],
+   "value": "To make delicious feel-good moments easy for everyone, though specific mission text was not fully detailed in the provided job portal."
+  },
   "name": "McDonald's Corporation",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "9f9928dd8d"
+   ],
+   "value": "Estimated: Moderate to slow, typical of established corporate tech environments."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "9f9928dd8d"
+   ],
+   "value": "Fast food, hamburgers, chicken sandwiches, fries, and breakfast items."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "9f9928dd8d"
+   ],
+   "value": "Estimated: 15-20 days annually."
   },
+  "refresh_after": 1790019226,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "9f9928dd8d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "9f9928dd8d"
+   ],
+   "value": "Estimated: Unlikely to offer guaranteed corporate-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "9f9928dd8d"
+   ],
+   "value": "Large-cap multinational public corporation."
   },
   "sources": [
    {
@@ -146326,14 +146622,45 @@
     "url": "https://jobs.mcdonalds.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "9f9928dd8d"
+   ],
+   "value": "Not detailed in the available sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "9f9928dd8d"
+   ],
+   "value": "McDonald's Corporation operates and franchises fast-food restaurants globally. They make money by collecting rent and royalties from franchised locations, alongside direct sales revenue from company-owned restaurants."
+  },
+  "synthesized_evidence_sha": "32be1198721a1ace",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "9f9928dd8d"
+   ],
+   "value": "Roles generally focus on IT, business technology, restaurant operations tech, and data analytics, rather than cutting-edge AI research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677599,
   "web_search_url": "https://duckduckgo.com/?q=McDonald%27s+Corporation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "9f9928dd8d"
+   ],
+   "value": "While McDonald's is a massive enterprise with good work-life balance, its tech culture is likely to involve traditional corporate bureaucracy rather than the fast, innovative environment you seek. It may not provide the elite AI prestige or accelerated technical learning expected from a top-tier data science role."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "9f9928dd8d"
+   ],
+   "value": "Estimated: Good. Likely respects sane hours compared to top tech firms, avoiding high-burnout cultures."
   }
  },
  "mckesson": {
@@ -152145,7 +152472,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -152184,7 +152511,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "last_attempt_at": 1784835077,
+  "last_attempt_at": 1784835226,
   "last_evidence_at": 1784821848,
   "locations": {
    "confidence": "high",
@@ -157207,40 +157534,90 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low; primarily a payments and e-commerce platform for gaming rather than a core AI or data science-focused firm."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely takes a transaction fee or percentage cut from payments processed through its e-commerce and payments platform for game publishers."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven and highly technical, focused on disrupting traditional app store monopolies for game publishers."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "9ffee20b25"
+   ],
+   "value": "Video game publishers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "9ffee20b25"
+   ],
+   "value": "$120,000 - $160,000 per year for entry-level software engineers."
   },
   "evidence_sha": "7ab95d81eec55cf8",
+  "generated_at": 1784835226,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "9ffee20b25"
+   ],
+   "value": "Fintech / Payments / E-commerce"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe heavily to ensure their fast startup pace does not bleed into toxic hours or burnout, specifically asking about expected weekly schedules and shutdown policies to verify they actually respect your work-life balance boundary."
   },
-  "last_attempt_at": 1784835077,
+  "last_attempt_at": 1784835226,
   "last_evidence_at": 1784711218,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "9ffee20b25"
+   ],
+   "value": "Founded in San Francisco, CA; current software engineering roles are based in New York, NY (onsite)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "9ffee20b25"
+   ],
+   "value": "To help game publishers earn more money and achieve independence from app stores."
+  },
   "name": "Neon",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and dynamic, typical of a sub-50 employee early-stage startup."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "9ffee20b25"
+   ],
+   "value": "Payments and e-commerce platform tailored for game publishers."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard startup PTO (likely 15-20 days), but exact policy is not public."
   },
+  "refresh_after": 1790019226,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -157250,7 +157627,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No information found regarding guaranteed company shutdowns."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "9ffee20b25"
+   ],
+   "value": "Early-stage startup founded in 2022, with 11-50 employees."
   },
   "sources": [
    {
@@ -157294,14 +157678,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=b10f3778ef4ad4176f1bd5f1079e32451f9676fc635675821551d6b3c481575bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly9uZW9uLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "9ffee20b25"
+   ],
+   "value": "Neon has a track record of offering H1B sponsorships, though this is not guaranteed for specific roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "9ffee20b25"
+   ],
+   "value": "Neon is a global payments and e-commerce platform built specifically to help video game publishers earn more revenue and gain independence from traditional app stores."
+  },
+  "synthesized_evidence_sha": "7ab95d81eec55cf8",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "9ffee20b25"
+   ],
+   "value": "Software engineering roles are currently entry-level / early career focused (requiring 1+ years of experience), involving full-time onsite work."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677861,
   "web_search_url": "https://duckduckgo.com/?q=Neon+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a small, mission-driven payments startup, Neon likely offers the fast, innovative tech culture and high-impact technical learning you are looking for, while its public new-grad salary range aligns with your elite pay expectations."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unclear/Unknown; startup environments can sometimes demand long hours, so work-life balance needs to be verified during interviews."
   }
  },
  "neon health": {
@@ -174164,11 +174575,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -174180,6 +174593,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
+  "last_attempt_at": 1784835226,
   "last_evidence_at": 1784671188,
   "name": "PayPal",
   "pace_of_work": {
@@ -253057,37 +253471,81 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (Emerging) — Early-stage consumer app applying AI to itinerary planning; not a core AI research lab, but strong applied ML exposure for a new grad."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Freemium SaaS with premium subscription tiers for advanced features (unlimited trips, offline maps, collaboration, export), plus potential affiliate revenue from booking partners (flights, hotels, activities)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Low-ego, product-obsessed, travel-enthusiast team. Founders likely ex-YC batch mates; flat hierarchy, async-first communication, dogfooding their own app for team offsites. Values autonomy and clear writing over meetings."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Leisure travelers, frequent flyers, digital nomads, and travel enthusiasts who want a centralized tool for trip planning, organization, and sharing."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$160k base + 0.05%-0.15% equity (4-yr vest, 1-yr cliff). Total comp ~$140k-$180k. Bay Area premium if onsite."
   },
   "evidence_sha": "5e9901c3ce7d53b8",
+  "generated_at": 1784835226,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "d0bd133499",
+    "753231e2a9"
+   ],
+   "value": "Consumer Travel Technology / SaaS"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe for: (1) Concrete examples of shipping user-facing features end-to-end in a small team; (2) How product decisions balance speed vs. quality (travel data integrity matters); (3) Current AI/ML stack—are they experimenting with LLMs for itinerary generation or still rule-based?; (4) On-call rotation and incident response expectations; (5) Recent hires' ramp time and mentorship structure. Ask to see a real sprint retrospective or planning doc to gauge process maturity."
   },
+  "last_attempt_at": 1784835226,
   "last_evidence_at": 1784676894,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Remote-first or hybrid with a hub in San Francisco Bay Area (common for YC W19); Wanderlog.com accessible globally."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To make travel planning effortless and enjoyable by providing the best tools for organizing, discovering, and sharing travel experiences."
+  },
   "name": "Wanderlog (W19)",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable — typical post-YC startup velocity with 2-week sprints, minimal bureaucracy, and direct user feedback loops. Crunch periods around peak travel seasons (spring/summer) possible."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: A web and mobile travel planning application that helps users create, organize, and share trip itineraries, likely with collaborative features, booking integrations, and offline access."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 US federal holidays + flexible unpaid leave; no public policy documented."
   },
+  "refresh_after": 1790019226,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -253097,7 +253555,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 24-Jan 1) common in YC-founded companies; summer slowdown encouraged. Not guaranteed."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Estimated: Seed to Series A stage, ~10-30 employees (typical for YC W19 companies still operating independently)."
   },
   "sources": [
    {
@@ -253131,14 +253596,40 @@
     "url": "https://www.workatastartup.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely supports H-1B transfers and cap-exempt petitions given YC backing and tech hiring needs; new grad OPT to H-1B path probable. No public policy found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "d0bd133499",
+    "753231e2a9"
+   ],
+   "value": "Wanderlog is a Y Combinator W19 startup operating a travel planning platform accessible at wanderlog.com. The company appears to offer a consumer-facing travel itinerary and planning service."
+  },
+  "synthesized_evidence_sha": "5e9901c3ce7d53b8",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Full-stack web/mobile development (React/React Native, Node.js/TypeScript, PostgreSQL, cloud infrastructure), third-party API integrations (booking, maps, places), real-time sync, offline-first architecture, and emerging AI/ML for itinerary optimization and recommendations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676894,
   "web_search_url": "https://duckduckgo.com/?q=Wanderlog+%28W19%29+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Wanderlog offers a rare combination for a new grad: YC pedigree (W19) signals elite early-stage validation, while a consumer travel product provides tangible impact and interesting AI/ML challenges (itinerary optimization, personalization). The remote-friendly, post-Series A scale suggests faster shipping cycles and broader ownership than Big Tech, without the burnout culture of pre-PMF startups. If the team maintains the YC ethos of 'make something people want' with sustainable pacing, it hits "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Remote-friendly culture, consumer SaaS with predictable traffic patterns (seasonal), and YC alumni founders who often advocate sustainable pace. No public burnout signals."
   }
  },
  "warner bros discovery": {
@@ -262075,48 +262566,126 @@
  "youlearn": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Estimated: Startup-tier AI prestige; being a YC-backed ed-tech company provides strong entrepreneurial validation but lacks the established scale of FAANG or elite AI labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e792064df7",
+    "3caaf2a3ba"
+   ],
+   "value": "Likely operates on a software-as-a-service (SaaS) or freemium subscription model common among Y Combinator ed-tech startups."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "e792064df7",
+    "3caaf2a3ba"
+   ],
+   "value": "Estimated: Highly innovative, hacker-culture, and mission-driven, emphasizing what you can build rather than rigid corporate processes."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "3caaf2a3ba"
+   ],
+   "value": "Learners, students, or educational organizations seeking AI-assisted learning tools."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Estimated: $90,000 - $130,000 base salary with varying equity, aligning with early-stage YC startup market rates."
   },
   "evidence_sha": "183921958fbf52a6",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Edtech / technology (estimated)"
+  "generated_at": 1784835226,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "3caaf2a3ba"
+   ],
+   "value": "EdTech (Education Technology) and Artificial Intelligence."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "During interviews, ask about the specific engineering pace, new grad compensation structure, and equity to confirm it meets your elite pay standards. Probe deeply into their daily operations to ensure the startup's tech culture remains fast-paced yet sustainable, avoiding the toxic burnout conditions you want to avoid while confirming your personal time is respected."
+  },
+  "last_attempt_at": 1784835226,
   "last_evidence_at": 1784671187,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Not explicitly stated in available sources; YC startups frequently offer remote work options or are headquartered in the San Francisco Bay Area."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "3caaf2a3ba"
+   ],
+   "value": "To leverage artificial intelligence to improve or accelerate the learning process for users."
+  },
   "name": "YouLearn",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Estimated: Very fast-paced and highly iterative, typical of Y Combinator startups pushing for rapid product market fit."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "3caaf2a3ba"
+   ],
+   "value": "An AI-powered learning application designed to enhance educational experiences or content ingestion."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Estimated: 10-15 days of PTO, though actual usage at a fast-paced seed startup depends heavily on the founders' view of downtime."
   },
+  "refresh_after": 1790019226,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research; standard startup operations usually only observe major public holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Early-stage startup (Seed phase), operating within the Y Combinator portfolio."
   },
   "sources": [
    {
@@ -262150,14 +262719,47 @@
     "url": "https://www.workatastartup.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Not explicitly stated in available sources; early-stage Y Combinator startups rarely offer visa sponsorship for new grads unless specifically highlighted."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "3caaf2a3ba",
+    "e792064df7"
+   ],
+   "value": "YouLearn is an early-stage Y Combinator-backed technology company headed by an AI-driven educational platform. As a YC startup, it likely operates on a software-as-a-service (SaaS) model, generating revenue by providing its AI learning application to educational institutions, students, or enterprise clients."
+  },
+  "synthesized_evidence_sha": "183921958fbf52a6",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "e792064df7",
+    "3caaf2a3ba"
+   ],
+   "value": "Building and scaling AI features for an ed-tech learning platform, likely involving large language models (LLMs), full-stack development, and rapid product iteration."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784671187,
   "web_search_url": "https://duckduckgo.com/?q=YouLearn+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "This role aligns with your priority for a fast, innovative tech culture, as Y Combinator startups operate with extreme agility and minimal bureaucracy. It appeals to your desire for a mission-driven environment focused on educational acceleration, providing hands-on AI learning and massive career growth potential for new grads."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "e792064df7"
+   ],
+   "value": "Estimated: Variable wlb; early-stage startup life often demands high hustle and long hours, which may conflict with strict boundaries unless explicitly avoided by founders."
   }
  },
  "yugabyte": {
