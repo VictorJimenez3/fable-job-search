@@ -46157,7 +46157,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -46175,7 +46175,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784797615,
+  "last_attempt_at": 1784797800,
   "last_evidence_at": 1784677043,
   "name": "Cellular Sales",
   "pace_of_work": {
@@ -69382,7 +69382,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -69400,7 +69400,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784797615,
+  "last_attempt_at": 1784797800,
   "last_evidence_at": 1784677533,
   "name": "Disney",
   "pace_of_work": {
@@ -136930,7 +136930,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -136948,7 +136948,7 @@
    "source_ids": [],
    "value": "Sports / technology (estimated)"
   },
-  "last_attempt_at": 1784797615,
+  "last_attempt_at": 1784797800,
   "last_evidence_at": 1784583484,
   "name": "Major League Baseball",
   "pace_of_work": {
@@ -155125,40 +155125,88 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 — strong applied ML on a unique social graph with real-world safety constraints; publishes occasionally at RecSys, KDD, WWW; not a primary research lab but offers high-impact production ML."
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Advertising-supported model (sponsored posts, local business ads, national brand campaigns) with potential revenue from transaction fees on classifieds and premium business features."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-first, collaborative, low-ego; 'neighborly' values extend to internal interactions; transparent leadership; diversity and inclusion are operational priorities; experimentation encouraged but measured."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "cf1b5af5f9"
+   ],
+   "value": "Verified neighborhood residents in the US, UK, Canada, and select other countries; local businesses and national advertisers seeking hyperlocal reach; public agencies posting safety and community alerts."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $135k-$155k base + $25k-$40k RSU (4-year) + $10k-$20k sign-on; total year 1 ~$170k-$215k; San Francisco / New York premium applied."
   },
   "evidence_sha": "3b7379b390ae0357",
+  "generated_at": 1784797800,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "cf1b5af5f9"
+   ],
+   "value": "Consumer internet / Hyperlocal social network / AdTech"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "cf1b5af5f9"
+   ],
+   "value": "Expect deep dives on recommendation systems, content safety ML, graph-based trust modeling, and A/B experimentation for local engagement. Prepare to discuss trade-offs between growth metrics and community health, and how you would design privacy-preserving local analytics. Behavioral questions will probe mission alignment and collaboration in a cross-functional, community-first environment."
+  },
+  "last_attempt_at": 1784797800,
+  "last_evidence_at": 1784643844,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Headquarters in San Francisco, CA; additional offices in New York, NYC; remote-friendly hybrid policy for many engineering roles; distributed teams across US and UK."
   },
-  "last_attempt_at": 1784797615,
-  "last_evidence_at": 1784643844,
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "cf1b5af5f9"
+   ],
+   "value": "To activate the power of local and make every neighborhood feel like home."
+  },
   "name": "Nextdoor",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — quarterly planning cycles with dedicated hack weeks; emphasis on sustainable delivery over crunch; public-company predictability reduces fire drills."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "cf1b5af5f9"
+   ],
+   "value": "Nextdoor mobile app and website; neighborhood news feed; local business pages; classifieds (For Sale & Free); groups and events; public agency alerts; advertising platform for local and national brands."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual PTO + 10-12 company holidays + unlimited sick/mental health days; volunteer time off; sabbatical after 5 years."
   },
+  "refresh_after": 1789981800,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -155168,7 +155216,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full company shutdown last week of December (between Christmas and New Year); occasional 'recharge Fridays' in summer."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "271899876f",
+    "df56705c31"
+   ],
+   "value": "Estimated: Public company (NYSE: KIND) with ~700-800 employees; post-SPAC merger (2021); mature growth stage focusing on monetization and international expansion."
   },
   "sources": [
    {
@@ -155202,14 +155258,39 @@
     "url": "https://about.nextdoor.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Actively sponsors H-1B visas and green cards for engineering and data science roles; typical for public tech companies of this size."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "cf1b5af5f9"
+   ],
+   "value": "Nextdoor operates a private social network for neighborhoods, connecting verified residents to share local information, recommendations, and services. The company generates revenue primarily through advertising and sponsored content targeted to hyperlocal audiences."
+  },
+  "synthesized_evidence_sha": "3b7379b390ae0357",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Recommendation and ranking systems for hyperlocal feed; content moderation and safety ML; graph algorithms for neighborhood trust; geospatial indexing; real-time notifications; ad targeting and auction systems; privacy-preserving local analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784643844,
   "web_search_url": "https://duckduckgo.com/?q=Nextdoor+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "cf1b5af5f9"
+   ],
+   "value": "Nextdoor offers a mission-driven product that tangibly strengthens local communities, with a public-company platform for deploying AI/ML at scale on a real-world social graph. The neighborhood trust model creates unique data challenges (safety, relevance, privacy) that accelerate technical growth. Reports suggest a culture that respects boundaries and avoids the burnout common in consumer social apps, aligning with your priority for sustainable pace and work-life balance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — culture explicitly values 'neighborly' behavior internally; protected evenings/weekends; on-call rotations are lightweight and compensated; flexible remote options."
   }
  },
  "nextech systems": {
@@ -173418,7 +173499,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -173436,7 +173517,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
-  "last_attempt_at": 1784797615,
+  "last_attempt_at": 1784797800,
   "last_evidence_at": 1784675467,
   "name": "Plaid",
   "pace_of_work": {
@@ -204058,37 +204139,96 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 — specialized ad-tech AI with production impact, but not a widely known AI research brand; strong for applied ML career acceleration."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "55f62a2554"
+   ],
+   "value": "Ad-tech platform revenue: likely takes a percentage of media spend (platform fees) or charges SaaS/subscription fees for Skybeam tools; monetizes access to TV+, PlayerWON, and Skybeam inventory and optimization capabilities."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "55f62a2554"
+   ],
+   "value": "Estimated: Innovative, product-oriented, technical — emphasizes AI R&D for real products; likely flat-ish structure with direct engineer-to-product collaboration; mission-driven around democratizing TV advertising."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "55f62a2554"
+   ],
+   "value": "Brands and advertisers seeking to reach audiences across linear TV, connected TV, and video games; agencies managing TV and cross-screen campaigns."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$160k base + equity (0.05-0.15%) + bonus; NYC ad-tech new grad AI roles typically in this band; total comp ~$160k-$200k."
   },
   "evidence_sha": "60de5afeb2f6dca1",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784797800,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "55f62a2554"
+   ],
+   "value": "Ad-tech / Marketing technology (MarTech) — specifically cross-screen TV, CTV, and in-game advertising platforms."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "55f62a2554"
+   ],
+   "value": "Expect deep technical screens on ML fundamentals (transformers, diffusion, RAG, evaluation), coding (Python, PyTorch/TensorFlow, SQL), and system design for real-time ad serving or data pipelines. Be ready to discuss a concrete AI project end-to-end: problem framing, data, model choice, deployment, monitoring. Ad-tech specifics (RTB, attribution, CTV/gaming inventory) are a plus but likely taught on the job. Ask about: how AI prototypes move to production, GPU/compute budget, collaboration betwe"
+  },
+  "last_attempt_at": 1784797800,
   "last_evidence_at": 1784673265,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "55f62a2554"
+   ],
+   "value": "Estimated: Headquarters in New York, NY; likely remote/hybrid options given modern ad-tech norms; job posting does not specify location."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "55f62a2554"
+   ],
+   "value": "To make TV advertising accessible and measurable for any brand by providing unified planning, buying, and optimization across linear, CTV, and gaming inventory."
+  },
   "name": "Simulmedia",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "55f62a2554"
+   ],
+   "value": "Estimated: Fast — job posting emphasizes \"research, prototype and implement\" cycles; ad-tech demands rapid iteration on bidding, measurement, and optimization; likely sprint-driven with quarterly product releases."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "55f62a2554"
+   ],
+   "value": "TV+ (cross-platform TV advertising platform covering linear and CTV), PlayerWON (in-game video game advertising), Skybeam (TV campaign planning, execution, and optimization platform)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + US federal holidays; typical for growth-stage tech; no public policy found."
   },
+  "refresh_after": 1789981800,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -204098,7 +204238,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found; some tech firms offer winter break but not confirmed."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "55f62a2554"
+   ],
+   "value": "Estimated: 100-500 employees; growth-stage ad-tech company with multiple platforms (TV+, PlayerWON, Skybeam) and active hiring for AI roles."
   },
   "sources": [
    {
@@ -204142,14 +204289,41 @@
     "url": "https://jobs.lever.co/simulmedia/52c56404-78f4-41be-a1a0-ef3ecd84993c"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely supports H-1B transfers and new grad sponsorship given technical hiring needs; no public policy disclosed in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "55f62a2554"
+   ],
+   "value": "Simulmedia operates TV+, an advertising platform that helps brands reach viewers across linear TV and connected TV (CTV), and PlayerWON for in-game video game advertising. Their Skybeam platform provides end-to-end tools for TV campaign planning, execution, and optimization."
+  },
+  "synthesized_evidence_sha": "60de5afeb2f6dca1",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "55f62a2554"
+   ],
+   "value": "Building and optimizing ad-tech platforms (TV+, PlayerWON, Skybeam); researching, prototyping, and implementing generative AI solutions for products and internal processes; large-scale data pipelines for cross-screen measurement and optimization; real-time bidding and inventory management systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673265,
   "web_search_url": "https://duckduckgo.com/?q=Simulmedia+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "55f62a2554"
+   ],
+   "value": "Simulmedia sits at the intersection of TV, streaming, and gaming advertising — a massive market undergoing rapid AI-driven transformation. The Generative AI Analyst role offers a new grad direct ownership of AI R&D for production ad-tech products (TV+, PlayerWON, Skybeam), not just support work. The company’s multi-platform scope means exposure to diverse data types (viewership, gaming, bidding, creative) and real revenue impact. Unlike big-tech AI labs where new grads are far from production, h"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — ad-tech can have campaign-driven crunches (upfronts, holiday seasons), but AI analyst role appears project-based rather than 24/7 ops; no public data on hours/shutdowns."
   }
  },
  "sinclair": {
@@ -229655,7 +229829,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -229673,7 +229847,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
-  "last_attempt_at": 1784797615,
+  "last_attempt_at": 1784797800,
   "last_evidence_at": 1784583341,
   "name": "Trinity Health",
   "pace_of_work": {
@@ -237177,7 +237351,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -237195,7 +237369,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784797615,
+  "last_attempt_at": 1784797800,
   "last_evidence_at": 1784675132,
   "name": "University of Texas - Austin",
   "pace_of_work": {
