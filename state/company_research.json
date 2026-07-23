@@ -77684,11 +77684,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -77700,6 +77702,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784779113,
   "last_evidence_at": 1784674079,
   "name": "Eversource Energy",
   "pace_of_work": {
@@ -99293,7 +99296,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -99311,7 +99314,7 @@
    "source_ids": [],
    "value": "Ai Lab / technology (estimated)"
   },
-  "last_attempt_at": 1784779005,
+  "last_attempt_at": 1784779113,
   "last_evidence_at": 1784599435,
   "name": "Hayden AI",
   "pace_of_work": {
@@ -116084,47 +116087,101 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Elite) — targeting same talent tier as Citadel, Two Sigma, Jane Street, Hudson River Trading"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Asset management fees (typically 1-2% management fee) and performance fees (typically 15-25% of profits) on capital deployed across systematic trading strategies."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Founder-led, engineering-first, meritocratic, transparent; small-team ownership with direct access to leadership; 'build it right from scratch' ethos."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Institutional investors, pension funds, endowments, and high-net-worth individuals allocating capital to the fund's strategies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $200k-$250k base + $150k-$300k sign-on/bonus + equity (carry/points) = $400k-$550k+ year-one all-in, competitive with top quant firms."
   },
   "evidence_sha": "ae9057a482de80d4",
+  "generated_at": 1784779113,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Quantitative Finance / Systematic Hedge Fund"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Expect rigorous technical screening: C++ systems design (latency, concurrency), Python data/ML fluency, probability/stats brainteasers, and applied math (stochastic calculus, optimization). Prepare for open-ended research discussions — how you'd approach a new dataset or strategy idea. Culture-fit will probe ownership bias, collaboration under pressure, and long-term commitment to building a platform. Ask about: tech stack decisions still in flight, research-to-production lifecycle, and how the "
+  },
+  "last_attempt_at": 1784779113,
+  "last_evidence_at": 1784676782,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Primary: New York, NY; potential secondary hubs in London, Singapore, or Miami as firm scales."
   },
-  "last_evidence_at": 1784676782,
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To build a world-class quantitative investment platform combining cutting-edge technology, rigorous research, and disciplined risk management to deliver superior risk-adjusted returns."
+  },
   "name": "Jain Global",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: High intensity but founding-stage autonomy; 'sprint-and-recover' cycles around strategy launches; less bureaucratic drag than mature platforms."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Multi-strategy quantitative investment strategies across equities, futures, options, and other liquid asset classes; systematic trading infrastructure and research platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days + market holidays; unlimited/s flexible policy likely but not yet formalized."
   },
+  "refresh_after": 1789963113,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal guaranteed shutdowns yet; leadership has signaled respect for personal time but policies are in formation."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Early-stage / launch phase (founded 2024); headcount estimated 50-150 employees scaling rapidly."
   },
   "sources": [
    {
@@ -116168,14 +116225,39 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and green cards for elite technical hires given competition with top quant firms; new-grad sponsorship probable but unconfirmed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Jain Global is a newly established quantitative investment firm founded by Bobby Jain, previously a senior executive at Millennium Management. The company operates as a multi-strategy hedge fund platform targeting elite technical talent for systematic trading and research roles."
+  },
+  "synthesized_evidence_sha": "ae9057a482de80d4",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Low-latency trading systems (C++, FPGA), distributed data pipelines, quantitative research platforms (Python), alternative data integration, ML/AI for alpha generation, risk systems, and core infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676782,
   "web_search_url": "https://duckduckgo.com/?q=Jain+Global+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Jain Global offers a rare combination: elite quant-firm prestige and top-of-market new-grad compensation (est. $400k-$500k+ total) at a founding-stage firm where you'll shape the tech stack and culture from day one. Backed by Bobby Jain's Millennium track record, it targets the same technical bar as Citadel/Two Sigma but with a blank-slate engineering environment — no legacy baggage, direct access to leadership, and a stated focus on sustainable intensity over burnout. For a candidate who wants "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — demanding but with explicit cultural guardrails against burnout; weekend protection and shutdown norms still being codified."
   }
  },
  "jamf": {
@@ -121632,37 +121714,84 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown/Not Applicable. The historical Kite had high AI prestige but ceased operations. Zerodha's Kite is a trading platform, not an AI research lab. No evidence of a current 'Kite Ping' AI organization."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown. Sources provide no cultural insights."
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown. No compensation data in sources. For reference, top-tier AI labs offer $150k-$250k+ total compensation for new grads, but this company's status is unverified."
   },
   "evidence_sha": "fb7c000f5eca66dc",
+  "generated_at": 1784779113,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "906a180dcc",
+    "4c61816049"
+   ],
+   "value": "Ambiguous. Could be AI developer tools (historical Kite) or fintech/trading platforms (Zerodha Kite). No definitive industry assignment possible from sources."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Given the candidate's priorities, interviews should probe: 1) Current company status and funding (is this an active, well-funded AI lab?). 2) Concrete WLB policies (core hours, on-call, shutdown rituals). 3) Technical depth of AI/ML work vs. application integration. 4) Mentorship structure for new grads. 5) Evidence of 'fast, innovative culture' vs. bureaucracy. Sources provide no data to answer these."
   },
+  "last_attempt_at": 1784779113,
   "last_evidence_at": 1784674080,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Kite Ping",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown. No data on current engineering pace or culture."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "906a180dcc",
+    "4c61816049"
+   ],
+   "value": "No verifiable product information found in the provided sources. The Wikipedia redirect (source 906a180dcc) suggests a historical connection to Kite, an AI coding assistant that shut down in 2022. The kite.zerodha.com redirect (source 4c61816049) points to Zerodha's retail trading platform named Kite, which is a separate entity."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown. No PTO policy information available."
   },
+  "refresh_after": 1789963113,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -121672,7 +121801,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown. No information on guaranteed shutdown policies or work-hour norms."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "906a180dcc",
+    "4c61816049"
+   ],
+   "value": "Unknown. The Kite AI coding assistant company (likely referenced by source 906a180dcc) was a startup that shut down in 2022. Zerodha (source 4c61816049) is a large Indian brokerage. No current stage data for 'Kite Ping' specifically."
   },
   "sources": [
    {
@@ -121706,14 +121843,41 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "906a180dcc",
+    "4c61816049"
+   ],
+   "value": "Kite Ping appears to be a reference to Kite, an AI-powered coding assistant startup that ceased operations in 2022, or possibly Zerodha's Kite trading platform. The supplied sources are redirect links with no accessible content, so the company's current status, products, and operations cannot be verified from these sources alone."
+  },
+  "synthesized_evidence_sha": "fb7c000f5eca66dc",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "906a180dcc",
+    "4c61816049"
+   ],
+   "value": "No technical work details available in the supplied sources. Historically, Kite (AI coding assistant) worked on ML for code completion; Zerodha's Kite is a trading platform."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674080,
   "web_search_url": "https://duckduckgo.com/?q=Kite+Ping+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The candidate seeks a top-tier AI/data science role with elite prestige, high new-grad pay, fast innovative culture, mission-driven work, strong work-life balance with guaranteed shutdowns, and accelerated technical growth. The available sources do not confirm whether Kite Ping exists as a current entity matching these criteria. The historical Kite (AI coding) was a prestigious AI startup but shut down; Zerodha's Kite is a fintech platform, not primarily an AI research employer."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown. No employee reports or policy data in sources."
   }
  },
  "kitware": {
@@ -156080,11 +156244,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -156096,6 +156262,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784779113,
   "last_evidence_at": 1784674613,
   "name": "Nymbus",
   "pace_of_work": {
@@ -173352,11 +173519,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -173368,6 +173537,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784779113,
   "last_evidence_at": 1784674615,
   "name": "Publicis Canada",
   "pace_of_work": {
@@ -179624,11 +179794,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -179640,6 +179812,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784779113,
   "last_evidence_at": 1784677108,
   "name": "Realm",
   "pace_of_work": {
@@ -196231,7 +196404,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 9,
+  "attempts": 10,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -196249,7 +196422,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784779005,
+  "last_attempt_at": 1784779113,
   "last_evidence_at": 1784677479,
   "name": "Sigma Computing",
   "pace_of_work": {
