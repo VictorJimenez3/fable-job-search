@@ -25617,40 +25617,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 \u2014 Strong applied ML in regulated environment; publishes occasionally, contributes to open source, but not a primary AI research lab."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Earns net interest income from loans and securities, plus fee income from deposit accounts, loan origination, and banking-as-a-service partnerships. Low operating costs due to branchless model drive higher net interest margins."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-led, pragmatic, low-politics. Values autonomy and technical excellence; culture leans more 'tech company' than 'bank'. Diversity and inclusion initiatives active but still evolving."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primarily retail consumers and small-to-medium businesses seeking low-fee, high-yield digital banking; also serves institutional partners through its banking-as-a-service and lending platforms."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: $115,000-$135,000 base + 10-15% annual bonus + RSU grant ($20k-$40k over 4 years). Total comp ~$140k-$175k year 1."
   },
   "evidence_sha": "acc4c31d2699e0cd",
+  "generated_at": 1784778392,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+   "value": "Financial Services / Digital Banking / Fintech"
   },
-  "last_attempt_at": 1784778363,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical screens on distributed systems, data pipelines, and ML model deployment; behavioral questions emphasizing ownership, customer obsession, and regulatory awareness. Prepare for case studies on credit risk or fraud detection. Ask about release cadence, on-call rotation, and how the team balances innovation with compliance."
+  },
+  "last_attempt_at": 1784778392,
   "last_evidence_at": 1784663560,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in San Diego, CA; additional offices in Jacksonville, FL, and remote-friendly roles across the US."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide innovative, low-cost financial products through technology, empowering customers with better banking experiences without traditional branch overhead."
+  },
   "name": "Axos Bank",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate-fast \u2014 Quarterly planning with bi-weekly sprints; faster than traditional banks but more measured than hyper-growth startups. Occasional crunch around regulatory deadlines."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Checking and savings accounts, money market accounts, certificates of deposit, personal and business loans, mortgage lending, auto and RV loans, investment accounts, and a suite of digital banking tools including mobile app and API platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays + unlimited sick leave; accrual increases with tenure."
   },
+  "refresh_after": 1789962392,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -25660,7 +25698,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some teams observe informal slowdowns between Christmas and New Year."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Publicly traded (NYSE: AX), ~$20B in assets, ~1,200 employees. Mature fintech bank with stable revenue but ongoing digital transformation."
   },
   "sources": [
    {
@@ -25694,14 +25737,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=ca8e0696979c98a17f9ad54036b6d1dc789980f4ecd9724f3c88f68880e9b540JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=13b3f972-4586-6ee0-3e25-eeef44316f9a&u=a1aHR0cHM6Ly93d3cuYXhvc2JhbmsuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B visas for technical roles; green card sponsorship common for senior engineering and data science positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Axos Bank is a digital-first, branchless bank offering consumer and business banking products, mortgages, and lending services entirely online. It operates as a subsidiary of Axos Financial, Inc., a publicly traded financial holding company."
+  },
+  "synthesized_evidence_sha": "acc4c31d2699e0cd",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core banking platform development, mobile/web applications, data engineering, machine learning for credit risk/fraud/personalization, API integration for BaaS, cloud infrastructure (AWS), and regulatory compliance automation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784663560,
   "web_search_url": "https://duckduckgo.com/?q=Axos+Bank+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Axos offers a rare blend of fintech innovation and banking stability, with a modern tech stack and real data science impact on credit and fraud models. Its branchless model drives a lean, engineering-centric culture that can provide faster iteration than traditional banks, while its public-company scale ensures compensation competitive with top-tier fintechs. For a new grad seeking elite prestige, high pay, and a sustainable pace, Axos represents a credible alternative to both big-tech burnout a"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "7/10 \u2014 Generally respected hours (40-45h/week), limited weekend work, but on-call rotations for platform teams. No guaranteed shutdowns."
   }
  },
  "axq capital": {
@@ -41860,11 +41924,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -41876,6 +41942,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784778392,
   "last_evidence_at": 1784674072,
   "name": "Capgemini",
   "pace_of_work": {
@@ -87972,7 +88039,7 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -87990,7 +88057,7 @@
    "source_ids": [],
    "value": "Ai Lab / technology (estimated)"
   },
-  "last_attempt_at": 1784778363,
+  "last_attempt_at": 1784778392,
   "last_evidence_at": 1784599435,
   "name": "Gecko Robotics",
   "pace_of_work": {
@@ -98583,11 +98650,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -98599,6 +98668,7 @@
    "source_ids": [],
    "value": "Ai Lab / technology (estimated)"
   },
+  "last_attempt_at": 1784778392,
   "last_evidence_at": 1784599435,
   "name": "Hayden AI",
   "pace_of_work": {
@@ -174969,7 +175039,7 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -174987,7 +175057,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
-  "last_attempt_at": 1784778363,
+  "last_attempt_at": 1784778392,
   "last_evidence_at": 1784672895,
   "name": "Qualcomm Technologies, Inc.",
   "pace_of_work": {
@@ -195280,7 +195350,7 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -195298,7 +195368,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784778363,
+  "last_attempt_at": 1784778392,
   "last_evidence_at": 1784677479,
   "name": "Sigma Computing",
   "pace_of_work": {
@@ -245056,7 +245126,7 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -245074,7 +245144,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784778363,
+  "last_attempt_at": 1784778392,
   "last_evidence_at": 1784672895,
   "name": "Zello",
   "pace_of_work": {
