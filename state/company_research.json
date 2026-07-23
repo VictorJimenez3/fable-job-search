@@ -70946,11 +70946,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -70962,6 +70964,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784779233,
   "last_evidence_at": 1784676783,
   "name": "EBSCO",
   "pace_of_work": {
@@ -77684,7 +77687,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -77702,7 +77705,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784779113,
+  "last_attempt_at": 1784779233,
   "last_evidence_at": 1784674079,
   "name": "Eversource Energy",
   "pace_of_work": {
@@ -99293,40 +99296,105 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High — production computer vision at scale on edge devices for government contracts is a recognized technical differentiator; attracts talent from top labs and big-tech perception teams."
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "1268c3ff10",
+    "0a94ed30c1",
+    "355238ff03"
+   ],
+   "value": "B2G (business-to-government) sales of integrated hardware-software perception systems for automated traffic enforcement and transportation optimization; likely recurring revenue from SaaS/cloud platform and support contracts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "355238ff03"
+   ],
+   "value": "Estimated: Mission-oriented, technical, impact-focused startup culture; values ownership and 'significant impact' over process. Likely lean, collaborative, with strong engineering craft around reliability for public safety."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "1268c3ff10",
+    "0a94ed30c1",
+    "355238ff03"
+   ],
+   "value": "Transit agencies, municipal governments, and other public sector organizations responsible for transportation enforcement and optimization."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140k-$180k base + equity (Bay Area computer vision/ML engineering market rate for well-funded growth startups); no public data."
   },
   "evidence_sha": "b3714e91f755750e",
+  "generated_at": 1784779233,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "1268c3ff10",
+    "0a94ed30c1",
+    "355238ff03"
+   ],
+   "value": "GovTech / Smart Cities / Transportation Technology / Computer Vision AI"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "1268c3ff10",
+    "355238ff03"
+   ],
+   "value": "Expect deep technical assessment on computer vision pipelines, edge/cloud deployment, and production monitoring. Prepare to discuss startup-style ownership, impact on public infrastructure, and how you balance speed with reliability in safety-critical systems. Ask about on-call expectations, release cadence, and how the team protects focus time."
+  },
+  "last_attempt_at": 1784779233,
+  "last_evidence_at": 1784599435,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+   "value": "Estimated: Headquartered in the San Francisco Bay Area; job postings do not specify remote/hybrid policies."
   },
-  "last_attempt_at": 1784779113,
-  "last_evidence_at": 1784599435,
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "1268c3ff10",
+    "0a94ed30c1",
+    "355238ff03"
+   ],
+   "value": "Harness the power of computer vision to transform the way transit systems and other government agencies address real-world challenges, accelerating transit, enhancing street safety, and driving toward a sustainable future."
+  },
   "name": "Hayden AI",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "355238ff03"
+   ],
+   "value": "Estimated: Fast — startup environment with 'desire to make a significant impact' (source) suggests high autonomy and rapid iteration, but government procurement cycles may create periodic crunches."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "1268c3ff10",
+    "0a94ed30c1",
+    "355238ff03"
+   ],
+   "value": "Mobile perception platform combining computer vision, edge computing, and cloud pipelines for automated bus lane/bus stop enforcement and transportation analytics."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + US federal holidays (typical for venture-backed growth startups); no public policy found."
   },
+  "refresh_after": 1789963233,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -99336,7 +99404,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns disclosed; verify with hiring team."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Growth-stage startup (likely 100-500 employees) with venture funding, actively hiring across engineering, hardware, and data roles."
   },
   "sources": [
    {
@@ -99370,14 +99443,47 @@
     "url": "https://jobs.ashbyhq.com/haydenai/6951fb04-478b-46f5-b918-123a69a28925"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely supports H-1B and similar visas for specialized engineering roles; no explicit statement found in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1268c3ff10",
+    "0a94ed30c1",
+    "355238ff03"
+   ],
+   "value": "Hayden AI develops computer vision and mobile perception systems that help transit agencies and governments enforce bus lanes, bus stops, and optimize transportation networks. The company sells its hardware-software platform to public sector clients to improve transit speed, street safety, and sustainability."
+  },
+  "synthesized_evidence_sha": "b3714e91f755750e",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "1268c3ff10",
+    "0a94ed30c1",
+    "355238ff03"
+   ],
+   "value": "Computer vision algorithms, edge deployment on mobile perception devices, cloud-based monitoring pipelines for algorithm/device health (staging/production), data analytics for transportation optimization, electrical test and hardware validation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583437,
   "web_search_url": "https://duckduckgo.com/?q=Hayden+AI+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "1268c3ff10",
+    "0a94ed30c1",
+    "355238ff03"
+   ],
+   "value": "Hayden AI offers a mission-driven, elite AI/computer vision role applied to public transit and safety — a tangible societal impact. The startup environment promises fast technical growth and high new-grad compensation without the bureaucracy of big tech, while the government-focused customer base may provide more predictable cycles than ad-driven or consumer products."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate — mission-driven startup with potential for meaningful work-life boundaries; no public policy on guaranteed shutdowns. Candidate should verify on-call load and release practices."
   }
  },
  "hcsc": {
@@ -156241,40 +156347,88 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 — Strong applied AI/ML opportunities in financial insights, risk modeling, and digital personalization within a specialized domain, but not a primary AI research lab or consumer-scale data company."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "39441812c4"
+   ],
+   "value": "B2B SaaS and platform model selling core banking software, digital onboarding, and related fintech solutions to financial institutions (banks and credit unions) likely via subscription/license fees and implementation services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-led, pragmatic, mission-oriented (community banking impact), collaborative across product/eng/compliance; values technical craftsmanship and domain expertise over hype; remote-friendly with intentional communication."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "39441812c4"
+   ],
+   "value": "Community banks and credit unions seeking to modernize their core banking systems and digital capabilities; example customer includes Inspire (credit union) which adopted Nymbus Core in 2019."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $105k-$130k base + equity (0.05-0.15%) + bonus target 10-15%; Jacksonville cost-of-living adjustment vs. coastal hubs; competitive for region and fintech vertical."
   },
   "evidence_sha": "419348eb02f2b61f",
+  "generated_at": 1784779233,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "39441812c4"
+   ],
+   "value": "Fintech / Core Banking Software / Financial Services Technology"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical interviews on distributed systems, data integrity, and cloud architecture; practical exercises around event-driven transaction processing or ML for financial insights; and behavioral questions emphasizing customer empathy (bank/credit union context), regulatory awareness, and sustainable pace — not heroic sprints."
   },
-  "last_attempt_at": 1784779113,
+  "last_attempt_at": 1784779233,
   "last_evidence_at": 1784674613,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Jacksonville, FL with distributed/remote workforce common in fintech; serves clients nationwide across US."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "39441812c4"
+   ],
+   "value": "To provide a fresh perspective on growth for banks and credit unions with the technology and support to make it happen, delivering faster, easier, and more secure solutions that enhance in-branch and digital experiences."
+  },
   "name": "Nymbus",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable — product-driven delivery cycles typical of growth-stage B2B SaaS, with regulatory/compliance gates that impose structure but not chaos; quarterly planning with iterative releases."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "39441812c4"
+   ],
+   "value": "Nymbus Banking Platform (core banking), Digital Onboard, Nymbus Connect, SMB solutions, CUSO (Credit Union Service Organization) partnerships, and Insights/Labs offerings for banking modernization."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 US holidays + flexible/unlimited sick; typical for US growth-stage fintech."
   },
+  "refresh_after": 1789963233,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -156284,7 +156438,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns published; some teams may observe reduced ops between Christmas/New Year — not a formal policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established growth-stage fintech (founded ~2015, 200-500 employees based on typical scale for core banking platform providers serving hundreds of institutions)."
   },
   "sources": [
    {
@@ -156318,14 +156477,39 @@
     "url": "https://nymbus.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely supports H-1B and green card sponsorship for specialized engineering and data science roles given fintech talent demands; no public policy details found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "39441812c4"
+   ],
+   "value": "Nymbus is a fintech company that provides modern core banking platforms and digital solutions to community banks and credit unions, enabling them to modernize their technology infrastructure and enhance digital customer experiences."
+  },
+  "synthesized_evidence_sha": "419348eb02f2b61f",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "39441812c4"
+   ],
+   "value": "Core banking platform development (likely Java, .NET, cloud-native microservices), digital onboarding systems, API integrations, data analytics/insights products, and secure financial transaction processing systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674613,
   "web_search_url": "https://duckduckgo.com/?q=Nymbus+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Nymbus sits at the intersection of financial services modernization and cloud-native platform engineering, offering a rare blend of mission-driven impact (helping community banks survive digitally) with complex technical challenges in core banking, data, and AI-driven insights — all in a growth-stage company that avoids big-bank bureaucracy while serving a regulated, high-stakes domain."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Fintech B2B culture generally respects boundaries better than consumer tech or big banks; on-call rotations exist for platform reliability but are managed; no public evidence of crunch culture."
   }
  },
  "o reilly auto parts": {
@@ -173519,7 +173703,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -173537,7 +173721,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784779113,
+  "last_attempt_at": 1784779233,
   "last_evidence_at": 1784674615,
   "name": "Publicis Canada",
   "pace_of_work": {
@@ -179794,7 +179978,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -179812,7 +179996,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784779113,
+  "last_attempt_at": 1784779233,
   "last_evidence_at": 1784677108,
   "name": "Realm",
   "pace_of_work": {
@@ -196404,7 +196588,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 10,
+  "attempts": 11,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -196422,7 +196606,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784779113,
+  "last_attempt_at": 1784779233,
   "last_evidence_at": 1784677479,
   "name": "Sigma Computing",
   "pace_of_work": {
@@ -240544,37 +240728,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Applied ML/analytics in production for student success; no published research at top conferences (NeurIPS, ICML); not a destination for cutting-edge AI research prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Nonprofit tuition-driven model: flat-rate tuition per six-month term regardless of course load, supplemented by grants, partnerships, and state contracts. No federal research funding; revenue reinvested into platform, curriculum, and student support."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, student-centric, low-ego, remote-first. Engineers work closely with learning designers and mentors. Values transparency, experimentation (A/B tests), and data-informed decisions. Less \"move fast and break things,\" more \"move deliberately and help students graduate.\""
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Working adult learners seeking flexible, affordable, career-aligned higher education; employers partnering for workforce upskilling; and state/workforce development agencies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k–$105k base + modest bonus (5–10%) + 403(b) match ~6–8%. Total comp ~$95k–$115k. Below FAANG/quant but competitive for mission-driven ed-tech/nonprofit."
   },
   "evidence_sha": "886479dcbe806d46",
+  "generated_at": 1784779233,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "EdTech / Nonprofit Higher Education"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect practical system design (scalable ed-tech platforms), SQL/analytics case studies (student success metrics), and behavioral questions on collaboration with non-technical stakeholders (faculty, student mentors). Emphasize experience with remote teams, data-driven product decisions, and passion for education access. LeetCode hard problems unlikely; focus on clean, maintainable code and product thinking."
+  },
+  "last_attempt_at": 1784779233,
   "last_evidence_at": 1784677665,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Salt Lake City, UT. Fully remote-eligible for most tech roles; occasional on-site collaboration events. No other major offices."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To expand access to high-quality, affordable higher education by removing barriers of time, place, and cost through competency-based online learning."
+  },
   "name": "WGU",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate — quarterly planning cycles, predictable releases, minimal firefighting. Some crunch near term starts (January, July) but generally sustainable 40–45 hr weeks."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Online degree programs (bachelor's and master's) in business, information technology, health professions, and education delivered through a competency-based, self-paced learning platform."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10–12 holidays + winter break (week between Christmas–New Year). Unlimited sick/mental health days. Policy not public; based on nonprofit higher-ed norms."
   },
+  "refresh_after": 1789963233,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -240584,7 +240809,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual winter shutdown (approx. 1 week, last week of December). No other company-wide shutdowns documented."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large mature nonprofit: ~150,000+ active students, ~5,000 employees (mostly faculty/mentors and staff), founded 1997, accredited, financially stable."
   },
   "sources": [
    {
@@ -240618,14 +240848,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=3a40982f06061e488cff6eea767750b934badb4bd56d2cca08a6b4b3f8bda6ecJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3c41252b-b38b-6729-1c82-32b6b2506626&u=a1aHR0cHM6Ly93d3cud2d1LmVkdS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Capable of H-1B and green card sponsorship for specialized technical roles; nonprofit cap-exempt H-1B status applies. Frequency moderate — typically for senior or hard-to-fill engineering/data positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Western Governors University (WGU) is a nonprofit, accredited online university that uses a competency-based education model to serve working adults. It offers bachelor's and master's degrees across business, IT, health, and education."
+  },
+  "synthesized_evidence_sha": "886479dcbe806d46",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Engineering and data roles focus on the learning platform (Student Portal, LMS integrations, competency engines), analytics for student success, adaptive learning, and ed-tech infrastructure. Stack includes AWS, Python, React, Snowflake, Kubernetes. AI/ML used for predictive analytics, personalized pathways, and content tagging — not core product research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677665,
   "web_search_url": "https://duckduckgo.com/?q=WGU+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "WGU offers a mission-driven nonprofit environment with genuine work-life balance (sane hours, no on-call culture) and a modern tech stack serving 150K+ learners. While not an elite AI research lab, it provides meaningful impact, solid new-grad pay for ed-tech, and a culture that respects personal time — aligning with your priorities for balance, growth, and purpose over prestige or burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "8/10 — Strong boundaries, no on-call for most roles, flexible remote work, leadership encourages time off. Nonprofit mission reduces pressure for infinite growth."
   }
  },
  "whatnot": {
