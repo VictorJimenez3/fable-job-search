@@ -29246,39 +29246,100 @@
  },
  "baton corporation": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "4acbd3dd3d"
+   ],
+   "value": "Low — role and company are full-stack crypto engineering, not AI/data science focused"
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "4acbd3dd3d"
+   ],
+   "value": "Transaction fees and platform revenue from pump.fun memecoin launchpad operations"
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "4acbd3dd3d"
+   ],
+   "value": "High-autonomy, ownership-obsessed, crypto-native, speed-oriented; 'unmatched ownership and autonomy' with immediate production impact"
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "4acbd3dd3d"
+   ],
+   "value": "Memecoin creators, traders, and speculators using the pump.fun launchpad platform"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "4acbd3dd3d"
+   ],
+   "value": "Estimated: $250k–$300k total compensation for Junior Full Stack Engineer (per job posting); likely similar for equivalent AI/DS roles if they exist"
   },
   "evidence_sha": "e6792e9a97060a51",
+  "generated_at": 1784797446,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "4acbd3dd3d"
+   ],
+   "value": "Cryptocurrency / blockchain infrastructure (memecoin launchpad)"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "4acbd3dd3d"
+   ],
+   "value": "Expect deep full-stack and systems questions focused on high-throughput, low-latency crypto workloads. Prepare to discuss ownership of production incidents, shipping velocity, and scaling challenges. Probe explicitly on on-call expectations, typical weekly hours, and whether the team has protected 'no-meeting' or shutdown periods to assess WLB reality."
+  },
+  "last_attempt_at": 1784797446,
+  "last_evidence_at": 1784675134,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Not specified in source; likely remote-first or major tech hub (SF/NYC) given crypto industry norms"
   },
-  "last_evidence_at": 1784675134,
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "4acbd3dd3d"
+   ],
+   "value": "Building and operating the technology infrastructure for the largest memecoin launchpad at the edge of crypto scale"
+  },
   "name": "Baton Corporation",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "4acbd3dd3d"
+   ],
+   "value": "Fast — 'ship fast,' 'immediate responsibility,' 'fast feedback,' and 'edge of crypto scale' indicate high velocity and intensity"
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "4acbd3dd3d"
+   ],
+   "value": "pump.fun (memecoin launchpad platform) and its underlying full technology stack"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days typical for early-stage crypto startups; no public policy disclosed"
   },
+  "refresh_after": 1789981446,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -29288,7 +29349,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found; crypto markets operate 24/7, making scheduled shutdowns unlikely"
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4acbd3dd3d"
+   ],
+   "value": "Early-stage, venture-backed crypto infrastructure startup (implied by high junior compensation and 'development company' description)"
   },
   "sources": [
    {
@@ -29332,14 +29400,43 @@
     "url": "https://jobs.ashbyhq.com/batoncorporation/bb3ab630-5e59-48b5-9794-00a225879a66"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No public information found on visa sponsorship policy"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "4acbd3dd3d"
+   ],
+   "value": "Baton Corporation is the development company that builds and operates the entire technology stack behind pump.fun, the largest memecoin launchpad in production. The company generates revenue through the pump.fun platform, which facilitates memecoin creation and trading at massive crypto scale."
+  },
+  "synthesized_evidence_sha": "e6792e9a97060a51",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "4acbd3dd3d"
+   ],
+   "value": "Full-stack engineering on high-throughput crypto systems; immediate ownership of production services handling massive memecoin launch volume; fast shipping cycles with real-time user impact"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675134,
   "web_search_url": "https://duckduckgo.com/?q=Baton+Corporation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "4acbd3dd3d"
+   ],
+   "value": "Offers elite new-grad compensation ($250k–$300k) and a fast, ownership-driven culture at the cutting edge of crypto scale — aligning with the priority for high pay and innovative speed. However, the role is full-stack crypto engineering, not AI/data science, so it may not satisfy the prestige tier or technical focus sought in AI/DS. Work-life balance signals are mixed: 'ship fast' and 'edge of crypto scale' suggest high intensity, with no guaranteed shutdowns or sane-hours policy disclosed."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "4acbd3dd3d"
+   ],
+   "value": "Estimated: Low to moderate — 'ship fast' culture and crypto-scale operations typically correlate with long hours and on-call demands; no guaranteed shutdowns or sane-hours policy found"
   }
  },
  "battelle": {
@@ -45993,7 +46090,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -46011,7 +46108,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784797278,
+  "last_attempt_at": 1784797446,
   "last_evidence_at": 1784677043,
   "name": "Cellular Sales",
   "pace_of_work": {
@@ -69218,7 +69315,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -69236,7 +69333,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784797278,
+  "last_attempt_at": 1784797446,
   "last_evidence_at": 1784677533,
   "name": "Disney",
   "pace_of_work": {
@@ -136766,7 +136863,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -136784,7 +136881,7 @@
    "source_ids": [],
    "value": "Sports / technology (estimated)"
   },
-  "last_attempt_at": 1784797278,
+  "last_attempt_at": 1784797446,
   "last_evidence_at": 1784583484,
   "name": "Major League Baseball",
   "pace_of_work": {
@@ -154964,7 +155061,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -154982,7 +155079,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784797278,
+  "last_attempt_at": 1784797446,
   "last_evidence_at": 1784643844,
   "name": "Nextdoor",
   "pace_of_work": {
@@ -173254,7 +173351,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -173272,7 +173369,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
-  "last_attempt_at": 1784797278,
+  "last_attempt_at": 1784797446,
   "last_evidence_at": 1784675467,
   "name": "Plaid",
   "pace_of_work": {
@@ -229491,11 +229588,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -229507,6 +229606,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784797446,
   "last_evidence_at": 1784583341,
   "name": "Trinity Health",
   "pace_of_work": {
@@ -237010,7 +237110,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -237028,7 +237128,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784797278,
+  "last_attempt_at": 1784797446,
   "last_evidence_at": 1784675132,
   "name": "University of Texas - Austin",
   "pace_of_work": {
