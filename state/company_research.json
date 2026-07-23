@@ -2166,7 +2166,7 @@
    "value": "High. Accenture is a brand-name 'Tier 2' innovator widely recognized for scaled AI implementation and consultancy breadth, carrying strong industry prestige, though it sits just below the elite pure-product research labs."
   },
   "aliases": [],
-  "attempts": 8,
+  "attempts": 9,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -2215,7 +2215,7 @@
    "source_ids": [],
    "value": "Candidates should expect rigorous questioning on advanced SQL, Python, and applied modeling, plus scenario-driven consultancy techniques. Equally probe how managers set scope and distribute workload during government project sprints to confirm environments that respect shutdowns and deep learning time rather than high-burnout hero worship."
   },
-  "last_attempt_at": 1784836982,
+  "last_attempt_at": 1784837129,
   "last_evidence_at": 1784826805,
   "locations": {
    "confidence": "high",
@@ -32404,7 +32404,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -32422,7 +32422,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
-  "last_attempt_at": 1784836982,
+  "last_attempt_at": 1784837129,
   "last_evidence_at": 1784655989,
   "name": "Berkshire Hathaway GUARD Insurance Companies",
   "pace_of_work": {
@@ -66833,11 +66833,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -66849,6 +66851,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784837129,
   "last_evidence_at": 1784655990,
   "name": "Danaher Corporation",
   "pace_of_work": {
@@ -73202,7 +73205,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -73220,7 +73223,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784836982,
+  "last_attempt_at": 1784837129,
   "last_evidence_at": 1784677665,
   "name": "Docusign",
   "pace_of_work": {
@@ -128086,40 +128089,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Top-tier (comparable to elite tech firms and top quant funds)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Proprietary trading and market making: the firm deploys its own capital to execute trading strategies that generate profits from price movements, spreads, and arbitrage opportunities."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Elite, meritocratic, highly technical, secretive, and intensely competitive. Engineers and researchers are treated as core revenue generators. Culture emphasizes autonomy and technical excellence but with high pressure."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The firm does not have traditional customers; it trades on exchanges and electronic venues as a principal, interacting with other market participants."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $200,000 - $300,000+ total compensation (base ~$125k-$150k, large signing bonus, performance bonus). Among the highest in the industry for new grads."
   },
   "evidence_sha": "3f7e6374491794bb",
+  "generated_at": 1784837129,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+   "value": "Proprietary Trading / Quantitative Finance / High-Frequency Trading"
   },
-  "last_attempt_at": 1784836982,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect rigorous technical interviews covering C++ internals, systems design, concurrency, probability/statistics, algorithms, and quantitative problem-solving. Some roles may include machine learning concepts. Preparation should emphasize low-latency programming, data structures, and mental math."
+  },
+  "last_attempt_at": 1784837129,
   "last_evidence_at": 1784583472,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in Chicago, Illinois; additional offices in New York, London, Singapore, and possibly other financial centers."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To apply cutting-edge technology and rigorous quantitative analysis to solve complex problems in financial markets."
+  },
   "name": "Jump Trading",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Very fast; intense, deadline-driven, with expectation of rapid iteration and high availability during market hours."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Proprietary trading algorithms, high-frequency trading systems, market-making strategies, quantitative research platforms, and low-latency infrastructure."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO plus holidays; unlimited policy not typical. Actual usage may be limited by workload."
   },
+  "refresh_after": 1790021129,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -128129,7 +128170,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns. Some teams may have reduced hours around major holidays, but trading operations run continuously."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established private company (founded 1999) with several hundred employees globally; self-funded, no outside investors."
   },
   "sources": [
    {
@@ -128163,14 +128209,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=8d0682c3d637be93841d0c835cb6295dbde0bde88eafaf8688c46ae43fae5148JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g_dj1yNkVlaTgxU3VxRQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Known to sponsor H-1B visas and green cards for technical talent; typically supports immigration for elite STEM graduates."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Jump Trading is a proprietary trading firm that uses advanced technology and quantitative research to trade financial instruments across global markets. It makes money by capturing small price discrepancies and providing liquidity as a market maker, profiting from the spread and short-term trading strategies."
+  },
+  "synthesized_evidence_sha": "3f7e6374491794bb",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core work includes building ultra-low-latency trading systems (C++, FPGA, kernel bypass), developing quantitative models (statistical arbitrage, machine learning), designing distributed systems for real-time data processing, and conducting advanced research in AI/ML for market prediction."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583472,
   "web_search_url": "https://duckduckgo.com/?q=Jump+Trading+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Jump Trading offers elite prestige and top-tier new-grad compensation in a fast-paced, innovative tech culture that values technical excellence. However, the environment is known for high intensity and long hours, which may conflict with the candidate's priority for guaranteed work-life balance and sane shutdowns. The firm accelerates technical learning through exposure to cutting-edge systems and research, but personal time may be sacrificed."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Low (likely 2-3/10). Known for demanding hours, on-call rotations, and limited guaranteed shutdowns. Work-life balance is generally considered poor compared to big tech."
   }
  },
  "just": {
@@ -132519,11 +132586,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -132535,6 +132604,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784837129,
   "last_evidence_at": 1784673567,
   "name": "Kong",
   "pace_of_work": {
@@ -149908,7 +149978,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 8,
+  "attempts": 9,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -149949,7 +150019,7 @@
    ],
    "value": "The job posting highlights equal employment opportunity and benefits, but does not explicitly address work-life balance, high new-grad pay, or fast tech culture. However, the statistical programming role indicates technical focus on data analysis and clinical trials, suggesting a collaborative, mission-driven environment."
   },
-  "last_attempt_at": 1784836982,
+  "last_attempt_at": 1784837129,
   "last_evidence_at": 1784677667,
   "locations": {
    "confidence": "high",
@@ -258801,7 +258871,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -258852,7 +258922,7 @@
    ],
    "value": "Clarify whether the role is a full-time W-2 position or part of the gig contributor network. Ask about compensation structure, actual working hours, and technical learning opportunities to ensure it fits your elite tech role and WLB priorities."
   },
-  "last_attempt_at": 1784836982,
+  "last_attempt_at": 1784837129,
   "last_evidence_at": 1784737480,
   "locations": {
    "confidence": "unknown",
