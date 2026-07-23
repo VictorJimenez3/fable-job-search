@@ -23643,7 +23643,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -23661,7 +23661,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784778735,
+  "last_attempt_at": 1784778873,
   "last_evidence_at": 1784677284,
   "name": "Aurora",
   "pace_of_work": {
@@ -82826,7 +82826,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -82844,7 +82844,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784778735,
+  "last_attempt_at": 1784778873,
   "last_evidence_at": 1784677481,
   "name": "FlexAI",
   "pace_of_work": {
@@ -88243,7 +88243,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 8,
+  "attempts": 9,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88261,7 +88261,7 @@
    "source_ids": [],
    "value": "Ai Lab / technology (estimated)"
   },
-  "last_attempt_at": 1784778735,
+  "last_attempt_at": 1784778873,
   "last_evidence_at": 1784599435,
   "name": "Gecko Robotics",
   "pace_of_work": {
@@ -98963,7 +98963,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -98981,7 +98981,7 @@
    "source_ids": [],
    "value": "Ai Lab / technology (estimated)"
   },
-  "last_attempt_at": 1784778735,
+  "last_attempt_at": 1784778873,
   "last_evidence_at": 1784599435,
   "name": "Hayden AI",
   "pace_of_work": {
@@ -115503,40 +115503,83 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 – Respected applied AI practice within a top-tier engineering firm, but not a primary AI research lab like FAANG or dedicated AI unicorns."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Project-based professional services model: revenue from fixed-price, cost-reimbursable, and time-and-materials contracts across long-term programs and discrete engagements."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, engineering-first, safety-conscious, and mission-oriented; values technical depth and client service over internal politics."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary customers are government agencies (defense, energy, transportation), municipal utilities, and private-sector companies in aerospace, technology, and critical infrastructure."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000–$105,000 base salary + modest sign-on bonus + 401(k) match; total comp ~$95k–$115k."
   },
   "evidence_sha": "84a480ac68e2d008",
+  "generated_at": 1784778873,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "57c92d001b",
+    "153130fa8f"
+   ],
+   "value": "Engineering & Construction / Professional Services / Government Contracting"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect a mix of technical assessments (Python/SQL, ML fundamentals, domain-specific case studies), behavioral questions tied to Jacobs' values, and scenario-based discussions on delivering client solutions under constraints."
   },
-  "last_attempt_at": 1784778735,
+  "last_attempt_at": 1784778873,
   "last_evidence_at": 1784677233,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Dallas, TX; major offices across the US, UK, Europe, Australia, and Asia; supports remote/hybrid arrangements per project."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "153130fa8f"
+   ],
+   "value": "Challenging today. Reinventing tomorrow – delivering innovative solutions for a more connected, sustainable world."
+  },
   "name": "Jacobs",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Project-driven with cyclical intensity; deadline-driven sprints around deliverables, but generally predictable planning horizons and limited 'always-on' culture."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core offerings include engineering design, program management, consulting, cybersecurity, data analytics, AI/ML-driven digital twins, asset management, and sustainability services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days annual PTO plus 10 federal holidays; accrual increases with tenure."
   },
+  "refresh_after": 1789962873,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -115546,7 +115589,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide shutdown between Christmas and New Year; additional summer shutdowns in some regions/business units."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public company (NYSE: J) with ~55,000 employees and ~$15B annual revenue; mature, stable, and globally diversified."
   },
   "sources": [
    {
@@ -115580,14 +115628,38 @@
     "url": "https://jacobs.taleo.net/smartorg/smartorg/common/toc.jsf?lang=en"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B visas for specialized technical roles; green-card support varies by business unit and role criticality."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "57c92d001b",
+    "153130fa8f"
+   ],
+   "value": "Jacobs is a global professional services firm delivering engineering, technical, and digital solutions across infrastructure, environmental, nuclear, and advanced technology sectors. The company generates revenue primarily through project-based contracts and consulting fees with government and private-sector clients worldwide."
+  },
+  "synthesized_evidence_sha": "84a480ac68e2d008",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AI/data science roles focus on predictive maintenance, digital twins, geospatial analytics, cyber threat detection, and simulation modeling for complex engineering systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677233,
   "web_search_url": "https://duckduckgo.com/?q=Jacobs+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Jacobs offers a rare blend of mission-driven impact on critical infrastructure and a growing AI/digital practice, with a culture that emphasizes sustainable pace and work-life boundaries—aligned with your priority for elite technical challenges without burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "3.5/5 – Strong emphasis on flexible scheduling and guaranteed shutdowns during major holidays; overtime occurs near milestones but is typically compensated or balanced with time off."
   }
  },
  "jahnel group": {
@@ -166595,40 +166667,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 – Respected in pharma/healthcare AI, publishes in domain conferences, but not a primary AI research lab; prestige comes from domain impact, not general AI leadership."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Integrated pharma and dermo-cosmetics: R&D, manufacturing, and direct commercial operations generate revenue from drug sales, OTC products, and skincare brands; profits are reinvested or directed to the Pierre Fabre Foundation."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, science-first, long-term oriented; hierarchical but with strong employee representation (works councils); emphasis on quality, safety, and sustainability; low toxicity, high job security."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Healthcare professionals, pharmacies, hospitals, and consumers in over 130 countries, with strong presence in Europe and growing in Asia and the Americas."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: €42,000–€55,000 base + variable bonus (5-10%) + benefits (meal vouchers, transport, mutual insurance, profit-sharing); total comp ~€48k–€62k. Below US big-tech but high for French pharma."
   },
   "evidence_sha": "d8c320d470b196b4",
+  "generated_at": 1784778873,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Pharmaceuticals & Dermo-cosmetics"
   },
-  "last_attempt_at": 1784778735,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect questions on applied ML in regulated environments (GxP, GDPR), translational research, and cross-functional collaboration with scientists. Demonstrate ability to productionize models in a conservative, quality-first culture. Prepare for case studies on clinical data, imaging, or consumer behavior analytics. Emphasize long-term impact orientation and adaptability to phased, compliant rollouts."
+  },
+  "last_attempt_at": 1784778873,
   "last_evidence_at": 1784677232,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in Castres, France; major R&D sites in Toulouse, Paris, and Montpellier; manufacturing in France and internationally; commercial subsidiaries in 40+ countries."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To improve patient health and well-being through innovative, science-based therapies and dermo-cosmetic solutions, guided by a long-term, foundation-owned governance model."
+  },
   "name": "Pierre Fabre",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate – Project cycles follow regulatory and clinical timelines (months to years); sprints exist but are gated by validation and compliance; less frantic than consumer tech, more structured than academia."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prescription pharmaceuticals (oncology, dermatology, CNS), OTC health products, and dermo-cosmetic brands such as Avène, Ducray, Klorane, René Furterer, and A-Derma."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25 statutory vacation days + ~10 RTT (reduction of working time) days + 11 public holidays = ~46 days total annual leave."
   },
+  "refresh_after": 1789962873,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -166638,7 +166748,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Collective company shutdown for 2-3 weeks in August (standard in French industry); additional holiday shutdown between Christmas and New Year."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mature, profitable private company with ~10,000 employees and ~€2.5B annual revenue; not a startup, not public, stable ownership via foundation."
   },
   "sources": [
    {
@@ -166672,14 +166787,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=24a393e903b240c5bcac85c718b66df714db9ab9c6bb6caa61c4dc51e538ecceJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=103e7724-cda9-6862-3910-60b9cc786965&u=a1aHR0cHM6Ly93d3cucGllcnJlYXV0by5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a large French multinational, Pierre Fabre sponsors work visas for specialized technical roles (including AI/data science) in France and other EU locations; sponsorship for non-EU candidates is case-by-case and more common for PhD-level or niche expertise."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Pierre Fabre is a privately held French pharmaceutical and dermo-cosmetics group, majority-owned by a foundation, that develops prescription drugs, over-the-counter medicines, and premium skincare brands sold worldwide."
+  },
+  "synthesized_evidence_sha": "d8c320d470b196b4",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Data science and AI applied to drug discovery, clinical trial optimization, manufacturing quality control, digital health apps, and consumer personalization; tech stack includes Python, cloud (AWS/Azure), and ML platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677232,
   "web_search_url": "https://duckduckgo.com/?q=Pierre+Fabre+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Pierre Fabre offers a mission-driven, foundation-owned environment where AI/data science directly impacts patient health and sustainable skincare. The company balances scientific prestige with French labor protections (35-hour week, generous leave, August shutdowns), providing strong work-life balance and structured career development without the burnout culture of tech giants. New-grad pay is competitive for European pharma, though below top-tier US tech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "High – French labor law enforces 35-hour week, 25+ days PTO, RTT days, and collective August shutdown; overtime is limited and compensated; culture respects boundaries."
   }
  },
  "pigment": {
@@ -195765,7 +195901,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -195783,7 +195919,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784778735,
+  "last_attempt_at": 1784778873,
   "last_evidence_at": 1784677479,
   "name": "Sigma Computing",
   "pace_of_work": {
@@ -198569,11 +198705,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -198585,6 +198723,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
+  "last_attempt_at": 1784778873,
   "last_evidence_at": 1784657139,
   "name": "Snap Finance",
   "pace_of_work": {
