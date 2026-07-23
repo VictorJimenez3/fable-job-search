@@ -66723,37 +66723,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Unknown; no evidence of AI/data science presence in provided sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No business model information found in the provided sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown; no culture information in provided sources."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No customer information found in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown; no compensation data available in provided sources."
   },
   "evidence_sha": "efe717cd1a4c81e1",
+  "generated_at": 1784777750,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Healthcare/health technology (inferred from name only; not confirmed by sources)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No interview process information available. Candidate should verify company legitimacy and role details independently before investing time."
+  },
+  "last_attempt_at": 1784777750,
   "last_evidence_at": 1784583360,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No location information found in provided sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No mission statement found in the provided sources."
+  },
   "name": "Diverge Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown; no culture or pace data available."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No product information found in the provided sources. The sources are redirect pages without content."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown; no PTO policy data available."
   },
+  "refresh_after": 1789961750,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -66763,7 +66804,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown; no guaranteed shutdown policy data available."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Unknown; no size or funding data in provided sources."
   },
   "sources": [
    {
@@ -66797,14 +66843,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=b8196cf41a860ef28be7ee9c35dc0247b83434c819d9652cbf2f410901168a1bJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRGl2ZXJnZV8oZmlsbSk&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No visa sponsorship information found in provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Diverge Health appears to be a health-related organization, but the provided sources are redirect links with no extractable content about its operations, products, or business model. No verifiable information about AI/data science roles, pay, or culture is available from the supplied sources."
+  },
+  "synthesized_evidence_sha": "efe717cd1a4c81e1",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No technical work details found in provided sources. Cannot confirm AI/data science focus."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583360,
   "web_search_url": "https://duckduckgo.com/?q=Diverge+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cannot assess alignment with candidate priorities (elite AI prestige, high new-grad pay, fast innovative culture, mission-driven with WLB guarantees) due to complete lack of verifiable company data in supplied sources."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown; no work-life balance data available."
   }
  },
  "dls engineering associates inc": {
@@ -69489,11 +69556,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -69505,6 +69574,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784777750,
   "last_evidence_at": 1784677474,
   "name": "Dutch",
   "pace_of_work": {
@@ -105302,11 +105372,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -105318,6 +105390,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784777750,
   "last_evidence_at": 1784674070,
   "name": "Hyundai Motor Company",
   "pace_of_work": {
@@ -114179,11 +114252,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -114195,6 +114270,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784777750,
   "last_evidence_at": 1784676696,
   "name": "Ivo",
   "pace_of_work": {
@@ -197038,41 +197114,104 @@
  "smith nephew": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "845e2e05b9",
+    "81e9a17569"
+   ],
+   "value": "Tier 2: a well-regarded, established industry player applying AI to tangible med-tech products (robotics, clinical analytics) with strong brand recognition in healthcare, though not a pure AI-first company like a DeepMind or OpenAI."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "845e2e05b9",
+    "81e9a17569"
+   ],
+   "value": "Operates a global B2B medical device model, selling capital equipment and single-use consumables through direct sales forces and distributors, with recurring revenue from implant and disposables reorders tied to surgical volumes."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, mission-oriented, and collaborative culture rooted in patient care. Staff describe an environment that is inclusive, intellectually curious, and supportive of continuous learning, though decision-making can be more structured and slower than pure software companies due to regulatory oversight."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "845e2e05b9",
+    "81e9a17569",
+    "067ffe33c6"
+   ],
+   "value": "Primary customers are hospitals, ambulatory surgery centers, orthopedic surgeons, sports medicine clinics, and wound care specialists across both public and private healthcare sectors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95,000-$115,000 base salary for a new-grad data scientist or AI engineer in a US technical hub, plus annual bonus and potential stock awards; total compensation may reach $120,000-$140,000 depending on credentials and location."
   },
   "evidence_sha": "ac2e83ecffccc53d",
+  "generated_at": 1784777750,
+  "generator": {
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "845e2e05b9",
+    "81e9a17569",
+    "067ffe33c6"
+   ],
+   "value": "Medical Devices and Healthcare Technology"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect a balanced assessment of technical depth in AI/ML or data engineering, domain applications in healthcare or robotics, and behavioral fit emphasizing collaboration, patient-centric thinking, and comfort within a regulated, quality-focused environment rather than a move-fast-and-break-things mindset."
   },
-  "last_attempt_at": 1784777580,
+  "last_attempt_at": 1784777750,
   "last_evidence_at": 1784676950,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "845e2e05b9",
+    "81e9a17569",
+    "067ffe33c6"
+   ],
+   "value": "Key R&D and technical hubs include Memphis, TN; Andover, MA; Pittsburgh, PA; Fort Worth, TX; plus global centers in the UK (Hull, Warwick), Germany, Switzerland, and Singapore."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "81e9a17569",
+    "067ffe33c6"
+   ],
+   "value": "To restore people's bodies and their self-belief by using technology to take the limits off living."
+  },
   "name": "Smith+Nephew",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate, deliberate pace driven by medical device regulation and quality systems, with structured project cycles; significantly less chaotic than consumer software startups."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "845e2e05b9",
+    "81e9a17569",
+    "067ffe33c6"
+   ],
+   "value": "Products span hip and knee implants, robotic-assisted surgery systems, arthroscopic cameras and shavers, trauma fixation devices, and advanced wound dressings including negative pressure wound therapy."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of paid vacation for full-time technical employees in the US, plus standard public holidays, aligning with large med-tech industry norms rather than unlimited PTO policies common in tech startups."
   },
+  "refresh_after": 1789961750,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -197082,7 +197221,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide annual shutdown confirmed in research; some manufacturing and office sites may observe limited operations between Christmas and New Year, varying by location and function."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "845e2e05b9",
+    "81e9a17569",
+    "067ffe33c6"
+   ],
+   "value": "Large, publicly traded multinational (FTSE 100 constituent) with revenues exceeding $5 billion and over 18,000 employees worldwide; a mature company undergoing a digital transformation toward data-driven and robotic-assisted technologies."
   },
   "sources": [
    {
@@ -197116,14 +197264,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=2469633f4f796fa43da6f9355fd73ce9ead9410554f1ffc4e34631437326e764JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=28186e5c-b7dc-65ce-244c-79c1b64464b0&u=a1aHR0cHM6Ly93d3cuc21pdGhzZm9vZGFuZGRydWcuY29tLz9tc29ja2lkPTI4MTg2ZTVjYjdkYzY1Y2UyNDRjNzljMWI2NDQ2NGIw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "845e2e05b9",
+    "81e9a17569",
+    "067ffe33c6"
+   ],
+   "value": "Smith+Nephew is a global medical technology company specializing in orthopedic reconstruction, sports medicine, and advanced wound care. It generates revenue by selling implantable devices, surgical instruments, and wound care products to hospitals, healthcare systems, and surgeons worldwide."
+  },
+  "synthesized_evidence_sha": "ac2e83ecffccc53d",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "845e2e05b9",
+    "81e9a17569",
+    "067ffe33c6"
+   ],
+   "value": "Technical roles involve developing machine learning models for surgical robotics, computer vision for arthroscopic imaging, data pipelines from connected surgical platforms, and analytics on real-world clinical evidence to support product design and regulatory submissions. Software engineers work on embedded systems, robotic control, and cloud-based surgical data platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676950,
   "web_search_url": "https://duckduckgo.com/?q=Smith%2BNephew+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Combines elite med-tech prestige through its FTSE 100 standing and robotic surgery platforms with a mission-driven focus on patient restoration. The pace respects work-life balance more than pure tech giants, offering accelerated technical learning in AI applied to surgery and clinical data without the high-burnout grind culture typical of startups or adtech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 8/10 for technical roles; consistent hours with rare weekend or late-night crunches, reflecting a mature medical device culture that values sustainability and compliance over unsustainable sprints."
   }
  },
  "smithfield foods": {
@@ -204336,11 +204513,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -204352,6 +204531,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784777750,
   "last_evidence_at": 1784677034,
   "name": "Stoke Space",
   "pace_of_work": {
@@ -206618,37 +206798,88 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Hardware/Infrastructure) — Critical supplier to top AI labs and hyperscalers; publishes MLPerf records; engineers collaborate directly with NVIDIA/AMD/Intel on next-gen platforms."
   },
   "aliases": [],
-  "culture_vibe": {
+  "attempts": 1,
+  "business_model": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Direct hardware sales (systems, components, accessories) plus professional services for rack integration, validation, and support; operates as a fabless manufacturer with outsourced assembly and in-house design/engineering."
   },
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [
+    "81cf0e4c2c"
+   ],
+   "value": "Estimated: Engineering-first, execution-obsessed, metric-driven; rewards visible technical ownership and speed. Can feel intense and siloed by product line. Limited public signals about psychological safety or structured mentorship."
+  },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Hyperscale cloud providers, enterprise IT departments, AI research labs, HPC centers, telecommunications companies, and OEM/ODM partners globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120k–$145k base + 10–15% target bonus + RSU (~$30k–$50k/yr vesting); total ~$160k–$210k Y1. Premium for GPU/firmware specialization."
   },
   "evidence_sha": "2521dba728dd312f",
+  "generated_at": 1784777750,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d7ed24c1b6"
+   ],
+   "value": "Computer Hardware / Enterprise Infrastructure / AI Hardware"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "81cf0e4c2c"
+   ],
+   "value": "Expect deep technical screens on systems programming (C/C++, Linux internals), GPU/accelerator architecture, thermal/power constraints, and distributed-systems debugging. Prepare for architecture-design questions about rack-scale AI clusters. Ask explicitly: 'What is the median weekly hours for this team?', 'Are there team-level core-hours or shutdown policies?', 'How is on-call rotated and compensated?' to validate WLB claims."
+  },
+  "last_attempt_at": 1784777750,
+  "last_evidence_at": 1784677474,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "98afd4eb8e"
+   ],
+   "value": "Headquarters: San Jose, California. Major R&D/manufacturing: Taiwan (Science Park), Netherlands (Europe HQ), and additional sites in Japan, China, and US."
+  },
+  "mission": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: To deliver application-optimized, energy-efficient server and storage innovation that accelerates customers' digital transformation and AI adoption while reducing total cost of ownership."
   },
-  "last_evidence_at": 1784677474,
   "name": "Supermicro",
   "pace_of_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "81cf0e4c2c"
+   ],
+   "value": "Fast — Careers page self-describes as 'fast-paced, success oriented'; industry context (AI hardware arms race) reinforces aggressive delivery cadences."
+  },
+  "products": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Rackmount and blade servers, GPU-accelerated systems for AI/HPC, storage appliances, networking switches, motherboards, chassis, and power supplies; also offers liquid-cooled solutions and rack-scale integration services."
   },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 US holidays (accrual-based, increases with tenure); no public unlimited-PTO policy."
   },
+  "refresh_after": 1789961750,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -206658,7 +206889,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide mandatory shutdowns documented; some teams may observe informal year-end slowdown but not guaranteed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "d7ed24c1b6"
+   ],
+   "value": "Public company (NASDAQ: SMCI); ~5,000+ employees globally; FY2024 revenue ~$14.9B; profitable, mature growth stage."
   },
   "sources": [
    {
@@ -206692,14 +206930,39 @@
     "url": "https://jobs.supermicro.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Actively sponsors H-1B and green cards for engineering roles; global footprint supports internal transfers. Specific cap-exempt or premium processing not publicly documented."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "81cf0e4c2c"
+   ],
+   "value": "Supermicro designs and manufactures high-performance server and storage solutions for data centers, cloud computing, AI/ML infrastructure, and edge computing. The company generates revenue by selling hardware systems, subsystems, and accessories directly to enterprises, cloud service providers, and OEMs, with a focus on energy-efficient, scalable architectures."
+  },
+  "synthesized_evidence_sha": "2521dba728dd312f",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Hardware architecture, firmware/BIOS development, thermal/mechanical engineering, GPU cluster integration, Linux kernel/driver optimization, rack-scale software-defined infrastructure, and AI workload benchmarking."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677474,
   "web_search_url": "https://duckduckgo.com/?q=Supermicro+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "81cf0e4c2c"
+   ],
+   "value": "Supermicro sits at the physical layer of the AI boom — its GPU-dense servers power many leading LLM clusters — giving AI/data-science engineers direct exposure to cutting-edge hardware/software co-design. The careers page emphasizes a 'fast-paced, success oriented' culture that rewards high performers, aligning with your desire for elite technical prestige and rapid learning. However, the same 'fast-paced' framing and lack of public WLB guarantees mean you should probe hard on actual hours, on-c"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 2.5/5 — Hardware bring-up cycles, customer escalations, and quarterly tape-out/launch milestones often drive extended hours; limited public evidence of formal WLB programs or guaranteed shutdowns."
   }
  },
  "supernova technology": {
@@ -222917,40 +223180,102 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 — flagship consumer ML at massive scale; publishes at top venues (NeurIPS, ICML, KDD); drives core revenue via ranking, pricing, matching, safety models."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "9935152a98",
+    "286e6d22b0",
+    "41168dd168"
+   ],
+   "value": "Marketplace platform taking a variable service fee (typically 20–30%) on each completed ride or delivery; supplemental revenue from subscriptions (Uber One), advertising, freight brokerage, and financial services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: High-agency, data-driven, writing-centric (RFCs, design docs); blunt feedback valued; 'move fast' legacy balanced by newer 'build responsibly' messaging; diverse, global, mission-oriented but metric-intense."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "9935152a98",
+    "286e6d22b0",
+    "41168dd168"
+   ],
+   "value": "Riders and eaters (consumers), driver and courier partners (independent contractors), restaurants and merchants, enterprise clients (Uber for Business), shippers and carriers (Uber Freight)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $165k–$195k base + $40k–$70k annual RSU refresh + $15k–$30k sign-on (San Francisco/Seattle/NYC bands); total first-year ~$230k–$290k."
   },
   "evidence_sha": "5e91357edcaf9538",
+  "generated_at": 1784777750,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "9935152a98",
+    "286e6d22b0",
+    "41168dd168"
+   ],
+   "value": "Mobility & Delivery Platform / Marketplace Technology"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
+   "value": "Expect heavy emphasis on production ML system design (ranking, pricing, dispatch), large-scale data modeling, and real-time algorithmic problem solving. Behavioral rounds probe for ownership, bias-for-action, and collaboration under ambiguity. Prepare concrete examples of shipping models end-to-end and measuring business impact."
   },
-  "last_attempt_at": 1784777580,
+  "last_attempt_at": 1784777750,
   "last_evidence_at": 1784583496,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "9935152a98",
+    "286e6d22b0",
+    "41168dd168"
+   ],
+   "value": "Headquartered in San Francisco, CA; major engineering hubs in Sunnyvale, Seattle, New York, Toronto, London, Amsterdam, Hyderabad, Bangalore, Singapore; remote-friendly hybrid policies."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "9935152a98",
+    "286e6d22b0",
+    "41168dd168"
+   ],
+   "value": "To create opportunity through movement — reimagining the way the world moves for the better."
+  },
   "name": "Uber",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast — quarterly planning with bi-weekly sprints; strong ship-it culture; on-call rotations for critical services; periodic crunch around launches but org-wide push to reduce sustained overtime."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "9935152a98",
+    "286e6d22b0",
+    "41168dd168"
+   ],
+   "value": "Core products: Uber Rides (mobility), Uber Eats (food delivery), Uber Freight (logistics). Also offers Uber for Business, Uber Health, and emerging autonomous/robotics initiatives."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days accrual + 10 company holidays + 5 'recharge' days (varies by region); unlimited sick; parental leave 20 weeks paid."
   },
+  "refresh_after": 1789961750,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -222960,7 +223285,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically Dec 25–Jan 1) plus occasional 'global recharge' long weekends; not a formal weekly shutdown policy."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "9935152a98",
+    "286e6d22b0",
+    "41168dd168"
+   ],
+   "value": "Large public company (NYSE: UBER); ~30,000+ corporate employees globally (excluding drivers/couriers); profitable on adjusted EBITDA basis; mature growth stage."
   },
   "sources": [
    {
@@ -222994,14 +223328,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=bc9dca0ee23107452c44b69556fe4bdf397d23b6b80c2b6c329ca1cf3b26f982JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cudWJlci5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B visas and green cards for technical roles; global mobility team supports transfers between international offices; new-grad offers typically include sponsorship where eligible."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "9935152a98",
+    "286e6d22b0",
+    "41168dd168"
+   ],
+   "value": "Uber operates a global mobility and delivery platform connecting riders with drivers, and consumers with restaurants and retailers via its app. It generates revenue by taking a commission on each transaction (rides, food delivery, freight) and through subscription and advertising products."
+  },
+  "synthesized_evidence_sha": "5e91357edcaf9538",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "9935152a98",
+    "286e6d22b0",
+    "41168dd168"
+   ],
+   "value": "Large-scale real-time marketplace algorithms (matching, pricing, routing), ML for ETA/demand forecasting, safety/fraud detection, mapping, autonomous vehicle research, data platform, mobile/client engineering, backend microservices at massive scale."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583496,
   "web_search_url": "https://duckduckgo.com/?q=Uber+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Uber offers elite AI/DS prestige — core products run on world-class marketplace ML at planetary scale — with top-of-market new-grad compensation. The culture emphasizes rapid iteration and technical ownership, yet recent org changes aim to reduce burnout via clearer priorities and protected focus time, aligning with a desire for high impact without toxic hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — hybrid 3-days-office norm; protected 'no-meeting' blocks; on-call load varies by team; recent leadership focus on sustainable pace but variability across orgs remains."
   }
  },
  "uber technologies inc": {
