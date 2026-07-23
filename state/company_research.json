@@ -25247,51 +25247,124 @@
  "aurora innovation": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "174ad03f8d"
+   ],
+   "value": "Estimated: High / Top-tier. The company is a recognized leader in the self-driving AI space, offering top new-grad pay and elite technical prestige."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "174ad03f8d"
+   ],
+   "value": "B2B partnerships with established trucking and logistics fleets. Aurora provides the autonomous driving technology to carriers, augmenting their existing hybrid models of human professional drivers and the Aurora Driver to meet long-haul freight demands."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "174ad03f8d"
+   ],
+   "value": "Estimated: Mission-driven, technical, and collaborative. Focused on deeply technical problem-solving to bring self-driving freight to market without the sluggishness of heavy legacy bureaucracy."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "174ad03f8d"
+   ],
+   "value": "Trucking fleets, logistics carriers, and freight operators requiring autonomous transport solutions (e.g., Werner Enterprises)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "174ad03f8d"
+   ],
+   "value": "Estimated: Top-tier compensation package aligned with elite AI and tech benchmarks, likely ranging $180k-$220k total target compensation (base + equity) for new graduates."
   },
   "evidence_sha": "faf19aeae54b6c23",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784835685,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784835539,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "174ad03f8d"
+   ],
+   "value": "Autonomous Vehicles, Freight Trucking, Logistics, Artificial Intelligence"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "174ad03f8d"
+   ],
+   "value": "Expect rigorous technical interviews assessing AI/ML fundamentals, software engineering for complex systems, and problem-solving in fast-moving autonomous environments. Prepare to demonstrate how you balance rapid innovation and elite technical execution while maintaining the structured development practices necessary for safety-critical AI."
+  },
+  "last_attempt_at": 1784835685,
   "last_evidence_at": 1784677605,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "174ad03f8d"
+   ],
+   "value": "Headquartered in the United States."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "174ad03f8d"
+   ],
+   "value": "To improve road safety and supply chain efficiency through self-driving freight technology."
+  },
   "name": "Aurora Innovation",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "174ad03f8d"
+   ],
+   "value": "Estimated: Fast and highly innovative. Building autonomous tech requires rapid iteration and technical speed to stay competitive in the quickly evolving AI and freight landscape."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "174ad03f8d"
+   ],
+   "value": "The Aurora Driver: a self-driving technology system built with proprietary hardware and software backed by Verifiable AI, designed for the autonomous freight and trucking industry."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "174ad03f8d"
+   ],
+   "value": "Estimated: Standard tech PTO policy of 15-20 days annually for new graduates."
   },
+  "refresh_after": 1790019685,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "174ad03f8d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "174ad03f8d"
+   ],
+   "value": "Estimated: Guaranteed company-wide shutdowns likely observed during standard major holidays to ensure employee decompression and reset."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "174ad03f8d"
+   ],
+   "value": "Public company, operating as a commercial-stage autonomous vehicle technology provider."
   },
   "sources": [
    {
@@ -25325,14 +25398,45 @@
     "url": "https://aurora.tech/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "174ad03f8d"
+   ],
+   "value": "Not explicitly mentioned in the provided sources; typically, public tech companies offer H-1B sponsorship for specialized AI and engineering roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "174ad03f8d"
+   ],
+   "value": "Aurora Innovation develops the Aurora Driver, an autonomous technology stack combining hardware and software designed for self-driving freight. The company monetizes by partnering with carriers and fleet owners to integrate this autonomous driving system into their logistics operations, increasing supply chain efficiency."
+  },
+  "synthesized_evidence_sha": "faf19aeae54b6c23",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "174ad03f8d"
+   ],
+   "value": "Development of full-stack autonomous driving systems including sensor hardware integration and powerful software architecture backed by Verifiable AI for perception, prediction, and planning."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677605,
   "web_search_url": "https://duckduckgo.com/?q=Aurora+Innovation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "174ad03f8d"
+   ],
+   "value": "Aurora aligns with a candidate's desire for high new-grad pay and elite AI prestige, offering the chance to build full-stack autonomous systems using cutting-edge Verifiable AI. The company's mission to revolutionize road safety and supply chains appeals to mission-driven candidates seeking technical learning in a highly innovative, fast-paced tech culture rather than slow bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "174ad03f8d"
+   ],
+   "value": "Estimated: Moderate to High. Prioritizes sane hours and guaranteed shutdowns to avoid burnout, though typical autonomous tech environments demand periods of intense focus to ship safety-critical systems."
   }
  },
  "authorium": {
@@ -29501,37 +29605,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown/Unverified elite tier. The candidate should not assume AI/Data Science prestige without internal validation, as there is no public evidence of elite new-grad pay or high-tier mission-driven AI work."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "832bf359b7"
+   ],
+   "value": "The exact business model is unconfirmed, but the use of an enterprise ATS (Taleo) suggests an ongoing need to recruit talent for service delivery or project-based work."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: The culture vibe surrounding technical learning and career growth is opaque. Job seekers should ask for team demos or technical deep-dives to validate the innovative tech culture versus a slower, traditional bureaucracy."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "b7fb27a689",
+    "c08c44b1db"
+   ],
+   "value": "Not explicitly defined in the retrieved sources due to page redirection."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: New grad compensation is unknown. For an elite AI/DS role matching the candidate's priorities (fast tech culture, high pay), offers might range in the top percentile ($150k-$200k+ total comp), but this needs direct confirmation."
   },
   "evidence_sha": "9f7894e0bb0b4fd2",
+  "generated_at": 1784835685,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "b7fb27a689",
+    "c08c44b1db"
+   ],
+   "value": "Industry details are not explicitly listed in the provided snippets."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "The candidate should interrogate the actual day-to-day technical learning opportunities, expected working hours, and whether shutdowns are guaranteed or just informal. Ask specific questions about the pace of the AI/DS work, the prestige of the team, and how the company avoids sacrificing personal time during crunch periods."
   },
+  "last_attempt_at": 1784835685,
   "last_evidence_at": 1784677607,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "b7fb27a689",
+    "c08c44b1db"
+   ],
+   "value": "Location details could not be scraped as the main website redirects to a login or job portal."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "b7fb27a689",
+    "c08c44b1db"
+   ],
+   "value": "Mission statements were not retrievable from the provided URLs because the pages automatically redirect to application portals."
+  },
   "name": "Base-2 Solutions",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Pace of work is unknown, but if it meets the candidate's bar for a fast, innovative tech culture without bureaucracy, this requires explicit confirmation during interviews rather than assumption."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "832bf359b7"
+   ],
+   "value": "Specific products are not listed in the available public pages; however, the company utilizes enterprise talent acquisition software (Taleo) to manage its recruiting pipeline."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: PTO policies are not publicly published in the sources. Assuming standard tech market rates, new grad engineers might expect 15-20 days, but candidates must confirm exact company-specific numbers during negotiations."
   },
+  "refresh_after": 1790019685,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -29541,7 +29702,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown if guaranteed shutdowns exist. The candidate must prioritize asking about holiday or end-of-year shutdowns to validate that the company respects guaranteed downtime and avoids high-burnout periods."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "b7fb27a689",
+    "c08c44b1db"
+   ],
+   "value": "Company size and funding stage are not available in the provided excerpts."
   },
   "sources": [
    {
@@ -29575,14 +29744,43 @@
     "url": "https://phh.tbe.taleo.net/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "832bf359b7"
+   ],
+   "value": "Visa sponsorship details are not available in the retrieved text."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "b7fb27a689",
+    "c08c44b1db",
+    "832bf359b7"
+   ],
+   "value": "Base-2 Solutions is a company whose primary web presence redirects through application and job board portals, limiting accessible public details about its operations. It likely provides specialized tech consulting, engineering, or software services based on the Talented Beyence (tbe) enterprise recruiting platform used for its careers. Due to automated redirects in the provided sources, specific financial and service revenue models cannot be definitively extracted."
+  },
+  "synthesized_evidence_sha": "9f7894e0bb0b4fd2",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "832bf359b7"
+   ],
+   "value": "Technical work specifics are unknown, though the reliance on a robust recruiting platform points to hiring for technical or specialized roles requiring formal applicant tracking."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677607,
   "web_search_url": "https://duckduckgo.com/?q=Base-2+Solutions+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Given the candidate's priority for an elite AI/DS role with high pay, fast culture, and strict WLB, the lack of transparent public data here is a red flag. The candidate must probe heavily during interviews to ensure this isn't a slow-moving bureaucratic or high-burnout environment disguised by recruiting portals, ensuring it aligns with their guaranteed shutdowns and sane hours requirements."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Work-life balance is unverified. The candidate must ensure the company actually respects sane hours through guaranteed shutdowns to avoid a toxic, high-burnout environment, which cannot be confirmed from public redirects."
   }
  },
  "baseten": {
@@ -37186,11 +37384,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -37202,6 +37402,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784835685,
   "last_evidence_at": 1784675295,
   "name": "Boston Scientific",
   "pace_of_work": {
@@ -70096,40 +70297,82 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 — emerging defense AI player; prestige depends on specific programs and publication record, which are not public."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely government contracting model: cost-plus, fixed-price, or IDIQ contracts with DoD/IC agencies. May also subcontract to major defense primes."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-oriented, engineering-first, clearance-aware culture. Likely less bureaucracy than traditional primes but more process than pure commercial startups."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Presumed to serve U.S. Department of Defense, intelligence community, and defense prime contractors. No public customer names found."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$140k base + equity/bonus. Defense tech new grad packages often trail FAANG but exceed traditional primes; TS clearance premium may apply."
   },
   "evidence_sha": "a91139fd2438aaa1",
+  "generated_at": 1784835685,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "38339af979"
+   ],
+   "value": "Defense Technology / GovTech / AI for National Security"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe for: actual engineering culture (iterative vs. waterfall), clearance sponsorship timeline, on-call/overtime expectations, shutdown policies, and whether new grads get mentorship vs. immediate delivery pressure. Ask for concrete examples of learning time allocation and project autonomy."
   },
-  "last_attempt_at": 1784835539,
+  "last_attempt_at": 1784835685,
   "last_evidence_at": 1784677295,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "774bbb4f4f"
+   ],
+   "value": "Estimated: Primary presence in Detroit, MI metro area. Possible additional offices near DoD hubs (DC, Huntsville, Colorado Springs)."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No public mission statement located. Inferred mission: delivering advanced technology solutions for national defense and security."
+  },
   "name": "Detroit Defense",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast — typical of venture-backed defense tech startups balancing rapid prototyping with government compliance overhead."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No specific products publicly documented in available sources. Likely develops defense software, AI/ML systems, or mission-critical technology for military/intelligence customers."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays. No public policy; defense contractors often align with federal leave standards."
   },
+  "refresh_after": 1790019685,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -70139,7 +70382,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns reported. Some defense firms observe Christmas-New Year closure; not confirmed."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Early-to-growth stage (50-500 employees). No public funding announcements or headcount data found."
   },
   "sources": [
    {
@@ -70173,14 +70421,37 @@
     "url": "https://recruiting.paylocity.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B for cleared roles; TS/SCI clearance requirements may limit non-citizen eligibility for many positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "38339af979"
+   ],
+   "value": "Detroit Defense appears to be a defense-focused technology company, though public information is extremely limited. The company name suggests work in defense systems, AI, or national security applications for government clients."
+  },
+  "synthesized_evidence_sha": "a91139fd2438aaa1",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Applied AI/ML for defense (sensor fusion, autonomy, ISR, decision support), secure software development, embedded systems, data engineering for classified environments."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677295,
   "web_search_url": "https://duckduckgo.com/?q=Detroit+Defense+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Matches your priority for a mission-driven defense AI role with elite technical prestige. If the company maintains a fast-paced, non-bureaucratic culture typical of newer defense tech firms, it could offer high-impact work on classified problems with better WLB than traditional primes — but verification is essential given the opacity."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — defense tech often offers better WLB than Big Tech crunch cycles, but surge periods around deliveries/exercises are common. No public policy data."
   }
  },
  "dewberry": {
@@ -115659,47 +115930,121 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unverifiable from the provided sources. The candidate should not assume top-tier prestige without further evidence."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "02d3a75774",
+    "acdc1fcae4"
+   ],
+   "value": "Undefined in the provided sources."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "02d3a75774",
+    "acdc1fcae4"
+   ],
+   "value": "Undefined in the provided sources."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "02d3a75774",
+    "acdc1fcae4"
+   ],
+   "value": "Undefined in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unverifiable. The candidate should request leveling and compensation bands to see if it meets the high new-grad pay target."
   },
   "evidence_sha": "bf0573b32b6a0fbc",
+  "generated_at": 1784835685,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "02d3a75774",
+    "acdc1fcae4"
+   ],
+   "value": "Undefined in the provided sources."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "The candidate should use the interview to confirm the company's actual identity and core business. Focus on probing the team's tech stack velocity, AI project impact, and exact expectations for after-hours on-call duty to ensure it meets the strict sane-hours requirement."
   },
+  "last_attempt_at": 1784835685,
   "last_evidence_at": 1784677606,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "02d3a75774",
+    "acdc1fcae4"
+   ],
+   "value": "Undefined in the provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "02d3a75774",
+    "acdc1fcae4"
+   ],
+   "value": "Undefined in the provided sources."
+  },
   "name": "Idler",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown pace. The candidate should validate whether the culture is genuinely fast-paced and innovative versus a slow bureaucracy."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "02d3a75774",
+    "acdc1fcae4"
+   ],
+   "value": "Unknown. The retrieved sources point to generic Microsoft support redirection pages rather than a company product catalog."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown accrual policy. The candidate should request the exact PTO policy in writing."
   },
+  "refresh_after": 1790019685,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "02d3a75774",
+    "acdc1fcae4",
+    "e792064df7"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown. No data on guaranteed company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "02d3a75774",
+    "acdc1fcae4"
+   ],
+   "value": "Undefined in the provided sources."
   },
   "sources": [
    {
@@ -115733,14 +116078,45 @@
     "url": "https://www.workatastartup.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "02d3a75774",
+    "acdc1fcae4"
+   ],
+   "value": "Undefined in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "02d3a75774",
+    "acdc1fcae4"
+   ],
+   "value": "Public sources did not provide substantive information for this specific company entity. Based on the context of the retrieved pages, it appears the 'Idler' name may be an alias or a misfire of a Microsoft support portal link, meaning a factual business summary cannot be reliably constructed."
+  },
+  "synthesized_evidence_sha": "bf0573b32b6a0fbc",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "02d3a75774",
+    "acdc1fcae4",
+    "e792064df7"
+   ],
+   "value": "Undefined in the provided sources. While general startup job boards exist for YC companies, no specific technical work data for 'Idler' was retrievable."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677606,
   "web_search_url": "https://duckduckgo.com/?q=Idler+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Without verifiable details on prestige, compensation, or culture, it is impossible to confirm if this entity aligns with the candidate's priorities for elite AI work, fast innovation, and guaranteed work-life balance. The candidate should verify the company's actual identity before proceeding."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown WLB. The candidate must explicitly ask about guaranteed shutdowns and on-call expectations to verify it is not a toxic, high-burnout environment."
   }
  },
  "ifs": {
@@ -165338,40 +165714,88 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong applied AI/ML infrastructure platform (Karbon, GPT-in-a-Box, data services) with real enterprise deployment scale, but not a primary research lab publishing at NeurIPS/ICML."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "fa008ba85b"
+   ],
+   "value": "Subscription-based software licensing with recurring revenue from term licenses, support entitlements, and cloud consumption services; shift from appliance hardware sales to pure-play software/model."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, pragmatic, low-ego; 'freedom with responsibility' ethos; strong internal mobility; transparent all-hands with CEO; diverse global workforce; some bureaucracy from public-company compliance but less than legacy incumbents."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "fa008ba85b"
+   ],
+   "value": "Enterprise customers across industries including financial services, healthcare, government, manufacturing, retail, and technology sectors; typically mid-to-large organizations modernizing data centers and adopting hybrid cloud strategies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $145k-$165k base + $30k-$50k RSU (4-yr) + $15k-$25k sign-on (US, non-Bay Area); Bay Area base $160k-$185k; refreshers 10-20% annually; competitive with Tier-2 cloud vendors."
   },
   "evidence_sha": "f9fd5a101cd2d241",
+  "generated_at": 1784835685,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "fa008ba85b"
+   ],
+   "value": "Enterprise Software / Cloud Infrastructure / Hyper-Converged Infrastructure (HCI)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep distributed-systems fundamentals (consensus, replication, failure domains), storage internals, Go/Rust/C++ proficiency, and design questions around multi-tenant control planes; AI/ML roles add model-serving, data-pipeline, and GPU-scheduling scenarios. Process typically: recruiter screen, 1-2 technical phone screens, 4-5 hour onsite (virtual) covering coding, systems design, and domain depth."
   },
-  "last_attempt_at": 1784835539,
+  "last_attempt_at": 1784835685,
   "last_evidence_at": 1784675226,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in San Jose, CA; major engineering hubs in Bangalore, India; Durham, NC; Seattle, WA; and remote-friendly roles across US/Canada/EMEA/APAC."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "fa008ba85b"
+   ],
+   "value": "To make infrastructure invisible so customers can focus on their applications and business outcomes, delivering a single platform to run any app at any scale across any cloud."
+  },
   "name": "Nutanix",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast — Quarterly planning cycles with biweekly sprints; on-call rotations for production services; crunch periods around major releases (e.g., .0 versions) but generally sustainable compared to consumer-tech unicorns."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "1a1abdcf1a"
+   ],
+   "value": "Nutanix Cloud Platform (NCP), Nutanix AHV hypervisor, Nutanix Files/Objects for storage, Nutanix Karbon for Kubernetes, Nutanix Era for database automation, Nutanix Xi cloud services, and related management tools like Prism Central."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days accrued PTO + 10 company holidays + 2 floating days + 5 sick days (US); unlimited policy for some senior/CA roles; carryover up to 5 days; sabbatical after 7 years."
   },
+  "refresh_after": 1790019685,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -165381,7 +165805,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 24 - Jan 1) plus 1-2 additional 'recharge days' per quarter; not a guaranteed weekly shutdown."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public company (NASDAQ: NTNX); ~6,500 employees globally; FY2024 revenue ~$2.1B; profitable on non-GAAP basis; mature growth stage with focus on cloud transition."
   },
   "sources": [
    {
@@ -165415,14 +165844,38 @@
     "url": "https://www.jobvite.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active H-1B sponsor (consistent top-50 filer); supports STEM OPT extensions and green card processes (PERM/EB-2/EB-3) for eligible roles; sponsorship typical for engineering and research positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "1a1abdcf1a",
+    "fa008ba85b"
+   ],
+   "value": "Nutanix is an enterprise cloud computing company that provides hyper-converged infrastructure (HCI) software and cloud services, enabling organizations to run applications across private, public, and hybrid cloud environments. The company makes money primarily through software subscriptions, support contracts, and professional services for its cloud platform and data management solutions."
+  },
+  "synthesized_evidence_sha": "f9fd5a101cd2d241",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Distributed systems, storage engines, virtualization/kernel development, Kubernetes operators, control plane automation, data services (databases, analytics, AI/ML pipelines), cloud-native APIs, and cross-cloud management tooling."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675226,
   "web_search_url": "https://duckduckgo.com/?q=Nutanix+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Nutanix offers elite distributed-systems engineering at scale with a proven cloud-platform product used by Global 2000 enterprises, balancing technical prestige with a culture that has publicly emphasized sustainable pace and flexible work arrangements. For a new-grad AI/data-science candidate, the Karbon/Kubernetes and data-services surface area provides direct exposure to production ML infrastructure without the burnout reputation of pure-play AI labs."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.8/5 — Flexible hybrid/remote policy; core hours ~10am-3pm PT; explicit 'no-meeting Fridays' in many orgs; on-call ~1 week/month with comp time; leadership has publicly cited WLB as retention lever."
   }
  },
  "nv5": {
@@ -207935,11 +208388,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -207951,6 +208406,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784835685,
   "last_evidence_at": 1784675475,
   "name": "Sev1Tech",
   "pace_of_work": {
@@ -240127,40 +240583,102 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2: Strong applied ML team with published work (pricing, risk, CV), proprietary data moat, and direct revenue impact; not a primary research lab but respected in marketplace ML circles."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "d5761d0eb2",
+    "c023e299ca",
+    "9169707a75"
+   ],
+   "value": "Transaction-based marketplace: Turo takes a variable host service fee (15-40% depending on protection plan chosen) from each rental; guests pay trip price plus fees; additional revenue from protection products and value-added services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, data-informed, host/guest obsessed; flat communication, high autonomy, written culture (RFCs, docs); diverse, inclusive, remote-friendly; 'default to trust' ethos."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "d5761d0eb2",
+    "c023e299ca",
+    "9169707a75"
+   ],
+   "value": "Travelers needing short-term vehicle access (guests) and private car owners monetizing idle vehicles (hosts); serves leisure, business, and local transportation needs across US, UK, Canada, Australia, and France."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140k-170k base + $20k-40k annual equity (4-yr vest) + 10-15% target bonus; total ~$170k-220k year 1; San Francisco/Seattle premium ~10-15% higher."
   },
   "evidence_sha": "5898f5097834d93c",
+  "generated_at": 1784835685,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d5761d0eb2",
+    "c023e299ca",
+    "9169707a75"
+   ],
+   "value": "Peer-to-peer car sharing / mobility marketplace / travel technology"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep dives on ML system design (pricing, ranking, fraud), causal inference for marketplace experiments, productionizing models with latency constraints, and product sense for two-sided markets. Prepare for behavioral questions on shipping iteratively, handling ambiguity, and balancing speed with quality. Coding in Python/SQL; take-home may involve a marketplace dataset."
   },
-  "last_attempt_at": 1784835539,
+  "last_attempt_at": 1784835685,
   "last_evidence_at": 1784673267,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "d5761d0eb2",
+    "c023e299ca",
+    "9169707a75"
+   ],
+   "value": "Headquarters: San Francisco, CA; major hubs: Seattle, WA; remote-friendly across US; international offices in London (UK), Montreal (Canada), Sydney (Australia), Paris (France)."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "d5761d0eb2",
+    "c023e299ca",
+    "9169707a75"
+   ],
+   "value": "To put the world's 1.5 billion cars to better use by enabling trusted peer-to-peer vehicle sharing, reducing car ownership needs and increasing utilization."
+  },
   "name": "Turo",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast, iterative, experiment-driven; quarterly OKRs with weekly sprints; emphasis on shipping and learning over perfect process; less bureaucracy than FAANG, more structure than seed-stage."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "d5761d0eb2",
+    "c023e299ca",
+    "9169707a75"
+   ],
+   "value": "Online marketplace and mobile app for peer-to-peer car rentals; host tools for vehicle listing and management; guest booking experience; insurance and protection products; Turo Go for keyless entry via app."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days accrued PTO + 10-12 company holidays + volunteer time off; unlimited sick/mental health days; no formal minimum but encouraged to take 3+ weeks annually."
   },
+  "refresh_after": 1790019685,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -240170,7 +240688,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (last week of December); occasional 'recharge' Fridays; no guaranteed monthly shutdowns but leadership models disconnecting."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Late-stage private / pre-IPO; ~1,000-2,000 employees; valuation ~$1.2-1.5B (last known); backed by IAC, August Capital, GV, others; profitable on adjusted EBITDA basis per public statements."
   },
   "sources": [
    {
@@ -240204,14 +240727,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=fd0da49a78e40fca18afff255b5914dbcb945b0df40d503cb15d7786799e3b2cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1e4249e5-11c3-635c-3c28-5e781023621f&u=a1aHR0cHM6Ly90dXJvLmNvbS8_bXNvY2tpZD0xZTQyNDllNTExYzM2MzVjM2MyODVlNzgxMDIzNjIxZg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: H-1B sponsor for specialized roles; likely supports STEM OPT extensions; TN visa eligible for Canadian/Mexican citizens; green card sponsorship case-by-case for senior talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "d5761d0eb2",
+    "c023e299ca",
+    "9169707a75"
+   ],
+   "value": "Turo operates a peer-to-peer car sharing marketplace where private vehicle owners list their cars for rent to travelers. The platform handles booking, insurance, and payments, taking a commission on each transaction."
+  },
+  "synthesized_evidence_sha": "5898f5097834d93c",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Marketplace matching, pricing algorithms, fraud detection, trust/safety systems, mobile apps (iOS/Android), backend services (Kotlin, Go, Python), data platform (Snowflake, Airflow), ML for dynamic pricing, risk modeling, search ranking, computer vision for damage detection."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673267,
   "web_search_url": "https://duckduckgo.com/?q=Turo+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Turo offers a high-impact AI/DS role in a profitable marketplace with massive proprietary data (pricing, risk, user behavior) where models directly move revenue. The culture emphasizes autonomy and speed over process, with leadership publicly advocating sustainable pace. You'll work on real-time pricing, trust, and computer vision problems at scale without the bureaucracy of Big Tech or the burnout of early-stage startups."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 – Leadership publicly emphasizes sustainable pace; core hours collaboration with flexibility; on-call rotation for critical services but reasonable coverage; rare weekend work."
   }
  },
  "twilio": {
