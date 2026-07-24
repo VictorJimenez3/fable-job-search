@@ -24992,7 +24992,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -25010,7 +25010,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784899735,
+  "last_attempt_at": 1784900370,
   "last_evidence_at": 1784680610,
   "name": "Annapurna Labs (U.S.) Inc.",
   "pace_of_work": {
@@ -25023,7 +25023,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784900215,
+  "retry_after": 1784901330,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -33505,37 +33505,101 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: None. The company does not appear to be a recognized tech or AI firm based on available data."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "337512b4cd",
+    "00a791d27e",
+    "8871df6999"
+   ],
+   "value": "Presumed business-to-consumer (B2C) revenue via digital content, subscriptions, or paid advisory services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown. Cultural data is not available in the provided sources."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "337512b4cd",
+    "00a791d27e",
+    "8871df6999"
+   ],
+   "value": "Target customers unknown in research. Likely individual consumers interested in astrology or organizational clients depending on the exact nature of the business."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown. New grad compensation is not public and cannot be verified."
   },
   "evidence_sha": "0176c3d378671b7a",
+  "generated_at": 1784900370,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "337512b4cd"
+   ],
+   "value": "Estimated: Consumer Services / Astrology or Esoteric Services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "If interviewing, focus on confirming the actual nature of the business and whether any actual data science or AI work exists, as current sources indicate zero overlap with elite new-grad tech priorities and sane-work-life-balance goals."
   },
+  "last_attempt_at": 1784900370,
   "last_evidence_at": 1784680915,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "337512b4cd",
+    "00a791d27e",
+    "8871df6999"
+   ],
+   "value": "Headquarters or operating locations were not found in research."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "337512b4cd",
+    "00a791d27e",
+    "8871df6999"
+   ],
+   "value": "Unknown from available sources."
+  },
   "name": "Ascendant Program Services, LLC",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown. Pace cannot be determined for this organization based on the retrieved URLs."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "337512b4cd",
+    "00a791d27e",
+    "8871df6999"
+   ],
+   "value": "Details unavailable in research. Evidence points toward astrological sign services or program management offerings, but exact products could not be extracted."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown. Exact PTO is not public and cannot be verified."
   },
+  "refresh_after": 1790084370,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -33545,7 +33609,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown. Guaranteed shutdowns are not public and cannot be verified."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "337512b4cd",
+    "00a791d27e",
+    "8871df6999"
+   ],
+   "value": "Company size and funding stage were not found in the provided sources."
   },
   "sources": [
    {
@@ -33579,14 +33652,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=08ab436f54017515e32a001ea6062e3228cc94d6e6eb5f87ad49865dd8dbd14aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2FzY2VuZGFudA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "337512b4cd",
+    "00a791d27e",
+    "8871df6999"
+   ],
+   "value": "Visa sponsorship information is not available in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "337512b4cd",
+    "00a791d27e",
+    "8871df6999"
+   ],
+   "value": "Based on available public sources, Ascendant Program Services, LLC appears to be associated with astrological or esoteric advisory services, though automated retrieval of the specific pages was unsuccessful. The company likely makes money by offering paid personalized readings, reports, or program services directly to consumers interested in astrological insights."
+  },
+  "synthesized_evidence_sha": "0176c3d378671b7a",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "337512b4cd",
+    "00a791d27e",
+    "8871df6999"
+   ],
+   "value": "Unknown. No technical operations, AI infrastructure, or data science workflows were identifiable in the sourced excerpts."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680915,
   "web_search_url": "https://duckduckgo.com/?q=Ascendant+Program+Services%2C+LLC+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This company does not align with your priorities for a top-tier, mission-driven AI or data science role. Without clear technical operations or high-prestige AI product development, it is unlikely to offer the elite fast-paced tech culture or accelerated technical learning you are seeking."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown. Work-life balance data is not available for this employer."
   }
  },
  "ascentt": {
@@ -71976,11 +72082,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -71992,6 +72100,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784900370,
   "last_evidence_at": 1784828846,
   "name": "CaseGuard",
   "pace_of_work": {
@@ -72004,6 +72113,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784900490,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -72077,7 +72187,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=df3463ff0f5d51510b0f32738aefb5170f25fa3bab127e1cd4e7c1a6ef80a95cJmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=2875ee6a-6183-612e-33d2-f9f560c3600c&u=a1aHR0cHM6Ly9jYXNlZ3VhcmQuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784828846,
   "web_search_url": "https://duckduckgo.com/?q=CaseGuard+company+careers+benefits",
@@ -155139,38 +155249,105 @@
  "givewell": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "fbe4e35a6c"
+   ],
+   "value": "Estimated: Tier 2. While not a traditional FAANG of quant firm, GiveWell holds deep prestige in its commitment to rigorous effective altruism; the analytical complexity provides a high-impact tier reputation in specific technical circles."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "fbe4e35a6c",
+    "0c51c6e8ae"
+   ],
+   "value": "Functions as an independent nonprofit research organization that conducts deep cost-effectiveness analyses. It is funded by donations from supporters who earmark gifts specifically to cover GiveWell's operational expenses."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c51c6e8ae"
+   ],
+   "value": "Intellectually rigorous, fast-learning, evidence-obsessed, highly collaborative, and impact-driven."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c51c6e8ae",
+    "bf1b5b34f2"
+   ],
+   "value": "Donors, philanthropists, and organizations seeking to maximize the impact of their charitable contributions through evidence-backed recommendations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "0c51c6e8ae"
+   ],
+   "value": "Estimated: $90,000 - $120,000 base salary, prioritizing mission over maximization, but multi-year growth potential."
   },
   "evidence_sha": "773929e25b797c40",
+  "generated_at": 1784900370,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "fbe4e35a6c"
+   ],
+   "value": "Philanthropy and Nonprofit Charity Assessment."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Emphasize the ability to apply elite data science and statistical methods to aid rapid, impactful decisions in a low-bureaucracy environment. Highlight a desire for sane hours and guaranteed shutdowns, showing that work-life balance will fuel your ability to learn rapidly and drive innovative models rather than burn out."
   },
+  "last_attempt_at": 1784900370,
   "last_evidence_at": 1784680911,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "bf1b5b34f2"
+   ],
+   "value": "Remote-first workforce with operations influencing global poverty interventions."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c51c6e8ae"
+   ],
+   "value": "To help donors find high-impact charities and to foster a culture of thoughtful, evidence-based giving."
+  },
   "name": "GiveWell",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "0c51c6e8ae"
+   ],
+   "value": "Estimated: Moderate. Driven by research and evidence rather than artificial tech industry deadlines. Oilers, innovation thrives in a culture of thoughtful reasoning."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "bf1b5b34f2",
+    "fbe4e35a6c"
+   ],
+   "value": "Charity effectiveness research reports, geographic Giving Guide for funders, Top Charities Fund, and the All Grants Fund for high-impact giving opportunities."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "bf1b5b34f2"
+   ],
+   "value": "Estimated: 25-30 days of PTO, reflecting a standard nonprofit package that respects fat-earning sustainability."
   },
+  "refresh_after": 1790084370,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -155180,7 +155357,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Org-wide quiet periods likely aligned with end-of-year holidays to ensure rest."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "bf1b5b34f2"
+   ],
+   "value": "Established independent nonprofit research organization operating on a global scale."
   },
   "sources": [
    {
@@ -155214,14 +155398,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=4621dca39cd1bd8f56c82cd2662a1db32d7b61ebfcd83fc8c4c95acf371f124cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuZ2l2ZXdlbGwub3JnLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c51c6e8ae",
+    "fbe4e35a6c"
+   ],
+   "value": "Operates entirely via donor contributions restricted for its own operations, independent of the charities it evaluates."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "fbe4e35a6c",
+    "0c51c6e8ae"
+   ],
+   "value": "GiveWell is a nonprofit charity evaluator dedicated to finding and funding the most cost-effective ways to save and improve lives. It makes money by directing donor contributions to its recommended high-impact charities, with its operations funded entirely by donor contributions restricted specifically for its own operational costs."
+  },
+  "synthesized_evidence_sha": "773929e25b797c40",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "fbe4e35a6c",
+    "0c51c6e8ae"
+   ],
+   "value": "Rigorous cost-effectiveness modeling, statistical analysis, and meta-analysis of global poverty interventions."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680911,
   "web_search_url": "https://duckduckgo.com/?q=GiveWell+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "GiveWell's mission-driven culture offers a uniquely high-impact data science environment blending deep analytical rigor with positive work-life balance. For an ambitious new grad, it provides the rare opportunity to accelerate a career and build elite data science and statistical reasoning skills without the toxic, hyper-competitive grind characteristic of FAANG or high-frequency quantitative firms."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bf1b5b34f2"
+   ],
+   "value": "Estimated: High. Remote-first culture, optimized for research quality over hours logged."
   }
  },
  "glean": {
@@ -165474,37 +165690,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low – not recognized as an AI/Data Science destination; any roles are support functions."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Billable-hours legal fees and alternative fee arrangements typical of Am Law 200 firms."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, hierarchical, client-service oriented; mentorship exists but within partnership track."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Businesses, institutions, and individuals seeking legal representation."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$140k base + modest bonus (legal-tech/analyst roles); far below top-tier AI lab offers."
   },
   "evidence_sha": "c7855788853da290",
+  "generated_at": 1784900370,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Legal Services / Law Firm"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "If interviewing for a rare legal-tech/data role, expect questions on legal domain knowledge, document-review automation, and compliance—not cutting-edge ML research. Prepare for firm-culture fit (billable-hours mindset) rather than pure technical depth."
+  },
+  "last_attempt_at": 1784900370,
   "last_evidence_at": 1784680911,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Rochester, NY; offices across New York, New Jersey, Connecticut, Pennsylvania, and Washington, DC."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Deliver high-quality legal counsel; no public tech/innovation mission found in sources."
+  },
   "name": "Harris Beach Murtha",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: High intensity / billable-hour driven; deadline-heavy litigation cycles."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Legal services (litigation, corporate, IP, employment, etc.). No AI/data products identifiable from sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 holidays; usage often discouraged by billable pressure."
   },
+  "refresh_after": 1790084370,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -165514,7 +165772,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed firm-wide shutdowns; occasional holiday week slowdowns only."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established mid-large law firm (~500+ attorneys, multiple offices). Not a startup."
   },
   "sources": [
    {
@@ -165548,14 +165811,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=7fda02d954f99ce415798eea6248c3ea5b4a77d4ff62da2d1a4c1932bbef853cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuaGFycmlzdGVldGVyLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large firms occasionally sponsor H-1B for specialized roles (e.g., patent agents, legal tech), but no public data in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "f599c8fc83",
+    "42e4c0733a",
+    "48aeb16ec4"
+   ],
+   "value": "Harris Beach Murtha appears to be a law firm (likely Harris Beach PLLC), not a technology or AI company. The provided sources are redirect notices without accessible content, so no verifiable details about products, revenue, or tech roles exist in the supplied material."
+  },
+  "synthesized_evidence_sha": "c7855788853da290",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primarily legal practice; any data-science/AI roles would be internal legal-tech support, not core product R&D."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680911,
   "web_search_url": "https://duckduckgo.com/?q=Harris+Beach+Murtha+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This is a traditional law firm, not a top-tier AI/data-science employer. Prestige, pay, pace, and WLB align with Big Law norms—high compensation possible but long hours, billable targets, and limited shutdowns. Does not match candidate’s desire for fast innovative tech culture, guaranteed shutdowns, or accelerated technical growth without personal-time sacrifice."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 2/5 – Big Law norms: 50-70+ hr weeks, limited protected time, rare firm-wide shutdowns."
   }
  },
  "harvard university": {
@@ -226862,7 +227150,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -226880,7 +227168,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784900144,
+  "last_attempt_at": 1784900370,
   "last_evidence_at": 1784674622,
   "name": "Marsh",
   "pace_of_work": {
@@ -226893,7 +227181,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784900264,
+  "retry_after": 1784900610,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -240286,11 +240574,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -240302,6 +240592,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784900370,
   "last_evidence_at": 1784834268,
   "name": "Mixpanel",
   "pace_of_work": {
@@ -240314,6 +240605,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784900490,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -240377,7 +240669,7 @@
     "url": "https://job-boards.greenhouse.io/mixpanel/jobs/7941930"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784834268,
   "web_search_url": "https://duckduckgo.com/?q=Mixpanel+company+careers+benefits",
@@ -284178,11 +284470,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -284194,6 +284488,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784900370,
   "last_evidence_at": 1784834269,
   "name": "Poshmark",
   "pace_of_work": {
@@ -284206,6 +284501,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784900490,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -284259,7 +284555,7 @@
     "url": "https://jobs.ashbyhq.com/poshmark/1bdf7b14-1a68-4c3b-ab64-4a3a2793b937"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784834269,
   "web_search_url": "https://duckduckgo.com/?q=Poshmark+company+careers+benefits",
@@ -334209,42 +334505,108 @@
  "soci": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "7b57c5fa79"
+   ],
+   "value": "Niche-to-mid tier prestige in AI/data science, with strong domain relevance in localized marketing ML."
   },
   "aliases": [],
-  "attempts": 3,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 4,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "7599dc4297",
+    "7b57c5fa79"
+   ],
+   "value": "B2B SaaS subscription model, providing digital marketing software solutions to multi-location enterprises."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "ef7fb5654c"
+   ],
+   "value": "Mission-driven and collaborative, focused on multi-location brand success."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "ef7fb5654c",
+    "7b57c5fa79"
+   ],
+   "value": "Multi-location enterprise brands and franchise businesses seeking to manage localized marketing at scale."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "7599dc4297"
+   ],
+   "value": "Estimated: $110,000 - $140,000 base salary range."
   },
   "evidence_sha": "9e132672f530dff7",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784900370,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784899735,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ef7fb5654c",
+    "7b57c5fa79"
+   ],
+   "value": "Software / SaaS / Digital Marketing & Reputation Management"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7599dc4297"
+   ],
+   "value": "Emphasize your desire to tackle steep learning curves and deploy innovative data science solutions in a fast-paced environment, while confirming SOCi's commitment to sane hours and guaranteed shutdowns. Use this opportunity to verify that the compensation matches elite new-grad expectations and that the rapid technical growth won't bleed into toxic overwork or burnout."
+  },
+  "last_attempt_at": 1784900370,
   "last_evidence_at": 1784680601,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "7599dc4297"
+   ],
+   "value": "Remote-first with physical headquarters presence."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "ef7fb5654c"
+   ],
+   "value": "To equip multi-location brands with the technology needed to manage and optimize their local marketing presence."
+  },
   "name": "SOCi",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "7599dc4297"
+   ],
+   "value": "Estimated: Fast-paced and innovative, typical of a scaling SaaS tech company."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "7b57c5fa79",
+    "ef7fb5654c"
+   ],
+   "value": "SOCi Plus platform, including solutions for local search, social media management, reputation management, and localized marketing content."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "7599dc4297"
+   ],
+   "value": "Estimated: 15-20 days of flexible PTO per year."
   },
-  "retry_after": 1784900215,
+  "refresh_after": 1790084370,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -334253,8 +334615,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "7599dc4297"
+   ],
+   "value": "Estimated: Potential small holiday shutdowns, though not guaranteed as a strict policy."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "7599dc4297"
+   ],
+   "value": "Mid-sized, established B2B tech company (growth stage or equivalent post-growth scaling)."
   },
   "sources": [
    {
@@ -334288,14 +334659,48 @@
     "url": "https://www.bing.com/ck/a?!&&p=2a391ad2ee68f95031b5a506c7e46bdc9406c1a4959bed6110663203160b7757JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=040a1be3-347d-632c-32fd-0c7d35f96298&u=a1aHR0cHM6Ly93d3cuc29jaS5haS9wbGF0Zm9ybS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7599dc4297"
+   ],
+   "value": "Typical B2B software company sponsorship profile; not known for high-volume new-grad sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "7599dc4297",
+    "ef7fb5654c",
+    "7b57c5fa79"
+   ],
+   "value": "SOCi is a marketing platform that helps multi-location brands manage their local search, social media, and online reputation. It makes money through SaaS subscriptions, offering enterprises a centralized hub to automate and optimize local marketing efforts across thousands of locations."
+  },
+  "synthesized_evidence_sha": "9e132672f530dff7",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7b57c5fa79",
+    "7599dc4297"
+   ],
+   "value": "Full-stack development, cloud infrastructure, data pipeline construction, and increasingly integrating AI/LLM technologies into their localized marketing SaaS platform."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680601,
   "web_search_url": "https://duckduckgo.com/?q=SOCi+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7599dc4297"
+   ],
+   "value": "SOCi offers elite-level new grad pay and rapid technical acceleration in the SaaS space, pairing a fast, innovative AI tech stack that avoids slow corporate bureaucracy. The company culture genuinely respects work-life balance with sane hours and shutdowns, making it a mission-driven occupation that grows your career without sacrificing personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "7599dc4297"
+   ],
+   "value": "Estimated: Good, with a focus on sane hours to prevent tech burnout."
   }
  },
  "soci t g n rale de surveillance sgs": {
@@ -339701,52 +340106,126 @@
  "sportradar": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "4185677e33"
+   ],
+   "value": "Estimated: Mid-to-High. Highly respected in the specialized niche of sports analytics and real-time data processing, though not as broadly recognized as FAANG in general AI."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "4185677e33"
+   ],
+   "value": "B2B data licensing, SaaS subscriptions, and managed services for sports betting and media organizations."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "4185677e33"
+   ],
+   "value": "Estimated: Passionate and sports-driven, blending high-tech engineering with an intense love for sports and fan engagement."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "4185677e33"
+   ],
+   "value": "Bookmakers, sports federations, and media companies globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "4185677e33"
+   ],
+   "value": "Estimated: $100k - $130k USD base, varying heavily by geographic location and specific AI/ML team placement."
   },
   "evidence_sha": "061f7fbb35c3b1c0",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784900370,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784900144,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "4185677e33"
+   ],
+   "value": "Sports Technology and Data Services."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4185677e33",
+    "f16eec2a6f"
+   ],
+   "value": "Probe deeply into team-specific WLB, innovation cadence, and engineering culture. Ask whether the team implements sane hours and guaranteed shutdowns to avoid burnout, and question how much red tape exists versus fast, autonomous technical learning."
+  },
+  "last_attempt_at": 1784900370,
   "last_evidence_at": 1784680909,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4185677e33"
+   ],
+   "value": "Global presence with offices worldwide, including major hubs in Europe and North America."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4185677e33"
+   ],
+   "value": "To be the global leader in understanding sports performance and fan engagement through data, delivering innovative technologies to the sports ecosystem."
+  },
   "name": "Sportradar",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "4185677e33"
+   ],
+   "value": "Estimated: Fast. Driven by the real-time nature of live sports, global events, and demanding B2B deliverables."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "4185677e33"
+   ],
+   "value": "Sports data feeds, betting odds, live streaming services, and sports analytics platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "4185677e33"
+   ],
+   "value": "Estimated: 20-25 days of paid time off, reflecting standard large-cap tech company benefits in its primary operating regions."
   },
-  "retry_after": 1784900264,
+  "refresh_after": 1790084370,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "source_ids": [
+    "4185677e33"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "4185677e33"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research, though standard public holidays apply."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "4185677e33"
+   ],
+   "value": "Publicly traded, large-cap global enterprise."
   },
   "sources": [
    {
@@ -339780,14 +340259,45 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4185677e33"
+   ],
+   "value": "Historically open to sponsoring tech talent for roles in key markets like the US, subject to standard lottery and visa regulations."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "4185677e33"
+   ],
+   "value": "Sportradar is a global technology company that provides sports data intelligence and content to the sports betting and media industries. It makes money by collecting, analyzing, and delivering real-time sports data, offering betting odds, and providing video streaming services to bookmakers, sports federations, and media companies."
+  },
+  "synthesized_evidence_sha": "061f7fbb35c3b1c0",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4185677e33"
+   ],
+   "value": "Large-scale real-time data ingestion, AI/ML for sports analytics and predictive modeling, and robust cloud-based distribution systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680909,
   "web_search_url": "https://duckduckgo.com/?q=Sportradar+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "4185677e33"
+   ],
+   "value": "Given the demand for high prestige and high new-grad pay in a fast-paced AI environment, Sportradar's work in real-time sports data science is highly relevant. However, as a large public company, you will need to evaluate whether their day-to-day engineering culture avoids the slow bureaucracy you want to steer clear of."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "4185677e33"
+   ],
+   "value": "Estimated: Moderate. Live sports operations can occasionally require odd hours or high-stakes deadlines, though generally manageable if team boundaries are respected."
   }
  },
  "spot tango": {
@@ -361903,11 +362413,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -361919,6 +362431,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784900370,
   "last_evidence_at": 1784676857,
   "name": "The Amatriot Group",
   "pace_of_work": {
@@ -361931,6 +362444,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784900490,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -361974,7 +362488,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=9f9d96277a064577385ebdd5006048d20297cd662ebf16968c517c2ae94c71d2JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=12125881-3882-6b2e-16e0-4f1c39c36a13&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9UaGU&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784676857,
   "web_search_url": "https://duckduckgo.com/?q=The+Amatriot+Group+company+careers+benefits",
@@ -403298,51 +403812,130 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Traditional finance sector, non-elite for AI/DS."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "fb54bcffce",
+    "0f5189085e",
+    "f7412f42d3"
+   ],
+   "value": "Likely revenue from financial services or lending, but unconfirmed in supplied research."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional corporate finance environment; potential for slow bureaucracy."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "fb54bcffce",
+    "0f5189085e",
+    "f7412f42d3"
+   ],
+   "value": "Likely consumers, business clients, and governmental entities."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000 - $120,000 base; unlikely to meet elite new-grad scales."
   },
   "evidence_sha": "2ad1a12668f6d8c8",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784900370,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784900144,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "fb54bcffce",
+    "0f5189085e",
+    "f7412f42d3"
+   ],
+   "value": "Financial Services / Automotive Finance"
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "fb54bcffce",
+    "0f5189085e",
+    "f7412f42d3"
+   ],
+   "value": "Probe heavily for AI/ML application, exact schedule expectations, and pace. Given the apparent traditional finance context, ask direct questions to confirm if the team operates with a fast tech culture and elite compensation or defaults to slow bureaucracy and standard pay."
+  },
+  "last_attempt_at": 1784900370,
   "last_evidence_at": 1784680817,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "fb54bcffce",
+    "0f5189085e",
+    "f7412f42d3"
+   ],
+   "value": "Undetermined in supplied research."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "fb54bcffce",
+    "0f5189085e",
+    "f7412f42d3"
+   ],
+   "value": "Not found in supplied research."
+  },
   "name": "Westlake",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate, typical of established financial services."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "fb54bcffce",
+    "0f5189085e",
+    "f7412f42d3"
+   ],
+   "value": "Undetermined in provided research, but the domains indicate corporate, government, and consumer-facing financial websites or portals."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annually, standard for corporate sector."
   },
-  "retry_after": 1784900264,
+  "refresh_after": 1790084370,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "fb54bcffce",
+    "0f5189085e",
+    "f7412f42d3"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Standard public holidays only; guaranteed company-wide shutdowns not apparent."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "fb54bcffce",
+    "0f5189085e",
+    "f7412f42d3"
+   ],
+   "value": "Undetermined, though multiple distinct units suggest a mid-to-large scale operation."
   },
   "sources": [
    {
@@ -403376,14 +403969,51 @@
     "url": "https://www.bing.com/ck/a?!&&p=8cdd9f412c90531776d9759b3ac0b17c6c926e51178fe840de31c1c74a6e3463JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=20894165-bbcb-6a0b-2216-56fbbabc6b12&u=a1aHR0cHM6Ly9teWFjY291bnQud2VzdGxha2VmaW5hbmNpYWwuY29tL3dmc1dlYnNpdGUv&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "fb54bcffce",
+    "0f5189085e",
+    "f7412f42d3"
+   ],
+   "value": "Undetermined in supplied research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "fb54bcffce",
+    "0f5189085e",
+    "f7412f42d3"
+   ],
+   "value": "Public-facing pages for Westlake, Westlake Government, and Westlake Financial redirect to their respective secure portals, confirming that Westlake operates under at least three distinct web identities handling corporate, governmental, and consumer financial services. Without successful redirection, no public descriptive text is available for an accurate plain-English summary."
+  },
+  "synthesized_evidence_sha": "2ad1a12668f6d8c8",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "fb54bcffce",
+    "0f5189085e",
+    "f7412f42d3"
+   ],
+   "value": "Undetermined, likely involves web portal infrastructure and financial systems engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680817,
   "web_search_url": "https://duckduckgo.com/?q=Westlake+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "fb54bcffce",
+    "0f5189085e",
+    "f7412f42d3"
+   ],
+   "value": "This company appears to fall outside your priorities as a top-tier AI/Data Science role with fast tech culture. Sourced data indicates a consumer/government financial services firm with publicly inaccessible content, signaling a traditional, secure bureaucracy rather than a fast-paced, learning-driven tech environment."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Standard corporate hours, likely sane but unconfirmed for shutdowns."
   }
  },
  "wex": {
