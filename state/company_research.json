@@ -16388,7 +16388,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -16406,7 +16406,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784874798,
+  "last_attempt_at": 1784875128,
   "last_evidence_at": 1784678734,
   "name": "American Electric Power",
   "pace_of_work": {
@@ -16419,7 +16419,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784875038,
+  "retry_after": 1784875608,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -82039,47 +82039,112 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2/3 (Industry IT). It is well-known in healthcare but not recognized as an elite, top-tier AI or data science employer."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "5d591c6444"
+   ],
+   "value": "Healthcare services. The company operates dialysis clinics and earns revenue by providing specialized clinical care to patients, funded by healthcare insurance and government reimbursement programs."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven and clinical. The culture likely emphasizes community care and patient impact over cutting-edge technological innovation."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "5d591c6444"
+   ],
+   "value": "Patients with chronic kidney disease and end-stage renal disease."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $80,000 - $110,000. Likely below top-tier tech pay bands due to healthcare industry compensation norms."
   },
   "evidence_sha": "dfeeaa77265614f1",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784875128,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "5d591c6444"
+   ],
+   "value": "Healthcare, Dialysis Services"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "93447193e8"
+   ],
+   "value": "Probe heavily into the specific team's pace of work to ensure it is not bogged down by slow bureaucracy. Ask about guaranteed shutdowns, exact hours, and the reality of work-life balance to confirm it meets your strict personal time requirements."
+  },
+  "last_attempt_at": 1784875128,
   "last_evidence_at": 1784674432,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "5d591c6444"
+   ],
+   "value": "Corporate offices and dialysis centers across the United States."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "5d591c6444"
+   ],
+   "value": "To be the provider, partner, and employer of choice for kidney care."
+  },
   "name": "DaVita",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow. As a large, established healthcare organization, the pace is likely driven by legacy systems and compliance rather than fast-paced tech innovation."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "5d591c6444"
+   ],
+   "value": "Kidney dialysis treatments, integrated kidney care, and home dialysis services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-25 days of PTO per year, typical for a large corporate healthcare employer."
   },
+  "refresh_after": 1790059128,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research"
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed tech-wide shutdowns found in research, though standard corporate holidays apply."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Publicly traded, established enterprise."
   },
   "sources": [
    {
@@ -82123,14 +82188,41 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "5d591c6444"
+   ],
+   "value": "DaVita is a healthcare company that provides kidney care, dialysis services, and integrated care. It generates revenue primarily by operating dialysis centers and providing related clinical services, largely reimbursed through government healthcare programs and commercial insurance."
+  },
+  "synthesized_evidence_sha": "dfeeaa77265614f1",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Technical work likely involves healthcare data analytics, clinical workflow optimization, internal tooling, and systems supporting large-scale medical operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674432,
   "web_search_url": "https://duckduckgo.com/?q=DaVita+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "93447193e8"
+   ],
+   "value": "While the company is strongly mission-driven in healthcare, its large size likely means a slower, more corporate tech bureaucracy rather than a fast, innovative tech culture. It may fit the work-life balance and mission priorities, but likely falls short of elite AI prestige and high new-grad tech pay."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Large, established healthcare companies often emphasize sane hours and stability, aligning with a low-burnout environment."
   }
  },
  "davita kidney care": {
@@ -120950,48 +121042,125 @@
  "go fish digital": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Tier 3 — Applied ML in agency setting; strong practical experience but not a primary AI research brand."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Service-based agency model — monthly retainers and project-based contracts for digital marketing services; revenue scales with headcount and client portfolio."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Collaborative, learning-focused, transparent; agency culture values client results and team autonomy, but can be high-pressure during pitches or reporting windows."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Mid-market to enterprise brands across e-commerce, B2B, healthcare, finance, and technology sectors seeking measurable digital growth."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $85k–$110k base + modest bonus; equity unlikely in private agency."
   },
   "evidence_sha": "381b1dd8a22cb16d",
+  "generated_at": 1784875128,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Digital Marketing Agency / Marketing Technology"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Expect practical ML case studies tied to marketing metrics (ROAS, CAC, LTV), SQL/analytics take-homes, and questions about communicating technical results to non-technical stakeholders. Probe for actual shutdown policies, on-call expectations, and mentorship structure for junior data scientists."
+  },
+  "last_attempt_at": 1784875128,
   "last_evidence_at": 1784807866,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Headquarters in Washington, DC metro area (Virginia/Maryland); remote-friendly for many roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: To deliver data-driven digital marketing results that grow client revenue while fostering a transparent, learning-oriented team culture."
+  },
   "name": "Go Fish Digital",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Fast — client-driven deadlines, multiple concurrent projects; sprints tied to monthly reporting cycles."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: SEO audits and strategy, paid search/social management, analytics & data science for marketing, content creation, digital PR, and conversion rate optimization."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: 15–20 days PTO + US federal holidays; unlimited not indicated."
   },
+  "refresh_after": 1790059128,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: No company-wide guaranteed shutdowns documented; some teams may observe winter break informally."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: 50–150 employees; privately held, profitable, mature agency stage (not a startup)."
   },
   "sources": [
    {
@@ -121035,14 +121204,45 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: May sponsor H-1B for senior data science/engineering roles; unlikely for new-grad positions given agency size."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Go Fish Digital is a digital marketing agency that helps clients improve online visibility and revenue through SEO, paid media, analytics, and content strategies. It makes money by charging clients retainer or project fees for marketing services."
+  },
+  "synthesized_evidence_sha": "381b1dd8a22cb16d",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Marketing data pipelines, Python/R for SEO/paid media automation, forecasting models, dashboarding (Looker/Tableau), NLP for content analysis, and internal tooling for campaign optimization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784807866,
   "web_search_url": "https://duckduckgo.com/?q=Go+Fish+Digital+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Offers a new-grad AI/data science role inside a marketing agency — rare blend of applied ML on real business data with agency-style variety. Promises faster project cycles than big-tech bureaucracy, but agency client demands can challenge work-life balance. Good for learning end-to-end impact quickly if the team protects sane hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: 3/5 — agency client demands can lead to periodic crunch; remote flexibility helps but guaranteed shutdowns not documented."
   }
  },
  "goldman sachs": {
@@ -137393,39 +137593,105 @@
  },
  "icapital": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "ee24667ec2",
+    "5c4d055184"
+   ],
+   "value": "Tier 1 (Top-tier) — proprietary private-markets dataset, production NLP/ML at scale, published engineering blog, conference speakers, competitive compensation benchmarked against FAANG/quant firms."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "ee24667ec2",
+    "e04268776e"
+   ],
+   "value": "Platform and transaction fees from advisors/institutions accessing funds; distribution and technology fees from fund managers; subscription/license fees for enterprise workflow and reporting tools (iCapital Architecture)."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "ee24667ec2"
+   ],
+   "value": "Engineering-first, low-bureaucracy, collaborative; strong mentorship (formal buddy program, tech talks, hackathons); diversity and inclusion initiatives visible; compliance-aware but not compliance-choked."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "e04268776e"
+   ],
+   "value": "Registered investment advisors (RIAs), wirehouse and regional broker-dealers, private banks, family offices, and institutional allocators; fund managers (GPs) seeking distribution."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $145k–$165k base + 10–15% target bonus + RSU grant (~$40k–$60k over 4 years) → ~$200k–$230k Year 1 total comp (NYC/Zurich benchmark)."
   },
   "evidence_sha": "ae1222f04aa58fb2",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+  "generated_at": 1784875128,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ee24667ec2"
+   ],
+   "value": "Fintech / Wealth-tech / Alternative Investment Platform"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "ee24667ec2",
+    "5c4d055184"
+   ],
+   "value": "Expect deep-dive system-design around high-throughput, audit-grade data pipelines; practical ML/NLP tasks (document classification, entity extraction from PPMs); ownership mindset questions (end-to-end feature delivery); and cultural fit for a collaborative, low-ego, compliance-aware engineering org. Prepare to discuss how you balance speed with correctness in regulated fintech."
+  },
+  "last_attempt_at": 1784875128,
   "last_evidence_at": 1784655991,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "ee24667ec2",
+    "e04268776e"
+   ],
+   "value": "Headquarters: New York, NY; major hubs: Zurich, London, Lisbon, Hong Kong, Singapore, Miami, Denver; remote-friendly hybrid model."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "ee24667ec2",
+    "e04268776e"
+   ],
+   "value": "Democratize access to alternative investments by building the technology and operational infrastructure that makes private markets as easy to buy, hold, and report on as public securities."
+  },
   "name": "iCapital",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast but sustainable — quarterly OKR cycles, biweekly sprints, blameless postmortems; minimal midnight/weekend pages due to mature observability and on-call rotation."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "ee24667ec2",
+    "e04268776e"
+   ],
+   "value": "Core platform for alternative investment access and workflow automation; iCapital Marketplace (fund menu for advisors); iCapital Architecture (admin, reporting, custody integration); iCapital Network (distribution for fund managers); tech stack includes data pipelines, fund onboarding automation, investor portal, and compliance tooling."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20 days PTO + 10 company holidays + 2 volunteer days; unlimited sick; accrual starts day one."
   },
+  "refresh_after": 1790059128,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -137435,7 +137701,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Two company-wide shutdown weeks per year (summer + year-end) plus mandatory 5-day consecutive PTO policy annually."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "ee24667ec2"
+   ],
+   "value": "Late-stage private (unicorn); ~1,000+ employees globally; last valued >$6B; backed by Temasek, Blackstone, MSD Capital, others; profitable or near-profitable growth stage."
   },
   "sources": [
    {
@@ -137469,51 +137742,131 @@
     "url": "https://www.bing.com/ck/a?!&&p=64e23413125efb043e6c288705bf5dbdc169b44b69d393720348d6dcc67d9e98JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=260a9729-c6c2-672f-23e1-80b4c77d665c&u=a1aHR0cHM6Ly9pY2FwaXRhbC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B and green cards for engineering and data roles; global mobility supported across hubs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "ee24667ec2",
+    "e04268776e",
+    "5c4d055184"
+   ],
+   "value": "iCapital is a financial technology platform that provides wealth advisors, banks, and institutional investors with streamlined access to alternative investment funds (private equity, hedge funds, private credit). It operates a marketplace and technology infrastructure that simplifies the traditionally complex, paper-heavy process of subscribing to and administering alternative investments."
+  },
+  "synthesized_evidence_sha": "ae1222f04aa58fb2",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "ee24667ec2",
+    "5c4d055184"
+   ],
+   "value": "Full-stack platform engineering (React/TypeScript, Java/Spring, Kotlin, PostgreSQL, Kafka, Kubernetes on AWS); data engineering for fund document ingestion, parsing, and standardization; ML/NLP for unstructured fund doc extraction; analytics and reporting pipelines; security/compliance-first fintech architecture."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784655991,
   "web_search_url": "https://duckduckgo.com/?q=iCapital+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "ee24667ec2",
+    "e04268776e",
+    "5c4d055184"
+   ],
+   "value": "iCapital sits at the intersection of fintech scale and alternative-investment complexity, offering elite AI/data-science prestige (large proprietary private-markets dataset, NLP-driven document automation, real-time analytics) with top-tier new-grad compensation. The engineering culture emphasizes rapid iteration on a modern stack (Kubernetes, Kafka, ML pipelines) while the company’s profitability and institutional client base provide stability without the burnout typical of early-stage startups"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — hybrid 3-days office, core-hours flexibility, protected weekends, company-wide shutdowns (see shutdowns field)."
   }
  },
  "icapital network": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2: Known as an elite fintech leader rather than a pure-play AI/data science firm, but likely offers strong data engineering, analytics, and machine learning opportunities supporting investment workflows."
   },
   "aliases": [],
-  "culture_vibe": {
+  "attempts": 1,
+  "business_model": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "B2B fintech SaaS and platform model generating revenue through management and transaction fees based on the volume and assets of alternative investments processed through its infrastructure."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "a1efb2ad2b"
+   ],
+   "value": "Highly collaborative and in-office focused; the company explicitly believes the best ideas and innovation happen when teams are together physically."
+  },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Asset management firms (fund sponsors) and wealth management firms (financial advisors and broker-dealers)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000 - $140,000 base salary per year for entry-to-mid level engineering roles, aligning with competitive NYC-based fintech compensation packages."
   },
   "evidence_sha": "adae7ff96d534dca",
+  "generated_at": 1784875128,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+   "value": "Financial Technology / Alternative Investment Infrastructure"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Given your priority for fast-paced, high-impact technical learning without toxic bureaucracy, probe the team's specific tech stack, the frequency of deployments, and how the 'unlimited PTO' policy translates into actual days taken. Ask engineers about sprint pacing and whether the mandatory in-office culture accelerates or bottlenecks technical innovation."
+  },
+  "last_attempt_at": 1784875128,
   "last_evidence_at": 1784666538,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in New York with a strong in-office culture, operating additional global offices."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To power the world of alternative investments by providing a technology platform that simplifies and streamlines the way funds are distributed and managed."
+  },
   "name": "iCapital Network",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "a1efb2ad2b"
+   ],
+   "value": "Estimated: Fast-paced environment driven by the high-growth fintech sector and continuous product development, requiring active collaboration with product management."
   },
-  "pto_days": {
+  "products": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "A white-label technology and infrastructure platform that streamlines the end-to-end alternative investment workflow, including automated subscription documents, data management, and reporting tools."
   },
+  "prompt_v": 2,
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a1efb2ad2b"
+   ],
+   "value": "Estimated: Unlimited PTO. The company explicitly offers an open/unlimited paid time off policy. Actual days taken average 15-20 per year in typical unlimited PTO cultures."
+  },
+  "refresh_after": 1790059128,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -137523,7 +137876,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No mention of company-wide shutdowns. Traceability or guaranteed downtime likely falls to standard PTO usage and public holidays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established, late-stage private company (valued as a unicorn) with a large global workforce exceeding 1,000 employees."
   },
   "sources": [
    {
@@ -137557,14 +137915,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=b23965c655d9efeb1a980775365cfcf2be7f6ee7397985f9dca8b46a520827eaJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=260a9729-c6c2-672f-23e1-80b4c77d665c&u=a1aHR0cHM6Ly9pY2FwaXRhbC5jb20vYWJvdXQtdXMv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not explicitly detailed in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "iCapital Network is a financial technology company that provides a B2B platform powering the distribution of alternative investments (like private equity, hedge funds, and private equity) through wealth management firms. It makes money by charging management and transaction fees on the assets that flow through its platform, servicing both the asset managers who create the funds and the financial advisors who distribute them."
+  },
+  "synthesized_evidence_sha": "adae7ff96d534dca",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "a1efb2ad2b"
+   ],
+   "value": "Full stack software engineering involving close collaboration with Product Management throughout the software development process to detail requirements, review work in progress, and address manual test issues."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784655992,
   "web_search_url": "https://duckduckgo.com/?q=iCapital+Network+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "As a candidate seeking a high-growth, innovative tech environment that respects work-life balance, iCapital offers a compelling middle ground: competitive new-grad pay, elite fintech prestige, and a mission-driven impact in democratizing alternative investments, paired with unlimited PTO and heavily subsidized healthcare benefits."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a1efb2ad2b"
+   ],
+   "value": "Estimated: Moderate-to-Good. The company offers 100% employer-paid virtual mental health counseling and unlimited PTO, but senior titles (e.g., AVP) in high-growth financial tech frequently carry demanding expectations."
   }
  },
  "icarus": {
@@ -151521,41 +151904,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Industry-specific tier; recognized for practical applications in PropTech but not broadly recognized as an elite, top-tier AI destination."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "4a8e2c73b9",
+    "fd93da98a0",
+    "c4c8137d22"
+   ],
+   "value": "JLL earns money through service fees, commissions, and management margins on real estate transactions, leasing, project management, and advisory mandates."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional and mission-driven, focused on sustainable real estate and corporate consulting."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "4a8e2c73b9",
+    "fd93da98a0",
+    "c4c8137d22"
+   ],
+   "value": "Corporations, investors, developers, and property owners seeking commercial real estate and investment management expertise."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000 - $120,000 base salary."
   },
   "evidence_sha": "2c8fdb864eae2172",
+  "generated_at": 1784875128,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "4a8e2c73b9",
+    "fd93da98a0",
+    "c4c8137d22"
+   ],
+   "value": "Commercial Real Estate and Investment Management."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Use interviews to probe the tech team's speed of innovation versus bureaucracy, actual new-grad compensation ranges, and expectations for working hours. Verify whether the specific team offers guaranteed shutdowns or if the culture leans toward toxic overwork."
   },
-  "last_attempt_at": 1784874965,
+  "last_attempt_at": 1784875128,
   "last_evidence_at": 1784678472,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "4a8e2c73b9",
+    "fd93da98a0",
+    "c4c8137d22"
+   ],
+   "value": "Corporate offices operating globally across major metropolitan markets."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "4a8e2c73b9",
+    "fd93da98a0",
+    "c4c8137d22"
+   ],
+   "value": "To shape the future of real estate for a better world by creating rewarding, opportunity-rich, and sustainable spaces where people and businesses can thrive."
+  },
   "name": "Jones Lang LaSalle (JLL)",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow pace characteristic of large, established corporate environments."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "4a8e2c73b9",
+    "fd93da98a0",
+    "c4c8137d22"
+   ],
+   "value": "Commercial real estate services, property management, leasing advisory, investment management, and real estate technology platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of paid time off annually."
   },
-  "retry_after": 1784875085,
+  "refresh_after": 1790059128,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -151566,6 +152011,15 @@
    "confidence": "estimated",
    "source_ids": [],
    "value": "None found in research (estimated)"
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "4a8e2c73b9",
+    "fd93da98a0",
+    "c4c8137d22"
+   ],
+   "value": "Public company (NYSE: JLL) operating on a massive global scale."
   },
   "sources": [
    {
@@ -151599,14 +152053,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=6a531dd0199752607b7eccc6c6f41f5ad8121ed3a0efb0dfe88d88741f113830JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=322fcd63-df39-6498-3122-dafdded965d4&u=a1aHR0cHM6Ly93d3cuam9uZXNzb2RhLmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely offers visa sponsorship for specialized tech and data roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "4a8e2c73b9",
+    "fd93da98a0",
+    "c4c8137d22"
+   ],
+   "value": "Jones Lang LaSalle (JLL) is a leading global commercial real estate and investment management firm. It generates revenue by providing property management, leasing, and advisory services, alongside managing real estate investments for its clients."
+  },
+  "synthesized_evidence_sha": "2c8fdb864eae2172",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Building internal real estate tech platforms, enterprise data pipelines, AI-driven property valuation models, and PropTech software solutions."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678472,
   "web_search_url": "https://duckduckgo.com/?q=Jones+Lang+LaSalle+%28JLL%29+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "While JLL is working on AI and data science for PropTech, a traditional real estate firm may not provide the fast, innovative tech culture or top-tier new-grad pay you are seeking. However, its commitment to sustainability and structured corporate environment may offer a more predictable, mission-driven experience than a high-burnout startup."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Generally stable work-life balance, though specific project deadlines may cause periodic spikes in workload."
   }
  },
  "jp morgan chase": {
@@ -255885,52 +256364,155 @@
  "soci t g n rale de surveillance sgs": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "2e6cb5d57d",
+    "fa8d3d7d76",
+    "f16eec2a6f"
+   ],
+   "value": "Estimated: Tier 3. SGS is an industry leader in testing and certification, but is not traditionally recognized for top-tier, cutting-edge AI/Data Science prestige."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "2e6cb5d57d",
+    "fa8d3d7d76",
+    "f16eec2a6f"
+   ],
+   "value": "Revenue generation model was not detailed in the retrieved sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "2e6cb5d57d",
+    "fa8d3d7d76",
+    "f16eec2a6f"
+   ],
+   "value": "Estimated: Corporate, structured, and globally dispersed. Emphasizes precision, standardization, and risk management over fast-paced technical disruption."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "2e6cb5d57d",
+    "fa8d3d7d76",
+    "f16eec2a6f"
+   ],
+   "value": "Customer segments were not explicitly listed in the retrieved sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "2e6cb5d57d",
+    "fa8d3d7d76",
+    "f16eec2a6f"
+   ],
+   "value": "Estimated: $70,000 - $90,000 USD equivalent. Generally lower than elite big tech benchmarks, with compensation varying widely depending on the country of employment."
   },
   "evidence_sha": "131f701a438d2fb9",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784875128,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784874798,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "2e6cb5d57d",
+    "fa8d3d7d76",
+    "f16eec2a6f"
+   ],
+   "value": "Industry classification was not provided in the retrieved sources."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2e6cb5d57d",
+    "fa8d3d7d76",
+    "f16eec2a6f"
+   ],
+   "value": "To assess fit for your priorities, probe deeply into the specific team's tech stack, release cycles, and AI project maturity. Ask about expectations for after-hours work, weekend on-call duties, and concrete opportunities for rapid technical skill acceleration versus standard corporate progression."
+  },
+  "last_attempt_at": 1784875128,
   "last_evidence_at": 1784678376,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "2e6cb5d57d",
+    "fa8d3d7d76",
+    "f16eec2a6f"
+   ],
+   "value": "Office locations were not detailed in the retrieved sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "2e6cb5d57d",
+    "fa8d3d7d76",
+    "f16eec2a6f"
+   ],
+   "value": "Company mission was not provided in the retrieved sources."
+  },
   "name": "Société Générale de Surveillance (SGS)",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "2e6cb5d57d",
+    "fa8d3d7d76",
+    "f16eec2a6f"
+   ],
+   "value": "Estimated: Moderate. Operations are process-heavy and methodical to ensure compliance and certification standards, which may feel slow compared to an agile tech startup."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "2e6cb5d57d",
+    "fa8d3d7d76",
+    "f16eec2a6f"
+   ],
+   "value": "Specific products and services were not detailed in the retrieved sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "2e6cb5d57d",
+    "fa8d3d7d76",
+    "f16eec2a6f"
+   ],
+   "value": "Estimated: 20-25 days. Standard for large European-rooted multinational corporations, though exact packages vary by local contracts."
   },
-  "retry_after": 1784875038,
+  "refresh_after": 1790059128,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
+   "source_ids": [
+    "2e6cb5d57d",
+    "fa8d3d7d76",
+    "f16eec2a6f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "2e6cb5d57d",
+    "fa8d3d7d76",
+    "f16eec2a6f"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns. Time off is typically negotiated individually based on regional norms and project requirements."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "2e6cb5d57d",
+    "fa8d3d7d76",
+    "f16eec2a6f"
+   ],
+   "value": "Company size and stage were not detailed in the retrieved sources."
   },
   "sources": [
    {
@@ -255964,14 +256546,55 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "2e6cb5d57d",
+    "fa8d3d7d76",
+    "f16eec2a6f"
+   ],
+   "value": "Visa sponsorship details were not found in the retrieved sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "2e6cb5d57d",
+    "fa8d3d7d76",
+    "f16eec2a6f"
+   ],
+   "value": "Information explicitly detailing SGS's core business and revenue model could not be extracted from the provided sources. Generally, SGS is known as a multinational company providing inspection, verification, testing, and certification services."
+  },
+  "synthesized_evidence_sha": "131f701a438d2fb9",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "2e6cb5d57d",
+    "fa8d3d7d76",
+    "f16eec2a6f"
+   ],
+   "value": "Technical work and engineering stacks were not detailed in the retrieved sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678376,
   "web_search_url": "https://duckduckgo.com/?q=Soci%C3%A9t%C3%A9+G%C3%A9n%C3%A9rale+de+Surveillance+%28SGS%29+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2e6cb5d57d",
+    "fa8d3d7d76",
+    "f16eec2a6f"
+   ],
+   "value": "As a massive, established inspection and certification corporation, SGS likely offers good job stability and benefits, but may struggle to provide the elite new-grad pay, fast-paced AI innovation, and agile tech culture you are seeking due to inherent corporate bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "2e6cb5d57d",
+    "fa8d3d7d76",
+    "f16eec2a6f"
+   ],
+   "value": "Estimated: Good. Large legacy companies often have structured hours to prevent burnout, though this varies heavily by department and region."
   }
  },
  "socket": {
@@ -290672,11 +291295,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -290688,6 +291313,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784875128,
   "last_evidence_at": 1784674719,
   "name": "Uline",
   "pace_of_work": {
@@ -290700,6 +291326,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784875248,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -290763,7 +291390,7 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674719,
   "web_search_url": "https://duckduckgo.com/?q=Uline+company+careers+benefits",
