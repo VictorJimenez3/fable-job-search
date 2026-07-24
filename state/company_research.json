@@ -54908,11 +54908,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -54924,6 +54926,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784876869,
   "last_evidence_at": 1784742766,
   "name": "Candid Health",
   "pace_of_work": {
@@ -54936,6 +54939,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784876989,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -55009,7 +55013,7 @@
     "url": "https://jobs.ashbyhq.com/candidhealth/f3aaae7e-cab4-42d5-aff4-2448b323dfaa"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784742766,
   "web_search_url": "https://duckduckgo.com/?q=Candid+Health+company+careers+benefits",
@@ -94905,51 +94909,116 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier. Highly respected within the healthcare and biomedical engineering sectors, though not traditionally classified alongside top-tier big tech or pure-play AI labs."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "8efbf4b0e8"
+   ],
+   "value": "Designs and manufactures medical devices and systems, generating revenue through direct sales to healthcare institutions and clinical professionals worldwide."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "8efbf4b0e8"
+   ],
+   "value": "Estimated: Mission-driven and patient-focused, with a culture that values deep scientific rigor, clinical impact, and collaborative, steady innovation."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "8efbf4b0e8"
+   ],
+   "value": "Hospitals, cardiac surgeons, interventional cardiologists, and critical care physicians."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000 - $140,000 base salary, with potential for standard corporate bonuses and benefits typical of large medtech firms."
   },
   "evidence_sha": "6adf72e51dd044a3",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784876869,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784876283,
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "8efbf4b0e8"
+   ],
+   "value": "Medical Devices and Equipment."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8efbf4b0e8"
+   ],
+   "value": "Candidates should prepare to discuss how they balance fast-paced, innovative AI development with the strict regulatory requirements of the medical device industry. Emphasize a passion for the healthcare mission and a desire to grow technical skills in biomedical data science while maintaining a sustainable work-life balance."
+  },
+  "last_attempt_at": 1784876869,
   "last_evidence_at": 1784679541,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "a98dbd1fd7",
+    "a8051c2a1a",
+    "8efbf4b0e8"
+   ],
+   "value": "Headquartered in Irvine, California, with additional manufacturing and clinical facilities referenced in West Covina and Ontario, California, alongside a broader global presence."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "8efbf4b0e8"
+   ],
+   "value": "Dedicated to providing innovative solutions for people facing cardiovascular disease."
+  },
   "name": "Edwards Lifesciences",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow. Innovation occurs in a highly regulated clinical environment, meaning testing and deployment cycles are deliberate and cautious rather than fast-paced tech culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "8efbf4b0e8"
+   ],
+   "value": "Transcatheter aortic heart valves (TAVR), surgical heart valves, and critical care hemodynamic monitoring systems."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of standard PTO annually, plus standard medical device industry holidays."
   },
-  "retry_after": 1784876763,
+  "refresh_after": 1790060869,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "8efbf4b0e8"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Limited company-wide shutdowns, potentially just standard paid holidays rather than extended guaranteed week-long breaks outside of standard PTO."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "8efbf4b0e8"
+   ],
+   "value": "Large-cap, publicly traded global medical device corporation."
   },
   "sources": [
    {
@@ -94983,14 +95052,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=e26f37627478793c6eb80f4a1beb87e5a8b886253d280cbbc8c9755317cba68bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ec016c9-b21a-6d98-3a21-0157b3d76c8f&u=a1aHR0cHM6Ly93d3cuZWR3YXJkcy5jb20v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a large multinational medical device company, Edwards likely sponsors work visas for highly specialized technical roles, though specifics are not public."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "8efbf4b0e8"
+   ],
+   "value": "Edwards Lifesciences is a global leader in structural heart disease and critical care medical technologies. They make money by developing, manufacturing, and selling innovative heart valves and hemodynamic monitoring systems to healthcare providers globally."
+  },
+  "synthesized_evidence_sha": "6adf72e51dd044a3",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8efbf4b0e8"
+   ],
+   "value": "Estimated: Data science and AI projects likely focus on biomedical signal processing, predictive modeling for patient outcomes, and optimizing clinical trial data. Hardware-software integration for medical devices is a core technical challenge."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679541,
   "web_search_url": "https://duckduckgo.com/?q=Edwards+Lifesciences+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8efbf4b0e8"
+   ],
+   "value": "While Edwards offers a mission-driven environment focused on life-saving medical technology, it may not perfectly align with a fast-paced, elite-tech culture due to the rigorous regulatory and clinical compliance inherent to medtech. It provides strong technical learning in a highly impactful domain, but the pace is generally slower than big tech, which trades off against the risk of high burnout to offer more stable hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Medical device companies often emphasize stable, sane hours to avoid burnout, offering a less toxic environment than high-growth tech startups."
   }
  },
  "eight sleep": {
@@ -95088,7 +95184,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -95106,7 +95202,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784876720,
+  "last_attempt_at": 1784876869,
   "last_evidence_at": 1784826849,
   "name": "Elastic",
   "pace_of_work": {
@@ -95119,7 +95215,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784876840,
+  "retry_after": 1784877109,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -116023,38 +116119,97 @@
  "garner health": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Niche HealthTech Data Role."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "c2269eb874"
+   ],
+   "value": "B2B healthcare navigation and benefits platform, monetizing through employer partnerships."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, fast, and innovative startup culture."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "c2269eb874"
+   ],
+   "value": "Employers seeking to optimize healthcare spending and provide better health benefits to their employees."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Highly competitive base salary around $130k-$160k."
   },
   "evidence_sha": "69d69658d4d8ca4a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784876869,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c2269eb874"
+   ],
+   "value": "Healthcare Technology / Digital Health."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "c2269eb874",
+    "17f8c9c419"
+   ],
+   "value": "Candidates should emphasize their desire to build high-impact data products in a fast-paced environment while maintaining sustainable habits that prevent burnout."
+  },
+  "last_attempt_at": 1784876869,
   "last_evidence_at": 1784677862,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "c2269eb874"
+   ],
+   "value": "New York, NY (Headquarters)."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "c2269eb874"
+   ],
+   "value": "To improve healthcare quality and affordability by guiding patients to better care."
+  },
   "name": "Garner Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and dynamic startup environment."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "c2269eb874"
+   ],
+   "value": "A healthcare navigation app that guides users to high-quality in-network doctors and care providers."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard PTO."
   },
+  "refresh_after": 1790060869,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -116064,7 +116219,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found in public sources."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Venture-backed growth stage startup."
   },
   "sources": [
    {
@@ -116108,14 +116270,45 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "c2269eb874"
+   ],
+   "value": "No specific visa sponsorship details found in public data."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "c2269eb874",
+    "17f8c9c419"
+   ],
+   "value": "Garner Health is a digital health company that provides an app-based platform to help employees navigate their healthcare benefits and find high-quality doctors. It makes money by partnering with employers who offer Garner's services as a health benefit to their workforce, ultimately aiming to reduce overall healthcare costs."
+  },
+  "synthesized_evidence_sha": "69d69658d4d8ca4a",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Data science roles likely involve healthcare data analysis, provider quality modeling, and recommendation algorithms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677862,
   "web_search_url": "https://duckduckgo.com/?q=Garner+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "c2269eb874",
+    "17f8c9c419"
+   ],
+   "value": "As a healthtech scale-up, Garner offers mission-driven work without traditional slow corporate bureaucracy. It likely provides competitive tech-sector compensation and a modern culture that appeals to elite data talent."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Standard tech WLB, generally respecting personal time but with periods of intensity."
   }
  },
  "gateway services inc": {
@@ -126663,38 +126856,96 @@
  "gsk": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "c74f9caa13"
+   ],
+   "value": "Estimated: Tier 2. Prestigious within the life sciences sector for impactful healthcare AI, but does not carry the elite cachet of a top-tier consumer tech firm."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "40989140a7"
+   ],
+   "value": "Researches, develops, and commercializes pharmaceutical products and vaccines, generating revenue through direct sales and global distribution partnerships."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "c74f9caa13"
+   ],
+   "value": "Estimated: Mission-driven, scientific, and highly collaborative, focused on patient outcomes and rigorous data."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "c74f9caa13"
+   ],
+   "value": "Hospitals, healthcare providers, governments, pharmacies, and patients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000 - $130,000 base salary. Competitive for the pharma sector but slightly below FAANG-level elite tech pay."
   },
   "evidence_sha": "fe8d73301ae6098b",
+  "generated_at": 1784876869,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "40989140a7"
+   ],
+   "value": "Pharmaceuticals and Biotechnology."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Candidates should probe the engineering culture to gauge the level of bureaucracy versus agile innovation. Ask specific questions about work hours, on-call expectations, and how AI initiatives are prioritized to ensure the role aligns with their WLB and technical learning priorities."
   },
+  "last_attempt_at": 1784876869,
   "last_evidence_at": 1784678007,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "40989140a7"
+   ],
+   "value": "Global operations with major hubs in the UK, US, and Belgium."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "c74f9caa13"
+   ],
+   "value": "To improve the quality of human life by enabling people to do more, feel better, and live longer."
+  },
   "name": "GSK",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. Driven by long pharmaceutical R&D cycles and regulatory compliance, making it slower and more process-heavy than a typical fast-paced tech startup."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "40989140a7"
+   ],
+   "value": "Prescription medicines, vaccines for infectious diseases, and consumer healthcare products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 paid days off per year, standard for large legacy pharmaceutical organizations."
   },
+  "refresh_after": 1790060869,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -126704,7 +126955,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Limited guaranteed shutdowns, typically restricted to standard public holidays rather than extended company-wide breaks."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "4bc9fbd41e"
+   ],
+   "value": "Large-cap, publicly traded multinational corporation."
   },
   "sources": [
    {
@@ -126738,14 +126996,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=36b5e4fb625ce69ead7e93e603180b956a176cce1d76ff6426055b4bff0571eeJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=07be2871-9636-65dd-1322-3fec97d6646f&u=a1aHR0cHM6Ly93d3cuZ3NrLmNvbS9lbi1nYi8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "c74f9caa13"
+   ],
+   "value": "Not explicitly found in the provided sources, but typical for a global life sciences company."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c74f9caa13",
+    "40989140a7"
+   ],
+   "value": "GSK is a global biopharmaceutical company that researches, develops, and manufactures vaccines and specialty medicines. It makes money by selling these pharmaceutical products to healthcare providers, governments, and patients worldwide."
+  },
+  "synthesized_evidence_sha": "fe8d73301ae6098b",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "40989140a7"
+   ],
+   "value": "Drug discovery, bioinformatics, computational biology, clinical trial data analysis, and machine learning for predictive healthcare modeling."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678007,
   "web_search_url": "https://duckduckgo.com/?q=GSK+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "GSK provides a strong mission-driven environment focused on global health, fulfilling the candidate's desire for meaningful work. However, as a legacy pharmaceutical giant, it may struggle to deliver the fast-paced, elite high-tech innovation culture and top-tier new grad pay the candidate prioritizes compared to big tech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Standard corporate expectations with a focus on employee well-being, though peak project cycles can occasionally require heavier hours."
   }
  },
  "guardian life": {
@@ -252550,48 +252836,125 @@
  "serve robotics": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "f7c20288ae"
+   ],
+   "value": "Estimated: Niche Tier 2/3. The AI work is highly applied and hands-on but lacks the scale and prestige of top-tier general AI labs."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "f7c20288ae"
+   ],
+   "value": "Solving real-world urban logistics and mobility problems using robotics and AI to provide delivery services."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "f7c20288ae"
+   ],
+   "value": "Mission-driven and innovative, formed by tech industry veterans pooling their skills in software, hardware, and design to build the future."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "f7c20288ae"
+   ],
+   "value": "End-users and partner businesses requiring urban delivery and logistics solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "f7c20288ae"
+   ],
+   "value": "Estimated: $120,000 - $150,000. Exact new grad pay is not publicly detailed, but robotics tech roles in urban tech hubs typically fall in this range."
   },
   "evidence_sha": "3b5c2971747cc9f1",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+  "generated_at": 1784876869,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f7c20288ae"
+   ],
+   "value": "Robotics and Autonomous Urban Logistics."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "f7c20288ae"
+   ],
+   "value": "Candidates should be prepared to demonstrate their ability to independently manage multiple projects and deliver high-quality work in a fast-paced environment. Focus on showing how you can accelerate technical learning and prioritize competing requests without leaning on bureaucratic processes."
+  },
+  "last_attempt_at": 1784876869,
   "last_evidence_at": 1784761140,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "f7c20288ae"
+   ],
+   "value": "Operations are specifically targeted at reimagining how things move in cities."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "f7c20288ae"
+   ],
+   "value": "To reimagine how things move in cities by pooling tech industry skills to build the future we want to live in."
+  },
   "name": "Serve Robotics",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "f7c20288ae"
+   ],
+   "value": "Estimated: Fast-paced. The company explicitly states it operates in a fast paced environment requiring independent management of competing requests."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "f7c20288ae"
+   ],
+   "value": "Autonomous sidewalk delivery robots that utilize robotics, machine learning, and computer vision for end-to-end user experiences."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "f7c20288ae"
+   ],
+   "value": "Estimated: 15-20 days. Standard PTO policies are not published in the available sources."
   },
+  "refresh_after": 1790060869,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "f7c20288ae"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "f7c20288ae"
+   ],
+   "value": "Estimated: No known guaranteed shutdowns. There is no mention of company-wide shutdowns in the available materials."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "f7c20288ae"
+   ],
+   "value": "Company comprised of tech industry veterans in software, hardware, and design."
   },
   "sources": [
    {
@@ -252635,14 +252998,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=aa248f13dea9b000af277ef9ccf5c58091018d2630df32293a6253f6a2a49e9aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2fa41502-bc51-61fa-2ab0-029fbd806008&u=a1aHR0cHM6Ly93d3cuc2VydmUuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "f7c20288ae"
+   ],
+   "value": "Sponsorship details are not explicitly mentioned in available materials."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "f7c20288ae"
+   ],
+   "value": "Serve Robotics is an autonomous robotics company that builds and deploys AI-powered sidewalk delivery robots to reimagining how things move in cities. It generates revenue by providing last-mile delivery services, leveraging machine learning and computer vision to solve real-world logistics problems."
+  },
+  "synthesized_evidence_sha": "3b5c2971747cc9f1",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "f7c20288ae"
+   ],
+   "value": "Solving real-world problems leveraging robotics, machine learning, computer vision, and other disciplines, with a focus on end-to-end user experience and managing multiple projects independently."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678107,
   "web_search_url": "https://duckduckgo.com/?q=Serve+Robotics+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "f7c20288ae"
+   ],
+   "value": "Serve Robotics provides access to elite, high-impact AI and machine learning work through its core autonomous robot technology, rooted in a mission-driven approach to urban innovation. The culture is designed to accelerate technical learning and career growth in a fast-paced environment, pushing back against slow bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "f7c20288ae"
+   ],
+   "value": "Estimated: Medium. The emphasis on a fast-paced startup culture and managing competing requests suggests intense work periods, though the mission-driven nature may provide non-monetary balance."
   }
  },
  "servicelink": {
@@ -297560,7 +297954,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -297578,7 +297972,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784876720,
+  "last_attempt_at": 1784876869,
   "last_evidence_at": 1784776551,
   "name": "Unilever",
   "pace_of_work": {
@@ -297591,7 +297985,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784876840,
+  "retry_after": 1784877109,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -308273,38 +308667,102 @@
  "vertex pharmaceuticals": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "f344b349ca"
+   ],
+   "value": "Estimated: Top-tier within biotech/pharma, offering high prestige for applying AI and data science to cutting-edge scientific challenges."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "f344b349ca"
+   ],
+   "value": "Researching, developing, manufacturing, and selling prescription biopharmaceutical products."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "f344b349ca"
+   ],
+   "value": "Estimated: Mission-driven, highly scientific, and patient-focused, aiming to foster technical learning and career growth without sacrificing personal time."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "f344b349ca"
+   ],
+   "value": "Patients with serious diseases, healthcare providers, and healthcare systems globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "f344b349ca"
+   ],
+   "value": "Estimated: Elite and highly competitive, generally ranging from $130k-$170k total compensation for new grads in AI and data science roles."
   },
   "evidence_sha": "5fa26415cd87e83d",
+  "generated_at": 1784876869,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f344b349ca"
+   ],
+   "value": "Biotechnology and Pharmaceuticals"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Be prepared to discuss how your AI and data science skills can directly accelerate drug discovery and improve patient outcomes without succumbing to biotech bureaucracy. Emphasize your desire for fast, innovative tech culture and ask interviewers about project turnaround times and strict shutdown policies to validate their respect for work-life balance."
   },
+  "last_attempt_at": 1784876869,
   "last_evidence_at": 1784678095,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "f344b349ca"
+   ],
+   "value": "Global presence with corporate headquarters and main research sites in the United States, alongside international operations."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "f344b349ca"
+   ],
+   "value": "To invest in scientific innovation to create medicines that improve the lives of people with serious diseases."
+  },
   "name": "Vertex Pharmaceuticals",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "f344b349ca"
+   ],
+   "value": "Estimated: Fast-paced and innovative for the pharmaceutical sector, attempting to merge elite tech culture agility with rigorous clinical development."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "f344b349ca"
+   ],
+   "value": "Therapeutics and medicines targeting serious diseases, including treatments for cystic fibrosis, sickle cell disease, and acute pain."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "f344b349ca"
+   ],
+   "value": "Estimated: Generous biotech-standard PTO accruing to roughly 20-25 days annually for new technical hires, alongside standard holidays."
   },
+  "refresh_after": 1790060869,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -308313,8 +308771,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "f344b349ca"
+   ],
+   "value": "Estimated: Guaranteed company-wide or targeted year-end shutdown days frequently implemented to ensure rest periods and assure strict work-life boundaries."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "d7e0266839"
+   ],
+   "value": "Large, established public biopharmaceutical company."
   },
   "sources": [
    {
@@ -308348,14 +308815,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=018c5e691378853ba5888a287d3efb4aecc321bb9b61ef8b0ead4ce2bc425d97JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2fa41502-bc51-61fa-2ab0-029fbd806008&u=a1aHR0cHM6Ly93d3cudnJ0eC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f344b349ca"
+   ],
+   "value": "Estimated: As a large global biopharma, Vertex typically sponsors work visas for specialized technical and scientific roles, though specific policies vary by position."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "f344b349ca"
+   ],
+   "value": "Vertex Pharmaceuticals is a global biotechnology company that invests in scientific innovation to create medicines for people with serious diseases. It makes money by discovering, developing, and commercializing these therapies."
+  },
+  "synthesized_evidence_sha": "5fa26415cd87e83d",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "f344b349ca"
+   ],
+   "value": "Data science, AI, computational biology, and software engineering focused on drug discovery, clinical development, and operational analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678095,
   "web_search_url": "https://duckduckgo.com/?q=Vertex+Pharmaceuticals+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Vertex targets the elite prestige and high new-grad compensation of top-tier tech while offering a mission-driven environment focused on curing serious diseases. It generally avoids the toxic burnout culture of big tech by offering highly competitive biotech WLB, sane hours, and strong personal time-off policies to protect technical learning and career growth."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "f344b349ca"
+   ],
+   "value": "Estimated: Strong work-life balance with sane hours, avoiding the high-burnout environment commonly found in pure big tech companies."
   }
  },
  "vertiv": {
