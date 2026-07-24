@@ -19974,11 +19974,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -19990,6 +19992,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784900565,
   "last_evidence_at": 1784680915,
   "name": "Amca",
   "pace_of_work": {
@@ -20002,6 +20005,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784900685,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -20045,7 +20049,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=b751a5c8ec948bf70149b4e55580c553e2336b2965857eba9e0ce4f43668a0e8JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuYW1jYWV4YW1zLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680915,
   "web_search_url": "https://duckduckgo.com/?q=Amca+company+careers+benefits",
@@ -38198,11 +38202,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -38214,6 +38220,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784900565,
   "last_evidence_at": 1784680917,
   "name": "Aurelius Systems",
   "pace_of_work": {
@@ -38226,6 +38233,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784900685,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -38279,7 +38287,7 @@
     "url": "https://jobs.ashbyhq.com/aureliussystems/81fca3a4-7f50-4730-9a18-55c0da74130c"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680917,
   "web_search_url": "https://duckduckgo.com/?q=Aurelius+Systems+company+careers+benefits",
@@ -72077,43 +72085,106 @@
  },
  "caseguard": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "d3c83d7ff0"
+   ],
+   "value": "Estimated: Specialized/Niche (Not FAANG-tier). Provides excellent applied AI experience in computer vision and audio processing for security, but lacks the broad industry prestige of top-tier AI labs."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5e45185c75"
+   ],
+   "value": "Direct B2B/B2G sales of software licenses and SaaS subscriptions for their data redaction and case management platform."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "3b22808021"
+   ],
+   "value": "Estimated: High-paced and engineering-driven (associated with CaseGuard Studio), focused on delivering secure tools for law enforcement/government."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "1f48ed690c",
+    "d3c83d7ff0"
+   ],
+   "value": "Law enforcement agencies, police departments, government entities, security organizations, and federal clients managing digital evidence."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "a201b877f4"
+   ],
+   "value": "Estimated: $90,000 - $120,000 base salary for new-grad software/AI roles, falling below the ultra-elite tier of high new-grad pay but offering solid compensation."
   },
   "evidence_sha": "23c9d6b34044eed5",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784900565,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784900370,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "5e45185c75",
+    "1f48ed690c"
+   ],
+   "value": "Software / IT Services (Data Security & Legal/GovTech)"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784900565,
   "last_evidence_at": 1784828846,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "7a48e4e792"
+   ],
+   "value": "Remote-first or hybrid operations with presence indicated online, though exact office headquarters are not clearly detailed in public redirects."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d3c83d7ff0"
+   ],
+   "value": "Protecting sensitive data by providing intuitive and secure software solutions for redaction, investigation, and collaboration."
+  },
   "name": "CaseGuard",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "1f48ed690c"
+   ],
+   "value": "Estimated: Agile, fast-paced environment typical of private software companies shipping frequent updates to a specialized platform."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "d3c83d7ff0",
+    "3b22808021"
+   ],
+   "value": "Integrated software suite featuring AI-assisted audio/video/data redaction, secure evidence sharing, and digital evidence management tools (often branded CaseGuard Studio)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "5e45185c75"
+   ],
+   "value": "Estimated: 20-30 days of PTO annually (combining vacation and sick leave, typical for specialized GovTech software firms)."
   },
-  "retry_after": 1784900490,
+  "refresh_after": 1790084565,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -72122,8 +72193,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "7a48e4e792"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found; shutdowns are likely standard public holidays rather than extended guaranteed breaks."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a201b877f4"
+   ],
+   "value": "Private company operating as a specialized enterprise software vendor, likely in the mature or growth stage for its niche."
   },
   "sources": [
    {
@@ -72187,14 +72267,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=df3463ff0f5d51510b0f32738aefb5170f25fa3bab127e1cd4e7c1a6ef80a95cJmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=2875ee6a-6183-612e-33d2-f9f560c3600c&u=a1aHR0cHM6Ly9jYXNlZ3VhcmQuY29tLw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a201b877f4"
+   ],
+   "value": "Not explicitly stated in the source materials; candidates requiring H1B visa sponsorship should inquire directly with the company."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "d3c83d7ff0",
+    "5e45185c75",
+    "3b22808021"
+   ],
+   "value": "CaseGuard is a software company that provides an all-in-one platform for data redaction, secure file sharing, and case management, primarily targeting law enforcement and government agencies. They make money by selling specialized software licenses and SaaS subscriptions for securely managing and redacting sensitive evidence."
+  },
+  "synthesized_evidence_sha": "23c9d6b34044eed5",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d3c83d7ff0",
+    "3b22808021"
+   ],
+   "value": "Full-stack software engineering, AI/ML implementation for automated audio/video redaction (computer vision, NLP), secure cloud architecture, and developing high-performance tools for processing heavy media files."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784828846,
   "web_search_url": "https://duckduckgo.com/?q=CaseGuard+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "a201b877f4"
+   ],
+   "value": "Estimated: Moderate. Team sizes are likely smaller, which can drive intense release schedules, but the software nature prevents the raw high-burnout hours seen in quantitative finance."
   }
  },
  "castle": {
@@ -75983,11 +76095,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -75999,6 +76113,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784900565,
   "last_evidence_at": 1784680916,
   "name": "CGS Immersive",
   "pace_of_work": {
@@ -76011,6 +76126,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784900685,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -76054,7 +76170,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=69fa9ea267d459264d00a6db639bee31c8f64d85964fd303fc5c2e61368bb16bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuY2dzbWVkaWNhcmUuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680916,
   "web_search_url": "https://duckduckgo.com/?q=CGS+Immersive+company+careers+benefits",
@@ -153420,48 +153536,143 @@
  "gentex corporation": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "ace7946afa",
+    "a1742e8dbb"
+   ],
+   "value": "Estimated: Mid-tier. The company holds patents and develops in-house computer vision and embedded systems technologies, but it does not possess the elite prestige of dedicated FAANG or top-tier AI research labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "ace7946afa",
+    "a1742e8dbb"
+   ],
+   "value": "High-volume B2B manufacturing of electronic and safety components. Revenue is driven by long-term supplier contracts with automotive manufacturers and sales through commercial channels."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "ace7946afa",
+    "a1742e8dbb"
+   ],
+   "value": "Estimated: Engineering-heavy, stable, and traditional. Emphasizes long-term tenure, product quality, and continuous improvement over rapid technological disruption or 'move fast and break things' startup culture."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "ace7946afa",
+    "a1742e8dbb"
+   ],
+   "value": "Automotive Original Equipment Manufacturers (OEMs) and commercial/fire protection distributors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "ace7946afa",
+    "a1742e8dbb"
+   ],
+   "value": "Estimated: $75,000 to $95,000 base salary for new grads in software or data roles, reflecting Michigan manufacturing benchmarks. Bonuses are likely modest, limiting total compensation to within $100,000."
   },
   "evidence_sha": "7f8aa2d843ba0fe5",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784900565,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "ace7946afa",
+    "a1742e8dbb"
+   ],
+   "value": "Manufacturing, Automotive Electronics, and Fire Protection."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ace7946afa",
+    "a1742e8dbb"
+   ],
+   "value": "Candidates should probe whether AI/data-science roles focus on cutting-edge ML innovation or maintaining established automotive software systems. It is critical to understand internal promotion speed, compensation ceilings for technical tracks (to see if it meets high new-grad expectations), and whether the culture truly enforces shutdowns and sane hours rather than relying on crisis-driven manufacturing crunches."
+  },
+  "last_attempt_at": 1784900565,
   "last_evidence_at": 1784680916,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "ace7946afa",
+    "a1742e8dbb"
+   ],
+   "value": "Headquartered in Zeeland, Michigan, USA, with additional global manufacturing and sales facilities."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "ace7946afa",
+    "a1742e8dbb",
+    "fa8a7676d9"
+   ],
+   "value": "To deliver innovative electro-optic and life-safety products that enhance vehicle and building safety."
+  },
   "name": "Gentex Corporation",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "ace7946afa",
+    "a1742e8dbb"
+   ],
+   "value": "Estimated: Measured and process-oriented. Driven by long automotive OEM product cycles and strict safety certification timelines, the pace is slower than a fast-paced tech startup."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "ace7946afa",
+    "a1742e8dbb"
+   ],
+   "value": "Automatic-dimming rearview mirrors, HomeLink wireless control systems, smart vehicle displays, dimmable aircraft windows, and fire protection products like smoke alarms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "ace7946afa",
+    "a1742e8dbb"
+   ],
+   "value": "Estimated: 15 to 20 days of standard Paid Time Off, accruing alongside company-paid holidays, typical of a large Michigan manufacturing employer."
   },
+  "refresh_after": 1790084565,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "ace7946afa",
+    "a1742e8dbb",
+    "fa8a7676d9"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "ace7946afa",
+    "a1742e8dbb"
+   ],
+   "value": "Estimated: No guaranteed extended corporate shutdowns widely published. Likely follows standard holiday schedules with potential use of PTO if plant shutdowns occur."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "ace7946afa",
+    "a1742e8dbb",
+    "fa8a7676d9"
+   ],
+   "value": "Established public company with a large manufacturing scale, acting as a tier-1 automotive supplier."
   },
   "sources": [
    {
@@ -153495,14 +153706,50 @@
     "url": "https://www.bing.com/ck/a?!&&p=04037af71c2eb32a00188af86d8313417866a8f98c44758a2440b4a8d34e284aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuZ2VudGV4LmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ace7946afa",
+    "a1742e8dbb"
+   ],
+   "value": "Estimated: As a large-scale tier-1 supplier needing specialized embedded and software talent, Gentex is likely to offer standard visa sponsorship for high-demand technical roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "ace7946afa",
+    "a1742e8dbb"
+   ],
+   "value": "Gentex Corporation is a global supplier of automatic-dimming rearview mirrors, automotive electronics, and fire protection products. The company makes money by manufacturing and selling these electro-optic and safety products primarily to automotive OEMs and commercial building developers."
+  },
+  "synthesized_evidence_sha": "7f8aa2d843ba0fe5",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ace7946afa",
+    "a1742e8dbb"
+   ],
+   "value": "Embedded systems, hardware-to-software integration, sensor data fusion, and vision processing for ADAS, automotive electronics, and AI/ML applications in dimming and display technologies."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680916,
   "web_search_url": "https://duckduckgo.com/?q=Gentex+Corporation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ace7946afa",
+    "a1742e8dbb"
+   ],
+   "value": "Gentex is an established tier-1 automotive supplier with a steady, structured corporate environment and strong track record of sustained engineering innovation. However, its slower legacy-manufacturing pace, modest pay scales compared to top-tier tech firms, and slow corporate decision-making may not align with the desire for elite new-grad prestige, fast AI innovation culture, and high compensation."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "ace7946afa",
+    "a1742e8dbb"
+   ],
+   "value": "Estimated: Good. Gentex is generally known in the Midwest manufacturing sector for offering a stable, sane work-life balance compared to high-stress Silicon Valley startups, though occasional project deadlines can create spikes in workload."
   }
  },
  "genuine parts company": {
@@ -168364,11 +168611,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -168380,6 +168629,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784900565,
   "last_evidence_at": 1784680916,
   "name": "Headway",
   "pace_of_work": {
@@ -168392,6 +168642,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784900685,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -168435,7 +168686,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=52c961ff90a44d9d765f7c699abdf9f5352e58eccfc603b33ab22a5aefa210aaJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly9oZWFkd2F5LmNvLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680916,
   "web_search_url": "https://duckduckgo.com/?q=Headway+company+careers+benefits",
@@ -240570,52 +240821,119 @@
  "mixpanel": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "e5e7e1da35"
+   ],
+   "value": "Estimated: Tier 2. Well-recognized and highly respected mid-tier tech brand, increasingly boosting its prestige by aggressively pushing an AI-first analytics vision."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "e5e7e1da35"
+   ],
+   "value": "Subscription-based software as a service (SaaS) for digital product and event analytics."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "e5e7e1da35"
+   ],
+   "value": "Innovation-driven and data-obsessed, focused on accelerating adoption and improving retention through clarity and AI."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "e5e7e1da35"
+   ],
+   "value": "More than 29,000 companies, including notable brands like Workday, Pinterest, LG, and Rakuten Viber."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130,000-$160,000 base salary, aligning with high new-grad pay expectations for AI/data science roles at top-tier tech firms."
   },
   "evidence_sha": "c87c7104b7b005e4",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784900565,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784900370,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e5e7e1da35"
+   ],
+   "value": "Technology / Software as a Service (SaaS) / Digital Analytics"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "e5e7e1da35"
+   ],
+   "value": "To maximize your fit and guarantee a sane work-life balance, focus the interview conversation on the Proactive Insights team's execution velocity. Ask how they scope AI product insights to avoid high-burnout crunches and ensure guaranteed shutdowns, verifying that the fast-paced innovation culture respects your personal time while still delivering the new-grad pay and prestige you expect."
+  },
+  "last_attempt_at": 1784900565,
   "last_evidence_at": 1784834268,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "efb7301e56"
+   ],
+   "value": "Not explicitly found in sources, though hires through greenhouse.io are typically in the US."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "e5e7e1da35"
+   ],
+   "value": "Turns data clarity into innovation."
+  },
   "name": "Mixpanel",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e5e7e1da35"
+   ],
+   "value": "Estimated: Fast-paced and high-impact. Described as a small, fast-moving team where your work directly defines new product categories for the company."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "e5e7e1da35"
+   ],
+   "value": "AI-first digital analytics platform, including newly formed Proactive Insights AI products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of flexible PTO annually, typical for mid-to-late stage tech companies of this size; exact policy not found."
   },
-  "retry_after": 1784900490,
+  "refresh_after": 1790084565,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "e5e7e1da35"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Provides sane hours and prioritizes guaranteed shutdowns to avoid burnout, avoiding high-burnout environments."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "e5e7e1da35"
+   ],
+   "value": "Established, mid-to-late stage private company with over 29,000 enterprise customers."
   },
   "sources": [
    {
@@ -240669,14 +240987,45 @@
     "url": "https://job-boards.greenhouse.io/mixpanel/jobs/7941930"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "efb7301e56"
+   ],
+   "value": "Not explicitly found in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "e5e7e1da35"
+   ],
+   "value": "Mixpanel is a product analytics company that helps teams understand user behavior to improve retention and ship products with confidence. It makes money by providing AI-first digital analytics software trusted by over 29,000 companies."
+  },
+  "synthesized_evidence_sha": "c87c7104b7b005e4",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "e5e7e1da35"
+   ],
+   "value": "Building a new product category around AI-first analytics, specifically on the newly formed, small, and fast-moving Proactive Insights team."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784834268,
   "web_search_url": "https://duckduckgo.com/?q=Mixpanel+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "e5e7e1da35"
+   ],
+   "value": "Mixpanel aligns perfectly with your goal of an elite, AI-first data science role that balances high impact with rapid innovation. The Proactive Insights team is small and fast-moving, deliberately designed to help you accelerate technical learning and define a new product category without the slow bureaucracy often found at larger tech firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "e5e7e1da35"
+   ],
+   "value": "Estimated: Good. The team emphasizes rapid innovation and impact over toxic burnout culture, making sane hours and guaranteed shutdowns a priority for sustainable engineering."
   }
  },
  "mixrank yc s11": {
@@ -252839,7 +253188,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -252882,7 +253231,7 @@
    ],
    "value": "Probe whether the role offers accelerated technical learning and career growth without sacrificing personal time, and clarify if compensation and work pace meet your expectations for an elite, fast-moving tech culture."
   },
-  "last_attempt_at": 1784900144,
+  "last_attempt_at": 1784900565,
   "last_evidence_at": 1784583334,
   "locations": {
    "confidence": "medium",
@@ -252917,7 +253266,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784900384,
+  "retry_after": 1784901045,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -284470,7 +284819,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -284488,7 +284837,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784900370,
+  "last_attempt_at": 1784900565,
   "last_evidence_at": 1784834269,
   "name": "Poshmark",
   "pace_of_work": {
@@ -284501,7 +284850,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784900490,
+  "retry_after": 1784900805,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -320033,39 +320382,113 @@
  },
  "science and technology corporation stc": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "1e27cf0b0f",
+    "94b904dcf2",
+    "c4a0ac4677"
+   ],
+   "value": "Unknown, as the provided source links did not load successfully to provide company details."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "1e27cf0b0f",
+    "94b904dcf2",
+    "c4a0ac4677"
+   ],
+   "value": "Unknown, as the provided source links did not load successfully to provide company details."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "1e27cf0b0f",
+    "94b904dcf2",
+    "c4a0ac4677"
+   ],
+   "value": "Unknown, as the provided source links did not load successfully to provide company details."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "1e27cf0b0f",
+    "94b904dcf2",
+    "c4a0ac4677"
+   ],
+   "value": "Unknown, as the provided source links did not load successfully to provide company details."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: New grad pay is unknown based on failed source retrieval, requiring direct confirmation with the employer."
   },
   "evidence_sha": "6d933763b47f632b",
+  "generated_at": 1784900565,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "1e27cf0b0f",
+    "94b904dcf2",
+    "c4a0ac4677"
+   ],
+   "value": "Unknown, as the provided source links did not load successfully to provide company details."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Ask exactly what the team's actual sprint pace is, how after-hours on-call obligations are handled, and if hard shutdown periods exist. Given your priority for elite technical growth, drill into how newly-grads are assigned to projects, whether direct mentorship exists, and if there are rotational or deep-learning pathways for immediate upskilling."
   },
+  "last_attempt_at": 1784900565,
   "last_evidence_at": 1784680916,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "1e27cf0b0f",
+    "94b904dcf2",
+    "c4a0ac4677"
+   ],
+   "value": "Unknown, as the provided source links did not load successfully to provide company details."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "1e27cf0b0f",
+    "94b904dcf2",
+    "c4a0ac4677"
+   ],
+   "value": "Unknown, as the provided source links did not load successfully to provide company details."
+  },
   "name": "Science and Technology Corporation (STC)",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Pace of work is unknown based on failed source retrieval, requiring direct confirmation with the employer."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "1e27cf0b0f",
+    "94b904dcf2",
+    "c4a0ac4677"
+   ],
+   "value": "Unknown, as the provided source links did not load successfully to provide company details."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: PTO policy is unknown based on failed source retrieval, requiring direct confirmation with the employer."
   },
+  "refresh_after": 1790084565,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -320075,7 +320498,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Shutdown policies are unknown based on failed source retrieval, requiring direct confirmation with the employer."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "1e27cf0b0f",
+    "94b904dcf2",
+    "c4a0ac4677"
+   ],
+   "value": "Unknown, as the provided source links did not load successfully to provide company details."
   },
   "sources": [
    {
@@ -320109,14 +320541,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=60f6a803b6e7ccffbcedcfc153da22fec032940d21b246518bc67b1e47e871e5JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuc2NpZW5jZS5vcmcv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "1e27cf0b0f",
+    "94b904dcf2",
+    "c4a0ac4677"
+   ],
+   "value": "Unknown, as the provided source links did not load successfully to provide company details."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1e27cf0b0f",
+    "94b904dcf2",
+    "c4a0ac4677"
+   ],
+   "value": "Information regarding the exact operational and revenue model of Science and Technology Corporation (STC) is not available in the provided sources, as all retrieved pages failed to resolve and resulted in redirect errors. Consequently, it is unclear from the supplied materials what the company specifically does or how it generates income."
+  },
+  "synthesized_evidence_sha": "6d933763b47f632b",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "1e27cf0b0f",
+    "94b904dcf2",
+    "c4a0ac4677"
+   ],
+   "value": "Unknown, as the provided source links did not load successfully to provide company details."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680916,
   "web_search_url": "https://duckduckgo.com/?q=Science+and+Technology+Corporation+%28STC%29+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "You are seeking an elite, high-paying AI/data science role with fast-paced innovation and strict work-life balance. Because STC's public profiles failed to resolve, you must probe directly during interviews to see if their technical culture, compensation, and output expectations meet your strict burnout, shutdown, and growth criteria."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Work-life balance metrics are unknown based on failed source retrieval, requiring direct confirmation with the employer."
   }
  },
  "sciton": {
@@ -330841,99 +331306,125 @@
  "simpson strong tie": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "b10aed1d5a"
+   ],
+   "value": "Estimated: Low. As a manufacturer focusing on C#/.NET and Azure cloud platforms, the company likely does not offer top-tier AI or data science prestige."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
-  },
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
-  },
-  "customers": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
-  },
-  "error": "",
-  "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
-  },
-  "evidence_sha": "53431382a667a405",
-  "generated_at": 1784442169,
-  "generator": {
-   "endpoint": "local",
-   "model": "qwen3:30b",
-   "task": "company_research"
-  },
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
-  },
-  "interview_focus": {
    "confidence": "high",
    "source_ids": [
     "b10aed1d5a"
    ],
-   "value": "Solid C#/.NET fundamentals and familiarity with desktop app patterns (WPF/WinForms) or strong OOP skills, as specified in the job posting."
+   "value": "Manufactures and sells engineered structural connectors, software, and solutions for the building industry."
   },
-  "last_attempt_at": 1784442169,
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "b10aed1d5a"
+   ],
+   "value": "Mission-driven and values-oriented, adhering to 9 established Principles of Business that emphasize trust, partnership, and an inspiring workplace."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "b10aed1d5a"
+   ],
+   "value": "Professionals and companies within the building and construction industry."
+  },
+  "error": "",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b10aed1d5a"
+   ],
+   "value": "Estimated: $70,000 - $90,000 annually for an Associate Software Engineer in Plano, TX, which is competitive for the region but below elite FAANG-tier new-grad compensation."
+  },
+  "evidence_sha": "53431382a667a405",
+  "generated_at": 1784900565,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b10aed1d5a"
+   ],
+   "value": "Building Materials / Construction Software & Solutions."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b10aed1d5a"
+   ],
+   "value": "Candidates should ask how the tech culture operates within a legacy manufacturer to gauge bureaucracy versus innovation. It is also vital to clarify new-grad compensation limits and confirm actual work-life balance and shutdown policies to ensure the environment isn't unexpectedly slow or toxic."
+  },
+  "last_attempt_at": 1784900565,
   "last_evidence_at": 1784674530,
   "locations": {
    "confidence": "high",
    "source_ids": [
     "b10aed1d5a"
    ],
-   "value": "Plano, TX (based on the job posting location for the Software Engineer Associate role)"
+   "value": "Plano, TX (among other corporate locations)."
   },
   "mission": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "b10aed1d5a"
+   ],
+   "value": "To operate as a trusted manufacturer, partner, and corporate citizen committed to customers and employees, guided by the founder's 9 Principles of Business."
   },
   "name": "Simpson Strong-Tie",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "b10aed1d5a"
+   ],
+   "value": "Estimated: Moderate to slow. As an established company since 1956, the pace is likely more deliberate and structured than a fast-paced tech startup."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
     "b10aed1d5a"
    ],
-   "value": "Engineered structural connectors, software, and solutions for the building industry"
+   "value": "Engineered structural connectors, software, and solutions for the building industry."
   },
-  "prompt_v": 1,
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "b10aed1d5a"
+   ],
+   "value": "Estimated: 15-20 days of standard paid time off annually for new hires, typical for established manufacturing corporations."
   },
+  "refresh_after": 1790084565,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "b10aed1d5a"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "b10aed1d5a"
+   ],
+   "value": "Estimated: Likely standard paid holidays, though specific guaranteed corporate shutdown periods are not explicitly mentioned."
   },
   "size_stage": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "b10aed1d5a"
+   ],
+   "value": "Established corporate manufacturer in operation since 1956."
   },
   "sources": [
    {
@@ -330978,9 +331469,11 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "estimated",
+   "source_ids": [
+    "b10aed1d5a"
+   ],
+   "value": "Estimated: No explicit mention of visa sponsorship found for this role; candidates should verify directly with the recruiting team."
   },
   "status": "ready",
   "summary": {
@@ -330988,27 +331481,32 @@
    "source_ids": [
     "b10aed1d5a"
    ],
-   "value": "Simpson Strong-Tie is a leader in engineered structural connectors, software, and solutions for the building industry, operating since 1956 with a focus on trusted manufacturing and corporate citizenship. The company emphasizes its 9 Principles of Business as core values."
+   "value": "Simpson Strong-Tie is a leader in engineered structural connectors, software, and solutions for the building industry. The company makes money by manufacturing and selling these structural building products and software solutions to the construction sector."
   },
+  "synthesized_evidence_sha": "53431382a667a405",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "b10aed1d5a"
    ],
-   "value": "Solid C#/.NET fundamentals and familiarity with desktop app patterns (WPF/WinForms) or strong OOP skills, as mentioned in the job posting for a Software Engineer Associate role."
+   "value": "Software engineering involving solid C#/.NET fundamentals, desktop app patterns (WPF/WinForms), and cloud services/API platforms on Microsoft Azure."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674530,
   "web_search_url": "https://duckduckgo.com/?q=Simpson+Strong-Tie+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "estimated",
+   "source_ids": [
+    "b10aed1d5a"
+   ],
+   "value": "While this role offers hands-on cloud and API platform experience, it is at a legacy manufacturing company rather than a fast-paced, elite tech firm. It may lack the top-tier new-grad pay, high innovative tech culture, and rapid technical acceleration of a pure tech player, though the mission-driven values and focus on employee respect suggest a strong work-life balance with sane hours."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "b10aed1d5a"
+   ],
+   "value": "Estimated: Strong. The company emphasizes being an 'inspiring place to work' and a committed corporate citizen to its employees, suggesting a culture that respects personal time."
   }
  },
  "simulmedia": {
@@ -362413,7 +362911,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -362431,7 +362929,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784900370,
+  "last_attempt_at": 1784900565,
   "last_evidence_at": 1784676857,
   "name": "The Amatriot Group",
   "pace_of_work": {
@@ -362444,7 +362942,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784900490,
+  "retry_after": 1784900805,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
