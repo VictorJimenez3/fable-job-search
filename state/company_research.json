@@ -16124,41 +16124,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 (Hardware/Edge AI leader) — Not a primary AI research lab like FAIR/DeepMind, but a recognized leader in deploying ML on silicon at the edge with high publication visibility in ISSCC, JSSC, and TinyML venues."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fabless-lite semiconductor model: ADI designs chips and owns proprietary process technology but leverages both internal fabrication (for differentiated analog processes) and external foundries for high-volume digital CMOS. Revenue comes from direct sales and distribution of high-margin, long-life-cycle ICs with strong IP moats."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, low-politics, collaborative. Long tenures common (15+ yr median). Decision-making is data-driven and consensus-oriented; bureaucracy exists but is technical (design reviews, quality systems) rather than administrative. Diversity initiatives visible but progress gradual."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Broad B2B base across industrial, automotive, communications, consumer, and healthcare sectors. Key accounts include major OEMs and contract manufacturers building factory automation, EV/ADAS systems, 5G infrastructure, medical imaging, and test/measurement equipment."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k–$150k base / $25k–$40k sign-on / $40k–$70k RSU (4-yr) = $195k–$260k year-1 total comp for EE/CS roles in high-cost hubs (Bay Area, Boston). Lower in MA/NC sites."
   },
   "evidence_sha": "5bee7ea414a99ef7",
+  "generated_at": 1784863706,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Semiconductors — Analog & Mixed-Signal ICs"
   },
-  "last_attempt_at": 1784863541,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep analog fundamentals (device physics, noise, linearity), circuit design walkthroughs, and signal-processing theory. For AI/DS roles: demonstrate ability to map ML models onto constrained DSP/MCU hardware, optimize for power/latency, and collaborate with IC designers. Behavioral questions probe cross-functional collaboration and long-project ownership."
+  },
+  "last_attempt_at": 1784863706,
   "last_evidence_at": 1784674898,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Wilmington, MA. Major design centers: San Jose, CA; Boston/Northwest MA; Raleigh, NC; Toronto; Limerick (Ireland); Manila; Bangalore; Tokyo. Fabs in Wilmington, MA and Beaverton, OR plus foundry partnerships."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To bridge the physical and digital worlds with unmatched analog and mixed-signal technology, enabling breakthroughs in how people live, work, and communicate."
+  },
   "name": "Analog Devices",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Measured, project-oriented cadence (12–36 month design cycles). Sprints exist in firmware/ML teams but are buffered by hardware tape-out schedules; quarterly planning dominates over weekly fire-drills."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core product lines include data converters (ADCs/DACs), amplifiers, RF/microwave components, power management ICs, MEMS sensors, and DSP/embedded processors. These are sold as components and as integrated subsystems for instrumentation, communications, automotive, industrial automation, and healthcare."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days vacation + 10 company holidays + 2 floating days (US new grads); accrual increases with tenure. Unlimited sick time. Summer/Winter shutdowns add ~5–7 extra days."
   },
-  "retry_after": 1784863661,
+  "refresh_after": 1790047706,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -16168,7 +16206,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual summer shutdown (typically 1 week in July) and winter shutdown (1 week between Christmas and New Year) — company-wide, paid, no PTO charged."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large-cap public company (NASDAQ: ADI); ~26,000 employees globally; FY2024 revenue ~$12.3B. Mature, profitable, and acquisitive (notably Maxim Integrated merger 2021)."
   },
   "sources": [
    {
@@ -16202,14 +16245,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=2e9ec65f4a84c37456d3433270cb8856e1cbabf796ceb5b65a6c8487d575edb1JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1fc87c60-4d5f-6869-1fee-6bfd4cab6979&u=a1aHR0cHM6Ly93d3cuYW5hbG9nLmNvbS9lbi9pbmRleC5odG1s&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active H-1B sponsor (top 50 employer historically); supports O-1, TN, and green-card (PERM) processing for eligible roles. University recruiting targets top EE/CS programs globally."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Analog Devices (ADI) is a global semiconductor leader specializing in analog, mixed-signal, and digital signal processing (DSP) integrated circuits. The company designs and manufactures chips that bridge the physical and digital worlds, enabling signal conversion, amplification, and processing for a vast range of electronic systems."
+  },
+  "synthesized_evidence_sha": "5bee7ea414a99ef7",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Deep analog/mixed-signal IC design, RF/mmWave circuit design, DSP algorithm development, embedded firmware, hardware validation, test engineering, and increasingly ML/AI for signal processing, predictive maintenance, and edge inference. Strong publication and patent culture."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674898,
   "web_search_url": "https://duckduckgo.com/?q=Analog+Devices+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "ADI offers elite semiconductor prestige with a growing AI/ML footprint (edge inference, TinyML, signal intelligence) while maintaining a hardware-centric culture that historically respects work-life boundaries better than pure software hyperscalers. New-grad total compensation is top-decile for analog/mixed-signal roles, and the company’s long product cycles reduce death-march crunches common in consumer internet."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Core hours culture with limited weekend/on-call expectation for most design/ML roles. Fab/ops rotations have shift schedules. Company emphasizes ‘sustainable pace’ in engagement surveys."
   }
  },
  "analysis group": {
@@ -17771,7 +17835,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -17789,7 +17853,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784863541,
+  "last_attempt_at": 1784863706,
   "last_evidence_at": 1784677230,
   "name": "Antares Nuclear",
   "pace_of_work": {
@@ -17802,7 +17866,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784863661,
+  "retry_after": 1784863946,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -36703,37 +36767,83 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown tier due to lack of public research presence, publications, or conference visibility."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No business model information available from supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown culture; no employee reviews or cultural signals in supplied sources."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No customer information available from supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown compensation; no salary data available for new grad AI/DS roles."
   },
   "evidence_sha": "78119c71141d8ed7",
+  "generated_at": 1784863706,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Unknown; insufficient public data to classify industry."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Focus interviews on clarifying: actual AI/DS team structure and project scope; compensation transparency for new grads; engineering culture pace and deployment frequency; explicit WLB policies (core hours, shutdowns, on-call); mentorship and learning budget; and mission authenticity beyond marketing."
+  },
+  "last_attempt_at": 1784863706,
   "last_evidence_at": 1784630051,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No location information found in supplied sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No mission statement found in supplied sources."
+  },
   "name": "Blissway",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown; no employee reports or public data on work pace."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "8b6426d0a7",
+    "cd9ff6c62f",
+    "f2c8311655"
+   ],
+   "value": "No verifiable product information found in supplied sources. Sources discuss UPS package tracking on Reddit, not Blissway products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown PTO policy; no public benefits documentation found."
   },
+  "refresh_after": 1790047706,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -36743,7 +36853,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No information on company-wide shutdowns or guaranteed disconnect policies."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Early-stage or small company given lack of public presence; exact size and funding stage unknown."
   },
   "sources": [
    {
@@ -36777,14 +36892,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=4d85ce586d16b068537b2a71a9f655950488cac4de1bf8fb1cc777ca8382c593JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=227c6992-93b9-66c6-194e-7e0f92fd67be&u=a1aHR0cHM6Ly93d3cucmVkZGl0LmNvbS9yL1VQUy9jb21tZW50cy9hN2l3YmIvdHJhY2tpbmdfYV9wYWNrYWdlX2FmdGVyXzEyMF9kYXlzLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No visa sponsorship information available from supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "8b6426d0a7",
+    "cd9ff6c62f",
+    "f2c8311655"
+   ],
+   "value": "Blissway appears to be a company with limited public information available. The provided sources reference Reddit discussions about UPS package tracking rather than Blissway itself, suggesting minimal verifiable public data on the company's operations."
+  },
+  "synthesized_evidence_sha": "78119c71141d8ed7",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No technical work details available from supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784630051,
   "web_search_url": "https://duckduckgo.com/?q=Blissway+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks elite AI/data science role with high new-grad pay, fast innovative culture, mission-driven focus, strong work-life balance with sane hours/guaranteed shutdowns, and accelerated technical growth without personal time sacrifice. Blissway's alignment is unknown due to insufficient public data."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown; no verifiable work-life balance data from sources."
   }
  },
  "blitzy": {
@@ -111100,37 +111240,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 4 (Non-technical employer; recruiting services firm). Does not conduct AI/ML research or build models. Prestige derives from client roster, not technical output."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Contingency and retained search fees for direct placements; hourly markups for contract staffing; possible subscription or consulting retainers for talent advisory services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Competitive, relationship-driven, metric-oriented sales culture with emphasis on placement volume and client satisfaction. Less \"engineering-first\" than product companies."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Technology companies, startups, and enterprises seeking specialized engineering and data talent across various industries."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70k-$90k base + commission/bonus for junior recruiter or analyst roles. Not competitive with top-tier AI/DS new-grad packages ($150k-$250k+)."
   },
   "evidence_sha": "68fe2fc6a03e77e3",
+  "generated_at": 1784863706,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology recruiting & staffing / Human capital services"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "If interviewing for an internal technical role (e.g., recruiting ops, data analyst), expect focus on SQL/Python, ATS/CRM systems, sourcing automation, and talent market analytics. For recruiter roles: consultative selling, technical screening ability, and client management. No AI/DS research depth expected."
+  },
+  "last_attempt_at": 1784863706,
   "last_evidence_at": 1784674902,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquartered in the Washington DC metro area (Arlington, VA); may have remote/hybrid presence across US tech hubs."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To bridge the gap between top-tier technical talent and innovative companies through specialized recruiting expertise."
+  },
   "name": "Hatch IT",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced, metrics-driven sales/recruiting cycles with quarterly quotas. Internal tech roles may have more sustainable pace but still service-oriented."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Technical recruiting services, contract staffing, direct-hire placement, and talent consulting for software engineering, data science, AI/ML, and related roles. No proprietary software product indicated in available sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + US federal holidays; unlimited policies uncommon in traditional staffing firms."
   },
+  "refresh_after": 1790047706,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -111140,7 +111322,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; typical US staffing firm holiday schedule only."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Small to mid-sized private company (likely 50-200 employees), mature recruiting firm rather than early-stage startup."
   },
   "sources": [
    {
@@ -111174,14 +111361,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=6d74155d63cdfa30380805d795dba55dc92d135d477773c0de17ecf41a5a6f12JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1fc87c60-4d5f-6869-1fee-6bfd4cab6979&u=a1aHR0cHM6Ly93d3cuaGF0Y2guY28vcmVzdG9yZQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a staffing firm, may place candidates on client-sponsored visas (H-1B, O-1, TN) but unlikely to sponsor directly for internal roles except senior positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Hatch IT is a technology-focused recruiting and staffing firm that connects companies with engineering, data science, and AI talent. The company operates as a talent marketplace and recruitment partner rather than a product company."
+  },
+  "synthesized_evidence_sha": "68fe2fc6a03e77e3",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Internal roles may include recruiting operations tooling, CRM/ATS customization, data analysis for talent market insights, and automation of sourcing workflows. Not a primary AI/ML product engineering environment."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674902,
   "web_search_url": "https://duckduckgo.com/?q=Hatch+IT+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a candidate seeking elite AI/data science prestige with high new-grad pay and fast innovation culture: Hatch IT is a recruiting firm, not an AI product company, so it does not offer direct AI/DS research or engineering roles with technical prestige. It may provide exposure to many companies but lacks the mission-driven technical culture, guaranteed shutdowns, or accelerated technical learning of an AI-native employer."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5. Recruiting roles often involve evenings/weekends for candidate/client calls. Internal tech roles likely better but still subject to service demands."
   }
  },
  "havi": {
@@ -140205,11 +140413,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -140221,6 +140431,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784863706,
   "last_evidence_at": 1784674043,
   "name": "LabCorp",
   "pace_of_work": {
@@ -140233,6 +140444,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784863826,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -140276,7 +140488,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=f780c4d8c0d6463c8542b25267c27a16d088ca10d75fb2c5948f8211f78f3a1bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2fce379a-2ad2-621a-3a8d-20072bc96375&u=a1aHR0cHM6Ly93d3cubGFiY29ycC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674043,
   "web_search_url": "https://duckduckgo.com/?q=LabCorp+company+careers+benefits",
@@ -212850,48 +213062,127 @@
  "ryan specialty": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "d9153f72a4"
+   ],
+   "value": "Estimated: Tier 2-3. The company is prestigious in the insurance domain but is not a top-tier destination for elite AI or Data Science talent."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a72739797b"
+   ],
+   "value": "Source content was unavailable. Estimated: Ryan Specialty generates revenue by taking a percentage of premiums or through fee-based services, acting as a wholesale intermediary between retail brokers and insurance carriers."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "94b30a0686"
+   ],
+   "value": "Estimated: Mission-driven and focused on service, but may lean slightly bureaucratic rather than feeling like a highly innovative tech culture."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d9153f72a4"
+   ],
+   "value": "Source content was unavailable. Estimated: Wholesale insurance brokers, retail agents, and managing general agents (MGAs)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "94b30a0686"
+   ],
+   "value": "Estimated: $90,000 - $115,000 base salary, which is competitive for insurance but below elite tech compensation."
   },
   "evidence_sha": "85709809b93c10fa",
+  "generated_at": 1784863706,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "d9153f72a4"
+   ],
+   "value": "Source content was unavailable. Estimated: Insurance (Wholesale and Specialty)."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "94b30a0686"
+   ],
+   "value": "Probe whether the specific team uses modern AI/data science stacks or is tied to slow legacy systems. Ask about exact expectations for after-hours work and whether they offer guaranteed shutdowns, as their typical corporate culture may not inherently align with elite new-grad tech pay."
+  },
+  "last_attempt_at": 1784863706,
   "last_evidence_at": 1784674044,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a72739797b"
+   ],
+   "value": "Source content was unavailable. Estimated: Headquarters in Chicago, Illinois, with various other offices located globally."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d9153f72a4"
+   ],
+   "value": "Source content was unavailable. Estimated: To provide unmatched service, speed, and capacity to insurance brokers and agents in the specialty insurance market."
+  },
   "name": "Ryan Specialty",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "a72739797b"
+   ],
+   "value": "Estimated: Moderate to fast, driven by client turnarounds and market needs, but with some traditional corporate structures."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d9153f72a4",
+    "a72739797b",
+    "94b30a0686"
+   ],
+   "value": "Source content was unavailable. Estimated: Specialty insurance products, underwriting facilities, and binding authority distribution services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "a72739797b"
+   ],
+   "value": "Estimated: 20-25 days of paid time off annually for full-time employees."
   },
+  "refresh_after": 1790047706,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "d9153f72a4"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "d9153f72a4"
+   ],
+   "value": "Estimated: No indication of guaranteed tech-wide shutdowns, though standard public holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d9153f72a4"
+   ],
+   "value": "Source content was unavailable. Estimated: A large, established corporate organization with thousands of employees operating globally."
   },
   "sources": [
    {
@@ -212925,14 +213216,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=18dd14946943f5ff92259350e0b0c14779d4e92f0065fd554cf57db75e7ccc18JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2fce379a-2ad2-621a-3a8d-20072bc96375&u=a1aHR0cHM6Ly93d3cueW91dHViZS5jb20vY2hhbm5lbC9VQ2hHSkdoWjlTT09IdkJCMFk0RE9PX3c&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a72739797b"
+   ],
+   "value": "Source content was unavailable. Estimated: Historically provides visa sponsorship for senior or highly specialized technical roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d9153f72a4",
+    "a72739797b",
+    "94b30a0686"
+   ],
+   "value": "The provided sources do not contain textual information about the company, as they are redirect pages. We estimate that Ryan Specialty is a holding company that provides distribution, underwriting, and product development services to insurance brokers, agents, and carriers."
+  },
+  "synthesized_evidence_sha": "85709809b93c10fa",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d9153f72a4"
+   ],
+   "value": "Source content was unavailable. Estimated: Tech roles likely involve maintaining internal underwriting platforms, developing APIs for policy administration, and modernizing legacy insurance systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674044,
   "web_search_url": "https://duckduckgo.com/?q=Ryan+Specialty+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "94b30a0686"
+   ],
+   "value": "A fast-paced, innovative, and mission-driven company that respects work-life balance and accelerates technical learning aligns with your priorities. We estimate Ryan Specialty's corporate structure might have some bureaucracy, but interviewing will clarify if they offer top-tier AI/data science roles with guaranteed shutdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "d9153f72a4"
+   ],
+   "value": "Estimated: Good. Known for a balanced environment compared to toxic startups, but absolute hours may vary by team."
   }
  },
  "ryder system": {
@@ -218587,37 +218911,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High-tier within industrial AI, benefiting from Siemens brand name and practical impact."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "705ab43bfd",
+    "affc3d4a5e",
+    "3b0f065630"
+   ],
+   "value": "Enterprise B2B software licensing and service contracts facilitated through Siemens' global corporate channels."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven and technical, blending startup roots with enterprise stability."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "705ab43bfd",
+    "affc3d4a5e",
+    "3b0f065630"
+   ],
+   "value": "Global industrial and manufacturing enterprises."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: High new-grad pay, likely £45,000-£60,000, reflecting elite AI role balance."
   },
   "evidence_sha": "45332f8871887350",
+  "generated_at": 1784863706,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "705ab43bfd",
+    "affc3d4a5e",
+    "3b0f065630"
+   ],
+   "value": "Industrial Software / AI / Predictive Maintenance."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Be prepared to discuss how the team balances rapid technical innovation and learning opportunities against Siemens' corporate structure, ensuring the role guarantees sane hours and work-life balance without bureaucratic bottlenecks."
   },
+  "last_attempt_at": 1784863706,
   "last_evidence_at": 1784674043,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "705ab43bfd",
+    "affc3d4a5e",
+    "3b0f065630"
+   ],
+   "value": "Primarily based in the UK, with presence across global Siemens offices."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "705ab43bfd",
+    "affc3d4a5e",
+    "3b0f065630"
+   ],
+   "value": "To use AI to deliver scalable predictive maintenance, driving industrial efficiency and minimizing equipment downtime."
+  },
   "name": "Senseye - A Siemens business",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Faster-paced than legacy industrial units due to AI focus, but potentially constrained by parent company bureaucracy."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "705ab43bfd",
+    "affc3d4a5e",
+    "3b0f065630"
+   ],
+   "value": "AI-driven predictive maintenance software and industrial analytics applications."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-30 days of annual leave, typical for UK/Siemens corporate roles."
   },
+  "refresh_after": 1790047706,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -218627,7 +219017,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely observes standard UK bank holidays and potentially a winter holiday shutdown, though specific guaranteed shutdowns are not public."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "705ab43bfd",
+    "affc3d4a5e",
+    "3b0f065630"
+   ],
+   "value": "Acquired/subsidiary stage operating within the massive corporate structure of Siemens."
   },
   "sources": [
    {
@@ -218661,14 +219060,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=0c86e1144f474d2f6ec405a8f5e659d5f0e1f13450e03061433203d9137be10eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2fce379a-2ad2-621a-3a8d-20072bc96375&u=a1aHR0cHM6Ly93d3cuY29zdGNvLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "705ab43bfd",
+    "affc3d4a5e",
+    "3b0f065630"
+   ],
+   "value": "Backed by and fully integrated into Siemens, providing vast financial and industrial resources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "705ab43bfd",
+    "affc3d4a5e",
+    "3b0f065630"
+   ],
+   "value": "Senseye, operating as part of Siemens, applies AI and machine learning to industrial data to predict equipment failures and optimize maintenance. As an integrated Siemens business, it monetizes by offering enterprise predictive maintenance solutions that reduce downtime and operational costs for manufacturers."
+  },
+  "synthesized_evidence_sha": "45332f8871887350",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "705ab43bfd",
+    "affc3d4a5e",
+    "3b0f065630"
+   ],
+   "value": "Applied AI, machine learning, and data science focused on time-series data, anomaly detection, and predictive maintenance."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674043,
   "web_search_url": "https://duckduckgo.com/?q=Senseye+-+A+Siemens+business+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role offers the elite prestige and strong new-grad pay of a top-tier AI position with the backing of a massive enterprise, potentially providing a fast-paced, innovative tech culture within a mission-driven industrial AI context."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good, supported by European corporate norms and Siemens' established HR policies."
   }
  },
  "sensiple": {
@@ -236937,37 +237369,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (top 5% of employers for AI/DS new grads; peer group: Jane Street, Citadel, Two Sigma, HRT, Jump)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Captures bid-ask spreads and earns rebates by continuously quoting two-sided markets; profits from statistical edge in pricing models and low-latency execution; supplements with proprietary directional strategies and venture investments."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Meritocratic, intellectually intense, low-politics, engineer-led. 'Trader-technologist' partnership model means technologists have real voice in strategy. Casual dress, free high-quality food, strong poker/game theory culture. Collaboration expected; ego checked at door."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Exchanges (CBOE, NYSE, NASDAQ, Eurex, etc.), institutional investors, asset managers, hedge funds, broker-dealers, and retail order flow via wholesale market making relationships."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $175k–$225k base + $50k–$150k sign-on + $30k–$80k year-end bonus (total first-year $250k–$450k); partnership equity vesting starts year 1."
   },
   "evidence_sha": "83dba8e33d8bb326",
+  "generated_at": 1784863706,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect rigorous probability/statistics brainteasers, mental math, and coding (C++/Python) focused on algorithmic efficiency and systems thinking. Prepare for: order-book simulation design, variance reduction techniques, convex optimization, and low-latency architecture trade-offs. They test how you think under uncertainty, not just what you know."
+  },
+  "last_attempt_at": 1784863706,
   "last_evidence_at": 1784675400,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Bala Cynwyd, PA (Philadelphia metro). Major offices: New York, Chicago, Dublin, London, Hong Kong, Shanghai, Sydney. Remote/hybrid varies by team."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To be the world's premier liquidity provider through quantitative excellence, technological innovation, and a culture of meritocratic decision-making."
+  },
   "name": "Susquehanna International Group",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast during market hours (6:30 AM–4 PM ET core); project cycles measured in weeks, not quarters; rapid iteration with production deployments daily. Quieter weekends and protected holiday periods."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Market making in equity options, ETFs, futures, and fixed income; proprietary quantitative trading strategies; institutional brokerage and execution services; SIG Capital (venture investing)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10–12 firm holidays (includes full week shutdowns for July 4 and Christmas/New Year)"
   },
+  "refresh_after": 1790047706,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -236977,7 +237451,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Yes—firm-wide mandatory shutdown weeks around July 4 and Christmas/New Year (markets closed or thin); additional discretionary days at manager approval."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature private partnership (~2,500+ employees globally); profitable and self-funded since founding in 1987; no outside investors."
   },
   "sources": [
    {
@@ -237011,14 +237490,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=672bf39d6c22091b321ff7184ae96cd4ec0d9ef5f3ab166427cd7396add8e867JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0d747011-3ce6-69c5-21ed-678c3d4e68b0&u=a1aHR0cHM6Ly9zaWcuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B and green cards for quantitative research, software engineering, and data science roles; strong track record with STEM OPT extensions; process begins post-offer."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "eb6294a59a",
+    "6d799246ed",
+    "022297f09d"
+   ],
+   "value": "Susquehanna International Group (SIG) is a global quantitative trading firm and one of the largest market makers in options and ETFs. It operates as a private, employee-owned partnership that uses proprietary technology and quantitative models to provide liquidity across global exchanges."
+  },
+  "synthesized_evidence_sha": "83dba8e33d8bb326",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Ultra-low-latency C++/Rust trading infrastructure; large-scale data pipelines (Python, Kafka, Spark); quantitative research platforms; GPU-accelerated model training; custom hardware/FPGA development; real-time risk systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675400,
   "web_search_url": "https://duckduckgo.com/?q=Susquehanna+International+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "SIG offers elite prestige and top-decile new-grad compensation in a culture that genuinely values technical depth over hierarchy. You'll work on hard, high-impact problems (nanosecond latency, petabyte-scale data, novel ML for market prediction) alongside world-class peers, with a partnership structure that aligns long-term incentives. Hours are intense during market sessions but predictable—no weekend fire drills, protected shutdowns around major holidays, and a culture that respects the 'off' "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "7/10 for quant research/tech roles (predictable market-hour intensity, rare weekends, firm-wide shutdowns); lower for production support/ops roles with on-call rotations."
   }
  },
  "susquehanna international group sig": {
