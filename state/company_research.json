@@ -17546,42 +17546,106 @@
  "altera corporation": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "cb935282dc"
+   ],
+   "value": "Estimated: Mid-tier. Recognized for hardware acceleration and AI inference edge cases, but not traditionally classified as an elite 'top-tier' AI/Data Science company."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "d4a7acc91c"
+   ],
+   "value": "Fabless semiconductor model: Altera designs and markets programmable logic hardware and software, outsourcing the actual silicon fabrication to foundries, generating revenue through direct and channel sales."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "5135c1b401"
+   ],
+   "value": "Estimated: Engineering-focused and collaborative, with a heavy emphasis on deep technical problem-solving and hardware-software optimization."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "d4a7acc91c",
+    "cb935282dc"
+   ],
+   "value": "Telecommunications, data center, automotive, aerospace, industrial, and consumer electronics companies that require high-performance, reconfigurable hardware solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "5135c1b401"
+   ],
+   "value": "Estimated: $120k-$150k base salary for hardware/software engineering roles, potentially higher for specialized AI/Data Science positions."
   },
   "evidence_sha": "e84a59dad8a514e8",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784899126,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784898945,
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "5135c1b401"
+   ],
+   "value": "Semiconductors and Electronic Design Automation (EDA)."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784899126,
   "last_evidence_at": 1784680510,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "d4a7acc91c",
+    "5135c1b401"
+   ],
+   "value": "Headquartered in San Jose, California, with significant research and development operations in Portland, Oregon, and global offices across North America, Europe, and Asia."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "cb935282dc"
+   ],
+   "value": "To deliver leading programmable technologies that empower customers to accelerate their innovation and solve complex engineering challenges."
+  },
   "name": "Altera Corporation",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "d4a7acc91c"
+   ],
+   "value": "Estimated: Moderate. Operates on hardware development cycles and post-spin-off stabilization, which may feel slower and more structured than agile software startups."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "d4a7acc91c",
+    "cb935282dc",
+    "5135c1b401"
+   ],
+   "value": "Field-Programmable Gate Arrays (FPGAs), System-on-a-Chip (SoC) FPGAs, CPLDs, Power management devices, and FPGA development software (Quartus)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "d4a7acc91c"
+   ],
+   "value": "Estimated: 15-20 days of accrued vacation for new hires, plus standard public holidays and limited sick leave."
   },
-  "retry_after": 1784899065,
+  "refresh_after": 1790083126,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -17590,8 +17654,18 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "cb935282dc"
+   ],
+   "value": "Estimated: No company-wide guaranteed shutdowns, though holidays may provide natural breaks."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "d4a7acc91c",
+    "cb935282dc"
+   ],
+   "value": "Recently spun off from Intel into an independent, standalone company, operating globally with thousands of employees."
   },
   "sources": [
    {
@@ -17625,14 +17699,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=f1be666d6b956c6e4af570acda0548e3da80947acc65999a50fb12fe2f045f1cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2c426153-30e1-6263-3808-76cd31e76370&u=a1aHR0cHM6Ly93d3cuYWx0ZXJhLmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d4a7acc91c"
+   ],
+   "value": "Historically offered visa sponsorship for hard-to-fill specialized hardware and EDA roles, though policies may be stabilizing post-spin-off."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "d4a7acc91c",
+    "cb935282dc",
+    "5135c1b401"
+   ],
+   "value": "Altera Corporation is a leading semiconductor company that designs and manufactures programmable logic devices, such as FPGAs, along with associated software and intellectual property (IP). The company makes money by selling these hardware components, software tools, and IP solutions to a broad range of industries for use in data centers, communications, and embedded systems."
+  },
+  "synthesized_evidence_sha": "e84a59dad8a514e8",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "cb935282dc"
+   ],
+   "value": "Hardware description language (HDL) programming, FPGA architecture design, EDA software development (C++/Python), digital signal processing, and hardware-software co-design."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680510,
   "web_search_url": "https://duckduckgo.com/?q=Altera+Corporation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "cb935282dc"
+   ],
+   "value": "Estimated: Good. Typically offers sane, standard semiconductor industry hours, avoiding the heavy burnout culture seen in early-stage startups, though exact team experiences vary."
   }
  },
  "altice usa": {
@@ -24887,11 +24992,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -24903,6 +25010,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784899126,
   "last_evidence_at": 1784680610,
   "name": "Annapurna Labs (U.S.) Inc.",
   "pace_of_work": {
@@ -24915,6 +25023,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784899246,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -24968,7 +25077,7 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680610,
   "web_search_url": "https://duckduckgo.com/?q=Annapurna+Labs+%28U.S.%29+Inc.+company+careers+benefits",
@@ -60292,52 +60401,123 @@
  "brookhaven lab": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "50e31394b1"
+   ],
+   "value": "Estimated: Elite-Tier (Top 5 National Lab). Elite reputation in scientific computing and applied AI."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "50e31394b1"
+   ],
+   "value": "Primarily funded by the U.S. Department of Energy, securing billions in federal research grants to maintain facilities and enable scientific discovery. Operated under a government contract."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "50e31394b1"
+   ],
+   "value": "Estimated: Mission-driven, collaborative, and academic. Focused on deep technical growth and scientific advancement without cutthroat corporate pressures."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "50e31394b1"
+   ],
+   "value": "The U.S. Department of Energy, academic institutions, industry partners, and visiting scientific researchers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "50e31394b1"
+   ],
+   "value": "Estimated: $100k - $140k base salary, varying by education level (BS/MS/PhD), plus comprehensive federal-style benefits."
   },
   "evidence_sha": "54a4a8f20c5e6069",
+  "generated_at": 1784899126,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "50e31394b1"
+   ],
+   "value": "Scientific Research and Laboratory Services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Focus on confirming that day-to-day project cycles are innovative and agile rather than slowed by bureaucracy, while highlighting accelerated learning and strong work-life balance."
   },
-  "last_attempt_at": 1784898945,
+  "last_attempt_at": 1784899126,
   "last_evidence_at": 1784680600,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "50e31394b1"
+   ],
+   "value": "Main campus located in Upton, New York (Long Island)."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "50e31394b1"
+   ],
+   "value": "To advance fundamental scientific research and develop innovative technologies that address national challenges in energy, security, and the environment."
+  },
   "name": "Brookhaven Lab",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "50e31394b1"
+   ],
+   "value": "Estimated: Steady and research-focused. Driven by publication and scientific discovery deadlines rather than aggressive commercial product launches, though still innovative."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "50e31394b1"
+   ],
+   "value": "Cutting-edge scientific research, user facilities (such as the National Synchrotron Light Source II and the Center for Functional Nanomaterials), and specialized technical services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "50e31394b1"
+   ],
+   "value": "Estimated: 18 to 25 days of annual leave, accruing more with federal service tenure."
   },
-  "retry_after": 1784899065,
+  "refresh_after": 1790083126,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "50e31394b1"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "50e31394b1"
+   ],
+   "value": "Estimated: Guaranteed annual shutdowns, typically around federal holidays (e.g., Thanksgiving and Christmas/New Year periods)."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "50e31394b1"
+   ],
+   "value": "Mature government-funded national laboratory with thousands of staff members, operating as a stable, permanent institution."
   },
   "sources": [
    {
@@ -60371,14 +60551,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=2bcad3d77ea26933211398f52d9ea6c8dea736035cf88f2f07dec5f8924db79aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=040a1be3-347d-632c-32fd-0c7d35f96298&u=a1aHR0cHM6Ly93d3cuYnJvb2toYXZlbm55Lmdvdi8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "50e31394b1"
+   ],
+   "value": "As a federal research facility, it generally supports U.S. citizens and permanent residents fully; international hiring is possible but may be restricted by specific national security and grant requirements."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "50e31394b1"
+   ],
+   "value": "Brookhaven National Laboratory (BNL) is a multidisciplinary scientific research institution funded by the U.S. Department of Energy. Operated by Brookhaven Science Associates, it conducts fundamental and applied research across physics, chemistry, biology, and data sciences."
+  },
+  "synthesized_evidence_sha": "54a4a8f20c5e6069",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "50e31394b1"
+   ],
+   "value": "Involves high-performance computing, AI/ML model development for scientific research, large-scale data analysis, computational modeling, and software engineering for experimental facilities."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680600,
   "web_search_url": "https://duckduckgo.com/?q=Brookhaven+Lab+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Offers elite scientific prestige and competitive new-grad compensation while maintaining a mission-driven culture with guaranteed holiday shutdowns, prioritizing sane hours over toxic burnout."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "50e31394b1"
+   ],
+   "value": "Estimated: Excellent. Sane hours with strong personal time boundaries and respect for guaranteed shutdowns."
   }
  },
  "brown brothers harriman": {
@@ -102660,52 +102869,125 @@
  "dassault syst mes": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "6657a3eaf0"
+   ],
+   "value": "Estimated: Upper-mid. Highly respected in industrial and engineering AI, but slightly off the radar for mainstream AI hype."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "6657a3eaf0"
+   ],
+   "value": "Enterprise software licensing, subscriptions, and SaaS/Cloud-based platform access."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "6657a3eaf0"
+   ],
+   "value": "Estimated: Engineering-focused, stable, and mission-driven. Emphasizes deep technical problem-solving and long-term innovation over crunch culture."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "6657a3eaf0"
+   ],
+   "value": "Major global enterprises across aerospace, automotive, industrial machinery, life sciences, and consumer goods sectors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "6657a3eaf0"
+   ],
+   "value": "Estimated: $90k - $120k USD base, with moderate equity, reflecting strong but non-FAANG extremes for new grads."
   },
   "evidence_sha": "dd799bf51f41e26c",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784899126,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784898527,
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "6657a3eaf0"
+   ],
+   "value": "Software / Technology / Product Lifecycle Management (PLM)"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "6657a3eaf0"
+   ],
+   "value": "Highlight how your fast-paced innovative tech background fits their high-paying AI and data science needs while emphasizing that you value sane hours and a healthy WLB. Frame your learning acceleration as a product of mission-driven work and efficient processes, avoiding any appearance of slow bureaucracy in your problem-solving style."
+  },
+  "last_attempt_at": 1784899126,
   "last_evidence_at": 1784677606,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "6657a3eaf0"
+   ],
+   "value": "Global headquarters in Vélizy-Villacoublay, France, with a major corporate campus in Waltham, Massachusetts, and offices worldwide."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "6657a3eaf0"
+   ],
+   "value": "To provide businesses with the 3D digital mock-up and PLM software necessary to design, test, and manage their products throughout their entire lifecycle."
+  },
   "name": "Dassault Systèmes",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "6657a3eaf0"
+   ],
+   "value": "Estimated: Moderate and methodical. As a large enterprise, the culture leans toward structured engineering, though it is not a slow bureaucracy."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "6657a3eaf0"
+   ],
+   "value": "The 3DEXPERIENCE platform, SOLIDWORKS (3D design), CATIA (3D modeling), SIMULIA (simulation), ENOVIA (collaboration), and DELMIA (manufacturing operations)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "6657a3eaf0"
+   ],
+   "value": "Estimated: 25-30 days of paid time off per year, influenced by robust European labor standards."
   },
-  "retry_after": 1784899007,
+  "refresh_after": 1790083126,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "6657a3eaf0"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "6657a3eaf0"
+   ],
+   "value": "Estimated: Likely observes year-end holiday shutdowns, standard for French-headquartered firms."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "6657a3eaf0"
+   ],
+   "value": "Public company (Euronext Paris), large enterprise."
   },
   "sources": [
    {
@@ -102739,14 +103021,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=c05d647802053693ae75e03166547d8d92d9b1bf6e8de47b1dc9b3263a1cbabcJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=304c9329-257b-6eeb-2979-84b424526fb5&u=a1aHR0cHM6Ly93d3cuZGFzc2F1bHQtYXZpYXRpb24uY29tL2VuLw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "6657a3eaf0"
+   ],
+   "value": "Global company with offices in many regions; large multinational employers frequently sponsor work visas in areas where they face talent shortages."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "6657a3eaf0"
+   ],
+   "value": "Dassault Systèmes (often styled as Dassault Systèmes or 3DS) is a massive French software corporation that creates 3D design, 3D digital mock-up, and product lifecycle management (PLM) software. It makes money by licensing its industry-specific software suites and cloud-based platforms to large enterprises worldwide."
+  },
+  "synthesized_evidence_sha": "dd799bf51f41e26c",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "6657a3eaf0"
+   ],
+   "value": "Software development for complex 3D modeling, physics simulation, digital twins, and cloud platform architecture."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677606,
   "web_search_url": "https://duckduckgo.com/?q=Dassault+Syst%C3%A8mes+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "6657a3eaf0"
+   ],
+   "value": "If you want an AI or data science role with high prestige but also sane hours, this company offers mission-driven work on complex simulation/Digital Twin technology without the toxic burnout culture of FAANG. Unlike slow bureaucracies, its platform work involves fast-paced innovation, and its work-life balance respects your personal time to accelerate learning without sacrificing weekends."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "6657a3eaf0"
+   ],
+   "value": "Estimated: High. European corporate roots tend to enforce strong boundaries and respect for personal time compared to US-dominated FAANG."
   }
  },
  "dat freight analytics": {
@@ -131921,37 +132234,89 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 1 — strong ML brand, publishes at RecSys/KDD, builds core marketplace intelligence, attracts top PhDs and FAANG transfers."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "2e6ef6f1e7"
+   ],
+   "value": "Takes a commission on transactions between retailers and brands on its marketplace; may also offer value-added services like financing, logistics, and advertising for brands."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, retailer-obsessed, data-informed, low-ego, collaborative; strong writing culture (RFCs, memos); values diversity and inclusion."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "2e6ef6f1e7"
+   ],
+   "value": "Independent retailers (boutiques, specialty shops) seeking unique inventory; brands and makers wanting wholesale distribution to local stores globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $170k-$210k total (base $130k-$150k + equity $40k-$60k/yr + signing bonus); varies by location and role (MLE/DS higher)."
   },
   "evidence_sha": "19056f0222db4b7b",
+  "generated_at": 1784899126,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2e6ef6f1e7"
+   ],
+   "value": "B2B marketplace / wholesale e-commerce / retail tech"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect ML system design (recommendation, ranking), marketplace economics, scalable backend, and product sense; culture screens for collaboration, owner mindset, and alignment with retailer empowerment mission."
   },
+  "last_attempt_at": 1784899126,
   "last_evidence_at": 1784680602,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in San Francisco; additional hubs in New York, London, Paris, Toronto, Sydney; remote-friendly for many roles."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "2e6ef6f1e7"
+   ],
+   "value": "To power the future of local retail by helping independent entrepreneurs succeed through technology, data, and community."
+  },
   "name": "Faire",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable — quarterly planning, rapid iteration on marketplace features, on-call rotations managed; not known for death marches."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "2e6ef6f1e7"
+   ],
+   "value": "Online wholesale marketplace platform with discovery, ordering, and fulfillment tools for retailers and brands; includes data-driven recommendations, net-60 payment terms, and free returns on first orders."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + flexible sick/mental health; unlimited policy in some regions with encouraged minimum usage."
   },
+  "refresh_after": 1790083126,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -131961,7 +132326,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (last week of December); occasional summer recharge days; no guaranteed monthly shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Late-stage private company (unicorn valuation); hundreds of employees across engineering, product, sales, operations; backed by top-tier VCs (Sequoia, YC, etc.)."
   },
   "sources": [
    {
@@ -132005,14 +132375,37 @@
     "url": "https://boards.greenhouse.io/faire/jobs/8525230002?gh_jid=8525230002"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors H-1B and green cards for technical roles; history of hiring international talent in US, Canada, UK, EU offices."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "2e6ef6f1e7"
+   ],
+   "value": "Faire is a technology wholesale platform that connects independent retailers with brands and makers worldwide, enabling local boutiques to discover and source unique products efficiently."
+  },
+  "synthesized_evidence_sha": "19056f0222db4b7b",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Marketplace architecture, recommendation/search ML, payments/fintech, logistics optimization, retailer/brand tooling, data platform, internationalization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680602,
   "web_search_url": "https://duckduckgo.com/?q=Faire+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Faire offers a high-growth marketplace with elite AI/ML prestige (recommendation, search, pricing, fraud) and competitive new-grad compensation, while emphasizing mission-driven culture and sustainable pace over burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — culture emphasizes autonomy and outcomes; core hours + flexibility; limited weekend work; leadership vocal about burnout prevention."
   }
  },
  "fanatics": {
@@ -179525,37 +179918,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown tier due to lack of source data; requires direct candidate probing to determine if it meets elite standards."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "7bd374a522"
+   ],
+   "value": "No business model information was successfully loaded from the sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown vibe; requires direct candidate probing to identify if it is mission-driven and respectful of personal time."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "c8b1ebdd11"
+   ],
+   "value": "No customer data was successfully loaded from the sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown exact compensation; requires direct candidate probing to verify it meets high new-grad market rates."
   },
   "evidence_sha": "6ba9ad8cdb731e32",
+  "generated_at": 1784899126,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "7bc5332a49"
+   ],
+   "value": "No industry classification was successfully loaded from the sources."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Determine if the company's AI/data science work is genuinely elite and innovative, ensuring it meets your high new-grad pay and prestige standards. Probe deeply into the team's pace to confirm it is fast-moving rather than bureaucratic, and validate their commitment to work-life balance, sane hours, and guaranteed shutdowns to ensure a low-burnout, mission-driven environment."
   },
+  "last_attempt_at": 1784899126,
   "last_evidence_at": 1784680607,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "7bd374a522"
+   ],
+   "value": "No office location data was successfully loaded from the sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "7bc5332a49"
+   ],
+   "value": "No mission statement was successfully loaded from the sources."
+  },
   "name": "Icon",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown pace; requires direct candidate probing to confirm it is fast and innovative rather than bureaucratic."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "7bd374a522"
+   ],
+   "value": "No product descriptions were successfully loaded from the sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown exact PTO; requires direct candidate probing to confirm adequate rest allowances."
   },
+  "refresh_after": 1790083126,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -179565,7 +180012,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown shutdown policy; requires direct candidate probing to verify if guaranteed company-wide breaks exist."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "c8b1ebdd11"
+   ],
+   "value": "No company size or funding stage data was successfully loaded from the sources."
   },
   "sources": [
    {
@@ -179599,14 +180053,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=76b9dba5bff8065b047e9edf0bb382464fc0af57c699f1411eb7e928ed047b3eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=040a1be3-347d-632c-32fd-0c7d35f96298&u=a1aHR0cHM6Ly93d3cuZmxhdGljb24uY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "c8b1ebdd11"
+   ],
+   "value": "No visa sponsorship details were successfully loaded from the sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "7bd374a522",
+    "c8b1ebdd11",
+    "7bc5332a49"
+   ],
+   "value": "Exact company details could not be retrieved as all supplied public sources are redirect pages with no accessible text. Consequently, specific factual data on the company, its core operations, and its revenue streams are unavailable."
+  },
+  "synthesized_evidence_sha": "6ba9ad8cdb731e32",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "7bc5332a49"
+   ],
+   "value": "No engineering or data science tech stack details were successfully loaded from the sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680607,
   "web_search_url": "https://duckduckgo.com/?q=Icon+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "A role here must align with your need for a top-tier AI/data science position that balances elite prestige and high new-grad pay with a fast, innovative tech culture. The ideal fit would be a mission-driven company that respects work-life balance through sane hours and guaranteed shutdowns, accelerating your technical learning without sacrificing personal time or leading to burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown rating; requires direct candidate probing to verify sane hours and low burnout."
   }
  },
  "idealforce": {
@@ -184380,7 +184863,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -184398,7 +184881,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784898945,
+  "last_attempt_at": 1784899126,
   "last_evidence_at": 1784680509,
   "name": "Inizio",
   "pace_of_work": {
@@ -184411,7 +184894,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784899065,
+  "retry_after": 1784899366,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -198714,37 +199197,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 - Strong industry reputation with unique proprietary data assets; growing ML investment but not a primary AI research lab"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "190b897934",
+    "e0ee38eeff",
+    "321d368182"
+   ],
+   "value": "B2B services model selling custom research projects, subscription-based data platforms, syndicated studies, and consulting engagements to enterprise clients on a project or retainer basis."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, collaborative, intellectually rigorous; strong domain expertise culture with increasing tech-forward mindset; hierarchical but accessible leadership"
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "190b897934",
+    "e0ee38eeff",
+    "321d368182"
+   ],
+   "value": "Fortune 500 companies, global brands, governments, and organizations seeking consumer and market intelligence across sectors like FMCG, technology, finance, and healthcare."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k-$120k base + 10-15% bonus + RSU (US); £35k-£45k base + bonus (UK); varies significantly by hub and role specialization"
   },
   "evidence_sha": "ba8e736e63e84ddb",
+  "generated_at": 1784899126,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "190b897934",
+    "e0ee38eeff",
+    "321d368182"
+   ],
+   "value": "Market Research, Data Analytics, Management Consulting"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect case studies on consumer analytics, SQL/Python assessments for data manipulation, ML modeling questions focused on survey/behavioral data, and stakeholder communication scenarios. Emphasize experience with messy real-world data, causal inference, and translating technical findings to business impact."
   },
+  "last_attempt_at": 1784899126,
   "last_evidence_at": 1784680601,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "190b897934",
+    "e0ee38eeff",
+    "321d368182"
+   ],
+   "value": "Global headquarters in London; major hubs in New York, Chicago, San Francisco, Paris, Frankfurt, Singapore, Shanghai, Sydney, and 80+ other offices worldwide."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "190b897934",
+    "e0ee38eeff",
+    "321d368182"
+   ],
+   "value": "To be the world's leading evidence-based insights and consulting company, helping clients understand people and inspire growth through data and analytics."
+  },
   "name": "Kantar",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate - Project-based consulting cycles with predictable crunch periods; slower than pure tech but faster than traditional consulting"
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "190b897934",
+    "e0ee38eeff",
+    "321d368182"
+   ],
+   "value": "Market research, consumer insights, brand tracking, media measurement, consulting services, and data analytics platforms across multiple industries."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days PTO + 10-12 company holidays (varies by country); UK/US policies differ"
   },
+  "refresh_after": 1790083126,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -198754,7 +199303,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; some regions observe reduced operations during Christmas/New Year period"
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "190b897934",
+    "e0ee38eeff",
+    "321d368182"
+   ],
+   "value": "Large established private company (~30,000 employees globally), owned by Bain Capital since 2019, operating in 90+ markets."
   },
   "sources": [
    {
@@ -198788,14 +199346,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=fb0b0eacd387e32e398472a5aee522e9d988174355a02da3b0b0e252c225d0ebJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=040a1be3-347d-632c-32fd-0c7d35f96298&u=a1aHR0cHM6Ly93d3cua2FudGFyLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors H-1B and other work visas for technical roles in US and UK hubs; large global footprint supports internal transfers."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "190b897934",
+    "e0ee38eeff",
+    "321d368182"
+   ],
+   "value": "Kantar is a global data, insights, and consulting company that provides evidence-based research and analytics to help clients understand consumers, markets, and brand performance."
+  },
+  "synthesized_evidence_sha": "ba8e736e63e84ddb",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Data engineering, ML/AI for consumer behavior modeling, NLP for survey analysis, large-scale survey platforms, real-time analytics dashboards, and cloud-based data products."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680601,
   "web_search_url": "https://duckduckgo.com/?q=Kantar+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Kantar offers elite prestige as the world's leading evidence-based insights firm with massive proprietary datasets, combining consulting rigor with growing AI/ML investments. As a Bain Capital portfolio company, it balances enterprise stability with transformation initiatives, offering new grads exposure to petabyte-scale consumer data and real-world ML applications without the burnout culture of pure tech giants."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 - Generally respected boundaries with ~40-45 hour weeks typical; client deadlines create periodic intensity but not systemic burnout culture"
   }
  },
  "katalyst space": {
@@ -231170,11 +231753,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -231186,6 +231771,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784899126,
   "last_evidence_at": 1784680607,
   "name": "Megger",
   "pace_of_work": {
@@ -231198,6 +231784,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784899246,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -231241,7 +231828,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=b8c69829e7f8ce653211c93766b07b246df6d3d8114d05f225805eccbfd812a4JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=040a1be3-347d-632c-32fd-0c7d35f96298&u=a1aHR0cHM6Ly93d3cubWVnZ2VyLmNvbS9lbg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680607,
   "web_search_url": "https://duckduckgo.com/?q=Megger+company+careers+benefits",
@@ -233065,11 +233652,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -233081,6 +233670,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784899126,
   "last_evidence_at": 1784680602,
   "name": "Metergy Solutions",
   "pace_of_work": {
@@ -233093,6 +233683,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784899246,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -233136,7 +233727,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=32cc7c4f22b8d00a7f4414d8c87241998d56bb8922a5f7e6c12549b85984b38bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=040a1be3-347d-632c-32fd-0c7d35f96298&u=a1aHR0cDovL2ZvcnVtcy5sb3Vpc3ZpbGxlaG90Ynl0ZXMuY29tL3ZpZXd0b3BpYy5waHA_dD0yNjUzNg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680602,
   "web_search_url": "https://duckduckgo.com/?q=Metergy+Solutions+company+careers+benefits",
@@ -330537,11 +331128,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -330553,6 +331146,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784899126,
   "last_evidence_at": 1784680601,
   "name": "SOCi",
   "pace_of_work": {
@@ -330565,6 +331159,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784899246,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -330608,7 +331203,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=2a391ad2ee68f95031b5a506c7e46bdc9406c1a4959bed6110663203160b7757JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=040a1be3-347d-632c-32fd-0c7d35f96298&u=a1aHR0cHM6Ly93d3cuc29jaS5haS9wbGF0Zm9ybS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680601,
   "web_search_url": "https://duckduckgo.com/?q=SOCi+company+careers+benefits",
@@ -364407,52 +365002,140 @@
  "titan": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "8758404038",
+    "5a35ef8991"
+   ],
+   "value": "Estimated: Unknown due to inaccessible source content."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "8758404038",
+    "5a35ef8991"
+   ],
+   "value": "Unknown due to inaccessible source content."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "8758404038",
+    "5a35ef8991"
+   ],
+   "value": "Unknown due to inaccessible source content."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "8758404038",
+    "5a35ef8991"
+   ],
+   "value": "Unknown due to inaccessible source content."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "8758404038",
+    "5a35ef8991"
+   ],
+   "value": "Estimated: Unknown due to inaccessible source content."
   },
   "evidence_sha": "4af8d94f8252e215",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784899126,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784898945,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "8758404038",
+    "5a35ef8991"
+   ],
+   "value": "Unknown due to inaccessible source content."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8758404038",
+    "5a35ef8991"
+   ],
+   "value": "Probe deeply into the reality of their work-life balance: ask current engineers about actual working hours, on-call expectations, and how strictly guaranteed shutdowns are respected. Additionally, evaluate their technical pedigree and new-grad compensation bands to ensure they truly match your elite-tier requirements."
+  },
+  "last_attempt_at": 1784899126,
   "last_evidence_at": 1784680511,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "8758404038",
+    "5a35ef8991"
+   ],
+   "value": "Unknown due to inaccessible source content."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "8758404038",
+    "5a35ef8991"
+   ],
+   "value": "Unknown due to inaccessible source content."
+  },
   "name": "Titan",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "8758404038",
+    "5a35ef8991"
+   ],
+   "value": "Estimated: Unknown due to inaccessible source content."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "8758404038",
+    "5a35ef8991"
+   ],
+   "value": "Unknown due to inaccessible source content."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "8758404038",
+    "5a35ef8991"
+   ],
+   "value": "Estimated: Unknown due to inaccessible source content."
   },
-  "retry_after": 1784899065,
+  "refresh_after": 1790083126,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "8758404038",
+    "5a35ef8991"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "8758404038",
+    "5a35ef8991"
+   ],
+   "value": "Estimated: Unknown due to inaccessible source content."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "8758404038",
+    "5a35ef8991"
+   ],
+   "value": "Unknown due to inaccessible source content."
   },
   "sources": [
    {
@@ -364486,14 +365169,51 @@
     "url": "https://www.bing.com/ck/a?!&&p=cb17a72a894bf10c84a40c8b898508b90935fc5971ad03b2323914bc145c6149JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2c426153-30e1-6263-3808-76cd31e76370&u=a1aHR0cHM6Ly9hcHAudGl0YW4uZW1haWwvbG9naW4v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "8758404038",
+    "5a35ef8991"
+   ],
+   "value": "Unknown due to inaccessible source content."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "8758404038",
+    "5a35ef8991",
+    "a78dc6d849"
+   ],
+   "value": "Specific business operations and monetization strategies could not be determined from the provided sources, as all retrieved pages are non-functional redirect links."
+  },
+  "synthesized_evidence_sha": "4af8d94f8252e215",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "8758404038",
+    "5a35ef8991"
+   ],
+   "value": "Unknown due to inaccessible source content."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680511,
   "web_search_url": "https://duckduckgo.com/?q=Titan+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8758404038",
+    "5a35ef8991"
+   ],
+   "value": "If Titan aligns with your priorities, it could offer the elite AI/data science prestige and high new-grad pay you seek without the bureaucracy or burnout of slower-moving competitors. A fast-paced, mission-driven environment here would accelerate your technical learning while strictly honoring guaranteed shutdowns and sane hours to protect your personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "8758404038",
+    "5a35ef8991"
+   ],
+   "value": "Estimated: Unknown due to inaccessible source content."
   }
  },
  "tmx group": {
