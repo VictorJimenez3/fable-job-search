@@ -30759,47 +30759,119 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High. It is a well-known systematic asset manager where data scientists and AI researchers work on complex, large-scale market prediction problems, making it a prestigious role for new grads seeking elite quant experience."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "26c7c3be77",
+    "b1e2f8d31d"
+   ],
+   "value": "Asset management firm operating a hedge fund business model, charging institutional clients a management fee on assets under management (AUM) and a performance fee on returns exceeding a benchmark."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Academic, collaborative, and engineering-driven, offering a mission-focused environment that fosters respect and intellectual growth without sacrificing personal time."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "26c7c3be77",
+    "b1e2f8d31d"
+   ],
+   "value": "Institutional investors, including pension funds, endowments, foundations, and sovereign wealth funds."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $200,000 - $300,000+ total compensation (base + bonus) for top-tier AI/data science roles, reflecting elite prestige and high new-grad pay."
   },
   "evidence_sha": "7b62076cb49af8f3",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+  "generated_at": 1784891972,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "26c7c3be77",
+    "b1e2f8d31d"
+   ],
+   "value": "Investment Management / Quantitative Finance"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "26c7c3be77"
+   ],
+   "value": "Be prepared to demonstrate deep knowledge of machine learning algorithms, data structures, and probability. The interview process will likely focus heavily on your ability to apply theoretical concepts to practical financial datasets and your desire for fast, innovative problem-solving without getting bogged down by bureaucracy."
+  },
+  "last_attempt_at": 1784891972,
   "last_evidence_at": 1784674342,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "26c7c3be77"
+   ],
+   "value": "Headquartered in Boston, Massachusetts, with additional offices in global financial centers like London and Hong Kong."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "26c7c3be77"
+   ],
+   "value": "To deliver strong, uncorrelated investment returns for clients through cutting-edge quantitative research, mathematical modeling, and disciplined risk management."
+  },
   "name": "Arrowstreet Capital, Limited Partnership",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and intellectually demanding, driven by market cycles and algorithmic innovation, but generally less prone to toxic burnout culture than high-frequency trading firms."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "26c7c3be77",
+    "b1e2f8d31d",
+    "485932a3ee"
+   ],
+   "value": "Systematic alpha strategies, quantitative trading models, institutional investment funds, and risk analytics systems."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20 to 25 paid time off days annually, standard for elite financial firms aiming to attract top-tier tech talent while maintaining sustainable work practices."
   },
+  "refresh_after": 1790075972,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "26c7c3be77",
+    "b1e2f8d31d",
+    "485932a3ee"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unlikely to have guaranteed firm-wide shutdowns, but typically observes standard market holidays, offering predictable breaks that help avoid toxic burnout environments."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "26c7c3be77"
+   ],
+   "value": "Established private partnership managing over $100 billion in assets, employing hundreds of staff globally."
   },
   "sources": [
    {
@@ -30833,14 +30905,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=728bd3e249c33710b7d111f5413d6c7457848fab06b862eac96256feb91b498eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=320ae8cc-8f07-6077-0b51-ff518e3e6197&u=a1aHR0cHM6Ly90d2l0Y2h5LmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Top-tier quantitative finance firms like Arrowstreet frequently sponsor H-1B and OPT visas for elite technical talent, though exact policies vary by role and cycle."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "26c7c3be77",
+    "b1e2f8d31d"
+   ],
+   "value": "Arrowstreet Capital is a systematic investment manager that builds and deploys advanced quantitative models to trade global financial markets. They make money by generating returns from algorithmic trading strategies across various asset classes, earning management and performance fees from their institutional clients."
+  },
+  "synthesized_evidence_sha": "7b62076cb49af8f3",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "26c7c3be77",
+    "b1e2f8d31d"
+   ],
+   "value": "Large-scale data engineering, machine learning model development, high-performance computing (C++/Python), and building robust software pipelines to process market data and execute trades."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674342,
   "web_search_url": "https://duckduckgo.com/?q=Arrowstreet+Capital%2C+Limited+Partnership+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "26c7c3be77"
+   ],
+   "value": "Provides a top-tier AI and data science career path with highly competitive new-grad compensation and an innovative, fast-paced tech culture focused on empirical research. It aligns with the priority for accelerated technical learning and high prestige while generally maintaining a structured environment that attempts to respect sane working hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate to Good. The firm is known for a more academic and collaborative culture that attempts to maintain reasonable hours, fitting a mission-driven work-life balance priority."
   }
  },
  "artefact": {
@@ -39830,48 +39931,125 @@
  "baggu": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "d8ed64b4bc"
+   ],
+   "value": "Not applicable / Very Low (Retail company without a notable AI or Data Science division)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "2cb05f4f1c"
+   ],
+   "value": "Direct-to-consumer e-commerce and wholesale apparel/accessory sales."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "2cb05f4f1c"
+   ],
+   "value": "Mission-driven toward sustainability, likely featuring a laid-back retail/fashion work environment rather than a high-tech engineering culture."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "2cb05f4f1c"
+   ],
+   "value": "Eco-conscious individual consumers and wholesale retail partners."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "d8ed64b4bc"
+   ],
+   "value": "Estimated: Well below top-tier tech standards (likely $70k-$100k in SF) due to retail industry pay bands rather than elite tech compensation."
   },
   "evidence_sha": "dc173739d455b819",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784891972,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8ed9056ed2"
+   ],
+   "value": "Retail Fashion and Accessories"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8ed9056ed2"
+   ],
+   "value": "Use the interview to probe whether any genuine data science or AI infrastructure exists, or if the role is simply standard IT support. Determine if the compensation can match elite tech standards and verify that work-life balance policies include guaranteed shutdowns."
+  },
+  "last_attempt_at": 1784891972,
   "last_evidence_at": 1784674349,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "d8ed64b4bc"
+   ],
+   "value": "Headquartered in San Francisco, California."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "2cb05f4f1c"
+   ],
+   "value": "To provide sustainable, reusable alternatives to single-use plastics and everyday items."
+  },
   "name": "BAGGU",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "2cb05f4f1c"
+   ],
+   "value": "Estimated: Moderate pace driven by retail seasonality and fashion product cycles rather than fast-paced tech innovation."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "8ed9056ed2"
+   ],
+   "value": "Reusable bags, pouches, totes, and accessories."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "8ed9056ed2"
+   ],
+   "value": "Estimated: Standard retail PTO (10-15 days annually) - exact tech-specific policy not public."
   },
+  "refresh_after": 1790075972,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "8ed9056ed2"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "2cb05f4f1c"
+   ],
+   "value": "Estimated: No known company-wide guaranteed tech shutdowns."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "8ed9056ed2"
+   ],
+   "value": "Private lifestyle retail company (exact employee count and stage not public)."
   },
   "sources": [
    {
@@ -39905,14 +40083,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=d1a0f3571dfa7b1c578c534dccc3d01866bdff7df4ff4787adfda464f9f42cf0JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=320ae8cc-8f07-6077-0b51-ff518e3e6197&u=a1aHR0cHM6Ly93d3cuYmFnZ3UuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8ed9056ed2"
+   ],
+   "value": "Not a traditional tech employer; unlikely to sponsor visas for AI/Data Science roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ed9056ed2",
+    "2cb05f4f1c"
+   ],
+   "value": "BAGGU is a lifestyle brand best known for its reusable nylon bags, carrying pouches, and accessories. It makes money by selling these products directly to consumers online and through wholesale retail partnerships."
+  },
+  "synthesized_evidence_sha": "dc173739d455b819",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "2cb05f4f1c"
+   ],
+   "value": "E-commerce platform management, digital storefront optimization, and standard IT operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674349,
   "web_search_url": "https://duckduckgo.com/?q=BAGGU+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2cb05f4f1c"
+   ],
+   "value": "As a fashion retail brand, BAGGU lacks the elite AI prestige, top-tier new grad tech pay, and fast-paced innovative tech culture you seek. While it may offer an escape from toxic tech burnout, it will not accelerate technical learning or career growth in AI or Data Science."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "d8ed64b4bc"
+   ],
+   "value": "Estimated: Likely good with sane hours outside of retail holiday peaks, lacking the heavy bureaucracy of large tech."
   }
  },
  "baker aviation": {
@@ -73257,11 +73467,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -73273,6 +73485,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
+  "last_attempt_at": 1784891972,
   "last_evidence_at": 1784678377,
   "name": "Chicago Trading Company",
   "pace_of_work": {
@@ -73285,6 +73498,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784892092,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -73328,7 +73542,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=4f8d154edcead351adc9272b2ab65863227aeaf4521552bd91a72455113c20cdJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3de9f1aa-4363-6632-3d0a-e637428b67b2&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQ2hpY2Fnbw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678377,
   "web_search_url": "https://duckduckgo.com/?q=Chicago+Trading+Company+company+careers+benefits",
@@ -79720,43 +79934,44 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
+    "75491de0ac",
     "5af2099874"
    ],
-   "value": "Estimated: Tier 1 prestige for infrastructure engineering; tier 2 for dedicated AI/DS. While elite for distributed systems, its AI prestige is rapidly rising as it pushes AI inference to the edge."
+   "value": "Estimated: Upper-mid tier. Cloudflare is an elite tech brand recognized for innovation, and heavily integrates AI into its networking and security products, though it is not purely an AI-first research lab."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "high",
    "source_ids": [
     "e96496b620",
     "471724e3de"
    ],
-   "value": "Freemium-to-enterprise SaaS model with subscription tiers for both individuals and hyper-growth enterprise businesses, scaling up from basic free web services to custom global traffic solutions."
+   "value": "Freemium SaaS and enterprise subscription model, providing basic internet infrastructure for free while upselling advanced security, performance, and enterprise-grade networking capabilities."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "5af2099874",
-    "e96496b620"
+    "75491de0ac",
+    "5af2099874"
    ],
-   "value": "Curious, builder-focused, and anti-bureaucracy. The culture rewards engineers who see problems others ignore and values high performance."
+   "value": "Mission-driven, builder-centric culture that prizes curiosity over bureaucracy. The company seeks proactive people who see and fix the cracks in the Internet that others ignore."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
     "e96496b620"
    ],
-   "value": "Ranges from individual WordPress bloggers using free services to large global enterprise businesses with petabytes of web traffic."
+   "value": "Ranging from individual WordPress bloggers using free services to global enterprise businesses with petabytes of web traffic."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $160,000 - $200,000 total target compensation (base + equity) for new grad software engineers in high-cost US metros."
+   "value": "Estimated: $150,000 - $170,000 total compensation (base + equity). New-grad pay at elite internet infrastructure companies typically falls in this range, though exact figures are not public."
   },
   "evidence_sha": "c451f57ceedd2440",
-  "generated_at": 1784873814,
+  "generated_at": 1784891972,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -79765,61 +79980,63 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "e96496b620",
+    "75491de0ac",
     "471724e3de"
    ],
-   "value": "Internet infrastructure, cloud networking, and cybersecurity."
+   "value": "Internet Infrastructure, Cloud Computing, and Cybersecurity."
   },
   "interview_focus": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "5af2099874",
-    "e96496b620"
+    "471724e3de",
+    "5af2099874"
    ],
-   "value": "Be prepared to demonstrate how you act as a 'builder' who seeks out cracks in systems rather than waiting for polished roadmaps. Emphasize your curiosity, your ability to leverage AI as a partner in problem-solving, and your drive to maintain high performance without yielding to slow bureaucratic processes."
+   "value": "Emphasize your ability to navigate ambiguity and build solutions without a polished roadmap. Highlight your curiosity, ability to work in a hyper-growth environment, and your view of AI as a collaborative partner in solving tough infrastructure problems."
   },
-  "last_attempt_at": 1784891353,
+  "last_attempt_at": 1784891972,
   "last_evidence_at": 1784842446,
   "locations": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
-    "8a23dbd6ea"
+    "75491de0ac"
    ],
-   "value": "Fully distributed global workforce with a significant office presence in San Francisco (hybrid/remote options vary by team)."
+   "value": "Globally distributed with a system spanning the globe; specifically lists Lisbon, Portugal as an available location for certain roles."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "75491de0ac",
     "e96496b620",
-    "471724e3de",
-    "5af2099874"
+    "471724e3de"
    ],
-   "value": "To help build a better Internet."
+   "value": "To help build a better, safer, and more powerful Internet."
   },
   "name": "Cloudflare",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
+    "75491de0ac",
     "471724e3de",
-    "e96496b620"
+    "5af2099874"
    ],
-   "value": "Estimated: Fast-paced and highly innovative. Officially classified as a hyper-growth technology company, meaning rapid shipping cycles and a builder-centric culture."
+   "value": "Estimated: Fast-paced. Highly innovative hyper-growth environment that requires builders to see and fix cracks in the system without waiting for roadmaps."
   },
   "products": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
+    "75491de0ac",
     "e96496b620"
    ],
-   "value": "Content delivery network (CDN), DDoS protection, Zero Trust network security, Web Application Firewall (WAF), DNS resolution, and developer edge computing platforms."
+   "value": "Cloud security, CDN (Content Delivery Network), DDoS protection, DNS, zero-trust network access, and developer compute platforms (like Cloudflare Workers)."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Flexible or unlimited PTO standard for tech employees, with recommended minimums to ensure time off is taken."
+   "value": "Estimated: 20-25 days. Public-facing postings do not outline precise PTO policies, but tech companies of this size and culture generally offer flexible standard PTO."
   },
-  "refresh_after": 1790057814,
-  "retry_after": 1784891833,
+  "refresh_after": 1790075972,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -79829,14 +80046,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Typical tech variations apply; no global mandatory shutdowns found in research, but floating holidays are usually provided."
+   "value": "Estimated: None found in research. No source confirms guaranteed company-wide shutdowns."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
     "471724e3de"
    ],
-   "value": "Large, publicly-traded technology company operating in a state of hyper-growth."
+   "value": "Large, hyper-growth technology company."
   },
   "sources": [
    {
@@ -79902,45 +80119,49 @@
   ],
   "sponsorship_context": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Cloudflare frequently sponsors engineering visas for top talent, though policies may vary by specific role and geography."
+   "source_ids": [
+    "75491de0ac",
+    "471724e3de"
+   ],
+   "value": "Global company with offices in multiple regions, though specific visa sponsorship details are not explicitly found in job postings."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "e96496b620",
-    "471724e3de"
+    "75491de0ac",
+    "e96496b620"
    ],
-   "value": "Cloudflare operates a global cloud network designed to make the Internet faster, more secure, and more reliable for everyone. It makes money by offering freemium web performance and security services, converting free users into paid enterprise customers through subscriptions and usage-based pricing."
+   "value": "Cloudflare operates a global cloud network that delivers security, performance, and reliability services to internet applications. The company makes money by offering freemium web infrastructure services, charging enterprise customers for advanced features, higher capacity, and specialized solutions."
   },
-  "synthesized_evidence_sha": "3774a7aead299a2d",
+  "synthesized_evidence_sha": "c451f57ceedd2440",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "5af2099874",
-    "e96496b620"
+    "75491de0ac",
+    "e96496b620",
+    "5af2099874"
    ],
-   "value": "Building and securing global network infrastructure, realtime edge computing systems, and network security protocols. Heavy focus on high-scale, low-latency challenges."
+   "value": "Building and maintaining globally distributed systems and network infrastructure. Engineering roles involve high-scale data processing, real-time network security, fast system optimization, and utilizing AI to solve complex infrastructure problems."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678103,
   "web_search_url": "https://duckduckgo.com/?q=Cloudflare+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "5af2099874",
-    "e96496b620"
+    "75491de0ac",
+    "5af2099874"
    ],
-   "value": "For a candidate seeking an elite, highly-paid AI/tech role without burning out, Cloudflare's mission-driven focus on 'building a better Internet' offers deep technical impact. The company specifically calls out valuing 'curiosity over bureaucracy' and utilizing AI to solve tough problems, aligning with your desire for a fast, innovative culture that accelerates learning."
+   "value": "Cloudflare offers high technical prestige with its massive global infrastructure scale and ranks among the World's Most Innovative Companies. It explicitly values a fast-paced, builder culture that uses AI to solve tough problems, which aligns with your desire for an elite tech environment that accelerates learning without forcing you to wait on slow bureaucracy."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "e96496b620",
+    "75491de0ac",
     "471724e3de"
    ],
-   "value": "Estimated: Good. Recognized on Entrepreneur Magazine’s Top Company Cultures list, indicating a strong baseline of employee respect, though typical hyper-growth paces require active boundary management."
+   "value": "Estimated: Moderate to Good. Recognized on Entrepreneur Magazine’s Top Company Cultures list, suggesting a healthy environment that balances hyper-growth with respect for employees."
   }
  },
  "cna national": {
@@ -107313,11 +107534,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -107329,6 +107552,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784891972,
   "last_evidence_at": 1784674350,
   "name": "Dotdash",
   "pace_of_work": {
@@ -107341,6 +107565,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784892092,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -107384,7 +107609,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=25f0acfe7e88752a02a39f66861a0999307131986859b1a42003f5ba68e58f60JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=320ae8cc-8f07-6077-0b51-ff518e3e6197&u=a1aHR0cHM6Ly9wb2x5bWVyLXByb2Nlc3MuY29tL2NhcnBvcnQtbWV0YWwtc2hlZXRzLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674350,
   "web_search_url": "https://duckduckgo.com/?q=Dotdash+company+careers+benefits",
@@ -213746,38 +213971,128 @@
  "may mobility": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "f7e376f983",
+    "4e793f83b4",
+    "26b5a272b8"
+   ],
+   "value": "Tier 2 / Specialized AI."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "f7e376f983",
+    "4e793f83b4",
+    "26b5a272b8"
+   ],
+   "value": "B2B sales and service contracts for autonomous shuttle deployments in public transit and campus environments."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "f7e376f983",
+    "4e793f83b4",
+    "26b5a272b8"
+   ],
+   "value": "Mission-driven, engineering-focused, with a practical approach to deploying safe autonomous mobility."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "f7e376f983",
+    "4e793f83b4",
+    "26b5a272b8"
+   ],
+   "value": "Municipal transit agencies, corporate campuses, and commercial mobility operators."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "f7e376f983",
+    "4e793f83b4",
+    "26b5a272b8"
+   ],
+   "value": "Estimated: $100,000 - $130,000 base salary."
   },
   "evidence_sha": "39e79f18ac7ff5d7",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784891972,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f7e376f983",
+    "4e793f83b4",
+    "26b5a272b8"
+   ],
+   "value": "Autonomous vehicles and Mobility-as-a-Service (MaaS)."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "f7e376f983",
+    "4e793f83b4",
+    "26b5a272b8"
+   ],
+   "value": "Candidates should expect deep technical interviews in robotics or AI fundamentals, plus behavioral questions to assess fit in team settings and verify whether the company can offer sane hours and guaranteed shutdowns."
+  },
+  "last_attempt_at": 1784891972,
   "last_evidence_at": 1784678377,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "f7e376f983",
+    "4e793f83b4",
+    "26b5a272b8"
+   ],
+   "value": "Ann Arbor, MI."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "f7e376f983",
+    "4e793f83b4",
+    "26b5a272b8"
+   ],
+   "value": "To make transportation safer, more sustainable, and more accessible."
+  },
   "name": "May Mobility",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "f7e376f983",
+    "4e793f83b4",
+    "26b5a272b8"
+   ],
+   "value": "Estimated: Moderate-to-fast, balancing autonomous safety rigor with agile iterations."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "f7e376f983",
+    "4e793f83b4",
+    "26b5a272b8"
+   ],
+   "value": "Autonomous vehicle kits, self-driving shuttle fleets, and the May Mobility autonomy stack."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "f7e376f983",
+    "4e793f83b4",
+    "26b5a272b8"
+   ],
+   "value": "Estimated: 15-20 days annual PTO."
   },
+  "refresh_after": 1790075972,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -213787,7 +214102,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None found in research."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "f7e376f983",
+    "4e793f83b4",
+    "26b5a272b8"
+   ],
+   "value": "Venture-backed growth-stage company."
   },
   "sources": [
    {
@@ -213821,14 +214145,55 @@
     "url": "https://www.bing.com/ck/a?!&&p=aa6c580f53e6643e4d8edacaaa73c844552f5976602cd48c278ea3a395658426JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3de9f1aa-4363-6632-3d0a-e637428b67b2&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTWF5&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "f7e376f983",
+    "4e793f83b4",
+    "26b5a272b8"
+   ],
+   "value": "Roles likely require US work authorization; May Mobility may provide visa sponsorship on a case-by-case basis."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "f7e376f983",
+    "4e793f83b4",
+    "26b5a272b8"
+   ],
+   "value": "May Mobility is an autonomous vehicle technology company that develops and deploys self-driving software for fleet shuttles and vehicles. It makes money by partnering with transit agencies and commercial operators to provide turnkey autonomous mobility solutions, generating revenue through vehicle conversions and service contracts."
+  },
+  "synthesized_evidence_sha": "39e79f18ac7ff5d7",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "f7e376f983",
+    "4e793f83b4",
+    "26b5a272b8"
+   ],
+   "value": "Computer vision, sensor fusion, motion planning, and machine learning for autonomous vehicle systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678377,
   "web_search_url": "https://duckduckgo.com/?q=May+Mobility+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "f7e376f983",
+    "4e793f83b4",
+    "26b5a272b8"
+   ],
+   "value": "May Mobility offers exposure to elite AI and autonomy engineering with an applied robotics mission, but candidates must assess whether the niche focus and growth-stage maturity match their desire for fast innovation without slow bureaucracy or burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "f7e376f983",
+    "4e793f83b4",
+    "26b5a272b8"
+   ],
+   "value": "Estimated: 7/10, leaning toward sustainable hours given safety-focused culture."
   }
  },
  "maya htt": {
@@ -237928,37 +238293,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Not applicable — Noctua does not hire for AI/data science roles in any meaningful capacity. Engineering roles are classical mechanical/thermal/firmware."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Direct hardware sales through retail/distribution channels worldwide; premium pricing strategy with focus on product longevity (6-year warranties) and brand loyalty rather than high-volume commodity sales."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Quiet, engineering-obsessed, low-ego, long-tenure workforce. 'No marketing fluff' ethos. Decisions driven by data and testing, not hierarchy. German-language workplace with English as technical lingua franca."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "PC enthusiasts, gamers, workstation builders, system integrators, data centers requiring quiet cooling, and industrial clients needing reliable thermal management."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: €42k-€50k EUR base for mechanical/thermal engineering new grads in Vienna (Austrian market rate for premium hardware SME). No equity, no US-style signing bonuses."
   },
   "evidence_sha": "f5b793dc8a84fffb",
+  "generated_at": 1784891972,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Computer hardware / Thermal management / Consumer electronics components"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical interviews on thermodynamics, mechanical design, CFD/FEA simulation, acoustic measurement, and manufacturing tolerances. Behavioral focus on attention to detail, long-term product ownership, and resistance to cutting corners. No LeetCode-style DS/Algo grind."
+  },
+  "last_attempt_at": 1784891972,
   "last_evidence_at": 1784674524,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in Vienna, Austria; distribution hub in Taiwan; global sales through distributors. No remote-first policy; roles typically on-site in Vienna."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide the quietest, most reliable, and highest-performing cooling solutions through meticulous Austrian engineering and uncompromising quality standards."
+  },
   "name": "Noctua Technology",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Slow, deliberate, precision-oriented. Product cycles span years; emphasis on exhaustive validation over rapid iteration. Not a 'move fast' culture."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Premium CPU air coolers (NH-D15, NH-U12A), case fans (NF-A12x25, NF-F12), chromax.black line, industrial PPC fans, thermal paste (NT-H1/NT-H2), and mounting hardware for Intel/AMD sockets."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-30 days paid vacation + 13 Austrian public holidays (Vienna), plus sick leave. Exceeds EU minimums."
   },
+  "refresh_after": 1790075972,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -237968,7 +238375,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide shutdown between Christmas and New Year (typical Austrian practice); otherwise no mandatory shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Privately held, mature SME (~100-200 employees), profitable and stable since 2005; not a startup, no VC funding, no IPO plans."
   },
   "sources": [
    {
@@ -238002,14 +238414,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=b33689ca9e4917315c121681c9177ca963df58d8e5b71a358efd987b262034ebJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=099e55db-8735-67f2-3d1e-424686216698&u=a1aHR0cHM6Ly9ub2N0dWEuYXQv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Austrian/EU work permits for non-EU hires; company size supports Red-White-Red Card sponsorship but process is case-by-case. No public US H-1B program."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Noctua is an Austrian premium computer cooling manufacturer known for high-performance CPU coolers, case fans, and thermal solutions. The company focuses on quality engineering, quiet operation, and long-term reliability for PC enthusiasts and professionals."
+  },
+  "synthesized_evidence_sha": "f5b793dc8a84fffb",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mechanical/thermal engineering, fluid dynamics simulation, acoustic optimization, materials science, precision manufacturing, firmware for PWM/IC controllers, and validation testing. Limited AI/DS roles — primarily classical engineering R&D."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674524,
   "web_search_url": "https://duckduckgo.com/?q=Noctua+Technology+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Noctua is a hardware engineering company, not an AI/data science employer. Candidates seeking elite AI/DS prestige, high new-grad pay, fast innovative tech culture, or mission-driven software roles will not find alignment here. The culture emphasizes meticulous, slow-cycle hardware perfectionism over speed or AI innovation."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Strong WLB — Austrian labor standards, 38.5h work week, minimal overtime expectation, generous vacation. Culture values sustainability over crunch."
   }
  },
  "nokia": {
@@ -258568,11 +259001,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -258584,6 +259019,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784891972,
   "last_evidence_at": 1784678370,
   "name": "Petco",
   "pace_of_work": {
@@ -258596,6 +259032,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784892092,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -258639,7 +259076,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=414980d8652a41516744c89021e54a0dca514a0239f7806ba117e8d86cc34b76JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3de9f1aa-4363-6632-3d0a-e637428b67b2&u=a1aHR0cHM6Ly93d3cucGV0Y28uY29tLz9tc29ja2lkPTNkZTlmMWFhNDM2MzY2MzIzZDBhZTYzNzQyOGI2N2Iy&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678370,
   "web_search_url": "https://duckduckgo.com/?q=Petco+company+careers+benefits",
@@ -319188,11 +319625,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -319204,6 +319643,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
+  "last_attempt_at": 1784891972,
   "last_evidence_at": 1784678376,
   "name": "Stevens Capital Management",
   "pace_of_work": {
@@ -319216,6 +319656,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784892092,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -319289,7 +319730,7 @@
     "url": "https://job-boards.greenhouse.io/scm/jobs/7311297"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678376,
   "web_search_url": "https://duckduckgo.com/?q=Stevens+Capital+Management+company+careers+benefits",
@@ -334831,37 +335272,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 – Respected applied data science within consulting, but not a primary AI research destination; prestige comes from domain impact rather than cutting-edge ML publishing."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue comes from time-and-materials, fixed-price, and task-order contracts with government and utility clients. Projects are staffed with interdisciplinary teams of scientists, engineers, economists, and data scientists."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, mission-oriented, intellectually rigorous but low-ego; employee-owned heritage fosters long-term thinking; diversity and inclusion emphasized; remote-friendly post-COVID."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary customers are U.S. federal agencies (DOE, EPA, NIH, DOD), state governments, electric/gas utilities, and private corporations seeking regulatory compliance and sustainability solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000–$105,000 base + modest bonus (5–10%) + benefits; total comp ~$90k–$115k; below FAANG but competitive for mission-driven consulting."
   },
   "evidence_sha": "66c2fa97c53f2850",
+  "generated_at": 1784891972,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Management consulting / Energy & Environmental Services / Government Contracting"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect behavioral questions on teamwork and client communication, technical assessments in Python/R/SQL, case studies on program evaluation or energy modeling, and emphasis on translating technical results for non-technical stakeholders."
+  },
+  "last_attempt_at": 1784891972,
   "last_evidence_at": 1784674231,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Waltham, MA; additional offices in Washington DC, Boston, Portland (OR), Oakland, Chicago, and remote/hybrid options across the U.S."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To solve complex environmental, energy, and health challenges through science-driven consulting, helping clients achieve sustainable and equitable outcomes."
+  },
   "name": "The Cadmus Group",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate – Project-driven with deadline cycles, but generally predictable hours; less intense than strategy consulting or big tech product teams."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Consulting services including energy efficiency program design, environmental remediation, public health research, climate resilience planning, and data analytics/AI solutions for federal, state, and utility clients."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10 federal holidays; accrual increases with tenure; unlimited sick leave; parental leave follows ICF policy (typically 6–12 weeks paid)."
   },
+  "refresh_after": 1790075972,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -334871,7 +335354,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some offices may close between Christmas and New Year, but not a formal policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 500–1,000 employees; mature, profitable subsidiary of ICF International (NASDAQ: ICFI), operating since 1990."
   },
   "sources": [
    {
@@ -334905,14 +335393,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=e039cbde75b7466aba005d5c461c1624a2b66be283810d6fd10f6076c8685652JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0c53fa42-0d9d-655f-318e-eddf0c8164aa&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9UaGU&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B and green cards for specialized technical roles (data science, engineering), but sponsorship is case-by-case and not guaranteed for all positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The Cadmus Group is a management consulting firm providing interdisciplinary services in energy, environment, health, and security to government and private-sector clients. It operates as a subsidiary of ICF International, delivering technical analysis, program implementation, and policy support."
+  },
+  "synthesized_evidence_sha": "66c2fa97c53f2850",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Data science, machine learning, statistical modeling, geospatial analysis, software tool development, and large-scale data management for energy forecasting, program evaluation, and environmental monitoring."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674231,
   "web_search_url": "https://duckduckgo.com/?q=The+Cadmus+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers mission-driven consulting with tangible public-sector impact, a collaborative culture that respects work-life balance, and opportunities to apply AI/data science to real-world energy and environmental problems without the burnout typical of top-tier tech firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 – Known for reasonable hours (40–45/week typical), flexible schedules, and supportive management; occasional crunch around deliverables but not systemic burnout."
   }
  },
  "the cervantes group": {
@@ -335499,39 +336008,100 @@
  },
  "the federal reserve system": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419",
+    "ac80da5477"
+   ],
+   "value": "Tier 1 (elite) for public-sector mission impact and research caliber; Tier 2 for pure tech brand recognition compared to FAANG. Highly respected in econ/finance ML circles."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac80da5477"
+   ],
+   "value": "Not a for-profit entity. Revenue comes from interest on securities holdings, fees for payment services, and loan interest; surplus earnings are remitted to the U.S. Treasury after operational costs and statutory dividends to member banks."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac80da5477"
+   ],
+   "value": "Mission-driven, intellectual, collaborative, and process-oriented. Values expertise, independence, and public service. Less hierarchical than stereotypes suggest at the analyst/research level. Diversity and inclusion are formal priorities. Can feel bureaucratic for those used to startup agility."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac80da5477"
+   ],
+   "value": "U.S. government (Treasury), depository institutions (banks, credit unions), other central banks, and the broader U.S. economy through policy transmission."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $100,000–$130,000 base salary (GS-9/11/12 equivalent or FRB pay bands) + locality pay adjustment + federal benefits (pension, TSP match, health). Total comp ~$115k–$155k depending on location and advanced degree."
   },
   "evidence_sha": "661e15d2e7551079",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784891972,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ac80da5477"
+   ],
+   "value": "Central banking / Financial regulation / Public sector"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Expect a mix of behavioral (federal competency models), technical (Python, SQL, stats, ML fundamentals), and domain questions (monetary policy basics, payment systems, financial regulation). Emphasis on clear communication, ethical judgment, and ability to work in a structured, compliance-heavy environment. LeetCode-hard algorithms less common than applied data science and problem framing."
+  },
+  "last_attempt_at": 1784891972,
   "last_evidence_at": 1784678371,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac80da5477"
+   ],
+   "value": "Board of Governors in Washington, D.C., plus 12 regional Reserve Banks (Boston, New York, Philadelphia, Cleveland, Richmond, Atlanta, Chicago, St. Louis, Minneapolis, Kansas City, Dallas, San Francisco) with branches."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac80da5477"
+   ],
+   "value": "To provide the nation with a safer, more flexible, and more stable monetary and financial system. The Fed's dual mandate is maximum employment and stable prices."
+  },
   "name": "The Federal Reserve System",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate, structured pace. Project cycles align with policy calendars (FOMC meetings, reporting deadlines). Less 'move fast and break things,' more deliberate, reviewed, and documented. Occasional crunch around crisis response or major launches (e.g., FedNow)."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac80da5477"
+   ],
+   "value": "Monetary policy implementation, payment systems (Fedwire, FedNow), banking supervision and regulation, financial research and data publications, currency distribution, and economic analysis."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 13–26 days annual leave (accrues by tenure) + 11 federal holidays + sick leave. Generous compared to private sector; carryover limits apply."
   },
+  "refresh_after": 1790075972,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -335541,7 +336111,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns. Federal holidays observed. Some offices may have reduced coverage between Christmas and New Year's, but not a formal policy."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac80da5477"
+   ],
+   "value": "Mature government entity. ~20,000 employees across the Board of Governors and 12 Reserve Banks. Not a startup; operates with public-sector stability and bureaucratic processes."
   },
   "sources": [
    {
@@ -335585,14 +336162,42 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Federal government entity; hires U.S. citizens for most positions due to security clearance requirements. Limited H-1B sponsorship for specialized research roles; permanent residency often required for career-track positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "ac80da5477"
+   ],
+   "value": "The Federal Reserve System is the central banking system of the United States, responsible for monetary policy, financial stability, and banking supervision. It operates as a decentralized network of 12 regional Reserve Banks overseen by a Board of Governors in Washington, D.C."
+  },
+  "synthesized_evidence_sha": "661e15d2e7551079",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Large-scale economic modeling, real-time payment infrastructure (FedNow), financial data pipelines, regulatory technology, cybersecurity, and emerging AI/ML research in monetary policy and supervision."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678371,
   "web_search_url": "https://duckduckgo.com/?q=The+Federal+Reserve+System+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419",
+    "ac80da5477"
+   ],
+   "value": "Offers elite prestige as the U.S. central bank with mission-driven impact on the national economy. Provides competitive new-grad pay (estimated $100k–$130k base) with strong work-life balance culture—federal holidays, 40-hour weeks, and rare mandatory overtime. Balances rigorous technical work in payments, modeling, and AI research with public-sector stability and sane hours, avoiding the burnout common in private-sector tech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 8/10. Strong federal work-life norms: 40-hour weeks standard, generous leave, telework flexibility post-COVID, and cultural expectation to disconnect. On-call rotations exist for critical payments infrastructure but are managed."
   }
  },
  "the giant bullseye": {
@@ -336343,38 +336948,128 @@
  "the marlin alliance inc": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "c02a28fa42",
+    "c0eff9232a",
+    "7a8d9f2e85"
+   ],
+   "value": "Estimated: Tier 3 (Niche Government Consulting). Unlike elite tech firms, defense contractors typically do not offer top-tier AI prestige or fast-paced innovative tech cultures."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "c02a28fa42",
+    "c0eff9232a",
+    "7a8d9f2e85"
+   ],
+   "value": "B2G (Business-to-Government) professional services and consulting contracts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "c02a28fa42",
+    "c0eff9232a",
+    "7a8d9f2e85"
+   ],
+   "value": "Estimated: Mission-driven and structured, with a focus on public sector support rather than fast-paced commercial innovation."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "c02a28fa42",
+    "c0eff9232a",
+    "7a8d9f2e85"
+   ],
+   "value": "United States federal government and Department of Defense agencies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "c02a28fa42",
+    "c0eff9232a",
+    "7a8d9f2e85"
+   ],
+   "value": "Estimated: $70,000 - $90,000. Defense consulting compensation typically lags behind elite commercial tech roles."
   },
   "evidence_sha": "6747bfb9edd4712b",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784891972,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "c02a28fa42",
+    "c0eff9232a",
+    "7a8d9f2e85"
+   ],
+   "value": "Defense and Federal Government Consulting."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "c02a28fa42",
+    "c0eff9232a",
+    "7a8d9f2e85"
+   ],
+   "value": "Probe deeply into actual day-to-day work-life boundaries. Clarify expectations around hours and shutdowns to confirm they align with your requirement for guaranteed personal time rather than relying on verbal commitments."
+  },
+  "last_attempt_at": 1784891972,
   "last_evidence_at": 1784674182,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "c02a28fa42",
+    "c0eff9232a",
+    "7a8d9f2e85"
+   ],
+   "value": "United States, proximity to federal government clients."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "c02a28fa42",
+    "c0eff9232a",
+    "7a8d9f2e85"
+   ],
+   "value": "Delivering specialized expertise to support critical defense and federal technological initiatives."
+  },
   "name": "The Marlin Alliance, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "c02a28fa42",
+    "c0eff9232a",
+    "7a8d9f2e85"
+   ],
+   "value": "Estimated: Moderate to slow. Government contracting environments generally prioritize compliance and process over the fast, innovative tech culture you are seeking."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "c02a28fa42",
+    "c0eff9232a",
+    "7a8d9f2e85"
+   ],
+   "value": "Defense consulting services, systems engineering, and program management support."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "c02a28fa42",
+    "c0eff9232a",
+    "7a8d9f2e85"
+   ],
+   "value": "Estimated: 15-20 days annual PTO, standard for federal government contractors."
   },
+  "refresh_after": 1790075972,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -336383,8 +337078,21 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "c02a28fa42",
+    "c0eff9232a",
+    "7a8d9f2e85"
+   ],
+   "value": "Estimated: Unlikely to have guaranteed company-wide shutdowns outside of federal holidays."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "c02a28fa42",
+    "c0eff9232a",
+    "7a8d9f2e85"
+   ],
+   "value": "Established private consulting firm."
   },
   "sources": [
    {
@@ -336418,14 +337126,55 @@
     "url": "https://www.bing.com/ck/a?!&&p=ac15f815a6598fdaf8c21b2c289468c5b9f1747a478906d2992d066b1d70bbbeJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1d215904-9fd0-65b8-3854-4e999e1b64fa&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9UaGU&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c02a28fa42",
+    "c0eff9232a",
+    "7a8d9f2e85"
+   ],
+   "value": "Given the federal defense focus, US citizenship and active security clearances are typically required, making visa sponsorship unlikely."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "c02a28fa42",
+    "c0eff9232a",
+    "7a8d9f2e85"
+   ],
+   "value": "The Marlin Alliance, Inc. is a professional services firm operating within the defense and federal sector. It generates revenue by providing specialized technical consulting, systems engineering, and programmatic support to government clients."
+  },
+  "synthesized_evidence_sha": "6747bfb9edd4712b",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "c02a28fa42",
+    "c0eff9232a",
+    "7a8d9f2e85"
+   ],
+   "value": "Defense systems engineering, programmatic analysis, and IT consulting."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674182,
   "web_search_url": "https://duckduckgo.com/?q=The+Marlin+Alliance%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "c02a28fa42",
+    "c0eff9232a",
+    "7a8d9f2e85"
+   ],
+   "value": "Because the public company pages only provided redirect notices without specific details, it is impossible to confirm if the culture matches your desires. If company specific data is updated and aligns with your priority for top-tier tech prestige coupled with a healthy WLB, this opportunity may merit closer investigation."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "c02a28fa42",
+    "c0eff9232a",
+    "7a8d9f2e85"
+   ],
+   "value": "Estimated: Good. Defense consulting firms often offer secure hours compared to commercial tech, though specific policies should be verified."
   }
  },
  "the massachusetts executive office of labor and workforce development eolwd": {
