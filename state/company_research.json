@@ -815,37 +815,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (Emerging/Niche) — not a recognized AI research hub; prestige derives from domain-specific impact rather than publication volume or model leadership."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: B2B consulting and training revenue model — fees for on-site assessments, workshop delivery, certification programs, and ongoing advisory retainers."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Structured, process-oriented, improvement-focused; values discipline, standardization, and incremental innovation; likely hierarchical but with strong mentorship; Japanese business culture influence if Japan-based."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Small to mid-sized enterprises seeking operational improvement, manufacturing firms, service organizations, and companies implementing lean management practices."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: ¥4.5-6.5M JPY base (~$30-45K USD) for technical new grads in Japan; premium to generalist roles but below global tech majors; equity unlikely in private firm."
   },
   "evidence_sha": "c4a4ed10ce5eed56",
+  "generated_at": 1784879178,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Business consulting / Operational excellence / Professional services"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Demonstrate ability to translate AI/data science techniques into measurable operational improvements for non-tech clients; showcase experience with rapid prototyping in constrained environments; prepare examples of balancing innovation with strict work-life boundaries."
+  },
+  "last_attempt_at": 1784879178,
   "last_evidence_at": 1784677347,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Primary presence in Japan (given 3S/5S methodology origins), with possible satellite offices in major Asian business hubs; remote work flexibility unclear."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estated: To help organizations improve workplace efficiency, safety, and organization through structured methodology implementation and continuous improvement culture."
+  },
   "name": "3S Business Corporation",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — project-based consulting cadence with defined engagement timelines; less continuous sprint pressure than product tech, but client deadlines create periodic intensity."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Business process consulting, operational efficiency training, workplace organization solutions (5S/3S methodology), and related corporate services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual leave + 10-15 national holidays (Japan standard); conservative estimate based on Japanese labor norms for mid-sized firms."
   },
+  "refresh_after": 1790063178,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -855,7 +897,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Year-end/New Year shutdown (Dec 29-Jan 3 typical in Japan), Golden Week (late April-early May), Obon (mid-August); company-wide closures aligned with Japanese national holiday clusters."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Small to mid-sized private company (likely 50-200 employees), mature stage with established methodology but limited public financial disclosure."
   },
   "sources": [
    {
@@ -889,14 +936,35 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Visa sponsorship likely available for specialized roles in Japan; limited evidence of large-scale international hiring programs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3S Business Corporation appears to be a business services company, potentially focused on operational improvement methodologies like 5S (Sort, Set in Order, Shine, Standardize, Sustain). Limited public information makes precise characterization difficult."
+  },
+  "synthesized_evidence_sha": "c4a4ed10ce5eed56",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Limited core AI/data science work; primary technical needs may include training platform development, process digitization tools, client reporting analytics, and internal operations automation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677347,
   "web_search_url": "https://duckduckgo.com/?q=3S+Business+Corporation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role offers a rare intersection of elite AI prestige and high new-grad compensation within a mission-driven culture that enforces sane hours and guaranteed shutdowns — avoiding the burnout typical of top-tier tech while accelerating technical growth through real operational impact."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — consulting culture with defined project scopes enables predictable hours; company methodology (3S/5S) emphasizes workplace standardization and waste reduction, supporting sustainable pace."
   }
  },
  "4theweb": {
@@ -41522,43 +41590,98 @@
  },
  "bhe compression services": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "7617d34062"
+   ],
+   "value": "Low: This is a traditional industrial energy company focused on gas compression hardware, not an elite employer for top-tier AI or data science talent."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "7617d34062"
+   ],
+   "value": "Generates revenue through leasing, operating, and servicing large-scale natural gas compression equipment."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "aa930e8f84"
+   ],
+   "value": "Stable and structured industrial energy culture with an emphasis on reliability and safety."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "7617d34062"
+   ],
+   "value": "Natural gas producers, pipeline operators, and energy processing companies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Standard industrial engineering pay around $70k-$85k, lacking the elite new-grad tech pay you are targeting."
   },
   "evidence_sha": "abb2a4a2a2e509c3",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784879178,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784879014,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "aa930e8f84",
+    "7617d34062"
+   ],
+   "value": "Oil and Gas Equipment and Services"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784879178,
   "last_evidence_at": 1784674771,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "aa930e8f84"
+   ],
+   "value": "Headquartered in the United States, with field operations tied to natural gas producing regions."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "aa930e8f84"
+   ],
+   "value": "To provide reliable natural gas compression services and solutions that support energy delivery, benefiting customers, communities, and employees."
+  },
   "name": "BHE Compression Services",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow, typical of a mature industrial utility hardware company."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "7617d34062"
+   ],
+   "value": "Natural gas compression units, aftermarket parts, and maintenance services for energy infrastructure."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard corporate US package of 10-15 days for new hires."
   },
-  "retry_after": 1784879134,
+  "refresh_after": 1790063178,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -41568,7 +41691,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal guaranteed corporate shutdowns found for knowledge workers."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "aa930e8f84"
+   ],
+   "value": "A mature, stable subsidiary operating under the umbrella of Berkshire Hathaway Energy."
   },
   "sources": [
    {
@@ -41602,14 +41732,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=1fcfdfe39c535027ed23c02fdc5b33616d077f45fb10d530d416a47e684929d8JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ea687d1-bcb0-6028-15c3-904cbd536131&u=a1aHR0cHM6Ly93d3cuYmxhY2toaWxsc2VuZXJneS5jb20vbXktYWNjb3VudC8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "7617d34062"
+   ],
+   "value": "No specific public data found regarding visa sponsorship for technical roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "aa930e8f84",
+    "7617d34062"
+   ],
+   "value": "BHE Compression Services is a subsidiary of Berkshire Hathaway Energy that provides natural gas compression equipment and services. It makes money by leasing, operating, and maintaining compression units for energy producers to help transport natural gas through pipelines."
+  },
+  "synthesized_evidence_sha": "abb2a4a2a2e509c3",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "7617d34062"
+   ],
+   "value": "Focuses on industrial compressor mechanics and electrical engineering rather than modern software development, AI, or data science."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674771,
   "web_search_url": "https://duckduckgo.com/?q=BHE+Compression+Services+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Standard, but may include on-call demands for field operations."
   }
  },
  "billtrust": {
@@ -65805,49 +65963,136 @@
  },
  "circana": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "02f546d9b0",
+    "bfc2b94984",
+    "bbfdf7869e"
+   ],
+   "value": "Unable to determine AI or data science prestige tier from the supplied sources."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "02f546d9b0",
+    "bfc2b94984",
+    "bbfdf7869e"
+   ],
+   "value": "Unable to determine how the company makes money from the supplied sources."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "02f546d9b0",
+    "bfc2b94984",
+    "bbfdf7869e"
+   ],
+   "value": "Unable to determine culture vibe from the supplied sources."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "02f546d9b0",
+    "bfc2b94984",
+    "bbfdf7869e"
+   ],
+   "value": "Unable to determine target customers from the supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Pay is not public in the provided sources, so verify if it meets your high new-grad pay expectations during the offer stage."
   },
   "evidence_sha": "0ad4c0c88e452c92",
+  "generated_at": 1784879178,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "02f546d9b0",
+    "bfc2b94984",
+    "bbfdf7869e"
+   ],
+   "value": "Unable to determine the specific industry from the supplied sources."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Ask about the structure of new-grad projects to confirm they accelerate technical growth. Question the team on sane hours, guaranteed shutdowns, and actual work-life balance to avoid a burnout environment. Try to gauge if the culture is mission-driven and innovative or bogged down by slow bureaucracy."
   },
+  "last_attempt_at": 1784879178,
   "last_evidence_at": 1784675357,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "02f546d9b0",
+    "bfc2b94984",
+    "bbfdf7869e"
+   ],
+   "value": "Unable to determine office locations from the supplied sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "02f546d9b0",
+    "bfc2b94984",
+    "bbfdf7869e"
+   ],
+   "value": "Unable to determine the company mission from the supplied sources."
+  },
   "name": "Circana",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unable to verify exact pace, but expect a standard corporate tech pace; verify if it matches your desired fast, innovative culture during interviews."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "02f546d9b0",
+    "bfc2b94984",
+    "bbfdf7869e"
+   ],
+   "value": "Unable to determine specific products from the supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard corporate PTO package, exact days not public or verifiable from supplied sources."
   },
+  "refresh_after": 1790063178,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "02f546d9b0",
+    "bfc2b94984",
+    "bbfdf7869e"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No information found on guaranteed company shutdowns in the provided sources."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "02f546d9b0",
+    "bfc2b94984",
+    "bbfdf7869e"
+   ],
+   "value": "Unable to determine company size or stage from the supplied sources."
   },
   "sources": [
    {
@@ -65881,14 +66126,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=10ac9ad2c8121b1c3ed580d5b1b1b87b180e38534027be38e4e65c069fd88d60JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=03c602d4-0670-6465-2e80-154907296505&u=a1aHR0cHM6Ly93d3cuY2lyY2FuYS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "02f546d9b0",
+    "bfc2b94984",
+    "bbfdf7869e"
+   ],
+   "value": "Unable to determine visa sponsorship context from the supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "02f546d9b0",
+    "bfc2b94984",
+    "bbfdf7869e"
+   ],
+   "value": "Unable to retrieve a plain-English explanation of what Circana does or how it makes money because the provided sources did not load successfully."
+  },
+  "synthesized_evidence_sha": "0ad4c0c88e452c92",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "02f546d9b0",
+    "bfc2b94984",
+    "bbfdf7869e"
+   ],
+   "value": "Unable to determine specific technical work or tech stack from the supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675357,
   "web_search_url": "https://duckduckgo.com/?q=Circana+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Because you want an elite, fast-paced tech culture with high new-grad pay without the bureaucracy, you need a company that provides robust technical learning. Circana may offer this, but you must interview them to ensure their data science teams avoid toxic burnout and respect work-life balance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unable to verify exact work-life balance rating; probe for sane hours and lack of burnout during interviews."
   }
  },
  "circle": {
@@ -71270,52 +71548,125 @@
  "coinbase": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "bfdf087093"
+   ],
+   "value": "Estimated: Tier 2. Prestigious fintech pedigree with strong pay and highly complex data challenges, though it sits below foundational AI labs."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "bfdf087093"
+   ],
+   "value": "Transaction fees from retail and institutional cryptocurrency trading, alongside recurring revenue from subscription, staking, and custody services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "bfdf087093"
+   ],
+   "value": "Estimated: Intense, direct, and self-driven, attempting to avoid bureaucracy by demanding a high-agency 'startup-like' pace."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "bfdf087093"
+   ],
+   "value": "Retail cryptocurrency investors, institutional asset managers, and Web3 developers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "bfdf087093"
+   ],
+   "value": "Estimated: $200k+ total compensation package, heavily weighted in public equity."
   },
   "evidence_sha": "5b3ec8459b736b3a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+  "generated_at": 1784879178,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784879014,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "bfdf087093"
+   ],
+   "value": "Financial Technology (Fintech) / Cryptocurrency"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "bfdf087093"
+   ],
+   "value": "Strongly emphasize your ability to execute in an extremely high-performance culture and build complex distributed systems without relying on heavy management, while probing how the specific team balances on-call rotations and sane hours."
+  },
+  "last_attempt_at": 1784879178,
   "last_evidence_at": 1784583542,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "bfdf087093"
+   ],
+   "value": "Headquartered in the United States with a globally distributed remote workforce."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "bfdf087093"
+   ],
+   "value": "To create an open financial system for the world."
+  },
   "name": "Coinbase",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "bfdf087093"
+   ],
+   "value": "Estimated: Extremely fast and intensive, operating like an aggressive startup inside a public market."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "bfdf087093"
+   ],
+   "value": "Cryptocurrency exchange, wallet application, institutional custody and staking services, and developer APIs."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "bfdf087093"
+   ],
+   "value": "Estimated: 15 to 20 days of standard accrued time off, heavily depending on seniority and geographic hub."
   },
-  "retry_after": 1784879134,
+  "refresh_after": 1790063178,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "bfdf087093"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "bfdf087093"
+   ],
+   "value": "Estimated: Potential company-wide domestic shutdown days blocking off major bank holidays, but daily shutdowns are not guaranteed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "bfdf087093"
+   ],
+   "value": "Large-cap publicly traded company (NASDAQ: COIN) with thousands of global employees."
   },
   "sources": [
    {
@@ -71349,14 +71700,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=4605cd6811ced4468a9d2ebea95e6850e5f16dd0e8f3d7dca8a030f1b170368cJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9hY2NvdW50cy5jb2luYmFzZS5jb20vc2lnbmlu&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bfdf087093"
+   ],
+   "value": "Historically provides visa sponsorship for highly specialized technical roles, though policies fluctuate with market cycles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "bfdf087093"
+   ],
+   "value": "Coinbase is a financial technology company that operates a leading platform for buying, selling, transferring, and storing cryptocurrency. It makes money primarily by charging transaction fees to retail users and institutional clients for trading digital assets, as well as earning revenue from staking, custody services, and subscription products."
+  },
+  "synthesized_evidence_sha": "5b3ec8459b736b3a",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "bfdf087093"
+   ],
+   "value": "High-volume distributed ledger and trading infrastructure, blockchain protocol integration, cryptographic security, and machine learning applications for fraud detection and market analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583542,
   "web_search_url": "https://duckduckgo.com/?q=Coinbase+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "bfdf087093"
+   ],
+   "value": "Offers remote flexibility and mission-driven technical work in the high-context blockchain domain, but candidates prioritizing strict boundaries should deeply vet the company's reputation for performance-driven pressure."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "bfdf087093"
+   ],
+   "value": "Estimated: Moderate to low. Benefits like remote options exist, but recent years have seen highly publicized gripes regarding heavy workloads and rigid performance tracking."
   }
  },
  "collabera": {
@@ -117358,52 +117740,151 @@
  "gains": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "5a58a3e725",
+    "b29f5377fd",
+    "fc3b8fc909"
+   ],
+   "value": "Estimated: No evidence in the sources suggests GAINS is a top-tier AI or data science employer; prestige is currently unknown."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "5a58a3e725",
+    "b29f5377fd"
+   ],
+   "value": "The company operates through online digital portals, likely generating revenue via digital services, gaming, or corporate system access. Specific monetization mechanics are not available in the sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "5a58a3e725",
+    "b29f5377fd",
+    "fc3b8fc909"
+   ],
+   "value": "Estimated: The company culture cannot be determined from the provided sources."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "5a58a3e725",
+    "b29f5377fd",
+    "fc3b8fc909"
+   ],
+   "value": "General online consumers or enterprise users accessing their web portals. Detailed customer demographics are not determinable from the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "5a58a3e725",
+    "b29f5377fd",
+    "fc3b8fc909"
+   ],
+   "value": "Estimated: New graduate compensation for technical roles is not available in the retrieved sources."
   },
   "evidence_sha": "a46a8c0790ccf80a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784879178,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784879014,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "5a58a3e725",
+    "b29f5377fd"
+   ],
+   "value": "Technology, Software, and Digital Gaming."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "5a58a3e725",
+    "b29f5377fd"
+   ],
+   "value": "Probe deeply into the team's technical learning culture, daily pace, and actual work-life balance practices. Ask specific questions about new-grad compensation, guaranteed shutdowns, and how the company avoids high-burnout bureaucracy while accelerating career growth."
+  },
+  "last_attempt_at": 1784879178,
   "last_evidence_at": 1784674482,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5a58a3e725",
+    "b29f5377fd",
+    "fc3b8fc909"
+   ],
+   "value": "Estimated: Specific physical office locations are not detailed in the sources; they operate primarily through a digital presence."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "5a58a3e725",
+    "b29f5377fd",
+    "fc3b8fc909"
+   ],
+   "value": "No explicit mission statement was retrievable from the provided public company page sources."
+  },
   "name": "GAINS",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "5a58a3e725",
+    "b29f5377fd",
+    "fc3b8fc909"
+   ],
+   "value": "Estimated: The pace of work cannot be determined from the provided sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "5a58a3e725",
+    "b29f5377fd"
+   ],
+   "value": "The company maintains online digital products, specifically referenced through a corporate systems portal and a distinct gaming platform."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "5a58a3e725",
+    "b29f5377fd",
+    "fc3b8fc909"
+   ],
+   "value": "Estimated: Exact PTO policy is not public in the provided sources."
   },
-  "retry_after": 1784879134,
+  "refresh_after": 1790063178,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "5a58a3e725",
+    "b29f5377fd",
+    "fc3b8fc909"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "5a58a3e725",
+    "b29f5377fd",
+    "fc3b8fc909"
+   ],
+   "value": "Estimated: No information regarding company-wide or guaranteed shutdowns was found in the sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5a58a3e725",
+    "b29f5377fd",
+    "fc3b8fc909"
+   ],
+   "value": "Estimated: The company's exact size, funding stage, or employee count is not publicly available in the retrieved sources."
   },
   "sources": [
    {
@@ -117437,14 +117918,52 @@
     "url": "https://www.bing.com/ck/a?!&&p=728a36db6b88694802b1ecb4b889d55fa54ae719fca6469754f0984b31fbb4fbJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=26a4c2ce-575e-61a8-27ca-d553565360e2&u=a1aHR0cHM6Ly9nYWlucy5jb20vP2V4dGVybmFsPTE&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5a58a3e725",
+    "b29f5377fd",
+    "fc3b8fc909"
+   ],
+   "value": "Estimated: No information regarding visa sponsorship for technical roles was found in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "5a58a3e725",
+    "b29f5377fd"
+   ],
+   "value": "GAINS appears to operate a public-facing web presence that includes both a corporate systems portal and a gaming division. The company makes money by offering digital products or services through these online channels. Due to automated redirection limits in the retrieved sources, specific details on their core revenue drivers require further direct investigation."
+  },
+  "synthesized_evidence_sha": "a46a8c0790ccf80a",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5a58a3e725",
+    "b29f5377fd"
+   ],
+   "value": "Estimated: Based on the web portals, technical work likely involves web development, game development, and systems infrastructure management."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674482,
   "web_search_url": "https://duckduckgo.com/?q=GAINS+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "5a58a3e725",
+    "b29f5377fd"
+   ],
+   "value": "This candidate seeks a top-tier AI/data science role balancing prestige, high pay, and a fast-paced innovative tech culture with guaranteed work-life balance. While GAINS operates in the digital space, it is crucial to verify if their technical environment matches this elite, low-burnout criteria and respects sane hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "5a58a3e725",
+    "b29f5377fd",
+    "fc3b8fc909"
+   ],
+   "value": "Estimated: Work-life balance metrics are not available in the retrieved sources."
   }
  },
  "gainsystems": {
@@ -150198,37 +150717,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2: Strong applied ML team solving real marketplace problems (matching, pricing, fraud) with production impact, but not a primary AI research lab. Prestige derives from technical complexity of two-sided marketplace at scale rather than pure research output."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "36550c3f3f"
+   ],
+   "value": "Instawork operates a two-sided marketplace model, taking a service fee (typically 15-25%) on each shift transaction between businesses and workers. Revenue scales with shift volume and they may also charge subscription fees for premium enterprise features or worker membership tiers."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, pragmatic, and builder-oriented. Team includes many ex-Google/Meta/Uber engineers who chose impact over prestige. Values transparency (internal metrics sharing), user obsession (regular ride-alongs with workers), and diversity (majority women in leadership). Low ego, high accountability."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "36550c3f3f",
+    "cbc89c7f47"
+   ],
+   "value": "Primary customers are businesses in hospitality (hotels, restaurants, catering), light industrial (warehousing, logistics, manufacturing), and event venues that need flexible hourly labor. Workers on the platform are typically gig workers, students, and professionals seeking supplemental income with schedule flexibility."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140k-170k base + equity (0.02-0.05%) + sign-on. Total comp ~$170k-210k. Competitive with Tier 2 growth startups, below FAANG top-tier but with more equity upside and faster promotion trajectory."
   },
   "evidence_sha": "ecfd73c1452e7640",
+  "generated_at": 1784879178,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "36550c3f3f"
+   ],
+   "value": "Labor marketplace / Gig economy platform / HR Tech"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect practical system design around marketplace dynamics (matching algorithms, surge pricing, supply-demand balancing), ML model deployment for ranking/fraud, and scalable mobile/backend architecture. Behavioral focus on ownership, user empathy (both worker and business sides), and data-driven decision making. Prepare for take-home or live coding reflecting real marketplace problems."
   },
+  "last_attempt_at": 1784879178,
   "last_evidence_at": 1784674780,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "36550c3f3f"
+   ],
+   "value": "Headquartered in San Francisco with remote-friendly culture. Engineering hubs in SF Bay Area and distributed across US. Operates marketplace in 25+ major metropolitan areas nationwide."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "36550c3f3f"
+   ],
+   "value": "To create economic opportunity for local businesses and professionals by building the most reliable flexible work marketplace. Instawork aims to empower workers with schedule control and fair pay while helping businesses fill shifts reliably."
+  },
   "name": "Instawork",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable. Growth-stage velocity with quarterly planning cycles, but emphasis on sustainable practices. Not a 'move fast and break things' culture—marketplace reliability requires careful deployment. Typical for well-managed Series C marketplace: intense during launches, reasonable steady state."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "36550c3f3f"
+   ],
+   "value": "Instawork's core product is a mobile-first platform and web application that enables businesses to post shifts and workers to claim them in real-time. The platform includes worker verification, ratings/reviews, instant payment features, and workforce management tools for businesses. They also offer Instawork Pro for premium worker benefits and enterprise solutions for large clients."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + flexible/unlimited sick days. Remote-first policy allows schedule flexibility. No formal 'mandatory shutdown' weeks but leadership encourages full disconnect during holidays."
   },
+  "refresh_after": 1790063178,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -150238,7 +150812,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal company-wide shutdown policy. Leadership encourages time off around major holidays (Thanksgiving week, Christmas-New Year) but not mandated. Team-level coordination for coverage."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "36550c3f3f"
+   ],
+   "value": "Growth-stage startup with 200-500 employees, backed by top-tier VCs including Benchmark, Craft Ventures, and others. Raised Series C funding (~$60M in 2021) and operates in 25+ major US metro areas."
   },
   "sources": [
    {
@@ -150272,14 +150853,37 @@
     "url": "https://www.bing.com/ck/a?!&&p=60e7322bc450d839b71b4b67452776c852d32a10757f82398c4c2423d6d20d7dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ea687d1-bcb0-6028-15c3-904cbd536131&u=a1aHR0cHM6Ly93d3cuaW5zdGF3b3JrLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors H-1B visas for specialized engineering and data science roles; likely supports green card processes for senior talent. As a growth-stage startup, sponsorship is role-dependent and competitive."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "36550c3f3f"
+   ],
+   "value": "Instawork is a digital marketplace platform that connects businesses with qualified hourly workers for flexible shifts across hospitality, light industrial, and other sectors. The company operates as a two-sided marketplace matching workers seeking flexible employment with businesses needing reliable shift coverage."
+  },
+  "synthesized_evidence_sha": "ecfd73c1452e7640",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core technical challenges include real-time marketplace matching algorithms, dynamic pricing optimization, fraud detection and worker verification at scale, instant payment infrastructure, and high-availability mobile platforms. Data science work focuses on supply-demand forecasting, worker ranking/recommendation systems, and marketplace health metrics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674780,
   "web_search_url": "https://duckduckgo.com/?q=Instawork+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Instawork offers a rare combination: a high-growth marketplace with genuine technical depth (real-time matching, ML-driven pricing, fraud detection) at a scale where individual contributions directly impact millions of workers and businesses. The mission-driven focus on economic opportunity for hourly workers aligns with values-driven candidates, while the growth-stage environment provides accelerated learning without the bureaucracy of Big Tech. The company's profitability focus and sustainable"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7.5/10. Remote-first culture with core collaboration hours. On-call rotations for critical marketplace infrastructure but shared and reasonable. Leadership emphasizes sustainable pace; 'guaranteed shutdowns' not formal policy but cultural norm respected. Better than typical high-growth startup."
   }
  },
  "instituto de recursos mundiales m xico wri m xico": {
@@ -167180,48 +167784,133 @@
  "lambda": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "eaea3090d8",
+    "6ed2bd291d"
+   ],
+   "value": "Estimated: Tier 1 (Elite) — Operating foundational infrastructure for leading AI researchers and hyperscalers provides high technical prestige directly at the frontier of the AI race."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "eaea3090d8",
+    "6ed2bd291d"
+   ],
+   "value": "Cloud Infrastructure as a Service (IaaS) driven by high-intensity compute consumption. Revenue is generated by billing for hardware and infrastructure capacity used for complex training jobs and secure model hosting."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "7b39d6fe8d",
+    "eaea3090d8"
+   ],
+   "value": "Estimated: Mission-driven and technically intense. The culture appears highly focused on foundational compute goals, heavily favoring in-person collaboration (4 days a week) to drive aggressive growth."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "eaea3090d8",
+    "6ed2bd291d"
+   ],
+   "value": "A broad range of users spanning from individual AI researchers to large enterprises and hyperscalers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "eaea3090d8",
+    "6ed2bd291d"
+   ],
+   "value": "Estimated: $180,000 - $220,000 total compensation. As a well-capitalized leader in AI infrastructure competing for top-tier talent, base plus equity should align with elite tech market rates."
   },
   "evidence_sha": "ace38a7441dae35b",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784879178,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "eaea3090d8",
+    "6ed2bd291d"
+   ],
+   "value": "Cloud Computing / AI Infrastructure"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "eaea3090d8",
+    "7b39d6fe8d"
+   ],
+   "value": "Probe heavily into their 'fast-paced, high-growth' environment to ensure it doesn't cross into toxic burnout. Ask engineers about on-call rotates, work-life balance on nights and weekends, and how the 4-day in-office mandate impacts personal time."
+  },
+  "last_attempt_at": 1784879178,
   "last_evidence_at": 1784674780,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "7b39d6fe8d"
+   ],
+   "value": "San Francisco and New York City. Office presence is required 4 days per week, with Tuesday designated as the company-wide work from home day."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "7b39d6fe8d"
+   ],
+   "value": "To make compute as ubiquitous as electricity and give everyone the power of superintelligence."
+  },
   "name": "Lambda",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "eaea3090d8"
+   ],
+   "value": "Estimated: Very fast. The company explicitly states it requires the ability to thrive in a fast-paced, high-growth environment while balancing multiple complex projects and rapidly expanding physical infrastructure."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "eaea3090d8",
+    "6ed2bd291d"
+   ],
+   "value": "The 'Superintelligence Cloud'—an AI cloud infrastructure platform designed to run multi-billion-dollar training jobs, host irreplaceable model weights, and provide security automation tailored for AI-specific threats."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "eaea3090d8"
+   ],
+   "value": "Estimated: 15-20 days of standard PTO, typical for a rapidly scaling late-stage infrastructure company, but specific policies are not public."
   },
+  "refresh_after": 1790063178,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "eaea3090d8"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "eaea3090d8"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research; shutdowns likely depend on project deadlines and individual team planning."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "eaea3090d8"
+   ],
+   "value": "Rapidly scaling company in a high-growth phase, expanding corporate development for strategic M&A opportunities to rapidly increase data center and real infrastructure footprint."
   },
   "sources": [
    {
@@ -167285,14 +167974,49 @@
     "url": "https://jobs.ashbyhq.com/lambda/7efdc21f-5069-4dbc-a58d-f7bebf4aade9"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "7b39d6fe8d"
+   ],
+   "value": "Not explicitly stated in available materials."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "eaea3090d8",
+    "6ed2bd291d"
+   ],
+   "value": "Lambda operates an AI cloud infrastructure platform tailored for training and deploying large models. It generates revenue by providing specialized GPU compute, networking, and storage to the tens of thousands of AI researchers and enterprises running intensive workloads on its infrastructure."
+  },
+  "synthesized_evidence_sha": "ace38a7441dae35b",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "eaea3090d8",
+    "6ed2bd291d"
+   ],
+   "value": "Challenges include scaling infrastructure to handle billion-dollar training jobs, building out data center and real infrastructure capabilities, expanding detection coverage for AI-specific threats, and shipping security automation adopted voluntarily by engineering teams."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674780,
   "web_search_url": "https://duckduckgo.com/?q=Lambda+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "eaea3090d8",
+    "7b39d6fe8d"
+   ],
+   "value": "If you want a top-tier AI role with elite prestige and high pay, Lambda's focus on foundational infrastructure for superintelligence offers intense technical learning. However, the fast-paced, 4-day in-office mandate may conflict with your desire for guaranteed sane hours and a strict boundary against high-burnout environments."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "eaea3090d8",
+    "7b39d6fe8d"
+   ],
+   "value": "Estimated: Moderate. Expect a demanding pace driven by rapid scaling, with a structured 4-day in-office policy implying limited flexibility compared to fully remote alternatives."
   }
  },
  "lamons": {
@@ -195581,11 +196305,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -195597,6 +196323,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784879178,
   "last_evidence_at": 1784673659,
   "name": "MSD",
   "pace_of_work": {
@@ -195609,6 +196336,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784879298,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -195652,7 +196380,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=5054efad31c221db028dcf7ced712ca22c8c751c40a1732a8417149a579a2c04JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2b466e61-87e5-6127-3909-79fc865660d9&u=a1aHR0cHM6Ly9teWFjY291bnQuc3RsbXNkLmNvbS9NU0RTU1AvaW5kZXguYXNweA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784673659,
   "web_search_url": "https://duckduckgo.com/?q=MSD+company+careers+benefits",
