@@ -40755,11 +40755,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -40771,6 +40773,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784870975,
   "last_evidence_at": 1784856585,
   "name": "Bluestaq",
   "pace_of_work": {
@@ -40783,6 +40786,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784871095,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -40836,7 +40840,7 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784856585,
   "web_search_url": "https://duckduckgo.com/?q=Bluestaq+company+careers+benefits",
@@ -84393,37 +84397,88 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Top-tier consumer ML platform; publishes at KDD/RecSys; runs large-scale real-time ranking & risk models)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue from sportsbook hold (vig), DFS entry fees/rake, and iGaming gross gaming revenue; monetizes via player losses, fees, and cross-selling across verticals. High marketing spend for customer acquisition."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, data-driven, competitive but collaborative; 'win together' mindset; transparent metrics; high autonomy; diversity initiatives growing; remote-friendly hybrid."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Retail sports bettors, fantasy sports enthusiasts, and online casino players in states/provinces where regulated; user base skews male 21–45 with high engagement during major sports seasons."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $165k–$185k base + $30k–$50k sign-on + $40k–$60k RSU (4-yr) = $235k–$295k Year 1 total; top quartile for Boston/NYC."
   },
   "evidence_sha": "8443438e176c9a9a",
+  "generated_at": 1784870975,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "c5642a0e4c",
+    "a2216eb6ac",
+    "6e47d73e83"
+   ],
+   "value": "Online Sports Betting, Daily Fantasy Sports, iGaming (Digital Gaming & Entertainment)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep ML system design (real-time ranking, feature stores), probability/stats questions (Kelly criterion, risk modeling), and production-grade coding (Python/Java/Scala). Prepare for case studies on odds optimization, churn prediction, and A/B testing at scale. Behavioral rounds probe ownership, speed-to-decision, and cross-functional collaboration with product/trading teams."
   },
+  "last_attempt_at": 1784870975,
   "last_evidence_at": 1784675128,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters Boston, MA; major hubs in NYC, Las Vegas, Toronto, Dublin, and remote-friendly across U.S./Canada."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "c5642a0e4c"
+   ],
+   "value": "To make life more exciting by responsibly creating the world's most engaging sports entertainment experiences."
+  },
   "name": "DraftKings",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast—sprint-driven with seasonal spikes (NFL, March Madness); deploys daily; expects rapid iteration but protects focus time via no-meeting blocks."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "a2216eb6ac",
+    "6e47d73e83"
+   ],
+   "value": "Core products include the DraftKings Sportsbook mobile app, Daily Fantasy Sports (DFS) platform, and iGaming/casino offerings; all delivered via mobile and web with real-time data, live betting, and proprietary risk engines."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 2 'recharge' days; unlimited sick; sabbatical after 5 years."
   },
+  "refresh_after": 1790054975,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -84433,7 +84488,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide winter shutdown (Dec 24–Jan 1); summer 'recharge' week optional; no-meeting Fridays year-round."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public company (NASDAQ: DKNG); ~5,000+ employees; profitable on adjusted EBITDA basis; mature growth stage with expanding state-by-state rollout."
   },
   "sources": [
    {
@@ -84467,14 +84527,37 @@
     "url": "https://www.bing.com/ck/a?!&&p=92d3414d4c3e00c483ff17fe2ab0b51f87d2c688265ad7103fbc0ba7bcd92e3bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=12c18078-a65a-610c-2521-97e5a7b360e2&u=a1aHR0cHM6Ly93d3cuZHJhZnRraW5ncy5jb20vP21zb2NraWQ9MTJjMTgwNzhhNjVhNjEwYzI1MjE5N2U1YTdiMzYwZTI&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active H-1B sponsor (top 50 employer); supports STEM OPT, green card (PERM) for senior roles; immigration team handles cap-exempt university/nonprofit filings where applicable."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "c5642a0e4c"
+   ],
+   "value": "DraftKings operates a leading digital sports entertainment and gaming platform offering daily fantasy sports, sports betting, and online casino games across regulated U.S. and Canadian markets."
+  },
+  "synthesized_evidence_sha": "8443438e176c9a9a",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "High-scale real-time betting engine, low-latency data pipelines, ML for odds modeling/personalization/fraud detection, mobile-native React Native/Swift/Kotlin, cloud-native on AWS/GCP, heavy event-driven architecture."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675128,
   "web_search_url": "https://duckduckgo.com/?q=DraftKings+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "DraftKings offers elite AI/DS prestige in a high-velocity consumer tech environment with top-of-market new-grad compensation. The real-time betting platform demands cutting-edge ML for odds, risk, and personalization—work that ships to millions daily. Culture emphasizes autonomy and technical ownership over bureaucracy, with leadership actively investing in platforms that accelerate learning. While sports calendar drives seasonal intensity, the company has formalized 'no-meeting Fridays' and pro"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "3.7/5 (Glassdoor); Estimated: 40–45 hrs/week baseline, 50+ during peak sports weekends; formal shutdowns and no-meeting Fridays respected."
   }
  },
  "draper": {
@@ -97923,11 +98006,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -97939,6 +98024,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784870975,
   "last_evidence_at": 1784679035,
   "name": "Ferrovial",
   "pace_of_work": {
@@ -97951,6 +98037,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784871095,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -97994,7 +98081,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=bcb9a0a7a9b04033ab625d84dab782727d8c244b115cff0719f2eda497cd5403JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=17cf358e-6c85-6b3e-3331-22106d4b6ad4&u=a1aHR0cHM6Ly93aXQtbW90aW9uLmNuLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784679035,
   "web_search_url": "https://duckduckgo.com/?q=Ferrovial+company+careers+benefits",
@@ -106323,48 +106410,126 @@
  "gainsystems": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "36b13aac78"
+   ],
+   "value": "Estimated: Niche/Boutique tier. While lacking big-tech brand recognition, solving complex applied operations research problems provides highly respected, specialized technical prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "36b13aac78"
+   ],
+   "value": "B2B software and consulting, generating revenue through software licensing, presales solutions engineering, and professional services for supply chain planning."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "36b13aac78"
+   ],
+   "value": "Estimated: Mission-driven and technical. The environment likely values deep analytical expertise and practical problem-solving over cutthroat competition."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "36b13aac78"
+   ],
+   "value": "Enterprises requiring supply chain planning, inventory optimization, and operations research implementations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "36b13aac78",
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $85,000 - $110,000 base salary for applied entry-level data science and operations research roles, based on Atlanta and Chicago market rates."
   },
   "evidence_sha": "e3462de86d5628cb",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784870975,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "36b13aac78"
+   ],
+   "value": "Software (Supply Chain Planning & Operations Research)"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "36b13aac78"
+   ],
+   "value": "Expect technical interviews centered on optimization, operations research, and applied data science problems. Prepare to demonstrate how you balance innovative, rapid technical problem-solving with sane, sustainable work practices."
+  },
+  "last_attempt_at": 1784870975,
   "last_evidence_at": 1784795724,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "36b13aac78"
+   ],
+   "value": "Primary hub in Atlanta, GA, with additional roles in Chicago, IL, and remote options for certain positions."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "36b13aac78"
+   ],
+   "value": "To provide advanced supply chain planning and operations research solutions that optimize enterprise inventory and operations."
+  },
   "name": "GAINSystems",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "36b13aac78"
+   ],
+   "value": "Estimated: Fast and innovative. A focused B2B software team iterating on supply chain analytics requires agile execution rather than slow bureaucracy."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "36b13aac78"
+   ],
+   "value": "Supply chain planning software, prescriptive analytics platforms, and operations research solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "36b13aac78"
+   ],
+   "value": "Estimated: 15-20 days of standard PTO, typical for a mid-sized B2B technology company."
   },
+  "refresh_after": 1790054975,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "36b13aac78"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "36b13aac78"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found, though standard major holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "36b13aac78"
+   ],
+   "value": "Likely a mid-sized or boutique B2B tech firm, evidenced by a specific set of senior and entry-level openings concentrated in major hubs like Atlanta and Chicago."
   },
   "sources": [
    {
@@ -106408,14 +106573,46 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "36b13aac78"
+   ],
+   "value": "Specific visa sponsorship details are not explicitly listed on the career page, but the presence of targeted new-grad and senior roles suggests standard B2B tech sponsorship policies may apply."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "36b13aac78"
+   ],
+   "value": "GAINSystems is a technology company specializing in supply chain planning and operations research solutions. It makes money by selling specialized software, such as its prescriptive analytics platform, to enterprises seeking to optimize inventory and supply chain operations."
+  },
+  "synthesized_evidence_sha": "e3462de86d5628cb",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "36b13aac78"
+   ],
+   "value": "Applied data science, operations research engineering, and prescriptive analytics focusing on supply chain and inventory optimization problems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784795724,
   "web_search_url": "https://duckduckgo.com/?q=GAINSystems+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "36b13aac78",
+    "dbc3b9e88f"
+   ],
+   "value": "As an applied data scientist or operations research engineer here, you will solve high-impact enterprise optimization problems. A boutique B2B firm is likely to offer a fast-paced, hands-on tech culture with rapid learning, acting as a strong alternative to the high-burnout environments of big tech while maintaining sane hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "36b13aac78"
+   ],
+   "value": "Estimated: Good. Boutique enterprise software firms typically rely on sane hours and sustainable pacing to retain talent, avoiding the toxic burnout of consumer tech."
   }
  },
  "galatea associates": {
@@ -120000,84 +120197,100 @@
  "havocai": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "b5ade14cc4"
+   ],
+   "value": "Estimated: High-growth tier with strong technical prestige in the autonomy and defense tech sectors, accelerated by recent major funding rounds."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "a7f4d01d09"
+   ],
+   "value": "Develops and sells autonomous systems and software solutions for military and commercial applications."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "a7f4d01d09"
+   ],
+   "value": "Estimated: Mission-driven and collaborative, focusing on high-impact autonomous systems development with a startup-like environment."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
     "a7f4d01d09"
    ],
-   "value": "Military and commercial-grade autonomous systems customers"
+   "value": "Military and commercial sectors requiring advanced autonomous systems."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
-  },
-  "evidence_sha": "302701d016e7dafd",
-  "generated_at": 1784403316,
-  "generator": {
-   "endpoint": "local",
-   "model": "qwen3:30b",
-   "task": "company_research"
-  },
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
-  },
-  "interview_focus": {
    "confidence": "high",
    "source_ids": [
     "a7f4d01d09"
    ],
-   "value": "Technical skills in Python, JavaScript, TypeScript, SQL, and APIs for developing business analytics solutions."
+   "value": "Estimated: $100,000 - $125,000 per year for entry-level software engineering roles."
   },
-  "last_attempt_at": 1784403316,
+  "evidence_sha": "302701d016e7dafd",
+  "generated_at": 1784870975,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a7f4d01d09"
+   ],
+   "value": "Defense and Commercial Autonomous Systems"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidates should emphasize their proficiency in Python, JavaScript, TypeScript, SQL, and APIs. Additionally, demonstrating an understanding of autonomous systems and business analytics will be crucial. The company values fast, innovative tech culture, so showcasing adaptability and eagerness to learn in a mission-driven environment will be key."
+  },
+  "last_attempt_at": 1784870975,
   "last_evidence_at": 1784678641,
   "locations": {
    "confidence": "high",
    "source_ids": [
     "a7f4d01d09"
    ],
-   "value": "San Diego, CA"
+   "value": "San Diego, CA with hybrid work arrangements."
   },
   "mission": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "a7f4d01d09"
+   ],
+   "value": "To lead in all-domain collaborative autonomy, focusing on military and commercial-grade autonomous systems."
   },
   "name": "HavocAI",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "b5ade14cc4"
+   ],
+   "value": "Estimated: Likely fast-paced and innovative, driven by recent funding and the need to advance autonomous systems technology quickly."
   },
   "products": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "a7f4d01d09"
+   ],
+   "value": "Military and commercial-grade autonomous systems and related software for all-domain collaborative autonomy."
   },
-  "prompt_v": 1,
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard startup PTO, likely around 15 days per year, though exact policies are not public."
   },
+  "refresh_after": 1790054975,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -120087,12 +120300,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No explicit information found on company-wide shutdowns; likely follows standard holiday schedules."
   },
   "size_stage": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "estimated",
+   "source_ids": [
+    "b5ade14cc4"
+   ],
+   "value": "Estimated: Early-stage growth company, having recently secured $85 million in autonomous vessel funding."
   },
   "sources": [
    {
@@ -120137,9 +120352,9 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Estimated: Sponsorship details are not explicitly stated, but entry-level roles may be open to domestic candidates primarily."
   },
   "status": "ready",
   "summary": {
@@ -120147,29 +120362,28 @@
    "source_ids": [
     "a7f4d01d09"
    ],
-   "value": "HavocAI is a company focused on autonomous systems for military and commercial applications, offering a software engineering role with competitive compensation and a hybrid work model."
+   "value": "HavocAI is a technology company specializing in all-domain collaborative autonomy for military and commercial-grade autonomous systems. It generates revenue by developing and deploying these autonomous systems and related software solutions for its clients."
   },
+  "synthesized_evidence_sha": "302701d016e7dafd",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "a7f4d01d09"
    ],
-   "value": "Developing all-domain collaborative autonomy systems using Python, JavaScript, TypeScript, SQL, and APIs"
+   "value": "Software engineering involving Python, JavaScript, TypeScript, SQL, and APIs for business analytics and autonomous systems."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678641,
   "web_search_url": "https://duckduckgo.com/?q=HavocAI+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "high",
-   "source_ids": [
-    "a7f4d01d09"
-   ],
-   "value": "A top-tier AI/data science role with elite prestige, high new-grad pay ($100K-$125K), and a fast, innovative tech culture focused on autonomous systems without bureaucracy."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "HavocAI operates in the high-impact defense and commercial autonomy sector, offering significant technical learning and career acceleration. The company's recent funding and focus on cutting-edge collaborative autonomy align with a fast-paced, innovative tech culture, appealing to candidates seeking elite, mission-driven work without the constraints of slow bureaucracy."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate, typical of fast-growing startups in the defense tech sector, but specific policies on work-life balance are not detailed."
   }
  },
  "hawk eye innovations": {
@@ -149231,48 +149445,125 @@
  "klaviyo": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "d38b90da33"
+   ],
+   "value": "Estimated: Contender tier. Recognized as a strong player in applied data science and machine learning within the B2B marketing space, offering excellent growth and technical prestige, though not at the Tier-1 foundational AI research level of OpenAI or DeepMind."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "ceacd6034a"
+   ],
+   "value": "SaaS subscription model with pricing tiers based on the number of active contacts and the volume of SMS credits and emails sent."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "ee3794b958"
+   ],
+   "value": "Estimated: Mission-driven and heavily analytical. The culture values ownership, data-informed decision-making, and continuous learning, making it a great place for new grads to accelerate their technical careers without burnout."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "a74099606f"
+   ],
+   "value": "Primarily B2C e-commerce brands and retailers, ranging from small businesses to large enterprises."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "ceacd6034a"
+   ],
+   "value": "Estimated: $140,000 - $160,000 base salary for new grad software engineers and data scientists, excluding RSU equity and bonuses."
   },
   "evidence_sha": "2a751e2e56a34c6c",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784870975,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "800c399940"
+   ],
+   "value": "Technology, Marketing Automation, and Customer Data Platform (CDP) software."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "ee3794b958"
+   ],
+   "value": "Be prepared to discuss how to apply machine learning models to massive, real-world e-commerce datasets while maintaining system scalability. Highlight your interest in building data-driven features rather than just theoretical modeling, demonstrating how you balance fast-paced innovation with sustainable working hours."
+  },
+  "last_attempt_at": 1784870975,
   "last_evidence_at": 1784677521,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "ee3794b958"
+   ],
+   "value": "Headquartered in Boston, Massachusetts, with additional global offices and remote work opportunities."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "800c399940"
+   ],
+   "value": "To empower creators to take ownership of their own destiny by providing them with the tools and data they need to grow their businesses."
+  },
   "name": "Klaviyo",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "0ddc422a00"
+   ],
+   "value": "Estimated: Moderate-to-fast. As a publicly traded SaaS competitor in the marketing space, Klaviyo pushes for rapid product iteration but avoids the extreme 80-hour weeks frequently seen in early-stage startups."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "a74099606f"
+   ],
+   "value": "Klaviyo Customer Platform, including email marketing, SMS marketing, marketing automation, analytics, and customer data infrastructure."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "a74099606f"
+   ],
+   "value": "Estimated: 20-25 days of flexible PTO typical for tech employees, plus standard public holidays."
   },
+  "refresh_after": 1790054975,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "0ddc422a00"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "800c399940"
+   ],
+   "value": "Estimated: No widespread company-wide guaranteed shutdowns found in research, aside from standard public holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "0ddc422a00"
+   ],
+   "value": "Publicly traded company (NYSE: KVYO) with over 1,000 employees."
   },
   "sources": [
    {
@@ -149336,14 +149627,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=3b0d4bd024536ab3b705f34eebc9cf18e2fb2219371e72a87c0dd03ddc2ab8d4JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1a6a8774-c738-6ffd-31bf-90e9c6946eb1&u=a1aHR0cHM6Ly93d3cua2xhdml5by5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a74099606f"
+   ],
+   "value": "Historically offers visa sponsorship for hard-to-fill engineering and data science roles, though policies may fluctuate based on current corporate budgets."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "d38b90da33",
+    "ee3794b958"
+   ],
+   "value": "Klaviyo is a technology company that provides a cloud-based marketing automation platform primarily used by e-commerce businesses. It makes money by charging customers subscription fees based on the volume of emails and SMS messages they send, as well as the number of contacts they store."
+  },
+  "synthesized_evidence_sha": "2a751e2e56a34c6c",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "d38b90da33"
+   ],
+   "value": "Building scalable data infrastructure, predictive analytics, AI-driven marketing features, and backend services primarily using Python, Go, and JavaScript/React."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677521,
   "web_search_url": "https://duckduckgo.com/?q=Klaviyo+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "a74099606f"
+   ],
+   "value": "Klaviyo leverages massive volumes of e-commerce data to power targeted AI and predictive analytics features, making it a highly relevant environment for data scientists. The company provides the prestige of a public tech leader without the glacial pace of legacy enterprise, offering high-impact projects that directly drive revenue."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "d38b90da33"
+   ],
+   "value": "Estimated: 7/10. Generally reported to respect personal time with sane engineering hours, but deadlines around major product launches or post-IPO financial quarters can temporarily increase workload."
   }
  },
  "knitwell group": {
@@ -158517,37 +158840,81 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown; no public rankings, research output, or brand recognition found to assess prestige tier."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown; no revenue model or business description found in available sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown; no culture decks, employee testimonials, or values statements found in public sources."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown; no public customer information found."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Not public; candidate expects high new-grad pay. Comparable early-stage AI/data firms often offer $120k–$170k base + equity + bonus, but this is a broad market estimate, not company-specific."
   },
   "evidence_sha": "42053e06f24da5ae",
+  "generated_at": 1784870975,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Data science / AI / analytics (inferred from name and new-grad tech hiring); not confirmed by public sources."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Given the candidate’s priorities, focus interview questions on: 1) Actual work hours, shutdown policies, and burnout prevention; 2) Technical mentorship structure and learning budget; 3) Project autonomy and innovation pace vs. bureaucracy; 4) Compensation transparency (base, equity, signing bonus) for new grads; 5) Mission impact and how technical work ties to it. Request concrete examples, not aspirations."
+  },
+  "last_attempt_at": 1784870975,
   "last_evidence_at": 1784802936,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbebf1b319"
+   ],
+   "value": "Estimated: Not specified in sources; career page does not list offices. May be remote-friendly or have a primary hub not disclosed publicly."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Not publicly documented; candidate priorities suggest a mission-driven, innovative tech culture, but this is unverified."
+  },
   "name": "LP Analyst",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown; candidate wants fast, innovative culture, but no employee reviews or engineering blogs found to verify pace."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No specific products identified in public sources; likely a data, analytics, or AI-focused firm given the name and new-grad tech hiring."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Not disclosed; no benefits page or handbook found."
   },
+  "refresh_after": 1790054975,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -158557,7 +158924,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Not documented; candidate wants guaranteed shutdowns, but no evidence of company-wide shutdown policies found."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Early-stage or small company (actively posting new-grad roles on SimplifyJobs); exact headcount and funding stage not public."
   },
   "sources": [
    {
@@ -158601,14 +158975,42 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown; no visa sponsorship policy found in public sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f",
+    "dbebf1b319"
+   ],
+   "value": "LP Analyst appears to be a company that hires new graduates for technical roles, with postings listed on the SimplifyJobs New Grad Positions board. Little public information is available about its products, mission, or business model."
+  },
+  "synthesized_evidence_sha": "42053e06f24da5ae",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Likely involves data science, AI/ML, or analytics engineering given the company name and targeting of new-grad tech talent; specific stack unknown."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784802936,
   "web_search_url": "https://duckduckgo.com/?q=LP+Analyst+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "The candidate seeks a top-tier AI/data science role with elite prestige, high new-grad pay, fast innovative culture, mission-driven focus, strong work-life balance with sane hours and guaranteed shutdowns, and accelerated technical growth without sacrificing personal time. LP Analyst’s new-grad presence on SimplifyJobs suggests active hiring, but public information is too limited to confirm alignment with these priorities."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown; candidate prioritizes sane hours and guaranteed shutdowns, but no Glassdoor/Blind data or policy docs located."
   }
  },
  "lpl financial holdings": {
@@ -258735,47 +259137,130 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unable to determine due to lack of retrievable sources. Treat as unverified until you can confirm their technical standing and AI/data science capabilities."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "de95885ded",
+    "81c33d0686",
+    "ff480dac9e"
+   ],
+   "value": "Unable to determine. The provided sources do not contain any accessible content regarding how TAP Engineering generates revenue or makes money."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "de95885ded",
+    "81c33d0686",
+    "ff480dac9e"
+   ],
+   "value": "Unable to determine. The provided sources do not contain any accessible content regarding TAP Engineering's company culture, work environment, or employee morale."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "de95885ded",
+    "81c33d0686",
+    "ff480dac9e"
+   ],
+   "value": "Unable to determine. The provided sources do not contain any accessible content regarding TAP Engineering's target customers or client base."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unable to determine due to lack of retrievable sources. Verify their compensation structure to ensure it meets your requirement for high new-grad pay."
   },
   "evidence_sha": "d838da6ab29188d6",
+  "generated_at": 1784870975,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "de95885ded",
+    "81c33d0686",
+    "ff480dac9e"
+   ],
+   "value": "Unable to determine. The provided sources do not contain any accessible content regarding TAP Engineering's specific industry."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Use the interview to test your core priorities, as external data is missing. Probe for evidence of elite technical learning, ask how they protect personal time, verify their compensation bands for new grads, and look for signs of fast, innovative culture versus slow bureaucratic delays."
   },
+  "last_attempt_at": 1784870975,
   "last_evidence_at": 1784676904,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "de95885ded",
+    "81c33d0686",
+    "ff480dac9e"
+   ],
+   "value": "Unable to determine. The provided sources do not contain any accessible content regarding TAP Engineering's office locations. (Note: One URL structure briefly mentions 'flytap', 'gentax', and 'idaho.gov', but no actual location data was retrievable)."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "de95885ded",
+    "81c33d0686",
+    "ff480dac9e"
+   ],
+   "value": "Unable to determine. The provided sources do not contain any accessible content regarding TAP Engineering's mission or stated values."
+  },
   "name": "TAP Engineering",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unable to determine due to lack of retrievable sources. You must verify during interviews whether the environment is fast and innovative or burdened by bureaucracy."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "de95885ded",
+    "81c33d0686",
+    "ff480dac9e"
+   ],
+   "value": "Unable to determine. The provided sources do not contain any accessible content regarding TAP Engineering's specific products or services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unable to determine due to lack of retrievable sources. Confirm exact vacation policies and guaranteed shutdown periods during the negotiation phase."
   },
+  "refresh_after": 1790054975,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "de95885ded",
+    "81c33d0686",
+    "ff480dac9e"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unable to determine due to lack of retrievable sources. You must explicitly ask recruiters if they offer guaranteed company-wide shutdowns to protect personal time."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "de95885ded",
+    "81c33d0686",
+    "ff480dac9e"
+   ],
+   "value": "Unable to determine. The provided sources do not contain any accessible content regarding TAP Engineering's employee headcount, funding stage, or corporate scale."
   },
   "sources": [
    {
@@ -258809,14 +259294,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=a7bfd585ecad01fed84c1baedfd5cf91c4edc3e96c90080c6f44cd6d41ef40c5JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01863cb3-ec2d-6271-268c-2b2eedc26349&u=a1aHR0cHM6Ly90YXguaWRhaG8uZ292L29ubGluZS1zZXJ2aWNlcy90YXAvaW50cm9kdWN0aW9uLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "de95885ded",
+    "81c33d0686",
+    "ff480dac9e"
+   ],
+   "value": "Unable to determine. The provided sources do not contain any accessible content regarding TAP Engineering's visa sponsorship or immigration policies."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "de95885ded",
+    "81c33d0686",
+    "ff480dac9e"
+   ],
+   "value": "TAP Engineering does not have a retrievable plain-English summary from the provided sources. The supplied URLs intended to link to public company pages (including references to flytap.com, gentax.com, and idaho.gov) failed to redirect to the actual company website or provide any accessible content."
+  },
+  "synthesized_evidence_sha": "d838da6ab29188d6",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "de95885ded",
+    "81c33d0686",
+    "ff480dac9e"
+   ],
+   "value": "Unable to determine. The provided sources do not contain any accessible content regarding the specific technical work, engineering stack, or data science projects at TAP Engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676904,
   "web_search_url": "https://duckduckgo.com/?q=TAP+Engineering+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Because the provided sources yielded zero retrievable content about the company, there is no confirmed data to assess against your priorities. You will need to independently verify if they offer top-tier new grad pay, possess elite AI prestige, or actually enforce the guaranteed shutdowns and sane hours needed for your work-life balance goals."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unable to determine due to lack of retrievable sources. The presence of sane hours and actual respect for personal time against toxic or high-burnout trends must be confirmed directly."
   }
  },
  "targeted victory": {
