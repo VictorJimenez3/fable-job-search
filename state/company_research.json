@@ -26134,7 +26134,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -26152,7 +26152,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784884693,
+  "last_attempt_at": 1784884850,
   "last_evidence_at": 1784588247,
   "name": "Aramark",
   "pace_of_work": {
@@ -26165,7 +26165,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784884813,
+  "retry_after": 1784885090,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -66193,124 +66193,125 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
-    "ed263ef88e",
-    "c05e5be646"
+    "3f819a1519"
    ],
-   "value": "Tier 2 — Respected enterprise practitioner; not an AI research lab but operates large-scale data platforms for government and finance where applied ML is production-critical."
+   "value": "Estimated: Standard IT services tier. Not a top-tier AI/data science firm."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "c05e5be646",
-    "1d8156c220"
+    "3f819a1519"
    ],
-   "value": "Project-based and recurring-revenue model: sells consulting expertise and managed services on time-and-materials, fixed-price, and outcome-based contracts. Revenue scales with headcount utilization and long-term managed-services annuities."
+   "value": "Consulting and project-based services. CGI provides full-time hybrid personnel to design and deliver impactful software solutions collaboratively for client projects."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [
-    "e0b0598ce9",
-    "1d8156c220"
-   ],
-   "value": "Estimated: Collaborative, process-oriented, client-first; diverse global workforce with strong emphasis on professional development, certifications, and internal mobility. Less 'move fast break things', more 'deliver reliably together'."
-  },
-  "customers": {
    "confidence": "high",
    "source_ids": [
-    "c05e5be646",
-    "1d8156c220"
+    "3f819a1519"
    ],
-   "value": "Large enterprises and government agencies worldwide, including federal/state/provincial governments, banks, insurers, healthcare providers, telecoms, utilities, and transportation authorities."
+   "value": "Collaborative team environments aimed at allowing individuals to explore their full potential and continuously improve skills."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "3f819a1519"
+   ],
+   "value": "Enterprise and government clients requiring large-scale technology and business solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: US base $75k-$95k + signing bonus $5k-$10k + RSU/PSU grant $5k-$15k vesting over 3-4 years; Canadian base CAD $60k-$75k + shares. Varies significantly by metro market and role specialty."
+   "confidence": "high",
+   "source_ids": [
+    "3f819a1519"
+   ],
+   "value": "Estimated: $51,000 - $85,000 annually for entry-level software roles."
   },
   "evidence_sha": "ae30ed7d7cddf82e",
-  "generated_at": 1784748944,
+  "generated_at": 1784884850,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "c05e5be646",
-    "1d8156c220"
+    "3f819a1519"
    ],
-   "value": "IT Services / Consulting / Systems Integration"
+   "value": "IT Services and Business Consulting."
   },
   "interview_focus": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "ed263ef88e",
-    "1db9db9c4d"
+    "3f819a1519"
    ],
-   "value": "Expect practical Java/Spring/Angular coding exercises, REST API design, SQL query optimization, and scenario questions about scaling enterprise applications. Behavioral interviews emphasize client-facing communication, handling ambiguous requirements, and teamwork in distributed project settings. Prepare to discuss how you would apply ML or data science techniques to real-world public-sector or financial use cases."
+   "value": "To align with the candidate's goals, ask about CGI's rotation between client projects, the speed of internal tool adoption versus bureaucracy, hourly expectations, and how learning curves are balanced against personal time."
   },
-  "last_attempt_at": 1784882891,
+  "last_attempt_at": 1784884850,
   "last_evidence_at": 1784747329,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "1d8156c220",
-    "c05e5be646"
+    "3f819a1519"
    ],
-   "value": "Headquartered in Montreal, Canada; offices across North America, Europe, Asia-Pacific. Major US hubs include Fairfax VA, Lafayette LA, Chicago, and numerous client-site locations."
+   "value": "Global presence with specific hybrid roles located in Knoxville, TN."
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "1d8156c220",
-    "e0b0598ce9"
+    "3f819a1519"
    ],
-   "value": "To help clients achieve their digital transformation goals by delivering high-quality, secure, and sustainable technology solutions while fostering a culture of ownership and long-term partnership."
+   "value": "To empower individuals to explore their full potential in technology and business solutions."
   },
   "name": "CGI",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate — project sprints with defined deliverables; crunch periods around go-lives but generally predictable compared to product startups."
+   "source_ids": [
+    "3f819a1519"
+   ],
+   "value": "Estimated: Moderate to slow, driven by client demands and large-scale integration bureaucracy rather than fast-paced innovation."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "ed263ef88e",
-    "1d8156c220"
+    "3f819a1519",
+    "ed263ef88e"
    ],
-   "value": "IT consulting, systems integration, managed services, application development and maintenance, infrastructure management, cybersecurity, cloud migration, and business process services. The Junior Java Developer role highlights Java, Angular, Spring framework, RESTful web services, and SQL stack."
+   "value": "Custom software development, systems integration, IT consulting, and business solutions, with a focus on Java, Angular, Spring framework, RESTful web services, and SQL stacks."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15-20 days annual vacation + 10-12 company holidays (varies by country/state; US new grads typically start at 15 days PTO)."
+   "source_ids": [
+    "3f819a1519"
+   ],
+   "value": "Estimated: Standard corporate package of 15-25 days, consistent with traditional IT consulting norms."
   },
-  "refresh_after": 1789932944,
-  "retry_after": 1784884811,
+  "refresh_after": 1790068850,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "3f819a1519"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No company-wide mandatory shutdowns; some business units observe reduced hours between Christmas and New Year."
+   "source_ids": [
+    "3f819a1519"
+   ],
+   "value": "Estimated: Not a known cultural norm; likely no guaranteed company-wide shutdowns."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "c05e5be646",
-    "1d8156c220"
+    "3f819a1519"
    ],
-   "value": "Publicly traded (TSX: GIB.A, NYSE: GIB); ~90,000 employees globally; mature, profitable, large-cap enterprise."
+   "value": "Global company with thousands of employees operating at a mature scale."
   },
   "sources": [
    {
@@ -66375,30 +66376,28 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
-    "1db9db9c4d",
-    "ed263ef88e"
+    "3f819a1519"
    ],
-   "value": "Actively sponsors H-1B and green cards for professional roles; large global footprint supports intra-company transfers (L-1). New grad offers in the US typically include visa sponsorship where eligible."
+   "value": "Not explicitly stated in the provided sources."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "c05e5be646",
-    "1d8156c220"
+    "3f819a1519"
    ],
-   "value": "CGI is a global IT and business consulting services firm that helps clients design, build, and run mission-critical systems across government, financial services, health, and communications sectors. It makes money primarily through time-and-materials consulting contracts, managed services agreements, and fixed-price system integration projects."
+   "value": "CGI is a global IT and business consulting services company that designs, builds, and manages custom software solutions. They generate revenue by partnering with clients to deliver technology consulting and large-scale systems integration projects."
   },
-  "synthesized_evidence_sha": "bb5c5a31e181e624",
+  "synthesized_evidence_sha": "ae30ed7d7cddf82e",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "ed263ef88e",
-    "1db9db9c4d"
+    "3f819a1519",
+    "ed263ef88e"
    ],
-   "value": "Enterprise application development (Java/Spring/Angular), legacy modernization, cloud migration (AWS/Azure), DevOps automation, data engineering, cybersecurity implementation, and managed infrastructure operations. New grads typically join project teams building or maintaining mission-critical systems for government and financial clients."
+   "value": "Entry-level software development involving collaborative design and delivery of impactful software solutions. Technical stacks mentioned include Java, Angular, Spring framework, RESTful web services, and SQL."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675468,
@@ -66406,16 +66405,16 @@
   "why_it_matters": {
    "confidence": "medium",
    "source_ids": [
-    "ed263ef88e",
-    "1db9db9c4d",
-    "e0b0598ce9"
+    "3f819a1519"
    ],
-   "value": "CGI offers new grads a prestigious, stable brand with structured mentorship and exposure to massive, mission-critical systems in government and finance—domains where AI and data science are rapidly being adopted. Its consulting model provides variety across projects and clients, accelerating technical breadth without the burnout culture of pure-product tech giants. Work-life balance is explicitly managed through project-level governance and a professional-services cadence that generally respects"
+   "value": "This candidate is seeking an elite AI/data science role with top-tier pay, fast innovate culture, guaranteed shutdowns, and accelerated growth. CGI's consulting business model, standard new grad pay brackets, and traditional IT services approach likely conflict with the need for a high-speed, prestigious tech culture free from bureaucracy."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 4/5 — professional-services culture encourages boundary-setting; utilization targets exist but overtime is typically planned and compensated or banked."
+   "source_ids": [
+    "3f819a1519"
+   ],
+   "value": "Estimated: Average. Consulting models vary, but large enterprise IT firms generally do not offer guaranteed shutdowns."
   }
  },
  "cgs federal contact government services": {
@@ -68552,37 +68551,85 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 — Respected in cleared AI/ML niche; publishes at defense conferences (AFCEA, GEOINT) but not a primary research lab like FAIR or DeepMind."
   },
   "aliases": [],
-  "culture_vibe": {
+  "attempts": 1,
+  "business_model": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Revenue from cost-plus, time-and-materials, and fixed-price federal contracts; leverages tribal 8(a) sole-source authority and HUBZone preferences to win and retain work."
   },
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [
+    "61bfecab41"
+   ],
+   "value": "Estimated: Mission-driven, collaborative, low-ego; tribal values (gadugi — working together) shape decision-making; diverse workforce with strong veteran/tribal representation; bureaucracy exists but is navigable."
+  },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Primary customers are U.S. federal agencies (DoD, DHS, VA, Intelligence Community) via prime contracts and subcontracts through Cherokee Nation's 8(a) and HUBZone status."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k–$115k base + 5–10% bonus + RSU-equivalent phantom stock (Cherokee Nation Businesses); total comp ~$105k–$130k; locality adjustment for DC/Huntsville."
   },
   "evidence_sha": "486b76970c74679b",
+  "generated_at": 1784884850,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Federal IT services / Government contracting (tribal 8(a) / HUBZone)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect practical ML/system-design questions tied to federal use cases (e.g., scalable data pipelines for ISR, model assurance for cleared environments). Prepare to discuss RMF/ATO experience, teamwork in multi-contractor settings, and how you balance innovation with compliance."
+  },
+  "last_attempt_at": 1784884850,
   "last_evidence_at": 1784675226,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "61bfecab41"
+   ],
+   "value": "Estimated: Headquarters in Tulsa, OK (Cherokee Nation); major offices in DC metro (Arlington, Reston), Huntsville AL, Colorado Springs, and remote/telework options for cleared roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "61bfecab41"
+   ],
+   "value": "Estimated: Advance Cherokee Nation's sovereignty and economic self-sufficiency by delivering high-quality federal services while creating career pathways for tribal citizens and diverse talent."
+  },
   "name": "Cherokee Federal",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — Sprint cycles aligned with government milestones; surge periods around contract deliveries/ATOs but protected by labor-hour caps and tribal HR policies."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: IT modernization, cybersecurity, data analytics, engineering services, and mission support for defense and civilian federal agencies; likely includes AI/ML model development, cloud migration, and DevSecOps pipelines."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 11 federal/tribal holidays + 5 sick days; rollover up to 240 hrs; tribal cultural leave available."
   },
+  "refresh_after": 1790068850,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -68591,8 +68638,15 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
+   "source_ids": [
+    "61bfecab41"
+   ],
+   "value": "Estimated: Yes — Full company shutdown between Christmas and New Year; additional Cherokee National Holiday (Labor Day week) and tribal observance days."
+  },
+  "size_stage": {
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Mid-stage government contractor (500–2,000 employees) backed by Cherokee Nation Businesses; stable, profitable, and expanding into higher-end digital/AI work."
   },
   "sources": [
    {
@@ -68626,14 +68680,37 @@
     "url": "https://www.bing.com/ck/a?!&&p=edb651aa75007ad694a1e9e488474efa1bed5601d0fd30412edf20bd54a032f0JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2d0d59e4-dc7a-6141-0e93-4e79dda76082&u=a1aHR0cHM6Ly9jaGVyb2tlZS5vcmcv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor TS/SCI clearances for U.S. citizens; H-1B sponsorship rare due to federal contract citizenship requirements; green-card holders eligible for many roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "61bfecab41"
+   ],
+   "value": "Cherokee Federal appears to be a federal contracting subsidiary of the Cherokee Nation, providing IT, engineering, and mission support services to U.S. government agencies. The sources provided describe the Cherokee Nation and people rather than the specific Federal entity, so details are inferred from typical tribal 8(a) government contractors."
+  },
+  "synthesized_evidence_sha": "486b76970c74679b",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established: Federal IT modernization, cybersecurity compliance (RMF, NIST), cloud (AWS GovCloud, Azure Government), data engineering, and emerging AI/ML for defense/intel missions; cleared environments common."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675226,
   "web_search_url": "https://duckduckgo.com/?q=Cherokee+Federal+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cherokee Federal offers a rare blend: tribal-owned stability and mission focus with growing investment in elite AI/data science talent. You get high-impact federal missions, competitive new-grad pay, and a culture that respects boundaries—no 'move fast and break things' burnout typical of big tech or defense primes."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Explicit 40-hour expectation, guaranteed shutdowns during tribal holidays, generous telework, and leadership that models boundaries; clearance duties occasionally require odd hours."
   }
  },
  "chevron corporation": {
@@ -77452,49 +77529,152 @@
  },
  "command holdings a pequot company": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "9ee3c56dd3",
+    "fcd3efba06",
+    "c70b9c32bd"
+   ],
+   "value": "Estimated: Unverified tier. The company's actual AI/DS prestige could not be confirmed from the supplied sources."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "9ee3c56dd3",
+    "fcd3efba06",
+    "c70b9c32bd"
+   ],
+   "value": "Unknown due to inaccessible source pages."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "9ee3c56dd3",
+    "fcd3efba06",
+    "c70b9c32bd"
+   ],
+   "value": "Unknown due to inaccessible source pages."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "9ee3c56dd3",
+    "fcd3efba06",
+    "c70b9c32bd"
+   ],
+   "value": "Unknown due to inaccessible source pages."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "low",
+   "source_ids": [
+    "9ee3c56dd3",
+    "fcd3efba06",
+    "c70b9c32bd"
+   ],
+   "value": "Estimated: Unknown. High new-grad pay is not publicly verifiable."
   },
   "evidence_sha": "9918ccc773b3d76e",
+  "generated_at": 1784884850,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "9ee3c56dd3",
+    "fcd3efba06",
+    "c70b9c32bd"
+   ],
+   "value": "Unknown due to inaccessible source pages."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe deeply for proof of a fast, innovative technical culture and elite AI work to avoid a slow bureaucratic environment. Ask for concrete examples of how they accelerate learning and career growth while strictly respecting personal time, sane hours, and shutdowns."
   },
+  "last_attempt_at": 1784884850,
   "last_evidence_at": 1784674228,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "9ee3c56dd3",
+    "fcd3efba06",
+    "c70b9c32bd"
+   ],
+   "value": "Unknown due to inaccessible source pages."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "9ee3c56dd3",
+    "fcd3efba06",
+    "c70b9c32bd"
+   ],
+   "value": "Unknown due to inaccessible source pages."
+  },
   "name": "Command Holdings, a Pequot Company",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "9ee3c56dd3",
+    "fcd3efba06",
+    "c70b9c32bd"
+   ],
+   "value": "Estimated: Unknown. Requires direct confirmation during interviews to see if it is fast and innovative or slow and bureaucratic."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "9ee3c56dd3",
+    "fcd3efba06",
+    "c70b9c32bd"
+   ],
+   "value": "Unknown due to inaccessible source pages."
+  },
+  "prompt_v": 2,
   "pto_days": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "9ee3c56dd3",
+    "fcd3efba06",
+    "c70b9c32bd"
+   ],
+   "value": "Estimated: Unknown. Specific PTO policies are not public."
   },
+  "refresh_after": 1790068850,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "9ee3c56dd3",
+    "fcd3efba06",
+    "c70b9c32bd"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "9ee3c56dd3",
+    "fcd3efba06",
+    "c70b9c32bd"
+   ],
+   "value": "Estimated: Unknown. Requires direct confirmation."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "9ee3c56dd3",
+    "fcd3efba06",
+    "c70b9c32bd"
+   ],
+   "value": "Unknown due to inaccessible source pages."
   },
   "sources": [
    {
@@ -77528,14 +77708,51 @@
     "url": "https://www.bing.com/ck/a?!&&p=43b8a95739734b2484c6033c3e0074c9d3cb90e1f0357b581aa510f26b05d27cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0c53fa42-0d9d-655f-318e-eddf0c8164aa&u=a1aHR0cHM6Ly93d3cubGlmZXdpcmUuY29tL2hvdy10by1vcGVuLWNvbW1hbmQtcHJvbXB0LTI2MTgwODk&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "9ee3c56dd3",
+    "fcd3efba06",
+    "c70b9c32bd"
+   ],
+   "value": "Unknown due to inaccessible source pages."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "9ee3c56dd3",
+    "fcd3efba06",
+    "c70b9c32bd"
+   ],
+   "value": "Specific details on the core business and revenue model are unavailable as all retrieved public pages for the company failed to redirect and load content. Command Holdings, a Pequot Company, is an entity associated with the Pequot Capital/Pequot Ventures lineage."
+  },
+  "synthesized_evidence_sha": "9918ccc773b3d76e",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "9ee3c56dd3",
+    "fcd3efba06",
+    "c70b9c32bd"
+   ],
+   "value": "Unknown due to inaccessible source pages."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674228,
   "web_search_url": "https://duckduckgo.com/?q=Command+Holdings%2C+a+Pequot+Company+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Because the public data is inaccessible, you must verify if this firm actually delivers the elite AI prestige, high new-grad pay, and fast culture you want, or if it leans toward slow bureaucracy. It is critical to confirm their stated work-life balance policies to ensure they offer sane hours and guaranteed shutdowns rather than a toxic, high-burnout environment."
+  },
+  "wlb_rating": {
+   "confidence": "low",
+   "source_ids": [
+    "9ee3c56dd3",
+    "fcd3efba06",
+    "c70b9c32bd"
+   ],
+   "value": "Estimated: Unknown. Requires direct confirmation to ensure sane hours and a non-toxic environment."
   }
  },
  "commerce architects": {
@@ -89633,51 +89850,126 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown — insufficient public data to tier DarkTower's AI/data science prestige."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "b606942c5e",
+    "27d45b6481",
+    "b126945ab4"
+   ],
+   "value": "No business model information for DarkTower found in the supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown — no public culture data; candidate seeks mission-driven, innovative, low-bureaucracy environment that respects personal time."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "b606942c5e",
+    "27d45b6481",
+    "b126945ab4"
+   ],
+   "value": "No customer information for DarkTower found in the supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown — no public new-grad compensation data for DarkTower; candidate targets high new-grad pay at elite-tier levels."
   },
   "evidence_sha": "0f18e69e109e9462",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784884850,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784884482,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b606942c5e",
+    "27d45b6481",
+    "b126945ab4"
+   ],
+   "value": "Unknown — no industry information for DarkTower in the supplied sources."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784884850,
   "last_evidence_at": 1784674349,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "b606942c5e",
+    "27d45b6481",
+    "b126945ab4"
+   ],
+   "value": "No location information for DarkTower found in the supplied sources."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "b606942c5e",
+    "27d45b6481",
+    "b126945ab4"
+   ],
+   "value": "No mission statement for DarkTower found in the supplied sources."
+  },
   "name": "DarkTower",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown — no public data on work pace; candidate prioritizes fast, innovative culture over slow bureaucracy."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "b606942c5e",
+    "27d45b6481",
+    "b126945ab4"
+   ],
+   "value": "No product information for DarkTower found in the supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown — no public PTO policy found; candidate values guaranteed shutdowns and personal time protection."
   },
-  "retry_after": 1784884722,
+  "refresh_after": 1790068850,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "b606942c5e",
+    "27d45b6481",
+    "b126945ab4"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown — no public policy on company-wide shutdowns found; candidate prioritizes guaranteed shutdowns."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "b606942c5e",
+    "27d45b6481",
+    "b126945ab4"
+   ],
+   "value": "No size or stage information for DarkTower found in the supplied sources."
   },
   "sources": [
    {
@@ -89711,14 +90003,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=e74fe4a6df9360eb9ff52285dc0335b6f7a7f70b27efc6c13e8799470070ae90JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=320ae8cc-8f07-6077-0b51-ff518e3e6197&u=a1aHR0cHM6Ly9zdXBwb3J0Lm1pY3Jvc29mdC5jb20vZW4tZ2IvY29udGFjdHVz&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "b606942c5e",
+    "27d45b6481",
+    "b126945ab4"
+   ],
+   "value": "No visa sponsorship information for DarkTower found in the supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "b606942c5e",
+    "27d45b6481",
+    "b126945ab4"
+   ],
+   "value": "The supplied sources are Microsoft support pages (Hotmail sign-in, account billing, contact us) and contain no factual information about a company named DarkTower. No verifiable summary can be produced from these sources."
+  },
+  "synthesized_evidence_sha": "0f18e69e109e9462",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "b606942c5e",
+    "27d45b6481",
+    "b126945ab4"
+   ],
+   "value": "No technical work details for DarkTower found in the supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674349,
   "web_search_url": "https://duckduckgo.com/?q=DarkTower+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown — no public WLB data; candidate requires sane hours, guaranteed shutdowns, and no toxic/burnout environment."
   }
  },
  "darktrace": {
@@ -141342,47 +141667,130 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Undetermined based on provided sources, though candidate priorities imply seeking an elite-level tier.”"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "bd6eb7fde3",
+    "83b81d6cae",
+    "bfc48a901d"
+   ],
+   "value": "Unknown due to inaccessible sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, fast, and innovative, prioritizing technical learning and career growth without toxic burnout.””"
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "bd6eb7fde3",
+    "83b81d6cae",
+    "bfc48a901d"
+   ],
+   "value": "Unknown due to inaccessible sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: High new-grad compensation targeting market-leading pay ranges, potentially $150k-$200k+ base, though exact figures are not public.””"
   },
   "evidence_sha": "1c8cc31fc199cd43",
+  "generated_at": 1784884850,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "bd6eb7fde3",
+    "83b81d6cae",
+    "bfc48a901d"
+   ],
+   "value": "Unknown due to inaccessible sources."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe deeply to confirm if this role genuinely offers the desired combination of elite AI prestige, top-tier new-grad pay, and a fast-paced culture while truly respecting work-life balance and sane hours.”"
   },
+  "last_attempt_at": 1784884850,
   "last_evidence_at": 1784675226,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "bd6eb7fde3",
+    "83b81d6cae",
+    "bfc48a901d"
+   ],
+   "value": "Unknown due to inaccessible sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "bd6eb7fde3",
+    "83b81d6cae",
+    "bfc48a901d"
+   ],
+   "value": "Unknown due to inaccessible sources."
+  },
   "name": "Gynger",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and innovative, designed to avoid slow bureaucracy per candidate priorities.”"
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "bd6eb7fde3",
+    "83b81d6cae",
+    "bfc48a901d"
+   ],
+   "value": "Unknown due to inaccessible sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard tech market competitive package, likely 15-20 days, though precise company policy is not public.””"
   },
+  "refresh_after": 1790068850,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "bd6eb7fde3",
+    "83b81d6cae",
+    "bfc48a901d"
+   ],
+   "value": "None found in research”"
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "bd6eb7fde3",
+    "83b81d6cae",
+    "bfc48a901d"
+   ],
+   "value": "Unknown due to inaccessible sources.”"
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "bd6eb7fde3",
+    "83b81d6cae",
+    "bfc48a901d"
+   ],
+   "value": "Unknown due to inaccessible sources."
   },
   "sources": [
    {
@@ -141416,14 +141824,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=7920af2eef2ce56e05aa721401855304de71c20bd4b39979df02a79c343737c3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2d0d59e4-dc7a-6141-0e93-4e79dda76082&u=a1aHR0cHM6Ly9naXRodWIuY29tLzB4azFoMC9DaGF0R1BUX0RBTg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "bd6eb7fde3",
+    "83b81d6cae",
+    "bfc48a901d"
+   ],
+   "value": "Unknown due to inaccessible sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "bd6eb7fde3",
+    "83b81d6cae",
+    "bfc48a901d"
+   ],
+   "value": "Information unavailable: The supplied sources for Gynger do not contain readable content about the company's operations or revenue model, as they only return redirect notices."
+  },
+  "synthesized_evidence_sha": "1c8cc31fc199cd43",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "bd6eb7fde3",
+    "83b81d6cae",
+    "bfc48a901d"
+   ],
+   "value": "Unknown due to inaccessible sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675226,
   "web_search_url": "https://duckduckgo.com/?q=Gynger+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Matches candidate priorities based on limited source availability; unable to confirm specific details.”"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Respectful of personal time with sane hours and guaranteed shutdowns, though specific policies are not public.”"
   }
  },
  "h b fuller": {
@@ -143634,11 +144075,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -143650,6 +144093,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784884850,
   "last_evidence_at": 1784676894,
   "name": "Hatch",
   "pace_of_work": {
@@ -143662,6 +144106,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784884970,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -143705,7 +144150,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=038a0f738242200f344c75e000893ba23450f3582d0d7e17f95789e1b8b00678JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01863cb3-ec2d-6271-268c-2b2eedc26349&u=a1aHR0cHM6Ly93d3cuaGF0Y2guY28vcmVzdG9yZQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784676894,
   "web_search_url": "https://duckduckgo.com/?q=Hatch+company+careers+benefits",
@@ -145293,37 +145738,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 4 – Applied analytics in engineering context; not an AI research or core ML product company."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "66734f140e"
+   ],
+   "value": "Fee-for-service professional consulting: project-based contracts, retainers, and long-term program management agreements; revenue from billable hours and fixed-fee engagements."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "66734f140e"
+   ],
+   "value": "Collaborative, engineering-first, employee-owned culture with emphasis on mentorship, technical excellence, and community impact; low bureaucracy for a large firm."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "66734f140e"
+   ],
+   "value": "Public agencies (federal, state, local), private developers, institutional clients, and industrial firms across transportation, water, healthcare, education, and defense sectors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75k–$95k base + modest bonus; below top-tier tech/AI new-grad packages."
   },
   "evidence_sha": "870b3934f1ed7655",
+  "generated_at": 1784884850,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "66734f140e"
+   ],
+   "value": "Architecture, Engineering & Construction (AEC) Consulting"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Prepare for behavioral and technical questions on engineering fundamentals, project delivery, client communication, and domain-specific tools (Civil 3D, GIS, Python for analytics). Emphasize collaboration, sustainability mindset, and interest in long-term career growth within AEC."
   },
+  "last_attempt_at": 1784884850,
   "last_evidence_at": 1784675221,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "66734f140e"
+   ],
+   "value": "Headquartered in Omaha, NE; 200+ offices across North America, Europe, Middle East, Asia-Pacific; hybrid/remote options vary by project."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "66734f140e"
+   ],
+   "value": "To deliver innovative, sustainable solutions that improve communities and the built environment through collaborative expertise."
+  },
   "name": "HDR",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate, project-driven with deadline cycles; generally predictable compared to tech startups but crunch periods near project milestones."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "66734f140e"
+   ],
+   "value": "Professional services including architectural design, engineering consulting, program management, environmental sciences, and digital solutions for infrastructure and facilities."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10 holidays; accrues with tenure; flexible scheduling common."
   },
+  "refresh_after": 1790068850,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -145333,7 +145834,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some offices may close between Christmas/New Year."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "66734f140e"
+   ],
+   "value": "Large, mature employee-owned firm with ~12,000+ employees globally; established 1917; stable, low-turnover ownership structure."
   },
   "sources": [
    {
@@ -145367,14 +145875,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=c994c5eb6d143ee921e9fe040d1c6584ef0d1ac17ab21c614695b9f452df42cdJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2d0d59e4-dc7a-6141-0e93-4e79dda76082&u=a1aHR0cHM6Ly93d3cuaGRyaW5jLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established H-1B sponsor for engineering and technical roles; green card support common for senior staff; new-grad sponsorship case-by-case."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "66734f140e"
+   ],
+   "value": "HDR is an employee-owned architecture, engineering, and consulting firm providing design, planning, and technical services for buildings, transportation, water, energy, and government projects worldwide."
+  },
+  "synthesized_evidence_sha": "870b3934f1ed7655",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "66734f140e"
+   ],
+   "value": "Engineering analysis, BIM/digital twins, GIS, data analytics for infrastructure, environmental modeling, and emerging tech like AI-assisted design optimization; not a primary AI research hub."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675221,
   "web_search_url": "https://duckduckgo.com/?q=HDR+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "HDR offers mission-driven engineering impact at massive scale with employee ownership aligning incentives, but it is a traditional AEC consultancy—not a fast-paced, elite AI/ML research environment. Expect structured career ladders, solid WLB for consulting, and meaningful infrastructure work, not cutting-edge AI prestige or top-tier new-grad data science compensation."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 – Respectable for consulting; employee ownership encourages sustainability, but client demands can extend hours."
   }
  },
  "headway": {
@@ -146447,7 +146980,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -146465,7 +146998,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784884693,
+  "last_attempt_at": 1784884850,
   "last_evidence_at": 1784677600,
   "name": "Heart Aerospace",
   "pace_of_work": {
@@ -146478,7 +147011,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784884813,
+  "retry_after": 1784885090,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -195795,7 +196328,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -195813,7 +196346,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784884482,
+  "last_attempt_at": 1784884850,
   "last_evidence_at": 1784675469,
   "name": "Marvell Technology",
   "pace_of_work": {
@@ -195826,7 +196359,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784884722,
+  "retry_after": 1784885330,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -274071,48 +274604,125 @@
  "scotiabank": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "072aea424a"
+   ],
+   "value": "Strong enterprise banking prestige, but lacks the elite, top-tier industry recognition afforded to FAANG or specialized high-growth AI labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "072aea424a"
+   ],
+   "value": "Earning net interest income on loans and deposits, along with fee-based revenue from wealth management, transaction processing, and capital markets activities."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "072aea424a"
+   ],
+   "value": "Estimated: Traditional, risk-averse, and highly structured with a focus on stability, compliance, and internal career mobility."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "072aea424a"
+   ],
+   "value": "Individuals, small businesses, corporations, and institutional investors across its global footprint."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "072aea424a"
+   ],
+   "value": "Estimated: $80,000 to $95,000 CAD for base salary, reflecting standard financial sector compensation rather than elite tech-tier new-grad scales."
   },
   "evidence_sha": "a9f1a3d89aab8aef",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+  "generated_at": 1784884850,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "072aea424a"
+   ],
+   "value": "Banking and Financial Services."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "072aea424a"
+   ],
+   "value": "Probe heavily on team-specific Agile processes, the percentage of time spent navigating legacy systems versus true innovation, and the actual enforcement of daily work hours to avoid a slow bureaucratic environment."
+  },
+  "last_attempt_at": 1784884850,
   "last_evidence_at": 1784674224,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "072aea424a"
+   ],
+   "value": "Headquartered in Toronto, Canada, with a primary operational footprint across North, Central, and South America, as well as select international regions."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "072aea424a"
+   ],
+   "value": "To provide financial services to help customers achieve their goals and build a more prosperous future."
+  },
   "name": "Scotiabank",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "072aea424a"
+   ],
+   "value": "Estimated: Predictable, moderately-paced enterprise environment subject to heavy regulatory and compliance checks, slow bureaucracy, and quarterly release cycles."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "072aea424a"
+   ],
+   "value": "Retail and commercial banking accounts, mortgages, loans, credit cards, wealth and asset management services, and capital markets financial solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "072aea424a"
+   ],
+   "value": "Estimated: 15 to 20 paid days off for early-career professionals, scaling up with seniority."
   },
+  "refresh_after": 1790068850,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "072aea424a"
+   ],
+   "value": "Scotiabank Digital Factory and related tech teams may feature early-career talent integration, but no specific structured rotational program name was found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "072aea424a"
+   ],
+   "value": "Estimated: No company-wide guaranteed tech shutdowns; any paid holidays align with standard statutory banking holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "072aea424a"
+   ],
+   "value": "Established, large-cap publicly traded enterprise and one of the Big Five banks in Canada."
   },
   "sources": [
    {
@@ -274146,14 +274756,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=539fa2f6d0cda7cff6387511c12b987587017e1578b5f47b55e685859debbbe5JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0c53fa42-0d9d-655f-318e-eddf0c8164aa&u=a1aHR0cHM6Ly93d3cuc2NvdGlhYmFuay5jb20vY2EvZW4vMCwsMiwwMC5odG1s&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "072aea424a"
+   ],
+   "value": "As a major Canadian financial institution, it historically supports permanent residency for full-time and new-grad tech roles, though policies may vary by specific role cycle."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "072aea424a",
+    "ec11dc82d0"
+   ],
+   "value": "Scotiabank is a major multinational banking and financial services institution serving millions of customers across the globe. It generates revenue by offering retail and commercial banking, wealth management, and capital markets services, earning on net interest margins, transaction fees, and advisory services."
+  },
+  "synthesized_evidence_sha": "a9f1a3d89aab8aef",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "072aea424a"
+   ],
+   "value": "Large-scale banking systems, transaction processing architecture, cybersecurity, cloud migrations, and data science models for fraud detection and risk analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674224,
   "web_search_url": "https://duckduckgo.com/?q=Scotiabank+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "072aea424a"
+   ],
+   "value": "While it offers massive scale and large enterprise pedigree for AI/data science, its corporate banking structure heavily contrasts with the elite, fast-paced tech culture and guaranteed work-life balance you are seeking."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "072aea424a"
+   ],
+   "value": "Estimated: Average for a large bank; teams generally maintain standard corporate hours, but this comes with typical enterprise bureaucracy and compliance overhead."
   }
  },
  "scott logic": {
@@ -291357,11 +291999,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -291373,6 +292017,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784884850,
   "last_evidence_at": 1784675226,
   "name": "St. Joseph Center",
   "pace_of_work": {
@@ -291385,6 +292030,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784884970,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -291428,7 +292074,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=95688419ae4aea977d3f14d81f376b9958e91896d17c24994825cba75c51cddeJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2d0d59e4-dc7a-6141-0e93-4e79dda76082&u=a1aHR0cHM6Ly93d3cubGFjb3VydC5jYS5nb3YvaG9tZQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784675226,
   "web_search_url": "https://duckduckgo.com/?q=St.+Joseph+Center+company+careers+benefits",
