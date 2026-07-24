@@ -903,5 +903,8 @@ the action, so no public page can consume Victor's API quota.
 
 The request returns immediately and the drawer tells the owner to refresh in
 roughly 1–3 minutes. This includes Actions queue/startup plus the normally
-20–75-second hosted synthesis. The workflow records retryable provider failure
-rather than making the browser wait or claiming a result it did not obtain.
+20–75-second hosted synthesis. To make a click-through session feel fast, the
+opened employer is processed first and the same owner request warms up to four
+distinct, not-yet-ready companies from the current Jobs ordering concurrently.
+The workflow records retryable provider failure rather than making the browser
+wait or claiming a result it did not obtain.

@@ -48,6 +48,12 @@ jobs:
           NVIDIA_NEMOTRON_3_ULTRA_550B_A55B_MODEL: ${{ vars.NVIDIA_NEMOTRON_3_ULTRA_550B_A55B_MODEL }}
           NVIDIA_KIMI_K2_6_API_KEY: ${{ secrets.NVIDIA_KIMI_K2_6_API_KEY }}
           NVIDIA_KIMI_K2_6_MODEL: ${{ vars.NVIDIA_KIMI_K2_6_MODEL }}
+          # Research the opened employer first and warm a few likely next
+          # clicks concurrently, using the existing bounded provider router.
+          RADAR_COMPANY_RESEARCH_WORKERS: "5"
+          RADAR_AI_MAX_CALLS: "5"
+          RADAR_AI_MAX_REQUESTS: "10"
+          RADAR_AI_PROVIDER_ATTEMPTS: "2"
         run: python -m radar.main web-action
       - name: Commit state
         run: |

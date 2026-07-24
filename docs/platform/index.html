@@ -440,23 +440,36 @@ async function actUntrack(j) {
   }} catch(e) { toast("Remove failed: "+e.message.slice(0,90)); }
   return false;
 }
-async function apiAction(action, job) {
+async function apiAction(action, job, extra={}) {
   const r = await fetch("/api/action", {method:"POST",
     headers:{"Content-Type":"application/json"},
     body: JSON.stringify({action, id:job.id, url:job.url, company:job.company,
-      title:job.title, location:(job.locations||[])[0] || ""})});
+      title:job.title, location:(job.locations||[])[0] || "", ...extra})});
   if (!r.ok) throw new Error((await r.json()).error || r.status);
   return true;
 }
 function canWrite() { return (S.auth && S.auth.owner) || token(); }
 function canResearchCompany() { return Boolean(S.auth && S.auth.owner); }
+function researchPrefetchIds(current) {
+  // One role per employer, in the user's current Jobs ordering. The opened
+  // employer stays first; already-ready dossiers do not waste a call.
+  const ids = [current.id], companies = new Set([norm(current.company)]);
+  for (const candidate of jobList()) {
+    if (ids.length >= 5) break;
+    const company = norm(candidate.company);
+    if (companies.has(company) || S.research[company]?.status === "ready") continue;
+    companies.add(company); ids.push(candidate.id);
+  }
+  return ids;
+}
 async function requestCompanyResearch(j) {
   // Deliberately do not use the tokenless/PAT fallback: this starts a hosted
   // provider job and is reserved for the owner's sealed OAuth session.
   if (!canResearchCompany()) return;
   try {
-    await apiAction("research-company", j);
-    toast("Company research queued · usually ready in 1–3 min; refresh this drawer to see it");
+    const ids = researchPrefetchIds(j);
+    await apiAction("research-company", j, {ids});
+    toast(`Research queued${ids.length>1?` · warming ${ids.length-1} next companies`:""} · usually ready in 1–3 min`);
   } catch(e) { toast("Research request failed: "+e.message.slice(0,100)); }
 }
 async function doWrite(action, job) {   // best available write path
@@ -813,8 +826,8 @@ function wsCompany(j, w, c, id) {
   const reg = S.registryByCompany[norm(j.company)];
   const researchAction = canResearchCompany()
     ? `<button class="act" onclick='requestCompanyResearch(jobById("${id}"))'>
-        ${d?.status==="ready"?"refresh company research":"research company now"}</button>
-       <p class="sub">Owner-only · uses the server-side provider budget; normally ready in 1–3 min.</p>`
+        ${d?.status==="ready"?"refresh + prefetch companies":"research + prefetch companies"}</button>
+       <p class="sub">Owner-only · researches this company first, then warms up to four likely next clicks.</p>`
     : "";
   return `
     <div class="sect"><h4>Found via</h4><p>${foundVia(j)}</p></div>

@@ -134,6 +134,28 @@ def test_web_action_company_research_is_one_job_owner_workflow(tmp_state, tmp_pa
     assert calls["usage"] is True
 
 
+def test_web_action_company_research_batches_distinct_known_ids(tmp_state, tmp_path, monkeypatch):
+    from radar.main import web_action
+    second = {**JOB, "id": "second", "company": "Second Co", "url": "https://second.example/job"}
+    state.save("jobs.json", {JOB["id"]: JOB, second["id"]: second})
+    event = tmp_path / "dispatch.json"
+    event.write_text(json.dumps({"client_payload": {
+        "action": "research-company", "id": JOB["id"],
+        "ids": [JOB["id"], "second", "second", "missing"]}}))
+    monkeypatch.setenv("GITHUB_EVENT_PATH", str(event))
+    monkeypatch.setattr("radar.company_research.load", lambda: {})
+    monkeypatch.setattr("radar.company_research.save", lambda records: None)
+    monkeypatch.setattr("radar.company_research.prepare_external_sources", lambda *args, **kwargs: True)
+    captured = {}
+    monkeypatch.setattr("radar.company_research.enrich",
+                        lambda jobs, applied, web, limit: captured.update(jobs=jobs, web=web, limit=limit) or 2)
+    monkeypatch.setattr("radar.llm.save_usage", lambda: None)
+    assert web_action() == 0
+    assert list(captured["jobs"]) == [JOB["id"], "second"]
+    assert captured["limit"] == 2
+    assert captured["web"]["jobs"][JOB["id"]]["research_requested"] is True
+
+
 def test_web_action_manual_add_creates_saved_dashboard_record(tmp_state, tmp_path, monkeypatch):
     from radar.main import web_action
     monkeypatch.delenv("NOTION_TOKEN", raising=False)

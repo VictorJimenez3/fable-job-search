@@ -668,7 +668,19 @@ def web_action() -> int:
         print(f"web-action: untrack {payload.get('company')} — changed={changed}")
         return 0
     if action == "research-company":
-        if job is None:
+        requested_ids = payload.get("ids") if isinstance(payload.get("ids"), list) else []
+        requested_ids = [str(jid) for jid in requested_ids if str(jid)][:5]
+        if payload.get("id") and payload["id"] not in requested_ids:
+            requested_ids.insert(0, payload["id"])
+        requested_ids = requested_ids[:5]
+        selected = []
+        for jid in requested_ids:
+            candidate = jobs.get(jid) or hist.get(jid)
+            if candidate and candidate not in selected:
+                selected.append(candidate)
+        if not selected and job is not None:
+            selected = [job]
+        if not selected:
             print(f"web-action: research job {payload.get('id')!r} not found")
             return 0
         # This action deliberately runs only in the owner-authorized workflow.
@@ -676,14 +688,25 @@ def web_action() -> int:
         # Actions secrets and no public visitor can spend the research budget.
         from . import company_research, llm
         records = company_research.load()
-        sources_changed = company_research.prepare_external_sources(
-            records, job["company"], [job.get("url", "")],
-            [job.get("source_url", "")], job.get("sector", ""), force=True)
+        sources_changed = 0
+        for index, selected_job in enumerate(selected):
+            sources_changed += bool(company_research.prepare_external_sources(
+                records, selected_job["company"], [selected_job.get("url", "")],
+                [selected_job.get("source_url", "")], selected_job.get("sector", ""),
+                # The clicked employer is refreshed; warmups reuse evidence
+                # already collected by the normal crawler/backfill.
+                force=index == 0))
         company_research.save(records)
+        # The opened job wins the existing priority queue ahead of speculative
+        # warmups, without persisting a fake user action in web state.
+        web = state.load("web_state.json", {})
+        web = {**web, "jobs": {**(web.get("jobs") or {}),
+                                selected[0]["id"]: {"research_requested": True}}}
         synthesized = company_research.enrich(
-            {job["id"]: job}, applied, state.load("web_state.json", {}), limit=1)
+            {selected_job["id"]: selected_job for selected_job in selected}, applied, web,
+            limit=len(selected))
         llm.save_usage()
-        print(f"web-action: research-company {job['company']} — "
+        print(f"web-action: research-company {selected[0]['company']} + {len(selected) - 1} prefetch — "
               f"sources_changed={sources_changed}, synthesized={synthesized}")
         return 0
     if action == "manual-add":
