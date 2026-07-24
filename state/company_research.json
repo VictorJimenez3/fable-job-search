@@ -4287,41 +4287,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Top fintech AI/DS destination; publishes at NeurIPS/ICML; known for hard technical problems in financial data)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "SaaS subscription model charging platform fees based on assets under management (AUM) or per-user/seat licenses. Revenue scales with client AUM growth and module adoption."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, intellectually honest, low ego. Strong writing culture (RFCs, design docs). Diverse team with many ex-Google/Meta/Palantir. Transparent leadership. Social but not mandatory. Focus on craft and customer outcomes over hours."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "RIAs, family offices, wealth management firms, banks, and asset managers managing over $5T in assets on the platform. Notable clients include major independent advisory firms and institutional allocators."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130-145K base + $30-50K equity (4-yr) + $15-25K sign-on = $175-220K total first year. Refreshers target 50-75% of initial grant annually."
   },
   "evidence_sha": "1f20cc95c3d979f7",
+  "generated_at": 1784867977,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Fintech / Wealth Management Technology / B2B SaaS"
   },
-  "last_attempt_at": 1784867831,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep dives on distributed systems design (data ingestion pipelines), ML for financial document parsing, and high-precision numerical computing. Prepare for system design around multi-tenant SaaS architecture and take-home exercises involving portfolio calculation logic. Behavioral emphasis on ownership, customer empathy, and sustainable pace."
+  },
+  "last_attempt_at": 1784867977,
   "last_evidence_at": 1784675474,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Mountain View, CA. Offices: New York, Salt Lake City, Chicago, London. Hybrid-friendly with remote options for many roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To bring transparency and data-driven decision-making to the world's capital by building the operating system for wealth management."
+  },
   "name": "Addepar",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable. Quarterly planning with 2-week sprints. On-call rotations exist but are well-managed. New features ship monthly. Less chaotic than early-stage, more agile than big banks."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core platform for portfolio management, performance reporting, client portal, data aggregation across custodians, and API ecosystem for integrations. Focus on alternatives, private equity, real estate, and complex multi-entity structures."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 5 sick days. Unlimited policy for senior roles. Winter shutdown (Dec 24-Jan 1). Summer Fridays (half-days) in some offices."
   },
-  "retry_after": 1784867951,
+  "refresh_after": 1790051977,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -4331,7 +4369,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual winter shutdown (Dec 24 - Jan 1) mandatory. Summer half-day Fridays (Memorial Day to Labor Day) in Mountain View and SLC offices."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Late-stage private company, ~1,000-1,500 employees, valued at $8B+ (2021). Backed by Valor Equity, Peter Thiel, Joe Lonsdale. Profitable or near-profitable with strong ARR growth."
   },
   "sources": [
    {
@@ -4365,14 +4408,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=996cbe8acf2fb44aa3e918e40dd0dfbd636713d53bf2888d50197d7be1b07c40JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0a5391a8-206b-65df-2328-8635211464e1&u=a1aHR0cHM6Ly9hZGRlcGFyLmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "H-1B sponsor (regular filings), supports STEM OPT, green card sponsorship for senior roles. Immigration support typical for Bay Area tech scale-ups."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Addepar is a technology and data platform for wealth management, providing investment professionals with tools for portfolio aggregation, analytics, and reporting across complex asset classes. It serves registered investment advisors, family offices, and financial institutions."
+  },
+  "synthesized_evidence_sha": "1f20cc95c3d979f7",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large-scale data ingestion/normalization from 300+ custodians, high-performance calculation engine for portfolio analytics, React/TypeScript frontend, Python/Go backend, ML for document parsing and anomaly detection, distributed systems on AWS/GCP."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675474,
   "web_search_url": "https://duckduckgo.com/?q=Addepar+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Addepar offers elite AI/data science prestige in fintech with top-tier new-grad compensation (~$170-200K total) while maintaining a mission-driven culture focused on sane hours (estimated 40-45 hrs/wk) and guaranteed shutdowns. The complex data normalization and analytics problems provide accelerated technical growth without the burnout typical of hedge funds or big tech. You own meaningful pieces of the calculation engine and ML pipeline that process trillions in assets."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5. Core hours 10am-4pm PT. No weekend expectation. 'No-meeting Wednesdays' practiced. PTO respected. On-call ~1 week/quarter with comp time."
   }
  },
  "adelaide metrics": {
@@ -129313,37 +129377,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong applied ML focus on proprietary EMS/healthcare datasets with real-world deployment, but not a primary AI research lab. Prestige comes from domain uniqueness (national EMS data network) and production ML impact rather than pure research publication volume."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "B2B SaaS and software licensing model with recurring revenue from subscription fees, implementation services, training, and ongoing support contracts. Sales are typically through direct enterprise sales to government agencies and healthcare systems."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, mission-driven, Midwestern pragmatic. Collaborative not competitive; long-tenured staff (10+ years common) indicates low burnout. Values regulatory expertise and domain depth. Transparent leadership, low bureaucracy for size. Remote-friendly with intentional in-person collaboration events."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary customers are EMS agencies, fire departments, hospitals, and state/local government health departments across the United States. They serve thousands of agencies including large metropolitan systems and statewide deployments."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$105,000 base + 5-10% bonus + RSU/equity (private company). Total comp ~$95k-$115k. Competitive for Midwest/remote but below FAANG/Unicorn tiers. Adjusted for cost of living in Lakeville/remote, strong purchasing power."
   },
   "evidence_sha": "aef80e5f2c399e8e",
+  "generated_at": 1784867977,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Healthcare Technology / Public Safety Software / SaaS (EMS, Fire, Hospital Data Systems)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical interviews on distributed systems, healthcare data standards (FHIR/HL7/NEMSIS), cloud architecture (Azure), and applied ML for time-series EMS data. Prepare for system design around high-reliability ingest pipelines and interoperability. Behavioral focus on mission alignment, collaborative problem-solving in regulated environments, and sustainable pace — they value engineers who ship quality without heroics."
+  },
+  "last_attempt_at": 1784867977,
   "last_evidence_at": 1784675294,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Lakeville, Minnesota. Remote-first/hybrid culture with employees across the United States. No international offices reported."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To improve patient outcomes and operational efficiency in emergency medical services and healthcare through innovative data solutions, interoperability, and analytics that empower first responders and healthcare providers."
+  },
   "name": "ImageTrend",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Sustainable, project-driven pace with regulated release cycles (quarterly/semi-annual major releases). Sprint-based development with emphasis on reliability over speed. Low 'crunch' culture due to government/healthcare compliance requirements enforcing planning discipline."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core products include ImageTrend Elite (ePCR and data management platform), ImageTrend Continuum (healthcare data exchange), ImageTrend Insight (analytics and reporting), and mobile applications for field data collection. They also offer implementation, training, and support services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + flexible sick/personal time. Unlimited PTO not reported; traditional accrual model typical for regulated industry. Specific policy not public."
   },
+  "refresh_after": 1790051977,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -129353,7 +129459,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company observes standard federal holidays + week between Christmas/New Year as paid shutdown. Summer Friday half-days reported informally. No guaranteed monthly/quarterly shutdowns documented publicly."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established growth-stage company (founded 1999) with approximately 300-500 employees. Privately held, headquartered in Lakeville, Minnesota with remote workforce distribution."
   },
   "sources": [
    {
@@ -129387,14 +129498,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=2da82a6a5a1db89a089f9cdb0d6f830fc3bf43614aa9bedb23a9c877479fd8d5JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=11f3d90b-5b5a-6eac-0346-ce965aad6f87&u=a1aHR0cHM6Ly93d3cudGVuZm9ydW1zLmNvbS90dXRvcmlhbHMvNzc0NS1maW5kLXByb2R1Y3Qta2V5LXdpbmRvd3MtMTAtYS5odG1s&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B visas for specialized technical roles given enterprise healthcare software focus. No public data on green card sponsorship frequency or cap-exempt status."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "ImageTrend provides software solutions for emergency medical services (EMS), fire departments, and healthcare organizations to manage patient care data, reporting, and analytics. The company specializes in electronic patient care reporting (ePCR), data interoperability, and performance analytics for public safety and healthcare agencies."
+  },
+  "synthesized_evidence_sha": "aef80e5f2c399e8e",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Full-stack development (C#, .NET, JavaScript/TypeScript, React, SQL Server), cloud infrastructure (Azure/AWS), mobile development (iOS/Android), data engineering, analytics/BI, interoperability standards (HL7/FHIR/NEMSIS), and emerging AI/ML for predictive analytics in EMS."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675294,
   "web_search_url": "https://duckduckgo.com/?q=ImageTrend+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "ImageTrend sits at the intersection of mission-critical public safety software and modern data science, offering elite technical challenges (nationwide EMS data interoperability, real-time analytics, FHIR/HL7 standards) with genuine social impact. The company's private, established structure avoids hyper-growth burnout culture while investing in AI/ML for predictive EMS analytics — a rare blend of technical depth, work-life sustainability, and domain prestige that aligns with your priorities for"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Strong work-life balance reputation in Minnesota tech ecosystem. Remote flexibility, core hours culture, and regulated industry constraints naturally limit after-hours expectations. On-call rotations exist for production support but are structured and compensated."
   }
  },
  "imc": {
@@ -129914,47 +130046,120 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Niche space-tech prestige; high engineering regard but not a traditional elite AI/data science brand."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "eb118b53a9"
+   ],
+   "value": "Manufacturing orbital transfer vehicles and charging for satellite transport and payload hosting services."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "eb118b53a9"
+   ],
+   "value": "Mission-driven, deeply focused on space exploration, and harmonious rather than solely balance-oriented."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "eb118b53a9"
+   ],
+   "value": "Satellite operators and organizations requiring payload transport and hosting in space."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120,000 - $150,000 base, typical for well-funded aerospace startups in high cost-of-living areas."
   },
   "evidence_sha": "46ed2ac0c7e81c5b",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784867977,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "eb118b53a9"
+   ],
+   "value": "Aerospace and New Space transportation."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "eb118b53a9"
+   ],
+   "value": "Candidates should prepare to discuss optimizing space vehicle trajectories and autonomous systems, while also gauging whether the company's 'work-life harmony' translates to sustainable hours in a startup setting."
+  },
+  "last_attempt_at": 1784867977,
   "last_evidence_at": 1784675292,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "eb118b53a9"
+   ],
+   "value": "Exact office locations not specified in available sources."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "eb118b53a9"
+   ],
+   "value": "To accelerate humanity's future in space through efficient transportation anywhere; GEO, the Moon, Mars, and beyond."
+  },
   "name": "Impulse Space",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "eb118b53a9"
+   ],
+   "value": "Estimated: Fast-paced and highly innovative startup environment focused on rapid vehicle development."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "eb118b53a9"
+   ],
+   "value": "Helios, a high-energy kick stage for moving large payloads from LEO to GEO; Mira, an orbital transfer and hosting vehicle optimized for LEO and GEO operations."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "eb118b53a9"
+   ],
+   "value": "Estimated: 15-20 days. The company cites a Flexible PTO Policy, but exact guarantees are not public."
   },
+  "refresh_after": 1790051977,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "eb118b53a9"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "eb118b53a9"
+   ],
+   "value": "Not specified in available sources."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "eb118b53a9"
+   ],
+   "value": "Early-stage aerospace company actively building its core vehicle fleet and scaling operations."
   },
   "sources": [
    {
@@ -129988,14 +130193,45 @@
     "url": "https://impulsespace.pinpointhq.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "eb118b53a9"
+   ],
+   "value": "Not specified in available sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "eb118b53a9"
+   ],
+   "value": "Impulse Space is an aerospace company building efficient space transportation vehicles. It makes money by providing orbital transfer and payload hosting services for satellites traveling to orbits like GEO."
+  },
+  "synthesized_evidence_sha": "46ed2ac0c7e81c5b",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "eb118b53a9"
+   ],
+   "value": "Designing and building space vehicles, including high-energy kick stages and orbital transfer vehicles for various orbital payloads."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675292,
   "web_search_url": "https://duckduckgo.com/?q=Impulse+Space+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "eb118b53a9"
+   ],
+   "value": "As a startup building novel space vehicles, this offers a fast-paced, innovative tech culture that accelerates learning for new grads. It also fits a mission-driven ethos with an explicit focus on work-life harmony over bureaucratic or toxic environments."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "eb118b53a9"
+   ],
+   "value": "Estimated: Good. The company explicitly states a belief in work-life harmony, though startup demands may cause occasional spikes."
   }
  },
  "imt insurance": {
@@ -144294,41 +144530,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2: Strong applied ML/OR reputation in a niche but high-impact domain; publishes at INFORMS, NeurIPS workshops, KDD; known for production ML at scale but not a primary AI research lab."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "SaaS subscription model selling the RapidResponse platform to enterprise customers. Revenue from recurring subscriptions, professional services, and training. Publicly traded on TSX (KXS)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, collaborative, low-ego, intellectually honest. Long tenures common (5-10+ years). Canadian politeness meets technical rigor. Diversity initiatives active. Not a 'bro culture' or hyper-competitive environment."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large global enterprises across high-tech/electronics, automotive, life sciences/pharmaceuticals, industrial/manufacturing, and consumer packaged goods. Notable public references include Ford, Qualcomm, Cisco, and major pharma companies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Canada: $85-105k CAD base + 10-15% bonus + RSUs (~$15-25k/yr vesting). US: $110-135k USD base + 10-15% bonus + RSUs. Varies by location (Ottawa vs Toronto vs US hubs)."
   },
   "evidence_sha": "8d31acc215375e0f",
+  "generated_at": 1784867977,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Enterprise SaaS / Supply Chain Management Software / AI for Operations Research"
   },
-  "last_attempt_at": 1784867831,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical interviews: data structures/algorithms (LeetCode medium-hard), system design for high-throughput planning engines, ML modeling for time-series forecasting and optimization, and domain-relevant SQL/data pipeline questions. Behavioral focus on collaboration, handling ambiguity in complex supply chain scenarios, and learning agility. Less emphasis on whiteboard trivia; more on practical problem-solving and architecture trade-offs."
+  },
+  "last_attempt_at": 1784867977,
   "last_evidence_at": 1784675228,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Ottawa, Canada. Major offices: Toronto, Atlanta, Boston, San Francisco, London, Munich, Paris, Tokyo, Singapore, Sydney, Bangalore, Hyderabad. Hybrid/remote-friendly policies."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To empower people to make confident, timely supply chain decisions through concurrent planning and AI-driven insights, transforming how organizations plan and respond to change."
+  },
   "name": "Kinaxis",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-sustainable. Quarterly release cycles with planned sprints; limited fire-drills due to enterprise SaaS stability requirements. Engineering-led prioritization reduces chaotic pivots."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "RapidResponse platform for supply chain planning, demand planning, supply planning, inventory optimization, and sales & operations planning (S&OP). AI/ML capabilities for predictive analytics, scenario modeling, and autonomous planning."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual vacation + 10-12 statutory holidays (Canada/US vary) + unlimited sick/mental health days. No public 'unlimited PTO' policy; accrual-based with rollover caps."
   },
-  "retry_after": 1784867951,
+  "refresh_after": 1790051977,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -144338,7 +144612,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 24-Jan 1 typical) + summer Fridays or similar flexible summer hours in some offices. Not a formal company-wide 'guaranteed shutdown' policy but culturally observed."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public company (TSX: KXS), ~2,500+ employees globally, founded 1984, headquartered in Ottawa, Canada. Mature growth stage with consistent profitability."
   },
   "sources": [
    {
@@ -144372,14 +144651,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=021fb1d42d0bba8199a8d15ced855f1c3a78750603413aa9ff6456fed02b742bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2d0d59e4-dc7a-6141-0e93-4e79dda76082&u=a1aHR0cHM6Ly93d3cua2luYXhpcy5jb20vZW4&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active H-1B sponsor in US (cap-subject and cap-exempt via university partnerships). Canadian immigration support via Global Talent Stream and Express Entry. Sponsors in UK, EU, APAC offices per local regulations."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Kinaxis is a supply chain management and operations planning software company that provides a cloud-based platform (RapidResponse) enabling concurrent planning across supply chain functions. The company serves large global enterprises in industries like high-tech, automotive, pharmaceuticals, and consumer goods."
+  },
+  "synthesized_evidence_sha": "8d31acc215375e0f",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cloud-native platform development (Java, React, Kubernetes, AWS/Azure), AI/ML for demand forecasting and optimization, high-performance in-memory computing, concurrent planning engine, data integration pipelines, and enterprise SaaS scalability."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675228,
   "web_search_url": "https://duckduckgo.com/?q=Kinaxis+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Kinaxis offers elite AI/DS prestige in supply chain optimization—a mission-critical domain with massive real-world impact—while maintaining a mature, engineering-led culture known for reasonable hours and low burnout compared to Big Tech or high-frequency trading. The concurrent planning engine presents genuinely hard technical problems (in-memory computing, combinatorial optimization, ML forecasting at enterprise scale) without the 'move fast break things' chaos. New grad pay is competitive top"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5. Canadian labor standards + mature culture = rare weekend work, core hours ~10-4, flexible remote. On-call rotation exists but infrequent pages. Vacation encouraged."
   }
  },
  "kindling": {
@@ -217781,37 +218081,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2: Respected applied ML shop with real production scale and domain depth; not a household AI brand but known in revenue science/OR communities. Strong for 'ML that makes money' credibility."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "B2B SaaS subscription model with annual contracts; revenue from platform licenses, module add-ons, and professional services for implementation and ongoing optimization. Private equity-backed (Clearlake Capital since 2021) with focus on scaling the platform."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-led, pragmatic, low-ego. 'Science-first' mindset with strong collaboration between DS, ML eng, and domain experts. Less hype-driven than SF AI labs; more focused on measurable client ROI. Social but not mandatory fun."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Enterprise clients across hospitality (major hotel chains, car rental companies), automotive (OEMs, dealer groups), media & entertainment (broadcasters, publishers, live events), and other capacity-constrained industries. Typical customers have complex pricing challenges with perishable inventory."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$135k base + 10-15% bonus + equity (RSUs, likely 4-yr vest). Total comp ~$130k-$160k. Atlanta COL adjustment vs. coastal tiers. No public bands confirmed."
   },
   "evidence_sha": "32480de1638769d9",
+  "generated_at": 1784867977,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Revenue Management / Pricing Optimization SaaS (vertical AI for hospitality, automotive, media)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect heavy emphasis on: (1) Time-series forecasting & causal inference case studies, (2) Optimization/OR modeling (pricing as constrained optimization), (3) Production ML system design (feature stores, model monitoring, A/B testing), (4) Domain fluency — ability to translate business pricing rules into ML objectives. Prepare for take-home or live coding with realistic messy data."
+  },
+  "last_attempt_at": 1784867977,
   "last_evidence_at": 1784674229,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Atlanta, GA (primary tech hub). Remote/hybrid options likely for engineering roles. No other major offices publicly documented."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To help organizations make smarter revenue decisions through data science and AI, transforming pricing from an art into a science that drives profitable growth."
+  },
   "name": "Revenue Analytics",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast. Project-driven with quarterly delivery cycles; not 'move fast break things' but steady shipping pressure from enterprise clients. Less bureaucracy than big tech, more structure than early startup."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core products include RA Platform (pricing and revenue optimization engine), RA Demand (demand forecasting), RA Price (dynamic pricing), and industry-specific solutions for hospitality (hotels, car rentals), automotive (OEMs, dealers), media/advertising, and live events. Delivered as cloud-based SaaS with APIs for integration."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 US holidays. Unlimited not typical for PE-backed growth co. No public policy confirmed."
   },
+  "refresh_after": 1790051977,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -217821,7 +218163,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns. Typical US private company calendar (major holidays only). Some teams may informally slow down between Christmas/New Year."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 200-400 employees; growth-stage private company (post-PE acquisition) with established product-market fit in niche verticals, expanding into new industries and geographies."
   },
   "sources": [
    {
@@ -217855,14 +218202,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=6e035104ff60229063836e4da1cd988e650347c77364a22a1fe5e2452ace849dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0c53fa42-0d9d-655f-318e-eddf0c8164aa&u=a1aHR0cHM6Ly93d3cuaW52ZXN0b3BlZGlhLmNvbS90ZXJtcy9yL3JldmVudWUuYXNw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B for senior DS/ML roles given technical specialization; new-grad sponsorship case-by-case. No public policy details found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue Analytics is an AI-powered revenue management and pricing optimization platform that helps enterprises in hospitality, automotive, media, and other industries maximize revenue through dynamic pricing, demand forecasting, and inventory optimization. The company combines advanced data science with industry expertise to deliver SaaS solutions that automate pricing decisions."
+  },
+  "synthesized_evidence_sha": "32480de1638769d9",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Applied ML/DS: demand forecasting (time series, causal inference), price optimization (reinforcement learning, operations research), large-scale data pipelines, feature engineering for sparse/seasonal data, A/B testing frameworks, cloud-native architecture (AWS), real-time scoring APIs. Strong emphasis on production ML engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674229,
   "web_search_url": "https://duckduckgo.com/?q=Revenue+Analytics+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue Analytics offers elite applied AI/DS work (pricing optimization, forecasting at scale) with a clear revenue-linked mission, avoiding ad-tech or surveillance use cases. As a PE-backed growth company, it balances technical depth with business impact, and its Atlanta base + industry focus suggest more sustainable hours than Bay Area unicorns. Strong fit for candidates wanting production ML impact without burnout culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5-4/5. Atlanta culture + enterprise SaaS rhythm generally supports reasonable hours (40-50/wk typical). On-call rotation for production models but not 24/7 firefighting. PE ownership may introduce periodic intensity around board reviews."
   }
  },
  "revionics": {
@@ -251583,37 +251951,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Emerging tier — specialized computational biology roles with high technical bar but lower public brand recognition than top-tier AI labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "78a0c950f9",
+    "99e32528de",
+    "e6d310c80b"
+   ],
+   "value": "Biotech R&D model: advance proprietary pipeline to clinical proof-of-concept, then monetize via partnerships, licensing, or acquisition. Revenue from collaboration agreements, grants, and equity financing."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Science-first, collaborative, mission-driven oncology culture; likely flat hierarchy with direct access to leadership; emphasis on innovation in antibody engineering."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "78a0c950f9",
+    "99e32528de",
+    "e6d310c80b"
+   ],
+   "value": "Pharmaceutical partners for collaboration/licensing, oncology clinicians and patients in clinical trials, investors. No commercial products on market yet."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$140k base + equity (biotech computational biology range, Seattle market); no public data."
   },
   "evidence_sha": "c876aaaa65b70bd0",
+  "generated_at": 1784867977,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "78a0c950f9",
+    "99e32528de",
+    "e6d310c80b"
+   ],
+   "value": "Biotechnology / Clinical-stage oncology drug development"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect questions on applying ML to biological data (protein sequencing, structure prediction, biomarker discovery), experience with noisy/small datasets, cross-functional collaboration with wet-lab scientists, and ability to translate computational insights into testable hypotheses. Demonstrate awareness of ADC/bispecific biology."
   },
+  "last_attempt_at": 1784867977,
   "last_evidence_at": 1784676897,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "78a0c950f9",
+    "99e32528de",
+    "e6d310c80b"
+   ],
+   "value": "Headquartered in Redmond, Washington (Seattle metro area). Possible additional lab/office sites."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "78a0c950f9",
+    "99e32528de",
+    "e6d310c80b"
+   ],
+   "value": "To develop innovative biotherapeutics that address unmet medical needs in oncology through novel antibody engineering platforms."
+  },
   "name": "SystImmune",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced, milestone-driven biotech environment with urgency around clinical milestones; likely periods of high intensity around IND/CTA filings and data readouts."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "78a0c950f9",
+    "99e32528de",
+    "e6d310c80b"
+   ],
+   "value": "Pipeline of antibody-drug conjugates (ADCs) and bispecific antibodies targeting solid tumors and hematologic malignancies. Lead candidates include BL-B01D1 (ADC) and other preclinical programs."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + holidays (typical US biotech); no public policy disclosed."
   },
+  "refresh_after": 1790051977,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -251623,7 +252057,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns reported; likely standard holiday observance only."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 100-300 employees, clinical-stage (Phase 1/2), venture-backed private company."
   },
   "sources": [
    {
@@ -251657,14 +252096,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=aa6d3b9114d11e9e2d831a72d98541878aed3ea7a31a0ac110423b24408375bcJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01863cb3-ec2d-6271-268c-2b2eedc26349&u=a1aHR0cHM6Ly9zeXN0aW1tdW5lLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B for specialized scientific roles given biotech talent needs; consult HR for current policy."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "78a0c950f9",
+    "99e32528de",
+    "e6d310c80b"
+   ],
+   "value": "SystImmune is a clinical-stage biotechnology company developing novel antibody-drug conjugates (ADCs) and bispecific antibodies for cancer treatment. The company advances a pipeline of proprietary candidates through preclinical and clinical development."
+  },
+  "synthesized_evidence_sha": "c876aaaa65b70bd0",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Antibody engineering, ADC conjugation chemistry, bispecific platforms, translational biology, bioinformatics, computational biology for target discovery and biomarker analysis, clinical data science."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676897,
   "web_search_url": "https://duckduckgo.com/?q=SystImmune+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "SystImmune offers early-career AI/data scientists a chance to apply computational methods to cutting-edge antibody therapeutics in a fast-paced biotech environment. The clinical-stage pipeline provides real-world impact on oncology drug development, while the company size allows for meaningful ownership and rapid skill growth without the bureaucracy of large pharma."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate — biotech clinical-stage typically demands commitment but smaller size may allow more flexibility than large pharma; no public policy data found."
   }
  },
  "t d williamson": {
@@ -284255,48 +284719,127 @@
  "watchfire": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "c9a8d60781"
+   ],
+   "value": "Estimated: Unknown based on provided sources. Inquire directly about AI team size and model deployment scope during interviews."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "04d8e726f2"
+   ],
+   "value": "Not identified in the provided sources."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "c9a8d60781"
+   ],
+   "value": "Not identified in the provided sources."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "ea7d793383"
+   ],
+   "value": "Not identified in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "c9a8d60781"
+   ],
+   "value": "Estimated: Not identified in the provided sources."
   },
   "evidence_sha": "c9b31bf4ec90076a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784867977,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ea7d793383"
+   ],
+   "value": "Not identified in the provided sources."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "04d8e726f2"
+   ],
+   "value": "Probe heavily for AI project traction, team structure, and expected hours to ensure they match your elite new-grad pay and sane pace requirements. Ask explicitly about guaranteed shutdowns, on-call expectations, and burnout prevention protocols."
+  },
+  "last_attempt_at": 1784867977,
   "last_evidence_at": 1784674229,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "04d8e726f2"
+   ],
+   "value": "Not identified in the provided sources."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "c9a8d60781",
+    "ea7d793383"
+   ],
+   "value": "Not identified in the provided sources."
+  },
   "name": "Watchfire",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "04d8e726f2"
+   ],
+   "value": "Estimated: Based on the candidate's target profile, demand confirmation that the company operates at a fast, innovative pace rather than relying on slow bureaucracy."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c9a8d60781",
+    "04d8e726f2"
+   ],
+   "value": "Not identified in the provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "04d8e726f2"
+   ],
+   "value": "Estimated: Not identified in the provided sources."
   },
+  "refresh_after": 1790051977,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "04d8e726f2"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "ea7d793383"
+   ],
+   "value": "Estimated: Not identified in the provided sources."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "ea7d793383"
+   ],
+   "value": "Not identified in the provided sources."
   },
   "sources": [
    {
@@ -284330,14 +284873,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=10a3c753900129c18f8c95cf86c8f80ef8a68506c4ef361f7de25071a915525aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0c53fa42-0d9d-655f-318e-eddf0c8164aa&u=a1aHR0cHM6Ly93d3cud2F0Y2hmaXJlLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "ea7d793383"
+   ],
+   "value": "Not identified in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c9a8d60781",
+    "04d8e726f2",
+    "ea7d793383"
+   ],
+   "value": "The supplied sources for Watchfire consist only of redirect pages and do not provide any actionable company information. Without additional source material, no factual summary or business model explanation can be accurately extracted."
+  },
+  "synthesized_evidence_sha": "c9b31bf4ec90076a",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "c9a8d60781"
+   ],
+   "value": "Not identified in the provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674229,
   "web_search_url": "https://duckduckgo.com/?q=Watchfire+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c9a8d60781"
+   ],
+   "value": "Since the provided sources lack public business descriptions, you must validate the company's mission, compensation, and technical culture during the interview. Ensure the role aligns with your need for fast-paced innovation, AI prestige, and guaranteed work-life balance before moving forward."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "ea7d793383"
+   ],
+   "value": "Estimated: Unknown based on provided sources. Must be interviewed for directly to ensure it meets sane hours and guaranteed shutdown criteria."
   }
  },
  "watney": {
@@ -286401,38 +286977,100 @@
  "western governors university": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "3cea5bf6f2"
+   ],
+   "value": "Estimated: Regional/Tier 3. While WGU handles significant data scale, its AI/Data Science work is applied to educational operations rather than pushing the boundaries of elite AI research or product development."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "3cea5bf6f2"
+   ],
+   "value": "Nonprofit university funded by student tuition (flat-term rates) and federal/state educational grants, utilizing a scalable digital infrastructure to reduce administrative overhead."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "3cea5bf6f2"
+   ],
+   "value": "Mission-driven, collaborative, and student-centric, prioritizing educational outcomes and accessibility over aggressive tech-driven disruption."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "3cea5bf6f2"
+   ],
+   "value": "Working adults and non-traditional students seeking flexible, accredited online degrees to advance or change their careers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75,000-$95,000. Nonprofit higher education institutions typically pay below big-tech market rates for software and data roles."
   },
   "evidence_sha": "8f46ef0d0bdafd69",
+  "generated_at": 1784867977,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "3cea5bf6f2"
+   ],
+   "value": "Higher Education / EdTech"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe heavily for the specific team's tech stack modernization speed, compensation bands for data/AI roles, and work-life balance expectations. Ask about their data infrastructure maturity and how quickly ML models are deployed to avoid getting stuck in slow, bureaucratic academic tech cycles."
   },
+  "last_attempt_at": 1784867977,
   "last_evidence_at": 1784677294,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "2a7ff212e6"
+   ],
+   "value": "Headquartered in Salt Lake City, Utah, with a largely remote workforce across the United States."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "5cd7ec9e5a"
+   ],
+   "value": "To expand access to higher education through affordable, competency-based online learning tailored for working adults."
+  },
   "name": "Western Governors University",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "2a7ff212e6"
+   ],
+   "value": "Estimated: Moderate. Focused on stable, reliable educational technology delivery rather than rapid, breakneck innovation cycles."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "2a7ff212e6"
+   ],
+   "value": "Online competency-based degree programs in IT, business, healthcare, and education, supported by digital learning platforms, student mentoring systems, and educational analytics."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "3cea5bf6f2"
+   ],
+   "value": "Estimated: 20-25 days of paid time off annually, alongside standard university and federal holidays, typical of higher education benefits."
   },
+  "refresh_after": 1790051977,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -286441,8 +287079,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "3cea5bf6f2"
+   ],
+   "value": "Estimated: Likely limited paid shutdowns, though higher ed often offers generous holiday breaks between terms."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "2a7ff212e6"
+   ],
+   "value": "Large, established nonprofit institution serving hundreds of thousands of enrolled students nationwide."
   },
   "sources": [
    {
@@ -286476,14 +287123,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=69fa06d94af7a7d9ca7c987afa564fa0b1f4f37466277cc1ec41492239fbb812JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3e64e231-5a75-6518-36ef-f5ac5b2264b9&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvV2VzdGVybl8oZ2VucmUp&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2a7ff212e6"
+   ],
+   "value": "As a US-based educational institution, it is subject to US employment regulations and likely sponsors work visas for specialized tech roles on a case-by-case basis."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "2a7ff212e6",
+    "3cea5bf6f2"
+   ],
+   "value": "Western Governors University (WGU) is a private, nonprofit online university focused on competency-based higher education. It generates revenue primarily through student tuition and government-funded grants, leveraging a scalable online model to keep costs lower than traditional institutions."
+  },
+  "synthesized_evidence_sha": "8f46ef0d0bdafd69",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "3cea5bf6f2"
+   ],
+   "value": "Building and maintaining scalable cloud infrastructure, learning management systems, large-scale data pipelines for student analytics, and AI models for personalized learning interventions."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677294,
   "web_search_url": "https://duckduckgo.com/?q=Western+Governors+University+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "WGU offers a mission-driven environment focused on expanding educational access, which aligns with a desire for meaningful work. However, as a large educational institution, it may struggle to deliver the fast-paced, innovative tech culture and elite new-grad pay you are seeking, likely leaning toward slower bureaucratic processes typical of higher education."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2a7ff212e6"
+   ],
+   "value": "Estimated: Good. Higher education institutions typically offer predictable hours, sane schedules, and strong respect for personal time compared to fast-paced tech companies."
   }
  },
  "western southern financial group": {
