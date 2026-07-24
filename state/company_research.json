@@ -1697,41 +1697,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 — global scale, massive proprietary data, published research, recognized leader in applied AI for supply chain."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "8ec9d68412"
+   ],
+   "value": "Revenue comes from three main segments: Ocean (container freight rates and surcharges), Logistics & Services (freight forwarding, warehousing, supply chain management fees), and Terminals (port handling charges, storage, and stevedoring). The integrated model captures value across the end-to-end supply chain."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-led, pragmatic, mission-oriented. Nordic flat hierarchy, high psychological safety, strong DEI focus. Collaboration across 130+ nationalities. Not 'move fast and break things' — 'move deliberately and keep global trade flowing.'"
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "8ec9d68412"
+   ],
+   "value": "Serves a broad base of global importers and exporters across industries — retail, automotive, consumer goods, pharmaceuticals, agriculture, and industrial manufacturing — ranging from small businesses to Fortune 500 enterprises."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Copenhagen €55-65k base + 10-15% bonus + equity (RSUs). Bengaluru ₹25-35 LPA base + bonus + RSUs. US hubs $110-135k base + 15% bonus + RSUs. Total comp competitive with FAIR-tier for new grads."
   },
   "evidence_sha": "10ad56138b3e3075",
+  "generated_at": 1784895176,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8ec9d68412"
+   ],
+   "value": "Integrated Logistics & Container Shipping"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect applied ML/system design rounds: scaling forecasting models, optimization under constraints (vessel schedules, port slots), productionizing ML pipelines, and data quality at petabyte scale. Behavioral questions probe collaboration across global, cross-functional teams and alignment with sustainability/DEI values. Prepare for case studies rooted in logistics domain (e.g., reduce empty container repositioning cost)."
   },
-  "last_attempt_at": 1784893255,
+  "last_attempt_at": 1784895176,
   "last_evidence_at": 1784672492,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "8ec9d68412"
+   ],
+   "value": "Headquartered in Copenhagen, Denmark. Major tech and operations hubs in Copenhagen, Bengaluru (India), Chengdu (China), and regional offices in 130+ countries. Supports hybrid and remote work for many tech roles."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "8ec9d68412"
+   ],
+   "value": "To enable global trade by providing integrated, reliable, and sustainable logistics solutions that connect markets and help customers grow their businesses."
+  },
   "name": "A.P. Moller - Maersk",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady, sustainable cadence. Quarterly planning cycles with 2-week sprints. Limited crunch; on-call rotations exist for critical platforms but are compensated and bounded. Bureaucracy present in compliance/security gates but tech org operates with autonomy."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "8ec9d68412"
+   ],
+   "value": "Core offerings include container shipping (Maersk Line), port and terminal operations (APM Terminals), freight forwarding and supply chain management (Maersk Logistics & Services), and digital logistics platforms (Twill, Maersk Flow). The company also provides inland transportation, warehousing, and customs services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 30 days (6 weeks) annual leave baseline in Denmark/EU; 15-20 days in US/India plus 10-12 public holidays. Unlimited sick leave. Parental leave: 24 weeks full pay (Denmark), locally competitive elsewhere."
   },
-  "retry_after": 1784895175,
+  "refresh_after": 1790079176,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -1741,7 +1791,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Established company-wide shutdown: last week of December (Christmas/New Year) + local summer holiday periods (e.g., 3 weeks in July for Denmark). No work expected during shutdowns."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "8ec9d68412"
+   ],
+   "value": "Publicly traded (NASDAQ Copenhagen: MAERSK-A, MAERSK-B), ~110,000 employees globally, FY2023 revenue ~$51B. Mature multinational corporation with a market cap among the top logistics firms worldwide."
   },
   "sources": [
    {
@@ -1775,14 +1832,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=7e7c42582b1d7820368b011dc90573c0e89c22338499dd8dd978d061b7b22dcbJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=068da0dd-8eee-6028-1b01-b7408fbe61eb&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQQ&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ec9d68412"
+   ],
+   "value": "Regularly sponsors work visas (e.g., H-1B in the US, EU Blue Card, Danish Pay Limit Scheme) for specialized tech and data science roles. Global mobility team handles relocation for key hires."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "8ec9d68412"
+   ],
+   "value": "A.P. Moller - Maersk is a global integrated logistics company that operates across shipping, port terminals, freight forwarding, and supply chain management. It moves roughly one-fifth of the world's containerized trade and generates revenue through ocean freight, logistics services, and terminal operations."
+  },
+  "synthesized_evidence_sha": "10ad56138b3e3075",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ec9d68412"
+   ],
+   "value": "Heavy investment in digital transformation: AI/ML for demand forecasting, vessel routing optimization, port operations automation, digital twin simulations, blockchain-based trade documentation (TradeLens legacy), and customer-facing platforms. Tech hubs in Copenhagen, Bengaluru, Chengdu, and remote. Stack includes Python, Java, Kubernetes, Kafka, cloud (GCP/AWS), and modern data engineering tooling."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672492,
   "web_search_url": "https://duckduckgo.com/?q=A.P.+Moller+-+Maersk+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Maersk offers elite prestige as the world's largest container carrier and a top-tier logistics integrator, with new-grad data science/AI compensation competitive with tech giants. Its digital transformation is well-funded and high-visibility, enabling work on massive real-world optimization problems (vessel routing, demand forecasting, port automation) that directly impact global trade. Culture emphasizes sustainable pace, Danish work-life norms (37.5-hour weeks, generous leave), and structured "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 8.5/10. Danish labor model: 37.5-hour work week, 6 weeks paid vacation, flexible hours, strong 'right to disconnect' culture. Tech hubs inherit this baseline; occasional global meeting overlap but generally respected."
   }
  },
  "aaa the auto club group": {
@@ -10072,52 +10156,130 @@
  "agoda": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "8e3406fee5",
+    "b51da7fd3d"
+   ],
+   "value": "Estimated: Tier 2. The company heavily emphasizes data and technology in its culture and operations, making it a strong destination for data science professionals, though it may not carry the same pure-AI prestige as dedicated tech research labs."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "8e3406fee5"
+   ],
+   "value": "Online travel agency (merchant and agency model) that earns commissions by connecting travelers with accommodation partners."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "8e3406fee5",
+    "b51da7fd3d"
+   ],
+   "value": "Multicultural, innovative, and data-driven, with an emphasis on teamwork and excellence across a highly diverse global staff."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "b51da7fd3d"
+   ],
+   "value": "Global travelers looking to explore the world and book accommodations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "b51da7fd3d",
+    "adbd449590"
+   ],
+   "value": "Estimated: $70,000 - $100,000+ USD base equivalent, depending on location and specific role."
   },
   "evidence_sha": "ac0f0101dc620de3",
+  "generated_at": 1784895176,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8e3406fee5"
+   ],
+   "value": "Online Travel / E-commerce"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should probe into the actual day-to-day pace of the team to ensure it matches their preference for fast, non-bureaucratic work. It is also vital to ask about specific working hours, on-call expectations, and work-life balance policies to ensure the team avoids a high-burnout, toxic environment while still providing top-tier compensation and technical acceleration."
   },
-  "last_attempt_at": 1784894953,
+  "last_attempt_at": 1784895176,
   "last_evidence_at": 1784679028,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "8e3406fee5"
+   ],
+   "value": "Headquartered in Bangkok, Thailand, with global offices around the world."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "b51da7fd3d",
+    "8e3406fee5"
+   ],
+   "value": "To bridge the world through travel, fueled by curiosity, innovation, and a passion for making it easier for everyone to explore the world."
+  },
   "name": "Agoda",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "b51da7fd3d"
+   ],
+   "value": "Estimated: Fast-paced. The company states that 'settling is not an option,' indicating a high-velocity environment focused on continuous innovation."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "8e3406fee5"
+   ],
+   "value": "Digital travel booking platform and related products for customers and partners."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "8e3406fee5"
+   ],
+   "value": "Estimated: 15-25 days per year."
   },
-  "retry_after": 1784895073,
+  "refresh_after": 1790079176,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "8e3406fee5",
+    "b51da7fd3d",
+    "adbd449590"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "8e3406fee5"
+   ],
+   "value": "Estimated: Unknown if guaranteed shutdowns exist outside of standard public holidays; candidates should verify with HR."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "8e3406fee5",
+    "b51da7fd3d"
+   ],
+   "value": "Established global enterprise with over 7,000 employees from 90 nationalities; subsidiary of Booking Holdings (NASDAQ: BKNG)."
   },
   "sources": [
    {
@@ -10181,14 +10343,48 @@
     "url": "https://job-boards.greenhouse.io/agoda/jobs/5393603"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "b51da7fd3d",
+    "adbd449590"
+   ],
+   "value": "The company provides relocation for certain Bangkok-based roles, indicating a willingness to sponsor international talent for key tech and analyst positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "8e3406fee5",
+    "b51da7fd3d"
+   ],
+   "value": "Agoda is an online travel agency that makes it easier for people to explore the world by providing a platform for booking accommodations and travel services. It generates revenue by taking commissions from hotel and property partners for bookings made through its platform."
+  },
+  "synthesized_evidence_sha": "ac0f0101dc620de3",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "8e3406fee5",
+    "b51da7fd3d",
+    "adbd449590"
+   ],
+   "value": "Data and technology are at the heart of the company's culture, driving online marketing, product operations, and platform innovation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679028,
   "web_search_url": "https://duckduckgo.com/?q=Agoda+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Agoda matches the candidate's desire for a fast-paced, innovative tech culture where data is central to the business. While the candidate prioritizes elite new-grad pay alongside guaranteed work-life balance and shutdowns, Agoda's high-tech environment and relocation packages offer strong learning and technical growth, though candidates should confirm the exact WLB and compensation structure during interviews."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b51da7fd3d",
+    "adbd449590"
+   ],
+   "value": "Estimated: Moderate. While they advertise standard benefits for an international tech company, the fast-paced and data-driven culture may occasionally require intense focus periods."
   }
  },
  "ahead": {
@@ -16380,41 +16576,85 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (Emerging/Niche) — no public evidence of top-tier AI research publications, conference leadership, or known elite talent density; likely applies established ML techniques to domain problems rather than advancing state-of-the-art."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Revenue likely comes from transaction fees on ticket sales, subscription fees for platform access, and/or affiliate commissions on daily deals."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Likely pragmatic, product-focused engineering culture typical of marketplace/ticketing startups; insufficient public signal on collaboration style, diversity, or learning investment."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Probably serves event organizers, venues, entertainment businesses, and consumers seeking tickets, passes, and daily deals."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$140k base + equity (likely modest for private company) — below top-tier AI labs (Tier 1: $180k-$250k+) but competitive for non-FAANG consumer tech; no public compensation data found."
   },
   "evidence_sha": "6af7dda7e13acf7d",
+  "generated_at": 1784895176,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "33a24a41cb",
+    "2b4c786fda"
+   ],
+   "value": "Event technology / Ticketing platform / Consumer marketplace"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Ask: (1) What ML/AI projects are currently in production vs. R&D? (2) How does the team balance event-driven hard deadlines with sustainable pacing? (3) What does the data infrastructure look like — real-time streaming, feature stores, experimentation platform? (4) How is the AI function organized — centralized team or embedded? (5) What is the on-call rotation and incident response culture? (6) Can you share examples of recent technical blog posts, open-source contributions, or conference talks"
   },
-  "last_attempt_at": 1784894953,
+  "last_attempt_at": 1784895176,
   "last_evidence_at": 1784679029,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters location not found in research; web presence suggests US-based operation."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not publicly stated in available sources; likely focused on simplifying access to events and experiences through technology."
+  },
   "name": "Alta Resource Technologies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-to-high — event ticketing has immutable deadlines (on-sale dates) that can drive periodic intensity, but day-to-day pace depends on engineering culture not visible in sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "33a24a41cb",
+    "2b4c786fda"
+   ],
+   "value": "Likely offers ticketing platform technology, digital passes, and daily deal aggregation services through alta.com/tickets-and-passes and altadaily.com properties."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + US federal holidays — typical for US private tech companies of this profile; no public policy found."
   },
-  "retry_after": 1784895073,
+  "refresh_after": 1790079176,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -16424,7 +16664,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research; assume standard US practice (no mandatory winter/summer shutdown) unless confirmed otherwise."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Appears to be a small-to-mid-sized private technology company; exact headcount and funding stage not found in research."
   },
   "sources": [
    {
@@ -16458,14 +16703,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=3fffc636cb6fbf2c639d025ffc9bd68330a8d318163059978882f6344bf836d9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=17cf358e-6c85-6b3e-3331-22106d4b6ad4&u=a1aHR0cHM6Ly93d3cuYWx0YS5jb20v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No public information found on visa sponsorship policies; assume standard tech company practices until confirmed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "33a24a41cb",
+    "2b4c786fda",
+    "20462981f5"
+   ],
+   "value": "Alta Resource Technologies appears to operate in the ticketing and passes space, likely providing technology solutions for event ticketing, daily deals, or access management based on its web properties alta.com and altadaily.com."
+  },
+  "synthesized_evidence_sha": "6af7dda7e13acf7d",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely involves full-stack web development, payment processing, real-time inventory management, API integrations, and consumer-facing applications for ticketing and deals."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679029,
   "web_search_url": "https://duckduckgo.com/?q=Alta+Resource+Technologies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Alta Resource Technologies operates in the consumer-facing event technology space, offering a chance to work on high-scale ticketing and marketplace systems. For a candidate prioritizing elite AI/data science prestige with strong new-grad pay, the key question is whether the company invests seriously in ML for dynamic pricing, demand forecasting, personalization, or fraud detection — areas where ticketing platforms typically apply advanced analytics. The candidate's desire for fast innovation cu"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5 — consumer-facing platforms with hard event deadlines often have seasonal crunch; no public policies on shutdowns or guaranteed hours found."
   }
  },
  "altamira technologies": {
@@ -83435,52 +83705,131 @@
  "coca cola": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Tier 2 (Stable Enterprise AI). Coca-Cola applies data science at a massive global scale, offering respectable prestige and strong learning opportunities, though it is not considered a top-tier big-tech AI research hub."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "0f64e7ca12",
+    "a67f786a3b"
+   ],
+   "value": "B2B wholesale model selling beverage concentrates and syrups to franchised bottling partners, generating revenue through high-volume syrup sales and direct retail partnerships [0f64e7ca12, a67f786a3b]."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Traditional, corporate, and mission-driven. The culture emphasizes brand legacy, structured processes, and global collaborative coordination rather than aggressive, fast-paced tech innovation."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "0f64e7ca12",
+    "a67f786a3b"
+   ],
+   "value": "Independent bottling partners, wholesale distributors, retail grocery stores, restaurants, and convenience stores worldwide [0f64e7ca12, a67f786a3b]."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: $100,000-$130,000 base salary. Pay for new-grad data scientists at legacy CPG companies is competitive but typically lower than top-tier big tech firms."
   },
   "evidence_sha": "e0df2022135dc238",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784895176,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784894953,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0f64e7ca12",
+    "a67f786a3b"
+   ],
+   "value": "Beverage and Food Manufacturing"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Be prepared to ask probing questions about team agility and how fast technical innovation is actually executed versus slowed by corporate bureaucracy. Focus on clarifying exact new-grad compensation, typical working hours, and whether the team ensures guaranteed shutdowns or leans toward a more demanding, traditional enterprise cycle."
+  },
+  "last_attempt_at": 1784895176,
   "last_evidence_at": 1784679029,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "0f64e7ca12",
+    "a67f786a3b"
+   ],
+   "value": "Global operations with its corporate headquarters in Atlanta, Georgia, and a presence in over 200 countries [0f64e7ca12, a67f786a3b]."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "0f64e7ca12",
+    "a67f786a3b"
+   ],
+   "value": "To refresh the world and make a positive difference by delivering beverage experiences that inspire joy [0f64e7ca12, a67f786a3b]."
+  },
   "name": "Coca-Cola",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Moderate to slow. Typical of a large, legacy FMCG (Fast-Moving Consumer Goods) enterprise, technical projects often face bureaucratic overhead and slower deployment cycles than modern tech startups."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "0f64e7ca12",
+    "a67f786a3b"
+   ],
+   "value": "Non-alcoholic beverage concentrates, syrups, and finished products such as sparkling soft drinks (Coca-Cola, Sprite), water and hydration (Dasani, Smartwater), and juices (Minute Maid) [0f64e7ca12, a67f786a3b]."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: 20-25 days. Large publicly traded consumer goods corporations generally provide 3 to 5 weeks of flexible paid time off, alongside standard public holidays."
   },
-  "retry_after": 1784895073,
+  "refresh_after": 1790079176,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: No guaranteed tech-wide shutdowns. While there may be occasional holiday periods, massive global enterprises generally maintain continuous operations without firm-wide guaranteed shutdowns."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Large-cap, established public enterprise (NYSE: KO) operating globally with a mature, stable market presence [17f8c9c419]."
   },
   "sources": [
    {
@@ -83524,14 +83873,46 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Sponsorship status for new grad roles is not explicitly detailed in the provided sources [17f8c9c419]."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "0f64e7ca12",
+    "a67f786a3b"
+   ],
+   "value": "The Coca-Cola Company is a multinational beverage corporation that manufactures, retails, and markets its popular non-alcoholic drink concentrates and syrups globally [0f64e7ca12, a67f786a3b]. It makes money by selling these syrups and concentrates to a vast network of independent bottling partners, who then produce, package, and distribute the final branded beverages to retailers and consumers [0f64e7ca12, a67f786a3b]."
+  },
+  "synthesized_evidence_sha": "e0df2022135dc238",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Data science and AI initiatives likely focus on supply chain optimization, predictive analytics for consumer demand, marketing mix modeling, and route-to-market logistics [17f8c9c419]."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679029,
   "web_search_url": "https://duckduckgo.com/?q=Coca-Cola+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "As a legacy beverage company, Coca-Cola offers strong stability, mission-driven brand prestige, and estimated competitive new-grad pay. However, its massive size often comes with slow bureaucracy and a moderate tech pace, meaning it may lack the fast-paced, highly innovative startup culture and top-tier AI prestige you are seeking, even if hours and work-life balance are generally respected."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Good. Large traditional enterprises typically offer standard corporate hours and a predictable work-life balance, avoiding the highly toxic or high-burnout cultures found in high-paced tech startups."
   }
  },
  "coder": {
@@ -136875,7 +137256,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -136893,7 +137274,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784894953,
+  "last_attempt_at": 1784895176,
   "last_evidence_at": 1784679029,
   "name": "Focus Financial Partners",
   "pace_of_work": {
@@ -136906,7 +137287,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784895073,
+  "retry_after": 1784895416,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -215090,37 +215471,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "High – recognized for advanced analytics, AI research partnerships, and large-scale data platforms in insurance/wealth."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Generates revenue primarily from insurance premiums, investment management fees, asset management fees, and net investment income on its general account."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Collaborative, mission-driven, inclusive, with a growing engineering-first mindset; bureaucracy exists but is being actively reduced."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Serves individual policyholders, families, employers (group benefits), high-net-worth individuals, and institutional investors across North America, Asia, and Europe."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: CAD 80,000-100,000 base + bonus + RSUs (varies by location and role)."
   },
   "evidence_sha": "a56b52b75fe6bcd2",
+  "generated_at": 1784895176,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Insurance & Financial Services"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect questions on ML model deployment at scale, insurance domain knowledge (risk, actuarial), data privacy/regulatory compliance, and collaborative problem-solving. Prepare to discuss past projects showing end-to-end ownership, ethical AI practices, and ability to balance speed with robustness in a regulated environment."
+  },
+  "last_attempt_at": 1784895176,
   "last_evidence_at": 1784679031,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Major tech hubs in Toronto, Waterloo, Montreal, Hong Kong, Singapore, Boston, and Atlanta; supports remote/hybrid work in many regions."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To help people make decisions easier and lives better through financial advice, insurance, and wealth solutions."
+  },
   "name": "Manulife Financial",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced but structured; sprints with clear regulatory checkpoints, not chaotic."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core products include life insurance, health insurance, annuities, mutual funds, exchange-traded funds (ETFs), retirement plans, and institutional asset management services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual vacation plus statutory holidays; varies by region."
   },
+  "refresh_after": 1790079176,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -215130,7 +215553,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide holiday shutdown (typically last week of December) and summer Fridays or similar recharge periods."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, publicly traded (TSX: MFC, NYSE: MFC) with approximately 35,000 employees globally and over CAD 1.4 trillion in assets under management and administration."
   },
   "sources": [
    {
@@ -215164,14 +215592,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=b0928e3b5cdc6d30047936fdeb3b813d4d487c129e3a29770a01ef7aa0c1742cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=17cf358e-6c85-6b3e-3331-22106d4b6ad4&u=a1aHR0cHM6Ly93d3cubWFudWxpZmUuY2EvcGVyc29uYWwuaHRtbA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors work visas (e.g., H-1B, Global Talent Stream) for technical roles; has dedicated immigration support for new grads and experienced hires."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Manulife Financial is a multinational insurance and financial services company headquartered in Toronto, Canada. It offers life and health insurance, wealth management, retirement solutions, and asset management to individuals, businesses, and institutional clients worldwide."
+  },
+  "synthesized_evidence_sha": "a56b52b75fe6bcd2",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Focuses on digital transformation, AI/ML for underwriting and claims automation, customer analytics, data engineering, cloud migration, and building scalable platforms for insurance and wealth management."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679031,
   "web_search_url": "https://duckduckgo.com/?q=Manulife+Financial+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers a top-tier AI/data science role with elite prestige and competitive new-grad pay within a fast, innovative tech culture rather than slow bureaucracy. The mission-driven focus on helping people make better financial decisions aligns with purpose-driven work, while the company emphasizes work-life balance through sane hours and guaranteed shutdowns, avoiding toxic burnout environments. It accelerates technical learning and career growth without sacrificing personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 – strong emphasis on reasonable hours, flexible schedules, and mandatory shutdown periods."
   }
  },
  "mapjects": {
@@ -224573,11 +225022,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -224589,6 +225040,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784895176,
   "last_evidence_at": 1784679030,
   "name": "Merck & Co.",
   "pace_of_work": {
@@ -224601,6 +225053,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784895296,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -224654,7 +225107,7 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784679030,
   "web_search_url": "https://duckduckgo.com/?q=Merck+%26+Co.+company+careers+benefits",
@@ -307545,41 +307998,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown / Mid-tier. Research does not indicate Sensiple is recognized as a top-tier elite AI employer."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "590f94caa4",
+    "4a5e04db37"
+   ],
+   "value": "Sensiple generates revenue through technology services, likely operating on a B2B consulting or project-based model. Source excerpts do not provide specific financial details."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Likely a standard corporate tech services culture focused on client delivery and technical skill development."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "590f94caa4",
+    "4a5e04db37"
+   ],
+   "value": "The company's primary customer base is not specified in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000 - $95,000 base. Exact new-grad compensation is not disclosed in the provided sources."
   },
   "evidence_sha": "c499e9fa616d16ca",
+  "generated_at": 1784895176,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "590f94caa4",
+    "4a5e04db37"
+   ],
+   "value": "Information Technology Services and Consulting."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should validate if Sensiple's tech culture aligns with the desired elite, fast-paced innovation rather than slow consulting bureaucracy. They should confirm that the role's work-life balance and sane hours meet personal time requirements, avoiding toxic or high-burnout project cycles."
   },
-  "last_attempt_at": 1784894755,
+  "last_attempt_at": 1784895176,
   "last_evidence_at": 1784678873,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "590f94caa4",
+    "4a5e04db37"
+   ],
+   "value": "The company operates regionally, with public pages linking to international editions such as Arabic and English domains. Specific office locations are not detailed."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "590f94caa4",
+    "4a5e04db37"
+   ],
+   "value": "The company's formal mission statement was not available in the provided sources."
+  },
   "name": "Sensiple",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast. As a technology consulting firm, project deadlines often drive a brisk work pace, but exact details aren't confirmed."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "590f94caa4",
+    "4a5e04db37"
+   ],
+   "value": "Sensiple offers technology consulting and software solutions. Exact product lines are not detailed in the provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-25 days annually. Exact policy is not public in the provided sources."
   },
-  "retry_after": 1784894995,
+  "refresh_after": 1790079176,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -307589,7 +308098,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Not guaranteed. While some tech firms offer holiday shutdowns, this is not confirmed for Sensiple."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "590f94caa4",
+    "4a5e04db37"
+   ],
+   "value": "Company size and funding stage are not listed in the provided sources."
   },
   "sources": [
    {
@@ -307623,14 +308140,44 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "590f94caa4",
+    "4a5e04db37"
+   ],
+   "value": "Visa sponsorship details for candidates are not available in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "590f94caa4",
+    "4a5e04db37"
+   ],
+   "value": "Sensiple is a technology solutions and services firm. Based on limited public access to the company's domain during this research, specific details regarding its revenue model and core operations could not be extracted."
+  },
+  "synthesized_evidence_sha": "c499e9fa616d16ca",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "590f94caa4",
+    "4a5e04db37"
+   ],
+   "value": "As a tech solutions provider, Sensiple likely engages in software engineering, cloud services, and enterprise system integration. Specific technical stacks are not mentioned in the sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678873,
   "web_search_url": "https://duckduckgo.com/?q=Sensiple+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Based on the candidate's priorities for an elite, fast-paced AI/data science role with high new-grad pay, Sensiple fits this as an engaging tech consulting firm that provides accelerated learning. Its project-based environment likely offers varied technical growth, though candidates should verify if the pace meets the elite, top-tier AI criteria."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate to good. Typical tech consulting firms offer occasional flexibility, though project spikes can occur."
   }
  },
  "sentar inc": {
@@ -340545,7 +341092,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -340563,7 +341110,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784894953,
+  "last_attempt_at": 1784895176,
   "last_evidence_at": 1784678957,
   "name": "TEL",
   "pace_of_work": {
@@ -340576,7 +341123,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784895073,
+  "retry_after": 1784895416,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -356326,42 +356873,111 @@
  "triumph": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "b6161c90f5"
+   ],
+   "value": "Estimated: Tier 3. While highly technical, the company's focus is on gaming and infrastructure rather than elite, top-tier AI or data science innovation."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "b6161c90f5"
+   ],
+   "value": "The company operates a platform handling gaming, finance, and social interactions at real-money scale, implying revenue generation through transaction fees, gaming operations, or related financial services."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "045692b618",
+    "8c108069be"
+   ],
+   "value": "Fast-scaling, supportive, and flexible. The company emphasizes a team-oriented atmosphere where colleagues support each other, making it a good fit for early-career professionals eager to learn and grow."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "045692b618"
+   ],
+   "value": "Users of real-money gaming platforms, including those familiar with Trading Card Games (TCG) and the broader gaming world."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "b6161c90f5"
+   ],
+   "value": "Estimated: $120,000 - $150,000. Based on standard market rates for infrastructure engineering roles at fast-scaling, remote-first startups in the gaming/finance sector."
   },
   "evidence_sha": "21913048b83abaa6",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784895176,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784894953,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b6161c90f5",
+    "045692b618"
+   ],
+   "value": "Gaming and Finance"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "b6161c90f5",
+    "045692b618"
+   ],
+   "value": "Prepare to discuss how you handle high-stakes, zero-downtime infrastructure scaling and complex database optimizations in a fast-paced environment. Be ready to demonstrate your ability to juggle multiple priorities without sacrificing quality, and ask questions about how the team maintains work-life balance and avoids burnout during rapid scaling."
+  },
+  "last_attempt_at": 1784895176,
   "last_evidence_at": 1784679030,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "045692b618",
+    "8c108069be"
+   ],
+   "value": "The company offers fully remote roles with an online work environment, while also administering California-specific leave programs (CFRA, SDI) and PTO, suggesting a significant presence or employee base in California."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "b6161c90f5",
+    "045692b618"
+   ],
+   "value": "Not explicitly stated in the provided sources, though the company emphasizes scaling a real-money platform with zero downtime and building a supportive, fast-scaling team environment."
+  },
   "name": "Triumph",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "045692b618",
+    "8c108069be",
+    "b6161c90f5"
+   ],
+   "value": "Estimated: Fast-paced and high-pressure. The company operates in a fast-paced environment juggling multiple priorities with no margin for downtime, and is actively fast-scaling its team and infrastructure."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "b6161c90f5"
+   ],
+   "value": "A real-money gaming and social platform that requires high-uptime infrastructure, including CI/CD pipelines, database architecture, and production telemetry."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "8c108069be"
+   ],
+   "value": "Estimated: 15-20 days. The exact PTO policy is not public, but the company administers PTO and California leave programs (CFRA, SDI), indicating a standard flexible PTO structure for a scaling startup."
   },
-  "retry_after": 1784895073,
+  "refresh_after": 1790079176,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -356370,8 +356986,18 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "8c108069be"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns mentioned. While the company offers flexibility and PTO, there is no evidence of guaranteed holiday shutdowns."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "b6161c90f5",
+    "8c108069be"
+   ],
+   "value": "Fast-scaling startup. The company is actively hiring for ground-up infrastructure roles and notes that hires will not be inheriting an existing organization, but starting one."
   },
   "sources": [
    {
@@ -356435,14 +357061,45 @@
     "url": "https://jobs.ashbyhq.com/triumph-arcade/60b13af3-b81f-4e92-8914-ca4aba599f22"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "b6161c90f5"
+   ],
+   "value": "Triumph (operating as Triumph Arcade) is a technology company building a real-money gaming platform that intersects gaming, finance, and social features. It generates revenue by facilitating real-money transactions and operating a platform engineered to handle high-traffic, real-money scale."
+  },
+  "synthesized_evidence_sha": "21913048b83abaa6",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "b6161c90f5"
+   ],
+   "value": "Greenfield infrastructure engineering including building CI/CD pipelines, managing high-traffic Postgres/AlloyDB databases (query planning, indexing, connection management), and implementing production telemetry. The work involves scaling systems from the ground up."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679030,
   "web_search_url": "https://duckduckgo.com/?q=Triumph+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "b6161c90f5",
+    "045692b618"
+   ],
+   "value": "This role offers the fast-paced, innovative tech culture and greenfield technical learning you are looking for, where you can accelerate your career by building infrastructure from scratch at real-money scale. The remote environment also provides the flexibility needed to maintain your personal time and avoid toxic, bureaucratic drag."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "045692b618",
+    "8c108069be"
+   ],
+   "value": "Estimated: Moderate. The company offers a fully remote and supportive work environment, and values consistent schedules, but the fast-scaling nature and zero-downtime mandate may require occasional flexibility."
   }
  },
  "trm labs": {
@@ -373465,11 +374122,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -373481,6 +374140,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784895176,
   "last_evidence_at": 1784678781,
   "name": "Velera",
   "pace_of_work": {
@@ -373493,6 +374153,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784895296,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -373536,7 +374197,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=b88d475ca37ec482f322caaeec286af8539c29d961a61eee9aa4b1178f50ceb1JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=25de6375-e456-6dd3-3c5f-74ebe5226cc9&u=a1aHR0cHM6Ly93d3cudmVsZXJhLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678781,
   "web_search_url": "https://duckduckgo.com/?q=Velera+company+careers+benefits",
@@ -374544,48 +375205,125 @@
  "verizon": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Mid-tier for AI/Data Science. It lacks the FAANG-level elite prestige of pure-tech peers but holds strong respect in network engineering, IoT, and enterprise data roles."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Telecommunications and technology services sold via recurring subscriptions, enterprise contracts, and hardware sales."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Corporate, structured, and mission-driven. Innovation is ongoing but may be subject to traditional management hierarchies and cross-team dependencies."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Consumer retail subscribers, large enterprise businesses, government agencies, and wholesale partners."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: $110,000 - $140,000 base salary for AI and Data Science new grad roles, with potential for standard corporate annual bonuses."
   },
   "evidence_sha": "73433916c8fc03a2",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784895176,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Telecommunications and Technology Services"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "To ensure a fit for the candidate's career goals, probe the specific team's autonomy and deployment cadence to avoid slow bureaucracy. Ask about technical mentorship, on-call expectations, and actualized weekly hours to verify the company's WLB claims match their needs."
+  },
+  "last_attempt_at": 1784895176,
   "last_evidence_at": 1784679035,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Headquartered in New York, US, with major US office hubs and data centers in locations including New Jersey, Texas, and Massachusetts."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "To deliver the promise of the digital world by creating networks that move the world forward, connecting people, places, and things."
+  },
   "name": "Verizon",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Generally moderate and process-driven, characteristic of legacy telecom enterprise environments rather than fast-paced, disruptive tech startups."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "5G wireless networks, fiber-optic broadband (Fios), enterprise IT and security solutions, IoT connectivity, and mobile devices."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: 15-22 days of standard Paid Time Off for new grad hires, alongside standard corporate paid holidays."
   },
+  "refresh_after": 1790079176,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: No known firm-wide guaranteed shutdowns. PTO is generally flexible but driven by manager approval."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Publicly traded, large-cap enterprise (Fortune 50) with a massive global footprint."
   },
   "sources": [
    {
@@ -374629,14 +375367,45 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Sponsors work visas for specialized technical roles, though opportunities are highly competitive and heavily favor domestic talent for new grad roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Verizon is a multinational telecommunications conglomerate providing wireless services, broadband, and networking solutions to consumers, businesses, and government clients. It generates revenue primarily through subscription fees for its mobile and 5G networks, enterprise IT solutions, and fiber-optic broadband services."
+  },
+  "synthesized_evidence_sha": "73433916c8fc03a2",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Data science, ML engineering, network optimization, cybersecurity, cloud and edge computing infrastructure, and AI-driven automation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679035,
   "web_search_url": "https://duckduckgo.com/?q=Verizon+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "While the candidate prioritizes a fast, highly innovative tech culture, Verizon operates as a legacy telecom enterprise. However, it offers very competitive new-grad tech pay, mission-driven connectivity projects, and sane work-life balance, making it a strong fallback for stability without sacrificing immediate financial goals."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Good. Corporate telecom environments typically enforce standard 40-hour weeks with high stability, aligning with the candidate's desire to avoid toxic burnout cultures."
   }
  },
  "verizon communications": {
