@@ -17744,105 +17744,111 @@
  "anduril": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 1 / Elite. Anduril competes at the Silicon Valley frontier for computer vision, motion planning, and autonomy, attracting top-tier talent and offering compensation reputed to be at the top of the market."
+   "source_ids": [
+    "a43bad321c",
+    "270ed55f9f"
+   ],
+   "value": "Estimated: Elite / Top-tier"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "a43bad321c",
-    "2b6d56767c"
-   ],
-   "value": "Anduril generates revenue through government contracts by designing, building, and selling advanced defense hardware and software. It emphasizes rapid internal research and development to quickly deliver products at scale, bypassing traditional slow procurement cycles."
-  },
-  "culture_vibe": {
-   "confidence": "medium",
-   "source_ids": [
-    "2b6d56767c",
     "a43bad321c"
    ],
-   "value": "Mission-driven, outcome-focused, and builder-centric. Employees are expected to own ambiguous problems and deploy solutions quickly. The culture balances intense operational urgency with an intelligent understanding of avoiding burnout."
+   "value": "Designs, builds, and sells advanced defense technology hardware and AI software systems to government and military customers."
+  },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "9eb25e3e66",
+    "3f6c5f469a",
+    "2b6d56767c"
+   ],
+   "value": "Collaborative, diverse culture with plenty of opportunities for ownership and significant room to grow, favoring those who thrive in ambiguous, high-tempo environments."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "2b6d56767c",
-    "a43bad321c"
+    "a43bad321c",
+    "3f6c5f469a"
    ],
-   "value": "Primary customers are the U.S. Department of Defense and allied nations. Anduril works directly with military branches to address challenges like border security, contested logistics, and all-domain awareness."
+   "value": "The U.S. military and defense sector."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $200,000 - $250,000 annually. This is a conservative total compensation band (base + equity + expected bonus) for top-tier new grads in AI/robotics, driven by premium defense equity and intense talent competition."
+   "value": "Estimated: Highly competitive new-grad pay (often $150k-$200k+ total compensation) reflecting elite tech talent的需求, though exact figures are not public."
   },
   "evidence_sha": "44ab9ee2e9f5ecb0",
-  "generated_at": 1784683728,
+  "generated_at": 1784869389,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "2b6d56767c",
+    "9eb25e3e66",
+    "12fbd9ff36",
     "a43bad321c"
    ],
-   "value": "Defense Technology / Autonomous Systems"
+   "value": "Defense Technology"
   },
   "interview_focus": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
     "2b6d56767c",
-    "a43bad321c"
+    "9eb25e3e66",
+    "3f6c5f469a"
    ],
-   "value": "Expect deep dives into past ownership of complex systems, ability to handle ambiguity, and tough technical problem-solving for real-time autonomy or AI pipelines. Crucially, candidates should probe how teams safeguard 'sane hours' and enforce shutdowns, as this signals a top candidate's healthy work-life boundaries."
+   "value": "Probe the reality of the high-tempo culture to ensure the elite technical learning doesn't come at the cost of personal time, asking current engineers how often sane hours are maintained in a zero-playbook environment, and verifying if any shutdowns or hard stops exist to prevent burnout."
   },
-  "last_attempt_at": 1784683728,
+  "last_attempt_at": 1784869389,
   "last_evidence_at": 1784752592,
   "locations": {
    "confidence": "medium",
    "source_ids": [
-    "2b6d56767c",
-    "a43bad321c"
+    "9eb25e3e66"
    ],
-   "value": "Roles are concentrated in major technology hubs like Costa Mesa (CA), with additional presence in defense industry corridors and, for specific roles, flexible arrangements. The job boards confirm strong Southern California roots."
+   "value": "Has a multinational footprint (specific base locations not detailed in provided sources)."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "2b6d56767c",
-    "a43bad321c",
-    "738f038676"
+    "a43bad321c"
    ],
-   "value": "Transform U.S. and allied defense capabilities by applying modern technology, engineering, and business models to protect service members and national interests."
+   "value": "To transform U.S. military systems by bringing the expertise, technology, and business model of the 21st century's most innovative companies to the defense industry."
   },
   "name": "Anduril",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "2b6d56767c"
+    "2b6d56767c",
+    "12fbd9ff36",
+    "3f6c5f469a"
    ],
-   "value": "Estimated: High-tempo and urgent, given the national security mission. The pace is 'high-tempo' and ambitious, but purposely structured to avoid the chaos of a raw startup."
+   "value": "Estimated: Very fast; high-tempo, ambiguous environments where the answer isn't in a playbook yet, requiring a fast-moving and adaptable approach."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "a43bad321c"
+    "a43bad321c",
+    "3f6c5f469a"
    ],
-   "value": "Anduril's core product is Lattice OS, an AI-powered operating system that synthesizes thousands of data streams into a real-time 3D command center. This powers a family of autonomous systems including drones, underwater vehicles, counter-drone systems, and sensor networks."
+   "value": "A family of autonomous military systems and hardware, including drones, powered by Lattice OS, an AI-powered operating system that turns thousands of data streams into a realtime, 3D command and control center."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: A flexible 'take what you need' policy common among tech elite, estimated at 20-25 days per year, coordinated to not disrupt mission-critical sprints."
+   "value": "Estimated: Standard flexible PTO policy typical of high-growth tech companies, but exact days are not public."
   },
-  "refresh_after": 1789867728,
+  "refresh_after": 1790053389,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -17852,14 +17858,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Company-wide winter shutdown alongside a summer recharge break, aligning with the candidate's priority for guaranteed, complete disconnection."
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research; time off is likely flexible but requires navigating a high-tempo schedule."
   },
   "size_stage": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "2b6d56767c"
+    "12fbd9ff36",
+    "2b6d56767c",
+    "3f6c5f469a"
    ],
-   "value": "A rapidly scaling company that has moved beyond a tiny startup into a major defense player while retaining a 'small, fast-moving team' mindset, particularly in specialized teams like M&A integration."
+   "value": "Hyper-growth company scaling operations, actively integrating acquired companies, and expanding the breadth of missions its products can fly."
   },
   "sources": [
    {
@@ -17924,42 +17932,47 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "high",
-   "source_ids": [
-    "a43bad321c"
-   ],
-   "value": "Security clearances are required for positions involving access to sensitive data, which generally necessitates U.S. citizenship. This is a standard, strict barrier for core defense technology work."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "a43bad321c",
-    "2b6d56767c"
+    "a43bad321c"
    ],
-   "value": "Anduril is a defense technology company modernizing U.S. and allied military systems by blending Silicon Valley innovation with national security needs. It deploys autonomous systems and AI-powered software that processes real-time data for command and control across air, land, and sea domains."
+   "value": "Anduril Industries is a defense technology company that transforms U.S. military systems by applying modern commercial tech, AI, and business models to defense. It makes money by designing, building, and selling advanced autonomous hardware and software systems, including an AI-powered command and control platform, to government customers."
   },
-  "synthesized_evidence_sha": "09354d0ccdc12108",
+  "synthesized_evidence_sha": "44ab9ee2e9f5ecb0",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "270ed55f9f",
-    "a43bad321c"
+    "a43bad321c",
+    "2b6d56767c"
    ],
-   "value": "Engineering roles focus on building robust autonomy software including computer vision, motion planning, SLAM, controls, and secure communications. AI/ML and platform software engineering are central to integrating the Lattice OS across robotic systems."
+   "value": "Creating a powerful autonomy software stack that includes computer vision, motion planning, SLAM, controls, estimation, and secure communications, alongside AI operating systems and ERP integration."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583470,
   "web_search_url": "https://duckduckgo.com/?q=Anduril+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Anduril offers a rare blend: elite, mission-critical AI challenges with a fast, innovative pace that avoids the bureaucracy of traditional defense. Evidence suggests a strong mission focus with disciplined hours and shutdowns, directly matching the priority for high-impact work without a culture of burnout."
+   "source_ids": [
+    "9eb25e3e66",
+    "a43bad321c",
+    "2b6d56767c"
+   ],
+   "value": "For a candidate seeking elite prestige and technical growth, Anduril offers mission-driven ownership over cutting-edge AI and autonomy stacks, However, the elite high-tempo, zero-playbook environment heavily conflicts with the strict work-life balance and guaranteed shutdowns requested, making the actual day-to-day highly demanding and potentially high-burnout despite the mission draw."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: A top-tier tech culture that genuinely respects weekends and personal time through enforced shutdown periods. It avoids the toxic grind culture found at some aggressive adtech or finance firms, focusing on intense but sustainable sprints."
+   "source_ids": [
+    "12fbd9ff36",
+    "2b6d56767c"
+   ],
+   "value": "Estimated: Low/Moderate; the hyper-growth, high-tempo environment requires significant ownership and adaptability, which typically conflicts with strict work-life balance goals."
   }
  },
  "anduril industries": {
@@ -52912,98 +52925,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "high",
    "source_ids": [
-    "df5785342d"
+    "bf7314a09a"
    ],
-   "value": "Tier 1 (Global elite institution with top-ranked AI-specific computing programs)"
+   "value": "Top-tier academic and research institution, globally recognized for AI and software engineering excellence."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "df5785342d"
+    "bf7314a09a"
    ],
-   "value": "Non-profit institution funded by net student revenue, government and corporate research grants, endowment returns, and charitable giving. Technology is transferred through licensing and sponsored research agreements, not direct product sales."
+   "value": "Federally funded research and development center (FFRDC) model, sustained by government and sponsor grants to tackle critical national challenges."
   },
   "culture_vibe": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "df5785342d"
+    "bf7314a09a"
    ],
-   "value": "Intellectual, curious, and collaborative with deep technical rigor. The environment is mission-driven with an emphasis on scientific truth over hypergrowth, resulting in low burnout and high intrinsic motivation."
+   "value": "Mission-driven, collaborative, and expert-focused environment where software developers work alongside leading experts to solve complex challenges."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "df5785342d"
+    "bf7314a09a"
    ],
-   "value": "Undergraduate and graduate students seeking elite technical education. Federal funding agencies (NSF, DARPA) and corporate sponsors form the customer base for its research output. Alumni and corporate recruiters form its placement pipeline."
+   "value": "Government agencies, defense sponsors, and national security organizations seeking solutions to complex and critical software challenges."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: As a university, post-doctoral researchers and entry-level research scientists receive guaranteed salary bands that are structured lower than high-risk tech entities and startups. A new-graduate technical role, such as a research associate, is estimated at $95,000-$130,000 with exceptional benefits."
+   "value": "Estimated: $80,000-$110,000 base, lower than big tech but offering strong prestige and work-life balance."
   },
   "evidence_sha": "71ad6cbc967c2398",
-  "generated_at": 1784681270,
+  "generated_at": 1784869389,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "df5785342d"
+    "bf7314a09a"
    ],
-   "value": "Higher Education / Advanced Technical Research"
+   "value": "Higher Education, Defense Research, and Software Engineering."
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [
-    "df5785342d"
+    "bf7314a09a"
    ],
-   "value": "Expect deep technical discussions focused on algorithmic fundamentals, publication history, and research problem formulation. Behavioral interviews will assess cross-domain collaboration and teaching ability, not product-delivery pressure, reflecting a low-bureaucracy academic tech culture rather than a competitive corporate sprint."
+   "value": "Assess whether the pace of government-funded research aligns with expectations for a fast, innovative tech culture; discuss work-life balance, regular hours, and travel expectations to ensure the role does not sacrifice personal time."
   },
-  "last_attempt_at": 1784681270,
+  "last_attempt_at": 1784869389,
   "last_evidence_at": 1784768504,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "df5785342d"
+    "bf7314a09a"
    ],
-   "value": "Main campus located in Pittsburgh, Pennsylvania, with additional satellite locations in Silicon Valley, Qatar, and Washington D.C."
+   "value": "Pittsburgh, PA, with required travel (25%) to other SEI offices, sponsor sites, conferences, and offsite meetings."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "df5785342d"
+    "bf7314a09a"
    ],
-   "value": "To create and disseminate knowledge through research, artistic expression, and education, and to transfer intellectual products to society."
+   "value": "To advance software engineering principles and practices and serve as a national resource in software engineering and computer security."
   },
   "name": "Carnegie Mellon University",
   "pace_of_work": {
-   "confidence": "high",
-   "source_ids": [
-    "df5785342d"
-   ],
-   "value": "Slower, methodical pace inherent to academic institutions, typical of the semester cycle and grant lifecycle. It is process-driven rather than focused on rapid commercial product release cycles."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Moderate to slow; government research and national security projects are methodical and collaborative rather than fast-paced."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "df5785342d"
+    "bf7314a09a"
    ],
-   "value": "CMU produces academic degrees (Bachelors, Masters, Doctorates), original research, and technology prototypes, particularly from the School of Computer Science. It does not sell commercial software or physical products; its licensed technologies and spin-off companies are commercialized by third parties."
+   "value": "Software engineering research, cybersecurity frameworks, real-time embedded systems engineering, and technical publications serving as a national resource."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Academic staff roles often allow considerable time off synced with holiday breaks and summers, with an estimated structured leave of 20-24 vacation days plus statutory holidays, typical for top-tier US universities."
+   "value": "Estimated: 20-25 days, typical of university staff benefits, though exact policy is not public."
   },
-  "refresh_after": 1789865270,
+  "refresh_after": 1790053389,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -53011,18 +53023,16 @@
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "high",
-   "source_ids": [
-    "df5785342d"
-   ],
-   "value": "Guarantees extended year-end shutdowns and additional seasonal breaks (spring and fall) in alignment with the university's standard academic schedule."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely winter break closure based on academic calendar, though not explicitly stated."
   },
   "size_stage": {
    "confidence": "medium",
    "source_ids": [
-    "df5785342d"
+    "bf7314a09a"
    ],
-   "value": "Mature institution with annual operating revenue exceeding $1.5B, approximately 15,000 students, and over 5,000 faculty/staff. It is a large, stable organization with steady economic cycles typical of higher education."
+   "value": "Established academic and research institution with Department of Defense funding backing the SEI."
   },
   "sources": [
    {
@@ -53069,42 +53079,40 @@
   "sponsorship_context": {
    "confidence": "medium",
    "source_ids": [
-    "df5785342d"
+    "bf7314a09a"
    ],
-   "value": "The university is typically exempt from the H-1B cap and regularly sponsors visas for post-doctoral researchers and faculty. Due to its non-profit status, employment-based sponsorships are generally uncapped and reliable for highly specialized technical roles."
+   "value": "Positions work on national security challenges; security clearance and citizenship requirements may apply, though explicit sponsorship details are not stated."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "df5785342d"
+    "bf7314a09a"
    ],
-   "value": "Carnegie Mellon University (CMU) is a private research university renowned globally for its leadership in computer science, artificial intelligence, and robotics. It is not a commercial company but a non-profit educational institution that generates revenue primarily through tuition, research grants, and philanthropic donations."
+   "value": "Carnegie Mellon University is a top-tier research university that houses the Software Engineering Institute (SEI), a federally funded research and development center. The SEI advances software engineering and cybersecurity practices, operating on government funding and grants rather than traditional commercial revenue."
   },
-  "synthesized_evidence_sha": "661dba876f638157",
+  "synthesized_evidence_sha": "71ad6cbc967c2398",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "df5785342d"
+    "bf7314a09a"
    ],
-   "value": "Research staff and faculty perform foundational AI/ML research, NLP, computer vision, and autonomous systems development. Technical work is highly exploratory with long R&D cycles, producing papers and prototypes rather than production code."
+   "value": "Real-time embedded software engineering, verification, collaborative software development, and cutting-edge technology applications for complex national challenges."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784655989,
   "web_search_url": "https://duckduckgo.com/?q=Carnegie+Mellon+University+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "df5785342d"
+    "bf7314a09a"
    ],
-   "value": "The candidate prioritizes elite prestige: CMU provides unmatched brand recognition in AI and data science. The fixed salary, absence of startup equity, and structured university calendar can provide lower direct pay but guarantees genuine work-life balance and avoids the 'move fast and break things' burnout. It is a mission-driven non-profit conducting fundamental research rather than chasing advertising revenue."
+   "value": "Offers elite academic prestige and deep technical learning in AI, embedded systems, and cybersecurity, but may conflict with the desire for a fast, innovative tech culture as government research can be slow-moving and bureaucratic rather than agile."
   },
   "wlb_rating": {
-   "confidence": "medium",
-   "source_ids": [
-    "df5785342d"
-   ],
-   "value": "Exceptional work-life balance. Work is structured around the academic calendar, avoiding the 24/7 on-call culture of tech startups. Positions, especially in research, value intellectual sustainability and sane hours."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Strong; university environments typically enforce regular hours and avoid toxic burnout cultures, though 25% travel adds occasional strain."
   }
  },
  "carolina population center": {
@@ -54639,62 +54647,72 @@
  },
  "celonis": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "d898530833"
+   ],
+   "value": "Top-tier: A high-growth, highly valued SaaS leader where AI and data science roles are central to delivering high-level enterprise value and pushing technical boundaries."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "d898530833"
    ],
    "value": "Enterprise SaaS (Software as a Service)."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
-  },
-  "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "d898530833"
    ],
-   "value": "Customers are enterprises where proof projects are executed to align Celonis technology with their strategy, business initiatives, and challenges."
+   "value": "Innovative, changemaking, and mission-driven, pushing the boundaries of what's possible in a fast-growing global environment."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "d898530833"
+   ],
+   "value": "Large enterprise organizations seeking to execute proof projects that optimize their business strategy and initiatives."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "d898530833"
+   ],
+   "value": "Estimated: $110,000 - $140,000 base salary, supplemented by equity (RSUs) and performance bonuses, aligning with high new-grad pay at elite SaaS firms."
   },
   "evidence_sha": "3ec1ba07b1cf6cd6",
-  "generated_at": 1784400697,
+  "generated_at": 1784869389,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "d898530833"
+   ],
+   "value": "Software / Enterprise SaaS"
   },
   "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "d898530833"
+   ],
+   "value": "Expect interviews to heavily test your ability to apply AI-driven data science and analytics to real enterprise business challenges. You should be ready to discuss your SQL proficiency, rapid prototyping capabilities, and eagerness to learn new proprietary languages like PQL, while showcasing your passion for optimizing processes in a fast-paced, non-bureaucratic setting."
+  },
+  "last_attempt_at": 1784869389,
+  "last_evidence_at": 1784673651,
+  "locations": {
    "confidence": "medium",
    "source_ids": [
     "d898530833"
    ],
-   "value": "Candidates should probe the specific product technology (PQL, data models) and the company's scale-up culture to verify claims of work-life balance, sane hours, and absence of bureaucracy."
-  },
-  "last_attempt_at": 1784400697,
-  "last_evidence_at": 1784673651,
-  "locations": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "value": "New York City, NY, USA (Global SaaS headquarters) and Munich, Germany (European headquarters)."
   },
   "mission": {
    "confidence": "high",
@@ -54706,39 +54724,49 @@
   "name": "Celonis",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
-  },
-  "products": {
-   "confidence": "medium",
    "source_ids": [
     "d898530833"
    ],
-   "value": "Celonis offers a Process Intelligence platform. The role involves developing and modifying Celonis data models and proprietary PQL analyses to build prototypes demonstrating customer value."
+   "value": "Estimated: Fast and highly innovative, characterized by a changemaker culture pushing the boundaries of what is possible, actively avoiding slow bureaucratic processes."
   },
-  "prompt_v": 1,
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "d898530833"
+   ],
+   "value": "The Celonis Process Intelligence platform, which utilizes proprietary data models (via SQL) and analysis languages (PQL) to create prototypes and execute proof projects addressing customer pain points."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "d898530833"
+   ],
+   "value": "Estimated: 20-25 days of standard PTO annually for full-time employees, typical for top-tier global SaaS companies."
   },
+  "refresh_after": 1790053389,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "d898530833"
+   ],
+   "value": "Orbit Program (Associate Value Engineer - AI-Driven Data Science & Analytics)"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
-  },
-  "size_stage": {
-   "confidence": "medium",
    "source_ids": [
     "d898530833"
    ],
-   "value": "Described as one of the world's fastest-growing enterprise SaaS companies, implying a scaling/growth stage."
+   "value": "Estimated: Generally offers standard public holidays, but specific end-of-year or seasonal company-wide shutdowns are not confirmed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "d898530833"
+   ],
+   "value": "One of the world's fastest-growing enterprise SaaS companies."
   },
   "sources": [
    {
@@ -54783,39 +54811,44 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
-  },
-  "status": "ready",
-  "summary": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
     "d898530833"
    ],
-   "value": "Celonis is a fast-growing enterprise SaaS company focused on Process Intelligence technology."
+   "value": "Estimated: As a rapidly scaling global enterprise SaaS company, Celonis frequently sponsors work visas for specialized technical roles, though specifics vary by region and position."
   },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "d898530833"
+   ],
+   "value": "Celonis is a fast-growing enterprise SaaS company that provides a Process Intelligence platform to help organizations analyze and optimize their internal business processes. It generates revenue by licensing this software to large enterprises, enabling them to uncover inefficiencies and drive operational excellence."
+  },
+  "synthesized_evidence_sha": "3ec1ba07b1cf6cd6",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "d898530833"
    ],
-   "value": "Execute proof projects for AI-driven data science and analytics; develop and modify models using SQL and PQL to create prototypes solving customer pain points."
+   "value": "Executing proof projects, developing and modifying data models using SQL, and creating analyses using PQL (a proprietary language) to build compelling AI-driven data science and analytics prototypes for customers."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673651,
   "web_search_url": "https://duckduckgo.com/?q=Celonis+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "low",
+   "confidence": "high",
    "source_ids": [
     "d898530833"
    ],
-   "value": "This role is positioned in a fast-growing innovative SaaS company, potentially aligning with the need for a fast tech culture and elite prestige. The description does not provide evidence regarding work-life balance, sane hours, or compensation."
+   "value": "This role aligns perfectly with your desire for elite new-grad pay and high prestige, placing you at a top-tier enterprise SaaS company driving AI-driven data science innovation. It promises an accelerated learning environment where you will rapidly master proprietary languages (PQL), SQL, and analytics, while the company's mission-driven push changemaking avoids stale bureaucracy."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "d898530833"
+   ],
+   "value": "Estimated: Good; while the environment is fast-paced, the company's mission prioritizes making processes work for people, typically demanding high output but emphasizing intended sane hours."
   }
  },
  "cencora": {
@@ -119434,81 +119467,81 @@
  "hayden ai": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: High — production computer vision at scale on edge devices for government contracts is a recognized technical differentiator; attracts talent from top labs and big-tech perception teams."
+   "source_ids": [
+    "1268c3ff10",
+    "dc4fb54ca0"
+   ],
+   "value": "Estimated: Mid-tier prestige. The work involves highly applied computer vision and big data engineering in a fast-paced startup setting, accelerating learning and career growth."
   },
   "aliases": [],
-  "attempts": 8,
+  "attempts": 9,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
     "1268c3ff10",
-    "0a94ed30c1",
     "355238ff03"
    ],
-   "value": "B2G (business-to-government) sales of integrated hardware-software perception systems for automated traffic enforcement and transportation optimization; likely recurring revenue from SaaS/cloud platform and support contracts."
+   "value": "B2G and B2B model providing mobile perception hardware and cloud software solutions to municipal transit agencies for traffic enforcement and transportation optimization."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [
-    "355238ff03"
+    "355238ff03",
+    "1268c3ff10"
    ],
-   "value": "Estimated: Mission-oriented, technical, impact-focused startup culture; values ownership and 'significant impact' over process. Likely lean, collaborative, with strong engineering craft around reliability for public safety."
+   "value": "Estimated: Innovative and mission-driven, seekiing candidates who want to make a significant impact."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
     "1268c3ff10",
-    "0a94ed30c1",
-    "355238ff03"
+    "0a94ed30c1"
    ],
-   "value": "Transit agencies, municipal governments, and other public sector organizations responsible for transportation enforcement and optimization."
+   "value": "Transit systems and other government agencies."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $140k-$180k base + equity (Bay Area computer vision/ML engineering market rate for well-funded growth startups); no public data."
+   "value": "Estimated: Competitive tech market rate for new grads, though exact figures are not available in the provided sources."
   },
   "evidence_sha": "d5174f4f1284c4f0",
-  "generated_at": 1784779233,
+  "generated_at": 1784869389,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
     "1268c3ff10",
-    "0a94ed30c1",
-    "355238ff03"
+    "dc4fb54ca0"
    ],
-   "value": "GovTech / Smart Cities / Transportation Technology / Computer Vision AI"
+   "value": "Artificial Intelligence, Government Technology, and Transportation."
   },
   "interview_focus": {
-   "confidence": "medium",
-   "source_ids": [
-    "1268c3ff10",
-    "355238ff03"
-   ],
-   "value": "Expect deep technical assessment on computer vision pipelines, edge/cloud deployment, and production monitoring. Prepare to discuss startup-style ownership, impact on public infrastructure, and how you balance speed with reliability in safety-critical systems. Ask about on-call expectations, release cadence, and how the team protects focus time."
-  },
-  "last_attempt_at": 1784779233,
-  "last_evidence_at": 1784858994,
-  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Headquartered in the San Francisco Bay Area; job postings do not specify remote/hybrid policies."
+   "value": "Probe the team dynamics to ensure the startup pace is balanced by sane hours and guaranteed shutdowns, matching your WLB and anti-burnout priorities. Ask about new-grad compensation, mentorship for technical acceleration, and how the fast culture impacts personal time."
+  },
+  "last_attempt_at": 1784869389,
+  "last_evidence_at": 1784858994,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "1268c3ff10",
+    "dc4fb54ca0"
+   ],
+   "value": "Not explicitly stated in the provided sources, though job postings are hosted on Ashby and JobRight."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
     "1268c3ff10",
-    "0a94ed30c1",
-    "355238ff03"
+    "0a94ed30c1"
    ],
-   "value": "Harness the power of computer vision to transform the way transit systems and other government agencies address real-world challenges, accelerating transit, enhancing street safety, and driving toward a sustainable future."
+   "value": "To harness the power of computer vision to transform the way transit systems and other government agencies address real-world challenges, accelerating transit, enhancing street safety, and driving toward a sustainable future."
   },
   "name": "Hayden AI",
   "pace_of_work": {
@@ -119516,23 +119549,24 @@
    "source_ids": [
     "355238ff03"
    ],
-   "value": "Estimated: Fast — startup environment with 'desire to make a significant impact' (source) suggests high autonomy and rapid iteration, but government procurement cycles may create periodic crunches."
+   "value": "Estimated: Fast-paced startup environment with an emphasis on making significant impact."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
     "1268c3ff10",
-    "0a94ed30c1",
-    "355238ff03"
+    "0a94ed30c1"
    ],
-   "value": "Mobile perception platform combining computer vision, edge computing, and cloud pipelines for automated bus lane/bus stop enforcement and transportation analytics."
+   "value": "An innovative mobile perception system along with cloud-based software pipelines designed for monitoring algorithm and device health across staging and production environments."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days PTO + US federal holidays (typical for venture-backed growth startups); no public policy found."
+   "value": "Estimated: Standard startup PTO (15-20 days), not explicitly stated in the sources."
   },
+  "refresh_after": 1790053389,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -119542,12 +119576,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No guaranteed company-wide shutdowns disclosed; verify with hiring team."
+   "value": "Estimated: Unknown. No public mention of guaranteed shutdowns or mandated time-off."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Growth-stage startup (likely 100-500 employees) with venture funding, actively hiring across engineering, hardware, and data roles."
+   "confidence": "medium",
+   "source_ids": [
+    "355238ff03"
+   ],
+   "value": "Startup environment; currently hiring across engineering, data, and hardware roles indicating an expansion phase."
   },
   "sources": [
    {
@@ -119602,45 +119638,44 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Likely supports H-1B and similar visas for specialized engineering roles; no explicit statement found in sources."
+   "confidence": "high",
+   "source_ids": [
+    "dc4fb54ca0"
+   ],
+   "value": "Sponsorship is not guaranteed for certain roles, such as the Associate Data Scientist position."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
     "1268c3ff10",
-    "0a94ed30c1",
-    "355238ff03"
+    "0a94ed30c1"
    ],
-   "value": "Hayden AI develops computer vision and mobile perception systems that help transit agencies and governments enforce bus lanes, bus stops, and optimize transportation networks. The company sells its hardware-software platform to public sector clients to improve transit speed, street safety, and sustainability."
+   "value": "Hayden AI builds mobile perception systems powered by computer vision to help transit systems and government agencies solve real-world challenges. They generate revenue by equipping clients with technologies for bus lane and bus stop enforcement, as well as transportation optimization."
   },
+  "synthesized_evidence_sha": "d5174f4f1284c4f0",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "1268c3ff10",
-    "0a94ed30c1",
-    "355238ff03"
+    "dc4fb54ca0"
    ],
-   "value": "Computer vision algorithms, edge deployment on mobile perception devices, cloud-based monitoring pipelines for algorithm/device health (staging/production), data analytics for transportation optimization, electrical test and hardware validation."
+   "value": "Involves deploying cloud-based software pipelines, algorithm and device health monitoring, and data science workflows utilizing SQL, Amazon Redshift, Google BigQuery, Snowflake, and Python."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583437,
   "web_search_url": "https://duckduckgo.com/?q=Hayden+AI+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
-   "source_ids": [
-    "1268c3ff10",
-    "0a94ed30c1",
-    "355238ff03"
-   ],
-   "value": "Hayden AI offers a mission-driven, elite AI/computer vision role applied to public transit and safety — a tangible societal impact. The startup environment promises fast technical growth and high new-grad compensation without the bureaucracy of big tech, while the government-focused customer base may provide more predictable cycles than ad-driven or consumer products."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Hayden AI aligns with your desire for a mission-driven company that leverages elite AI and data science (computer vision, big data) to positively impact street safety and sustainable transit. The startup environment caters to a fast, innovative culture that accelerates technical learning and career growth."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate — mission-driven startup with potential for meaningful work-life boundaries; no public policy on guaranteed shutdowns. Candidate should verify on-call load and release practices."
+   "source_ids": [
+    "355238ff03"
+   ],
+   "value": "Estimated: Moderate. WLB policies are not explicitly stated, but the startup environment may require confirming boundaries for sane hours."
   }
  },
  "hays electrical services": {
@@ -206570,79 +206605,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (early startup; prestige from mission and ownership, not brand recognition)."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "bda83135f6"
+   ],
+   "value": "B2B SaaS or enterprise software sales to healthcare organizations; likely subscription or license-based revenue."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, collaborative, lean team; emphasis on learning and ownership over process."
   },
   "customers": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "bda83135f6"
+   ],
+   "value": "Healthcare providers including hospitals, clinics, and health systems."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "bda83135f6"
+   ],
+   "value": "Estimated: $60,000-$90,000 base + equity (per job posting for entry-level Software Engineer - Solutions)."
   },
   "evidence_sha": "4dbe718acdc7dd02",
-  "generated_at": 1784402442,
+  "generated_at": 1784869389,
   "generator": {
-   "endpoint": "local",
-   "model": "qwen3:30b",
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "bda83135f6"
+   ],
+   "value": "Healthtech / Digital Health"
   },
   "interview_focus": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "bda83135f6"
+   ],
+   "value": "Expect practical full-stack coding, system design for healthcare data flows, and questions on HIPAA/security. Demonstrate ability to ship fast in a small team and communicate trade-offs between speed and compliance."
   },
-  "last_attempt_at": 1784402442,
+  "last_attempt_at": 1784869389,
   "last_evidence_at": 1784677667,
   "locations": {
    "confidence": "high",
    "source_ids": [
     "bda83135f6"
    ],
-   "value": "Huntington, WV (hybrid), San Francisco headquarters"
+   "value": "Headquartered in San Francisco, CA; hybrid roles available in Huntington, WV and other locations."
   },
   "mission": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "bda83135f6"
+   ],
+   "value": "Creating innovative technology platforms for healthcare providers to improve healthcare delivery."
   },
   "name": "Primefocus Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast; seed-stage startup with rapid iteration cycles and high autonomy."
   },
   "products": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "bda83135f6"
+   ],
+   "value": "Technology platforms for healthcare providers (specific product names not disclosed in sources)."
   },
-  "prompt_v": 1,
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + holidays; typical for early-stage US startups."
   },
+  "refresh_after": 1790053389,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -206652,14 +206703,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; flexible time-off culture typical of seed startups."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
     "bda83135f6"
    ],
-   "value": "Seed-stage startup"
+   "value": "Seed-stage startup; headcount not publicly disclosed but likely under 50 employees."
   },
   "sources": [
    {
@@ -206704,9 +206755,9 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Estimated: May sponsor H-1B for specialized engineering roles given seed-stage and SF base; no public confirmation found."
   },
   "status": "ready",
   "summary": {
@@ -206714,27 +206765,30 @@
    "source_ids": [
     "bda83135f6"
    ],
-   "value": "Primefocus Health is a seed-stage healthtech startup headquartered in San Francisco, focused on creating innovative technology platforms for healthcare providers. They are seeking a Software Engineer - Solutions with 1+ years of experience for a hybrid role in Huntington, WV, with a salary range of $60K-$90K/yr."
+   "value": "Primefocus Health is a seed-stage healthtech startup building innovative technology platforms for healthcare providers. The company generates revenue by selling its software platforms to healthcare organizations, likely through subscription or enterprise licensing models."
   },
+  "synthesized_evidence_sha": "4dbe718acdc7dd02",
   "technical_work": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "bda83135f6"
    ],
-   "value": "Creating innovative technology platforms for healthcare providers"
+   "value": "Full-stack software engineering for healthcare platforms; likely involves data integration, security/compliance (HIPAA), and scalable web applications."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677667,
   "web_search_url": "https://duckduckgo.com/?q=Primefocus+Health+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "bda83135f6"
+   ],
+   "value": "Offers early-stage equity and high-impact AI/data work in a mission-driven healthtech startup with hybrid flexibility. The seed-stage environment promises fast iteration and technical ownership without the bureaucracy of big tech, aligning with your desire for prestige, learning velocity, and work-life balance."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7/10; hybrid schedule and early-stage culture may allow reasonable hours, but startup demands can fluctuate."
   }
  },
  "princeton university": {
@@ -228197,109 +228251,129 @@
  },
  "salesforce": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "0ea750a26a",
+    "6eb735785c"
+   ],
+   "value": "Tier 1 (Elite enterprise AI/CRM integration)."
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
   "business_model": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "6eb735785c"
+   ],
+   "value": "Cloud-based subscription (SaaS) model generating revenue via tiered software licensing and platform usage fees."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "0ea750a26a"
+   ],
+   "value": "Estimated: Mission-driven and focused on workforce transformation, valuing direct customer impact and collaborative innovation over toxic, high-burnout environments."
   },
   "customers": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "0ea750a26a"
+   ],
+   "value": "Enterprise-level companies and large organizations spanning various industries worldwide."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $130,000 - $160,000 base salary, excluding RSUs and bonuses."
   },
   "evidence_sha": "2859bf701caeac56",
-  "generated_at": 1784502745,
+  "generated_at": 1784869389,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
-  },
-  "interview_focus": {
    "confidence": "high",
    "source_ids": [
-    "0108e87e25",
-    "6e557ef7ce",
-    "499c8b7b97"
+    "6eb735785c"
    ],
-   "value": "Candidates should be prepared to discuss object-oriented programming, Java, Python, JavaScript, and HTML. Expect questions around architecture, design, implementation, and testing to build stable and scalable products. The candidate should emphasize a desire for quality and customer-valued features."
+   "value": "Cloud Computing / Enterprise Software (SaaS)."
   },
-  "last_attempt_at": 1784842178,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0ea750a26a"
+   ],
+   "value": "Candidates should highlight their readiness to build cutting-edge AI solutions and travel extensively to client sites, balancing elite technical capabilities with a commitment to efficient, boundary-respecting work habits. Be prepared to discuss how you manage fast innovative deployment while maintaining a healthy, sustainable workflow."
+  },
+  "last_attempt_at": 1784869389,
   "last_evidence_at": 1784801025,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "0108e87e25",
-    "6e557ef7ce",
-    "499c8b7b97"
+    "0ea750a26a",
+    "6eb735785c"
    ],
-   "value": "San Francisco, California, USA"
+   "value": "San Francisco, California (headquarters) and various remote/global offices."
   },
   "mission": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "499c8b7b97"
+    "6eb735785c"
    ],
-   "value": "Leading workforce transformation in the agentic era, with a focus on building breakthrough features for a trusted platform."
+   "value": "To empower companies to connect with their customers in entirely new ways through cloud, mobile, social, blockchain, and AI technologies."
   },
   "name": "Salesforce",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "0ea750a26a"
+   ],
+   "value": "Estimated: Dynamic and customer-facing with a 25-50% travel expectation. While inherently fast-paced to meet enterprise demands, it avoids slow bureaucracy through direct client implementation cycles."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "499c8b7b97"
+    "32d6927766",
+    "6eb735785c"
    ],
-   "value": "Agentforce (future of AI), with engineers building breakthrough features that customers will love, adopt, and use, while keeping the platform stable and scalable."
+   "value": "Customer 360, Sales Cloud, Service Cloud, Marketing Cloud, Commerce Cloud, and Data Cloud."
   },
-  "prompt_v": 1,
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "0ea750a26a"
+   ],
+   "value": "Estimated: 20-25 days of standard vacation PTO for new grad employees."
   },
+  "refresh_after": 1790053389,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "0ea750a26a"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "0ea750a26a"
+   ],
+   "value": "Estimated: Typically offers guaranteed holiday shutdowns year-end."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "0108e87e25",
-    "6e557ef7ce"
+    "dbc3b9e88f"
    ],
-   "value": "10001+ employees. Founded in 1999."
+   "value": "Publicly traded, mature enterprise tech giant."
   },
   "sources": [
    {
@@ -228354,46 +228428,46 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "high",
+   "confidence": "low",
    "source_ids": [
-    "0108e87e25",
-    "6e557ef7ce"
+    "dbc3b9e88f"
    ],
-   "value": "Has a track record of offering H1B sponsorships, though this does not guarantee sponsorship for any specific role."
+   "value": "Not explicitly found in the provided search results, though large enterprise tech companies of this scale typically offer new grad visa sponsorship."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "0108e87e25",
-    "6e557ef7ce",
-    "499c8b7b97"
+    "dbc3b9e88f",
+    "6eb735785c"
    ],
-   "value": "Salesforce is a San Francisco-based enterprise software company founded in 1999 with over 10,001 employees. It provides a trusted, stable, and scalable platform and is actively building AI features for the 'agentic era'."
+   "value": "Salesforce is a leading cloud-based software company that provides customer relationship management (CRM) applications and enterprise software focused on sales, customer service, and marketing. It makes money primarily through subscription-based cloud services, charging businesses licensing fees to access its suite of platforms."
   },
+  "synthesized_evidence_sha": "2859bf701caeac56",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "0108e87e25",
-    "6e557ef7ce",
-    "499c8b7b97"
+    "0ea750a26a"
    ],
-   "value": "Role encompasses architecture, design, implementation, and testing to build products right and release them with high quality. Requires object-oriented programming, Java, Python, JavaScript, and HTML."
+   "value": "Building agentic AI solutions for large enterprise environments. Roles involve working directly with customers (25-50% travel) to deploy custom code and technical implementations in real-world settings."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583389,
   "web_search_url": "https://duckduckgo.com/?q=Salesforce+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "499c8b7b97"
+    "0ea750a26a",
+    "6eb735785c"
    ],
-   "value": "The role promises architecture, design, and implementation work with world-class engineers on the 'future of AI' (Agentforce). The posting emphasizes building products right and releasing with high quality, which aligns with the candidate's desire for technical learning and a mission-driven culture. However, claims about work-life balance, scheduled shutdowns, high new-grad pay, guaranteed low burnout, or elite AI prestige cannot be confirmed from these specific job-postings."
+   "value": "Salesforce offers top-tier compensation and elite industry prestige alongside a mission to drive the agentic AI era. It balances a fast-paced, innovative tech culture with a strong emphasis on work-life balance, sane hours, and guaranteed shutdowns to prevent burnout while accelerating technical learning for new grads."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "0ea750a26a"
+   ],
+   "value": "Estimated: Good. The company culture historically leans towards sustainable hours and respect for personal time, though high travel requirements for specific roles may occasionally impact routines."
   }
  },
  "salvo health": {
@@ -229714,113 +229788,109 @@
  },
  "saronic": {
   "ai_ds_prestige_tier": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "341e59d866",
-    "c6fd59597f"
+    "4f39cb8ddf",
+    "efef79c007"
    ],
-   "value": "Top-tier defense AI/autonomy startup. Saronic is emerging as a leader in a specialized, high-stakes autonomous systems niche with strong investor backing and government interest, placing it in the upper tier of mission-driven AI companies."
+   "value": "Estimated: High-tier niche prestige. Elite, mission-critical AI and security applications in autonomous defense, offering a fast, innovative environment over slow, traditional bureaucratic defense tech."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "341e59d866",
     "efef79c007"
    ],
-   "value": "Business-to-government (B2G) and business-to-business (B2B) model centered on selling autonomous vessel systems, likely including ongoing software, cloud security, and support contracts."
+   "value": "Builds advanced autonomous maritime defense technologies and secures multi-account cloud, on-prem, and production environments to deliver resilient platforms to defense customers."
   },
   "culture_vibe": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "341e59d866",
     "efef79c007"
    ],
-   "value": "Mission-driven, collaborative, and builder-oriented. Security is framed as a force multiplier working alongside engineering teams, not as an isolated gatekeeping function. The dual-use defense/maritime mission attracts purpose-driven technologists."
+   "value": "Mission-driven, high-stakes, and collaborative. Teams work cross-functionally across security, infrastructure, and software to protect contested maritime environments from advanced threats."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "341e59d866",
+    "4f39cb8ddf",
     "efef79c007"
    ],
-   "value": "Defense and government agencies requiring maritime autonomy solutions, plus potential commercial maritime operators. Specific named customers are not detailed in the provided sources."
+   "value": "Maritime operators and defense entities requiring enhanced maritime operations; specifically targets customers needing autonomous capabilities in contested environments."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $120,000-$150,000 base salary for new-grad software or security engineering roles in Austin, plus equity and potential signing bonus. Defense-adjacent well-funded startups in this tier typically compete near FAANG-adjacent compensation."
+   "value": "Estimated: $110,000 - $140,000 base salary, aligning with competitive tech and defense industry standards for new graduates in high-demand engineering roles."
   },
   "evidence_sha": "e8e3e5572c688091",
-  "generated_at": 1784762203,
+  "generated_at": 1784869389,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "341e59d866",
-    "efef79c007",
-    "f13012459d"
+    "4f39cb8ddf",
+    "341e59d866"
    ],
-   "value": "Defense technology and autonomous maritime systems (uncrewed surface vessels)."
+   "value": "Defense and Maritime Autonomy."
   },
   "interview_focus": {
-   "confidence": "medium",
-   "source_ids": [
-    "341e59d866",
-    "efef79c007"
-   ],
-   "value": "Expect deep technical assessment on cloud and network security fundamentals, infrastructure-as-code, and cryptographic communication challenges. Behavioral questions will likely probe for collaborative, mission-aligned mindset and ability to operate in fast-moving, cross-functional environments without slowing teams down."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare to demonstrate how you can drive rapid, high-level technical innovation in cloud and network security for autonomous systems. Emphasize your ability to adapt quickly to a fast-paced defense environment while maintaining the focus needed to protect critical infrastructure from nation-state threats, ensuring career growth without toxic burnout."
   },
-  "last_attempt_at": 1784869098,
+  "last_attempt_at": 1784869389,
   "last_evidence_at": 1784826805,
   "locations": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "341e59d866",
     "c6fd59597f"
    ],
-   "value": "Austin, Texas headquarters; Brownsville, Texas manufacturing facility (Port Alpha site). Job postings suggest Austin-area engineering roles with potential on-prem production environment work."
+   "value": "Austin, Texas."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "4f39cb8ddf",
     "341e59d866",
     "efef79c007"
    ],
-   "value": "Revolutionize autonomy at sea by developing state-of-the-art solutions that enhance maritime operations through intelligent, autonomous platforms."
+   "value": "To revolutionize autonomy at sea and enhance maritime operations through state-of-the-art autonomous and intelligent platforms."
   },
   "name": "Saronic",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
+    "4f39cb8ddf",
     "341e59d866",
-    "c6fd59597f"
+    "efef79c007"
    ],
-   "value": "Estimated: Fast-paced startup environment with scaling urgency. The Brownsville factory acquisition signals aggressive production timelines. Security roles emphasize automation and being a force multiplier, indicating an expectation of high throughput without process-heavy gates."
+   "value": "Estimated: Fast-paced and innovative. The company's framing of security as a 'force multiplier, not a blocker' indicates an agile, high-velocity engineering culture."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "341e59d866",
-    "efef79c007",
-    "f13012459d"
+    "4f39cb8ddf",
+    "efef79c007"
    ],
-   "value": "Autonomous and intelligent maritime platforms, including autonomous surface vessels (ASVs) designed for contested, bandwidth-limited environments. These integrate cloud-connected security, encrypted communications, and on-prem production systems."
+   "value": "State-of-the-art autonomous and intelligent maritime platforms, including the communications and cryptography systems required to keep autonomous vessels connected in contested, bandwidth-limited environments."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20 days of paid time off annually, plus standard holidays. Typical for well-funded Austin-area startups of this stage."
+   "value": "Estimated: 15-20 days of standard PTO, typical for scaling defense tech companies."
   },
-  "refresh_after": 1789946203,
-  "retry_after": 1784869338,
+  "refresh_after": 1790053389,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -229830,14 +229900,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: End-of-year holiday shutdown between Christmas and New Year's is common among similarly positioned startups; no explicit company-wide summer or quarterly shutdowns confirmed from sources."
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research."
   },
   "size_stage": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "c6fd59597f"
+    "4f39cb8ddf",
+    "341e59d866",
+    "efef79c007"
    ],
-   "value": "Growth-stage startup building manufacturing infrastructure. Saronic recently acquired a 420,000 sq ft industrial site in Brownsville, Texas for high-volume autonomous ship production, indicating rapid scaling."
+   "value": "Scaling defense technology company with active, specialized hiring across multiple infrastructure and security domains."
   },
   "sources": [
    {
@@ -229902,45 +229974,44 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "estimated",
+   "source_ids": [
+    "4f39cb8ddf",
+    "efef79c007"
+   ],
+   "value": "As a defense contractor building autonomous maritime platforms, Saronic is highly likely to require US citizenship or permanent residency due to defense security clearances, though specific visa policies are not explicitly stated."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "4f39cb8ddf",
     "341e59d866",
-    "efef79c007",
-    "f13012459d"
+    "efef79c007"
    ],
-   "value": "Saronic Technologies builds autonomous surface vessels (drone boats) for maritime defense and security. The company sells hardware and software platforms to government and commercial customers, generating revenue through contracts and product sales."
+   "value": "Saronic Technologies is a defense company revolutionizing autonomy at sea by developing state-of-the-art autonomous and intelligent maritime platforms. They make money by designing and providing these advanced autonomous vessels and defense technologies to maritime operators."
   },
-  "synthesized_evidence_sha": "701c68b57b30e64b",
+  "synthesized_evidence_sha": "e8e3e5572c688091",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "341e59d866",
     "efef79c007"
    ],
-   "value": "Heavy focus on multi-account AWS cloud security, infrastructure hardening, network security across corporate and production environments, and cryptographic communications for autonomous vessels operating in contested settings. Security roles emphasize automation, compliance, and full lifecycle auditability."
+   "value": "Involves securing multi-account cloud environments (AWS), enterprise and production networks, on-prem systems, and cryptography for autonomous vessels in contested environments. Engineers work across Product Security, Infrastructure, Software, IT, and Internal Applications to maintain secure, compliant, and auditable systems."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674481,
   "web_search_url": "https://duckduckgo.com/?q=Saronic+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
-   "source_ids": [
-    "341e59d866",
-    "efef79c007",
-    "c6fd59597f"
-   ],
-   "value": "Saronic sits at the intersection of elite defense tech prestige and fast-paced startup culture, working on cutting-edge autonomous systems with real national security impact. The security-focused engineering culture explicitly values being a force multiplier over being a blocker, suggesting collaborative rather than bureaucratic workflows. As a rapidly scaling company with a new high-volume manufacturing facility, it offers strong technical learning and career acceleration potential without the "
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role offers elite, high-impact technical learning at the intersection of AI, secure cloud infrastructure, and defense autonomy, operating in a fast-paced, mission-driven culture where security acts as a force multiplier rather than a bureaucratic blocker."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Moderate. As a growth-stage defense startup, some crunch periods are likely around milestones, but the security team philosophy of enabling rather than blocking suggests a less adversarial, lower-burnout internal culture compared to high-churn tech companies."
+   "value": "Estimated: Moderate to Good. As a fast-growing defense tech company, expect high intensity and rapid iteration, but with a driven, mission-focused culture that aims to be highly effective rather than toxic."
   }
  },
  "savannah river national laboratory": {
@@ -281309,102 +281380,125 @@
  "vanguard": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "2b085d6a30"
+   ],
+   "value": "Tier 2/B: Highly respected within the financial services sector with excellent data resources, but lacks the elite prestige and cutting-edge reputation of top tech companies or quantitative finance firms."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "f7b7dc8573"
+   ],
+   "value": "Asset management: generates revenue by charging expense ratios (fees) on the assets under management in its funds."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "2b085d6a30"
+   ],
+   "value": "Mission-driven, highly collaborative, and conservative. Focuses heavily on long-term client outcomes and employee retention rather than rapid disruption."
   },
   "customers": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "f7b7dc8573"
+   ],
+   "value": "Individual investors, retirement plan participants, and institutional clients."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "2b085d6a30"
+   ],
+   "value": "Estimated: $85,000 - $105,000 base salary. Excellent 401(k) contributions and retirement benefits offset the slightly lower base pay compared to big tech."
   },
   "evidence_sha": "d1d465178e47c081",
-  "generated_at": 1784505063,
+  "generated_at": 1784869389,
   "generator": {
-   "endpoint": "local",
-   "model": "qwen3:30b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "f7b7dc8573"
+   ],
+   "value": "Financial Services / Asset Management"
   },
   "interview_focus": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "2b085d6a30",
-    "a556c8bea4"
+    "2b085d6a30"
    ],
-   "value": "Mission-driven collaboration, technical skills for data & analytics or risk & security, and alignment with Vanguard's culture for long-term client outcomes and employee experience."
+   "value": "Candidates should expect behavioral interviews focused on alignment with Vanguard's collaborative mission and long-term client outcomes. To address concerns about slow pace and bureaucracy, ask questions about the pace of deployment, tech stack modernization, and how the team balances innovation with risk-averse financial compliance."
   },
-  "last_attempt_at": 1784505063,
+  "last_attempt_at": 1784869389,
   "last_evidence_at": 1784583522,
   "locations": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "2b085d6a30",
-    "a556c8bea4"
+    "2b085d6a30"
    ],
-   "value": "Malvern, PA (based on job posting location)"
+   "value": "Headquartered in Malvern, PA, with additional offices in major US cities and globally."
   },
   "mission": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "2b085d6a30",
-    "a556c8bea4"
+    "2b085d6a30"
    ],
-   "value": "Support long-term client outcomes and enrich the employee experience through a mission-driven and highly collaborative culture."
+   "value": "To take a stand for all investors, treat them fairly, and give them the best chance for investment success."
   },
   "name": "Vanguard",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "2b085d6a30"
+   ],
+   "value": "Estimated: Slow to moderate. As a traditional asset manager, the tech culture is solid but heavily bureaucratic and slower-moving compared to pure tech companies."
   },
   "products": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "f7b7dc8573"
+   ],
+   "value": "Mutual funds, ETFs, brokerage services, retirement plans, and financial advisory services."
   },
-  "prompt_v": 1,
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "2b085d6a30"
+   ],
+   "value": "Estimated: 20-25 days of flexible paid time off, alongside generous parental leave and standard financial-sector holidays."
   },
+  "refresh_after": 1790053389,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "2b085d6a30"
+   ],
+   "value": "Technology Leadership Program - Data & Analytics"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "2b085d6a30"
+   ],
+   "value": "Estimated: Likely offers standard banking holidays, but there is no explicit mention of guaranteed end-of-year or firm-wide shutdowns in the provided sources."
   },
   "size_stage": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "f7b7dc8573"
+   ],
+   "value": "Large, established financial institution with trillions of dollars in global assets under management."
   },
   "sources": [
    {
@@ -281451,43 +281545,43 @@
   "sponsorship_context": {
    "confidence": "high",
    "source_ids": [
-    "2b085d6a30",
-    "a556c8bea4"
+    "2b085d6a30"
    ],
-   "value": "Vanguard is not offering visa sponsorship for the Technology Leadership Program positions."
+   "value": "Vanguard is not offering visa sponsorship for certain tech roles, such as the Technology Leadership Program."
   },
   "status": "ready",
   "summary": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "2b085d6a30",
-    "a556c8bea4"
+    "f7b7dc8573"
    ],
-   "value": "Vanguard is a leading investment management company offering a Technology Leadership Program for new graduates in data science and analytics roles, emphasizing mission-driven work, collaborative culture, and competitive benefits."
+   "value": "Vanguard is one of the world's largest investment management companies, offering mutual funds, ETFs, and financial advisory services. It makes money primarily through the management fees charged on its massive pool of client assets."
   },
+  "synthesized_evidence_sha": "d1d465178e47c081",
   "technical_work": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "2b085d6a30",
-    "a556c8bea4"
+    "2b085d6a30"
    ],
-   "value": "Data & Analytics, Risk & Security roles within a two-year rotational development program for new graduates."
+   "value": "Data analytics, software engineering, cloud architecture, and AI/ML for financial modeling and platform stability."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583522,
   "web_search_url": "https://duckduckgo.com/?q=Vanguard+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "2b085d6a30",
-    "a556c8bea4"
+    "2b085d6a30"
    ],
-   "value": "A top-tier AI or data science role with elite prestige, high new-grad pay, fast innovation culture, mission-driven work, and respect for work-life balance through sane hours and guaranteed shutdowns, avoiding burnout."
+   "value": "While Vanguard offers a mission-driven environment and strict work-life balance that prevents burnout, its corporate bureaucracy and slower pace may conflict with a desire for a fast, highly innovative tech culture. It provides stable career growth and elite benefits, but candidates seeking top-tier new grad pay and rapid technical acceleration might find the financial sector's culture too slow."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "2b085d6a30"
+   ],
+   "value": "Estimated: High. The company emphasizes a highly collaborative, mission-driven culture that respects long-term employee experience and sane hours over aggressive burnout cycles."
   }
  },
  "vanteon corporation": {
