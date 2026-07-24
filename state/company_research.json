@@ -72865,39 +72865,102 @@
  },
  "dcca": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "1c45e4290e"
+   ],
+   "value": "Low — not an AI/data science destination; minimal ML infrastructure or research output."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "1c45e4290e"
+   ],
+   "value": "State government agency funded through legislative appropriations, fees from licensing and registration programs, and federal grants. Does not operate for profit."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "1c45e4290e"
+   ],
+   "value": "Traditional public-sector culture: mission-focused on consumer protection, risk-averse, hierarchical, collaborative but slow-moving; values stability and equity over innovation."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "1c45e4290e"
+   ],
+   "value": "Hawaii residents, businesses, licensed professionals, insurance consumers, and regulated entities operating in Hawaii."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $55,000–$70,000 base (state IT Specialist I/II entry bands) + full benefits; no equity or signing bonus."
   },
   "evidence_sha": "0760493bd344ecd2",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784863043,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "1c45e4290e"
+   ],
+   "value": "Government / Public Administration — Regulatory Services"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "1c45e4290e"
+   ],
+   "value": "Expect structured civil-service panel interviews emphasizing public-sector ethics, regulatory knowledge, and experience with legacy systems (mainframe, COBOL, .NET). Technical depth in modern AI/ML is rarely assessed. Prepare for behavioral questions on handling sensitive citizen data, compliance, and cross-division collaboration."
+  },
+  "last_attempt_at": 1784863043,
   "last_evidence_at": 1784677403,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "1c45e4290e"
+   ],
+   "value": "Headquarters in Honolulu (King St. / Dole Cannery), with neighbor-island offices in Hilo, Kahului, and Lihue. Mostly on-site or hybrid per state policy; remote work limited."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "1c45e4290e"
+   ],
+   "value": "To protect consumers, ensure fair business practices, and regulate industries in the public interest for the State of Hawaii."
+  },
   "name": "DCCA",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "1c45e4290e"
+   ],
+   "value": "Slow — bureaucratic, process-driven, change cycles measured in years; limited autonomy to experiment or ship quickly."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "f734da8786",
+    "1c45e4290e"
+   ],
+   "value": "Regulatory services including business registration (BREG), professional and vocational licensing (PVL), insurance division oversight, consumer advocacy, financial institutions regulation, and securities enforcement."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 21 days annual leave + 14 paid state holidays + sick leave (accrual-based per Hawaii civil-service rules)."
   },
+  "refresh_after": 1790047043,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -72905,9 +72968,18 @@
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "1c45e4290e"
+   ],
+   "value": "Observes all official Hawaii state holidays (e.g., Prince Kuhio Day, Admission Day) with full office closures; no additional company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "1c45e4290e"
+   ],
+   "value": "Established state government department with multiple divisions; employs several hundred civil service staff across Oahu and neighbor islands."
   },
   "sources": [
    {
@@ -72941,14 +73013,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=491af415f0e9f5874114c6ef77ffa8cee72f023c50eb6e6a2c5824942c696129JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1007e481-0202-6d0a-33e8-f31c033a6cfd&u=a1aHR0cHM6Ly9jY2EuaGF3YWlpLmdvdi8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a state agency, visa sponsorship (H-1B cap-exempt) is possible for specialized IT roles but rare; preference for U.S. citizens / permanent residents due to civil-service hiring rules."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1c45e4290e",
+    "f734da8786"
+   ],
+   "value": "DCCA (Department of Commerce and Consumer Affairs) is a Hawaii state government agency responsible for regulating business registration, professional licensing, consumer protection, insurance, and financial institutions across the state."
+  },
+  "synthesized_evidence_sha": "0760493bd344ecd2",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "1c45e4290e",
+    "f734da8786"
+   ],
+   "value": "Primarily IT support, legacy system maintenance, database management for licensing/registration records, and gradual modernization of public-facing portals. Limited AI/data science scope; work centers on regulatory data integrity and public service delivery."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677403,
   "web_search_url": "https://duckduckgo.com/?q=DCCA+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "1c45e4290e",
+    "f734da8786"
+   ],
+   "value": "DCCA is a state regulatory agency, not a high-growth AI or data science employer. It offers stable public-sector work with strong work-life balance and civil-service benefits, but does not provide elite prestige, top-tier new-grad compensation, or a fast-paced innovative tech culture. Candidates seeking cutting-edge ML research, high equity upside, or startup velocity will not find that here."
+  },
   "wlb_rating": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "1c45e4290e"
+   ],
+   "value": "High — standard 40-hour weeks, generous leave, strong union protections, minimal on-call; shutdowns observed per state holidays."
   }
  },
  "debtbook": {
@@ -86681,7 +86785,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 29,
+  "attempts": 30,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -86699,7 +86803,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784716477,
+  "last_attempt_at": 1784863043,
   "last_evidence_at": 1784676545,
   "name": "Esri",
   "pace_of_work": {
@@ -86712,6 +86816,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784884643,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -86765,7 +86870,7 @@
     "url": "https://jobright.ai/jobs/info/6a5a988b686b4755d1e1631f?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784676545,
   "web_search_url": "https://duckduckgo.com/?q=Esri+company+careers+benefits",
@@ -152348,37 +152453,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 — strong applied AI within a traditional industry leader; respected for actuarial data science but not a pure tech research lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Collects insurance premiums and investment management fees; generates returns from invested assets (general account) and shares profits with policyholders as dividends (mutual structure)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Established, mission-driven, collaborative, and increasingly tech-forward; low toxicity, high emphasis on employee development and community impact."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Individual policyholders, employer groups for retirement benefits, institutional investors, and high-net-worth individuals."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $105,000-$130,000 base + 10-15% target bonus + RSU/equity (vesting over 4 years); total comp ~$120k-$150k."
   },
   "evidence_sha": "fd976a20c26127be",
+  "generated_at": 1784863043,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Insurance / Financial Services"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect technical depth in ML/statistics (especially actuarial applications), system design for scalable data pipelines, and behavioral questions on collaboration and ethical AI. Prepare for case studies on insurance risk modeling."
+  },
+  "last_attempt_at": 1784863043,
   "last_evidence_at": 1784674490,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in Springfield, MA; major offices in Boston, MA; Enfield, CT; and remote/hybrid options across the US."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To help people secure their future and protect the ones they love through prudent financial guidance and reliable insurance solutions."
+  },
   "name": "MassMutual",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — project cycles measured in quarters; regulatory constraints add process but leadership emphasizes sustainable delivery over crunch."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Life insurance (whole, term, universal), annuities, retirement plans (401k, pensions), investment management, and related financial advisory services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days PTO plus 10-12 company holidays; accrual starts day one."
   },
+  "refresh_after": 1790047043,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -152388,7 +152535,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically Dec 24-Jan 1) plus summer half-day Fridays in some divisions."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Large, mature mutual company (Fortune 100) with ~$300B+ assets under management and ~10,000+ employees; not a startup."
   },
   "sources": [
    {
@@ -152422,14 +152574,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=6da6ccc1414efec269b627b0532c18d024f3a882134c496d4a84287a5d91e5ecJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=26a4c2ce-575e-61a8-27ca-d553565360e2&u=a1aHR0cHM6Ly93d3cubWFzc211dHVhbC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B visas for specialized tech and actuarial roles; green card sponsorship possible for senior positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "MassMutual is a mutual life insurance and financial services company that helps individuals and institutions manage risk and build wealth through insurance, annuities, retirement plans, and investment products."
+  },
+  "synthesized_evidence_sha": "fd976a20c26127be",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Actuarial modeling, data science for underwriting/claims/fraud, AI/ML for customer personalization, cloud migration, full-stack development for digital platforms, and cybersecurity."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674490,
   "web_search_url": "https://duckduckgo.com/?q=MassMutual+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "MassMutual offers a rare blend of elite prestige in insurance/finance AI, competitive new-grad compensation, and a culture that emphasizes work-life balance with sane hours — aligning with your desire for technical growth without burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — known for reasonable hours (40-45 hrs/week typical), flexible hybrid schedules, and leadership that encourages disconnecting."
   }
  },
  "massmutual ascend": {
@@ -187109,48 +187282,130 @@
  "philips": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "dc7e7b530c"
+   ],
+   "value": "Estimated: Tier 2-3. Prestigious within healthcare AI / medical imaging, but generally below elite big-tech general AI roles."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "dc7e7b530c",
+    "735dd9b75c"
+   ],
+   "value": "Sells health technology, imaging, monitoring, and personal health products as well as related services and software to healthcare systems and consumers."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "dc7e7b530c"
+   ],
+   "value": "Estimated: Mission-driven and corporate. Emphasis on patient outcomes and healthcare innovation, with structured processes typical of large regulated companies."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "dc7e7b530c",
+    "735dd9b75c"
+   ],
+   "value": "Hospitals, healthcare providers, and consumers (inferred from public website redirects)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dc7e7b530c"
+   ],
+   "value": "Estimated: $95k-$130k base salary, lower than top-tier big-tech but competitive for health-tech sector."
   },
   "evidence_sha": "f7ec27d5b3425d04",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784863043,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "dc7e7b530c",
+    "735dd9b75c"
+   ],
+   "value": "Healthcare technology / medical equipment."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "dc7e7b530c",
+    "735dd9b75c"
+   ],
+   "value": "Probe team-specific pace, on-call expectations, model deployment speed, and whether new-grad compensation meets elite tech-bar despite being a healthcare conglomerate."
+  },
+  "last_attempt_at": 1784863043,
   "last_evidence_at": 1784677403,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "dc7e7b530c"
+   ],
+   "value": "Global presence, US site referenced; exact office locations not detailed in provided snippets."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "dc7e7b530c"
+   ],
+   "value": "Improving health and well-being through meaningful innovation (corporate mission inferred from general public presence; exact page did not resolve)."
+  },
   "name": "Philips",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "dc7e7b530c"
+   ],
+   "value": "Estimated: Moderate. Regulated medical device environment likely adds process and compliance steps, slowing iteration speed compared to pure tech firms."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "dc7e7b530c",
+    "735dd9b75c"
+   ],
+   "value": "Healthcare technology and consumer wellness products (redirect page, specific products not listed)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "dc7e7b530c"
+   ],
+   "value": "Estimated: 20-25 days PTO plus holidays, typical for large established US enterprise."
   },
+  "refresh_after": 1790047043,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "dc7e7b530c"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "dc7e7b530c"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns beyond standard public holidays."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "a891a02054"
+   ],
+   "value": "Large multinational public company (Netherlands-headquartered, listed and established)."
   },
   "sources": [
    {
@@ -187184,14 +187439,50 @@
     "url": "https://www.bing.com/ck/a?!&&p=4486e934c31fea34acd1846f269a219dd7a20905da43120a6c8433179f188884JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1007e481-0202-6d0a-33e8-f31c033a6cfd&u=a1aHR0cHM6Ly93d3cudXNhLnBoaWxpcHMuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "dc7e7b530c",
+    "735dd9b75c"
+   ],
+   "value": "Not specified in supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "a891a02054",
+    "dc7e7b530c",
+    "735dd9b75c"
+   ],
+   "value": "Please click here if the page does not redirect automatically..."
+  },
+  "synthesized_evidence_sha": "f7ec27d5b3425d04",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "dc7e7b530c",
+    "735dd9b75c"
+   ],
+   "value": "Likely includes AI/ML for medical imaging, patient monitoring, health data analytics, and connected device software."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677403,
   "web_search_url": "https://duckduckgo.com/?q=Philips+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "dc7e7b530c",
+    "735dd9b75c"
+   ],
+   "value": "For a candidate seeking top-tier AI prestige, mission-driven healthcare impact, and work-life balance, a large health-tech employer could fit; however, enterprise scale may carry more bureaucracy and slower pace than fast tech startups."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "dc7e7b530c"
+   ],
+   "value": "Estimated: Good. Mature enterprise typically supports reasonable hours, though on-call and project deadlines vary by team."
   }
  },
  "phillips 66": {
@@ -208008,7 +208299,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -208026,7 +208317,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
-  "last_attempt_at": 1784862889,
+  "last_attempt_at": 1784863043,
   "last_evidence_at": 1784673989,
   "name": "Robinhood",
   "pace_of_work": {
@@ -208039,7 +208330,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784863009,
+  "retry_after": 1784863283,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -249030,37 +249321,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Top-tier — competes directly with firms like Jane Street, Citadel Securities, Two Sigma, and Hudson River Trading for ML/DS talent."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Proprietary trading: the firm deploys its own capital to capture profits from market inefficiencies, liquidity provision, and statistical edges. Revenue is directly tied to trading P&L."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Meritocratic, intellectually intense, engineering-centric, and secretive. Collaboration within small pods; minimal bureaucracy but high performance pressure."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No external customers; the firm trades its own capital as a principal. Counterparties include exchanges, other market makers, and institutional participants."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $175k–$225k base + $100k–$200k sign-on + annual bonus (0.5–1.5x base) = $300k–$500k+ all-in first year."
   },
   "evidence_sha": "4515647992d5b88c",
+  "generated_at": 1784863043,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Proprietary Trading / Quantitative Finance"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical screens: C++ internals, OS/kernel tuning, probability/stats brainteasers, time-series analysis, and system design for low-latency architectures. Research roles add ML/statistical modeling case studies."
+  },
+  "last_attempt_at": 1784863043,
   "last_evidence_at": 1784674489,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Chicago, IL; additional offices in New York, London, and possibly other financial centers."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To achieve superior risk-adjusted returns through continuous innovation in quantitative research, technology, and trading execution."
+  },
   "name": "TransMarket Group",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast — rapid iteration from research to production, with daily pressure to improve latency and alpha. Deployments can happen multiple times per day."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Low-latency trading infrastructure, proprietary algorithmic trading strategies, quantitative research platforms, and real-time risk management systems across equities, futures, options, and fixed income."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10 US holidays; unlimited sick leave. Actual usage may be constrained by trading calendar."
   },
+  "refresh_after": 1790047043,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -249070,7 +249403,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed firm-wide shutdowns. Market holidays only; some teams observe voluntary quiet periods around major holidays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-sized, well-established firm (likely 200–500 employees) with a flat hierarchy and significant capital allocation per researcher/trader."
   },
   "sources": [
    {
@@ -249104,14 +249442,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=97dca084b1f2dde5abeb110f4950fc20cd092012bd8e08d3047e1393eeeffaa2JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=26a4c2ce-575e-61a8-27ca-d553565360e2&u=a1aHR0cHM6Ly9uanByb3BlcnRpZXNzZWFyY2guY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Actively sponsors H-1B visas and green cards for quantitative researchers, developers, and data scientists given talent scarcity."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "TransMarket Group is a proprietary trading firm that uses quantitative strategies and advanced technology to trade its own capital across global financial markets. It generates revenue through market-making, arbitrage, and other algorithmic trading strategies rather than serving external clients."
+  },
+  "synthesized_evidence_sha": "4515647992d5b88c",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core focus on ultra-low-latency C++ systems, large-scale data pipelines, machine learning for signal generation, and real-time risk analytics. Heavy emphasis on hardware-software co-optimization (FPGA, kernel bypass, etc.)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674489,
   "web_search_url": "https://duckduckgo.com/?q=TransMarket+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers elite prestige and top-of-market new-grad compensation in a fast-paced, technology-first prop-trading environment. However, the culture is typically intense with long hours during market hours; guaranteed shutdowns and strong work-life balance are not hallmarks of the industry. Candidates prioritizing sane hours and predictable personal time should probe carefully."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 2.5/5 — market hours dictate core schedule; evenings/weekends common during strategy crunches. Limited formal shutdown policies."
   }
  },
  "transunion": {
@@ -262038,37 +262397,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier — recognized brands with real data scale but not known as an AI research destination; prestige comes from business impact, not publishing."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "d7eca56f2c"
+   ],
+   "value": "Revenue from direct sales and distribution of sporting goods, apparel, equipment, spirit uniforms, camps, competitions, and yearbook services to schools and organizations."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "d7eca56f2c"
+   ],
+   "value": "Passionate, school-spirit oriented, values-driven ('heart of the game'), with emphasis on innovation and growth; likely mix of corporate professionalism and energetic field culture."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "d7eca56f2c"
+   ],
+   "value": "K-12 schools, colleges, youth sports leagues, cheer and dance programs, and educational institutions seeking spirit, sports equipment, and memory-keeping products."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$110,000 base + bonus/equity; Dallas market rates for large private company, likely below FAANG but competitive for region."
   },
   "evidence_sha": "9c847fd5b49646bc",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784863043,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d7eca56f2c"
+   ],
+   "value": "Sporting goods, spirit apparel, educational products, and experiences (cheer/dance/yearbook)."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "d7eca56f2c"
+   ],
+   "value": "Ask how data science is embedded across BSN SPORTS and Varsity Spirit (e.g., demand forecasting, customer lifetime value, media analysis). Clarify whether AI/ML roles sit in a centralized team or are distributed. Probe for concrete examples of recent ML projects shipped to production. Ask about engineering culture: deployment frequency, experimentation framework, and technical debt management. Inquire about typical sprint cycles and on-call expectations to gauge pace. Request specifics on PTO us"
+  },
+  "last_attempt_at": 1784863043,
   "last_evidence_at": 1784677099,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "d7eca56f2c"
+   ],
+   "value": "Headquartered in Dallas, Texas; additional offices, warehouses, and field operations across the U.S."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "d7eca56f2c"
+   ],
+   "value": "Championing the heart of the game by building school pride, student engagement, and community spirit while empowering the next generation of professionals."
+  },
   "name": "Varsity Brands",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast — seasonal peaks (back-to-school, competition season) drive intensity; corporate tech likely runs agile sprints but with enterprise governance."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "d7eca56f2c"
+   ],
+   "value": "Sporting goods apparel and equipment (BSN SPORTS); cheer, dance, performing arts, and yearbook products and experiences (Varsity Spirit)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 8-10 company holidays; no public policy details found."
   },
+  "refresh_after": 1790047043,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -262078,7 +262495,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns publicly documented; some divisions may observe holiday breaks but not confirmed."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d7eca56f2c"
+   ],
+   "value": "Established private company (portfolio of Bain Capital) with two large divisions; headcount likely in the thousands across corporate, manufacturing, and field operations."
   },
   "sources": [
    {
@@ -262112,14 +262536,41 @@
     "url": "https://careers.varsitybrands.com/us/en"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No public information found on visa sponsorship policies; large national employer likely supports H-1B for specialized roles but candidate should verify with recruiter."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "d7eca56f2c"
+   ],
+   "value": "Varsity Brands is a Dallas-based company that builds school pride and community spirit through two main businesses: BSN SPORTS, a leading marketer, manufacturer, and distributor of sporting goods apparel and equipment, and Varsity Spirit, a global provider of cheer, dance, performing arts, and yearbook services."
+  },
+  "synthesized_evidence_sha": "9c847fd5b49646bc",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d7eca56f2c"
+   ],
+   "value": "E-commerce platforms, supply chain and inventory systems, digital experiences for camps/competitions, yearbook production software, and data analytics for sales and operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677099,
   "web_search_url": "https://duckduckgo.com/?q=Varsity+Brands+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "d7eca56f2c"
+   ],
+   "value": "Varsity Brands offers a mission-driven culture centered on student engagement and community spirit, with two iconic brands (BSN SPORTS, Varsity Spirit) that dominate their niches. For an AI/data science candidate, the scale of physical and digital operations — spanning e-commerce, supply chain, events, and yearbook platforms — creates real opportunities to apply ML to inventory optimization, personalization, computer vision for spirit media, and predictive analytics. The company emphasizes 'pass"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — mission-driven culture may support balance, but seasonal businesses and private-equity ownership can create crunch periods; no public shutdown policy found."
   }
  },
  "vast": {
@@ -266425,47 +266876,126 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Elite / Top-tier within quantitative finance, offering competitive prestige for AI and data science roles."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "047de57f95",
+    "16ac523891",
+    "3ef202173c"
+   ],
+   "value": "Operates as an investment management firm, generating income through a combination of management fees based on assets under management (AUM) and performance fees tied to investment returns."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Highly technical, rigorous, and focused on continuous learning, leaning toward fast iteration rather than traditional slow corporate financial structures."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "047de57f95",
+    "16ac523891",
+    "3ef202173c"
+   ],
+   "value": "Institutional investors, pension funds, and high-net-worth individuals seeking investment management."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $250,000 - $400,000+ total compensation (base + performance bonus), reflecting elite quant market rates for new graduates."
   },
   "evidence_sha": "9c8667c47f98da86",
+  "generated_at": 1784863043,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "047de57f95",
+    "16ac523891",
+    "3ef202173c"
+   ],
+   "value": "Investment Management / Quantitative Finance."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+   "value": "Highlight elite technical pedigree and interest in fast-paced systems rather than slow bureaucracy. In interviews, emphasize how you build rigorous, highly efficient models that solve innovative problems without leaking personal time. Since you value firm-wide shutdowns and guaranteed work-life balance, ask pointed questions about core hours, weekend work expectations, and how the team sustains sane hours during market volatility."
   },
+  "last_attempt_at": 1784863043,
   "last_evidence_at": 1784674276,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "047de57f95",
+    "16ac523891",
+    "3ef202173c"
+   ],
+   "value": "Headquartered in the New York City metropolitan area (Minnetonka, MN / New York area)."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "047de57f95",
+    "16ac523891",
+    "3ef202173c"
+   ],
+   "value": "To deliver strong, risk-adjusted financial returns for investors through quantitative and fundamental market analysis."
+  },
   "name": "Walleye Capital",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and innovation-driven, requiring rapid adaptation to real-time market data without slow bureaucracy."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "047de57f95",
+    "16ac523891",
+    "3ef202173c"
+   ],
+   "value": "Financial investment products and asset management services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of Paid Time Off annually, typical for elite quantitative hedge funds."
   },
+  "refresh_after": 1790047043,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "047de57f95",
+    "16ac523891",
+    "3ef202173c"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: May offer firm-wide holiday shutdowns or structured PTO to prevent burnout, though specific policies require verification."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "047de57f95",
+    "16ac523891",
+    "3ef202173c"
+   ],
+   "value": "Mid-stage investment firm operating in the financial sector."
   },
   "sources": [
    {
@@ -266499,14 +267029,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=34ddf7c4513c3077c07a818e1da0358025be90caa7b036ead8d9299b51f20a76JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2a7b1ce1-283e-6477-218e-0b7c29fe652e&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9XYWxsZXll&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "047de57f95",
+    "16ac523891",
+    "3ef202173c"
+   ],
+   "value": "No specific information regarding visa sponsorship for technical or quantitative roles was found in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "047de57f95",
+    "16ac523891",
+    "3ef202173c"
+   ],
+   "value": "Walleye Capital is an investment management firm that operates in the financial sector. It generates revenue by managing funds and executing financial trades, earning returns on investments and management fees from its clients."
+  },
+  "synthesized_evidence_sha": "9c8667c47f98da86",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "047de57f95",
+    "16ac523891",
+    "3ef202173c"
+   ],
+   "value": "Developing high-performance trading systems, building quantitative models, data pipeline engineering, and applying machine learning to financial datasets for predictive analysis."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674276,
   "web_search_url": "https://duckduckgo.com/?q=Walleye+Capital+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Walleye Capital offers an elite hedge fund environment where AI and data science candidates can build highly lucrative, predictive models that directly drive trading outcomes. For a candidate seeking a fast-paced, innovative tech culture with top-tier new grad pay, quant finance uniquely forces rapid technical learning on massive datasets. This space provides clear mission-driven impact (alpha generation) and often structure to ensure traders remain sharp, though candidates should screen for spe"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. While some quant firms strictly enforce sane hours, the nature of financial markets can occasionally demand intense focus during high volatility."
   }
  },
  "walmart": {
