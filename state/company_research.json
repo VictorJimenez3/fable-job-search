@@ -100335,37 +100335,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Niche/Regional. Highly respected in aerospace but lacks elite general AI/tech recognition."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "3024b201d3"
+   ],
+   "value": "Non-profit university funded by student tuition, research grants, and institutional partnerships."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Academic, mission-driven, and highly focused on aviation and aerospace passion rather than tech-startup innovation."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "3024b201d3"
+   ],
+   "value": "Undergraduate and graduate students seeking careers in aviation, aerospace, and related technological fields."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $65,000 - $80,000. Non-profit academic pay scales generally fall below elite corporate tech compensation."
   },
   "evidence_sha": "2bcac5324487c18d",
+  "generated_at": 1784880395,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "3024b201d3"
+   ],
+   "value": "Higher Education / Aerospace and Aviation."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Assess whether the aerospace-specific data science work justifies the institution's slow bureaucratic pace and lower compensation, and confirm if the academic hours truly match your WLB expectations compared to tech industry standards."
   },
+  "last_attempt_at": 1784880395,
   "last_evidence_at": 1784672022,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "3024b201d3"
+   ],
+   "value": "Campuses in Daytona Beach, Florida, and Prescott, Arizona, with a worldwide online division."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "3024b201d3"
+   ],
+   "value": "To provide a world-class education in aviation, aerospace, and related fields, preparing students for leadership roles in the industry."
+  },
   "name": "Embry-Riddle Aeronautical University",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow to moderate. Academic calendars and university bureaucracy dictate a steady rather than fast-paced tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "3024b201d3"
+   ],
+   "value": "Undergraduate and graduate degree programs, particularly in aviation, aerospace engineering, and applied sciences."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of PTO plus university holidays and academic calendar breaks."
   },
+  "refresh_after": 1790064395,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -100375,7 +100429,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely has institutional closures during major academic holidays (e.g., winter break), though specific tech staff shutdowns may vary."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "3024b201d3"
+   ],
+   "value": "Large, established private university with global reach."
   },
   "sources": [
    {
@@ -100409,14 +100470,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=b4e6a5c32fcdb18bf40432e471a2b3dd358a537ad2d29aa827c5e61d64399387JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=32b443f7-64f1-66a5-2db3-546a65e467d4&u=a1aHR0cHM6Ly9lcmF1LmVkdS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "3024b201d3"
+   ],
+   "value": "University academic environment; scaled research roles depend on specific lab funding and grant provisions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "3024b201d3"
+   ],
+   "value": "Embry-Riddle Aeronautical University is a private university specializing in aviation and aerospace education. As a non-profit educational institution, it makes money through student tuition, government grants, and research funding rather than traditional corporate revenue."
+  },
+  "synthesized_evidence_sha": "2bcac5324487c18d",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "3024b201d3"
+   ],
+   "value": "Academic and grant-funded research in aerospace engineering, data science, and aviation technology."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672022,
   "web_search_url": "https://duckduckgo.com/?q=Embry-Riddle+Aeronautical+University+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Embry-Riddle offers mission-driven work in an environment that traditionally respects academic work-life balance, but as a higher education institution it lacks the fast-paced, high-paying tech culture of a top-tier AI company, and new-grad pay will generally lag behind elite tech firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Academic staff generally have predictable hours and benefit from institutional breaks."
   }
  },
  "emerson": {
@@ -136655,37 +136743,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3. Healthcare operations provide stable data roles but lack the elite AI or data science prestige found in top tech firms."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "4ee63f35f4",
+    "813c801099"
+   ],
+   "value": "Healthcare company that generates revenue through health insurance premiums and managed care operations."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven and community-focused. Likely prioritizes healthcare impact over aggressive technical innovation, with a structured corporate environment."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "813c801099",
+    "b1b5dd7785"
+   ],
+   "value": "Individuals and organizations seeking health insurance coverage and clinical care services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "4ee63f35f4"
+   ],
+   "value": "Estimated: $69K - $100K. Based on an entry-level Data Analyst role; AI/Data Science specific roles might trend towards the higher end of this bracket."
   },
   "evidence_sha": "492ceb1d0ea57f3e",
+  "generated_at": 1784880395,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "4ee63f35f4"
+   ],
+   "value": "Healthcare / Health Insurance"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Expect questions on operational data analysis and healthcare domain problem-solving. Candidates should gauge the team's actual pace of innovation versus bureaucratic overhead, and clarify policies around personal time and shutdowns to ensure the role meets their WLB and learning growth criteria."
   },
+  "last_attempt_at": 1784880395,
   "last_evidence_at": 1784680774,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "4ee63f35f4"
+   ],
+   "value": "New York, NY (Hybrid work model)."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "32a12d0868",
+    "4ee63f35f4"
+   ],
+   "value": "To provide healthcare services and health coverage to its members, with a focus on community health in New York."
+  },
   "name": "Healthfirst",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. The healthcare and insurance industry typically involves regulated, slower-paced processes rather than a fast, innovative tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "4ee63f35f4",
+    "813c801099"
+   ],
+   "value": "Health insurance coverage, clinical eligibility services, and operational healthcare data management solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days. Typical for a mid-sized healthcare organization, though specific tiered policies are not public."
   },
+  "refresh_after": 1790064395,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -136695,7 +136843,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Standard public holidays. No evidence of company-wide guaranteed tech shutdowns."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "4ee63f35f4"
+   ],
+   "value": "Mid-sized company with 1001-5000 employees, founded in 1993."
   },
   "sources": [
    {
@@ -136749,14 +136904,41 @@
     "url": "https://jobright.ai/jobs/info/6a5fdc57b0f20036bc6339c9?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "4ee63f35f4"
+   ],
+   "value": "Healthfirst has a track record of offering H1B sponsorships."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "4ee63f35f4"
+   ],
+   "value": "Healthfirst is a New York-based healthcare company founded in 1993 that provides health insurance and related clinical care services. It makes money by managing and operating health coverage plans, likely focusing on government-sponsored and community health programs."
+  },
+  "synthesized_evidence_sha": "492ceb1d0ea57f3e",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "4ee63f35f4"
+   ],
+   "value": "Analyzing operational data to support Clinical Eligibility and Operations, likely involving data pipelines, healthcare data compliance, and business intelligence."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680774,
   "web_search_url": "https://duckduckgo.com/?q=Healthfirst+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "A mission-driven healthcare company offering a stable environment and work-life balance. However, it may not provide the elite tech prestige, highly innovative tech culture, or top-tier new-grad pay associated with fast-paced tech firms, as its operations are tied to slow healthcare bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Standard healthcare company hours are expected, though specific shutdown or guaranteed personal time policies are not public."
   }
  },
  "healthpartners": {
@@ -141879,37 +142061,81 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong applied AI/ML in device intelligence, security, and sustainability; respected industry brand but not a primary AI research lab like FAIR/DeepMind/OpenAI."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Hardware sales (transactional) combined with high-margin recurring revenue from printing supplies and subscription services (e.g., Instant Ink, managed print services, device-as-a-service)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Collaborative, engineering-led, inclusive, sustainability-focused; large-company bureaucracy exists but mitigated by strong ERGs and explicit well-being policies."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Consumers, small-to-medium businesses, enterprise organizations, education institutions, and government agencies worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $115k-$135k base + 10-15% target bonus + RSU ($30k-$50k over 4y) for AI/DS/embedded roles in high-cost metros."
   },
   "evidence_sha": "e1cc323e1fc9ba86",
+  "generated_at": 1784880395,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology Hardware, Storage & Peripherals / Computer Hardware"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical assessment in embedded systems, firmware, and hardware-software integration; behavioral questions aligned with HP's values (innovation, inclusion, sustainability); and evaluation of ability to ship quality code in a regulated, cross-functional environment without burnout signals."
+  },
+  "last_attempt_at": 1784880395,
   "last_evidence_at": 1784671191,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "561a7b378b"
+   ],
+   "value": "Headquartered in Palo Alto, California; major sites in Houston, San Diego, Vancouver, Barcelona, Singapore, Taipei, and worldwide R&D/manufacturing/sales offices."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To create technology that makes life better for everyone, everywhere — focusing on sustainable impact, innovation, and inclusion."
+  },
   "name": "HP",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — structured release cycles, hardware dependency adds predictability; less chaotic than pure-software unicorns but slower iteration than cloud-native teams."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Personal computers (laptops, desktops, workstations), printers (inkjet, laser, large format), printing supplies (ink, toner), and associated software/services (HP Instant Ink, HP Wolf Security, HP TechPulse)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual PTO + 10-12 company holidays (US); varies by region/tenure."
   },
+  "refresh_after": 1790064395,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -141919,7 +142145,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically last week of December); some teams observe summer half-day Fridays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "561a7b378b"
+   ],
+   "value": "Large public company (NYSE: HPQ); 10,001+ employees; founded 1939; mature stage with global operations."
   },
   "sources": [
    {
@@ -141963,14 +142196,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=8ef6deb2e28d36d440d26718d3f1e9e3cf6c380e5e78eeb7c0cc341ce1123b95JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1b863ecb-db21-6a09-32c2-2956da1c6b70&u=a1aHR0cHM6Ly93d3cuaHAuY29tL3VzLWVuL2hvbWUuaHRtbD9tc29ja2lkPTFiODYzZWNiZGIyMTZhMDkzMmMyMjk1NmRhMWM2Yjcw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "561a7b378b"
+   ],
+   "value": "HP has a track record of offering H-1B sponsorship for qualifying roles; sponsorship is not guaranteed for any specific position."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "561a7b378b"
+   ],
+   "value": "HP Inc. is a global technology company founded in 1939 that designs, manufactures, and sells personal computing devices, printers, and related services. It generates revenue primarily through hardware sales (PCs, printers), supplies (ink, toner), and recurring services/subscriptions."
+  },
+  "synthesized_evidence_sha": "e1cc323e1fc9ba86",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "561a7b378b"
+   ],
+   "value": "Embedded firmware, device drivers, EFI/UEFI applications, DSP programming, hardware-software integration, cloud-connected device platforms, AI/ML for predictive analytics and security, and sustainability-focused engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784671191,
   "web_search_url": "https://duckduckgo.com/?q=HP+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "HP offers elite-brand prestige and competitive new-grad compensation in AI/data science roles within a mature, mission-driven hardware-software company that emphasizes sustainable impact and has institutional work-life balance policies — rare in high-paying tech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — HP publicly emphasizes work-life balance, flexible work, and 'guaranteed shutdown' culture; mature processes reduce fire-drills."
   }
  },
  "hpe university": {
@@ -147561,42 +147821,100 @@
  "ignitec inc": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "7818457c3f"
+   ],
+   "value": "Estimated: Low. The required skills (Advanced Excel, Power BI, Tableau) suggest traditional business intelligence rather than elite, top-tier AI or data science."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "7818457c3f"
+   ],
+   "value": "Service-based consulting and government contracting, requiring active security clearances for client-facing analytics work."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "7818457c3f"
+   ],
+   "value": "Estimated: Professional and compliance-driven. Operating in cleared government spaces emphasizes protocol and documentation over rapid innovation."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "7818457c3f"
+   ],
+   "value": "Government agencies and healthcare organizations requiring cleared personnel and healthcare optimization support."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "7818457c3f"
+   ],
+   "value": "Estimated: $70,000 - $90,000. Typical for cleared healthcare data analyst roles, falling short of elite new-grad tech compensation."
   },
   "evidence_sha": "abfe580762f9c938",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784880395,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784880247,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "7818457c3f"
+   ],
+   "value": "Government Consulting / Healthcare Data Analytics"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7818457c3f"
+   ],
+   "value": "Given the mismatch in priorities, the candidate should ask about the proportion of high-level data science vs routine BI reporting. Probe deeply into work-life balance, frequency of expected 'fire drills' with government clients, and whether the environment fosters technical learning or operates as slow bureaucracy."
+  },
+  "last_attempt_at": 1784880395,
   "last_evidence_at": 1784858994,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "7818457c3f"
+   ],
+   "value": "Not explicitly stated in the sources, though their focus appears to be optimizing healthcare operations for clients."
+  },
   "name": "Ignitec Inc",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "7818457c3f"
+   ],
+   "value": "Estimated: Moderate. Government healthcare consulting typically adheres to strict contract deadlines and security protocols over fast, iterative tech culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "7818457c3f"
+   ],
+   "value": "Data analytics services, operations experience, and data visualization solutions using tools like Power BI and Tableau."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days. Standard for government consulting firms, though exact policy is not public."
   },
-  "retry_after": 1784880367,
+  "refresh_after": 1790064395,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -147606,7 +147924,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed shutdowns. Not typical for client-facing government consulting roles."
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -147660,14 +147983,43 @@
     "url": "https://jobright.ai/jobs/info/6a6286df1e089c0cc884d1b0?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "7818457c3f"
+   ],
+   "value": "Ignitec Inc is a consulting and analytics firm that supports healthcare optimization efforts. They provide data analysis services and interface directly with clients, likely generating revenue through government contracts."
+  },
+  "synthesized_evidence_sha": "abfe580762f9c938",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "7818457c3f"
+   ],
+   "value": "Involves conducting analytics, leveraging advanced Excel, Power BI, Tableau, and R to support healthcare optimization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784858994,
   "web_search_url": "https://duckduckgo.com/?q=Ignitec+Inc+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7818457c3f"
+   ],
+   "value": "This role does not align with the candidate's priorities for a top-tier AI/data science position; it is a BI/analyst role focused on reporting tools rather than advanced ML. Additionally, government contracting often involves bureaucracy that contradicts the desire for a fast-paced, innovative tech culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "7818457c3f"
+   ],
+   "value": "Estimated: Moderate. Client-facing analytics can experience fluctuating hours based on government contract deliverables."
   }
  },
  "igt": {
@@ -205707,48 +206059,129 @@
  "nextech systems": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "d01ec6588e"
+   ],
+   "value": "Estimated: Mid-tier enterprise data engineering with healthcare focus. Unlikely to offer the elite, cutting-edge AI/DS prestige of top-tier tech companies, but provides applied, business-critical data work."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "d01ec6588e"
+   ],
+   "value": "Selling and supporting specialty healthcare technology platforms and cloud-based data systems to medical providers."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "d01ec6588e",
+    "9830a0177b"
+   ],
+   "value": "Estimated: Focused on precision, performance, and privacy with a commitment to a fair and inclusive hiring process. Likely mission-driven but structured by healthcare industry regulations."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "d01ec6588e"
+   ],
+   "value": "Specialty healthcare providers and organizations relying on precision-driven clinical workflows and regulatory reporting."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "d01ec6588e"
+   ],
+   "value": "Estimated: Likely competitive mid-tier healthcare tech salary for a Data Engineer II role (roughly $70,000–$95,000 base), though exact new-grad pay bands are not published."
   },
   "evidence_sha": "07da36e9880878bd",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784880395,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d01ec6588e"
+   ],
+   "value": "Specialty Healthcare Technology / HealthTech"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d01ec6588e",
+    "9830a0177b"
+   ],
+   "value": "Evaluate whether the team's approach to building cloud-based data pipelines for clinical workflows offers fast, innovative tech culture or carries slow bureaucratic tendencies typical of regulated healthcare. Probe into the team's approach to sane hours, guaranteed shutdowns, and avoiding burnout. Ask about technical mentorship, the acceleration of data engineering skills, and new-grad compensation bands to ensure it meets your high pay and growth expectations without sacrificing personal time."
+  },
+  "last_attempt_at": 1784880395,
   "last_evidence_at": 1784674186,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "d01ec6588e"
+   ],
+   "value": "Roles such as Data Engineer II are available as Remote - United States."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "d01ec6588e"
+   ],
+   "value": "To deliver specialty healthcare technology solutions where precision, performance, and privacy are paramount for mission-critical clinical workflows."
+  },
   "name": "Nextech Systems",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "d01ec6588e"
+   ],
+   "value": "Estimated: Likely a moderate-to-steady pace balanced by the demands of supporting real-time clinical workflows and strict healthcare data privacy regulations."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "d01ec6588e"
+   ],
+   "value": "A cloud-based data platform that supports real-time clinical workflows, patient data analytics, and regulatory reporting for specialty healthcare applications."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "d01ec6588e"
+   ],
+   "value": "Estimated: Standard corporate tech PTO for an established healthcare software company (typically 15-20 days annually), though exact policies are not public."
   },
+  "refresh_after": 1790064395,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "d01ec6588e",
+    "9830a0177b",
+    "dbc3b9e88f"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "d01ec6588e"
+   ],
+   "value": "Estimated: No specific information found regarding guaranteed company-wide shutdowns. Expect standard standard holiday schedules rather than tech-industry style holiday pauses."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "d01ec6588e"
+   ],
+   "value": "Established healthcare technology leader with a footprint large enough to maintain dedicated remote data engineering teams supporting mission-critical applications."
   },
   "sources": [
    {
@@ -205812,14 +206245,47 @@
     "url": "https://jobs.lever.co/nextech/5f2f3398-12f2-45c2-921e-f22f915e1c15/apply"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "9830a0177b"
+   ],
+   "value": "Candidates must be legally authorized to work in the United States at the time of hire without requiring company sponsorship (including H-1B, OPT, STEM OPT, etc.)."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "d01ec6588e"
+   ],
+   "value": "Nextech Systems is a technology company that provides specialty healthcare technology solutions, including cloud-based data systems that power mission-critical clinical applications. They make money by supplying software that enables real-time clinical workflows, patient data analytics, and regulatory reporting for healthcare providers."
+  },
+  "synthesized_evidence_sha": "07da36e9880878bd",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "d01ec6588e"
+   ],
+   "value": "Optimization, support, and deployment of cloud-based data systems powering mission-critical healthcare applications, focusing on performance, privacy, and precision."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674186,
   "web_search_url": "https://duckduckgo.com/?q=Nextech+Systems+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "9830a0177b",
+    "d01ec6588e",
+    "dbc3b9e88f"
+   ],
+   "value": "Nextech offers a remote Data Engineer II position, which aligns with your desire for a fast-paced technical role. However, the company does not provide visa sponsorship, which may limit your entry depending on your work authorization status. The focus on mission-critical healthcare applications promises meaningful work, but it remains to be seen if the engineering culture matches the elite, innovation-first tech culture and balanced hours you prioritize."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "d01ec6588e"
+   ],
+   "value": "Estimated: Potentially balanced due to remote work flexibility, but the mission-critical nature of healthcare application support could occasionally require high-stakes engagement."
   }
  },
  "niagara bottling": {
@@ -231733,49 +232199,126 @@
  },
  "preludesys": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "73d418b711"
+   ],
+   "value": "Low. The company specializes in traditional IT services and .NET development rather than cutting-edge AI or data science innovation."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "73d418b711"
+   ],
+   "value": "IT services and consulting firm that generates revenue through outsourced software development, technical staffing, and IT-enabled services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "73d418b711"
+   ],
+   "value": "Estimated: Corporate and structured. As a process-oriented IT services provider, the culture likely prioritizes client deliverables and process compliance over a mission-driven or highly agile tech environment."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "73d418b711"
+   ],
+   "value": "Enterprise clients requiring IT and software development services (specific client names not listed in available sources)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "73d418b711"
+   ],
+   "value": "Estimated: $75,000 per year, based on the explicitly listed salary for their entry-level .NET developer role."
   },
   "evidence_sha": "8745e546a6d5e223",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784880395,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "73d418b711"
+   ],
+   "value": "IT Services and IT Consulting."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "73d418b711"
+   ],
+   "value": "If pursuing this role to gain enterprise experience, focus your interview prep heavily on C#, ASP.NET MVC, and SQL Server. Be sure to probe the interviewers about the day-to-day pace, work-life balance, and opportunities for technical growth to ensure it meets your sanity and learning requirements."
+  },
+  "last_attempt_at": 1784880395,
   "last_evidence_at": 1784672886,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "73d418b711"
+   ],
+   "value": "Hiring in Illinois State and surrounding regions with on-site work requirements."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "73d418b711"
+   ],
+   "value": "To provide certified, high-quality IT and ITES services to enterprise clients, as evidenced by their CMMI Level 3 and ISO 9001:2008 certifications."
+  },
   "name": "PreludeSys",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "73d418b711"
+   ],
+   "value": "Estimated: Moderate to steady pace typical of a CMMI Level 3 certified IT services firm, which often emphasizes process and documentation over rapid, fast-paced innovation."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "73d418b711"
+   ],
+   "value": "Software development services, IT consulting, and enterprise solutions utilizing technologies like C#, .NET, ASP.Net MVC, and SQL Server."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "73d418b711"
+   ],
+   "value": "Estimated: Standard for the US IT services industry (likely 15-20 days annually), but exact policy is not public in the provided sources."
   },
+  "refresh_after": 1790064395,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "73d418b711"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "73d418b711"
+   ],
+   "value": "None found in research. It is uncommon for traditional IT services firms to offer guaranteed company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "73d418b711"
+   ],
+   "value": "Mid-size IT services firm actively hiring entry-level and experienced developers, though exact employee headcount was not found in the provided sources."
   },
   "sources": [
    {
@@ -231829,14 +232372,45 @@
     "url": "https://jobright.ai/jobs/info/6a51201e8d7d3e6cf1cbf30f?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "73d418b711"
+   ],
+   "value": "Not explicitly found in research, but the firm operates as an IT services company which may offer sponsorship. Candidates should verify directly."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "73d418b711"
+   ],
+   "value": "PreludeSys is an IT services and IT-enabled services (ITES) organization that specializes in enterprise technology solutions. The company makes money by providing software development talent and IT consulting services to enterprise clients."
+  },
+  "synthesized_evidence_sha": "8745e546a6d5e223",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "73d418b711"
+   ],
+   "value": "Enterprise software development focusing on the Microsoft technology stack, specifically requiring C#, ASP.Net MVC, SQL Server, JavaScript, and HTML."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672886,
   "web_search_url": "https://duckduckgo.com/?q=PreludeSys+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "73d418b711"
+   ],
+   "value": "PreludeSys may offer a solid entry point into enterprise software development, but it likely does not align with your priority for top-tier AI or data science prestige. The CMMI Level 3 certification suggests a structured, process-heavy bureaucracy that contrasts with a fast, innovative tech culture, and the $75K pay is below elite new-grad standards."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "73d418b711"
+   ],
+   "value": "Estimated: Fair. Traditional IT services firms generally maintain standard hours, though project deadlines can occasionally cause spikes. It is unlikely to feature the guaranteed shutdowns or hyper-defined work-life boundaries you seek."
   }
  },
  "priceline": {
@@ -234001,48 +234575,125 @@
  "protiviti": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "cb011cc0d2"
+   ],
+   "value": "Estimated: Tier 2 or 3 for pure AI/Data Science. Prestige is strong in business and risk consulting, but not recognized as an elite leader in cutting-edge data science compared to top tech firms."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "cb011cc0d2"
+   ],
+   "value": "Professional services model generating revenue by charging billable hours or fixed project fees for specialized consulting and implementation services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "d56fe1208d"
+   ],
+   "value": "Estimated: Collaborative and professional, strongly focused on client-service, continuous learning, and career development within a structured corporate environment."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "d56fe1208d"
+   ],
+   "value": "Primarily large enterprises and Fortune 500 companies across industries such as financial services, healthcare, manufacturing, and the public sector."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "d56fe1208d"
+   ],
+   "value": "Estimated: $85,000 - $110,000 base salary. Consultancies generally offer lower base pay than elite tech companies, offset by performance bonuses."
   },
   "evidence_sha": "e51633539e8aa84b",
+  "generated_at": 1784880395,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "fdfe9fe195"
+   ],
+   "value": "Management Consulting and Professional Services."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should highlight their ability to balance technical expertise with consulting acumen, emphasizing a willingness to operate within client-facing structures while communicating a realistic understanding of how consulting demands might impact the fast-paced, innovative tech culture and guaranteed personal time they prioritize."
   },
+  "last_attempt_at": 1784880395,
   "last_evidence_at": 1784651028,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "fdfe9fe195",
+    "d56fe1208d"
+   ],
+   "value": "Operates globally with a significant presence in North America, Europe, and Asia, featuring numerous offices worldwide."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "cb011cc0d2"
+   ],
+   "value": "To help organizations navigate complex business challenges and improve their operations through specialized risk, advisory, and technology consulting."
+  },
   "name": "Protiviti",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "d56fe1208d"
+   ],
+   "value": "Estimated: Moderate to fast. Speed is driven by billable hours and client deadlines, meaning work intensity fluctuates with project demands."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "d56fe1208d",
+    "cb011cc0d2"
+   ],
+   "value": "Consulting services in internal audit, risk management, technology consulting, digital transformation, data analytics, and business process improvement."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "fdfe9fe195"
+   ],
+   "value": "Estimated: 20-25 days of Paid Time Off annually, in addition to standard public holidays."
   },
+  "refresh_after": 1790064395,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "cb011cc0d2"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "cb011cc0d2"
+   ],
+   "value": "Estimated: Standard public holidays. Guaranteed firm-wide shutdowns are not a prominent feature of consulting models, though office closures may occur around major holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "fdfe9fe195"
+   ],
+   "value": "An established, large global consulting firm operating as a wholly-owned subsidiary of Robert Half."
   },
   "sources": [
    {
@@ -234076,14 +234727,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=5977afa6f567fb293600e7762a736cf75d84889671b15d3a3435e7ab6918cbc5JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2184c037-9589-6e8f-1811-d7aa94d46f17&u=a1aHR0cHM6Ly93d3cucHJvdGl2aXRpLmNvbS91cy1lbg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "cb011cc0d2"
+   ],
+   "value": "As a major global consulting firm, sponsorship availability varies by regional hiring needs and specific project demand."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "d56fe1208d",
+    "cb011cc0d2"
+   ],
+   "value": "Protiviti is a global management consulting firm that provides risk, advisory, and technology solutions to help organizations solve complex business problems. It generates revenue by billing clients for specialized consulting services across various industries."
+  },
+  "synthesized_evidence_sha": "e51633539e8aa84b",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "cb011cc0d2"
+   ],
+   "value": "Involves technology consulting, digital transformation initiatives, data analytics, and IT systems implementation for client environments."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784651028,
   "web_search_url": "https://duckduckgo.com/?q=Protiviti+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "While Protiviti offers solid technical exposure in digital transformation, it is a traditional consulting firm at its core, meaning candidates must weigh the strong career trajectory against the reality of navigating bureaucratic structures, lower-tier base pay compared to FAANG, and the demanding billable-hours culture that can challenge strict work-life boundaries."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "cb011cc0d2"
+   ],
+   "value": "Estimated: Moderate. Standard for consulting, meaning potential for long hours during busy engagements, though likely better than high-burnout strategy consulting."
   }
  },
  "protolabs": {
@@ -251652,42 +252333,100 @@
  "rockhaven homes": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "e3c08a5a2e"
+   ],
+   "value": "Estimated: Low. As a residential construction company, it is unlikely to offer top-tier prestige or elite AI/Data Science opportunities."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "e3c08a5a2e"
+   ],
+   "value": "Constructing and selling residential real estate in the Atlanta metropolitan area."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "e3c08a5a2e"
+   ],
+   "value": "Estimated: Traditional corporate environment focused on real estate development rather than an innovative, fast-moving tech culture."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "e3c08a5a2e"
+   ],
+   "value": "Homebuyers seeking single-family homes and townhomes in the Atlanta metropolitan area."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "e3c08a5a2e"
+   ],
+   "value": "Estimated: $90,000 - $110,000 based on the entry/mid-level software engineer posting."
   },
   "evidence_sha": "9ff78634976a6cba",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784880395,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784880247,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e3c08a5a2e"
+   ],
+   "value": "Real Estate / Residential Construction."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "e3c08a5a2e"
+   ],
+   "value": "Given the mismatch with the candidate's goals, the interview should focus on probing the actual technical ceiling of the role. Ask about the specific use cases for Python and APIs, the size of the engineering team, opportunities for technical learning, and whether the company enforces sane hours and guaranteed shutdowns."
+  },
+  "last_attempt_at": 1784880395,
   "last_evidence_at": 1784701485,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "e3c08a5a2e"
+   ],
+   "value": "Atlanta metropolitan area (Onsite)."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "unknown"
+  },
   "name": "Rockhaven Homes",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e3c08a5a2e"
+   ],
+   "value": "Estimated: Moderate. Construction and real estate generally follow traditional business cycles rather than fast-paced tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "e3c08a5a2e"
+   ],
+   "value": "Vibrant communities of single-family homes and townhomes."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10-15 days. Standard for traditional industries but specific policy is not public."
   },
-  "retry_after": 1784880367,
+  "refresh_after": 1790064395,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -251697,7 +252436,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed tech shutdowns found. Standard corporate holidays are likely but unspecified."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "e3c08a5a2e"
+   ],
+   "value": "Private company operating in the Atlanta metropolitan area. Specific employee count and funding stage were not found in research."
   },
   "sources": [
    {
@@ -251741,14 +252487,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=ce23ad4990aa3f661e0007c4994c068907424b52dbbf98efcd6a8f1715642dcbJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=103e7724-cda9-6862-3910-60b9cc786965&u=a1aHR0cHM6Ly9iZWVib20uY29tL2Jlc3QtY2hyb21lLWV4dGVuc2lvbnMv&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "e3c08a5a2e"
+   ],
+   "value": "No information regarding visa sponsorship was found in the research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "e3c08a5a2e"
+   ],
+   "value": "Rockhaven Homes is a real estate development and construction company that builds single-family homes and townhomes. They make money by developing, building, and selling residential properties in the Atlanta metropolitan area."
+  },
+  "synthesized_evidence_sha": "9ff78634976a6cba",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "e3c08a5a2e"
+   ],
+   "value": "Software engineering roles involving Python, SQL, APIs, and Git-based development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677223,
   "web_search_url": "https://duckduckgo.com/?q=Rockhaven+Homes+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "e3c08a5a2e"
+   ],
+   "value": "This role does not match the candidate's priorities. Rockhaven is a homebuilder offering a standard Software Engineer position, not an elite AI or data science role at a top-tier tech firm. The pay is moderate and the company lacks the fast-paced, high-prestige tech culture and mission-driven AI innovation the candidate is seeking."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "e3c08a5a2e"
+   ],
+   "value": "Estimated: Average. Software engineers at traditional non-tech companies typically experience average to good work-life balance, though guaranteed shutdowns are rarely featured."
   }
  },
  "rockwell automation": {
