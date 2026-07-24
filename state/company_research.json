@@ -14600,112 +14600,99 @@
   "ai_ds_prestige_tier": {
    "confidence": "high",
    "source_ids": [
-    "396cb216c7",
-    "5d97aaebcd"
+    "396cb216c7"
    ],
-   "value": "Top-tier (AWS is a leader in AI/ML services and attracts top talent for AI/DS roles)."
+   "value": "Top-tier; AWS supplies critical infrastructure, hardware, and network software directly to leading AI companies."
   },
   "aliases": [],
   "attempts": 15,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "0396f0b224",
-    "1d97b2401f"
+    "396cb216c7"
    ],
-   "value": "AWS operates on a subscription-based model, charging customers for cloud resources used, with pricing tiers based on usage volume."
+   "value": "AWS sells cloud computing services and infrastructure to other businesses, charging for compute time, networking bandwidth, and storage used by customers."
   },
   "culture_vibe": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "0396f0b224",
-    "1d97b2401f"
+    "396cb216c7",
+    "772d527fc0"
    ],
-   "value": "Innovative, customer-focused, and collaborative, with an emphasis on technical excellence and continuous learning."
+   "value": "Estimated: Enterprise-scale engineering environment focused on operational reliability, technical troubleshooting, and open-source contribution, which may carry bureaucratic operational overhead."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "0396f0b224",
-    "1d97b2401f"
+    "396cb216c7"
    ],
-   "value": "AWS serves enterprises, startups, governments, and developers across industries, including major companies like Netflix, Airbnb, and NASA."
+   "value": "A wide array of global businesses ranging from startups to large enterprises, specifically including leading AI companies requiring high-performance computing support."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [
-    "396cb216c7"
-   ],
-   "value": "Estimated: $160,000-$190,000 base salary plus bonus for new grad AI/DS roles (conservative estimate based on public data and role postings)."
+   "source_ids": [],
+   "value": "Estimated: $150,000 - $200,000+ total target compensation (base plus equity) for new grad technical roles."
   },
   "evidence_sha": "9b5355394361885c",
-  "generated_at": 1784871572,
+  "generated_at": 1784871652,
   "generator": {
-   "endpoint": "local",
-   "model": "qwen3:30b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "0396f0b224",
-    "1d97b2401f"
+    "396cb216c7"
    ],
-   "value": "Cloud computing and enterprise software."
+   "value": "Cloud Computing and Information Technology Services."
   },
   "interview_focus": {
-   "confidence": "high",
-   "source_ids": [
-    "5d97aaebcd",
-    "772d527fc0"
-   ],
-   "value": "Technical problem-solving, system design, and hands-on experience with cloud infrastructure and programming languages like Python and Linux."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidates should be prepared to discuss how they handle fast-paced operational demands and navigate large-scale enterprise processes without sacrificing technical excellence. Highlight your ability to maintain high performance in an environment that may lack guaranteed downtime, and emphasize your strategies for rapid learning and resilience against burnout."
   },
-  "last_attempt_at": 1784871572,
-  "last_evidence_at": 1784871255,
+  "last_attempt_at": 1784871652,
+  "last_evidence_at": 1784807865,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "0396f0b224",
-    "1d97b2401f"
+    "396cb216c7"
    ],
-   "value": "AWS has global data centers, with major hubs in the US (Virginia, Oregon), Europe (Ireland, Germany), and Asia (Singapore, Japan)."
+   "value": "Seattle, Washington, USA (Global Headquarters)."
   },
   "mission": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "0396f0b224",
-    "1d97b2401f"
+    "396cb216c7"
    ],
-   "value": "To be the world's most customer-centric company by providing reliable, scalable, and secure cloud computing services."
+   "value": "To provide the foundational computing infrastructure and services that enable businesses to innovate rapidly, though a specific formal mission statement was not found in the provided sources."
   },
   "name": "Amazon Web Services (AWS)",
   "pace_of_work": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
     "396cb216c7",
-    "5d97aaebcd"
+    "772d527fc0"
    ],
-   "value": "Fast-paced with a focus on innovation and rapid iteration, typical of tech industry leaders."
+   "value": "Estimated: Fast-paced and demanding, focused on production environment support and high-performance open-source innovation, which can lead to a high-rhythm output."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "0396f0b224",
-    "1d97b2401f"
+    "396cb216c7",
+    "772d527fc0"
    ],
-   "value": "AWS offers a wide range of cloud services including EC2 (compute), S3 (storage), RDS (databases), Lambda (serverless), and AI/ML tools like SageMaker."
+   "value": "Cloud computing infrastructure, storage solutions, and specialized hardware/software networking technologies like the Elastic Fabric Adapter (EFA) used to support high-performance AI and machine learning workloads."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "396cb216c7"
-   ],
-   "value": "Estimated: 15-20 days of PTO annually for new grads (conservative estimate based on industry standards and AWS's public policies)."
+   "source_ids": [],
+   "value": "Estimated: 15-20 days of paid time off annually, subject to standard corporate tiering."
   },
-  "refresh_after": 1790055572,
+  "refresh_after": 1790055652,
   "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
@@ -14714,18 +14701,16 @@
   },
   "schema_v": 1,
   "shutdowns": {
-   "confidence": "medium",
-   "source_ids": [
-    "396cb216c7"
-   ],
-   "value": "Guaranteed shutdowns during major holidays (e.g., Christmas, New Year's) and potentially other company-wide shutdowns for reflection or planning."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No company-wide guaranteed shutdown periods; operations run continuously."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
     "396cb216c7"
    ],
-   "value": "AWS is a massive division of Amazon, with over 10,000 employees and a dominant market share in cloud computing."
+   "value": "Established large enterprise with over 10,001 employees, founded in 2002 in Seattle, Washington, USA."
   },
   "sources": [
    {
@@ -14794,45 +14779,40 @@
    "source_ids": [
     "396cb216c7"
    ],
-   "value": "AWS provides H1B sponsorship for eligible roles, as noted in job postings for software engineering positions."
+   "value": "AWS has a track record of offering H1B sponsorship, though this does not guarantee sponsorship for every specific role."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "0396f0b224",
-    "1d97b2401f"
+    "396cb216c7"
    ],
-   "value": "AWS is the cloud computing arm of Amazon, providing scalable infrastructure and services to businesses globally. It generates revenue by charging customers for compute, storage, and other cloud services on a pay-as-you-go basis."
+   "value": "Amazon Web Services (AWS) is a comprehensive cloud computing platform founded in 2002 that provides on-demand computing infrastructure, storage, and services to businesses globally. It generates revenue through a pay-as-you-go model, charging customers for the specific compute resources, storage, and specialized software services they consume."
   },
   "synthesized_evidence_sha": "9b5355394361885c",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "772d527fc0",
-    "5d97aaebcd"
+    "5d97aaebcd",
+    "396cb216c7",
+    "772d527fc0"
    ],
-   "value": "Engineers build and maintain cloud infrastructure, develop scalable services, and optimize systems for performance and security."
+   "value": "Technical roles involve production computing environment support, Linux/Windows systems administration, and writing high-performance C code for open source networking projects alongside Python and Ruby scripting."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583361,
   "web_search_url": "https://duckduckgo.com/?q=Amazon+Web+Services+%28AWS%29+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "high",
-   "source_ids": [
-    "396cb216c7",
-    "5d97aaebcd",
-    "772d527fc0"
-   ],
-   "value": "AWS is a top-tier AI and data science employer with high prestige, offering competitive pay for new grads and a fast-paced, innovative culture that accelerates technical growth without excessive burnout."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "While AWS offers top-tier technical prestige and highly competitive new-grad pay, its culture is known for intense operational pressure and bureaucracy that can hinder rapid innovation. The work-life balance often falls short of guaranteed shutdowns and sane hours, but the sheer scale of learning and career acceleration remains elite."
   },
   "wlb_rating": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "396cb216c7",
     "772d527fc0"
    ],
-   "value": "Moderate to High (AWS is known for respecting work-life balance with structured shutdowns, though some teams may have higher intensity)."
+   "value": "Estimated: Variable and demanding. The heavy focus on production computing support may require intense hours and on-call responsibilities."
   }
  },
  "amazon web services inc": {
@@ -40864,37 +40844,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Not recognized as a top-tier AI/data science brand."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "778c83456d"
+   ],
+   "value": "Technology consulting and solutions firm that monetizes through expert teams deploying technology to bridge strategy and execution."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "778c83456d"
+   ],
+   "value": "Describes itself as bold, smart, agile, and fun."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "778c83456d"
+   ],
+   "value": "Companies seeking transformation and growth across various industries."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: Competitive but not elite-tier pay."
   },
   "evidence_sha": "b6ea08fa8bd902ff",
+  "generated_at": 1784871652,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "778c83456d"
+   ],
+   "value": "Technology solutions and consulting."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Assess whether the consulting pace aligns with your WLB needs and confirm new grad compensation meets your expectations."
   },
+  "last_attempt_at": 1784871652,
   "last_evidence_at": 1784850885,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "778c83456d"
+   ],
+   "value": "Headquartered in Bellevue, Washington, with a strong presence across the United States."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "778c83456d"
+   ],
+   "value": "To transform and grow companies by connecting strategy, business solutions, products, and services."
+  },
   "name": "Blueprint Technologies",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "778c83456d"
+   ],
+   "value": "Estimated: Bold, smart, and agile culture suggests a moderately fast pace."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "778c83456d"
+   ],
+   "value": "Technology solutions, business solutions, products, and services that connect strategy to execution."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: No public PTO policy found; expect standard 15-20 days."
   },
+  "refresh_after": 1790055652,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -40904,7 +40942,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No information on guaranteed shutdowns."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "778c83456d"
+   ],
+   "value": "Presence across the United States with teams possessing years of experience across multiple industries."
   },
   "sources": [
    {
@@ -40948,14 +40993,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=f172bcbbe5a98f62b515924b1a1983bbeae8e2686ca4e2a10af2df77968e595eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=16ae291e-3ee3-6c70-0417-3e833f4b6d41&u=a1aHR0cHM6Ly9ibHVlcHJpbnRwcmVwLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No sponsorship details found in research; verify with recruiter."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "778c83456d"
+   ],
+   "value": "Blueprint Technologies is a technology solutions firm headquartered in Bellevue, Washington, with a strong presence across the United States. The company bridges the gap between strategy and execution by connecting strategy, business solutions, products, and services to transform and grow companies. They generate revenue by leveraging the knowledge, skills, and expertise of their teams across multiple industries."
+  },
+  "synthesized_evidence_sha": "b6ea08fa8bd902ff",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "778c83456d"
+   ],
+   "value": "Delivering technology solutions, products, and services to bridge strategy and execution."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677766,
   "web_search_url": "https://duckduckgo.com/?q=Blueprint+Technologies+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Blueprint fits a fast tech culture and accelerates technical learning through cross-industry experience, though it may lack the elite AI prestige and guaranteed shutdowns you seek."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "778c83456d"
+   ],
+   "value": "Estimated: Claims fun culture but consulting nature may impact hours."
   }
  },
  "bluescope": {
@@ -64339,7 +64411,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
-  "last_evidence_at": 1784871255,
+  "last_evidence_at": 1784842446,
   "name": "Cloudflare",
   "pace_of_work": {
    "confidence": "estimated",
@@ -73176,7 +73248,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_evidence_at": 1784871255,
+  "last_evidence_at": 1784678568,
   "name": "CrowdGen by Appen",
   "pace_of_work": {
    "confidence": "estimated",
@@ -80660,7 +80732,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_evidence_at": 1784871524,
+  "last_evidence_at": 1784672493,
   "name": "Deloitte",
   "pace_of_work": {
    "confidence": "estimated",
@@ -87998,41 +88070,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (Applied AI/ML minimal; focus is low-code automation and BI, not core AI/DS research or elite ML engineering)."
   },
   "aliases": [],
   "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "54f9cc22f1",
+    "9a0842cd0d"
+   ],
+   "value": "Likely professional services / consulting and managed services for Microsoft Power Platform and Azure/AWS cloud implementations; possibly ISV solutions on AWS Marketplace."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Practical, client-facing, certification-driven (Microsoft), learning-through-delivery culture typical of Power Platform consultancies."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "9a0842cd0d"
+   ],
+   "value": "Enterprise clients needing low-code/no-code business process automation, data analytics, and custom application development on Microsoft stack."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: $75k\u2013$95k base (US) for Junior Power Apps Developer; consulting new-grad bands vary by region."
   },
   "evidence_sha": "688095d0431363ca",
+  "generated_at": 1784871652,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "9a0842cd0d",
+    "54f9cc22f1"
+   ],
+   "value": "Enterprise software / cloud consulting / low-code automation (Microsoft Power Platform ecosystem)."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "9a0842cd0d"
+   ],
+   "value": "Expect practical Power Platform assessments: canvas/model-driven app design, Power Automate flow logic, Dataverse data modeling, DAX/Power BI visualization, and scenario-based problem solving for business process automation."
+  },
+  "last_attempt_at": 1784871652,
+  "last_evidence_at": 1784676688,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "7e4572fce4"
+   ],
+   "value": "Not specified in sources. Estimated: US-based with possible remote/hybrid options; domains suggest Netherlands (.nl redirect) and global cloud presence."
+  },
+  "mission": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Not explicitly stated in sources. Estimated: Delivering practical Microsoft Power Platform and cloud solutions that accelerate business process automation for enterprise customers."
   },
-  "last_attempt_at": 1784871572,
-  "last_evidence_at": 1784871524,
   "name": "ECS",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-to-fast consulting pace; project-driven with client deadlines, but not described as extreme."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "9a0842cd0d",
+    "54f9cc22f1"
+   ],
+   "value": "Microsoft Power Platform solutions (Power Apps, Power Automate, Power BI, Dataverse, SharePoint Online integration); likely cloud/enterprise software services given AWS Marketplace presence."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 15\u201320 days PTO + US federal holidays; no public policy found."
   },
-  "retry_after": 1784871692,
+  "refresh_after": 1790055652,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88042,7 +88167,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns documented; consulting firms rarely mandate full shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-size (200\u20131,000 employees), growth-stage professional services / cloud solutions firm."
   },
   "sources": [
    {
@@ -88096,14 +88226,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=f524767ab29697be3b1d6d2891127471f0eb4c5537473d6eff801f10e97294d4JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0b4b891b-fa91-601f-2c29-9e86fbb26179&u=a1aHR0cHM6Ly93d3cuZWNzbGltaXRlZC5jb20v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not mentioned in sources. Estimated: May sponsor H-1B for specialized Power Platform/cloud roles given enterprise consulting model."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d",
+    "9a0842cd0d",
+    "54f9cc22f1"
+   ],
+   "value": "ECS appears to be a technology company hiring for Microsoft Power Platform roles (Power Apps, Power Automate, Power BI, Dataverse). The company has web presences on AWS Marketplace and domains including ecssteuning.com and ecslimited.com, suggesting it may operate in cloud solutions or enterprise software services."
+  },
+  "synthesized_evidence_sha": "688095d0431363ca",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "9a0842cd0d"
+   ],
+   "value": "Low-code/no-code development on Microsoft Power Platform (Power Apps, Power Automate, Power BI, Dataverse), SharePoint Online integration, business process automation, data modeling, and cloud deployment (Azure/AWS)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676688,
   "web_search_url": "https://duckduckgo.com/?q=ECS+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d",
+    "9a0842cd0d"
+   ],
+   "value": "This role offers hands-on experience with Microsoft's enterprise low-code stack (Power Platform) at a company actively hiring new grads. It balances practical, in-demand cloud automation skills with a likely consulting-style learning curve, but the sources don't confirm elite AI/data science prestige, guaranteed shutdowns, or above-market new-grad pay."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5; professional services typically have variable hours around client deliverables, no guaranteed shutdowns evidenced."
   }
  },
  "ecs group of companies": {
@@ -102568,13 +102728,13 @@
    "source_ids": [],
    "value": "$85k\u2013$125k base (estimated; US market)"
   },
-  "evidence_sha": "f24c2adfe7c5855d",
+  "evidence_sha": "0b3cbd614762d133",
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_evidence_at": 1784871574,
+  "last_evidence_at": 1784871651,
   "name": "Flash Group",
   "pace_of_work": {
    "confidence": "estimated",
@@ -102599,6 +102759,46 @@
   },
   "sources": [
    {
+    "content_sha": "fae40f6513d4a1de",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/jobright-ai/2026-Software-Engineer-New-Grad.",
+    "id": "1db9db9c4d",
+    "kind": "discovery_feed",
+    "publisher": "Flash Group",
+    "retrieved_at": 1784871651,
+    "title": "Discovery source for Flash Group",
+    "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "230597b703",
+    "kind": "company_web",
+    "publisher": "Flash Group",
+    "retrieved_at": 1784871651,
+    "title": "Flash Group public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=dd8e8d832ecc3b59438cbf5ddac7fe764d26907eaae9b74b4f8af8cfd1707622JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=2ede432b-c71e-6a17-3d9f-548bc63f6b19&u=a1aHR0cHM6Ly93d3cuYWRvYmUuY29tL3Byb2R1Y3RzL2ZsYXNocGxheWVyL2VuZC1vZi1saWZlLWFsdGVybmF0aXZlLmh0bWw_bXNvY2tpZD0yZWRlNDMyYmM3MWU2YTE3M2Q5ZjU0OGJjNjNmNmIxOQ&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "1c4d97b99b",
+    "kind": "company_web",
+    "publisher": "Flash Group",
+    "retrieved_at": 1784871651,
+    "title": "Flash Group public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=2788dc047d57244e94b44a97897f520e1760256d80782853009f7963e05f8a16JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=2ede432b-c71e-6a17-3d9f-548bc63f6b19&u=a1aHR0cHM6Ly9tLmltZGIuY29tL3RpdGxlL3R0MzEwNzI4OC8&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "c67b2a33e0",
+    "kind": "company_web",
+    "publisher": "Flash Group",
+    "retrieved_at": 1784871651,
+    "title": "Flash Group public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=e69a3c7e8d1ebf63b7fdc9e1a37a337b861ed907cf163304191e5f8c0b0fa31dJmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=2ede432b-c71e-6a17-3d9f-548bc63f6b19&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9UaGVfRmxhc2hfKDIwMTRfVFZfc2VyaWVzKQ&ntb=1"
+   },
+   {
     "content_sha": "35f1aee2ad38d195",
     "excerpt": "Please click here if the page does not redirect automatically ...",
     "id": "c68d84ba33",
@@ -102617,41 +102817,11 @@
     "retrieved_at": 1784871574,
     "title": "Flash Group public company page",
     "url": "https://www.bing.com/ck/a?!&&p=a2786363764aa5ff255ea6f36c09731335537d06cf3e3557f2d50a88e7f469d3JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=13993e83-135a-6981-0794-292312eb68ce&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQWRvYmVfRmxhc2g&ntb=1"
-   },
-   {
-    "content_sha": "35f1aee2ad38d195",
-    "excerpt": "Please click here if the page does not redirect automatically ...",
-    "id": "6f838a526e",
-    "kind": "company_web",
-    "publisher": "Flash Group",
-    "retrieved_at": 1784871574,
-    "title": "Flash Group public company page",
-    "url": "https://www.bing.com/ck/a?!&&p=e23b13439aef46b9e307e772e2b994997b2204ce81e631ae7e9d2eeea5bf5951JmltdHM9MTc4NDc2NDgwMA&ptn=3&ver=2&hsh=4&fclid=13993e83-135a-6981-0794-292312eb68ce&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvVGhlX0ZsYXNoXygyMDE0X1RWX3Nlcmllcyk&ntb=1"
-   },
-   {
-    "content_sha": "fae40f6513d4a1de",
-    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/jobright-ai/2026-Software-Engineer-New-Grad.",
-    "id": "1db9db9c4d",
-    "kind": "discovery_feed",
-    "publisher": "Flash Group",
-    "retrieved_at": 1784871574,
-    "title": "Discovery source for Flash Group",
-    "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
-   },
-   {
-    "content_sha": "d00206baae2b5e00",
-    "excerpt": "Jobright.ai Software Engineer I (DM) jobs in United States Overview Company Apply on Employer Site APPLY NOW Flash Group \u00b7 8 hours ago Software Engineer I (DM) Linthicum Heights, MD Full-time Onsite Entry Level $140K/yr - $152K/yr 1+ years exp Flash Group is a company that values technical ambition and contributions. Your Score - Top Applicants Must-Have Skills for This Role Pig PySpark Analytics Development Optimize my Resume Get Referral Via linkedIn FREE 3\u00d7 Higher Response via Email Outreach M Muhammad Hasan H. Software Engineer I (DM) @ Flash Group",
-    "id": "62731126fc",
-    "kind": "official_job",
-    "publisher": "Flash Group",
-    "retrieved_at": 1784871255,
-    "title": "Official job posting \u2014 Software Engineer I (DM)",
-    "url": "https://jobright.ai/jobs/info/6a62c6711ed5b0056a938a38?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
   "status": "evidence_only",
   "web_research_status": "sources captured",
-  "web_researched_at": 1784871574,
+  "web_researched_at": 1784871651,
   "web_search_url": "https://duckduckgo.com/?q=Flash+Group+company+careers+benefits",
   "wlb_rating": {
    "confidence": "estimated",
@@ -109334,48 +109504,126 @@
  "ge vernova": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "7d7343ad36"
+   ],
+   "value": "Estimated: Tier 3. Legacy industrial company, not recognized as a top-tier AI or data science employer."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "686f71846e"
+   ],
+   "value": "Unknown from provided sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "7d7343ad36"
+   ],
+   "value": "Estimated: Mission-driven and traditional corporate, balancing electrification goals with structured engineering processes."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "686f71846e"
+   ],
+   "value": "Unknown from provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "source_ids": [
+    "7d7343ad36"
+   ],
+   "value": "Estimated: $90k-$120k base salary. Likely lower than top-tier tech firms but offering solid corporate compensation."
   },
   "evidence_sha": "13df2e6dfbd3da41",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784871652,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "08a562d1f7"
+   ],
+   "value": "Unknown from provided sources."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "686f71846e"
+   ],
+   "value": "To ensure this role fits your priorities, probe heavily on the team's pace of innovation, daily hours, and technical learning curves. Ask direct questions about whether you will be building cutting-edge AI models or supporting legacy infrastructure to verify work-life balance expectations."
+  },
+  "last_attempt_at": 1784871652,
   "last_evidence_at": 1784677231,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "686f71846e"
+   ],
+   "value": "Unknown from provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "08a562d1f7"
+   ],
+   "value": "Unknown from provided sources."
+  },
   "name": "GE Vernova",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "686f71846e"
+   ],
+   "value": "Estimated: Slow to moderate. Large industrial engineering firms tend to have more structured, bureaucratic processes rather than a fast-paced tech culture."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "7d7343ad36",
+    "08a562d1f7"
+   ],
+   "value": "Unknown from provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "source_ids": [
+    "686f71846e"
+   ],
+   "value": "Estimated: 15-20 days of base PTO, typical for large corporate employers."
   },
+  "refresh_after": 1790055652,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "686f71846e"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "08a562d1f7"
+   ],
+   "value": "Estimated: Likely offers some standard corporate holidays, but guaranteed extended shutdown periods are unconfirmed."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "7d7343ad36"
+   ],
+   "value": "Public company."
   },
   "sources": [
    {
@@ -109409,14 +109657,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=39c66703a10e08059c8c980bed19673268b5bc06516b8ad519f2e30275668b42JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=103e7724-cda9-6862-3910-60b9cc786965&u=a1aHR0cHM6Ly93d3cuZ2VhcHBsaWFuY2VzLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "08a562d1f7"
+   ],
+   "value": "Unknown from provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "7d7343ad36",
+    "686f71846e"
+   ],
+   "value": "The provided sources consist solely of redirect pages for GE Vernova and General Electric, yielding no descriptive content. Based on general knowledge, GE Vernova is an energy company formed from GE's spinoff, specializing in power generation, wind, and electrification technologies."
+  },
+  "synthesized_evidence_sha": "13df2e6dfbd3da41",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "08a562d1f7"
+   ],
+   "value": "Unknown from provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677231,
   "web_search_url": "https://duckduckgo.com/?q=GE+Vernova+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "7d7343ad36"
+   ],
+   "value": "GE Vernova is a legacy industrial player, meaning its culture may lean toward slow bureaucracy rather than the fast, innovative tech environment you seek. While it is highly mission-driven in accelerating electrification, it likely lacks the elite AI prestige and high new-grad pay ceilings of top-tier tech firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "08a562d1f7"
+   ],
+   "value": "Estimated: Moderate. Likely offers standard corporate hours and guaranteed shutdowns, but may lack the flexibility of pure tech companies."
   }
  },
  "gecko robotics": {
@@ -145353,37 +145633,105 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low. Traditional real estate firms rarely host top-tier AI talent or research."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "cbef3edac3",
+    "c66f444426",
+    "07029bc12e"
+   ],
+   "value": "No business model details could be extracted from the supplied sources."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "cbef3edac3",
+    "c66f444426",
+    "07029bc12e"
+   ],
+   "value": "No culture information could be extracted from the supplied sources."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "cbef3edac3",
+    "c66f444426",
+    "07029bc12e"
+   ],
+   "value": "No customer information could be extracted from the supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: Likely below top-tier tech standards, potentially in the $80k-$110k range for internal IT/data roles."
   },
   "evidence_sha": "9abb8ec7bed68c36",
+  "generated_at": 1784871652,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "cbef3edac3"
+   ],
+   "value": "Real Estate (based on company name, as sources failed to load)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe deeply into whether they build proprietary AI in-house or merely implement vendor products. Determine if the culture is slow and bureaucratic, and verify if new-grad pay meets top-tier market rates."
   },
+  "last_attempt_at": 1784871652,
   "last_evidence_at": 1784674767,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "cbef3edac3",
+    "c66f444426",
+    "07029bc12e"
+   ],
+   "value": "No location information could be extracted from the supplied sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "cbef3edac3",
+    "c66f444426",
+    "07029bc12e"
+   ],
+   "value": "No mission statement could be extracted from the supplied sources."
+  },
   "name": "JRK Property Holdings",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow, typical of established real estate operations rather than fast-paced tech startups."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "cbef3edac3",
+    "c66f444426",
+    "07029bc12e"
+   ],
+   "value": "No product information could be extracted from the supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: Standard corporate allocation of 15-20 days, though exact policy is not public."
   },
+  "refresh_after": 1790055652,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -145393,7 +145741,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal guaranteed shutdowns found; typical standard holidays only."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "cbef3edac3",
+    "c66f444426",
+    "07029bc12e"
+   ],
+   "value": "No size or stage information could be extracted from the supplied sources."
   },
   "sources": [
    {
@@ -145427,14 +145784,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=fe09ddf378dd79fd597e08abcd6fbcc9869995e192b2f8f5779d9c2b8b4e15cdJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ea687d1-bcb0-6028-15c3-904cbd536131&u=a1aHR0cHM6Ly93d3cuaW1kYi5jb20vdGl0bGUvdHQyMzQ1MTEyL2Z1bGxjcmVkaXRzLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "cbef3edac3",
+    "c66f444426",
+    "07029bc12e"
+   ],
+   "value": "No visa sponsorship information could be extracted from the supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "cbef3edac3",
+    "c66f444426",
+    "07029bc12e"
+   ],
+   "value": "JRK Property Holdings is a real estate investment and property management firm. The supplied sources did not contain readable content, so no further factual company details could be extracted."
+  },
+  "synthesized_evidence_sha": "9abb8ec7bed68c36",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "cbef3edac3",
+    "c66f444426",
+    "07029bc12e"
+   ],
+   "value": "No technical work details could be extracted from the supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674767,
   "web_search_url": "https://duckduckgo.com/?q=JRK+Property+Holdings+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a traditional real estate firm, this likely conflicts with your desire for elite AI prestige and a fast, innovative tech culture. Much of the heavy tech work may be outsourced, limiting internal technical learning and career growth."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Generally acceptable hours, though without guaranteed tech-industry-style shutdowns."
   }
  },
  "jst corporation sales america": {
@@ -163761,110 +164151,137 @@
  "mantech": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 2 \u2014 Respected within government AI/ML community; publishes at cleared conferences; less visible in open commercial AI research."
-  },
-  "aliases": [],
-  "attempts": 3,
-  "business_model": {
-   "confidence": "medium",
    "source_ids": [
+    "f810345841",
     "7bde4aa68d"
    ],
-   "value": "Federal government contracting \u2014 primarily cost-plus, time-and-materials, and fixed-price contracts with defense and intelligence agencies."
+   "value": "Estimated: Mid-tier. Offers compelling public-sector security prestige, but lacks the elite, cutting-edge innovation prestige of top-tier commercial AI or data science companies."
+  },
+  "aliases": [],
+  "attempts": 4,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "f810345841",
+    "7bde4aa68d"
+   ],
+   "value": "Business-to-Government (B2G) defense and intelligence contracting."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Mission-focused, structured, clearance-aware culture; engineering rigor valued; hierarchy present but technical leads have authority; strong veteran and civil-service alumni presence."
-  },
-  "customers": {
-   "confidence": "medium",
    "source_ids": [
+    "f810345841",
     "7bde4aa68d"
    ],
-   "value": "U.S. government intelligence agencies, Department of Defense, and other federal national security organizations."
+   "value": "Estimated: Mission-driven and national security-oriented, but heavily bureaucratic with a requirement to navigate government agency protocols rather than fast-paced tech startup culture."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "f810345841",
+    "7bde4aa68d"
+   ],
+   "value": "U.S. federal government and national intelligence agencies."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
+    "f810345841",
     "7bde4aa68d"
    ],
-   "value": "Estimated: $85K\u2013$115K base + modest bonus/RSU; Data Analyst posting shows $83K\u2013$140K range."
+   "value": "Estimated: $77K to $140K per year for entry-level data and software engineering roles, depending on specific tech stack and position grades."
   },
   "evidence_sha": "90083292c2dca831",
-  "generated_at": 1784749117,
+  "generated_at": 1784871652,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
+    "f810345841",
     "7bde4aa68d"
    ],
-   "value": "Defense / Federal IT Contracting / National Security"
+   "value": "National Security / Government Defense IT Services."
   },
   "interview_focus": {
-   "confidence": "medium",
-   "source_ids": [
-    "7bde4aa68d"
-   ],
-   "value": "Expect technical screens on Python/R statistical modeling, data pipeline design, and scenario-based problem solving for intelligence use cases. Behavioral questions will probe clearance eligibility, teamwork in regulated environments, and handling ambiguity. Prepare for questions on data ethics, model explainability, and experience with classified or sensitive data."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Probe the WLB and daily pace: clarify if the role allows for guaranteed shutdowns or bounds on overtime to avoid toxic burnout. Assess the actual technical learning curve to ensure it meets the desire for AI/DS career acceleration without sacrificing personal time."
   },
-  "last_attempt_at": 1784749117,
-  "last_evidence_at": 1784871255,
+  "last_attempt_at": 1784871652,
+  "last_evidence_at": 1784711509,
   "locations": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "f810345841",
     "7bde4aa68d"
    ],
-   "value": "Headquartered in Herndon, VA; major presence in Ashburn, VA (Hybrid), and other DoD/intelligence community hubs nationwide."
+   "value": "Roles are based in Fort Meade, MD (Onsite) and Ashburn, VA (Hybrid)."
   },
   "mission": {
    "confidence": "medium",
    "source_ids": [
+    "f810345841",
     "7bde4aa68d"
    ],
-   "value": "Delivering innovative technology solutions that protect national security and enable critical government missions."
+   "value": "To secure and advance the nation through specialized technology and engineering solutions for national security."
   },
   "name": "MANTECH",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate \u2014 program-driven with sprint cycles tied to contract deliverables; surges around milestone reviews and deployment windows."
-  },
-  "products": {
-   "confidence": "medium",
    "source_ids": [
+    "f810345841",
     "7bde4aa68d"
    ],
-   "value": "Advanced analytics, data science, cybersecurity, systems engineering, IT modernization, and mission-focused technology services for defense and intelligence missions."
+   "value": "Estimated: Moderate-to-slow pace governed by government contracting cycles and compliance regulations, rather than a fast, innovative tech culture."
+  },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "f810345841",
+    "7bde4aa68d"
+   ],
+   "value": "Advanced software engineering solutions, data analysis, and IT services tailored for government intelligence agencies."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15\u201320 days PTO + 10 federal holidays; accrual increases with tenure."
+   "source_ids": [
+    "f810345841",
+    "7bde4aa68d"
+   ],
+   "value": "Estimated: 15 to 20 paid time off days annually, standard for established federal contractors, subject to contract specifics."
   },
-  "refresh_after": 1789933117,
+  "refresh_after": 1790055652,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "f810345841",
+    "7bde4aa68d"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: No guaranteed company-wide shutdowns; some programs observe winter break; mandatory time-off policies vary by contract."
+   "source_ids": [
+    "f810345841",
+    "7bde4aa68d"
+   ],
+   "value": "Estimated: Standard federal holidays. While guaranteed corporate-wide shutdowns akin to top-tier tech companies are not prominently documented, federal holiday alignments are likely."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Large established defense contractor (acquired by Carlyle Group in 2018; ~10,000+ employees)."
+   "confidence": "medium",
+   "source_ids": [
+    "f810345841",
+    "7bde4aa68d"
+   ],
+   "value": "Established government contractor operating across multiple U.S. locations with active ongoing hiring cycles."
   },
   "sources": [
    {
@@ -163930,39 +164347,45 @@
   ],
   "sponsorship_context": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Likely sponsors H-1B and green cards for cleared roles; U.S. citizenship and security clearance (often TS/SCI) required for most positions."
+   "source_ids": [
+    "f810345841",
+    "7bde4aa68d"
+   ],
+   "value": "Highly likely to require U.S. citizenship and security clearance due to national security and government intelligence dependencies, which typically limits visa sponsorship."
   },
   "status": "ready",
   "summary": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "f810345841",
     "7bde4aa68d"
    ],
-   "value": "MANTECH is a government contractor providing advanced technology and analytics solutions to U.S. national security and intelligence agencies. It generates revenue through federal contracts for services including data analysis, cybersecurity, systems engineering, and mission-focused IT modernization."
+   "value": "MANTECH is a technology and engineering company at the forefront of national security, providing advanced solutions to government intelligence agencies. It earns revenue by contracting technical talent and systems directly to the U.S. federal government."
   },
-  "synthesized_evidence_sha": "4fba52be7780bd20",
+  "synthesized_evidence_sha": "90083292c2dca831",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "f810345841",
     "7bde4aa68d"
    ],
-   "value": "Data analysis, statistical modeling, Python/R/Scala development, cloud platforms, cybersecurity tooling, and mission-critical software engineering for classified environments."
+   "value": "Entry-level technical roles involve software engineering and data analysis. Key technical skills required include Python, Java, JavaScript, C++, AWS, and statistical modeling."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672493,
   "web_search_url": "https://duckduckgo.com/?q=MANTECH+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
-   "source_ids": [
-    "7bde4aa68d"
-   ],
-   "value": "Offers elite-prestige national security mission with high new-grad pay ($83K\u2013$140K) and exposure to cutting-edge AI/data science on classified programs. Hybrid schedule and government contracting structure can provide more predictable hours than commercial tech, but clearance requirements and program deadlines may create periodic intensity. Strong technical mentorship exists in analytics groups, though bureaucracy is inherent to federal contracting."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This is a mission-driven role with high national security prestige, but it does not perfectly align with a candidate seeking elite AI/data science pay and a fast, innovative tech culture. Bureaucracy, mandatory onsite work, and clearance requirements may impede the rapid technical learning and guaranteed personal time desired."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 3.5/5 \u2014 Hybrid schedules common; core hours expected; overtime occurs during crunch periods but not chronic."
+   "source_ids": [
+    "f810345841",
+    "7bde4aa68d"
+   ],
+   "value": "Estimated: Moderate to Good. Government contracting often enforces strict 40-hour weeks though it may lack hyper-flexible tech culture perks. WLB is generally sane, but heavily dependent on the specific contract and agency."
   }
  },
  "manulife": {
@@ -169559,7 +169982,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_evidence_at": 1784871524,
+  "last_evidence_at": 1784674903,
   "name": "McKinsey & Company",
   "pace_of_work": {
    "confidence": "estimated",
@@ -249553,7 +249976,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_evidence_at": 1784871255,
+  "last_evidence_at": 1784768504,
   "name": "Specter",
   "pace_of_work": {
    "confidence": "estimated",
@@ -276427,51 +276850,51 @@
  },
  "twitch": {
   "ai_ds_prestige_tier": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
     "92ebcabdd2",
     "a23e7a37d1"
    ],
-   "value": "Top-tier (Amazon-owned, global scale, innovative projects in AI/ML for live streaming)."
+   "value": "Estimated: High. Offers strong prestige due to Amazon's resources and the technical complexity of real-time global content recommendation systems."
   },
   "aliases": [],
   "attempts": 6,
   "business_model": {
-   "confidence": "high",
-   "source_ids": [
-    "a23e7a37d1",
-    "dbc3b9e88f"
-   ],
-   "value": "Revenue comes from subscriptions (Twitch Prime, subscriptions to streamers), advertising (pre-roll, mid-roll ads), and partnerships with brands and streamers."
-  },
-  "culture_vibe": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "a23e7a37d1"
    ],
-   "value": "Collaborative, mission-driven, and innovative with a focus on community and real-time engagement."
+   "value": "Live streaming monetization via advertisements, channel subscriptions, and virtual currency (Bits)."
+  },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "a23e7a37d1",
+    "92ebcabdd2"
+   ],
+   "value": "Gaming and creator-focused, community-driven, leveraging Amazon's corporate infrastructure and benefits."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
     "a23e7a37d1"
    ],
-   "value": "Twitch serves global audiences of streamers and viewers, with communities built around diverse interests like gaming, music, and sports."
+   "value": "Content creators (streamers) and viewers interested in gaming, entertainment, music, sports, and cooking."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "dbc3b9e88f",
-    "92ebcabdd2"
+    "92ebcabdd2",
+    "a23e7a37d1"
    ],
-   "value": "Estimated: $140,000\u2013$160,000 base + bonuses (based on Amazon's typical new-grad tech pay scale)."
+   "value": "Estimated: Top-tier compensation due to Amazon sub-organization structure, likely highly competitive base salary with equity and benefits."
   },
   "evidence_sha": "e44385eb9997a539",
-  "generated_at": 1784871572,
+  "generated_at": 1784871652,
   "generator": {
-   "endpoint": "local",
-   "model": "qwen3:30b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
@@ -276479,7 +276902,7 @@
    "source_ids": [
     "a23e7a37d1"
    ],
-   "value": "Live streaming, entertainment, and social media technology."
+   "value": "Technology / Live Streaming / Entertainment."
   },
   "interview_focus": {
    "confidence": "estimated",
@@ -276487,69 +276910,72 @@
     "92ebcabdd2",
     "a23e7a37d1"
    ],
-   "value": "Technical skills in AI/ML, data engineering, and problem-solving; emphasis on collaboration, innovation, and alignment with Twitch's mission-driven culture."
+   "value": "Evaluate how specifically the team implements sane hours and guaranteed shutdowns within the broader Amazon ecosystem. Clarify compensation details and verify how the technical culture stays fast-paced and innovative rather than succumbing to corporate bureaucracy."
   },
-  "last_attempt_at": 1784871572,
-  "last_evidence_at": 1784871524,
+  "last_attempt_at": 1784871652,
+  "last_evidence_at": 1784858995,
   "locations": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "92ebcabdd2"
    ],
-   "value": "Headquartered in San Francisco, California, with offices globally (specific locations not detailed in sources)."
+   "value": "Headquartered in San Francisco, California."
   },
   "mission": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "a23e7a37d1"
    ],
-   "value": "To be the world's most engaging live streaming platform, fostering communities around shared interests through interactive and real-time content."
+   "value": "To empower the global community of live streamers and viewers by providing the best platform for interactive live broadcasting."
   },
   "name": "Twitch",
   "pace_of_work": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
     "a23e7a37d1"
    ],
-   "value": "Fast-paced, innovative tech culture with a focus on real-time systems and rapid iteration."
+   "value": "Estimated: Fast-paced and innovative, requiring real-time system operations and high scalability."
   },
   "products": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "a23e7a37d1"
+    "a23e7a37d1",
+    "9d23abe300"
    ],
-   "value": "Twitch is the world's largest live streaming service, hosting live video streams across gaming, entertainment, music, sports, cooking, and more."
+   "value": "Live streaming platform, Twitch mobile apps, community chat, and creator monetization tools."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [
-    "dbc3b9e88f"
+    "a23e7a37d1"
    ],
-   "value": "Estimated: 15 days (based on Amazon's standard for similar roles)."
+   "value": "Estimated: Standard comprehensive paid time off inherited from Amazon's corporate benefits structure."
   },
-  "refresh_after": 1790055572,
+  "refresh_after": 1790055652,
   "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "92ebcabdd2",
+    "a23e7a37d1"
+   ],
+   "value": "None found."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [
-    "dbc3b9e88f"
+    "a23e7a37d1"
    ],
-   "value": "Guaranteed shutdowns during major holidays (e.g., Christmas, New Year's) and possibly for team retreats or system maintenance."
+   "value": "Estimated: Standard corporate holidays, with specific team-level flexibility."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "92ebcabdd2",
-    "dbc3b9e88f"
+    "92ebcabdd2"
    ],
-   "value": "1001-5000 employees, publicly traded under Amazon (since 2014) with a global presence."
+   "value": "1001-5000 employees. Founded in 2007. Operates as a sub-organization of Amazon."
   },
   "sources": [
    {
@@ -276616,29 +277042,26 @@
   "sponsorship_context": {
    "confidence": "high",
    "source_ids": [
-    "92ebcabdd2",
-    "dbc3b9e88f"
+    "92ebcabdd2"
    ],
-   "value": "Twitch has a track record of offering H1B sponsorships, though not guaranteed for every role. It is a sub-organization of Amazon."
+   "value": "Twitch has a track record of offering H1B sponsorships, though it is not guaranteed for specific roles."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "92ebcabdd2",
     "a23e7a37d1",
-    "dbc3b9e88f"
+    "92ebcabdd2"
    ],
-   "value": "Twitch is a live streaming platform focused on gaming, entertainment, and community-driven content, owned by Amazon since 2014. It generates revenue primarily through subscriptions, ads, and partnerships with streamers and brands."
+   "value": "Twitch is the world's biggest live streaming service, hosting global communities around gaming, entertainment, music, and sports. It makes money primarily through subscriptions, ads, and bits (virtual currency) purchased by viewers to support streamers, operating as a sub-organization of Amazon."
   },
   "synthesized_evidence_sha": "e44385eb9997a539",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "92ebcabdd2",
-    "a23e7a37d1"
+    "92ebcabdd2"
    ],
-   "value": "Engineers work on scalable live streaming infrastructure, real-time data processing, content recommendation systems, and tools for streamers and viewers."
+   "value": "Building highly scalable backend systems, interactive streaming infrastructure, and cross-platform frontends (React, Kotlin, Swift, Objective-C, TypeScript)."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675359,
@@ -276649,14 +277072,14 @@
     "92ebcabdd2",
     "a23e7a37d1"
    ],
-   "value": "Twitch offers a top-tier AI/data science role with elite prestige, competitive new-grad pay, and a fast-paced tech culture. It prioritizes work-life balance through sane hours and guaranteed shutdowns, avoiding burnout."
+   "value": "Twitch operates at Amazon-level scale with a product-centric culture that is highly relevant for AI and data science candidates. It offers strong career learning and impact potential while leveraging Amazon's broader compensation structure."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "dbc3b9e88f"
+    "92ebcabdd2"
    ],
-   "value": "High (guaranteed shutdowns, sane hours, mental health support, and work-life balance initiatives)."
+   "value": "Estimated: Moderate to good, inheriting Amazon's work culture but maintaining a streamer-focused tech environment."
   }
  },
  "twitch interactive inc": {
@@ -295101,29 +295524,28 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
-    "5c981df6f0",
-    "dfe95759c4"
+    "630fd51fdd",
+    "5c981df6f0"
    ],
-   "value": "Estimated: Niche AI data service provider rather than a top-tier AI research lab; prestige comes from client scale, not technical innovation."
+   "value": "Estimated: Mid-tier. While they supply data to top AI systems, the company itself is primarily a localization and data annotation vendor, lacking the prestige of a core AI research lab or top-tier tech product company."
   },
   "aliases": [],
-  "attempts": 14,
+  "attempts": 15,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "5c981df6f0",
-    "dfe95759c4"
+    "b7e8787a58",
+    "5c981df6f0"
    ],
-   "value": "B2B service provider contracting freelance linguists and AI specialists to deliver localized content and data annotation at scale."
+   "value": "Business-to-business (B2B) services, providing data operations and managed freelance linguistic talent to large enterprises on a project or ongoing contract basis."
   },
   "culture_vibe": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "dfe95759c4",
-    "347d544d26",
-    "1db43be8db"
+    "630fd51fdd",
+    "dfe95759c4"
    ],
-   "value": "Estimated: Global distributed community focused on detail-oriented quality assurance and linguistic precision."
+   "value": "Global, community-oriented, and contributor-focused. They emphasize building a network of culturally aware language enthusiasts and AI specialists."
   },
   "customers": {
    "confidence": "high",
@@ -295131,7 +295553,7 @@
     "5c981df6f0",
     "b7e8787a58"
    ],
-   "value": "Over 2,000 clients including leading multinational companies."
+   "value": "Over 2,000 clients, including leading multinational companies building generative AI systems used by millions globally."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
@@ -295140,10 +295562,10 @@
     "5c981df6f0",
     "dfe95759c4"
    ],
-   "value": "Estimated: Likely hourly contract rates rather than elite new-grad tech salaries; exact figures not public."
+   "value": "Estimated: Highly variable and likely below top-tier tech pay. Roles seem heavily geared towards freelance translation and AI analyst work, suggesting hourly or per-project compensation rather than elite, full-time new-grad engineering salaries."
   },
   "evidence_sha": "34c07cd84d511c5a",
-  "generated_at": 1784869244,
+  "generated_at": 1784871652,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -295152,21 +295574,18 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "5c981df6f0",
-    "dfe95759c4"
+    "630fd51fdd",
+    "5c981df6f0"
    ],
-   "value": "Translation and Localization / AI Data Operations."
+   "value": "Artificial Intelligence Data Services and Localization"
   },
   "interview_focus": {
-   "confidence": "medium",
-   "source_ids": [
-    "dfe95759c4",
-    "347d544d26"
-   ],
-   "value": "Ask about full-time conversion paths and internal tooling to ensure the role accelerates your data science career rather than stalling in contract work."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
-  "last_attempt_at": 1784869244,
-  "last_evidence_at": 1784871255,
+  "last_attempt_at": 1784871652,
+  "last_evidence_at": 1784737480,
   "locations": {
    "confidence": "high",
    "source_ids": [
@@ -295174,34 +295593,31 @@
     "dfe95759c4",
     "347d544d26"
    ],
-   "value": "Distributed global operations with roles supporting US timezones and regional linguistics (e.g., Argentina, Brazil, Italy)."
+   "value": "Global remote network, with specific project support roles distributed across various timezones (e.g., Dutch linguists based in US timezones, contributors in Argentina, Brazil, and Italy)."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "dfe95759c4",
-    "347d544d26",
-    "1db43be8db"
+    "630fd51fdd"
    ],
-   "value": "To support the development of next-generation Generative AI systems used by millions of people worldwide."
+   "value": "To build smarter AI through the power of human contribution, creating safer and more advanced systems by leveraging a culturally aware global community."
   },
   "name": "Welo Global",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
     "5c981df6f0",
-    "b7e8787a58"
+    "dfe95759c4"
    ],
-   "value": "Estimated: Project-driven dynamic environment with deadlines tied to multinational client deliverables."
+   "value": "Estimated: Project-driven and potentially metric-heavy. The culture revolves around ongoing, long-term client projects with an emphasis on detail-oriented, high-volume output."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "dfe95759c4",
-    "347d544d26",
-    "1db43be8db"
+    "5c981df6f0",
+    "dfe95759c4"
    ],
-   "value": "Multilingual and multimodal AI data operations, content annotation, translation, and copy editing services for product, marketing, and UI content."
+   "value": "AI data training, annotation, content review, quality assurance for multimodal and multilingual generative AI, alongside freelance translation and copy editing for product, marketing, and UI content."
   },
   "prompt_v": 2,
   "pto_days": {
@@ -295210,31 +295626,34 @@
     "5c981df6f0",
     "b7e8787a58"
    ],
-   "value": "Estimated: Not applicable for freelancers/contractors; full-time corporate PTO details are not public."
+   "value": "Estimated: Varies widely. Many roles appear to be freelance or contract-based, meaning paid time off is likely not guaranteed or accrued as it would be in a traditional full-time corporate structure."
   },
-  "refresh_after": 1790053244,
+  "refresh_after": 1790055652,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "630fd51fdd",
+    "5c981df6f0"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [
-    "5c981df6f0",
-    "b7e8787a58"
+    "b7e8787a58",
+    "630fd51fdd"
    ],
-   "value": "Estimated: No public info on company-wide shutdowns; unlikely for contractor-heavy service operations."
+   "value": "Estimated: None found. As a global company relying on freelance and contract contributors, formal company-wide shutdowns are unlikely due to the need to support clients across various timezones continuously."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "5c981df6f0",
-    "b7e8787a58",
-    "dfe95759c4"
+    "630fd51fdd",
+    "5c981df6f0"
    ],
-   "value": "Scaled global operations serving over 2,000 clients in 300 languages with a distributed freelance community."
+   "value": "Established, large-scale global organization with a network of over 500,000 contributors and serving over 2,000 clients."
   },
   "sources": [
    {
@@ -295299,50 +295718,46 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
     "5c981df6f0",
     "b7e8787a58"
    ],
-   "value": "Estimated: Heavy reliance on freelance and remote contracts suggests limited traditional visa sponsorship for new grads."
+   "value": "Not explicitly mentioned in the provided sources; however, the heavy reliance on a global freelance contributor network suggests many roles are remote contract positions rather than traditional sponsored full-time employment."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "5c981df6f0",
-    "b7e8787a58"
+    "630fd51fdd",
+    "5c981df6f0"
    ],
-   "value": "Welo Global is a leader in multilingual AI, technology, and content solutions. The company provides localization, translation, and AI data annotation services to enterprise clients globally."
+   "value": "Welo Global (part of Welocalize) is a multilingual AI, technology, and content solutions company that helps train the world's most advanced AI systems. They make money by providing high-quality, ethical human-generated data and linguistic services to enterprise clients developing generative AI and localized content."
   },
-  "synthesized_evidence_sha": "f84ebadbc1b51377",
+  "synthesized_evidence_sha": "34c07cd84d511c5a",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "dfe95759c4",
     "347d544d26",
-    "1db43be8db"
+    "5c981df6f0"
    ],
-   "value": "Annotation, content review, quality assurance, and data operations for multilingual and multimodal AI systems."
+   "value": "Data annotation, content review, quality assurance, and multimodal AI project support for generative models, as well as specialized translation, proofreading, and cultural localization for UI and marketing content."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784586002,
   "web_search_url": "https://duckduckgo.com/?q=Welo+Global+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
-   "source_ids": [
-    "dfe95759c4",
-    "5c981df6f0"
-   ],
-   "value": "Fits your desire for technical learning in AI without toxicity: data-heavy roles offer exposure to multimodal systems, but freelance models may lack the elite prestige or structured career growth of top-tier tech firms."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
-    "b7e8787a58",
-    "dfe95759c4"
+    "630fd51fdd"
    ],
-   "value": "Estimated: Remote/freelance structure may offer flexibility, but cross-timezone multinational demands could complicate guaranteed shutdowns."
+   "value": "Estimated: Moderate to Flexible. The company highlights working on 'your terms' for its global community, suggesting flexibility, though freelance annotation roles can often be deadline-intensive."
   }
  },
  "welocalize": {
