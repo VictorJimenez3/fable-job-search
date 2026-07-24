@@ -39326,37 +39326,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 – solid applied ML/data science supporting fraud, risk, personalization, and operations; not a primary AI research lab or elite publication venue."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "c98f697d1a"
+   ],
+   "value": "Credit union (member-owned cooperative): earns net interest margin and fee income; returns surplus to members via higher deposit rates, lower loan rates, and reduced fees. No outside shareholders."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Collaborative, mission-oriented, low-ego, community-focused; engineers report supportive managers and low politics compared to big tech or megabanks."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "c98f697d1a"
+   ],
+   "value": "1.5 million members primarily in Washington state and nationally via digital channels; individuals, families, and small businesses."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "c98f697d1a"
+   ],
+   "value": "Estimated: $95K–$115K base + modest bonus/RSU (credit unions rarely grant equity); aligns with posted Associate Software Developer range ($97K–$118K for 1+ years exp)."
   },
   "evidence_sha": "ae1ed10b1f469a28",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784880549,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c98f697d1a"
+   ],
+   "value": "Financial services – credit union / cooperative banking"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "c98f697d1a"
+   ],
+   "value": "Expect behavioral questions on member service, collaboration, and handling ambiguity; technical screens on .NET/C#, TypeScript/React, Python, SQL, API design, and cloud basics. Emphasize learning agility, security awareness, and alignment with cooperative values."
+  },
+  "last_attempt_at": 1784880549,
   "last_evidence_at": 1784693224,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "c98f697d1a"
+   ],
+   "value": "Headquartered in Tukwila, WA (Seattle metro); remote/hybrid options for tech roles; branches across Washington state."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "c98f697d1a"
+   ],
+   "value": "To improve the financial well-being of members and communities through cooperative, not-for-profit banking that prioritizes people over profit."
+  },
   "name": "BECU",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate – regulated environment with compliance gates; sprints and modern agile practices but not 'move fast and break things'."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "c98f697d1a"
+   ],
+   "value": "Consumer banking (checking, savings, CDs), lending (mortgages, auto, personal loans, credit cards), investment services, insurance, and digital banking platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10–12 holidays + volunteer time; typical for large financial institution."
   },
+  "refresh_after": 1790064549,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -39366,7 +39424,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some teams observe quiet periods around major holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "c98f697d1a"
+   ],
+   "value": "Large, mature credit union (~$30B+ assets, 1.5M members, 2,000+ employees); stable, not a startup."
   },
   "sources": [
    {
@@ -39420,14 +39485,41 @@
     "url": "https://jobright.ai/jobs/info/6a5fea69b0f20036bc633e95?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No explicit sponsorship policy found in sources; large financial institutions typically support H-1B and green card for specialized tech roles, but confirm with recruiter."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c98f697d1a"
+   ],
+   "value": "BECU is a member-owned, not-for-profit credit union serving 1.5 million members with a focus on community and operational efficiency. It generates revenue through interest on loans, fees, and investment income, returning profits to members via better rates and lower fees rather than shareholders."
+  },
+  "synthesized_evidence_sha": "ae1ed10b1f469a28",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "c98f697d1a"
+   ],
+   "value": "Full-stack software development for digital banking, core banking integrations, data platforms, and member-facing apps. Stack includes .NET/C#, JavaScript/TypeScript, Python, cloud infrastructure, and API development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784693224,
   "web_search_url": "https://duckduckgo.com/?q=BECU+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "c98f697d1a"
+   ],
+   "value": "Offers a mission-driven, member-first culture in a stable, large credit union with competitive new-grad pay ($97K–$118K) and remote flexibility. The cooperative structure aligns with work-life balance and low burnout vs. high-pressure tech or big-bank environments, while still providing modern stack (.NET, TS, Python) and scale for technical growth."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 – credit union culture emphasizes reasonable hours, limited on-call, and respect for personal time; remote options add flexibility."
   }
  },
  "behr paint company": {
@@ -64377,37 +64469,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low to Mid-tier. Defense contracting IT roles generally lack the elite industry prestige associated with top-tier tech firms or dedicated AI research labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "ae91549a1f"
+   ],
+   "value": "Revenue is generated through federal contracting, utilizing ANC procurement advantages and delivering specialized technical and support services to government agencies."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-oriented, structured, and heavily compliance-focused. Prioritizes security, reliability, and government protocol over rapid iteration or disruption."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "ae91549a1f"
+   ],
+   "value": "The primary customers are U.S. federal government agencies and the Department of Defense."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75,000 to $95,000. Government contracting compensation typically offers fair market rates with strong benefits, but rarely matches elite big-tech new-grad salaries."
   },
   "evidence_sha": "ee92e455ee970521",
+  "generated_at": 1784880549,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ae91549a1f"
+   ],
+   "value": "Defense and Federal Government Contracting"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe heavily for the specific contract team's daily pace, as government work can be slow. Ask about clearance timelines and how much red tape exists for adopting new AI tools. Confirm exact billable hour expectations to ensure the role doesn't creep into personal time."
   },
+  "last_attempt_at": 1784880549,
   "last_evidence_at": 1784672023,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "ae91549a1f"
+   ],
+   "value": "Corporate operations are anchored in Alaska, with subsidiary operations and contract sites spread across the United States."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "ae91549a1f"
+   ],
+   "value": "The mission focuses on providing high-quality services to federal customers while simultaneously generating economic opportunities and social dividends for Alaska Native Corporation shareholders."
+  },
   "name": "Chenega Defense & Aerospace Solutions",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to Slow. Strongly influenced by standard government operating procedures, compliance, and contract oversight, which often stifles rapid innovation."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "ae91549a1f"
+   ],
+   "value": "The company offers IT services, systems engineering, cybersecurity, program management, and aerospace support solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 to 20 days of PTO annually. Federal contractors typically provide standard corporate leave packages for mid-level professionals."
   },
+  "refresh_after": 1790064549,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -64417,7 +64563,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None found in research. Due to government billing structures, company-wide shutdowns are rare, though employees may be able to float holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "ae91549a1f"
+   ],
+   "value": "Chenega Corporation is a large, established enterprise and one of the most successful Alaska Native Corporations, operating numerous subsidiary companies across various sectors."
   },
   "sources": [
    {
@@ -64451,14 +64604,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=95fea84aee103ce26ad0505ffcf9e3718de0544f2f02ac95fc99dcd1293afd9bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=32b443f7-64f1-66a5-2db3-546a65e467d4&u=a1aHR0cHM6Ly93d3cuY2hlbmVnYS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "ae91549a1f"
+   ],
+   "value": "Standard for federal contractors, roles likely require U.S. citizenship and the ability to obtain government security clearances. Visa sponsorship is typically unlikely."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "ae91549a1f"
+   ],
+   "value": "Chenega Defense & Aerospace Solutions is an Alaska Native Corporation (ANC) subsidiary that provides specialized IT, engineering, and aerospace solutions. It generates revenue primarily through federal government contracting, leveraging its ANC status to secure set-aside contracts."
+  },
+  "synthesized_evidence_sha": "ee92e455ee970521",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "ae91549a1f"
+   ],
+   "value": "Technical work involves IT infrastructure support, systems engineering, and cybersecurity operations for government clients."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672023,
   "web_search_url": "https://duckduckgo.com/?q=Chenega+Defense+%26+Aerospace+Solutions+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a government contractor, the culture will likely be heavily bureaucratic and process-driven rather than fast-paced. This conflicts with a desire for an innovative tech atmosphere and elite prestige. However, standard government contract hours may offer predictable work-life balance compared to big tech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good to Excellent. Federal contractors often operate on standard 40-hour weeks with strict boundaries, making burnout highly unlikely unless on a high-tempo deployed program."
   }
  },
  "chenega mios sbu": {
@@ -124441,11 +124621,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -124457,6 +124639,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784880549,
   "last_evidence_at": 1784807865,
   "name": "GenLogs",
   "pace_of_work": {
@@ -124469,6 +124652,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784880669,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -124532,7 +124716,7 @@
     "url": "https://ats.rippling.com/genlogs-corporation/jobs/127f98d1-b702-4395-a25c-0f7ebc98881b"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784807865,
   "web_search_url": "https://duckduckgo.com/?q=GenLogs+company+careers+benefits",
@@ -223380,37 +223564,85 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Top tier — highly selective quant firm known for elite technical hiring and cutting-edge research."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Proprietary trading and investment management; profits come from trading gains and/or management/performance fees on managed capital."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Academic, collaborative, low-ego, meritocratic; emphasis on technical excellence and intellectual honesty over politics or face time."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Institutional investors and the firm's own capital; no external retail clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $200k-$300k total compensation (base ~$150k-$180k, sign-on ~$50k-$100k, bonus ~$50k-$150k) for quantitative research roles."
   },
   "evidence_sha": "85193866175f8d4f",
+  "generated_at": 1784880549,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "c9016d165c"
+   ],
+   "value": "Quantitative finance / systematic trading / hedge fund."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "c9016d165c"
+   ],
+   "value": "Expect deep technical assessment in probability, statistics, machine learning, and coding (Python/R/Matlab); open-ended research problems; and evaluation of how you approach ambiguous, real-world quantitative challenges. Prepare to discuss past projects in detail and demonstrate clear, rigorous thinking under time pressure."
+  },
+  "last_attempt_at": 1784880549,
+  "last_evidence_at": 1784680911,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "c9016d165c"
+   ],
+   "value": "New York, New York, USA (headquarters)."
+  },
+  "mission": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: To generate superior risk-adjusted returns through rigorous quantitative research and innovative technology."
   },
-  "last_evidence_at": 1784680911,
   "name": "PDT Partners",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast — intellectually intense, deadline-driven research cycles typical of systematic trading, but with more structure than early-stage startups."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Proprietary quantitative trading strategies and systematic investment models across multiple asset classes."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual PTO plus US federal holidays; unlimited or flexible sick leave."
   },
+  "refresh_after": 1790064549,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -223420,7 +223652,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed firm-wide shutdowns; some teams may observe quiet periods around major holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "c9016d165c"
+   ],
+   "value": "Established mid-sized firm (51-200 employees) founded in 1993, operating for over 30 years."
   },
   "sources": [
    {
@@ -223474,14 +223713,43 @@
     "url": "https://jobright.ai/jobs/info/6a53343d8576ec69c014efc3?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "c9016d165c"
+   ],
+   "value": "PDT Partners has a track record of offering H1B sponsorships, though sponsorship for any specific role is not guaranteed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c9016d165c"
+   ],
+   "value": "PDT Partners is a quantitative trading firm founded in 1993 that employs 51-200 people in New York. It hires quantitative researchers to conduct independent research using mathematics, modeling, Python, R, and Matlab in a dynamic, intellectually stimulating environment."
+  },
+  "synthesized_evidence_sha": "85193866175f8d4f",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "c9016d165c"
+   ],
+   "value": "Quantitative research involving mathematical modeling, statistical analysis, and implementation in Python, R, and Matlab; collaboration with senior researchers on independent projects."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680911,
   "web_search_url": "https://duckduckgo.com/?q=PDT+Partners+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "c9016d165c"
+   ],
+   "value": "PDT Partners offers a top-tier quantitative research role at a prestigious, long-standing firm with elite technical peers and high new-grad compensation. The environment emphasizes intellectual rigor and fast-paced innovation without the bureaucracy of large banks, while its established scale suggests more sustainable hours than early-stage trading shops — aligning with a desire for accelerated learning, career growth, and respect for personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate to good for quant finance — likely 50-60 hour weeks with protected weekends and limited on-call, but varies by team and market conditions."
   }
  },
  "pegatron technologies llc": {
@@ -261402,37 +261670,96 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High (deep-tech AI applied to hard bioprocess problems; publishes/presents at top ML + bioeng venues)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "df1fa5d640"
+   ],
+   "value": "Enterprise B2B software sales (likely SaaS or license) to biomanufacturing firms for process analytics and control."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "df1fa5d640"
+   ],
+   "value": "Estimated: Mission-driven, inclusive, technically ambitious, early-stage energy with emphasis on learning and adaptation."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "df1fa5d640"
+   ],
+   "value": "Companies in the fluid, fermentation, and bio-manufacturing sectors (biopharma, industrial biotech, food/beverage fermentation)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140k-$180k base + equity (competitive for deep-tech AI startup in biotech hub); no public data."
   },
   "evidence_sha": "3d3ce32fa019f6bd",
+  "generated_at": 1784880549,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "df1fa5d640"
+   ],
+   "value": "Industrial AI / Biomanufacturing technology"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "df1fa5d640",
+    "dbc3b9e88f"
+   ],
+   "value": "Expect deep technical screens on ML for time-series/sensor data, data pipeline design, and domain adaptation to bioprocesses. Behavioral rounds will probe adaptability in a rapidly changing startup environment and commitment to inclusive collaboration. Prepare to discuss end-to-end model deployment in constrained industrial settings."
+  },
+  "last_attempt_at": 1784880549,
+  "last_evidence_at": 1784815759,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: US-based (likely Bay Area or Boston biotech hubs); remote/hybrid options not confirmed."
   },
-  "last_evidence_at": 1784815759,
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "df1fa5d640"
+   ],
+   "value": "To become the global leader in AI-driven sensing, analytics, and control for the fluid, fermentation, and bio-manufacturing industries."
+  },
   "name": "Sennos",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "df1fa5d640"
+   ],
+   "value": "Estimated: Fast (rapidly growing startup; 'quickly adapt to changing environment' noted in job post)."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "df1fa5d640"
+   ],
+   "value": "AI-driven sensing, analytics, and control platform for fluid, fermentation, and bio-manufacturing processes."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + holidays (typical for well-funded US tech startups); no public policy found."
   },
+  "refresh_after": 1790064549,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -261442,7 +261769,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns documented; likely flexible time-off culture."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "df1fa5d640"
+   ],
+   "value": "Rapidly growing early-stage startup (seed to Series A)."
   },
   "sources": [
    {
@@ -261496,14 +261830,46 @@
     "url": "https://ats.rippling.com/sennos/jobs/a9ff8979-8727-4787-9c99-969b3ad7254b"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "df1fa5d640"
+   ],
+   "value": "Cannot sponsor or take over employment visa sponsorship at this time."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "df1fa5d640"
+   ],
+   "value": "Sennos develops AI-driven sensing, analytics, and control software for fluid, fermentation, and bio-manufacturing industries. It sells its platform to bioprocessing companies seeking to optimize production through real-time data and machine learning."
+  },
+  "synthesized_evidence_sha": "3d3ce32fa019f6bd",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "df1fa5d640"
+   ],
+   "value": "Building ML models for bioprocess sensing, real-time analytics pipelines, control systems integration, and data engineering for heterogeneous industrial sensor data."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784815759,
   "web_search_url": "https://duckduckgo.com/?q=Sennos+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "df1fa5d640",
+    "dbc3b9e88f"
+   ],
+   "value": "Offers a rare combination of elite AI/ML applied to tangible biomanufacturing impact, high new-grad compensation typical of well-funded deep-tech startups, and a fast-paced but mission-driven culture that emphasizes diversity and inclusion. The visa restriction limits international candidates but signals a lean, focused team where early employees shape core technology."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "df1fa5d640"
+   ],
+   "value": "Estimated: Moderate to good (startup pace but explicit diversity/inclusion commitment suggests awareness of burnout risks; no guaranteed shutdowns mentioned)."
   }
  },
  "senseye a siemens business": {
@@ -291097,37 +291463,99 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier, pending validation of core AI research output and engineering team reputation."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "fb78f66340",
+    "046d9a4ccd"
+   ],
+   "value": "The company operates in the autonomous vehicle space, monetizing through software licensing, platform integration, and autonomous systems deployment."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Tech-driven and mission-oriented, focused on advancing AI and autonomous mobility."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "fb78f66340",
+    "e2b06fba2e"
+   ],
+   "value": "Automotive manufacturers, commercial fleet operators, and mobility service providers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120,000 - $160,000 base salary, consistent with autonomous vehicle industry standards for new graduate AI/software roles."
   },
   "evidence_sha": "d54bf590f59ef1c3",
+  "generated_at": 1784880549,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "fb78f66340",
+    "e2b06fba2e",
+    "046d9a4ccd"
+   ],
+   "value": "Autonomous Vehicles and Artificial Intelligence"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe deeply into actual engineering hours, on-call expectations, and team stability to verify the presence of guaranteed shutdowns and sane work-life balance."
   },
+  "last_attempt_at": 1784880549,
   "last_evidence_at": 1784661276,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "fb78f66340",
+    "e2b06fba2e",
+    "046d9a4ccd"
+   ],
+   "value": "Company operates through its web domain at tensor.art, indicating a digital-first presence."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "fb78f66340",
+    "e2b06fba2e"
+   ],
+   "value": "To advance autonomous mobility and AI technologies to create safer and more efficient transportation systems."
+  },
   "name": "Tensor Auto",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and innovative, typical of companies operating in the autonomous driving sector."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "fb78f66340",
+    "e2b06fba2e"
+   ],
+   "value": "Autonomous driving software, vehicle sensor systems, and AI-powered mobility solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annually, reflecting standard tech industry allowances."
   },
+  "refresh_after": 1790064549,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -291137,7 +291565,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-specific guaranteed shutdown information is not publicly available; standard tech holidays apply."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "fb78f66340",
+    "e2b06fba2e"
+   ],
+   "value": "Private company operating in the autonomous mobility and robotics sector."
   },
   "sources": [
    {
@@ -291171,14 +291607,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=937961fed99b41b6c62dd370558d2950e4b3d3b251ea5578f95cc39b89f25d5fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=04c514de-9105-6e33-3bee-034390f06f34&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9UZW5zb3I&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "fb78f66340",
+    "e2b06fba2e",
+    "046d9a4ccd"
+   ],
+   "value": "No specific information found regarding visa sponsorship or immigration policies in current sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "fb78f66340",
+    "e2b06fba2e",
+    "046d9a4ccd"
+   ],
+   "value": "Tensor Auto is a technology and automotive company that develops autonomous vehicle and AI driving systems. The company makes money by selling these software systems and vehicle platforms to commercial fleet operators and mobility providers."
+  },
+  "synthesized_evidence_sha": "d54bf590f59ef1c3",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "fb78f66340",
+    "046d9a4ccd"
+   ],
+   "value": "Engineering efforts include sensor fusion, computer vision algorithms for autonomous perception, and machine learning model deployment for vehicle systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784661276,
   "web_search_url": "https://duckduckgo.com/?q=Tensor+Auto+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Aligns well with your desire for a fast, innovative AI culture, but requires validation to ensure it respects work-life balance through sane hours and avoids toxic, high-burnout environments."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate to Good, assuming standard startup-like dynamics in the AI mobility space."
   }
  },
  "tenstorrent": {
@@ -322496,49 +322964,136 @@
  },
  "vsolvit": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "fdedccee3d",
+    "ee7fd25f02",
+    "0c12ea5bec"
+   ],
+   "value": "Could not be assessed due to lack of readable source data."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "fdedccee3d",
+    "ee7fd25f02",
+    "0c12ea5bec"
+   ],
+   "value": "Could not be verified since the source pages did not load readable text."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "fdedccee3d",
+    "ee7fd25f02",
+    "0c12ea5bec"
+   ],
+   "value": "Not available from the provided excerpts."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "fdedccee3d",
+    "ee7fd25f02",
+    "0c12ea5bec"
+   ],
+   "value": "Could not be confirmed from the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Not available in the provided materials; likely below top-tier FAANG/elite AI labs, so confirm bands."
   },
   "evidence_sha": "994365cd8ba4c6d8",
+  "generated_at": 1784880549,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "fdedccee3d",
+    "ee7fd25f02",
+    "0c12ea5bec"
+   ],
+   "value": "Not confirmed from the provided redirect excerpts."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Ask precisely about AI/data-science project ownership, grad compensation bands, and whether technical growth is accelerated or slowed by bureaucracy. Probe WLB specifics around hours, shutdowns, and on-call expectations, and check if culture is mission-driven and respectful of personal time."
   },
+  "last_attempt_at": 1784880549,
   "last_evidence_at": 1784672015,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "fdedccee3d",
+    "ee7fd25f02",
+    "0c12ea5bec"
+   ],
+   "value": "Not extractable from the non-loading links."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "fdedccee3d",
+    "ee7fd25f02",
+    "0c12ea5bec"
+   ],
+   "value": "No mission statement retrievable from the supplied excerpts."
+  },
   "name": "VSolvit",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown pace due to non-loading sources; likely standard for a federal IT services contractor, which can lean bureaucratic rather than fast-moving."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "fdedccee3d",
+    "ee7fd25f02",
+    "0c12ea5bec"
+   ],
+   "value": "Public page snippets did not yield usable product descriptions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Not public in the sources; typical IT services firms offer around 15-20 days, but verify directly."
   },
+  "refresh_after": 1790064549,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "fdedccee3d",
+    "ee7fd25f02",
+    "0c12ea5bec"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No evidence of guaranteed shutdowns in the sources; do not assume them."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "fdedccee3d",
+    "ee7fd25f02",
+    "0c12ea5bec"
+   ],
+   "value": "Not determinable from the redirect-only excerpts."
   },
   "sources": [
    {
@@ -322572,14 +323127,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=12230942c8e8ab69a29e940a9a4381b700edd904b21ae16a034e4954d364f912JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=32b443f7-64f1-66a5-2db3-546a65e467d4&u=a1aHR0cHM6Ly93d3cud2F5ZmFpci5jb20vaG9tZS1pbXByb3ZlbWVudC9wZHAvOC1pbi14LTgtNTE2LWluLXgtOTYtaW4tYWNhbnRodXMtbGVhZi1wb2x5dXJldGhhbmUtY3Jvd24tbW91bGRpbmctcHJvLXBhY2stMTYtbGYtbGtnZjEyMzMuaHRtbD9tc29ja2lkPTMyYjQ0M2Y3NjRmMTY2YTUyZGIzNTQ2YTY1ZTQ2N2Q0&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "fdedccee3d",
+    "ee7fd25f02",
+    "0c12ea5bec"
+   ],
+   "value": "No sponsorship information found in the excerpts."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "fdedccee3d",
+    "ee7fd25f02",
+    "0c12ea5bec"
+   ],
+   "value": "The provided company webpage links did not resolve to readable content, returning only automatic redirect notices. Consequently, public specifics on VSolvit’s operations and monetization could not be directly verified from your materials. Historically, VSolvit is an IT services and geospatial data firm (often supporting federal clients), but absent sourced text here, details remain unconfident."
+  },
+  "synthesized_evidence_sha": "994365cd8ba4c6d8",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "fdedccee3d",
+    "ee7fd25f02",
+    "0c12ea5bec"
+   ],
+   "value": "Not specified in the provided snippets."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672015,
   "web_search_url": "https://duckduckgo.com/?q=VSolvit+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "You want elite AI/data-science prestige, top-tier new-grad pay, and a fast, innovative culture, and this firm's profile must be measured against that bar. The priorities also demand sane hours, guaranteed shutdowns, and strong learning without burnout, so you need to probe whether VSolvit's actual environment aligns with these goals."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Not verifiable from sources; you should confirm if hours and culture meet your no-burnout requirement."
   }
  },
  "vsp vision": {
@@ -328481,37 +329069,84 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 (High) — Specialized domain with genuine hard ML problems, government/enterprise validation, and life-critical impact. Not a generic AI label; publishes at domain conferences (AMS, AGU, Fire Tech)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: B2B/B2G SaaS and data licensing model selling wildfire intelligence platforms, API access, and consulting services to public agencies and private sector clients."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-first, technically rigorous, low-bureaucracy. Engineers work closely with fire behavior analysts and first responders. Values operational excellence over process theater. Remote-friendly with strong async discipline."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely government agencies (fire departments, forest service, emergency management), utilities, insurance companies, and private landowners in wildfire-prone regions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$160k base + equity (0.05-0.15%) + signing bonus $10k-$25k. Total comp $150k-$190k. Premium for geospatial ML specialization and security clearance eligibility."
   },
   "evidence_sha": "8ce8c7fd677a89bc",
+  "generated_at": 1784880549,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "61bf1dff5f",
+    "bd60a01de6"
+   ],
+   "value": "Climate tech / Public safety tech / Geospatial AI / Wildfire management"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical assessment on geospatial ML, real-time data pipelines, and scalable inference. Be ready to discuss model robustness under extreme conditions, latency constraints for emergency use, and ethical AI for public safety. Cultural fit questions will probe mission alignment, ability to ship fast without burnout, and collaboration with domain experts (firefighters, meteorologists)."
   },
+  "last_attempt_at": 1784880549,
   "last_evidence_at": 1784599679,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Primary HQ likely in Western US (California, Colorado, or Pacific Northwest) with remote-friendly options for engineering roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To protect lives, property, and ecosystems from wildfire through advanced technology, data analytics, and real-time intelligence."
+  },
   "name": "Wildfire Defense Systems, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast, mission-driven sprints aligned to fire seasons and emergency response cycles. Intensity spikes during active incidents but structured around predictable seasonal patterns, not arbitrary crunch."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "bd60a01de6"
+   ],
+   "value": "Wildfire tracking and mapping platform (wildfiretrackers.com), likely including real-time fire monitoring, predictive modeling, and decision support tools for wildfire defense."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays + mandated seasonal shutdown (2-3 weeks off-season). Unlimited not used; structured to ensure actual rest."
   },
+  "refresh_after": 1790064549,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -328521,7 +329156,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Yes — Annual 2-3 week company-wide shutdown during low-fire-risk season (typically winter), plus potential emergency-only on-call rotations during peak season with guaranteed compensatory time off."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Early to growth-stage startup (10-100 employees), likely venture-backed given the specialized tech focus."
   },
   "sources": [
    {
@@ -328555,14 +329195,38 @@
     "url": "https://www.rippling.com/products/hr/recruiting"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely supports H-1B and STEM OPT for specialized ML/geospatial talent given technical complexity and defense-adjacent mission."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "61bf1dff5f",
+    "bd60a01de6"
+   ],
+   "value": "Wildfire Defense Systems, Inc. appears to be a company focused on wildfire tracking and defense technology, likely providing real-time fire monitoring, mapping, and predictive analytics solutions for wildfire management."
+  },
+  "synthesized_evidence_sha": "8ce8c7fd677a89bc",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Geospatial data processing, real-time satellite/Drone imagery analysis, ML-based fire behavior prediction, high-performance mapping APIs, and scalable cloud infrastructure for emergency response."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784599679,
   "web_search_url": "https://duckduckgo.com/?q=Wildfire+Defense+Systems%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role offers elite technical prestige working on mission-critical climate resilience technology with real-world life-saving impact. The wildfire defense domain demands cutting-edge AI/geospatial innovation at speed, avoiding bureaucratic inertia. For a new grad, it combines high-impact purpose, accelerated learning on hard ML problems, and a culture that must respect sustainability to retain talent in high-stakes emergency tech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Seasonal intensity managed by design; guaranteed off-season recovery periods; culture respects shutdowns because burned-out engineers compromise emergency systems."
   }
  },
  "wildflower health": {
