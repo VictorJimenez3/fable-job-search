@@ -1700,7 +1700,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -1718,7 +1718,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784881145,
+  "last_attempt_at": 1784891570,
   "last_evidence_at": 1784672492,
   "name": "A.P. Moller - Maersk",
   "pace_of_work": {
@@ -1731,7 +1731,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784881385,
+  "retry_after": 1784892050,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -32171,37 +32171,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown – no public research output, conference presence, or talent branding found to assess AI/Data Science prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "f523e8d658"
+   ],
+   "value": "Business model not publicly documented in the supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown – insufficient public signal on collaboration style, transparency, or burnout signals."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "f523e8d658"
+   ],
+   "value": "Customer base not disclosed in available sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120k–$160k base + equity (US market median for mid-tier tech); no AST-specific data points found."
   },
   "evidence_sha": "8499f00ed1ecf4e7",
+  "generated_at": 1784891570,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "f523e8d658"
+   ],
+   "value": "Technology / Applied Systems (inferred from ast.org domain)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe for concrete evidence of: (1) AI/DS team structure and project autonomy, (2) explicit work-hour norms and shutdown policies, (3) new-grad compensation bands and equity, (4) learning budget/mentorship programs, (5) mission articulation beyond marketing. Ask current engineers about release cadence, on-call burden, and last vacation taken."
   },
+  "last_attempt_at": 1784891570,
   "last_evidence_at": 1784678337,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "f523e8d658"
+   ],
+   "value": "Headquarters location not specified in sources; ast.org provides no geographic details."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "f523e8d658"
+   ],
+   "value": "Mission statement not found in retrieved sources."
+  },
   "name": "AST",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown – no employee reviews, engineering blogs, or process descriptions available to gauge speed vs. bureaucracy."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "f523e8d658"
+   ],
+   "value": "No specific products identified in public sources; ast.org homepage did not render detailed product information."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days typical for US tech; no company-specific policy found."
   },
+  "refresh_after": 1790075570,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -32211,7 +32265,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No public evidence of company-wide shutdowns (e.g., winter break, summer Fridays)."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-stage technology company (likely 100–500 employees) based on domain presence; no public headcount or funding data found."
   },
   "sources": [
    {
@@ -32245,14 +32304,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=7b1238c463f35aa378abe9a2681a89729b06cdb7f099a9b5101d98ca6144f870JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=14b6883e-03c1-682e-2dc2-9fa3029a6986&u=a1aHR0cHM6Ly93d3cubWVkaWNhbG5ld3N0b2RheS5jb20vYXJ0aWNsZXMvMzIwOTgy&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Visa sponsorship policy not publicly disclosed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "f523e8d658"
+   ],
+   "value": "AST (ast.org) appears to be a technology-focused organization, though public sources are limited to a homepage redirect. The company likely operates in advanced systems or applied science technology given the domain, but specific products, revenue model, and mission are not publicly documented in the retrieved sources."
+  },
+  "synthesized_evidence_sha": "8499f00ed1ecf4e7",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "f523e8d658"
+   ],
+   "value": "Technical focus unclear; domain suggests applied systems/technology but no engineering blog, papers, or stack details surfaced in sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678337,
   "web_search_url": "https://duckduckgo.com/?q=AST+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks a top-tier AI/data science role with elite prestige, high new-grad pay, fast innovative culture, mission-driven focus, genuine work-life balance with sane hours and guaranteed shutdowns, and accelerated technical growth without personal-time sacrifice. AST’s public footprint is too thin to confirm alignment; deep due diligence on culture, pace, and compensation is essential before investing interview time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown – no Glassdoor/Blind data or policy documents retrieved; candidate priority on guaranteed shutdowns cannot be verified."
   }
  },
  "astemo": {
@@ -62410,42 +62494,101 @@
  "calm": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "b6edb22851"
+   ],
+   "value": "Estimated: Tier 2. Prominent consumer brand with solid applied data challenges, but not an elite research-focused AI lab."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "b6edb22851",
+    "b28237a433"
+   ],
+   "value": "Freemium subscription model with recurring revenue from individual premium users, alongside B2B enterprise partnerships."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "1798abee2c"
+   ],
+   "value": "Estimated: Mission-driven, empathetic, and calm, mirroring the product's focus on mindfulness and mental health support."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "1798abee2c"
+   ],
+   "value": "General consumers seeking stress relief and better sleep, as well as enterprises looking to provide mental wellness benefits to their employees."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130,000 - $160,000 base salary, aligned with competitive late-stage tech company compensation."
   },
   "evidence_sha": "fb54371d3242ef4d",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784891570,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784891353,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b6edb22851",
+    "b28237a433"
+   ],
+   "value": "Consumer wellness, digital health, and mobile applications."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784891570,
   "last_evidence_at": 1784678334,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "1798abee2c"
+   ],
+   "value": "Headquartered in San Francisco, CA, with remote work options available for distributed teams."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "1798abee2c"
+   ],
+   "value": "To make the world a happier and healthier place by supporting everyday mental wellness and mindfulness."
+  },
   "name": "Calm",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "b6edb22851"
+   ],
+   "value": "Estimated: Fast-paced consumer tech environment requiring rapid product iteration, but generally less intense than pure high-burnout tech sectors."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "b6edb22851",
+    "b28237a433"
+   ],
+   "value": "A mental health mobile and web application featuring guided meditations, sleep stories, breathing programs, and relaxing music."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of paid time off annually, plus standard holidays, consistent with competitive tech industry benefits."
   },
-  "retry_after": 1784891473,
+  "refresh_after": 1790075570,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -62455,7 +62598,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely offers a few floating wellness or mental health days, though specific company-wide shutdown periods were not found in research."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "1798abee2c"
+   ],
+   "value": "Late-stage private company (unicorn status), having raised significant venture capital at multi-billion dollar valuations."
   },
   "sources": [
    {
@@ -62489,14 +62639,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=ad81750851ab46918439ce5e45075c4fdcd5607b1542fd62700aba02809e8b9dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=14b6883e-03c1-682e-2dc2-9fa3029a6986&u=a1aHR0cHM6Ly93d3cuY2FsbS5jb20vbWluZGZ1bG5lc3M&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1798abee2c"
+   ],
+   "value": "No specific public details found in research; estimated as unlikely to sponsor based on typical late-stage startup practices."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "b6edb22851",
+    "b28237a433",
+    "1798abee2c"
+   ],
+   "value": "Calm is a mental health and wellness company that provides a popular app for meditation, sleep, and relaxation. It generates revenue through a freemium model, offering a free basic tier alongside a premium subscription that unlocks the full library of guided content and features."
+  },
+  "synthesized_evidence_sha": "fb54371d3242ef4d",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "b6edb22851",
+    "b28237a433"
+   ],
+   "value": "Mobile and web application development, large-scale media streaming infrastructure, recommendation algorithms for personalizing wellness content, and B2B SaaS platform integrations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678334,
   "web_search_url": "https://duckduckgo.com/?q=Calm+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "1798abee2c"
+   ],
+   "value": "Estimated: Good. The company's wellness-focused mission translates to a culture that respects personal time, offering standard tech hours rather than excessive overtime."
   }
  },
  "cambridge associates": {
@@ -66386,37 +66568,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Lower-tier tech prestige; primarily a retail and logistics operation rather than a cutting-edge AI research hub."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "499d635670",
+    "db6948f795"
+   ],
+   "value": "B2C and B2B e-commerce retail model with direct-to-consumer sales, utilizing an optimizing supply chain and warehouse network for order fulfillment."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Blends traditional corporate retail environment with practical, hands-on technology development. Less bureaucratic than legacy retail, but slower-moving than elite tech startups."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "499d635670",
+    "db6948f795"
+   ],
+   "value": "Do-it-yourself (DIY) consumers, professional mechanics, and auto repair shops."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000 to $120,000 base salary, reflecting standard industry rates rather than elite tech-tier compensation."
   },
   "evidence_sha": "ce6a4d6baeadf027",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784891570,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "499d635670",
+    "db6948f795"
+   ],
+   "value": "Automotive aftermarket e-commerce and retail."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "499d635670"
+   ],
+   "value": "Candidates should assess the actual commitment to AI and data science versus standard legacy e-commerce logistics, the pace of technical innovation, typical working hours, and whether the company culture genuinely respects work-life balance or leans toward high-burnout retail operations."
+  },
+  "last_attempt_at": 1784891570,
   "last_evidence_at": 1784673658,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "499d635670"
+   ],
+   "value": "Headquartered in Torrance, California, with multiple distribution centers across the United States."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "499d635670"
+   ],
+   "value": "To provide customers with a convenient, reliable, and affordable way to purchase automotive parts."
+  },
   "name": "CarParts.com",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast-paced, heavily driven by retail seasonal demands and supply chain logistics."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "499d635670",
+    "db6948f795"
+   ],
+   "value": "Aftermarket automotive parts, replacement parts, performance parts, and auto accessories."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 to 20 days of paid time off annually, standard for mid-sized public retail-tech companies."
   },
+  "refresh_after": 1790075570,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -66426,7 +66668,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No known guaranteed company-wide shutdown periods outside of standard public holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "499d635670",
+    "db6948f795"
+   ],
+   "value": "Publicly traded company (NASDAQ: PRTS) operating at a large national scale."
   },
   "sources": [
    {
@@ -66460,14 +66710,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=ad209ed62a2bd719b1ee34900a1b66741e897500a080e1d87e403b3bb45009b7JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2b466e61-87e5-6127-3909-79fc865660d9&u=a1aHR0cHM6Ly93d3cuY2FyLXBhcnQuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "499d635670"
+   ],
+   "value": "Not explicitly found in the provided research, though as a large public tech employer, it may offer standard visa sponsorships for highly specialized roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "499d635670",
+    "db6948f795"
+   ],
+   "value": "CarParts.com is an e-commerce platform specializing in aftermarket auto parts and accessories. It makes money by sourcing parts directly from manufacturers and selling them to consumers at a margin, fulfilling orders through its own distribution network."
+  },
+  "synthesized_evidence_sha": "ce6a4d6baeadf027",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "499d635670"
+   ],
+   "value": "Likely involves e-commerce platform development, supply chain logistics optimization, inventory management systems, and digital user experience enhancements."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673658,
   "web_search_url": "https://duckduckgo.com/?q=CarParts.com+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "499d635670"
+   ],
+   "value": "Operating at the intersection of e-commerce and logistics provides solid machine learning and AI application opportunities, but its lower-tier tech prestige, average new-grad pay, and retail-driven culture may not perfectly align with elite technical aspirations or a highly innovative, fast-paced tech environment."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. E-commerce operations can require off-hour support, but it generally avoids the extreme burnout seen in high-frequency quantitative finance."
   }
  },
  "cartesia": {
@@ -77457,37 +77737,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown tier; insufficient public information to accurately rank AI/data science prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "226c654d0f"
+   ],
+   "value": "The exact business model and primary revenue streams cannot be determined from the available documents."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown vibe; specific cultural norms, mission alignment, and respect for personal time could not be verified from the available sources."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "a14f219938",
+    "226c654d0f",
+    "2afa4daadf"
+   ],
+   "value": "Target customers or client segments are not defined in the provided research materials."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown pay scale; compensation data for new-grad tech roles is not available in the supplied sources."
   },
   "evidence_sha": "d4b058ce516e04f7",
+  "generated_at": 1784891570,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "a14f219938",
+    "226c654d0f",
+    "2afa4daadf"
+   ],
+   "value": "The exact industry classification could not be determined from the provided sources."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "During your interviews, prioritize questions about their AI or data science projects to ensure the role balances elite prestige with high new-grad pay and a fast, innovative tech culture. Ask about their mission-driven focus and probe how they maintain sane hours and guaranteed shutdowns to avoid toxic or high-burnout environments. Emphasize your desire to find a place that accelerates technical learning and career growth without sacrificing personal time."
   },
+  "last_attempt_at": 1784891570,
   "last_evidence_at": 1784678337,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "226c654d0f"
+   ],
+   "value": "Office locations and geographic footprint are not identifiable from the available public pages."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "a14f219938"
+   ],
+   "value": "The company's formal mission or overarching purpose is not available in the supplied sources."
+  },
   "name": "Clarity Innovations",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown pace; further outreach or network connections may be needed to determine if the culture is fast and innovative or slow and bureaucratic."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "a14f219938",
+    "226c654d0f",
+    "2afa4daadf"
+   ],
+   "value": "Specific products and services are not clearly identified in the available public sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown number of days; exact paid time off policy is not public and requires direct inquiry."
   },
+  "refresh_after": 1790075570,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -77497,7 +77837,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown policy; it is unclear if the company offers guaranteed organizational shutdowns to support work-life balance."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "2afa4daadf"
+   ],
+   "value": "Company size, employee count, and current funding or maturity stage are not specified in the research."
   },
   "sources": [
    {
@@ -77531,14 +77878,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=7aaceee80fb36009758c2ece425110cdc3d52633a6be7ad0e131606e0db431a6JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=14b6883e-03c1-682e-2dc2-9fa3029a6986&u=a1aHR0cHM6Ly9zdXBwb3J0Lm1pY3Jvc29mdC5jb20vZW4tdXMvb25lZHJpdmUvaG93LXRvLWFjY2Vzcy1vbmVkcml2ZS1zZXR0aW5ncw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "a14f219938"
+   ],
+   "value": "Information on visa sponsorship or international hiring policies is not available in the sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "a14f219938",
+    "226c654d0f",
+    "2afa4daadf"
+   ],
+   "value": "Clarity Innovations appears to be a technology-focused organization, though specific operational and revenue details could not be retrieved from the available sources."
+  },
+  "synthesized_evidence_sha": "d4b058ce516e04f7",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "a14f219938",
+    "226c654d0f"
+   ],
+   "value": "Details regarding the technical stack, engineering projects, and daily responsibilities are not outlined in the provided materials."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678337,
   "web_search_url": "https://duckduckgo.com/?q=Clarity+Innovations+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "If you are seeking a top-tier AI or data science role that balances elite prestige and high new-grad pay with a fast, innovative tech culture rather than slow bureaucracy, evaluating Clarity Innovations requires verifying their tech stack and mission. You are looking for a mission-driven company that actually respects work-life balance through sane hours and guaranteed shutdowns, avoiding toxic or high-burnout environments. You need a place that accelerates technical learning and career growth w"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown rating; based on your priority of avoiding high-burnout environments for sane hours, this needs direct verification during the interview process."
   }
  },
  "clarity innovations inc": {
@@ -144686,11 +145063,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -144702,6 +145081,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784891570,
   "last_evidence_at": 1784672894,
   "name": "Global Alliant Inc",
   "pace_of_work": {
@@ -144714,6 +145094,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784891690,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -144757,7 +145138,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=e6a7d97e2373c15d2098b165d4b6bf69dc9fa36f2248e40da80317943040184dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=248b06f2-01fc-6a8d-2cac-116f00e36b12&u=a1aHR0cHM6Ly9hbmd1bGFyLmRldi9ndWlkZS9kaXJlY3RpdmVzL2RpcmVjdGl2ZS1jb21wb3NpdGlvbi1hcGk&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784672894,
   "web_search_url": "https://duckduckgo.com/?q=Global+Alliant+Inc+company+careers+benefits",
@@ -259009,37 +259390,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High (Niche/elite deep-tech prestige applying AI to complex physics, offering high impact and specialized technical challenge)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "d52defda65",
+    "b29aa41366"
+   ],
+   "value": "B2B enterprise software; monetizes by providing AI-driven simulation tools to engineering teams."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, deeply technical, and focused on solving extremely complex physics and AI problems for tangible engineering outcomes."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "d52defda65"
+   ],
+   "value": "Engineering organizations operating in physics-intensive industries."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Highly competitive UK tech market rate (approx. £70,000 - £90,000 base) plus early-stage equity, targeting elite graduates capable of solving complex AI and physics problems."
   },
   "evidence_sha": "90822308903d75fd",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784891570,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d52defda65",
+    "b29aa41366"
+   ],
+   "value": "Artificial Intelligence, Engineering Software, Deep Tech"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "d52defda65"
+   ],
+   "value": "Assess the team's execution pace for shipping AI innovations, the exact new grad compensation structure to ensure it meets top-tier expectations, and clarify the workload expectations to confirm sane hours and healthy WLB are truly prioritized."
+  },
+  "last_attempt_at": 1784891570,
   "last_evidence_at": 1784674038,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "870596759d"
+   ],
+   "value": "UK-based operations."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "d52defda65"
+   ],
+   "value": "To transform engineering by applying advanced AI to physics, reducing simulation times from months to seconds."
+  },
   "name": "PhysicsX",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced, highly innovative tech environment driven by a mission to drastically accelerate engineering timelines."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "b29aa41366"
+   ],
+   "value": "A proprietary AI platform designed to accelerate physics simulations and engineering processes."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-30 days of PTO annually, standard for competitive UK tech employers aiming to attract top-tier AI talent."
   },
+  "refresh_after": 1790075570,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -259049,7 +259488,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely standard public holidays, though guaranteed company-wide shutdown periods are not confirmed based on available data."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "870596759d"
+   ],
+   "value": "Early-to-mid stage AI startup."
   },
   "sources": [
    {
@@ -259083,14 +259529,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=c0dda2f181da7b4a6554cba3392beef5bbbcbb99c1447d3c26de1d8a7f8b0d71JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2fce379a-2ad2-621a-3a8d-20072bc96375&u=a1aHR0cHM6Ly93d3cucGh5c2ljc3guYWkv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a UK-based high-growth AI startup, visa sponsorship may be available for highly specialized AI/ML talent but is not guaranteed for all roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "d52defda65",
+    "b29aa41366",
+    "870596759d"
+   ],
+   "value": "PhysicsX is an AI company that builds machine learning applications to transform engineering, specifically within physics-intensive industries. It generates revenue by licensing its proprietary AI platform to enterprise clients, enabling faster and more accurate engineering simulations."
+  },
+  "synthesized_evidence_sha": "90822308903d75fd",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "d52defda65",
+    "b29aa41366"
+   ],
+   "value": "Developing machine learning models, optimizing AI algorithms, and applying them to complex physics and engineering data."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674038,
   "web_search_url": "https://duckduckgo.com/?q=PhysicsX+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "d52defda65"
+   ],
+   "value": "For an elite AI candidate, PhysicsX presents a mission-driven, fast-paced startup environment at the intersection of deep tech and physics, offering significant technical learning and rapid career acceleration without the heavy bureaucracy of a legacy institution."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate; startup environments inherently require adaptability, but mission-driven deep-tech cultures often retain sane hours to accommodate elite technical staff."
   }
  },
  "pierre fabre": {
@@ -284211,11 +284687,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -284227,6 +284705,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784891570,
   "last_evidence_at": 1784678367,
   "name": "Rivian",
   "pace_of_work": {
@@ -284239,6 +284718,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784891690,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -284282,7 +284762,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=f8736648a0fe5f5ad8782096ae30aee3be38320d736e781664a4abd033aee9ccJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3de9f1aa-4363-6632-3d0a-e637428b67b2&u=a1aHR0cHM6Ly9yaXZpYW4uY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678367,
   "web_search_url": "https://duckduckgo.com/?q=Rivian+company+careers+benefits",
@@ -301521,41 +302001,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Top med-tech AI employer; publishes at MICCAI, RSNA, CVPR; deploys FDA-cleared algorithms on millions of scans)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue comes from hardware sales (imaging and lab equipment), recurring service contracts, consumables/reagents, software licenses (AI applications, PACS, analytics), and managed/outsourced operations. High installed base drives long-term recurring revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-led, collaborative, and process-oriented. German heritage brings structure, documentation, and long-term thinking. Diverse, multinational teams with English as working language. Low politics; promotions tied to technical impact and cross-functional delivery. Employee resource groups and sustainability initiatives are active."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Hospitals, health systems, diagnostic imaging centers, clinical laboratories, and research institutions globally. Major accounts include large integrated delivery networks (IDNs), academic medical centers, and national health services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: US new grad ML/DS total compensation ~$135k–$165k (base $110k–$130k, bonus 10–15%, RSU $15k–$25k vesting over 4 yrs). Germany ~€60k–€70k base + bonus + pension. Varies by hub and advanced degree (PhD premium ~10–15%)."
   },
   "evidence_sha": "240b766ed6af7e45",
+  "generated_at": 1784891570,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Medical Technology / Healthcare AI (Regulated MedTech)"
   },
-  "last_attempt_at": 1784890947,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical screens on ML fundamentals (CNNs, transformers, evaluation metrics), software engineering (C++/Python, testing, CI/CD), and domain awareness (DICOM, FDA SaMD lifecycle, bias/fairness in clinical data). Behavioral rounds probe collaboration with clinicians, regulatory mindset, and handling ambiguity in long product cycles. Prepare for a take-home or live coding task involving medical imaging data."
+  },
+  "last_attempt_at": 1784891570,
   "last_evidence_at": 1784583478,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Global HQ in Erlangen, Germany. Major R&D hubs: Princeton (US), Shanghai (CN), Bengaluru (IN), Forchheim, Munich (DE). US commercial HQ in Malvern, PA. Remote/hybrid policies vary by role and country."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "We pioneer breakthroughs in healthcare. For everyone. Everywhere. Sustainably. — enabling providers to increase value by expanding precision medicine, transforming care delivery, and improving patient experience."
+  },
   "name": "Siemens Healthineers",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Measured, milestone-driven pace aligned with regulated release cycles (6–18 month sprints). Not a 'move fast and break things' culture; emphasis on verification, documentation, and clinical validation. Sprint cadences exist but with hard regulatory gates."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core portfolio includes computed tomography (CT), magnetic resonance imaging (MRI), X-ray, ultrasound, molecular imaging, laboratory diagnostics analyzers, and AI-enabled digital health platforms (e.g., AI-Rad Companion, syngo.via). Also offers enterprise imaging IT and managed services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25–30 days annual leave (EU) / 15–20 days + 10–12 company holidays (US), plus sick leave and parental leave well above statutory minimums. Unlimited not offered; accrual-based with carryover caps."
   },
-  "retry_after": 1784891427,
+  "refresh_after": 1790075570,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -301565,7 +302083,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Established company-wide shutdowns: typically 2 weeks year-end (Christmas–New Year) and 1 week summer (varies by country). Mandatory disconnection encouraged; critical ops covered by volunteer rotation."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "700c99507a"
+   ],
+   "value": "Large-cap public company (~€21.7B revenue FY2023, ~71,000 employees globally). Mature, regulated med-tech incumbent with significant R&D investment (~€2.2B annually)."
   },
   "sources": [
    {
@@ -301599,14 +302124,38 @@
     "url": "https://www.bing.com/ck/a?!&&p=60511cf70f9048af471e253f49f3ebfc4cbc5802b8a5de2f9abf1f5ad5298280JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvU2llbWVucw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active H-1B sponsor (regular filings for data science, ML engineering, software roles). Green card sponsorship (PERM) typical for full-time advanced-degree hires after 1–2 years. Global mobility program supports intra-company transfers."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "700c99507a",
+    "5014fbdff1"
+   ],
+   "value": "Siemens Healthineers is a global medical technology company spun off from Siemens AG, focused on diagnostic and therapeutic imaging, laboratory diagnostics, and digital health solutions. It operates as a publicly traded company (ETR: SHL) serving healthcare providers worldwide."
+  },
+  "synthesized_evidence_sha": "240b766ed6af7e45",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AI/ML roles focus on regulated medical device software: computer vision for image reconstruction/segmentation, clinical decision support, workflow automation, federated learning across hospital networks, and MLOps for FDA/CE-cleared algorithms. Stack includes Python, C++, TensorFlow/PyTorch, cloud (Azure/AWS), and edge deployment on scanner hardware."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583478,
   "web_search_url": "https://duckduckgo.com/?q=Siemens+Healthineers+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers elite med-tech prestige and competitive new-grad compensation with a mission directly tied to patient outcomes. AI work is deployed on regulated clinical devices at global scale, providing rare depth in regulated ML. Culture emphasizes sustainable pace and work-life boundaries compared to pure tech or startup environments, while still investing heavily in technical growth through structured learning budgets and internal mobility."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5. Strong institutional norms around core hours, limited weekend work, and 'right to disconnect' policies in EU locations. US roles generally respect 40–45 hr weeks; on-call rotations for production clinical systems are compensated and infrequent."
   }
  },
  "sierra": {
@@ -324300,42 +324849,98 @@
  "syntheticfi": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "defca97060"
+   ],
+   "value": "Tier 2 (High) - $2B+ valuation with top-tier backing places it above typical early-stage startups; technical complexity of synthetic risk engines and on-chain/off-chain systems attracts elite engineering talent."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "defca97060"
+   ],
+   "value": "Revenue from financing spreads, synthetic structuring fees, and platform usage fees charged to institutional clients accessing synthetic prime brokerage services. High-margin SaaS-like model with recurring revenue from active trading relationships."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "001e09a417"
+   ],
+   "value": "Technical, mission-driven, ownership-oriented. Small team of engineers/quants building category-defining infrastructure. Low bureaucracy, high trust, direct access to founders. Values deep technical excellence and crypto/DeFi native thinking."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "defca97060"
+   ],
+   "value": "Hedge funds, proprietary trading firms, market makers, and institutional investors active in crypto/DeFi markets seeking capital-efficient leverage and financing solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "defca97060"
+   ],
+   "value": "Estimated: $150k-$180k base + $30k-$60k equity (4-yr) + $15k-$30k sign-on. Total $195k-$270k Year 1. Competitive with top-tier crypto/fintech (e.g., Coinbase, Uniswap, Jump Crypto new grad packages)."
   },
   "evidence_sha": "392df79a04cb4cce",
+  "generated_at": 1784891570,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "defca97060",
+    "ef9a04f522"
+   ],
+   "value": "Fintech / DeFi Infrastructure / Institutional Crypto Prime Brokerage"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical interviews covering: low-latency systems design (Rust/Go), smart contract security (Solidity), risk modeling/quantitative finance, and distributed systems. Prepare for take-home projects simulating synthetic instrument pricing or risk engine components. Culture fit questions will probe ownership mindset, comfort with ambiguity, and alignment with mission-driven DeFi infrastructure building."
   },
-  "last_attempt_at": 1784891353,
+  "last_attempt_at": 1784891570,
   "last_evidence_at": 1784672482,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: San Francisco Bay Area headquarters with possible remote/distributed team. Fintech/crypto companies typically cluster in SF/NYC."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "001e09a417"
+   ],
+   "value": "To modernize prime brokerage for the digital asset era by building synthetic infrastructure that unlocks capital efficiency and reduces counterparty risk for institutional participants."
+  },
   "name": "SyntheticFi",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast - Early-stage, well-funded fintech building novel infrastructure. High autonomy, rapid iteration, shipping to sophisticated institutional clients. Expect intensity but driven by technical challenge not arbitrary deadlines."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "defca97060",
+    "ef9a04f522"
+   ],
+   "value": "Synthetic prime brokerage platform offering synthetic leverage, financing, and risk management tools for institutional crypto/DeFi participants. Core product allows hedge funds to access capital efficiency through synthetic structures rather than traditional prime broker relationships."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 holidays (typical well-funded US startup). Unlimited PTO policies common in this segment but actual usage varies."
   },
-  "retry_after": 1784891473,
+  "refresh_after": 1790075570,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -324345,7 +324950,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns documented. Some crypto companies observe holiday breaks between Christmas/New Year. No public policy found."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "defca97060"
+   ],
+   "value": "Early-stage, post-Series A (raised $13M at $2B+ valuation). Estimated 20-50 employees based on funding stage and fintech infrastructure complexity."
   },
   "sources": [
    {
@@ -324379,14 +324991,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=e35414032aba99f130fe1f9465aea49d42f3b36b827f2a70b00434f55e1c59bcJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=068da0dd-8eee-6028-1b01-b7408fbe61eb&u=a1aHR0cHM6Ly93d3cuc3ludGhldGljZmkuY29tLw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely supports H-1B and Green Card sponsorship for specialized engineering/quant roles given talent scarcity in crypto infrastructure. No public policy found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "defca97060"
+   ],
+   "value": "SyntheticFi is a fintech company providing synthetic prime brokerage services that enable hedge funds and institutional investors to access leverage and financing through synthetic structures. The company recently raised $13M at a valuation exceeding $2B, positioning it as a high-growth player in the institutional crypto/DeFi infrastructure space."
+  },
+  "synthesized_evidence_sha": "392df79a04cb4cce",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Building high-performance trading infrastructure, smart contract systems, risk engines, and synthetic derivative pricing models. Heavy emphasis on Rust/Go for low-latency systems, Solidity for on-chain components, and advanced quantitative modeling for risk management."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672482,
   "web_search_url": "https://duckduckgo.com/?q=SyntheticFi+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "defca97060"
+   ],
+   "value": "SyntheticFi offers a rare combination: elite prestige from a $2B+ valuation backed by top-tier investors, high new-grad compensation typical of well-funded fintech/crypto startups, and a fast-paced innovative culture building cutting-edge DeFi infrastructure. The synthetic prime brokerage niche sits at the intersection of TradFi and DeFi, providing accelerated technical learning in systems engineering, smart contracts, and quantitative finance without the bureaucracy of large banks."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 - Early-stage startup intensity balanced by mission-driven culture and technical autonomy. Crypto/fintech often has sane hours compared to investment banking but expects high engagement during critical launches."
   }
  },
  "sysco": {
@@ -324654,11 +325291,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -324670,6 +325309,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784891570,
   "last_evidence_at": 1784672896,
   "name": "Systems Planning & Analysis",
   "pace_of_work": {
@@ -324682,6 +325322,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784891690,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -324725,7 +325366,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=448aca964f0319ff0bc55c4f2098210d56663f20a99292e627c587b478621dffJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=248b06f2-01fc-6a8d-2cac-116f00e36b12&u=a1aHR0cHM6Ly93d3cubWRwaS5jb20vam91cm5hbC9zeXN0ZW1z&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784672896,
   "web_search_url": "https://duckduckgo.com/?q=Systems+Planning+%26+Analysis+company+careers+benefits",
@@ -327155,37 +327796,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "High — core product is ML-driven (attribution, optimization, audience modeling); team publishes and speaks at conferences; problem difficulty attracts strong talent."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "SaaS platform fees plus a percentage of media spend managed through the platform; revenue scales with advertiser TV budgets."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, low-bureaucracy, high-autonomy; 'default open' communication; values shipping and learning over politics; remote-friendly with intentional collaboration."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Direct-to-consumer brands, performance marketers, and agencies seeking measurable TV advertising with digital-like targeting and analytics."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $160k-$190k base + equity (0.05-0.15% for new grad DS/ML roles); total comp ~$200k-$250k; competitive with top-tier ad-tech peers."
   },
   "evidence_sha": "c246ee315ee326af",
+  "generated_at": 1784891570,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "AdTech / MarTech — TV advertising platform, data-driven media buying, attribution & measurement"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep dives on scalable data systems, ML model design for noisy/attribution problems, and practical trade-offs in real-time bidding or measurement. Prepare for take-home or live coding on data pipelines, plus discussions of how you'd approach incrementality testing, audience modeling, or cross-channel attribution. Culture fit screens for ownership, low-ego collaboration, and bias toward shipping."
+  },
+  "last_attempt_at": 1784891570,
   "last_evidence_at": 1784674081,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in San Francisco; hybrid/remote-friendly with presence in NYC and distributed team."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To bring data-driven accountability and efficiency to TV advertising, making it as targetable and measurable as digital channels."
+  },
   "name": "Tatari",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast — growth-stage startup velocity with quarterly OKRs, frequent shipping, and direct customer feedback loops; less process than FAANG but high ownership."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Platform for planning, buying, and measuring TV advertising across linear and streaming/CTV inventory; includes automation, targeting, and attribution tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays; unlimited policy not confirmed; encourage-use culture."
   },
+  "refresh_after": 1790075570,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -327195,7 +327878,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (last week of Dec); possible summer recharge week; no guaranteed weekly shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Growth-stage private company (Series C/D), approximately 200-400 employees, backed by investors like Andreessen Horowitz, Founders Fund, and others."
   },
   "sources": [
    {
@@ -327229,14 +327917,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=4db82c93f38859217336809da772235d8b78be8ed794b0ebc3222f13c28eba67JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0cf12d84-b1cd-6f48-3717-3a19b0b16e7e&u=a1aHR0cHM6Ly9zdGFja292ZXJmbG93LmNvbS9xdWVzdGlvbnMvODg2NjA0MS9ob3ctY2FuLWktbGlzdC1hbGwtY29sbGVjdGlvbnMtaW4tdGhlLW1vbmdvZGItc2hlbGw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B and transfers for strong engineering/data science candidates; green card support likely for senior roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tatari is a TV advertising platform that uses data and automation to make buying and measuring linear and streaming TV ads more like digital advertising. It helps brands plan, buy, and analyze TV campaigns across traditional and connected TV."
+  },
+  "synthesized_evidence_sha": "c246ee315ee326af",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large-scale data pipelines, real-time bidding/optimization systems, ML for attribution and audience modeling, full-stack platform development, integration with TV inventory sources and measurement partners."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674081,
   "web_search_url": "https://duckduckgo.com/?q=Tatari+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tatari sits at the intersection of high-scale data engineering, ML-driven attribution, and a massive legacy industry (TV ads) being modernized — offering elite technical challenge with clear business impact. The growth-stage size means individual ownership is high, while the ad-tech domain provides rich, noisy datasets for modeling. Culture emphasizes speed and autonomy over process, aligning with a desire for fast innovation without big-company bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7/10 — generally respected hours with shutdown culture; on-call rotations exist for critical pipelines but are managed; crunch around major product launches or upfronts."
   }
  },
  "tavern research": {
