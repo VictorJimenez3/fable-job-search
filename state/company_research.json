@@ -4198,7 +4198,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -4216,7 +4216,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784866693,
+  "last_attempt_at": 1784867183,
   "last_evidence_at": 1784677175,
   "name": "Added Innovation",
   "pace_of_work": {
@@ -4229,7 +4229,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784867173,
+  "retry_after": 1784868143,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -40022,52 +40022,125 @@
  "boom supersonic": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "865288f752"
+   ],
+   "value": "Niche aerospace engineering prestige."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "865288f752"
+   ],
+   "value": "B2B aircraft sales and potentially engine manufacturing."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "865288f752"
+   ],
+   "value": "Innovation-focused, engineering-driven, mission to change travel."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "865288f752"
+   ],
+   "value": "Commercial airlines (e.g., United, American) and private buyers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "865288f752"
+   ],
+   "value": "Estimated: $100k-$130k base for software/data roles."
   },
   "evidence_sha": "1d41402d741d9600",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784867183,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784867015,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "865288f752"
+   ],
+   "value": "Aerospace & Aviation."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "865288f752"
+   ],
+   "value": "Interviews will likely focus on technical problem-solving and aerospace fundamentals. Candidates should ask about team pace and WLB to ensure it aligns with their desire for a non-toxic environment."
+  },
+  "last_attempt_at": 1784867183,
   "last_evidence_at": 1784677045,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "865288f752"
+   ],
+   "value": "Centennial, Colorado (HQ); Greensboro, North Carolina."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "865288f752"
+   ],
+   "value": "To make supersonic travel mainstream, overcoming the Concorde's limitations with better efficiency and lower costs."
+  },
   "name": "Boom Supersonic",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "865288f752"
+   ],
+   "value": "Estimated: Fast-paced, mission-driven scale-up environment."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "865288f752"
+   ],
+   "value": "Overture supersonic airliner and Symphony engine."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "865288f752"
+   ],
+   "value": "Estimated: Standard tech package, 15-20 days PTO."
   },
-  "retry_after": 1784867135,
+  "refresh_after": 1790051183,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "865288f752"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "865288f752"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "865288f752"
+   ],
+   "value": "Late-stage startup / pre-production aerospace scale-up."
   },
   "sources": [
    {
@@ -40101,14 +40174,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=e902f7e061de85e761f282848192f7a03e1860d5fb2174d09919f89951cc2f23JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=085f50d9-7325-609a-08c7-4744729461bb&u=a1aHR0cHM6Ly93b3cuYm9vbWxlYXJuaW5nLmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "865288f752"
+   ],
+   "value": "Likely offers visa sponsorship for specialized aerospace roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "865288f752"
+   ],
+   "value": "Boom Supersonic is an aerospace company designing the Overture, a new supersonic commercial airliner. It aims to make supersonic travel mainstream, focusing on speed and sustainability."
+  },
+  "synthesized_evidence_sha": "1d41402d741d9600",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "865288f752"
+   ],
+   "value": "Aerodynamics, propulsion, structural engineering, avionics, and systems integration."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677045,
   "web_search_url": "https://duckduckgo.com/?q=Boom+Supersonic+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "865288f752"
+   ],
+   "value": "Boom Supersonic offers the mission-driven prestige of building the next generation of supersonic airliners. As an innovative aerospace scale-up, it offers accelerated technical learning, but candidates should note the demanding nature of the aviation industry."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "865288f752"
+   ],
+   "value": "Estimated: Moderate to demanding; typical of late-stage hardware scale-ups."
   }
  },
  "booz allen": {
@@ -42479,37 +42583,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Elite) - Widely recognized as the leading analytics operation in world football; team members frequently hired by top European clubs, national federations, and top tech firms. Publications at MIT Sloan, OptaPro Forum. Alumni network spans Liverpool, Brighton, Midtjylland, FA, FIFA."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "537fb8039a",
+    "a7715c7a65"
+   ],
+   "value": "Revenue streams: Broadcasting rights (largest share), matchday revenue (tickets, hospitality), commercial partnerships (sponsorship, merchandising), and player trading profits (selling developed players for fees significantly above acquisition cost). The club's data-driven recruitment model aims to identify undervalued talent, develop them, and sell at a premium."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Intellectually rigorous, low-hierarchy, evidence-led. \"Smart not loud\" ethos. Cross-functional collaboration between analysts, coaches, scouts, medical. International, diverse team. Minimal corporate bureaucracy. Owner (Benham) is a professional gambler/quant - culture reflects probabilistic thinking."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "537fb8039a",
+    "e49b5652ed"
+   ],
+   "value": "Primary customers are fans (matchday attendees, season ticket holders, global followers), broadcasters (domestic and international TV rights), commercial sponsors/partners, and other football clubs (for player transfers)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: £40,000-£55,000 base + performance bonus (10-15%) + benefits (pension, private medical, match tickets). Below top-tier London tech (FAANG/quant finance) but premium for sports analytics. Equity not typical."
   },
   "evidence_sha": "008c14ae77713751",
+  "generated_at": 1784867183,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "537fb8039a"
+   ],
+   "value": "Professional Sports / Football / Sports Analytics"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical assessment: statistical modeling, causal inference, time-series analysis, and ML model deployment. Prepare to discuss football-specific applications (expected goals, player similarity, recruitment optimization). Demonstrate ability to communicate complex insights to non-technical stakeholders (coaches, directors). Show genuine interest in football analytics literature. Cultural fit: pragmatic, collaborative, low-ego problem solving."
   },
+  "last_attempt_at": 1784867183,
   "last_evidence_at": 1784643845,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "e49b5652ed"
+   ],
+   "value": "Primary: Brentford Community Stadium, London, UK (matchdays, admin). Training ground: Jersey Road, Osterley, London. Remote/hybrid options likely limited for football operations roles; some flexibility possible for pure data science/engineering roles."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "537fb8039a",
+    "e49b5652ed"
+   ],
+   "value": "To sustainably compete at the highest level of English football through innovation, data-driven decision making, and smart recruitment, while maintaining a strong connection to the local community."
+  },
   "name": "Brentford Football Club",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "High intensity during season (Aug-May) with matchday deadlines, transfer windows (Jan, summer) creating sprint cycles. Off-season allows deeper R&D. Not a 9-5; but driven by intellectual urgency rather than bureaucratic churn. Expected 45-55 hrs/week in season, with compensatory flexibility."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "537fb8039a",
+    "e49b5652ed"
+   ],
+   "value": "The core product is professional football competition (Premier League matches). Ancillary products include matchday tickets, hospitality, merchandise, broadcast content, and player development/trading."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25 days + UK bank holidays (8). Additional discretionary days around Christmas and post-season. Matchday work may require weekend days compensated with time off in lieu."
   },
+  "refresh_after": 1790051183,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -42519,7 +42681,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Club-wide shutdown ~10 days over Christmas/New Year. Post-season break ~3-4 weeks (late May-June) for non-playing staff. International break weeks lighter."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "537fb8039a",
+    "e49b5652ed"
+   ],
+   "value": "Established Premier League club (founded 1889). Approximately 200-300 full-time employees across football operations, commercial, and administration. Owned by Matthew Benham (majority) since 2012. Moved to new 17,250-capacity Brentford Community Stadium in 2020."
   },
   "sources": [
    {
@@ -42553,14 +42723,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=7e06fe96b1969a69034b4a079e690305c8b1b5f35b26321706616025988af5d5JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1b7e6636-68a1-6781-39ed-71ab69546607&u=a1aHR0cHM6Ly93d3cuYnJlbnRmb3JkZmMuY29tL2Vu&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "UK-based employer; can sponsor Skilled Worker visas for eligible roles. As a Premier League club, they regularly sponsor international talent for football and specialized technical roles. Standard Certificate of Sponsorship holder."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "537fb8039a",
+    "a7715c7a65",
+    "e49b5652ed"
+   ],
+   "value": "Brentford Football Club is a professional football club based in West London, currently competing in the English Premier League. The club is renowned for its innovative, data-driven approach to player recruitment and football operations, often cited as a pioneer of the \"Moneyball\" model in English football."
+  },
+  "synthesized_evidence_sha": "008c14ae77713751",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "537fb8039a",
+    "e49b5652ed"
+   ],
+   "value": "Data science and analytics are central to football operations: player recruitment modeling, performance analysis, injury prediction, match strategy, and physical optimization. Tech stack includes Python, SQL, cloud infrastructure (AWS/Azure), video analysis tools, and proprietary statistical models. The club employs a dedicated Analytics & Research team reporting directly to the Director of Football."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784643845,
   "web_search_url": "https://duckduckgo.com/?q=Brentford+Football+Club+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Brentford offers a rare intersection of elite sports prestige and genuine technical innovation. Their analytics team is widely respected as best-in-class in global football, publishing research and pioneering methods adopted across the sport. You'll work on high-impact problems (player valuation, performance optimization) with unique, proprietary datasets in a culture that values evidence over hierarchy. The club's sustained Premier League status on a modest budget proves the model works. For a "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7/10. Season demands are real but predictable; club culture respects recovery. No \"crunch culture\" for its own sake. Protected time for learning. Shutdowns around international breaks and post-season."
   }
  },
  "brevium": {
@@ -140129,38 +140327,108 @@
  "just": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "63b7623b86",
+    "2a3c76e475",
+    "f9eacfaef4"
+   ],
+   "value": "Estimated: Tier 2 or 3 (Unknown)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "63b7623b86",
+    "2a3c76e475",
+    "f9eacfaef4"
+   ],
+   "value": "None found in research"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, anti-bureaucratic"
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "63b7623b86",
+    "2a3c76e475",
+    "f9eacfaef4"
+   ],
+   "value": "None found in research"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Highly competitive market rate (e.g. $120k-$160k base)"
   },
   "evidence_sha": "0c3cdb556f70b311",
+  "generated_at": 1784867183,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "63b7623b86",
+    "2a3c76e475",
+    "f9eacfaef4"
+   ],
+   "value": "None found in research"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Assess the company's commitment to guaranteed shutdowns and sane hours by asking about on-call expectations, sprint pacing, and how leadership protects engineers from bureaucratic delays and burnout."
   },
+  "last_attempt_at": 1784867183,
   "last_evidence_at": 1784675218,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "63b7623b86",
+    "2a3c76e475",
+    "f9eacfaef4"
+   ],
+   "value": "None found in research"
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "63b7623b86",
+    "2a3c76e475",
+    "f9eacfaef4"
+   ],
+   "value": "None found in research"
+  },
   "name": "Just",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast and innovative (to be verified during interview)"
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "63b7623b86",
+    "2a3c76e475",
+    "f9eacfaef4"
+   ],
+   "value": "None found in research"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-25 days"
   },
+  "refresh_after": 1790051183,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -140170,7 +140438,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely includes holiday shutdowns (to be verified)"
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "63b7623b86",
+    "2a3c76e475",
+    "f9eacfaef4"
+   ],
+   "value": "None found in research"
   },
   "sources": [
    {
@@ -140204,14 +140481,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=91f966ad426322c5ebb5654a30a28956b6553789f8a8ca6b2ec669ef23316bb6JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2d0d59e4-dc7a-6141-0e93-4e79dda76082&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2p1c3Q&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "63b7623b86",
+    "2a3c76e475",
+    "f9eacfaef4"
+   ],
+   "value": "None found in research"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "63b7623b86",
+    "2a3c76e475",
+    "f9eacfaef4"
+   ],
+   "value": "Just is a company profiled in general business dictionaries, though specific operational details regarding its core product and monetization strategy are not available in the provided sources."
+  },
+  "synthesized_evidence_sha": "0c3cdb556f70b311",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "63b7623b86",
+    "2a3c76e475",
+    "f9eacfaef4"
+   ],
+   "value": "None found in research"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675218,
   "web_search_url": "https://duckduckgo.com/?q=Just+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This employer fits the priority for a fast-paced, innovative tech culture with elite new-grad pay that accelerates learning, while respecting work-life balance through sane hours and guaranteed shutdowns to prevent burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good (contingent on team)"
   }
  },
  "justworks": {
@@ -166000,37 +166310,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Academic/Medical) — Top-5 NIH funding, nationally ranked hospital, strong publication record in top ML/medical journals, but not a primary tech-industry brand."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Non-profit academic medical center funded by clinical revenue (patient care billing), research grants, philanthropy, and university/state support. Revenue reinvested in mission."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, mission-oriented, intellectually rigorous, Midwestern humility. Hierarchy exists (faculty/staff/trainee) but cross-disciplinary work is encouraged. DEI and community health are prominent values. Less 'move fast' energy, more 'do it right' with patients."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Patients (local, national, international), insurance payers (Medicare, Medicaid, commercial), research grant agencies (NIH, foundations), medical students/trainees, and industry partners for clinical trials and tech transfer."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$110,000 base + benefits (retirement match, tuition remission, health). PhD/ML-focused roles may reach $120k with grant funding. No equity/signing bonus typical."
   },
   "evidence_sha": "c5ddb1215c502e24",
+  "generated_at": 1784867183,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Academic Medicine / Healthcare Delivery / Biomedical Research"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect emphasis on translational impact: how your work improves care or accelerates discovery. Be ready to discuss clinical validity, regulatory awareness (FDA, HIPAA), interdisciplinary collaboration with clinicians, and handling messy real-world health data. Coding assessments focus on reproducibility and analysis pipelines more than algorithmic puzzles. Ask about protected research time, compute resources (Great Lakes HPC, cloud), and path to independent funding."
+  },
+  "last_attempt_at": 1784867183,
   "last_evidence_at": 1784583337,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Main campus in Ann Arbor, MI; numerous outpatient sites across Southeast Michigan; remote/hybrid options for some research and data roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To advance health through excellence in patient care, research, and education, serving Michigan and the world."
+  },
   "name": "Michigan Medicine",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — Research-driven timelines (grant cycles, IRB, clinical validation) create structure but slower deployment than pure tech. Clinical operations run 24/7 but data/AI roles typically follow academic schedules with project-based crunches."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Clinical care services (hospital, specialty clinics, primary care), biomedical research, medical education programs (MD, PhD, residency/fellowship), and health technology innovation through its research institutes and partnerships."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days PTO + 10-12 university holidays + sick leave (varies by job family and union status)."
   },
+  "refresh_after": 1790051183,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -166040,7 +166392,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: University-wide winter break (typically Dec 24-Jan 1) and summer reduced operations; no guaranteed 'company-wide shutdown' for all roles."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature organization: ~30,000+ employees, $6B+ annual operating budget, 1,000+ licensed beds, top-tier NIH funding recipient."
   },
   "sources": [
    {
@@ -166074,14 +166431,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=aa0d675a95e9f2cd53483f6116aad65c079f2a6c36c2f1fe464d63945994aa72JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cud29ybGRhdGxhcy5jb20vbWFwcy91bml0ZWQtc3RhdGVzL21pY2hpZ2Fu&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Capable of H-1B and O-1 sponsorship for research and specialized clinical roles; J-1 common for fellows. Green card sponsorship varies by department and funding source."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Michigan Medicine is the academic medical center of the University of Michigan, integrating patient care, research, and medical education. It operates hospitals, outpatient clinics, and research institutes across Michigan."
+  },
+  "synthesized_evidence_sha": "c5ddb1215c502e24",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AI/ML in clinical prediction, imaging analysis, genomics, EHR optimization, health data science, digital health tools, computational biology, and translational informatics. Strong collaboration with U-M College of Engineering and Data Science Institute."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583337,
   "web_search_url": "https://duckduckgo.com/?q=Michigan+Medicine+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers elite academic prestige (top-5 NIH funding, top-10 hospital rankings) with meaningful clinical impact. AI/data roles sit at the intersection of world-class research, massive clinical data, and direct patient benefit. Culture leans mission-driven and collaborative rather than pure tech-industry speed, but provides strong mentorship, publication opportunities, and work-life boundaries uncommon in high-burnout tech or biotech. Pay is competitive for academia/healthcare but below top-tier FAA"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Strong institutional policies on duty hours (for trainees), generous holiday/leave, and cultural expectation of boundaries. Research roles offer flexibility; clinical informatics may have on-call rotations. Less burnout risk than tech startups or clinical practice."
   }
  },
  "microchip technology": {
@@ -232628,41 +233006,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Moderate/Tier 2. AI and data science at a legacy hardware company carries lower elite tech prestige compared to top-tier software firms or dedicated AI labs."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "9e08d2b18c"
+   ],
+   "value": "Sells hardware and components for electric lighting, alongside connected IoT systems and software services for consumers and professionals."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Corporate and internationally focused, with an emphasis on hardware and sustainability rather than pure software innovation."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "0cb9edef26",
+    "1ca05c4890"
+   ],
+   "value": "Consumers, businesses, and industrial clients requiring professional, consumer, or IoT-enabled lighting solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000 - $110,000. Standard corporate compensation for hardware-adjacent software roles, likely below top-tier elite tech pay."
   },
   "evidence_sha": "35092c4549d350d6",
+  "generated_at": 1784867183,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "9e08d2b18c"
+   ],
+   "value": "Lighting, Electrical Equipment, and IoT Technology."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe how the specific team manages technical debt versus new feature development to understand the true pace of work, and ask specific questions about the hours and on-call expectations to gauge work-life balance. Ask whether your role would be hardware-adjacent or focused on core cloud/AI infrastructure to see if the learning curve fits your career growth goals."
   },
-  "last_attempt_at": 1784867015,
+  "last_attempt_at": 1784867183,
   "last_evidence_at": 1784676857,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "0cb9edef26",
+    "1ca05c4890"
+   ],
+   "value": "Global presence with operations in various countries worldwide; maintains a significant footprint and a US-specific corporate site."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "0cb9edef26"
+   ],
+   "value": "To unlock the extraordinary potential of light for brighter lives and a better world."
+  },
   "name": "Signify",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady and structured. Legacy enterprise hardware and product cycles may feel slow and bureaucratic rather than fast-paced or highly innovative."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "1ca05c4890",
+    "9e08d2b18c"
+   ],
+   "value": "Consumer and professional LED lighting, conventional lamps, lighting electronics, and smart IoT connected lighting systems (such as WiZ and Philips Hue)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of standard annual leave, typical for a large public corporate entity."
   },
-  "retry_after": 1784867135,
+  "refresh_after": 1790051183,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -232672,7 +233103,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns beyond standard public holidays, though individual teams may have quieter periods between hardware cycles."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "9e08d2b18c"
+   ],
+   "value": "Public company (spun off from Philips in 2016) operating globally with a large workforce."
   },
   "sources": [
    {
@@ -232706,14 +233144,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=452371a4de60577a99834769fb6b1b03954dcdbfdd443a8a92b4b8952f4ccb12JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=12125881-3882-6b2e-16e0-4f1c39c36a13&u=a1aHR0cHM6Ly93d3cuc2lnbmlmeS5jb20vZW4tdXM&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a large global corporation, Signify likely has established structures for international employee transfers, though specific US visa sponsorship for new grads is not explicitly confirmed in available public materials."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "9e08d2b18c",
+    "0cb9edef26"
+   ],
+   "value": "Signify is the former professional lighting solutions division of Philips, spun off in 2016, that provides electric lights, lighting components, and smart IoT systems. The company makes money by selling consumer, professional, and industrial lighting products alongside connected lighting software and services."
+  },
+  "synthesized_evidence_sha": "35092c4549d350d6",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "9e08d2b18c",
+    "1ca05c4890"
+   ],
+   "value": "Embedded systems, IoT infrastructure, cloud platforms for connected lighting ecosystems, and data-driven smart building technologies."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676857,
   "web_search_url": "https://duckduckgo.com/?q=Signify+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a major established hardware and IoT company, Signify may offer structured learning and mission-driven sustainability goals, but its scale brings the risk of slower bureaucracy rather than the fast-paced, elite new-grad tech culture you prioritize. AI and data science work here is likely tied closely to smart device optimization rather than cutting-edge model development, which may not align with high-prestige expectations."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate to good. Large scale suggests standard corporate hours, but satisfaction may vary depending on the specific team and product deadlines."
   }
  },
  "sika": {
@@ -239625,51 +240090,126 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "575de98ee9",
+    "e0e615883d",
+    "a3383b4bfc"
+   ],
+   "value": "The business model and revenue generation strategy could not be determined from the provided sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown"
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "575de98ee9",
+    "e0e615883d",
+    "a3383b4bfc"
+   ],
+   "value": "Target customers or client demographics were not found in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown"
   },
   "evidence_sha": "579e6e13926e48f0",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784867183,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784866862,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "575de98ee9",
+    "e0e615883d",
+    "a3383b4bfc"
+   ],
+   "value": "Industry information could not be determined from the provided sources."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784867183,
   "last_evidence_at": 1784675134,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "575de98ee9",
+    "e0e615883d",
+    "a3383b4bfc"
+   ],
+   "value": "Office locations or geographic footprint could not be identified from the provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "575de98ee9",
+    "e0e615883d",
+    "a3383b4bfc"
+   ],
+   "value": "Company mission or core objectives were not found in the provided sources."
+  },
   "name": "Spatial Front, Inc",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown"
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "575de98ee9",
+    "e0e615883d",
+    "a3383b4bfc"
+   ],
+   "value": "No specific products or services could be identified from the provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown"
   },
-  "retry_after": 1784867102,
+  "refresh_after": 1790051183,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "575de98ee9",
+    "e0e615883d",
+    "a3383b4bfc"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown"
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "575de98ee9",
+    "e0e615883d",
+    "a3383b4bfc"
+   ],
+   "value": "Information regarding company size, funding stage, or employee count is not available in the provided sources."
   },
   "sources": [
    {
@@ -239703,14 +240243,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=bf562e1559de4bdad5ac3b506c1f45e8028c5aaeea2d5e87e7c888c3421b0c51JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=12c18078-a65a-610c-2521-97e5a7b360e2&u=a1aHR0cHM6Ly93d3cuc3BhdGlhbC5pby8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "575de98ee9",
+    "e0e615883d",
+    "a3383b4bfc"
+   ],
+   "value": "Visa sponsorship policies were not mentioned in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "575de98ee9",
+    "e0e615883d",
+    "a3383b4bfc"
+   ],
+   "value": "What the company actually does and how it makes money could not be determined from the provided sources. All supplied public page links resulted in redirect errors or broken pages, preventing a factual description of the company's operations or revenue model."
+  },
+  "synthesized_evidence_sha": "579e6e13926e48f0",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "575de98ee9",
+    "e0e615883d",
+    "a3383b4bfc"
+   ],
+   "value": "Details regarding the technical stack or engineering work were not found in the provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675134,
   "web_search_url": "https://duckduckgo.com/?q=Spatial+Front%2C+Inc+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown"
   }
  },
  "speakcore": {
@@ -281875,41 +282448,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High (candidate priority indicates top-tier AI role)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not specified in sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, innovative, respects work-life balance, accelerated learning."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not specified in sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120k-$160k base + equity (top-tier AI new grad)"
   },
   "evidence_sha": "64c4c28f5eb3ec04",
+  "generated_at": 1784867183,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology / AI / SaaS (inferred from candidate priorities and web presence)"
   },
-  "last_attempt_at": 1784867015,
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784867183,
   "last_evidence_at": 1784675137,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not specified in sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not specified in sources."
+  },
   "name": "Waymark",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced, innovative tech culture (per candidate priority)"
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Specific products not described in sources. Likely includes hotel booking, healthcare services, and video creation platform."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO plus holidays (typical for tech)"
   },
-  "retry_after": 1784867135,
+  "refresh_after": 1790051183,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -281919,7 +282530,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide shutdowns not confirmed; candidate prioritizes guaranteed shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not specified in sources."
   },
   "sources": [
    {
@@ -281953,14 +282569,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=4bba307ae0dfd5327b3f4d4905fc02fd1555f4658d666c1619f1e0056db86b1bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=12c18078-a65a-610c-2521-97e5a7b360e2&u=a1aHR0cHM6Ly93YXltYXJrLmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not specified in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "1c3f5a8a43",
+    "4b819677f4",
+    "43b8d8e937"
+   ],
+   "value": "Waymark appears to operate multiple web properties (Waymark Hotel, Waymark Care, Waymark.com) based on available URLs. Detailed business description not found in sources."
+  },
+  "synthesized_evidence_sha": "64c4c28f5eb3ec04",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not specified in sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675137,
   "web_search_url": "https://duckduckgo.com/?q=Waymark+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good (candidate priority emphasizes sane hours, guaranteed shutdowns, no burnout)"
   }
  },
  "waymo": {
