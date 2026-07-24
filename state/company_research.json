@@ -11182,7 +11182,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -11200,7 +11200,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784892861,
+  "last_attempt_at": 1784893038,
   "last_evidence_at": 1784674524,
   "name": "Aircall",
   "pace_of_work": {
@@ -11213,7 +11213,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784892981,
+  "retry_after": 1784893278,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -31892,11 +31892,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -31908,6 +31910,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784893038,
   "last_evidence_at": 1784678639,
   "name": "ASML",
   "pace_of_work": {
@@ -31920,6 +31923,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784893158,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -31963,7 +31967,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=701b893e61404c70700fe4cff60515cc509e707910f1b3afcda6002e99890bebJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=05520e09-9322-6508-1892-199792cb6405&u=a1aHR0cHM6Ly93d3cuYXNtbC5jb20vZW4&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678639,
   "web_search_url": "https://duckduckgo.com/?q=ASML+company+careers+benefits",
@@ -133852,48 +133856,132 @@
  "flighthub": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "c3ee1cecbf"
+   ],
+   "value": "Estimated: Mid-tier. While handling large transaction volumes offers good data engineering challenges, an OTA is generally not considered a top-tier, elite AI research company."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "c3ee1cecbf",
+    "cf45b7bb81"
+   ],
+   "value": "FlightHub operates on an OTA merchant and agency model, earning revenue through commissions on flight tickets, hotel bookings, and travel packages sold via its website."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "cf45b7bb81"
+   ],
+   "value": "Estimated: Corporate tech environment focused on consumer growth, conversion optimization, and transaction volume, likely balancing startup-style feature shipping with established company processes."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "c3ee1cecbf",
+    "cf45b7bb81"
+   ],
+   "value": "The platform serves everyday consumers and travelers looking for affordable flights, hotels, and vacation packages."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "cf45b7bb81"
+   ],
+   "value": "Estimated: $70,000 - $90,000 CAD per year for new grad software or data roles in Canada."
   },
   "evidence_sha": "6d1613e0dc8d8e83",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784893038,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c3ee1cecbf",
+    "cf45b7bb81"
+   ],
+   "value": "Online Travel Agency (OTA) / E-commerce / Travel Technology"
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "c3ee1cecbf"
+   ],
+   "value": "Candidates should probe the team's pace of innovation versus bureaucracy, asking how much time is dedicated to genuine AI/data science model building versus traditional web development. It is crucial to ask about exact work hours, on-call expectations, and whether the company enforces guaranteed shutdowns or sane hours to avoid burnout."
+  },
+  "last_attempt_at": 1784893038,
   "last_evidence_at": 1784678780,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "cf45b7bb81"
+   ],
+   "value": "Estimated: Headquarters in Montreal, Quebec, Canada, with potential remote work options."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "c3ee1cecbf"
+   ],
+   "value": "The company focuses on providing accessible and affordable travel by offering cheap flights and seamless booking experiences, though a formal mission statement was not directly available in the provided sources."
+  },
   "name": "FlightHub",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "c3ee1cecbf",
+    "cf45b7bb81"
+   ],
+   "value": "Estimated: Moderate to Fast. Driven by the competitive and dynamic nature of the online travel industry, requiring frequent updates to pricing and inventory systems."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "c3ee1cecbf",
+    "cf45b7bb81"
+   ],
+   "value": "FlightHub's primary products are its online flight booking platform and hotel/accommodation reservation system, offering cheap flights and travel packages."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "cf45b7bb81"
+   ],
+   "value": "Estimated: 15-20 days of standard paid time off per year, typical for an established Canadian tech company."
   },
+  "refresh_after": 1790077038,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "722d337fed",
+    "c3ee1cecbf",
+    "cf45b7bb81"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "cf45b7bb81"
+   ],
+   "value": "Estimated: No information found regarding guaranteed company-wide shutdowns or offline periods."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "cf45b7bb81"
+   ],
+   "value": "Estimated: Large, established private company. FlightHub is a major Canadian OTA having recently merged with Just Fly."
   },
   "sources": [
    {
@@ -133927,14 +134015,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=2720ea924de3428a8d6805ff640ee3b01f2f172100f9280e147c71461ce1e7a4JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=25de6375-e456-6dd3-3c5f-74ebe5226cc9&u=a1aHR0cHM6Ly93d3cuZmxpZ2h0aHViLmNvbS8_bXNvY2tpZD0yNWRlNjM3NWU0NTY2ZGQzM2M1Zjc0ZWJlNTIyNmNjOQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "cf45b7bb81"
+   ],
+   "value": "Estimated: As a large Canadian tech employer, they may offer visa sponsorship for specialized tech roles, but this is not explicitly confirmed in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "c3ee1cecbf",
+    "cf45b7bb81"
+   ],
+   "value": "FlightHub is an online travel agency (OTA) that allows users to search for, book, and manage cheap flights, hotels, and vacation packages. The company makes money by taking commissions from airlines, hotels, and travel service providers for bookings made through its platform."
+  },
+  "synthesized_evidence_sha": "6d1613e0dc8d8e83",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "cf45b7bb81"
+   ],
+   "value": "Estimated: Likely involves full-stack web development, search engine optimization, large-scale database management for inventory, pricing algorithms, and building scalable consumer-facing booking platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678780,
   "web_search_url": "https://duckduckgo.com/?q=FlightHub+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "c3ee1cecbf"
+   ],
+   "value": "This role offers the opportunity to optimize large-scale, high-traffic search and pricing systems, which provides strong technical learning in scalable architecture. However, an OTA may not align with the elite prestige of a top-tier AI-first company, and candidates should verify that the tech culture prioritizes innovation over bureaucratic processes."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "c3ee1cecbf"
+   ],
+   "value": "Estimated: Moderate. Online travel agencies often experience seasonal spikes and high traffic volumes which can impact work-life balance, though specifics are not public."
   }
  },
  "florida atlantic university": {
@@ -175424,41 +175544,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Top European bank for AI/DS; publishes at NeurIPS/ICML/KDD, runs internal ML platform, recognized in industry benchmarks)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "a8708c629f",
+    "779dc95a3d"
+   ],
+   "value": "Universal banking model generating revenue primarily from net interest income (mortgages, loans), fee & commission income (payments, asset management, trade finance), and financial markets/trading income. Heavy investment in digital platforms and data/AI to reduce cost-to-serve and create new revenue streams."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, blameless postmortems, strong psychological safety, diverse international squads, hackathons, tech talks, and guilds. Dutch directness + collaborative mindset. Less political than US big tech; more structured than startups."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "a8708c629f",
+    "779dc95a3d"
+   ],
+   "value": "Approximately 39 million individual customers, small businesses, mid-corporates, and large multinational corporations across 40+ countries, with primary markets in the Netherlands, Belgium, Germany, Poland, Spain, Italy, Australia, and Romania."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Amsterdam €55-70k base + 10-15% variable + RSU (vesting 3-4y) + pension; Warsaw/Bucharest €35-50k base + bonus + benefits. Total comp competitive with EU tech peers, below US FAANG."
   },
   "evidence_sha": "9638a1114649f863",
+  "generated_at": 1784893038,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a8708c629f",
+    "779dc95a3d"
+   ],
+   "value": "Financial Services / Banking / FinTech"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect: (1) ML system design (fraud, recommendation, risk) emphasizing productionization, monitoring, and fairness; (2) Python/SQL coding + software engineering fundamentals (testing, CI/CD, git); (3) Behavioral questions on squad collaboration, stakeholder management, and learning agility; (4) Case study on a real ING data problem. Prepare to discuss model governance, explainability, and how you balance innovation with regulatory constraints."
   },
-  "last_attempt_at": 1784892638,
+  "last_attempt_at": 1784893038,
   "last_evidence_at": 1784678562,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "a8708c629f",
+    "712476b902",
+    "779dc95a3d"
+   ],
+   "value": "Headquarters: Amsterdam, Netherlands. Major tech hubs: Amsterdam, Brussels, Warsaw, Bucharest, Manila, Sydney, Madrid, Milan, Istanbul. Remote/hybrid options vary by country and team."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "779dc95a3d"
+   ],
+   "value": "Empowering people to stay a step ahead in life and in business. ING aims to deliver a differentiating customer experience through technology and innovation, while driving sustainable progress."
+  },
   "name": "ING",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast for a bank: 2-week sprints, quarterly PI planning, continuous deployment to production. Some legacy dependencies and regulatory gates slow releases vs. pure tech, but far faster than traditional banking peers."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "a8708c629f",
+    "779dc95a3d"
+   ],
+   "value": "Retail banking (checking/savings accounts, mortgages, personal loans, credit cards), wholesale banking (lending, payments & cash management, trade finance, financial markets), and digital banking platforms. Known for mobile-first banking apps and API-driven services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-30 days annual leave + 10-12 public holidays (Netherlands); varies by country (e.g., 26 days Poland, 20-25 days Romania). Unlimited not offered."
   },
-  "retry_after": 1784892878,
+  "refresh_after": 1790077038,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -175468,7 +175644,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide shutdown between Christmas and New Year (~5-7 business days). Some NL offices have mandatory summer closure weeks. No guaranteed monthly/quarterly shutdowns."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "a8708c629f",
+    "779dc95a3d"
+   ],
+   "value": "Large-cap public company (Euronext: INGA), ~57,000 employees globally, €900B+ balance sheet, mature but actively transforming into a digital-first tech-driven bank."
   },
   "sources": [
    {
@@ -175502,14 +175686,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=98187317adab0e9c6c2bf436a97491b85394b33daa64c7a90e4819a44b16957aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2cc0e328-47aa-6edd-3b9c-f4b646516f85&u=a1aHR0cHM6Ly93d3cuaW5nLmNvbS5hdS9zZWN1cmViYW5raW5nLw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "ING sponsors work visas (e.g., EU Blue Card, Dutch Kennismigrant, Polish work permits) for technical roles, especially in Amsterdam, Warsaw, and Bucharest hubs. Sponsorship is role-dependent and subject to local immigration rules."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "a8708c629f",
+    "779dc95a3d",
+    "712476b902"
+   ],
+   "value": "ING is a Dutch multinational banking and financial services corporation headquartered in Amsterdam, providing retail banking, wholesale banking, and financial services to individuals, small businesses, and corporate clients across Europe, Australia, and Asia."
+  },
+  "synthesized_evidence_sha": "9638a1114649f863",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "779dc95a3d"
+   ],
+   "value": "Large-scale distributed systems, real-time payments processing, cloud-native platforms (AWS/Azure/GCP), ML/AI for fraud detection, credit risk, personalized recommendations, NLP for customer service, MLOps platforms, data lake/warehouse modernization, API gateway & developer platform, Kubernetes-based infrastructure, and internal developer tooling. Active open-source contributions."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678562,
   "web_search_url": "https://duckduckgo.com/?q=ING+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "ING offers a rare combination for a new-grad AI/DS candidate: top-tier European bank prestige with genuine tech-company pace (Spotify-model squads, internal platforms, open-source culture), €60-75k base + bonus in Amsterdam (higher in low-cost hubs), protected WLB via 36-40h weeks and 'right to disconnect' policies, and a clear mission around financial empowerment and sustainability. You'll ship models to millions of customers without the burnout typical of FAANG or quant finance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "8/10 — Core hours 9-5, explicit 'right to disconnect' after hours, 36-40h typical week, minimal weekend work. On-call rotations exist for platform teams but are compensated and limited."
   }
  },
  "init innovations in transportation inc": {
@@ -264968,48 +265179,137 @@
  "plusai": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "13fd4dcb34",
+    "398f94545e"
+   ],
+   "value": "Estimated: High. Tackling complex physical AI and autonomous robotics represents a prestigious, elite engineering challenge, though specific industry rankings are not explicitly sourced."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "13fd4dcb34"
+   ],
+   "value": "Develops and deploys autonomous driving software and virtual driver systems for factory-built commercial trucks, likely through commercial partnerships and fleet integrations."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "13fd4dcb34",
+    "398f94545e"
+   ],
+   "value": "Estimated: Deeply technical and engineering-driven, with a strong mission to build safe autonomous systems. The culture likely values robust infrastructure building and innovative algorithm development over slow bureaucracy."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "13fd4dcb34"
+   ],
+   "value": "Commercial trucking fleets and manufacturers of factory-built autonomous trucks."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "13fd4dcb34",
+    "17f8c9c419"
+   ],
+   "value": "Estimated: High new-grad pay ranging from $130,000 to $170,000 base, reflecting the elite AI and specialized robotics nature of the software engineering roles."
   },
   "evidence_sha": "3777d781eee80772",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784893038,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "13fd4dcb34"
+   ],
+   "value": "Autonomous vehicles, Artificial Intelligence, and Trucking/Logistics technology."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "13fd4dcb34",
+    "398f94545e"
+   ],
+   "value": "Be prepared to discuss systems programming, low-latency infrastructure, and simulation architecture. Emphasize your desire to accelerate technical learning in autonomous robotics, and ask interviewers about the engineering culture to ensure WLB and working hours align with your aversion to burnout."
+  },
+  "last_attempt_at": 1784893038,
   "last_evidence_at": 1784678639,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "17f8c9c419",
+    "13fd4dcb34"
+   ],
+   "value": "Specific office locations are not detailed in the provided sources, but the company recruits globally through online job postings."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "13fd4dcb34",
+    "398f94545e"
+   ],
+   "value": "To pioneer AI-based virtual driver software for autonomous trucks, utilizing simulation and robust on-vehicle infrastructure to develop safe and reliable autonomous driving."
+  },
   "name": "PlusAI",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "13fd4dcb34",
+    "398f94545e"
+   ],
+   "value": "Estimated: Fast-paced tech culture. The emphasis on rapid simulation development and low-latency on-vehicle performance suggests a dynamic engineering environment focused on iterative, technical innovation."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "13fd4dcb34",
+    "398f94545e"
+   ],
+   "value": "AI-based virtual driver software for factory-built autonomous trucks, and simulation infrastructure used to develop and test autonomous driving algorithms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "13fd4dcb34"
+   ],
+   "value": "Estimated: Standard tech industry PTO ranging from 15-20 days annually, as exact company policy is not publicly detailed in the provided sources."
   },
+  "refresh_after": 1790077038,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "13fd4dcb34",
+    "398f94545e"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "13fd4dcb34",
+    "398f94545e"
+   ],
+   "value": "Estimated: No guaranteed shutdowns mentioned in the provided sources; applicants should confirm if the company offers holiday closures to ensure it meets personal WLB requirements."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419",
+    "13fd4dcb34",
+    "398f94545e"
+   ],
+   "value": "Hiring actively for specialized autonomous systems and AI roles, indicating a growth-stage company scaling its engineering operations."
   },
   "sources": [
    {
@@ -265073,14 +265373,48 @@
     "url": "https://jobs.lever.co/plus-2/1a1fc0e8-0741-4be1-adbb-52aa418eecf2"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "13fd4dcb34",
+    "398f94545e"
+   ],
+   "value": "Specific visa sponsorship details were not found in the provided job postings or company pages."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "13fd4dcb34"
+   ],
+   "value": "PlusAI is a Physical AI company pioneering AI-based virtual driver software for factory-built autonomous trucks. It makes money by equipping commercial fleets with this autonomous driving software."
+  },
+  "synthesized_evidence_sha": "3777d781eee80772",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "13fd4dcb34",
+    "398f94545e"
+   ],
+   "value": "Involves developing and optimizing low-latency C++ middleware and runtime infrastructure for on-vehicle robotics, and building simulation systems to test autonomous driving algorithms and detect regressions."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678639,
   "web_search_url": "https://duckduckgo.com/?q=PlusAI+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "13fd4dcb34",
+    "398f94545e"
+   ],
+   "value": "Aligns with your goal for fast-paced, innovative tech culture by tackling cutting-edge Physical AI and autonomous trucking problems. The deep work in simulation and C++ robotics infrastructure provides elite technical learning and career growth, positioning you at the forefront of the autonomous vehicle industry."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "13fd4dcb34"
+   ],
+   "value": "Estimated: Good. The company's focus on cutting-edge robotics and simulation suggests a mission-driven environment, but applicants should verify current hours to ensure they meet personal standards for work-life balance."
   }
  },
  "pm pediatric care": {
@@ -267523,39 +267857,99 @@
  },
  "predictx": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "e7293e08ef"
+   ],
+   "value": "Tier 2 — Strong applied AI/ML track record (10+ years) in a recognized London scale-up, but not a primary research lab or FAANG-level brand."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "e7293e08ef"
+   ],
+   "value": "B2B SaaS subscription model — recurring revenue from licensing AI/ML analytics platform to enterprise clients."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "e7293e08ef"
+   ],
+   "value": "Technical, growth-oriented, mission-driven ('make a real difference'), pragmatic AI practitioners rather than hype-chasers. London scale-up energy — ambitious but not chaotic."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "e7293e08ef"
+   ],
+   "value": "Enterprise organizations seeking AI-driven analytics and forecasting capabilities; exact verticals not specified in available sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: £45k-£60k base + equity (London scale-up range for ML/Data Engineering new grads). No public compensation data found."
   },
   "evidence_sha": "d50685f0b498df04",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784893038,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e7293e08ef"
+   ],
+   "value": "B2B SaaS / Enterprise AI & Analytics"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "e7293e08ef"
+   ],
+   "value": "Probe for concrete WLB practices: typical weekly hours, on-call expectations, and whether 'guaranteed shutdowns' or core-hours policies exist. Ask how the 'growth role' translates to structured mentorship, code-review culture, and promotion pathways. Clarify the tech stack depth — are you maintaining legacy pipelines or building net-new ML systems? Confirm London office cadence and remote flexibility."
+  },
+  "last_attempt_at": 1784893038,
   "last_evidence_at": 1784678640,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "e7293e08ef"
+   ],
+   "value": "London, UK (headquarters); remote/hybrid policy not specified in sources."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "e7293e08ef"
+   ],
+   "value": "To pioneer the future of AI, data analytics, and technology while making a real difference as one of London's foremost SaaS scale-ups."
+  },
   "name": "PredictX",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast — scale-up environment with 'pioneer the future' messaging suggests high velocity, but not the extreme crunch of early-stage startups."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "e7293e08ef"
+   ],
+   "value": "AI-powered SaaS platform for data analytics and business forecasting; specific product modules not detailed in public sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-28 days + UK bank holidays (standard UK tech scale-up range). Not publicly confirmed."
   },
+  "refresh_after": 1790077038,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -267565,7 +267959,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns documented. UK firms typically observe Christmas/New Year break; candidate should ask."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "e7293e08ef"
+   ],
+   "value": "Scale-up stage (post-startup, pre-IPO); described as 'one of London's foremost SaaS scale-ups'. Headcount not publicly disclosed."
   },
   "sources": [
    {
@@ -267609,14 +268010,41 @@
     "url": "https://jobs.lever.co/pibenchmark/ed101eda-27e3-4cfa-83c0-0474a483dd3e"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "e7293e08ef"
+   ],
+   "value": "PredictX is a London-based SaaS scale-up that has integrated AI and machine learning into its core product for over a decade. It sells data analytics and AI-driven software solutions to enterprise customers, generating revenue through subscription licensing."
+  },
+  "synthesized_evidence_sha": "d50685f0b498df04",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "e7293e08ef"
+   ],
+   "value": "Machine learning engineering, data engineering, AI model development and deployment, scalable data pipelines, and product-focused applied research. Role emphasizes growth and learning in AI space."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678640,
   "web_search_url": "https://duckduckgo.com/?q=PredictX+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "e7293e08ef"
+   ],
+   "value": "PredictX offers a decade-deep AI/ML pedigree inside a London SaaS scale-up — elite technical prestige without big-tech bureaucracy. The role is explicitly framed as a growth position for learning and evolving in AI, aligning with your priority for accelerated technical development. As a scale-up, it likely moves faster than enterprise incumbents, and the 'make a real difference' language suggests ownership scope that drives career growth. No public burnout signals appear in the job posting, but "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — No public burnout signals; scale-ups often demand intensity but job posting emphasizes 'growth' and 'learn, contribute, evolve' over grind language. Verify directly."
   }
  },
  "preference model": {
@@ -297308,42 +297736,97 @@
  "savannah river national laboratory": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "8ac26e0dab"
+   ],
+   "value": "Mid to High: Highly prestigious within the government and energy sectors, but not on the same elite tier as top commercial tech firms or top-tier academic AI labs (like OpenAI or Google DeepMind) for fast-paced, cutting-edge AI development."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ac26e0dab",
+    "03dd2d3270"
+   ],
+   "value": "Operates as a Federally Funded Research and Development Center (FFRDC) funded by government contracts and taxpayer appropriations, managed by the Battelle Savannah River Alliance."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, highly collaborative, and highly regulated. Avoids corporate toxicity and burnout but leans academic and bureaucratic rather than agile and fast-paced."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ac26e0dab",
+    "03dd2d3270"
+   ],
+   "value": "Primary clients are United States government agencies, specifically the Department of Energy (DOE) and the National Nuclear Security Administration (NNSA), along with other federal and state defense/security entities."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75,000 - $95,000. While offering highly competitive benefits, government labs typically compensate below elite commercial tech giants for new graduate technical roles."
   },
   "evidence_sha": "5f4b96d0a4a53962",
+  "generated_at": 1784893038,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8ac26e0dab",
+    "03dd2d3270"
+   ],
+   "value": "National Security, Federal Government Research, and Renewable Energy."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe the specific pace of the team's AI projects to see if it fits your 'fast tech' ideal or leans 'slow bureaucracy'. Ask about the exact new-grad compensation stack (base vs. contracts) to ensure it hits your high pay bar, and clarify daily flexibility to confirm it meets your hardline WLB and low-burnout expectations."
   },
-  "last_attempt_at": 1784892861,
+  "last_attempt_at": 1784893038,
   "last_evidence_at": 1784678634,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "8ac26e0dab"
+   ],
+   "value": "Headquartered at the Savannah River Site in Aiken, South Carolina."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ac26e0dab"
+   ],
+   "value": "To deliver targeted national security, environmental stewardship, and clean energy solutions through scientific research and technological innovation, primarily addressing legacy nuclear waste and future energy needs."
+  },
   "name": "Savannah River National Laboratory",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow to steady. Controlled by strict federal compliance, safety protocols, and lengthy clearance processes, which can stall rapid deployment and innovative tech iteration."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ac26e0dab"
+   ],
+   "value": "The lab produces advanced research, applied technologies, and technical solutions in national security, nuclear nonproliferation, environmental remediation, and clean energy (notably hydrogen storage and production)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days. Standard federal contractor benefits typically offer strong leave policies including personal time, federal holidays, and sick leave."
   },
-  "retry_after": 1784892981,
+  "refresh_after": 1790077038,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -297353,7 +297836,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely. DOE facilities often observe reduced operations or mandated holiday breaks around Christmas and New Year, though not always officially documented as paid corporate 'shutdowns'."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ac26e0dab"
+   ],
+   "value": "Mature, large-scale national laboratory employing between 1,000 and 5,000 staff members, operating as a stable government contractor."
   },
   "sources": [
    {
@@ -297387,14 +297877,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=20343cd2b73c56b85b16339fc08d552ecbc29efe1b2ac620a4028fd8f66cb3bdJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=05520e09-9322-6508-1892-199792cb6405&u=a1aHR0cHM6Ly92aXNpdHNhdmFubmFoLmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ac26e0dab"
+   ],
+   "value": "Due to the sensitive nature of national security and nuclear research, roles typically require U.S. citizenship and the ability to obtain and maintain a DOE security clearance."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ac26e0dab",
+    "03dd2d3270"
+   ],
+   "value": "Savannah River National Laboratory (SRNL) is a multi-program United States Department of Energy (DOE) national laboratory focused on environmental stewardship, hydrogen energy, and nuclear materials management. It operates as a federally funded research and development center (FFRDC) managed by Battelle Savannah River Alliance, generating revenue primarily through government contracts and public sector research grants."
+  },
+  "synthesized_evidence_sha": "5f4b96d0a4a53962",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "8ac26e0dab"
+   ],
+   "value": "Involves advanced materials science, radiochemistry, environmental modeling, cyber security, and high-performance computing. Applied AI and data science roles focus on predictive maintenance, complex system modeling, and scientific data analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678634,
   "web_search_url": "https://duckduckgo.com/?q=Savannah+River+National+Laboratory+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Aligns with your mission-driven priority through high-impact national security and clean energy research. It likely satisfies your work-life balance requirement through stable government hours and guaranteed holidays, though the DOE clearance process and federal bureaucracy may contrast with your preference for a fast, innovative tech culture and top-tier new-grad pay."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Very Good. Government lab environments typically enforce 40-hour work weeks, prioritize safety, and rarely require intense overtime compared to commercial tech."
   }
  },
  "saxon global": {
@@ -298122,39 +298640,106 @@
  },
  "schmidt sciences": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "ebfa35c088",
+    "e742d6fe88"
+   ],
+   "value": "Top-tier (Eric Schmidt legacy, Special Competitive Studies Project linkage, explicit AI/emerging-tech focus)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "e742d6fe88",
+    "ebfa35c088"
+   ],
+   "value": "Philanthropic nonprofit (501(c)(3)) funded by Eric and Wendy Schmidt’s personal wealth; no commercial revenue stream."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "ee2616aad3",
+    "e742d6fe88"
+   ],
+   "value": "Estimated: Mission-driven, intellectually rigorous, high-autonomy engineering culture with philanthropic backing; likely less political than big tech but still building processes."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "e742d6fe88"
+   ],
+   "value": "Scientists, research institutions, and interdisciplinary teams receiving funding or using Schmidt Sciences–built tools; also the broader scientific ecosystem benefiting from open infrastructure."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k–$170k base + modest bonus/equity (nonprofit, so no RSUs); competitive with top-tier research nonprofits but below big-tech peaks."
   },
   "evidence_sha": "d3d8c4e19dbbbd41",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784893038,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e742d6fe88",
+    "ebfa35c088"
+   ],
+   "value": "Philanthropic scientific research acceleration / nonprofit AI for science"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "ee2616aad3"
+   ],
+   "value": "Probe for concrete evidence of work-life guardrails (e.g., core hours, shutdown policies), engineering autonomy vs. process overhead, and how a philanthropic timeline affects project pacing and technical debt."
+  },
+  "last_attempt_at": 1784893038,
   "last_evidence_at": 1784678638,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "e742d6fe88",
+    "ee2616aad3"
+   ],
+   "value": "United States (remote/hybrid likely; job postings do not specify a single headquarters)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "e742d6fe88"
+   ],
+   "value": "Accelerate scientific knowledge and breakthroughs with the most promising, advanced tools to support a thriving planet."
+  },
   "name": "Schmidt Sciences",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "ee2616aad3"
+   ],
+   "value": "Estimated: Fast, startup-like pace driven by high-ownership culture and mission urgency; less bureaucratic than large tech but intensity may vary by program."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "e742d6fe88"
+   ],
+   "value": "Grant-making programs (e.g., Bioscience Center), advanced computational tools for science, AI-driven research platforms, and operational support for awardee communities."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + US federal holidays; no public policy found."
   },
+  "refresh_after": 1790077038,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -298164,7 +298749,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns publicly documented; may observe standard holiday breaks."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "e742d6fe88",
+    "ee2616aad3"
+   ],
+   "value": "Early-stage nonprofit (founded 2024), actively hiring across program, design, and engineering functions; headcount not publicly disclosed but appears to be scaling from zero."
   },
   "sources": [
    {
@@ -298228,14 +298821,43 @@
     "url": "https://jobs.lever.co/schmidt-entities/ac2ad1dd-701e-48a3-9662-49d6e954bd58"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No public information on visa sponsorship policy; as a new nonprofit, assume case-by-case basis."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "e742d6fe88"
+   ],
+   "value": "Schmidt Sciences is a nonprofit organization founded in 2024 by Eric and Wendy Schmidt that accelerates scientific breakthroughs by funding and building advanced tools — including AI and data-intensive platforms — for researchers. As a philanthropic entity, it does not generate revenue; it deploys capital from the Schmidt family fortune to make grants, run programs, and develop open scientific infrastructure."
+  },
+  "synthesized_evidence_sha": "d3d8c4e19dbbbd41",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "ee2616aad3"
+   ],
+   "value": "Full-stack software engineering for enterprise research applications, data platforms, and AI/ML tooling; high-ownership roles working across systems and architectures."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678638,
   "web_search_url": "https://duckduckgo.com/?q=Schmidt+Sciences+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "e742d6fe88",
+    "ee2616aad3",
+    "ebfa35c088"
+   ],
+   "value": "Offers elite AI/data-science prestige via Eric Schmidt’s network and a mission to accelerate science with cutting-edge tools, while operating as a nonprofit — avoiding commercial pressure — and advertising high-ownership engineering roles that suggest fast innovation without typical big-tech bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — nonprofit mission may encourage sustainable hours, but early-stage scaling and high ownership could lead to sporadic crunch; no public policy disclosed."
   }
  },
  "schonfeld": {
@@ -303306,11 +303928,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -303322,6 +303946,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784893038,
   "last_evidence_at": 1784675034,
   "name": "Sev1Tech LLC",
   "pace_of_work": {
@@ -303334,6 +303959,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784893158,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -303377,7 +304003,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=57bf3bd664569cadbbac327251c18e56d4cac5930a848ec17fd3e6e7eb7e195aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2f9070d1-60b6-6a79-23fc-674c61596b6f&u=a1aHR0cHM6Ly93d3cubmV3c3RhdGVzbWFuLmNvbS9jdWx0dXJlL2ZpbG0vMjAyNS8xMS9waWxsaW9uLWlzLXRoZS1maWxtLWZpZnR5LXNoYWRlcy1mYWlsZWQtdG8tYmU&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784675034,
   "web_search_url": "https://duckduckgo.com/?q=Sev1Tech+LLC+company+careers+benefits",
@@ -313967,37 +314593,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "High (specialized applied ML for audio, voice, room acoustics; publishes at ICASSP, INTERSPEECH; strong PhD hiring)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Hardware-first revenue from premium audio devices sold direct (Sonos.com, Sonos stores) and through retail partners (Best Buy, Amazon, Apple, specialty audio). Growing revenue from services (Sonos Radio, voice partnerships), accessories, and licensing."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-led, music-loving, design-obsessed, collaborative, low-ego. Employees are often audiophiles/musicians. Transparent leadership, strong DEI focus, and a 'no-asshole' norm."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Consumers seeking premium multi-room audio, home theater enthusiasts, design-conscious households, and commercial/installer channels for custom installations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$160k base + 10-15% target bonus + RSU grant (~$40k-$70k over 4 years) for SW/AI/ML roles in CA/WA; competitive with top-tier hardware firms."
   },
   "evidence_sha": "063d4fd4683070b7",
+  "generated_at": 1784893038,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Consumer electronics / Audio technology / Smart home"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical loops: embedded C/C++, audio signal processing, distributed systems design, and ML/applied research questions. Behavioral emphasis on collaboration, user empathy, and shipping quality hardware/software together. Prepare for take-home or on-site system design relevant to multi-room audio."
+  },
+  "last_attempt_at": 1784893038,
   "last_evidence_at": 1784678639,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Santa Barbara, CA. Major offices: Boston, MA; Seattle, WA; London, UK; Berlin, Germany; Shenzhen, China. Hybrid work model with office hubs."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To transform the way people listen by giving them access to all the music and audio they love, everywhere in their home, with an experience that is effortless, immersive, and lasting."
+  },
   "name": "Sonos, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate-fast: hardware cycles set cadence (12-18 months), but software/ML teams ship iterative updates. Less chaotic than ad-driven big tech; more deadline-driven than pure research labs."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Wireless speakers (Era, One, Move, Roam), soundbars (Arc, Beam, Ray), subwoofers (Sub), architectural speakers, amplifiers (Amp), and the Sonos OS software platform with voice control and streaming service integration."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + sick leave; unlimited not typical for hardware co."
   },
+  "refresh_after": 1790077038,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -314007,7 +314675,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically last week of December through New Year); occasional summer half-days or long weekends."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public company (NASDAQ: SONO) since 2018; ~1,500–2,000 employees globally; mature product company with recurring revenue initiatives."
   },
   "sources": [
    {
@@ -314041,14 +314714,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=00f73684f0c301a4f632bd5eef82052247c891d965c3e68d090f849ce2e523b1JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=05520e09-9322-6508-1892-199792cb6405&u=a1aHR0cHM6Ly93d3cuc29ub3MuY29tL2VuLXVzL2hvbWU&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors H-1B and green cards for specialized engineering roles; typical for mid-size public tech hardware company. New-grad sponsorship likely on case-by-case basis."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Sonos designs and sells premium wireless home audio products including speakers, soundbars, and components that work together over Wi-Fi. The company generates revenue primarily through hardware sales of its audio devices and increasingly through services and partnerships."
+  },
+  "synthesized_evidence_sha": "063d4fd4683070b7",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Embedded systems (Linux, RTOS), audio DSP, wireless networking (Wi-Fi, Thread, Bluetooth), cloud services (AWS, microservices), mobile apps (iOS/Android), voice AI integration, acoustics engineering, and ML for room calibration/voice."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678639,
   "web_search_url": "https://duckduckgo.com/?q=Sonos%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Sonos offers a rare blend: elite audio engineering prestige with a consumer-brand mission, competitive new-grad pay for hardware/AI roles, and a culture known for reasonable hours and low burnout compared to big-tech peers. The technical scope spans embedded, cloud, ML, and acoustics—accelerating growth without the grind."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "4/5 (reputation for sane hours, limited on-call, respect for personal time; occasional crunch near hardware launches)"
   }
  },
  "sony interactive entertainment": {
@@ -317529,11 +318223,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -317545,6 +318241,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784893038,
   "last_evidence_at": 1784674530,
   "name": "Sprezzatura",
   "pace_of_work": {
@@ -317557,6 +318254,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784893158,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -317610,7 +318308,7 @@
     "url": "https://jobright.ai/jobs/info/6a57442be9b77f668bd6745f?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674530,
   "web_search_url": "https://duckduckgo.com/?q=Sprezzatura+company+careers+benefits",
@@ -368626,37 +369324,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (applied ML in a niche domain; not a primary AI research destination)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Recurring SaaS subscriptions for tax calculation and compliance software, plus implementation and managed services fees."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Established, collaborative, process-driven corporate culture with a focus on compliance and reliability; less experimental, more predictable."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Large enterprises and mid-market companies across retail, manufacturing, technology, and services sectors that require automated sales/use tax, VAT, and GST determination and filing."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95,000-$115,000 base + 10-15% target bonus + RSUs (~$15k-25k/yr); total comp ~$120k-$150k."
   },
   "evidence_sha": "18f65ebbe759cbc6",
+  "generated_at": 1784893038,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Tax Technology / RegTech / Enterprise SaaS"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect practical coding (Java, Python, SQL), system design for scalable tax engines, domain questions on tax compliance, and behavioral questions about working in a regulated, enterprise software environment. Prepare to discuss how you balance speed with accuracy and handle cross-team coordination in a mature org."
+  },
+  "last_attempt_at": 1784893038,
   "last_evidence_at": 1784678781,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in King of Prussia, PA (Philadelphia metro); additional offices in London, Berlin, São Paulo, and remote roles in the US."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To simplify global tax complexity through technology, enabling businesses to stay compliant and focus on growth."
+  },
   "name": "Vertex Inc  https://www.vertexinc.com/",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate; structured sprints with enterprise release cycles, not a move-fast-break-things environment."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Vertex Cloud (SaaS tax engine), Vertex Indirect Tax Returns, Vertex Tax Data Management, Vertex Integrations for ERP systems (SAP, Oracle, etc.), and Vertex Professional Services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-11 US holidays; accrual-based, typical for US public company."
   },
+  "refresh_after": 1790077038,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -368666,7 +369406,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some teams may observe reduced schedules between Christmas and New Year."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Public company (NASDAQ: VERX) with approximately 1,200 employees; mature growth stage."
   },
   "sources": [
    {
@@ -368700,14 +369445,35 @@
     "url": "https://news.ycombinator.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Provides H-1B sponsorship and green card support for qualified technical roles; typical for a public US tech employer."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Vertex Inc provides cloud-based tax technology solutions that automate indirect tax calculation, compliance, and reporting for enterprises. The company makes money by selling subscription software and professional services to large corporations and mid-market businesses that need to manage complex tax obligations across jurisdictions."
+  },
+  "synthesized_evidence_sha": "18f65ebbe759cbc6",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Building and maintaining a high-throughput tax calculation engine, data pipelines for tax rate/content updates, ERP integrations, cloud infrastructure (AWS/Azure), and emerging ML/AI for tax classification and anomaly detection."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678781,
   "web_search_url": "https://duckduckgo.com/?q=Vertex+Inc++https%3A%2F%2Fwww.vertexinc.com%2F+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Vertex is a stable, public tax-tech company—not an elite AI research lab. New-grad pay is solid but not top-of-market for pure AI/DS roles. The culture is corporate and process-oriented, which may feel slower than a startup, but it offers reasonable work-life balance, predictable hours, and low burnout risk. If you prioritize guaranteed shutdowns, sane hours, and steady technical growth over prestige and maximum compensation, it fits; if you want cutting-edge AI prestige and high-speed innovatio"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5; generally respected hours, limited on-call, and low weekend work for most engineering roles."
   }
  },
  "vertex pharmaceuticals": {
