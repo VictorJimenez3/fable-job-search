@@ -5975,48 +5975,137 @@
  "adventhealth": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "e525cb57c7"
+   ],
+   "value": "Estimated: Moderate. Large healthcare systems do complex data integration and clinical analytics, but generally rank far below elite tech companies, specialized research labs, or quant firms for raw AI/DS prestige."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "e525cb57c7",
+    "bcb4510cc8"
+   ],
+   "value": "As a non-profit healthcare provider, AdventHealth operates by delivering medical services across its physical network of hospitals and clinics, billing public and private insurance providers as well as patients to sustain operations and fund community health initiatives."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "e525cb57c7",
+    "bcb4510cc8"
+   ],
+   "value": "Highly mission-driven, faith-based, collaborative, and patient-centric. The environment prioritizes community service and holistic health over aggressive technical disruption."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "e525cb57c7",
+    "bcb4510cc8"
+   ],
+   "value": "Individual patients and families seeking comprehensive medical care and wellness services across the communities served by the hospital network."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "e525cb57c7",
+    "bcb4510cc8"
+   ],
+   "value": "Estimated: $75,000 - $90,000 base salary. Non-profit healthcare systems typically pay new-grad software and data roles below big tech market rates, relying on benefits and mission for retention."
   },
   "evidence_sha": "d1b764ec1d60d80c",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784884090,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e525cb57c7",
+    "bcb4510cc8"
+   ],
+   "value": "Healthcare / Hospital & Health Care Systems"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "e525cb57c7",
+    "bcb4510cc8"
+   ],
+   "value": "Probe deeply into the specific technical stack, innovation budget, and project deployment speed for the data science/AI team to see if it escapes the typical slow, compliance-heavy healthcare bureaucracy. Confirm new-grad compensation bands and learning opportunities to ensure they meet elite-tier expectations."
+  },
+  "last_attempt_at": 1784884090,
   "last_evidence_at": 1784583422,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "e525cb57c7",
+    "1fb19637b7"
+   ],
+   "value": "Headquartered in Altamonte Springs, Florida, with major hubs, corporate offices, and medical facilities across Florida, Texas, Colorado, Kansas, and other states."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "e525cb57c7",
+    "bcb4510cc8"
+   ],
+   "value": "Extends the healing ministry of Christ by providing whole-person care that addresses the physical, mental, and spiritual needs of patients."
+  },
   "name": "AdventHealth",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e525cb57c7",
+    "bcb4510cc8"
+   ],
+   "value": "Estimated: Slow to moderate. As a massive non-profit hospital system, tech teams must navigate heavy regulatory compliance, clinical safety checks, and enterprise IT change management, resulting in a slower pace than big tech."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "e525cb57c7"
+   ],
+   "value": "Inpatient and acute hospital care, emergency medicine, surgical services, outpatient physician clinics, imaging and diagnostics, wellness programs, and specialized care across pediatrics, cardiology, and oncology."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "bcb4510cc8"
+   ],
+   "value": "Estimated: 20-25 days of Paid Time Off annually, alongside standard observed holidays, which is typical for large enterprise healthcare systems."
   },
+  "refresh_after": 1790068090,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "1fb19637b7",
+    "e525cb57c7",
+    "bcb4510cc8"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "e525cb57c7",
+    "bcb4510cc8"
+   ],
+   "value": "Estimated: No company-wide tech shutdowns guaranteed. Clinical operations require 24/7/365 uptime, so IT staff often follow an on-call rotation model rather than getting guaranteed holiday shutdowns."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "e525cb57c7"
+   ],
+   "value": "A massive, established enterprise-level healthcare system operating over 50 hospitals and hundreds of care facilities across multiple states."
   },
   "sources": [
    {
@@ -6050,14 +6139,51 @@
     "url": "https://www.bing.com/ck/a?!&&p=b044b07bd726a42caf92492801c29d55a5ec414bd610cd708528e9ae948b04d2JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9hZHZlbnRoZWFsdGgubWVkYnJpZGdlZ28uY29tL3NpZ25faW4&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e525cb57c7",
+    "bcb4510cc8"
+   ],
+   "value": "Likely does not offer employment visa sponsorship for standard new-grad tech roles, as large non-profit healthcare systems typically prioritize domestic hiring. Verify with the recruiter."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1fb19637b7",
+    "e525cb57c7",
+    "bcb4510cc8"
+   ],
+   "value": "AdventHealth is one of the largest faith-based, non-profit healthcare systems in the United States, operating a vast network of hospitals, outpatient facilities, and urgent care centers. The organization generates revenue by providing a wide range of medical services, from primary care to specialized treatments, funded by patient billing, insurance reimbursements, and government health programs."
+  },
+  "synthesized_evidence_sha": "d1b764ec1d60d80c",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "e525cb57c7",
+    "bcb4510cc8"
+   ],
+   "value": "A mix of clinical technologies, complex electronic health record (EHR) systems, digital patient engagement portals, integration of medical devices, and enterprise IT services. Typical tech roles span data engineering, software development, cybersecurity, cloud infrastructure, and increasingly, clinical data analytics and AI."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583422,
   "web_search_url": "https://duckduckgo.com/?q=AdventHealth+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "e525cb57c7",
+    "bcb4510cc8"
+   ],
+   "value": "Aligns well with the desire for a mission-driven organization focused on work-life balance, as AdventHealth explicitly trades on its faith-based commitment to whole-person care, largely avoiding the toxic burnout culture of big tech. However, it fundamentally conflicts with the candidate's priority for elite AI prestige, high new-grad pay, and a fast, innovative tech culture over slow bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "e525cb57c7",
+    "bcb4510cc8"
+   ],
+   "value": "Estimated: Good. Hospital systems operate on predictable clinical schedules, and AdventHealth's mission-driven, faith-based culture explicitly emphasizes whole-person well-being for employees, supporting sane hours."
   }
  },
  "adventhealth colorado": {
@@ -26337,37 +26463,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Below top-tier. It is a retail/apparel brand, meaning AI roles are focused on internal optimizations (inventory, e-commerce) rather than cutting-edge core AI model development."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "c27c357042",
+    "a24f4f48db"
+   ],
+   "value": "Designing and selling premium outdoor apparel and equipment via direct-to-consumer channels, brand stores, and wholesale partners."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mountain-driven, design-centric, and pragmatic. Encourages staff to engage with the outdoors, resulting in a mission-driven workforce that is passionate but professional about work-life boundaries."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "a24f4f48db"
+   ],
+   "value": "Outdoor enthusiasts, climbers, mountaineers, and consumers seeking premium technical wear."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000-$90,000 CAD. Below elite tech pay; reflects non-tech-industry rates in Canada."
   },
   "evidence_sha": "f6e8eb446fc17d9e",
+  "generated_at": 1784884090,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "c27c357042",
+    "a24f4f48db"
+   ],
+   "value": "Retail / Outdoor Apparel and Equipment"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Investigate the actual tech stack and pace of the internal engineering teams. Ask about their specific work-life balance policies, sane working hours, and guaranteed shutdowns to ensure the culture isn't slipping into toxic retail crunch."
   },
+  "last_attempt_at": 1784884090,
   "last_evidence_at": 1784676850,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "a24f4f48db"
+   ],
+   "value": "Headquartered in North Vancouver, BC, Canada, with global offices and retail locations."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "a24f4f48db"
+   ],
+   "value": "Building the finest products for the outdoors and inspiring a culture of design perfection."
+  },
   "name": "Arc'teryx Equipment",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Balances a fast e-commerce and retail product cycle with a mountain-culture ethos, resulting in a moderate pace that is less bureaucratic than legacy retail but slower than a pure tech startup."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "c27c357042",
+    "a24f4f48db"
+   ],
+   "value": "Technical apparel, outerwear (like Gore-Tex jackets), climbing equipment, and backpacks."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard vacation plus standard Canadian statutory holidays, but precise policy not found in public research."
   },
+  "refresh_after": 1790068090,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -26377,7 +26560,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely offers a few company-wide shutdown days around major holidays, but no guaranteed week-long tech shutdown indicated."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "c27c357042"
+   ],
+   "value": "Established global subsidiary (owned by Chinese sportswear conglomerate Anta) with a large international retail and corporate footprint."
   },
   "sources": [
    {
@@ -26411,14 +26601,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=2082903b0d07bab237b69472c44a9aabb78cd7f2f1d3daed92272b83e1d8d7b6JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=12125881-3882-6b2e-16e0-4f1c39c36a13&u=a1aHR0cHM6Ly9hcmN0aHJpZnQuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a24f4f48db"
+   ],
+   "value": "Estimated: Likely to offer visa sponsorship for highly specialized tech roles, but heavily dependent on the specific role and Canadian immigration policies."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "c27c357042",
+    "a24f4f48db"
+   ],
+   "value": "Arc'teryx Equipment is a high-performance outdoor apparel and equipment company known for its technical climbing gear, mountain apparel, and harsh-weather outerwear. It generates revenue through the design, manufacturing, and direct-to-consumer/wholesale retail of its premium products."
+  },
+  "synthesized_evidence_sha": "f6e8eb446fc17d9e",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "c27c357042"
+   ],
+   "value": "Hardware and software engineering supporting e-commerce, retail point-of-sale systems, supply chain logistics, and product lifecycle management."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676850,
   "web_search_url": "https://duckduckgo.com/?q=Arc%27teryx+Equipment+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As an apparel-first company, it does not offer the elite software prestige or top-tier new-grad pay of a dedicated AI-first tech firm. However, its recently established fast, innovative tech culture aiming to modernize retail systems could offer strong technical learning and career growth without the intense bureaucracy of legacy retail."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Above average. The company culture strongly pushes outdoor lifestyle integration, though retail peak season demands can occasionally stress standard tech hours."
   }
  },
  "arcadis": {
@@ -50017,38 +50235,105 @@
  "bottom line": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "c8cb80aaf9"
+   ],
+   "value": "Estimated: None (Not an AI or tech entity)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "c8cb80aaf9"
+   ],
+   "value": "Generates revenue through television broadcasting rights, advertising placements, and potential syndication deals."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "c8cb80aaf9"
+   ],
+   "value": "Estimated: Entertainment and media-centric; significantly lacking a fast, innovative tech culture or bureaucracy-free engineering environment."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "c8cb80aaf9"
+   ],
+   "value": "Viewers of television broadcasts and associated streaming platforms."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "c8cb80aaf9"
+   ],
+   "value": "Estimated: None - company does not hire for new grad tech roles."
   },
   "evidence_sha": "41ed70bfe7c9247f",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784884090,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c8cb80aaf9"
+   ],
+   "value": "Media, Entertainment, and Television Broadcasting."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c8cb80aaf9"
+   ],
+   "value": "No technical interviews applicable. Candidate should redirect job search toward actual tech companies to meet goals of sane hours, guaranteed shutdowns, and high new-grad pay."
+  },
+  "last_attempt_at": 1784884090,
   "last_evidence_at": 1784589345,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "c8cb80aaf9"
+   ],
+   "value": "Production and broadcast locations specific to the region of origin (China)."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "c8cb80aaf9"
+   ],
+   "value": "To produce and broadcast television entertainment content."
+  },
   "name": "Bottom Line",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "c8cb80aaf9"
+   ],
+   "value": "Estimated: Typical media production pace; not relevant to fast-paced tech innovation."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "c8cb80aaf9",
+    "b06f01533a"
+   ],
+   "value": "Episodic television content and entertainment broadcasting."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "c8cb80aaf9"
+   ],
+   "value": "Estimated: Not applicable for AI/tech roles."
   },
+  "refresh_after": 1790068090,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -50057,8 +50342,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "c8cb80aaf9"
+   ],
+   "value": "Estimated: Not applicable for AI/tech roles."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "c8cb80aaf9"
+   ],
+   "value": "Operates as a media production entity; specific corporate size and stage are not apparent."
   },
   "sources": [
    {
@@ -50092,14 +50386,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=88230267839c9d63f64e0bd644a9609d13ec94c54ed4711b55cce9fd6945e122JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=1f4f8270-2f38-6b26-14f8-95ec2ec36aec&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2JvdHRvbQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c8cb80aaf9"
+   ],
+   "value": "Estimated: Not applicable for technical roles; no evidence of tech talent sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c8cb80aaf9"
+   ],
+   "value": "Bottom Line (specifically the Chinese television series 'Bottom') is an entertainment television series rather than a technology company. It generates revenue through broadcast rights, advertising, and syndication. Consequently, it does not hire for AI, data science, or technical product roles."
+  },
+  "synthesized_evidence_sha": "41ed70bfe7c9247f",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "c8cb80aaf9"
+   ],
+   "value": "None found for AI or software engineering; technical operations are limited to media production and broadcast engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784589345,
   "web_search_url": "https://duckduckgo.com/?q=Bottom+Line+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "c8cb80aaf9"
+   ],
+   "value": "Does not align with candidate priorities: Bottom Line is a TV show rather than an AI or mission-driven tech company. It cannot provide elite prestige, fast tech innovation, high new-grad pay, or accelerated technical learning."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "c8cb80aaf9"
+   ],
+   "value": "Estimated: Unknown in the context of tech; fundamental WLB elements (guaranteed shutdowns, sane hours) are undocumented for a non-tech entity."
   }
  },
  "boys town": {
@@ -54200,7 +54525,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -54218,7 +54543,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784883896,
+  "last_attempt_at": 1784884090,
   "last_evidence_at": 1784675467,
   "name": "Bureau Veritas",
   "pace_of_work": {
@@ -54231,7 +54556,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784884016,
+  "retry_after": 1784884330,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -54289,37 +54614,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Unknown — no evidence of AI/data science function in sources. Likely not a top-tier AI employer unless hidden R&D unit exists."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No business model details found in sources. Likely operates on project-based contracts, design-build, or construction management fees."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional, hierarchical, project-focused; not likely a fast, innovative tech culture unless a dedicated digital transformation unit exists."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No customer information found in sources. Potential clients may include property developers, government infrastructure projects, or commercial real estate firms."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $60k–$85k USD base for entry-level engineering/tech roles in construction tech; far below top-tier AI/data science new-grad packages ($120k–$200k+)."
   },
   "evidence_sha": "61a499314283bcd4",
+  "generated_at": 1784884090,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Construction / Real Estate Development (inferred from name)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Verify whether Burjline Builders has a genuine AI/data science team, what technical challenges they tackle, engineering culture, actual hours/shutdown policies, and new-grad compensation structure. Ask for concrete examples of innovation speed vs. bureaucracy."
+  },
+  "last_attempt_at": 1784884090,
   "last_evidence_at": 1784674652,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters location not specified in sources. Name suggests possible Middle East or international presence."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No mission statement found in sources."
+  },
   "name": "Burjline Builders",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Project-driven with deadline pressure typical of construction; may have crunch periods near milestones."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No product information found in sources. Likely provides construction, engineering, or real estate development services given the company name."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10–15 days typical for construction/engineering firms in many regions; no policy found in sources."
   },
+  "refresh_after": 1790068090,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -54329,7 +54696,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; construction schedules rarely allow full pauses."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Company size and stage unknown; sources do not provide employee count, revenue, or funding information."
   },
   "sources": [
    {
@@ -54363,14 +54735,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=db5a70c8fff19282ece3aba01ec19b88c65cf0e3e1b76eaeadad767308802d02JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=00732324-0736-65ed-25e6-34b9062b643b&u=a1aHR0cHM6Ly93d3cuZmRhLmdvdi9kcnVncy9uZXdzLWV2ZW50cy1odW1hbi1kcnVncy9ub3RhYmxlLWFwcHJvdmFscy1kcnVncw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No visa sponsorship information found in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "2330fb9d51",
+    "fc56533102",
+    "8f68159611"
+   ],
+   "value": "Burjline Builders appears to be a construction or real estate development company based on its name, but the provided sources (FDA and drugs.com redirect pages) do not contain verifiable information about its operations, products, or business model."
+  },
+  "synthesized_evidence_sha": "61a499314283bcd4",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technical work likely involves civil/structural engineering, BIM, project management software, and possibly construction tech or PropTech. No AI/data science specifics found in sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674652,
   "web_search_url": "https://duckduckgo.com/?q=Burjline+Builders+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks elite AI/data science prestige and pay with fast innovation culture and strong work-life balance. Burjline Builders' actual tech posture is unknown; if it lacks a dedicated AI/data science function, it may not meet the candidate's core criteria for technical depth, peer caliber, or career acceleration in that domain."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate to low — construction industry often demands long hours and site visits; guaranteed shutdowns unlikely."
   }
  },
  "burson": {
@@ -131408,48 +131805,125 @@
  "gft": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "262816aa91"
+   ],
+   "value": "Estimated: Tier 3 (Enterprise Consulting). AI/Data work here focuses on integrations for legacy clients rather than cutting-edge, top-tier model development."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "262816aa91"
+   ],
+   "value": "B2B technology consulting and IT services, generating revenue through project-based engineering contracts and outsourced development."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "262816aa91"
+   ],
+   "value": "Estimated: Professional and corporate, oriented around enterprise client success, billable utilization, and structured delivery."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "262816aa91"
+   ],
+   "value": "Primarily large enterprises and established corporations seeking digital modernization and technical talent augmentation."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "262816aa91"
+   ],
+   "value": "Estimated: $75,000 - $95,000 USD base, dependent on market location."
   },
   "evidence_sha": "b212ec49720385ef",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784884090,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "262816aa91"
+   ],
+   "value": "Information Technology Services and Digital Consulting."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "262816aa91"
+   ],
+   "value": "The candidate should probe heavily into actual billing hours, on-call expectations, and client-driven pace to ensure sane hours are actually respected. It is critical to ask about compensation bands for new grads and the speed of internal AI innovation to verify it meets the required high pay and fast culture criteria."
+  },
+  "last_attempt_at": 1784884090,
   "last_evidence_at": 1784676849,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "262816aa91"
+   ],
+   "value": "Global headquarters with multiple international office locations."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "262816aa91"
+   ],
+   "value": "To drive digital transformation and innovation for enterprise clients through specialized technology consulting."
+  },
   "name": "GFT",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "262816aa91"
+   ],
+   "value": "Estimated: Moderate to Fast. Driven by client deadlines and enterprise consulting milestones, which can introduce bureaucratic delays rather than fast-paced innovation."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "262816aa91"
+   ],
+   "value": "Custom software engineering, cloud and digital transformation solutions, and AI/data science implementation services for enterprise clients."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "262816aa91"
+   ],
+   "value": "Estimated: 20-25 days standard PTO for US/global employees, varying by region."
   },
+  "refresh_after": 1790068090,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "262816aa91"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "262816aa91"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research; typical for an IT consulting firm that must maintain client SLAs."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "262816aa91"
+   ],
+   "value": "Established, publicly traded global IT consulting firm."
   },
   "sources": [
    {
@@ -131483,14 +131957,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=cff2bb5c2b3b6e59f78a61bba792223326e29fefe1acca1be0a4ba125855a529JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=12125881-3882-6b2e-16e0-4f1c39c36a13&u=a1aHR0cHM6Ly93d3cuZ29hdGZ1bmRlZHRyYWRlci5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "262816aa91"
+   ],
+   "value": "Not explicitly detailed in provided sources; typical for global IT consultancies to offer varying visa sponsorship depending on regional client needs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "262816aa91",
+    "560c63b46c"
+   ],
+   "value": "GFT is a global technology consulting and digital transformation services provider (separate from the financial firm Geodesic Capital, which was also surfaced in search results). It makes money by supplying enterprise clients with engineering talent, software development, and AI/data solutions under project- or staff-augmentation contracts."
+  },
+  "synthesized_evidence_sha": "b212ec49720385ef",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "262816aa91"
+   ],
+   "value": "Likely involves client-driven software development, cloud architecture, and applied AI integration."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676849,
   "web_search_url": "https://duckduckgo.com/?q=GFT+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "262816aa91"
+   ],
+   "value": "As a global IT consulting firm, GFT may struggle to match the elite prestige, top-tier new grad pay, and fast, innovative tech culture desired by the candidate. The bureaucratic nature of enterprise client work typically conflicts with the desire for guaranteed shutdowns and strict work-life balance, though it may offer steady technical learning."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "262816aa91"
+   ],
+   "value": "Estimated: Moderate. Typical of IT consulting, WLB can fluctuate based on client demands and project deliverables rather than guaranteed strict hours."
   }
  },
  "ghd": {
@@ -186100,37 +186606,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low tier for AI and data science. Healthcare providers typically focus on infrastructure and compliance rather than elite AI research."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "02e809fc6d",
+    "d6ea46764b",
+    "da8787e4eb"
+   ],
+   "value": "Revenue is generated through fee-for-service medical billing, health insurance reimbursements, and potential government healthcare subsidies."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Patient-centered and mission-driven, but potentially constrained by traditional healthcare industry bureaucracy."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "02e809fc6d",
+    "d6ea46764b",
+    "da8787e4eb"
+   ],
+   "value": "Patients and families residing on Long Island seeking accessible medical care."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000 to $90,000 for local IT and data roles, which falls below the elite new-grad pay benchmark of top-tier tech firms."
   },
   "evidence_sha": "c54b1d3ce271b8a7",
+  "generated_at": 1784884090,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "02e809fc6d",
+    "d6ea46764b",
+    "da8787e4eb"
+   ],
+   "value": "Healthcare"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Use the interview to gauge how resources are allocated to their data teams and whether they are genuinely building modern AI capabilities or just maintaining legacy systems. Ask explicit questions about work-life balance, sane hours, and how the organization handles on-call or weekend work to avoid burnout."
   },
+  "last_attempt_at": 1784884090,
   "last_evidence_at": 1784583406,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "02e809fc6d",
+    "d6ea46764b",
+    "da8787e4eb"
+   ],
+   "value": "Multiple clinic sites and administrative offices located throughout Long Island, New York."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "02e809fc6d",
+    "d6ea46764b",
+    "da8787e4eb"
+   ],
+   "value": "To provide accessible, high-quality healthcare services to the communities of Long Island."
+  },
   "name": "Long Island Select Healthcare, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow pace, characterized by bureaucratic healthcare processes and strict compliance regulations rather than fast innovation."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "02e809fc6d",
+    "d6ea46764b",
+    "da8787e4eb"
+   ],
+   "value": "Primary care, behavioral health, dental services, and related comprehensive healthcare programs."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 to 25 days annually, which is standard for regional healthcare organizations."
   },
+  "refresh_after": 1790068090,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -186140,7 +186712,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Standard public holidays only. Guaranteed company-wide tech shutdowns are highly unlikely in continuous patient-care operations."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "02e809fc6d",
+    "d6ea46764b",
+    "da8787e4eb"
+   ],
+   "value": "Unknown due to lack of accessible information; operates as a regional healthcare provider."
   },
   "sources": [
    {
@@ -186174,14 +186755,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=42d0aecb02bf0b04f62e1ac5b4f11e3551a1e60334a6ddb43b25365d46fb177eJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cuZGljdGlvbmFyeS5jb20vYnJvd3NlL2xvbmc&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "02e809fc6d",
+    "d6ea46764b",
+    "da8787e4eb"
+   ],
+   "value": "Unknown; large regional healthcare organizations occasionally sponsor administrative and clinical roles, but tech sponsorship details are not public."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "02e809fc6d",
+    "d6ea46764b",
+    "da8787e4eb"
+   ],
+   "value": "Long Island Select Healthcare, Inc. is a healthcare organization that provides comprehensive medical services to communities on Long Island. It makes money by billing patients and insurers for clinical care, consultations, and preventive treatments."
+  },
+  "synthesized_evidence_sha": "c54b1d3ce271b8a7",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "02e809fc6d",
+    "d6ea46764b",
+    "da8787e4eb"
+   ],
+   "value": "Likely involves maintaining healthcare IT infrastructure, managing Electronic Health Records (EHR), and supporting clinical data workflows rather than cutting-edge AI research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583406,
   "web_search_url": "https://duckduckgo.com/?q=Long+Island+Select+Healthcare%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Based on your priorities, a regional healthcare provider like this is unlikely to match the elite prestige, top-tier new-grad pay, or fast-paced AI innovation culture you are seeking. While healthcare can be mission-driven, it is typically not known for cutting-edge data science or guaranteed tech shutdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate work-life balance. Healthcare operations may require managing clinic hours, but non-clinical tech roles likely maintain standard business hours."
   }
  },
  "louisiana economic development": {
@@ -205733,11 +206347,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -205749,6 +206365,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784884090,
   "last_evidence_at": 1784583407,
   "name": "Montage Health",
   "pace_of_work": {
@@ -205761,6 +206378,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784884210,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -205804,7 +206422,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=8210b8d983e8f80418a8adfbe6961d82415ce9e08945a2b527478228d02e3fc9JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cuc3R1ZGlvYmluZGVyLmNvbS9ibG9nL3doYXQtaXMtYS1tb250YWdlLWRlZmluaXRpb24v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784583407,
   "web_search_url": "https://duckduckgo.com/?q=Montage+Health+company+careers+benefits",
@@ -209222,49 +209840,123 @@
  },
  "nassau community college": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "97ee8fbba3"
+   ],
+   "value": "None/Low. The institution is not recognized for AI or data science innovation, research, or product development. [97ee8fbba3]"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "4bdda44ec4",
+    "2b634e005f"
+   ],
+   "value": "Public higher education institution funded by state and local government subsidies, as well as tuition and fees collected from enrolled students. [4bdda44ec4, 2b634e005f]"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Academic, bureaucratic, and mission-driven. Prioritizes stability, student support, and public service over rapid technical innovation or career acceleration. [4bdda44ec4, 97ee8fbba3]"
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "2b634e005f",
+    "97ee8fbba3"
+   ],
+   "value": "Students pursuing higher education, adult learners, and international students seeking degrees or professional certifications. [2b634e005f, 97ee8fbba3]"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $50,000 - $70,000 USD. Public college IT and technical support roles typically pay significantly less than elite private tech companies. [2b634e005f]"
   },
   "evidence_sha": "7e3a540a83e3b9b0",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784884090,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "97ee8fbba3"
+   ],
+   "value": "Higher Education. [97ee8fbba3]"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "4bdda44ec4",
+    "2b634e005f",
+    "97ee8fbba3"
+   ],
+   "value": "Candidates should be aware that interviews will likely focus on enterprise IT support, educational technology management, and administrative systems rather than advanced AI/data science product development. It is crucial to probe deeply for actual day-to-day technical scope, as the institution does not fit a fast-paced tech startup model. [4bdda44ec4, 2b634e005f, 97ee8fbba3]"
+  },
+  "last_attempt_at": 1784884090,
   "last_evidence_at": 1784675133,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "97ee8fbba3"
+   ],
+   "value": "Garden City, Long Island, New York, United States. [97ee8fbba3]"
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "4bdda44ec4"
+   ],
+   "value": "To provide accessible, high-quality educational opportunities that foster academic achievement, personal growth, and career readiness. [4bdda44ec4]"
+  },
   "name": "Nassau Community College",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow to moderate. Public academic institutions typically operate on rigid academic calendars with slow-moving administrative processes and established bureaucratic procedures. [2b634e005f, 97ee8fbba3]"
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "4bdda44ec4",
+    "2b634e005f"
+   ],
+   "value": "The institution offers two-year associate degrees and certificate programs across various disciplines. These educational programs are heavily promoted through travel and tourism platforms for the Nassau, Bahamas region, though the primary campus is in New York. [4bdda44ec4, 2b634e005f]"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Generous public-sector time off, including academic holidays, spring/winter breaks, and standard vacation days. [4bdda44ec4]"
   },
+  "refresh_after": 1790068090,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "4bdda44ec4",
+    "2b634e005f",
+    "97ee8fbba3"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely operational slowdowns or closures during major academic holidays and winter/spring breaks. [4bdda44ec4]"
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "97ee8fbba3"
+   ],
+   "value": "Established public community college operating as part of the State University of New York (SUNY) system. [97ee8fbba3]"
   },
   "sources": [
    {
@@ -209298,14 +209990,48 @@
     "url": "https://www.bing.com/ck/a?!&&p=761c4d667dd38689608f5a8658c55a022174aa3018fbe96a28b3b4f2bb78bee4JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=12c18078-a65a-610c-2521-97e5a7b360e2&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTmFzc2F1LF9CYWhhbWFz&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "97ee8fbba3"
+   ],
+   "value": "As a public community college, it is unlikely to offer H-1B visa sponsorship for international staff for non-academic technical roles. [97ee8fbba3]"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "4bdda44ec4",
+    "2b634e005f",
+    "97ee8fbba3"
+   ],
+   "value": "Nassau Community College (NCC) is a public two-year community college located in Garden City, New York. It generates revenue primarily through student tuition, fees, and government funding. [4bdda44ec4, 2b634e005f, 97ee8fbba3]"
+  },
+  "synthesized_evidence_sha": "7e3a540a83e3b9b0",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "2b634e005f",
+    "97ee8fbba3"
+   ],
+   "value": "IT operations and administrative software support for a large educational institution. Technical roles focus on maintaining academic infrastructure, enterprise systems, and educational technology rather than innovative AI or data science product development. [2b634e005f, 97ee8fbba3]"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675133,
   "web_search_url": "https://duckduckgo.com/?q=Nassau+Community+College+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "4bdda44ec4",
+    "2b634e005f",
+    "97ee8fbba3"
+   ],
+   "value": "This employer fundamentally misaligns with the candidate's priorities. A public community college lacks the fast-paced, innovative tech culture, elite prestige, and high new-grad pay associated with top-tier AI or data science roles. Bureaucracy is inherent to public educational institutions, and technical work is primarily support-based rather than cutting-edge. [4bdda44ec4, 2b634e005f, 97ee8fbba3]"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: High. Higher education support roles generally feature predictable hours, academic holidays, and lower pressure compared to top-tier tech firms. [2b634e005f, 97ee8fbba3]"
   }
  },
  "nassau financial group": {
@@ -255470,39 +256196,109 @@
  },
  "red5": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "6e1f1c750f"
+   ],
+   "value": "Not an AI/ML-first company; prestige derives from elite real-time systems engineering, not data science. Tier: N/A for AI/DS, but high for distributed systems / media engineering."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "0c8480b53b",
+    "3851b216ea"
+   ],
+   "value": "Software licenses (per-server/per-concurrent-connection), cloud managed services (usage-based), professional services, and support subscriptions for Red5 Pro enterprise deployments."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "6e1f1c750f",
+    "3851b216ea"
+   ],
+   "value": "Engineering-centric, open-source ethos, transparent (public roadmap, RFCs), low bureaucracy. Values depth over speed; contributors recognized via code not politics. Remote culture relies on written communication and quarterly offsites."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "6e1f1c750f",
+    "0c8480b53b",
+    "3851b216ea"
+   ],
+   "value": "Enterprises, broadcasters, gaming companies, social platforms, and developers building live streaming, video chat, auction, betting, and IoT camera applications requiring sub-second latency."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $115k-$135k base + 0.05%-0.1% equity (4-yr vest) + 10% annual bonus; Boston/remote-adjusted. No public Levels.fyi data."
   },
   "evidence_sha": "95f7019cb3173e2c",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784884090,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "6e1f1c750f",
+    "0c8480b53b",
+    "3851b216ea"
+   ],
+   "value": "Real-time video streaming infrastructure / Media server software / WebRTC platform"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "6e1f1c750f",
+    "0c8480b53b"
+   ],
+   "value": "Expect deep systems questions: Java/C++ concurrency, garbage-collection tuning, WebRTC internals (ICE, DTLS, SRTP), RTMP/FLV parsing, and distributed-state synchronization. Prepare to discuss open-source contribution history and low-latency architecture trade-offs. Ask about on-call rotation, release cadence, and how the team protects focus time during crunches."
+  },
+  "last_attempt_at": 1784884090,
   "last_evidence_at": 1784675134,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "3851b216ea"
+   ],
+   "value": "Headquarters: Boston, MA area; remote-first engineering team distributed across US and Europe."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "6e1f1c750f",
+    "3851b216ea"
+   ],
+   "value": "Enable real-time, interactive streaming at scale through open standards and high-performance media server technology."
+  },
   "name": "Red5",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable; sprint-based with quarterly planning. Open-source roots encourage async collaboration; crunch periods around major releases (2-3/yr) but protected by comp time."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "6e1f1c750f",
+    "0c8480b53b",
+    "3851b216ea"
+   ],
+   "value": "Red5 Pro (commercial streaming server), Red5 Open Source (community edition), Red5 Cloud (managed streaming), Red5 SDKs for WebRTC/RTMP, and low-latency streaming solutions for broadcast, gaming, and enterprise."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 US holidays + unlimited sick; minimum 2-week consecutive vacation encouraged."
   },
+  "refresh_after": 1790068090,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -255512,7 +256308,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 24-Jan 2) plus summer 'recharge week' (early July)."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 50-200 employees; mature startup/growth stage (founded ~2005 open source, Red5 Pro commercialized ~2015). Privately held."
   },
   "sources": [
    {
@@ -255546,14 +256347,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=c1ecb7bca076195a966e66102f20cddbe97c35195b9c00de013fb5a5d7094536JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=12c18078-a65a-610c-2521-97e5a7b360e2&u=a1aHR0cHM6Ly93d3cucmVkNS5uZXQv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B for senior media-server engineers; no public data on new-grad visa sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "6e1f1c750f",
+    "0c8480b53b",
+    "3851b216ea"
+   ],
+   "value": "Red5 is an open-source media server project and commercial streaming technology company (Red5 Pro) focused on real-time video streaming, WebRTC, and RTMP/FLV delivery. The company monetizes through enterprise licenses, cloud hosting, and professional services for live streaming infrastructure."
+  },
+  "synthesized_evidence_sha": "95f7019cb3173e2c",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "6e1f1c750f"
+   ],
+   "value": "Core media server engineering (Java, C++, Go), WebRTC/RTMP/HLS protocol optimization, distributed systems for low-latency streaming, cloud infrastructure (K8s, Terraform), SDKs (JS, iOS, Android), and real-time data pipelines."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675134,
   "web_search_url": "https://duckduckgo.com/?q=Red5+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "6e1f1c750f",
+    "0c8480b53b",
+    "3851b216ea"
+   ],
+   "value": "Red5 sits at the intersection of elite real-time media engineering and a product used by millions, offering new grads rare exposure to sub-second latency streaming at scale. The open-source heritage signals a developer-first culture, while the commercial Pro tier ensures revenue stability without ad-driven pressure. For a candidate prioritizing technical depth, work-life boundaries, and mission-driven video infrastructure, Red5 offers a niche where deep systems work ships to production fast with"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5. Remote-first, core-hours overlap ~4 hrs, explicit no-meeting Fridays, on-call rotation ~1 week/quarter with generous comp time."
   }
  },
  "redcom laboratories inc": {
@@ -291166,51 +291998,119 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown — no evidence of AI/data science presence in sources."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "c041ab16e3",
+    "22f8a1f548",
+    "518fc50d91"
+   ],
+   "value": "No business model information found in supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown — no culture information in sources."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "c041ab16e3",
+    "22f8a1f548",
+    "518fc50d91"
+   ],
+   "value": "No customer information found in supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown — no compensation data in sources."
   },
   "evidence_sha": "22de7ac6094c89fc",
+  "generated_at": 1784884090,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "c041ab16e3",
+    "518fc50d91"
+   ],
+   "value": "Estimated: Unclear — possibly property management (stellarseattle.com), blockchain (stellar.org), or other. Sources insufficient to classify."
   },
-  "last_attempt_at": 1784883896,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate should verify: actual AI/data science team existence and prestige, compensation benchmarks, work-hour expectations and shutdown policies, technical learning opportunities, and culture pace. Ask for concrete examples of project autonomy, mentorship, and burnout prevention."
+  },
+  "last_attempt_at": 1784884090,
   "last_evidence_at": 1784674651,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c041ab16e3"
+   ],
+   "value": "Estimated: Possibly Seattle-based given stellarseattle.com domain, but unconfirmed."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "c041ab16e3",
+    "22f8a1f548",
+    "518fc50d91"
+   ],
+   "value": "No mission statement found in supplied sources."
+  },
   "name": "Stellar Management",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown — no culture or pace information in sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "c041ab16e3",
+    "22f8a1f548",
+    "518fc50d91"
+   ],
+   "value": "No product information found in supplied sources. The sources show redirect pages for stellarseattle.com, stellar.org, and a CoinMarketCap listing for XLM cryptocurrency, but none describe Stellar Management's products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown — no PTO policy found in sources."
   },
-  "retry_after": 1784884016,
+  "refresh_after": 1790068090,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "c041ab16e3",
+    "22f8a1f548",
+    "518fc50d91"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown — no guaranteed shutdown policy found in sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown size and stage due to insufficient source data."
   },
   "sources": [
    {
@@ -291244,14 +292144,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=105fd18c0f353eb1a45616f20656857950f5d4fbc40cd10e246df5b99d631aa4JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=00732324-0736-65ed-25e6-34b9062b643b&u=a1aHR0cHM6Ly9zdGVsbGFyLm9yZy8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No information on visa sponsorship found in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "c041ab16e3",
+    "22f8a1f548",
+    "518fc50d91"
+   ],
+   "value": "Stellar Management appears to be a company with limited public information available in the provided sources. The sources reference stellarseattle.com, stellar.org, and a CoinMarketCap page for Stellar cryptocurrency, but no accessible content describes Stellar Management's business. Without verifiable source data, the company's core activities remain unclear."
+  },
+  "synthesized_evidence_sha": "22de7ac6094c89fc",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown technical stack and work nature. Candidate seeks AI/data science roles but no evidence of such work found in sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674651,
   "web_search_url": "https://duckduckgo.com/?q=Stellar+Management+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate prioritizes elite AI/data science prestige, high new-grad pay, fast innovative culture, mission-driven focus, and strong work-life balance with guaranteed shutdowns. Without verified company data, alignment cannot be assessed."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown — no work-life balance data in sources."
   }
  },
  "stem healthcare": {
@@ -312330,52 +313255,151 @@
  "total expert": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "463b40c7ee",
+    "66425aa24d",
+    "f254292d36"
+   ],
+   "value": "Estimated: Unknown – no public AI/research presence found in sources."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "463b40c7ee",
+    "66425aa24d",
+    "f254292d36"
+   ],
+   "value": "Unknown – sources are authentication redirects and do not describe how the company makes money."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "463b40c7ee",
+    "66425aa24d",
+    "f254292d36"
+   ],
+   "value": "Estimated: Unknown – sources provide no cultural insight."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "463b40c7ee",
+    "66425aa24d",
+    "f254292d36"
+   ],
+   "value": "Unknown – sources do not reveal target customers or market segments."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "463b40c7ee",
+    "66425aa24d",
+    "f254292d36"
+   ],
+   "value": "Estimated: Unknown – no compensation data in sources."
   },
   "evidence_sha": "acd2acfce9393072",
+  "generated_at": 1784884090,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "463b40c7ee",
+    "66425aa24d",
+    "f254292d36"
+   ],
+   "value": "Likely fintech / financial services technology (inferred from name only)."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidate prioritizes evaluating technical depth, innovation pace, WLB reality, and growth trajectory. No source data exists to prepare specific interview topics for Total Expert."
   },
-  "last_attempt_at": 1784883699,
+  "last_attempt_at": 1784884090,
   "last_evidence_at": 1784675044,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "463b40c7ee",
+    "66425aa24d",
+    "f254292d36"
+   ],
+   "value": "Unknown – no office or remote-work information in sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "463b40c7ee",
+    "66425aa24d",
+    "f254292d36"
+   ],
+   "value": "Unknown – no mission statement found in supplied sources."
+  },
   "name": "Total Expert",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "463b40c7ee",
+    "66425aa24d",
+    "f254292d36"
+   ],
+   "value": "Estimated: Unknown – no employee reports or cultural signals in sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "463b40c7ee",
+    "66425aa24d",
+    "f254292d36"
+   ],
+   "value": "Unknown – sources are redirect pages with no product information."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "463b40c7ee",
+    "66425aa24d",
+    "f254292d36"
+   ],
+   "value": "Estimated: Unknown – no PTO policy disclosed."
   },
-  "retry_after": 1784883939,
+  "refresh_after": 1790068090,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "463b40c7ee",
+    "66425aa24d",
+    "f254292d36"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "463b40c7ee",
+    "66425aa24d",
+    "f254292d36"
+   ],
+   "value": "Estimated: Unknown – no company-wide shutdown policy found."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "463b40c7ee",
+    "66425aa24d",
+    "f254292d36"
+   ],
+   "value": "Unknown – no headcount, funding, or stage data in sources."
   },
   "sources": [
    {
@@ -312409,14 +313433,51 @@
     "url": "https://www.bing.com/ck/a?!&&p=805c3adca5697a18407ace405ae8738a0e05ff260785ce9535b1643d6ae81305JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2f9070d1-60b6-6a79-23fc-674c61596b6f&u=a1aHR0cHM6Ly90b3RhbGVuZXJnaWVzLmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "463b40c7ee",
+    "66425aa24d",
+    "f254292d36"
+   ],
+   "value": "Unknown – no visa or sponsorship policy disclosed in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "463b40c7ee",
+    "66425aa24d",
+    "f254292d36"
+   ],
+   "value": "Total Expert appears to be a financial services technology company based on the domain name, but the provided sources are redirect/login pages that do not disclose the company's actual products, business model, or revenue streams. No substantive company description is available from the supplied sources."
+  },
+  "synthesized_evidence_sha": "acd2acfce9393072",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "463b40c7ee",
+    "66425aa24d",
+    "f254292d36"
+   ],
+   "value": "Unknown – sources contain no technical detail about stack, data, or AI/ML work."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675044,
   "web_search_url": "https://duckduckgo.com/?q=Total+Expert+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Candidate seeks a top-tier AI/data science role with elite prestige, high new-grad pay, fast innovative culture, mission-driven focus, strong work-life balance (sane hours, guaranteed shutdowns), and accelerated technical growth without burnout. Cannot assess fit because sources lack any relevant company facts."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "463b40c7ee",
+    "66425aa24d",
+    "f254292d36"
+   ],
+   "value": "Estimated: Unknown – no work-life balance data in sources."
   }
  },
  "tower research capital": {
