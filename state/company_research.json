@@ -24992,7 +24992,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -25010,7 +25010,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784899126,
+  "last_attempt_at": 1784899318,
   "last_evidence_at": 1784680610,
   "name": "Annapurna Labs (U.S.) Inc.",
   "pace_of_work": {
@@ -25023,7 +25023,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784899246,
+  "retry_after": 1784899558,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -59359,11 +59359,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -59375,6 +59377,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784899318,
   "last_evidence_at": 1784680700,
   "name": "BRINC Drones",
   "pace_of_work": {
@@ -59387,6 +59390,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784899438,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -59450,7 +59454,7 @@
     "url": "https://jobs.ashbyhq.com/brinc/f4d9cc60-7807-4446-874f-9370a4dd3c8e"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680700,
   "web_search_url": "https://duckduckgo.com/?q=BRINC+Drones+company+careers+benefits",
@@ -63907,37 +63911,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 – Applied analytics and ML engineering within a traditional telecom; not a recognized AI research leader."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Recurring subscription revenue from monthly broadband, video, and voice plans; additional revenue from installation fees, equipment rentals, advertising, and business services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Pragmatic, engineering-focused, low-politics, with a 'get it done' attitude; transitioning from legacy cable culture to more modern tech practices; collaborative but not high-intensity innovation culture."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Residential households and small-to-medium businesses in mostly non-metro markets across the Western, Midwestern, and Southern U.S."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$105,000 base + modest RSU/bonus (total comp ~$95k-$120k); below top-tier tech but competitive for telecom."
   },
   "evidence_sha": "95b0a0e7820d1e03",
+  "generated_at": 1784899318,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Telecommunications / Cable & Broadband Services"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect practical coding, SQL, and system design questions tied to telecom use cases (network traffic, customer churn, capacity planning). Behavioral emphasis on collaboration, reliability, and handling legacy systems. Less focus on novel ML research or whiteboard algorithms."
+  },
+  "last_attempt_at": 1784899318,
   "last_evidence_at": 1784680609,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Phoenix, AZ; major operations in Idaho, Mississippi, Texas, Oklahoma, and other states; remote-friendly for some tech roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To connect customers to what matters most by providing reliable, high-value broadband and communication services with a focus on underserved communities."
+  },
   "name": "Cable One",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate – Project cycles measured in quarters; regulated environment slows deployment; some agile teams but overall deliberative pace."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "High-speed internet (fiber and coaxial), cable TV, digital phone, managed Wi-Fi, and business enterprise solutions including ethernet and cloud services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 holidays; accrual increases with tenure."
   },
+  "refresh_after": 1790083318,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -63947,7 +63993,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No company-wide guaranteed shutdowns; some teams observe reduced ops during major holidays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Publicly traded (NYSE: CABO), ~$4.5B market cap, ~3,500 employees, mature incumbent in cable/telecom sector."
   },
   "sources": [
    {
@@ -63981,14 +64032,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=6b710086ec24c267a0a5f9c6d81a2ee0f7c9dbb58aaeb313be523fb44ed73d18JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=040a1be3-347d-632c-32fd-0c7d35f96298&u=a1aHR0cHM6Ly93d3cueGZpbml0eS5jb20vP21zb2NraWQ9MDQwYTFiZTMzNDdkNjMyYzMyZmQwYzdkMzVmOTYyOTg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "History of H-1B sponsorship for specialized engineering and data roles; green card support varies by team and budget."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cable One (operating as Sparklight) is a U.S. broadband and cable communications provider delivering internet, TV, and phone services to residential and business customers across 24 states. It generates revenue primarily through monthly subscription fees for connectivity and bundled packages."
+  },
+  "synthesized_evidence_sha": "95b0a0e7820d1e03",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Network engineering, infrastructure automation, data analytics for network optimization, customer experience platforms, and emerging AI/ML for predictive maintenance and churn reduction. Not an AI-first research lab."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680609,
   "web_search_url": "https://duckduckgo.com/?q=Cable+One+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Cable One offers a stable, mission-driven telecom environment with decent work-life balance and opportunities to apply data science at scale on real network data, but it lacks the elite AI prestige, fast-paced innovation culture, or top-tier new-grad compensation found at major tech firms. It suits candidates prioritizing balance and domain impact over cutting-edge research prestige."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 – Generally reasonable hours (40-45 hrs/week), on-call rotations for network ops, limited weekend work for most tech roles."
   }
  },
  "caci": {
@@ -220508,11 +220580,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -220524,6 +220598,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784899318,
   "last_evidence_at": 1784680608,
   "name": "Magical",
   "pace_of_work": {
@@ -220536,6 +220611,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784899438,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -220599,7 +220675,7 @@
     "url": "https://jobs.ashbyhq.com/magical/0f575ece-98cf-4366-a7f6-ef7eca2873b7"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680608,
   "web_search_url": "https://duckduckgo.com/?q=Magical+company+careers+benefits",
@@ -231753,7 +231829,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -231771,7 +231847,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784899126,
+  "last_attempt_at": 1784899318,
   "last_evidence_at": 1784680607,
   "name": "Megger",
   "pace_of_work": {
@@ -231784,7 +231860,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784899246,
+  "retry_after": 1784899558,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -233647,53 +233723,136 @@
  },
  "metergy solutions": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "7fcfce98cc",
+    "eb0025a3cf",
+    "79a6c71f80"
+   ],
+   "value": "Unknown."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "7fcfce98cc",
+    "eb0025a3cf",
+    "79a6c71f80"
+   ],
+   "value": "Unknown."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unverified from research; candidate should seek employee testimonials to clarify if the culture is innovative and respectful."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "7fcfce98cc",
+    "eb0025a3cf",
+    "79a6c71f80"
+   ],
+   "value": "Unknown."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Not found in research; candidate should request totals and equity details to ensure it meets top-tier expectations."
   },
   "evidence_sha": "96f78d7ce72b8ff2",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784899318,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784899126,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "7fcfce98cc",
+    "eb0025a3cf",
+    "79a6c71f80"
+   ],
+   "value": "Unknown."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "7fcfce98cc",
+    "eb0025a3cf",
+    "79a6c71f80"
+   ],
+   "value": "During interviews, probe deeply into the actual day-to-day pace, compensation structure for new grads, and explicit policies regarding sane hours and guaranteed shutdowns to see if it aligns with your requirements."
+  },
+  "last_attempt_at": 1784899318,
   "last_evidence_at": 1784680602,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "7fcfce98cc",
+    "eb0025a3cf",
+    "79a6c71f80"
+   ],
+   "value": "Unknown."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "7fcfce98cc",
+    "eb0025a3cf",
+    "79a6c71f80"
+   ],
+   "value": "Unknown."
+  },
   "name": "Metergy Solutions",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Due to lack of source data, candidate should directly verify if the pace is appropriately fast and avoids slow bureaucracy."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "7fcfce98cc",
+    "eb0025a3cf",
+    "79a6c71f80"
+   ],
+   "value": "Unknown."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Not found in research; candidate should negotiate and confirm exact PTO allotments."
   },
-  "retry_after": 1784899246,
+  "refresh_after": 1790083318,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "7fcfce98cc",
+    "eb0025a3cf",
+    "79a6c71f80"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Not found in research; candidate must explicitly ask if guaranteed company shutdowns exist."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "7fcfce98cc",
+    "eb0025a3cf",
+    "79a6c71f80"
+   ],
+   "value": "Unknown."
   },
   "sources": [
    {
@@ -233727,14 +233886,51 @@
     "url": "https://www.bing.com/ck/a?!&&p=32cc7c4f22b8d00a7f4414d8c87241998d56bb8922a5f7e6c12549b85984b38bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=040a1be3-347d-632c-32fd-0c7d35f96298&u=a1aHR0cDovL2ZvcnVtcy5sb3Vpc3ZpbGxlaG90Ynl0ZXMuY29tL3ZpZXd0b3BpYy5waHA_dD0yNjUzNg&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "7fcfce98cc",
+    "eb0025a3cf",
+    "79a6c71f80"
+   ],
+   "value": "Unknown."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "7fcfce98cc",
+    "eb0025a3cf",
+    "79a6c71f80"
+   ],
+   "value": "Specific details on Metergy Solutions' core operations and revenue streams are not available in the provided sources."
+  },
+  "synthesized_evidence_sha": "96f78d7ce72b8ff2",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "7fcfce98cc",
+    "eb0025a3cf",
+    "79a6c71f80"
+   ],
+   "value": "Unknown."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680602,
   "web_search_url": "https://duckduckgo.com/?q=Metergy+Solutions+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "7fcfce98cc",
+    "eb0025a3cf",
+    "79a6c71f80"
+   ],
+   "value": "Because the provided sources lack specifics, it is currently unclear if Metergy Solutions offers the elite AI prestige, new-grad pay, and fast-paced but work-life balanced environment that fits your priorities."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unverified from research; candidate must confirm if sane hours and anti-burnout standards are actively maintained."
   }
  },
  "metropolitan state university of denver": {
@@ -263801,42 +263997,101 @@
  "omni design technologies": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "21191007be"
+   ],
+   "value": "Estimated: High technical prestige in the semiconductor IP sector due to specializations in ultra-low power AI and advanced FinFET nodes, though not a traditional big-tech AI/ML powerhouse."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "21191007be"
+   ],
+   "value": "Licensing high-performance, ultra-low power IP cores to system-on-chip designers to enable differentiated semiconductor solutions."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "21191007be"
+   ],
+   "value": "Estimated: Intensely innovative, technology-driven, and highly ambitious, focusing on solidifying a leadership position and capturing market share."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "21191007be"
+   ],
+   "value": "Companies in critical applications and industries including 5G, wireline and optical communications, LiDAR, radar, automotive networking, AI, and image sensors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Highly competitive base salary and equity in the $120,000 - $160,000 range, reflecting the specialized semiconductor skill set and high-growth stage."
   },
   "evidence_sha": "be64295c648fb53b",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784899318,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784898945,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "21191007be"
+   ],
+   "value": "Semiconductor Intellectual Property (IP) and System-on-Chip (SoC) solutions."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "21191007be"
+   ],
+   "value": "Given the rapid year-over-year growth, expect interviewers to emphasize your ability to handle aggressive technical learning curves and adapt to a fast-paced culture without sacrificing quality. They may also probe your commitment to mission-driven semiconductor innovation and your strategies for maintaining sustainable work-life balance to avoid burnout in a high-growth environment."
+  },
+  "last_attempt_at": 1784899318,
   "last_evidence_at": 1784680504,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "21191007be",
+    "1ffb847af3"
+   ],
+   "value": "Specific office locations were not found in the provided research, but the company actively recruits through standard job boards."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "21191007be"
+   ],
+   "value": "Providing differentiated system-on-chip (SoC) solutions that fuel innovation in critical advanced applications."
+  },
   "name": "Omni Design Technologies",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "21191007be"
+   ],
+   "value": "Estimated: Very fast-paced, mirroring the company's exponential year-over-year growth trajectory and proactive market expansion goals."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "21191007be"
+   ],
+   "value": "High-performance, ultra-low power IP cores ranging from 28nm down through advanced FinFET nodes, used to build differentiated system-on-chip (SoC) solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard paid time off annually, typical for mid-sized private semiconductor companies."
   },
-  "retry_after": 1784899185,
+  "refresh_after": 1790083318,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -263847,6 +264102,13 @@
    "confidence": "estimated",
    "source_ids": [],
    "value": "None found in research (estimated)"
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "21191007be"
+   ],
+   "value": "High-growth private company with a proven track record of exceeding 50% year-over-year growth, currently at an inflection point to significantly expand market share."
   },
   "sources": [
    {
@@ -263900,14 +264162,43 @@
     "url": "https://jobs.lever.co/omnidesigntech/003f8d12-e454-4df9-be7f-5dd73faf0dd2"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "21191007be"
+   ],
+   "value": "Omni Design Technologies develops high-performance, ultra-low power semiconductor IP cores for system-on-chip (SoC) solutions. The company generates revenue by licensing these IP cores to electronics manufacturers across various advanced technology sectors."
+  },
+  "synthesized_evidence_sha": "be64295c648fb53b",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "21191007be"
+   ],
+   "value": "Involves designing, verifying, and integrating ultra-low power semiconductor IP cores and system-on-chip (SoC) components across process nodes from 28nm to advanced FinFET nodes."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680504,
   "web_search_url": "https://duckduckgo.com/?q=Omni+Design+Technologies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "21191007be"
+   ],
+   "value": "This company offers a fast-paced, innovative tech culture driven by exponential (50%+) year-over-year growth, avoiding slow corporate bureaucracy while positioning you for rapid career growth. Furthermore, its leadership in ultra-low power AI IP allows you to engage in high-prestige, mission-driven semiconductor technology that accelerates technical learning in cutting-edge fields."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "21191007be"
+   ],
+   "value": "Estimated: Good work-life balance typical of specialized engineering IP firms, though periods of high intensity can be expected during product tape-outs or rapid scaling phases."
   }
  },
  "omniai": {
@@ -323445,49 +323736,136 @@
  },
  "shyftlabs": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "d10c644af9",
+    "fe85288f8e",
+    "23528e5cf1"
+   ],
+   "value": "Unknown due to source retrieval failures."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "d10c644af9",
+    "fe85288f8e",
+    "23528e5cf1"
+   ],
+   "value": "Unknown due to source retrieval failures."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "d10c644af9",
+    "fe85288f8e",
+    "23528e5cf1"
+   ],
+   "value": "Unknown due to source retrieval failures."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "d10c644af9",
+    "fe85288f8e",
+    "23528e5cf1"
+   ],
+   "value": "Unknown due to source retrieval failures."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $100k-$140k base, assuming North American tech market rates for data roles."
   },
   "evidence_sha": "fd3692312321d56a",
+  "generated_at": 1784899318,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "d10c644af9",
+    "fe85288f8e",
+    "23528e5cf1"
+   ],
+   "value": "Unknown due to source retrieval failures."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe their tech stack and AI implementation speed to ensure it matches your fast-paced, innovative culture requirement. Ask about typical work hours, shutdown policies, and new-grad compensation to verify they meet your high pay and strict WLB standards. Discuss technical learning trajectories to confirm they accelerate career growth without demanding personal time."
   },
+  "last_attempt_at": 1784899318,
   "last_evidence_at": 1784680610,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "d10c644af9",
+    "fe85288f8e",
+    "23528e5cf1"
+   ],
+   "value": "Unknown due to source retrieval failures."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "d10c644af9",
+    "fe85288f8e",
+    "23528e5cf1"
+   ],
+   "value": "Unknown due to source retrieval failures."
+  },
   "name": "ShyftLabs",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced tech culture, typical of smaller innovative data labs."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "d10c644af9",
+    "fe85288f8e",
+    "23528e5cf1"
+   ],
+   "value": "Unknown due to source retrieval failures."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days, standard for tech companies of this scale."
   },
+  "refresh_after": 1790083318,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "d10c644af9",
+    "fe85288f8e",
+    "23528e5cf1"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed shutdowns found, typical tech company standard."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "d10c644af9",
+    "fe85288f8e",
+    "23528e5cf1"
+   ],
+   "value": "Unknown due to source retrieval failures."
   },
   "sources": [
    {
@@ -323521,14 +323899,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=43d64d13906f708e6822d8f0cab2aa7f5ae38d340970c78003028c0006fd9985JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=040a1be3-347d-632c-32fd-0c7d35f96298&u=a1aHR0cHM6Ly93d3cuZmFuZGFuZ28uY29tL3JhbGVpZ2hfbmNfbW92aWV0aW1lcw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "d10c644af9",
+    "fe85288f8e",
+    "23528e5cf1"
+   ],
+   "value": "Unknown due to source retrieval failures."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "d10c644af9",
+    "fe85288f8e",
+    "23528e5cf1"
+   ],
+   "value": "ShyftLabs is a company whose public profile and business specifics could not be reliably extracted from the supplied sources, as all provided URLs resulted in redirect loops without providing page content. Based on the company name, it likely operates in the tech or data solutions sector, but its exact operations and revenue model remain unverified. Proceed with internal knowledge or manual verification to fill in these details accurately."
+  },
+  "synthesized_evidence_sha": "fd3692312321d56a",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "d10c644af9",
+    "fe85288f8e",
+    "23528e5cf1"
+   ],
+   "value": "Unknown due to source retrieval failures."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680610,
   "web_search_url": "https://duckduckgo.com/?q=ShyftLabs+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a candidate seeking elite AI/data science roles with high pay, fast culture, and strict work-life balance, ShyftLabs must be evaluated on its technical prestige and actual WLB metrics. If it aligns with your goal of avoiding toxic environments while guaranteeing shutdowns and sane hours, it could be a strong match, but this requires direct verification through employee testimonials or internal data."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate to Good, assuming standard tech industry hours with potential for flexibility."
   }
  },
  "sia partners": {
@@ -329494,47 +329905,126 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unverified, likely a niche health-tech tier rather than top-tier elite AI lab; insufficient public data from sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "4748819077",
+    "dbbb8a1d59",
+    "d021fd648f"
+   ],
+   "value": "Not derivable from the provided sources, as the available URLs resolve to non-commercial sleep information portals."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown culture vibe; candidate should assess whether it feels mission-driven and respectful of personal time."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "4748819077",
+    "dbbb8a1d59",
+    "d021fd648f"
+   ],
+   "value": "Not resolvable from the provided sources, which point to public health and educational domains instead of corporate customer or market data."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown pay band; no public salary data available."
   },
   "evidence_sha": "a24314aca73b91ec",
+  "generated_at": 1784899318,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "4748819077",
+    "dbbb8a1d59",
+    "d021fd648f"
+   ],
+   "value": "Presumed health technology / sleep medicine based on the company name and the redirect context of the source URLs to sleep information pages, but unverified at the corporate level."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe new-grad AI compensation, on-call burden and shutdown policies, technical learning rate, and whether daily work is fast-paced or slows under bureaucracy."
   },
+  "last_attempt_at": 1784899318,
   "last_evidence_at": 1784680699,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "4748819077",
+    "dbbb8a1d59",
+    "d021fd648f"
+   ],
+   "value": "Not available from the provided sources; corporate office locations or remote-work policies were not present."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "4748819077",
+    "dbbb8a1d59",
+    "d021fd648f"
+   ],
+   "value": "Not explicitly stated in the provided sources; the redirects point to general sleep awareness and education pages rather than a corporate mission statement."
+  },
   "name": "Sleep Doctor",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown pace; candidate should confirm whether it matches a fast, innovative tech culture or leans toward slow bureaucracy."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "4748819077",
+    "dbbb8a1d59",
+    "d021fd648f"
+   ],
+   "value": "Not resolvable from the provided sources, as the links redirect to general informational sleep-health pages rather than a company product catalog."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown PTO allotment; no public policy found."
   },
+  "refresh_after": 1790083318,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "4748819077",
+    "dbbb8a1d59",
+    "d021fd648f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown shutdown policy; candidate should confirm if guaranteed shutdowns exist."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "4748819077",
+    "dbbb8a1d59",
+    "d021fd648f"
+   ],
+   "value": "Not available from the current sources; company headcount, funding stage, or revenue metrics could not be retrieved."
   },
   "sources": [
    {
@@ -329568,14 +330058,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=dea2de9d5fca1943d19c814f067343df20339d68f438efe5114f4e6335a50323JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=04b615d7-10a9-635e-06d5-024911f062cb&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvU2xlZXA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "4748819077",
+    "dbbb8a1d59",
+    "d021fd648f"
+   ],
+   "value": "Not available from the provided sources; visa sponsorship details could not be retrieved."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "4748819077",
+    "dbbb8a1d59",
+    "d021fd648f"
+   ],
+   "value": "The retrieved source URLs for Sleep Doctor redirect to authoritative health pages (cdc.gov, sleepfoundation.org, and en.wikipedia.org/wiki/Sleep) rather than a corporate homepage, preventing the extraction of a concrete plain-English business description."
+  },
+  "synthesized_evidence_sha": "a24314aca73b91ec",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "4748819077",
+    "dbbb8a1d59",
+    "d021fd648f"
+   ],
+   "value": "Not available; the source redirects do not provide information on the company's engineering stack, AI pipelines, or data-science tooling."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680699,
   "web_search_url": "https://duckduckgo.com/?q=Sleep+Doctor+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Attracted to Sleep Doctor because a mission-driven sleep-health company could offer meaningful AI work, but want to verify the company is not a low-prestige or high-burnout environment."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown WLB rating; candidate must verify sane hours and shutdown practices directly."
   }
  },
  "smartrak ai": {
@@ -331128,7 +331651,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -331146,7 +331669,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784899126,
+  "last_attempt_at": 1784899318,
   "last_evidence_at": 1784680601,
   "name": "SOCi",
   "pace_of_work": {
@@ -331159,7 +331682,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784899246,
+  "retry_after": 1784899558,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -362466,37 +362989,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Moderate corporate prestige. It holds high prestige within the insurance industry but is generally considered a tier below elite tech firms or quantitative hedge funds for AI and data science."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "870193fdb7"
+   ],
+   "value": "Generates revenue primarily through underwriting profits (collecting policy premiums that exceed claims paid out) and investment income derived from managing its vast pool of collected premiums."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Stable, conservative, and mission-driven. Emphasizes steady corporate hierarchy and reliable execution rather than disruptive innovation."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "870193fdb7"
+   ],
+   "value": "A broad base of individual consumers, small businesses, and large corporate entities seeking risk management and asset protection."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000 to $110,000 base salary for new-grad data science roles, driven by recent tech market competitiveness."
   },
   "evidence_sha": "9db142720984c673",
+  "generated_at": 1784899318,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "870193fdb7"
+   ],
+   "value": "Insurance and Financial Services."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "To match your strict criteria, you should rigorously vet the specific team's pace of work during interviews to determine if their AI culture is genuinely fast-paced or trapped in slow bureaucracy. It is critical to question hiring managers directly about guaranteed shutdowns, realistic technical learning curves, and career growth acceleration to ensure they actually respect your personal time."
   },
+  "last_attempt_at": 1784899318,
   "last_evidence_at": 1784680609,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "870193fdb7"
+   ],
+   "value": "Headquartered in New York City with robust corporate office footprints across the United States, including major technology hubs."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "870193fdb7"
+   ],
+   "value": "To take care of customers by providing peace of mind and helping them manage risk, backed by a strong legacy of financial stability."
+  },
   "name": "The Travelers Companies",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow and deliberate. Typical of a large corporate insurance environment where strict compliance, regulatory hurdles, and legacy IT systems outweigh a highly innovative tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "870193fdb7"
+   ],
+   "value": "A diverse suite of personal, commercial, and specialty property and casualty insurance products, including auto, home, workers' compensation, and business liability coverage."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20 to 25 days of flexible Paid Time Off annually, reflecting generous benefits typical of established legacy insurance firms."
   },
+  "refresh_after": 1790083318,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -362506,7 +363083,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No industry-wide guaranteed corporate shutdowns, though standard paid public holidays are strictly observed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "870193fdb7"
+   ],
+   "value": "Mature, publicly traded large-cap enterprise operating on a national and international scale."
   },
   "sources": [
    {
@@ -362550,14 +363134,42 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Typically favorable for elite quantitative roles at top-tier legacy institutions, often offering H-1B visa sponsorship for specialized AI and data science talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "870193fdb7",
+    "0fa56ba956",
+    "d48858dc46"
+   ],
+   "value": "The Travelers Companies is a leading historical insurance provider that has grown into a massive property and casualty corporate entity. Like most large legacy financial institutions, it makes money by collecting policy premiums and investing that pool of capital before claims are paid out."
+  },
+  "synthesized_evidence_sha": "9db142720984c673",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "870193fdb7",
+    "17f8c9c419"
+   ],
+   "value": "Data science and AI roles likely focus on quantitative risk modeling, actuarial analysis, claims prediction, and pricing optimization rather than experimental algorithm design."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680609,
   "web_search_url": "https://duckduckgo.com/?q=The+Travelers+Companies+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Travelers offers strong mission-driven stability for a new-grad data scientist seeking high pay, elite corporate prestige, and sane hours in a legacy insurance environment. However, the fast-paced innovative tech culture you are looking for is likely heavily restricted by slow bureaucracy, prioritizing predictive modeling over cutting-edge AI research."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Very Good. Traditional large financial institutions generally offer sane hours and strong work-life balance, prioritizing predictable output over toxic burnout."
   }
  },
  "the voleon group": {
@@ -401003,52 +401615,142 @@
  "williams sonoma": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "177ba8deae",
+    "ec5e116cdd"
+   ],
+   "value": "Estimated: Mid-tier. While strategically critical to the business, AI and data science at Williams-Sonoma is viewed as operational support rather than industry-leading product development, sitting below elite pure-play tech firms in brand prestige."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "177ba8deae",
+    "ec5e116cdd"
+   ],
+   "value": "Direct-to-consumer omni-channel retail, generating revenue through the sale of proprietary designed home furnishings and cookware via e-commerce platforms, catalogs, and physical stores."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "177ba8deae",
+    "ec5e116cdd"
+   ],
+   "value": "Estimated: Traditional retail-meets-corporate. The environment is mission-driven around home and lifestyle products but may have more layers of corporate process and bureaucracy compared to a fast, innovative tech startup."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "177ba8deae",
+    "ec5e116cdd"
+   ],
+   "value": "Consumers seeking high-quality home furnishings, kitchenware, and decor, typically targeting middle-to-upper income households."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "177ba8deae",
+    "ec5e116cdd"
+   ],
+   "value": "Estimated: $110k - $140k total compensation. Salaries are good but are anchored to retail industry standards rather than big tech pay scales."
   },
   "evidence_sha": "61ba0a8b7dd5aa9a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784899318,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784898728,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "177ba8deae",
+    "ec5e116cdd"
+   ],
+   "value": "Retail / E-commerce / Home Furnishings"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "177ba8deae",
+    "ec5e116cdd",
+    "0fb6ff77f2"
+   ],
+   "value": "Be prepared to discuss how you can apply practical data science and machine learning to real-world retail problems like demand forecasting and dynamic personalization rather than focusing purely on theoretical or prestige-driven AI. Ask probing questions during interviews about cross-functional integration and how widespread tech adoption is to ensure you will not be slowed by non-technical corporate bureaucracy."
+  },
+  "last_attempt_at": 1784899318,
   "last_evidence_at": 1784679534,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "177ba8deae",
+    "ec5e116cdd"
+   ],
+   "value": "Headquartered in San Francisco, California, with corporate offices, customer care centers, and retail locations globally."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "177ba8deae",
+    "ec5e116cdd"
+   ],
+   "value": "Enhancing the quality of customers' lives at home by offering high-quality, stylish, and sustainable home goods."
+  },
   "name": "Williams-Sonoma",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "177ba8deae",
+    "ec5e116cdd"
+   ],
+   "value": "Estimated: Moderate. Pace is driven by seasonal retail calendar and omnichannel operations; it offers steady project cycles rather than the rapid, iterative hustle of a tech startup, avoiding extreme crunch but lacking high-speed tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "177ba8deae",
+    "ec5e116cdd",
+    "0fb6ff77f2"
+   ],
+   "value": "Home furnishings, cookware, kitchenware, furniture, textiles, decor, and lifestyle products under brands like Williams Sonoma, Pottery Barn, Pottery Barn Kids, PBteen, West Elm, and Rejuvenation."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "177ba8deae",
+    "ec5e116cdd"
+   ],
+   "value": "Estimated: 15-25 days of standard paid time off annually for full-time corporate employees, alongside standard paid holidays, which is competitive for the sector."
   },
-  "retry_after": 1784899208,
+  "refresh_after": 1790083318,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "177ba8deae",
+    "ec5e116cdd"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "177ba8deae",
+    "ec5e116cdd"
+   ],
+   "value": "None found in research."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "177ba8deae",
+    "ec5e116cdd"
+   ],
+   "value": "Large-cap public retail corporation (NYSE: WSM) with a vast international footprint and omnichannel operations."
   },
   "sources": [
    {
@@ -401082,14 +401784,52 @@
     "url": "https://www.bing.com/ck/a?!&&p=c15d5f9bc753c74b9e29407f26819b572b47dc71ecd5ef16a0828c8428ccd3bfJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ec016c9-b21a-6d98-3a21-0157b3d76c8f&u=a1aHR0cHM6Ly93d3cud2lsbGlhbXMtc29ub21hLmNvbS8_bXNvY2tpZD0wZWMwMTZjOWIyMWE2ZDk4M2EyMTAxNTdiM2Q3NmM4Zg&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "177ba8deae",
+    "ec5e116cdd"
+   ],
+   "value": "Likely limited; as a non-tech-first retail organization, visa sponsorship for new grads and entry-level tech roles is typically less common than at dedicated tech firms."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "177ba8deae",
+    "ec5e116cdd",
+    "0fb6ff77f2"
+   ],
+   "value": "Williams-Sonoma, Inc. is a premier omni-channel specialty retailer of high-quality home products, operating several distinct brands including Williams Sonoma, Pottery Barn, West Elm, and Rejuvenation. It makes money by designing and selling its proprietary merchandise directly to consumers through its e-commerce sites, catalogs, and physical retail stores worldwide."
+  },
+  "synthesized_evidence_sha": "61ba0a8b7dd5aa9a",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "177ba8deae",
+    "0fb6ff77f2"
+   ],
+   "value": "E-commerce platforms, supply chain logistics, digital customer experience, large-scale data analytics, and AI/ML applications for personalization and inventory forecasting."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679534,
   "web_search_url": "https://duckduckgo.com/?q=Williams-Sonoma+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "177ba8deae",
+    "ec5e116cdd",
+    "0fb6ff77f2"
+   ],
+   "value": "Williams-Sonoma offers a unique intersection of traditional retail and high-scale tech, providing strong learning opportunities in applied AI/ML for personalization and supply chain without the高压 burnout culture of big tech. However, candidates must realize the company's core DNA is retail, meaning elite AI prestige and FAANG-level new-grad compensation are likely capped by corporate norms rather than startup innovation."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "177ba8deae",
+    "ec5e116cdd"
+   ],
+   "value": "Estimated: Good. The company generally maintains standard corporate retail hours, making it more predictable and respectful of personal time than high-burnout tech environments, though peak retail seasons may demand more flexibility."
   }
  },
  "wilmington trust": {
