@@ -43293,48 +43293,155 @@
  "bluescope": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "11af8dd676",
+    "a41e094eca",
+    "0364474839"
+   ],
+   "value": "Estimated: Low. A traditional manufacturing company typically does not offer the elite AI or data science prestige found in top-tier tech firms."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "11af8dd676",
+    "a41e094eca",
+    "0364474839"
+   ],
+   "value": "Business model details are not available in the provided sources. Estimated: Generates revenue by manufacturing and selling steel products and building solutions globally."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "11af8dd676",
+    "a41e094eca",
+    "0364474839"
+   ],
+   "value": "Estimated: Safety-focused and traditional. The culture is likely mission-driven around building infrastructure, lacking a hyper-competitive tech startup atmosphere."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "11af8dd676",
+    "a41e094eca",
+    "0364474839"
+   ],
+   "value": "Customer information is not available in the provided sources. Estimated: Serves the construction, automotive, and manufacturing industries."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "11af8dd676",
+    "a41e094eca",
+    "0364474839"
+   ],
+   "value": "Estimated: $70,000 - $90,000 USD. Traditional industrial sectors typically pay below top-tier tech market rates for new graduates."
   },
   "evidence_sha": "28bbd0daf33fff25",
+  "generated_at": 1784875957,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "11af8dd676",
+    "a41e094eca",
+    "0364474839"
+   ],
+   "value": "Industry is not explicitly stated in the excerpts. Estimated: Steel and metals manufacturing."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "11af8dd676",
+    "a41e094eca",
+    "0364474839"
+   ],
+   "value": "Candidates should assess whether the technical growth matches elite AI standards or if the environment leans toward slow bureaucracy. It is crucial to clarify new grad pay bands and confirm if there are guaranteed shutdowns or strict WLB policies that respect personal time."
+  },
+  "last_attempt_at": 1784875957,
   "last_evidence_at": 1784674981,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "11af8dd676",
+    "a41e094eca",
+    "0364474839"
+   ],
+   "value": "Location details are not present in the provided sources. Estimated: Operations are global, with a significant presence in Australia, New Zealand, and the United States."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "11af8dd676",
+    "a41e094eca",
+    "0364474839"
+   ],
+   "value": "Mission details were not found in the provided text. Estimated: Focused on creating strength and inspiration through sustainable steel solutions."
+  },
   "name": "BlueScope",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "11af8dd676",
+    "a41e094eca",
+    "0364474839"
+   ],
+   "value": "Estimated: Moderate to slow. Industrial manufacturing environments often prioritize stability and process over fast, innovative tech cycles."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "11af8dd676",
+    "a41e094eca",
+    "0364474839"
+   ],
+   "value": "The provided sources do not contain specific product details. Estimated: Flat steel products, coated and painted steel, and building components."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "11af8dd676",
+    "a41e094eca",
+    "0364474839"
+   ],
+   "value": "Estimated: 20-25 days of annual leave plus public holidays, depending on the region of employment."
   },
+  "refresh_after": 1790059957,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "11af8dd676",
+    "a41e094eca",
+    "0364474839"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "11af8dd676",
+    "a41e094eca",
+    "0364474839"
+   ],
+   "value": "Estimated: Unlikely to offer guaranteed tech-industry style shutdowns, though some manufacturing sites may have scheduled maintenance downtime."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "11af8dd676",
+    "a41e094eca",
+    "0364474839"
+   ],
+   "value": "Company size and stage are not detailed in the sources. Estimated: A large, established public corporation."
   },
   "sources": [
    {
@@ -43378,14 +43485,55 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "11af8dd676",
+    "a41e094eca",
+    "0364474839"
+   ],
+   "value": "No sponsorship information was found in the provided sources. Estimated: Visa sponsorship may be available for specialized roles but is not guaranteed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "11af8dd676",
+    "a41e094eca",
+    "0364474839"
+   ],
+   "value": "Based on the available sources, specific operational details for BlueScope could not be extracted. Conservative estimates based on public industry knowledge indicate it is a global steel manufacturing company."
+  },
+  "synthesized_evidence_sha": "28bbd0daf33fff25",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "11af8dd676",
+    "a41e094eca",
+    "0364474839"
+   ],
+   "value": "Technical work details are not found in the provided sources. Estimated: Likely involves industrial software, supply chain data systems, and manufacturing automation rather than cutting-edge AI research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674981,
   "web_search_url": "https://duckduckgo.com/?q=BlueScope+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "11af8dd676",
+    "a41e094eca",
+    "0364474839"
+   ],
+   "value": "As a traditional steel and manufacturing company, it likely does not fit the candidate's priority for a fast-paced, innovative tech culture or elite AI prestige. However, traditional industries can sometimes offer strictly maintained sane hours and a mission-driven environment."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "11af8dd676",
+    "a41e094eca",
+    "0364474839"
+   ],
+   "value": "Estimated: Good. Heavy industry companies frequently enforce standard hours and offer predictable schedules to avoid burnout."
   }
  },
  "bluestaq": {
@@ -53247,11 +53395,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -53263,6 +53413,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784875957,
   "last_evidence_at": 1784802937,
   "name": "California Department of Conservation",
   "pace_of_work": {
@@ -53275,6 +53426,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784876077,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -53328,7 +53480,7 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784802937,
   "web_search_url": "https://duckduckgo.com/?q=California+Department+of+Conservation+company+careers+benefits",
@@ -72935,47 +73087,110 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3. Conservice is a traditional utility management company, meaning AI/Data Science work is likely applied to internal process optimization rather than cutting-edge model development."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "871100a2bc"
+   ],
+   "value": "B2B software and services. They charge property management firms for utility billing processing, expense management software subscriptions, and energy efficiency consulting."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional and mission-driven toward sustainability and cost efficiency, primarily prioritizing reliable client service over rapid technological disruption."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "871100a2bc"
+   ],
+   "value": "Multifamily housing property owners, commercial real estate managers, and residential property management companies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000 - $85,000 base salary for new grad software engineers in Utah, which is below elite tier-1 tech pay but standard for the local market."
   },
   "evidence_sha": "37fe8ee3862dc3cc",
+  "generated_at": 1784875957,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "871100a2bc"
+   ],
+   "value": "Real Estate Tech / Utility Management Software"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Given your desire for a fast-paced, innovative tech culture, be sure to ask about their tech stack modernization initiatives and data science roadmap to ensure it fits your learning goals. Probe deeply into work-life balance, on-call expectations, and guaranteed shutdowns to verify the environment won't lead to burnout."
   },
+  "last_attempt_at": 1784875957,
   "last_evidence_at": 1784674081,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "ddb496cfff"
+   ],
+   "value": "Headquartered in Utah with remote/hybrid options likely available for technical roles."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "871100a2bc"
+   ],
+   "value": "To provide innovative utility management and billing solutions that optimize energy usage and costs for property owners and residents."
+  },
   "name": "Conservice",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. As an established B2B software company, the pace is likely steady and focused on maintaining reliable billing systems rather than fast-paced tech startup disruption."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "871100a2bc"
+   ],
+   "value": "Utility billing platforms, expense management software, and energy efficiency consulting services for the real estate industry."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of accrued PTO annually, which is standard for mid-sized professional SaaS companies."
   },
+  "refresh_after": 1790059957,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No standard company-wide shutdowns found, though standard paid holidays are expected."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Established mid-market private company (specific employee headcount was not available in public redirects)."
   },
   "sources": [
    {
@@ -73019,14 +73234,42 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Not explicitly mentioned in available sources; visa sponsorship is unlikely for a mid-sized utility management firm."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "871100a2bc",
+    "1db9db9c4d"
+   ],
+   "value": "Conservice is a utility management and billing company that serves the multifamily housing and commercial real estate sectors. They make money by providing software and outsourced services to property owners to manage utility costs, billing, and energy efficiency."
+  },
+  "synthesized_evidence_sha": "37fe8ee3862dc3cc",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Software engineering roles focused on building and maintaining utility billing platforms, data processing pipelines for utility expenses, and customer-facing property management dashboards."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674081,
   "web_search_url": "https://duckduckgo.com/?q=Conservice+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a new grad, you seek elite AI/data science prestige and high pay, but Conservice is an established utility management firm, indicating slower bureaucratic tech culture rather than cutting-edge AI innovation. You value work-life balance and accelerated technical learning; while WLB at non-startups can be sane, the mission-driven focus here leans more toward real estate cost-savings than high-growth tech acceleration."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. B2B enterprise software firms typically offer standard 40-hour weeks with sane hours, though this needs to be verified with the specific team."
   }
  },
  "constellis": {
@@ -76451,11 +76694,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -76467,6 +76712,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784875957,
   "last_evidence_at": 1784678866,
   "name": "Crane Co.",
   "pace_of_work": {
@@ -76479,6 +76725,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784876077,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -76522,7 +76769,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=03c16c7d5ffd8e60f94eb7820b3335f27d1ac6d6a3bc34a63facb86623b30d8aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3109bc3e-77f3-65b1-30f3-aba076836467&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQ3JhbmVfKG1hY2hpbmUp&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678866,
   "web_search_url": "https://duckduckgo.com/?q=Crane+Co.+company+careers+benefits",
@@ -94006,7 +94253,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -94024,7 +94271,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784875793,
+  "last_attempt_at": 1784875957,
   "last_evidence_at": 1784679541,
   "name": "Edwards Lifesciences",
   "pace_of_work": {
@@ -94037,7 +94284,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784875913,
+  "retry_after": 1784876197,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -162516,48 +162763,128 @@
  "laserfiche": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "56b8431065"
+   ],
+   "value": "Estimated: Not recognized as an elite-tier AI/data science company. While it may utilize machine learning for document processing, it is primarily known as an enterprise software provider rather than a top-tier tech employer."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "76a2fc4d60",
+    "56b8431065"
+   ],
+   "value": "Software company providing B2B SaaS solutions for document management, process automation, and information governance."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "56b8431065"
+   ],
+   "value": "Estimated: Professional, corporate, and stable. It may lack the fast-paced innovation and prestige of top-tier tech companies, but likely respects personal time."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "56b8431065"
+   ],
+   "value": "Enterprises, government agencies, educational institutions, and other organizations needing secure document storage and workflow automation."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "56b8431065"
+   ],
+   "value": "Estimated: Likely pays established software company rates of $100,000 - $130,000 for new grads, which is competitive but falls short of top-tier tech pay of $180,000+."
   },
   "evidence_sha": "563f13ecefe8843a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784875957,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "76a2fc4d60",
+    "56b8431065"
+   ],
+   "value": "Software - Enterprise Content Management & Business Process Automation."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "56b8431065"
+   ],
+   "value": "Candidates should prepare to discuss how they can apply AI or data science techniques to optimize traditional document management and workflow automation. To address the desire for a fast-paced, innovative culture, they should ask interviewers about the specific pace of AI innovation at the company, the structure of the new grad program, and how quickly technical learning and career growth occur."
+  },
+  "last_attempt_at": 1784875957,
   "last_evidence_at": 1784677175,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "56b8431065"
+   ],
+   "value": "Headquartered in Long Beach, California, with global offices."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "56b8431065"
+   ],
+   "value": "Empowering organizations to optimize business processes through digital transformation and document management."
+  },
   "name": "Laserfiche",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "56b8431065"
+   ],
+   "value": "Estimated: Likely traditional and moderate, typical of established B2B enterprise software companies, which may feel slower and more bureaucratic than the desired fast startup tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "76a2fc4d60",
+    "56b8431065"
+   ],
+   "value": "Enterprise Content Management (ECM) software, document management systems, and business process automation tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "56b8431065"
+   ],
+   "value": "Estimated: Likely offers a standard corporate package of 15-20 days of PTO, though exact policy is not public."
   },
+  "refresh_after": 1790059957,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "56b8431065"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "56b8431065"
+   ],
+   "value": "Estimated: Likely offers standard public holidays off, but specific holiday or summer shutdowns are not publicly confirmed in the provided sources."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "56b8431065"
+   ],
+   "value": "Established, private software company operating globally."
   },
   "sources": [
    {
@@ -162591,14 +162918,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=cb8af2a2097040d6d74b1d2fdb4b1066d7a73da4c5785bdd80e430e6cfba12e3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0b35a25d-ffe7-6b72-3428-b5c0fe9e6aff&u=a1aHR0cHM6Ly93d3cubGFzZXJmaWNoZS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "56b8431065"
+   ],
+   "value": "Estimated: Likely supports standard tech role sponsorship for highly specialized roles, but specific visa policy details are not publicly confirmed in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "76a2fc4d60",
+    "56b8431065"
+   ],
+   "value": "Laserfiche is a software company that provides enterprise content management and business process automation solutions. It makes money by selling SaaS subscriptions and enterprise licenses to organizations for document management, workflow automation, and cloud infrastructure."
+  },
+  "synthesized_evidence_sha": "563f13ecefe8843a",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "76a2fc4d60",
+    "56b8431065"
+   ],
+   "value": "Software development and cloud engineering focused on enterprise document management, workflow automation, and scalable software architecture."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677175,
   "web_search_url": "https://duckduckgo.com/?q=Laserfiche+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "56b8431065"
+   ],
+   "value": "Laserfiche is an established B2B enterprise software company that may offer a more stable work environment and good work-life balance compared to fast-paced startups. However, it is unlikely to align with a candidate's priority for an elite-tier AI/Data Science role offering top-tier new grad pay and fast, innovative tech culture, as its core product is traditional ECM rather than cutting-edge AI."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "56b8431065"
+   ],
+   "value": "Estimated: Likely good work-life balance with sane hours, typical of an established corporate software company, which aligns well with the candidate's desire to avoid toxic or high-burnout environments."
   }
  },
  "latitude ai": {
@@ -175725,11 +176085,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -175741,6 +176103,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784875957,
   "last_evidence_at": 1784676697,
   "name": "Marvell",
   "pace_of_work": {
@@ -175753,6 +176116,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784876077,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -175806,7 +176170,7 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784676697,
   "web_search_url": "https://duckduckgo.com/?q=Marvell+company+careers+benefits",
@@ -231332,48 +231696,115 @@
  "raymond james financial": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "52ee07c0ac"
+   ],
+   "value": "Tier 3: Established financial institution AI/data roles focusing on enterprise analytics and platform optimization rather than top-tier cutting-edge AI research."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "52ee07c0ac"
+   ],
+   "value": "The firm generates revenue through a diversified model comprising financial advisory fees, brokerage commissions, investment banking advisory fees, and net interest margins from its banking operations."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "52ee07c0ac"
+   ],
+   "value": "Professional, client-centric, and conservative. The culture emphasizes ethical advising, stable growth, and long-term relationship building over rapid technological disruption."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "52ee07c0ac"
+   ],
+   "value": "Raymond James serves individual investors, corporate and institutional clients, and independent financial advisors utilizing its broker-dealer support services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 - $110,000 base salary for new graduate tech and data roles, which is competitive for regional financial sector tech jobs but may fall short of elite new-grad tech pay."
   },
   "evidence_sha": "9839ea44139d1fa1",
+  "generated_at": 1784875957,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "52ee07c0ac"
+   ],
+   "value": "Financial Services / Investment Management"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should probe the specific team's tech stack and AI roadmap to ensure the role provides accelerated technical learning, rather than bureaucratic maintenance work, while verifying sane hours and true work-life balance."
   },
+  "last_attempt_at": 1784875957,
   "last_evidence_at": 1784674981,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "52ee07c0ac"
+   ],
+   "value": "The company is headquartered in St. Petersburg, Florida, and operates numerous branch offices and international centers across the United States and globally."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "52ee07c0ac"
+   ],
+   "value": "The firm's history and ethos revolve around a commitment to client-first financial planning, emphasizing long-term relationships, prudent advice, and stable growth."
+  },
   "name": "Raymond James Financial",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady and methodical. As a mature financial institution, the culture prioritizes risk management and compliance, which can result in slower, bureaucracy-heavy processes rather than fast-paced innovation."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "52ee07c0ac"
+   ],
+   "value": "The firm offers a range of financial solutions including retail brokerage, advisory services, wealth management, institutional consulting, investment banking, and fixed income products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of paid time off annually, which is standard for a large corporate financial institution, alongside typical banking holidays."
   },
+  "refresh_after": 1790059957,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "52ee07c0ac"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unlikely to have guaranteed firm-wide shutdowns outside of standard public holidays, which is typical for continuous-operations financial firms."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "52ee07c0ac"
+   ],
+   "value": "A large, publicly traded, established financial institution operating as a mature enterprise in the global market."
   },
   "sources": [
    {
@@ -231407,14 +231838,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=c52a085831b366c784f64a1f25f901f51877978dec75fe8d033a6f81f10f04a9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1c06e9b4-2be8-6be3-03a0-fe292a286ab8&u=a1aHR0cHM6Ly93d3cucmF5bW9uZGNvcnAuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "52ee07c0ac"
+   ],
+   "value": "As a large established financial institution, it provides corporate infrastructure for a global workforce, though specific visa sponsorship details for tech roles are not publicly detailed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "52ee07c0ac"
+   ],
+   "value": "Raymond James Financial is a multinational financial services firm that provides investment banking, asset management, and financial planning services. It makes money by charging fees for wealth management, generating commissions on securities trading, and earning interest on its banking and loan portfolios."
+  },
+  "synthesized_evidence_sha": "9839ea44139d1fa1",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "52ee07c0ac"
+   ],
+   "value": "The firm builds internal and client-facing software platforms for wealth management, brokerage services, data analytics, and enterprise cybersecurity."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674981,
   "web_search_url": "https://duckduckgo.com/?q=Raymond+James+Financial+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "While traditional finance lacks the elite prestige and fast-moving culture of top-tier tech firms, Raymond James offers mission-driven work tied to securing and optimizing client financial futures, providing a potentially stable alternative to toxic, high-burnout tech environments."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate to Good. Financial firms generally offer more predictable, sane hours compared to high-burnout tech startups, though specific team demands can vary."
   }
  },
  "raytheon": {
