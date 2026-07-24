@@ -94469,7 +94469,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -94487,7 +94487,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784875957,
+  "last_attempt_at": 1784876283,
   "last_evidence_at": 1784679541,
   "name": "Edwards Lifesciences",
   "pace_of_work": {
@@ -94500,7 +94500,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784876197,
+  "retry_after": 1784876763,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -121683,52 +121683,128 @@
  "global infrastructure": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Tier 2 or 3. Elite AI/data science prestige cannot be confirmed without role specifics, so treat with caution."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "80823dc683",
+    "70e7eb2837"
+   ],
+   "value": "Revenue model is unverified; based on URL clues, it may rely on gaming engagements or banking services, though this is unconfirmed."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Ambiguous. The technical new-grad hiring presence suggests an innovative learning culture, but you need to probe for mission-driven values and a non-toxic management style."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "2fdc18febb"
+   ],
+   "value": "Customer base details are not available from the retrieved sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $100,000 - $150,000 base salary range for new-grad technical roles, though actual compensation is undocumented in the supplied sources."
   },
   "evidence_sha": "b2b6f16fb2b21ce4",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784876283,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784876118,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "80823dc683",
+    "70e7eb2837"
+   ],
+   "value": "Inferred from source URLs as potentially the gaming or financial/online banking technology sector."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Assess whether the day-to-day engineering pace aligns with your desire for a fast, innovative culture rather than slow bureaucracy. Critically validate their work-life balance claims—ask about sane hours and guaranteed shutdowns—to ensure the technical learning and career growth won't sacrifice your personal time."
+  },
+  "last_attempt_at": 1784876283,
   "last_evidence_at": 1784675409,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Specific office locations or hiring geographies are not provided in the sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "2fdc18febb"
+   ],
+   "value": "Company mission could not be extracted from the available redirect sources."
+  },
   "name": "Global Infrastructure",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Moderate to Fast. As a technical employer potentially in tech/gaming, you should expect a dynamic environment, though exact operational speed is unverified."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "70e7eb2837",
+    "80823dc683"
+   ],
+   "value": "Specific products could not be verified due to redirect pages, but URLs indicate potential involvement in online/mobile banking or gaming platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: 15-25 days standard PTO, typical for new-grad tech positions, though undocumented in current sources."
   },
-  "retry_after": 1784876238,
+  "refresh_after": 1790060283,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Unknown. Guaranteed shutdowns are rare in tech unless specifically publicized; assume none are guaranteed until confirmed with the employer."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Company size and funding stage are not detailed in the provided sources, though presence on a new-grad job board suggests active technical hiring."
   },
   "sources": [
    {
@@ -121772,14 +121848,47 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Visa sponsorship details for new grads are not explicitly confirmed in the retrieved sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "2fdc18febb",
+    "80823dc683",
+    "70e7eb2837"
+   ],
+   "value": "Due to accessible source limitations, specific operational details for Global Infrastructure could not be extracted from the supplied redirects. The company was verified as an active employer through a monitored new-grad job board, suggesting it hires recent technical graduates. The redirects indicate potential ties to online/mobile banking or gaming sectors."
+  },
+  "synthesized_evidence_sha": "b2b6f16fb2b21ce4",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Specific engineering stacks are unknown, but inclusion in a new-grad technical repository implies software engineering, data, or AI roles for recent graduates."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675409,
   "web_search_url": "https://duckduckgo.com/?q=Global+Infrastructure+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "This company must be evaluated carefully against your priorities for elite prestige, top-tier new-grad pay, and a fast, innovative tech culture. You need to confirm if the technical learning pace here is accelerated enough to meet your growth goals without introducing the slow bureaucracy or toxic burnout environments you want to avoid."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Moderate. Tech environments often have fluctuating hours, so you must proactively screen to ensure they meet your standard of respecting personal time."
   }
  },
  "global lending services": {
@@ -187384,7 +187493,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -187402,7 +187511,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784876118,
+  "last_attempt_at": 1784876283,
   "last_evidence_at": 1784719725,
   "name": "Mondelez International",
   "pace_of_work": {
@@ -187415,7 +187524,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784876238,
+  "retry_after": 1784876523,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -255247,38 +255356,100 @@
  "sika": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "d8e8184f84"
+   ],
+   "value": "Low. Unlikely to be perceived as elite or prestigious within the AI/Data Science community."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "d8e8184f84"
+   ],
+   "value": "Operates as a global business-to-business (B2B) manufacturer, generating revenue through direct sales and distribution channels of its chemical products."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "d8e8184f84"
+   ],
+   "value": "Corporate, engineering-focused, global, and structured."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "d8e8184f84"
+   ],
+   "value": "Construction companies, infrastructure developers, industrial manufacturers, and building professionals."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000 - $95,000 USD base salary, standard for non-tech-hub legacy industries."
   },
   "evidence_sha": "ba82cb3a0d5b5c52",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784876283,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d8e8184f84"
+   ],
+   "value": "Specialty Chemicals and Building Materials"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d8e8184f84",
+    "a8f5dc4437"
+   ],
+   "value": "Probe heavily for the exact team structure, tech stack modernity, and daily innovation autonomy to determine if the role is a genuine growth accelerator or slow, traditional IT support."
+  },
+  "last_attempt_at": 1784876283,
   "last_evidence_at": 1784826848,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "d8e8184f84",
+    "a8f5dc4437"
+   ],
+   "value": "U.S. headquarters and offices alongside a vast global footprint spanning multiple continents."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "d8e8184f84"
+   ],
+   "value": "To provide innovative, sustainable solutions for the construction and transportation sectors."
+  },
   "name": "Sika",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow to moderate, typical of a traditional global manufacturing enterprise."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "d8e8184f84"
+   ],
+   "value": "Concrete admixtures, waterproofing membranes, roofing systems, industrial sealants, adhesives, and structural strengthening materials."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard PTO, consistent with global corporate norms."
   },
+  "refresh_after": 1790060283,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -255288,7 +255459,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Standard public holidays, with no formal company-wide tech shutdowns found."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "d8e8184f84"
+   ],
+   "value": "Global publicly traded enterprise (Sika AG) with operations in over 100 countries."
   },
   "sources": [
    {
@@ -255322,14 +255500,46 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "d8e8184f84",
+    "a8f5dc4437"
+   ],
+   "value": "No specific mention of visa sponsorship found in the provided public pages."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "d8e8184f84",
+    "a8f5dc4437"
+   ],
+   "value": "Sika is a global specialty chemicals company focused on construction and industrial manufacturing. It makes money by developing, manufacturing, and selling waterproofing, concrete admixtures, sealing, bonding, and roofing systems to businesses globally."
+  },
+  "synthesized_evidence_sha": "ba82cb3a0d5b5c52",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
+   "value": "Enterprise software development, data engineering, and smart recruiting platforms"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784826848,
   "web_search_url": "https://duckduckgo.com/?q=Sika+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "d8e8184f84",
+    "a8f5dc4437"
+   ],
+   "value": "Sika is fundamentally a manufacturing and chemicals company rather than a fast-paced tech firm. The pace and highly-structured corporate environment typical of legacy global enterprises will heavily conflict with a candidate seeking an elite, innovative AI culture with guaranteed shutdowns and zero bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Generally stable, though unlikely to feature the highly structured guaranteed shutdowns found in top-tier tech companies."
   }
  },
  "silna health": {
@@ -265078,49 +265288,124 @@
  },
  "st luke s university health network": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Low tier."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "14fd04013b"
+   ],
+   "value": "Non-profit healthcare provider generating revenue through inpatient and outpatient medical services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "14fd04013b"
+   ],
+   "value": "Estimated: Rooted in patient safety and care. Tech teams might be siloed but contribute to a broader, respected mission."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "14fd04013b"
+   ],
+   "value": "Patients in the greater Lehigh Valley region."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $70k-$85k, typical for healthcare IT but likely below the 'elite high pay' this candidate seeks."
   },
   "evidence_sha": "ec80eac1836bccb4",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784876283,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "14fd04013b"
+   ],
+   "value": "Hospital & Health Care"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784876283,
   "last_evidence_at": 1784814414,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "14fd04013b"
+   ],
+   "value": "Lehigh Valley region, Pennsylvania (implied by regional network identity)."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "14fd04013b"
+   ],
+   "value": "Not explicitly provided in sources. Typically, as a non-profit healthcare network, it focuses on patient care and community health."
+  },
   "name": "St. Luke's University Health Network",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "14fd04013b"
+   ],
+   "value": "Estimated: Typical healthcare bureaucracy. It is likely slower and more regulated than the fast, innovative tech culture this candidate prioritizes."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "14fd04013b"
+   ],
+   "value": "Healthcare services including hospital care, outpatient clinics, and a university medical school."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "14fd04013b"
+   ],
+   "value": "Estimated: 20-25 days annually plus standard hospital holidays."
   },
+  "refresh_after": 1790060283,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "14fd04013b"
+   ],
+   "value": "Estimated: No guaranteed shutdowns except standard hospital holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "14fd04013b"
+   ],
+   "value": "Mature non-profit organization."
   },
   "sources": [
    {
@@ -265164,14 +265449,45 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Not explicitly stated in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "14fd04013b",
+    "dbc3b9e88f"
+   ],
+   "value": "St. Luke's University Health Network is a non-profit regional healthcare system. It generates revenue primarily through clinical services across its hospitals, outpatient facilities, and physician networks."
+  },
+  "synthesized_evidence_sha": "ec80eac1836bccb4",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f",
+    "14fd04013b"
+   ],
+   "value": "While primarily a clinical organization, it hosts tech roles (including new grad positions, likely in health data) tracked on its career page."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784814414,
   "web_search_url": "https://duckduckgo.com/?q=St.+Luke%27s+University+Health+Network+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "14fd04013b"
+   ],
+   "value": "Estimated: Generally good. Healthcare networks often offer stable hours, but verify for specific tech teams."
   }
  },
  "stamp": {
@@ -277755,38 +278071,104 @@
  "tempus": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: High technical prestige in the healthtech sector due to massive proprietary clinical datasets, though less broadly recognized than elite consumer tech firms."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "6b161deff4"
+   ],
+   "value": "Charges for molecular profiling services, data analytics subscriptions, and licensing de-identified datasets to pharma for drug discovery."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "6b161deff4"
+   ],
+   "value": "Estimated: Mission-driven and data-centric, focusing on patient impact with a collaborative environment."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "6b161deff4"
+   ],
+   "value": "Oncologists, academic medical centers, biotechnology firms, and large pharmaceutical companies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $120,000 - $150,000 base salary, aligning with high new-grad tech pay expectations in the Chicago market."
   },
   "evidence_sha": "c63c6d5ed22b002a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784876283,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "6b161deff4"
+   ],
+   "value": "Healthtech, Precision Medicine, Artificial Intelligence"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Probe for team-specific WLB, on-call expectations, and project shipping speeds to ensure the environment accelerates learning without requiring constant overtime. Seek clarity on how much process overhead exists versus the desired fast, low-bureaucracy engineering culture."
+  },
+  "last_attempt_at": 1784876283,
   "last_evidence_at": 1784680774,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "6b161deff4"
+   ],
+   "value": "Headquartered in Chicago, Illinois, with additional office locations."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "6b161deff4"
+   ],
+   "value": "To improve patient outcomes and advance precision medicine by connecting real-world clinical and molecular data."
+  },
   "name": "Tempus",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Fast-paced and mission-driven, though aspects of operations may be slowed by clinical regulations and standard corporate processes."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "6b161deff4"
+   ],
+   "value": "Molecular sequencing, clinical data structuring, AI-driven analytics platforms, and biological datasets for research."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Standard large-tech policy likely providing 15-20 days of flexible PTO, not including standard holidays."
   },
+  "refresh_after": 1790060283,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -277795,8 +278177,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: No broad company-wide shutdowns found, typical of operations requiring near-continuous uptime."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "6b161deff4"
+   ],
+   "value": "Publicly traded company (NASDAQ: TO), large-scale data and clinical operations."
   },
   "sources": [
    {
@@ -277840,14 +278231,46 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Not found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "6b161deff4",
+    "dbc3b9e88f"
+   ],
+   "value": "Tempus is a precision medicine and oncology technology company. It makes money by leveraging its massive proprietary library of clinical and molecular data to provide sequencing, analytics, and licensing services to physicians and pharmaceutical companies."
+  },
+  "synthesized_evidence_sha": "c63c6d5ed22b002a",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "6b161deff4"
+   ],
+   "value": "Data engineering, machine learning on multimodal datasets, bioinformatics, and scalable backend infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680774,
   "web_search_url": "https://duckduckgo.com/?q=Tempus+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Aligns with the top-tier data science ambition by offering large-scale AI work in precision medicine. While compensation is competitive, the candidate must carefully vet the company to ensure its corporate bureaucracy and pace match the desired fast, innovative tech culture and strict WLB requirements."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Generally moderate, but candidate should confirm the specific team avoids toxic burnout cultures."
   }
  },
  "tenon": {
@@ -285301,34 +285724,88 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "0ce6bbf28c"
+   ],
+   "value": "No business model details found in the provided sources. The company hires software engineers, suggesting a B2B or government contracting model, but this is not confirmed."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "0ce6bbf28c"
+   ],
+   "value": "Estimated: Agile team-based culture focused on mission-critical software delivery. No broader culture data available."
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: No compensation data found in sources for new grad roles."
   },
   "evidence_sha": "17c14eefa7df7037",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784876283,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "0ce6bbf28c"
+   ],
+   "value": "Technology / Software Engineering (likely defense or mission-critical systems given 'mission-critical development' and 'information assurance' mentions)."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "0ce6bbf28c"
+   ],
+   "value": "Based on the job posting, expect focus on agile methodology, real-time mission-critical development, open/layered architecture, model-based tools, and information assurance tools development. Candidate should prepare for technical questions on software design, implementation, integration, and testing in such environments."
+  },
+  "last_attempt_at": 1784876283,
   "last_evidence_at": 1784675127,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Thunderbolt Solutions",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "0ce6bbf28c"
+   ],
+   "value": "Estimated: Likely moderate to fast given 'real-time mission-critical development' and agile methodology mentions, but no direct evidence of pace culture."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "0ce6bbf28c"
+   ],
+   "value": "No specific product details found in the provided sources. The job posting mentions 'software solutions' generically but does not name products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: No PTO policy information found in sources."
   },
+  "refresh_after": 1790060283,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -285338,7 +285815,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed shutdown policies found in sources."
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -285392,14 +285874,43 @@
     "url": "https://jobright.ai/jobs/info/6a5f9981f68dd368023e7666?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d",
+    "0ce6bbf28c"
+   ],
+   "value": "Thunderbolt Solutions appears to be a technology company hiring software engineers for roles involving agile development, design, implementation, integration, and testing of software solutions. The company was surfaced in a 2026 new-grad software engineer job board."
+  },
+  "synthesized_evidence_sha": "17c14eefa7df7037",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "0ce6bbf28c"
+   ],
+   "value": "Software Engineer I role involves collaborating in a team using agile methodology to perform design, implementation, integration, and testing of software solutions. Mentions real-time mission-critical development, open/layered architecture environment, model-based tools, and information assurance tools development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675127,
   "web_search_url": "https://duckduckgo.com/?q=Thunderbolt+Solutions+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "0ce6bbf28c",
+    "1db9db9c4d"
+   ],
+   "value": "Candidate seeks a top-tier AI/data science role with elite prestige and high new-grad pay, fast innovative culture, mission-driven focus, genuine work-life balance with sane hours and guaranteed shutdowns, and accelerated technical growth without sacrificing personal time. Thunderbolt Solutions' actual alignment with these priorities cannot be verified from the limited sources, which only confirm a software engineer hiring presence."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown - no work-life balance policies, hours, or culture data found in sources."
   }
  },
  "tickpick": {
@@ -312320,49 +312831,141 @@
  },
  "western alliance": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "33772bb16e",
+    "6953724496"
+   ],
+   "value": "Low tier for AI/Data Science."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "33772bb16e",
+    "6953724496"
+   ],
+   "value": "Banking business model generating revenue from net interest income and fee-based financial services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "33772bb16e",
+    "6953724496"
+   ],
+   "value": "Estimated: Professional, corporate environment."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "33772bb16e",
+    "6953724496"
+   ],
+   "value": "Businesses, entrepreneurs, professionals, and consumers seeking banking products and loans."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "33772bb16e",
+    "6953724496"
+   ],
+   "value": "Estimated: $80,000 - $110,000."
   },
   "evidence_sha": "22deed0b54dfad22",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784876283,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "33772bb16e",
+    "6953724496"
+   ],
+   "value": "Banking and Financial Services."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "33772bb16e",
+    "6953724496"
+   ],
+   "value": "Expect traditional behavioral interviews and questions on enterprise technology. It is important for the candidate to gauge the team's pace of work, frequency of shutdowns, and level of bureaucracy to determine if it meets the desired work-life balance and rapid learning criteria."
+  },
+  "last_attempt_at": 1784876283,
   "last_evidence_at": 1784676850,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "33772bb16e",
+    "6953724496"
+   ],
+   "value": "United States."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "33772bb16e",
+    "6953724496"
+   ],
+   "value": "To provide banking services; the broader mission is not explicitly captured in the provided sources."
+  },
   "name": "Western Alliance",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "33772bb16e",
+    "6953724496"
+   ],
+   "value": "Estimated: Slower pace characteristic of traditional banking."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "33772bb16e",
+    "6953724496"
+   ],
+   "value": "Commercial banking, consumer banking, treasury management, and specialized lending services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "33772bb16e",
+    "6953724496"
+   ],
+   "value": "Estimated: 15-25 days."
   },
+  "refresh_after": 1790060283,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "33772bb16e",
+    "6953724496"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "33772bb16e",
+    "6953724496"
+   ],
+   "value": "Estimated: No guaranteed shutdowns."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "33772bb16e",
+    "6953724496"
+   ],
+   "value": "Large publicly traded holding company."
   },
   "sources": [
    {
@@ -312396,14 +312999,50 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "33772bb16e",
+    "6953724496"
+   ],
+   "value": "Estimated: Unclear, but large banking companies often sponsor visas for in-demand tech roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "33772bb16e",
+    "6953724496"
+   ],
+   "value": "Western Alliance Bancorporation is a publicly traded regional bank holding company that provides banking services. Revenue is generated primarily through net interest income on loans and deposits, supplemented by fee-based services."
+  },
+  "synthesized_evidence_sha": "22deed0b54dfad22",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "33772bb16e",
+    "6953724496"
+   ],
+   "value": "Financial technology, banking IT, and enterprise data systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676850,
   "web_search_url": "https://duckduckgo.com/?q=Western+Alliance+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "33772bb16e",
+    "6953724496"
+   ],
+   "value": "As a large bank, Western Alliance likely offers stable, well-compensated roles with structured learning. However, it might lack the fast-paced, high-prestige, and highly innovative tech culture found at elite tech companies, potentially featuring slow bureaucracy rather than rapid career growth."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "33772bb16e",
+    "6953724496"
+   ],
+   "value": "Estimated: Good work-life balance with regular hours."
   }
  },
  "western digital": {
