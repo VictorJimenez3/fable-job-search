@@ -268459,41 +268459,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier. As a legacy retail and B2B office supplier, the company does not hold the elite AI/Data Science prestige of top-tier tech firms."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "3c1fe24fc7"
+   ],
+   "value": "Retail sales of office products and B2B supply chain solutions."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional corporate retail environment with a focus on business services, lacking the fast-paced, high-innovation vibe of elite tech companies."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "3c1fe24fc7"
+   ],
+   "value": "General consumers and enterprise clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "3c1fe24fc7"
+   ],
+   "value": "Estimated: $75,000 - $90,000 base salary. Likely falls short of the elite new-grad pay benchmarks found in top-tier tech."
   },
   "evidence_sha": "6b5a399f9d26c0c0",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784930118,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784929954,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "3c1fe24fc7"
+   ],
+   "value": "Retail Office Products and Services"
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "3c1fe24fc7"
+   ],
+   "value": "Prepare to discuss how you can drive innovation within a traditional corporate structure, and ask questions about the team's tech stack and work-life boundaries to ensure they meet your standards for guaranteed shutdowns and fast-paced learning."
+  },
+  "last_attempt_at": 1784930118,
   "last_evidence_at": 1784929172,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "3c1fe24fc7"
+   ],
+   "value": "Headquartered in Boca Raton, Florida, USA."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "3c1fe24fc7"
+   ],
+   "value": "Providing retail and B2B office products and services."
+  },
   "name": "Office Depot",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. As a legacy retail corporation, the pace is likely steady and traditional, potentially leaning toward slower bureaucracy rather than fast-paced innovation."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "3c1fe24fc7"
+   ],
+   "value": "Office supplies, facility products, technology products, cleaning supplies, furniture, copy and print services, and business services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "3c1fe24fc7"
+   ],
+   "value": "Estimated: Vacation time starts accruing immediately from Day 1, growing with tenure. Exact days are not public but likely range around 15-20 days annually for new hires plus holidays."
   },
-  "retry_after": 1784930074,
+  "refresh_after": 1790114118,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -268503,7 +268559,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No structured company-wide shutdowns found. Traditional retail companies rarely offer guaranteed tech shutdowns outside of standard public holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "3c1fe24fc7"
+   ],
+   "value": "10001+ employees, founded in 1986."
   },
   "sources": [
    {
@@ -268557,14 +268620,43 @@
     "url": "https://jobright.ai/jobs/info/6a639e85e8d8d22e32929c96?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "3c1fe24fc7"
+   ],
+   "value": "Office Depot has a track record of offering H1B sponsorships. Please note that this does not guarantee sponsorship for this specific role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "3c1fe24fc7"
+   ],
+   "value": "Office Depot is a retail and B2B supplier of office products, services, and technology solutions. The company makes money by selling office supplies, furniture, and business services to consumers and enterprises."
+  },
+  "synthesized_evidence_sha": "6b5a399f9d26c0c0",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "3c1fe24fc7"
+   ],
+   "value": "Data science and analysis tasks related to business operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784929172,
   "web_search_url": "https://duckduckgo.com/?q=Office+Depot+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "3c1fe24fc7"
+   ],
+   "value": "The candidate is seeking an elite, high-paying new grad role with a fast-paced, innovative, mission-driven tech culture and a strict work-life balance. Office Depot is a traditional retail company with a Glassdoor rating of 3.2, which may present a slower bureaucracy rather than the fast-paced, elite tech culture the candidate prioritizes."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. Traditional retail and supply chain hours may provide standard work-life balance, but it may lack the modern \"guaranteed shutdown\" policies of top-tier tech firms."
   }
  },
  "ofi north america olam food ingredients": {
