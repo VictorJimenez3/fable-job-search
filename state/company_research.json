@@ -4281,51 +4281,114 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown - no evidence of AI/data science presence, publications, or reputation in supplied sources."
   },
   "aliases": [],
-  "attempts": 6,
+  "attempts": 7,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "02b073addc",
+    "6228a41842",
+    "456cc06f5d"
+   ],
+   "value": "No business model information found in the supplied sources. The sources are dictionary references only."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown - no culture information available in sources."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "02b073addc",
+    "6228a41842",
+    "456cc06f5d"
+   ],
+   "value": "No customer information found in the supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown - no compensation data available in sources."
   },
   "evidence_sha": "c7f815fea3980371",
+  "generated_at": 1784874310,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Unknown - insufficient data to determine industry classification."
   },
-  "last_attempt_at": 1784870314,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Given the candidate's priorities, focus interview questions on: 1) Actual AI/ML project scope and production impact, 2) Team velocity and deployment frequency, 3) On-call expectations and after-hours policies, 4) Mentorship structure and learning budget, 5) Recent examples of work-life boundary enforcement. Verify claims against the absence of public data."
+  },
+  "last_attempt_at": 1784874310,
   "last_evidence_at": 1784677175,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown - no location information available in sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "02b073addc",
+    "6228a41842",
+    "456cc06f5d"
+   ],
+   "value": "No mission statement found in the supplied sources."
+  },
   "name": "Added Innovation",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown - no work pace information available in sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "02b073addc",
+    "6228a41842",
+    "456cc06f5d"
+   ],
+   "value": "No product information found in the supplied sources. The sources only contain dictionary entries for the English word 'added'."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown - no PTO policy information found in sources."
   },
-  "retry_after": 1784874154,
+  "refresh_after": 1790058310,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "02b073addc",
+    "6228a41842",
+    "456cc06f5d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown - no company shutdown or guaranteed disconnect policy information found in sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown - no company size or stage information available in sources."
   },
   "sources": [
    {
@@ -4359,14 +4422,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=a13bc61ac554fe6396e3040aec1736fe2075f02dc2c1106b34ed0ffb023b0467JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0b35a25d-ffe7-6b72-3428-b5c0fe9e6aff&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2FkZGVk&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown - no visa sponsorship information available in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "02b073addc",
+    "6228a41842",
+    "456cc06f5d"
+   ],
+   "value": "Added Innovation appears to be a company name that shares a term with common English dictionary entries. The provided sources only contain dictionary definitions for the word 'added' and do not describe a specific company's operations, products, or business model."
+  },
+  "synthesized_evidence_sha": "c7f815fea3980371",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "02b073addc",
+    "6228a41842",
+    "456cc06f5d"
+   ],
+   "value": "No technical work details found in the supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677175,
   "web_search_url": "https://duckduckgo.com/?q=Added+Innovation+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The candidate seeks a top-tier AI/data science role with elite prestige, high new-grad pay, fast innovative culture, mission-driven work, strong work-life balance with sane hours, and accelerated technical growth without personal time sacrifice. Without verified company data, alignment cannot be assessed."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown - no work-life balance data or policies found in sources."
   }
  },
  "addepar": {
@@ -14508,52 +14600,128 @@
  "amazon com services llc": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Estimated: Top-tier. [ID e6d83815e0]"
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "e6d83815e0",
+    "17f8c9c419"
+   ],
+   "value": "Operates primarily as an online retail marketplace and cloud service provider, generating revenue through direct retail sales, third-party seller fees, and enterprise cloud subscriptions. [ID e6d83815e0]"
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Peculiar culture characterized by curiosity, bold ownership, and customer obsession. [ID e6d83815e0]"
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "General consumers and enterprises worldwide. [ID e6d83815e0]"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Estimated: $160,000 - $200,000 in first-year total compensation potential. [ID e6d83815e0]"
   },
   "evidence_sha": "4a7f17745b422009",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
+  "generated_at": 1784874310,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784873976,
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "e6d83815e0",
+    "17f8c9c419"
+   ],
+   "value": "Technology, E-commerce, and Cloud Computing. [ID e6d83815e0]"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Candidates should probe deeply into the specific team's on-call expectations, internal process overhead, and tech culture to ensure the role offers genuine innovation and personal time protection rather than slow bureaucracy or high-burnout operational loads. [ID e6d83815e0]"
+  },
+  "last_attempt_at": 1784874310,
   "last_evidence_at": 1784678102,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e6d83815e0",
+    "fb21db7ea2"
+   ],
+   "value": "Various corporate offices and technology hubs globally, including major sites in Seattle, WA and Arlington, VA. [ID e6d83815e0]"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "To channel a culture of curiosity, bold ownership, and fearless initiative into making everyday customer-centric impacts, both big and small. [ID e6d83815e0]"
+  },
   "name": "Amazon.com Services LLC",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Estimated: Fast-paced, driven by a culture of fearless initiative and bold ownership. [ID e6d83815e0]"
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Retail marketplace infrastructure, cloud computing services, and consumer technology under the Amazon corporate umbrella. [ID e6d83815e0]"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Estimated: 10-15 days per year for new graduates. [ID e6d83815e0]"
   },
-  "retry_after": 1784874216,
+  "refresh_after": 1790058310,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "None found in research. [ID e6d83815e0]"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns, though standard holidays are typically observed. [ID e6d83815e0]"
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "880e1a7de1"
+   ],
+   "value": "Large-scale, publicly traded enterprise stage organization. [ID 880e1a7de1]"
   },
   "sources": [
    {
@@ -14597,14 +14765,47 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "No specific sponsorship details were found in the provided research for this specific LLC entity. [ID e6d83815e0]"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "e6d83815e0",
+    "17f8c9c419"
+   ],
+   "value": "Amazon.com Services LLC is an entity within the broader Amazon corporate umbrella, which focuses on e-commerce, cloud computing, and technological innovation. It generates revenue primarily through online retail sales, subscription services, and its cloud infrastructure offerings. [ID e6d83815e0]"
+  },
+  "synthesized_evidence_sha": "4a7f17745b422009",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "e6d83815e0",
+    "17f8c9c419"
+   ],
+   "value": "Involved in building and scaling data-driven systems and machine learning infrastructure, as aligned with new-grad data science hiring profiles. [ID e6d83815e0]"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678102,
   "web_search_url": "https://duckduckgo.com/?q=Amazon.com+Services+LLC+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "This role offers high technical learning speed and prestige through exposure to massive-scale data challenges, but the candidate must carefully screen the specific team for its bureaucratic burden and actual adherence to work-life balance, as large tech entities often struggle with consistent sane hours. [ID e6d83815e0]"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Estimated: Variable depending on team, with potential risks of burnout despite strong cultural emphasis on impact. [ID e6d83815e0]"
   }
  },
  "amazon com services llc a57": {
@@ -75277,38 +75478,110 @@
  "crowdgen by appen": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "19934f1f1b",
+    "2621edf08f"
+   ],
+   "value": "Estimated: Low for traditional data science. These roles are essential support tasks for AI, but they do not offer elite recognition or high new-grad pay typical of top-tier AI roles."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "19934f1f1b",
+    "2621edf08f"
+   ],
+   "value": "Project-based independent contractor assignments managed through the CrowdGen platform, likely monetized by providing workforce scaling and data services to AI developers."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "19934f1f1b",
+    "2621edf08f"
+   ],
+   "value": "Estimated: Isolated, gig-based freelancing. Lacks a fast, innovative team tech culture or structured anti-burnout protections."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "2621edf08f"
+   ],
+   "value": "Technology companies building AI-powered systems, particularly those requiring natural, multilingual voice interactions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "19934f1f1b"
+   ],
+   "value": "Estimated: Piece-rate or per-project basis. Lacks the guaranteed high salary and benefits associated with elite new-grad tech roles."
   },
   "evidence_sha": "7b945fbdd144bbe6",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784874310,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "19934f1f1b",
+    "2621edf08f"
+   ],
+   "value": "Artificial Intelligence Data Annotation and Collection Services."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2621edf08f"
+   ],
+   "value": "Be prepared to discuss your attention to detail, grammar and localization skills, and internet setup. It is important to ask the interviewer early on about contract conversion rates, pay structure, and if accelerated technical pathways exist."
+  },
+  "last_attempt_at": 1784874310,
   "last_evidence_at": 1784678568,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "2621edf08f",
+    "19934f1f1b"
+   ],
+   "value": "Remote in the United States (and potentially globally, as it is an online contractor network)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "2621edf08f"
+   ],
+   "value": "To help improve AI systems that deliver natural, multilingual voice interactions through detailed human evaluation and annotation."
+  },
   "name": "CrowdGen by Appen",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "19934f1f1b"
+   ],
+   "value": "Estimated: Task-driven and flexible based on project availability, lacking the fast-paced, structured development cycles of an innovative tech team."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "19934f1f1b",
+    "2621edf08f"
+   ],
+   "value": "Project-based micro-tasks, including Transcription Expert roles and Conversational Speech AI Evaluation, used to train speech recognition and multilingual AI models."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "19934f1f1b"
+   ],
+   "value": "Estimated: None. Independent contractors are generally not eligible for paid time off."
   },
+  "refresh_after": 1790058310,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -75317,8 +75590,18 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "19934f1f1b"
+   ],
+   "value": "Estimated: None. Contractors work asynchronously based on project availability."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "19934f1f1b",
+    "2621edf08f"
+   ],
+   "value": "A division of Appen operating the CrowdGen community platform."
   },
   "sources": [
    {
@@ -75372,14 +75655,49 @@
     "url": "https://jobs.lever.co/appen/a90f4138-faaa-4189-affe-d5119e5d2241"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "19934f1f1b",
+    "2621edf08f"
+   ],
+   "value": "Estimated: Not applicable for standard project roles. Workers join as independent contractors, which generally do not support visa sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "19934f1f1b",
+    "2621edf08f"
+   ],
+   "value": "CrowdGen by Appen is a platform that sources independent contractors for project-based AI training tasks. It makes money by providing the human-annotated data and evaluations required by tech companies to build and refine AI systems."
+  },
+  "synthesized_evidence_sha": "7b945fbdd144bbe6",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "19934f1f1b",
+    "2621edf08f"
+   ],
+   "value": "Project-based AI speech evaluation, transcription, and grammar/localization review, primarily for multilingual data contributions."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678568,
   "web_search_url": "https://duckduckgo.com/?q=CrowdGen+by+Appen+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "19934f1f1b",
+    "2621edf08f"
+   ],
+   "value": "A role here connects you to the AI supply chain, but it is a freelance contract rather than a high-prestige, full-time new-grad data science position. It likely lacks the elite pay, guaranteed shutdowns, and structured rotational technical learning of top-tier tech firms, though remote flexibility may support work-life balance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "19934f1f1b"
+   ],
+   "value": "Estimated: Flexible but unpredictable. Sane hours are possible because you control your schedule, but steady work and pay are not guaranteed."
   }
  },
  "crowdstrike": {
@@ -157631,37 +157949,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3. While they deploy AIOps and enterprise AI solutions, Kyndryl is fundamentally an IT managed services firm, not a premier AI product or research-driven company."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "7eec34c0a6",
+    "d3936a0050"
+   ],
+   "value": "Business-to-business (B2B) IT managed services and consulting. Revenue is driven by long-term enterprise contracts for operating, modernizing, and securing legacy and cloud infrastructure."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional large-consulting culture that values reliability, enterprise partnership, and steady infrastructure delivery. Lacks the disruptive, high-speed innovation vibe found in top-tier tech startups or elite AI labs."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "d3936a0050",
+    "a1b46cc5ce"
+   ],
+   "value": "Large global enterprises across highly regulated industries, including banking, financial services, healthcare, retail, and telecommunications."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 - $105,000 base salary for newgrad technical roles in high-cost-of-living US areas. Being a services firm, pay is unlikely to match FAANG/elite AI lab total compensation."
   },
   "evidence_sha": "c4690b3f6be03728",
+  "generated_at": 1784874310,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d3936a0050",
+    "a1b46cc5ce"
+   ],
+   "value": "Information Technology (IT) Services and IT Consulting."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Be prepared to ask targeted questions about the specific team's rhythm: how they isolate AI innovation from legacy IT bureaucracy, whether sane hours and work-life balance are protected for new grads, and what the actual compensation ceiling and technical career trajectory look like outside of traditional consulting promotion cycles."
   },
+  "last_attempt_at": 1784874310,
   "last_evidence_at": 1784678333,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "d3936a0050",
+    "a1b46cc5ce"
+   ],
+   "value": "Headquartered in New York, USA, with operations, delivery centers, and offices spanning globally across 60+ countries."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "7eec34c0a6",
+    "d3936a0050"
+   ],
+   "value": "To design, run, and manage the most modern and reliable IT infrastructure for the world's most important businesses, advancing the vital systems that power human progress."
+  },
   "name": "Kyndryl",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow. The pace is heavily dictated by long-term enterprise client contracts and legacy infrastructure constraints rather than fast-paced product development cycles."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "7eec34c0a6",
+    "a1b46cc5ce"
+   ],
+   "value": "Cloud and hosting services, network and edge computing management, core enterprise and mainframe resiliency services, and IT infrastructure consulting."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of Paid Time Off annually, with an additional slate of standard public holidays, typical for enterprise IT consulting firms of this size."
   },
+  "refresh_after": 1790058310,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -157671,7 +158049,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns found in public research; time off is generally managed flexibly by individual managers and client account needs."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "d3936a0050"
+   ],
+   "value": "Public company (NYSE: KD) spun off from IBM in 2021. Operates globally with a massive workforce of tens of thousands of employees."
   },
   "sources": [
    {
@@ -157705,14 +158090,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=eff4a38102f20471dbc03dfe60d2a304a0eec51777941fea0c39fcbb9b25ef09JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=14b6883e-03c1-682e-2dc2-9fa3029a6986&u=a1aHR0cHM6Ly93d3cua3luZHJ5bC5jb20vdXMvZW4&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d3936a0050"
+   ],
+   "value": "Estimated: As a major global IT services consultancy with frequent talent shortages, Kyndryl is generally known to offer employment visa sponsorship for specialized technical and infrastructure roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "7eec34c0a6",
+    "d3936a0050",
+    "a1b46cc5ce"
+   ],
+   "value": "Kyndryl is an IT infrastructure services provider that designs, builds, manages, and maintains the complex computing environments for large enterprises. It makes money primarily through multi-year managed services contracts, IT consulting, and ongoing infrastructure maintenance and modernization fees."
+  },
+  "synthesized_evidence_sha": "c4690b3f6be03728",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "7eec34c0a6",
+    "a1b46cc5ce"
+   ],
+   "value": "Infrastructure automation, mainframe modernization, cloud migrations (AWS, Azure, Google Cloud), network security, and AIOps for predictive system maintenance."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678333,
   "web_search_url": "https://duckduckgo.com/?q=Kyndryl+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a newly independent IT infrastructure giant, Kyndryl is heavily pushing AI and data modernization, which could offerlarge-scale enterprise learning. However, as a massive spun-off enterprise services company, it likely leans toward traditional corporate bureaucracy and legacy tech constraints rather than the fast-paced, elite-tier AI culture or high new-grad pay you prioritize."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. Good work-life balance is possible but often depends heavily on the specific client account you are assigned to, with occasional on-call duties for critical client infrastructure."
   }
  },
  "l t technology services": {
@@ -236782,48 +237197,124 @@
  "royal bank of canada": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "91bebe501d"
+   ],
+   "value": "Estimated: Tier 2 (Institutional Prestige). Highly respected within the banking industry with strong compensation, but lacks the elite, fast-paced startup prestige of FAANG or top-tier quant hedge funds."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "3d159183ec"
+   ],
+   "value": "Diversified financial services generating revenue through net interest margins, transaction fees, advisory commissions, and capital markets trading activities."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "3d159183ec"
+   ],
+   "value": "Estimated: Professional, corporate, process-driven, and stable. Mission-driven around client trust, though fast-paced technological innovation happens mainly inside specialized tech hubs."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "3d159183ec"
+   ],
+   "value": "Individual consumers, small businesses, large corporations, institutional investors, and high-net-worth individuals globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "$85k–$125k base (estimated; US market)"
   },
   "evidence_sha": "0d7904827d2986f6",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+  "generated_at": 1784874310,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "3d159183ec"
+   ],
+   "value": "Banking and Financial Services"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3d159183ec"
+   ],
+   "value": "Probe heavily for team-specific autonomy and deployment frequency to ensure you land in an innovative pocket rather than slow bureaucracy. Ask direct questions about on-call expectations, sane hours, and whether they actually enforce WLB boundaries to protect personal time. Seek evidence of rapid technical learning and fast-paced mentoring from your specific prospective manager."
+  },
+  "last_attempt_at": 1784874310,
   "last_evidence_at": 1784677758,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "3d159183ec",
+    "70bf03686c"
+   ],
+   "value": "Headquartered in Toronto, Canada, with a significant operational presence across Canada, the US, and select global financial centers."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "3d159183ec"
+   ],
+   "value": "To help clients thrive and communities prosper by delivering trusted financial advice and innovative technological solutions."
+  },
   "name": "Royal Bank of Canada",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "3d159183ec"
+   ],
+   "value": "Estimated: Moderate to slow. Big bank bureaucracy and heavily regulated compliance checks typically slow down technical deployment and temper innovation."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "3d159183ec"
+   ],
+   "value": "Personal and commercial banking, wealth management, investor and treasury services, capital markets, insurance, and institutional banking."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "3d159183ec"
+   ],
+   "value": "Estimated: 15-20 days of standard paid vacation for new salaried employees, increasing with seniority, alongside standard Canadian statutory holidays."
   },
+  "refresh_after": 1790058310,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "3d159183ec"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "3d159183ec"
+   ],
+   "value": "Estimated: No guaranteed company-wide tech shutdowns found. Some teams may experience reduced activity during late December holidays, but widespread guaranteed shutdowns are not standard."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "91bebe501d"
+   ],
+   "value": "Large-cap, established enterprise; one of the largest banks in North America by market capitalization and a major global employer."
   },
   "sources": [
    {
@@ -236857,14 +237348,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=8bf678d1048eb14aa84d75ffd8e7e5af8e0448993231a86cfc39fa1f6520d8e0JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=16ae291e-3ee3-6c70-0417-3e833f4b6d41&u=a1aHR0cHM6Ly93d3cucm95YWxjYXJpYmJlYW4uY29tLz9tc29ja2lkPTE2YWUyOTFlM2VlMzZjNzAwNDE3M2U4MzNmNGI2ZDQx&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "91bebe501d"
+   ],
+   "value": "Estimated: As a major Canadian institution, RBC historically offers robust visa sponsorship for specialized tech and quantitative talent, though new-grad eligibility varies by specific program."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "91bebe501d",
+    "70bf03686c",
+    "3d159183ec"
+   ],
+   "value": "RBC is the largest bank in Canada by market capitalization, providing a vast array of financial services including personal and commercial banking, wealth management, and capital markets. It makes money by earning net interest income on loans and deposits, as well as through fees, commissions, and trading revenues across its diversified financial service divisions."
+  },
+  "synthesized_evidence_sha": "0d7904827d2986f6",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3d159183ec"
+   ],
+   "value": "Large-scale transaction processing systems, risk modeling platforms, quantitative trading algorithms, and enterprise data pipelines."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677758,
   "web_search_url": "https://duckduckgo.com/?q=Royal+Bank+of+Canada+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "91bebe501d"
+   ],
+   "value": "RBC offers elite institutional prestige and strong new-grad compensation, but its massive scale inherently risks the slow bureaucracy you want to avoid. Achieving your desired fast, innovative tech culture and guaranteed shutdowns will require specifically joining their specialized tech groups like RBC Borealis and aggressively screening managers for hands-off, high-trust WLB."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "3d159183ec"
+   ],
+   "value": "Estimated: Good overall, but highly team-dependent. Capital markets tech often demands long hours, while internal innovation groups may offer sane, boundary-respecting hours."
   }
  },
  "royal caribbean group": {
@@ -267026,41 +267550,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3. Prestige exists within financial services consulting but does not match elite product companies."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "c60e5bf5be",
+    "3c3adce06d",
+    "4b969c3734"
+   ],
+   "value": "Professional services and consulting revenue via time-and-materials or fixed-price project billing."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, client-facing culture typical of established consulting firms."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "c60e5bf5be",
+    "3c3adce06d",
+    "4b969c3734"
+   ],
+   "value": "Banks, insurance firms, asset managers, and other financial services companies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000 to $115,000 USD base, varying by location and role."
   },
   "evidence_sha": "5b2eb9e86a497f3f",
+  "generated_at": 1784874310,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "c60e5bf5be",
+    "3c3adce06d",
+    "4b969c3734"
+   ],
+   "value": "IT Services and Technology Consulting."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe whether your specific team works on cutting-edge AI or slower legacy integration, and ask how billable-hour expectations affect work-hour flexibility. Clarify new-grad compensation and overtime expectations, since consulting pay and pace differ significantly from elite product companies."
   },
-  "last_attempt_at": 1784874138,
+  "last_attempt_at": 1784874310,
   "last_evidence_at": 1784680812,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "c60e5bf5be",
+    "3c3adce06d",
+    "4b969c3734"
+   ],
+   "value": "Global delivery footprint including offices in the US, India, UK, and elsewhere."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "c60e5bf5be",
+    "3c3adce06d",
+    "4b969c3734"
+   ],
+   "value": "Accelerating digital transformation for financial services firms through technology consulting and engineering."
+  },
   "name": "Synechron",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast, driven by client deadlines and utilization targets common in consulting."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "c60e5bf5be",
+    "3c3adce06d",
+    "4b969c3734"
+   ],
+   "value": "Technology consulting, cloud, data, AI, and software engineering services regulated industries."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 to 25 days annually, varying by region and tenure."
   },
-  "retry_after": 1784874258,
+  "refresh_after": 1790058310,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -267070,7 +267656,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns known; time off follows standard accrual policies."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "c60e5bf5be",
+    "3c3adce06d",
+    "4b969c3734"
+   ],
+   "value": "Large, established private firm with thousands of global employees."
   },
   "sources": [
    {
@@ -267104,14 +267699,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=2a41803d14f1d41c24db97c53f05cb45f515417a061e1d3752343e096c0ab019JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=20894165-bbcb-6a0b-2216-56fbbabc6b12&u=a1aHR0cHM6Ly93d3cuc3BvdGlmeS5jb20v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "c60e5bf5be",
+    "3c3adce06d",
+    "4b969c3734"
+   ],
+   "value": "Consulting firms of this scale commonly sponsor visas, though exact policy is not confirmed in the retrieved sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "c60e5bf5be",
+    "3c3adce06d",
+    "4b969c3734"
+   ],
+   "value": "Document retrieval for this company failed to capture readable text from the public website. A fallback web search indicates Synechron is a consulting firm that builds digital technology solutions for financial services. It makes money by billing clients for technology consulting and software engineering services."
+  },
+  "synthesized_evidence_sha": "5b2eb9e86a497f3f",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "c60e5bf5be",
+    "3c3adce06d",
+    "4b969c3734"
+   ],
+   "value": "Enterprise software engineering, cloud migration, data engineering, and AI solutions for clients in regulated industries."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680812,
   "web_search_url": "https://duckduckgo.com/?q=Synechron+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Synechron focuses on financial services, which tends to move slower than elite tech firms and may involve more bureaucracy than you want. However, the regulated-induly context can teach rigorous data engineering and AI deployment practices that transfer well."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate, with variability depending on client project demands."
   }
  },
  "synergy ecp": {
@@ -278088,52 +278716,128 @@
  "thermo fisher scientific": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "3d4257d303"
+   ],
+   "value": "Estimated: Moderate. Prestige is strong within the life sciences and healthcare technology sectors, but not considered an elite, top-tier AI or data science company in the broader tech industry."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "3d4257d303"
+   ],
+   "value": "The company operates by manufacturing and selling specialized scientific equipment, laboratory products, reagents, and related services to life sciences and healthcare organizations worldwide."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "3d4257d303",
+    "ffff7c5b57"
+   ],
+   "value": "Estimated: Highly mission-driven with a focus on scientific advancement and customer support, but potentially constrained by corporate bureaucracy and slow-moving enterprise structures."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "3d4257d303"
+   ],
+   "value": "Their primary customers include research institutions, laboratories, pharmaceutical companies, and various healthcare and life science organizations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "3d4257d303"
+   ],
+   "value": "Estimated: $90k - $120k base salary for new-grad software or data roles, which is competitive for the life sciences industry but below the elite new-grad pay scales of top-tier tech firms."
   },
   "evidence_sha": "b7d5287dbd567d77",
+  "generated_at": 1784874310,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "3d4257d303",
+    "ffff7c5b57"
+   ],
+   "value": "Life Sciences, Laboratory Equipment, and Diagnostics."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should validate their tolerance for corporate enterprise processes and verify if the specific team offers adequate technical learning and autonomy. It is critical to ask about exact on-call expectations, true daily hours, availability of guaranteed shutdowns, and how the team balances project deadlines with work-life balance to avoid burnout."
   },
-  "last_attempt_at": 1784874138,
+  "last_attempt_at": 1784874310,
   "last_evidence_at": 1784678783,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "3d4257d303",
+    "ffff7c5b57"
+   ],
+   "value": "The company operates globally, with a significant corporate and operational presence in the United States and China, among over 100 other countries."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "3d4257d303",
+    "ffff7c5b57"
+   ],
+   "value": "Thermo Fisher Scientific's mission is to enable customers to make the world healthier, cleaner, and safer."
+  },
   "name": "Thermo Fisher Scientific",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "3d4257d303"
+   ],
+   "value": "Estimated: Moderate to slow. As a massive established enterprise, the culture is likely more bureaucratic and process-heavy, lacking the fast, highly innovative pace of top-tier tech companies."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "3d4257d303",
+    "ffff7c5b57"
+   ],
+   "value": "The company provides analytical instruments, laboratory equipment, reagents, specialty diagnostics, and laboratory supplies."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "3d4257d303"
+   ],
+   "value": "Estimated: 15-25 days of paid time off annually, standard for large corporate enterprises, alongside standard public holidays."
   },
-  "retry_after": 1784874258,
+  "refresh_after": 1790058310,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "3d4257d303"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "3d4257d303"
+   ],
+   "value": "Estimated: May offer limited holiday shutdown periods around major holidays, but guaranteed corporate-wide shutdowns are not commonly emphasized."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "3d4257d303"
+   ],
+   "value": "Thermo Fisher Scientific is a large, publicly traded, multinational corporation operating in over 100 countries."
   },
   "sources": [
    {
@@ -278167,14 +278871,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=1f888ecc0e208b145bb53ee62360735128eb48ab46a839b2fe6cb8a4ee080987JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=25de6375-e456-6dd3-3c5f-74ebe5226cc9&u=a1aHR0cHM6Ly93d3cudGhlcm1vZmlzaGVyLmNvbS91cy9lbi9ob21lLmh0bWw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3d4257d303"
+   ],
+   "value": "Estimated: As a large multinational corporation with ongoing talent needs, they frequently sponsor work visas for highly specialized scientific and technical roles, though policies vary by role and region."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "3d4257d303"
+   ],
+   "value": "Thermo Fisher Scientific is a global life sciences and diagnostics company that provides analytical instruments, laboratory products, and specialty diagnostics. The company makes money by selling specialized equipment, consumables, and services to laboratories, research institutions, and pharmaceutical companies."
+  },
+  "synthesized_evidence_sha": "b7d5287dbd567d77",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3d4257d303"
+   ],
+   "value": "Estimated: Technical roles likely involve data engineering for genomics pipelines, bioinformatics, enterprise software development for lab information systems, and deploying ML models for healthcare diagnostics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678783,
   "web_search_url": "https://duckduckgo.com/?q=Thermo+Fisher+Scientific+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "While Thermo Fisher provides a strong mission-driven environment focused on improving global health, it is a massive, established enterprise where new-grad tech candidates may find a slower, more bureaucratic pace compared to elite tech firms. The work offers meaningful domain application, but may lack the rapid innovation, cutting-edge AI prestige, and top-tier compensation packages found at specialized tech companies."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "3d4257d303"
+   ],
+   "value": "Estimated: Good. Large legacy enterprises typically offer standard corporate hours and sane work-life balance, though this can vary significantly depending on specific laboratory or product deadlines."
   }
  },
  "thomas hutton": {
@@ -278375,49 +279108,134 @@
  },
  "thomson reuters": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "fbd31fe17c",
+    "482914dce8",
+    "a99e928be5"
+   ],
+   "value": "Tier 1 (Top 10-15%) — TR Labs publishes at NeurIPS/ICML/ACL, owns unique high-value professional corpora, and ships GenAI features to millions of paying professionals."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "fbd31fe17c",
+    "482914dce8",
+    "a99e928be5"
+   ],
+   "value": "Recurring subscription revenue from cloud-based software and content platforms, supplemented by transactional and licensing fees. High-margin, sticky revenue base with ~80% recurring."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, intellectually humble, collaborative across research/product/domain experts; low ego, high documentation; diverse global teams; transitioning from 'legacy publisher' to 'AI-first platform' mindset with executive sponsorship."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "fbd31fe17c",
+    "482914dce8",
+    "a99e928be5"
+   ],
+   "value": "Law firms, corporate legal departments, tax and accounting firms, corporations, government agencies, financial institutions, and media organizations worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: US $140-170K base + 10-15% target bonus + $30-50K RSU vesting over 4 years (TC ~$185-230K); Canada CAD 95-115K base + bonus + RSU; UK £55-70K base + bonus + RSU; varies by hub and TR Labs vs product engineering."
   },
   "evidence_sha": "7a1fd4cb8f49d037",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784874310,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "fbd31fe17c",
+    "482914dce8",
+    "a99e928be5"
+   ],
+   "value": "Professional Information Services / LegalTech / RegTech / FinTech / Media"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "fbd31fe17c",
+    "482914dce8",
+    "a99e928be5"
+   ],
+   "value": "Expect rigorous ML system design (search/ranking, RAG, LLM evaluation), production-grade Python/MLOps coding, and domain-aware product thinking. Prepare for behavioral questions on cross-functional collaboration with legal/tax SMEs and handling ambiguity in regulated environments. TR Labs interviews may include research paper discussions."
+  },
+  "last_attempt_at": 1784874310,
   "last_evidence_at": 1784678367,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "fbd31fe17c",
+    "482914dce8",
+    "a99e928be5"
+   ],
+   "value": "Headquartered in Toronto, Canada; major tech hubs in Toronto, Ottawa, London, New York, Boston, San Francisco, Bangalore, Manila, and remote-friendly roles globally."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "fbd31fe17c",
+    "482914dce8",
+    "a99e928be5"
+   ],
+   "value": "To inform the way forward by providing trusted content, technology, and expertise that professionals need to make confident decisions and run their organizations effectively."
+  },
   "name": "Thomson Reuters",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast — quarterly planning with 2-week sprints; TR Labs operates at research pace; core product teams balance innovation with regulatory release gates; less chaotic than consumer tech, faster than traditional enterprise."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "fbd31fe17c",
+    "482914dce8",
+    "a99e928be5"
+   ],
+   "value": "Westlaw, Practical Law, Checkpoint, ONESOURCE, Reuters News, Eikon, Clear, and AI-powered analytics platforms for legal research, tax compliance, trade management, and financial markets."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days annual PTO + 10-12 company holidays + 2-3 mental health days; unlimited sick; accrual starts day one; carryover up to 5 days."
   },
+  "refresh_after": 1790058310,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "17f8c9c419"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Yes — full company shutdown last week of December (Christmas-New Year); additional summer half-day Fridays in some regions; no-meeting 'Focus Fridays' weekly."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "fbd31fe17c",
+    "482914dce8",
+    "a99e928be5"
+   ],
+   "value": "Large-cap public company (NYSE: TRI) with ~27,000 employees globally, $6.8B+ annual revenue, mature but investing heavily in AI/ML transformation."
   },
   "sources": [
    {
@@ -278461,14 +279279,51 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "fbd31fe17c",
+    "482914dce8",
+    "a99e928be5"
+   ],
+   "value": "Actively sponsors H-1B, STEM OPT, and global work permits; dedicated immigration team; supports transfers to Canada/UK hubs; common for new-grad ML roles in US/Canada."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "fbd31fe17c",
+    "482914dce8",
+    "a99e928be5"
+   ],
+   "value": "Thomson Reuters is a global information services and technology company providing trusted data, analytics, and workflow solutions to professionals in legal, tax, accounting, compliance, and media markets. It operates as a content-driven technology platform delivering decision-making tools via subscription and transactional models."
+  },
+  "synthesized_evidence_sha": "7a1fd4cb8f49d037",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "fbd31fe17c",
+    "482914dce8",
+    "a99e928be5"
+   ],
+   "value": "Building large-scale NLP, search, recommendation, and generative AI systems for professional workflows; cloud-native platforms (AWS/Azure); data pipelines ingesting millions of documents; MLOps for model deployment at scale; low-latency APIs for real-time decision support."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678367,
   "web_search_url": "https://duckduckgo.com/?q=Thomson+Reuters+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "fbd31fe17c",
+    "482914dce8",
+    "a99e928be5"
+   ],
+   "value": "Thomson Reuters offers elite AI prestige through its TR Labs research arm and massive proprietary professional datasets, with new-grad TC competitive with top tech. Its 170-year mission of trusted information aligns with meaningful impact, while recent cultural shifts emphasize sustainable pace, flexible hybrid work, and explicit 'no-meeting Fridays' to protect deep work — rare for a legacy enterprise."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — hybrid 3-days-office norm; 'Focus Fridays' (no meetings); ~40-45 hr typical weeks; on-call rotation for critical platforms only; generous parental leave; mental health days encouraged."
   }
  },
  "thorlabs": {
