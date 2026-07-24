@@ -23306,48 +23306,127 @@
  "applied information sciences": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "ca2f8a8557"
+   ],
+   "value": "Estimated: Mid-tier / Low prestige. AI work is heavily application-focused (e.g., Azure AI integrations) rather than foundational research or elite-tier data science."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "ca2f8a8557",
+    "d3ec20d97d",
+    "51239b9fc1"
+   ],
+   "value": "Business-to-Business (B2B) and Business-to-Government (B2G) professional services firm operating on a project-based or hourly billing model, generating revenue through IT consulting and custom engineering contracts."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "ca2f8a8557"
+   ],
+   "value": "Established, collaborative, and traditional consulting environment focused on client service rather than rapid tech culture disruption."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "ca2f8a8557",
+    "51239b9fc1"
+   ],
+   "value": "Sectors heavily include federal government agencies, state and local governments, healthcare, and financial services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "ca2f8a8557"
+   ],
+   "value": "Estimated: $80,000 - $100,000 base salary, with limited bonus potential. Below the elite new-grad tech pay bands of FAANG/top-tier AI firms."
   },
   "evidence_sha": "166a9b4202d101d6",
+  "generated_at": 1784881896,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "ca2f8a8557"
+   ],
+   "value": "IT Services and Consulting / Professional Services"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe the balance of billable client hours vs. dedicated innovation time, the typical pace of technical projects, and AI/ML project intricacy. Ask about WLB—such as remote flexibility, guaranteed shutdowns, and typical hours—to ensure the environment aligns with a desire for strong personal time and accelerated, non-bureaucratic learning."
   },
+  "last_attempt_at": 1784881896,
   "last_evidence_at": 1784676695,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "ca2f8a8557"
+   ],
+   "value": "US-based with remote opportunities and office presence in regions like the Washington D.C. metro area, Texas, and Ohio."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "ca2f8a8557"
+   ],
+   "value": "To deliver high-value IT consulting and custom software solutions that solve complex enterprise challenges through a focus on technical excellence and client partnerships."
+  },
   "name": "Applied Information Sciences",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "ca2f8a8557"
+   ],
+   "value": "Estimated: Moderate to slow, dictated by enterprise and government client bureaucracy rather than a fast-moving, innovative tech culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "ca2f8a8557",
+    "d3ec20d97d"
+   ],
+   "value": "Custom software development services, cloud architecture and migration solutions (primarily Azure), data analytics and AI services, and enterprise application modernization."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "ca2f8a8557"
+   ],
+   "value": "Estimated: 15-20 days of base PTO alongside standard company-paid holidays, with flexibility based on tenure."
   },
+  "refresh_after": 1790065896,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
+   "source_ids": [
+    "ca2f8a8557"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "ca2f8a8557"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns, typical for client-driven consulting firms."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "ca2f8a8557"
+   ],
+   "value": "Mid-sized, established private company."
   },
   "sources": [
    {
@@ -23381,14 +23460,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=6c62d59a85731a28e034ec7b412fc580a07ad82a601cb1bb2b17385ae1a9ac0cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0b4b891b-fa91-601f-2c29-9e86fbb26179&u=a1aHR0cHM6Ly93d3cuYXBwbGllZC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ca2f8a8557"
+   ],
+   "value": "Estimated: Sponsorship needs are unlikely for commercial roles due to standard US consulting firm practices, but may be supported selectively for highly specialized federal contracts requiring clearances."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "ca2f8a8557",
+    "d3ec20d97d",
+    "51239b9fc1"
+   ],
+   "value": "Applied Information Sciences (AIS) is an IT consulting and software development firm that helps clients modernize legacy systems, build custom applications, and migrate to cloud infrastructure. They make money by providing professional services, enterprise architecture guidance, and custom engineering solutions to large enterprise and government clients."
+  },
+  "synthesized_evidence_sha": "166a9b4202d101d6",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "ca2f8a8557"
+   ],
+   "value": "Software engineering focused on enterprise .NET ecosystems, Azure cloud integrations, data engineering, AI/Copilot implementations, and heavy legacy system modernization rather than cutting-edgealgorithmic data science."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676695,
   "web_search_url": "https://duckduckgo.com/?q=Applied+Information+Sciences+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "AIS provides solid exposure to enterprise cloud architecture and practical AI integration for business problems. However, as a traditional consulting firm serving government clients, it may lack the elite prestige, fast-paced algorithmic innovation, or top-tier new grad pay bands typical of mission-driven tech giants, potentially clashing with high-growth technical ambitions."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ca2f8a8557"
+   ],
+   "value": "Estimated: Above average for consulting, generally offering sane hours and remote options compared to big-tech or high-burnout startups."
   }
  },
  "applied intuition": {
@@ -60083,37 +60193,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Academic/Research Hub - nationally recognized for demographic research and data science within the specific niche of population health, but lacks the elite prestige of top-tier commercial AI/DS labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "0d94dcd70a"
+   ],
+   "value": "Operates as a university-affiliated research center funded by external, highly competitive federal grants (e.g., NIH) and private foundations to conduct long-term demographic studies and data infrastructure development."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Academic, collaborative, and deeply mission-driven. Culture favors careful, highly reproducible research and scientific accuracy over fast, innovative tech development."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "0d94dcd70a"
+   ],
+   "value": "The National Institutes of Health (NIH), other federal science and public health agencies, global health NGOs, and academic research institutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $65,000 to $80,000 base salary. University staff compensation is based on rigid state pay bands, which will not meet the elite high new-grad compensation targets seen in top-tier tech companies."
   },
   "evidence_sha": "5bb3ae41b54dd878",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784881896,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0d94dcd70a"
+   ],
+   "value": "Higher Education and Academic Public Health Research."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "0d94dcd70a"
+   ],
+   "value": "The candidate should assess if the structured, slow-paced academic environment suits them by questioning the exact federal grant funding timelines, which inherently introduce bureaucracy not seen in fast tech cultures. Additionally, they should explore the standard university salary bands and rigid PTO policies to see if the work-life balance offsets the lower compensation."
+  },
+  "last_attempt_at": 1784881896,
   "last_evidence_at": 1784674529,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "0d94dcd70a"
+   ],
+   "value": "Headquartered at the University of North Carolina at Chapel Hill campus in Chapel Hill, North Carolina."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "0d94dcd70a"
+   ],
+   "value": "To advance and diffuse knowledge about population issues, improve public health, and train the next generation of interdisciplinary population researchers."
+  },
   "name": "Carolina Population Center",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow and deliberate, driven by multi-year federal grant cycles and rigorous academic peer review processes rather than fast-paced commercial product launches."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "0d94dcd70a"
+   ],
+   "value": "Population health and demographic research datasets, public health data analysis tools, and large-scale longitudinal research studies (e.g., the National Longitudinal Study of Adolescent to Adult Health)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of standard university vacation accrual plus generous institutional holidays, though specific bargaining unit or staff policies apply."
   },
+  "refresh_after": 1790065896,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -60123,7 +60289,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: The university observes a winter holiday closure spanning about a week, but there are no specific, guaranteed operational shutdowns outside the standard UNC Chapel Hill academic calendar."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "0d94dcd70a"
+   ],
+   "value": "A mature, large-scale academic research hub encompassing hundreds of affiliated faculty, researchers, and administrative staff across an extensive network of university departments."
   },
   "sources": [
    {
@@ -60157,14 +60330,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=0a82e6f3c75532ebe7f28e50843f3428b70af084b03907969c63514758ab3694JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=099e55db-8735-67f2-3d1e-424686216698&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQ2Fyb2xpbmFz&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0d94dcd70a"
+   ],
+   "value": "University staff roles at research centers are typically restricted to US persons or permanent residents due to federal grant compliance, though unclassified postdoctoral researcher roles may occasionally offer visa sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "0d94dcd70a"
+   ],
+   "value": "The Carolina Population Center (CPC) at the University of North Carolina at Chapel Hill is an interdisciplinary research center focused on population studies, demography, and public health. It makes money primarily through securing and administering large-scale, federally funded research grants (such as from the NIH) rather than through commercial product sales."
+  },
+  "synthesized_evidence_sha": "5bb3ae41b54dd878",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "0d94dcd70a"
+   ],
+   "value": "Involves developing secure data access systems, building large-scale data infrastructure, and performing complex statistical and demographic research calculations using tools like SAS and R."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674529,
   "web_search_url": "https://duckduckgo.com/?q=Carolina+Population+Center+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "0d94dcd70a"
+   ],
+   "value": "This role severely mismatches the candidate's priorities regarding fast-paced tech culture and elite new-grad compensation, as academic research grants drive slow, bureaucratic development cycles and standard university pay scales. However, it does align strongly with the mission-driven aspect and prioritizes sane hours over toxic, high-burnout environments."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Highly favorable. University research center roles generally feature standard 40-hour weeks, rigid end times, and high respect for personal time without the toxic crunches of corporate tech."
   }
  },
  "carparts com": {
@@ -63425,7 +63627,7 @@
    "value": "Tier 2 — Respected enterprise practitioner; not an AI research lab but operates large-scale data platforms for government and finance where applied ML is production-critical."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -63479,7 +63681,7 @@
    ],
    "value": "Expect practical Java/Spring/Angular coding exercises, REST API design, SQL query optimization, and scenario questions about scaling enterprise applications. Behavioral interviews emphasize client-facing communication, handling ambiguous requirements, and teamwork in distributed project settings. Prepare to discuss how you would apply ML or data science techniques to real-world public-sector or financial use cases."
   },
-  "last_attempt_at": 1784881290,
+  "last_attempt_at": 1784881896,
   "last_evidence_at": 1784747329,
   "locations": {
    "confidence": "high",
@@ -63518,7 +63720,7 @@
    "value": "Estimated: 15-20 days annual vacation + 10-12 company holidays (varies by country/state; US new grads typically start at 15 days PTO)."
   },
   "refresh_after": 1789932944,
-  "retry_after": 1784881770,
+  "retry_after": 1784882856,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -99476,37 +99678,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier for AI/DS (applied analytics focus, not core research); the provided sources do not indicate AI research prestige."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Fee-based consulting model with retainers and project-based engagements; the provided sources do not contain financial details."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, collaborative, hierarchical; the provided sources do not describe culture."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Large corporations, governments, NGOs, and brands across various industries worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$110,000 base + bonus for data science/analytics roles in major US markets; the provided sources do not contain compensation data."
   },
   "evidence_sha": "74f940cb401d2076",
+  "generated_at": 1784881896,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Public Relations / Communications Consulting"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect case studies in communications analytics, behavioral questions on client management, and technical assessments for data science roles (Python, SQL, ML). The provided sources do not describe interview processes."
+  },
+  "last_attempt_at": 1784881896,
   "last_evidence_at": 1784674978,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquartered in New York with offices in 60+ cities worldwide; the provided sources do not list locations."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To help clients build trust, manage reputation, and communicate effectively with stakeholders."
+  },
   "name": "Edelman",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced, client-driven deadlines with potential for crunch periods; the provided sources do not describe work pace."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Public relations, crisis management, digital marketing, brand strategy, and communications consulting services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + holidays (varies by region/tenure); the provided sources do not specify PTO policy."
   },
+  "refresh_after": 1790065896,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -99516,7 +99760,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; the provided sources do not mention shutdown policies."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Large, mature private company with ~6,000+ employees globally; the provided sources do not confirm headcount or stage."
   },
   "sources": [
    {
@@ -99550,14 +99799,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=cd7540fd1bf2247d8af8f3384844d1eeabf6d68e0a4fbd9326d07d6318016e39JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1c06e9b4-2be8-6be3-03a0-fe292a286ab8&u=a1aHR0cHM6Ly93d3cuZWRlbG1hbi5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and other work visas for specialized roles; the provided sources do not contain immigration policy information."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Edelman is a global public relations and communications consultancy firm, though the provided sources contain only redirect links without extractable content."
+  },
+  "synthesized_evidence_sha": "74f940cb401d2076",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Data analytics, social listening, AI-driven insights, digital measurement, and marketing technology implementation; the provided sources do not detail technical roles."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674978,
   "web_search_url": "https://duckduckgo.com/?q=Edelman+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Edelman offers a prestigious brand in communications with growing investment in AI and data science, but the provided sources do not confirm work-life balance, pay, or culture details. Candidates prioritizing elite prestige, high new-grad pay, fast innovative tech culture, mission-driven work, and guaranteed shutdowns should verify these independently as the supplied sources contain no relevant information."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate (3/5) – client service demands can lead to long hours; the provided sources do not contain WLB data."
   }
  },
  "edgehog trading": {
@@ -103005,11 +103275,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -103021,6 +103293,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784881896,
   "last_evidence_at": 1784675401,
   "name": "Enbridge",
   "pace_of_work": {
@@ -103033,6 +103306,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784882016,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -103076,7 +103350,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=13957c9d435ce2bda1ad6a0173155c90799e7a95246c369630af604eeffdd6f3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0d747011-3ce6-69c5-21ed-678c3d4e68b0&u=a1aHR0cHM6Ly93d3cuZW5icmlkZ2UuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784675401,
   "web_search_url": "https://duckduckgo.com/?q=Enbridge+company+careers+benefits",
@@ -126961,48 +127235,126 @@
  "genworth": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "e23cc03599"
+   ],
+   "value": "Estimated: Tier 3. Traditional insurance companies typically lack the elite prestige and cutting-edge AI culture found at top-tier tech firms."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "e23cc03599"
+   ],
+   "value": "Insurance underwriting and premium collection, managing risk pools and investment portfolios to ensure payouts are covered while generating profit."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "e23cc03599"
+   ],
+   "value": "Estimated: Traditional, risk-averse, and corporate, focused on regulatory compliance and steady operational maintenance rather than fast-paced disruption."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "e23cc03599"
+   ],
+   "value": "Homebuyers, mortgage lenders, and financial institutions seeking risk mitigation, as well as individuals planning for long-term care and retirement."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "e23cc03599"
+   ],
+   "value": "Estimated: $80,000 - $105,000 base salary. Financial services typically pay below elite big tech benchmarks but offer stable compensation."
   },
   "evidence_sha": "ebbd13d4ba0c144e",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784881896,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e23cc03599"
+   ],
+   "value": "Insurance and Financial Services."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "e23cc03599"
+   ],
+   "value": "You should probe heavily into the specific tech stack and AI deployment cadence of the team. Ask how much time is spent on legacy system maintenance versus greenfield AI innovation, to ensure the role accelerates your technical learning quickly without getting bogged down by traditional corporate bureaucracy."
+  },
+  "last_attempt_at": 1784881896,
   "last_evidence_at": 1784674979,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "e23cc03599"
+   ],
+   "value": "Headquartered in Richmond, Virginia, with other corporate offices across the United States."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "e23cc03599"
+   ],
+   "value": "To help families navigate the financial challenges of aging and homeownership responsibly."
+  },
   "name": "Genworth",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e23cc03599"
+   ],
+   "value": "Estimated: Slow to moderate. Bureaucratic processes inherent to regulated legacy financial institutions traditionally slow down innovation and deployment cycles."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "e23cc03599",
+    "4089350125"
+   ],
+   "value": "Mortgage insurance, long-term care insurance, life insurance, and annuities."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "e23cc03599"
+   ],
+   "value": "Estimated: 20-25 days of standard PTO, typical for an established corporate financial employer."
   },
+  "refresh_after": 1790065896,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "e23cc03599"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "e23cc03599"
+   ],
+   "value": "Estimated: No known guaranteed company-wide tech shutdowns, though standard paid holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "e23cc03599"
+   ],
+   "value": "Publicly traded, established enterprise."
   },
   "sources": [
    {
@@ -127036,14 +127388,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=382052dc9c163d2cee7ef5589475604058ae140bcd8e2b9324ac10aeb34cab17JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1c06e9b4-2be8-6be3-03a0-fe292a286ab8&u=a1aHR0cHM6Ly93d3cuZ2Vud29ydGguY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e23cc03599"
+   ],
+   "value": "Estimated: Likely limited visa sponsorship; large legacy financial companies often prioritize domestic talent but may sponsor highly specialized roles on a case-by-case basis."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "e23cc03599"
+   ],
+   "value": "Genworth Financial is a publicly traded insurance company that provides mortgage insurance and long-term care insurance. Its core revenue comes from charging premiums to homeowners for protecting lenders against default, as well as offering annuities and life insurance products."
+  },
+  "synthesized_evidence_sha": "ebbd13d4ba0c144e",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e23cc03599"
+   ],
+   "value": "Estimated: Actuarial modeling, risk analytics, legacy system maintenance, and data pipeline modernization for insurance underwriting."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674979,
   "web_search_url": "https://duckduckgo.com/?q=Genworth+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "e23cc03599"
+   ],
+   "value": "While Genworth offers mission-driven work securing families' financial futures, it leans heavily toward a legacy insurance culture. As a candidate prioritizing a fast, innovative tech environment, high new-grad pay, and elite AI prestige, you may find the pace here bureaucratic and lacking the elite tech tier you are aiming for."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "e23cc03599"
+   ],
+   "value": "Estimated: Good. Mature insurance companies generally promote sane hours and work-life balance, avoiding the high-burnout cultures found in rapid-growth tech startups."
   }
  },
  "georgetown university": {
@@ -134757,11 +135140,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -134773,6 +135158,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784881896,
   "last_evidence_at": 1784674529,
   "name": "H.B. Fuller",
   "pace_of_work": {
@@ -134785,6 +135171,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784882016,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -134828,7 +135215,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=38d5070e19a7feaed80553904710788c42d94242803e4354b2769caad52b259bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=099e55db-8735-67f2-3d1e-424686216698&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9I&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674529,
   "web_search_url": "https://duckduckgo.com/?q=H.B.+Fuller+company+careers+benefits",
@@ -187268,47 +187655,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Not applicable — this is an IP law firm, not an AI/data science employer. Patent prosecution uses technical expertise but is not AI/DS research or engineering."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Law firm partnership model: revenue from billable hours, fixed fees for prosecution, and contingency/litigation fees. No financial details in supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, hierarchical, apprentice-model (associates → partners). Collegial but competitive. Technical depth valued. Not a 'tech culture' — it's a law firm with STEM-educated professionals."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Corporations, startups, universities, and individual inventors seeking patent/trademark protection and enforcement. No customer details found in supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Patent agent (BS/MS, pre-law school): $110k-$140k base + bonus. First-year associate (JD + patent bar): $200k-$225k (market). Not competitive with top-tier AI/DS new grad packages ($200k-$300k+ total comp)."
   },
   "evidence_sha": "baa331c5840a4448",
+  "generated_at": 1784881896,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Legal services / Intellectual property law"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Assess whether the candidate wants a patent agent/attorney career (requiring law school or patent bar) vs. AI/DS engineering. Clarify billable hour expectations, partnership track timeline, and technical specialization areas. This role does not match the candidate's stated priorities for tech culture and WLB guarantees."
+  },
+  "last_attempt_at": 1784881896,
   "last_evidence_at": 1784675406,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Chicago, IL. Additional offices: Washington DC, Boston, San Francisco, Detroit, Research Triangle Park (NC). No location data in supplied sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not stated in supplied sources. Typical IP firm mission: protect and maximize the value of clients' intellectual property assets."
+  },
   "name": "Marshall, Gerstein & Borun LLP",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: High-intensity, deadline-driven (court/USPTO deadlines). Billable hour targets typically 1,800-2,000+/year. Not a 'fast innovative tech culture' — it's a professional services model with client-driven urgency."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "IP legal services: patent prosecution, trademark registration, IP litigation, counseling, and portfolio management. No product details found in supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 holidays. Typical for mid-size law firms. No guaranteed shutdown periods. Usage often discouraged by billable pressure."
   },
+  "refresh_after": 1790065896,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research"
+   "value": "None found in research. Law firms typically use direct assignment to practice groups, not rotational programs."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No firm-wide guaranteed shutdowns. Some offices may close between Christmas/New Year, but attorneys often remain reachable. No policy found in sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established mid-size IP boutique (approx. 80-100 attorneys). Founded 1999. No size data in supplied sources."
   },
   "sources": [
    {
@@ -187342,14 +187776,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=ed362b883f23d549fcfc27acc682148e31e1e08f74851f68a2c270cd492fda41JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0d747011-3ce6-69c5-21ed-678c3d4e68b0&u=a1aHR0cHM6Ly93d3cubWFyc2hhbGxzLmNvbS91cy9zdG9yZS9pbmRleC5qc3A&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H-1B for patent agents/attorneys with advanced STEM degrees. No sponsorship data in supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Marshall, Gerstein & Borun LLP is a Chicago-based intellectual property law firm specializing in patents, trademarks, and related litigation. The provided sources contain no accessible content about the firm's operations."
+  },
+  "synthesized_evidence_sha": "baa331c5840a4448",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Patent prosecution requires technical degrees (EE, CS, bio, chem, physics). Work involves drafting/arguing patents, prior art searches, and technical analysis for litigation. No tech stack details in sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675406,
   "web_search_url": "https://duckduckgo.com/?q=Marshall%2C+Gerstein+%26+Borun+LLP+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This is a traditional IP law firm, not an AI/data science company. It offers prestige in IP law and high pay for patent professionals, but lacks the fast innovative tech culture, guaranteed shutdowns, or AI/DS career acceleration the candidate seeks. Work-life balance in law firms typically involves billable hour pressures."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 2.5/5. Law firm billable hour model creates unpredictable hours, weekend work near deadlines, and limited shutdowns. Some IP boutiques offer slightly better WLB than BigLaw, but no guaranteed shutdowns."
   }
  },
  "marvell": {
@@ -207760,41 +208215,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Global Top-10): Courant Institute and Center for Data Science consistently rank among world's best for ML theory, optimization, CV, NLP, and healthcare AI."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue comes primarily from tuition and fees, research grants and contracts, medical center operations (NYU Langone Health), endowment distributions, and philanthropic gifts. As a nonprofit, surplus is reinvested in the university's mission."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Intellectual, collaborative, mission-driven. Hierarchy exists (faculty > staff) but labs function as apprenticeship communities. Diverse, global student body. Bureaucracy present (HR, procurement, IRB) but research groups largely self-govern."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Students (degree-seeking and continuing education), research sponsors (federal agencies, foundations, industry), patients at NYU Langone, and philanthropic donors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $100,000-$130,000 base for research scientist/engineer roles (varies by school and grant funding); no equity; excellent benefits (tuition remission, subsidized housing lottery, TIAA retirement)."
   },
   "evidence_sha": "0d9ef354e8b8ea94",
+  "generated_at": 1784881896,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
-  "last_attempt_at": 1784881688,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical questions on ML theory, statistics, and systems; readiness to discuss research trajectory and publications; alignment with faculty mentor's lab; ability to collaborate across disciplines (e.g., healthcare, neuroscience, social science). Prepare for academic-style interviews: chalkboard talks, paper discussions, and long-term research vision."
+  },
+  "last_attempt_at": 1784881896,
   "last_evidence_at": 1784674282,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary campus in Greenwich Village, Manhattan; Brooklyn campus (Tandon Engineering); NYU Abu Dhabi; NYU Shanghai; global academic centers in 11+ cities; NYU Langone Health campuses across NYC."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To be a top-quality international center of scholarship, teaching, and research, retaining and attracting outstanding faculty and encouraging them to create programs that draw outstanding students."
+  },
   "name": "New York University",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. Academic research cycles (paper deadlines, grant cycles) create bursts, but no on-call rotations or product shipping pressure. Faculty and research staff set own schedules within grant deliverables."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Academic degree programs (undergraduate, graduate, professional), research output and publications, continuing education certificates, and clinical services through NYU Langone Health."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-22 vacation days + 12-14 university holidays + winter shutdown (~10 business days) = ~42-46 days total annual paid time off for regular staff. Faculty have no formal PTO but control schedules."
   },
-  "retry_after": 1784881808,
+  "refresh_after": 1790065896,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -207804,7 +208297,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Yes — university-wide winter shutdown (typically Dec 24-Jan 2); many labs observe reduced summer hours. No guaranteed 'summer Fridays' but flexible norms."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature nonprofit university: ~60,000 students, ~20,000 faculty, ~25,000 staff across multiple campuses; annual budget over $10B including the medical center."
   },
   "sources": [
    {
@@ -207838,14 +208336,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=b8b7906f053d4dfd6f58a9d55f9683768046c0ff8da444a9b85159a9a7e7a826JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2a7b1ce1-283e-6477-218e-0b7c29fe652e&u=a1aHR0cHM6Ly9uZXdzLmdvb2dsZS5jb20v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Longstanding sponsor of H-1B, O-1, and J-1 visas for faculty, researchers, and specialized staff; routine cap-exempt H-1B filings for university roles; green card sponsorship common for tenure-track and research faculty."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "New York University is a premier private research university with a global footprint, anchored in New York City. It advances knowledge through teaching, research, and public service across hundreds of academic programs."
+  },
+  "synthesized_evidence_sha": "0d9ef354e8b8ea94",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AI and data science research at Courant Institute, Center for Data Science, Tandon School of Engineering, and Center for Neural Science; applied ML in healthcare (NYU Langone), finance, urban science, and digital humanities; high-performance computing infrastructure; faculty-led labs publishing at NeurIPS, ICML, CVPR."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674282,
   "web_search_url": "https://duckduckgo.com/?q=New+York+University+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "NYU offers elite AI prestige (Courant/CDS rank top-10 globally) with academic freedom and a mission-driven culture. New-grad research roles pay competitively ($100k-$130k base) while providing sane hours, strong mentorship, and publication opportunities — rare for top-tier AI. The university structure guarantees shutdowns (winter break, summer flexibility) and avoids the burnout common in industry labs."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5. Strong norms around evenings/weekends off; university-wide winter shutdown (~2 weeks); summer flexibility; sabbatical eligibility for faculty. Less predictable for grant-dependent soft-money research staff."
   }
  },
  "newmark group": {
@@ -239634,11 +240153,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -239650,6 +240171,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784881896,
   "last_evidence_at": 1784674980,
   "name": "Puget Sound Energy",
   "pace_of_work": {
@@ -239662,6 +240184,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784882016,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -239705,7 +240228,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=90299049ac1a10dbd743e2bfe7cbf7e640dd417cf71769aa4bdd066ae99f4334JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1c06e9b4-2be8-6be3-03a0-fe292a286ab8&u=a1aHR0cHM6Ly93d3cucHNlLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674980,
   "web_search_url": "https://duckduckgo.com/?q=Puget+Sound+Energy+company+careers+benefits",
@@ -271077,11 +271600,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -271093,6 +271618,7 @@
    "source_ids": [],
    "value": "Ai Lab / technology (estimated)"
   },
+  "last_attempt_at": 1784881896,
   "last_evidence_at": 1784583498,
   "name": "Simbe Robotics",
   "pace_of_work": {
@@ -271105,6 +271631,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784882016,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -271148,7 +271675,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=ea077be1adeca8148edccbefd0996da194b43b62c8222aa5a79cba5e2eadada9JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cuc2ltYmVyb2JvdGljcy5jb20vYWJvdXQvd2hvLXdlLWFyZQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784583498,
   "web_search_url": "https://duckduckgo.com/?q=Simbe+Robotics+company+careers+benefits",
@@ -310347,37 +310874,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 – Strong reputation in biomedical informatics and clinical AI research (NIH-funded centers), but not a primary destination for cutting-edge general AI/ML engineering compared to top tech labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "87a1b76029"
+   ],
+   "value": "Non-profit academic medical center funded by clinical revenue (patient care), research grants, philanthropy, and state/university appropriations."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, mission-focused, hierarchical (academic/clinical hierarchy); strong emphasis on compliance, patient safety, and publications; less 'move fast and break things', more 'rigorous and responsible'."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "87a1b76029"
+   ],
+   "value": "Patients in Alabama and the Southeast, insurers (Medicare, Medicaid, commercial), research sponsors (NIH, industry), and trainees (medical students, residents, fellows)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75k–$95k base (research data scientist / clinical informatics analyst), minimal equity, benefits include tuition remission and retirement match; well below top-tier tech new-grad packages."
   },
   "evidence_sha": "f6852d78f2afc5e9",
+  "generated_at": 1784881896,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "87a1b76029"
+   ],
+   "value": "Academic Medicine / Healthcare Delivery / Biomedical Research"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Expect questions on handling messy clinical data, regulatory constraints (HIPAA, IRB), translating research to production, and collaboration with clinicians; emphasize experience with EHR data, reproducibility, and communication with non-technical stakeholders."
   },
+  "last_attempt_at": 1784881896,
   "last_evidence_at": 1784583432,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "b08beae894"
+   ],
+   "value": "Primary campus in Birmingham, Alabama (multiple hospitals, clinics, research buildings); affiliated clinics across central Alabama."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "87a1b76029"
+   ],
+   "value": "To improve health through excellence in patient care, research, and education, serving the community and advancing medical knowledge."
+  },
   "name": "UAB Medicine",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate to slow – Academic and clinical priorities drive timelines; projects often involve IRB approvals, clinical validation, and committee reviews, leading to longer cycles than pure tech."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "87a1b76029",
+    "b08beae894"
+   ],
+   "value": "Clinical healthcare services (inpatient, outpatient, specialty care), biomedical research, medical education, and health data/analytics platforms (e.g., Epic EHR, clinical data warehouses)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days annual leave + 10–12 university holidays + sick leave (accrual-based); varies by appointment type (faculty vs staff)."
   },
+  "refresh_after": 1790065896,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -310387,7 +310969,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; university observes standard holiday breaks (winter, spring) but clinical/research operations continue."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "87a1b76029"
+   ],
+   "value": "Large, mature organization (~23,000 employees, $3B+ annual revenue); part of a public university system."
   },
   "sources": [
    {
@@ -310421,14 +311010,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=6fc6f94ef6d1082f282ee01acf83de0e939fbd3555456082f858078ce8ff34dbJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cudWFibWVkaWNpbmUub3JnL2xvY2F0aW9ucy91YWItaG9zcGl0YWwv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a major academic institution, UAB routinely sponsors H-1B and J-1 visas for research faculty, data scientists, and clinical roles; green card support varies by department."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "87a1b76029",
+    "b08beae894"
+   ],
+   "value": "UAB Medicine is the academic medical center of the University of Alabama at Birmingham, integrating patient care, research, and education across a large hospital system and outpatient network."
+  },
+  "synthesized_evidence_sha": "f6852d78f2afc5e9",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "87a1b76029",
+    "98fb5c5698"
+   ],
+   "value": "Clinical informatics (Epic optimization), health data science (outcomes research, population health), AI/ML for imaging and predictive modeling, bioinformatics, and research computing infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583432,
   "web_search_url": "https://duckduckgo.com/?q=UAB+Medicine+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers mission-driven impact in academic medicine with access to vast clinical data for AI/health research, but operates in a bureaucratic university-hospital environment rather than a fast-paced tech culture; new-grad pay is competitive for healthcare but well below elite tech, and work-life balance varies by team (clinical deadlines, grant cycles) with no guaranteed shutdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 – Generally reasonable hours for research/data roles (40–50 hrs/week), but grant deadlines, clinical collaborations, and on-call rotations for production systems can cause crunch periods; no organization-wide guaranteed shutdowns."
   }
  },
  "uare ai": {
