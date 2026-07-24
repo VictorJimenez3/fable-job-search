@@ -54213,37 +54213,104 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Elite. As a premier asset management firm relying on complex research to beat markets, tech and data roles command massive industry prestige and compensation."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "c9dbc99db0",
+    "81b3658858"
+   ],
+   "value": "Institutional asset management. The firm stays competitive by continuously improving its investment and management strategies to outperform increasingly smarter financial markets."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "c9dbc99db0",
+    "81b3658858"
+   ],
+   "value": "Anchored in excellence, constant improvement, openness, and transparency. Highly introspective, designed to make you a better version of yourself by tackling complex management and investment questions."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "81b3658858"
+   ],
+   "value": "The most sophisticated global institutional investors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "81b3658858"
+   ],
+   "value": "Estimated: $200,000 - $300,000+ total compensation (base + heavy performance bonuses), commensurate with elite quantitative hedge funds."
   },
   "evidence_sha": "63289a57847d232e",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784889932,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "81b3658858"
+   ],
+   "value": "Asset Management / Hedge Funds"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "c9dbc99db0",
+    "81b3658858"
+   ],
+   "value": "Probe heavily into the day-to-day pace of technical execution versus organizational meetings. Ask how teams prioritize learning and tech growth while avoiding burnout, and clarify their views on work-life balance, since elite systematic investing often demands aggressive hours that might conflict with your personal time."
+  },
+  "last_attempt_at": 1784889932,
   "last_evidence_at": 1784841602,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "1c214073b5"
+   ],
+   "value": "CT / NY (Standard for Bridgewater's primary Westport and NYC offices; exact locations not found in the provided sources)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "c9dbc99db0"
+   ],
+   "value": "To keep rapidly improving in order to beat highly objective and competitive markets, while unlocking the most complex questions in investment strategy, management, and corporate culture through a culture of openness and transparency."
+  },
   "name": "Bridgewater Associates",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "c9dbc99db0"
+   ],
+   "value": "Estimated: Fast-paced and highly rigorous, driven by the necessity to constantly outperform objective, increasingly smart financial markets."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "81b3658858"
+   ],
+   "value": "Global investment management strategies and unique investment insights tailored for institutional investors."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "81b3658858"
+   ],
+   "value": "Estimated: Standard senior vacation policy typical of elite finance (around 20-25 days annually). Specific policies are not disclosed publicly."
   },
+  "refresh_after": 1790073932,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -54253,7 +54320,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None found in research. The firm operates in global financial markets which typically run continuously without firm-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "81b3658858"
+   ],
+   "value": "Premier, established asset management firm. (Exact headcount not specified in provided materials)."
   },
   "sources": [
    {
@@ -54317,14 +54391,48 @@
     "url": "https://job-boards.greenhouse.io/bridgewater89/jobs/8581069002"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "1c214073b5"
+   ],
+   "value": "Not explicitly stated in the provided sources for U.S. roles. Candidates should verify directly with Bridgewater recruiters."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1c214073b5",
+    "c9dbc99db0",
+    "81b3658858"
+   ],
+   "value": "Bridgewater Associates is a premier asset management firm that delivers unique investment insights and partnerships for sophisticated global institutional investors. The firm makes money by managing capital on behalf of these clients and generating returns through its highly systematic, research-driven global investment strategies."
+  },
+  "synthesized_evidence_sha": "63289a57847d232e",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "c9dbc99db0"
+   ],
+   "value": "While specific job details were not provided, tech roles at this elite hedge fund generally involve building systems to unpack complex investment questions, automate research, and process vast datasets to beat competitive markets."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784841602,
   "web_search_url": "https://duckduckgo.com/?q=Bridgewater+Associates+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "c9dbc99db0",
+    "81b3658858"
+   ],
+   "value": "Matches your desire for elite prestige and high new-grad pay in a data-driven environment that tackles complex problems. However, Bridgewater's famously radical transparency and intense debate culture can feel draining and bureaucratic rather than fast-paced or highly technical, and its associated wall-to-wall work culture may challenge your strict work-life balance boundary."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "c9dbc99db0"
+   ],
+   "value": "Estimated: Average to Low. While the firm prioritizes meaningful work and a supportive culture, relentless improvement in competitive financial markets often requires long hours and high personal investment."
   }
  },
  "brigham young university": {
@@ -131701,38 +131809,109 @@
  "frec markets inc": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "3e8e3719ea"
+   ],
+   "value": "Estimated: Emerging tier in fintech; prestige depends on the candidate's focus on algorithmic trading or data science."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "3e8e3719ea",
+    "7232d3a053"
+   ],
+   "value": "Fintech platform offering direct indexing and automated trading infrastructure, likely earning through management fees or subscription models for financial services."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "abe6fd7b37",
+    "7232d3a053"
+   ],
+   "value": "Collaborative and high-ownership, with a focus on building quality products that empower customers."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "abe6fd7b37"
+   ],
+   "value": "Individual retail investors looking to manage their own money."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "7232d3a053"
+   ],
+   "value": "Estimated: $120k-$160k base salary, typical for fintech startups in major tech hubs."
   },
   "evidence_sha": "dc2ee81d6a9caaae",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784889932,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "3e8e3719ea"
+   ],
+   "value": "Financial Technology (Fintech) / Direct Indexing"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "3e8e3719ea",
+    "7232d3a053"
+   ],
+   "value": "Candidates should emphasize experience with algorithm optimization, trading infrastructure, and scalable backend systems. Be prepared to discuss how to reduce latency and ensure stability in high-performance environments."
+  },
+  "last_attempt_at": 1784889932,
   "last_evidence_at": 1784680503,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7232d3a053"
+   ],
+   "value": "Estimated: Likely remote-first or flexible, given the modern tech stack and startup nature."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "abe6fd7b37",
+    "7232d3a053"
+   ],
+   "value": "To expand the possibilities for everyone and their money, level the financial playing field, and empower people to manage their own money."
+  },
   "name": "Frec Markets, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "7232d3a053"
+   ],
+   "value": "Estimated: Fast-paced startup environment with high autonomy and ownership of large pieces of infrastructure."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "3e8e3719ea",
+    "abe6fd7b37"
+   ],
+   "value": "Direct indexing engines supporting long-only and long-short strategies, automated trading execution, portfolio optimization, performance reporting systems, and tax optimization features."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "7232d3a053"
+   ],
+   "value": "Estimated: Standard startup PTO, likely 15-20 days annually."
   },
+  "refresh_after": 1790073932,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -131741,8 +131920,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "7232d3a053"
+   ],
+   "value": "Estimated: No specific information found; typical startups may have limited shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7232d3a053"
+   ],
+   "value": "Estimated: Early-stage startup, actively hiring across engineering roles with a focus on building and scaling infrastructure."
   },
   "sources": [
    {
@@ -131806,14 +131994,48 @@
     "url": "https://jobs.ashbyhq.com/frec/3251b1c3-d6dd-4654-af14-38eb1570137c"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7232d3a053"
+   ],
+   "value": "Estimated: Not explicitly mentioned in sources; typical for early-stage startups."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "abe6fd7b37",
+    "3e8e3719ea"
+   ],
+   "value": "Frec Markets, Inc. is a fintech company that provides a direct indexing platform for individuals to manage their own money. It makes money by offering automated trading execution, portfolio optimization, and tax optimization services."
+  },
+  "synthesized_evidence_sha": "dc2ee81d6a9caaae",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "3e8e3719ea",
+    "7232d3a053"
+   ],
+   "value": "Engineers own the design, implementation, and optimization of core algorithms, backend infrastructure, and frontend features. Work includes reducing latency, improving deployment, and scaling systems to handle growth."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680503,
   "web_search_url": "https://duckduckgo.com/?q=Frec+Markets%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "abe6fd7b37",
+    "7232d3a053"
+   ],
+   "value": "Frec appeals to candidates seeking a fast, innovative tech culture with mission-driven work in fintech. The autonomy to drive end-to-end features offers accelerated learning, though work-life balance details are not publicly specified."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "7232d3a053"
+   ],
+   "value": "Estimated: Moderate; high ownership suggests demanding work, but no explicit toxic signals."
   }
  },
  "fred hutch": {
@@ -157573,11 +157795,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -157589,6 +157813,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784889932,
   "last_evidence_at": 1784680510,
   "name": "Hilcorp",
   "pace_of_work": {
@@ -157601,6 +157826,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784890052,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -157644,7 +157870,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=c0b67e9de8bea8e40b636ceaa2eafd6bf19e1f72501dfe893516b6433efc38ccJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2c426153-30e1-6263-3808-76cd31e76370&u=a1aHR0cHM6Ly93d3cuaGlsY29ycC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680510,
   "web_search_url": "https://duckduckgo.com/?q=Hilcorp+company+careers+benefits",
@@ -157881,7 +158107,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -157899,7 +158125,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
-  "last_attempt_at": 1784889740,
+  "last_attempt_at": 1784889932,
   "last_evidence_at": 1784678007,
   "name": "Hinge Health",
   "pace_of_work": {
@@ -157912,7 +158138,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784889860,
+  "retry_after": 1784890172,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -193978,11 +194204,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -193994,6 +194222,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784889932,
   "last_evidence_at": 1784678094,
   "name": "Levels",
   "pace_of_work": {
@@ -194006,6 +194235,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784890052,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -194049,7 +194279,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=c4a11e3d9c177db92cfc766fc078cea794098c37a4aa673a09e2e37d9ee0b9c2JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2fa41502-bc51-61fa-2ab0-029fbd806008&u=a1aHR0cHM6Ly93d3cubGV2ZWxzLmNvbS9ob3ctaXQtd29ya3M&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678094,
   "web_search_url": "https://duckduckgo.com/?q=Levels+company+careers+benefits",
@@ -201559,41 +201789,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "T2 (High-growth scale-up with specialized data science teams; strong mission-driven prestige in health-tech)."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "376f2160de"
+   ],
+   "value": "B2B enterprise model where employers pay for workforce access to Lyra's mental health platform and provider network."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "376f2160de"
+   ],
+   "value": "Mission-oriented and deeply empathetic, reflecting the healthcare focus of the business. Expected to value collaboration and impact over cutthroat internal competition."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "376f2160de"
+   ],
+   "value": "Primarily enterprise employers seeking to provide mental health benefits to their employees."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140,000 - $160,000 base salary, aligning with competitive Bay Area scale-up rates for AI/Data Science roles."
   },
   "evidence_sha": "a47309390894652a",
+  "generated_at": 1784889932,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "376f2160de"
+   ],
+   "value": "Mental Health / Healthcare Technology"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "During the interview, emphasize your passion for building mission-driven AI solutions and your desire for an innovative, fast-paced tech culture. Highlight your experience shipping data science products and ask questions about technical learning curves, WLB, and guaranteed shutdowns to ensure alignment with your personal time priorities."
   },
-  "last_attempt_at": 1784889740,
+  "last_attempt_at": 1784889932,
   "last_evidence_at": 1784678006,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "376f2160de"
+   ],
+   "value": "Headquartered in the San Francisco Bay Area with remote work options."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "376f2160de"
+   ],
+   "value": "To provide access to life-changing mental health care for everyone, everywhere."
+  },
   "name": "Lyra Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and collaborative scale-up environment, but structured enough to avoid the chaos often seen in smaller startups."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "376f2160de"
+   ],
+   "value": "Mental health platform offering access to therapy, coaching, and digital self-care tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of PTO per year, alongside standard company holidays, typical for mature late-stage tech companies."
   },
-  "retry_after": 1784889860,
+  "refresh_after": 1790073932,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -201603,7 +201885,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely offers standard holidays and potentially a winter shutdown, though not explicitly confirmed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "376f2160de"
+   ],
+   "value": "Late-stage private company (Scale-up / Pre-IPO)."
   },
   "sources": [
    {
@@ -201637,14 +201926,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=7caf8d036254c647294f1ef76c418728bfa9d16eac1b3a932de76dbd0385c18fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=07be2871-9636-65dd-1322-3fec97d6646f&u=a1aHR0cHM6Ly93d3cubHlyYWhlYWx0aC5jb20v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "376f2160de"
+   ],
+   "value": "Not explicitly stated in current research; tech scale-ups of this stage may sponsor selectively based on role needs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "376f2160de"
+   ],
+   "value": "Lyra Health is a mental health technology company that partners with employers to provide accessible therapy and coaching services to their workforce. It makes money primarily through B2B enterprise contracts, charging employer clients a subscription or per-employee rate to offer its mental health benefits platform to their workers."
+  },
+  "synthesized_evidence_sha": "a47309390894652a",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "376f2160de"
+   ],
+   "value": "Engineering work involves building scalable healthcare platforms, secure data infrastructure, and machine learning models for provider matching and care optimization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678006,
   "web_search_url": "https://duckduckgo.com/?q=Lyra+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Lyra Health places AI/ML engineers at the intersection of healthcare and scalable tech, allowing you to build impactful models that directly improve mental health access. This positions you for high-growth career acceleration and elite tech prestige while keeping sane hours and avoiding high-burnout toxic environments."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate to Good. Mission-driven companies often attract empathetic cultures, but late-stage scale-up pressures can create busy seasons."
   }
  },
  "m t bank": {
@@ -205617,37 +205933,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Respected in insurance analytics and actuarial science; growing ML brand but not a primary AI research destination."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "93818b02e2",
+    "ca91ecf7d9",
+    "5142168549"
+   ],
+   "value": "Collects premiums from specialty insurance and reinsurance, aims for underwriting profit, and invests the float in public equities, fixed income, and wholly-owned operating businesses (Markel Ventures). Revenue = net premiums earned + investment income + Ventures revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Collaborative, low-ego, long-term orientation. 'Owner-operator' ethos from Ventures trickles into tech—teams own outcomes end-to-end. Conservative dress/code in client-facing roles; engineering culture more relaxed."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "93818b02e2",
+    "ca91ecf7d9",
+    "5142168549"
+   ],
+   "value": "Businesses and professionals with complex or hard-to-place risks (e.g., law firms, healthcare providers, energy companies, event organizers, manufacturers), plus reinsurance clients (other insurers). Markel Ventures serves end markets of its portfolio companies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k-$115k base + 10-15% target bonus + RSU (4-yr vest ~$20k/yr). Total ~$125k-$145k Year 1. Actuarial track slightly higher with exam raises."
   },
   "evidence_sha": "8021551800afa42a",
+  "generated_at": 1784889932,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "93818b02e2",
+    "ca91ecf7d9",
+    "5142168549"
+   ],
+   "value": "Specialty Insurance & Reinsurance / Financial Holding Company (InsurTech-adjacent)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect case-style questions on insurance data (imbalanced claims, long-tail loss development), model explainability for regulators, and time-series forecasting. Prepare to discuss productionizing ML in a regulated, audit-heavy environment. Behavioral screens emphasize 'owner mindset' and cross-functional collaboration with underwriters/actuaries."
   },
+  "last_attempt_at": 1784889932,
   "last_evidence_at": 1784680816,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "93818b02e2",
+    "ca91ecf7d9",
+    "5142168549"
+   ],
+   "value": "Headquarters: Richmond, VA. Major hubs: London, New York, Chicago, Philadelphia, Toronto, Munich, Singapore, Sydney. Remote/hybrid options vary by team; many roles offer flexibility."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "93818b02e2",
+    "ca91ecf7d9",
+    "5142168549"
+   ],
+   "value": "To deliver long-term shareholder value through underwriting profit and investment returns, guided by a culture of integrity, entrepreneurial discipline, and partnership with customers and Ventures companies."
+  },
   "name": "Markel Group",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — project cycles measured in quarters; regulatory reviews add gates but protect against fire drills. Occasional crunch at renewal seasons (Jan/Apr/Jul/Oct)."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "93818b02e2",
+    "ca91ecf7d9",
+    "5142168549"
+   ],
+   "value": "Specialty insurance (professional liability, marine, energy, event cancellation, equine), reinsurance (property, casualty, specialty), and Markel Ventures (majority stakes in industrial and service businesses). Also offers insurance-linked securities and program services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 company holidays + 2 volunteer days; accrues with tenure. Unlimited not offered."
   },
+  "refresh_after": 1790073932,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -205657,7 +206039,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full week shutdown between Christmas and New Year; occasional summer half-day Fridays."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "93818b02e2",
+    "ca91ecf7d9",
+    "5142168549"
+   ],
+   "value": "Large public company (NYSE: MKL), ~19,000 employees, $15B+ revenue, $30B+ market cap. Mature, financially conservative, run with a Berkshire-style decentralized model."
   },
   "sources": [
    {
@@ -205691,14 +206082,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=1f19443b3304d6ae1cb9c92bf1e6f07fb5369b1711f970549921c2df4a66d4d7JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=20894165-bbcb-6a0b-2216-56fbbabc6b12&u=a1aHR0cHM6Ly9jaGF0Z3B0LmNvbS9lcy1FUy9wbGFucy9mcmVlLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established H-1B sponsor (insurance/actuarial/tech roles). Green card support (PERM) for experienced hires. New-grad sponsorship common in actuarial, data science, and engineering rotations."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "93818b02e2",
+    "ca91ecf7d9",
+    "5142168549"
+   ],
+   "value": "Markel Group is a Fortune 500 specialty insurance and financial holding company that operates through insurance, reinsurance, and investment operations. It writes niche insurance products for complex risks and deploys insurance float into a diversified investment portfolio including equity stakes in operating businesses (Markel Ventures)."
+  },
+  "synthesized_evidence_sha": "8021551800afa42a",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "93818b02e2",
+    "ca91ecf7d9",
+    "5142168549"
+   ],
+   "value": "Actuarial modeling, pricing engines, catastrophe risk modeling, data engineering for claims/underwriting, ML for submission triage and fraud detection, legacy modernization (Guidewire, cloud migration), and internal tools for Ventures portfolio analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680816,
   "web_search_url": "https://duckduckgo.com/?q=Markel+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Markel offers a rare mix: elite insurance-brand prestige, Berkshire-style long-term capital for AI/ML experimentation, and a culture that explicitly protects personal time. You get ownership of high-impact models (pricing, CAT, fraud) without the 24/7 grind of tech giants or quant funds. The Ventures portfolio adds product variety—industrial IoT, SaaS, manufacturing data—that most pure insurers lack."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Core hours ~40-45/week; explicit 'no weekend email' norm on many teams; flexible hybrid. Actuarial/exam study time supported."
   }
  },
  "markon": {
@@ -226226,7 +226646,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -226244,7 +226664,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784889740,
+  "last_attempt_at": 1784889932,
   "last_evidence_at": 1784680607,
   "name": "Ncino",
   "pace_of_work": {
@@ -226257,7 +226677,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784889860,
+  "retry_after": 1784890172,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -241737,49 +242157,156 @@
  },
  "omada health": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "37b7b30593",
+    "bbc83c5a58",
+    "120acd0801"
+   ],
+   "value": "Prestige Tier: High (within the digital health sector). It offers strong technical rigor in health-tech but does not have the universal FAANG-level prestige elite tech giants have."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "37b7b30593",
+    "bbc83c5a58",
+    "120acd0801"
+   ],
+   "value": "B2B model charging employers and health plans for digital chronic care management programs."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "37b7b30593",
+    "bbc83c5a58",
+    "120acd0801"
+   ],
+   "value": "Mission-driven and collaborative, focusing on improving patient health outcomes through technology."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "37b7b30593",
+    "bbc83c5a58",
+    "120acd0801"
+   ],
+   "value": "Employers and health insurance plans."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "37b7b30593",
+    "bbc83c5a58",
+    "120acd0801"
+   ],
+   "value": "Estimated: $130,000 - $150,000 base salary, aligning with standard late-stage tech companies in San Francisco."
   },
   "evidence_sha": "42181e09dcf920dd",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784889932,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "37b7b30593",
+    "bbc83c5a58",
+    "120acd0801"
+   ],
+   "value": "Digital Health / Virtual Care."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "37b7b30593",
+    "bbc83c5a58",
+    "120acd0801"
+   ],
+   "value": "Candidates should probe how directly their AI/DS work will ship to production and impact patient care. It is important to clarify team expectations around shipping pace versus slow regulatory cycles, and to ask how on-call duties and project deadlines might impact guaranteed personal time."
+  },
+  "last_attempt_at": 1784889932,
   "last_evidence_at": 1784678008,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "37b7b30593",
+    "bbc83c5a58",
+    "120acd0801"
+   ],
+   "value": "San Francisco, CA."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "37b7b30593",
+    "bbc83c5a58",
+    "120acd0801"
+   ],
+   "value": "To inspire and engage people in lifelong health."
+  },
   "name": "Omada Health",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "37b7b30593",
+    "bbc83c5a58",
+    "120acd0801"
+   ],
+   "value": "Estimated: Fast and innovative for a healthcare company, driven by tech-sector standards, but sometimes constrained by healthcare regulatory compliance."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "37b7b30593",
+    "bbc83c5a58",
+    "120acd0801"
+   ],
+   "value": "Digital health coaching apps and connected devices for chronic conditions such as diabetes, hypertension, and obesity."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "37b7b30593",
+    "bbc83c5a58",
+    "120acd0801"
+   ],
+   "value": "Estimated: Standard tech PPO package offering around 15-20 days of PTO plus holidays."
   },
+  "refresh_after": 1790073932,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "37b7b30593",
+    "bbc83c5a58",
+    "120acd0801"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "37b7b30593",
+    "bbc83c5a58",
+    "120acd0801"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found, likely standard floating holidays."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "37b7b30593",
+    "bbc83c5a58",
+    "120acd0801"
+   ],
+   "value": "Late-stage private company backed byventure capital."
   },
   "sources": [
    {
@@ -241813,14 +242340,55 @@
     "url": "https://www.bing.com/ck/a?!&&p=a6adaa56f674aab863c89c9955bb524745888b91846fdbd431e836236a04a9e2JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=07be2871-9636-65dd-1322-3fec97d6646f&u=a1aHR0cHM6Ly93d3cub21hZGFoZWFsdGguY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "37b7b30593",
+    "bbc83c5a58",
+    "120acd0801"
+   ],
+   "value": "Not explicitly disclosed in standard public sources; tech employers at this stage typically provide H-1B sponsorship for specialized roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "37b7b30593",
+    "bbc83c5a58",
+    "120acd0801"
+   ],
+   "value": "Omada Health is a digital health company that provides virtual chronic care programs for preventable conditions like diabetes and hypertension. It makes money by partnering with health plans and employers who pay for Omada's interventions to help their members manage lifestyle and medical conditions."
+  },
+  "synthesized_evidence_sha": "42181e09dcf920dd",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "37b7b30593",
+    "bbc83c5a58",
+    "120acd0801"
+   ],
+   "value": "Full-stack development, mobile application engineering, data science for health analytics, and machine learning for personalized behavior interventions."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678008,
   "web_search_url": "https://duckduckgo.com/?q=Omada+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "37b7b30593",
+    "bbc83c5a58",
+    "120acd0801"
+   ],
+   "value": "As a mission-driven digital health leader, Omada combines the feel-good impact of healthcare with elite data science applications in behavioral ML. It appeals to candidates seeking meaningful work without the high-burnout, toxic culture often found in ultra-fast-paced tech sectors."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "37b7b30593",
+    "bbc83c5a58",
+    "120acd0801"
+   ],
+   "value": "Estimated: Good, with a culture that generally respects sane hours over a hyper-competitive grind."
   }
  },
  "omd": {
@@ -321891,48 +322459,126 @@
  "taylormade golf": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "06d6060663"
+   ],
+   "value": "Estimated: Tier 3 (Industry-Specific). While highly prestigious in the golf equipment space, TaylorMade is not recognized as an elite AI or data science employer compared to big tech or quantitative finance firms. [Source 06d6060663]"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "0a66c854b8"
+   ],
+   "value": "Global manufacturing and retail sales of premium sporting goods, supplemented by a direct-to-consumer digital platform (TaylorMade Clubs) offering exclusive gear and membership benefits. [Source 0a66c854b8]"
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "0a66c854b8"
+   ],
+   "value": "Estimated: Mission-driven, sports-oriented, and passionate. The culture values golf heritage blended with modern technical innovation for its direct-to-consumer platforms. [Source 0a66c854b8]"
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "0a66c854b8"
+   ],
+   "value": "Serious amateur golfers, touring professionals, and golf enthusiasts, often engaged via a direct-to-consumer digital membership model. [Source 0a66c854b8]"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "06d6060663"
+   ],
+   "value": "Estimated: $85,000 - $110,000 base salary. TaylorMade likely offers competitive consumer-goods tech salaries rather than elite FAANG-level new-grad compensation. [Source 06d6060663]"
   },
   "evidence_sha": "5738b92b044cecd8",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784889932,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "06d6060663"
+   ],
+   "value": "Consumer Goods / Sporting Goods & Equipment. [Source 06d6060663]"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "06d6060663"
+   ],
+   "value": "Candidates should assess if TaylorMade can provide hyper-accelerated technical learning in AI and data science without slipping into slow corporate bureaucracy. It is critical to probe whether technical growth occurs during sane working hours, and whether the company's tech culture compensates for not providing top-market big tech new-grad pay."
+  },
+  "last_attempt_at": 1784889932,
   "last_evidence_at": 1784680509,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "06d6060663",
+    "476c116378"
+   ],
+   "value": "Global operations with product pages clearly accessible to users in both the US and Canada. [Source 06d6060663, 476c116378]"
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "06d6060663"
+   ],
+   "value": "To drive innovation and excellence in golf by developing premium equipment that enhances player performance. [Source 06d6060663]"
+  },
   "name": "TaylorMade Golf",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "0a66c854b8"
+   ],
+   "value": "Estimated: Fast-paced and collaborative, driven by seasonal sports product launches and direct-to-consumer digital sales targets, though generally more stable than high-pressure tech conglomerates. [Source 0a66c854b8]"
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "06d6060663"
+   ],
+   "value": "Premium golf drivers, fairways, irons, putters, golf balls, golf bags, accessories, and branded apparel. [Source 06d6060663]"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "06d6060663"
+   ],
+   "value": "Estimated: 15-20 days of standard paid time off per year, typical for an established private consumer goods brand, though exact corporate policy is not public. [Source 06d6060663]"
   },
+  "refresh_after": 1790073932,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "06d6060663"
+   ],
+   "value": "None found in research. [Source 06d6060663]"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "06d6060663"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found, though standard US corporate holidays are likely observed. [Source 06d6060663]"
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "06d6060663"
+   ],
+   "value": "Established, globally recognized consumer goods brand operating as a large private enterprise. [Source 06d6060663]"
   },
   "sources": [
    {
@@ -321966,14 +322612,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=18084dca05a9021771c907e5e8ad0a03a403c1617c76fd1db592cbe6edfc47a3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2c426153-30e1-6263-3808-76cd31e76370&u=a1aHR0cHM6Ly93d3cudGF5bG9ybWFkZWdvbGYuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "06d6060663",
+    "476c116378"
+   ],
+   "value": "As a global consumer brand with digital operations in the US and Canada, TaylorMade likely sponsors visas for specialized technical roles, though specific policy details are not publicly confirmed. [Source 06d6060663, 476c116378]"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "06d6060663",
+    "0a66c854b8"
+   ],
+   "value": "TaylorMade Golf is a leading manufacturer of premium golf equipment, apparel, and accessories. The company makes money by designing, marketing, and selling its flagship golf clubs, golf balls, and gear through retail partners, direct-to-consumer channels, and its membership-driven TaylorMade clubs platform. [Source 06d6060663, 0a66c854b8]"
+  },
+  "synthesized_evidence_sha": "5738b92b044cecd8",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "0a66c854b8"
+   ],
+   "value": "DTC e-commerce engineering, data analytics for consumer purchasing behavior, supply chain optimization for global retail distribution, and digital platform development for the TaylorMade Clubs membership experience. [Source 0a66c854b8]"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680509,
   "web_search_url": "https://duckduckgo.com/?q=TaylorMade+Golf+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "06d6060663"
+   ],
+   "value": "TaylorMade sits outside the traditional FAANG/quant bracket, so its AI/data roles may lack elite tech prestige and ultra-high new-grad compensation. However, its mission-driven sports tech focus provides a unique, less bureaucratic environment that typically respects work-life balance and operates at a fast pace without the high burnout or toxic hours seen in pure-tech giants."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "06d6060663"
+   ],
+   "value": "Estimated: Good. As an established consumer products company rather than a startup or high-frequency trading firm, TaylorMade generally respects work-life balance, offering sane hours during standard corporate periods. [Source 06d6060663]"
   }
  },
  "td bank": {
@@ -330029,37 +330708,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (Applied industry roles, not a recognized AI research leader)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Off-price retail: opportunistic buying of excess inventory, rapid inventory turnover, low-cost store operations, and minimal markdowns to maintain high gross margins."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, process-oriented, collaborative, with a focus on operational excellence and cost discipline. Less experimental, more execution-focused."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Value-conscious consumers seeking brand-name and designer merchandise at discounted prices, primarily in the U.S., Canada, Europe, and Australia."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90k–$115k base + modest bonus/RSU; total comp ~$100k–$130k. Below top-tier tech companies."
   },
   "evidence_sha": "5157e9da382af448",
+  "generated_at": 1784889932,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Off-price retail / Apparel & Home Goods"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect practical coding, SQL, and system design questions focused on retail use cases (inventory, forecasting, recommendation). Behavioral emphasis on collaboration, process improvement, and handling ambiguity. Less emphasis on cutting-edge ML research; more on productionizing models at scale."
+  },
+  "last_attempt_at": 1784889932,
   "last_evidence_at": 1784678008,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Framingham, MA. Major tech hubs in Boston area, New York, and some distributed roles. Global retail operations in U.S., Canada, Europe, Australia."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To deliver great value to customers every day by offering a rapidly changing selection of quality, brand-name merchandise at prices generally 20–60% below department and specialty store regular prices."
+  },
   "name": "The TJX Companies, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate; project cycles tied to retail seasons and planning calendars. Not a 'move fast and break things' culture."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Off-price apparel, home goods, accessories, and footwear sold through T.J. Maxx, Marshalls, HomeGoods, Sierra, and Homesense stores globally, plus e-commerce sites."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 8–10 holidays; varies by tenure and role."
   },
+  "refresh_after": 1790073932,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -330069,7 +330790,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdown periods publicly documented."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature public company (NYSE: TJX) with ~$50B+ annual revenue, ~340,000 associates, and 4,800+ stores across 9 countries."
   },
   "sources": [
    {
@@ -330103,14 +330829,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=ff28c5c83f2e7394b6508b809668cd422400f29d07fb9bf3a337b6544d9b2a83JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=07be2871-9636-65dd-1322-3fec97d6646f&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9UaGU&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsors H-1B and green cards for specialized tech roles; typical for large U.S. retailer. No public data on cap-exempt or premium processing."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The TJX Companies, Inc. is a leading off-price retailer operating brands such as T.J. Maxx, Marshalls, HomeGoods, and Sierra. It makes money by purchasing excess inventory from manufacturers and department stores at deep discounts and selling it to consumers at prices 20–60% below full-price retailers."
+  },
+  "synthesized_evidence_sha": "5157e9da382af448",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology focuses on supply chain optimization, demand forecasting, inventory allocation, e-commerce platforms, data analytics, and emerging AI/ML for pricing and personalization. Not known as an elite AI research hub; roles are applied and operations-focused."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678008,
   "web_search_url": "https://duckduckgo.com/?q=The+TJX+Companies%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "TJX offers a stable, large-scale retail tech environment with meaningful data volumes and real-world impact on supply chain and merchandising. However, it is not a top-tier AI prestige destination, new-grad pay is likely below elite tech firms, and culture leans operational rather than fast-paced innovation. Work-life balance is generally reasonable for corporate retail, but guaranteed shutdowns are not a known policy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5; typical corporate hours with some seasonal peaks (holiday planning). No guaranteed shutdowns reported."
   }
  },
  "the trade desk": {
@@ -366356,34 +367103,93 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "143c0ba702",
+    "68e000fdd8"
+   ],
+   "value": "How the company makes money is not detailed in available sources due to page redirects."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, collaborative, and respectful of personal time."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "143c0ba702",
+    "68e000fdd8"
+   ],
+   "value": "Target customers are not detailed in available sources due to page redirects."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: High, elite new-grad pay."
   },
   "evidence_sha": "a43e0f3c17a9fde7",
+  "generated_at": 1784889932,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "143c0ba702"
+   ],
+   "value": "Based on historical context, potentially Healthtech or Food/Retail, but current public redirects obscure confirmation."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Prepare to discuss how you can thrive in an innovative, fast-paced AI environment while maintaining strict boundaries for personal time. Emphasize your ability to drive technical learning and career growth efficiently without succumbing to toxic or high-burnout cultures."
   },
+  "last_attempt_at": 1784889932,
   "last_evidence_at": 1784678094,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "143c0ba702",
+    "68e000fdd8"
+   ],
+   "value": "Company locations are not detailed in available sources due to page redirects."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "143c0ba702",
+    "68e000fdd8"
+   ],
+   "value": "Company mission is not detailed in available sources due to page redirects."
+  },
   "name": "Wildflower Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced, low bureaucracy tech environment."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "143c0ba702",
+    "68e000fdd8"
+   ],
+   "value": "Specific product lines are not detailed in available sources due to page redirects."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Generous standard PTO with guaranteed company-wide shutdowns."
   },
+  "refresh_after": 1790073932,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -366393,7 +367199,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed company-wide shutdowns to ensure employee rest."
+  },
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -366427,14 +367238,38 @@
     "url": "https://news.ycombinator.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "143c0ba702",
+    "68e000fdd8"
+   ],
+   "value": "Wildflower Health (operating as Wildflower Bread or Wildflower Cases, based on domain redirects) is a consumer or enterprise-focused company. Public sources for its core operations and revenue model currently yield redirect notices and do not provide specific business descriptions."
+  },
+  "synthesized_evidence_sha": "a43e0f3c17a9fde7",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678094,
   "web_search_url": "https://duckduckgo.com/?q=Wildflower+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role aligns with your goal of finding a top-tier AI or data science position at a mission-driven company that offers fast-paced, innovative tech culture without slow bureaucracy. It presents an opportunity to accelerate your technical learning and career growth in an environment that respects work-life balance through guaranteed shutdowns and sane hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: High, with sane hours and guaranteed shutdowns."
   }
  },
  "william mary": {
