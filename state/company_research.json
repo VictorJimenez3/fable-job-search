@@ -139584,7 +139584,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -139602,7 +139602,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784915984,
+  "last_attempt_at": 1784916252,
   "last_evidence_at": 1784908633,
   "name": "FirstEnergy",
   "pace_of_work": {
@@ -139615,7 +139615,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784916224,
+  "retry_after": 1784916732,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -215795,52 +215795,131 @@
  "liberty mutual": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "65f6f4c9c5"
+   ],
+   "value": "Estimated: Strong industry prestige within InsurTech and risk modeling, though generally considered a tier below elite FAANG/Big Tech for purely technical AI acclaim."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "41df6fb009",
+    "65f6f4c9c5"
+   ],
+   "value": "Collecting insurance premiums from policyholders to provide financial protection against specified risks, generating profit through underwriting margins and investment income on collected premiums."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "65f6f4c9c5"
+   ],
+   "value": "Collaborative, mission-driven to protect customers, emphasizing inclusion, employee resource groups, and steady career development."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "65f6f4c9c5"
+   ],
+   "value": "Individual consumers seeking personal insurance, as well as businesses of all sizes requiring commercial insurance and risk management solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "65f6f4c9c5",
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $95,000 - $120,000 base salary for new graduate technical roles, reflecting a balance of competitive corporate pay with non-Big TechgetLocation cost adjustments."
   },
   "evidence_sha": "f2a0ed4c125b93dc",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784916252,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784915984,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "41df6fb009",
+    "65f6f4c9c5"
+   ],
+   "value": "Insurance and Financial Services"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "65f6f4c9c5"
+   ],
+   "value": "Candidates should probe the specific team's autonomy to ensure they are joining a fast-paced innovation pod rather than a slow, bureaucratic legacy IT team. Ask about the deployment cadence, tech stack modernization, and how the team balances elite AI career growth with their actual day-to-day hours."
+  },
+  "last_attempt_at": 1784916252,
   "last_evidence_at": 1784915596,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "41df6fb009",
+    "65f6f4c9c5"
+   ],
+   "value": "Headquartered in Boston, Massachusetts, with offices and operations distributed globally."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "65f6f4c9c5"
+   ],
+   "value": "To help people manage and mitigate risk so they can embrace life with confidence and security."
+  },
   "name": "Liberty Mutual",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "65f6f4c9c5"
+   ],
+   "value": "Estimated: Moderate pace characteristic of established enterprise companies; generally slower than high-growth startups but accelerating in dedicated digital transformation and AI units."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "65f6f4c9c5"
+   ],
+   "value": "Personal insurance (auto, home, renters, life) and business insurance (commercial property, liability, workers' compensation, specialty lines)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "65f6f4c9c5"
+   ],
+   "value": "Estimated: 20-25 days of accrued paid time off per year for new full-time technical hires, combined with standard paid company holidays."
   },
-  "retry_after": 1784916224,
+  "refresh_after": 1790100252,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "65f6f4c9c5",
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "65f6f4c9c5"
+   ],
+   "value": "Estimated: No firm details on guaranteed company-wide shutdowns, but standard office closures apply for major holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "41df6fb009",
+    "65f6f4c9c5"
+   ],
+   "value": "A large, established, publicly traded multinational corporation operating in the mature insurance and financial services industry."
   },
   "sources": [
    {
@@ -215884,14 +215963,48 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "65f6f4c9c5",
+    "dbc3b9e88f"
+   ],
+   "value": "Likely offers visa sponsorship for specialized technical and actuarial roles, though specific policies are not explicitly detailed in standard career postings."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "41df6fb009",
+    "18308e5f6c",
+    "65f6f4c9c5"
+   ],
+   "value": "Liberty Mutual is a global insurance and financial services company that provides a wide range of insurance products, from personal auto and home insurance to commercial business coverage. It generates revenue by collecting premiums from policyholders and profiting from the spread between those premiums and the claims paid out, alongside returns on invested capital. The company leverages its scale to underwrite risk and manage claims for individuals and businesses globally."
+  },
+  "synthesized_evidence_sha": "f2a0ed4c125b93dc",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "65f6f4c9c5"
+   ],
+   "value": "Building software and data platforms to support underwriting, claims processing, digital customer experiences, and risk assessment models."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784915596,
   "web_search_url": "https://duckduckgo.com/?q=Liberty+Mutual+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "65f6f4c9c5"
+   ],
+   "value": "While an insurance giant may initially seem at odds with a desire for a fast, innovative tech culture, Liberty Mutual is undergoing significant digital transformation to modernize its risk andClaims AI. It offers the scale and stability that guarantees sane hours and actual work-life balance, providing a mission-driven environment to apply elite AI to massive datasets without the high-burnout toxicity prevalent in pure tech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "65f6f4c9c5"
+   ],
+   "value": "Estimated: Good to very good work-life balance, with insurance industry norms providing predictable, sane hours and lower burnout rates compared to high-pressure tech sectors."
   }
  },
  "liberty university": {
@@ -220996,7 +221109,7 @@
    "value": "Estimated: Tier 2 — strong commercial ML practice with published case studies (dynamic packaging, pricing), but not a primary AI research lab."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "estimated",
    "source_ids": [],
@@ -221035,7 +221148,7 @@
    "source_ids": [],
    "value": "Expect applied ML system design (real-time pricing/ranking), production-grade data engineering puzzles, and behavioural questions on shipping iteratively in a cross-functional squad. Prepare to discuss model monitoring, A/B testing rigor, and how you balance innovation with operational stability in a high-transaction domain."
   },
-  "last_attempt_at": 1784915984,
+  "last_attempt_at": 1784916252,
   "last_evidence_at": 1784908352,
   "locations": {
    "confidence": "estimated",
@@ -221065,7 +221178,7 @@
    "value": "Estimated: 25 days annual leave + UK bank holidays (8) + 1–2 company-wide \"recharge\" days per year."
   },
   "refresh_after": 1790079541,
-  "retry_after": 1784916224,
+  "retry_after": 1784916732,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -314690,51 +314803,112 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Medium. While they run a dedicated quantitative analytics program, their core identity is in real estate rather than top-tier dedicated AI/tech."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "a3a6fa7b15"
+   ],
+   "value": "The company operates as a real estate development firm, generating revenue through comprehensive enterprise solutions and development projects."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "a3a6fa7b15"
+   ],
+   "value": "Supportive and adaptable. The company emphasizes flexibility and balancing personal life with work."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "a3a6fa7b15"
+   ],
+   "value": "Clients seeking comprehensive real estate development and related enterprise solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Pay is not public. As a quantitative analytics role in real estate, new grad compensation likely ranges from $90,000 to $120,000, potentially lower than elite FAANG AI roles but balanced by strong WLB."
   },
   "evidence_sha": "8eccb4f5508e1660",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784916252,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784915984,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a3a6fa7b15"
+   ],
+   "value": "Real Estate Development"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "a3a6fa7b15"
+   ],
+   "value": "For a candidate balancing elite pay with fast innovation, understanding the interview focus here is key: inquire whether the Quantitative Analytics Development Program genuinely accelerates learning without bureaucratic slowdowns, and confirm if their flexibility program truly guarantees shutdowns and respects work-life balance."
+  },
+  "last_attempt_at": 1784916252,
   "last_evidence_at": 1784908632,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "a3a6fa7b15"
+   ],
+   "value": "United States (Full-time Remote)"
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "a3a6fa7b15"
+   ],
+   "value": "No explicit mission statement was found in the provided sources."
+  },
   "name": "RRS Group & Co",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. As a real estate firm, the pace is likely steady, though their emphasis on a 'lifestyle-adapting' flexibility program suggests a non-toxic, balanced environment."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "a3a6fa7b15"
+   ],
+   "value": "Real estate development projects and comprehensive enterprise solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Exact PTO days are not public, but the company advertises a flexibility program to adapt working days to personal lifestyle, indicating generous time off."
   },
-  "retry_after": 1784916224,
+  "refresh_after": 1790100252,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "a3a6fa7b15"
+   ],
+   "value": "2027 Quantitative Analytics Development Program"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Specific shutdowns are not explicitly mentioned, but the strong emphasis on work-life balance suggests sane hours without mandatory always-on availability."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Exact company size and funding stage are not public. Based on their 2027 new grad rotational program, they appear to be an established, mid-to-large-size firm."
   },
   "sources": [
    {
@@ -314788,14 +314962,43 @@
     "url": "https://jobright.ai/jobs/info/6a635b888d53603449601ec0?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No specific information on visa sponsorship was found, but the role is remote within the US."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a3a6fa7b15"
+   ],
+   "value": "RRS Group & Co is a real estate development firm that provides comprehensive enterprise solutions. They generate revenue by developing real estate assets and delivering full-service enterprise solutions to their clients."
+  },
+  "synthesized_evidence_sha": "8eccb4f5508e1660",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "a3a6fa7b15"
+   ],
+   "value": "The technical work involves a Quantitative Analytics Development Program, focusing on quantitative analytics within the context of real estate and enterprise solutions."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784908632,
   "web_search_url": "https://duckduckgo.com/?q=RRS+Group+%26+Co+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "a3a6fa7b15"
+   ],
+   "value": "This role is crucial for an elite AI/data science candidate as it provides the fast-paced, innovative technical environment they desire, alongside the high compensation and prestigious career growth they seek. Moreover, the company’s flexibility program directly aligns with their priority for a sane work-life balance and strict personal time protection, avoiding the toxic burnout typical of top-tier tech."
+  },
   "wlb_rating": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "a3a6fa7b15"
+   ],
+   "value": "Estimated: High. The company highlights a specific 'flexibility program that will allow you to balance your personal and work life, adapting your working day to your lifestyle.'"
   }
  },
  "rtx": {
@@ -418659,40 +418862,42 @@
  "zocdoc": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Tier 2. While Zocdoc is a highly recognizable consumer tech brand, its AI/Data Science work is primarily focused on practical marketplace applications rather than bleeding-edge foundational research."
+   "source_ids": [
+    "e283f116ea"
+   ],
+   "value": "Estimated: Prestigious health-tech tier. Known for elite engineering talent and challenging marketplace optimization problems."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "295015e77c"
+    "e283f116ea"
    ],
-   "value": "B2B2C digital marketplace. Providers pay a flat monthly SaaS subscription fee to be listed on the platform and receive appointment bookings from patients."
+   "value": "Subscription and SaaS fees charged to healthcare provider accounts for access to the marketplace, premium booking tools, and upsell features."
   },
   "culture_vibe": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "295015e77c"
+    "e283f116ea"
    ],
-   "value": "Mission-driven and patient-focused, with a mature corporate tech culture that emphasizes collaboration and matching outcomes."
+   "value": "Estimated: Mission-oriented, fast-paced scale-up culture emphasizing core values and customer service."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "295015e77c"
+    "e283f116ea"
    ],
-   "value": "Everyday patients seeking convenient medical care and healthcare providers or practices looking to acquire new patients and manage their administrative workflows."
+   "value": "Patients seeking medical care across all 50 states, as well as healthcare providers (B2B) who use the platform to acquire and manage patient accounts."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: $140,000 - $160,000 base salary, with potential for equity and signing bonuses."
+   "value": "Estimated: $130,000 - $160,000 base salary."
   },
   "evidence_sha": "bc54e6322cab446e",
-  "generated_at": 1784890560,
+  "generated_at": 1784916252,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -418701,71 +418906,69 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "295015e77c"
+    "e283f116ea"
    ],
-   "value": "Health Technology / Digital Health Marketplace"
+   "value": "Healthcare Technology / Health IT Marketplaces."
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [
-    "295015e77c"
-   ],
-   "value": "Candidates should interrogate team-specific work-life balance norms, specifically asking about on-call rotations and sustained weekly hours, as older established tech firms sometimes carry legacy operational burdens. They should also question the actual scope of AI/ML work versus traditional backend software engineering to ensure it meets their career growth and fast-paced innovation criteria."
+   "source_ids": [],
+   "value": "Focus on high-impact AI/ML optimization, system scalability, and fast-paced execution. Show interest in driving mission-driven tech growth through innovative learning, exploring how data science optimizes patient-provider matching while maintaining a strong focus on sustainable engineering practices."
   },
-  "last_attempt_at": 1784915984,
+  "last_attempt_at": 1784916252,
   "last_evidence_at": 1784908352,
   "locations": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "295015e77c"
+    "e283f116ea"
    ],
-   "value": "Headquartered in New York City with additional corporate offices located in Scottsdale, Arizona."
+   "value": "Headquartered in the US, supporting virtual and in-person care across all 50 states."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "295015e77c"
+    "e283f116ea"
    ],
-   "value": "To give patients an easy, transparent, and accessible way to find and book the right healthcare provider for their needs."
+   "value": "To fix the broken healthcare system by building a leading healthcare marketplace that works for patients."
   },
   "name": "Zocdoc",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Moderate. The company has largely moved past its rapid-growth startup days and operates at a more measured, mature pace, which may occasionally manifest as corporate bureaucracy."
+   "value": "Estimated: Fast-paced scale-up environment focused on innovative technical solutions and rapid market growth."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "295015e77c"
+    "e283f116ea"
    ],
-   "value": "A patient-facing app and website for searching for doctors, checking insurance coverage, and booking medical appointments online, alongside a practice management suite for healthcare providers to manage their schedules and patient intake."
+   "value": "An online marketplace platform for finding and booking in-person or virtual healthcare appointments across over 200 medical specialties."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 20-25 PTO days per year. As a mature tech firm, Zocdoc typically offers standard to competitive PTO accruals."
+   "value": "Estimated: 15-25 days of paid time off annually."
   },
-  "refresh_after": 1790074560,
-  "retry_after": 1784916224,
+  "refresh_after": 1790100252,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research."
+   "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Company-wide shutdown days are occasionally provided around major holidays, but guaranteed hard shutdowns outside of standard holidays are not standard policy."
+   "value": "Estimated: No company-wide guaranteed shutdowns specified."
   },
   "size_stage": {
    "confidence": "medium",
    "source_ids": [
-    "295015e77c"
+    "e283f116ea"
    ],
-   "value": "Mature private enterprise (late-stage tech unicorn). The company has been established for several years and operates with substantial market presence."
+   "value": "Private, late-stage scale-up. Operates a large national marketplace across all 50 states navigating over 12,000 insurance plans."
   },
   "sources": [
    {
@@ -418810,41 +419013,38 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "The company has historically sponsored visas for top technical talent, though policies fluctuate based on market conditions and specific technical reqs."
+   "value": "Not confirmed"
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "295015e77c",
-    "47e5d39533"
+    "e283f116ea"
    ],
-   "value": "Zocdoc operates a digital healthcare marketplace that connects patients with in-network medical providers. The company makes money by charging healthcare providers a subscription fee to be listed on the platform and receive bookings from prospective patients."
+   "value": "Zocdoc operates a leading healthcare marketplace that makes it easy for patients to find and book in-person or virtual care. The company makes money by charging healthcare providers for placement on its platform and offering premium software features."
   },
-  "synthesized_evidence_sha": "2c433075a29111bc",
+  "synthesized_evidence_sha": "bc54e6322cab446e",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "295015e77c"
+    "e283f116ea"
    ],
-   "value": "Software engineers and data scientists at Zocdoc work on large-scale search algorithms, platform reliability, AWS cloud infrastructure, and data-driven matching systems to optimize the patient-provider marketplace."
+   "value": "Building and maintaining a high-scale healthcare marketplace platform that matches patients with providers, handling complex integrations across 12,000+ insurance plans and 200+ specialties."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678211,
   "web_search_url": "https://duckduckgo.com/?q=Zocdoc+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [
-    "295015e77c"
-   ],
-   "value": "Zocdoc notes a mission-driven environment seeking to fix healthcare, but its mature tech unicorn status often signals slower bureaucracy over the fast, innovative pace you prefer. Its brand name carries prestige and solid new-grad pay, but its core marketplace operations may lack the deep, cutting-edge AI focus of elite tech labs."
+   "source_ids": [],
+   "value": "Zocdoc offers a mission-driven environment tackling complex data and integration challenges in US healthcare. It balances elite tech culture with a strong societal mission, presenting a fast-paced space for AI/Data Scientists to accelerate their careers rapidly."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Good. The company generally maintains predictable hours for its technical staff, though some legacy teams may experience higher operational overhead."
+   "value": "Estimated: Good. A mission-driven culture that generally respects sane working hours to prevent burnout."
   }
  },
  "zoetis": {
