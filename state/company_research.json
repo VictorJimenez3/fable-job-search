@@ -75628,12 +75628,96 @@
   }
  },
  "centene": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
   "aliases": [],
-  "evidence_sha": "9a5006622b35d5c0",
-  "last_evidence_at": 1784933777,
+  "attempts": 1,
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "error": "provider unavailable or response was not source-grounded",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "e3eb2d75de40ca25",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_attempt_at": 1784935022,
+  "last_evidence_at": 1784935026,
   "name": "Centene",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "retry_after": 1784935142,
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "0e381844fe",
+    "kind": "company_web",
+    "publisher": "Centene",
+    "retrieved_at": 1784935026,
+    "title": "Centene public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=5db282dc086e601a253fbc03a8461897d6d2d83b66403566d0a80e5ea92ec9f1JmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=2b17f8f5-f294-65ff-1c70-ef55f3c5643e&u=a1aHR0cHM6Ly93d3cuYW1hem9uLmNvbS9zaWduL3M_az1zaWduK2lu&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "05711b53e8",
+    "kind": "company_web",
+    "publisher": "Centene",
+    "retrieved_at": 1784935026,
+    "title": "Centene public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=d0d392288d33a1191a4eb35f74e9a06c2875d4fbb6e6e5986a3a2885773aeebbJmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=2b17f8f5-f294-65ff-1c70-ef55f3c5643e&u=a1aHR0cHM6Ly93d3cuYW1hem9uLmNvbS9ncC92aWRlby9jb2xsZWN0aW9uL0luY2x1ZGVkd2l0aFByaW1l&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "01f7360d8d",
+    "kind": "company_web",
+    "publisher": "Centene",
+    "retrieved_at": 1784935026,
+    "title": "Centene public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=22917ff8d060a70ce8c77cb0a11dc7709a24115ab9459e96e900367349fb984eJmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=2b17f8f5-f294-65ff-1c70-ef55f3c5643e&u=a1aHR0cHM6Ly93d3cuYW1hem9uLmNvbS9hbWF6b25wcmltZQ&ntb=1"
+   },
+   {
+    "content_sha": "12a4d5dec14f7a74",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/SimplifyJobs/New-Grad-Positions.",
+    "id": "dbc3b9e88f",
+    "kind": "discovery_feed",
+    "publisher": "Centene",
+    "retrieved_at": 1784935026,
+    "title": "Discovery source for Centene",
+    "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
+   },
    {
     "content_sha": "f36d201949e369c7",
     "excerpt": "Sponsorship and future sponsorship are not available for this opportunity, including employment-based visa types H-1B, L-1, O-1, H-1B1, F-1, J-1, OPT, or CPT. without the need for employment-based visa sponsorship now or in the future. Pay Range: $56,200.00 - $101,000.00 per year Centene offers a comprehensive benefits package including: competitive pay, health insurance, 401K and stock purchase plans, tuition reimbursement, paid time off plus holidays, and a flexible approach to work with remote, hybrid, field or office work schedules.",
@@ -75645,7 +75729,15 @@
     "url": "https://centene.wd5.myworkdayjobs.com/Centene_External/job/Remote-MI/Data-Analyst-I-Healthcare-Analytics_1636195"
    }
   ],
-  "status": "evidence_only"
+  "status": "retrying",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784935026,
+  "web_search_url": "https://duckduckgo.com/?q=Centene+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
  },
  "centific": {
   "ai_ds_prestige_tier": {
@@ -100524,12 +100616,96 @@
   }
  },
  "cruisebound": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
   "aliases": [],
-  "evidence_sha": "7fd7e7287126ab2a",
-  "last_evidence_at": 1784933777,
+  "attempts": 1,
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "error": "provider unavailable or response was not source-grounded",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "e022e251860d472f",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_attempt_at": 1784935022,
+  "last_evidence_at": 1784935026,
   "name": "Cruisebound",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "retry_after": 1784935142,
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "ca6db6e36d",
+    "kind": "company_web",
+    "publisher": "Cruisebound",
+    "retrieved_at": 1784935026,
+    "title": "Cruisebound public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=3dffa82f9e141af9af3fb858843ea417d3087bdcca4279caf6c055f8c74e1029JmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=2b17f8f5-f294-65ff-1c70-ef55f3c5643e&u=a1aHR0cHM6Ly9zdXBwb3J0Lm1pY3Jvc29mdC5jb20vZW4tdXMv&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "9b64a4bd93",
+    "kind": "company_web",
+    "publisher": "Cruisebound",
+    "retrieved_at": 1784935026,
+    "title": "Cruisebound public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=69ea40b6cda58e391234e025fb4f972859cddd4def9ade92a7cfe83319fb9fadJmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=2b17f8f5-f294-65ff-1c70-ef55f3c5643e&u=a1aHR0cHM6Ly9zdXBwb3J0Lm1pY3Jvc29mdC5jb20vZW4tVVMvV2luZG93cy9BcHBzL2NoYW5nZS1kZWZhdWx0LWFwcHMtaW4td2luZG93cw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "17ec04f951",
+    "kind": "company_web",
+    "publisher": "Cruisebound",
+    "retrieved_at": 1784935026,
+    "title": "Cruisebound public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=738c45e960aca130d9ee642e0e6a8306f715871317c006240c4570574971fbc2JmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=2b17f8f5-f294-65ff-1c70-ef55f3c5643e&u=a1aHR0cHM6Ly9zdXBwb3J0Lm1pY3Jvc29mdC5jb20vZW4tVVMvV2luZG93cy9IYXJkd2FyZS9QcmludGVyL3NldC1hLWRlZmF1bHQtcHJpbnRlci1pbi13aW5kb3dz&ntb=1"
+   },
+   {
+    "content_sha": "fae40f6513d4a1de",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/jobright-ai/2026-Software-Engineer-New-Grad.",
+    "id": "1db9db9c4d",
+    "kind": "discovery_feed",
+    "publisher": "Cruisebound",
+    "retrieved_at": 1784935026,
+    "title": "Discovery source for Cruisebound",
+    "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
+   },
    {
     "content_sha": "a1f319d0c33c24d7",
     "excerpt": "Your Score - Top Applicants Must-Have Skills for This Role SQL Python Statistics Machine learning Model building Optimize my Resume Get Referral Via linkedIn FREE 3× Higher Response via Email Outreach L Linda L. Jobright.ai Data Scientist jobs in United States Overview Company Apply on Employer Site APPLY NOW Cruisebound · 4 hours ago Data Scientist East Coast Full-time Onsite Entry, Mid Level $90K/yr - $110K/yr Cruisebound is on a mission to bring the joy of cruising to all travelers by simplifying online booking.",
@@ -100541,7 +100717,15 @@
     "url": "https://jobright.ai/jobs/info/6a63ae775c7e2d715ebad4c6?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "status": "retrying",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784935026,
+  "web_search_url": "https://duckduckgo.com/?q=Cruisebound+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
  },
  "crusoe": {
   "ai_ds_prestige_tier": {
@@ -143827,12 +144011,92 @@
   }
  },
  "flock": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
   "aliases": [],
-  "evidence_sha": "b6ac2f1713d1f799",
-  "last_evidence_at": 1784933777,
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "3ba563ce47d454f4",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784935028,
   "name": "Flock",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "42fb1d9a20",
+    "kind": "company_web",
+    "publisher": "Flock",
+    "retrieved_at": 1784935028,
+    "title": "Flock public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=316dfa5a3f1a21ae40ef775d32c953cba6db747ca0707d4cbfe577c1d06e6d1bJmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=2b17f8f5-f294-65ff-1c70-ef55f3c5643e&u=a1aHR0cHM6Ly93d3cuZmxvY2suY29tLw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "0b9603b4b5",
+    "kind": "company_web",
+    "publisher": "Flock",
+    "retrieved_at": 1784935028,
+    "title": "Flock public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=92215ab0c60a7c08cd3942eb310e428f8a24b436da91ceb3172ad48e2035e611JmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=2b17f8f5-f294-65ff-1c70-ef55f3c5643e&u=a1aHR0cHM6Ly93d3cuZmxvY2tzYWZldHkuY29tL2luZHVzdHJpZXMvbGF3LWVuZm9yY2VtZW50&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "b5e4f3f97a",
+    "kind": "company_web",
+    "publisher": "Flock",
+    "retrieved_at": 1784935028,
+    "title": "Flock public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=03331e7f89b4890da762ba633e1b29546eadc9b1548bcda1671bfe3c211c5175JmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=2b17f8f5-f294-65ff-1c70-ef55f3c5643e&u=a1aHR0cHM6Ly93d3cuZmxvY2tzYWZldHkuY29tLw&ntb=1"
+   },
+   {
+    "content_sha": "fae40f6513d4a1de",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/jobright-ai/2026-Software-Engineer-New-Grad.",
+    "id": "1db9db9c4d",
+    "kind": "discovery_feed",
+    "publisher": "Flock",
+    "retrieved_at": 1784935028,
+    "title": "Discovery source for Flock",
+    "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
+   },
    {
     "content_sha": "bdca67bb8705a857",
     "excerpt": "Jobright.ai Associate Wireless Software Engineer jobs in United States Overview Company Apply on Employer Site APPLY NOW Flock · 3 hours ago Associate Wireless Software Engineer Atlanta, GA Full-time Hybrid Entry Level $100K/yr - $150K/yr Flock is a company dedicated to building technology that reduces crime and protects privacy. Flock will provide a $50,000-lifetime maximum benefit related to eligible adoption, surrogacy, or fertility expenses. Associate Wireless Software Engineer @ Flock We offer four ERGs today - Women of Flock, Flock Proud, LEOs and Melanin Motion.",
@@ -143844,7 +144108,15 @@
     "url": "https://jobright.ai/jobs/info/6a63baaa8d53603449603f7e?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only"
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784935028,
+  "web_search_url": "https://duckduckgo.com/?q=Flock+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
  },
  "florida atlantic university": {
   "ai_ds_prestige_tier": {
@@ -152688,7 +152960,7 @@
    "value": "Estimated: Mid-tier. While Gen Digital is a major tech enterprise, it is primarily known for consumer cybersecurity rather than elite AI research, though its current Generative AI roles offer strong applied learning."
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -152740,7 +153012,7 @@
    ],
    "value": "Prepare to discuss how you thrive in a 'scrappy' and 'relentlessly customer driven' environment, balancing fast technical experimentation with practical application development. Be ready to demonstrate how you can manage hands-on AI innovation without contributing to burnout, leveraging their stated well-being programs and flexible work options."
   },
-  "last_attempt_at": 1784925820,
+  "last_attempt_at": 1784935022,
   "last_evidence_at": 1784908352,
   "locations": {
    "confidence": "high",
@@ -152781,7 +153053,7 @@
    "value": "Estimated: 20-25 days. The company highlights competitive time off, though exact accruable amounts are not public."
   },
   "refresh_after": 1790053098,
-  "retry_after": 1784933500,
+  "retry_after": 1784950382,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -165479,7 +165751,7 @@
    "value": "Estimated: Tier 2-3. It holds prestige in the consulting world, but is not generally recognized as a top-tier, elite tech firm for data science innovation in the way that FAANG or specialized AI labs are."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -165501,7 +165773,7 @@
    ],
    "value": "Commercial businesses, financial institutions, healthcare organizations, and public sector and government agencies."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -165530,7 +165802,7 @@
    ],
    "value": "You must probe heavily into the realities of consulting hours during interviews. Focus on questions about billable hour expectations, client project rotations, and whether involvement in 'fast, innovative tech' is actually feasible when serving government and legacy commercial clients that prioritize slow, steady delivery."
   },
-  "last_attempt_at": 1784894547,
+  "last_attempt_at": 1784935022,
   "last_evidence_at": 1784934042,
   "locations": {
    "confidence": "medium",
@@ -165569,6 +165841,7 @@
    ],
    "value": "Estimated: 20-25 days of annual PTO, typical for large consulting firms, though actual utilization may be constrained by active client project deadlines."
   },
+  "retry_after": 1784935262,
   "rotational_program_name": {
    "confidence": "low",
    "source_ids": [
@@ -165660,7 +165933,7 @@
    ],
    "value": "Not explicitly found in research, though large consulting firms frequently offer visa sponsorship for specialized technical roles."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -193923,6 +194196,94 @@
    "value": "Estimated: 3.5/5 — government contracts often mandate 40-hr weeks and comp time; on-call rotations exist but are typically bounded."
   }
  },
+ "intermountain healthcare": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "6637de900ef1f737",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Healthtech / technology (estimated)"
+  },
+  "last_evidence_at": 1784935028,
+  "name": "Intermountain Healthcare",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "ae8af57a58",
+    "kind": "company_web",
+    "publisher": "Intermountain Healthcare",
+    "retrieved_at": 1784935028,
+    "title": "Intermountain Healthcare public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=9e5eb41ed13f29ccf54573970fb30e3bea76fe496bb97b6bb913accbb5fbd0adJmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=2b17f8f5-f294-65ff-1c70-ef55f3c5643e&u=a1aHR0cHM6Ly9pbnRlcm1vdW50YWluaGVhbHRoY2FyZS5vcmcvcGF0aWVudC1wb3J0YWw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "c604901356",
+    "kind": "company_web",
+    "publisher": "Intermountain Healthcare",
+    "retrieved_at": 1784935028,
+    "title": "Intermountain Healthcare public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=2f78a563de6717533e682184507efa8cda0600ecbaaf921b3c4e15d434433d69JmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=2b17f8f5-f294-65ff-1c70-ef55f3c5643e&u=a1aHR0cHM6Ly9teWNoYXJ0LmludGVybW91bnRhaW5oZWFsdGgub3JnLw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "57dadd6722",
+    "kind": "company_web",
+    "publisher": "Intermountain Healthcare",
+    "retrieved_at": 1784935028,
+    "title": "Intermountain Healthcare public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=a8a8747e4239d5d61773dc2daf496a14c13dfee7d7d549638f0c8a8b6539d872JmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=2b17f8f5-f294-65ff-1c70-ef55f3c5643e&u=a1aHR0cHM6Ly9pbnRlcm1vdW50YWluaGVhbHRoY2FyZS5vcmcv&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784935028,
+  "web_search_url": "https://duckduckgo.com/?q=Intermountain+Healthcare+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
  "international": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
@@ -196738,6 +197099,84 @@
    "value": "Estimated: Good WLB with sane hours expected."
   }
  },
+ "iqvia": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "cf1f44639d0a7ce5",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784935028,
+  "name": "IQVIA",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "a297f654df",
+    "kind": "company_web",
+    "publisher": "IQVIA",
+    "retrieved_at": 1784935028,
+    "title": "IQVIA public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=d772d40157cb4ee4c272869e06659341dd2504b171b0fdbb4303157c6d6c9a8aJmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=2b17f8f5-f294-65ff-1c70-ef55f3c5643e&u=a1aHR0cHM6Ly96ZW5vZG8ub3JnL3JlY29yZHMvMTQ4MTQyNjIvZmlsZXMvMi5NYXhSeF8yMDI0QXByMjlfc2Vuc2l0aXZpdHlfMzBkYXkuaXB5bmI&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "a286e94d65",
+    "kind": "company_web",
+    "publisher": "IQVIA",
+    "retrieved_at": 1784935028,
+    "title": "IQVIA public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=1d09daf288ae7f8b7fe0fd3e597990891424f851009537a483c38c1b3f73b78cJmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=2b17f8f5-f294-65ff-1c70-ef55f3c5643e&u=a1aHR0cHM6Ly96ZW5vZG8ub3JnL3JlY29yZHMvMTQ4MTQyNjIvZmlsZXMvNC4lMjBSZWdyZXNzaW9uX3dhc2hvdXRfMThNX25vZG9zYWdlY2hhbmdlX3NlbnNpdGl2aXR5XzMwZGF5LlJtZA&ntb=1"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784935028,
+  "web_search_url": "https://duckduckgo.com/?q=IQVIA+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
+ },
  "iridium": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
@@ -196936,12 +197375,96 @@
   }
  },
  "iridium communications": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
   "aliases": [],
-  "evidence_sha": "a459780fa5962a2a",
-  "last_evidence_at": 1784933777,
+  "attempts": 1,
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "error": "provider unavailable or response was not source-grounded",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "ee55e7115928dbb7",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_attempt_at": 1784935022,
+  "last_evidence_at": 1784935026,
   "name": "Iridium Communications",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "retry_after": 1784935142,
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "9e1841858c",
+    "kind": "company_web",
+    "publisher": "Iridium Communications",
+    "retrieved_at": 1784935026,
+    "title": "Iridium Communications public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=72ccc484d0c5972a8802fc9bbedfd0d22f2efd0efa517a00c2553e19cd357d2dJmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=2b17f8f5-f294-65ff-1c70-ef55f3c5643e&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvSXJpZGl1bQ&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "90aa6852d2",
+    "kind": "company_web",
+    "publisher": "Iridium Communications",
+    "retrieved_at": 1784935026,
+    "title": "Iridium Communications public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=9bdbae180820014f902b4457fa4f41d662fdeb54b735e1f41ff49b9469f01036JmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=2b17f8f5-f294-65ff-1c70-ef55f3c5643e&u=a1aHR0cHM6Ly93d3cuaXJpZGl1bS5jb20v&ntb=1"
+   },
+   {
+    "content_sha": "155749b9c820c08c",
+    "excerpt": "You will work 12-hour shifts leading a team in a 24-hour, multi-satellite operations environment. This role is central to shaping how our customers connect, integrate, and innovate on the Iridium global network. We are committed to helping our employees and their families lead healthy, productive lives. You will work 12-hour shifts with a team in a 24-hour, multi-satellite operations environment.",
+    "id": "c77127e36e",
+    "kind": "company_careers_or_benefits",
+    "publisher": "Iridium Communications",
+    "retrieved_at": 1784935026,
+    "title": "Iridium Satellite Communications | Truly Global Communications",
+    "url": "https://careers-iridium.icims.com/jobs/search?hashed=-435596479"
+   },
+   {
+    "content_sha": "12a4d5dec14f7a74",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/SimplifyJobs/New-Grad-Positions.",
+    "id": "dbc3b9e88f",
+    "kind": "discovery_feed",
+    "publisher": "Iridium Communications",
+    "retrieved_at": 1784935026,
+    "title": "Discovery source for Iridium Communications",
+    "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
+   },
    {
     "content_sha": "01ae8a1d46471cd2",
     "excerpt": "citizen&nbsp; Work Environment: This position primarily works in an office setting and is largely sedentary with the majority of the position working with a computer. The role typically requires the use of basic office equipment such as a phone, video, computer, keyboard, mouse, and printer.&nbsp; &nbsp; We believe in-person connection drives innovation, strengthens mentorship, and builds culture, while flexibility enables employees to do their best work. Options Apply for this job online Apply Sha",
@@ -196953,7 +197476,15 @@
     "url": "https://careers-iridium.icims.com/jobs/5047/job?mobile=true&needsRedirect=false"
    }
   ],
-  "status": "evidence_only"
+  "status": "retrying",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784935026,
+  "web_search_url": "https://duckduckgo.com/?q=Iridium+Communications+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
  },
  "iron mountain": {
   "ai_ds_prestige_tier": {
@@ -249447,7 +249978,7 @@
    "value": "Tier 3 (Solid entry-level deployment into branded finance programs; not a core AI research lab)"
   },
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -249496,7 +250027,7 @@
    ],
    "value": "Expect practical assessments in Python (pandas, NumPy), ML algorithm fundamentals, and NLP basics. Prepare for scenario questions about deploying models in regulated banking environments and adapting to client-team workflows. Ask about typical client engagement length, mentorship structure, and conversion rates to direct hire."
   },
-  "last_attempt_at": 1784925820,
+  "last_attempt_at": 1784935022,
   "last_evidence_at": 1784924399,
   "locations": {
    "confidence": "medium",
@@ -249529,7 +250060,7 @@
    "source_ids": [],
    "value": "Estimated: 10-15 days PTO + holidays (varies by employment contract and client site policy); not publicly documented."
   },
-  "retry_after": 1784933500,
+  "retry_after": 1784950382,
   "rotational_program_name": {
    "confidence": "medium",
    "source_ids": [
@@ -258940,12 +259471,96 @@
   }
  },
  "nexxen": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
   "aliases": [],
-  "evidence_sha": "3fddc9ac2b99cfdf",
-  "last_evidence_at": 1784933777,
+  "attempts": 1,
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "error": "provider unavailable or response was not source-grounded",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "677282737d4dcec9",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_attempt_at": 1784935022,
+  "last_evidence_at": 1784935028,
   "name": "Nexxen",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "retry_after": 1784935142,
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
   "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
   "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "69efe5a1ce",
+    "kind": "company_web",
+    "publisher": "Nexxen",
+    "retrieved_at": 1784935028,
+    "title": "Nexxen public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=ce4e99a557762b24dd8d7016c821f7c3997ce92b95e5f76f22ffa0a5d11f85d9JmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=2b17f8f5-f294-65ff-1c70-ef55f3c5643e&u=a1aHR0cHM6Ly9tYXBzLmdvb2dsZS5jb20ubXgvYXBwbGUtYXBwLXNpdGUtYXNzb2NpYXRpb24&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "42966d032b",
+    "kind": "company_web",
+    "publisher": "Nexxen",
+    "retrieved_at": 1784935028,
+    "title": "Nexxen public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=662c98043a77c280dc1b6d4225576b28f4d3f5c93dfdfb6bf0c4c01f8b619296JmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=2b17f8f5-f294-65ff-1c70-ef55f3c5643e&u=a1aHR0cHM6Ly9tYXBzLmdvb2dsZS5jb20ubXgvbWFwZmlsZXMvaG9tZTMuaHRtbA&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "e3fb256d03",
+    "kind": "company_web",
+    "publisher": "Nexxen",
+    "retrieved_at": 1784935028,
+    "title": "Nexxen public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=21495f8c42bcafaa52b4e438e3859100dd0a396352b5aa245784f1b7ef5afe1dJmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=2b17f8f5-f294-65ff-1c70-ef55f3c5643e&u=a1aHR0cHM6Ly9tYXBzLmdvb2dsZS5jb20ubXgvbWFwZmlsZXMvbXMvYmxhbmsuaHRtbA&ntb=1"
+   },
+   {
+    "content_sha": "12a4d5dec14f7a74",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/SimplifyJobs/New-Grad-Positions.",
+    "id": "dbc3b9e88f",
+    "kind": "discovery_feed",
+    "publisher": "Nexxen",
+    "retrieved_at": 1784935028,
+    "title": "Discovery source for Nexxen",
+    "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
+   },
    {
     "content_sha": "68dece273326c2f2",
     "excerpt": "Please be advised that Nexxen will never request payment (whether in cash, cryptocurrency, or any other form) as a condition of employment, offer positions that require you to invest in vague or dubious financial schemes, or promote roles that resemble get-rich-quick opportunities. Take part in the monitoring and deployment of new production applications and environments. We are aware of the growing number of online scams and fraudulent job postings, and we urge all job seekers to remain vigilant.",
@@ -258967,7 +259582,15 @@
     "url": "https://jobs.ashbyhq.com/nexxen/53cbef54-13b1-4539-9a18-bdd0c3431d32"
    }
   ],
-  "status": "evidence_only"
+  "status": "retrying",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784935028,
+  "web_search_url": "https://duckduckgo.com/?q=Nexxen+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
+  }
  },
  "niagara bottling": {
   "ai_ds_prestige_tier": {
@@ -318338,115 +318961,106 @@
  },
  "rtx": {
   "ai_ds_prestige_tier": {
-   "confidence": "high",
-   "source_ids": [
-    "363952685d",
-    "db1957d5bf"
-   ],
-   "value": "Top-tier (RTX is a leading player in defense and aerospace AI/ML applications, with significant R&D investment and government contracts for AI-driven systems)."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Niche High-Prestige (Aerospace & Defense)"
   },
   "aliases": [],
-  "attempts": 23,
+  "attempts": 24,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "363952685d",
-    "db1957d5bf"
+    "ac1d12454a",
+    "dae57049f7"
    ],
-   "value": "Revenue is primarily generated through long-term government contracts for defense systems, aircraft, and cybersecurity services, with additional commercial revenue from aviation and aerospace products."
+   "value": "RTX operates as a prime contractor and subcontractor, earning revenue through long-term fixed-price and cost-reimbursement R&D and production contracts with government agencies, supplemented by commercial aviation product sales and long-cycle service agreements."
   },
   "culture_vibe": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "4591ea339a",
-    "6697765143",
-    "db1957d5bf"
+    "68934c3bbb"
    ],
-   "value": "Innovative, collaborative, and mission-driven with a focus on Agile/Scrum teams, creative problem-solving, and respect for personal time."
+   "value": "Principled and patriotic, but traditional and hierarchical. The culture values mission assurance over rapid innovation, resulting in a stable environment that can feel slow and bureaucratic compared to big tech norms."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "363952685d",
-    "db1957d5bf"
+    "ac1d12454a",
+    "dae57049f7"
    ],
-   "value": "Government agencies (e.g., U.S. Department of Defense), defense contractors, and commercial aviation and aerospace clients."
+   "value": "Primary customers are the U.S. Department of Defense, intelligence agencies, and allied governments, along with commercial airlines, business jet operators, and aircraft manufacturers like Boeing and Airbus."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "dbc3b9e88f"
+    "ac1d12454a"
    ],
-   "value": "Estimated: $120,000–$140,000 base salary + bonuses"
+   "value": "Estimated: $52,000 - $115,000 USD annually. Onerous location variance is significant; roles in AWK of underperforming, AZ and Madison, AL may skew to the lower-middle of this range, while Boston-area hubs trend higher."
   },
   "evidence_sha": "1fdf88d5951bc9ef",
-  "generated_at": 1784856583,
+  "generated_at": 1784935022,
   "generator": {
-   "endpoint": "local",
-   "model": "qwen3:30b",
+   "endpoint": "nvidia:deepseek",
+   "model": "deepseek-ai/deepseek-v4-pro",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "dbc3b9e88f"
+    "ac1d12454a",
+    "dae57049f7"
    ],
-   "value": "Aerospace and defense technology"
+   "value": "Aerospace and Defense Technology"
   },
   "interview_focus": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "4591ea339a",
-    "6697765143",
-    "db1957d5bf"
+    "fdb7969a09"
    ],
-   "value": "Assessing ability to thrive in a fast-paced Agile environment, solve complex technical problems collaboratively, and contribute to real-time embedded software development with a focus on security and DevOps practices."
+   "value": "RTX interviews for new grads will likely emphasize fundamental STEM knowledge, specific skill checks in C++ or Python, and behavioral questions assessing collaboration in agile teams. Given your need for a high-learning, low-burnout culture, you should probe for concrete examples of technical debt, tooling age, and how strictly the 9/80 schedule is protected during crunch times."
   },
-  "last_attempt_at": 1784925820,
+  "last_attempt_at": 1784935022,
   "last_evidence_at": 1784934042,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "4591ea339a",
-    "6697765143",
-    "363952685d"
+    "68934c3bbb",
+    "ac1d12454a",
+    "dae57049f7"
    ],
-   "value": "Primarily U.S. locations including Massachusetts (Marlborough, Tewksbury), Indiana (Fort Wayne), and other major defense and aerospace hubs."
+   "value": "RTX is headquartered in Arlington, Virginia, with major software and engineering hubs in Tucson, AZ; Tewksbury, MA; and Fort Wayne, Indiana. The work is typically onsite."
   },
   "mission": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "363952685d",
-    "db1957d5bf"
+    "68934c3bbb"
    ],
-   "value": "To innovate and deliver critical defense and aerospace solutions that protect national security and advance global aviation."
+   "value": "RTX's stated goal is to defend freedoms and advance aerospace innovation, with a belief that an inclusive culture and diverse workforce are essential to solving the hardest challenges in aerospace and defense."
   },
   "name": "RTX",
   "pace_of_work": {
-   "confidence": "high",
-   "source_ids": [
-    "4591ea339a",
-    "db1957d5bf"
-   ],
-   "value": "Fast-paced, dynamic, with time-critical requirements and Agile/Scrum sprints."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Slow to moderate; constrained by rigorous IT rules, documentation, safety critical certification processes, and budgeting cycles. Not iterative or fast-fail."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "363952685d",
-    "db1957d5bf"
+    "68934c3bbb",
+    "ac1d12454a",
+    "dae57049f7"
    ],
-   "value": "Advanced defense systems, aircraft (including military and commercial), cybersecurity solutions, and aerospace technologies."
+   "value": "RTX develops missile systems, radars, sensors, electronic warfare systems, and test solutions for complex defense systems. It also produces commercial and military aircraft engines through Pratt & Whitney, and avionics, interiors, and communications systems through Collins Aerospace."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [
-    "dbc3b9e88f"
-   ],
-   "value": "Estimated: 15-20 days"
+   "source_ids": [],
+   "value": "Estimated: 15 days of paid time per year for new grads, with additional sick days and floating holidays likely standard."
   },
+  "refresh_after": 1790119022,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -318455,18 +319069,15 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [
-    "4591ea339a",
-    "6697765143"
-   ],
-   "value": "Guaranteed shutdowns during holidays and potentially for project milestones (based on company emphasis on work-life balance and team efficiency)."
+   "source_ids": [],
+   "value": "Estimated: The year-end closure between Christmas and New Year's Day is a predictable and common shutdown week in the defense sector, often guaranteed."
   },
   "size_stage": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
-    "dbc3b9e88f"
+    "dae57049f7"
    ],
-   "value": "Large enterprise (multinational, Fortune 500 company) with significant global operations."
+   "value": "RTX is an established, publicly traded corporation with over 180,000 employees globally. It is a mature, large-cap company, not a startup or growth-stage entity."
   },
   "sources": [
    {
@@ -318531,50 +319142,45 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "medium",
-   "source_ids": [
-    "8a521171ea"
-   ],
-   "value": "RTX sponsors U.S. work visas for eligible candidates, including H-1B visas, for roles requiring specialized technical expertise."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a major defense contractor, many RTX positions require U.S. citizenship and ability to obtain a security clearance, which generally precludes sponsorship. This essentially limits these roles to U.S. Persons per ITAR regulations."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "363952685d",
-    "dbc3b9e88f",
-    "db1957d5bf"
+    "ac1d12454a",
+    "dae57049f7"
    ],
-   "value": "RTX (formerly Raytheon Technologies) is a global aerospace and defense company that designs, develops, and manufactures advanced defense systems, aircraft, and cybersecurity solutions. It generates revenue through contracts with government agencies, defense contractors, and commercial clients for cutting-edge technology products and services."
+   "value": "RTX is an aerospace and defense conglomerate formed by the merger of Raytheon and United Technologies, designing, manufacturing, and servicing advanced systems and components for military and commercial customers. It makes money primarily through long-term government defense contracts, as well as selling commercial aviation products and aftermarket services."
   },
+  "synthesized_evidence_sha": "1fdf88d5951bc9ef",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "4591ea339a",
-    "6697765143",
-    "db1957d5bf"
+    "fdb7969a09",
+    "ac1d12454a",
+    "dae57049f7"
    ],
-   "value": "Developing and maintaining software for defense systems, aircraft, and cybersecurity solutions in Agile/Scrum environments with a focus on real-time embedded systems, DevOps, and test automation."
+   "value": "Software Engineers design, develop, and maintain software for complex defense systems, often using C++, C#, C, or Python in Agile, Scrum, or SAFe environments. Work includes building test solutions and supporting the full lifecycle of systems from labs to field production."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583338,
   "web_search_url": "https://duckduckgo.com/?q=RTX+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
+   "confidence": "medium",
    "source_ids": [
-    "4591ea339a",
-    "6697765143",
-    "db1957d5bf"
+    "68934c3bbb",
+    "ac1d12454a",
+    "dae57049f7"
    ],
-   "value": "RTX offers a top-tier AI/data science role with elite prestige in defense and aerospace, high new-grad pay, and a fast, innovative tech culture in an Agile environment. The company prioritizes work-life balance through guaranteed shutdowns and sane hours, avoiding burnout by focusing on efficient, team-based problem-solving."
+   "value": "RTX offers scarce prestige in the defense tech sector with strong job stability, but its highly regulated, onsite culture and classified work can feel like archaic bureaucracy, directly conflicting with your need for a fast, innovative pace. The requirement for U.S. citizenship and clearances could limit flexibility, while the 9/80 schedule is a rare form of guaranteed shutdown, potentially aligning with your desire for predictable time off."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "4591ea339a",
-    "6697765143"
-   ],
-   "value": "High (company emphasizes work-life balance through guaranteed shutdowns, sane hours, and team-based efficiency to avoid burnout)."
+   "source_ids": [],
+   "value": "Estimated: Good. A common 9/80 schedule (nine-hour days with every other Friday off) and the non-linear funding cycles of a defense contractor generally protect against sustained startup-style sprints."
   }
  },
  "rubrik": {
@@ -326219,6 +326825,104 @@
    "confidence": "estimated",
    "source_ids": [],
    "value": "Estimated: Work-life balance metrics are unknown based on failed source retrieval, requiring direct confirmation with the employer."
+  }
+ },
+ "scitec": {
+  "ai_ds_prestige_tier": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+  },
+  "aliases": [],
+  "culture_vibe": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Technology team; company-specific culture research pending (estimated)"
+  },
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "$85k–$125k base (estimated; US market)"
+  },
+  "evidence_sha": "ad8fcd3bea9c2623",
+  "industry": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Other / technology (estimated)"
+  },
+  "last_evidence_at": 1784935027,
+  "name": "SciTec",
+  "pace_of_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Moderate-to-fast (estimated)"
+  },
+  "pto_days": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "15–20 days (estimated)"
+  },
+  "rotational_program_name": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research"
+  },
+  "schema_v": 1,
+  "shutdowns": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "None found in research (estimated)"
+  },
+  "sources": [
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "66ccea666d",
+    "kind": "company_web",
+    "publisher": "SciTec",
+    "retrieved_at": 1784935027,
+    "title": "SciTec public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=4c2a165eeccc8ffc6e86ce822607f30d2038054947546a8c76b8db3642cd8816JmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=2b17f8f5-f294-65ff-1c70-ef55f3c5643e&u=a1aHR0cHM6Ly9zY2l0ZWMuY29tL2Fib3V0LXVzLw&ntb=1"
+   },
+   {
+    "content_sha": "35f1aee2ad38d195",
+    "excerpt": "Please click here if the page does not redirect automatically ...",
+    "id": "0dd192150e",
+    "kind": "company_web",
+    "publisher": "SciTec",
+    "retrieved_at": 1784935027,
+    "title": "SciTec public company page",
+    "url": "https://www.bing.com/ck/a?!&&p=90516c70107902becaf3e47cb9f21195fdbd6b1ea943ec8a91915c2b9cca7b25JmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=2b17f8f5-f294-65ff-1c70-ef55f3c5643e&u=a1aHR0cHM6Ly9zY2l0ZWMuY29tLw&ntb=1"
+   },
+   {
+    "content_sha": "92d3da386db87472",
+    "excerpt": "Workable",
+    "id": "e212d3fb35",
+    "kind": "company_web",
+    "publisher": "SciTec",
+    "retrieved_at": 1784935027,
+    "title": "Workable",
+    "url": "https://apply.workable.com/"
+   },
+   {
+    "content_sha": "12a4d5dec14f7a74",
+    "excerpt": "This company posting was surfaced through the monitored source: https://github.com/SimplifyJobs/New-Grad-Positions.",
+    "id": "dbc3b9e88f",
+    "kind": "discovery_feed",
+    "publisher": "SciTec",
+    "retrieved_at": 1784935027,
+    "title": "Discovery source for SciTec",
+    "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
+   }
+  ],
+  "status": "evidence_only",
+  "web_research_status": "sources captured",
+  "web_researched_at": 1784935027,
+  "web_search_url": "https://duckduckgo.com/?q=SciTec+company+careers+benefits",
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "3/5 (estimated)"
   }
  },
  "sciton": {
