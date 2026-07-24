@@ -14665,7 +14665,7 @@
    "value": "AWS prioritizes technical skills in coding, system design, and problem-solving, with a focus on real-world applications in cloud infrastructure and AI/ML development."
   },
   "last_attempt_at": 1784826845,
-  "last_evidence_at": 1784871255,
+  "last_evidence_at": 1784807865,
   "locations": {
    "confidence": "high",
    "source_ids": [
@@ -30083,38 +30083,107 @@
  "avis budget group": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "5b6429f884"
+   ],
+   "value": "Estimated: Tier 2/3 traditional enterprise tech; offers strong scale challenges but lacks FAANG-level prestige and high new-grad pay."
   },
   "aliases": [],
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "1f99f961d0",
+    "5b6429f884"
+   ],
+   "value": "Revenue is generated through the daily, weekly, and monthly rental of fleet vehicles, supplemented by fees for ancillary services and insurance products."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "5b6429f884"
+   ],
+   "value": "Estimated: Traditional, corporate CARS culture focusing on customer service and operational reliability, which may feel slow to fast-moving tech talent."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "1f99f961d0",
+    "5b6429f884"
+   ],
+   "value": "Business and leisure travelers, insurance replacement customers, and corporate fleet clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "source_ids": [
+    "5b6429f884"
+   ],
+   "value": "Estimated: $90,000 - $120,000 base salary for new grad tech roles."
   },
   "evidence_sha": "a4514c9e9df20c99",
+  "generated_at": 1784871485,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "1f99f961d0",
+    "5b6429f884"
+   ],
+   "value": "Travel and Mobility / Car Rental."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should probe heavily on the team's specific tech stack and the cycle time for deploying new ML models, ensuring the environment accelerates technical learning rather than being bogged down by corporate bureaucracy. To ensure work-life balance expectations are met, candidates should clarify daily hours, on-call expectations, and whether sane, predictable schedules are actually respected."
   },
+  "last_attempt_at": 1784871485,
   "last_evidence_at": 1784675819,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "1bc106442f",
+    "1f99f961d0"
+   ],
+   "value": "Headquartered in Parsippany, NJ, with thousands of rental locations worldwide, including widespread presence across the United States and Canada."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "5b6429f884"
+   ],
+   "value": "To provide safe, innovative, and value-driven mobility solutions to customers globally, empowering their journeys."
+  },
   "name": "Avis Budget Group",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "5b6429f884"
+   ],
+   "value": "Estimated: Moderate, steady pace characteristic of a mature, process-driven corporate environment rather than a fast-paced startup."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "1f99f961d0",
+    "5b6429f884"
+   ],
+   "value": "Vehicle rental services, car sharing, fleet management, and ancillary travel products under the Avis and Budget brands."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "source_ids": [
+    "5b6429f884"
+   ],
+   "value": "Estimated: 15-20 days of vacation for new full-time employees, plus standard holidays."
   },
+  "refresh_after": 1790055485,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -30123,8 +30192,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "5b6429f884"
+   ],
+   "value": "Estimated: No company-wide guaranteed shutdowns, typical of continuous service operations."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "1f99f961d0"
+   ],
+   "value": "Publicly traded, mature enterprise operating globally with a massive physical fleet."
   },
   "sources": [
    {
@@ -30158,14 +30236,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=bac61d3b888e93d938a4d0bbbe059f10b0de1bd6b52a9204d708e207e562e7cfJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2599f633-462e-681f-18db-e1ae47a769bf&u=a1aHR0cHM6Ly93d3cuYXZpcy5jb20vZW4vaG9tZT9tc29ja2lkPTI1OTlmNjMzNDYyZTY4MWYxOGRiZTFhZTQ3YTc2OWJm&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "5b6429f884"
+   ],
+   "value": "General corporate policy not found in the provided sources, though large global companies typically sponsor H-1B visas."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1f99f961d0",
+    "5b6429f884"
+   ],
+   "value": "Avis Budget Group is a leading global provider of mobility solutions, primarily operating the Avis and Budget rental car brands. They make money by renting vehicles to consumers and businesses, along with offering ancillary services like insurance and GPS navigation."
+  },
+  "synthesized_evidence_sha": "a4514c9e9df20c99",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "5b6429f884"
+   ],
+   "value": "Focuses on fleet logistics, dynamic pricing algorithms, reservation systems, and mobile app development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675819,
   "web_search_url": "https://duckduckgo.com/?q=Avis+Budget+Group+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Avis Budget Group operates at a massive scale, offering AI and data science candidates the opportunity to optimize complex, real-world logistics and dynamic pricing systems. However, as a traditional operational enterprise, the day-to-day tech culture may lean towards slow bureaucracy rather than fast, elite innovation, and the company may not perfectly align with top-tier new-grad prestige or guaranteed shutdowns."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5b6429f884"
+   ],
+   "value": "Estimated: Good, typical of large legacy companies, but may involve unpredictable hours during peak travel seasons or system outages."
   }
  },
  "avnet": {
@@ -40759,11 +40867,13 @@
    "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -40775,6 +40885,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784871317,
   "last_evidence_at": 1784850885,
   "name": "Blueprint Technologies",
   "pace_of_work": {
@@ -40787,6 +40898,7 @@
    "source_ids": [],
    "value": "15\u201320 days (estimated)"
   },
+  "retry_after": 1784871557,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -40840,7 +40952,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=f172bcbbe5a98f62b515924b1a1983bbeae8e2686ca4e2a10af2df77968e595eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=16ae291e-3ee3-6c70-0417-3e833f4b6d41&u=a1aHR0cHM6Ly9ibHVlcHJpbnRwcmVwLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677766,
   "web_search_url": "https://duckduckgo.com/?q=Blueprint+Technologies+company+careers+benefits",
@@ -56375,47 +56487,106 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 (emerging, not yet widely recognized)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Innovative, builder-oriented, early-career heavy"
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: $120k\u2013$160k base + equity (early-stage range)"
   },
   "evidence_sha": "a3a6b51812b60a0a",
+  "generated_at": 1784871485,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Technology / Software / AI"
   },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Prepare for standard new-grad SWE loops (data structures, algorithms, system design basics). Probe directly on actual working hours, shutdown policies, mentorship structure, and project ownership to validate WLB and growth claims."
+  },
+  "last_attempt_at": 1784871485,
   "last_evidence_at": 1784788842,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Likely US-based (appears on US new-grad job board); exact offices unknown."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Centrillion Technology, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Fast (early-stage startup hiring aggressively)"
   },
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 10\u201315 days + holidays (typical US startup default)"
   },
+  "refresh_after": 1790055485,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns reported"
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Early- to growth-stage startup (hiring new grads for 2026)."
   },
   "sources": [
    {
@@ -56459,14 +56630,41 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May offer visa sponsorship for new grads; no public policy found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Centrillion Technology, Inc. appears to be a technology company hiring for 2026 new graduate software engineering roles, discovered via a monitored GitHub job board. Specific public details about its products, mission, or business model are not available in the retrieved sources."
+  },
+  "synthesized_evidence_sha": "a3a6b51812b60a0a",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: General software engineering; likely AI/ML or data-intensive given candidate context, but not confirmed by sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784788842,
   "web_search_url": "https://duckduckgo.com/?q=Centrillion+Technology%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Matches your priority for a fast-paced, innovative new-grad role with elite prestige signals (early-stage, selective hiring) and potential for high learning velocity. Absence of public burnout signals suggests possible WLB respect, but unverified."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown \u2014 no employee reviews or policy data found"
   }
  },
  "cerebras": {
@@ -64145,7 +64343,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
-  "last_evidence_at": 1784871255,
+  "last_evidence_at": 1784842446,
   "name": "Cloudflare",
   "pace_of_work": {
    "confidence": "estimated",
@@ -72982,7 +73180,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_evidence_at": 1784871255,
+  "last_evidence_at": 1784678568,
   "name": "CrowdGen by Appen",
   "pace_of_work": {
    "confidence": "estimated",
@@ -80466,7 +80664,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_evidence_at": 1784871524,
+  "last_evidence_at": 1784672493,
   "name": "Deloitte",
   "pace_of_work": {
    "confidence": "estimated",
@@ -85419,37 +85617,90 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "value": "Low; DTCC is a legacy financial utility focused on transaction processing and risk mitigation, not a recognized hub for enterprise AI complexity."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "8a72b8c6f5"
+   ],
+   "value": "DTCC operates as a privately-held, industry-owned utility. It generates revenue primarily through volume-based transaction fees, clearing fund contributions, and servicing charges applied to its member firms."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Conservative, collaborative, and risk-averse, reflecting company ownership by major banks; emphasizes stability and steady development."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "8a72b8c6f5",
+    "a1047c195a"
+   ],
+   "value": "Banks, broker-dealers, asset managers, insurance companies, and global financial institutions operating in the US and international markets."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "value": "Estimated: $90,000 - $120,000 base salary"
   },
   "evidence_sha": "6fab248ba6230256",
+  "generated_at": 1784871485,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8a72b8c6f5"
+   ],
+   "value": "Financial Services / Financial Market Infrastructure (Clearing & Settlement)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Prepare to demonstrate how you can modernize legacy systems and implement data-driven tools in a heavily regulated environment, focusing on your interest in sane hours, guaranteed shutdowns, and career growth without sacrificing personal time."
   },
+  "last_attempt_at": 1784871485,
   "last_evidence_at": 1784674729,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in New York City, NY, with major operational hubs in Tampa, FL, and Jersey City, NJ, alongside global offices in major financial centers."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "a1047c195a"
+   ],
+   "value": "To safeguard the financial system by providing critical financial market infrastructure and driving innovation, efficiency, and resilience in global markets."
+  },
   "name": "DTCC",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow to moderate; heavily influenced by regulatory compliance cycles, cautious tech adoption, and stability-first mandate."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "8a72b8c6f5"
+   ],
+   "value": "Post-trade clearing, settlement, and custody services, as well as asset tracking and data repositories for equities, fixed income, derivatives, and mortgage-backed securities."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "value": "Estimated: 20-25 PTO days per year"
   },
+  "refresh_after": 1790055485,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -85459,7 +85710,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Holiday shutdown period around Christmas/New Year, plus standard federal bank holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "8a72b8c6f5"
+   ],
+   "value": "Mature, privately-held, industry-owned global utility; act"
   },
   "sources": [
    {
@@ -85493,14 +85751,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=d31582162aed38e5f7c7509ed55858f2ba368747bfaa88dec5d314d718d5cc49JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=16ae2af2-1db7-6310-1eaf-3d6f1cb262fb&u=a1aHR0cHM6Ly93d3cuZHRjYy5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a well-resourced financial institution, sponsorship is common but highly dependent on the specific role's operational needs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "8a72b8c6f5"
+   ],
+   "value": "The Depository Trust & Clearing Corporation (DTCC) is a critical financial market infrastructure provider that serves as the central post-trade clearing and settlement hub for the global financial system. It makes money by charging transaction, clearing, and settlement fees to its member financial institutions for safely processing trillions of dollars in securities trades and mitigating counterparty risk."
+  },
+  "synthesized_evidence_sha": "6fab248ba6230256",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a1047c195a"
+   ],
+   "value": "Massive-scale transaction processing, modernizing legacy mainframe environments, shifting to cloud-native infrastructure, and developing data analytics, risk modeling, and machine learning platforms for settlement optimization and anomaly detection."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674729,
   "web_search_url": "https://duckduckgo.com/?q=DTCC+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "DTCC operates critical financial infrastructure, offering mission-driven work where your code provides systemic market stability and prevents toxic burnout culture, but the traditional banking environment is fundamentally incompatible with elite 'fast-paced' tech culture or top-tier AI prestige."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: High; prioritizes stability and sane hours over hyper-growth, avoiding the extreme burnout of high-frequency trading floors or Agile-driven startups."
   }
  },
  "ducharme mcmillen associates": {
@@ -87738,7 +88021,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_evidence_at": 1784871524,
+  "last_evidence_at": 1784676688,
   "name": "ECS",
   "pace_of_work": {
    "confidence": "estimated",
@@ -109793,48 +110076,125 @@
  "general atlantic": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "a5acda56a5"
+   ],
+   "value": "Estimated: Elite financial prestige, but tier 2 for AI/DS compared to FAANG. The firm is highly respected in finance but is not a dedicated AI-first or big tech firm."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "a5acda56a5"
+   ],
+   "value": "Invests capital from its ~$126 billion assets under management into growth-stage companies, generating returns through value appreciation and standard private equity fund management fees."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "a5acda56a5"
+   ],
+   "value": "Estimated: Professional, highly analytical, and relationship-driven. The culture emphasizes intellectual rigor and partnership over a fast, autonomous tech-hacker vibe."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "a5acda56a5"
+   ],
+   "value": "Visionary founders, dynamic businesses seeking growth capital, and institutional investors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "source_ids": [
+    "a5acda56a5"
+   ],
+   "value": "Estimated: $120k-$150k base salary. While lower in base than FAANG, tech roles supporting finance often feature large performance bonuses."
   },
   "evidence_sha": "cadd3aec8bf9965c",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784871485,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a5acda56a5"
+   ],
+   "value": "Private Equity / Venture Capital / Financial Services"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a5acda56a5"
+   ],
+   "value": "If pursuing a data science role here, expect interviews to evaluate your ability to derive actionable investment insights from data rather than pure software engineering speed. Prepare to discuss how you can apply AI to real-world portfolio growth challenges while navigating a corporate investment culture that may not align with a desire for high new-grad tech pay and rigid shutdown policies."
+  },
+  "last_attempt_at": 1784871485,
   "last_evidence_at": 1784776546,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "a5acda56a5"
+   ],
+   "value": "Global footprint spanning 20 countries across five regions."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "a5acda56a5"
+   ],
+   "value": "To be a dedicated partner to visionary founders and investors seeking to build dynamic businesses and create lasting value."
+  },
   "name": "General Atlantic",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "a5acda56a5"
+   ],
+   "value": "Estimated: Fast-paced and high-pressure typical of top-tier global investment firms, driven by market cycles and deal flow rather than software deployment sprints."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "a5acda56a5"
+   ],
+   "value": "The firm's primary offerings are private equity, growth equity, and credit investments, alongside strategic support for portfolio companies."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "source_ids": [
+    "a5acda56a5"
+   ],
+   "value": "Estimated: 20-25 days annually, consistent with standard financial sector benefits, but actual usage may be constrained by deal deadlines."
   },
+  "refresh_after": 1790055485,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "a5acda56a5"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "a5acda56a5"
+   ],
+   "value": "Estimated: No guaranteed tech-style shutdowns; time off is typically coordinated around market closures and individual deal schedules."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "a5acda56a5"
+   ],
+   "value": "Established firm (founded in 1980) with over 900 professionals operating in 20 countries across five regions, managing approximately $126 billion in assets."
   },
   "sources": [
    {
@@ -109898,14 +110258,46 @@
     "url": "https://job-boards.greenhouse.io/generalatlantic/jobs/6115031004"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "a5acda56a5"
+   ],
+   "value": "Not explicitly detailed in the provided sources; large global firms of this scale typically evaluate visa sponsorship on a case-by-case basis."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a5acda56a5"
+   ],
+   "value": "General Atlantic is a leading global growth equity firm that provides capital and strategic support to visionary founders and companies. The firm makes money by investing in high-growth businesses and generating returns through capital appreciation, management fees, and carried interest."
+  },
+  "synthesized_evidence_sha": "cadd3aec8bf9965c",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "a5acda56a5",
+    "dbc3b9e88f"
+   ],
+   "value": "While the sourced listings focus on investment roles, tech functions at growth equity firms typically involve building data infrastructure, investment analytics platforms, and internal software to support deal sourcing and portfolio management."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784776546,
   "web_search_url": "https://duckduckgo.com/?q=General+Atlantic+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a5acda56a5"
+   ],
+   "value": "While General Atlantic offers elite financial prestige and a mission-driven approach to value creation, its core identity is rooted in finance rather than fast-paced tech innovation. The environment may lack the pure technical acceleration and guaranteed shutdowns you prioritize, operating more as a structured investment firm than a rapid-growth tech company."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "a5acda56a5"
+   ],
+   "value": "Estimated: Moderate to low balance for technical roles supporting deal teams, as hours often fluctuate with active investment cycles rather than offering guaranteed sane hours."
   }
  },
  "general atomics aeronautical systems": {
@@ -163335,7 +163727,7 @@
    "value": "Expect technical screens on Python/R statistical modeling, data pipeline design, and scenario-based problem solving for intelligence use cases. Behavioral questions will probe clearance eligibility, teamwork in regulated environments, and handling ambiguity. Prepare for questions on data ethics, model explainability, and experience with classified or sensitive data."
   },
   "last_attempt_at": 1784749117,
-  "last_evidence_at": 1784871255,
+  "last_evidence_at": 1784711509,
   "locations": {
    "confidence": "medium",
    "source_ids": [
@@ -165387,48 +165779,123 @@
  "marsh mclennan": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Tier 2/3. While the company has elite prestige in business and consulting, its AI/Data Science work is primarily internal enablement rather than cutting-edge, industry-leading AI research."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Fee-for-service and commission-based business model, generating revenue by providing specialized consulting, insurance brokering, and customized risk transfer services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Corporate, professional, process-driven, and risk-averse. Expected to be highly formal compared to a fast-moving tech culture."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Large multinational corporations, mid-market businesses, government entities, and institutional clients seeking risk advice and HR solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $90,000 - $120,000 base salary. CorporateMat tech roles pay well but usually lack the massive equity multipliers seen at top-tier tech companies."
   },
   "evidence_sha": "a5d3cdcf06006619",
+  "generated_at": 1784871485,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Insurance Brokerage, Management Consulting, and Professional Services."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Assess how much of your day-to-day will be building fast, modern data science products versus maintaining slow legacy analytic pipelines for risk teams. Ask about after-hours expectations, on-call rotations, and whether there are any firm-wide shutdowns (e.g., around holidays) to ensure the environment is not a toxic, high-burnout corporate trap."
   },
+  "last_attempt_at": 1784871485,
   "last_evidence_at": 1784761412,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Global corporate footprint with major offices in New York, London, and dispersed operations across Asia, Europe, and North America."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "To provide trusted advice and solutions to clients in the areas of risk, strategy, and human capital, helping them navigate complex global challenges."
+  },
   "name": "Marsh & McLennan",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Moderate to Slow. As an established, non-tech legacy enterprise, the pace is driven by client billing cycles and corporate risk compliance, rather than fast-paced tech iterations."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Insurance brokerage, risk management advisory, management consulting (Oliver Wyman), and health & wealth employee benefits administration."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: 20-25 days of PTO annually, typical for large professional services firms."
   },
+  "refresh_after": 1790055485,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Potential partial shutdowns around major holidays (Christmas/New Year), but not guaranteed tech-industry style firm-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Established, publicly traded, Fortune 500 enterprise."
   },
   "sources": [
    {
@@ -165472,14 +165939,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=b9033a16ae5a2eb2e36b51b4d28b466230d219c7171a3a654f008bd9bc207888JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0f446203-d0c3-62fc-3d75-759ed14763ba&u=a1aHR0cHM6Ly93ZW5rdS5iYWlkdS5jb20vdmlldy83NzM5ZDIwYWM2ODFlNTNhNTgwMjE2ZmM3MDBhYmI2OGE5ODJhZGQxLmh0bWw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "As a large global professional services firm, sponsorship is plausible for specialized roles, but specific cases for technical new grads are not explicitly confirmed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Marsh & McLennan (MMC) is a global professional services firm operating in insurance brokerage, risk management, and management consulting. It makes money by charging client fees and commissions for advisory services, insurance placement, and tailored enterprise risk solutions."
+  },
+  "synthesized_evidence_sha": "a5d3cdcf06006619",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Likely involves building data pipelines, actuarial pricing models, claims analytics, and internal enterprise software to support brokerage and consulting operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675868,
   "web_search_url": "https://duckduckgo.com/?q=Marsh+%26+McLennan+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "While MMC offers established corporate prestige, its traditional financial and insurance services environment may heavily contrast with your desire for an innovative, fast-paced tech culture. The structured nature of a legacy enterprise likely includes bureaucracy that could slow down technical learning and career acceleration compared to a dedicated AI firm, and guaranteed shutdowns may be less common than simply generous PTO."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Good. Financial services and consulting prioritize predictability for client billing, typically offering sane working hours with less demanding schedules than pure tech startups."
   }
  },
  "marshall gerstein borun llp": {
@@ -168975,7 +169471,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_evidence_at": 1784871524,
+  "last_evidence_at": 1784674903,
   "name": "McKinsey & Company",
   "pace_of_work": {
    "confidence": "estimated",
@@ -179297,48 +179793,126 @@
  "namsa": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Low tier. Traditional consumer finance companies generally lack the elite, top-tier AI/Data Science industry prestige characteristic of top-tier tech firms."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "2785532be8"
+   ],
+   "value": "Revenue is generated through interest accumulation and associated fees on consumer credit and loan products."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "5cf21d96bd"
+   ],
+   "value": "Estimated: Traditional corporate environment typical of Japanese financial firms."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "5cf21d96bd"
+   ],
+   "value": "Japanese consumers seeking personal credit and financing solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $50k-$70k USD equivalent. Likely reflects Japanese domestic standard graduate salary scales for tech rather than elite FAANG-level compensation, though exact figures are not public."
   },
   "evidence_sha": "a9d97fb2eb12be79",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784871485,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2785532be8"
+   ],
+   "value": "Consumer Finance / Financial Services."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Given the candidate's strict WLB and culture requirements, interviews should heavily probe actual engineering hours, on-call expectations, and the pace of product deployment. It is also vital to question the exact new-grad compensation package and technical learning pathways to ensure they meet elite standards."
+  },
+  "last_attempt_at": 1784871485,
   "last_evidence_at": 1784675876,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "5cf21d96bd",
+    "e7cab09d48"
+   ],
+   "value": "Japan."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "2785532be8"
+   ],
+   "value": "While specific mission text was not available in the provided sources, as a consumer finance entity, its core mission centers on providing accessible consumer credit and financial services in Japan."
+  },
   "name": "NAMSA",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "2785532be8"
+   ],
+   "value": "Estimated: Slow to moderate pace. Traditional financial institutions typically operate with slower bureaucratic processes and heavy regulation rather than a fast, innovative tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "2785532be8"
+   ],
+   "value": "Consumer financing products, credit loans, and related financial services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "source_ids": [
+    "5cf21d96bd"
+   ],
+   "value": "Estimated: 15-20 days. Standard for mid-to-large Japanese corporations, though exact policies are not public."
   },
+  "refresh_after": 1790055485,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "e7cab09d48"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "5cf21d96bd"
+   ],
+   "value": "Estimated: Unlikely to have guaranteed tech-wide company shutdowns outside of standard Japanese public holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "5cf21d96bd"
+   ],
+   "value": "Established corporate entity operating in the Japanese financial sector."
   },
   "sources": [
    {
@@ -179382,14 +179956,46 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "e7cab09d48"
+   ],
+   "value": "Sponsorship details for international candidates are not explicitly mentioned in the available sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "2785532be8",
+    "5cf21d96bd"
+   ],
+   "value": "NAMSA is a Japanese consumer finance company that provides lending and credit-related financial services. It generates revenue by charging interest and fees on consumer loans and credit products issued to its customer base."
+  },
+  "synthesized_evidence_sha": "a9d97fb2eb12be79",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Technical roles likely involve backend systems for credit processing, financial data engineering, and risk assessment modeling."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675876,
   "web_search_url": "https://duckduckgo.com/?q=NAMSA+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "This is a traditional financial services company, which typically conflicts with a candidate's priority for a fast, innovative tech culture over slow bureaucracy. Additionally, without explicit mentions of elite new-grad pay, guaranteed shutdowns, or AI/data prestige, it falls short of the desired top-tier tech profile."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "5cf21d96bd"
+   ],
+   "value": "Estimated: Moderate. Japanese corporate culture in finance can sometimes demand long hours, though specific shutdown policies are not visible."
   }
  },
  "narmi": {
@@ -211223,48 +211829,146 @@
  "protective life": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "7e195a7b6e",
+    "7e9aab659f",
+    "2616853b2f"
+   ],
+   "value": "Estimated: Tier 3 - Established insurance enterprise; AI/DS roles likely focus on risk and actuarial analytics rather than cutting-edge elite tech prestige."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "7e195a7b6e",
+    "7e9aab659f"
+   ],
+   "value": "Insurance underwriting and premium collection across life insurance, asset protection, and employee benefits."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "7e195a7b6e",
+    "7e9aab659f",
+    "2616853b2f"
+   ],
+   "value": "Mission-driven and customer-focused, emphasizing protection, peace of mind, and cross-functional support across divisions."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "7e195a7b6e",
+    "7e9aab659f"
+   ],
+   "value": "Individuals and employers seeking life insurance and employee benefit protections against life's uncertainties."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "source_ids": [
+    "7e195a7b6e",
+    "7e9aab659f",
+    "2616853b2f"
+   ],
+   "value": "Estimated: $75,000 - $95,000 for technical analytical roles, reflecting corporate insurance industry standards rather than elite tech compensation."
   },
   "evidence_sha": "e285d2e92990999f",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784871485,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "7e195a7b6e",
+    "7e9aab659f"
+   ],
+   "value": "Insurance and financial services."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7e195a7b6e",
+    "7e9aab659f"
+   ],
+   "value": "Assess the velocity of technical decision-making and AI deployment to ensure it matches your desire for a fast, innovative culture. Clarify new-grad compensation, promotion velocity, and work-life boundaries to confirm sane hours and absence of burnout practices."
+  },
+  "last_attempt_at": 1784871485,
   "last_evidence_at": 1784821848,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "7e195a7b6e",
+    "7e9aab659f"
+   ],
+   "value": "United States, with operations and hiring tied to its insurance and corporate divisions."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "7e195a7b6e",
+    "7e9aab659f",
+    "2616853b2f"
+   ],
+   "value": "To help protect customers against life's uncertainties and provide protection and peace of mind when customers need it most."
+  },
   "name": "Protective Life",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "7e195a7b6e",
+    "7e9aab659f"
+   ],
+   "value": "Estimated: Moderate corporate pace typical of established insurance companies, prioritizing compliance and stability over rapid technical iteration."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "7e195a7b6e",
+    "7e9aab659f"
+   ],
+   "value": "Life insurance, asset protection, and employee benefits administered through divisions such as Protective Insurance Company."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "source_ids": [
+    "7e195a7b6e",
+    "7e9aab659f"
+   ],
+   "value": "Estimated: 15-25 days of annual PTO, standard for corporate insurance enterprises but exact policy not publicly specified."
   },
+  "refresh_after": 1790055485,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "7e195a7b6e",
+    "7e9aab659f",
+    "2616853b2f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "7e195a7b6e",
+    "7e9aab659f"
+   ],
+   "value": "Estimated: No evidence of guaranteed company-wide shutdowns; standard holiday schedule is more likely for a traditional corporate insurer."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "7e195a7b6e",
+    "7e9aab659f",
+    "2616853b2f"
+   ],
+   "value": "Established corporate insurer with multiple product divisions and ongoing enterprise hiring across functions."
   },
   "sources": [
    {
@@ -211328,14 +212032,51 @@
     "url": "https://jobs.lever.co/protective/0f80dd37-8a60-4a32-b34f-2793c350cfb0"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "7e195a7b6e",
+    "7e9aab659f"
+   ],
+   "value": "Estimated: Not explicitly detailed in current postings; typical corporate insurance roles may offer limited visa sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "7e195a7b6e",
+    "7e9aab659f"
+   ],
+   "value": "Protective Life is an insurance and financial services company that provides life insurance, asset protection, and employee benefits. It makes money by collecting insurance premiums, managing reserves and investments, and generating returns on those assets while paying out claims and covering operational costs."
+  },
+  "synthesized_evidence_sha": "e285d2e92990999f",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "7e195a7b6e",
+    "7e9aab659f",
+    "2616853b2f"
+   ],
+   "value": "Enterprise functions include Security GRC, risk analytics, product compliance, and supporting systems for insurance operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674265,
   "web_search_url": "https://duckduckgo.com/?q=Protective+Life+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "7e195a7b6e",
+    "7e9aab659f"
+   ],
+   "value": "Protective Life offers a mission-driven environment centered on customer protection and peace of mind, which aligns with seeking meaningful work. Its corporate structure provides stability and predictable hours, though a candidate prioritizing fast, elite AI innovation should evaluate whether the tech culture moves at the desired pace."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "7e195a7b6e",
+    "7e9aab659f"
+   ],
+   "value": "Estimated: Good, with standard corporate hours typical of the insurance industry, though not necessarily featuring innovative guaranteed shutdowns."
   }
  },
  "protiviti": {
@@ -248724,7 +249465,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_evidence_at": 1784871255,
+  "last_evidence_at": 1784768504,
   "name": "Specter",
   "pace_of_work": {
    "confidence": "estimated",
@@ -275653,7 +276394,7 @@
    "value": "Probe the specific team's tech stack, on-call expectations, and sprint pacing to confirm the role provides rapid learning and sane hours without toxic burnout, rather than intense Corporate Amazon-style ops work."
   },
   "last_attempt_at": 1784861700,
-  "last_evidence_at": 1784871524,
+  "last_evidence_at": 1784858995,
   "locations": {
    "confidence": "high",
    "source_ids": [
@@ -275689,6 +276430,7 @@
    ],
    "value": "Estimated: 15-20 days of paid time off, structured under Amazon's comprehensive corporate benefits package."
   },
+  "refresh_after": 1790045700,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -275785,6 +276527,7 @@
    ],
    "value": "Twitch is the world's biggest live streaming service, hosting global communities built around gaming, entertainment, music, sports, and cooking. As a subsidiary of Amazon, it makes money through subscriptions, advertising, and Bits (a virtual currency), sharing revenue with its streamers."
   },
+  "synthesized_evidence_sha": "447e33ebbd4cafd5",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
@@ -282170,49 +282913,127 @@
  },
  "university of texas at austin": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 \u2014 not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "0a32f58a38"
+   ],
+   "value": "Top-tier academic institution for AI and data science; highly respected globally but less visible as a tech employer compared to FAANG."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "0a32f58a38"
+   ],
+   "value": "Public university funded by state appropriations, student tuition, research grants, and philanthropic endowments."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "fddd37bb4b"
+   ],
+   "value": "Academic, mission-driven, and collaborative, but constrained by institutional bureaucracy and state regulations."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "fddd37bb4b",
+    "aa7aba57f7"
+   ],
+   "value": "Prospective and enrolled students, academic researchers, government funding agencies, and alumni."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k\u2013$125k base (estimated; US market)"
+   "source_ids": [
+    "0a32f58a38"
+   ],
+   "value": "Estimated: $60,000-$85,000 for staff or post-graduate research roles, significantly lower than private-sector tech compensation."
   },
   "evidence_sha": "da7b7d275cd8e759",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784871485,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "fddd37bb4b"
+   ],
+   "value": "Higher Education and Academic Research."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784871485,
   "last_evidence_at": 1784583603,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "fddd37bb4b",
+    "0a32f58a38"
+   ],
+   "value": "Main campus located in Austin, Texas."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "aa7aba57f7"
+   ],
+   "value": "To serve Texas and the world through excellence in education, research, and public service."
+  },
   "name": "University of Texas at Austin",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "0a32f58a38"
+   ],
+   "value": "Estimated: Slower, methodical, and structured by the academic calendar and grant cycles rather than fast-paced agile sprints."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "fddd37bb4b",
+    "0a32f58a38"
+   ],
+   "value": "Undergraduate and graduate degree programs, continuing education, academic research, and athletic programs."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15\u201320 days (estimated)"
+   "source_ids": [
+    "aa7aba57f7"
+   ],
+   "value": "Estimated: Staff receive approximately 15-20 vacation days plus university holidays and winter shutdowns, though exact numbers vary by classification."
   },
+  "refresh_after": 1790055485,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "fddd37bb4b"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "fddd37bb4b"
+   ],
+   "value": "Estimated: Likely holiday closures around late December and other standard university holidays, though not strictly guaranteed for all research roles."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "fddd37bb4b"
+   ],
+   "value": "A large, established public university with over 50,000 students and thousands of faculty and staff."
   },
   "sources": [
    {
@@ -282246,14 +283067,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=eaa6294bccf3465071ce214193009c3b9b885d31f5031a64a89c50f39dafef85JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvVW5pdmVyc2l0eQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0a32f58a38"
+   ],
+   "value": "Estimated: Academic appointments and postdoctoral roles typically offer J-1 or H-1B visa sponsorship, though policies vary by department and grant."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "fddd37bb4b",
+    "aa7aba57f7"
+   ],
+   "value": "The University of Texas at Austin is a major public research university and higher-education institution. It generates revenue through tuition, state funding, research grants, and private endowments."
+  },
+  "synthesized_evidence_sha": "da7b7d275cd8e759",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "0a32f58a38"
+   ],
+   "value": "Academic and grant-funded research in computer science, AI, data science, and engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583603,
   "web_search_url": "https://duckduckgo.com/?q=University+of+Texas+at+Austin+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "aa7aba57f7"
+   ],
+   "value": "Estimated: Sane hours with university holidays off, but heavily dependent on grant deadlines and specific lab culture."
   }
  },
  "university of texas austin": {
@@ -294205,7 +295056,7 @@
    "value": "Ask about full-time conversion paths and internal tooling to ensure the role accelerates your data science career rather than stalling in contract work."
   },
   "last_attempt_at": 1784869244,
-  "last_evidence_at": 1784871255,
+  "last_evidence_at": 1784737480,
   "locations": {
    "confidence": "high",
    "source_ids": [
@@ -294252,6 +295103,7 @@
    "value": "Estimated: Not applicable for freelancers/contractors; full-time corporate PTO details are not public."
   },
   "refresh_after": 1790053244,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
