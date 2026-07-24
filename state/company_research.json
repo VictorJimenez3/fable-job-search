@@ -21729,38 +21729,106 @@
  "applied systems inc": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "2709027a13"
+   ],
+   "value": "Tier 2 — Established applied AI team shipping production automation for core insurance workflows; not a pure research lab but high-impact, domain-rich ML with proprietary data at scale."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "390546c60f"
+   ],
+   "value": "B2B SaaS subscriptions for core agency management platforms, plus transaction-based revenue from digital payments, comparative rating, and data services; professional services for implementation and training."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "2709027a13",
+    "390546c60f"
+   ],
+   "value": "Values-driven, collaborative, low-ego; explicit commitment to diversity and mutual accountability; 'indispensable to each other' ethos; long-tenure employees common; innovation encouraged within regulatory guardrails."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "390546c60f"
+   ],
+   "value": "Independent insurance agencies, brokerage firms, insurance carriers, and managing general agents (MGAs) across the U.S. and Canada."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $115k–$135k base + 10–15% target bonus + RSU grant (4-year vest); total comp ~$135k–$160k Year 1 for AI/ML roles in major metros/remote."
   },
   "evidence_sha": "d00dbd973de3eaf6",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784871987,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "390546c60f"
+   ],
+   "value": "InsurTech / Vertical SaaS (Insurance Software)"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "2709027a13",
+    "390546c60f"
+   ],
+   "value": "Expect practical ML/system design (document AI, NLP for insurance forms), production-grade Python/Cloud coding, and behavioral questions tied to their stated values (customer success, innovation, mutual accountability). Prepare to discuss how you balance speed with reliability in regulated environments."
+  },
+  "last_attempt_at": 1784871987,
   "last_evidence_at": 1784851159,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "390546c60f"
+   ],
+   "value": "Headquarters in University Park, IL (Chicago metro); major offices in Minneapolis, Denver, Toronto, and remote/hybrid roles across U.S. and Canada."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "390546c60f",
+    "2709027a13"
+   ],
+   "value": "To lead industry innovation that powers the business of insurance by delivering indispensable software and services to customers, within a culture built on values that make employees indispensable to each other."
+  },
   "name": "Applied Systems, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "2709027a13"
+   ],
+   "value": "Estimated: Moderate — sprint-based delivery with quarterly planning; regulated industry requires thorough testing, but culture emphasizes 'ready to learn, willing to try new things' over heroics."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "390546c60f",
+    "2709027a13"
+   ],
+   "value": "Agency management systems (Epic, TAM), comparative rating tools, client self-service portals, data analytics, AI-driven automation tools for insurance workflows, and digital payment solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + flexible sick time; accrual increases with tenure."
   },
+  "refresh_after": 1790055987,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -21770,7 +21838,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (approx. Dec 24–Jan 1) plus summer half-day Fridays; not guaranteed but historically observed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "19f2e47425",
+    "390546c60f"
+   ],
+   "value": "Large, established private company (majority-owned by private equity via Hellman & Friedman, JMI Equity, and others); ~3,000+ employees; mature InsurTech market leader."
   },
   "sources": [
    {
@@ -21824,14 +21900,48 @@
     "url": "https://careers-appliedsystems.icims.com/jobs/7719/job?mobile=true&needsRedirect=false"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "H-1B and Green Card sponsorship available for qualified technical roles; historical USCIS filings show consistent sponsorship for software engineering and data science positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "390546c60f",
+    "2709027a13"
+   ],
+   "value": "Applied Systems is a leading insurance technology company that provides cloud-based software platforms for insurance agencies, brokerages, and carriers to manage policies, clients, and operations. The company generates revenue primarily through B2B SaaS subscriptions and related professional services for its agency management systems and digital insurance solutions."
+  },
+  "synthesized_evidence_sha": "d00dbd973de3eaf6",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "2709027a13",
+    "390546c60f"
+   ],
+   "value": "Full-stack cloud development (AWS, .NET, React, SQL), AI/ML automation for insurance workflows (document ingestion, policy checking, data extraction), platform APIs, data engineering, and DevOps."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784851159,
   "web_search_url": "https://duckduckgo.com/?q=Applied+Systems%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "2709027a13",
+    "390546c60f",
+    "dbc3b9e88f"
+   ],
+   "value": "Applied offers a rare combination for a new grad: a dedicated AI Automation Engineer track at a market-leading InsurTech with 30+ years of domain data, elite compensation benchmarks for the Midwest/remote, and a publicly stated values-driven culture that emphasizes sustainable pace and learning over burnout — directly matching your priorities for prestige, pay, WLB, and growth."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "2709027a13",
+    "390546c60f"
+   ],
+   "value": "Estimated: 4/5 — public emphasis on values-based culture and sustainable pace; hybrid/remote flexibility; no public reports of mandatory crunch or weekend work."
   }
  },
  "applovin": {
@@ -23851,48 +23961,127 @@
  "arista networks": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "a74973c58b"
+   ],
+   "value": "Estimated: Tier 2 for pure AI/DS, but Tier 1 for high-performance networking (which AI infrastructure relies upon)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "a74973c58b"
+   ],
+   "value": "The provided sources do not contain detailed information on the specific business model, though it is a corporate technology company page."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "a74973c58b"
+   ],
+   "value": "Estimated: Engineering-focused and mature, emphasizing deep networking knowledge."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "a74973c58b"
+   ],
+   "value": "Large data center, campus, and cloud-scale enterprise environments."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "f16eec2a6f"
+   ],
+   "value": "Estimated: $130K - $160K, contingent on role and location."
   },
   "evidence_sha": "ae1f009ec5cfa1a6",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784871987,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "a74973c58b"
+   ],
+   "value": "Computer Networking, Technology Hardware, and Software."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a74973c58b"
+   ],
+   "value": "Given the lack of public details on exact hours, candidates should strongly prioritize uncovering the team's actual WLB and on-call expectations to ensure it meets sane hour requirements. Emphasize a desire for a fast, innovative tech culture and probe the pace of the specific group, avoiding slow, bureaucratic divisions. Seek validation of guaranteed shutdowns and personal time respect, de-prioritizing any group that exhibits high burnout rate signs."
+  },
+  "last_attempt_at": 1784871987,
   "last_evidence_at": 1784677182,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "a74973c58b",
+    "f16eec2a6f"
+   ],
+   "value": "The exact office locations are not specified in the provided job board snippets, but headquarters or main pages are listed online."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "a74973c58b"
+   ],
+   "value": "The provided sources do not contain specific information regarding the company's core mission."
+  },
   "name": "Arista Networks",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "a74973c58b"
+   ],
+   "value": "Estimated: Demanding and technically rigorous, typically lacking startup-style flexibility."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "c76b7019a0",
+    "a74973c58b"
+   ],
+   "value": "Cloud networking solutions, Ethernet switches, routers, and network operating systems (EOS)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "a74973c58b"
+   ],
+   "value": "Estimated: 20-25 days per year, dependent on tenure."
   },
+  "refresh_after": 1790055987,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "a74973c58b"
+   ],
+   "value": "Estimated: Possible limited shutdowns during major holidays, but not guaranteed company-wide."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "c76b7019a0"
+   ],
+   "value": "The provided sources do not contain specific employee count or financial stage details."
   },
   "sources": [
    {
@@ -23926,14 +24115,46 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
+   "value": "The provided sources do not contain information regarding visa sponsorship or H1B context."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "c76b7019a0",
+    "a74973c58b"
+   ],
+   "value": "Arista Networks is a supplier of cloud networking solutions, including switches and routers, designed for large data centers and campus environments. The company makes money by selling its high-performance networking hardware and associated software subscriptions to enterprise and cloud-scale customers."
+  },
+  "synthesized_evidence_sha": "ae1f009ec5cfa1a6",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "f16eec2a6f"
+   ],
+   "value": "Arista interfaces with job boards to recruit for technical roles, though specific technical domains are not detailed in the provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677182,
   "web_search_url": "https://duckduckgo.com/?q=Arista+Networks+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a74973c58b"
+   ],
+   "value": "A role here offers exposure to the foundational networking infrastructure (switches, routers) that powering modern AI and cloud data centers. While it sits firmly in the networking space rather than being a pure AI firm, the high throughput data demands validated here can accelerate learning in distributed systems. However, candidates should note that established tech firms may carry more bureaucracy and less guaranteed shutdown flexibility than fast-moving startups."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "a74973c58b"
+   ],
+   "value": "Estimated: Above average for a tech firm, but dependent on specific role expectations."
   }
  },
  "arixa capital": {
@@ -72617,11 +72838,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -72633,6 +72856,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784871987,
   "last_evidence_at": 1784795725,
   "name": "CrackaJack Digital Solutions LLC",
   "pace_of_work": {
@@ -72645,6 +72869,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784872107,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -72708,7 +72933,7 @@
     "url": "https://crackajackdigitalsolutionsllc.applytojob.com/apply/KpZktL66FY/Software-Developer-Multiple-Openings"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784795725,
   "web_search_url": "https://duckduckgo.com/?q=CrackaJack+Digital+Solutions+LLC+company+careers+benefits",
@@ -98219,7 +98444,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -98237,7 +98462,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784871825,
+  "last_attempt_at": 1784871987,
   "last_evidence_at": 1784673256,
   "name": "FanDuel",
   "pace_of_work": {
@@ -98250,7 +98475,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784871945,
+  "retry_after": 1784872227,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -111955,79 +112180,108 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 1 (Cruise autonomy research, Ultium battery AI, vehicle intelligence platforms — publishes at CVPR/NeurIPS/ICRA, competes for top PhD talent)"
+   "value": "Estimated: High-tier prestige within the automotive sector due to direct work on autonomous vehicle AI, though potentially viewed as slightly less elite than top-tier pure-play tech giants."
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Traditional OEM model: design/engineer/manufacture vehicles, sell through franchised dealers, capture recurring revenue via financing (GM Financial), parts/service, and connected services. Pivoting to EV-first with vertical integration in batteries (Ultium) and software-defined vehicle architecture."
+   "confidence": "high",
+   "source_ids": [
+    "00fded03f8",
+    "a55cb51a20"
+   ],
+   "value": "Designs and manufactures vehicles and automotive software, generating revenue through the sale of vehicles, parts, and subscriptions to connected vehicle services."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Engineering-first culture in tech hubs (Mountain View, Phoenix, Austin) with hackathons, tech talks, open-source contributions; Detroit core more traditional but modernizing. Safety-obsessed, data-driven, collaborative. Diversity & inclusion emphasized. Less 'move fast break things,' more 'move fast validate safely.'"
+   "confidence": "high",
+   "source_ids": [
+    "00fded03f8",
+    "a55cb51a20"
+   ],
+   "value": "Highly inclusive and team-oriented, with a focus on employee belonging and development to drive the creation of better automotive products."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Consumer retail buyers, commercial fleet customers, government agencies, and rideshare/delivery operators across North America, China, and select international markets."
+   "confidence": "medium",
+   "source_ids": [
+    "00fded03f8",
+    "a55cb51a20"
+   ],
+   "value": "Global consumers seeking personal vehicles, particularly electric and autonomous transportation options."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $130k–$150k base + $15k–$30k sign-on + $30k–$60k RSU (4-yr) = ~$175k–$240k year-1 total compensation for AI/DS roles; Cruise offers may exceed range."
+   "source_ids": [
+    "a55cb51a20"
+   ],
+   "value": "Estimated: $120,000 - $150,000 base salary for early career software engineers in Sunnyvale, CA, backed by strong corporate retirement and medical benefits."
   },
   "evidence_sha": "407f2bbab50ac831",
-  "generated_at": 1784681270,
+  "generated_at": 1784871987,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Automotive / Mobility / EV / Autonomous Vehicles"
+   "confidence": "high",
+   "source_ids": [
+    "00fded03f8",
+    "a55cb51a20"
+   ],
+   "value": "Automotive Manufacturing and Autonomous Vehicle Technology."
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Expect LeetCode-style coding (medium-hard), system design for vehicle-scale data/platforms, ML fundamentals (perception, prediction, planning for AV; battery modeling for EV), and behavioral questions tied to GM's values (safety, inclusion, innovation). Domain knowledge in robotics, embedded systems, or automotive is a plus but not required for general AI/DS roles. Prepare for 'why GM over pure tech?' narratives."
+   "source_ids": [
+    "00fded03f8",
+    "a55cb51a20"
+   ],
+   "value": "Assess the team's pace of innovation to ensure it operates like a fast-paced tech company rather than a slow bureaucracy. Ask about expected working hours, work-life balance, and learning opportunities to confirm the role accelerates technical growth without sacrificing personal time."
   },
-  "last_attempt_at": 1784869982,
+  "last_attempt_at": 1784871987,
   "last_evidence_at": 1784791696,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Headquarters: Detroit, MI (Renaissance Center). Major tech hubs: Mountain View, CA (Cruise); Phoenix, AZ; Austin, TX; Toronto; Warren, MI (Tech Center). Manufacturing across US, Canada, Mexico, China, South Korea."
+   "confidence": "high",
+   "source_ids": [
+    "00fded03f8",
+    "a55cb51a20"
+   ],
+   "value": "Sunnyvale, California, USA (and other global manufacturing and corporate hubs)."
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "To create a world with zero crashes, zero emissions, and zero congestion through advanced technology and electric vehicles."
+   "confidence": "high",
+   "source_ids": [
+    "00fded03f8",
+    "a55cb51a20"
+   ],
+   "value": "To create an inclusive workplace where employees thrive and develop better products for customers, with a strong focus on autonomous and electric vehicle innovation."
   },
   "name": "General Motors",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Moderate-to-fast in Cruise and EV software orgs (2-week sprints, quarterly OKRs); slower in legacy vehicle programs (3–5 year cycles). Overall faster than traditional auto, slower than Big Tech."
+   "value": "Estimated: Moderate to fast pace driven by the push to deliver autonomous vehicle software, though corporate bureaucracy may occasionally slow down execution compared to nimble startups."
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Vehicles (cars, trucks, SUVs, EVs) under Chevrolet, Buick, GMC, Cadillac; GM Financial auto lending; OnStar connected services; Ultium battery platform; Cruise autonomous driving technology; BrightDrop commercial EV solutions."
+   "confidence": "high",
+   "source_ids": [
+    "00fded03f8",
+    "a55cb51a20"
+   ],
+   "value": "Autonomous vehicle software systems, electric vehicles, HIL (Hardware-in-the-Loop) platforms, and related automotive hardware."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15 days PTO + 10 company holidays + 1–2 floating days; additional 'winter shutdown' week (5 days) between Christmas–New Year; unlimited sick leave."
+   "source_ids": [
+    "00fded03f8",
+    "a55cb51a20"
+   ],
+   "value": "Estimated: 15-25 days of paid vacation along with standard company holidays, supported by comprehensive sickness and accident benefits."
   },
-  "refresh_after": 1789865270,
-  "retry_after": 1784871902,
+  "refresh_after": 1790055987,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -112037,12 +112291,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Annual winter shutdown (typically Dec 24–Jan 1, ~5 business days) where most non-manufacturing operations close; some teams may have summer shutdown days."
+   "value": "Estimated: Likely standard public holidays and potentially limited corporate holiday periods, though guaranteed extended tech shutdowns are not explicitly mentioned."
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Large public company (NYSE: GM); ~165,000 employees globally; $150B+ annual revenue; mature but undergoing major EV/AV transformation."
+   "confidence": "medium",
+   "source_ids": [
+    "00fded03f8",
+    "a55cb51a20"
+   ],
+   "value": "Established global enterprise with large-scale automotive manufacturing operations and a growing software engineering footprint in tech hubs like Sunnyvale, California."
   },
   "sources": [
    {
@@ -112097,34 +112354,46 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Active H-1B sponsor for engineering/tech roles; supports STEM OPT extensions; green card sponsorship (PERM) for qualified candidates. Large international workforce."
+   "confidence": "medium",
+   "source_ids": [
+    "00fded03f8",
+    "a55cb51a20"
+   ],
+   "value": "Hiring for software engineering roles in Sunnyvale, CA, though specific visa sponsorship details are not explicitly confirmed in the job postings."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "General Motors is a global automotive manufacturer that designs, builds, and sells vehicles under brands including Chevrolet, Buick, GMC, and Cadillac. The company makes money primarily through vehicle sales, financing via GM Financial, and increasingly through software-enabled services and its Cruise autonomous vehicle subsidiary."
+   "confidence": "high",
+   "source_ids": [
+    "00fded03f8",
+    "a55cb51a20"
+   ],
+   "value": "General Motors is a legacy automotive manufacturer actively transitioning into a technology company focused on autonomous vehicles and electric vehicles. They make money by designing, manufacturing, and selling vehicles, parts, and related software services globally."
   },
-  "synthesized_evidence_sha": "33da41627d3c11c8",
+  "synthesized_evidence_sha": "407f2bbab50ac831",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "EV platform engineering (Ultium), battery cell R&D, autonomous driving (Cruise), vehicle software/OTA, connected services (OnStar), manufacturing automation, ADAS, simulation/validation, cybersecurity, data platforms for telematics/fleet."
+   "confidence": "high",
+   "source_ids": [
+    "00fded03f8",
+    "a55cb51a20"
+   ],
+   "value": "Involves building autonomous vehicle software systems, AV HIL (Hardware-in-the-Loop) platforms, and infrastructure to support automated driving technology."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784657139,
   "web_search_url": "https://duckduckgo.com/?q=General+Motors+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "GM offers elite AI/DS prestige through its Cruise autonomy division and Ultium EV platform work, with new-grad total compensation competitive with top tech ($130k–$170k base + equity/bonus). The mission-driven zero-crashes/zero-emissions narrative is genuine and central to strategy. Culture is shifting from legacy auto bureaucracy toward software-defined speed, but remains a large corporation — expect structured processes, not startup chaos. Work-life balance is generally respected with 9/80 or "
+   "source_ids": [
+    "00fded03f8",
+    "a55cb51a20"
+   ],
+   "value": "GM's AV division offers the high pay and elite prestige of a Silicon Valley tech role while working on cutting-edge autonomous AI. The company promotes a culture of inclusion and stability, which can provide a mission-driven environment that respects work-life balance and avoids the high-burnout toxicity often found in pure-tech startups."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 3.8/5 — engineering roles typically 40–45 hrs/week; Cruise can spike to 50+ during milestones; 9/80 schedules and winter shutdown week common."
+   "value": "Estimated: Good work-life balance with standard corporate protections, offering a more sustainable environment than high-burnout startups, though requiring oversight to maintain sane hours."
   }
  },
  "generalist": {
@@ -194019,11 +194288,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -194035,6 +194306,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784871987,
   "last_evidence_at": 1784674221,
   "name": "Oklahoma State Government",
   "pace_of_work": {
@@ -194047,6 +194319,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784872107,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -194090,7 +194363,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=152e5101e50cf6b1ff33e24cc05bf8328fd39395c31163ebaaf5b75ddfb1d5e5JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0c53fa42-0d9d-655f-318e-eddf0c8164aa&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9Pa2xhaG9tYQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674221,
   "web_search_url": "https://duckduckgo.com/?q=Oklahoma+State+Government+company+careers+benefits",
@@ -263120,7 +263393,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -263138,7 +263411,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784871825,
+  "last_attempt_at": 1784871987,
   "last_evidence_at": 1784674266,
   "name": "TD Synnex",
   "pace_of_work": {
@@ -263151,7 +263424,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784871945,
+  "retry_after": 1784872227,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -300857,37 +301130,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 — Strong applied ML opportunities in scheduling optimization, retention prediction, and labor forecasting; not a primary AI research lab but high-impact data science in production."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "99aff3428f"
+   ],
+   "value": "B2B SaaS platform selling workforce management solutions to enterprise customers in food service and retail; revenue from subscription contracts with multi-location brands."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "99aff3428f"
+   ],
+   "value": "Mission-driven, builder-oriented, empathetic to end-users (hourly workers); engineering culture values shipping reliable software over heroics; diverse team tackling unglamorous but critical problems."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "99aff3428f"
+   ],
+   "value": "Leading brands across multiple sectors including Burger King, Carl's Jr./Hardee's, IHOP, KFC, and Culver's."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$160k base + equity (0.05%-0.15%) + sign-on; total comp $150k-$190k. Series B Bay Area startup benchmark for strong engineering talent."
   },
   "evidence_sha": "e990404afc7a5f95",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784871987,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "99aff3428f"
+   ],
+   "value": "HR Technology / Workforce Management SaaS (Vertical: Hourly Workforce, QSR, Retail)"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "99aff3428f",
+    "168277ade8"
+   ],
+   "value": "Expect practical full-stack and system design questions relevant to multi-tenant SaaS, high-volume scheduling/payroll logic, and device integration. Embedded roles will test C/C++, RTOS, and hardware-software interfaces. Cultural fit around mission empathy for hourly workers, ownership in a fast-paced but sustainable environment, and ability to ship quality code without heroics will be assessed."
+  },
+  "last_attempt_at": 1784871987,
   "last_evidence_at": 1784861698,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "fca3940ccf",
+    "a8a79ef4ff"
+   ],
+   "value": "Headquarters in San Francisco Bay Area; likely hybrid/remote-friendly given modern SaaS startup norms."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "99aff3428f"
+   ],
+   "value": "Built for the hourly workforce from day one so that businesses and their employees can thrive."
+  },
   "name": "Workstream",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable — Series B scaling demands velocity, but mission focus and non-toxic reputation suggest guarded against burnout; typical startup sprint cycles with realistic planning."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "99aff3428f"
+   ],
+   "value": "Hiring, onboarding, and workforce management software tailored for hourly workers; expanding product portfolio to deliver on a broader vision for the hourly workforce."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays; unlimited PTO policies common at this stage but actual usage encouraged."
   },
+  "refresh_after": 1790055987,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -300897,7 +301230,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal company-wide shutdowns; likely observes major US holidays and offers flexible year-end time off."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "99aff3428f"
+   ],
+   "value": "High-growth Series B startup; headcount likely 100-300 based on stage and customer base."
   },
   "sources": [
    {
@@ -300961,14 +301301,43 @@
     "url": "https://job-boards.greenhouse.io/workstream/jobs/6111335004"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B for specialized engineering roles; Series B companies typically support visa transfers and cap-subject petitions for strong candidates."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "99aff3428f"
+   ],
+   "value": "Workstream is a Series B HR technology platform purpose-built for the hourly workforce, providing hiring, onboarding, and workforce management software to major quick-service restaurant and retail brands. The company focuses on helping businesses and their hourly employees thrive through specialized automation."
+  },
+  "synthesized_evidence_sha": "e990404afc7a5f95",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "99aff3428f",
+    "168277ade8"
+   ],
+   "value": "Full-stack development for HR/workforce SaaS platform; embedded software engineering roles indicate hardware/device integration; likely React/TypeScript frontend, Python/Go backend, cloud infrastructure, and mobile apps for hourly workers."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784861698,
   "web_search_url": "https://duckduckgo.com/?q=Workstream+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "99aff3428f",
+    "dbc3b9e88f"
+   ],
+   "value": "Workstream offers a mission-driven Series B environment tackling real problems for hourly workers — a massive, underserved labor segment — with elite technical challenges in scaling SaaS and embedded systems. The company’s high-growth stage means significant ownership and learning velocity, while its focus on a humane mission (not ad-tech or fintech) aligns with values-driven work. Candidate priorities for prestige, pay, balance, and growth are met by a well-funded, product-expanding startup wit"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Leadership emphasizes humane treatment of hourly workers internally; culture likely respects boundaries with core hours and limited weekend expectations."
   }
  },
  "world wide professional solutions": {
