@@ -23918,41 +23918,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (elite) — peer with Two Sigma, Citadel, DE Shaw, Renaissance in quantitative research prestige; publishes in top ML/finance venues."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "30c7d35458",
+    "63cd360c93"
+   ],
+   "value": "Asset management fee model: charges management fees (typically 0.5%-1.5% AUM) and performance fees on certain strategies; scales with assets under management (~$100B+)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Academic, collaborative, intellectually rigorous; low politics, high autonomy for researchers; meritocratic with long tenures common."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "30c7d35458",
+    "63cd360c93"
+   ],
+   "value": "Institutional investors (pension funds, sovereign wealth funds, endowments), financial advisors, and retail investors via mutual funds and ETFs."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $175k-$225k base + $75k-$150k sign-on + $50k-$100k year-end bonus (total $300k-$475k) for quant research/data science roles."
   },
   "evidence_sha": "7b57fa630c0d4454",
+  "generated_at": 1784878881,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "30c7d35458",
+    "63cd360c93"
+   ],
+   "value": "Quantitative Asset Management / Systematic Investing"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+   "value": "Expect deep technical interviews: probability/statistics, linear algebra, optimization, ML theory, coding (Python/C++), and research problem-solving. Emphasis on scientific rigor, reproducibility, and translating research to production. Behavioral focus on collaboration, intellectual honesty, and long-term thinking."
   },
-  "last_attempt_at": 1784878715,
+  "last_attempt_at": 1784878881,
   "last_evidence_at": 1784673654,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "30c7d35458",
+    "63cd360c93"
+   ],
+   "value": "Headquarters in Greenwich, CT; major offices in New York, London, Chicago, Hong Kong, Sydney, and Bangalore."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "30c7d35458",
+    "63cd360c93"
+   ],
+   "value": "To deliver superior risk-adjusted returns through rigorous quantitative research and systematic investment processes."
+  },
   "name": "AQR Capital Management",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate-to-fast: research cycles are deliberate but production deadlines exist; less frantic than HFT shops, more structured than early-stage startups."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "30c7d35458",
+    "63cd360c93"
+   ],
+   "value": "Quantitative investment strategies including equity, fixed income, macro, multi-asset, and alternative funds; systematic portfolio solutions; research publications and data."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 vacation days + 10-12 holidays + flexible sick/personal time; unlimited not standard."
   },
-  "retry_after": 1784878835,
+  "refresh_after": 1790062881,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -23962,7 +24018,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No firm-wide guaranteed shutdowns; some teams observe quiet periods around holidays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "30c7d35458",
+    "63cd360c93"
+   ],
+   "value": "Large, established private firm (~1,000+ employees) founded in 1998; mature stage with global operations."
   },
   "sources": [
    {
@@ -23986,14 +24050,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=70ca32ae503ebddb6de0ee44fe7202801310e85e0674b1dfd0dd2fe923b82bc6JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2b466e61-87e5-6127-3909-79fc865660d9&u=a1aHR0cHM6Ly93d3cuYXFyLmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "30c7d35458",
+    "63cd360c93"
+   ],
+   "value": "Actively sponsors H-1B and green cards for quantitative researchers, data scientists, and engineers; known for hiring PhDs and top-tier graduates."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "30c7d35458",
+    "63cd360c93"
+   ],
+   "value": "AQR Capital Management is a quantitative investment management firm that applies systematic, research-driven strategies across asset classes. It generates revenue primarily through management fees and performance fees on assets under management for institutional and retail clients."
+  },
+  "synthesized_evidence_sha": "7b57fa630c0d4454",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "30c7d35458",
+    "63cd360c93"
+   ],
+   "value": "Advanced quantitative research, machine learning for alpha generation, high-performance computing, large-scale data pipelines, portfolio optimization, risk modeling, and systematic trading infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673654,
   "web_search_url": "https://duckduckgo.com/?q=AQR+Capital+Management+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AQR offers elite prestige in quantitative finance with top-tier new-grad compensation, combining rigorous academic research culture with systematic production systems. It balances intellectual depth with structured work norms typical of established quant firms, appealing to candidates who want cutting-edge ML/applied math without startup chaos or investment banking hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7/10 — generally respected hours (50-60/wk typical), protected weekends, low fire-drill culture; varies by team and bonus cycle."
   }
  },
  "aquatic capital management": {
@@ -82639,11 +82733,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -82655,6 +82751,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784878881,
   "last_evidence_at": 1784674768,
   "name": "Daimler Truck",
   "pace_of_work": {
@@ -82667,6 +82764,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784879001,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -82710,7 +82808,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=5e8110e01dcdd569f523087c09bb27de790985c9c6ea82c87157862dfebbc03fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ea687d1-bcb0-6028-15c3-904cbd536131&u=a1aHR0cHM6Ly93d3cuZGFpbWxlcnRydWNrLmNvbS9lbg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674768,
   "web_search_url": "https://duckduckgo.com/?q=Daimler+Truck+company+careers+benefits",
@@ -141275,11 +141373,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -141291,6 +141391,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784878881,
   "last_evidence_at": 1784674482,
   "name": "Huntington Bancshares",
   "pace_of_work": {
@@ -141303,6 +141404,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784879001,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -141346,7 +141448,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=f5d0d5a93086fc5aac6f3693506f60bc41538b584f72a07a708b54ad4dd1b5efJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=26a4c2ce-575e-61a8-27ca-d553565360e2&u=a1aHR0cHM6Ly93d3cuaHVudGluZ3Rvbi5jb20vP21zb2NraWQ9MjZhNGMyY2U1NzVlNjFhODI3Y2FkNTUzNTY1MzYwZTI&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674482,
   "web_search_url": "https://duckduckgo.com/?q=Huntington+Bancshares+company+careers+benefits",
@@ -168953,7 +169055,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -168971,7 +169073,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784878400,
+  "last_attempt_at": 1784878881,
   "last_evidence_at": 1784737480,
   "name": "Lendable",
   "pace_of_work": {
@@ -168984,7 +169086,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784878880,
+  "retry_after": 1784879841,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -170968,11 +171070,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -170984,6 +171088,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784878881,
   "last_evidence_at": 1784675879,
   "name": "Lidl US",
   "pace_of_work": {
@@ -170996,6 +171101,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784879001,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -171039,7 +171145,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=ab99b0e3f185fdbcf55114e63fd311d41c08dd80a4e02a180220243a120d401eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0f446203-d0c3-62fc-3d75-759ed14763ba&u=a1aHR0cHM6Ly93d3cubGlkbC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784675879,
   "web_search_url": "https://duckduckgo.com/?q=Lidl+US+company+careers+benefits",
@@ -178590,37 +178696,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low. prestige for AI/Data Science roles is minimal, as core functions are legal rather than tech-driven and the office lacks a reputation for advanced technical innovation."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "9a53d35987"
+   ],
+   "value": "Funded entirely by local government appropriations and taxpayer dollars to carry out the legal and civic function of criminal prosecution."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Formal, public-service-oriented, and mission-driven. Environment is governmental with strict adherence to legal procedures and protocols."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "9a53d35987"
+   ],
+   "value": "The citizens of New York County and the broader public, who rely on the office to uphold the law and maintain public safety."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $60,000 - $85,000. Municipal salaries align with public sector scales, falling far short of top-tier private sector tech compensation."
   },
   "evidence_sha": "56c5e2a413a39e66",
+  "generated_at": 1784878881,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "9a53d35987"
+   ],
+   "value": "Law Enforcement / Criminal Justice / Municipal Government"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Interviews will prioritize legal framework knowledge, public service ethos, and willingness to navigate bureaucratic constraints. Candidates should expect heavy vetting regarding ethics and background, as well as whether they accept lower municipal pay and slower tech adoption in exchange for mission-driven work."
   },
+  "last_attempt_at": 1784878881,
   "last_evidence_at": 1784675878,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "9a53d35987"
+   ],
+   "value": "Headquartered in New York County (Manhattan), New York City."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "9a53d35987"
+   ],
+   "value": "To seek justice, protect the community, and ensure public safety by prosecuting crimes and advocating for victims and their families."
+  },
   "name": "Manhattan District Attorney's Office",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Generally slower and process-driven due to government bureaucracy, though high-profile legal cases can occasionally create intense, high-stakes work spikes."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "9a53d35987"
+   ],
+   "value": "Criminal prosecutions, legal investigations, public safety initiatives, and community outreach programs aimed at protecting Manhattan residents."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Generous public-sector accrual typically offering 15 to 25 days of vacation annually, plus standard government holidays."
   },
+  "refresh_after": 1790062881,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -178630,7 +178790,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Minimal to none, aside from standard public holidays. Essential government operations generally do not have company-wide holiday shutdowns."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "9a53d35987"
+   ],
+   "value": "A large, established municipal government office employing hundreds of prosecutors, investigators, and administrative personnel."
   },
   "sources": [
    {
@@ -178664,14 +178831,37 @@
     "url": "https://www.bing.com/ck/a?!&&p=f54dc8bc7b28c77e7987fe4b0d969caed8ef00a3998418b1ee1141df1a032428JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0f446203-d0c3-62fc-3d75-759ed14763ba&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTWFuaGF0dGFu&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unlikely to offer visa sponsorship for international candidates, as it is a public city office requiring employees to be U.S. citizens or legal residents authorized to work."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "9a53d35987"
+   ],
+   "value": "The Manhattan District Attorney's Office is the chief prosecutorial office for New York County, responsible for investigating and prosecuting crimes committed within the borough of Manhattan. As a government entity, it does not operate for profit; instead, it is funded by taxpayer dollars to enforce laws and administer justice on behalf of the public."
+  },
+  "synthesized_evidence_sha": "56c5e2a413a39e66",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Involves case management systems, digital evidence processing, and data analysis for investigative support, but relies heavily on legacy municipal technology rather than cutting-edge AI or data science innovation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675878,
   "web_search_url": "https://duckduckgo.com/?q=Manhattan+District+Attorney%27s+Office+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This organization does not align with your priorities for a top-tier AI or data science role offering elite new-grad pay and a fast-paced, innovative tech culture. As a government office, it operates within rigid bureaucracy and focuses on civic duty rather than accelerating technical learning or pursuing cutting-edge AI initiatives."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate to Good. Unlike Big Tech, government roles typically offer predictable hours and a lack of profit-driven crunch, but trial preparation may require occasional overtime."
   }
  },
  "mantech": {
@@ -196040,7 +196230,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -196058,7 +196248,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784878544,
+  "last_attempt_at": 1784878881,
   "last_evidence_at": 1784674432,
   "name": "Nakupuna Companies",
   "pace_of_work": {
@@ -196071,7 +196261,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784878784,
+  "retry_after": 1784879361,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -196601,37 +196791,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (industry-leading publications, clinical-grade ML, high-impact diagnostics)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Diagnostic test sales with revenue from insurance reimbursement, direct patient pay, and biopharma partnerships for clinical trial enrollment and companion diagnostics."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, collaborative, intellectually rigorous; engineers and scientists work side-by-side; transparency from leadership; low politics."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Obstetricians, oncologists, transplant centers, health systems, insurance payers, and patients seeking genetic insights."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140k-$165k base + 10-15% bonus + RSUs ($40k-$60k/yr vesting); total comp ~$190k-$230k."
   },
   "evidence_sha": "c4389c737415ffb2",
+  "generated_at": 1784878881,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Clinical Diagnostics / Genomics / Precision Medicine"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare for deep technical screens on ML for noisy biological data, scalable pipeline design, and statistical validation. Expect behavioral questions on cross-functional collaboration with clinicians and regulatory awareness. Demonstrate ability to ship reliable code in fast-paced, high-stakes healthcare context."
+  },
+  "last_attempt_at": 1784878881,
   "last_evidence_at": 1784674767,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in Austin, TX; major labs in San Carlos, CA and Austin; remote-friendly roles across US."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To make personalized genetic testing and diagnostics part of standard clinical care worldwide."
+  },
   "name": "Natera",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast-paced but structured; sprint cycles with clear regulatory milestones; minimal bureaucracy for a regulated company."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Panorama (NIPT), Signatera (cancer recurrence monitoring), Prospera (organ transplant rejection), Horizon (carrier screening), and related bioinformatics pipelines."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 company holidays + flexible sick leave; unlimited not offered but generous accrual."
   },
+  "refresh_after": 1790062881,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -196641,7 +196873,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 24-Jan 1) plus summer half-day Fridays; no mandatory crunch periods."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public company (NASDAQ: NTRA) with ~3,000+ employees, profitable and scaling globally."
   },
   "sources": [
    {
@@ -196675,14 +196912,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=44fec75c210f802334af0553088c475d49ef81a3b7b3161607c30afda0957ad9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ea687d1-bcb0-6028-15c3-904cbd536131&u=a1aHR0cHM6Ly93d3cubmF0ZXJhLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B and green cards for technical roles; history of cap-exempt filings through university collaborations."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Natera is a global leader in cell-free DNA testing, providing non-invasive prenatal testing (NIPT), oncology screening, and organ transplant monitoring. The company generates revenue by selling proprietary genetic tests to hospitals, clinics, and directly to patients, billing insurance and through partnerships."
+  },
+  "synthesized_evidence_sha": "c4389c737415ffb2",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large-scale bioinformatics, machine learning for variant calling and classification, cloud-native data pipelines (AWS/GCP), real-time analytics, and regulatory-grade software development for clinical diagnostics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674767,
   "web_search_url": "https://duckduckgo.com/?q=Natera+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Natera offers elite AI/DS prestige in a mission-critical clinical genomics setting with top-tier new-grad compensation. The culture emphasizes rapid innovation in regulated environments, strong work-life boundaries (core hours, protected weekends), and structured mentorship that accelerates growth without burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 – core hours, protected weekends, on-call rotations shared and compensated; leadership emphasizes sustainable pace."
   }
  },
  "national center for missing exploited children": {
