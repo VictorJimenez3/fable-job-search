@@ -2957,37 +2957,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "High — core product differentiation relies on proprietary ML for ransomware detection, backup anomaly scoring, and automated incident response; publishes at top security/ML venues; recruits from PhD programs and FAIR/MSR alumni."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Subscription and perpetual license revenue from software (Cyber Protect, backup, DR) plus recurring cloud storage fees; significant portion sold through MSP partners on monthly recurring revenue (MRR) contracts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, low-meeting, written-async culture; diverse international teams; strong emphasis on technical mentorship (formal buddy + guild system); minimal politics, decisions driven by RFCs and data."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "SMBs, enterprises, and individual consumers; a major channel is managed service providers (MSPs) who resell Acronis to their own clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: US (Scottsdale/remote) $125k–$145k base + 10–15% bonus + RSU (4-yr vest, ~$40k–$60k total); EU/Israel/Singapore adjusted to local top-quartile for cyber/security new grads."
   },
   "evidence_sha": "6c31697329a0e11b",
+  "generated_at": 1784862005,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Cyber protection / data backup & recovery / endpoint security (converged)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep systems/ML questions: designing scalable backup pipelines, real-time anomaly detection on streaming telemetry, cross‑platform agent architecture, and adversarial ML robustness. Be ready to discuss productionizing models in constrained endpoint environments and collaborating with MSP automation teams. Cultural interviews probe ownership, async communication, and boundary-setting habits."
+  },
+  "last_attempt_at": 1784862005,
   "last_evidence_at": 1784673653,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Dual HQ: Schaffhausen, Switzerland and Singapore; R&D centers in Bulgaria (Sofia), Israel (Tel Aviv), USA (Scottsdale, AZ), and Serbia (Belgrade); sales offices worldwide."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide complete cyber protection — safety, accessibility, privacy, authenticity, and security (SAPAS) — for all data, applications, and systems."
+  },
   "name": "Acronis",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast but sustainable — quarterly release cadence for cloud services, bi‑annual major agent releases; sprint-based with explicit \"no weekend deployments\" rule in most R&D sites."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Acronis Cyber Protect (integrated backup, anti‑malware, endpoint management), Acronis True Image (consumer backup), Acronis Cyber Backup, Acronis Cyber Disaster Recovery, and cloud storage / MSP‑focused platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25–30 days annual leave (varies by country; Switzerland/Singapore statutory minimums + company top-up) + 10–12 public holidays."
   },
+  "refresh_after": 1790046005,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -2997,7 +3038,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual company-wide shutdown (last week of December) + optional summer shutdown week in European offices; no-meeting Fridays in several R&D sites."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Private, ~2,000–2,500 employees globally; majority-owned by CVC Capital Partners since 2020; profitable, mature growth stage."
   },
   "sources": [
    {
@@ -3031,14 +3077,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=0b60d751c42c45a9573d6ccb2fc3444e309dfacc377b5eeffa419e0c9de91af8JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2b466e61-87e5-6127-3909-79fc865660d9&u=a1aHR0cHM6Ly93d3cuYWNyb25pcy5jb20vZW4v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Regularly sponsors H‑1B and other work visas in the US (Scottsdale, remote-eligible roles); also supports EU Blue Cards and Singapore EP/S-Pass for R&D hubs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Acronis is a global cyber protection company that combines data backup, disaster recovery, and cybersecurity into integrated solutions. It serves both businesses and consumers through direct sales and a large managed service provider (MSP) partner network."
+  },
+  "synthesized_evidence_sha": "6c31697329a0e11b",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large-scale backup/storage engines, cross‑platform agents (Windows, Linux, macOS, mobile), anti‑malware/EDR integration, cloud infrastructure, AI‑based threat detection, and MSP automation APIs."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673653,
   "web_search_url": "https://duckduckgo.com/?q=Acronis+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Acronis offers a rare blend: elite AI/data-science prestige (core ML-driven threat detection, anomaly detection at petabyte scale) with new‑grad compensation competitive with top-tier security vendors, inside a private, engineering-led culture that avoids big‑tech bureaucracy. The mission — protecting all data everywhere — is tangible and customer-visible. Leadership has publicly emphasized sustainable pace, guaranteed shutdown policies in several offices, and explicit WLB commitments, making it"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "4/5 — company-wide \"right to disconnect\" policy in EU/Swiss locations; Singapore and US teams observe core-hours + flexible remote; on-call rotation is compensated and capped at 1 week/month per engineer."
   }
  },
  "acuity": {
@@ -86581,40 +86648,89 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low (Tier 3). As a water filtration hardware brand, it is not recognized as a top-tier AI/Data Science employer."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "06f42b79b5",
+    "e4011f4c48"
+   ],
+   "value": "Machinery and equipment manufacturing, likely following a B2B and B2C hardware sales model with recurring revenue from replacement filter cartridges."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional, stable, and corporate. Likely suited for hardware and mechanical engineers rather than specialized AI/ML practitioners."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "06f42b79b5"
+   ],
+   "value": "Commercial foodservice operators, retail consumers, and potentially industrial clients requiring purified water or fluid management."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75,000 - $95,000. Pay for technical roles at non-tech industrial manufacturers generally lags behind elite tech or AI firms."
   },
   "evidence_sha": "2d93c571d44d74c7",
+  "generated_at": 1784862005,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "e4011f4c48"
+   ],
+   "value": "Commercial and Residential Water Treatment / Industrial Machinery Manufacturing."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "If interviewing for a data or IT role here, focus questions on how the team modernizes legacy systems and the actual scope of technical innovation. Ask explicitly about day-to-day pace, work-life boundaries, and whether the culture is bogged down by corporate bureaucracy before accepting an offer."
   },
-  "last_attempt_at": 1784842178,
+  "last_attempt_at": 1784862005,
   "last_evidence_at": 1784677184,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "e4011f4c48"
+   ],
+   "value": "Headquarters and office locations not explicitly listed in the snippets, though parent company operations exist under PentairEverpure."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Everpure",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow to moderate. As a subsidiary of an established conglomerate, the pace is likely driven by traditional industrial manufacturing cycles rather than rapid tech iteration."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "e4011f4c48"
+   ],
+   "value": "Water filtration and purification systems, replacement cartridges, and related fluid handling/treatment products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 to 25 days annually, following standard corporate manufacturing benefits."
   },
+  "refresh_after": 1790046005,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -86624,7 +86740,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None guaranteed in research. Typical legacy industrial companies do not offer tech-style end-of-year guaranteed shutdowns."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "06f42b79b5"
+   ],
+   "value": "Operates as a brand or subsidiary under Pentair (a large, publicly-traded industrial conglomerate)."
   },
   "sources": [
    {
@@ -86658,14 +86781,38 @@
     "url": "https://www.bing.com/ck/a?!&&p=10e82cb0be548c56457bf176caee0a677bb1c2807451676ab3c311a6ef376ad7JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0b35a25d-ffe7-6b72-3428-b5c0fe9e6aff&u=a1aHR0cHM6Ly93d3cuZXZlcnB1cmVkYXRhLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "06f42b79b5",
+    "e4011f4c48"
+   ],
+   "value": "Based on the retrieved page titles and URLs, Everpure appears to operate under the PentairEverpure parent company, focusing on the water filtration and treatment sector. They likely design and manufacture commercial and residential water purification systems, making money by selling these filtration products and replacement cartridges to businesses and consumers."
+  },
+  "synthesized_evidence_sha": "2d93c571d44d74c7",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677184,
   "web_search_url": "https://duckduckgo.com/?q=Everpure+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This is a legacy industrial subsidiary (water filtration hardware) rather than a fast-paced, high-prestige AI or data science employer. It likely lacks the elite technical prestige, high new-grad pay, and fast innovative tech culture you are seeking. While large conglomerates may offer standard WLB, this environment will likely involve traditional corporate bureaucracy and slow-paced engineering rather than rapid AI career acceleration."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate to Good. Large legacy industrial companies typically enforce standard corporate hours, though this may come at the expense of rapid technical innovation."
   }
  },
  "eversource energy": {
@@ -125033,40 +125180,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 – Strong applied AI/ML engineering practice within a services model; limited pure research output or high-profile publications."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Project-based consulting fees, fixed-price managed services contracts, and time-and-materials staffing arrangements."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-focused, collaborative, with a mix of startup agility and large-company processes. Emphasis on upskilling through internal academies and certifications."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mid-to-large enterprises across healthcare, financial services, retail, manufacturing, and technology sectors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$105,000 base + modest bonus + RSU (LTTS stock) for US roles; varies by location and role (data engineer vs ML engineer)."
   },
   "evidence_sha": "ae4d192476f93957",
+  "generated_at": 1784862005,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "IT Services / Consulting / Digital Transformation"
   },
-  "last_attempt_at": 1784842178,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect practical coding (Python/SQL), ML fundamentals (model evaluation, deployment), cloud basics, and case-study problem solving. Emphasize ability to learn quickly, communicate with clients, and deliver in agile teams. Prepare for behavioral questions on handling ambiguity and balancing multiple priorities."
+  },
+  "last_attempt_at": 1784862005,
   "last_evidence_at": 1784673652,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Fremont, CA; delivery centers in India (Bangalore, Chennai, Pune), Mexico, and client sites across North America and Europe."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To accelerate digital transformation for clients through innovative engineering and deep domain expertise."
+  },
   "name": "Intelliswift - An LTTS Company",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast – Project-driven delivery cycles, frequent client interactions, and rapid onboarding to new tech stacks. Occasional crunch near milestones."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Application modernization, cloud migration, data & analytics, AI/ML enablement, product engineering, DevOps, and IT staffing services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 US holidays (varies by location/tenure)."
   },
+  "refresh_after": 1790046005,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -125076,7 +125261,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No guaranteed company-wide shutdowns; some teams observe reduced hours during major holidays."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mid-sized subsidiary of LTTS (L&T Technology Services), ~2,000+ employees globally, established >20 years, post-acquisition integration phase."
   },
   "sources": [
    {
@@ -125110,14 +125300,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=d2dee58b992d70684e5846928778786a850b6937df0559e01847e22917a798abJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2b466e61-87e5-6127-3909-79fc865660d9&u=a1aHR0cHM6Ly93d3cuaW50ZWxsaXN3aWZ0LmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active H-1B sponsor (as LTTS subsidiary); transfers and new petitions common for engineering roles. Green card support (PERM) typical for long-term employees."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Intelliswift, an LTTS Company, is a digital transformation and product engineering services provider that helps enterprises modernize applications, adopt cloud, and leverage data analytics. It generates revenue through consulting engagements, managed services, and staffing solutions for technology projects."
+  },
+  "synthesized_evidence_sha": "ae4d192476f93957",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Full-stack development, cloud architecture (AWS/Azure/GCP), data engineering, machine learning model deployment, legacy modernization, and embedded systems for IoT."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673652,
   "web_search_url": "https://duckduckgo.com/?q=Intelliswift+-+An+LTTS+Company+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers a fast-paced services environment with exposure to diverse AI/ML projects across industries, backed by LTTS scale. While not a pure-play AI research lab, it provides hands-on production ML experience and clear career ladders. Work-life balance varies by project but generally respects standard consulting hours; guaranteed shutdowns are not policy. New grad pay is competitive for services firms but below top-tier product companies."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "3.5/5 – Generally reasonable hours (40-45 avg), but client demands can cause variability. No company-wide guaranteed shutdowns."
   }
  },
  "interaction": {
@@ -128928,37 +129139,88 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 (Strong) — Growing ML team applied to endpoint telemetry, threat detection, and fleet analytics. Not a primary AI research lab, but production ML at scale on unique Apple-ecosystem data. Prestige derives from domain uniqueness and security impact rather than pure AI publishing volume."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "cfc8a3bb36"
+   ],
+   "value": "Subscription SaaS (recurring revenue) with tiered pricing for Business (SMB to Enterprise) and Education (K-12 to Higher Ed). Also sells through partner/reseller channel. Offers 14-day free trials. Publicly traded (NASDAQ: JAMF) since 2020; taken private by Vista Equity Partners in 2024."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-led, pragmatic, collaborative, and mission-oriented (education + privacy). Low ego, high craftsmanship. Strong Apple enthusiast community internally. Remote/hybrid friendly with intentional offsites. Diversity and inclusion initiatives visible. Vista ownership brings operational discipline without stripping culture."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "cfc8a3bb36"
+   ],
+   "value": "Enterprise businesses (small to large), K-12 school districts, higher education institutions, and managed service partners/resellers. Notable customers include IBM, SAP, and numerous Fortune 500 companies running Apple fleets."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $115k-$135k base + 10-15% target bonus + RSUs (~$30k-$50k/yr vesting). Total comp ~$155k-$195k. Minneapolis COL-adjusted; higher in SF/NYC hubs. Signing bonus $10k-$20k common."
   },
   "evidence_sha": "51e643596fd65b08",
+  "generated_at": 1784862005,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "cfc8a3bb36"
+   ],
+   "value": "Enterprise Software / SaaS — Unified Endpoint Management (UEM) & Endpoint Security (Apple-first)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical screens on: (1) Apple OS internals (launchd, XPC, entitlements, TCC, kernel extensions/eBPF), (2) distributed systems / cloud-native design (K8s, gRPC, event-driven architectures), (3) security fundamentals (zero trust, EDR telemetry, MITRE ATT&CK), and (4) data/ML for anomaly detection at scale. Behavioral emphasis on customer empathy (IT admin persona), privacy-by-design, and cross-functional collaboration. Prepare for a take-home or live coding exercise reflecting real J"
   },
+  "last_attempt_at": 1784862005,
   "last_evidence_at": 1784677344,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Minneapolis, MN. Major hubs: Minneapolis, San Diego, Portland, London, Sydney, Tokyo, Frankfurt, Singapore. Remote-friendly hybrid model."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "cfc8a3bb36"
+   ],
+   "value": "To help organizations succeed with Apple at scale by providing the only complete management and security solution for an Apple-first environment that is enterprise secure, consumer simple, and protects personal privacy."
+  },
   "name": "Jamf",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable — quarterly planning with 2-week sprints; emphasis on shipping quality Apple-platform code. Less fire-drill culture than consumer tech; more predictable than early-stage startups. On-call rotation exists for platform/SRE but generally respected."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "cfc8a3bb36"
+   ],
+   "value": "Jamf Pro (enterprise management), Jamf Now (SMB management), Jamf School (education), Jamf Protect (endpoint security), Jamf Connect (identity/access), Jamf Safe Internet (content filtering), and Jamf Data Policy (compliance). All delivered as cloud-native SaaS with on-prem options."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + unlimited sick/mental health days. 'Recharge' weeks encouraged. Parental leave: 16-20 weeks paid."
   },
+  "refresh_after": 1790046005,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -128968,7 +129230,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically Dec 24 - Jan 1) + occasional 'global recharge' Fridays. Not guaranteed every year but strong precedent."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: ~2,500 employees globally; late-stage growth / private-equity owned (Vista Equity Partners). Revenue estimated $500M+ ARR. Headquarters in Minneapolis, MN with offices worldwide."
   },
   "sources": [
    {
@@ -129002,14 +129269,37 @@
     "url": "https://www.jamf.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Actively sponsors H-1B and green cards for specialized engineering, security, and data roles. History of cap-subject and cap-exempt filings. Visa support typical for senior and niche Apple-platform talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "cfc8a3bb36"
+   ],
+   "value": "Jamf is the leading Apple device management and security platform, providing a complete solution for organizations to manage, secure, and deploy Apple devices (Mac, iPad, iPhone, Apple TV) at scale. The company serves both enterprise and education customers with an Apple-first approach that balances enterprise security with consumer simplicity and personal privacy."
+  },
+  "synthesized_evidence_sha": "51e643596fd65b08",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Cloud-native microservices (AWS, Kubernetes), macOS/iOS/tvOS agent development (Swift, Objective-C), security tooling (eBPF, kernel extensions), data pipeline/ML for threat detection, API/platform integrations (MDM, Identity, SIEM). Strong Apple ecosystem expertise required."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677344,
   "web_search_url": "https://duckduckgo.com/?q=Jamf+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Jamf sits at the unique intersection of elite Apple-platform engineering, high-scale SaaS, and endpoint security — offering new grads rare depth in macOS/iOS internals, cloud infrastructure, and ML-driven threat detection. As the category leader in a growing Apple-in-enterprise market, it provides prestige, strong compensation, and a mission-driven culture (education + privacy focus) with a reputation for sustainable pace and work-life balance compared to hyperscaler or ad-tech environments."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Strong reputation for work-life balance in employee reviews. Core hours flexibility, minimal weekend work, generous PTO, and leadership that models boundaries. Privacy-focused mission attracts culture of respect for personal time."
   }
  },
  "jane street": {
@@ -148073,40 +148363,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low/Unknown — no evidence of AI research publications, conference presence, or elite talent branding in supplied sources."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "c03d598abb",
+    "bd219b6793",
+    "454264577f"
+   ],
+   "value": "No business model details found in the supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown — only TikTok redirects found; no Glassdoor, Blind, or team blog content surfaced."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "c03d598abb",
+    "bd219b6793",
+    "454264577f"
+   ],
+   "value": "No customer information found in the supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown — junior mining tech roles often pay below Big Tech; likely $70k–$100k CAD/AUD base unless venture-backed with dedicated ML team."
   },
   "evidence_sha": "3ce7ee03c366a68f",
+  "generated_at": 1784862005,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Mineral exploration / Mining technology"
   },
-  "last_attempt_at": 1784842178,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Ask: (1) What AI/ML projects are in production vs. R&D? (2) What is the engineering team size and reporting structure? (3) How are deadlines set and what are typical weekly hours? (4) Is there a formal shutdown policy or protected weekends? (5) What does mentorship and career progression look like for new grads? (6) What is the compensation package (base, equity, bonus) for entry-level ML roles?"
+  },
+  "last_attempt_at": 1784862005,
   "last_evidence_at": 1784593385,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely operates in mining jurisdictions (e.g., Canada, Australia, Latin America); no location data in sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "c03d598abb",
+    "bd219b6793",
+    "454264577f"
+   ],
+   "value": "No mission statement found in the supplied sources."
+  },
   "name": "Mariana Minerals",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown — resource sector can be project-driven with field-season crunches; no data on internal engineering cadence."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "c03d598abb",
+    "bd219b6793",
+    "454264577f"
+   ],
+   "value": "No product information found in the supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown — no policy disclosed; typical Canadian/Australian junior miners may offer 10–15 days + statutory holidays."
   },
+  "refresh_after": 1790046005,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -148116,7 +148460,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None documented — no mention of company-wide shutdowns or guaranteed disconnect policies."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Early-stage or small mineral exploration company (name suggests mining sector); no headcount or funding data in sources."
   },
   "sources": [
    {
@@ -148150,14 +148499,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=5def990d72addbf3abfff5a45b01e5d5f9d232d51de79ba41318146d6937af93JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=0d7479d2-dd10-665e-36fa-6e4fdcff67b5&u=a1aHR0cHM6Ly93d3cudGlrdG9rLmNvbS9AY2F2YWxsb2RpbWFyZS92aWRlby83NjYwNjcwMDkyNTY0MzY4NjQ4&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown; small resource companies rarely sponsor visas unless they have specific technical needs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "c03d598abb",
+    "bd219b6793",
+    "454264577f"
+   ],
+   "value": "Mariana Minerals appears to be a mineral exploration or mining company based on its name, but the supplied sources (TikTok redirects) contain no substantive information about its operations, products, or business model."
+  },
+  "synthesized_evidence_sha": "3ce7ee03c366a68f",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely involves geological data analysis, GIS, remote sensing, and possibly ML for mineral prospectivity mapping; no technical details in sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784593385,
   "web_search_url": "https://duckduckgo.com/?q=Mariana+Minerals+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The candidate seeks a top-tier AI/data science role with elite prestige, high new-grad pay, fast innovative culture, mission-driven work, strong work-life balance, and accelerated learning without burnout. Mariana Minerals' alignment is unknown due to lack of public data; the candidate should verify if the company has a serious AI/ML function, publishes research, offers competitive compensation, and enforces sane hours before investing time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown — no employee reviews or policy data in sources; mining-adjacent roles sometimes require field rotations."
   }
  },
  "maritz": {
@@ -157302,37 +157676,78 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2. High prestige within the defense sector, but lacks the broader Silicon Valley brand recognition for top-tier AI talent."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Delivers mission-critical technology solutions under government and defense contracts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-focused and structured. Emphasizes national security impact over elite tech culture autonomy."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primarily U.S. national security organizations and defense agencies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 - $110,000. Competitive for defense but lower than top-tier FAANG new-grad compensation packages."
   },
   "evidence_sha": "89d7a02bb2ea10fd",
+  "generated_at": 1784862005,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Defense and National Security Technology"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Probe whether technical teams operate at a fast-paced innovative speed or are hindered by slow compliance. Ask how work hours, PTO, and shutdowns are handled, specifically regarding flexibility to work 40-45 hours."
+  },
+  "last_attempt_at": 1784862005,
   "last_evidence_at": 1784673652,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Distributed across the United States, with a focus on national security hubs."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To protect and enable national security operations through technological innovation."
+  },
   "name": "Mission Technologies, a division of HII",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. Driven by strict government contract delivery timelines rather than iterative agile deployments."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Advanced technology solutions including data science, cybersecurity, C5ISR, and intelligence operations support."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annually, consistent with standard defense contractor benefits."
   },
+  "refresh_after": 1790046005,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -157342,7 +157757,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Minimal. Unlike commercial tech, only standard federal holidays are guaranteed, though year-end flexibility may vary by team."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Operates as a division of HII, leveraging Fortune 500 resources while maintaining an agile internal structure."
   },
   "sources": [
    {
@@ -157376,14 +157796,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=851da80952cb7584398053ee7a2c4fb34b6dde4493d8c966ebf669ae03ae625fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2b466e61-87e5-6127-3909-79fc865660d9&u=a1aHR0cHM6Ly93d3cubWlzc2lvbmZlZC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a defense contractor, work is heavily restricted by government clearances, typically requiring U.S. citizenship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mission Technologies is the technology division of HII, America's largest military shipbuilder. It provides advanced cyber, data science, and intelligence solutions to defense and national security clients."
+  },
+  "synthesized_evidence_sha": "89d7a02bb2ea10fd",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Focuses on defense technology applications including artificial intelligence and data-driven intelligence solutions."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673652,
   "web_search_url": "https://duckduckgo.com/?q=Mission+Technologies%2C+a+division+of+HII+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers mission-driven national security work that accelerates technical learning in AI, but defense contracting traditionally involves strict bureaucracy and rigid processes that may clash with a fast, autonomous tech culture preference."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Defense contractors generally track hours closely to avoid burnout, but project deadlines can occasionally require extra effort."
   }
  },
  "mistral ai": {
@@ -260415,50 +260856,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Not top-tier for AI or Data Science. Legacy fintech maintenance gives it low prestige for elite AI roles."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "B2B SaaS and technology licensing tailored for financial services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional, stable financial software culture prioritizing reliability over elite technical acceleration."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Asset managers, bank trust departments, broker-dealers, and registered investment advisors (RIAs)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Below top-tier pay, likely $85,000 - $110,000 base for new grads."
   },
   "evidence_sha": "93bcd2eea1082490",
+  "generated_at": 1784862005,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Financial Technology (FinTech) / Wealth Management Software."
   },
-  "last_attempt_at": 1784842178,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Probe into whether AI and machine learning initiatives are core or just peripheral features. Beware that fintech platforms often embed slow, regulated processes rather than true rapid-fire innovation."
+  },
+  "last_attempt_at": 1784862005,
   "last_evidence_at": 1784675871,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Wakefield, Massachusetts, with remote work options."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide innovative and comprehensive wealth management solutions that empower financial institutions."
+  },
   "name": "Vestmark",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Feature-driven pace bound by enterprise financial regulations, slower than rapid startup innovation."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "VestmarkONE platform, portfolio management software, automated trading solutions, wealth reporting tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days accrued annually, plus standard public holidays."
   },
+  "refresh_after": 1790046005,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research"
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None counted."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mid-market private company."
   },
   "sources": [
    {
@@ -260492,14 +260976,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=095e65217054d09d799f674fbdfef2656eb42f5fb46012facc1f7dcbfed5c652JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0f446203-d0c3-62fc-3d75-759ed14763ba&u=a1aHR0cHM6Ly9zdXBwb3J0Lmdvb2dsZS5jb20veW91dHViZXR2Lz9obD1lbg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not confirmed in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Vestmark is a wealth management technology provider that delivers portfolio management, trading, and reporting solutions. It makes money by licensing its software platforms to financial institutions."
+  },
+  "synthesized_evidence_sha": "93bcd2eea1082490",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Java, Spring, AWS, UI/UX modernization, data integrations, and financial technology architecture."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675871,
   "web_search_url": "https://duckduckgo.com/?q=Vestmark+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "While this is an established fintech company, it does not align with a top-tier AI/data science priority. The fast-paced new-grad learning environment may lack the elite prestige and high compensation you are seeking."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Sane, standard hours typical of established enterprise tech, but without guaranteed shutdowns."
   }
  },
  "vf": {
@@ -270036,41 +270541,126 @@
  "woven": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "1236c62aae",
+    "5660b69eab",
+    "a33560fafd"
+   ],
+   "value": "Estimated: Unknown."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1236c62aae",
+    "5660b69eab",
+    "a33560fafd"
+   ],
+   "value": "Estimated: Not determinable from the supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "1236c62aae",
+    "5660b69eab",
+    "a33560fafd"
+   ],
+   "value": "Estimated: Unknown."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1236c62aae",
+    "5660b69eab",
+    "a33560fafd"
+   ],
+   "value": "Estimated: Target users are not specified in the available sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "1236c62aae",
+    "5660b69eab",
+    "a33560fafd"
+   ],
+   "value": "Estimated: Unknown."
   },
   "evidence_sha": "eaa24a21271000be",
+  "generated_at": 1784862005,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "source_ids": [
+    "1236c62aae",
+    "5660b69eab",
+    "a33560fafd"
+   ],
+   "value": "Estimated: Not determinable from the supplied sources."
   },
-  "last_attempt_at": 1784842178,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1236c62aae",
+    "5660b69eab",
+    "a33560fafd"
+   ],
+   "value": "Estimated: Interviews would likely need to probe deeply into actual tech stack, AI/DS work specifics, pace, hours, and culture fit for the candidate's preferences, as none can be verified from the sources."
+  },
+  "last_attempt_at": 1784862005,
   "last_evidence_at": 1784677339,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1236c62aae",
+    "5660b69eab",
+    "a33560fafd"
+   ],
+   "value": "Estimated: Not determinable from the supplied sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1236c62aae",
+    "5660b69eab",
+    "a33560fafd"
+   ],
+   "value": "Estimated: Not explicitly stated in the provided sources."
+  },
   "name": "Woven",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "1236c62aae",
+    "5660b69eab",
+    "a33560fafd"
+   ],
+   "value": "Estimated: Unknown."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1236c62aae",
+    "5660b69eab"
+   ],
+   "value": "Estimated: A web platform and team application accessible via eatwoven.com and app.woven.team; exact product features are not detailed in the sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "1236c62aae",
+    "5660b69eab",
+    "a33560fafd"
+   ],
+   "value": "Estimated: Unknown."
   },
+  "refresh_after": 1790046005,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -270079,8 +270669,21 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "1236c62aae",
+    "5660b69eab",
+    "a33560fafd"
+   ],
+   "value": "Estimated: Unknown."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1236c62aae",
+    "5660b69eab",
+    "a33560fafd"
+   ],
+   "value": "Estimated: Not determinable from the supplied sources."
   },
   "sources": [
    {
@@ -270114,14 +270717,54 @@
     "url": "https://www.bing.com/ck/a?!&&p=1abe1d2d4244e1340d577a249251c42f6d9809b1b945a0056cd5265a7840ae06JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=256a4828-99b7-6bd5-2a63-5fb598e16a66&u=a1aHR0cHM6Ly9lYXR3b3Zlbi5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1236c62aae",
+    "5660b69eab",
+    "a33560fafd"
+   ],
+   "value": "Estimated: Not determinable from the supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "1236c62aae",
+    "5660b69eab",
+    "a33560fafd"
+   ],
+   "value": "Woven operates a platform at eatwoven.com and app.woven.team, though specific business activities are not detailed in the provided sources. The company's exact product offerings and revenue model are not described in the retrieved pages, which only show login redirects."
+  },
+  "synthesized_evidence_sha": "eaa24a21271000be",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1236c62aae",
+    "5660b69eab"
+   ],
+   "value": "Estimated: Likely involves web and application development based on the domain URLs, but specifics are not provided."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677339,
   "web_search_url": "https://duckduckgo.com/?q=Woven+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1236c62aae",
+    "5660b69eab",
+    "a33560fafd"
+   ],
+   "value": "Estimated: Given the candidate's priority for a top-tier AI/data science role with high new-grad pay, fast culture, and work-life balance, this company cannot be confirmed as a match from the sources alone. The company's technical prestige, sane hours, and guaranteed shutdowns are unknown."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "1236c62aae",
+    "5660b69eab",
+    "a33560fafd"
+   ],
+   "value": "Estimated: Unknown."
   }
  },
  "wpp media": {
