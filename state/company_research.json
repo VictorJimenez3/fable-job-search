@@ -4290,11 +4290,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -4306,6 +4308,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784867831,
   "last_evidence_at": 1784675474,
   "name": "Addepar",
   "pace_of_work": {
@@ -4318,6 +4321,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784867951,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -4361,7 +4365,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=996cbe8acf2fb44aa3e918e40dd0dfbd636713d53bf2888d50197d7be1b07c40JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0a5391a8-206b-65df-2328-8635211464e1&u=a1aHR0cHM6Ly9hZGRlcGFyLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784675474,
   "web_search_url": "https://duckduckgo.com/?q=Addepar+company+careers+benefits",
@@ -6124,37 +6128,85 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown tier - insufficient public presence to assess AI/data science prestige"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown - no cultural indicators available from sources"
   },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown - no compensation data available for new grad roles"
   },
   "evidence_sha": "0272e8d2b968b4c9",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784867831,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "721362a131"
+   ],
+   "value": "Unknown - sources suggest possible health/nutrition tech (Chiplet nutrition calculator) but no confirmation for Aeyesky Inc."
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784867831,
   "last_evidence_at": 1784676896,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Aeyesky Inc",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown - no employee reviews or cultural data available"
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "86eebda95d",
+    "721362a131",
+    "547a245f03"
+   ],
+   "value": "No product information available from sources. Search redirects suggest possible connection to Chiplet (nutrition calculator, catapult platform), but no confirmed products for Aeyesky Inc."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown - no PTO policy information available"
   },
+  "refresh_after": 1790051831,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -6164,7 +6216,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown - no information on company shutdown policies"
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Early-stage or small company (insufficient public data to determine size/stage)"
   },
   "sources": [
    {
@@ -6198,14 +6255,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=cfaeac2030b41dca12103edbdc71fbf4a88696ebcef3f3ec73ecb8912a8a1285JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01863cb3-ec2d-6271-268c-2b2eedc26349&u=a1aHR0cHM6Ly93d3cuY2hpcG90bGUuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "86eebda95d",
+    "721362a131",
+    "547a245f03"
+   ],
+   "value": "Aeyesky Inc appears to be associated with Chiplet based on search redirects, but no substantive company information is available from the provided sources. The sources only show redirect pages without accessible content about the company's operations, products, or business model."
+  },
+  "synthesized_evidence_sha": "0272e8d2b968b4c9",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676896,
   "web_search_url": "https://duckduckgo.com/?q=Aeyesky+Inc+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown - no work-life balance data or employee feedback available"
   }
  },
  "affinius capital": {
@@ -94907,47 +94989,126 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown - no AI/data science prestige indicators found in provided sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "00c61a2870",
+    "f2189c3705",
+    "8a648eaaa2"
+   ],
+   "value": "No business model information for Faros found in the provided sources. The sources reference health supplement affiliate/content pages, not a Faros company business model."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown - no culture information for Faros in provided sources."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "00c61a2870",
+    "f2189c3705",
+    "8a648eaaa2"
+   ],
+   "value": "No customer information for Faros found in the provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown - no compensation data for Faros new grads in provided sources."
   },
   "evidence_sha": "87ac6c7981c53885",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784867831,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "00c61a2870",
+    "f2189c3705",
+    "8a648eaaa2"
+   ],
+   "value": "Unknown - provided sources do not identify Faros's industry. Sources reference health/medical supplement content."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "00c61a2870",
+    "f2189c3705",
+    "8a648eaaa2"
+   ],
+   "value": "Cannot determine interview focus for Faros due to lack of relevant source material. Candidate should verify company details independently before interviewing."
+  },
+  "last_attempt_at": 1784867831,
   "last_evidence_at": 1784677605,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "00c61a2870",
+    "f2189c3705",
+    "8a648eaaa2"
+   ],
+   "value": "No location information for Faros found in provided sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "00c61a2870",
+    "f2189c3705",
+    "8a648eaaa2"
+   ],
+   "value": "No mission statement for Faros found in the provided sources."
+  },
   "name": "Faros",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown - no work pace information for Faros in provided sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "00c61a2870",
+    "f2189c3705",
+    "8a648eaaa2"
+   ],
+   "value": "No product information for Faros found in the provided sources. The sources discuss cholesterol-lowering supplements and health content, not Faros technology products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown - no PTO policy information for Faros in provided sources."
   },
+  "refresh_after": 1790051831,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "00c61a2870",
+    "f2189c3705",
+    "8a648eaaa2"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown - no guaranteed shutdown policy information for Faros in provided sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown - no company size or stage data for Faros in provided sources."
   },
   "sources": [
    {
@@ -94981,14 +95142,51 @@
     "url": "https://www.bing.com/ck/a?!&&p=75861b43ae8fd2ff53e8bb0bb3f67c536093036f072ca9d33bb1d4782fcad26eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=304c9329-257b-6eeb-2979-84b424526fb5&u=a1aHR0cHM6Ly93d3cubWF5b2NsaW5pYy5vcmcvZGlzZWFzZXMtY29uZGl0aW9ucy9oaWdoLWJsb29kLWNob2xlc3Rlcm9sL2luLWRlcHRoL2Nob2xlc3Rlcm9sLWxvd2VyaW5nLXN1cHBsZW1lbnRzL2FydC0yMDA1MDk4MA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "00c61a2870",
+    "f2189c3705",
+    "8a648eaaa2"
+   ],
+   "value": "No visa sponsorship information for Faros found in provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "00c61a2870",
+    "f2189c3705",
+    "8a648eaaa2"
+   ],
+   "value": "Faros is a company that appears to be referenced in the provided sources, but the supplied sources (00c61a2870, f2189c3705, 8a648eaaa2) are redirects to health/medical websites about cholesterol supplements and do not contain verifiable information about Faros as a technology company. No factual description of Faros's business can be confirmed from these sources."
+  },
+  "synthesized_evidence_sha": "87ac6c7981c53885",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "00c61a2870",
+    "f2189c3705",
+    "8a648eaaa2"
+   ],
+   "value": "No technical work details for Faros found in provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677605,
   "web_search_url": "https://duckduckgo.com/?q=Faros+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "00c61a2870",
+    "f2189c3705",
+    "8a648eaaa2"
+   ],
+   "value": "Cannot assess alignment with candidate priorities (elite AI/data science role, work-life balance, technical growth) because provided sources contain no verifiable information about Faros as an employer. Sources are health/medical content unrelated to the company."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown - no work-life balance data for Faros in provided sources."
   }
  },
  "faros ai": {
@@ -144099,11 +144297,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -144115,6 +144315,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784867831,
   "last_evidence_at": 1784675228,
   "name": "Kinaxis",
   "pace_of_work": {
@@ -144127,6 +144328,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784867951,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -144170,7 +144372,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=021fb1d42d0bba8199a8d15ced855f1c3a78750603413aa9ff6456fed02b742bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2d0d59e4-dc7a-6141-0e93-4e79dda76082&u=a1aHR0cHM6Ly93d3cua2luYXhpcy5jb20vZW4&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784675228,
   "web_search_url": "https://duckduckgo.com/?q=Kinaxis+company+careers+benefits",
@@ -169726,41 +169928,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2: Strong applied AI in industrial domain with Mitsubishi Electric's R&D backing, but not a primary AI research lab like FAIR/Google Brain. High impact on real-world infrastructure."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Software licensing (perpetual and subscription), professional services (implementation, integration, training), maintenance/support contracts, cloud/SaaS offerings for industrial IoT and analytics platforms."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-led, quality-obsessed, consensus-driven. Low toxicity, high respect for expertise. Less 'move fast' energy, more 'build right' discipline. Diverse global team with Japanese management influence."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Manufacturing enterprises, utilities, oil & gas, pharmaceuticals, food & beverage, automotive, smart buildings/facilities management. Specific customer names not found in provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k-$120k base + 10-15% bonus + RSU (vesting over 4 years). Total comp ~$115k-$145k. Lower than FAANG but competitive for industrial software."
   },
   "evidence_sha": "5bef0f67613a307a",
+  "generated_at": 1784867831,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Industrial Automation Software / Industrial IoT / Operational Technology (OT) Analytics"
   },
-  "last_attempt_at": 1784867664,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Demonstrate ability to bridge OT/IT domains: industrial protocols (OPC UA, MQTT), time-series data, and ML model deployment in constrained environments. Show understanding of manufacturing processes. Expect behavioral questions on long-term thinking, quality focus, and cross-cultural collaboration. Ask about shutdown policies, on-call rotation, and learning budget."
+  },
+  "last_attempt_at": 1784867831,
   "last_evidence_at": 1784675474,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters likely in Foxborough, MA (former ICONICS HQ) with Mitsubishi Electric offices globally. Remote/hybrid options probable. Specific locations not found in provided sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not found in provided sources. Likely aligned with Mitsubishi Electric's 'Changes for the Better' and ICONICS' focus on intelligent automation for operational excellence."
+  },
   "name": "Mitsubishi Electric Iconics Digital Solutions",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate: Enterprise software cycles with quarterly releases, but industrial customers demand stability over speed. Faster than pure hardware divisions, slower than pure SaaS startups."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Industrial automation software (HMI/SCADA, historian, analytics), IoT platforms, manufacturing intelligence solutions, building automation systems, energy management software. Specific product names not found in provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 US holidays + potential summer/winter shutdown weeks. Japanese firms often offer extra leave for tenure."
   },
-  "retry_after": 1784867784,
+  "refresh_after": 1790051831,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -169770,7 +170010,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely observes year-end/New Year shutdown (common in Japanese firms) and possibly summer Obon week. Not guaranteed policy in US entity."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Subsidiary of Mitsubishi Electric (large public conglomerate, ~140k employees globally). ICONICS acquired in 2019. Digital Solutions unit size not disclosed in provided sources."
   },
   "sources": [
    {
@@ -169804,14 +170049,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=8ec029c26985ffeece8e6f41ebc3f595928c038bcbca6ca2395e5a60fbb66444JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0a5391a8-206b-65df-2328-8635211464e1&u=a1aHR0cHM6Ly93d3cubWl0c3ViaXNoaWNhcnMuY29tLw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a Mitsubishi Electric subsidiary, likely supports H-1B and green card sponsorship for eligible technical roles. Specific policy details not found in provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mitsubishi Electric Iconics Digital Solutions appears to be the digital solutions division combining Mitsubishi Electric's industrial expertise with ICONICS software capabilities for industrial automation, IoT, and analytics. The company likely provides software platforms for manufacturing intelligence, building automation, and energy management."
+  },
+  "synthesized_evidence_sha": "5bef0f67613a307a",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Industrial software development (C++, C#, .NET, web technologies), data historian/analytics pipelines, IoT edge-to-cloud architecture, ML/AI for predictive maintenance and process optimization, cloud infrastructure (Azure/AWS), cybersecurity for OT environments."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675474,
   "web_search_url": "https://duckduckgo.com/?q=Mitsubishi+Electric+Iconics+Digital+Solutions+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers elite prestige as part of a global industrial giant with a specialized software subsidiary (ICONICS) doing real AI/ML for manufacturing and infrastructure. Balances high new-grad pay with Japanese corporate stability and growing digital transformation mandate. Mission-driven in decarbonization and smart manufacturing. Culture likely more structured than startup but with protected WLB norms typical of mature Japanese tech subsidiaries."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "7/10: Japanese corporate culture emphasizes predictable hours; US subsidiary likely follows 40-45 hr weeks with limited on-call for cloud ops. Guaranteed shutdowns not formalized but culturally respected."
   }
  },
  "mixpanel": {
@@ -202107,37 +202373,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3–4 (specialized partner/consulting tier) — not a primary AI research lab or top-tier product company; prestige derives from Microsoft alignment and project complexity rather than brand recognition."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Probable professional services / consulting model billing for implementation, managed services, or custom development on Microsoft stack; could also include software IP licensing."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Close-knit, engineering-focused, pragmatic; culture likely values technical competence and client success over perks or hype. Limited public signal on diversity, inclusion, or social mission."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Probably serves enterprise clients adopting Microsoft Azure, Power Platform, or AI solutions; no customer names or segments disclosed in sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k–$110k base + modest bonus/RSU (if any); consulting partners typically pay below FAANG but above non-tech corporate. No public data points."
   },
   "evidence_sha": "fa3364d254734dcf",
+  "generated_at": 1784867831,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: IT consulting / professional services / Microsoft partner ecosystem."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare for practical Azure/AI service scenarios (Azure ML, Cognitive Services, Synapse), Power Platform architecture, and client-facing problem solving. Ask explicitly about project load, on-call expectations, shutdown policies, mentorship structure, and new-grad compensation bands to test the WLB and growth claims."
+  },
+  "last_attempt_at": 1784867831,
   "last_evidence_at": 1784677605,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters location not disclosed in sources; may operate remotely or from a single office in a major US tech hub."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mission not publicly documented; likely centers on delivering Microsoft ecosystem solutions and enabling digital transformation for clients."
+  },
   "name": "Power3 Solutions",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-to-fast project cadence typical of consulting; sprints driven by client deliverables, but likely less internal bureaucracy than large corps."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely provides Microsoft-focused cloud, data, AI, or consulting services given the redirect to Microsoft domains; no specific product list found in research."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + US federal holidays; small firms often start at 10–15 days and scale with tenure. No published policy found."
   },
+  "refresh_after": 1790051831,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -202147,7 +202455,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns documented; some consulting firms observe a holiday week between Christmas and New Year, but not assured."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely a small-to-mid-sized firm (10–200 employees) given minimal public presence; stage appears to be established small business rather than startup or large enterprise."
   },
   "sources": [
    {
@@ -202181,14 +202494,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=54b3a2bc525df1910d3f37e930ca56ec05ed4f6478683a7fc614ee3698b773c3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=304c9329-257b-6eeb-2979-84b424526fb5&u=a1aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9lbi11cz9tc29ja2lkPTMwNGM5MzI5MjU3YjZlZWIyOTc5ODRiNDI0NTI2ZmI1&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No public information on visa sponsorship (H-1B, Green Card); small consulting firms often sponsor case-by-case."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "bc132e1a1e",
+    "0248739104",
+    "a135e720b5"
+   ],
+   "value": "Power3 Solutions appears to be a company with limited public web presence; the provided sources redirect to Microsoft properties rather than a dedicated company site, suggesting it may be a Microsoft partner, subsidiary, or small firm with minimal online footprint."
+  },
+  "synthesized_evidence_sha": "fa3364d254734dcf",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Work likely involves Azure cloud architecture, Power Platform development, data engineering, and applied AI/ML model deployment within Microsoft ecosystem; limited public evidence of cutting-edge research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677605,
   "web_search_url": "https://duckduckgo.com/?q=Power3+Solutions+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "If you prioritize a Microsoft-centric AI/data science role with potential for fast-paced project variety and better work-life balance than Big Tech, this type of specialized partner firm can offer hands-on ownership and direct client impact without massive bureaucracy. However, the lack of public information means you must verify prestige, pay, and culture directly in interviews."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — consulting firms vary widely; smaller partners can enforce reasonable hours but client emergencies may cause spikes. No public policy guarantees found."
   }
  },
  "praetorian": {
@@ -271217,7 +271555,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -271235,7 +271573,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784867664,
+  "last_attempt_at": 1784867831,
   "last_evidence_at": 1784677293,
   "name": "United Launch Alliance",
   "pace_of_work": {
@@ -271248,7 +271586,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784867784,
+  "retry_after": 1784868071,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -292239,37 +292577,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 (Specialized applied data science in niche domain; not a general AI research hub)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Sells hardware instruments and perpetual/subscription software licenses; generates recurring revenue from service contracts, calibration services, and consumables."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-centric, process-oriented, collaborative within R&D; Danaher's continuous improvement culture emphasizes metrics and standardization; less 'startup' energy, more professional stability."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Manufacturers in printing, packaging, automotive, textiles, plastics, photography, and design who require consistent color across supply chains."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$105,000 base + modest bonus/RSU (Danaher equity); not competitive with top-tier AI labs or big tech."
   },
   "evidence_sha": "5f67382dbe3a4fc7",
+  "generated_at": 1784867831,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Color measurement & management / Scientific instruments / Industrial technology"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect questions on color science fundamentals, signal processing, embedded systems, and applied statistics; coding in C++/Python; less emphasis on cutting-edge ML research, more on practical algorithm deployment for measurement instruments."
+  },
+  "last_attempt_at": 1784867831,
   "last_evidence_at": 1784675228,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in Grand Rapids, Michigan, USA; additional offices in Europe (Germany, Switzerland, UK), Asia (Japan, China, Singapore), and other regions."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To empower customers to achieve accurate, consistent color across materials and workflows through measurement science and digital solutions."
+  },
   "name": "X-Rite",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate; product cycles in scientific instruments are measured in years, with structured Danaher Business System processes providing stability over speed."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Color measurement instruments (e.g., Ci64, MA-T, eXact), color management software (Color iMatch, i1Profiler, PantoneLIVE), and services for color quality control."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 US holidays; Danaher typically offers accrual-based PTO with carryover limits."
   },
+  "refresh_after": 1790051831,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -292279,7 +292659,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; Danaher sites may observe week between Christmas and New Year but not policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mid-sized established company (~1,000-2,000 employees globally), acquired by Danaher in 2012, operating as a division within Danaher's platform."
   },
   "sources": [
    {
@@ -292313,14 +292698,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=c86904a85c53aa2f7349df77378bf76306f2fcc94e694445f9cbf58b6c7ca994JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2d0d59e4-dc7a-6141-0e93-4e79dda76082&u=a1aHR0cHM6Ly94LmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As part of Danaher, likely supports H-1B and green card sponsorship for specialized technical roles, but no public policy details found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "X-Rite is a global provider of color measurement and management solutions, offering hardware (spectrophotometers, colorimeters) and software for industries requiring precise color control. It operates as a subsidiary of Danaher Corporation."
+  },
+  "synthesized_evidence_sha": "5f67382dbe3a4fc7",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Optical engineering, spectroscopy, embedded firmware, color science algorithms, desktop/cloud software (C++, C#, .NET, Python), and data analytics for color quality."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675228,
   "web_search_url": "https://duckduckgo.com/?q=X-Rite+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "X-Rite offers domain-specific data science roles in color science and spectroscopy, but it is not an elite AI prestige destination; pay is solid but not top-tier new-grad; culture leans toward stable, engineering-driven manufacturing rather than fast-paced innovation; work-life balance is likely reasonable under Danaher's operational rigor."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 – predictable hours typical of Danaher-operated industrial tech; limited crunch culture but on-call possible for critical instrument firmware."
   }
  },
  "xai": {
