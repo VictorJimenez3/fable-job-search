@@ -6445,52 +6445,127 @@
  "affirm": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Tier 2. Affirm is a strong, recognizable fintech brand with a solid data science function, though it does not carry the elite, specialized AI prestige of frontier research labs."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "9382eb4fb7"
+   ],
+   "value": "Financial technology platform operating in the consumer credit space, specifically focused on transparent buy-now-pay-later financing."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "9382eb4fb7"
+   ],
+   "value": "Pragmatic, solutions-oriented, and driven by innovation and scaling. The company values balancing risk with business velocity."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "9382eb4fb7"
+   ],
+   "value": "Consumers seeking flexible payment options and merchants looking to increase sales velocity."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "9382eb4fb7"
+   ],
+   "value": "Estimated: $130,000 - $160,000 base salary. As a reputable fintech firm, new grad pay is competitive, though potentially below the highest tier of big-tech giants."
   },
   "evidence_sha": "12daf68b2863c3a9",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784870809,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784870641,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "9382eb4fb7"
+   ],
+   "value": "Financial Technology (FinTech) / Consumer Credit"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Prepare for rigorous technical interviews covering statistics, machine learning, and data modeling specific to risk and financial contexts. Emphasize your ability to balance rapid innovation with regulatory and risk constraints, and showcase any previous work in finance, credit, or fast-paced growth environments."
+  },
+  "last_attempt_at": 1784870809,
   "last_evidence_at": 1784674431,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "9382eb4fb7"
+   ],
+   "value": "Offers remote work options (#LI-Remote) for various roles."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "9382eb4fb7"
+   ],
+   "value": "To reinvent credit to make it more honest and friendly, giving consumers the flexibility to buy now and pay later without hidden fees or compounding interest."
+  },
   "name": "Affirm",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "9382eb4fb7"
+   ],
+   "value": "Estimated: Fast-paced. The company emphasizes a high-growth, technology-driven environment that balances risk with business velocity."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "9382eb4fb7"
+   ],
+   "value": "Consumer point-of-sale financing and buy-now-pay-later loan products without hidden fees or compounding interest."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "9382eb4fb7"
+   ],
+   "value": "Estimated: 15-20 days. Standard PTO for a modern public fintech company."
   },
-  "retry_after": 1784870761,
+  "refresh_after": 1790054809,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "5edb931a0b",
+    "0285390232",
+    "5a2d04a949"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "9382eb4fb7"
+   ],
+   "value": "Estimated: Likely offers a few standard holiday shutdown days, but no widespread company-wide guaranteed summer/winter shutdowns were found."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "9382eb4fb7"
+   ],
+   "value": "Public high-growth company described as operating in a high-growth, technology-driven environment."
   },
   "sources": [
    {
@@ -6554,14 +6629,45 @@
     "url": "https://job-boards.greenhouse.io/affirm/jobs/7721506003"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "9382eb4fb7"
+   ],
+   "value": "Visa sponsorship is not available for certain positions (e.g., Counsel II roles), though this policy may differ for technical roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "9382eb4fb7"
+   ],
+   "value": "Affirm is a financial technology company that provides buy-now-pay-later (BNPL) solutions, allowing consumers to purchase items and pay for them over time. The company makes money primarily through merchant fees for facilitating sales and, to a lesser extent, interest on consumer loans."
+  },
+  "synthesized_evidence_sha": "12daf68b2863c3a9",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "9382eb4fb7"
+   ],
+   "value": "Technology and data science work likely focuses on credit risk modeling, fraud detection, payment processing infrastructure, and merchant integration systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674431,
   "web_search_url": "https://duckduckgo.com/?q=Affirm+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "As a data scientist at Affirm, you would tackle high-impact financial problems like risk assessment and fraud prevention using rich transaction data, blending fintech prestige with meaningful consumer mission. The company's transparent credit model offers a compelling ethical angle in the tech industry."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "9382eb4fb7"
+   ],
+   "value": "Estimated: Moderate to Good. As a high-growth tech firm, the pace can be intense, but remote work flexibility and modern tech culture aim to prevent high toxicity and burnout."
   }
  },
  "aflac": {
@@ -12072,48 +12178,125 @@
  "alpaca": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "3d277220f5"
+   ],
+   "value": "Estimated: Tier 2 - Recognized fintech infrastructure scale-up; high technical impact but not an elite tier-1 AI lab."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "3d277220f5"
+   ],
+   "value": "Provides a technology-driven trading environment and brokerage infrastructure, likely monetizing through API usage, trading fees, and B2B infrastructure licensing."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "3d277220f5"
+   ],
+   "value": "Diverse, experienced, and mission-driven, focusing on opening financial services globally through technology."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "3d277220f5"
+   ],
+   "value": "Global businesses, developers, and financial professionals requiring trading infrastructure."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "3d277220f5"
+   ],
+   "value": "Estimated: Competitive fintech new-grad compensation, likely ranging $120k-$160k base salary, excluding equity and bonuses."
   },
   "evidence_sha": "a5c8689db7f49c2b",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784870809,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "3d277220f5"
+   ],
+   "value": "Financial Technology / Brokerage Infrastructure"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "3d277220f5"
+   ],
+   "value": "Ask hiring managers about the typical engineering hours and weekend on-call expectations to ensure the fast-paced environment aligns with your work-life balance needs. Inquire about the specific AI and data science applications in their trade surveillance and brokerage systems to confirm the role matches your technical growth ambitions."
+  },
+  "last_attempt_at": 1784870809,
   "last_evidence_at": 1784856586,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "3d277220f5"
+   ],
+   "value": "US-headquartered with a global team footprint."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "3d277220f5"
+   ],
+   "value": "To open financial services to everyone on the planet."
+  },
   "name": "Alpaca",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "3d277220f5"
+   ],
+   "value": "Estimated: Highly fast-paced and technology-driven, as explicitly stated in their job descriptions, typical of modern fintech scale-ups avoiding slow bureaucracy."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "3d277220f5"
+   ],
+   "value": "Brokerage infrastructure supporting 24/5 trading for stocks, ETFs, options, crypto, and fixed income."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "3d277220f5"
+   ],
+   "value": "Estimated: Standard tech-market PTO, likely in the range of 15-20 days annually for new graduates, subject to role and location."
   },
+  "refresh_after": 1790054809,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "3d277220f5"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "3d277220f5"
+   ],
+   "value": "Estimated: No formal company-wide shutdowns found in research; time off is likely managed flexibly by team."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "3d277220f5"
+   ],
+   "value": "Global, US-headquartered start-up/scale-up infrastructure provider actively hiring across multiple departments."
   },
   "sources": [
    {
@@ -12177,14 +12360,45 @@
     "url": "https://job-boards.greenhouse.io/alpaca/jobs/6119938004"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "3d277220f5"
+   ],
+   "value": "Specific visa sponsorship details are not explicitly stated, but the company maintains a global team which may indicate openness to international hiring."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "3d277220f5"
+   ],
+   "value": "Alpaca is a technology-driven financial services company that provides agent-first brokerage infrastructure for trading stocks, ETFs, options, crypto, and fixed income. It makes money by offering APIs and platform infrastructure that enables other businesses, developers, and end-users to execute and manage trades."
+  },
+  "synthesized_evidence_sha": "a5c8689db7f49c2b",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "3d277220f5"
+   ],
+   "value": "Building and maintaining agent-first brokerage infrastructure in a fast-paced environment, utilizing a team of experienced engineers and trading professionals."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784856586,
   "web_search_url": "https://duckduckgo.com/?q=Alpaca+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "3d277220f5"
+   ],
+   "value": "Alpaca offers the fast, innovative tech culture and mission-driven environment you are seeking, allowing you to accelerate your technical learning by building modern trading infrastructure. Its global team of experienced engineers provides strong mentorship and prestige potential without the slow bureaucracy of traditional finance firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "3d277220f5"
+   ],
+   "value": "Estimated: Good, though the explicitly fast-paced environment may require vigilance to maintain strict boundaries. Global remote flexibility likely aids work-life harmony."
   }
  },
  "alpha fmc": {
@@ -100364,39 +100578,101 @@
  },
  "fiserv": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "424fb7446e"
+   ],
+   "value": "High structural prestige within fintech enterprise operations, with AI and data science teams often focused on fraud detection and transaction optimization."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "424fb7446e",
+    "978014b739"
+   ],
+   "value": "B2B financial technology and services. Revenue is derived from transaction-based processing fees, software subscription and licensing, and professional services."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "424fb7446e"
+   ],
+   "value": "Professional and mission-critical, reflecting its role in global financial infrastructure."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "424fb7446e"
+   ],
+   "value": "Financial institutions, merchants, corporations, government agencies, and small businesses requiring payment and financial services technology."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 - $115,000 base salary for entry-level software and data roles."
   },
   "evidence_sha": "692bd92204be7f03",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784870809,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "978014b739"
+   ],
+   "value": "Financial Technology (Fintech) / Information Technology Services."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "424fb7446e"
+   ],
+   "value": "Assess if the AI and data science teams operate with a fast, innovative tech culture rather than legacy bureaucracy. Seek proof of accelerated technical learning and career growth, while confirming sane hours and guaranteed shutdowns to ensure work-life balance."
+  },
+  "last_attempt_at": 1784870809,
   "last_evidence_at": 1784675357,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "424fb7446e",
+    "978014b739"
+   ],
+   "value": "Global operations headquartered in Wisconsin, USA, with major technology and office hubs distributed worldwide."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "424fb7446e"
+   ],
+   "value": "To elevate money flows by delivering superior financial technology solutions that enable clients to drive commerce and advance their communities."
+  },
   "name": "Fiserv",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Due to its large corporate structure, the environment is generally steady and cautious."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "424fb7446e"
+   ],
+   "value": "Payment processing networks (Clover), core banking and financial institution software, digital banking platforms, merchant acquiring services, and risk management solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-25 days of accrued time off."
   },
+  "refresh_after": 1790054809,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -100406,7 +100682,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Increasingly featuring corporate reset weeks or floating holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "978014b739"
+   ],
+   "value": "Large, established public corporation (S&P 500) operating globally with tens of thousands of employees."
   },
   "sources": [
    {
@@ -100440,14 +100723,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=93286bc9ca67f570d323a849afda74e5e1fddf4f98c17ec571ccc3168a03f00eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=03c602d4-0670-6465-2e80-154907296505&u=a1aHR0cHM6Ly93d3cuZmlzZXJ2LmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "424fb7446e"
+   ],
+   "value": "As a massive global fintech employer, Fiserv frequently sponsors technical roles and maintains a large international workforce."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "424fb7446e",
+    "978014b739"
+   ],
+   "value": "Fiserv is a global financial technology company that constructs the infrastructure and software powering the financial world. It generates revenue by providing payment processing, core banking systems, and digital financial services to merchants, banks, and corporate clients worldwide."
+  },
+  "synthesized_evidence_sha": "692bd92204be7f03",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "424fb7446e"
+   ],
+   "value": "Software engineering across large-scale transaction processing systems, cloud-based fintech platforms, enterprise integrations, and digital banking infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675357,
   "web_search_url": "https://duckduckgo.com/?q=Fiserv+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "424fb7446e"
+   ],
+   "value": "A top-tier AI or data science role here balances elite prestige and high new-grad pay against a fast, innovative tech culture, rather than slow bureaucracy. You need a mission-driven company that respects work-life balance through sane hours and guaranteed shutdowns, avoiding toxic or high-burnout environments."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Sustained moderate work-life balance due to predictable corporate hours."
   }
  },
  "fitch ratings": {
@@ -150744,102 +151057,113 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [
-    "042d75951d"
+    "258d21cbe2"
    ],
-   "value": "Tier 3: Prestige is derived from elite national security and defense program importance rather than the bleeding-edge AI commercial ecosystem. It is not recognized as a top-competing AI metric leader (like DeepMind or Salesforce) but is highly respected for hard, classified engineering applicable to defense intelligence."
+   "value": "Estimated: Tier 2. While providing cutting-edge defense solutions, the company's prestige in the commercial AI/data science space is lower than elite tech firms."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "9c747e36a6",
+    "258d21cbe2",
     "042d75951d"
    ],
-   "value": "Operates as a large government and military prime/sub-contractor. Revenue is generated through long-term cost-plus and fixed-price DoD contracts, Foreign Military Sales to allied nations, and limited commercial sales in public safety and air traffic management. Program wins are sustained through specialized classified manufacturing and engineering services."
+   "value": "L3Harris provides full-time, onsite engineering roles to develop defense and aerospace technologies, generating revenue through government and defense contracts."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Security-focused, conservative, and highly procedural, with a patriotic slant. The culture values ESOP, benefits, long tenure, and compliant protocol over a ‘move fast and break things’ codebase. Titles and verified time matter; likely not suited to the ultra-casual creative tech scenario."
+   "source_ids": [
+    "258d21cbe2",
+    "042d75951d"
+   ],
+   "value": "Estimated: Mission-driven and mission-focused with an emphasis on defense and security, though the culture may lean traditional and bureaucratic rather than fast-paced."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "9c747e36a6"
+    "258d21cbe2"
    ],
-   "value": "Primary customers include the U.S. Department of Defense, armed services branches (Army, Navy, Air Force, Marines), intelligence agencies, NASA, the FAA, and allied foreign governments. A smaller portion of revenue comes from commercial aerospace and public safety municipalities."
+   "value": "Defense and aerospace sectors, with a focus on government and military clients."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "high",
    "source_ids": [
+    "258d21cbe2",
     "042d75951d"
    ],
-   "value": "Estimated: $76,000–$140,000 per year for a New Grad Associate in Software Engineering in Yorba Linda, CA. Defense salaries typically issue total comp at the median or slightly below-mass tech median but get supplemental with sign-on or relocation via direct program codes."
+   "value": "Estimated: $76K/yr - $140K/yr for new grad software engineers, with variation by location and specific role."
   },
   "evidence_sha": "e262aa7f32a6ac8f",
-  "generated_at": 1784680703,
+  "generated_at": 1784870809,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "9c747e36a6",
-    "042d75951d"
+    "258d21cbe2"
    ],
-   "value": "Aerospace and Defense Technology (Defense Prime Contractor)."
+   "value": "Defense and Aerospace."
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [
+    "258d21cbe2",
     "042d75951d"
    ],
-   "value": "Interview Focus: Expect behavioral questions and competency-based assessments rather than abstract LeetCode hazing. The culture favors experience with ITAR/EAR compliance, signals processing, embedded constraints, and reliability over rapid-startup-on-the-java style innovation. The candidate should emphasize mission-aligned clearance-able engineering and real-time algorithm application, while probing for innovative AI pockets within the broad enterprise."
+   "value": "Candidates should clarify day-to-day pace, work-life balance, and technical growth opportunities to ensure the role meets their expectations for sane hours and career growth without bureaucratic friction."
   },
-  "last_attempt_at": 1784869828,
+  "last_attempt_at": 1784870809,
   "last_evidence_at": 1784821848,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "042d75951d",
-    "1a290305ec"
+    "258d21cbe2",
+    "c0abe61dff",
+    "9fa9ec1ae1"
    ],
-   "value": "Headquartered in Melbourne, Florida. Major engineering sites include Palm Bay FL, Rochester and Clifton NY, Greenville and Plano TX, Camden NJ, Salt Lake City UT, Colorado Springs CO, and Yorba Linda CA. The specific job opening is in Yorba Linda, CA."
+   "value": "Hiring is location-specific and onsite, with recent roles in Herndon, VA; Huntsville, AL; Greenville, TX; and Yorba Linda, CA."
   },
   "mission": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "1a290305ec",
-    "9c747e36a6"
+    "258d21cbe2",
+    "042d75951d"
    ],
-   "value": "L3Harris's public mission is to deliver end-to-end technology solutions connecting space, air, land, sea, and cyber domains in the interest of national security. The company emphasizes trusted disruption and agile innovation for defense and first-responder missions."
+   "value": "The company does not explicitly state a mission in the provided sources, but it identifies as a leading technology company focused on delivering innovative solutions in the defense and aerospace space."
   },
   "name": "L3Harris Technologies",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate with little crunch time. Large defense contractors typically balance long government cycle acquisitions with specific engineering serial reviews; daily Operations are deliberate and bureaucracy-heavy, unlike a fast-iterative tech startup."
+   "source_ids": [
+    "258d21cbe2",
+    "042d75951d"
+   ],
+   "value": "Estimated: Slow-to-moderate pace typical of the defense and aerospace industry, which can involve bureaucratic processes and long project lifecycles."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "1a290305ec",
-    "9c747e36a6"
+    "882069ffc8",
+    "9fa9ec1ae1"
    ],
-   "value": "Defense products span secure military radios/communications, ISR (Intelligence, Surveillance, Reconnaissance) platforms, night vision devices, electronic warfare systems, avionics, and space sensors/antennas. The company also provides civilian air traffic control management and weather satellite payloads."
+   "value": "Software and hardware systems for defense and aerospace, including embedded systems, real-time controls, robotics, software security, and hardware communications interfacing."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15–20 days of annual vacation accrual plus standard federal holidays for experienced exempt staff; new graduates may start at the lower range. Defense industry standards suggest combines general PTO until incrementally structured mini-weeks achieved."
+   "source_ids": [
+    "c9341b5e49",
+    "882069ffc8"
+   ],
+   "value": "Estimated: 15-20 days of paid time off, alongside company-paid holidays, as is typical for large defense contractors."
   },
-  "refresh_after": 1789864703,
-  "retry_after": 1784870788,
+  "refresh_after": 1790054809,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -150848,16 +151172,18 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Mandatory facility shutdowns are typically effective between the week of Christmas and New Year’s Day, completely. Additional flat end-of-year quarter closures may happen, but only the year-end validated fully removes work obligations."
+   "source_ids": [
+    "c9341b5e49",
+    "882069ffc8"
+   ],
+   "value": "Estimated: No guaranteed shutdowns mentioned in the sources, though standard holidays are provided."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "042d75951d",
-    "9c747e36a6"
+    "042d75951d"
    ],
-   "value": "An extremely large, mature public company with over 10,001 employees, founded through the 2019 merger. It is a stockholder-owned public corporation (NYSE: LHX), not a startup; the company is in a stable post-merger integration and optimization stage."
+   "value": "Founded in 2019, the company has over 10,001 employees."
   },
   "sources": [
    {
@@ -150926,38 +151252,44 @@
    "source_ids": [
     "042d75951d"
    ],
-   "value": "L3Harris shows a track record of H1B sponsorship; however, due to defense cybersecurity regulations and ITAR export controls, many technical roles are restricted to U.S. persons only (citizen or permanent resident). Sponsorship is not guaranteed for any specific, on-site new grad role."
+   "value": "L3Harris has a track record of offering H1B sponsorships, though this is not guaranteed for specific roles."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "1a290305ec",
+    "258d21cbe2",
     "042d75951d"
    ],
-   "value": "L3Harris Technologies is a large American defense technology contractor formed in 2019 from the merger of L3 Technologies and Harris Corporation. It develops advanced military communications, electronic warfare, and space/airborne systems for the U.S. Department of Defense, allied governments, and commercial customers."
+   "value": "L3Harris Technologies is a leading defense and aerospace technology company that delivers innovative solutions for complex mission-critical systems. The company makes money by securing contracts to design, build, and service advanced hardware and software systems for government and defense customers."
   },
-  "synthesized_evidence_sha": "38d55a732e1b8051",
+  "synthesized_evidence_sha": "e262aa7f32a6ac8f",
   "technical_work": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "042d75951d",
-    "1a290305ec"
+    "9fa9ec1ae1",
+    "258d21cbe2"
    ],
-   "value": "Technical work involves signal processing, embedded electronics, RF analysis, model-based systems engineering, and secure high-reliability software for Defense. AI/Data roles apply machine learning to ISR object detection, communication signal classification, and forecasting, but the core culture is hardware-integrated systems engineering rather than pure consumer software."
+   "value": "Software engineering roles involve C++, C#, C, Java, JS, Ruby, HTML5, SQL, .NET, Unix, Linux, RTOS, and embedded systems, alongside modern deployment technologies like Docker and Kubernetes."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784599679,
   "web_search_url": "https://duckduckgo.com/?q=L3Harris+Technologies+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Why It Matters: Defense contracting offers elite prestige and stronger work boundaries than commercial Big Tech. L3Harris provides high stability and the chance to work on classified ‘impact’ missions. While related to the candidate's interests, the overall pace can be process-slower than pure software firms; however, the 9/80 schedules common in defense rigily respect 'sane hours' through predictable temporal enforcement, avoiding the toxic burnout culture of ad-tech."
+   "source_ids": [
+    "258d21cbe2",
+    "042d75951d"
+   ],
+   "value": "L3Harris offers mission-driven work in defense with broad technical exposure, but the traditional bureaucracy common to aerospace contracts may conflict with a desire for a fast, innovative tech culture and elite prestige."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 4.0/5. The security compliance-driven environment limits weekend off-hour DevOps; compressed 4/10 days and 9/80 Flex schedules are a defense-wide standard that rigorous to predictable working hours. Work-life balance is commonly cited as a tenure-enhancing factor."
+   "source_ids": [
+    "c9341b5e49",
+    "882069ffc8"
+   ],
+   "value": "Estimated: Good work-life balance with sane hours, driven by standard defense contracting practices rather than high-burnout tech culture."
   }
  },
  "labcorp": {
@@ -210216,48 +210548,129 @@
  "prudential financial": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "e0b2fc2379"
+   ],
+   "value": "Mid-tier. Highly respected within financial services and actuarial data science, but lacks the elite industry-wide AI prestige of top tech companies or advanced research labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "62949583c1",
+    "e0b2fc2379"
+   ],
+   "value": "Collects premiums and fees for insurance, retirement, and asset management products, generating revenue by investing those funds before paying out claims or returns."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "e0b2fc2379"
+   ],
+   "value": "Estimated: Traditional, stable, and mission-driven. Emphasizes long-term career growth, diversity, and financial security rather than rapid disruption."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "62949583c1",
+    "e0b2fc2379"
+   ],
+   "value": "Individual and institutional customers across the United States, Asia, Europe, and Latin America."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "e0b2fc2379"
+   ],
+   "value": "Estimated: $90,000 - $120,000 base salary, plus potential bonuses. Unlikely to match the $180k+ total compensation top-tier tech companies offer."
   },
   "evidence_sha": "b1e42fda05f6e62c",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784870809,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "62949583c1"
+   ],
+   "value": "Financial Services, Insurance, and Asset Management."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e0b2fc2379"
+   ],
+   "value": "Verify if your specific AI or data science team operates with high autonomy and modern tech stacks, or if it is bound by slow bureaucracy. Confirm whether work-life balance is genuinely respected with sane hours and shutdowns, and ask concrete questions about new-grad pay bands and technical career acceleration."
+  },
+  "last_attempt_at": 1784870809,
   "last_evidence_at": 1784674521,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "62949583c1"
+   ],
+   "value": "Headquartered in Newark, New Jersey, with operations and offices in the United States, Asia, Europe, and Latin America."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "e0b2fc2379"
+   ],
+   "value": "To help people make the most of their lives by providing financial peace of mind."
+  },
   "name": "Prudential Financial",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e0b2fc2379"
+   ],
+   "value": "Estimated: Steady and highly regulated. Prioritizes stability and risk mitigation over fast-paced, innovative shipping, which may feel slow and bureaucratic."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "62949583c1",
+    "e0b2fc2379"
+   ],
+   "value": "Life insurance, annuities, retirement-related products, investment management, and mutual funds."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "e0b2fc2379"
+   ],
+   "value": "Estimated: 20-25 days of paid time off annually, standard for major financial services corporations."
   },
+  "refresh_after": 1790054809,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "source_ids": [
+    "e0b2fc2379"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "e0b2fc2379"
+   ],
+   "value": "Estimated: Standard public holidays, but guaranteed corporate-wide holiday shutdowns akin to tech companies are not public or confirmed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "62949583c1",
+    "e0b2fc2379"
+   ],
+   "value": "Large, established public multinational corporation (Fortune 500)."
   },
   "sources": [
    {
@@ -210291,14 +210704,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=eedf3dba1d1e5ac0867729fb6644905343fb1935edf3ab3128c39740e20331efJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=099e55db-8735-67f2-3d1e-424686216698&u=a1aHR0cHM6Ly93d3cucHJ1ZGVudGlhbC5jb20vbG9naW4&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e0b2fc2379"
+   ],
+   "value": "Large legacy financial institutions of this scale typically offer visa sponsorship for specialized technical roles, though specific policies are not explicitly confirmed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "62949583c1",
+    "e0b2fc2379"
+   ],
+   "value": "Prudential Financial is a global financial services and insurance institution headquartered in the US. It makes money by collecting premiums on life insurance and annuities, managing retirement and investment products, and earning returns on the premiums and assets it holds."
+  },
+  "synthesized_evidence_sha": "b1e42fda05f6e62c",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "e0b2fc2379"
+   ],
+   "value": "Actuarial modeling, legacy system modernization, cloud migrations, data analytics, and software development for customer-facing financial platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674521,
   "web_search_url": "https://duckduckgo.com/?q=Prudential+Financial+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e0b2fc2379"
+   ],
+   "value": "You are looking for an elite, fast-paced tech culture with top-tier new-grad pay, but this leans more toward stable corporate bureaucracy. AI and data science roles here provide a strong mission and learning opportunities, but may not match the high-velocity, cutting-edge innovation or extreme compensation packages of top-tier tech firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "e0b2fc2379"
+   ],
+   "value": "Estimated: Good. Generally offers a strong work-life balance with predictable hours and low burnout risk, contrasting with high-pressure tech environments."
   }
  },
  "psp investments": {
@@ -228166,37 +228611,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2: High-impact applied AI in a massive traditional industry; public-company resources and real-time data feedback loops; recognized in freight tech but not a pure-play AI research lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "420e3fb898",
+    "0d7dbbf2a9"
+   ],
+   "value": "Asset-light brokerage model: earns margin on the spread between shipper rates and carrier costs, plus fees for managed transportation, technology subscriptions, and value-added services. Low capital intensity, high scalability through platform network effects."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: 'Startup within a public company'—engineering-first mindset, data-driven decisions, flat hierarchy in tech org. Values: ownership, transparency, customer obsession (shipper & carrier). Diversity initiatives active. Less political than legacy logistics firms."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "420e3fb898"
+   ],
+   "value": "Serves shippers across retail, e-commerce, manufacturing, automotive, and consumer packaged goods industries. Customer base ranges from small businesses to Fortune 500 enterprises needing scalable freight capacity."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $115k-$135k base + 10-15% target bonus + RSUs (~$30k-$50k/yr vesting). Total ~$160k-$200k year 1. Charlotte/Chicago geo-adjusted; competitive with Tier 2 tech hubs."
   },
   "evidence_sha": "2d430160296b506d",
+  "generated_at": 1784870809,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "420e3fb898"
+   ],
+   "value": "Transportation & Logistics / Freight Tech / Supply Chain Technology"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep dives into ML system design (pricing, matching, forecasting), productionizing models at scale, and domain-specific problems like capacity prediction or route optimization. Behavioral rounds will probe ownership, speed of iteration, and cross-functional collaboration with operations teams. Prepare for case studies using real freight data patterns."
   },
+  "last_attempt_at": 1784870809,
   "last_evidence_at": 1784676697,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "420e3fb898"
+   ],
+   "value": "Headquarters: Charlotte, NC. Major tech hubs in Charlotte, Chicago, and remote-friendly across US. Operations offices nationwide for brokerage and managed transportation teams."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "420e3fb898"
+   ],
+   "value": "To simplify transportation through technology and people, creating the most efficient and reliable freight network. Focus on solving complex logistics challenges with data-driven solutions."
+  },
   "name": "RXO",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced product cycles (2-week sprints, quarterly OKRs) driven by competitive freight tech market. Spin-off culture encourages autonomy and speed. Less bureaucracy than XPO legacy, but operational dependencies (carriers, shippers) add real-world constraints."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "14d49ed7ac",
+    "420e3fb898"
+   ],
+   "value": "Core offerings include truckload brokerage (RXO Connect platform), managed transportation services, last-mile delivery for heavy goods, freight forwarding, and intermodal solutions. The tech platform provides real-time visibility, automated matching, and predictive analytics."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 2 floating days. Unlimited sick leave. No public policy doc found; based on public-company norms and employee reviews."
   },
+  "refresh_after": 1790054809,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -228206,7 +228707,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns. Some teams observe reduced ops between Christmas/New Year. Not a formal policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0d7dbbf2a9",
+    "420e3fb898"
+   ],
+   "value": "Public company (NYSE: RXO) spun off from XPO Logistics in November 2022. ~$4.7B annual revenue, ~6,500 employees. Growth-stage public entity investing heavily in proprietary tech platform."
   },
   "sources": [
    {
@@ -228240,14 +228749,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=02c433a3945a02973e5ded8ac9afb0c717df334a815560dae77e35589d69fc80JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0b4b891b-fa91-601f-2c29-9e86fbb26179&u=a1aHR0cHM6Ly9yeG8uY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely supports H-1B transfers and new cap petitions for specialized tech roles (ML, data science, platform engineering). Green card sponsorship probable for senior talent. No public policy details found in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "420e3fb898"
+   ],
+   "value": "RXO is a leading asset-light transportation and logistics company providing freight brokerage, managed transportation, and freight forwarding services. It connects shippers with a vast network of third-party carriers through its proprietary technology platform."
+  },
+  "synthesized_evidence_sha": "2d430160296b506d",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "420e3fb898"
+   ],
+   "value": "Builds RXO Connect platform: real-time freight matching algorithms, pricing engines, carrier recommendation systems, shipment tracking/visibility, predictive ETAs, and shipper/carrier portals. Stack includes cloud-native microservices, event-driven architecture, ML for pricing and capacity forecasting."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676697,
   "web_search_url": "https://duckduckgo.com/?q=RXO+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "RXO offers a rare combination: a well-capitalized public logistics company investing heavily in AI/ML for freight optimization, with a modern tech culture born from a recent spin-off. You get elite compensation benchmarks and the prestige of building category-defining supply chain technology, without the bureaucracy of legacy incumbents. The mission—fixing a $800B fragmented freight market—is tangible and data-rich."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.8/5. Tech teams report reasonable hours (40-45 typical) with on-call rotations for platform reliability. No guaranteed shutdowns; some crunch during peak shipping seasons (Q4). Culture emphasizes sustainable pace post-spin-off."
   }
  },
  "ryan specialty": {
@@ -249646,48 +250180,134 @@
  "state of north carolina": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "c8cccbd166"
+   ],
+   "value": "Estimated: Low to Medium. Unlikely to offer elite industry prestige or highly advanced AI/Data Science work compared to top-tier tech companies"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "c8cccbd166",
+    "edda9e1d95"
+   ],
+   "value": "Public sector entity funded predominantly by state taxes and federal grants to support government operations and public programs."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "c8cccbd166",
+    "edda9e1d95"
+   ],
+   "value": "Estimated: Mission-driven, public service-oriented, stable, and heavily focused on compliance and procedure rather than rapid innovation"
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "c8cccbd166",
+    "0aef11858c"
+   ],
+   "value": "The residents, businesses, and visitors of North Carolina."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "c8cccbd166"
+   ],
+   "value": "Estimated: $60,000 - $75,000 per year"
   },
   "evidence_sha": "e2b6a0d05eff2157",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784870809,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c8cccbd166",
+    "edda9e1d95"
+   ],
+   "value": "Government / Public Administration"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c8cccbd166",
+    "edda9e1d95"
+   ],
+   "value": "Estimated: Given the candidate's desire for fast innovation and elite pay, it is critical to probe specific team tech stacks, promotion velocity, and whether any modernization initiatives offer sufficient technical learning without being bogged down by slow government processes"
+  },
+  "last_attempt_at": 1784870809,
   "last_evidence_at": 1784674831,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "c8cccbd166",
+    "0aef11858c"
+   ],
+   "value": "Raleigh (state capital) and various state offices and facilities across North Carolina."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "c8cccbd166",
+    "edda9e1d95"
+   ],
+   "value": "To serve the citizens of North Carolina by providing essential public services, ensuring public safety, and improving the quality of life across the state."
+  },
   "name": "State of North Carolina",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "c8cccbd166"
+   ],
+   "value": "Estimated: Slow to moderate, characterized by bureaucratic processes, extensive compliance requirements, and carefully managed timelines rather than rapid tech-culture agility"
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c8cccbd166",
+    "edda9e1d95"
+   ],
+   "value": "Public services, state infrastructure, regulatory oversight, public health programs, education systems, and transportation networks."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "c8cccbd166"
+   ],
+   "value": "Estimated: Likely accrues 15 to 25 days of paid time off annually, plus state holidays"
   },
+  "refresh_after": 1790054809,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "c8cccbd166"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "c8cccbd166"
+   ],
+   "value": "Estimated: Likely includes paid state holidays and potential administrative leave days, though not guaranteed tech-style holiday shutdowns"
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "c8cccbd166",
+    "edda9e1d95"
+   ],
+   "value": "Large, established government organization administering state-wide operations."
   },
   "sources": [
    {
@@ -249721,14 +250341,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=d1c951d7992c0209ee213cdd22fccf4c0ea6e3d803cefd97aaf8a73a666d74d0JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1652f470-e9a6-6726-1fef-e3ede8396625&u=a1aHR0cHM6Ly93d3cuc3RhdGVmYXJtLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c8cccbd166"
+   ],
+   "value": "Estimated: Generally does not sponsor visas for international candidates typical of U.S. state governments"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c8cccbd166",
+    "0aef11858c"
+   ],
+   "value": "The State of North Carolina is a U.S. state government entity that provides public services, infrastructure, and administration for its residents. It generates revenue through taxation and federal funding to operate state agencies and programs."
+  },
+  "synthesized_evidence_sha": "e2b6a0d05eff2157",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c8cccbd166"
+   ],
+   "value": "Estimated: Mainly traditional IT operations, legacy system maintenance, database management, and enterprise software administration"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674831,
   "web_search_url": "https://duckduckgo.com/?q=State+of+North+Carolina+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c8cccbd166",
+    "edda9e1d95"
+   ],
+   "value": "Estimated: While highly mission-driven with strong work-life balance and predictable hours, state government work typically conflicts with desires for elite tech prestige, top-tier new-grad pay, and fast-paced innovation, as it is known for bureaucratic pace and legacy tech stacks"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "c8cccbd166"
+   ],
+   "value": "Estimated: Good to Excellent. Known for sane hours, likely a 40-hour workweek, and high respect for personal time"
   }
  },
  "state of utah": {
@@ -252411,48 +253064,125 @@
  "stryker": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "1f67c31134"
+   ],
+   "value": "Mid-tier: Stryker is highly prestigious in the medical device industry, but is not generally recognized as an elite tech company for AI or data science, making it a strong brand name without top-tier AI prestige."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "1f67c31134"
+   ],
+   "value": "The company makes money by developing, manufacturing, and selling medical devices and equipment to healthcare providers globally."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "1f67c31134"
+   ],
+   "value": "Mission-driven and quality-focused; a large corporate structure with a strong emphasis on healthcare impact."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "1f67c31134"
+   ],
+   "value": "The company sells its products and services to hospitals, doctors, and healthcare facilities."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "1f67c31134"
+   ],
+   "value": "Estimated: $90,000 - $115,000. Competitive for a large, established company in the medical sector but potentially lower than top-tier tech firms."
   },
   "evidence_sha": "2410255323fa21db",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784870809,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "1f67c31134"
+   ],
+   "value": "Medical equipment and supplies manufacturing."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "1f67c31134"
+   ],
+   "value": "Candidates should emphasize technical learning and career growth within a mission-driven context, while carefully probing for team-specific pace, autonomy, and work-life balance to gauge alignment with their goal of avoiding high-burnout and slow bureaucracy."
+  },
+  "last_attempt_at": 1784870809,
   "last_evidence_at": 1784583325,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "1f67c31134"
+   ],
+   "value": "Stryker is headquartered in Kalamazoo, Michigan, with operations and locations worldwide."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "d222bf81f7"
+   ],
+   "value": "Stryker is driven by a mission to make healthcare better."
+  },
   "name": "Stryker",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "1f67c31134"
+   ],
+   "value": "Estimated: Moderately fast. As a large medical device manufacturer, the pace emphasizes rigorous product development and regulation rather than the hyper-fast, agile tech culture of a software startup."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "1f67c31134"
+   ],
+   "value": "Stryker's products include implants used in joint replacement and trauma surgeries, surgical equipment, surgical navigation systems, and robotic technology. They also produce medical devices for neurosurgery, spinal surgery, and emergency medical equipment such as stretchers and cots."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "1f67c31134"
+   ],
+   "value": "Estimated: 20-25 days per year. Large companies in this sector typically offer competitive vacation packages, though exact policy is not public."
   },
+  "refresh_after": 1790054809,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "1f67c31134"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "1f67c31134"
+   ],
+   "value": "Estimated: No standard holiday shutdowns. Most operations continue year-round, though standard public holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "1f67c31134"
+   ],
+   "value": "Stryker is a large, established public corporation (Fortune 500)."
   },
   "sources": [
    {
@@ -252486,14 +253216,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=9496cdf697a0b6d7336cd8b56dde2691ef8071d7400b1df705ced8d900d32c25JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvU3RyeWtlcl9Db3Jwb3JhdGlvbg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1f67c31134"
+   ],
+   "value": "While large multinational medical companies frequently support visas, specific data on Stryker's current visa sponsorship for technical roles is not detailed in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1f67c31134"
+   ],
+   "value": "Stryker is a multinational medical technologies corporation based in Kalamazoo, Michigan. It develops, manufactures, and markets medical devices and equipment, generating revenue by selling these products to hospitals and healthcare providers."
+  },
+  "synthesized_evidence_sha": "2410255323fa21db",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "1f67c31134"
+   ],
+   "value": "The company primarily focuses on medical devices and robotic surgical technology rather than cutting-edge AI or data science."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583325,
   "web_search_url": "https://duckduckgo.com/?q=Stryker+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "1f67c31134"
+   ],
+   "value": "Stryker offers a mission-driven environment focused on improving healthcare, aligning with the candidate's desire for meaningful work. However, the company is a large corporation (Fortune 500), which may not perfectly match the candidate's preference for a 'fast, innovative tech culture rather than slow bureaucracy' or an 'elite AI or data science role.'"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "1f67c31134"
+   ],
+   "value": "Estimated: Good. Stryker is often praised for providing a solid work-life balance, which aligns with the candidate's desire for sane hours, though this can vary by specific team."
   }
  },
  "stubhub": {
