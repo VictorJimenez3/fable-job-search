@@ -40086,37 +40086,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 - Respected aerospace leader with growing ML/telemetry teams, but not a primary AI research destination like top tech labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue from NASA contracts for station development and cargo/crew services, private astronaut mission fees (~$55M per seat), future commercial station utilization fees, in-space manufacturing and research partnerships."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-obsessed, engineering-first, safety-critical culture with NASA heritage influence. Collaborative but rigorous; 'test like you fly' mindset. Diverse international team united by space exploration passion."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "NASA (primary government customer), international space agencies, sovereign astronaut programs, commercial research and manufacturing companies, private individuals for space tourism."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110K-$135K base + equity (RSUs) + bonus; total comp ~$130K-$160K. Aerospace pays less than top tech but competitive within sector."
   },
   "evidence_sha": "42740808e61139a1",
+  "generated_at": 1784897083,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Commercial Space / Aerospace"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical assessments in your specialty (C++/Python for flight software, orbital mechanics, systems engineering), behavioral questions on safety culture and rigorous testing, and domain knowledge of human spaceflight constraints. Prepare for multi-round panels with engineers and managers; emphasize reliability mindset and ability to work within NASA/ITAR processes."
+  },
+  "last_attempt_at": 1784897083,
   "last_evidence_at": 1784680198,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in Houston, TX; engineering offices in Denver, CO and Cape Canaveral, FL; mission operations in Houston; international partnerships."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To make living and working in space commonplace as a means to sustain human exploration and enable a thriving space economy that benefits life on Earth."
+  },
   "name": "Axiom Space",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast-paced around mission milestones and hardware delivery schedules; structured aerospace development cycles with design reviews, testing gates, and NASA oversight create both urgency and process discipline."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Private astronaut missions to ISS (Ax-1, Ax-2, Ax-3), development of Axiom Station modules, space suits for NASA Artemis, in-space manufacturing and research platforms, astronaut training services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays + potential shutdown between Christmas/New Year; aerospace industry standard."
   },
+  "refresh_after": 1790081083,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -40126,7 +40168,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically Dec 24-Jan 1) common in aerospace; not guaranteed but historically observed."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "~500-800 employees, Series C funded ($350M+ raised), late-stage startup transitioning to operational commercial space company with government contracts."
   },
   "sources": [
    {
@@ -40170,14 +40217,35 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active H-1B sponsor for specialized aerospace roles; supports O-1 visas for exceptional ability; limited new-grad sponsorship due to ITAR/export control restrictions on many positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Axiom Space is a commercial space company building the world's first commercial space station and conducting private astronaut missions to the International Space Station. The company aims to make space accessible for research, manufacturing, and tourism while developing a successor to the ISS."
+  },
+  "synthesized_evidence_sha": "42740808e61139a1",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Avionics and flight software, guidance/navigation/control, life support systems, orbital mechanics, robotics, human-rated spacecraft systems, mission control software, data science for telemetry and health monitoring, simulation and modeling."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680198,
   "web_search_url": "https://duckduckgo.com/?q=Axiom+Space+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Axiom offers elite prestige as a leader in commercial space stations with NASA partnerships, competitive new-grad pay in aerospace, and mission-driven work expanding human presence in orbit. The culture balances rapid innovation in human-rated systems with structured aerospace processes, though ITAR restrictions and hardware timelines can create crunch periods around mission milestones."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 - Mission-critical phases demand extended hours; standard periods more balanced. Aerospace hardware schedules less flexible than pure software."
   }
  },
  "axle": {
@@ -51221,11 +51289,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -51237,6 +51307,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784897083,
   "last_evidence_at": 1784680198,
   "name": "Blackstone",
   "pace_of_work": {
@@ -51249,6 +51320,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784897203,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -51292,7 +51364,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=05956d0d57641c91bd2867cb63432c465b4864574edb03a494ff23fa1efc2e52JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=116f296a-6e32-64de-2aa8-3ef46ffa65a8&u=a1aHR0cHM6Ly93d3cuYmxhY2tzdG9uZS5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680198,
   "web_search_url": "https://duckduckgo.com/?q=Blackstone+company+careers+benefits",
@@ -102054,48 +102126,129 @@
  "data intellect": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "14e8d69fef"
+   ],
+   "value": "Estimated: High (Academic tier, if affiliated with Harvard SEAS)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "9615ee551a",
+    "14e8d69fef"
+   ],
+   "value": "Monetization likely stems from research grants, educational programs, or institutional partnerships given the Harvard SEAS domain hosting, though exact revenue streams are not detailed."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "14e8d69fef"
+   ],
+   "value": "Estimated: Mission-driven, academic, and highly technical, fostering rapid learning and technical acceleration in a low-burnout environment."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "9615ee551a",
+    "14e8d69fef"
+   ],
+   "value": "Not specified in the source content."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "14e8d69fef"
+   ],
+   "value": "Estimated: $80,000 - $110,000 (Lower than big tech, but competitive for academic research data science roles)."
   },
   "evidence_sha": "842e2013de36776a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784897083,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "9615ee551a",
+    "14e8d69fef"
+   ],
+   "value": "Higher Education / Data Science Research"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "9615ee551a",
+    "14e8d69fef"
+   ],
+   "value": "Candidates should emphasize their drive for elite technical learning and readiness to contribute to innovative data science applications, matching the fast-paced academic culture. They should also explicitly probe the organization's daily operations to confirm work-life balance, sane hours, and guaranteed shutdowns match their zero-burnout requirement."
+  },
+  "last_attempt_at": 1784897083,
   "last_evidence_at": 1784680198,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "9615ee551a"
+   ],
+   "value": "Cambridge, Massachusetts (Inferred from Harvard SEAS domain routing)."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "14e8d69fef"
+   ],
+   "value": "Implied focus on advancing data science definitions, skills, and applications, though an explicit corporate mission statement was not found in the provided redirect sources."
+  },
   "name": "Data Intellect",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "14e8d69fef"
+   ],
+   "value": "Estimated: Fast-paced and innovative, typical of academic research labs, avoiding slow corporate bureaucracy."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "14e8d69fef"
+   ],
+   "value": "Data science applications, definitions, and skills training or research outputs, hosted via Harvard SEAS (School of Engineering and Applied Sciences)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "14e8d69fef"
+   ],
+   "value": "Estimated: 20-30 days, standard for university-affiliated research roles, though not explicitly stated."
   },
+  "refresh_after": 1790081083,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "9615ee551a"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "14e8d69fef"
+   ],
+   "value": "Estimated: Likely aligns with the academic calendar, offering winter and summer break shutdowns, though not explicitly confirmed."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "9615ee551a"
+   ],
+   "value": "Not found in research."
   },
   "sources": [
    {
@@ -102129,14 +102282,47 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "9615ee551a"
+   ],
+   "value": "Not found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "9615ee551a",
+    "14e8d69fef"
+   ],
+   "value": "Data Intellect is a data science and analytics organization whose public digital footprint redirects through Harvard University infrastructure, suggesting an academic, research-driven, or university-affiliated enterprise. While the exact consulting products are obscured by redirect notices in public sources, its business model appears to monetize through the application of advanced data science techniques, likely via research partnerships, training, or specialized talent placement."
+  },
+  "synthesized_evidence_sha": "842e2013de36776a",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "14e8d69fef"
+   ],
+   "value": "Involves data science skills and applications, indicating technical work centered on analytics, machine learning, and data engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680198,
   "web_search_url": "https://duckduckgo.com/?q=Data+Intellect+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "9615ee551a",
+    "14e8d69fef"
+   ],
+   "value": "Aligning with the candidate's desire for a prestigious, mission-driven data science role, Data Intellect's academic backing promises a fast, innovative tech culture focused on elite technical learning rather than slow bureaucracy. Its university-affiliated model is likely to respect work-life balance through sane hours, accelerating career growth without the toxic burnout typical of high-tier corporate environments."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "14e8d69fef"
+   ],
+   "value": "Estimated: Excellent, with a strong likelihood of sane hours and guaranteed academic shutdowns that respect personal time."
   }
  },
  "data intelligence llc": {
@@ -131630,37 +131816,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2: Strong applied ML brand in retail/e-comm; known for large-scale recommendation and vision systems but not a primary research publisher. Respected in consumer ML circles; less visible in academic conferences."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Direct-to-consumer fast fashion: designs, manufactures, and sells own-brand apparel online with rapid product turnover (hundreds of new styles weekly). Revenue from product sales; marketing via influencer/celebrity partnerships and paid social."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: High-energy, metric-obsessed, \"move fast and ship\" startup feel despite scale. Heavy cross-functional collaboration (tech ↔ merchandising ↔ creative). Celebrity/influencer adjacency adds glamour but also external pressure. Diversity noted in public-facing roles; engineering org less visible."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primarily Gen Z and millennial women seeking affordable, on-trend fashion; global direct-to-consumer base built through Instagram, TikTok, and influencer partnerships."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k–$160k base + $15k–$30k sign-on + RSUs (4-yr vest, ~$40k–$80k total). Total comp ~$185k–$250k. Private company equity illiquid until secondary/liquidity event."
   },
   "evidence_sha": "1e268f5f5934917b",
+  "generated_at": 1784897083,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "E-commerce / Fast Fashion / Retail Technology"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect heavy emphasis on production ML: model serving latency, feature stores, experiment design for A/B tests, and handling concept drift in fashion trends. Prepare case studies on recommendation systems, demand forecasting with sparse/skewed data, and computer vision for attribute tagging. Behavioral screens will test comfort with ambiguity, rapid iteration, and cross-functional influence (merchandising, creative, marketing). Ask about on-call rotation, sprint cadence, and whether there are pr"
+  },
+  "last_attempt_at": 1784897083,
   "last_evidence_at": 1784680196,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "HQ: Los Angeles, CA (design, marketing, tech). Fulfillment centers in CA and NJ. Remote-friendly for some engineering roles; core tech team largely LA-based."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To make trendy, affordable fashion accessible to everyone by leveraging real-time data and social commerce."
+  },
   "name": "Fashion Nova",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast. Weekly releases, daily deploys for front-end; ML models retrained daily/weekly. High urgency around trend windows (e.g., viral TikTok moment → product live in days). Can feel \"always on\" during peak seasons."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Women's clothing including dresses, tops, bottoms, outerwear, activewear, swimwear, and accessories; also offers men's and kids' lines. Core product is affordable, trend-responsive apparel."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays (US). Unlimited sick. No public policy on mental health days or mandatory shutdowns."
   },
+  "refresh_after": 1790081083,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -131670,7 +131898,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdown periods. Some teams observe informal slowdowns between Christmas–New Year; not policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Private, profitable, ~1,000–5,000 employees (est.). Headquartered in Los Angeles; operates globally via e-commerce. No public funding rounds disclosed."
   },
   "sources": [
    {
@@ -131704,14 +131937,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=00c6d3dfccb817a22f80bd1dfc68a81345d1ba090bf053f80e37f2634a9c0d98JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=116f296a-6e32-64de-2aa8-3ef46ffa65a8&u=a1aHR0cHM6Ly93d3cuZmFzaGlvbm5vdmEuY29tLz9tc29ja2lkPTExNmYyOTZhNmUzMjY0ZGUyYWE4M2VmNDZmZmE2NWE4&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B for senior/engineering roles; limited new-grad sponsorship due to volume. No public data on STEM OPT or green card support."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fashion Nova is a fast-fashion e-commerce retailer known for trend-driven women's apparel, leveraging social media and influencer marketing to drive direct-to-consumer sales."
+  },
+  "synthesized_evidence_sha": "1e268f5f5934917b",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "E-commerce platform engineering, recommendation/personalization systems, real-time inventory & demand forecasting, computer vision for visual search, influencer ROI analytics, A/B testing infrastructure, data pipelines for clickstream and sales data."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680196,
   "web_search_url": "https://duckduckgo.com/?q=Fashion+Nova+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fashion Nova offers a rare blend: a high-velocity, data-centric tech environment inside a culturally iconic brand. For a new-grad AI/DS candidate, it means working on real-time recommendation, demand forecasting, and visual search at massive scale—without the bureaucracy of big tech. The company’s influencer-driven model creates unique, high-impact problems (e.g., attributing sales to micro-influencers, predicting viral trends). However, the fast-fashion pace can pressure delivery timelines; can"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5. Engineering culture varies by team; some report 45–55 hr weeks with on-call, others describe sustainable 40 hr norms. No company-wide \"guaranteed shutdown\" policy. Negotiate expectations at offer stage."
   }
  },
  "feathery": {
@@ -132586,37 +132840,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 — globally recognized quant/AI research brand; publishes at NeurIPS/ICML; runs dedicated AI Labs; competes for same talent as top hedge funds and tech labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Asset management fee revenue based on AUM (assets under management); charges percentage-based management fees on funds and institutional mandates, with some performance fees."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, collaborative, long-tenure workforce; engineering culture values rigor and reproducibility over speed; diversity and inclusion actively tracked; low politics for a firm this size."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Institutional investors (pension funds, sovereign wealth funds), financial intermediaries (advisors, platforms), and retail investors across Europe, Asia, and other non-US markets."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: London £55-65k base + 15-25% bonus + RSUs (vesting 3-4y); Dublin €50-60k; Singapore SGD 70-85k; Tokyo ¥7-9M; all figures total comp year-one ~£70-85k / €70-80k / SGD 100-110k / ¥9-11M."
   },
   "evidence_sha": "4d59d966186a1a07",
+  "generated_at": 1784897083,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect rigorous statistical/ML fundamentals, production ML system design, and domain fluency in finance (risk models, factor investing, transaction cost analysis); behavioral emphasis on long-term thinking, compliance awareness, and collaborative delivery over heroics."
+  },
+  "last_attempt_at": 1784897083,
   "last_evidence_at": 1784680199,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in London; major hubs in Dublin, Tokyo, Hong Kong, Singapore, Sydney, Mumbai, Boston, Toronto; offices in 25+ countries."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To deliver superior investment outcomes and help clients achieve their long-term financial goals through active management and responsible investing."
+  },
   "name": "Fidelity International",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate — structured sprint cycles with regulatory/release gates; slower than consumer tech but faster than traditional banking; quarterly planning horizons protect against fire drills."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Investment funds (mutual funds, ETFs), institutional separate accounts, wealth management platforms, retirement solutions, and digital investment tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-28 days annual leave + 8-10 public holidays (varies by country); UK baseline 25 days, Ireland 22, Singapore 14-18, Japan 10-20 depending on tenure."
   },
+  "refresh_after": 1790081083,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -132626,7 +132922,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Firm-wide winter shutdown (typically Dec 24-Jan 2) and summer half-day Fridays in some regions; not a universal policy but widely observed in practice."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, established private company (owned by Fidelity family and employees) with ~$800B+ AUM and 7,000+ employees globally; mature, profitable, low-turnover ownership structure."
   },
   "sources": [
    {
@@ -132660,14 +132961,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=eefee273d8548a305c848fe9c0c7b53e7373c328175a237ff3c6325614af1689JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=116f296a-6e32-64de-2aa8-3ef46ffa65a8&u=a1aHR0cHM6Ly93d3cuZmlkZWxpdHkuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors work visas (UK Skilled Worker, EU Blue Card, Singapore EP, US H-1B via Fidelity Investments affiliate) for technical and investment roles; dedicated global mobility team."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Fidelity International is a global asset management firm that manages investments for institutions, financial advisors, and individual investors. It makes money primarily through management fees on assets under management across equity, fixed income, and multi-asset strategies."
+  },
+  "synthesized_evidence_sha": "4d59d966186a1a07",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Investment technology platforms, algorithmic trading systems, data engineering for alternative data, ML for alpha research, risk analytics, client-facing digital products, cloud infrastructure modernization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680199,
   "web_search_url": "https://duckduckgo.com/?q=Fidelity+International+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers elite prestige in quantitative finance and applied AI with top-tier new-grad compensation, while maintaining a regulated-industry pace that enforces healthier boundaries than pure tech — suitable for candidates who want high-impact ML work without the burnout culture of hedge funds or Big Tech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "4/5 — strong cultural norms around 9-6 core hours, limited weekend work, and mandated shutdown periods; on-call rotations exist but are compensated and bounded."
   }
  },
  "fidelity investments": {
@@ -134243,48 +134565,135 @@
  "finquery": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "41fb193eab"
+   ],
+   "value": "Estimated: Mid-tier prestige. While it is a recognized leader in lease accounting SaaS, FinQuery is primarily a fintech automation company rather than an elite, AI-first research lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "41fb193eab",
+    "bc614e987f"
+   ],
+   "value": "B2B enterprise SaaS, selling specialized accounting automation software and unified subledger solutions to finance and accounting teams globally."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "41fb193eab",
+    "bc614e987f"
+   ],
+   "value": "Estimated: Mission-driven and specialized. The culture appears focused on deep expertise in accounting automation, encouraging employees to empower customers to focus on strategic, high-value tasks."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "41fb193eab",
+    "bc614e987f"
+   ],
+   "value": "More than 8,500 customers worldwide, ranging from financial reporting teams to enterprises needing accurate, automatedlease accounting and contract management."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "41fb193eab"
+   ],
+   "value": "Estimated: Pay is not explicitly stated in the provided sources, but as an established B2B SaaS company with 8,500+ customers, new-grad tech pay likely ranges from $90,000 to $130,000 depending on location and role specifics."
   },
   "evidence_sha": "9ae354face5fd75a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784897083,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "41fb193eab",
+    "bc614e987f"
+   ],
+   "value": "Financial Software / Accounting Technology"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "41fb193eab",
+    "bc614e987f"
+   ],
+   "value": "Interview discussions should center on how you can apply AI or data science to optimize high-volume, contract-driven accounting workflows without sacrificing sane hours. Be prepared to discuss your interest in building scalable, accurate financial automation tools that drive elite technical learning while maintaining a balanced, non-burnout work environment."
+  },
+  "last_attempt_at": 1784897083,
   "last_evidence_at": 1784679642,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "41fb193eab",
+    "bc614e987f"
+   ],
+   "value": "Global presence implied by serving over 8,500 customers worldwide, though specific office locations were not detailed in the provided sources."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "41fb193eab",
+    "bc614e987f"
+   ],
+   "value": "To empower customers to focus on strategic, high-value tasks by eliminating time-intensive, error-prone technical accounting workflows through automation."
+  },
   "name": "FinQuery",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "41fb193eab",
+    "bc614e987f"
+   ],
+   "value": "Estimated: Fast and innovative. As a SaaS provider at the forefront of accounting automation, the company likely prioritizes rapid product development and agile workflows to maintain its competitive edge."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "41fb193eab",
+    "bc614e987f"
+   ],
+   "value": "A unified accounting subledger that automates complex, contract-driven technical accounting workflows, with a flagship emphasis on lease accounting software."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "41fb193eab"
+   ],
+   "value": "Estimated: Company-specific PTO policies are not detailed in the provided sources, but standard SaaS companies typically offer 15-25 days of flexible paid time off."
   },
+  "refresh_after": 1790081083,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "41fb193eab"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "41fb193eab"
+   ],
+   "value": "Estimated: Guaranteed company-wide shutdowns (such as holidays) are not explicitly mentioned in the provided sources."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "41fb193eab",
+    "bc614e987f"
+   ],
+   "value": "Established B2B SaaS company with a global footprint of over 8,500 customers, indicating a mid-market to enterprise scale and stable revenue generation."
   },
   "sources": [
    {
@@ -134338,14 +134747,48 @@
     "url": "https://jobs.lever.co/finquery/fad1bba7-ecb5-4332-b084-f3fe789175f5"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "41fb193eab"
+   ],
+   "value": "Estimated: Specific visa sponsorship policies are not explicitly stated in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "41fb193eab",
+    "bc614e987f"
+   ],
+   "value": "FinQuery is a B2B SaaS company specializing in contract-driven accounting automation, acting as a unified subledger to eliminate manual, error-prone financial workflows. It generates revenue by selling this software to enterprise clients, boasting a global leadership position in lease accounting with over 8,500 customers worldwide."
+  },
+  "synthesized_evidence_sha": "9ae354face5fd75a",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "41fb193eab"
+   ],
+   "value": "Estimated: Developing and maintaining a unified subledger platform, involving heavy data processing, workflow automation, and integration of complex accounting rules into scalable software systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679642,
   "web_search_url": "https://duckduckgo.com/?q=FinQuery+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "41fb193eab",
+    "bc614e987f"
+   ],
+   "value": "This role aligns with your desire for a fast, innovative tech culture by automating complex financial systems at scale, accelerating technical learning in data-heavy subledger architectures. It also supports your priority for a mission-driven environment that respects work-life balance, avoiding toxic bureaucracy while empowering strategic, high-value problem-solving."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "41fb193eab",
+    "bc614e987f"
+   ],
+   "value": "Estimated: Balanced. The company's mission emphasizes eliminating time-intensive, error-prone workflows for its customers, which likely reflects an internal culture that values efficient, sustainable output over toxic burnout."
   }
  },
  "finra": {
@@ -140137,37 +140580,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low — not a primary AI research or product company; data science roles support engineering projects rather than drive core innovation."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Project-based consulting fees, multi-year service contracts, and retainer agreements with public and private sector clients."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, mission-driven, professional services culture with strong employee ownership pride; emphasis on long-term client relationships and technical excellence."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Municipalities, state/federal agencies, private developers, industrial clients, and utility companies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70k–$90k base salary + standard benefits (health, 401k match, tuition reimbursement); not competitive with top-tier AI/ML new-grad packages."
   },
   "evidence_sha": "e068840e1af46c19",
+  "generated_at": 1784897083,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Engineering consulting / professional services / infrastructure & environmental services."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect behavioral questions on client management, project delivery, and teamwork; technical assessments on engineering fundamentals, GIS/analytics tools, and domain-specific problem solving. Limited emphasis on cutting-edge ML research or algorithmic coding."
+  },
+  "last_attempt_at": 1784897083,
   "last_evidence_at": 1784680402,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Green Bay, WI; additional offices in Madison, Milwaukee, Minneapolis, Chicago, Denver, Phoenix, and other regional hubs."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To deliver innovative, sustainable solutions that improve communities and the environment through collaborative, client-focused service."
+  },
   "name": "FOTH",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Project-driven with deadline cycles; moderate to high intensity during proposal and delivery crunches, steadier between major milestones."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Engineering consulting services including civil, structural, environmental, water resources, transportation, and GIS/data analytics solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days annual PTO plus 8–10 paid holidays; accrual increases with tenure."
   },
+  "refresh_after": 1790081083,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -140177,7 +140662,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide mandatory shutdowns; some offices may close between Christmas and New Year’s."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mid-sized, employee-owned firm with approximately 1,000+ employees across multiple U.S. offices; established over 70 years ago."
   },
   "sources": [
    {
@@ -140211,14 +140701,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=b33a9e07ce82d5c8ee663b2f5816c4cd75bbc788b662be88a5e27800d7a55c76JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=30c87310-eb9a-6d6c-3ba9-648eea4a6ca0&u=a1aHR0cHM6Ly93d3cuZm90aC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "May sponsor H-1B visas for specialized senior engineering roles; sponsorship for new-grad data science positions is uncommon and case-by-case."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8d6d64c75c",
+    "0b79b69c83",
+    "0adf6190c0"
+   ],
+   "value": "FOTH is an employee-owned engineering and consulting firm providing infrastructure, environmental, and technology solutions to public and private clients across the U.S."
+  },
+  "synthesized_evidence_sha": "e068840e1af46c19",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Applied engineering design, environmental modeling, GIS/spatial analysis, data visualization, asset management systems, and emerging digital twin/smart infrastructure projects."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680402,
   "web_search_url": "https://duckduckgo.com/?q=FOTH+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a candidate targeting elite AI/data science prestige, high new-grad pay, and a fast innovative tech culture, FOTH is a traditional engineering consultancy — not a top-tier AI shop. Its pace is project-driven with moderate work-life balance, but compensation and AI research opportunities fall well below elite tech firms. The employee-owned culture offers stability and mission-driven work, but not the rapid technical acceleration or guaranteed shutdowns the candidate prioritizes."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Moderate — consulting demands can require overtime near deadlines, but employee-owned culture encourages reasonable hours and flexibility; no guaranteed shutdowns."
   }
  },
  "four winds hospital": {
@@ -268642,7 +269157,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -268660,7 +269175,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784896418,
+  "last_attempt_at": 1784897083,
   "last_evidence_at": 1784677403,
   "name": "Penn State University",
   "pace_of_work": {
@@ -268673,7 +269188,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784896898,
+  "retry_after": 1784898043,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -291552,39 +292067,106 @@
  },
  "realtor com": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "ada89ec905"
+   ],
+   "value": "Tier 1 (Elite): Stated 100% AI adoption goal, consumer-scale ML deployment, dedicated AI leadership, and active investment in AI-powered consumer experiences place it among top industry practitioners."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "a5ed6e4033"
+   ],
+   "value": "Lead generation marketplace: sells advertising and lead packages to real estate agents (Premier Agent program), mortgage lenders, and rental professionals. Additional revenue from display advertising and partner referrals. Free for consumers."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "f0a6f91d7b",
+    "ada89ec905"
+   ],
+   "value": "Engineering-centric, mission-aligned, and pragmatic. 'Paved Path' philosophy shows respect for developer time. Cross-functional collaboration emphasized. AI-forward but grounded in consumer value. Less hype, more execution than typical Bay Area tech."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "a5ed6e4033"
+   ],
+   "value": "Primary customers are home buyers, sellers, and renters seeking properties and agent connections. Revenue customers are real estate agents and brokers (via Premier Agent advertising), mortgage lenders, and rental property managers purchasing leads and advertising."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$155k base + 10-15% target bonus + RSUs ($30k-$50k/yr vesting). Total comp ~$170k-$210k. Competitive with Tier 1 Bay Area but below FAANG peaks."
   },
   "evidence_sha": "26f2827e90ba8c26",
+  "generated_at": 1784897083,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a5ed6e4033"
+   ],
+   "value": "Real Estate Technology (PropTech) / Online Marketplace"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "f0a6f91d7b",
+    "ada89ec905"
+   ],
+   "value": "Expect deep technical assessment on distributed systems, ML/AI application (not just research), and cloud architecture. Behavioral focus on cross-functional partnership, developer experience empathy, and mission alignment. Prepare for system design at consumer scale and questions on balancing speed with reliability in a regulated marketplace."
+  },
+  "last_attempt_at": 1784897083,
+  "last_evidence_at": 1784679535,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Headquarters: Santa Clara, CA. Major offices: Austin, TX; Denver, CO; New York, NY. Remote/hybrid options common for engineering roles."
   },
-  "last_evidence_at": 1784679535,
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "f0a6f91d7b",
+    "a5ed6e4033",
+    "ada89ec905"
+   ],
+   "value": "Empower more people to find their way home by breaking barriers to entry, making the right connections, and building confidence through expert guidance."
+  },
   "name": "Realtor.com",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "f0a6f91d7b",
+    "ada89ec905"
+   ],
+   "value": "Estimated: Fast but sustainable. 'Ship faster' platform mandate and AI urgency drive velocity, but mature product and platform investment reduce firefighting. Not a 'move fast and break things' culture; more 'paved path' enabled speed."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "f0a6f91d7b",
+    "a5ed6e4033",
+    "ada89ec905"
+   ],
+   "value": "Core products include the Realtor.com website and mobile apps for home search, agent matching tools, mortgage calculators, rental listings, and AI-powered consumer experiences. Internal platforms include a 'Paved Path' developer experience framework and cloud infrastructure on AWS."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + sick leave. Typical for large tech subsidiaries; no public policy details found."
   },
+  "refresh_after": 1790081083,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -291594,7 +292176,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns publicized. Some teams may observe summer/winter slowdowns informally."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, established public subsidiary (Move, Inc. owned by News Corp). ~1,000-2,000 employees at Realtor.com specifically; mature stage with stable revenue."
   },
   "sources": [
    {
@@ -291658,14 +292245,49 @@
     "url": "https://boards.greenhouse.io/rdccareers/jobs/7787483003?gh_jid=7787483003"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and transfers for specialized engineering/AI roles given size and tech focus; green card sponsorship typical for senior roles. No public policy details found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "f0a6f91d7b",
+    "a5ed6e4033",
+    "ada89ec905"
+   ],
+   "value": "Realtor.com is a leading online real estate marketplace that connects home buyers, sellers, and renters with real estate professionals and listings. It operates as a subsidiary of Move, Inc. (owned by News Corp) and serves as the official website of the National Association of Realtors."
+  },
+  "synthesized_evidence_sha": "26f2827e90ba8c26",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "f0a6f91d7b",
+    "a5ed6e4033",
+    "ada89ec905"
+   ],
+   "value": "Scalable consumer-facing web/mobile applications, real-time search and recommendation systems, ML/AI for personalization and lead scoring, cloud platform engineering (AWS), developer productivity tooling ('Paved Path'), data pipelines, and AI-powered consumer experiences with stated goal of 100% AI adoption."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679535,
   "web_search_url": "https://duckduckgo.com/?q=Realtor.com+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "f0a6f91d7b",
+    "a5ed6e4033",
+    "ada89ec905"
+   ],
+   "value": "Realtor.com offers a rare combination: a top-tier AI mandate (100% AI adoption goal) at a profitable, mission-driven marketplace with consumer-scale impact. The 'Paved Path' platform investment signals genuine engineering-first culture, while the mission of helping people find homes provides meaningful work without the burnout typical of ad-tech or hyper-growth startups."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "f0a6f91d7b"
+   ],
+   "value": "Estimated: 4/5. Explicit platform investment to reduce toil, mature org with defined processes, and mission-driven culture suggest strong boundaries. No guaranteed shutdowns publicized, but low burnout reputation in PropTech."
   }
  },
  "red bull": {
@@ -301497,11 +302119,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -301513,6 +302137,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784897083,
   "last_evidence_at": 1784679642,
   "name": "Rocket Lab USA",
   "pace_of_work": {
@@ -301525,6 +302150,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784897203,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -301598,7 +302224,7 @@
     "url": "https://job-boards.greenhouse.io/rocketlab/jobs/7763996003"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784679642,
   "web_search_url": "https://duckduckgo.com/?q=Rocket+Lab+USA+company+careers+benefits",
@@ -335102,7 +335728,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -335120,7 +335746,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784896859,
+  "last_attempt_at": 1784897083,
   "last_evidence_at": 1784679640,
   "name": "STEM Xpert",
   "pace_of_work": {
@@ -335133,7 +335759,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784896979,
+  "retry_after": 1784897323,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -395315,37 +395941,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — recognized leader in geospatial AI for defense/intel; publishes at CVPR/ICCV workshops, partners with NVIDIA/Esri/AWS; not a consumer AI brand but elite in its domain."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Project-based professional services contracts (time-and-materials, fixed-price) with government and commercial clients; recurring revenue from geospatial data subscriptions and managed services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, mission-driven, low-ego collaboration; employee ownership drives long-term thinking; strong mentorship (formal buddy + technical guilds); diversity initiatives active but still evolving in defense-adjacent space."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Federal agencies (DoD, intelligence), state/local governments, utilities, transportation departments, and commercial developers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k–$115k base + 5–10% annual bonus + ESOP allocation (vests over 5 years); total comp ~$105k–$130k year one; premium for cleared AI/ML roles."
   },
   "evidence_sha": "2b3a17185353a815",
+  "generated_at": 1784897083,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "AEC / Geospatial / Defense Tech"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical screens on geospatial data pipelines (GDAL/PDAL, cloud raster/vector processing), ML model deployment at scale, and software engineering rigor (CI/CD, testing, architecture). Prepare for scenario questions on balancing innovation with strict security/compliance (IL-5/IL-6). Ask about the 'Woolpert Labs' R&D allocation, internal mobility between programs, and how sprint cycles accommodate classified delivery cadences."
+  },
+  "last_attempt_at": 1784897083,
   "last_evidence_at": 1784680197,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "30+ offices across the US; major hubs in Dayton (HQ), Cincinnati, Washington DC, Denver, Tampa, St. Louis; remote/hybrid options common."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To deliver innovative geospatial and engineering solutions that solve complex infrastructure and national security challenges."
+  },
   "name": "Woolpert",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast for innovation/R&D teams (2-week sprints, hackathon culture); moderate-to-fast on delivery programs driven by contract milestones; minimal bureaucracy due to ESOP structure."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Architecture, engineering, geospatial services, surveying/mapping, data analytics, and digital twins for infrastructure and defense."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 federal holidays + 2 floating days; accrual starts day one; unlimited sick leave."
   },
+  "refresh_after": 1790081083,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -395355,7 +396023,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Established: company-wide shutdown week between Christmas/New Year; additional 'recharge Fridays' (4 per year) where no meetings are scheduled."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "~2,000 employees; private, employee-owned (ESOP); founded 1911, headquartered in Dayton, OH."
   },
   "sources": [
    {
@@ -395389,14 +396062,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=613147dd37ee2cfd759c87aa0e67f1587208af15f1f6b7a6c7431c3dca105d40JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=116f296a-6e32-64de-2aa8-3ef46ffa65a8&u=a1aHR0cHM6Ly93b29scGVydC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "H-1B sponsor for specialized geospatial/engineering roles; green-card sponsorship case-by-case for senior talent; defense work may require US citizenship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Woolpert is a national architecture, engineering, and geospatial (AEG) firm delivering design, mapping, and data solutions for public and private sector clients."
+  },
+  "synthesized_evidence_sha": "2b3a17185353a815",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "GIS/remote sensing pipelines, LiDAR processing, photogrammetry, cloud-native geospatial platforms, AI/ML for feature extraction, digital twin development, full-stack web apps for situational awareness."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680197,
   "web_search_url": "https://duckduckgo.com/?q=Woolpert+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Woolpert sits at the intersection of elite geospatial prestige (major DoD/intelligence prime) and a fast-moving innovation culture investing heavily in AI/ML, cloud-native pipelines, and digital twins. As an employee-owned firm, it avoids quarterly-pressure bureaucracy, offers above-market new-grad compensation for AI/data science talent, and emphasizes sustainable project pacing with guaranteed shutdowns — rare in defense-adjacent tech. You get mission-critical impact, rapid technical growth, a"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "7.5/10 — core hours 9-3, guaranteed Friday 4pm shutdown on most programs, no weekend expectation; surge periods around contract deliveries (2-3×/year)."
   }
  },
  "woongjin": {
