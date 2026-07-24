@@ -23170,52 +23170,123 @@
  "ancestry": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "70844ec1d3"
+   ],
+   "value": "Estimated: Niche elite. The applied ML work in genomics and large-scale data processing carries high prestige in the biotech/data community, but may lack the broad tech-industry name recognition of FAANG."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "70844ec1d3",
+    "355bba9d4b"
+   ],
+   "value": "B2C subscription model layered with physical product sales. Revenue is driven by ongoing digital subscriptions to historical records databases, supported by initial physical DNA kit sales."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "355bba9d4b"
+   ],
+   "value": "Estimated: Mission-driven and academic-leaning, focused on personal discovery. Culture respects scientific rigor and cross-functional collaboration rather than pure tech hustle."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "70844ec1d3"
+   ],
+   "value": "General consumers, hobbyist genealogists, and individuals interested in personal family history, ethnicity estimates, and genetic traits."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000 - $135,000 base salary, with moderate equity and signing bonuses."
   },
   "evidence_sha": "01b7d84bc1111e44",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784897895,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784897683,
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "70844ec1d3"
+   ],
+   "value": "Consumer Genetics and Internet Family History."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "355bba9d4b"
+   ],
+   "value": "Estimated: Be prepared for new-grad compensation to be moderate rather than FAANG-tier due to private equity ownership. Ask interviewers about tech-stack modernization initiatives to gauge whether the team's pace is fast and autonomous or tied up in bureaucracy."
+  },
+  "last_attempt_at": 1784897895,
   "last_evidence_at": 1784680304,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "84abcd6830"
+   ],
+   "value": "Headquartered in Lehi, Utah, with additional engineering hubs in San Francisco, California, and Dublin, Ireland."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "355bba9d4b"
+   ],
+   "value": "The company's public mission centers on empowering journeys of personal discovery and helping people understand their heritage and family connections."
+  },
   "name": "Ancestry",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "355bba9d4b"
+   ],
+   "value": "Estimated: Steady and deliberate. Heavy emphasis on scientific accuracy and infrastructure stability creates an innovative tech culture that avoids high-burnout, though it lacks the hyper-fast pace of pure tech startups."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "70844ec1d3"
+   ],
+   "value": "AncestryDNA genetic testing kits, an online subscription platform for historical records, and the Ancestry app for building family trees."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of flexible PTO, plus accrued sick time, aligning with standard or slightly above-average tech industry benefits."
   },
-  "retry_after": 1784897803,
+  "refresh_after": 1790081895,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "84abcd6830",
+    "70844ec1d3",
+    "355bba9d4b"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Standard major holiday closures and likely annual year-end shutdown days."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "84abcd6830",
+    "355bba9d4b"
+   ],
+   "value": "A large, established private company formerly public, currently owned by private equity and generating over $1B in annual revenue."
   },
   "sources": [
    {
@@ -23249,14 +23320,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=6e8270d0cea6f23cf4717e7e6389a81ca16a46048396b06f81230d3cc596419bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0e56f1b4-f4ba-6f6e-35a2-e62af52a6e64&u=a1aHR0cHM6Ly93d3cuYW5jZXN0cnkuY29tLz9tc29ja2lkPTBlNTZmMWI0ZjRiYTZmNmUzNWEyZTYyYWY1MmE2ZTY0&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Historically favorable to visa sponsorship but contingent on specific role requirements and recent private equity budget constraints."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "70844ec1d3",
+    "355bba9d4b"
+   ],
+   "value": "Ancestry is a consumer genetics and family history company that combines DNA testing with historical records to help people discover their genealogical roots. It makes money through subscription fees granting access to its archive of billions of historical records, as well as the outright sale of consumer DNA testing kits."
+  },
+  "synthesized_evidence_sha": "01b7d84bc1111e44",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "84abcd6830",
+    "70844ec1d3"
+   ],
+   "value": "Large-scale machine learning and statistical methods for DNA ethnicity estimation and genetic matching, alongside comprehensive full-stack web development for massive historical record indexing."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680304,
   "web_search_url": "https://duckduckgo.com/?q=Ancestry+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "355bba9d4b"
+   ],
+   "value": "Estimated: Ancestry offers elite AI and ML challenges in population genetics and record indexing, but the organizational pace can lean toward slow bureaucracy under private equity ownership. It scores highly on mission-driven work and sane, sustainable hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "84abcd6830"
+   ],
+   "value": "Estimated: Very Good. The company is known for respecting personal time and offering sane hours, making it a strong fit for those seeking career growth without a toxic, high-burnout environment."
   }
  },
  "anchor general insurance agency": {
@@ -102122,11 +102224,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -102138,6 +102242,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784897895,
   "last_evidence_at": 1784677606,
   "name": "Dassault Systèmes",
   "pace_of_work": {
@@ -102150,6 +102255,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784898015,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -102193,7 +102299,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=c05d647802053693ae75e03166547d8d92d9b1bf6e8de47b1dc9b3263a1cbabcJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=304c9329-257b-6eeb-2979-84b424526fb5&u=a1aHR0cHM6Ly93d3cuZGFzc2F1bHQtYXZpYXRpb24uY29tL2VuLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677606,
   "web_search_url": "https://duckduckgo.com/?q=Dassault+Syst%C3%A8mes+company+careers+benefits",
@@ -146295,37 +146401,101 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: No evidence of AI/data science presence or prestige tier in supplied sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "5975060870",
+    "47bbf60136",
+    "cf6478f232"
+   ],
+   "value": "No business model for a tech company found. Sources suggest ad-supported news (The Gateway Pundit) and government-funded social services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: No culture information for a tech employer in sources. Sources describe news media and government service environments."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "47bbf60136",
+    "cf6478f232"
+   ],
+   "value": "No customer information for a tech company found. Sources indicate government/homeless services clients for City of Albuquerque programs."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: No compensation data for new-grad tech roles found in sources."
   },
   "evidence_sha": "2a95e814f0e9ad66",
+  "generated_at": 1784897895,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "5975060870",
+    "47bbf60136",
+    "cf6478f232"
+   ],
+   "value": "Sources span online media (conservative news) and government/social services (homelessness/housing). No technology industry classification supported."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Cannot assess technical interview process; no evidence of AI/data science hiring in sources. Candidate should confirm company identity and request interview details directly."
   },
+  "last_attempt_at": 1784897895,
   "last_evidence_at": 1784677295,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "5975060870",
+    "47bbf60136",
+    "cf6478f232"
+   ],
+   "value": "Sources reference The Gateway Pundit (online) and City of Albuquerque, New Mexico facilities. No tech office locations identified."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "47bbf60136",
+    "cf6478f232"
+   ],
+   "value": "No mission statement for a tech employer found. Sources show City of Albuquerque mission to address homelessness and housing instability."
+  },
   "name": "Gateway Services Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown. No workplace pace information for a tech employer in sources."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "5975060870",
+    "47bbf60136",
+    "cf6478f232"
+   ],
+   "value": "No technology products or AI/data science services found in sources. Sources reference a news website and municipal homeless services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: No PTO policy information found in sources for a tech employer."
   },
+  "refresh_after": 1790081895,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -146335,7 +146505,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed shutdown policy information found in sources for a tech employer."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown for a tech entity. Sources reference a news outlet and municipal programs, not a unified tech company."
   },
   "sources": [
    {
@@ -146369,14 +146544,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=175306144a680b589e231e0ea1dbfdd4c4f21955b87c1b83f0dfdf27bcf4b7c2JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3e64e231-5a75-6518-36ef-f5ac5b2264b9&u=a1aHR0cHM6Ly93d3cuY2FicS5nb3YvZmFtaWx5L2dhdGV3YXktY2VudGVyLWF0LWdpYnNvbi1oZWFsdGgtaHViL2dhdGV3YXktY2VudGVy&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No visa sponsorship information found in sources for a tech employer."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "5975060870",
+    "47bbf60136",
+    "cf6478f232"
+   ],
+   "value": "The provided sources do not describe a technology company named 'Gateway Services Inc.' They reference a conservative news site (The Gateway Pundit) and City of Albuquerque homeless services programs (Gateway Network, Gateway Center at Gibson Health Hub). No information about an AI/data science employer is available in the supplied sources."
+  },
+  "synthesized_evidence_sha": "2a95e814f0e9ad66",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "5975060870",
+    "47bbf60136",
+    "cf6478f232"
+   ],
+   "value": "No evidence of AI, data science, or software engineering roles in supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677295,
   "web_search_url": "https://duckduckgo.com/?q=Gateway+Services+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "5975060870",
+    "47bbf60136",
+    "cf6478f232"
+   ],
+   "value": "The supplied sources do not support the existence of a 'Gateway Services Inc.' that matches the candidate's priorities (elite AI/data science role, high new-grad pay, fast innovative culture, strong WLB). Sources describe unrelated entities: a news site and municipal homeless services. Candidate should verify the correct company identity."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown. No work-life balance data for a tech employer in sources."
   }
  },
  "gci": {
@@ -187655,7 +187863,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -187673,7 +187881,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784897476,
+  "last_attempt_at": 1784897895,
   "last_evidence_at": 1784679540,
   "name": "Intertek",
   "pace_of_work": {
@@ -187686,7 +187894,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784897716,
+  "retry_after": 1784898375,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -192972,47 +193180,130 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Indeterminate due to lack of accessible company information."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "459cf9900f",
+    "386b09cd34",
+    "aedb14be82"
+   ],
+   "value": "Not found in research; the retrieved excerpts contain no information on how Jigsaw makes money."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "459cf9900f",
+    "386b09cd34",
+    "aedb14be82"
+   ],
+   "value": "Not found in research; no cultural descriptors are available in the provided sources."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "459cf9900f",
+    "386b09cd34",
+    "aedb14be82"
+   ],
+   "value": "Not found in research; no accessible text describes the target market or user base."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Indeterminate due to lack of accessible company information."
   },
   "evidence_sha": "804f2b4ac54cb2e2",
+  "generated_at": 1784897895,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "459cf9900f",
+    "386b09cd34",
+    "aedb14be82"
+   ],
+   "value": "Not found in research; the industry segment cannot be identified from the provided sources."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe deeply into the actual day-to-day AI projects to confirm they are cutting-edge, ask for examples of how the company enforces sane hours and guaranteed shutdowns, and verify new-grad pay bands. Use the interview to assess whether the culture truly avoids toxic bureaucracy and actively accelerates technical learning."
   },
+  "last_attempt_at": 1784897895,
   "last_evidence_at": 1784680309,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "459cf9900f",
+    "386b09cd34",
+    "aedb14be82"
+   ],
+   "value": "Not found in research; office locations are not visible in the provided excerpts."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "459cf9900f",
+    "386b09cd34",
+    "aedb14be82"
+   ],
+   "value": "Not found in research; the company pages do not provide accessible mission statements."
+  },
   "name": "Jigsaw",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Indeterminate due to lack of accessible company information."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "459cf9900f",
+    "386b09cd34",
+    "aedb14be82"
+   ],
+   "value": "Not found in research; the provided URLs do not load descriptive content and instead attempt to redirect automatically."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Indeterminate due to lack of accessible company information."
   },
+  "refresh_after": 1790081895,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "459cf9900f",
+    "386b09cd34",
+    "aedb14be82"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Indeterminate due to lack of accessible company information."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "459cf9900f",
+    "386b09cd34",
+    "aedb14be82"
+   ],
+   "value": "Not found in research; the provided sources lack data on employee count or funding stage."
   },
   "sources": [
    {
@@ -193046,14 +193337,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=3155809180de38623788d5c50e016c9928789802086d4d01af596c24f65f1fa0JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0e56f1b4-f4ba-6f6e-35a2-e62af52a6e64&u=a1aHR0cHM6Ly90aGVqaWdzYXdwdXp6bGVzLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "459cf9900f",
+    "386b09cd34",
+    "aedb14be82"
+   ],
+   "value": "Not found in research; visa sponsorship policies are not mentioned in the available sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "459cf9900f",
+    "386b09cd34",
+    "aedb14be82"
+   ],
+   "value": "Jigsaw's public company pages attempt to redirect visitors to external destinations but provide no immediate plain-English overview of their operations. Consequently, how the company creates value or generates revenue cannot be determined from the available sources."
+  },
+  "synthesized_evidence_sha": "804f2b4ac54cb2e2",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "459cf9900f",
+    "386b09cd34",
+    "aedb14be82"
+   ],
+   "value": "Not found in research; the public pages do not specify the engineering or data science tech stack."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680309,
   "web_search_url": "https://duckduckgo.com/?q=Jigsaw+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Based on the candidate's priorities, this role would need to offer top-tier pay and elite AI prestige alongside guaranteed shutdowns and a fast, non-bureaucratic culture. Without confirmed technical work or business model details, it is impossible to verify if this position aligns with those mission-driven, high-growth requirements."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Indeterminate due to lack of accessible company information."
   }
  },
  "jimmy choo": {
@@ -193219,7 +193543,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -193237,7 +193561,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784897476,
+  "last_attempt_at": 1784897895,
   "last_evidence_at": 1784680207,
   "name": "JM Family Enterprises",
   "pace_of_work": {
@@ -193250,7 +193574,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784897716,
+  "retry_after": 1784898375,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -221377,48 +221701,155 @@
  "maritz": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "79e72fbe4a",
+    "a76779f30d",
+    "75e00db4f6"
+   ],
+   "value": "Estimated: Unknown due to source retrieval failure; likely not top-tier AI prestige based on historical context of Maritz as a sales/marketing firm, but unverified here."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "79e72fbe4a",
+    "a76779f30d",
+    "75e00db4f6"
+   ],
+   "value": "Unknown due to source retrieval failure."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "79e72fbe4a",
+    "a76779f30d",
+    "75e00db4f6"
+   ],
+   "value": "Unknown due to source retrieval failure."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "79e72fbe4a",
+    "a76779f30d",
+    "75e00db4f6"
+   ],
+   "value": "Unknown due to source retrieval failure."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "79e72fbe4a",
+    "a76779f30d",
+    "75e00db4f6"
+   ],
+   "value": "Estimated: Unknown due to source retrieval failure."
   },
   "evidence_sha": "77ff646db9e2db5a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784897895,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "79e72fbe4a",
+    "a76779f30d",
+    "75e00db4f6"
+   ],
+   "value": "Unknown due to source retrieval failure."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "79e72fbe4a",
+    "a76779f30d",
+    "75e00db4f6"
+   ],
+   "value": "With no content retrieved from the public pages, you should prepare to ask the recruiter directly about tech stack, mission, WLB, and new-grad pay to evaluate fit for your priorities."
+  },
+  "last_attempt_at": 1784897895,
   "last_evidence_at": 1784677607,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "79e72fbe4a",
+    "a76779f30d",
+    "75e00db4f6"
+   ],
+   "value": "Unknown due to source retrieval failure."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "79e72fbe4a",
+    "a76779f30d",
+    "75e00db4f6"
+   ],
+   "value": "Unknown due to source retrieval failure."
+  },
   "name": "Maritz",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "79e72fbe4a",
+    "a76779f30d",
+    "75e00db4f6"
+   ],
+   "value": "Estimated: Unknown due to source retrieval failure."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "79e72fbe4a",
+    "a76779f30d",
+    "75e00db4f6"
+   ],
+   "value": "Unknown due to source retrieval failure."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "79e72fbe4a",
+    "a76779f30d",
+    "75e00db4f6"
+   ],
+   "value": "Estimated: Unknown due to source retrieval failure."
   },
+  "refresh_after": 1790081895,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "79e72fbe4a",
+    "a76779f30d",
+    "75e00db4f6"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "79e72fbe4a",
+    "a76779f30d",
+    "75e00db4f6"
+   ],
+   "value": "Estimated: Unknown due to source retrieval failure."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "79e72fbe4a",
+    "a76779f30d",
+    "75e00db4f6"
+   ],
+   "value": "Unknown due to source retrieval failure."
   },
   "sources": [
    {
@@ -221452,14 +221883,55 @@
     "url": "https://www.bing.com/ck/a?!&&p=a433faf4214299a813d0b43df65197377375a9cc47ee0788ebd960edcf9eaa16JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=304c9329-257b-6eeb-2979-84b424526fb5&u=a1aHR0cHM6Ly9tYXJpdHouY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "79e72fbe4a",
+    "a76779f30d",
+    "75e00db4f6"
+   ],
+   "value": "Unknown due to source retrieval failure."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "79e72fbe4a",
+    "a76779f30d",
+    "75e00db4f6"
+   ],
+   "value": "Maritz is a true-return source, but all provided public company pages (Maritz, Maritz/about-us, and a Wikipedia redirect) failed to load content in the supplied excerpts, returning only 'Please click here if the page does not redirect automatically'."
+  },
+  "synthesized_evidence_sha": "77ff646db9e2db5a",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "79e72fbe4a",
+    "a76779f30d",
+    "75e00db4f6"
+   ],
+   "value": "Unknown due to source retrieval failure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677607,
   "web_search_url": "https://duckduckgo.com/?q=Maritz+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "79e72fbe4a",
+    "a76779f30d",
+    "75e00db4f6"
+   ],
+   "value": "The retrieved sources do not contain enough data to confirm or map to your priorities. Company research appears unavailable."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "79e72fbe4a",
+    "a76779f30d",
+    "75e00db4f6"
+   ],
+   "value": "Estimated: Unknown due to source retrieval failure."
   }
  },
  "mark anthony brands inc": {
@@ -235922,41 +236394,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown; YC alumni status signals technical credibility but no AI research publications or team profiles in sources."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely B2B SaaS subscription model, but no revenue details in sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Innovative, technical, founder-led culture common to YC S11 cohort, but no firsthand accounts in sources."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Probably B2B enterprises seeking competitive intelligence, but no customer information in sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120k-$170k base + equity for engineering roles at YC-backed companies; no MixRank-specific compensation data in sources."
   },
   "evidence_sha": "3ee6bd06b145d053",
+  "generated_at": 1784897895,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Marketing intelligence / competitive analysis / data-as-a-service, inferred from name only."
   },
-  "last_attempt_at": 1784897683,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely emphasizes algorithmic problem-solving, scalable systems, and data mining skills, but no interview process details in sources."
+  },
+  "last_attempt_at": 1784897895,
   "last_evidence_at": 1784680410,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely headquartered in San Francisco Bay Area (common for YC S11), but no location data in sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mission not disclosed in sources; typical YC companies focus on solving hard technical problems at scale."
+  },
   "name": "MixRank (YC S11)",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced startup environment typical of YC companies, but no employee reports in sources."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely a data intelligence or marketing technology platform given the name, but no product details found in sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: ~10-15 days typical for US startups; no official policy found in sources."
   },
-  "retry_after": 1784897803,
+  "refresh_after": 1790081895,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -235966,7 +236476,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No evidence of mandated shutdowns or 'right to disconnect' policies in sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: YC S11 alumni; could range from seed to Series B+, but no headcount or funding data in sources."
   },
   "sources": [
    {
@@ -236000,14 +236515,38 @@
     "url": "https://news.ycombinator.com/"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a US tech company, may sponsor H-1B visas, but no immigration policy found in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "c7c1f10c64",
+    "00d0d52edb"
+   ],
+   "value": "MixRank is a Y Combinator S11 company operating a web platform at mixrank.com. The supplied sources only show login and homepage redirects without business details."
+  },
+  "synthesized_evidence_sha": "3ee6bd06b145d053",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely involves large-scale data processing, web crawling, and ML given the 'MixRank' branding, but no technical details in sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680410,
   "web_search_url": "https://duckduckgo.com/?q=MixRank+%28YC+S11%29+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks elite AI/data science role with high new-grad pay, fast innovative culture, strong WLB, and accelerated growth. MixRank's YC pedigree suggests technical ambition, but sources lack evidence on pay, culture, WLB, or AI focus to confirm fit."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate; early-stage startups often demand intensity, but no culture data in sources to verify 'sane hours' or 'guaranteed shutdowns'."
   }
  },
  "moab": {
@@ -302658,51 +303197,116 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Top-tier emerging prestige in the physical AI and robotics subfield, given the focus on complex learning systems connecting perception and action."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "ba6fb9390b",
+    "1fc203fc4b"
+   ],
+   "value": "Developing and selling AI-powered robotic labor solutions tailored for industrial scalability and real-world deployment."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "1fc203fc4b",
+    "ba6fb9390b"
+   ],
+   "value": "Estimated: Collaborative, ambitious, and impact-driven, focusing on highly consequential work and team building."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "ba6fb9390b",
+    "1fc203fc4b"
+   ],
+   "value": "Operators of demanding industrial environments requiring scalable, real-world robotic deployment."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Highly competitive new grad tech pay, likely ranging from $140,000 to $180,000+ base, given the elite AI/robotics talent focus."
   },
   "evidence_sha": "596ef1886fd9aaf4",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784897895,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784897476,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ba6fb9390b"
+   ],
+   "value": "AI Robotics / Physical AI"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "ba6fb9390b"
+   ],
+   "value": "Assess the company's pace of work and WLB expectations. While the role promises fast, innovative technical learning, it is crucial to confirm if the 'ambitious work with real consequences' implies a high-burnout environment or if sane hours and personal time are genuinely respected."
+  },
+  "last_attempt_at": 1784897895,
   "last_evidence_at": 1784680207,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "ba6fb9390b",
+    "1fc203fc4b"
+   ],
+   "value": "To power the future of Physical AI by building deployable robots capable of taking on dull, dirty, and dangerous work."
+  },
   "name": "RoboForce",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and highly innovative, characteristic of early-stage startups building foundational Physical AI systems."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "ba6fb9390b"
+   ],
+   "value": "Physical AI-powered robots (Robo-Labor) and learning systems that connect perception, reasoning, and action."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard startup PTO (15-20 days annually), though exact policies are not public."
   },
-  "retry_after": 1784897716,
+  "refresh_after": 1790081895,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "ba6fb9390b"
+   ],
+   "value": "AI Resident (a hands-on residency program rather than a traditional rotational program)"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research; typical startup operations apply."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "1fc203fc4b"
+   ],
+   "value": "Early-stage AI robotics startup currently building out foundational teams, including talent acquisition."
   },
   "sources": [
    {
@@ -302756,14 +303360,44 @@
     "url": "https://job-boards.greenhouse.io/roboforce/jobs/5196164008"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "1fc203fc4b"
+   ],
+   "value": "Offers visa sponsorship and green card support for qualified candidates."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "ba6fb9390b",
+    "1fc203fc4b"
+   ],
+   "value": "RoboForce is an AI robotics company that develops Physical AI-powered Robo-Labor designed to perform dull, dirty, and dangerous work. The company likely makes money by engineering and deploying scalable robotic systems for demanding industrial environments."
+  },
+  "synthesized_evidence_sha": "596ef1886fd9aaf4",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "ba6fb9390b"
+   ],
+   "value": "Hands-on AI and robotics development building learning systems that connect perception, reasoning, and physical action."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680207,
   "web_search_url": "https://duckduckgo.com/?q=RoboForce+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "ba6fb9390b"
+   ],
+   "value": "As an AI Resident, you would tackle ambitious work with real consequences, building deployable physical AI systems rather than theoretical models. This aligns with a fast, innovative tech culture and provides high-impact technical learning that accelerates career growth."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Variable to demanding; ambitious startup work environments with real-world deployment goals typically require high flexibility and availability."
   }
  },
  "rochester regional health": {
@@ -318520,41 +319154,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low. Primarily a hardware and consumer electronics company, not known for top-tier AI or data science prestige."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "930c2d7c1b",
+    "94c70e618b",
+    "921710d05b"
+   ],
+   "value": "Manufactures hardware and electronic components, selling to consumers via retail channels and to businesses via enterprise procurement."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional Japanese corporate environment, likely emphasizing hierarchy and stability over rapid innovation and mission-driven tech culture."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "930c2d7c1b",
+    "94c70e618b",
+    "921710d05b"
+   ],
+   "value": "Retail consumers and business-to-business (B2B) enterprise partners."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70k-$90k. Lower than elite tech firms, aligning with hardware manufacturing industry standards rather than top-tier data science pay."
   },
   "evidence_sha": "65b3261c34c23fd6",
+  "generated_at": 1784897895,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "930c2d7c1b",
+    "94c70e618b",
+    "921710d05b"
+   ],
+   "value": "Consumer Electronics and Hardware Manufacturing."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe the specific team's tech stack and innovation pace, asking about AI integration in hardware and how bureaucracy impacts new-grad learning and WLB."
   },
-  "last_attempt_at": 1784897274,
+  "last_attempt_at": 1784897895,
   "last_evidence_at": 1784679629,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "930c2d7c1b",
+    "94c70e618b",
+    "921710d05b"
+   ],
+   "value": "Global presence, headquartered in Japan."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "930c2d7c1b",
+    "94c70e618b",
+    "921710d05b"
+   ],
+   "value": "Not found in research."
+  },
   "name": "Sharp Electronics",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow to moderate. Legacy hardware manufacturing typically involves structured, bureaucratic processes rather than fast, innovative tech culture."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "930c2d7c1b",
+    "94c70e618b",
+    "921710d05b"
+   ],
+   "value": "Consumer electronics, home appliances, LCD display panels, office equipment, and mobile applications."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days. Standard corporate leave policies typical of large manufacturing firms."
   },
-  "retry_after": 1784897754,
+  "refresh_after": 1790081895,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -318564,7 +319260,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None found in research. Unlikely on top of standard holidays for new grads outside of manufacturing plant maintenance schedules."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "930c2d7c1b",
+    "94c70e618b",
+    "921710d05b"
+   ],
+   "value": "Large, established multinational corporation."
   },
   "sources": [
    {
@@ -318598,14 +319303,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=299e850d691b5379fff7810ee29f7f79e29b8cd6ca30d34986b33bdfef269206JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1f750150-5d57-6605-2908-16ce5cf16711&u=a1aHR0cHM6Ly93d3cuc2hhcnAuY29tL2FwcA&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a large multinational, likely offers visa sponsorship for specialized hardware and engineering roles, though specific new-grad policies are not public."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "930c2d7c1b",
+    "94c70e618b",
+    "921710d05b"
+   ],
+   "value": "Sharp Corporation is a major Japanese multinational electronics manufacturer that designs and sells consumer electronics, home appliances, and LCD panels. The company makes money by selling these hardware devices and electronic components to retail consumers and enterprise B2B customers."
+  },
+  "synthesized_evidence_sha": "65b3261c34c23fd6",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "930c2d7c1b",
+    "94c70e618b",
+    "921710d05b"
+   ],
+   "value": "Hardware engineering, LCD display manufacturing, embedded systems, and mobile application development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679629,
   "web_search_url": "https://duckduckgo.com/?q=Sharp+Electronics+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a legacy electronics manufacturer with slow bureaucracy, Sharp may not meet the candidate's priority for an elite AI/data science role with a fast, innovative tech culture or guaranteed shutdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Adequate. Typically offers standard hours but lacks the modern tech-industry WLB perks like guaranteed shutdowns."
   }
  },
  "sharp electronics corporation usa": {
@@ -379038,41 +379772,87 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Respected niche manufacturer; not a household AI name but offers high-impact applied ML in precision optics with publication potential at conferences like OFC, ECOC, SPIE."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
+  "attempts": 2,
+  "business_model": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Product-based B2B manufacturing: US Conec designs and produces fiber optic components in-house, selling at volume to distributors, OEMs, and end users. Revenue comes from hardware margins on connectors, assemblies, and related tooling; recurring revenue from consumables (cleaning supplies, inspection scopes) provides a steady tail."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "8015794ace"
+   ],
+   "value": "Collaborative, engineering-led, low-ego. 'Friendly, inclusive culture that values teamwork, creativity, and mutual respect' per official messaging. Long-tenured workforce (many 10+ year veterans) signals low turnover and psychological safety."
+  },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary customers are hyperscale data center operators, telecom carriers, network equipment OEMs (e.g., Cisco, Arista, Juniper), structured cabling contractors, and enterprise IT departments building high-speed optical links."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k–$105k base + 5–10% annual bonus + RSU/phantom equity (private co.). Total comp ~$95k–$115k Year 1. Hickory, NC cost of living ~30% below national avg."
   },
   "evidence_sha": "b589fab4b2eaed5d",
+  "generated_at": 1784897895,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
-  "last_attempt_at": 1784897683,
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "8015794ace"
+   ],
+   "value": "Expect questions on applying ML to manufacturing sensor data (e.g., predicting ferrule geometry defects, optimizing polish recipes), statistical process control, and translating lab-scale models to production pipelines. Demonstrate ability to work cross-functionally with process engineers and operators. Prepare a concise example of a project where you balanced model accuracy with deployment constraints and stakeholder communication."
+  },
+  "last_attempt_at": 1784897895,
   "last_evidence_at": 1784680302,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters and manufacturing: Hickory, North Carolina, USA. Additional sales/support offices in China, Japan, and Europe (UK/Germany)."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "8015794ace"
+   ],
+   "value": "To enable faster, denser, and more reliable fiber optic networks through precision-engineered connectivity solutions while fostering a people-first culture that values teamwork, creativity, and mutual respect."
+  },
   "name": "US Conec",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "8015794ace"
+   ],
+   "value": "Estimated: Steady, project-driven cadence (sprints of 2–4 weeks). Quarterly planning cycles; minimal fire-drills. Manufacturing schedule provides natural guardrails against endless crunch."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core products include MTP®/MPO connectors, MT ferrules, adapter plates, cassettes, patch cords, and ruggedized assemblies for high-density fiber infrastructure. The portfolio also covers single-fiber connectors (LC, SC, FC), cleaning tools, and inspection equipment."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 5 sick days (accrual starts day one). No public policy; inferred from mid-size NC manufacturer norms."
   },
-  "retry_after": 1784897803,
+  "refresh_after": 1790081895,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -379082,7 +379862,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full week shutdown July 4 week; full week between Christmas and New Year. Manufacturing lines down; salaried staff expected offline."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: 200–500 employees; mature, profitable, privately held company founded in 2000. No public funding rounds or IPO."
   },
   "sources": [
    {
@@ -379126,14 +379911,41 @@
     "url": "https://job-boards.greenhouse.io/usconec/jobs/4324285009"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B for specialized engineering roles (optical, mechanical, process); limited public record of PERM filings. New-grad sponsorship assessed case-by-case."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8015794ace"
+   ],
+   "value": "US Conec is a privately held manufacturer of high-performance fiber optic connectivity solutions, best known for its MTP®/MPO multi-fiber connectors and MT ferrules used in data center, telecommunications, and enterprise networks. The company designs, molds, and assembles precision components in Hickory, North Carolina, and sells globally through distributors and direct OEM channels."
+  },
+  "synthesized_evidence_sha": "b589fab4b2eaed5d",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Precision plastics molding, ferrules polishing, optical alignment, mechanical design (SolidWorks/Creo), test automation (Python/LabVIEW), statistical process control, materials science for low-loss ferrules, and factory data analytics for yield improvement."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680302,
   "web_search_url": "https://duckduckgo.com/?q=US+Conec+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "8015794ace"
+   ],
+   "value": "US Conec offers a rare combination for a new-grad AI/data scientist: a hardware-centric, precision-manufacturing environment where ML can directly improve optical yield and factory throughput, without the burnout culture of big-tech or high-frequency finance. The company emphasizes work-life balance, inclusive teamwork, and long-term career growth in a stable, profitable business — aligning with your priorities for prestige-level technical impact, sane hours, and accelerated learning."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "8015794ace"
+   ],
+   "value": "Estimated: 4/5. Company explicitly promotes 'supportive environment' and 'meaningful impact' without sacrificing personal time. Manufacturing core hours (7am–3pm or 8am–4pm) create predictable shutdowns."
   }
  },
  "usaa": {
@@ -397234,48 +398046,127 @@
  "wolters kluwer": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "ecb0011973"
+   ],
+   "value": "Estimated: Mid-tier. Recognized within specialized B2B domains but lacks the elite prestige of FAANG or top-tier AI labs in the general tech market."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "ecb0011973"
+   ],
+   "value": "B2B software, subscription-based information services, and workflow tools."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "ecb0011973"
+   ],
+   "value": "Estimated: Professional, structured, and mission-driven, focusing on deep expertise in specific functional domains (tax, legal, medical)."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "ecb0011973"
+   ],
+   "value": "Professionals and organizations in the healthcare, tax and accounting, financial and corporate compliance, and legal sectors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "17f8c9c419",
+    "ecb0011973"
+   ],
+   "value": "Estimated: $80k - $110k. Competitive for mid-tier enterprise software, but generally lower than the elite pay bands of top-tier AI/tech firms."
   },
   "evidence_sha": "1dbd4bfb01898e26",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784897895,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ecb0011973"
+   ],
+   "value": "Software and Information Services."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Candidates should probe the specific team's work-life balance policies, hours, and culture to ensure it aligns with their need for sane hours and guaranteed shutdowns. Additionally, asking about technical learning, career growth, and the autonomy of the role is crucial to avoid slow bureaucracy."
+  },
+  "last_attempt_at": 1784897895,
   "last_evidence_at": 1784680309,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "ecb0011973"
+   ],
+   "value": "Global operations."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "ecb0011973"
+   ],
+   "value": "To help professionals make critical decisions by delivering expert information, software, and services."
+  },
   "name": "Wolters Kluwer",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "ecb0011973"
+   ],
+   "value": "Estimated: Moderate. Being a large, established public company, the pace is likely steady and structured rather than fast-paced and highly innovative."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "ecb0011973"
+   ],
+   "value": "The company offers specialized software, cloud-based services, and information solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "ecb0011973"
+   ],
+   "value": "Estimated: 20-25 days. Standard for large enterprise employers, but exact policy varies by region and tenure."
   },
+  "refresh_after": 1790081895,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "ecb0011973",
+    "17f8c9c419"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "ecb0011973"
+   ],
+   "value": "Estimated: Company-wide shutdowns are not guaranteed but may occur during major holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "ecb0011973"
+   ],
+   "value": "Large established public company."
   },
   "sources": [
    {
@@ -397319,14 +398210,47 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ecb0011973"
+   ],
+   "value": "Likely varies by region, but standard for a large global multi-national."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "ecb0011973",
+    "79ac223b8c",
+    "6a77a3c930"
+   ],
+   "value": "Wolters Kluwer is a global provider of professional information, software solutions, and services for the healthcare, tax and accounting, financial and corporate compliance, and legal sectors. They make money by selling specialized B2B software, subscription-based information services, and workflow tools that help professionals make complex, critical decisions."
+  },
+  "synthesized_evidence_sha": "1dbd4bfb01898e26",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "ecb0011973"
+   ],
+   "value": "Involves building and maintaining specialized software, cloud-based services, and information solutions."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680309,
   "web_search_url": "https://duckduckgo.com/?q=Wolters+Kluwer+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "As a mission-driven company focused on critical decision-making, the work offers a meaningful impact. However, as a large established corporation, the fast-paced innovative culture and high new-grad pay typically associated with elite tech firms may differ from the bureaucratic and stable environment found here."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "ecb0011973"
+   ],
+   "value": "Estimated: Good to Excellent. Large enterprise software companies often maintain stable hours, though this can vary by team needs and product launches."
   }
  },
  "wolverine trading": {
