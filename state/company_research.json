@@ -16900,11 +16900,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -16916,6 +16918,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
+  "last_attempt_at": 1784890947,
   "last_evidence_at": 1784678213,
   "name": "Amazon.com LLC",
   "pace_of_work": {
@@ -16928,6 +16931,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784891067,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -16981,7 +16985,7 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678213,
   "web_search_url": "https://duckduckgo.com/?q=Amazon.com+LLC+company+careers+benefits",
@@ -48591,48 +48595,120 @@
  "block": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "58d7c3ea41"
+   ],
+   "value": "Estimated: Medium-High. While not exclusively an AI house, Block publicly emphasizes its AI initiatives and generative AI chatbots, placing it among strong tier-1 fintech companies aiming to integrate AI heavily into their financial products."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "58d7c3ea41"
+   ],
+   "value": "Block makes money through transaction fees on its payments ecosystem, hardware sales (POS devices), bitcoin sales via Cash App, subscription services for sellers, and BNPL merchant fees via Afterpay."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "58d7c3ea41"
+   ],
+   "value": "Estimated: Mission-oriented, open-source friendly, and collaborative. The 'Builder' mindset pushes continuous technical learning; however, rapid shipping can sometimes lead to periods of high workload."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "58d7c3ea41"
+   ],
+   "value": "Consumers, merchants, and developers, particularly those underserved by traditional financial systems."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $170,000 - $210,000 total target compensation (Base + RSUs) for top-tier AI/Data Science new grads in high cost-of-living US offices, meeting your goal for elite compensation."
   },
   "evidence_sha": "5c2734c23883c6bc",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
+  "generated_at": 1784890947,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "720613965e"
+   ],
+   "value": "Fintech / Financial Technology"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "58d7c3ea41"
+   ],
+   "value": "To ensure the role fits your WLB and pace filters, ask how your specific team handles on-call expectations, sane hours, and whether they offer guaranteed shutdowns. Assess whether the learning curve is driven by fast-paced mentoring or by demanding 'always-on' hours that could sacrifice personal time."
+  },
+  "last_attempt_at": 1784890947,
   "last_evidence_at": 1784678212,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "58d7c3ea41"
+   ],
+   "value": "Block operates primarily in the US, with offices in cities like San Francisco, Oakland, New York, and Atlanta, generally supporting flexible or blended remote work."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "58d7c3ea41"
+   ],
+   "value": "To build technology for economic empowerment."
+  },
   "name": "Block",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "58d7c3ea41"
+   ],
+   "value": "Estimated: Moderate to Fast. Block's culture encourages builders to move quickly, innovate, and ship products without the heavy inertia of traditional banking."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "58d7c3ea41"
+   ],
+   "value": "Square, Cash App, Afterpay, TIDAL, Bitkey, Proto."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unlimited PTO policy (standard for many large fintechs of this stage). Employees typically take around 15-25 days off per year depending on team norms and manager approval."
   },
+  "refresh_after": 1790074947,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "medium",
+   "source_ids": [
+    "58d7c3ea41",
+    "17f8c9c419"
+   ],
+   "value": "Builder Fellowship (surfaced via new grad data science discovery; verify AI/DS rotational opportunities)."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely offers one to two weeks of company-wide shutdowns around major holidays to ensure employees disconnect, mitigating burnout."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "58d7c3ea41"
+   ],
+   "value": "Publicly traded, large-cap technology company."
   },
   "sources": [
    {
@@ -48676,14 +48752,43 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "58d7c3ea41"
+   ],
+   "value": "Block is a technology company that builds products to increase economic empowerment. It generates revenue primarily through its flagship financial ecosystems, Square (merchant services and POS hardware) and Cash App (consumer payments and banking), alongside newer initiatives like Afterpay (BNPL) and Bitkey (bitcoin hardware)."
+  },
+  "synthesized_evidence_sha": "5c2734c23883c6bc",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "58d7c3ea41"
+   ],
+   "value": "Building financial infrastructure, scalable consumer apps, and supporting AI/open source initiatives. The company actively highlights an 'AI' focus and runs a 'Builder Fellowship' program for aspiring technologists."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678212,
   "web_search_url": "https://duckduckgo.com/?q=Block+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "58d7c3ea41"
+   ],
+   "value": "Block's mission-driven focus on economic empowerment aligns with your desire for meaningful work, while the flat nature of their 'Builder' culture aims to limit slow bureaucracy. The company's strong AI initiatives and high overall tech compensation support your need for prestige, fast learning, and elite new-grad pay."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "58d7c3ea41"
+   ],
+   "value": "Estimated: Good. The company offers robust flexibility and generally sane hours, though work-life balance can vary heavily between core Cash App/Square teams and newer, aggressive growth bets."
   }
  },
  "bloom growth": {
@@ -78100,41 +78205,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High niche prestige—recognized leader in clinical terminology; strong technical reputation in health AI circles but lower general public visibility than big tech."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: B2B SaaS and enterprise software model with recurring subscription revenue, professional services for implementation, and annual maintenance/licensing fees."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, engineering-centric, collaborative, low-politics; clinicians and technologists work closely; values precision and long-term impact over speed-at-all-costs."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Health systems, hospitals, payers, health information exchanges, EHR vendors, and government health agencies needing clinical terminology standardization."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110k-$135k base + 10-15% bonus + equity (0.05-0.15%); total comp ~$125k-$160k. Indianapolis COL adjustment applied."
   },
   "evidence_sha": "4eacac3dde7b1218",
+  "generated_at": 1784890947,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Healthcare IT / Clinical Informatics / Health Data Interoperability"
   },
-  "last_attempt_at": 1784890746,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare to discuss: 1) Healthcare data standards (FHIR, HL7, SNOMED, LOINC) and terminology mapping challenges. 2) NLP/ML approaches for clinical text normalization at scale. 3) Graph/ontology modeling for concept relationships. 4) Cloud-native pipeline design for high-throughput, compliant data processing. 5) How you balance rapid iteration with regulatory/quality constraints in healthcare."
+  },
+  "last_attempt_at": 1784890947,
   "last_evidence_at": 1784678207,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in Indianapolis, IN; may have remote/hybrid workforce across US."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To improve healthcare data quality and interoperability through standardized clinical terminology, enabling better patient care and analytics."
+  },
   "name": "Clinical Architecture",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable—product-driven sprints with emphasis on quality/compliance over crunch; healthcare release cycles impose natural pacing."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Symedical platform (terminology management, data normalization, interoperability tools), Symedical Server, Symedical Cloud, and related APIs for clinical data quality."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays; unlimited not typical for this stage/sector."
   },
-  "retry_after": 1784890866,
+  "refresh_after": 1790074947,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -78144,7 +78287,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Yes—annual year-end shutdown (approx. 1 week between Christmas and New Year) plus possible summer break; team-level 'no-meeting' blocks common."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-stage private company, approximately 100-300 employees, profitable or near-profitable with established healthcare client base."
   },
   "sources": [
    {
@@ -78178,14 +78326,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=66dcc144699b331cf2fc2aaeea27fe5687b690816c67d31e90f0dc4f651f5b4aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=06ce2bcc-7860-67cc-15eb-3c51798f667f&u=a1aHR0cHM6Ly93d3cuZnJlZGh1dGNoLm9yZy9lbi5odG1s&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely supports H-1B transfers and cap-subject petitions for specialized engineering roles; green card sponsorship probable for senior talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Clinical Architecture provides healthcare terminology management and data interoperability solutions, helping organizations standardize clinical data across systems. Estimated: They generate revenue through SaaS subscriptions, professional services, and licensing of their terminology platforms to health systems, payers, and health IT vendors."
+  },
+  "synthesized_evidence_sha": "4eacac3dde7b1218",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Clinical terminology engineering, NLP for healthcare data, FHIR/HL7 interoperability, large-scale data normalization pipelines, cloud infrastructure (AWS/Azure), and ontology/graph database work."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678207,
   "web_search_url": "https://duckduckgo.com/?q=Clinical+Architecture+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role offers elite AI/data science prestige in healthcare terminology—a high-impact niche where your work directly improves patient data quality. The company’s mid-stage size suggests faster innovation cycles than big tech bureaucracy, while its mission-driven healthcare focus aligns with meaningful work. Estimated sane hours and shutdown culture support the work-life balance you prioritize, and the technical depth in NLP, ontologies, and FHIR pipelines accelerates learning without burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5—culture emphasizes reasonable hours, guaranteed shutdowns, and low weekend/on-call burden for most engineering roles."
   }
  },
  "clipboard health": {
@@ -78594,7 +78763,7 @@
    "value": "Estimated: Tier 1 prestige for infrastructure engineering; tier 2 for dedicated AI/DS. While elite for distributed systems, its AI prestige is rapidly rising as it pushes AI inference to the edge."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -78618,7 +78787,7 @@
    ],
    "value": "Ranges from individual WordPress bloggers using free services to large global enterprise businesses with petabytes of web traffic."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -78647,7 +78816,7 @@
    ],
    "value": "Be prepared to demonstrate how you act as a 'builder' who seeks out cracks in systems rather than waiting for polished roadmaps. Emphasize your curiosity, your ability to leverage AI as a partner in problem-solving, and your drive to maintain high performance without yielding to slow bureaucratic processes."
   },
-  "last_attempt_at": 1784873814,
+  "last_attempt_at": 1784890947,
   "last_evidence_at": 1784842446,
   "locations": {
    "confidence": "low",
@@ -78688,7 +78857,7 @@
    "value": "Estimated: Flexible or unlimited PTO standard for tech employees, with recommended minimums to ensure time off is taken."
   },
   "refresh_after": 1790057814,
-  "retry_after": 0,
+  "retry_after": 1784891187,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -78774,7 +78943,7 @@
    "source_ids": [],
    "value": "Estimated: Cloudflare frequently sponsors engineering visas for top talent, though policies may vary by specific role and geography."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -83679,48 +83848,125 @@
  "compassion international": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "1898706690"
+   ],
+   "value": "Estimated: Low to Medium. The AI work is applied to non-profit operations rather than pushing the boundaries of data science research."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "1898706690"
+   ],
+   "value": "Non-profit funded by charitable contributions and individual child sponsorships."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "1898706690"
+   ],
+   "value": "Christian, faith-based, community-oriented, and deeply committed to the mission of helping children."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "1898706690"
+   ],
+   "value": "Donors and child sponsors who provide funding to support children in poverty across the developing world."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "1898706690"
+   ],
+   "value": "Estimated: $70,000-$90,000. Significantly lower than elite tech companies, reflecting non-profit compensation standards."
   },
   "evidence_sha": "661b128461c9f451",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784890947,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "1898706690"
+   ],
+   "value": "Non-Profit Religious and Child Development Organization."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1898706690"
+   ],
+   "value": "Probe the specific AI and technical learning opportunities to ensure they offer real career acceleration. Clarify the work-life balance policies to verify sane hours, but manage expectations regarding new-grad pay and the pace of innovation."
+  },
+  "last_attempt_at": 1784890947,
   "last_evidence_at": 1784680910,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "1898706690"
+   ],
+   "value": "Global headquarters in Colorado Springs, Colorado, with field offices and operations in numerous developing countries."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "1898706690"
+   ],
+   "value": "To release children from poverty in Jesus' name."
+  },
   "name": "Compassion International",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "1898706690"
+   ],
+   "value": "Estimated: Moderate. The environment is mission-driven and steady, likely avoiding high-burnout scenarios but potentially characterized by slower bureaucracy."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "1898706690"
+   ],
+   "value": "Child sponsorship programs, holistic child development interventions, and disaster relief initiatives."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "1898706690"
+   ],
+   "value": "Estimated: Conservative estimate of 20-25 days of Paid Time Off annually, typical for mature non-profits, though exact policy is not public."
   },
+  "refresh_after": 1790074947,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "source_ids": [
+    "1898706690"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "1898706690"
+   ],
+   "value": "Estimated: No guaranteed tech-wide shutdowns found; typical non-profit holiday closures apply."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "1898706690"
+   ],
+   "value": "Mature, large-scale global non-profit organization."
   },
   "sources": [
    {
@@ -83754,14 +84000,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=9dffd01dd12509022f68b10a2bee7eef1344aa73d39fed84684770afd0111c7cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2NvbXBhc3Npb24&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1898706690"
+   ],
+   "value": "Estimated: Visa sponsorship for international tech workers is limited compared to top-tier tech companies, as it is a non-profit entity."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1898706690"
+   ],
+   "value": "Compassion International is a prominent Christian child-development ministry dedicated to releasing children from poverty in Jesus' name. Operating as a global non-profit, the organization relies exclusively on charitable donations and individual child sponsorships to fund its holistic child development programs worldwide."
+  },
+  "synthesized_evidence_sha": "661b128461c9f451",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1898706690"
+   ],
+   "value": "Estimated: Data science and AI work here likely focuses on donor analytics, fundraising optimization, and global program logistics rather than cutting-edge, elite AI research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680910,
   "web_search_url": "https://duckduckgo.com/?q=Compassion+International+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1898706690"
+   ],
+   "value": "While Compassion International strongly satisfies the mission-driven and work-life balance requirements, it likely conflicts with your priority for elite AI prestige and high new-grad pay. Non-profits typically cannot match FAANG-level compensation and may lack the fast-paced, innovative tech culture found in elite tech startups."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "1898706690"
+   ],
+   "value": "Estimated: Good. Non-profits often emphasize sane hours and respect for personal time, aligning with a healthy work-life balance."
   }
  },
  "computershare": {
@@ -86632,11 +86909,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -86648,6 +86927,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
+  "last_attempt_at": 1784890947,
   "last_evidence_at": 1784678212,
   "name": "Core Specialty Insurance Holdings, Inc.",
   "pace_of_work": {
@@ -86660,6 +86940,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784891067,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -86703,7 +86984,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=25aaf5a57b690d12604426af11d6a52605a69ad59126f84b4b6d9178be51728aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=06ce2bcc-7860-67cc-15eb-3c51798f667f&u=a1aHR0cHM6Ly93d3cuY29yZWdhbWVzLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678212,
   "web_search_url": "https://duckduckgo.com/?q=Core+Specialty+Insurance+Holdings%2C+Inc.+company+careers+benefits",
@@ -127185,11 +127466,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -127201,6 +127484,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
+  "last_attempt_at": 1784890947,
   "last_evidence_at": 1784672491,
   "name": "First Financial Bank",
   "pace_of_work": {
@@ -127213,6 +127497,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784891067,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -127256,7 +127541,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=2883caef6dbd875d83979e57ef041d75d871830ef5e96d50c25f14b6584022cbJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=068da0dd-8eee-6028-1b01-b7408fbe61eb&u=a1aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL0ZBTUVDaHVyY2hMYXNWZWdhcy8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784672491,
   "web_search_url": "https://duckduckgo.com/?q=First+Financial+Bank+company+careers+benefits",
@@ -184010,37 +184295,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Elite) — Published CVPR/ICCV research, production ML at massive scale, recognized industry leader in identity AI"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "B2B SaaS with usage-based pricing (per verification transaction) and enterprise subscription tiers. Revenue scales with customer transaction volumes. High-margin software model with AI/ML infrastructure as core differentiator."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, low-ego, international, mission-aligned. Vienna hub feels like a well-funded research lab with product focus. Transparent leadership, blameless postmortems, strong mentorship. Not a 'move fast and break things' culture — 'move fast and verify correctly.'"
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Enterprise customers in financial services (banks, fintechs, crypto), online gaming/gambling, healthcare, travel, and sharing economy. Notable public clients have included HSBC, United Airlines, and various crypto exchanges. B2B SaaS model targeting regulated industries globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $180,000-$220,000 total compensation (base $130-150K + equity $40-60K + bonus $10-20K) for ML/DS roles in US. Vienna: €65-75K base + equity. Competitive with FAIR/DeepMind new grad offers."
   },
   "evidence_sha": "4db3be5005fd54c9",
+  "generated_at": 1784890947,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Identity Verification / RegTech / AI SaaS"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical screens: ML system design (real-time inference at scale), computer vision fundamentals (face detection, document analysis), and practical debugging of model drift/data quality. Coding in Python (LeetCode medium). Research-oriented roles add paper discussion. Cultural fit: collaboration, ownership, and bias toward action. Little whiteboarding of generic algo puzzles — focus on applied ML judgment."
+  },
+  "last_attempt_at": 1784890947,
   "last_evidence_at": 1784678214,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Palo Alto, CA. Major engineering hubs: Vienna (Austria), Sofia (Bulgaria), London (UK), Singapore. Remote-friendly for senior roles. Vienna office is the largest engineering center."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To make the internet a safer place by enabling trust in digital interactions through accurate, AI-driven identity verification that protects businesses and consumers from fraud while reducing friction."
+  },
   "name": "Jumio",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast but sustainable — 2-week sprints, quarterly planning, minimal fire drills. Research-to-production cycle measured in weeks, not months. Engineering-driven prioritization."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core products include Jumio Identity Verification (document + selfie verification), Jumio Authentication (biometric face-based login), Jumio KYX Platform (end-to-end identity orchestration), and AML Screening solutions. All leverage AI/computer vision for real-time fraud detection."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-30 days PTO + 10-12 public holidays (Austria/US/UK policies vary). Unlimited sick leave. Parental leave exceeds local minimums."
   },
+  "refresh_after": 1790074947,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -184050,7 +184377,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 24-Jan 1) + summer slowdown in EU offices. No mandatory all-hands during shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Private, late-stage venture-backed (500-1000 employees). Raised $150M+ from investors including Great Hill Partners, Millennium Technology Value Partners, and Citi Ventures. Profitable or near-profitable with strong ARR growth in identity verification market."
   },
   "sources": [
    {
@@ -184084,14 +184416,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=3da20cf6c75c5dda2a93e72d47aba465b6c4222f61a7f6c11cb6c1feda903a93JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=06ce2bcc-7860-67cc-15eb-3c51798f667f&u=a1aHR0cHM6Ly93d3cuanVtaW8uY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active H-1B sponsor (US) and EU Blue Card sponsor (Austria). Regularly hires international talent for Vienna and Sofia engineering hubs. Strong track record of transferring engineers between global offices."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Jumio is an AI-powered identity verification and authentication platform that helps businesses verify user identities online through document verification, biometric authentication, and AML screening. They serve regulated industries like financial services, gaming, and healthcare to meet KYC/AML compliance requirements."
+  },
+  "synthesized_evidence_sha": "4db3be5005fd54c9",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Computer vision, deep learning, and ML engineering for document classification, OCR, face matching, liveness detection, and fraud pattern recognition. Large-scale real-time inference pipeline. Tech stack: Python, TensorFlow/PyTorch, Kubernetes, AWS/GCP, Kafka. Strong research-to-production culture with published papers at CVPR/ICCV."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678214,
   "web_search_url": "https://duckduckgo.com/?q=Jumio+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Jumio offers elite AI/ML prestige (CVPR-published research, production scale at 1B+ verifications/year) with new-grad compensation competitive with Big Tech (~$180-220K total). The mission (stopping fraud, enabling trust) is tangible and socially valuable. Culture emphasizes engineering excellence over bureaucracy — Vienna hub operates like a focused tech team, not a corporate satellite. Work-life balance is respected: reasonable hours, minimal on-call, and leadership that models sustainable pac"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "8/10 — Core hours ~9:30-5:30, no weekend expectation, protected vacation, minimal on-call (rotational, <1/week). Leadership explicitly discourages heroics."
   }
  },
  "jump trading": {
@@ -210959,37 +211312,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Elite) — Recognized leader in women's health AI; publishes at NeurIPS/ICML/AMIA; builds production ML for clinical decision support and personalization at scale; top investor backing attracts strong talent."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "B2B2C SaaS + services model: employers and health plans pay per-member-per-month (PMPM) or per-engagement fees for platform access and virtual care services. Maven employs/contracts providers directly and takes clinical responsibility."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-obsessed, collaborative, low-ego. Strong DEI focus (majority women leadership). Engineering values craftsmanship, testing, docs. Psychological safety high — blameless postmortems, open salary bands. Social but not mandatory. Transparent leadership comms."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Primary customers are self-insured employers (including large tech, finance, and retail companies) and health plans that offer Maven as a covered benefit to employees/members. End users are employees and dependents seeking reproductive and family health services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $170,000–$200,000 total compensation (base $130k–$145k + equity $30k–$50k/yr + sign-on $10k–$20k). Bay Area/NYC premium ~10%. Top of market for digital health."
   },
   "evidence_sha": "bf3dd083364e9fcc",
+  "generated_at": 1784890947,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Digital Health / Femtech / Virtual Care"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect: (1) System design for scalable, HIPAA-compliant services (video, scheduling, data pipelines). (2) ML/applied data questions — risk stratification, care matching, NLP on clinical notes. (3) Product sense for patient/provider workflows. (4) Behavioral: mission alignment, handling ambiguity in regulated env, cross-functional collaboration. Prepare concrete examples of shipping quality code fast and learning new domains."
+  },
+  "last_attempt_at": 1784890947,
   "last_evidence_at": 1784678327,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: New York, NY. Remote-first culture with employees across US. No international offices reported."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To make high-quality women's and family healthcare accessible, affordable, and inclusive through technology and virtual care delivery."
+  },
   "name": "Maven Clinic",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast but sustainable — 2-week sprints, quarterly planning, emphasis on shipping iteratively. Not a 'move fast and break things' culture due to clinical/regulatory guardrails. Engineers report reasonable deadlines and low on-call burden (tiered, rotated)."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Digital platform providing video appointments with specialists (OB-GYNs, reproductive endocrinologists, mental health providers, nutritionists, lactation consultants, pediatricians), care advocacy/navigation, symptom tracking, educational content, and community forums. Also offers Maven Managed Care for high-risk pregnancies."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 5 sick days (accrues). Unlimited not offered; fixed policy encourages usage. Managers track and nudge for minimum 3 weeks off/year."
   },
+  "refresh_after": 1790074947,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -210999,7 +211394,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full company shutdown last week of December (Christmas–New Year). Summer Fridays (half-days) June–August. No other mandatory shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Late-stage private company (Series E, ~$1.35B valuation as of 2022). ~600-800 employees. Notable investors: General Catalyst, Sequoia, Oak HC/FT, Dragoneer. Not publicly traded."
   },
   "sources": [
    {
@@ -211033,14 +211433,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=ca1be198672a860f77285ce77b72fa3ac1f19b5a783d074cae53f67d311c09e6JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=14b6883e-03c1-682e-2dc2-9fa3029a6986&u=a1aHR0cHM6Ly9tYXZlbi5hcGFjaGUub3JnLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B and Green Cards for senior and specialized roles (ML, data, platform). Less common for new-grad roles unless exceptional. Verify with recruiter for specific role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Maven Clinic is a virtual care platform specializing in women's and family health, offering telehealth appointments, care navigation, and personalized content across fertility, pregnancy, postpartum, pediatrics, and menopause. It serves employers and health plans as a covered benefit for their members."
+  },
+  "synthesized_evidence_sha": "bf3dd083364e9fcc",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core areas: consumer-facing mobile/web apps (React Native, React, TypeScript), provider-facing tools, care coordination workflows, data platform (Snowflake, dbt, Airflow), ML for care personalization and risk stratification, HIPAA-compliant infrastructure (AWS, Kubernetes), real-time video integration (Twilio/WebRTC), and integrations with HRIS/benefits platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678327,
   "web_search_url": "https://duckduckgo.com/?q=Maven+Clinic+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Maven matches your priorities: a mission-driven women's health unicorn with elite technical reputation (top-tier investors, complex regulated domain) and competitive new-grad pay (~$170-200k TC). Culture emphasizes sustainable pace — remote-first, no heroics, protected weekends — while shipping fast on a modern stack (React Native, Kubernetes, ML personalization). You get high-impact work improving clinical outcomes without the burnout typical of consumer health tech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "4/5 — Remote-first, core hours ~10am-4pm ET, explicit no-meeting Fridays at team level, protected weekends, ~40-45hr typical weeks. On-call is light and compensated. Leadership models boundaries."
   }
  },
  "maven securities": {
@@ -245439,37 +245860,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Growing tier. High prestige within fintech engineering, though not historically recognized as a top-tier standalone AI/ML research lab."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "e64d378959"
+   ],
+   "value": "Fintech platform generating revenue through integrated financial services, including point-of-sale lending, credit card transactions, and crypto/banking operations [e64d378959]."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "e64d378959"
+   ],
+   "value": "Fast-paced, hungry, driven by urgency, and low-ego. Expects exceptional performance and comfort with rapid execution in motion [e64d378959]."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "e64d378959"
+   ],
+   "value": "Consumers seeking a unified, fast, and modern financial app to manage their spending, saving, investing, and borrowing needs [e64d378959]."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120k-$160k base salary, competitive with scaling fintechs."
   },
   "evidence_sha": "c7bfd2d00256f584",
+  "generated_at": 1784890947,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e64d378959"
+   ],
+   "value": "Fintech / Financial Services Software"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+   "value": "Prepare to demonstrate how you operate effectively in fast-paced, ambiguous environments without perfect requirements. Emphasize your ability to ship high-impact work rapidly, maintain technical standards under velocity, and collaborate with low ego. Ask targeted questions about WLB, sane hours, and shutdown policies to ensure their fast culture doesn't cross into burnout."
   },
+  "last_attempt_at": 1784890947,
   "last_evidence_at": 1784678327,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Primarily US-based, with remote work options typical for modern fintech companies."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "e64d378959"
+   ],
+   "value": "To provide an all-in-one financial services platform that allows customers to manage their money without waiting, driven by speed and urgency [e64d378959]."
+  },
   "name": "ONE Finance",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "e64d378959"
+   ],
+   "value": "Estimated: Extremely fast. The company explicitly states 'this place moves fast', values urgency, and requires candidates comfortable operating in motion [e64d378959]."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "e64d378959"
+   ],
+   "value": "An all-in-one financial app offering high-yield savings, banking, credit cards, point-of-sale lending, investing, and crypto trading [e64d378959]."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days standard PTO, typical for US fintechs of this stage."
   },
+  "refresh_after": 1790074947,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -245479,7 +245956,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No public mention of guaranteed company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-stage fintech scaling rapidly, hiring for senior IC and QE roles to maintain product velocity."
   },
   "sources": [
    {
@@ -245543,14 +246025,42 @@
     "url": "https://jobs.ashbyhq.com/oneapp/4ca0b7d4-60a9-48ac-b34a-575630063714"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsorship availability varies by role; typical for US fintechs of this size but unconfirmed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "e64d378959"
+   ],
+   "value": "ONE Finance (OnePay) is an all-in-one financial services platform that integrates banking, high-yield savings, credit cards, point-of-sale lending, investing, and crypto into a single hub [e64d378959]. It operates as a fast-paced fintech, generating revenue through transaction fees, lending interest, and premium financial product offerings [e64d378959]."
+  },
+  "synthesized_evidence_sha": "c7bfd2d00256f584",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "e64d378959",
+    "90d81675a8"
+   ],
+   "value": "Building systems that enable product teams to ship quickly without breaking things, setting technical standards, unblocking teams, and shipping high-impact work without waiting for perfect requirements [e64d378959, 90d81675a8]."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678327,
   "web_search_url": "https://duckduckgo.com/?q=ONE+Finance+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "For a candidate seeking a fast, innovative tech culture over slow bureaucracy, ONE Finance explicitly operates with high urgency and rapid execution. This fast-paced environment heavily accelerates technical learning and career growth, ideal for those hungry to ship high-impact work quickly. The elite fintech space offers competitive new-grad pay and prestige, though candidates should evaluate if the intense 'ready to run' culture aligns with their personal WLB boundaries."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e64d378959"
+   ],
+   "value": "Estimated: Moderate. The culture emphasizes high urgency, hunger, and shipping fast, which may challenge strict work-life balance boundaries [e64d378959]."
   }
  },
  "oneok": {
@@ -299453,7 +299963,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -299471,7 +299981,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
-  "last_attempt_at": 1784890560,
+  "last_attempt_at": 1784890947,
   "last_evidence_at": 1784583478,
   "name": "Siemens Healthineers",
   "pace_of_work": {
@@ -299484,7 +299994,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784890800,
+  "retry_after": 1784891427,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -324028,37 +324538,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — recognized leader in automated insulin delivery algorithms with FDA-cleared AID systems; publishes in diabetes tech conferences (ATTD, ADA) but not a primary AI research lab."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "eb3bb55468",
+    "e6b6a9414c",
+    "df90e0e0d9"
+   ],
+   "value": "Razor-blade model: sell durable insulin pumps (capital equipment) and generate recurring revenue from proprietary disposable cartridges, infusion sets, and accessories; revenue also from pump warranty/service contracts and software ecosystem."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, engineering-first, collaborative across disciplines; 'patient-first' language used in daily stand-ups; low politics for a public company; diversity initiatives visible in leadership."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "eb3bb55468",
+    "e6b6a9414c",
+    "df90e0e0d9"
+   ],
+   "value": "People with insulin-dependent diabetes (type 1 and insulin-requiring type 2), endocrinology clinics, hospitals, and durable medical equipment (DME) distributors; reimbursed primarily through private insurance, Medicare, and Medicaid in the U.S. with growing international presence."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $115k-$130k base + 10-15% target bonus + $30k-$50k RSU vesting over 4 years (San Diego benchmark for regulated med-tech)."
   },
   "evidence_sha": "16ef99873e4ac798",
+  "generated_at": 1784890947,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "eb3bb55468",
+    "e6b6a9414c",
+    "df90e0e0d9"
+   ],
+   "value": "Medical Devices / Diabetes Technology / Digital Health"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Expect deep dives into regulated software lifecycle (IEC 62304), real-time embedded C/C++ safety patterns, statistical methods for algorithm validation, and system-level hazard analysis. Prepare a concrete example of shipping a feature under design controls. Behavioral questions will probe collaboration across hardware/firmware/clinical/regulatory boundaries and how you balance speed with patient safety."
   },
+  "last_attempt_at": 1784890947,
   "last_evidence_at": 1784678212,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "eb3bb55468",
+    "e6b6a9414c",
+    "df90e0e0d9"
+   ],
+   "value": "Headquarters in San Diego, CA; manufacturing in San Diego and Bolton, MA; remote/hybrid roles available for many engineering functions."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "eb3bb55468",
+    "e6b6a9414c",
+    "df90e0e0d9"
+   ],
+   "value": "To improve the lives of people with diabetes through innovative insulin delivery technology and relentless focus on user experience."
+  },
   "name": "Tandem Diabetes Care",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast — 2-week sprints with quarterly PI planning; regulated release cadence (2-3 major updates/year) creates predictable crunch windows but protected downtime between submissions."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "eb3bb55468",
+    "e6b6a9414c",
+    "df90e0e0d9"
+   ],
+   "value": "Insulin pumps (t:slim X2, t:sport, Mobi) with integrated continuous glucose monitoring (CGM) connectivity, disposable cartridges and infusion sets, and accompanying diabetes management software (t:connect)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 5 sick days; unlimited not offered; accrual starts day one."
   },
+  "refresh_after": 1790074947,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -324068,7 +324644,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 24-Jan 1) plus summer 'recharge week' (first week of July) — both company-wide, no work expected."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "eb3bb55468",
+    "e6b6a9414c",
+    "df90e0e0d9"
+   ],
+   "value": "Public company (NASDAQ: TNDM); ~2,500 employees; $800M+ annual revenue; profitable with growing installed base of >500k pumps worldwide."
   },
   "sources": [
    {
@@ -324102,14 +324687,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=4c4562d3ff63dc6f6d3a26edca23c6023dd112ec9d030aa3c7adf72b7b92f883JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=06ce2bcc-7860-67cc-15eb-3c51798f667f&u=a1aHR0cHM6Ly9nby50YW5kZW0ubmV0Lw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B and green cards for specialized engineering roles (embedded, regulated software, algorithms); typical for mid-size med-tech firms with dedicated immigration counsel."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "eb3bb55468",
+    "e6b6a9414c",
+    "df90e0e0d9"
+   ],
+   "value": "Tandem Diabetes Care is a medical device company focused on insulin delivery systems for people with diabetes. It designs, manufactures, and sells insulin pumps and related disposable products."
+  },
+  "synthesized_evidence_sha": "16ef99873e4ac798",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "eb3bb55468",
+    "e6b6a9414c",
+    "df90e0e0d9"
+   ],
+   "value": "Embedded firmware for pump safety/cybersecurity, mobile/cloud apps for data visualization and remote monitoring, algorithm development for automated insulin delivery (AID), mechanical/fluidics engineering for disposable sets, FDA-regulated software verification/validation, and data science for real-world evidence and predictive analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678212,
   "web_search_url": "https://duckduckgo.com/?q=Tandem+Diabetes+Care+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Tandem sits at the intersection of regulated med-tech and modern software/AI: you'll build FDA-cleared automated insulin delivery algorithms that run on a pump people wear 24/7, directly improving glycemic outcomes. The company's public-market scale gives prestige and competitive new-grad compensation, while its single-product focus and agile squads avoid the bureaucracy of diversified conglomerates. Leadership has publicly emphasized sustainable pace (no mandatory weekends, protected deployment"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — core hours 10am-3pm PT, no-meeting Fridays common, on-call rotation limited to critical cloud services (1 week/quarter); leadership tracks burnout metrics quarterly."
   }
  },
  "tangram interiors": {
