@@ -2863,118 +2863,155 @@
  "accenture": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "High. Accenture is a brand-name 'Tier 2' innovator widely recognized for scaled AI implementation and consultancy breadth, carrying strong industry prestige, though it sits just below the elite pure-product research labs."
+   "source_ids": [
+    "57826b8e1d",
+    "7f01c559be",
+    "b5914d8793"
+   ],
+   "value": "Estimated: Tier 2. The global Accenture brand carries elite prestige and scale, but internal AI/data work in the federal branch leans heavily toward government consulting integration rather than top-tier cutting-edge AI research."
   },
   "aliases": [],
-  "attempts": 16,
+  "attempts": 17,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "f9a1c7f972",
-    "c50280f271"
+    "57826b8e1d",
+    "0565c38a2f",
+    "7f01c559be"
    ],
-   "value": "A professional services firm that generates revenue through project-based consulting, long-term managed services, and government contracts. Accenture Federal Services operates as a subsidiary focused on public-sector technology contracts with security clearance requirements."
+   "value": "Technology consulting contracted directly to the US federal government, deploying specialized engineering talent to solve complex public sector mission and enterprise challenges."
   },
   "culture_vibe": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "f9a1c7f972"
+    "57826b8e1d",
+    "d78e003131",
+    "8e39813591"
    ],
-   "value": "Polished professionalism with an increasing openness to agile innovation. The Federal Services unit layers mission patriotism onto Accenture's traditional collaborative, intellectually curious atmosphere, attracting people who want to solve technical puzzles with tangible national impact."
+   "value": "Large-scale, purpose-driven, and inclusive. Employees are united by a shared purpose to utilize technology for public sector missions and are expected to help create a welcoming culture."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
-    "f9a1c7f972",
-    "c50280f271"
+    "57826b8e1d",
+    "0565c38a2f",
+    "7f01c559be"
    ],
-   "value": "Enterprises across 40+ industries, including the US federal government (defense, national security, public safety, military health). Serves the Fortune Global 500 and large government agencies."
+   "value": "US federal government agencies across defense, national security, public safety, civilian, and military health organizations."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $95,000–$135,000 base salary plus performance bonus and signing top-up, with Federal Services Dulles corridor roles concentrated toward the higher center of that band."
+   "source_ids": [
+    "57826b8e1d",
+    "7f01c559be",
+    "0565c38a2f"
+   ],
+   "value": "Estimated: $85,000 - $115,000. Large government IT contracts offer stable but non-top-tier compensation commensurate with the local federal market."
   },
   "evidence_sha": "ad3aa71531a8da0c",
-  "generated_at": 1784682730,
+  "generated_at": 1784886268,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "2706aa8535"
+    "57826b8e1d",
+    "0565c38a2f",
+    "7f01c559be"
    ],
-   "value": "IT Services & Consulting"
+   "value": "IT Services and Consulting"
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Candidates should expect rigorous questioning on advanced SQL, Python, and applied modeling, plus scenario-driven consultancy techniques. Equally probe how managers set scope and distribute workload during government project sprints to confirm environments that respect shutdowns and deep learning time rather than high-burnout hero worship."
+   "source_ids": [
+    "57826b8e1d",
+    "0565c38a2f",
+    "7f01c559be"
+   ],
+   "value": "Ask about day-to-day client variability, engineering agility vs. red tape, actual hours logged on federal contracts, and whether billable-hour metrics create crunches to determine if this avoids the toxic environments you want to avoid."
   },
-  "last_attempt_at": 1784864526,
+  "last_attempt_at": 1784886268,
   "last_evidence_at": 1784842446,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "f9a1c7f972",
-    "2706aa8535"
+    "57826b8e1d",
+    "0565c38a2f",
+    "7f01c559be"
    ],
-   "value": "Global headquarters in Dublin, Ireland; corporate offices in major US cities. Federal hiring locations include Washington, DC metro area (Arlington, VA, and surrounding intelligence community hubs)."
+   "value": "United States (operates across US federal defense, national security, public safety, civilian, and military health sectors)."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "f9a1c7f972",
-    "c50280f271"
+    "0565c38a2f",
+    "7f01c559be",
+    "d78e003131"
    ],
-   "value": "To deliver on the promise of technology and human ingenuity. The Federal Services subsidiary's stated purpose is to help the US federal government make the nation stronger and safer and life better for people."
+   "value": "To help the US federal government make the nation stronger and safer and life better for people by pursuing the limitless potential of technology and ingenuity."
   },
   "name": "Accenture",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Brisk and metric-driven. Client-facing timelines create defined productivity spikes, though corporate standardization and government contracting strictures impose more governance—and somewhat less chaotic quick-release chaos—than found at venture-backed startups."
+   "source_ids": [
+    "57826b8e1d",
+    "0565c38a2f",
+    "7f01c559be"
+   ],
+   "value": "Estimated: Variable but moderate to fast. Pace is dictated by federal client deadlines and large-scale enterprise integrations rather than true startup innovation or tech-grade deployment."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "f9a1c7f972",
-    "a45e61fe76",
-    "c50280f271"
+    "57826b8e1d",
+    "0565c38a2f",
+    "b5914d8793"
    ],
-   "value": "Consulting, technology services (including cloud, AI, and cybersecurity), and operations. Also offers AI/ML development, data science, software engineering, and specialized federal defense technology solutions."
+   "value": "AI/ML engineering, large language models (LLMs), retrieval-augmented generation (RAG) systems, cloud DevOps, data analytics, and custom platform development."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15-20 days of paid vacation, plus floating holidays; total institution varies based on tenure and distinct consultant banding."
+   "source_ids": [
+    "d78e003131",
+    "8e39813591",
+    "b5914d8793"
+   ],
+   "value": "Estimated: 20-25 days. Federal consulting subsidiaries typically offer standard accrued PTO matching industry averages for large enterprises, though exact policy is not public."
   },
-  "refresh_after": 1789866730,
-  "retry_after": 1784886126,
+  "refresh_after": 1790070268,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "57826b8e1d",
+    "7f01c559be",
+    "0565c38a2f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Association-wide holiday shutdowns are not universal; however, braced public-sector project contracts often schedule systematic fortnight-long wind-downs during year-end, effectively guaranteeing mandatory downtime."
+   "source_ids": [
+    "d78e003131",
+    "8e39813591",
+    "b5914d8793"
+   ],
+   "value": "Estimated: None found in research. No guaranteed shutdowns or firm-wide holidays were indicated in the available sources."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "f9a1c7f972",
-    "2706aa8535"
+    "57826b8e1d",
+    "0565c38a2f",
+    "7f01c559be"
    ],
-   "value": "Global workforce of approximately 738,000 people; the Federal Services segment employs 13,000+ people. Public, mature global enterprise with consistent growth."
+   "value": "Large established enterprise with over 13,000 employees operating as a subsidiary within global Accenture."
   },
   "sources": [
    {
@@ -3041,39 +3078,52 @@
   "sponsorship_context": {
    "confidence": "medium",
    "source_ids": [
-    "f9a1c7f972"
+    "57826b8e1d",
+    "0565c38a2f",
+    "7f01c559be"
    ],
-   "value": "Varies by role and entity; many US-based technology roles are available for US citizens, and Federal Services positions mandate US citizenship with active Secret or higher security clearance, which typically excludes visa sponsorship."
+   "value": "Highly likely to sponsor work visas due to federal client requirements and being part of a large global consultancy, though specific roles may require US citizenship for government security clearance."
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "c50280f271",
-    "2706aa8535"
+    "57826b8e1d",
+    "0565c38a2f",
+    "7f01c559be"
    ],
-   "value": "Accenture is a global professional services company that helps organizations build their digital core, optimize operations, accelerate revenue growth, and enhance citizen services. It makes money by providing consulting, technology, and outsourcing services to clients across more than 40 industries."
+   "value": "Accenture Federal Services is a technology consulting subsidiary within global Accenture that designs and builds software, cloud, AI, and data solutions for US federal government agencies. It makes money by contracting with government clients to modernize their technology and solve complex mission and enterprise challenges."
   },
-  "synthesized_evidence_sha": "2a6296d8dd6bea3b",
+  "synthesized_evidence_sha": "ad3aa71531a8da0c",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "f9a1c7f972"
+    "57826b8e1d",
+    "7f01c559be",
+    "b5914d8793"
    ],
-   "value": "Data science, AI/ML model development, application development, cybersecurity, and cloud architecture. Federal roles include building creative data solutions for intelligence analysis and mission-critical systems requiring active Secret clearance."
+   "value": "Designing and building intelligent systems with LLMs and RAG, full-stack AI/ML engineering, cloud DevOps, and implementing data solutions blending analysis and software engineering."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784672017,
   "web_search_url": "https://duckduckgo.com/?q=Accenture+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Accenture blends elite name-brand prestige with large-scale AI implementations, giving you immediate high-impact exposure. While consultancies can push long hours during critical client sprints, the company's sheer size enables structured career progression frameworks and a growing emphasis on sane workload boundaries that protect personal time."
+   "source_ids": [
+    "57826b8e1d",
+    "0565c38a2f",
+    "7f01c559be"
+   ],
+   "value": "Fits the elite mission-driven priority through high-impact public sector work and total comp perposting, but a massive 13,000+ bureaucratic consultancy will likely conflict with your desire for a fast, innovative tech culture and highly respected WLB with guaranteed shutdowns."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate to Good. Accenture publicly promotes holistic well-being and flexibility; the reality is project-dependent. Government/federal contracts often enforce truly disengaging shutdowns and mandated leave, making the edge less prone to industrial-grade burnout than scaled-up rival integrators."
+   "source_ids": [
+    "d78e003131",
+    "8e39813591",
+    "b5914d8793"
+   ],
+   "value": "Estimated: Moderate. They emphasize inclusivity but government contracts clock standard weekly expectations without explicit mention of shutdowns or extreme WLB."
   }
  },
  "accenture federal services": {
@@ -38576,39 +38626,88 @@
  },
  "baker hughes": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Tier 1 (Fortune 500, dedicated digital org, publishes at NeurIPS/ICML, competes for same talent as big tech)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Revenue from product sales (turbomachinery, drilling tools), long-term service contracts, digital subscriptions, and integrated project delivery for upstream/midstream energy and industrial sectors."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, safety-obsessed, increasingly data-driven; culture varies — digital hubs feel like tech companies, traditional divisions feel like industrial giants."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "National and international oil companies, independent operators, industrial manufacturers, and utilities worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $115k-$135k base + 10-15% target bonus + RSUs ($20k-$40k over 4 yrs) for US data science/AI roles; higher in hubs like Houston/Bay Area."
   },
   "evidence_sha": "49ecbb9dccc55925",
+  "generated_at": 1784886268,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Expect applied ML/system design questions tied to physical assets (time-series, sensor fusion, optimization), strong emphasis on productionizing models, and behavioral questions on safety culture and cross-functional collaboration."
+  },
+  "last_attempt_at": 1784886268,
   "last_evidence_at": 1784678947,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Houston, TX; major hubs in London, Dubai, Singapore, and 120+ countries. R&D centers in Houston, Claremont (CA), Celle (Germany), Pune (India)."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To take energy forward — making it safer, cleaner, and more efficient for people and the planet."
+  },
   "name": "Baker Hughes",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast in digital/AI groups (quarterly OKRs, biweekly sprints); slower in hardware/field-service divisions due to safety/regulatory gates."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d9b9f26572",
+    "0dbc8ca3fc"
+   ],
+   "value": "Oilfield services, equipment, and digital solutions for hydrocarbon extraction, production optimization, and energy transition (e.g., turbomachinery, drilling services, software/AI for asset performance)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual PTO + 10 company holidays (US); accrual increases with tenure."
   },
+  "refresh_after": 1790070268,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -38618,7 +38717,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; some business units observe year-end slowdown (Dec 24-Jan 1) but not policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Publicly traded (NYSE: BKR), ~55,000 employees globally, Fortune 500, mature multinational with ongoing energy-transition pivot."
   },
   "sources": [
    {
@@ -38662,14 +38766,43 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established H-1B and green-card sponsor for STEM roles; routinely hires international new grads into US and global locations."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "d9b9f26572",
+    "0dbc8ca3fc",
+    "833de033b1"
+   ],
+   "value": "Baker Hughes is a global energy technology company providing products and services for the oil and gas industry, as well as industrial and energy transition solutions."
+  },
+  "synthesized_evidence_sha": "49ecbb9dccc55925",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "AI/ML for predictive maintenance, reservoir modeling, emissions monitoring, digital twins, edge computing in harsh environments, and high-performance computing for simulation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678947,
   "web_search_url": "https://duckduckgo.com/?q=Baker+Hughes+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Offers top-tier AI/data science roles in a Fortune 500 energy-tech leader with high new-grad compensation, a stated mission around energy transition, and a culture pushing digital innovation — but operates in a capital-intensive, regulated industry where pace and WLB can vary by division."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — digital roles often offer hybrid flexibility and core-hours protection; field/manufacturing roles involve rotation and on-call."
   }
  },
  "baker tilly": {
@@ -45643,37 +45776,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low tier. This is primarily a networking and IT services firm, not an elite AI-first or top-tier data science company."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "4586580ef5",
+    "47d198e40d",
+    "2a07a5b3aa"
+   ],
+   "value": "B2B IT services and systems integration, generating recurring revenue from managed IT services alongside one-off deployment contracts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional corporate environment focused on enterprise IT deployments and client services, rather than a fast-paced, high-learning tech culture."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "4586580ef5",
+    "47d198e40d",
+    "2a07a5b3aa"
+   ],
+   "value": "Enterprise clients spanning commercial businesses, government agencies, and educational institutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000 - $85,000 base salary, below the elite new-grad pay bands of top-tier AI companies."
   },
   "evidence_sha": "acefc0f41fbbdf65",
+  "generated_at": 1784886268,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "4586580ef5",
+    "47d198e40d",
+    "2a07a5b3aa"
+   ],
+   "value": "Information Technology and Network Infrastructure Services."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Candidates should clarify the scope of and investment in modern AI/data science initiatives versus legacy IT services. It is critical to assess whether the team offers genuine machine learning innovation or if the role leans toward slow bureaucracy, and to probe deeply for sane hours and guaranteed shutdowns to ensure it avoids the high-burnout environments the candidate wants to avoid."
   },
+  "last_attempt_at": 1784886268,
   "last_evidence_at": 1784680411,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "4586580ef5",
+    "47d198e40d",
+    "2a07a5b3aa"
+   ],
+   "value": "Headquartered in the United States with a global footprint across multiple international offices."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "4586580ef5",
+    "47d198e40d",
+    "2a07a5b3aa"
+   ],
+   "value": "To deliver best-in-class technology solutions that connect people and businesses through robust network infrastructure."
+  },
   "name": "Black Box",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow pace, characteristic of established enterprise IT service providers rather than fast, innovative tech startups."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "4586580ef5",
+    "47d198e40d",
+    "2a07a5b3aa"
+   ],
+   "value": "IT infrastructure, structured cabling, network systems, unified communications, and managed IT services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 to 20 days of standard annual paid time off."
   },
+  "refresh_after": 1790070268,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -45683,7 +45882,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Standard public holidays only. Guaranteed company-wide shutdowns for rest are unlikely in this industry."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "4586580ef5",
+    "47d198e40d",
+    "2a07a5b3aa"
+   ],
+   "value": "Established public company operating on a global scale with thousands of employees."
   },
   "sources": [
    {
@@ -45717,14 +45925,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=032491206ceaf99495b8031972366198bd6d0ea7fb04630228668976d737b808JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=30c87310-eb9a-6d6c-3ba9-648eea4a6ca0&u=a1aHR0cHM6Ly9zaW1wbGUud2lraXBlZGlhLm9yZy93aWtpL0JsYWNr&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "4586580ef5",
+    "47d198e40d",
+    "2a07a5b3aa"
+   ],
+   "value": "As a large global enterprise, Black Box has the structural capacity to offer visa sponsorship, though specifics vary by role and region."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "4586580ef5",
+    "47d198e40d",
+    "2a07a5b3aa"
+   ],
+   "value": "Black Box is a technology solutions provider specializing in network infrastructure, systems integration, and IT services. The company generates revenue by designing, deploying, and managing enterprise communication and networking products for clients."
+  },
+  "synthesized_evidence_sha": "acefc0f41fbbdf65",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "4586580ef5",
+    "47d198e40d",
+    "2a07a5b3aa"
+   ],
+   "value": "Network engineering, systems integration, infrastructure deployment, and enterprise IT management."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680411,
   "web_search_url": "https://duckduckgo.com/?q=Black+Box+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This company operates as an established IT infrastructure provider, which fundamentally misaligns with a candidate seeking a top-tier, fast-paced AI/Data Science role known for high new-grad pay, rapid technical innovation, and elite industry prestige."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Average. Work-life balance is typical for a legacy IT services firm, lacking the guaranteed shutdowns often found at modern tech companies."
   }
  },
  "blackedge capital": {
@@ -92612,37 +92853,101 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 1.5-2. While not an pure-play AI company, Datadog is an elite tech employer with strong technical prestige and complex data challenges in observability."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "a54177f0a1",
+    "e9c60cf06b"
+   ],
+   "value": "Subscription-based SaaS model charging for cloud monitoring and security products, often tied to infrastructure usage and premium support tiers."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "e9c60cf06b",
+    "fd6c484582"
+   ],
+   "value": "Collaborative and value-driven, emphasizing office culture, relationships, creativity, and inclusion as choices made daily."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "e9c60cf06b"
+   ],
+   "value": "Organizations of all sizes that require cloud monitoring, specifically highlighting a 'Premier Customer base' for top-tier support."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $180,000-$220,000 total compensation (base + equity) for top-tier tech roles in tier-1 cities. Datadog is known for competitive, elite-level pay."
   },
   "evidence_sha": "622552b5f3dffd08",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
+  "generated_at": 1784886268,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "a54177f0a1"
+   ],
+   "value": "Cloud Infrastructure, Software as a Service (SaaS), IT Operations, and Security."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "e9c60cf06b",
+    "fd6c484582"
+   ],
+   "value": "Assess whether their 'fast-paced' environment genuinely respects work-life balance or if it masks a high-burnout culture. Ask about typical project timelines, on-call expectations, and how the hybrid model practically ensures 'work-life harmony' while maintaining rapid innovation."
+  },
+  "last_attempt_at": 1784886268,
   "last_evidence_at": 1784821848,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "e9c60cf06b",
+    "fd6c484582"
+   ],
+   "value": "Operates in a hybrid and flexible work environment, placing value on office culture and collaboration."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "fd6c484582"
+   ],
+   "value": "Focused on inclusion and fostering an environment where people of all backgrounds can excel, succeed together, and drive sustainable operations as outlined in their ESG report."
+  },
   "name": "Datadog",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "e9c60cf06b"
+   ],
+   "value": "Estimated: High. Described explicitly as a 'fast-paced environment' where employees are challenged and must immediately witness contributions."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "a5d06da536"
+   ],
+   "value": "A comprehensive cloud monitoring and security platform that provides visibility into infrastructure, application performance, and logs."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days standard PTO, typical for large public tech companies. Exact policy not public in provided sources."
   },
+  "refresh_after": 1790070268,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -92652,7 +92957,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns mentioned in sources. Typically, tech companies may offer a holiday break, but this needs verification."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "e9c60cf06b"
+   ],
+   "value": "Public company operating at a large, global scale with a hybrid workforce."
   },
   "sources": [
    {
@@ -92706,14 +93018,48 @@
     "url": "https://careers.datadoghq.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "fd6c484582"
+   ],
+   "value": "Specific visa sponsorship policies are not explicitly detailed in the provided materials, but as a large public tech company, it typically sponsors work visas for top talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a54177f0a1",
+    "a5d06da536"
+   ],
+   "value": "Datadog is a public cloud monitoring and security platform that helps organizations observe their infrastructure, applications, and logs. It makes money by selling subscriptions to its various monitoring products based on usage and hosting requirements."
+  },
+  "synthesized_evidence_sha": "622552b5f3dffd08",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "e9c60cf06b"
+   ],
+   "value": "In-house roles involve becoming a product expert in cloud monitoring infrastructure, handling customer challenges, and operating in a fast-paced, collaborative environment."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678103,
   "web_search_url": "https://duckduckgo.com/?q=Datadog+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "e9c60cf06b",
+    "fd6c484582"
+   ],
+   "value": "Datadog's fast-paced, innovative tech environment aligns with your desire for accelerated learning and career growth without the typical slow bureaucracy of large tech companies. The hybrid work model and stated focus on 'work-life harmony' suggest an attempt to balance high performance with personal time, though you should verify that the fast pace does not lead to burnout."
+  },
   "wlb_rating": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "e9c60cf06b",
+    "fd6c484582"
+   ],
+   "value": "Estimated: Stable with caveats. The company promotes 'work-life harmony' and flexible work, but the fast-paced environment and customer-facing nature may require active boundary-setting to prevent burnout."
   }
  },
  "datadome": {
@@ -108934,11 +109280,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -108950,6 +109298,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784886268,
   "last_evidence_at": 1784678873,
   "name": "Emerson Electric",
   "pace_of_work": {
@@ -108962,6 +109311,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784886388,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -109005,7 +109355,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=cd2b2e2a96c3e1000464154e9fe3ee2e2e270cffd1e70b0a5e48ec3744f83f81JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3109bc3e-77f3-65b1-30f3-aba076836467&u=a1aHR0cHM6Ly93d3cuZW1lcnNvbi5jb20vZW4vY29ycG9yYXRl&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678873,
   "web_search_url": "https://duckduckgo.com/?q=Emerson+Electric+company+careers+benefits",
@@ -148915,49 +149265,156 @@
  },
  "hearst": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "6b7fa13bf1",
+    "61dc902dbe",
+    "b8e3512acd"
+   ],
+   "value": "Traditional corporate media tech; not a specialized AI first-mover."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "6b7fa13bf1",
+    "61dc902dbe",
+    "b8e3512acd"
+   ],
+   "value": "Diversified revenue streams including advertising, consumer and B2B subscriptions, and data licensing."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "6b7fa13bf1",
+    "61dc902dbe",
+    "b8e3512acd"
+   ],
+   "value": "Corporate, traditional media, legacy-focused."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "6b7fa13bf1",
+    "61dc902dbe",
+    "b8e3512acd"
+   ],
+   "value": "Mass-market consumers and enterprise B2B clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "6b7fa13bf1",
+    "61dc902dbe",
+    "b8e3512acd"
+   ],
+   "value": "Estimated: $100k - $130k base, variable by subsidiary."
   },
   "evidence_sha": "30e0fa9404356b4f",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784886268,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "6b7fa13bf1",
+    "61dc902dbe",
+    "b8e3512acd"
+   ],
+   "value": "Media and Information Services"
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "6b7fa13bf1",
+    "61dc902dbe",
+    "b8e3512acd"
+   ],
+   "value": "Be sure to probe for the specific tech stack and team culture of the subsidiary you are interviewing for to ensure it aligns with your preference for fast innovation over slow bureaucracy."
+  },
+  "last_attempt_at": 1784886268,
   "last_evidence_at": 1784762207,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "6b7fa13bf1",
+    "61dc902dbe",
+    "b8e3512acd"
+   ],
+   "value": "Headquartered in New York City with operations globally."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "6b7fa13bf1",
+    "61dc902dbe",
+    "b8e3512acd"
+   ],
+   "value": "General public information and corporate communications."
+  },
   "name": "Hearst",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "6b7fa13bf1",
+    "61dc902dbe",
+    "b8e3512acd"
+   ],
+   "value": "Estimated: Generally traditional and process-oriented, though pace varies heavily by subsidiary."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "6b7fa13bf1",
+    "61dc902dbe",
+    "b8e3512acd"
+   ],
+   "value": "Diversified portfolio including consumer media (magazines, broadcasting, digital media), business media (B2B data and analytics platforms), and transportation logistics data."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "6b7fa13bf1",
+    "61dc902dbe",
+    "b8e3512acd"
+   ],
+   "value": "Estimated: 15-20 PTO days annually, varying by tenure and corporate subsidiary."
   },
+  "refresh_after": 1790070268,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "6b7fa13bf1",
+    "61dc902dbe",
+    "b8e3512acd"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "6b7fa13bf1",
+    "61dc902dbe",
+    "b8e3512acd"
+   ],
+   "value": "Estimated: Standard corporate holidays, no guaranteed company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "6b7fa13bf1",
+    "61dc902dbe",
+    "b8e3512acd"
+   ],
+   "value": "Well-established large corporate enterprise."
   },
   "sources": [
    {
@@ -148991,14 +149448,55 @@
     "url": "https://www.bing.com/ck/a?!&&p=020f25a471c18fd8fca2ec0f55def8d8fd11c89d37d1605c505ccdda9d352959JmltdHM9MTc4NDY3ODQwMA&ptn=3&ver=2&hsh=4&fclid=1b715aaf-3b1c-69ea-31bc-4d313a1b681e&u=a1aHR0cHM6Ly93d3cuaGVhcnN0LmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "6b7fa13bf1",
+    "61dc902dbe",
+    "b8e3512acd"
+   ],
+   "value": "Variable sponsorship by individual subsidiaries."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "6b7fa13bf1",
+    "61dc902dbe",
+    "b8e3512acd"
+   ],
+   "value": "Hearst is one of the largest diversified media and information companies in the world, operating across media, business media, and transportation data. It generates revenue through a mix of advertising, subscriptions, and licensing across its global portfolio of brands and platforms."
+  },
+  "synthesized_evidence_sha": "30e0fa9404356b4f",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "6b7fa13bf1",
+    "61dc902dbe",
+    "b8e3512acd"
+   ],
+   "value": "Traditional media technology and business data platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784762207,
   "web_search_url": "https://duckduckgo.com/?q=Hearst+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "6b7fa13bf1",
+    "61dc902dbe",
+    "b8e3512acd"
+   ],
+   "value": "Hearst is a legendary media institution, offering a path into enterprise data science and digital transformation."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "6b7fa13bf1",
+    "61dc902dbe",
+    "b8e3512acd"
+   ],
+   "value": "Estimated: Generally good standard corporate WLB, but highly dependent on the specific brand or subsidiary."
   }
  },
  "heart aerospace": {
@@ -261470,11 +261968,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -261486,6 +261986,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784886268,
   "last_evidence_at": 1784679088,
   "name": "Real Chemistry",
   "pace_of_work": {
@@ -261498,6 +261999,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784886388,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -261551,7 +262053,7 @@
     "url": "https://job-boards.greenhouse.io/realchemistry/jobs/5366100008"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784679088,
   "web_search_url": "https://duckduckgo.com/?q=Real+Chemistry+company+careers+benefits",
@@ -277420,39 +277922,111 @@
  },
  "scale ai": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "47de58917f"
+   ],
+   "value": "Top-tier AI industry leader directly building the systems behind critical national decisions."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "47de58917f"
+   ],
+   "value": "Scale operates by building and shipping robust software platforms tailored for specific customer environments, monetizing through the delivery, integration, and adoption of these AI systems in the field."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "47de58917f",
+    "8253aa9552"
+   ],
+   "value": "A mission-driven, highly technical culture that values fast delivery and direct problem-solving, placing engineers directly with customers in the field while supporting continuous learning through dedicated stipends."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "47de58917f",
+    "8253aa9552"
+   ],
+   "value": "The company serves public sector and government clients, deploying hybrid customer-facing engineering roles where engineers sit directly with the people whose problems they are solving."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "47de58917f",
+    "8253aa9552"
+   ],
+   "value": "Estimated: Highly competitive top-tier tech market rates expected for new grads in AI and data science roles, reflecting the elite prestige of the company."
   },
   "evidence_sha": "58241ed17e4c831f",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+  "generated_at": 1784886268,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "47de58917f"
+   ],
+   "value": "Artificial Intelligence Systems and Data Infrastructure."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "47de58917f",
+    "8253aa9552"
+   ],
+   "value": "To assess if this role truly avoids toxic burnout culture while accelerating technical growth, focus your interview questions on the reality of the 'hybrid customer-facing' travel expectations and the pace of shipping from prototype to production. Ask detailed questions about how their stated 'generous PTO' is actually enforced and whether there are guaranteed shutdowns to ensure your personal time is genuinely protected."
+  },
+  "last_attempt_at": 1784886268,
   "last_evidence_at": 1784842446,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "47de58917f",
+    "8253aa9552"
+   ],
+   "value": "Scale operates in hybrid customer-facing environments where engineers sit directly with the customers whose problems they are solving, as well as in public sector infrastructure settings."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "47de58917f"
+   ],
+   "value": "To build the AI systems behind some of the country's most important decisions, owning delivery from the first prototype all the way to production software that customers adopt and rely on in the field."
+  },
   "name": "Scale AI",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "47de58917f"
+   ],
+   "value": "Estimated: Fast-paced and highly innovative, requiring engineers to own delivery from the first prototype directly to production software that customers rely on in the field."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "47de58917f",
+    "8253aa9552"
+   ],
+   "value": "Scale offers a core platform featuring robust backend systems and data integrations that connect customer environments to their platform, alongside dedicated public sector infrastructure and product security services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "8253aa9552"
+   ],
+   "value": "Estimated: Generous PTO policy provided to all employees, ensuring ample time off for rest and personal time."
   },
+  "refresh_after": 1790070268,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -277461,8 +278035,18 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "8253aa9552"
+   ],
+   "value": "Estimated: No specific guaranteed company-wide shutdowns found in research, though generous PTO is explicitly provided to ensure work-life balance."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "47de58917f",
+    "8253aa9552"
+   ],
+   "value": "Scale AI operates at a scale large enough to support dedicated public sector infrastructure, product security teams, and specialized customer-facing engineering roles."
   },
   "sources": [
    {
@@ -277516,14 +278100,49 @@
     "url": "https://job-boards.greenhouse.io/scaleai/jobs/4481921005"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "47de58917f",
+    "8253aa9552"
+   ],
+   "value": "Specific details on visa sponsorship are not explicitly mentioned in the sourced materials."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "47de58917f"
+   ],
+   "value": "Scale AI builds the AI systems and data infrastructure behind some of the country's most important decisions. They make money by providing robust backend systems, data integrations, and customer-facing platforms that connect client environments directly to Scale's technology."
+  },
+  "synthesized_evidence_sha": "58241ed17e4c831f",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "47de58917f",
+    "8253aa9552"
+   ],
+   "value": "Engineers build robust backend systems and data integrations connecting customer environments to Scale's platform, evaluate and enhance product security through RFC and service reviews, and own software delivery from first prototype to production."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678096,
   "web_search_url": "https://duckduckgo.com/?q=Scale+AI+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "8253aa9552",
+    "47de58917f"
+   ],
+   "value": "This role aligns perfectly with your desire for elite prestige and high new-grad pay in a fast, innovative tech culture, while avoiding slow bureaucracy. The mission-driven focus on building AI for the country's most important decisions is balanced by a stated commitment to generous PTO and learning stipends, matching your need for sane hours and respected work-life boundaries."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "8253aa9552",
+    "47de58917f"
+   ],
+   "value": "Estimated: Supportive work environment backed by comprehensive benefits and generous PTO, though the hybrid customer-facing nature and full ownership of delivery cycles may require focused boundary management to avoid burnout."
   }
  },
  "scanscape": {
@@ -297422,11 +298041,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -297438,6 +298059,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784886268,
   "last_evidence_at": 1784679087,
   "name": "Stantec",
   "pace_of_work": {
@@ -297450,6 +298072,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784886388,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -297493,7 +298116,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=52f0f612ddbfc7748844d76265eb2f3db6145c8aca1948de16d70e6250c375dfJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=179ba77f-7319-6e8a-37a0-b0e1727b6f5a&u=a1aHR0cHM6Ly93d3cuc3RhbnRlYy5jb20vZW4&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784679087,
   "web_search_url": "https://duckduckgo.com/?q=Stantec+company+careers+benefits",
@@ -306830,11 +307453,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -306846,6 +307471,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784886268,
   "last_evidence_at": 1784680197,
   "name": "T-Mobile",
   "pace_of_work": {
@@ -306858,6 +307484,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784886388,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -306901,7 +307528,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=cef98122b1ce3f8a0cf9df818be4d1fc39ec9e771e75038c176db938f7f45147JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=116f296a-6e32-64de-2aa8-3ef46ffa65a8&u=a1aHR0cHM6Ly93d3cudGlrdG9rLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680197,
   "web_search_url": "https://duckduckgo.com/?q=T-Mobile+company+careers+benefits",
@@ -333198,37 +333825,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Regional Tier. Prestige is highly localized to academic medical research and climate science, lacking the elite global tech prestige of FAANG or top-tier AI labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "2a89f87817",
+    "6a894f5bad",
+    "d296299125"
+   ],
+   "value": "Operates as a private non-profit university, generating revenue through tuition fees, extensive sponsored research grants, and healthcare services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, academic, and collaborative. Culture prioritizes education, research impact, and community service over aggressive commercial shipping goals."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "2a89f87817",
+    "6a894f5bad",
+    "d296299125"
+   ],
+   "value": "Prospective and current undergraduate/graduate students, medical patients, research funding agencies, and alumni donors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $65,000 - $85,000 base salary for new-grad technical roles, significantly lower than private-sector tech compensation."
   },
   "evidence_sha": "9f3bc34ed4037aba",
+  "generated_at": 1784886268,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "2a89f87817",
+    "6a894f5bad",
+    "d296299125"
+   ],
+   "value": "Higher Education and Healthcare"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probes should focus on identifying if the specific AI/Data Science role is tied to a well-funded, autonomous research lab, and thus insulated from standard university HR bureaucracy, slow pace, and lower pay bands. Ask about grant funding duration and exact work hours."
   },
+  "last_attempt_at": 1784886268,
   "last_evidence_at": 1784678787,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "2a89f87817",
+    "6a894f5bad",
+    "d296299125"
+   ],
+   "value": "Main campus located in Coral Gables, Florida, with additional medical and research facilities in Miami."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "2a89f87817",
+    "6a894f5bad",
+    "d296299125"
+   ],
+   "value": "To educate, nurture, and produce leaders who are dedicated to serving their communities, while advancing research and clinical care."
+  },
   "name": "University of Miami",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow to moderate. Academic calendars and university HR processes inherently create a slower, bureaucratic pace compared to fast-moving tech startups."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "2a89f87817",
+    "6a894f5bad",
+    "d296299125"
+   ],
+   "value": "Undergraduate and graduate academic degrees, professional continuing education, academic research output, and clinical healthcare services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 paid days off annually, alongside university-observed holidays and potential seasonal academic breaks."
   },
+  "refresh_after": 1790070268,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -333238,7 +333931,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Possible partial administrative shutdowns during major winter holidays, but not guaranteed for all technical or research roles."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "2a89f87817",
+    "6a894f5bad",
+    "d296299125"
+   ],
+   "value": "Established private university with over 15,000 students, a large medical school, and a robust R1 research classification."
   },
   "sources": [
    {
@@ -333272,14 +333974,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=c556c7c821b01bd950cd65253bcdafc1b7f1a98af2d485da1468d3711cf0a75aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=25de6375-e456-6dd3-3c5f-74ebe5226cc9&u=a1aHR0cHM6Ly93d3cudWNsYS5lZHUv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely does not sponsor H-1B visas for general IT roles, but university L-1/O-1 visas may be plausible for specialized international research staff."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "2a89f87817",
+    "6a894f5bad",
+    "d296299125"
+   ],
+   "value": "The University of Miami is a private research university that generates revenue through student tuition, government and private research grants, and philanthropic donations. It operates academic, healthcare, and research divisions, including the UHealth system."
+  },
+  "synthesized_evidence_sha": "9f3bc34ed4037aba",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Work involves academic research programming, clinical data management, and IT infrastructure. Roles vary from backend development and HPC cluster support to bioinformatics and clinical data science."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678787,
   "web_search_url": "https://duckduckgo.com/?q=University+of+Miami+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "While a university offers high mission-drive and strong work-life balance, it historically clashes with a candidate's desire for a fast, innovative tech culture, elite AI prestige, and high new-grad pay due to inherent academic bureaucracy and salary bands."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Universities generally respect standard hours and offer strong job security, though academic deadlines and grant pushes can cause occasional spikes."
   }
  },
  "university of mississippi medical center": {
@@ -346648,53 +347375,156 @@
  },
  "wash u": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "ff2484299c",
+    "eecf13bbfd",
+    "ab298b9734"
+   ],
+   "value": "No AI or data science prestige tier information found in the supplied sources."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "ff2484299c",
+    "eecf13bbfd",
+    "ab298b9734"
+   ],
+   "value": "No public business model information available in the retrieved sources."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "ff2484299c",
+    "eecf13bbfd",
+    "ab298b9734"
+   ],
+   "value": "No public culture or vibe information found in the retrieved sources."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "ff2484299c",
+    "eecf13bbfd",
+    "ab298b9734"
+   ],
+   "value": "No customer information found in the supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "ff2484299c",
+    "eecf13bbfd",
+    "ab298b9734"
+   ],
+   "value": "Estimated: $70,000-$110,000 base salary, typical for academic/research tech roles, though exact new-grad pay was not found in the sources."
   },
   "evidence_sha": "c2c8a62f174bb2f2",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784886268,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784885874,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "ff2484299c",
+    "eecf13bbfd",
+    "ab298b9734"
+   ],
+   "value": "Industry information not available in the retrieved sources; redirection pages provided no content."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "ff2484299c",
+    "eecf13bbfd",
+    "ab298b9734"
+   ],
+   "value": "Probe whether specific AI/data science groups operate with startup-like speed or if bureaucratic processes slow deployment. Ask about new-grad total compensation baselines versus tech industry benchmarks, and clarify expectations for hours, on-call, and any guaranteed shutdown periods."
+  },
+  "last_attempt_at": 1784886268,
   "last_evidence_at": 1784675305,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "ff2484299c",
+    "eecf13bbfd",
+    "ab298b9734"
+   ],
+   "value": "No headquarters or office location information found in the supplied sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "ff2484299c",
+    "eecf13bbfd",
+    "ab298b9734"
+   ],
+   "value": "No public mission statement available in the retrieved sources."
+  },
   "name": "Wash U",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "ff2484299c",
+    "eecf13bbfd",
+    "ab298b9734"
+   ],
+   "value": "Estimated: Moderate academic pace requiring candidate verification, as no public pace data was found in the sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "ff2484299c",
+    "eecf13bbfd",
+    "ab298b9734"
+   ],
+   "value": "No product information found; the retrieved Wash U company pages did not load substantive public content."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "ff2484299c",
+    "eecf13bbfd",
+    "ab298b9734"
+   ],
+   "value": "Estimated: Standard academic leave (~20-25 days) typical of university employers, but exact PTO is not public in the supplied sources."
   },
-  "retry_after": 1784886114,
+  "refresh_after": 1790070268,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "ff2484299c",
+    "eecf13bbfd",
+    "ab298b9734"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "ff2484299c",
+    "eecf13bbfd",
+    "ab298b9734"
+   ],
+   "value": "Estimated: Possible holiday closures common in academic settings, but no specific shutdown policy was found in the sources."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "ff2484299c",
+    "eecf13bbfd",
+    "ab298b9734"
+   ],
+   "value": "No company size or stage information found in the supplied sources."
   },
   "sources": [
    {
@@ -346728,14 +347558,55 @@
     "url": "https://www.bing.com/ck/a?!&&p=8e38c45c0d8590e88d669017d76487963a6ff6f932aa67f4406427538c06672cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=11f3d90b-5b5a-6eac-0346-ce965aad6f87&u=a1aHR0cHM6Ly93d3cud2FzaC5jb20v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "ff2484299c",
+    "eecf13bbfd",
+    "ab298b9734"
+   ],
+   "value": "No visa sponsorship information found in the retrieved sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "ff2484299c",
+    "eecf13bbfd",
+    "ab298b9734"
+   ],
+   "value": "No public summary available; the provided sources for Wash U do not contain a plain-English explanation of what the company does or how it makes money."
+  },
+  "synthesized_evidence_sha": "c2c8a62f174bb2f2",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "ff2484299c",
+    "eecf13bbfd",
+    "ab298b9734"
+   ],
+   "value": "No technical work details available in the retrieved sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675305,
   "web_search_url": "https://duckduckgo.com/?q=Wash+U+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "ff2484299c",
+    "eecf13bbfd",
+    "ab298b9734"
+   ],
+   "value": "Given the candidate's priority for a fast, innovative tech culture with elite AI/data science prestige and high new-grad pay, Wash U's academic/research context requires careful evaluation. Academic institutions often provide mission-driven work and sane hours, but may move slower in bureaucracy than tech startups and typically offer lower new-grad compensation than big tech firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "ff2484299c",
+    "eecf13bbfd",
+    "ab298b9734"
+   ],
+   "value": "Estimated: Likely favorable work-life balance typical of academic/research environments, but unspecified in the sources."
   }
  },
  "washington university in st louis": {
