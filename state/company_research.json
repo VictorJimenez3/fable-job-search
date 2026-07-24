@@ -10439,47 +10439,112 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Niche/Mid-tier for traditional AI/ML roles, as the core product is cloud networking rather than artificial intelligence; AI work may be secondary to infrastructure."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "5267236172"
+   ],
+   "value": "Subscription-based cloud networking services, with pricing likely tiered by network traffic, points of presence, and selected security features."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-first, mission-driven culture focused on solving complex multi-cloud networking problems."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "5267236172"
+   ],
+   "value": "Enterprises requiring secure, automated multi-cloud network connectivity and management."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130,000 - $160,000 base salary, aligning with US cloud infrastructure tech market rates."
   },
   "evidence_sha": "ee7830f989cb9dd4",
+  "generated_at": 1784867502,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "5267236172"
+   ],
+   "value": "Cloud Networking and Infrastructure / Network-as-a-Service (NaaS)."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Emphasize your desire to build elite, innovative cloud networking infrastructure without sacrificing personal time or dealing with toxic bureaucracy. Highlight how you thrive in fast-paced, mission-driven cultures that prioritize technical excellence, guaranteed shutdowns, and high new-grad pay."
   },
+  "last_attempt_at": 1784867502,
   "last_evidence_at": 1784677598,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "5267236172"
+   ],
+   "value": "Headquartered in the United States, likely operating with a distributed or hybrid workforce model."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "5267236172"
+   ],
+   "value": "To simplify and revolutionize cloud networking by providing an on-demand, point-and-click network-as-a-service platform."
+  },
   "name": "Alkira",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and innovative startup environment typical of venture-backed scale-ups in the cloud infrastructure space."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "5267236172"
+   ],
+   "value": "Alkira Cloud Services Connect (CXC), a multi-cloud networking platform delivering Network-as-a-Service (NaaS) with built-in security and visibility."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard paid time off, typical for private tech scale-ups."
   },
+  "refresh_after": 1790051502,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "5267236172",
+    "b9e671b184"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely standard national holidays, with unpredicted shutdowns not publicly guaranteed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "b9e671b184",
+    "5267236172"
+   ],
+   "value": "Venture-backed private company scaling its market presence, recently highlighted in major industry acquisitions."
   },
   "sources": [
    {
@@ -10503,14 +10568,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=370e10de97689ce8e31824b8d21ade8ccffe6aa1b0bba93e48272205aa1a70d8JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=304c9329-257b-6eeb-2979-84b424526fb5&u=a1aHR0cHM6Ly93d3cuYWxraXJhLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsoring likely available for specialized roles given the high technical barrier of cloud networking infrastructure, but unconfirmed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "5267236172"
+   ],
+   "value": "Alkira provides a cloud networking platform that enables enterprises to build, deploy, and manage global networks securely. It makes money by selling subscription-based access to its Network-as-a-Service (NaaS) platform, which is consumed on-demand based on points of presence and usage."
+  },
+  "synthesized_evidence_sha": "ee7830f989cb9dd4",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "5267236172"
+   ],
+   "value": "Developing scalable cloud networking infrastructure, multi-cloud routing protocols, and network virtualization systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677598,
   "web_search_url": "https://duckduckgo.com/?q=Alkira+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Alkira represents an elite, mission-driven opportunity that balances high compensation with a fast-paced, innovative cloud infrastructure environment, leaving slow bureaucracy behind. The technical complexity of multi-cloud networking accelerates AI and data science learning while respecting personal time through strong work-life balance and sane hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate to Good; standard for tech scale-ups, generally avoiding toxic burnout cultures while maintaining high output."
   }
  },
  "allegion": {
@@ -21955,11 +22045,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -21971,6 +22063,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784867502,
   "last_evidence_at": 1784677175,
   "name": "Arbin Instruments",
   "pace_of_work": {
@@ -21983,6 +22076,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784867622,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -22026,7 +22120,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=9d5a311bcb845f95b21328200903e160c9e8538acdec5525bdaf173be6c9e859JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0b35a25d-ffe7-6b72-3428-b5c0fe9e6aff&u=a1aHR0cHM6Ly9hcmJpbi5jb20vd3AtY29udGVudC91cGxvYWRzLzIwMjQvMDkvQXJiaW4tTEJUU19Ccm9jaHVyZV9yZXYxMi5wZGY&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677175,
   "web_search_url": "https://duckduckgo.com/?q=Arbin+Instruments+company+careers+benefits",
@@ -120912,39 +121006,83 @@
  },
  "histosonics inc": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "07076138c9"
+   ],
+   "value": "High — commercial-stage FDA-cleared platform with real-time ML, top-tier investor syndicate, and acquisition validation."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Razor-blade model: capital equipment sales of Edison consoles plus recurring revenue from single-use treatment kits and service contracts; reimbursed via existing CPT codes for ablation procedures."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, engineering-first, collaborative across R&D/clinical/regulatory; transparent leadership with weekly all-hands; low politics, high psychological safety."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Hospitals and academic medical centers performing interventional radiology, hepatology, and urology procedures; initially U.S. early-adopter sites, expanding internationally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$150k base + 10-15% target bonus + equity (0.05-0.15% for IC1); total comp ~$155k-$185k."
   },
   "evidence_sha": "dfba6300916cdffd",
+  "generated_at": 1784867502,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical interviews on real-time signal processing, GPU/C++ optimization, and FDA software documentation practices. Prepare to discuss how you balance rapid iteration with regulatory rigor, and show examples of deploying ML models in safety-critical or hardware-constrained settings."
+  },
+  "last_attempt_at": 1784867502,
   "last_evidence_at": 1784677598,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Ann Arbor, MI; Manufacturing: Plymouth, MI; Clinical/field roles: remote across major U.S. metro areas."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To transform patient care by making non-invasive, precise tissue ablation widely accessible through histotripsy technology."
+  },
   "name": "HistoSonics, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast — commercial launch phase drives aggressive feature velocity; two-week sprints with quarterly regulatory milestones."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Edison histotripsy system (FDA-cleared for liver tissue destruction); disposable handpieces and controllers; imaging integration software for real-time treatment monitoring."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + flexible sick time; unlimited not offered due to regulated environment tracking."
   },
+  "refresh_after": 1790051502,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -120954,7 +121092,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 24-Jan 1) + summer Fridays (half-days Jun-Aug); no guaranteed monthly shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "07076138c9"
+   ],
+   "value": "~200-300 employees; commercial-stage medical device company post-FDA clearance (2023) with $2.25B acquisition announced by investor consortium (2025)."
   },
   "sources": [
    {
@@ -120988,14 +121133,37 @@
     "url": "https://www.bing.com/ck/a?!&&p=dab9da039737d6442f6cfaf92316a3fae438548ec80642e0cd9700327340dbd2JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=304c9329-257b-6eeb-2979-84b424526fb5&u=a1aHR0cHM6Ly9oaXN0b3Nvbmljcy5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Capable of H-1B and green-card sponsorship for specialized engineering roles; typical for venture-backed medtech at this scale."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "HistoSonics develops histotripsy, a non-invasive ultrasound ablation platform that mechanically destroys target tissue without heat or incisions. The company commercializes the Edison system for liver and kidney applications, generating revenue through system sales and per-procedure disposables."
+  },
+  "synthesized_evidence_sha": "dfba6300916cdffd",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Real-time ultrasound imaging processing, GPU-accelerated beamforming, acoustic simulation, FDA-regulated software (IEC 62304), cloud-based case analytics, and machine learning for treatment planning/quality assurance."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677598,
   "web_search_url": "https://duckduckgo.com/?q=HistoSonics%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "07076138c9"
+   ],
+   "value": "HistoSonics offers a rare blend: a clinically validated, FDA-cleared platform at commercial scale with elite investor backing, meaning AI/data-science work directly impacts patient outcomes in a regulated, high-innovation environment. The announced $2.25B acquisition signals strong exit validation while the company continues operating independently, preserving a fast-paced, mission-driven culture without big-corp bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — medtech commercial stage demands intensity but leadership emphasizes sustainable pace; core hours 10am-3pm, limited on-call for field clinical support only."
   }
  },
  "hitachi energy": {
@@ -131732,37 +131900,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (emerging/early-stage) – no published research, conference presence, or notable alumni found in sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "45690f014e",
+    "bbf5a30262",
+    "0acc288ed8"
+   ],
+   "value": "No business-model details could be extracted from the supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Small, ambitious, builder-oriented team; culture details not publicly documented."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "45690f014e",
+    "bbf5a30262",
+    "0acc288ed8"
+   ],
+   "value": "No customer or target-market information could be extracted from the supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$170k base + equity (0.1-0.5%); wide range due to no public data."
   },
   "evidence_sha": "18945d9389b217bd",
+  "generated_at": 1784867502,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "0acc288ed8"
+   ],
+   "value": "Artificial Intelligence / Machine Learning software"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+   "value": "Ask directly about: (1) engineering team size and reporting structure, (2) typical sprint cadence and on-call expectations, (3) concrete WLB policies (core hours, shutdowns, PTO), (4) new-grad compensation bands and equity, (5) mentorship and project ownership for junior hires. Verify claims against the candidate's priorities."
   },
+  "last_attempt_at": 1784867502,
   "last_evidence_at": 1784669636,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely US-based (domain .ai and English-language redirects); no office locations disclosed in sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "45690f014e",
+    "bbf5a30262",
+    "0acc288ed8"
+   ],
+   "value": "No mission statement could be extracted from the supplied sources."
+  },
   "name": "InstaLILY AI",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast – typical of seed/Series A AI startups; expect rapid iteration and shifting priorities."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "45690f014e",
+    "bbf5a30262",
+    "0acc288ed8"
+   ],
+   "value": "No product information could be extracted from the supplied sources; all three are redirect URLs without page content."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10-15 days + US federal holidays (typical US startup baseline); no official policy found."
   },
+  "refresh_after": 1790051502,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -131772,7 +132000,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns documented; unlikely at this stage."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Early-stage startup (likely <50 employees) based on limited public footprint; no headcount or funding data found in sources."
   },
   "sources": [
    {
@@ -131806,14 +132039,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=0bcc66f1ccbdd56ce6c0e07979ad30ce1aa1cf7f5362790f03223166dcdd1686JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=03fea5e8-08f3-6be6-1d93-b27509a66a96&u=a1aHR0cHM6Ly93d3cuaW5zdGFsaWx5LmFpLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown; early-stage AI startups often sponsor H-1B but no public record found in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "45690f014e",
+    "bbf5a30262",
+    "0acc288ed8"
+   ],
+   "value": "InstaLILY AI appears to be an AI-focused company with a public web presence, but the supplied sources are redirect links that do not expose any descriptive content about the company's products, mission, or operations."
+  },
+  "synthesized_evidence_sha": "18945d9389b217bd",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Core work likely involves applied AI/ML model development, data pipelines, and productizing generative or predictive models; specific stack unknown."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784669636,
   "web_search_url": "https://duckduckgo.com/?q=InstaLILY+AI+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The candidate seeks a top-tier AI role with elite prestige, high new-grad pay, fast innovative culture, genuine work-life balance, and accelerated learning without burnout. InstaLILY AI's public footprint is too thin to confirm any of these attributes; deeper diligence (team LinkedIn, Glassdoor, funding announcements) is required before investing interview time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3/5 – early-stage default; no public policy guaranteeing shutdowns or sane hours found."
   }
  },
  "instawork": {
@@ -225428,51 +225686,122 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Strong applied AI at massive enterprise scale; publishes at top venues (NeurIPS, ICML, KDD) but not a primary AGI research lab like DeepMind/OpenAI."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "c98055ca43",
+    "0247ff9fed",
+    "8097962d4b"
+   ],
+   "value": "Revenue from cloud subscriptions (SaaS/PaaS/IaaS), software licenses, support/maintenance, and professional services. Transitioning to cloud-first recurring revenue model."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-led, process-aware, collaborative, diverse, stability-valued; German 'Ordnung' meets Silicon Valley pragmatism. Low politics for a 100K-person org."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "c98055ca43",
+    "0247ff9fed",
+    "8097962d4b"
+   ],
+   "value": "Large enterprises and mid-market companies across industries including manufacturing, retail, financial services, public sector, and consumer goods. Over 400,000 customers globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: US $130-150K base + 10-15% annual bonus + €15-25K RSUs over 4YR (Germany €60-75K base + bonus + stock); top AI/ML hires may reach $160-170K base."
   },
   "evidence_sha": "850fe93ba335cd09",
+  "generated_at": 1784867502,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c98055ca43",
+    "0247ff9fed",
+    "8097962d4b"
+   ],
+   "value": "Enterprise Software / Cloud Computing / Business Applications"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect system-design heavy loops (scalable services, data pipelines, ML ops), practical ML applied to tabular/time-series enterprise data, and behavioral questions on cross-functional collaboration. Prepare for 'customer-zero' mindset: how your model survives dirty, regulated, multi-tenant data. LeetCode hard is rare; focus on production-grade Python/SQL, distributed systems trade-offs, and explaining ML to non-technical stakeholders."
   },
-  "last_attempt_at": 1784867341,
+  "last_attempt_at": 1784867502,
   "last_evidence_at": 1784675221,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "c98055ca43",
+    "0247ff9fed",
+    "8097962d4b"
+   ],
+   "value": "Headquarters: Walldorf, Germany. Major hubs: Palo Alto, New York, Bangalore, Shanghai, São Paulo, Tel Aviv, Paris, London, and 130+ countries with offices or remote options."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "c98055ca43",
+    "0247ff9fed",
+    "8097962d4b"
+   ],
+   "value": "Help the world run better and improve people's lives through enterprise software that enables digital transformation and intelligent enterprise."
+  },
   "name": "SAP",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — Quarterly release cycles for cloud, structured agile sprints, limited fire-drills; innovation units move faster than core ERP teams."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "c98055ca43",
+    "0247ff9fed",
+    "8097962d4b"
+   ],
+   "value": "Core ERP suite (S/4HANA), cloud applications (SuccessFactors, Ariba, Concur, Fieldglass), business technology platform (SAP BTP), database/analytics (HANA), and industry-specific solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25-30 days paid vacation + 10-12 public holidays (Germany); US ~15-20 days PTO + 10 holidays; varies by country/role."
   },
-  "retry_after": 1784867461,
+  "refresh_after": 1790051502,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research"
+   "value": "None found in research — SAP runs 'Early Talent' and 'University Alliances' intern-to-hire pipelines but no formal named rotational program for new grads in public sources."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Established: Company-wide 'Winter Break' (Dec 24-Jan 1) and 'Summer Break' (varies) where most offices close; teams coordinate coverage."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "c98055ca43",
+    "0247ff9fed",
+    "8097962d4b"
+   ],
+   "value": "Large-cap public company (NYSE: SAP), ~105,000 employees globally, €30B+ annual revenue, founded 1972, headquartered in Walldorf, Germany."
   },
   "sources": [
    {
@@ -225506,14 +225835,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=ca0830b7fd4134bc2f6f741a21cb56697c9c1132aa8b5e9d9be9161db7d2cb28JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2d0d59e4-dc7a-6141-0e93-4e79dda76082&u=a1aHR0cHM6Ly93d3cuc2FwLmNvbS9pbmRleC5odG1s&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Active H-1B sponsor (US) and global mobility program. Strong track record of visa sponsorship for technical roles across major hubs. EU Blue Card support in Germany."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "c98055ca43",
+    "0247ff9fed",
+    "8097962d4b"
+   ],
+   "value": "SAP is a German multinational software corporation that develops enterprise software to manage business operations and customer relations. It is the world's largest enterprise application software company by revenue."
+  },
+  "synthesized_evidence_sha": "850fe93ba335cd09",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "c98055ca43",
+    "0247ff9fed",
+    "8097962d4b"
+   ],
+   "value": "Distributed systems, cloud infrastructure, in-memory databases (HANA), enterprise application development, AI/ML integration into business processes, data engineering, DevOps, and platform engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675221,
   "web_search_url": "https://duckduckgo.com/?q=SAP+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "SAP offers elite enterprise-scale data/AI impact (400K+ customers, petabyte-scale HANA) with new-grad total compensation competitive with top tech ($130-170K base + equity/bonus). The culture emphasizes 'Flexible Working' and 'Trust-Based Working Time' with core hours but no mandated overtime, supporting the WLB priority. AI/DS roles sit in SAP Business AI and BTP innovation units, which operate with startup-like autonomy inside a stable, mission-driven giant — avoiding both boutique fragility a"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — 'Trust-Based Working Time' policy, core hours ~10-3, flexible remote, 20-30 paid vacation days (region-dependent), low weekend/on-call expectation for most IC roles."
   }
  },
  "saronic": {
@@ -262291,39 +262649,101 @@
  },
  "tower research capital": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "0f6f0d0de7"
+   ],
+   "value": "Tier 1. Recognized as home to the world's best quantitative trading teams, offering highly prestigious and technically demanding AI/data science roles."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "0f6f0d0de7"
+   ],
+   "value": "Proprietary trading and liquidity provision, using its own capital to profit from market inefficiencies across various global markets and asset classes."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "0f6f0d0de7"
+   ],
+   "value": "A culture of excellence that is highly stimulating, results-oriented, and powered by highly intelligent and motivated colleagues. It emphasizes high performance and innovation rather than slow bureaucracy."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "0f6f0d0de7"
+   ],
+   "value": "Institutional market participants and global financial exchanges acting as counterparties to its liquidity provision and trading activities."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $200,000 - $300,000+ total compensation. Top-tier quantitative trading firms typically offer highly competitive base salaries and substantial performance bonuses that exceed standard tech industry new-grad pay."
   },
   "evidence_sha": "fd7ec484ee921fdd",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+  "generated_at": 1784867502,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0f6f0d0de7"
+   ],
+   "value": "Quantitative Trading / Financial Services / Technology."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "0f6f0d0de7"
+   ],
+   "value": "During the interview, you should probe deeply into the day-to-day culture to ensure it respects your boundary for sane hours and avoids toxic, high-burnout patterns. Ask specific questions about after-hours on-call expectations, weekend work frequency, and whether the firm enforces guaranteed shutdowns to protect personal time. Emphasize your desire for an innovative tech culture that promotes rapid learning, but clarify how the team measures performance to ensure it does not demand continuous p"
+  },
+  "last_attempt_at": 1784867502,
   "last_evidence_at": 1784673265,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "0f6f0d0de7"
+   ],
+   "value": "Offices located throughout the world."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "0f6f0d0de7"
+   ],
+   "value": "To create a stimulating, results-oriented environment powered by a high-performance technology platform, housing the world's best quantitative trading teams."
+  },
   "name": "Tower Research Capital",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "0f6f0d0de7"
+   ],
+   "value": "Estimated: Extremely fast-paced and results-oriented. Employees are expected to perform at their best, focused and engaged on the cutting edge of financial technology."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "0f6f0d0de7"
+   ],
+   "value": "High-performance quantitative trading algorithms, liquidity provision services, proprietary trading infrastructure, and venture investments."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard financial sector PTO, roughly 15-20 days annually, subject to trading desk coverage constraints."
   },
+  "refresh_after": 1790051502,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -262333,7 +262753,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Standard market holidays and weekends, though global market activity may require coverage outside of typical local holiday shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "0f6f0d0de7"
+   ],
+   "value": "Established, privately-held global financial services and technology firm with multiple international offices."
   },
   "sources": [
    {
@@ -262367,14 +262794,43 @@
     "url": "https://tower-research.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "0f6f0d0de7"
+   ],
+   "value": "Tower Research Capital is a global quantitative trading and financial services firm that builds high-performance technology platforms to trade across any asset class and time horizon. It makes money by deploying its own capital to execute algorithmic and high-frequency trading strategies, as well as through liquidity provision and venture investments."
+  },
+  "synthesized_evidence_sha": "fd7ec484ee921fdd",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "0f6f0d0de7"
+   ],
+   "value": "Developing and maintaining a high-performance technology platform for quantitative trading, utilizing advanced engineering, machine learning, and data science to optimize trading strategies across global markets."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673265,
   "web_search_url": "https://duckduckgo.com/?q=Tower+Research+Capital+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "0f6f0d0de7"
+   ],
+   "value": "Tower Research Capital is an elite quantitative trading firm that perfectly aligns with your desire for a prestigious, top-tier AI and data science role. It offers an innovative, fast-paced tech culture driven by highly intelligent colleagues, which accelerates technical learning and career growth without the slow bureaucracy found in larger, slower-moving institutions. However, candidates must carefully weigh this high-performance environment against their need for guaranteed shutdowns and a st"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "0f6f0d0de7"
+   ],
+   "value": "Estimated: Moderate to Poor. The culture is highly stimulating and results-oriented, driven by highly motivated colleagues, which often translates to demanding hours in the competitive quantitative trading industry rather than a strong emphasis on work-life balance."
   }
  },
  "toyota": {
@@ -263861,48 +264317,155 @@
  "trexquant investment lp": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "01754d75cf",
+    "7293acf1af",
+    "667f42c477"
+   ],
+   "value": "Estimated: Tier 1/Tier 2. Highly prestigious quant environment with elite new-grad pay, though slightly less brand-recognized outside of finance circles compared to top-tier pure tech firms."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "01754d75cf",
+    "7293acf1af",
+    "667f42c477"
+   ],
+   "value": "A quantitative trading model that generates revenue directly from market gains and transaction cost savings achieved through sophisticated research and proprietary algorithms."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "01754d75cf",
+    "7293acf1af",
+    "667f42c477"
+   ],
+   "value": "Estimated: Academic and heavily mission-driven toward pure research. Highly collaborative but competitive, attracting elite quantitative minds."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "01754d75cf",
+    "7293acf1af",
+    "667f42c477"
+   ],
+   "value": "Trexquant does not have external customers as it trades exclusively with its own private capital."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "01754d75cf",
+    "7293acf1af",
+    "667f42c477"
+   ],
+   "value": "Estimated: $200K - $350K+ total compensation. Ranges heavily based on firm performance and growing immediately."
   },
   "evidence_sha": "bf1fa18a93e64382",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+  "generated_at": 1784867502,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "01754d75cf",
+    "7293acf1af",
+    "667f42c477"
+   ],
+   "value": "Financial Services, Quantitative Trading, Hedge Funds."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "01754d75cf",
+    "7293acf1af",
+    "667f42c477"
+   ],
+   "value": "Prepare to prove how you can apply math and machine learning to noisy financial datasets without expecting long-term hand-holding; also seek to uncover if they meet your strict WLB and burnout avoidance demands."
+  },
+  "last_attempt_at": 1784867502,
   "last_evidence_at": 1784674350,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "01754d75cf",
+    "7293acf1af",
+    "667f42c477"
+   ],
+   "value": "Headquartered in Stamford, CT, with additional corporate and research presence in Asia (e.g., Shanghai, China)."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "01754d75cf",
+    "7293acf1af",
+    "667f42c477"
+   ],
+   "value": "To generate consistent, uncorrelated returns in global financial markets by applying rigorous scientific methods, advanced mathematics, and cutting-edge technology."
+  },
   "name": "Trexquant Investment LP",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "01754d75cf",
+    "7293acf1af",
+    "667f42c477"
+   ],
+   "value": "Estimated: Fast and highly technical. Quant research demands rapid iteration, though it is less structurally bureaucratic than traditional large tech companies."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "01754d75cf",
+    "7293acf1af",
+    "667f42c477"
+   ],
+   "value": "The firm's core products are proprietary systematic trading algorithms, quantitative financial models, and the high-performance data infrastructure used to execute trades."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "01754d75cf",
+    "7293acf1af",
+    "667f42c477"
+   ],
+   "value": "Estimated: 20-25 days. Typically competitive for the financial sector, though optimized to avoid disrupting live trading or research deadlines."
   },
+  "refresh_after": 1790051502,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "01754d75cf",
+    "7293acf1af",
+    "667f42c477"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "01754d75cf",
+    "7293acf1af",
+    "667f42c477"
+   ],
+   "value": "Estimated: Likely standard market holiday closures rather than explicit mandatory corporate shutdowns often seen in pure tech firms."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "01754d75cf",
+    "7293acf1af",
+    "667f42c477"
+   ],
+   "value": "A mature, privately-held quantitative hedge fund operating at a mid-size scale."
   },
   "sources": [
    {
@@ -263936,14 +264499,55 @@
     "url": "https://www.bing.com/ck/a?!&&p=24ff023194a8bd6d23607fbb282e213bce4d67bf228ef6ed873260be2c0d0bb2JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=320ae8cc-8f07-6077-0b51-ff518e3e6197&u=a1aHR0cHM6Ly9kcmphY29icy1zaG9wLmRlLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "01754d75cf",
+    "7293acf1af",
+    "667f42c477"
+   ],
+   "value": "Estimated: Quantitative firms of this size typically sponsor visas for highly specialized quantitative researcher and developer roles, though specific visa policy is not publicly detailed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "01754d75cf",
+    "7293acf1af",
+    "667f42c477"
+   ],
+   "value": "Trexquant Investment LP is a systematic investment firm that leverages advanced quantitative models and AI to trade global financial markets. It makes money by deploying proprietary capital into alpha-generating strategies built and executed by its team of quantitative researchers and engineers."
+  },
+  "synthesized_evidence_sha": "bf1fa18a93e64382",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "01754d75cf",
+    "7293acf1af",
+    "667f42c477"
+   ],
+   "value": "Involves researching and implementing predictive financial models, processing large datasets, applying machine learning and deep learning algorithms, and optimizing high-frequency trading execution."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674350,
   "web_search_url": "https://duckduckgo.com/?q=Trexquant+Investment+LP+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "01754d75cf",
+    "7293acf1af",
+    "667f42c477"
+   ],
+   "value": "Fits the desire for high-impact AI/data science work in a fast-paced, prestigious environment with elite compensation, offering significant learning and career acceleration for top new grads."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "01754d75cf",
+    "7293acf1af",
+    "667f42c477"
+   ],
+   "value": "Estimated: Good. Often features better hours than collegiate internet tech firms, but requires intense mental focus during working hours which may impact work-life balance depending on team deadlines."
   }
  },
  "tria federal": {
@@ -290966,37 +291570,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 1. X is highly prestigious for elite AI and deep tech talent working on first-of-their-kind moonshot problems."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "c9540aeea6"
+   ],
+   "value": "Operates as an R&D lab funded by Alphabet, generating long-term value by graduating moonshot projects into standalone businesses within Alphabet's portfolio or integrating them into Google's core products."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "c9540aeea6"
+   ],
+   "value": "Highly mission-driven, audaciously ambitious, and heavily collaborative across deep-tech disciplines."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "c9540aeea6"
+   ],
+   "value": "Alphabet and its subsidiaries act as the primary consumers of X's spun-out technologies. The ultimate end-users of these foundational technologies span global infrastructure, mobility, energy, and agriculture sectors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $180,000 - $220,000+ total compensation. Tied to Google's high compensation bands."
   },
   "evidence_sha": "7e1a558ca9d22b74",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784867502,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c9540aeea6"
+   ],
+   "value": "Deep Tech R&D / Technology Incubation"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "c9540aeea6"
+   ],
+   "value": "Expect deep challenges on AI, data science, and rapid prototyping to assess your ability to solve massive, ambiguous problems. Prepare to demonstrate how you balance elite technical execution with fast, iterative innovation while maintaining sane working hours and avoiding burnout."
+  },
+  "last_attempt_at": 1784867502,
   "last_evidence_at": 1784589345,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "c9540aeea6"
+   ],
+   "value": "Headquartered in Mountain View, California, operating near Google's main campus."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "c9540aeea6"
+   ],
+   "value": "To bring sci-fi ideas into reality to help solve some of the world's hardest problems."
+  },
   "name": "X Development",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "c9540aeea6"
+   ],
+   "value": "Estimated: Extremely fast-paced, heavily focused on rapid prototyping, iterating, and pivoting away from unviable ideas quickly."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c9540aeea6"
+   ],
+   "value": "Conceptualizes and develops radical technologies including self-driving cars (Waymo), light-beamed internet (Taara), molten salt for energy storage, airborne package delivery, a digital immune system for cybersecurity, and a plant decoder for sustainable agriculture."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of standard vacation, plus holidays and Alphabet's standard corporate breaks."
   },
+  "refresh_after": 1790051502,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -291006,7 +291670,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely follows Alphabet-wide holiday shutdowns, reducing burnout risk."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "c9540aeea6"
+   ],
+   "value": "Operates as a secretive, mid-sized R&D subsidiary of Alphabet (a massive, public tech conglomerate)."
   },
   "sources": [
    {
@@ -291040,14 +291711,41 @@
     "url": "https://x.company/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Offers tier-1 visa sponsorship for elite talent, consistent with standard Alphabet policies."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "c9540aeea6"
+   ],
+   "value": "X Development (formerly Google X) is Alphabet's 'moonshot factory,' dedicated to inventing and launching breakthrough technologies aimed at solving global problems. It operates semi-independently within Alphabet, generating revenue by spinning successful sci-fi R&D projects into independent Alphabet companies or integrating them into Google."
+  },
+  "synthesized_evidence_sha": "7e1a558ca9d22b74",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "c9540aeea6"
+   ],
+   "value": "Rapid prototyping, deep tech engineering, and applied research across AI, robotics, hardware, and quantum technologies to prove radical concepts."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784589345,
   "web_search_url": "https://duckduckgo.com/?q=X+Development+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "c9540aeea6"
+   ],
+   "value": "X offers the elite prestige of Alphabet's moonshot factory with a mission-driven, fast-paced innovation culture rather than corporate bureaucracy. It provides a launchpad for rapid technical learning, high impact problem-solving, and access to top-tier compensation without the slow pace of big tech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good to Moderate. While deadlines can be intense, Alphabet's overarching culture generally supports sane hours and work-life boundaries."
   }
  },
  "x rite": {
