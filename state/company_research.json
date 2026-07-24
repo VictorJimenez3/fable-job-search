@@ -17987,89 +17987,99 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Top-tier, mission-driven defense tech provider recognized for advanced autonomous systems, though prestige may be viewed differently compared to traditional big tech or consumer AI sectors."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "1331fbe63c"
    ],
-   "value": "Defense technology company specializing in autonomous systems for national security"
+   "value": "Develops advanced defense technologies and autonomous systems, monetizing through defense contracts and the sale of proprietary military platforms."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "1331fbe63c"
+   ],
+   "value": "Estimated: Mission-driven and innovative, focused heavily on national security and advanced technologies. Likely prioritizes technical excellence and rapid execution over individual work-life balance."
   },
   "customers": {
    "confidence": "high",
    "source_ids": [
     "1331fbe63c"
    ],
-   "value": "Military and defense sectors"
+   "value": "Government and military agencies seeking advanced national security and defense technology solutions."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "1331fbe63c"
+   ],
+   "value": "Estimated: $115K/yr - $135K/yr base pay range for early career software engineers slated for 2026."
   },
   "evidence_sha": "67f3b4558a24f555",
-  "generated_at": 1784475917,
+  "generated_at": 1784869982,
   "generator": {
-   "endpoint": "local",
-   "model": "qwen3:30b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "1331fbe63c"
+   ],
+   "value": "Defense Technology / Advanced Autonomous Systems."
   },
   "interview_focus": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
     "1331fbe63c"
    ],
-   "value": "Technical skills for AI/data science roles, with emphasis on innovation and mission-driven work in defense technology."
+   "value": "You should evaluate Anduril's defense-tech ethos to ensure it matches your career growth and work-life balance targets. Ask interviewers about the reality of their pace, project cadence, and learning opportunities to guarantee they respect personal time rather than harboring a toxic, high-burnout engineering culture."
   },
-  "last_attempt_at": 1784475917,
+  "last_attempt_at": 1784869982,
   "last_evidence_at": 1784674824,
   "locations": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "1331fbe63c"
    ],
-   "value": "Seattle, WA (onsite)"
+   "value": "Seattle, WA (with operations in the United States)."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
     "1331fbe63c"
    ],
-   "value": "Enhancing military capabilities through advanced technology"
+   "value": "Focused on enhancing military capabilities and national security through advanced technology."
   },
   "name": "Anduril Industries",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "1331fbe63c"
+   ],
+   "value": "Estimated: Fast-paced and innovative tech culture focused on rapidly delivering advanced defense solutions, lacking slow bureaucracy."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
     "1331fbe63c"
    ],
-   "value": "Advanced autonomous systems for national security"
+   "value": "Advanced autonomous systems and defense technology hardware/software designed to enhance military capabilities."
   },
-  "prompt_v": 1,
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Conservative company-specific estimate suggests competitive tech PTO nationwide, likely around 15-20 days annually."
   },
+  "refresh_after": 1790053982,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -18079,12 +18089,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No public info found on guaranteed company-wide shutdowns or 'sane hours' policies that prevent burnout."
   },
   "size_stage": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "1331fbe63c"
+   ],
+   "value": "Scaling defense technology company actively recruiting for 2026 early career roles."
   },
   "sources": [
    {
@@ -18129,9 +18141,11 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "low",
+   "source_ids": [
+    "1331fbe63c"
+   ],
+   "value": "Not explicitly mentioned for early career roles given the defense and national security focus, which typically requires U.S. citizenship or permanent residency."
   },
   "status": "ready",
   "summary": {
@@ -18139,29 +18153,32 @@
    "source_ids": [
     "1331fbe63c"
    ],
-   "value": "Anduril Industries is a defense technology company developing advanced autonomous systems for national security, with a focus on AI and data science roles offering competitive early-career compensation and a mission-driven culture."
+   "value": "Anduril Industries is a defense technology company that enhances military capabilities and national security through advanced autonomous systems. The company makes money by developing and selling these hardware and software platforms to government and defense agencies."
   },
+  "synthesized_evidence_sha": "67f3b4558a24f555",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "1331fbe63c"
    ],
-   "value": "Developing advanced autonomous systems using AI and data science"
+   "value": "Full-time, onsite software engineering roles focusing on the development of advanced autonomous systems and defense technologies."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674824,
   "web_search_url": "https://duckduckgo.com/?q=Anduril+Industries+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
     "1331fbe63c"
    ],
-   "value": "A top-tier AI/data science role with elite prestige, high new-grad pay ($115K-$135K), and a fast, innovative tech culture focused on national security mission."
+   "value": "Anduril aligns with your desire for a top-tier AI and data science role compensating highly for new grads ($115K-$135K) while operating at an elite, fast-paced tech culture. The mission-driven nature of the work ensures high impact, though you should verify if their WLB expectations meet your need for sane hours and guaranteed shutdowns."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "1331fbe63c"
+   ],
+   "value": "Estimated: Unclear. Defense-tech often demands high urgency and can risk high-burnout. Consequently, Anduril may not always provide sane hours or guaranteed shutdowns."
   }
  },
  "anima": {
@@ -33625,101 +33642,125 @@
  "basis set": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "df066b0d6d"
+   ],
+   "value": "Estimated: Emerging tier. As a small early-stage startup (2-10 employees) focusing on AI in global trade, the prestige is driven by the ground-up technical experience rather than an established market reputation."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "df066b0d6d"
+   ],
+   "value": "Sells AI-driven software solutions aimed at modernizing and optimizing global trade operations for enterprise clients."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "df066b0d6d"
+   ],
+   "value": "Estimated: High autonomy and technical ownership within a mission-driven, highly collaborative startup team heavily focused on AI innovation."
   },
   "customers": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "df066b0d6d"
+   ],
+   "value": "Businesses operating within the international trade and global supply chain sectors."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
-  },
-  "evidence_sha": "92d7b90a1f52916e",
-  "generated_at": 1784512313,
-  "generator": {
-   "endpoint": "local",
-   "model": "qwen3:30b",
-   "task": "company_research"
-  },
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
-  },
-  "interview_focus": {
    "confidence": "high",
    "source_ids": [
     "df066b0d6d"
    ],
-   "value": "Early-career software engineering role with no experience required, focusing on technical skills and fit for AI-driven global trade industry."
+   "value": "$130,000 to $170,000 per year for Early Career Software Engineers."
   },
-  "last_attempt_at": 1784512313,
+  "evidence_sha": "92d7b90a1f52916e",
+  "generated_at": 1784869982,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "df066b0d6d"
+   ],
+   "value": "International Trade and Global Supply Chain / AI Technology"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "df066b0d6d"
+   ],
+   "value": "Probe the day-to-day working hours, on-call expectations, and how the team manages project deadlines to prevent burnout. Given the startup's size, ask founders directly if there are any guaranteed work-life balance mechanisms or shutdowns to ensure the elite technical learning doesn't sacrifice personal time."
+  },
+  "last_attempt_at": 1784869982,
   "last_evidence_at": 1784677296,
   "locations": {
    "confidence": "high",
    "source_ids": [
     "df066b0d6d"
    ],
-   "value": "San Francisco, CA (onsite)"
+   "value": "Founded in Menlo Park, CA, with early career software engineering positions based in San Francisco, CA."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
     "df066b0d6d"
    ],
-   "value": "Transforming the global trade industry through AI technology"
+   "value": "To transform the global trade industry through the application of AI technology."
   },
   "name": "Basis Set",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "df066b0d6d"
+   ],
+   "value": "Estimated: Fast-paced and highly dynamic, typical of an early-stage AI startup with fewer than 10 employees, requiring rapid iteration and adaptability."
   },
   "products": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "df066b0d6d"
+   ],
+   "value": "AI technology and software solutions built to transform the global trade industry."
   },
-  "prompt_v": 1,
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "df066b0d6d"
+   ],
+   "value": "Estimated: Standard startup PTO (likely 10-15 days accrued annually), though exact policies are not publicly documented."
   },
+  "refresh_after": 1790053982,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "df066b0d6d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "df066b0d6d"
+   ],
+   "value": "Estimated: None publicly guaranteed; shutdowns are less common in sub-10 person early-stage startups and would need to be negotiated or confirmed during interviews."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
     "df066b0d6d"
    ],
-   "value": "2-10 employees"
+   "value": "Early-stage startup with 2-10 employees, founded in 2017."
   },
   "sources": [
    {
@@ -33768,7 +33809,7 @@
    "source_ids": [
     "df066b0d6d"
    ],
-   "value": "Basis Set has a track record of offering H1B sponsorships, but this does not guarantee sponsorship for this specific role."
+   "value": "Basis Set has a track record of offering H1B sponsorships, though this is not guaranteed for all specific roles."
   },
   "status": "ready",
   "summary": {
@@ -33776,27 +33817,32 @@
    "source_ids": [
     "df066b0d6d"
    ],
-   "value": "Basis Set is a small AI company founded in 2017 in Menlo Park, California, focused on transforming global trade through AI technology. It offers early-career software engineering roles with competitive pay and H1B sponsorship."
+   "value": "Basis Set is a company focused on transforming the global trade industry through AI technology. Founded in 2017 and based in Menlo Park, the startup builds AI-driven solutions to optimize and modernize international supply chains and trade operations."
   },
+  "synthesized_evidence_sha": "92d7b90a1f52916e",
   "technical_work": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "df066b0d6d"
+   ],
+   "value": "Full-time, onsite Software Engineer (Early Career) roles involving AI technology development for global trade."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677296,
   "web_search_url": "https://duckduckgo.com/?q=Basis+Set+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
     "df066b0d6d"
    ],
-   "value": "A top-tier AI role with elite prestige, high new-grad pay ($130K-$170K/yr), and a fast, innovative tech culture (small size, 2-10 employees) without slow bureaucracy. Mission-driven focus on global trade AI. Work-life balance not explicitly confirmed but small size may imply less bureaucracy."
+   "value": "This role provides a strong $130K-$170K new-grad salary with high-impact AI autonomy typical of a sub-10 person startup. The intense, fast-paced environment and lack of established bureaucracy at this stage conflict with a priority for guaranteed work-life balance and shutdowns, meaning you will gain elite learning but must actively advocate for your personal time."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "df066b0d6d"
+   ],
+   "value": "Estimated: Potentially variable; early-stage startups often demand flexible hours and high availability, which may challenge strict work-life balance preferences."
   }
  },
  "baton corporation": {
@@ -108378,7 +108424,7 @@
    "value": "Tier 2 (Elite Defense/Aerospace) — Fielded autonomy on 5M+ flight hours; publishes at CVPR/ICRA/AIAA; DARPA/AFRL prime on multiple AI efforts; not a consumer-AI brand but top-tier for deployed defense ML."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "estimated",
    "source_ids": [],
@@ -108417,7 +108463,7 @@
    "source_ids": [],
    "value": "Expect deep C++/embedded fundamentals, DO-178C/DO-254 awareness, sensor-fusion/estimation theory (Kalman, particle filters), real-time Linux/RTOS debugging, and system-safety articulation. Prepare for scenario questions on autonomy safety, multi-sensor latency budgets, and ITAR-compliant software architecture. Behavioral emphasis on cross-functional collaboration (systems, hardware, test) and documentation rigor."
   },
-  "last_attempt_at": 1784869681,
+  "last_attempt_at": 1784869982,
   "last_evidence_at": 1784858719,
   "locations": {
    "confidence": "estimated",
@@ -108447,7 +108493,7 @@
    "value": "Estimated: 15 days PTO + 10 federal holidays + 5 floating days (accrual starts day 1); additional sick bank; partial carryover up to 240 hrs."
   },
   "refresh_after": 1789866913,
-  "retry_after": 1784869921,
+  "retry_after": 1784870462,
   "rotational_program_name": {
    "confidence": "high",
    "source_ids": [
@@ -109382,7 +109428,7 @@
    "value": "Tier 1 (Cruise autonomy research, Ultium battery AI, vehicle intelligence platforms — publishes at CVPR/NeurIPS/ICRA, competes for top PhD talent)"
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "estimated",
    "source_ids": [],
@@ -109398,7 +109444,7 @@
    "source_ids": [],
    "value": "Consumer retail buyers, commercial fleet customers, government agencies, and rideshare/delivery operators across North America, China, and select international markets."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -109421,7 +109467,7 @@
    "source_ids": [],
    "value": "Expect LeetCode-style coding (medium-hard), system design for vehicle-scale data/platforms, ML fundamentals (perception, prediction, planning for AV; battery modeling for EV), and behavioral questions tied to GM's values (safety, inclusion, innovation). Domain knowledge in robotics, embedded systems, or automotive is a plus but not required for general AI/DS roles. Prepare for 'why GM over pure tech?' narratives."
   },
-  "last_attempt_at": 1784681270,
+  "last_attempt_at": 1784869982,
   "last_evidence_at": 1784791696,
   "locations": {
    "confidence": "estimated",
@@ -109451,6 +109497,7 @@
    "value": "Estimated: 15 days PTO + 10 company holidays + 1–2 floating days; additional 'winter shutdown' week (5 days) between Christmas–New Year; unlimited sick leave."
   },
   "refresh_after": 1789865270,
+  "retry_after": 1784871902,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -109524,7 +109571,7 @@
    "source_ids": [],
    "value": "Active H-1B sponsor for engineering/tech roles; supports STEM OPT extensions; green card sponsorship (PERM) for qualified candidates. Large international workforce."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "estimated",
    "source_ids": [],
@@ -188502,7 +188549,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -188518,7 +188565,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -188544,7 +188591,7 @@
    ],
    "value": "Emphasize problem-solving skills, an analytical mindset, and any exposure to Smart Card/Java Card OS, secure coding, cryptography, or Global Platform/EMVco standards. Be prepared to discuss how you collaborate across hardware and software boundaries to optimize system performance."
   },
-  "last_attempt_at": 1784520372,
+  "last_attempt_at": 1784869982,
   "last_evidence_at": 1784677224,
   "locations": {
    "confidence": "high",
@@ -188582,6 +188629,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784870222,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -188655,7 +188703,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -197582,7 +197630,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -197598,7 +197646,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -197623,7 +197671,7 @@
    ],
    "value": "LLMs, API design, Backend architecture, Frontend UI, React"
   },
-  "last_attempt_at": 1784505063,
+  "last_attempt_at": 1784869982,
   "last_evidence_at": 1784677231,
   "locations": {
    "confidence": "high",
@@ -197654,6 +197702,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784870222,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -197721,7 +197770,7 @@
    ],
    "value": "Pax has a track record of offering H1B sponsorships. Please note that this does not guarantee sponsorship for this specific role."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -228994,99 +229043,119 @@
  "sambanova systems": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "be2ad30a7f"
+   ],
+   "value": "Estimated: Tier 1 - Recognized as a heavily funded, multi-billion dollar AI hardware startup building bleeding-edge systems."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "f5f1541c8f"
+   ],
+   "value": "SambaNova makes money by selling state-of-the-art AI hardware and software systems designed to be set up easily in data centers to run AI inference workloads."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "be2ad30a7f"
+   ],
+   "value": "Estimated: Innovative and mission-focused with a high emphasis on pushing the envelope of full-stack AI technology, potentially ambiguous given corporate exploring strategic alternatives."
   },
   "customers": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "f5f1541c8f"
+   ],
+   "value": "Enterprises running data centers and entities requiring fast agentic AI inference on massive models. The company has notable partnerships with organizations like Meta to deliver inference on models like Scout and Maverick."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "be2ad30a7f"
+   ],
+   "value": "Estimated: $140,000 - $180,000 base salary, competitive with top-tier AI hardware companies."
   },
   "evidence_sha": "183d68409ece0ab7",
-  "generated_at": 1784532644,
+  "generated_at": 1784869982,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "f5f1541c8f"
+   ],
+   "value": "Artificial Intelligence Hardware and Semiconductors"
   },
   "interview_focus": {
-   "confidence": "medium",
-   "source_ids": [
-    "bb01238703"
-   ],
-   "value": "Assess the culture to ensure it provides the required work-life balance and sane hours. Explore the scope of the AI Systems Performance Engineer role to verify it offers elite prestige and fast-paced learning."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Use the interview to probe for sane hours and real shutdowns to avoid burnout; signal your desire for a fast, innovative tech culture over slow corporate bureaucracy."
   },
-  "last_attempt_at": 1784532644,
+  "last_attempt_at": 1784869982,
   "last_evidence_at": 1784589346,
   "locations": {
-   "confidence": "medium",
+   "confidence": "low",
    "source_ids": [
-    "bb01238703"
+    "0866615d8c"
    ],
-   "value": "Recruiting contact phone number suggests a presence in the 650 area code (San Francisco Bay Area/Peninsula)."
+   "value": "Public sources indicate presence in locations relevant to AI chip design, with the company website retrieving from a standard corporate domain; specific physical office addresses were not explicitly captured in the provided snippets."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "bb01238703"
+    "f5f1541c8f"
    ],
-   "value": "Employs some of the greatest minds and talent in AI and machine learning."
+   "value": "SambaNova is focused on delivering the fastest AI inference platform and making it highly efficient to run the largest AI models at a fraction of the cost."
   },
   "name": "SambaNova Systems",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "f5f1541c8f"
+   ],
+   "value": "Estimated: Fast-paced and highly innovative, driven by the need to compete in the rapidly advancing AI chip and inference market."
   },
   "products": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "f5f1541c8f"
+   ],
+   "value": "The company builds full-stack AI inference platforms, combining hardware, operating systems, and networking. Key products include the SambaRack SN40-16 and the fifth-generation SambaRack SN50, which are optimized to run large models efficiently."
   },
-  "prompt_v": 1,
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of PTO, aligning with high-tech startup industry averages."
   },
+  "refresh_after": 1790053982,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "0866615d8c"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Guaranteed company-wide shutdowns could not be confirmed from public sources."
   },
   "size_stage": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "be2ad30a7f"
+   ],
+   "value": "A late-stage AI chip startup previously valued at $4 billion, exploring a sale after failing to raise new funding."
   },
   "sources": [
    {
@@ -229121,39 +229190,40 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "low",
+   "source_ids": [
+    "0866615d8c"
+   ],
+   "value": "Public records in the retrieved sources to confirm or deny visa sponsorship were not found."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "bb01238703"
+    "f5f1541c8f"
    ],
-   "value": "SambaNova Systems is an AI and machine learning company that employs top talent in the field."
+   "value": "SambaNova Systems is an AI hardware and software company that builds full-stack solutions for fast AI inference. It generates revenue by selling its integrated data center racks and proprietary operating systems to enterprises seeking to run large language models."
   },
+  "synthesized_evidence_sha": "183d68409ece0ab7",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "bb01238703"
+    "f5f1541c8f"
    ],
-   "value": "AI Systems Performance Engineering for new grads."
+   "value": "Involves developing full-stack AI infrastructure: designing hardware systems, networking, operating systems, and optimizing large language models (like GPT and DeepSeek) to run efficiently on proprietary data center racks."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784589346,
   "web_search_url": "https://duckduckgo.com/?q=SambaNova+Systems+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
-   "source_ids": [
-    "bb01238703"
-   ],
-   "value": "SambaNova hires top-tier AI/ML talent, aligning with the candidate's desire for an innovative, learning-focused environment. The company has an official pay transparency policy, suggesting potential to meet high new-grad pay expectations."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "SambaNova offers elite, full-stack technical challenges in AI hardware and inference software, ideal for accelerated learning and a high-prestige tech profile with competitive new-grad pay."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Commitment to sane hours and work-life balance may vary heavily by team, similar to norms in the AI hardware startup sector."
   }
  },
  "samsara": {
@@ -233728,83 +233798,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Top-tier — recognized for cutting-edge synthetic fraud detection, publishing at ML conferences, and trusted by major financial institutions."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Estimated: B2B SaaS/API pricing — per-verification or volume-based contracts with financial institutions; recurring revenue from ongoing fraud monitoring and identity risk scoring."
   },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-first, intellectually honest, low-ego, collaborative. Values depth over hype. Transparent leadership. Quietly ambitious."
   },
   "customers": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Estimated: Banks, credit unions, fintech lenders, credit card issuers, and other financial services companies that need to verify identities at account opening and throughout the customer lifecycle."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $160k-$190k base + equity (ISO/RSU) + sign-on; total comp ~$200k-$250k year 1 for ML/DS roles."
   },
   "evidence_sha": "e1a7357ffc890de7",
-  "generated_at": 1784475917,
+  "generated_at": 1784869982,
   "generator": {
-   "endpoint": "local",
-   "model": "qwen3:30b",
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "task": "company_research"
   },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Fintech / Identity Verification / Fraud Prevention / Applied AI"
   },
   "interview_focus": {
-   "confidence": "high",
-   "source_ids": [
-    "eb34494128"
-   ],
-   "value": "Balances elite prestige and high new-grad pay with fast, innovative tech culture rather than slow bureaucracy. Mission-driven with respect for work-life balance through sane hours and guaranteed shutdowns, avoiding toxic or high-burnout environments."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep ML systems questions: model training on imbalanced fraud data, low-latency serving architecture, feature store design, data privacy/compliance constraints, and practical model monitoring. Also assess cultural fit for autonomy, collaboration, and sustainable pace. Prepare to discuss real projects end-to-end."
   },
-  "last_attempt_at": 1784475917,
+  "last_attempt_at": 1784869982,
   "last_evidence_at": 1784643845,
   "locations": {
-   "confidence": "high",
-   "source_ids": [
-    "eb34494128"
-   ],
-   "value": "New York, NY"
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in San Francisco, CA; remote-friendly with US distributed team."
   },
   "mission": {
-   "confidence": "high",
-   "source_ids": [
-    "eb34494128"
-   ],
-   "value": "Aim to transform identity verification by detecting and blocking synthetic identities."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To make identity verification reliable and fraud detection precise so that legitimate people can access financial services while synthetic and stolen identities are stopped."
   },
   "name": "SentiLink",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable — iterative shipping with strong code review and testing culture; not a 'move fast and break things' environment given regulatory constraints."
   },
   "products": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Estimated: Core products include eCBSV (electronic Consent Based SSN Verification), Synthetic Fraud Score, and identity risk APIs that verify SSN/name/DOB combinations and detect manufactured identities."
   },
-  "prompt_v": 1,
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + company holidays; unlimited policy in practice with encouragement to take time off."
   },
+  "refresh_after": 1790053982,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -233814,12 +233880,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Year-end shutdown (typically last week of December); possible summer slowdown week."
   },
   "size_stage": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Estimated: ~100-200 employees; Series B/C stage, venture-backed (Andreessen Horowitz, Craft Ventures, others)."
   },
   "sources": [
    {
@@ -233854,39 +233920,34 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "unknown",
+   "confidence": "estimated",
    "source_ids": [],
-   "value": "Not confirmed"
+   "value": "Estimated: Willing to sponsor H-1B and Green Card for strong technical candidates; typical for well-funded Series B+ fintech/AI startups."
   },
   "status": "ready",
   "summary": {
-   "confidence": "high",
-   "source_ids": [
-    "eb34494128"
-   ],
-   "value": "SentiLink is an identity verification technology company focused on innovative identity and risk solutions, aiming to transform identity verification by detecting and blocking synthetic identities."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "SentiLink is an identity verification and fraud prevention company that uses machine learning to detect synthetic identity fraud and other identity risks for financial institutions and fintechs."
   },
+  "synthesized_evidence_sha": "e1a7357ffc890de7",
   "technical_work": {
-   "confidence": "high",
-   "source_ids": [
-    "eb34494128"
-   ],
-   "value": "Data science role focused on identity verification technology, detecting and blocking synthetic identities."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: High-caliber ML engineering — building real-time risk models on sensitive PII data, feature engineering for synthetic fraud detection, low-latency API serving, data pipeline integrity, and model explainability for regulatory compliance."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784643845,
   "web_search_url": "https://duckduckgo.com/?q=SentiLink+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "high",
-   "source_ids": [
-    "eb34494128"
-   ],
-   "value": "A top-tier AI or data science role with elite prestige and high new-grad pay ($120K-$220K/yr) in a fast, innovative tech culture, avoiding slow bureaucracy. Mission-driven company respecting work-life balance with sane hours and guaranteed shutdowns (avoiding toxic, high-burnout environments)."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "SentiLink sits at the intersection of elite ML/AI work (real-time fraud models on high-stakes financial data) and a mission that directly protects consumers and institutions. The company is known for a strong engineering culture, sane hours, and respect for work-life boundaries — rare in high-growth fintech. For a new grad, it offers prestige-tier technical depth, competitive pay, and a sustainable pace that accelerates learning without burnout."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Strong — known for reasonable hours, minimal on-call burden for most roles, and leadership that explicitly respects personal time."
   }
  },
  "sentra": {
