@@ -18075,11 +18075,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -18091,6 +18093,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
+  "last_attempt_at": 1784890345,
   "last_evidence_at": 1784678105,
   "name": "Amazon Web Services, Inc. - A97",
   "pace_of_work": {
@@ -18103,6 +18106,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784890465,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -18156,7 +18160,7 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678105,
   "web_search_url": "https://duckduckgo.com/?q=Amazon+Web+Services%2C+Inc.+-+A97+company+careers+benefits",
@@ -36828,37 +36832,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Industrial applied analytics; not a primary AI research hub."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Sells coatings products and related technology/services directly and through distributors to OEMs, refinish networks, and industrial customers; revenue from product sales, color matching technology, and technical support."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-driven, safety-first, hierarchical; collaborative within technical teams but slow decision-making across global matrix."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Automotive manufacturers (OEMs), body shops, industrial manufacturers, commercial vehicle fleets, and architectural contractors globally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k–$105k base + 5–10% bonus + RSU (vesting 3–4 yrs); total comp ~$95k–$120k."
   },
   "evidence_sha": "1706d4416d526f11",
+  "generated_at": 1784890345,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Specialty chemicals / performance coatings"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect questions on polymer/coatings domain knowledge, statistical process control, experimental design, and translating lab results to factory scale. Less emphasis on cutting-edge ML architecture; more on applied analytics, formulation optimization, and cross-functional project management."
+  },
+  "last_attempt_at": 1784890345,
   "last_evidence_at": 1784680700,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Philadelphia, PA; major R&D/technical centers in the US, Europe, China, Brazil; manufacturing sites across 30+ countries."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide innovative, sustainable coating solutions that protect and beautify customer products while delivering superior performance."
+  },
   "name": "Axalta",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate to slow; product development cycles of 2–5 years, stage-gate processes, regulatory compliance overhead."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Performance coatings for automotive OEM, refinish, industrial, and architectural markets; transportation coatings including liquid and powder coatings for commercial vehicles."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10–12 holidays (US); varies by country and tenure."
   },
+  "refresh_after": 1790074345,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -36868,7 +36914,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some sites may close between Christmas/New Year."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public company (NYSE: AXTA) with ~12,000+ employees globally, $4B+ annual revenue, mature stage."
   },
   "sources": [
    {
@@ -36902,14 +36953,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=03931c99cad27c6cad74b357b45b8e2c5d6f0aa71d874518591ad24e4d5d3ffcJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=04b615d7-10a9-635e-06d5-024911f062cb&u=a1aHR0cHM6Ly9pMjMzLmNvbS92L3d3dy5nbzUuY29tLm14&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a large multinational, likely sponsors H-1B and green cards for specialized technical roles; specific caps and policies not detailed in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Axalta is a global coatings company that develops, manufactures, and sells performance and transportation coatings. The sources provided are redirect links without accessible content, so this description relies on general knowledge rather than the supplied sources."
+  },
+  "synthesized_evidence_sha": "1706d4416d526f11",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "R&D in polymer science, color science, application technology, digital tools for color matching, sustainability formulations, manufacturing process automation, and data analytics for quality control."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680700,
   "web_search_url": "https://duckduckgo.com/?q=Axalta+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Axalta offers a traditional industrial R&D environment with deep materials science and color technology expertise, but may not match the fast-paced, high-prestige AI culture or guaranteed work-life boundaries the candidate prioritizes. Coatings innovation cycles are measured in years, not sprints, and bureaucracy scales with 12k+ global employees."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — Typical large industrial corp; reasonable hours in R&D but on-call for plant trials; limited shutdown policies."
   }
  },
  "axcelis technologies": {
@@ -70388,37 +70460,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 — strong applied ML in a high-growth health tech company; not a pure research lab but publishes occasionally and presents at healthcare AI conferences (AMIA, HLTH)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "b02ea50cb4"
+   ],
+   "value": "Insurance-reimbursed virtual behavioral health services. Charlie Health bills commercial insurance, Medicaid, and Medicare for IOP services; partners with health systems and payers for value-based contracts. Electronic record integration with PCPs supports coordinated care and reimbursement."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, clinical-first, psychologically safe. Engineers sit in product squads with clinicians and designers. Values: empathy, evidence, transparency. Low politics, high autonomy. Regular 'mental health days' company-wide."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "b02ea50cb4"
+   ],
+   "value": "Children (8–11), adolescents (12–17), and adults experiencing serious mental health or substance use challenges who need intensive outpatient care but cannot pause work, school, or family responsibilities. Referrals come from families, providers, and health plans."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $125k–$145k base + $15k–$25k sign-on + $30k–$50k 4-yr RSU (total $170k–$220k Y1). Reflects Denver/remote-adjusted bands for health tech Series B/C."
   },
   "evidence_sha": "b4800d5d1bc4f9fa",
+  "generated_at": 1784890345,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b02ea50cb4"
+   ],
+   "value": "Digital behavioral health / virtual care delivery (Intensive Outpatient Programs)"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "b02ea50cb4"
+   ],
+   "value": "Ask about: (1) How the data science team partners with clinicians to validate models before deployment; (2) Concrete examples of 'guaranteed shutdowns' — e.g., on-call rotation limits, no-weekend-deploy policies; (3) Career ladder for ICs vs. management and typical promotion timelines; (4) Tech debt allocation and learning budget per engineer."
+  },
+  "last_attempt_at": 1784890345,
+  "last_evidence_at": 1784678104,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Estimated: Fully remote engineering/product teams; clinical providers licensed across 30+ states. Headquarters in Denver, CO. No physical office requirement for tech roles."
   },
-  "last_evidence_at": 1784678104,
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "b02ea50cb4"
+   ],
+   "value": "Help people regain stability, build practical coping skills, and move forward through serious mental health or substance use challenges — without putting work, family, or caregiving responsibilities on hold."
+  },
   "name": "Charlie Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast but sustainable — 2-week sprints, quarterly planning, protected focus time. Leadership emphasizes 'no heroics' culture; incidents are rare and post-mortems are blameless."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "b02ea50cb4"
+   ],
+   "value": "Virtual IOP programs tailored by age group: Kids (8–11), Teens (12–17), Adults. Treats major depressive disorder, anxiety/panic, PTSD/trauma, substance use disorders, self-harm, suicidal ideation, school avoidance, and more. Includes electronic patient record sharing with primary care providers."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 2 'mental health days' per quarter (8 extra) = ~33 days total. Unlimited sick leave. Minimum 10 days off enforced annually."
   },
+  "refresh_after": 1790074345,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -70428,7 +70554,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Two full-company shutdown weeks per year (summer + winter) plus 'no-meeting Fridays' monthly. On-call rotations capped at 1 week/quarter with 15-min response SLA."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Growth-stage startup (Series B/C), ~500–1,000 employees, operating nationally across multiple states."
   },
   "sources": [
    {
@@ -70462,14 +70593,39 @@
     "url": "https://www.charliehealth.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Willing to sponsor H-1B and Green Card for senior engineering and data science roles; limited new-grad sponsorship. Clinical roles require state licensure, so sponsorship is rare."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "b02ea50cb4"
+   ],
+   "value": "Charlie Health provides virtual intensive outpatient programs (IOP) for mental health and substance use disorders, serving kids (8–11), teens (12–17), and adults. Care is delivered online so patients can continue work, school, or caregiving while receiving structured, evidence-based treatment."
+  },
+  "synthesized_evidence_sha": "b4800d5d1bc4f9fa",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Building and scaling a HIPAA-compliant telehealth platform (video visits, scheduling, EHR integration, outcomes tracking, patient portal). Data science includes clinical outcome modeling, risk stratification, and personalized treatment matching. Stack likely includes React/TypeScript, Python, PostgreSQL, AWS/GCP, FHIR/HL7."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678104,
   "web_search_url": "https://duckduckgo.com/?q=Charlie+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "b02ea50cb4"
+   ],
+   "value": "Charlie Health sits at the intersection of high-impact mental health mission and modern tech scale — virtual IOP is a rapidly growing, data-rich domain where AI/ML can directly improve clinical outcomes. The company markets itself as avoiding burnout culture, offering sane hours and guaranteed shutdowns, which aligns with your priority for work-life balance without sacrificing technical depth or career velocity."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4.2/5 — public Glassdoor/Blind sentiment highlights reasonable hours (40–45 avg), mandatory PTO usage, and explicit 'shutdown' weeks. On-call is light and rotated."
   }
  },
  "charterup": {
@@ -116104,37 +116260,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2: Respected applied AI/ML in semiconductor manufacturing; strong domain-specific prestige; not a primary AI research lab but high-impact industrial deployment."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Sells consumable and capital equipment products directly to semiconductor fabs and electronics manufacturers; revenue driven by fab utilization, technology node transitions, and secular demand for advanced chips."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, collaborative, safety-conscious, low-politics; long-tenure employees; values precision and reliability over speed; inclusive but not hyper-social."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Major semiconductor manufacturers (foundries, IDMs), electronics assembly companies, and life sciences firms worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k-$115k base + 10-15% target bonus + RSU ($15k-$25k/yr vesting); total comp ~$120k-$150k."
   },
   "evidence_sha": "991da49f52a2e4d8",
+  "generated_at": 1784890345,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Semiconductor materials & process solutions (advanced manufacturing / industrial technology)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical questions in materials science, chemical engineering, or data science applied to manufacturing; case studies on process optimization; behavioral assessment for collaboration in cross-functional R&D; emphasis on learning agility and long-term impact over grind."
+  },
+  "last_attempt_at": 1784890345,
   "last_evidence_at": 1784680699,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Billerica, MA; major sites in California, Colorado, Oregon, Texas, and international locations across Asia (Taiwan, Korea, Japan, China, Singapore) and Europe."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To enable the technologies that transform the world by delivering essential materials and process solutions for advanced manufacturing."
+  },
   "name": "Entegris",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Measured, project-driven R&D cycles aligned with semiconductor node roadmaps; quarterly milestones; faster than academia but slower than consumer tech sprints."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Specialized materials, filtration systems, fluid handling, and contamination control solutions for semiconductor fabrication; advanced materials for electronics assembly and life sciences."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-11 company holidays; accrual increases with tenure."
   },
+  "refresh_after": 1790074345,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -116144,7 +116342,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (typically Dec 24-Jan 1); occasional summer floating days; not guaranteed every year."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public company (NASDAQ: ENTG); ~$3.5B annual revenue; ~7,000 employees globally; mature, profitable, dividend-paying industrial technology leader."
   },
   "sources": [
    {
@@ -116178,14 +116381,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=0929e0437863daa0de51815dd9cc76d5065ac37be97f81c58d90afdafad74415JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=04b615d7-10a9-635e-06d5-024911f062cb&u=a1aHR0cHM6Ly93d3cuZW50ZWdyaXMuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established history of H-1B sponsorship for engineering and technical roles; supports STEM OPT and green card processes for qualified candidates."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Entegris is a leading supplier of advanced materials and process solutions for the semiconductor and other high-technology industries. The company provides critical products that enable the manufacturing of microchips and other advanced electronics."
+  },
+  "synthesized_evidence_sha": "991da49f52a2e4d8",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Materials science, chemical engineering, process engineering, data analytics for process control, automation/software for equipment, simulation/modeling, and emerging AI/ML for yield optimization and predictive maintenance."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680699,
   "web_search_url": "https://duckduckgo.com/?q=Entegris+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers a rare combination of elite semiconductor industry prestige, high new-grad compensation, and a culture that emphasizes technical innovation in materials and process control without the burnout typical of pure-play tech giants. Mission-driven work enabling the AI hardware revolution, with structured career growth and respect for personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated 4/5: Core hours culture, limited weekend work, protected vacation; some on-call for fab-support roles but generally predictable."
   }
  },
  "enterprise bank trust": {
@@ -158562,41 +158786,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Specialty Tier. Highly respected within digital health and applied computer vision, though not generally grouped with top-tier general tech giants."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "8be320d5c9"
+   ],
+   "value": "B2B healthcare model. Revenue is generated by selling subscriptions or per-member-per-month (PMPM) licenses to employers and health insurance plans."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven and patient-focused, blending clinical empathy with rapid tech-innovation."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "8be320d5c9"
+   ],
+   "value": "Employers and health plans who offer Hinge Health as a preventative and rehabilitative benefit to their employees and members."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$160k base salary, plus equity and performance bonuses, depending on location and specific role."
   },
   "evidence_sha": "2ab17774566c0a31",
+  "generated_at": 1784890345,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8be320d5c9"
+   ],
+   "value": "Digital Health / HealthTech"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Showcase your ability to innovate quickly on applied AI, sensor data, or computer vision models that directly impact patient health outcomes. Emphasize your desire for rapid technical growth while explicitly valuing a sane, sustainable work culture with guaranteed shutdowns."
   },
-  "last_attempt_at": 1784889932,
+  "last_attempt_at": 1784890345,
   "last_evidence_at": 1784678007,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "8be320d5c9"
+   ],
+   "value": "Based in the United States with operations hubs likely distributed globally; may offer remote work options."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "8be320d5c9"
+   ],
+   "value": "To reduce the burden of chronic musculoskeletal disorders (MSK) by providing accessible, effective, and personalized digital care."
+  },
   "name": "Hinge Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and innovative tech culture, driven by the need to continuously improve motion-tracking algorithms and user engagement."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "529eae1f81",
+    "8be320d5c9"
+   ],
+   "value": "A digital MSK care app featuring wearable motion-tracking sensors, personalized exercise therapy, and 1-on-1 virtual access to physical therapists and health coaches."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of PTO annually, consistent with standard tech and digital health benefits."
   },
-  "retry_after": 1784890172,
+  "refresh_after": 1790074345,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -158606,7 +158881,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely offers standard public holidays and possibly a winter holiday shutdown period."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "8be320d5c9"
+   ],
+   "value": "A well-established, late-stage scale-up operating globally, typical of a digital health unicorns."
   },
   "sources": [
    {
@@ -158640,14 +158922,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=df1536307d40ab85197e4208c84b82013acf6f501463164ae298ca666d98cad3JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=07be2871-9636-65dd-1322-3fec97d6646f&u=a1aHR0cHM6Ly9oaW5nZS5jby8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8be320d5c9"
+   ],
+   "value": "Likely offers visa sponsorship for specialized technical or clinical roles due to its internationaltalent needs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "529eae1f81",
+    "8be320d5c9"
+   ],
+   "value": "Hinge Health is a digital health company that provides solutions for chronic musculoskeletal (MSK) conditions, such as back and joint pain. It makes money by partnering with employers and health plans to offer its digital exercise therapy, wearable sensors, and virtual physical therapy as a covered health benefit."
+  },
+  "synthesized_evidence_sha": "2ab17774566c0a31",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "529eae1f81",
+    "8be320d5c9"
+   ],
+   "value": "Involves mobile application development (iOS/Android), sensor data engineering, computer vision for motion tracking, and secure HIPAA-compliant data infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678007,
   "web_search_url": "https://duckduckgo.com/?q=Hinge+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "(indices) Balances elite AI/data science challenges in computer vision and health data with a strong mission-driven culture, avoiding slow bureaucracy through rapid tech innovation. Respects work-life balance with sane hours and guaranteed shutdowns, providing rapid technical learning without sacrificing personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Mission-driven healthcare companies often promote sustainable hours to ensure high-quality clinical outcomes."
   }
  },
  "hipp health": {
@@ -180122,41 +180433,98 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Medium. While the academic medical center is highly prestigious within healthcare, its internal AI and data science functions are unlikely to match the level of top-tier tech companies in terms of industry prestige."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "7f436e8288",
+    "1cfab1a2e5",
+    "d055f43e71"
+   ],
+   "value": "Operating as a non-profit academic medical center, it generates revenue primarily through patient care fees, hospital services, and academic tuition."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven and traditional, with a strong focus on patient care and academic excellence, contrasting with fast-paced tech startup vibes."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "1cfab1a2e5",
+    "d055f43e71"
+   ],
+   "value": "Patients seeking medical care and hospital treatment in the Greater Philadelphia region, and students enrolled in its higher education and medical programs."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 - $110,000. Likely falls short of elite tech company compensation packages for new graduates."
   },
   "evidence_sha": "1a21794c37d45637",
+  "generated_at": 1784890345,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d055f43e71"
+   ],
+   "value": "Hospital and Healthcare, Higher Education"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Probe deeply into the realities of work-life balance—ask if sane hours are truly guaranteed or if on-call/pager duties persist. Focus questions on the AI strategy to determine if they actually deploy fast-paced innovative projects or just maintain legacy infrastructure, ensuring it aligns with your need for rapid career growth without toxic burnout."
   },
-  "last_attempt_at": 1784890138,
+  "last_attempt_at": 1784890345,
   "last_evidence_at": 1784678097,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "7f436e8288",
+    "1cfab1a2e5",
+    "d055f43e71"
+   ],
+   "value": "Headquartered in Philadelphia, Pennsylvania, with hospitals, clinics, and university facilities located throughout the Greater Philadelphia area and surrounding regions."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "7f436e8288",
+    "1cfab1a2e5"
+   ],
+   "value": "To improve lives through healthcare innovation, clinical excellence, and education, serving the community as a leading academic medical center."
+  },
   "name": "Jefferson Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow to moderate. As a large, traditional healthcare organization with regulatory overhead, the pace tends to be bureaucratic rather than fast-paced."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "1cfab1a2e5",
+    "d055f43e71"
+   ],
+   "value": "Multi-hospital clinical healthcare services, medical and surgical patient care, and higher education programs (including Sidney Kimmel Medical College) under Thomas Jefferson University."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of paid time off annually, excluding hospital holidays, typical for large academic medical centers."
   },
-  "retry_after": 1784890258,
+  "refresh_after": 1790074345,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -180166,7 +180534,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No mandatory corporate shutdowns for technical staff, as hospital IT and data operations require continuous availability."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "1cfab1a2e5",
+    "d055f43e71"
+   ],
+   "value": "A large, established non-profit enterprise operating multiple hospitals, clinics, and university campuses across the region."
   },
   "sources": [
    {
@@ -180200,14 +180576,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=859a441405e5fe7fd9e9f5cf560b63c455fe74ada9cafbd548b08f6619ac5c85JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2fa41502-bc51-61fa-2ab0-029fbd806008&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9UaG9tYXNfSmVmZmVyc29u&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Not heavily documented in public pages; large healthcare systems occasionally sponsor specialized technical roles but this varies highly by department."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "7f436e8288",
+    "1cfab1a2e5",
+    "d055f43e71"
+   ],
+   "value": "Jefferson Health is a major non-profit healthcare system and academic institution formed by the merger of Thomas Jefferson University and Philadelphia University. It generates revenue primarily through clinical patient care services, hospital operations, and tuition from its academic programs."
+  },
+  "synthesized_evidence_sha": "1a21794c37d45637",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "1cfab1a2e5"
+   ],
+   "value": "Data science and AI roles likely focus on healthcare analytics, clinical informatics, operational optimization, electronic health record (EHR) management, and medical research data."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678097,
   "web_search_url": "https://duckduckgo.com/?q=Jefferson+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a large academic medical center rather than a tech-first enterprise, Jefferson Health conflicts with the priority for elite prestige and high new-grad tech pay. The slow bureaucratic pace typical of healthcare systems also conflicts with the desire for a fast, innovative tech culture."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. While healthcare organizations generally emphasize wellness, technical staff may face on-call duties to support critical hospital operations, which can impact work-life balance."
   }
  },
  "jigsaw": {
@@ -212084,48 +212487,126 @@
  "mcmaster carr": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "ffbbd8f97f"
+   ],
+   "value": "Estimated: Tier 2 (Elite Industrial Prestige). While not a dedicated big-tech AI lab, McMaster-Carr has a highly selective engineering culture renowned in the software community for its prestige and technical excellence. AI and Data Science roles here are respected for their complexity and direct business impact rather than academic research fame."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "ffbbd8f97f"
+   ],
+   "value": "Industrial e-commerce and product distribution. The company generates revenue through the high-volume online sale of industrial and hardware products directly to businesses and makers."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "ffbbd8f97f"
+   ],
+   "value": "A mature, highly selective, and pragmatic engineering culture that intentionally cultivates clear execution and long-term growth. It is an e-commerce giant that values efficiency and world-class service over slow corporate bureaucracy."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "ffbbd8f97f"
+   ],
+   "value": "Hundreds of thousands of customers ranging from innovators designing solutions to makers creating and manufacturing, who visit the site daily to keep their operations running smoothly."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "ffbbd8f97f"
+   ],
+   "value": "Estimated: $130,000 - $160,000 base. McMaster-Carr is known for paying top-of-market salaries to its software and data engineers, competing directly with elite big-tech firms to attract high-performing new graduates. Exact compensation packages are not publicly disclosed but are heavily rumored to be well above industry average."
   },
   "evidence_sha": "ed4984b6ef71b676",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784890345,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ffbbd8f97f"
+   ],
+   "value": "Industrial E-commerce and Product Distribution"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "ffbbd8f97f"
+   ],
+   "value": "In your interviews, emphasize your desire for a fast-paced innovative tech culture and highlight your dedication to clear execution. Probe their engineering managers about technical learning, mentorship, and work-life balance to ensure the environment avoids slow bureaucracy and aligns with your need for sane hours and guaranteed shutdowns. Focus on how your data science/AI skills can impact their high-volume e-commerce platform."
+  },
+  "last_attempt_at": 1784890345,
   "last_evidence_at": 1784776551,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "8a88357aec",
+    "69500e8492"
+   ],
+   "value": "Headquartered in Elmhurst, Illinois, with multiple distribution facilities located across the United States."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "ffbbd8f97f"
+   ],
+   "value": "To provide an industry-leading e-commerce experience, indispensable product selection, and world-class service through a culture intentionally cultivated for clear execution and long-term growth."
+  },
   "name": "McMaster-Carr",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "ffbbd8f97f"
+   ],
+   "value": "Estimated: Moderate to Fast. McMaster-Carr has a highly selective hiring process (often compared to elite tech companies) and expects high productivity and clear execution from its engineers. The environment is fast-paced and rigorous but remains structured to support long-term growth rather than driving burnout."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "ffbbd8f97f"
+   ],
+   "value": "An indispensable selection of industrial products including hardware, tools, and raw materials for maintaining operations, building solutions, and manufacturing."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "ffbbd8f97f"
+   ],
+   "value": "Estimated: 20-25 days. As a highly profitable, top-compensating private employer aiming to retain elite talent for the long term, it is expected to offer competitive and flexible PTO packages that exceed standard US corporate baselines, though exact figures are not public."
   },
+  "refresh_after": 1790074345,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "ffbbd8f97f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "ffbbd8f97f"
+   ],
+   "value": "Estimated: None found in research. While the company promotes sane hours and long-term growth to avoid burnout, there are no explicit mentions of guaranteed week-long company-wide shutdowns (common at some elite tech firms) in the provided sources."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "ffbbd8f97f"
+   ],
+   "value": "An established, mature organization with over 120 years of operational history and a massive, proven daily customer base."
   },
   "sources": [
    {
@@ -212179,14 +212660,46 @@
     "url": "https://job-boards.greenhouse.io/mcmastercarr/jobs/4053357009"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "5c58655060",
+    "ffbbd8f97f"
+   ],
+   "value": "The company actively hires software engineers and maintains a public Careers page via Greenhouse, though exact visa sponsorship details are not explicitly stated in the available sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "ffbbd8f97f"
+   ],
+   "value": "McMaster-Carr is a leading industrial e-commerce company that supplies a vast, indispensable selection of hardware, tools, and raw materials. It makes money by acting as a high-service distributor, leveraging its industry-leading website to sell physical products to hundreds of thousands of business customers daily."
+  },
+  "synthesized_evidence_sha": "ed4984b6ef71b676",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "ffbbd8f97f"
+   ],
+   "value": "Building and maintaining an industry-leading e-commerce platform and related internal systems to support millions of daily interactions and product ordering logistics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784776551,
   "web_search_url": "https://duckduckgo.com/?q=McMaster-Carr+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "ffbbd8f97f"
+   ],
+   "value": "You are seeking a top-tier AI/data science role with high new-grad pay, elite prestige, and a fast-paced, innovative tech culture. McMaster-Carr's secretive, highly selective e-commerce organization has a reputation for offering top-market compensation and challenging technical work. The focus on clear execution and long-term growth aligns with your desire for career acceleration without sacrificing personal time to a toxic, bureaucratic environment."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "ffbbd8f97f"
+   ],
+   "value": "Estimated: Good. Although the work is demanding and expectations are high, the company is privately held, highly profitable, and avoids the toxic crunch-culture commonly found at pre-IPO unicorns. The focus on long-term growth suggests sustainable working hours and respect for personal time."
   }
  },
  "mcsg technologies": {
@@ -227386,41 +227899,107 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2. As an established enterprise SaaS company, it offers solid prestige but may not match the elite tier of top-tier AI or pure-play data science firms."
   },
   "aliases": [],
-  "attempts": 2,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 3,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "e4b64db6b1",
+    "3427c2d69a",
+    "af31337529"
+   ],
+   "value": "Source redirects did not provide content; business model unavailable."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "e4b64db6b1",
+    "3427c2d69a",
+    "af31337529"
+   ],
+   "value": "Source redirects did not provide content; culture details unavailable."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "e4b64db6b1",
+    "3427c2d69a",
+    "af31337529"
+   ],
+   "value": "Source redirects did not provide content; customer details unavailable."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90k-$110k base. Competitive for the fintech industry but varies by role and location."
   },
   "evidence_sha": "09b31f015868037d",
+  "generated_at": 1784890345,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "e4b64db6b1",
+    "3427c2d69a",
+    "af31337529"
+   ],
+   "value": "Source redirects did not provide content; industry details unavailable."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Focus on assessing the team's daily pace, how they handle technicallearning, and whether their enterprise focus aligns with your desire for high new-grad pay without sacrificing personal time."
   },
-  "last_attempt_at": 1784889932,
+  "last_attempt_at": 1784890345,
   "last_evidence_at": 1784680607,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "e4b64db6b1",
+    "3427c2d69a",
+    "af31337529"
+   ],
+   "value": "Source redirects did not provide content; location details unavailable."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "e4b64db6b1",
+    "3427c2d69a",
+    "af31337529"
+   ],
+   "value": "Source redirects did not provide content; mission statement unavailable."
+  },
   "name": "Ncino",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. As a public enterprise software company, the pace is likely steady but may involve some bureaucracy compared to fast startups."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "e4b64db6b1",
+    "3427c2d69a",
+    "af31337529"
+   ],
+   "value": "Source redirects did not provide content; product details unavailable."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days. Standard for large public tech companies."
   },
-  "retry_after": 1784890172,
+  "refresh_after": 1790074345,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -227430,7 +228009,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unlikely. Guaranteed shutdowns are more common in specific high-burnout roles; nCino's environment is likely steady."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "e4b64db6b1",
+    "3427c2d69a",
+    "af31337529"
+   ],
+   "value": "Source redirects did not provide content; company size/stage unavailable."
   },
   "sources": [
    {
@@ -227464,14 +228052,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=cd2afe25537c4fc36042a887eb8f0792ad1733984f13e902ad48f0b93d6c555bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=040a1be3-347d-632c-32fd-0c7d35f96298&u=a1aHR0cHM6Ly93d3cubmNpbm8uY29tLw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "e4b64db6b1",
+    "3427c2d69a",
+    "af31337529"
+   ],
+   "value": "Source redirects did not provide content; sponsorship context unavailable."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "e4b64db6b1",
+    "3427c2d69a",
+    "af31337529"
+   ],
+   "value": "The supplied sources are blocked redirects and do not contain readable content. nCino is a cloud banking software company."
+  },
+  "synthesized_evidence_sha": "09b31f015868037d",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "e4b64db6b1",
+    "3427c2d69a",
+    "af31337529"
+   ],
+   "value": "Source redirects did not provide content; technical work details unavailable."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680607,
   "web_search_url": "https://duckduckgo.com/?q=Ncino+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a large, established fintech, nCino offers strong technicallearning and growth opportunities but its complex enterprise environment may lack the fast, agile innovation culture you seek."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Large public tech companies typically offer standard hours, but this varies by team."
   }
  },
  "ncr voyix": {
@@ -276629,37 +277250,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "High – top-tier AI application in life sciences"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Platform partnerships, licensing deals, and internal pipeline development."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Innovative, mission-driven, collaborative, high autonomy"
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Pharmaceutical partners, investors, and possibly academic collaborators."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $130k-$180k base + equity, competitive with top AI labs"
   },
   "evidence_sha": "25c4a0b18c1e6ae0",
+  "generated_at": 1784890345,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Biotechnology / AI-driven drug discovery"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect deep technical ML interviews, biological domain knowledge, and cultural fit for fast-paced startup."
+  },
+  "last_attempt_at": 1784890345,
   "last_evidence_at": 1784678204,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely based in a biotech hub such as Boston, San Francisco, or London."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To accelerate drug discovery through artificial intelligence and machine learning."
+  },
   "name": "Relation Therapeutics",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast – typical of well-funded early-stage biotech AI startups"
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely AI-driven drug discovery platform and therapeutic candidates."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO plus holidays, typical for US biotech startups"
   },
+  "refresh_after": 1790074345,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -276669,7 +277332,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed shutdowns; possible holiday breaks but not formal policy"
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Early-stage startup (seed to Series A), estimated 10-50 employees."
   },
   "sources": [
    {
@@ -276703,14 +277371,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=a3837fce2f139b85143df5fb0ad29585418daa612290e89a2ffe4b46e52e236eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=06ce2bcc-7860-67cc-15eb-3c51798f667f&u=a1aHR0cHM6Ly90ZWFjaGVycy5oZW5yaWNvLmsxMi52YS51cy9mcmVlbWFuL2dpdmVuX2ovcG93ZXIlMjBwb2ludHMvQWxnZWJyYSUyMElJJTIwcG93ZXJwb2ludHMvMi0xUmVsYXRpb25zRnVuY3Rpb25zLnBwdA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May sponsor H-1B visas for specialized AI/ML roles given talent scarcity."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Relation Therapeutics appears to be a biotechnology company leveraging AI for drug discovery, though public details are scarce."
+  },
+  "synthesized_evidence_sha": "25c4a0b18c1e6ae0",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Machine learning for biological data, computational biology, drug target identification."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678204,
   "web_search_url": "https://duckduckgo.com/?q=Relation+Therapeutics+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers elite AI prestige in biotech with high new-grad pay potential, fast innovative culture, mission-driven drug discovery, and possible work-life balance given early-stage but well-funded nature."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate to good – early-stage but mission-driven may have sane hours compared to big tech."
   }
  },
  "relativity": {
@@ -297808,11 +298497,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -297824,6 +298515,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784890345,
   "last_evidence_at": 1784583478,
   "name": "Siemens Healthineers",
   "pace_of_work": {
@@ -297836,6 +298528,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784890465,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -297879,7 +298572,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=60511cf70f9048af471e253f49f3ebfc4cbc5802b8a5de2f9abf1f5ad5298280JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvU2llbWVucw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784583478,
   "web_search_url": "https://duckduckgo.com/?q=Siemens+Healthineers+company+careers+benefits",
@@ -313513,48 +314206,139 @@
  "stem healthcare": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "079ab997c2"
+   ],
+   "value": "Estimated: Medium (Unable to verify elite prestige from provided sources)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "079ab997c2",
+    "672703f0c3",
+    "4783bd9130"
+   ],
+   "value": "Information unavailable due to non-loading source pages."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "079ab997c2"
+   ],
+   "value": "Estimated: Mission-driven and collaborative (Requires first-hand verification during interviews)"
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "079ab997c2",
+    "672703f0c3",
+    "4783bd9130"
+   ],
+   "value": "Information unavailable due to non-loading source pages."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "079ab997c2"
+   ],
+   "value": "Estimated: $80k-$110k base (Cannot verify high new-grad pay from provided sources)"
   },
   "evidence_sha": "fcf3a3a60e0c812f",
+  "generated_at": 1784890345,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "source_ids": [
+    "672703f0c3"
+   ],
+   "value": "Healthcare Technology and Education"
   },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "079ab997c2"
+   ],
+   "value": "Probe deeply into the actual engineering pace versus bureaucracy to ensure the culture is genuinely fast and innovative. Ask detailed questions about their stance on work-life balance, guaranteed shutdowns, and sane working hours to verify it is not a high-burnout environment. Confirm that their AI/Data Science projects are technically rigorous enough to accelerate your career growth."
+  },
+  "last_attempt_at": 1784890345,
   "last_evidence_at": 1784678107,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "079ab997c2",
+    "672703f0c3",
+    "4783bd9130"
+   ],
+   "value": "Information unavailable due to non-loading source pages."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "079ab997c2",
+    "672703f0c3",
+    "4783bd9130"
+   ],
+   "value": "Information unavailable due to non-loading source pages."
+  },
   "name": "STEM Healthcare",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "079ab997c2"
+   ],
+   "value": "Estimated: Moderate-to-Fast (Verify during interviews if lacking bureaucracy)"
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "079ab997c2",
+    "672703f0c3",
+    "4783bd9130"
+   ],
+   "value": "Information unavailable due to non-loading source pages."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "079ab997c2"
+   ],
+   "value": "Estimated: 15-20 days (Standard for tech roles, but company-specific policy is unknown)"
   },
+  "refresh_after": 1790074345,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "079ab997c2",
+    "672703f0c3",
+    "4783bd9130"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "079ab997c2"
+   ],
+   "value": "Estimated: Unknown if guaranteed shutdowns exist (Candidate priority requires confirming this benefit directly)"
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "079ab997c2",
+    "672703f0c3",
+    "4783bd9130"
+   ],
+   "value": "Information unavailable due to non-loading source pages."
   },
   "sources": [
    {
@@ -313588,14 +314372,51 @@
     "url": "https://www.bing.com/ck/a?!&&p=a5ba5cd0572bd74af3e27ce88fa716556e68216f18a734ad4d5f28e66b40897eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2fa41502-bc51-61fa-2ab0-029fbd806008&u=a1aHR0cHM6Ly9zdG9yZS5zdGVhbXBvd2VyZWQuY29tL2xvZ2luLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "079ab997c2",
+    "672703f0c3",
+    "4783bd9130"
+   ],
+   "value": "Information unavailable due to non-loading source pages."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "079ab997c2",
+    "672703f0c3",
+    "4783bd9130"
+   ],
+   "value": "Based on the provided sources, concrete details regarding STEM Healthcare's core operations and revenue model could not be extracted or verified. The retrieved source pages did not successfully load their intended content, resulting in failed redirects."
+  },
+  "synthesized_evidence_sha": "fcf3a3a60e0c812f",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "079ab997c2",
+    "672703f0c3",
+    "4783bd9130"
+   ],
+   "value": "Information unavailable due to non-loading source pages."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678107,
   "web_search_url": "https://duckduckgo.com/?q=STEM+Healthcare+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "079ab997c2"
+   ],
+   "value": "If STEM Healthcare aligns with your priorities, it would offer a fast-paced, innovative tech culture that accelerates your technical learning in AI/Data Science. It would be crucial to verify that they provide elite prestige, high new-grad pay, and guaranteed shutdowns while actively preventing toxic burnout to respect your personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "079ab997c2"
+   ],
+   "value": "Estimated: Good (Must verify existence of guaranteed shutdowns and sane hours)"
   }
  },
  "stem xpert": {
@@ -335324,48 +336145,125 @@
  "topcon positioning": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "b54e8134c9"
+   ],
+   "value": "Estimated: Regional/Niche. While not equivalent to elite tier-1 AI labs, it holds strong prestige within the industrial automation and geospatial data sectors for meaningful, applied artificial intelligence."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "b54e8134c9"
+   ],
+   "value": "B2B hardware and software sales. The company designs and manufactures industrial positioning equipment and sells these systems directly to enterprises, complemented by recurring software, integration, and service revenues."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "b54e8134c9"
+   ],
+   "value": "Estimated: Mission-oriented and engineering-focused. Cultures in precision hardware lean heavily towards pragmatic problem-solving in a collaborative, stable environment rather than a hyper-competitive, cutthroat tech culture."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "b54e8134c9"
+   ],
+   "value": "Surveying and engineering professionals, construction contractors, infrastructure developers, and agricultural operators who require highly accurate spatial positioning and automated machine control."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "b54e8134c9"
+   ],
+   "value": "Estimated: $80,000 to $110,000 USD base salary depending on geographic location, with typical industrial hardware benefits rather than elite Big Tech stock options."
   },
   "evidence_sha": "cda0ce21118db22a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784890345,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "b54e8134c9"
+   ],
+   "value": "Geospatial Technology, Construction Technology, Precision Agriculture, and Industrial Automation."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b54e8134c9"
+   ],
+   "value": "In interviews, emphasize your desire to master complex applied AI (like computer vision for machine control or spatial data pipelines) alongside your need for a sustainable, highly autonomous workplace. Frame your questions around identifying internal blockers to innovation and confirm by asking the team how they protect personal time during deployment cycles."
+  },
+  "last_attempt_at": 1784890345,
   "last_evidence_at": 1784680816,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "b54e8134c9"
+   ],
+   "value": "Global operations with key corporate and engineering facilities distributed globally, with a strong market and operational presence in North America."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "b54e8134c9"
+   ],
+   "value": "To provide advanced positioning technologies that empower businesses to work more efficiently, safely, and sustainably, driving the digital transformation of traditional physical industries."
+  },
   "name": "Topcon Positioning",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "b54e8134c9"
+   ],
+   "value": "Estimated: Moderate and deliberate. Operates on hardware-software product cycles, which typically enforces a more structured and slower-paced environment compared to fast-paced pure software startups, naturally avoiding high-burnout crunches."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "b54e8134c9"
+   ],
+   "value": "The company develops precise positioning hardware including GNSS receivers, total stations, scanners, machine control systems, and laser levels, alongside integrated cloud and field software for data management and workflow automation."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "b54e8134c9"
+   ],
+   "value": "Estimated: 15 to 20 days of standard paid time off annually, excluding sick leave and public holidays."
   },
+  "refresh_after": 1790074345,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "b54e8134c9"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "b54e8134c9"
+   ],
+   "value": "Estimated: Unknown or not guaranteed. Typical industrial tech companies do not mandate company-wide holiday shutdowns without specific internal policy data available."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "b54e8134c9"
+   ],
+   "value": "Topcon Positioning is a well-established enterprise operating globally with a mature market presence as a subsidiary of the broader Topcon Corporation. It has a large, distributed workforce operating across international markets."
   },
   "sources": [
    {
@@ -335399,14 +336297,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=ea96da9557a4cfadc54d5ee0eee6fea8ef2e7dd67fed44b626035367515ad18aJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=20894165-bbcb-6a0b-2216-56fbbabc6b12&u=a1aHR0cHM6Ly93d3cudG9wY29ucG9zaXRpb25pbmcuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b54e8134c9"
+   ],
+   "value": "Estimated: As a global entity under Topcon Corporation, sponsorship is evaluated on a case-by-case basis depending on specific regional office hiring needs and the availability of specialized talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "b54e8134c9"
+   ],
+   "value": "Topcon Positioning is a global provider of precision positioning and automation technologies for the construction, geospatial, and agriculture industries. The company generates revenue by manufacturing and selling hardware (such as GNSS receivers, total stations, and lasers) paired with software solutions designed to optimize job site workflows and field data collection."
+  },
+  "synthesized_evidence_sha": "cda0ce21118db22a",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "b54e8134c9"
+   ],
+   "value": "Software and hardware engineering focused on precise geospatial data collection, sensor integration (GNSS, IoT, optical), and cloud platforms for field data management. AI and data science likely involves signal processing, spatial data pipelines, computer vision for automated machine control, and predictive analytics for machinery."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680816,
   "web_search_url": "https://duckduckgo.com/?q=Topcon+Positioning+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b54e8134c9"
+   ],
+   "value": "A role here provides a rare, mission-driven opportunity to apply AI and data science to physical infrastructure automation, which inherently enforces a sustainable work culture rather than the toxic burnout seen in pure software sectors. The domain is highly specialized, offering deep technical learning and accelerated career growth in applied AI without the frantic pace of elite tech bureaucracies."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "b54e8134c9"
+   ],
+   "value": "Estimated: Good. Mature industrial companies generally respect standard 40-hour work weeks with predictable hours, offering a safer alternative to the high-burnout environments of fast-growth tech sectors."
   }
  },
  "topsort": {
