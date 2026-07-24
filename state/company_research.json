@@ -59242,52 +59242,130 @@
  "charles schwab": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "5a39cd65d1"
+   ],
+   "value": "Estimated: Tier 2. Recognized institutionally but lacks the elite, top-tier industry prestige of dedicated tech giants or cutting-edge AI startups."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "0b404f212f",
+    "5a39cd65d1"
+   ],
+   "value": "Generates revenue through financial services, retail brokerage, and banking operations."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "0b404f212f"
+   ],
+   "value": "Estimated: Professional and stable. Focuses on career impact within a highly regulated financial environment rather than rapid, uninhibited innovation."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "5a39cd65d1"
+   ],
+   "value": "Retail investors, traders, and banking clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "0b404f212f"
+   ],
+   "value": "Estimated: $83,400 - $128,000 base salary, based on listed entry-level hourly rates of $40.10/hr - $61.49/hr."
   },
   "evidence_sha": "68e5d2522c73e285",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784873205,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784873059,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0b404f212f",
+    "5a39cd65d1"
+   ],
+   "value": "Financial Services"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5a39cd65d1",
+    "0b404f212f"
+   ],
+   "value": "Candidates should assess the team's adoption of modern AI/data methodologies versus legacy systems like Backbone, and ensure the culture supports sane hours and avoids toxic, high-burnout environments."
+  },
+  "last_attempt_at": 1784873205,
   "last_evidence_at": 1784742766,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "5a39cd65d1",
+    "0b404f212f"
+   ],
+   "value": "Headquartered in San Francisco, California, with roles available in locations such as Austin, TX."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "0b404f212f"
+   ],
+   "value": "A financial services company that empowers employees to make an impact on their careers."
+  },
   "name": "Charles Schwab",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "5a39cd65d1"
+   ],
+   "value": "Estimated: Moderate to slow. As a large, established financial institution, the pace is likely more bureaucratic and structured than a fast-moving tech startup."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "0b404f212f",
+    "5a39cd65d1"
+   ],
+   "value": "Financial services, including retail brokerage, banking, and trading platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "5a39cd65d1"
+   ],
+   "value": "Estimated: 20-25 days. Standard for large financial services companies of this size."
   },
-  "retry_after": 1784873179,
+  "refresh_after": 1790057205,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "5a39cd65d1"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "0b404f212f"
+   ],
+   "value": "Estimated: Unlikely to have guaranteed company-wide shutdowns, typical of large financial institutions that maintain continuous operations."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "5a39cd65d1"
+   ],
+   "value": "Large enterprise with over 10,001 employees, founded in 1973."
   },
   "sources": [
    {
@@ -59351,14 +59429,48 @@
     "url": "https://jobright.ai/jobs/info/6a60d622193c4d692385fbb0?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "5a39cd65d1"
+   ],
+   "value": "Has a track record of offering H1B sponsorships, though this is not guaranteed for specific roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "5a39cd65d1",
+    "0b404f212f"
+   ],
+   "value": "Charles Schwab is a financial services company that empowers employees to make an impact on their careers. Founded in 1973 and headquartered in San Francisco, California, it has grown to over 10,001 employees."
+  },
+  "synthesized_evidence_sha": "68e5d2522c73e285",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "5a39cd65d1",
+    "0b404f212f"
+   ],
+   "value": "Software development and engineering utilizing C#, HTML5, Angular, Backbone, and JavaScript."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784742766,
   "web_search_url": "https://duckduckgo.com/?q=Charles+Schwab+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "0b404f212f",
+    "5a39cd65d1"
+   ],
+   "value": "While Schwab offers competitive pay and stability, its legacy financial services background may not align with a fast, innovative tech culture or elite AI prestige, potentially involving slower bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "0b404f212f"
+   ],
+   "value": "Estimated: Good. The company emphasizes empowering careers, suggesting a standard work-life balance typical of large financial services firms."
   }
  },
  "charlie health": {
@@ -74876,49 +74988,124 @@
  },
  "cs contract solutions": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "c7060881bb"
+   ],
+   "value": "Low — no AI/ML, data science, or research function visible; role is traditional full-stack application development."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "c7060881bb"
+   ],
+   "value": "B2B telecommunications vendor and custom application development services; revenue from client contracts and project-based engagements."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "c7060881bb"
+   ],
+   "value": "Estimated: Small, client-facing, hands-on engineering culture; likely less bureaucracy than large corps but also less formal learning infrastructure; vibe depends heavily on direct manager and team size."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "c7060881bb"
+   ],
+   "value": "Business clients across the United States seeking telecommunications vendor solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "c7060881bb"
+   ],
+   "value": "Estimated: $45K–$55K base (per job posting); no equity, bonus, or signing bonus mentioned; well below top-tier new-grad benchmarks ($100K+)."
   },
   "evidence_sha": "a42ba81f93c59975",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784873205,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c7060881bb"
+   ],
+   "value": "Telecommunications / IT Services / Custom Software Development"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "c7060881bb"
+   ],
+   "value": "Ask directly: (1) What are typical weekly hours and is there a guaranteed shutdown policy? (2) How is mentorship structured for entry-level developers? (3) What does the career ladder look like at 12/24 months? (4) Can you describe a recent project where a new grad owned a feature end-to-end? (5) Is there any rotation or cross-team exposure? The company’s low public profile means you must extract culture and growth signals in conversation."
+  },
+  "last_attempt_at": 1784873205,
   "last_evidence_at": 1784861698,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "c7060881bb"
+   ],
+   "value": "Bedford, NH (onsite); no remote or multi-office information found in sources."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "CS Contract Solutions",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "c7060881bb"
+   ],
+   "value": "Estimated: Moderate — client-driven project work in a services/vendor model typically avoids the extreme pace of product unicorns but may have deadline crunches; no public data on sprint cycles or release frequency."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "c7060881bb"
+   ],
+   "value": "Telecommunications vendor services and application development for clients across the United States; specific product names not disclosed in public sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "c7060881bb"
+   ],
+   "value": "Estimated: 10–15 days PTO + US federal holidays (typical for small US private firms); no public policy disclosed."
   },
+  "refresh_after": 1790057205,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "c7060881bb"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "c7060881bb"
+   ],
+   "value": "Estimated: None documented; no mention of company-wide shutdowns, summer Fridays, or mandatory disconnect policies in sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c7060881bb"
+   ],
+   "value": "Estimated: Small to mid-sized private company (likely 50–200 employees) based on single-location hiring and entry-level role structure; no public funding or headcount data found."
   },
   "sources": [
    {
@@ -74972,14 +75159,45 @@
     "url": "https://jobright.ai/jobs/info/6a62a3a61e089c0cc884db10?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c7060881bb"
+   ],
+   "value": "Estimated: No explicit visa sponsorship mention in job posting; small private firms often do not sponsor, but not confirmed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c7060881bb"
+   ],
+   "value": "CS Contract Solutions is a telecommunications vendor serving clients across the United States, hiring entry-level application developers for onsite roles in Bedford, NH with a tech stack centered on C#/.NET, TypeScript, Angular, React, and SQL."
+  },
+  "synthesized_evidence_sha": "a42ba81f93c59975",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "c7060881bb"
+   ],
+   "value": "Full-stack application development using C#/.NET, TypeScript, Angular, React, and SQL; onsite in Bedford, NH; entry-level focused with 1+ years experience preferred."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784861698,
   "web_search_url": "https://duckduckgo.com/?q=CS+Contract+Solutions+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "c7060881bb"
+   ],
+   "value": "This role offers a rare entry point into full-stack development at a telecommunications-focused vendor with a modern stack (C#/.NET, Angular, React, TypeScript) and transparent entry-level pay ($45K–$55K). The onsite, small-company environment may provide faster hands-on ownership than large bureaucracies, aligning with a desire for accelerated technical learning without the burnout culture of elite tech giants. However, the below-market compensation and lack of public mission/WLB data mean you "
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "c7060881bb"
+   ],
+   "value": "Estimated: 3/5 — onsite requirement and services model suggest standard business hours with potential client-driven overtime; no public policy on shutdowns, flex time, or burnout prevention found."
   }
  },
  "csx": {
@@ -80210,52 +80428,129 @@
  "davita kidney care": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "bf5c8b286d"
+   ],
+   "value": "Estimated: Not a traditional tech firm; offers strong domain-specific impact but falls below top-tier firms in broader AI or data science prestige."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "bf5c8b286d"
+   ],
+   "value": "Operates dialysis centers and provides clinical care, generating revenue through the delivery of essential, life-sustaining treatments for kidney disease."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "bf5c8b286d"
+   ],
+   "value": "Mission-driven and clinically focused, emphasizing patient outcomes and community care."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "bf5c8b286d"
+   ],
+   "value": "Patients living with end stage kidney disease (ESKD)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "bf5c8b286d"
+   ],
+   "value": "Estimated: $70k-$90k base salary for Data Analysts, which is below elite tech-market new grad compensation."
   },
   "evidence_sha": "6860a1f7aba3d17b",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784873205,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784873059,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "bf5c8b286d"
+   ],
+   "value": "Healthcare / Dialysis / Provider Services."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bf5c8b286d"
+   ],
+   "value": "Candidates should probe heavily into the team's actual tech stack, deployment cadence, and data infrastructure modernization to ensure it aligns with their requirement for a fast, innovative AI culture. Additionally, ask detailed questions about daily hours, on-call expectations, and burnout metrics to confirm the company's WLB matches their need for sane hours and personal time, as these factors are not guaranteed in clinical/reported roles."
+  },
+  "last_attempt_at": 1784873205,
   "last_evidence_at": 1784768808,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ae16f3dd6c",
+    "1c8b5f411b",
+    "134b01494e"
+   ],
+   "value": "Estimated: Distributed network of dialysis centers across various cities/states."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "bf5c8b286d"
+   ],
+   "value": "To give life, reflecting a proud history as leaders in life-sustaining dialysis treatment for those living with end stage kidney disease (ESKD)."
+  },
   "name": "DaVita Kidney Care",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "bf5c8b286d"
+   ],
+   "value": "Estimated: Regulated clinical pace; likely prioritizes compliance and stability over rapid AI innovation."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "bf5c8b286d"
+   ],
+   "value": "Dialysis treatments and clinical care services for end stage kidney disease (ESKD)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "bf5c8b286d"
+   ],
+   "value": "Estimated: ~15-20 days of PTO annually, varying by tenure and role, as is standard in large healthcare employers."
   },
-  "retry_after": 1784873179,
+  "refresh_after": 1790057205,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "bf5c8b286d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "bf5c8b286d"
+   ],
+   "value": "Estimated: No known official company-wide guaranteed shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ae16f3dd6c",
+    "1c8b5f411b",
+    "134b01494e"
+   ],
+   "value": "Estimated: Large, established healthcare enterprise with a broad network of clinical facilities."
   },
   "sources": [
    {
@@ -80309,14 +80604,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=651883db804311a2b740b3a7a499b246947c92512d4461773c7a9ae478384939JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRGFWaXRh&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bf5c8b286d"
+   ],
+   "value": "Estimated: Not specified in current research; sponsorship is less common in clinical-focused roles, though possible for specific tech positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "bf5c8b286d"
+   ],
+   "value": "DaVita Kidney Care is a healthcare company that provides dialysis and related services for patients with end stage kidney disease (ESKD). The company generates revenue by operating a network of dialysis centers and billing for these life-sustaining treatments and associated clinical care."
+  },
+  "synthesized_evidence_sha": "6860a1f7aba3d17b",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "bf5c8b286d"
+   ],
+   "value": "Clinical analytics and reporting, utilizing tools like SQL, Tableau, Anaplan, Python, and R."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583401,
   "web_search_url": "https://duckduckgo.com/?q=DaVita+Kidney+Care+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "bf5c8b286d"
+   ],
+   "value": "DaVita offers a deeply mission-driven environment for data professionals, focusing on life-sustaining healthcare outcomes. However, coming from a traditional healthcare provider background, its tech culture may be slower and more bureaucratic than elite technical firms, and it is unlikely to provide the top-tier new grad pay, fast-paced innovation, or guaranteed shutdowns desired by AI/data candidates seeking a highly accelerated environment."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "bf5c8b286d"
+   ],
+   "value": "Estimated: Moderate, varies by team; not widely recognized for elite tech-style shutdowns or flexible structures."
   }
  },
  "daybreak game company llc": {
@@ -87585,7 +87911,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -87603,7 +87929,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784873059,
+  "last_attempt_at": 1784873205,
   "last_evidence_at": 1784679541,
   "name": "Duke Energy",
   "pace_of_work": {
@@ -87616,7 +87942,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784873179,
+  "retry_after": 1784873445,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -99494,48 +99820,125 @@
  "exxonmobil": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "1787773aa3"
+   ],
+   "value": "Estimated: Low-tier or non-applicable for software; core prestige is in chemical and petroleum engineering rather than AI or data science."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "1787773aa3"
+   ],
+   "value": "Upstream exploration and production, downstream refining and marketing, and chemical manufacturing operations."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "7675770073"
+   ],
+   "value": "Estimated: Traditional corporate energy environment, likely lacking the mission-driven tech focus and high-burnout or slow-paced bureaucracy."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "1787773aa3"
+   ],
+   "value": "Wholesale markets, industrial manufacturers, and retail consumers needing energy and chemical products."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "7675770073"
+   ],
+   "value": "Estimated: $80k-$110k base salary for software/data roles, lower than top-tier tech but potentially factoring in traditional corporate boosts."
   },
   "evidence_sha": "bd3a7f737e78f16a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784873205,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "1787773aa3"
+   ],
+   "value": "Oil and Gas / Energy"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1787773aa3"
+   ],
+   "value": "Prepare to probe heavily on whether the specific team genuinely values work-life balance through sane hours or if operational demands lead to a toxic/high-burnout environment. Ask how strictly they guarantee shutdowns and question how the notoriously slow bureaucracy and lack of tech-centric innovation will impact your technical learning and career growth."
+  },
+  "last_attempt_at": 1784873205,
   "last_evidence_at": 1784680809,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "7675770073"
+   ],
+   "value": "Global presence with corporate offices and operational facilities worldwide."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "1787773aa3"
+   ],
+   "value": "To responsibly provide the energy and products society needs while advancing lower-emission technologies."
+  },
   "name": "ExxonMobil",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "1787773aa3"
+   ],
+   "value": "Estimated: Slow, traditional, and heavily bureaucratic, lacking the fast, innovative tech culture desired by top-tier software candidates."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "1787773aa3"
+   ],
+   "value": "Crude oil, natural gas, petroleum products, lubricants, and chemical products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "7675770073"
+   ],
+   "value": "Estimated: 15-25 days of standard PTO annually, typical for a legacy energy corporation."
   },
+  "refresh_after": 1790057205,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "7675770073"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "7675770073"
+   ],
+   "value": "Estimated: No guaranteed recurring corporate tech shutdowns like those found in big tech; operations are continuous."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "1787773aa3"
+   ],
+   "value": "Large-cap, established publicly traded global enterprise."
   },
   "sources": [
    {
@@ -99579,14 +99982,46 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7675770073"
+   ],
+   "value": "Likely available for specialized roles, though exact policies vary by position."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1787773aa3",
+    "7675770073"
+   ],
+   "value": "ExxonMobil is a global multinational oil and gas corporation that explores, produces, refines, and sells crude oil, natural gas, and petroleum products. It makes money by extracting and processing these resources and selling them on global energy markets, as well as through its extensive chemical manufacturing operations."
+  },
+  "synthesized_evidence_sha": "bd3a7f737e78f16a",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "7675770073"
+   ],
+   "value": "Traditional corporate and engineering technologies supporting energy operations and resource management."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680809,
   "web_search_url": "https://duckduckgo.com/?q=ExxonMobil+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1787773aa3"
+   ],
+   "value": "This company presents a fundamental mismatch for your priorities: it is a slow-moving, traditional energy giant rather than a fast-paced, elite tech firm. While pay may be competitive for the energy sector, it lacks the top-tier AI prestige and high new-grad salary you seek, and its slow bureaucracy will frustrate your desire for accelerated technical learning and career growth without personal sacrifices."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "7675770073"
+   ],
+   "value": "Estimated: Variable; benefits may be generous, but workloads can be demanding based on operational demands rather than guaranteed sane hours."
   }
  },
  "ey": {
@@ -231950,37 +232385,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 — Regional health system applying established AI/ML; not an industry research leader. Limited publication record or open-source presence compared to top tech or academic medical centers."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Non-profit integrated healthcare system funded through patient service revenue (insurance reimbursements, government payers), health plan premiums, philanthropy, and government grants. Reinvests surplus into facilities, technology, and community programs."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-oriented, collaborative, risk-averse, and process-heavy. Values clinical partnership and equity. Decision-making involves multiple stakeholders; less autonomy than pure tech companies."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Patients and families across Western New York and the Finger Lakes region; employers and individuals purchasing health insurance through Rochester Regional Health's health plan; government payers (Medicare, Medicaid)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k–$110k base + modest bonus (5–10%) + benefits. Below top-tier tech (FAANG/unicorns) but competitive for regional healthcare IT. Equity not typical for non-profit."
   },
   "evidence_sha": "ca851fef78e1246f",
+  "generated_at": 1784873205,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect behavioral questions on healthcare mission alignment, cross-functional collaboration with clinicians, and handling regulatory constraints (HIPAA). Technical assessment likely focuses on applied ML in clinical settings, EHR data pipelines, and model explainability over cutting-edge research."
+  },
+  "last_attempt_at": 1784873205,
   "last_evidence_at": 1784782305,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Rochester, NY. Facilities across Monroe, Ontario, Wayne, Seneca, Yates, and St. Lawrence counties. Hybrid/remote options likely for select tech roles; clinical-adjacent roles require on-site presence."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide high-quality, compassionate care to the communities we serve, improving health outcomes and advancing health equity across the region."
+  },
   "name": "Rochester Regional Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate to slow — Governed by clinical safety, regulatory compliance (HIPAA, FDA), and committee review cycles. Innovation occurs but within structured governance; not a 'move fast' tech culture."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Healthcare delivery services including acute hospital care, primary and specialty physician practices, behavioral health, long-term care, and community health programs. Also operates health insurance products through its affiliated health plan."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10–12 holidays + sick leave (varies by tenure/role). Non-profit health systems typically offer competitive benefits but exact accrual not public."
   },
+  "refresh_after": 1790057205,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -231990,7 +232467,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No guaranteed company-wide shutdowns. Some departments may observe reduced staffing between Christmas/New Year; not a formal policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature non-profit health system with ~19,000 employees, 5 hospitals, 150+ locations, and $3B+ annual revenue. Established 2014 via merger of Rochester General and Unity Health systems."
   },
   "sources": [
    {
@@ -232034,14 +232516,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=e3aeac734062ee02cfab0a3fb2945fbe9ad8154117689ab705284a17abdaadccJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cudmlzaXRyb2NoZXN0ZXIuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely supports H-1B and GC sponsorship for specialized technical roles (data science, ML engineering, clinical informatics) given size and non-profit status; cap-exempt H-1B possible. New grad sponsorship assessed case-by-case."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Rochester Regional Health is an integrated health services organization serving the Rochester, NY region and the Finger Lakes area. It operates multiple hospitals, immediate care centers, and physician practices, providing comprehensive healthcare services."
+  },
+  "synthesized_evidence_sha": "ca851fef78e1246f",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "EHR optimization (Epic), clinical analytics, population health management, revenue cycle automation, cybersecurity, telehealth platforms, and emerging AI/ML applications in clinical decision support and operational efficiency."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583424,
   "web_search_url": "https://duckduckgo.com/?q=Rochester+Regional+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers mission-driven impact in healthcare AI with non-profit stability, but likely lacks the elite prestige, top-tier new-grad pay, and fast innovative tech culture of leading tech firms. Work-life balance may be better than hospital clinical roles but bureaucratic pace typical of large health systems."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — Generally sane hours (40–45 hrs/week) for corporate tech roles; limited on-call outside clinical informatics. Less burnout risk than provider roles, but bureaucracy can cause frustration."
   }
  },
  "rocket": {
@@ -244428,38 +244935,102 @@
  "sibylline": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "d8d8e740eb"
+   ],
+   "value": "Tier 3 (Specialized Domain Prestige) — Elite reputation in intelligence/security niche but not a general AI/DS prestige brand; limited ML/AI research output."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "d8d8e740eb"
+   ],
+   "value": "Project-based and retainer consulting fees for embedded analyst placements and strategic risk advisory services; likely billed at premium rates for specialized intelligence expertise."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "d8d8e740eb"
+   ],
+   "value": "Professional, mission-oriented, expertise-driven culture typical of elite intelligence consultancies; likely low bureaucracy but high accountability. Analysts operate with autonomy but bear direct responsibility for client outcomes."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "d8d8e740eb"
+   ],
+   "value": "Global technology companies and multinational enterprises seeking embedded intelligence support for security and strategic risk management."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "d8d8e740eb"
+   ],
+   "value": "Estimated: $80,000-$85,000 base for Junior Intelligence Analyst (per posting); limited equity/bonus typical for consultancy. Not a 'tech' pay scale — reflects analyst market rate."
   },
   "evidence_sha": "ba6091f23abc5092",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784873205,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "d8d8e740eb"
+   ],
+   "value": "Intelligence & Strategic Risk Consultancy / Security Services"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "d8d8e740eb"
+   ],
+   "value": "Expect case studies on geopolitical risk scenarios, OSINT collection/analysis exercises, and structured analytic techniques. Demonstrate ability to deliver concise, actionable intelligence under time pressure. Ask about typical analyst-to-client ratios, escalation paths during crises, and whether 'guaranteed shutdowns' or protected time exist — critical for assessing true WLB in client-facing embedded roles."
+  },
+  "last_attempt_at": 1784873205,
   "last_evidence_at": 1784742131,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "d8d8e740eb"
+   ],
+   "value": "Remote-first for embedded roles; headquarters likely in UK/London (Sibylline is a known UK-based consultancy); analysts embedded at client sites across Americas and Europe."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "d8d8e740eb"
+   ],
+   "value": "To provide leading intelligence and strategic risk consultancy that enables clients to navigate complex security environments with timely, actionable intelligence."
+  },
   "name": "Sibylline",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "d8d8e740eb"
+   ],
+   "value": "Estimated: Fast-paced during active intelligence cycles/crises; variable based on client events. Embedded model means pace mirrors client's operational tempo — can surge unpredictably."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "d8d8e740eb"
+   ],
+   "value": "Embedded intelligence analyst teams; strategic risk consulting; geopolitical and security threat monitoring; actionable intelligence delivery across Americas and Europe."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days PTO + holidays (UK/US hybrid norms for professional services); no public policy found."
   },
+  "refresh_after": 1790057205,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -244469,7 +245040,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found; client-facing embedded roles typically require coverage continuity."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d8d8e740eb"
+   ],
+   "value": "Established consultancy (likely 100-500 employees) operating in the security/intelligence sector; not a startup but a specialized professional services firm."
   },
   "sources": [
    {
@@ -244523,14 +245101,43 @@
     "url": "https://jobright.ai/jobs/info/6a60b9f6e3f5ff347d7c541f?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely supports work authorization for specialized intelligence roles given global client base; no explicit sponsorship policy found in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "d8d8e740eb"
+   ],
+   "value": "Sibylline is a leading intelligence and strategic risk consultancy in the security sector that embeds analysts within client organizations to deliver timely, actionable intelligence. The firm generates revenue through consulting fees for embedded intelligence analyst placements and strategic risk advisory services, primarily serving global technology companies and other enterprises requiring geopolitical and security risk monitoring."
+  },
+  "synthesized_evidence_sha": "ba6091f23abc5092",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "d8d8e740eb"
+   ],
+   "value": "Intelligence analysis using OSINT tools, geospatial analysis platforms, threat intelligence platforms, and data visualization; some Python/R for data processing but primarily analyst-focused rather than heavy ML/AI engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784742131,
   "web_search_url": "https://duckduckgo.com/?q=Sibylline+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "d8d8e740eb"
+   ],
+   "value": "Offers a mission-driven intelligence career with elite prestige in the security sector, paying $80-85K for entry-level analysts — competitive for new grads. The embedded model provides fast, innovative exposure to real-time geopolitical risk at global tech firms without traditional consultancy bureaucracy. Remote work and project-based structure suggest potential for better work-life balance than high-burnout environments, though client demands may drive intensity."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "d8d8e740eb"
+   ],
+   "value": "Estimated: 6/10 — Remote flexibility helps, but embedded client-facing roles risk scope creep and after-hours demands during crises. No public policy on guaranteed shutdowns found."
   }
  },
  "sidley austin llp": {
@@ -251166,37 +251773,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Low: Not recognized as an elite tech or data science employer; focus is primarily on traditional distribution."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "69a1d81cd2"
+   ],
+   "value": "B2B wholesale distribution and supply chain management for electrical products."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "69a1d81cd2"
+   ],
+   "value": "Global and 'Powered by Difference', focusing on diversity and international career mobility within the electrical distribution sector."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "69a1d81cd2"
+   ],
+   "value": "Electrical contractors, industrial businesses, and commercial customers requiring electrical distribution materials and supply chain services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000-$90,000 USD, reflecting traditional industry compensation rather than elite tech new-grad pay scales."
   },
   "evidence_sha": "31bc8cd305ebfc4c",
+  "generated_at": 1784873205,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "69a1d81cd2"
+   ],
+   "value": "Wholesale Distribution (Electrical Equipment)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Assess whether the team uses modern AI methodologies and agile workflows or if they are bogged down by legacy IT processes. Ask questions about work-life balance, guaranteed shutdowns, and whether the data science culture offers genuine learning acceleration or simply slow-moving corporate maintenance."
   },
+  "last_attempt_at": 1784873205,
   "last_evidence_at": 1784675135,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "69a1d81cd2"
+   ],
+   "value": "Operations spanning 40 countries globally with career opportunities offered internationally."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "69a1d81cd2"
+   ],
+   "value": "Powered by Difference: To provide a rewarding international work environment while serving as a global leader in electrical distribution."
+  },
   "name": "Sonepar",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow pace, typical of large legacy wholesale distributors focused on operational stability rather than rapid tech iteration."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "69a1d81cd2"
+   ],
+   "value": "Electrical equipment, industrial supplies, and associated B2B distribution services managed via a portfolio of 90 leading localized brands."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard corporate allowance of 20-25 days of PTO for experienced hires, varying by region, with less guaranteed time off for new grads."
   },
+  "refresh_after": 1790057205,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -251206,7 +251869,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No widespread guaranteed corporate shutdowns found in research; typical standard public holidays apply rather than tech-style week-long closures."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "69a1d81cd2"
+   ],
+   "value": "Large, established global enterprise operating in 40 countries."
   },
   "sources": [
    {
@@ -251240,14 +251910,41 @@
     "url": "https://career.sonepar.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Large global brands often provide visa sponsorship for specific senior engineering roles, though sponsorship for new grad roles is limited."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "69a1d81cd2"
+   ],
+   "value": "Sonepar is a global distributor of electrical products and equipment, operating through a network of 90 leading brands across 40 countries. As a privately held B2B wholesale distributor, it makes money by purchasing electrical and industrial supplies from manufacturers and selling them to commercial contractors, electricians, and industrial clients."
+  },
+  "synthesized_evidence_sha": "31bc8cd305ebfc4c",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: IT and data teams at Sonepar likely focus on supply chain optimization, inventory management, and internal process digitization rather than developing proprietary AI models or elite data science products."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675135,
   "web_search_url": "https://duckduckgo.com/?q=Sonepar+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "69a1d81cd2"
+   ],
+   "value": "Sonepar's massive scale provides solid data infrastructure challenges, but it is fundamentally a traditional electrical distributor. This means the AI and data science work will likely lean toward operational optimization rather than cutting-edge, fast-paced tech innovation, and the culture may lean toward slow bureaucracy rather than elite technical acceleration."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "69a1d81cd2"
+   ],
+   "value": "Estimated: Good work-life balance is implied by their promotion of a 'rewarding work environment', though it likely lacks the highly structured guaranteed shutdowns of top-tier tech firms."
   }
  },
  "sonia": {
