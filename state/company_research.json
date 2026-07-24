@@ -28248,7 +28248,7 @@
    "value": "Estimated: Tier 1 (Elite AI/Prestige) due to deep focus on cutting-edge perception, autonomy frameworks, and multi-domain collaborative AI."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -28268,7 +28268,7 @@
    ],
    "value": "Automotive, defense, trucking, construction, mining, and agriculture industries."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -28299,7 +28299,7 @@
    ],
    "value": "Candidates must demonstrate mastery of C++ and autonomy frameworks, but they should also evaluate if the 5-day in-office mandate and fast-paced scale-up culture fit their strict boundary requirements against toxic burnout and their desire for sane hours."
   },
-  "last_attempt_at": 1784915802,
+  "last_attempt_at": 1784920630,
   "last_evidence_at": 1784919313,
   "locations": {
    "confidence": "high",
@@ -28340,6 +28340,7 @@
    "value": "Estimated: 15 to 20 days of standard PTO supported by wellness benefits."
   },
   "refresh_after": 1790099802,
+  "retry_after": 1784921110,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -28423,7 +28424,7 @@
    "source_ids": [],
    "value": "Estimated: Sponsorship likely evaluated on a case-by-case basis for specialized autonomous systems roles."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -88734,11 +88735,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88750,6 +88753,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784920630,
   "last_evidence_at": 1784919614,
   "name": "Coherent Corp.",
   "pace_of_work": {
@@ -88762,6 +88766,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784920750,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88825,7 +88830,7 @@
     "url": "https://jobright.ai/jobs/info/6a5b16ef856af468ab00bcaf?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784919614,
   "web_search_url": "https://duckduckgo.com/?q=Coherent+Corp.+company+careers+benefits",
@@ -98757,48 +98762,128 @@
  "cribl": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "eff5a8b0b9"
+   ],
+   "value": "Tier 2 (Emerging Tech: Elite Data Infrastructure). While primarily an observability and data routing company, Cribl holds strong technical prestige in distributed systems and data engineering, making it an elite choice for software engineers interested in massive-scale data pipelines."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "a5eaa34163"
+   ],
+   "value": "B2B enterprise software operating on a subscription and SaaS model, charging for large-scale data processing, storage (Cribl Lake), and routing capabilities."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "eff5a8b0b9"
+   ],
+   "value": "Mission-driven, customer-centric, and highly collaborative. The culture emphasizes technical excellence and disruptive innovation in the observability space, with a 'creb' (.Customer First) mentality."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "eff5a8b0b9"
+   ],
+   "value": "Enterprise organizations with large-scale observability, IT operations, and security needs."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "eff5a8b0b9",
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: $130k - $170k base salary, with total compensation potentially reaching $180k - $220k including equity and bonuses, reflecting its unicorn status and top-tier tech market rates."
   },
   "evidence_sha": "97227c9c4d5fd341",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784920630,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "eff5a8b0b9"
+   ],
+   "value": "Enterprise Software, Data Observability, and IT Infrastructure."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a5eaa34163",
+    "1db9db9c4d"
+   ],
+   "value": "Prepare to discuss high-volume data processing, distributed systems design, and efficient algorithm implementation. To assess their fit for your priorities, ask the interviewers directly about the exact team structure, how they support new-grad growth, and what tools are used for the AI/ML components of their data routing products."
+  },
+  "last_attempt_at": 1784920630,
   "last_evidence_at": 1784919613,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "eff5a8b0b9"
+   ],
+   "value": "Headquartered in San Francisco, CA, with additional US hubs (such as Austin, TX) and remote work options globally."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "eff5a8b0b9"
+   ],
+   "value": "To unlock the value of data by providing organizations with the ability to route, process, and manage their observability, security, and log data efficiently and cost-effectively."
+  },
   "name": "Cribl",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "eff5a8b0b9"
+   ],
+   "value": "Estimated: Fast-paced and highly innovative with a strong product-driven focus, typical of a late-stage unicorn backed by major venture capital, but actively avoiding the slow bureaucracy of legacy enterprise vendors."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "a5eaa34163"
+   ],
+   "value": "Cribl offers a unified data management suite, most notably Cribl Stream (data routing and processing), Cribl Edge (edge data collection), Cribl Search (unified log search), and Cribl Lake (managed cloud data storage)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "eff5a8b0b9"
+   ],
+   "value": "Estimated: 15-20 days of standard Paid Time Off per year for full-time employees, alongside standard paid holidays."
   },
+  "refresh_after": 1790104630,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "medium",
+   "source_ids": [
+    "eff5a8b0b9",
+    "1db9db9c4d"
+   ],
+   "value": "None found in research indicating a formal rotational program"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "eff5a8b0b9"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns are explicitly listed; however, standard paid holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "eff5a8b0b9"
+   ],
+   "value": "Late-stage startup / Series E funded company recognized as a unicorn, operating with a rapidly growing global footprint."
   },
   "sources": [
    {
@@ -98842,14 +98927,47 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "eff5a8b0b9"
+   ],
+   "value": "Visa sponsorship is evaluated on a case-by-case basis, with a strong preference for candidates already authorized to work in the regions they are hiring."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a5eaa34163",
+    "eff5a8b0b9"
+   ],
+   "value": "Cribl is an enterprise software company that develops a data management platform specializing in observability, security, and log data. It makes money by selling subscription-based software and cloud services (Cribl Cloud) that help organizations route, process, and filter massive volumes of machine data efficiently."
+  },
+  "synthesized_evidence_sha": "97227c9c4d5fd341",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "a5eaa34163"
+   ],
+   "value": "High-scale distributed systems engineering and data pipeline development. Software engineers work on massive data processing, routing, and search infrastructure, largely utilizing modern tech stacks and open-source frameworks."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784919613,
   "web_search_url": "https://duckduckgo.com/?q=Cribl+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "eff5a8b0b9",
+    "1db9db9c4d"
+   ],
+   "value": "Cribl aligns well with your desire for a fast, innovative tech culture focused on bleeding-edge data science and distributed systems, avoiding slow corporate bureaucracy. While not an 'AI-first' unicorn, its elite-tier data platform challenges engineers with high-scale problems, accelerating your technical learning and prestige without forcing you into a high-burnout, toxic environment."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "eff5a8b0b9"
+   ],
+   "value": "Estimated: Generally good work-life balance with standard tech hours, though occasional intensive periods may occur during major product launches or customer escalations."
   }
  },
  "criteo": {
@@ -139876,52 +139994,128 @@
  "firstenergy": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "574b3a7132"
+   ],
+   "value": "Low. As a traditional electric utility, it is not recognized for elite AI/data science or fast, innovative tech culture."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "574b3a7132"
+   ],
+   "value": "Rate-regulated electric utility and competitive wholesale generation."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "574b3a7132"
+   ],
+   "value": "Conservative, mission-driven, traditional corporate utility culture."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "574b3a7132"
+   ],
+   "value": "Residential, commercial, and industrial customers across multiple U.S. states."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $70,000 - $90,000 base salary for new-grad tech/AI roles. Strong benefits may offset lower base pay."
   },
   "evidence_sha": "fe7ac8fda2aee9a5",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784920630,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784916252,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "574b3a7132"
+   ],
+   "value": "Utilities - Electric"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "574b3a7132",
+    "dbc3b9e88f"
+   ],
+   "value": "Candidates should emphasize adaptability and如何在缓慢的官僚环境中创新(innovation in bureaucratic environments). Ask how data science work directly impacts grid reliability and how tech teams balance modernization with the strict safety regulations typical of a utility."
+  },
+  "last_attempt_at": 1784920630,
   "last_evidence_at": 1784908633,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "574b3a7132"
+   ],
+   "value": "Operations primarily located in the Midwest and Mid-Atlantic regions of the United States (e.g., Ohio, Pennsylvania, New Jersey, Maryland, West Virginia)."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "574b3a7132"
+   ],
+   "value": "To provide safe, reliable, and environmentally responsible energy."
+  },
   "name": "FirstEnergy",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "574b3a7132"
+   ],
+   "value": "Estimated: Slow and steady, typical of a heavily regulated utility bureaucracy rather than a fast-paced tech culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "574b3a7132",
+    "fefdaaddf3"
+   ],
+   "value": "Electricity generation, electric transmission infrastructure, and last-mile electricity distribution."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "574b3a7132"
+   ],
+   "value": "Estimated: 15-20 days of standard PTO annually, typical for a legacy utility, but exact packages are often negotiated per union or role."
   },
-  "retry_after": 1784916732,
+  "refresh_after": 1790104630,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "574b3a7132"
+   ],
+   "value": "Estimated: No formal guaranteed tech shutdowns, though traditional utility holidays may be observed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "574b3a7132",
+    "fefdaaddf3"
+   ],
+   "value": "Large, established public electric utility."
   },
   "sources": [
    {
@@ -139965,14 +140159,47 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Not explicitly confirmed in recent job postings."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "574b3a7132",
+    "fefdaaddf3"
+   ],
+   "value": "FirstEnergy Corp is a diversified energy company dedicated to providing safe, reliable, and environmentally responsible energy. It generates, transmits, and distributes electricity to millions of customers, making money through rate-based utility revenues and wholesale market operations."
+  },
+  "synthesized_evidence_sha": "fe7ac8fda2aee9a5",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "574b3a7132"
+   ],
+   "value": "Grid modernization, smart meter analytics, predictive maintenance for infrastructure, and enterprise IT systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784908633,
   "web_search_url": "https://duckduckgo.com/?q=FirstEnergy+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "574b3a7132",
+    "dbc3b9e88f"
+   ],
+   "value": "While a utility company may not match the elite prestige or top-tier pay of big tech, it aligns perfectly with seeking a mission-driven company that maintains sane hours and respects work-life balance, avoiding toxic or high-burnout environments without sacrificing personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "574b3a7132"
+   ],
+   "value": "Estimated: Sane hours and stable environment; highly bureaucratic but generally avoids tech-sector burnout."
   }
  },
  "fis": {
@@ -213780,42 +214007,39 @@
  "lendable": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [
-    "3d2f179118"
-   ],
-   "value": "Estimated: Elite/Niche. The company heavily markets its elite in-house AI and ML stack to compete on speed, indicating high technical prestige for AI/DS practitioners."
+   "source_ids": [],
+   "value": "Estimated: High tier"
   },
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "business_model": {
    "confidence": "high",
    "source_ids": [
-    "3d2f179118"
+    "3d2f179118",
+    "5ab40053aa"
    ],
-   "value": "Financial technology (fintech) lending, generating revenue through AI-driven loan origination and fast capital distribution."
+   "value": "The company originates consumer credit, leveraging proprietary AI and machine learning systems built in-house to automate heavy lifting and provide faster, efficient loan decisions."
   },
   "culture_vibe": {
-   "confidence": "high",
-   "source_ids": [
-    "3d2f179118"
-   ],
-   "value": "Innovation-focused and automation-first, with a strong emphasis on shared security responsibility and building technology in-house."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: AI-driven, cloud-native, fast-paced organization."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
-    "3d2f179118"
+    "5ab40053aa"
    ],
-   "value": "Individual consumers seeking fast access to personal loans and financing."
+   "value": "Everyday consumers who need quick, affordable access to personal credit."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: £60,000 - £80,000. Competitive UK fintech compensation for new graduates in AI/DS roles."
+   "value": "Estimated: Competitive"
   },
   "evidence_sha": "2431d389d0cd18f2",
-  "generated_at": 1784879930,
+  "generated_at": 1784920630,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -213824,18 +214048,16 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "3d2f179118"
+    "5ab40053aa"
    ],
-   "value": "Financial Technology / Lending"
+   "value": "Financial Technology (Fintech)"
   },
   "interview_focus": {
-   "confidence": "medium",
-   "source_ids": [
-    "3d2f179118"
-   ],
-   "value": "Be prepared to discuss how you can thrive in a fast-paced, cloud-native setting and apply ML/AI to automate complex processes cleanly. Emphasize your drive for rapid career growth and technical excellence, while probing interviewers about engineering team norms to assess work-life balance and avoid toxic or high-burnout environments."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
-  "last_attempt_at": 1784879930,
+  "last_attempt_at": 1784920630,
   "last_evidence_at": 1784919313,
   "locations": {
    "confidence": "unknown",
@@ -213845,32 +214067,32 @@
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "3d2f179118"
+    "5ab40053aa"
    ],
-   "value": "To get money into customers' hands in minutes instead of days by building the best in-house technology and letting machines do the heavy lifting."
+   "value": "To build the world's best technology to help people get credit and save money."
   },
   "name": "Lendable",
   "pace_of_work": {
-   "confidence": "high",
-   "source_ids": [
-    "3d2f179118"
-   ],
-   "value": "Estimated: Fast-paced. The company explicitly describes its environment as fast-paced and focused on getting money to customers in minutes."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Fast/moving"
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "3d2f179118"
+    "3d2f179118",
+    "5ab40053aa"
    ],
-   "value": "A proprietary, cloud-native lending platform that leverages machine learning and AI to automate underwriting and disburse funds rapidly."
+   "value": "Technology-driven financial products, specifically consumer credit and loan services featuring fast automated approvals and fund delivery."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 25-30 days. Standard for UK tech firms of this stage, though exact policy is not public."
+   "value": "Estimated: Conservative market-standard PTO allowance."
   },
-  "refresh_after": 1790063930,
+  "refresh_after": 1790104630,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -213880,14 +214102,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: No guaranteed company-wide shutdowns found in public sources; expect standard PTO structures instead."
+   "value": "None found in research (estimated)"
   },
   "size_stage": {
-   "confidence": "low",
-   "source_ids": [
-    "3d2f179118"
-   ],
-   "value": "Not explicitly stated in provided sources, but operates as an established tech-driven lender with dedicated InfoSec and engineering teams."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "sources": [
    {
@@ -213950,34 +214170,31 @@
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "3d2f179118"
+    "3d2f179118",
+    "5ab40053aa"
    ],
-   "value": "Lendable is a financial technology company that uses AI, machine learning, and new data sources to build in-house technology for fast loan approvals, getting money to customers in minutes. It makes money by originating loans efficiently through its cloud-native, AI-driven platform."
+   "value": "Lendable is a fintech company that uses AI, machine learning, and new data sources to build in-house technology for consumer credit. They make money by originating loans and getting approved funds to customers in minutes instead of days."
   },
-  "synthesized_evidence_sha": "685f0fa688094a28",
+  "synthesized_evidence_sha": "2431d389d0cd18f2",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "3d2f179118"
    ],
-   "value": "Development of fast, cloud-native systems using new data sources, machine learning, and AI to automate heavy lifting in loan processing and security operations."
+   "value": "Building scalable technology in a fast-paced, cloud-native environment, utilizing machine learning, AI, and new data sources to automate processes."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678733,
   "web_search_url": "https://duckduckgo.com/?q=Lendable+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
-   "source_ids": [
-    "3d2f179118"
-   ],
-   "value": "Lendable offers a fast-paced, AI-driven environment where machines do the heavy lifting, aligning with your desire for innovative tech culture and accelerated learning. The focus on building elite technology in-house provides the technical prestige and impact you seek in a top-tier AI/DS role."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [
-    "3d2f179118"
-   ],
-   "value": "Estimated: Moderate. The fast-paced AI-driven culture may conflict with guaranteed sane hours, so candidates should rigorously screen for burnout expectations."
+   "source_ids": [],
+   "value": "Estimated: Sane/Good"
   }
  },
  "lentech inc": {
@@ -221607,80 +221824,104 @@
  "loveholidays": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Tier 2 — strong commercial ML practice with published case studies (dynamic packaging, pricing), but not a primary AI research lab."
+   "source_ids": [
+    "1f19435d0b"
+   ],
+   "value": "Estimated: Mid-tier. The company brands itself as an AI-first technology platform"
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Merchant model: loveholidays contracts inventory from airlines, hoteliers, and bed-banks, packages it dynamically, and sells at a markup. Revenue comes from package margins, ancillary fees, and commission on add-ons. No subscription or advertising revenue."
+   "confidence": "high",
+   "source_ids": [
+    "1f19435d0b"
+   ],
+   "value": "Online travel agency earning revenue through holiday bookings and package deals facilitated by its platform."
   },
   "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Engineering-led, data-driven, low hierarchy. Blameless post-mortems, internal hack days, and open salary bands. Socials are optional; diversity & inclusion initiatives are tracked publicly."
+   "confidence": "medium",
+   "source_ids": [
+    "1f19435d0b"
+   ],
+   "value": "Mission-driven tech culture focused on innovation and growth, employing the best minds in technology to drive expansion."
   },
   "customers": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Leisure travellers in the UK and Ireland booking short- and medium-haul package holidays, primarily price-sensitive families, couples, and groups seeking self-serve digital booking."
+   "confidence": "high",
+   "source_ids": [
+    "1f19435d0b"
+   ],
+   "value": "Consumers looking for their next getaway, utilizing the platform as a personal holiday expert."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: £45k–£55k base + 10–15% annual bonus + RSUs (vesting over 4 years). Total first-year comp ~£55k–£65k."
+   "source_ids": [
+    "1f19435d0b"
+   ],
+   "value": "Estimated: Highly competitive UK/EU tech market rate"
   },
   "evidence_sha": "ec96fdaecc501323",
-  "generated_at": 1784895541,
+  "generated_at": 1784920630,
   "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Online Travel / E-commerce"
+   "confidence": "high",
+   "source_ids": [
+    "1f19435d0b"
+   ],
+   "value": "Online Travel / Technology"
   },
   "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Expect applied ML system design (real-time pricing/ranking), production-grade data engineering puzzles, and behavioural questions on shipping iteratively in a cross-functional squad. Prepare to discuss model monitoring, A/B testing rigor, and how you balance innovation with operational stability in a high-transaction domain."
+   "confidence": "medium",
+   "source_ids": [
+    "1f19435d0b"
+   ],
+   "value": "Discuss how you can apply AI and data science principles to build scalable cloud infrastructure. Be prepared to demonstrate how your technical skills can support the company's ambitious growth targets while maintaining a healthy approach to work-life balance."
   },
-  "last_attempt_at": 1784916252,
+  "last_attempt_at": 1784920630,
   "last_evidence_at": 1784908352,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Headquarters in London (UK); engineering hubs in London and Manchester; remote-friendly within UK time zones."
+   "confidence": "medium",
+   "source_ids": [
+    "1f19435d0b"
+   ],
+   "value": "Company operates with a European footprint, with specific office locations not detailed in the provided sources."
   },
   "mission": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "To make holidays affordable and accessible by using technology to cut out traditional high-street travel agent overheads and pass savings to customers."
+   "confidence": "high",
+   "source_ids": [
+    "1f19435d0b"
+   ],
+   "value": "To open the world to everyone by giving customers unlimited choice, unmatched ease, and unmissable value for their next getaway, while expanding across Europe."
   },
   "name": "loveholidays",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Fast but sustainable — two-week sprints, quarterly OKRs, on-call rotation for critical pricing/availability services. Leadership emphasizes \"no heroics\" delivery."
+   "source_ids": [
+    "1f19435d0b"
+   ],
+   "value": "Estimated: Fast-paced and growth-oriented"
   },
   "products": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Package holidays (flight + hotel), flight-only bookings, hotel-only bookings, airport transfers, and add-ons such as baggage and seat selection, all sold through a proprietary web and mobile platform."
+   "confidence": "high",
+   "source_ids": [
+    "1f19435d0b"
+   ],
+   "value": "An AI-first technology platform offering holiday booking services with unlimited choice, unmatched ease, and unmissable value for getaways."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 25 days annual leave + UK bank holidays (8) + 1–2 company-wide \"recharge\" days per year."
+   "source_ids": [
+    "1f19435d0b"
+   ],
+   "value": "Estimated: Standard European tech market average (~25-30 days)"
   },
-  "refresh_after": 1790079541,
-  "retry_after": 1784916732,
+  "refresh_after": 1790104630,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -221689,13 +221930,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Annual full-company shutdown between Christmas and New Year (typically 3–5 working days). No other mandatory shutdowns."
+   "source_ids": [
+    "1f19435d0b"
+   ],
+   "value": "Estimated: Likely standard public holidays in operating regions"
   },
   "size_stage": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 1,000–2,000 employees; privately held, profitable, mature scale-up stage with significant UK market share in online package holidays."
+   "confidence": "high",
+   "source_ids": [
+    "1f19435d0b"
+   ],
+   "value": "Growing company with ambitious plans to expand across Europe, actively employing top talent to scale operations."
   },
   "sources": [
    {
@@ -221740,34 +221985,42 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
+   "confidence": "unknown",
    "source_ids": [],
-   "value": "Estimated: Licensed UK sponsor; routinely sponsors Skilled Worker visas for engineering, data science, and ML roles. No public cap or restriction noted."
+   "value": "Not confirmed"
   },
-  "status": "retrying",
+  "status": "ready",
   "summary": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "loveholidays is a UK-based online travel agency that sells package holidays, flights, hotels, and transfers directly to consumers via its website and app. It operates as a digital-first retailer, bundling travel components from suppliers and earning margin on each booking."
+   "confidence": "high",
+   "source_ids": [
+    "1f19435d0b"
+   ],
+   "value": "loveholidays is an online travel agency operating an AI-first technology platform that helps customers find and book holiday getaways. It makes money by taking commissions on holiday packages booked through its platform."
   },
-  "synthesized_evidence_sha": "42ea3601c36680d8",
+  "synthesized_evidence_sha": "ec96fdaecc501323",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Full-stack product engineering (React/TypeScript, Node.js, Kotlin/Spring), data platform (Snowflake, dbt, Airflow), ML for dynamic pricing, demand forecasting, personalisation, and real-time availability caching. Cloud-native on AWS/GCP with CI/CD automation."
+   "confidence": "high",
+   "source_ids": [
+    "1f19435d0b"
+   ],
+   "value": "Building and operating secure, scalable, and resilient cloud infrastructure systems for an AI-first platform."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679087,
   "web_search_url": "https://duckduckgo.com/?q=loveholidays+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "loveholidays offers a high-impact AI/data science environment inside a profitable, digital-native travel retailer where models directly drive pricing, conversion, and customer experience. The company’s scale (millions of bookings) provides rich data, while its private ownership and engineering-led culture tend to favour sustainable pace over burnout, aligning with a new grad’s desire for prestige, technical depth, and work-life balance."
+   "confidence": "high",
+   "source_ids": [
+    "1f19435d0b"
+   ],
+   "value": "For a candidate seeking an elite AI or data science role, loveholidays offers high-impact technical work on an AI-first platform, avoiding slow bureaucracy. The focus on cloud infrastructure and ambitious European expansion provides a fast-paced, innovative environment that accelerates career growth."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 4/5 — core hours 10–4, limited weekend work, explicit \"no email after 6 pm\" norm for non-on-call staff. Glassdoor reviews consistently cite good balance for a high-growth tech company."
+   "source_ids": [
+    "1f19435d0b"
+   ],
+   "value": "Estimated: Standard for a growing tech company, balances ambitious expansion with modern tech culture"
   }
  },
  "lp analyst": {
@@ -241388,37 +241641,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown; no public research output, conference presence, or notable alumni found in sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Not publicly documented; could be product licensing, consulting fees, or subscription revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown; no employee reviews or culture artifacts surfaced in research."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Not publicly documented; likely enterprise clients, startups, or public-sector organizations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown; candidate targets high new-grad pay. No salary data surfaced."
   },
   "evidence_sha": "1959368c8144e772",
+  "generated_at": 1784920630,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Technology / Software / Professional Services"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare to probe: (1) concrete AI/data science projects and publication record; (2) compensation transparency (base, equity, sign-on) for new grads; (3) engineering culture—deployment frequency, code-review rigor, on-call expectations; (4) work-life guardrails—core hours, shutdown rituals, PTO usage; (5) mentorship structure and career-ladder clarity. Ask for recent examples of each."
+  },
+  "last_attempt_at": 1784920630,
   "last_evidence_at": 1784919615,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Not publicly documented; likely U.S.-based given the GitHub job-board source."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Not publicly documented."
+  },
   "name": "Milltown Partners",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown; candidate prefers fast, innovative pace over bureaucracy."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Not publicly documented; likely software products, platforms, or professional services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Not publicly documented; typical U.S. tech range 15–20 days plus holidays."
   },
+  "refresh_after": 1790104630,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -241428,7 +241723,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Not publicly documented; no company-wide shutdown policy found."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Early-to-growth stage, indicated by active new-graduate hiring on monitored job boards."
   },
   "sources": [
    {
@@ -241472,14 +241774,39 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Not publicly documented; unknown whether the company sponsors work visas (H-1B, O-1, etc.)."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Milltown Partners appears to be a technology-focused company that hires new-graduate software engineers. Its exact products, services, and revenue model are not publicly documented in the available sources."
+  },
+  "synthesized_evidence_sha": "1959368c8144e772",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Software engineering roles for new graduates; specific tech stack, domains (AI/data science), and internal tooling are not disclosed in sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784919615,
   "web_search_url": "https://duckduckgo.com/?q=Milltown+Partners+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks a top-tier AI/data science role with elite prestige, high new-grad pay, fast innovative culture, mission-driven focus, strong work-life balance (sane hours, guaranteed shutdowns), and accelerated technical growth without burnout. Milltown Partners’ public profile is too thin to confirm alignment; deep diligence on team, projects, and policies is essential before investing interview time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown; candidate requires sane hours and guaranteed shutdowns."
   }
  },
  "milwaukee tool": {
@@ -409861,23 +410188,24 @@
    "source_ids": [
     "1272a97ecb"
    ],
-   "value": "Estimated: Low for dedicated AI/DS prestige; Wing Assistant is primarily a remote staffing company, not an AI-first tech firm."
+   "value": "Estimated: Low to Medium. The company leverages AI to enable its talent platform, but available evidence points to a service-oriented business rather than a cutting-edge core AI/ML research firm."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "high",
    "source_ids": [
     "64402a767c"
    ],
-   "value": "B2B staffing and workforce solutions; Wing Assistant embeds skilled, cost-effective operators into clients' workflows to handle operational tasks, allowing clients to scale without traditional overhead."
+   "value": "B2B service model that provides skilled remote operators embedded into clients' workflows, driving productivity and unlocking capacity in exchange for service revenue."
   },
   "culture_vibe": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
+    "96383d4a3d",
     "64402a767c"
    ],
-   "value": "Estimated: Focused on ownership, operational efficiency, and client success, with a remote-first work culture."
+   "value": "Focused on ownership, organizational culture-building, and cross-functional collaboration. They emphasize taking operational weight off leaders so teams can execute strategically."
   },
   "customers": {
    "confidence": "high",
@@ -409885,19 +410213,18 @@
     "1272a97ecb",
     "64402a767c"
    ],
-   "value": "Growing businesses that need high-quality operational and support talent to scale their organizations without the overhead of full-time hires."
+   "value": "Growing businesses looking to scale productivity and execution without the overhead of traditional hires."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
-    "64402a767c",
     "1272a97ecb"
    ],
-   "value": "Estimated: Pay likely aligns with staffing/remote operations standards rather than elite AI/DS packages; no public new-grad tech salary data found."
+   "value": "Estimated: Competitive for a talent platform but potentially below top-tier big-tech new grad salaries; precise figures not publicly available."
   },
   "evidence_sha": "673c8350a9c0fcfa",
-  "generated_at": 1784889740,
+  "generated_at": 1784920630,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -409906,64 +410233,70 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "1272a97ecb",
+    "96383d4a3d",
     "64402a767c"
    ],
-   "value": "Staffing and outsourcing / AI-enabled workforce solutions."
+   "value": "Staffing and Remote Workforce Solutions / Technology-Enabled Talent Platform."
   },
   "interview_focus": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "1272a97ecb",
     "64402a767c"
    ],
-   "value": "Probe whether AI/DS roles exist with dedicated ML/AI engineering teams building proprietary models, or if AI is limited to using off-the-shelf tools. Ask about new-grad compensation bands, sane working hours, shutdowns, and WLB policies. Evaluate whether technical growth is prioritized or if the focus is primarily on operational support staffing."
+   "value": "Question whether an AI or data science role here would involve true algorithmic innovation or just apply existing tools to talent-matching workflows, and probe hard for guaranteed shutdowns or strict hours, as a fast-growing talent platform may lack the structured safeguards needed to prevent burnout and protect personal time."
   },
-  "last_attempt_at": 1784889740,
+  "last_attempt_at": 1784920630,
   "last_evidence_at": 1784919313,
   "locations": {
-   "confidence": "estimated",
+   "confidence": "high",
    "source_ids": [
-    "64402a767c"
+    "64402a767c",
+    "1272a97ecb"
    ],
-   "value": "Estimated: Operates as a remote-first organization providing global talent to client companies."
+   "value": "Operates as a remote-first global talent platform."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
+    "96383d4a3d",
     "64402a767c"
    ],
-   "value": "To provide remote talent that takes ownership of operational work, allowing business leaders to focus on strategic work that moves the business forward while helping companies scale without overhead."
+   "value": "To help companies scale with high-quality global talent and AI-powered support, freeing leaders to focus on strategic work that moves the business forward."
   },
   "name": "Wing Assistant",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [
-    "64402a767c"
+    "64402a767c",
+    "96383d4a3d"
    ],
-   "value": "Estimated: Fast-paced, focusing on scaling operations and productivity for growing businesses."
+   "value": "Estimated: Fast-paced and execution-driven. Job descriptions emphasize scaling productivity, sharpening execution, and taking ownership of operational burdens, suggesting an agile, high-output environment."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
     "1272a97ecb",
-    "7c74bfbc58"
+    "64402a767c"
    ],
-   "value": "AI-enabled workforce solutions and remote staffing services across business functions like executive assistance, admin support, customer support, sales support, recruiting support, and operations support."
+   "value": "AI-enabled workforce solutions providing remote talent for executive assistance, admin support, customer support, sales support, recruiting support, and operations support."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [
-    "64402a767c"
+    "96383d4a3d"
    ],
-   "value": "Estimated: PTO details are not public, but likely aligns with remote staffing standards (10-15 days)."
+   "value": "Estimated: Standard startup PTO, likely 15-20 days annually, but exact policy is not public."
   },
-  "refresh_after": 1790073740,
+  "refresh_after": 1790104630,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "high",
    "source_ids": [
-    "64402a767c"
+    "96383d4a3d",
+    "64402a767c",
+    "1272a97ecb"
    ],
    "value": "None found in research"
   },
@@ -409971,17 +410304,19 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [
+    "96383d4a3d",
     "64402a767c"
    ],
-   "value": "Estimated: No information found regarding guaranteed company shutdowns."
+   "value": "Estimated: No public information regarding guaranteed company-wide shutdowns or strict offline hours for internal employees."
   },
   "size_stage": {
    "confidence": "estimated",
    "source_ids": [
+    "96383d4a3d",
     "64402a767c",
     "1272a97ecb"
    ],
-   "value": "Estimated: Mid-size, scaling company actively hiring for customer success and support roles."
+   "value": "Estimated: Growing startup scale, actively hiring across HR, customer success, and operational support roles."
   },
   "sources": [
    {
@@ -410050,7 +410385,7 @@
    "source_ids": [
     "64402a767c"
    ],
-   "value": "Estimated: Sponsorship details are not explicitly stated in available materials, though the remote-first nature may allow for global hiring."
+   "value": "Estimated: No specific visa sponsorship details found, but as a platform built on global remote talent, they are highly open to international hiring."
   },
   "status": "ready",
   "summary": {
@@ -410059,34 +410394,36 @@
     "64402a767c",
     "1272a97ecb"
    ],
-   "value": "Wing Assistant provides top-tier remote talent to handle operational work for growing businesses, embedding skilled, cost-effective operators into client workflows. By offering roles like executive assistance, admin support, and customer support, the company helps clients scale without overhead, driving productivity and freeing leaders to focus on strategic work."
+   "value": "Wing Assistant is a technology-enabled talent platform that connects businesses with high-quality, cost-effective global remote talent. It makes money by embedding skilled operators into client workflows—spanning executive assistance, customer support, and operations—allowing companies to scale without traditional overhead."
   },
-  "synthesized_evidence_sha": "5a32107d89465807",
+  "synthesized_evidence_sha": "673c8350a9c0fcfa",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
     "1272a97ecb",
-    "7c74bfbc58"
+    "96383d4a3d",
+    "64402a767c"
    ],
-   "value": "Building the next generation of AI-enabled workforce solutions for growing businesses, ranging from operational support to customer service workflows."
+   "value": "Focused on building the next generation of AI-enabled workforce solutions; currently public job openings lean heavily on HR operations and customer-facing roles rather than core data science or AI engineering."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678465,
   "web_search_url": "https://duckduckgo.com/?q=Wing+Assistant+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "high",
+   "confidence": "medium",
    "source_ids": [
     "1272a97ecb",
-    "64402a767c"
+    "96383d4a3d"
    ],
-   "value": "The candidate is seeking an elite AI/data science role at a prestigious company with high pay, fast innovation, and strong WLB. Wing Assistant's AI-enabled workforce solutions may offer exposure to applied AI in business workflows, but its core business is staffing and support operations, not foundational AI/model development. It likely will not fully meet the candidate's need for top-tier AI prestige, elite new-grad pay, or accelerated technical learning."
+   "value": "While Wing Assistant describes itself as building AI-enabled workforce solutions, its current hiring focus suggests this is a talent-matching service rather than a deep-tech AI powerhouse; thus, an AI or data science candidate might find sharply limited opportunities to drive advanced model development or gain elite technical prestige here."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [
+    "96383d4a3d",
     "64402a767c"
    ],
-   "value": "Estimated: Standard startup/scale-up WLB, though specific policies are not detailed."
+   "value": "Estimated: Moderate. The company emphasizes building a positive culture and employee experience, but the focus on high-cost-efficiency and operational ownership might demand significant availability."
   }
  },
  "winsupply": {
