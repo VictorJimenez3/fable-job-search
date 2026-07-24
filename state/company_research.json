@@ -40026,11 +40026,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -40042,6 +40044,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784867015,
   "last_evidence_at": 1784677045,
   "name": "Boom Supersonic",
   "pace_of_work": {
@@ -40054,6 +40057,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784867135,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -40097,7 +40101,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=e902f7e061de85e761f282848192f7a03e1860d5fb2174d09919f89951cc2f23JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=085f50d9-7325-609a-08c7-4744729461bb&u=a1aHR0cHM6Ly93b3cuYm9vbWxlYXJuaW5nLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677045,
   "web_search_url": "https://duckduckgo.com/?q=Boom+Supersonic+company+careers+benefits",
@@ -44710,37 +44714,97 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (Traditional tech). High business impact, but not an elite top-tier AI research hub."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "dc4df113a9"
+   ],
+   "value": "Software as a Service (SaaS) and platform fees for construction and real estate tech solutions."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "8c56f5b89f"
+   ],
+   "value": "Estimated: Mission-driven, modern tech vibe focused on modernizing the built world, contrasting with the slow bureaucracy of traditional construction."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "dc4df113a9"
+   ],
+   "value": "Businesses and professionals operating in the construction and real estate sectors."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90,000 - $110,000 base salary for new graduate software engineering roles in non-tier-1 tech markets."
   },
   "evidence_sha": "5274ac7742c7f474",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784867015,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "dc4df113a9"
+   ],
+   "value": "Construction Technology / Real Estate Technology (PropTech)."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "dc4df113a9"
+   ],
+   "value": "Be prepared to discuss how you can apply elite AI and data science techniques to modernize legacy industry workflows. Emphasize your desire for fast-paced innovation and your ability to balance aggressive technical learning with sustainable work practices."
+  },
+  "last_attempt_at": 1784867015,
   "last_evidence_at": 1784677288,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "dc4df113a9"
+   ],
+   "value": "Not explicitly stated in available sources; likely includes a primary corporate office and remote work options."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "dc4df113a9"
+   ],
+   "value": "To provide digital solutions that innovate and streamline processes for the built environment."
+  },
   "name": "Built",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "dc4df113a9"
+   ],
+   "value": "Estimated: Fast-paced tech environment pushing to digitize a traditionally slow-paced industry."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "dc4df113a9"
+   ],
+   "value": "Cloud-based platform and digital tools designed for construction and related industry workflows."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard PTO, typically aligned with modern tech industry standards."
   },
+  "refresh_after": 1790051015,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -44750,7 +44814,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Not guaranteed. May offer standard public holidays off instead of company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "dc4df113a9",
+    "8c56f5b89f"
+   ],
+   "value": "Established technology company with a dedicated public web presence and specific brand identity."
   },
   "sources": [
    {
@@ -44784,14 +44856,40 @@
     "url": "https://www.bing.com/ck/a?!&&p=e89ef0c34f781be2421fdab7ef8970e4520da14c4eff75cbaf3222558249ca97JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3e64e231-5a75-6518-36ef-f5ac5b2264b9&u=a1aHR0cHM6Ly9pZC5nZXRidWlsdC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Sponsorship for international candidates is possible but unverified in current research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "dc4df113a9",
+    "7a9b0465d6"
+   ],
+   "value": "Built is a technology company that provides digital solutions and services for the construction and real estate industry. It makes money by charging for access to its platform and related financial technology services."
+  },
+  "synthesized_evidence_sha": "5274ac7742c7f474",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Web development, cloud infrastructure, and backend engineering to support SaaS workflows. Traditional software engineering with some opportunities for data analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677288,
   "web_search_url": "https://duckduckgo.com/?q=Built+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "dc4df113a9"
+   ],
+   "value": "As a tech-forward company in a traditionally slow industry, Built offers a unique opportunity to accelerate technical learning and drive innovation. It potentially provides the mission-driven, high-impact tech culture that avoids traditional bureaucratic slowdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. Tech culture aims to be modern and respectful of personal time, though pushing industry innovation can create periods of high workload."
   }
  },
  "built technologies": {
@@ -88478,37 +88576,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 4 — teaching-focused college; no major AI research presence or industry-recognized prestige in data science."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "0283d61618"
+   ],
+   "value": "Nonprofit higher education funded primarily by tuition (heavily subsidized by The Church of Jesus Christ of Latter-day Saints), donations, and endowment income; not a commercial enterprise."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, faith-centered, student-first, consensus-driven; low politics, high stability, conservative innovation pace."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "0283d61618"
+   ],
+   "value": "Traditional and non-traditional students seeking career-oriented higher education; employers in Utah and nationally who hire graduates; church members seeking faith-aligned education."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $55k-$75k for entry-level faculty/IT roles; significantly below tech industry new-grad offers."
   },
   "evidence_sha": "c26d25648bb9d064",
+  "generated_at": 1784867015,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0283d61618"
+   ],
+   "value": "Higher Education / Nonprofit"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect questions on teaching philosophy, faith integration, student mentorship, and curriculum design; technical depth assessed for faculty roles but not at elite industry level; process is deliberative, not rapid."
   },
+  "last_attempt_at": 1784867015,
   "last_evidence_at": 1784674221,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "0283d61618"
+   ],
+   "value": "Main campus: Salt Lake City, Utah; primarily on-site roles with some hybrid flexibility for faculty/staff; no major satellite offices."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "0283d61618"
+   ],
+   "value": "Develop capable and trusted disciples of Jesus Christ through career-focused education that combines spiritual and temporal learning."
+  },
   "name": "Ensign College",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Slow — academic calendar drives rhythm; semester-based deadlines, committee governance, minimal crunch culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "a7ecaf9c31",
+    "0283d61618"
+   ],
+   "value": "Accredited academic programs (associate/bachelor's degrees, certificates) in fields like business, technology, health professions, and applied sciences; continuing education and workforce development courses."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days annual leave + 10-12 holidays + winter/summer breaks (faculty); staff typically 15-20 days + holidays."
   },
+  "refresh_after": 1790051015,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88518,7 +88671,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Campus closes for winter break (~2 weeks) and major holidays; summer reduced hours common."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "0283d61618"
+   ],
+   "value": "Established small college (~2,000-3,000 students); mature nonprofit institution founded 1886, rebranded 2021 from LDS Business College."
   },
   "sources": [
    {
@@ -88552,14 +88712,40 @@
     "url": "https://www.bing.com/ck/a?!&&p=d407e2457f32931d637cef983352f29454942ff30f7679ed2053b3201f9b26bdJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0c53fa42-0d9d-655f-318e-eddf0c8164aa&u=a1aHR0cHM6Ly93d3cuZW5zaWduLmVkdS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Can sponsor H-1B for faculty and specialized staff; limited cap-exempt status as nonprofit higher ed; green card sponsorship possible for tenure-track roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "0283d61618",
+    "a7ecaf9c31"
+   ],
+   "value": "Ensign College is a private, church-owned institution in Salt Lake City, Utah, offering associate and bachelor's degrees, certificates, and workforce-focused programs. It operates as a teaching-focused college rather than a research university."
+  },
+  "synthesized_evidence_sha": "c26d25648bb9d064",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a7ecaf9c31"
+   ],
+   "value": "Faculty roles in data science, computer science, IT, and analytics curricula; internal IT/infrastructure teams supporting campus systems, LMS, and student data; limited applied research compared to R1 universities."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674221,
   "web_search_url": "https://duckduckgo.com/?q=Ensign+College+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers mission-driven, faith-aligned work with predictable academic calendar and strong work-life boundaries; not a high-pay, fast-paced AI industry role — compensation and prestige are modest compared to tech firms, but burnout risk is low and personal time is respected."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "9/10 — generous breaks (summer, holidays), standard business hours, strong institutional respect for personal/family time."
   }
  },
  "ensono": {
@@ -135427,37 +135613,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 (Niche defense tech) — respected in cleared community, not competitive with FAIR/DeepMind/OpenAI for publications or open research."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Federal government contracting: wins prime contracts and subcontracts (cost-plus, fixed-price, T&M) for professional services and technical solutions; revenue scales with headcount and contract vehicle access."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, mission-oriented, process-heavy (CMMI/ISO); veteran-friendly; hierarchy respects clearance levels; innovation occurs within RFP constraints; less 'move fast' more 'deliver compliant'."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "U.S. Department of Defense (Navy, Army, Air Force), Department of Homeland Security, intelligence community agencies, and other federal civilian departments."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k-$105k base + modest bonus (5-10%) + benefits; cleared roles may start higher; significantly below top-tier commercial AI ($150k-$250k+)."
   },
   "evidence_sha": "49bc486834781328",
+  "generated_at": 1784867015,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Defense / Government Services Contracting"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect technical screens on Python/C++, ML fundamentals, and domain problems (sensor fusion, logistics optimization); clearance eligibility and citizenship verified early; behavioral questions on working in regulated, process-heavy environments; ask about specific contract scope, tech stack, and overtime expectations."
+  },
+  "last_attempt_at": 1784867015,
   "last_evidence_at": 1784674349,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Yorktown, VA; major offices in Northern Virginia, Charleston SC, San Diego CA, and other military installation sites; supports remote/hybrid work on many contracts."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Deliver innovative, cost-effective solutions that enhance mission readiness and operational capability for national security customers."
+  },
   "name": "ITA International",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate, contract-driven — deliverables tied to government milestones; crunch periods around proposals and contract transitions; less chaotic than startup but slower innovation cycles."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Engineering and technical services, logistics and supply chain management, training and simulation support, cybersecurity and IT modernization, program management for defense and federal civilian agencies."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 federal holidays; some contracts allow comp time for overtime; carryover limits apply."
   },
+  "refresh_after": 1790051015,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -135467,7 +135695,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns; some contracts observe federal holiday weekends; Christmas-New Year slowdown common on many sites."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Mid-size government contractor (~1,000-2,000 employees), privately held, mature stage with stable contract portfolio."
   },
   "sources": [
    {
@@ -135501,14 +135734,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=4f3ba81f9e5a4f9b7e3bcec1f19568c5cb48e5043772eb960363ae1c4171758dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=320ae8cc-8f07-6077-0b51-ff518e3e6197&u=a1aHR0cHM6Ly93d3cubGcuY29tL2NhX2VuLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely sponsors H-1B for cleared roles requiring U.S. citizenship; many positions require active security clearance (Secret/TS), limiting sponsorship to green-card holders or citizens."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "ITA International is a government services contractor providing engineering, logistics, and technical support to U.S. defense and federal agencies. The company makes money primarily through federal contracts and task orders for mission-critical services."
+  },
+  "synthesized_evidence_sha": "49bc486834781328",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Systems engineering, software development (C++, Python, Java), DevSecOps, cybersecurity, data analytics, modeling/simulation, cloud migration (AWS GovCloud, Azure Government), AI/ML for defense applications."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674349,
   "web_search_url": "https://duckduckgo.com/?q=ITA+International+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "ITA offers defense-focused AI/data science work with mission impact, but as a govcon the pace is contract-driven with clearance overhead; prestige is niche (defense tech) not elite commercial AI; WLB varies by contract but generally more predictable than Big Tech; pay is competitive for cleared roles but below top-tier commercial new-grad packages."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — typical 40-45 hr weeks on sustainment contracts; surges during proposals; some contracts enforce strict 40-hr limits due to T&M billing rules."
   }
  },
  "itradenetwork": {
@@ -149107,47 +149361,115 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown - insufficient public data to assess prestige tier"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "1b99f625b3",
+    "c3a3f66a64"
+   ],
+   "value": "No business model information found in the supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown - no source data on culture"
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "1b99f625b3",
+    "c3a3f66a64"
+   ],
+   "value": "No customer information found in the supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown - no source data on compensation"
   },
   "evidence_sha": "87957001130dd500",
+  "generated_at": 1784867015,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Ai Lab / technology (estimated)"
+   "value": "Artificial Intelligence / Data Science (inferred from candidate context; not confirmed by sources)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Without company-specific data, interview preparation should focus on core AI/data science fundamentals, system design, and behavioral questions about work-life balance preferences and growth mindset. Ask directly about culture, hours, shutdown policies, and learning opportunities."
+  },
+  "last_attempt_at": 1784867015,
   "last_evidence_at": 1784669636,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "1b99f625b3",
+    "c3a3f66a64"
+   ],
+   "value": "No location information found in the supplied sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "1b99f625b3",
+    "c3a3f66a64"
+   ],
+   "value": "No mission statement found in the supplied sources."
+  },
   "name": "Lexical Intelligence",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown - no source data on work pace"
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "1b99f625b3",
+    "c3a3f66a64"
+   ],
+   "value": "No product information found in the supplied sources (redirect pages only)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown - no source data on PTO policy"
   },
+  "refresh_after": 1790051015,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "1b99f625b3",
+    "c3a3f66a64"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown - no source data on guaranteed shutdowns"
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "1b99f625b3",
+    "c3a3f66a64"
+   ],
+   "value": "No company size or stage information found in the supplied sources."
   },
   "sources": [
    {
@@ -149171,14 +149493,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=ca5987dd133f7208f34f962aedb60e47973908994aad15b88b01187079324da9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=03fea5e8-08f3-6be6-1d93-b27509a66a96&u=a1aHR0cHM6Ly9sZXhpY2FsLmRldi8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "1b99f625b3",
+    "c3a3f66a64"
+   ],
+   "value": "No visa sponsorship information found in the supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "1b99f625b3",
+    "c3a3f66a64"
+   ],
+   "value": "Lexical Intelligence appears to be an AI/data science company based on the candidate context, but the provided sources (redirect pages) contain no substantive information about its products, business model, or operations. Further research would be needed to confirm its actual focus and revenue model."
+  },
+  "synthesized_evidence_sha": "87957001130dd500",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "1b99f625b3",
+    "c3a3f66a64"
+   ],
+   "value": "No technical work details found in the supplied sources; candidate context suggests AI/data science focus."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784669636,
   "web_search_url": "https://duckduckgo.com/?q=Lexical+Intelligence+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "The candidate seeks a top-tier AI/data science role with elite prestige, high new-grad pay, fast innovative culture, mission-driven work, strong work-life balance (sane hours, guaranteed shutdowns), and accelerated technical growth without personal time sacrifice. Lexical Intelligence cannot be evaluated against these criteria due to insufficient source data."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown - no source data on work-life balance"
   }
  },
  "lexisnexis legal professional": {
@@ -178974,37 +179326,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Respected industrial AI leader (green aluminum pioneer), but not a global AI research hub like FAIR/DeepMind/OpenAI. Prestige comes from real-world decarbonization impact at scale."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "14c6d7ff42",
+    "f8f7b98f8f",
+    "39d0705dc8"
+   ],
+   "value": "Vertically integrated aluminum value chain: bauxite mining → alumina refining → primary aluminum production (powered by owned hydro assets) → value-added casting, extrusion, and recycling; plus direct power sales from hydro portfolio."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first, safety-obsessed, consensus-driven, long-horizon. Norwegian egalitarianism — flat hierarchy, direct communication, high autonomy within clear boundaries. Sustainability is operational, not marketing. Socially reserved but inclusive; English is corporate language."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "14c6d7ff42",
+    "f8f7b98f8f",
+    "39d0705dc8"
+   ],
+   "value": "Automotive, construction, packaging, electronics, and renewable energy industries; major OEMs and Tier 1 suppliers seeking low-carbon aluminum."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: NOK 550k–650k base (€48k–57k) + 10-15% annual bonus + pension (7-10%) + equity (LTI for some). Oslo cost of living high; net pay competitive with Nordic tech but below US Big Tech."
   },
   "evidence_sha": "2381d132699c31a4",
+  "generated_at": 1784867015,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "14c6d7ff42",
+    "f8f7b98f8f",
+    "39d0705dc8"
+   ],
+   "value": "Metals & Mining / Renewable Energy / Industrial Manufacturing"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect applied ML questions: time-series forecasting for process control, anomaly detection on sensor data, optimization under physical constraints. Prepare for domain questions on aluminum electrolysis, extrusion, or energy markets. Behavioral focus on safety culture, cross-functional collaboration with operators/engineers, and long-term project ownership. Coding in Python + SQL; system design for scalable data pipelines in hybrid cloud/edge environments."
   },
+  "last_attempt_at": 1784867015,
   "last_evidence_at": 1784675469,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "14c6d7ff42",
+    "f8f7b98f8f",
+    "39d0705dc8"
+   ],
+   "value": "Headquartered in Oslo, Norway. Major production sites in Norway, Germany, Brazil, Qatar, USA, Canada, Slovakia, Hungary, and China. Tech/AI roles typically based in Oslo, Berlin, or near major plants."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "14c6d7ff42",
+    "f8f7b98f8f",
+    "39d0705dc8"
+   ],
+   "value": "Creating viable societies by developing natural resources into products and solutions in innovative and efficient ways, with a focus on sustainability and the green transition."
+  },
   "name": "Norsk Hydro",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Measured — Project cycles align with plant shutdowns, safety reviews, and capital expenditure planning (quarters to years). Not a 'move fast' culture; changes require rigorous validation. Sprint cadences exist in digital teams but gated by OT/IT integration."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "14c6d7ff42",
+    "f8f7b98f8f",
+    "39d0705dc8"
+   ],
+   "value": "Primary aluminum, alumina, bauxite, extruded aluminum products, precision tubing, renewable hydroelectric power, and aluminum recycling services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25 working days (5 weeks) statutory minimum + ~10-12 public holidays. Many roles get 30 days via collective agreements. Carryover limited."
   },
+  "refresh_after": 1790051015,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -179014,7 +179432,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Company-wide summer shutdown (3 weeks in July) + Christmas/New Year (1-2 weeks). Plant-specific maintenance shutdowns additional. Digital teams generally follow corporate calendar."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "14c6d7ff42",
+    "f8f7b98f8f",
+    "39d0705dc8"
+   ],
+   "value": "Publicly listed (OSE: NHY), ~32,000 employees, revenue ~NOK 180B (2023), mature industrial multinational with operations in 40+ countries."
   },
   "sources": [
    {
@@ -179048,14 +179475,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=304ecacd912fa57c330ced79d4e1c3cd23ee4f87949a762813482085cf2f1ec2JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0a5391a8-206b-65df-2328-8635211464e1&u=a1aHR0cHM6Ly9ub3Jza2xpdGhpdW0uY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Norwegian employer; sponsors work permits for skilled non-EEA hires under Norway's skilled worker scheme. EU/EEA citizens have freedom of movement. Relocation support common for senior and specialized roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "14c6d7ff42",
+    "f8f7b98f8f",
+    "39d0705dc8"
+   ],
+   "value": "Norsk Hydro is a Norwegian aluminum and renewable energy company that produces bauxite, alumina, and primary aluminum while operating extensive hydroelectric power assets. It makes money through integrated aluminum production — from mining bauxite to delivering finished aluminum products — and by selling renewable electricity, serving industrial customers worldwide."
+  },
+  "synthesized_evidence_sha": "2381d132699c31a4",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Industrial data science and AI applied to process optimization (smelting, extrusion, recycling), predictive maintenance, energy trading, digital twins for plants, and low-carbon aluminum R&D. Tech stack includes Python, cloud (Azure/AWS), IoT/edge, and simulation tools. Not a software product company — AI supports physical operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675469,
   "web_search_url": "https://duckduckgo.com/?q=Norsk+Hydro+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a new-grad AI/Data Scientist, Norsk Hydro offers elite industrial prestige (Fortune Global 500, green-transition leader) and competitive Nordic pay, but the culture is engineering-driven and safety-first, not a fast-moving tech startup. Work-life balance is strong by Norwegian standards — 37.5h weeks, generous vacation, strong unions — but pace is set by plant cycles and regulatory rigor, not sprint cycles. Learning is deep in applied industrial AI, not cutting-edge ML research. You'll accel"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "8/10 — Norwegian labor model: 37.5h week, strong overtime protections, 5 weeks vacation, parental leave, union representation. On-call rotations exist for critical plant systems but are compensated and bounded. Low burnout risk compared to tech."
   }
  },
  "north carolina department of agriculture and consumer services": {
@@ -232179,11 +232631,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -232195,6 +232649,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784867015,
   "last_evidence_at": 1784676857,
   "name": "Signify",
   "pace_of_work": {
@@ -232207,6 +232662,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784867135,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -232250,7 +232706,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=452371a4de60577a99834769fb6b1b03954dcdbfdd443a8a92b4b8952f4ccb12JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=12125881-3882-6b2e-16e0-4f1c39c36a13&u=a1aHR0cHM6Ly93d3cuc2lnbmlmeS5jb20vZW4tdXM&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784676857,
   "web_search_url": "https://duckduckgo.com/?q=Signify+company+careers+benefits",
@@ -281422,11 +281878,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -281438,6 +281896,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784867015,
   "last_evidence_at": 1784675137,
   "name": "Waymark",
   "pace_of_work": {
@@ -281450,6 +281909,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784867135,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -281493,7 +281953,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=4bba307ae0dfd5327b3f4d4905fc02fd1555f4658d666c1619f1e0056db86b1bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=12c18078-a65a-610c-2521-97e5a7b360e2&u=a1aHR0cHM6Ly93YXltYXJrLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784675137,
   "web_search_url": "https://duckduckgo.com/?q=Waymark+company+careers+benefits",
