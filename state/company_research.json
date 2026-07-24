@@ -53067,11 +53067,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -53083,6 +53085,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784899544,
   "last_evidence_at": 1784680707,
   "name": "Blue Cross of Idaho",
   "pace_of_work": {
@@ -53095,6 +53098,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784899664,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -53138,7 +53142,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=405f88d23e60c826ee21af0e4a65931ad8917cadc72843281e604ec8900862aaJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=04b615d7-10a9-635e-06d5-024911f062cb&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9CbHVl&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680707,
   "web_search_url": "https://duckduckgo.com/?q=Blue+Cross+of+Idaho+company+careers+benefits",
@@ -58159,38 +58163,102 @@
  "brainbase labs": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "cf238728b6"
+   ],
+   "value": "Estimated: Tier 1 (founding-stage applied AI agent startup with elite-university founding team and top-tier investors)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "cf238728b6"
+   ],
+   "value": "B2B SaaS/usage-based pricing for AI agent products (Brainbase Conversational and related agents) sold to enterprises for workforce automation."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "cf238728b6"
+   ],
+   "value": "Estimated: High-agency, technical, multi-national founding team from elite schools; mission-oriented around shipping production AI agents"
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "cf238728b6"
+   ],
+   "value": "Businesses seeking to automate customer-facing conversational roles and internal operational workflows with AI agents."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "cf238728b6"
+   ],
+   "value": "Estimated: $150k-$200k base + significant equity (founding-engineer tier at well-funded AI agent startup)"
   },
   "evidence_sha": "69bc5e3426fb55de",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784899544,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "cf238728b6"
+   ],
+   "value": "Applied AI / AI Agents / Enterprise Automation SaaS"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "cf238728b6"
+   ],
+   "value": "Expect deep technical assessment on LLM agent architecture (planning, tool use, memory, evals), production ML systems, and applied AI problem-solving. Prepare for case studies on conversational agent design and back-office automation. Ask concretely about on-call expectations, sprint cadence, and whether the team has explicit shutdown rituals or core-hours policies to gauge WLB reality versus early-stage norms."
+  },
+  "last_attempt_at": 1784899544,
   "last_evidence_at": 1784680702,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "cf238728b6"
+   ],
+   "value": "Multi-national team (explicit); specific hubs not disclosed in sources."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "cf238728b6"
+   ],
+   "value": "Building the first AI Workforce by creating applied AI agents that act as employees across support and operational roles."
+  },
   "name": "Brainbase Labs",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "cf238728b6"
+   ],
+   "value": "Estimated: Fast — founding-stage, well-funded, 'first AI Workforce' mission implies high velocity and rapid iteration"
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "cf238728b6"
+   ],
+   "value": "Brainbase Conversational (AI agent for front-line support); additional AI agents for back-office operational tasks (implied)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days (typical early-stage US startup range); no public policy disclosed"
   },
+  "refresh_after": 1790083544,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -58200,7 +58268,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns documented; early-stage startups rarely mandate formal shutdown periods"
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "cf238728b6"
+   ],
+   "value": "Early-stage, well-funded startup backed by top investors; founding-team phase with multi-national hires from elite universities."
   },
   "sources": [
    {
@@ -58244,14 +58319,41 @@
     "url": "https://jobs.ashbyhq.com/brainbaselabs/a7fc3230-70a0-4927-b24b-604fccdd758a"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "cf238728b6"
+   ],
+   "value": "Brainbase Labs builds an AI Workforce of applied AI agents that function as digital employees handling front-line conversational support and back-office operational tasks. The company monetizes by selling its Brainbase Conversational product and related AI agent solutions to businesses seeking to automate workforce roles."
+  },
+  "synthesized_evidence_sha": "69bc5e3426fb55de",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "cf238728b6"
+   ],
+   "value": "Applied AI/ML engineering: LLM agent orchestration, conversational AI, tool use, RAG, evaluation/guardrails, and scalable backend systems for production AI agents."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680702,
   "web_search_url": "https://duckduckgo.com/?q=Brainbase+Labs+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "cf238728b6"
+   ],
+   "value": "Brainbase Labs offers a rare combination: elite AI/agent engineering at a well-funded founding stage with a team from Harvard/Stanford/Berkeley, directly building production AI agents that replace human workflows. The mission-driven 'AI Workforce' focus aligns with high-impact technical work, while the early-stage culture typically enables fast iteration and steep learning curves. Candidate priorities for prestige, pay, pace, and work-life balance hinge on undisclosed specifics, but the founding"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate — early-stage startup pace typically demands intensity; no public WLB policies found"
   }
  },
  "brenntag": {
@@ -59359,7 +59461,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -59377,7 +59479,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784899318,
+  "last_attempt_at": 1784899544,
   "last_evidence_at": 1784680700,
   "name": "BRINC Drones",
   "pace_of_work": {
@@ -59390,7 +59492,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784899438,
+  "retry_after": 1784899784,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -76699,37 +76801,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Emerging / High-Growth Startup Tier — not a household AI lab, but publishes occasionally on marketplace ML and offers strong ownership scope for early-career researchers/engineers."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1edd542886"
+   ],
+   "value": "Marketplace commission/fee model: CharterUP takes a percentage of each booked trip (typically 15–25 %) paid by the operator, with no upfront cost to the group organizer."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Low-ego, operator-empathetic, data-driven but pragmatic; ‘default to transparency’ (open metrics dashboards), quarterly hack weeks, and team offsites."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1edd542886"
+   ],
+   "value": "Corporate travel managers, university athletics/events staff, K–12 school districts, sports teams, wedding/event planners, and any group needing 20–56 passenger transportation."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $115k–$135k base + 0.05 %–0.15 % equity (4-yr vest, 1-yr cliff) + annual bonus target 10 %; total ~$135k–$160k year-1."
   },
   "evidence_sha": "332cdd894fb79ae1",
+  "generated_at": 1784899544,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "1edd542886"
+   ],
+   "value": "Travel & Transportation Technology / B2B Marketplace (Charter Bus Rental)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep dives on marketplace mechanics (two-sided network effects), time-series forecasting for seasonal demand, combinatorial optimization for vehicle assignment, and production ML system design. Prepare to discuss past projects where you balanced model accuracy with latency/business constraints, and be ready for a take-home or live coding exercise mirroring real CharterUP data challenges."
   },
+  "last_attempt_at": 1784899544,
   "last_evidence_at": 1784680701,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "eb5cb8a3df"
+   ],
+   "value": "Headquarters: Austin, TX (hybrid-friendly). Remote eligible in many U.S. states; no international offices."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1edd542886"
+   ],
+   "value": "To make group transportation as easy and reliable as booking a rideshare, modernizing the fragmented charter bus industry through technology."
+  },
   "name": "CharterUP",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast, shipping-oriented sprints (2-week cycles) with quarterly OKRs; minimal meeting overhead. Occasional crunch around peak travel seasons (spring/fall)."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1edd542886"
+   ],
+   "value": "B2B charter bus marketplace (web/mobile), instant quoting engine, operator management dashboard, trip tracking & communications tools, and enterprise/group sales portal."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + flexible sick/mental-health days; unlimited policy not advertised."
   },
+  "refresh_after": 1790083544,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -76739,7 +76895,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full company shutdown last week of December (between Christmas & New Year) and Friday after Thanksgiving; no other mandatory shutdowns."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "eb5cb8a3df"
+   ],
+   "value": "~80–120 employees; Series A funded (last public raise ~$20 M led by Fontinalis Partners, 2022), headquartered in Austin, TX."
   },
   "sources": [
    {
@@ -76773,14 +76936,38 @@
     "url": "https://www.bing.com/ck/a?!&&p=b2dd8713e75925c3f9eeffe88d06587c37bb8f651baafcb0a436be38086a4680JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=04b615d7-10a9-635e-06d5-024911f062cb&u=a1aHR0cHM6Ly93d3cuY2hhcnRlcnVwLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "H-1B cap-subject and cap-exempt filings observed; will sponsor strong candidates. No public STEM-OPT or green-card policy details."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "1edd542886",
+    "eb5cb8a3df"
+   ],
+   "value": "CharterUP is a technology platform and marketplace that connects groups (corporate, school, event planners) with a network of vetted charter bus operators across the U.S., streamlining quoting, booking, and trip management. The company makes money by taking a commission or service fee on each completed booking facilitated through its platform."
+  },
+  "synthesized_evidence_sha": "332cdd894fb79ae1",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Full-stack marketplace development (React/TypeScript, Node/Go, Postgres), real-time pricing & matching algorithms, mobile apps for organizers & drivers, data pipeline for operator supply/pricing, and ML-driven demand forecasting."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680701,
   "web_search_url": "https://duckduckgo.com/?q=CharterUP+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "CharterUP sits at the intersection of marketplace dynamics, logistics optimization, and transportation tech—offering a high-impact arena for AI/data science (pricing, demand forecasting, route optimization) without the bureaucracy of big tech. The Series A stage means equity upside, direct product ownership, and a pace that rewards shipping over process, while the Austin base and hybrid culture support sustainable hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Core hours 10 am–4 pm CT, no-on-call for most DS roles, explicit ‘no weekends’ norm; leadership models sustainable pace."
   }
  },
  "chase": {
@@ -83476,11 +83663,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -83492,6 +83681,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784899544,
   "last_evidence_at": 1784680602,
   "name": "Clean Harbors",
   "pace_of_work": {
@@ -83504,6 +83694,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784899664,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -83547,7 +83738,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=e5bdebc810a0ec62fea3935bd06b01cf184982fec25b60737d05fd398b7fd7f9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=040a1be3-347d-632c-32fd-0c7d35f96298&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2NsZWFu&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680602,
   "web_search_url": "https://duckduckgo.com/?q=Clean+Harbors+company+careers+benefits",
@@ -174129,48 +174320,125 @@
  "howmet aerospace": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "fab2243476"
+   ],
+   "value": "Estimated: Traditional industrial tier; not considered a top-tier, elite tech or data science employer."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "45b43e93cf"
+   ],
+   "value": "Howmet makes money by manufacturing and selling advanced aerospace components and systems to aircraft OEMs and Tier 1 aerospace suppliers."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "fab2243476"
+   ],
+   "value": "Estimated: Mission-driven engineering culture focused on safety and reliability, potentially leaning towards traditional corporate bureaucracy rather than fast-paced tech."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "45b43e93cf"
+   ],
+   "value": "Commercial and defense aircraft original equipment manufacturers (OEMs) such as Boeing and Airbus, as well as Tier 1 aerospace suppliers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "fab2243476"
+   ],
+   "value": "Estimated: Likely offers competitive industrial engineering salaries ranging from $75,000 to $95,000 for new grads, which may fall below elite tech pay benchmarks."
   },
   "evidence_sha": "71ed139cf983107b",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784899544,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "45b43e93cf"
+   ],
+   "value": "Aerospace manufacturing."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "fab2243476"
+   ],
+   "value": "Candidates should probe the specific pace of AI and data science innovation within Howmet to ensure it meets their expectations for a fast tech culture. It is also critical to clarify work-life balance expectations, remote work flexibility, and learning opportunities to ensure the role does not sacrifice personal time."
+  },
+  "last_attempt_at": 1784899544,
   "last_evidence_at": 1784680511,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "45b43e93cf"
+   ],
+   "value": "Headquartered in the United States."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "fab2243476"
+   ],
+   "value": "Howmet Aerospace focuses on delivering innovative, engineered solutions for the aerospace industry."
+  },
   "name": "Howmet Aerospace",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "fab2243476"
+   ],
+   "value": "Estimated: Likely slower-paced and process-driven due to the highly regulated nature of the aerospace manufacturing industry."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "45b43e93cf"
+   ],
+   "value": "Engineered aerospace components, including jet engine parts, fastening systems, and structural components for commercial and defense aircraft."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "fab2243476"
+   ],
+   "value": "Estimated: Standard corporate PTO policy likely offering around 15-20 days of vacation annually, plus standard holidays."
   },
+  "refresh_after": 1790083544,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "58cda22460"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "fab2243476"
+   ],
+   "value": "Estimated: May have plant-specific shutdowns for maintenance, but guaranteed corporate-wide shutdowns are not publicly confirmed."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "fab2243476"
+   ],
+   "value": "A large, publicly traded aerospace manufacturer."
   },
   "sources": [
    {
@@ -174204,14 +174472,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=437e046cef86aa7b0e2b1b870d0d79e2de787f405ed96f3cb06a5cf66bc32f21JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2c426153-30e1-6263-3808-76cd31e76370&u=a1aHR0cHM6Ly93d3cuaG93bWV0LmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "58cda22460"
+   ],
+   "value": "Howmet Aerospace provides a careers portal for applicants to explore job opportunities and join the company."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "45b43e93cf"
+   ],
+   "value": "Howmet Aerospace is a major American aerospace manufacturer that produces engineered components and systems for commercial and defense aircraft. The company makes money by manufacturing and selling high-performance, advanced aerospace components such as engine parts and fasteners to aircraft OEMs and Tier 1 suppliers."
+  },
+  "synthesized_evidence_sha": "71ed139cf983107b",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "fab2243476"
+   ],
+   "value": "Howmet works on engineered solutions for the aerospace industry, which may include advanced manufacturing processes and materials engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680511,
   "web_search_url": "https://duckduckgo.com/?q=Howmet+Aerospace+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "fab2243476"
+   ],
+   "value": "As a legacy aerospace manufacturer, Howmet may not align with the candidate's desire for a fast, innovative tech culture; it likely operates with traditional corporate bureaucracy, which could impact the agile adoption of AI and data science. However, it could provide strong work-life balance and stable hours, satisfying the candidate's requirement for a non-toxic environment that respects personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "fab2243476"
+   ],
+   "value": "Estimated: Likely solid work-life balance with sane hours, typical of established industrial and manufacturing companies."
   }
  },
  "hp": {
@@ -177628,38 +177927,107 @@
  "hyperexponential": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "756beb0520"
+   ],
+   "value": "Estimated: Mid-tier. Hyperexponential solves highly complex simulation and modeling problems, but focuses more on software engineering and mathematical pricing than elite pure-play AI/ML research."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "756beb0520"
+   ],
+   "value": "B2B Enterprise SaaS"
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "756beb0520"
+   ],
+   "value": "Estimated: Highly intellectual, collaborative, and mission-driven, focused on solving hard mathematical and engineering problems without the bureaucracy of legacy insurance."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "b8540b4241"
+   ],
+   "value": "Global commercial insurers, reinsurance companies, Lloyd's syndicates, and managing general agents (MGAs)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "8cf79fa8c9",
+    "b8540b4241"
+   ],
+   "value": "Estimated: £70,000 - £85,000 (UK) or $130,000 - $160,000 (US) base salary, depending on location and equity package."
   },
   "evidence_sha": "f9d2095d220e483b",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784899544,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "8cf79fa8c9",
+    "b8540b4241",
+    "756beb0520"
+   ],
+   "value": "Insurtech / SaaS"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784899544,
   "last_evidence_at": 1784680701,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "b8540b4241"
+   ],
+   "value": "London (UK HQ), New York (US), and remote-friendly."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "8cf79fa8c9"
+   ],
+   "value": "To revolutionize insurance pricing by building the software layer that allows insurers to price complex risks with speed, accuracy, and flexibility."
+  },
   "name": "hyperexponential",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "b8540b4241"
+   ],
+   "value": "Estimated: Fast-paced and innovative, typical of a heavily funded scale-up transitioning from startup chaos to structured enterprise delivery."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "8cf79fa8c9",
+    "756beb0520"
+   ],
+   "value": "Renew is a cloud-based, data-driven platform designed to automate and optimize complex insurance pricing processes."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "8cf79fa8c9",
+    "b8540b4241"
+   ],
+   "value": "Estimated: 25-30 days of paid time off per year for UK-based employees, with localized variations for US staff."
   },
+  "refresh_after": 1790083544,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -177668,8 +178036,19 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "756beb0520"
+   ],
+   "value": "Estimated: Likely offers standard bank holidays, but guaranteed week-long company shutdowns are unconfirmed."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "8cf79fa8c9",
+    "b8540b4241",
+    "756beb0520"
+   ],
+   "value": "Series C scale-up, estimated at 200-400 employees."
   },
   "sources": [
    {
@@ -177703,14 +178082,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=c456fdb629378d78ccab40b581c55fae0f2b5e81eabf71fd232e202c06c822f4JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=04b615d7-10a9-635e-06d5-024911f062cb&u=a1aHR0cHM6Ly9zdXBwb3J0Lmdvb2dsZS5jb20vdHJhbnNsYXRlL2Fuc3dlci82MzUwODUwP2hsPXB0LUJSJmNvPUdFTklFLlBsYXRmb3JtJTNERGVza3RvcA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "8cf79fa8c9"
+   ],
+   "value": "Estimated: Likely offers visa sponsorship for highly specialized technical roles, particularly for US/UK tech hubs, but requires confirmation during the interview process."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "8cf79fa8c9",
+    "b8540b4241",
+    "756beb0520"
+   ],
+   "value": "Hyperexponential builds specialized software that helps actuarial and pricing teams rapidly model complex risks, such as those in commercial insurance and reinsurance. The company primarily makes money by licensing this pricing software as a service (SaaS) to large global insurers, Lloyd's syndicates, and managing general agents."
+  },
+  "synthesized_evidence_sha": "f9d2095d220e483b",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "8cf79fa8c9",
+    "756beb0520"
+   ],
+   "value": "Building cloud-native pricing platforms using Python and React, involving complex Monte Carlo simulations, scalable backend pipelines, and intuitive user interfaces for non-technical analysts."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680701,
   "web_search_url": "https://duckduckgo.com/?q=hyperexponential+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "8cf79fa8c9"
+   ],
+   "value": "Estimated: Good. Known for heavily prioritizing sustainable engineering practices and focusing on balanced hours rather than aggressive startup crunch."
   }
  },
  "hyundai motor company": {
@@ -184935,7 +185346,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -184953,7 +185364,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784899126,
+  "last_attempt_at": 1784899544,
   "last_evidence_at": 1784680509,
   "name": "Inizio",
   "pace_of_work": {
@@ -184966,7 +185377,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784899366,
+  "retry_after": 1784900024,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -195446,51 +195857,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — Respected enterprise analytics/actuarial hub with massive proprietary data; not an AI research lab but offers high-impact applied ML at scale."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Vertically integrated automotive ecosystem: distributes Toyota vehicles to dealers, provides financing/insurance to car buyers, and offers dealer services. Profits from vehicle distribution margins, finance/insurance spreads, and service fees."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Family-oriented, low-ego, high-trust, mission-driven. ESOP ownership aligns incentives. Associates stay 10-20+ years. Collaborative over competitive. 'Work hard, go home' ethos."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Toyota dealerships in the Southeast US, automotive consumers seeking financing/insurance, and enterprise fleet customers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000-$105,000 base + 10-15% target bonus + ESOP allocation (vests over 6 years) + comprehensive benefits. Total comp ~$100K-$125K year one."
   },
   "evidence_sha": "f8c06c63aedaaf85",
+  "generated_at": 1784899544,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Automotive / Financial Services / Insurance (diversified conglomerate)"
   },
-  "last_attempt_at": 1784898527,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Demonstrate ability to translate analytical rigor into business value for insurance/finance domains. Prepare for behavioral questions on collaboration, long-term thinking, and respect for boundaries. Expect case studies on pricing, risk, or customer lifetime value. Ask about the Analytics Development Program and ESOP impact on culture."
+  },
+  "last_attempt_at": 1784899544,
   "last_evidence_at": 1784680207,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Deerfield Beach, FL. Major offices: Jacksonville FL, Atlanta GA, Phoenix AZ, and remote/hybrid options. Limited international presence."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To be the best company in the world to work for while delivering exceptional value to customers and communities, guided by a culture of respect, integrity, and long-term thinking."
+  },
   "name": "JM Family Enterprises",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Measured, deliberate — quarterly planning cycles, low urgency culture. Projects move at enterprise speed with strong governance; minimal fire drills."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Toyota vehicle distribution (Southeast US), automotive finance and insurance (JM&A Group), auto lending (World Omni Financial), fleet management, and dealer services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + 2 week summer shutdown + 1 week winter shutdown (varies by role/tenure)."
   },
-  "retry_after": 1784899487,
+  "refresh_after": 1790083544,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research"
+   "value": "Analytics Development Program (ADP) — 2-year rotational program for new grads in actuarial, data science, and analytics (per public campus recruiting materials)."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual company-wide summer shutdown (~2 weeks, early July) and winter shutdown (~1 week, between Christmas and New Year). All associates off; systems on minimal support."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature, privately held (employee-owned via ESOP). ~$18B+ revenue, ~4,500+ associates. Stable, low-turnover, family-governed since 1968."
   },
   "sources": [
    {
@@ -195534,14 +195988,35 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B for specialized technical roles (actuarial, data science, engineering) given size and tenure; green card sponsorship probable for high performers. No public policy details found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "JM Family Enterprises is a privately held, diversified automotive conglomerate headquartered in Deerfield Beach, Florida. It generates revenue primarily through Southeast Toyota Distributors (vehicle distribution), JM&A Group (finance and insurance products), World Omni Financial Corp (auto financing), and various other automotive-related businesses."
+  },
+  "synthesized_evidence_sha": "f8c06c63aedaaf85",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Enterprise IT, data analytics, actuarial science, digital transformation, cloud migration, and emerging AI/ML applications in pricing, risk, and customer experience. Tech supports core automotive finance/insurance operations."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680207,
   "web_search_url": "https://duckduckgo.com/?q=JM+Family+Enterprises+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Matches your priorities: elite stability (Fortune 100 Best Companies 20+ years), strong new-grad pay for a non-tech-native firm, and a culture explicitly built on work-life balance (guaranteed shutdowns, sane hours). Technical learning is accelerated through actuarial/analytics rotation and access to massive automotive/financial datasets, without the burnout typical of pure-play tech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "9/10 — Consistently ranked top for WLB; core hours, rare weekends, company-wide summer/winter shutdowns, generous PTO, and management evaluated on associate well-being."
   }
  },
  "jobs for humanity": {
@@ -220576,42 +221051,106 @@
  "magical": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "7fcef33df2"
+   ],
+   "value": "Estimated: Tier 2. As an early-stage startup deploying state-of-the-art AI agents in production, it offers high-level technical prestige within the startup ecosystem, though it lacks the established historical prestige of larger tech firms."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "7fcef33df2",
+    "20b1a9740b"
+   ],
+   "value": "B2B SaaS platform providing agentic automation solutions to healthcare organizations to optimize their operational workflows."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "20b1a9740b"
+   ],
+   "value": "Estimated: Intense, mission-driven, and entrepreneurial. The focus on hiring exceptional passive candidates and building a founding team suggests a high-performance culture."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "20b1a9740b",
+    "7fcef33df2"
+   ],
+   "value": "Healthcare organizations looking to move faster, reduce operational burden, and improve outcomes for patients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "7fcef33df2"
+   ],
+   "value": "Estimated: Competitive Toronto startup new-grad software engineer pay, likely in the $100k-$130k CAD range, though exact figures are not public."
   },
   "evidence_sha": "09e1dd744f0d7aa4",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784899544,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784899318,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "7fcef33df2",
+    "20b1a9740b"
+   ],
+   "value": "Healthcare Technology and Artificial Intelligence."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "20b1a9740b",
+    "7fcef33df2"
+   ],
+   "value": "Candidates should highlight their interest in AI applied to real-world operational challenges and their willingness to work in a fast-paced, early-stage environment. It may be useful to ask about team structure, expectations for sane hours, and opportunities for mentorship to ensure the role meets the candidate’s work-life balance and learning objectives."
+  },
+  "last_attempt_at": 1784899544,
   "last_evidence_at": 1784680608,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "7fcef33df2"
+   ],
+   "value": "Hybrid role based in the Toronto office."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "7fcef33df2"
+   ],
+   "value": "To transform healthcare with state-of-the-art AI by driving greater accuracy, efficiency, and care throughout operations."
+  },
   "name": "Magical",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "20b1a9740b"
+   ],
+   "value": "Estimated: Fast-paced. The company is growing quickly across multiple departments and operates in a hands-on, early-stage startup environment."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "7fcef33df2"
+   ],
+   "value": "AI agents designed to operate in real production healthcare environments, helping to scale operational workflows."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Not explicitly stated, but likely standard startup PTO in the 15-20 days range."
   },
-  "retry_after": 1784899438,
+  "refresh_after": 1790083544,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -220621,7 +221160,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No specific company-wide shutdowns mentioned in the available sources."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "20b1a9740b"
+   ],
+   "value": "Early-stage, high-growth startup currently building out its founding team across engineering, product, deployment, sales, and operations."
   },
   "sources": [
    {
@@ -220675,14 +221221,46 @@
     "url": "https://jobs.ashbyhq.com/magical/0f575ece-98cf-4366-a7f6-ef7eca2873b7"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "7fcef33df2",
+    "20b1a9740b"
+   ],
+   "value": "Magical is an agentic automation platform that uses state-of-the-art AI to build AI agents for real production environments in the healthcare sector. The company makes money by empowering healthcare organizations to scale their top experts across workflows, reducing operational burden and improving patient outcomes."
+  },
+  "synthesized_evidence_sha": "09e1dd744f0d7aa4",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "7fcef33df2"
+   ],
+   "value": "Building state-of-the-art AI agents that operate reliably in real production environments, requiring expertise in AI and automation."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680608,
   "web_search_url": "https://duckduckgo.com/?q=Magical+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "20b1a9740b",
+    "7fcef33df2"
+   ],
+   "value": "As a fast-growing startup building state-of-the-art AI agents for healthcare, Magical offers the innovative tech culture and rapid learning environment that aligns with the candidate's goals. The founding-stage nature provides direct exposure to elite technical challenges, while the hybrid Toronto setup offers an opportunity to grow quickly without the bureaucratic constraints of larger firms."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "20b1a9740b",
+    "7fcef33df2"
+   ],
+   "value": "Estimated: Moderate. As a quickly growing startup hiring for founding roles, work-life balance may be demanding, though the hybrid setup offers some flexibility."
   }
  },
  "magna international": {
@@ -297311,38 +297889,126 @@
  "red bull": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "f5e7cad14e",
+    "df608f03b3",
+    "17f8c9c419"
+   ],
+   "value": "Tier 2. Red Bull is an elite, globally recognized brand, but its data science work is often viewed as supporting business operations rather than pushing the bleeding edge of core AI research like FAANG or top AI labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "f5e7cad14e",
+    "df608f03b3",
+    "17f8c9c419"
+   ],
+   "value": "FMCG (Fast-Moving Consumer Goods) beverage sales driven by massive lifestyle marketing. Revenue is generated through wholesale beverage distribution and direct retail sales, subsidized by a massive content and sports marketing flywheel."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "f5e7cad14e",
+    "df608f03b3",
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Sporty, unconventional, dynamic, and highly autonomous. They heavily value 'givers of wings'—proactive employees who push boundaries, act like entrepreneurs, and embody the high-energy lifestyle brand."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "f5e7cad14e",
+    "df608f03b3",
+    "17f8c9c419"
+   ],
+   "value": "Mass-market consumers globally, specifically targeting young adults, students, athletes, and extreme sports fans. Customers also include retail distributors and grocery chains."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "f5e7cad14e",
+    "df608f03b3",
+    "17f8c9c419"
+   ],
+   "value": "Estimated: $110,000 to $140,000 base salary for US new grad tech/data roles, with potential for performance bonuses. Highly competitive but slightly lower than top-tier pure-tech FAANG salaries."
   },
   "evidence_sha": "63fd57f9b84cd692",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784899544,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "f5e7cad14e",
+    "df608f03b3",
+    "17f8c9c419"
+   ],
+   "value": "Beverage / FMCG (Fast-Moving Consumer Goods), Media, and Sports Marketing"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "You should interview Red Bull on exactly how their AI teams operate day-to-day: do they guarantee sane working hours and explicit shutdowns during off-cycle periods? Ask about their technical roadmap, mentorship for new grads, and how they balance the fast-paced event culture with sustainable WLB. Inquire how technical career growth is accelerated without sacrificing personal time."
+  },
+  "last_attempt_at": 1784899544,
   "last_evidence_at": 1784680607,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "f5e7cad14e",
+    "df608f03b3",
+    "17f8c9c419"
+   ],
+   "value": "Global headquarters in Salzburg, Austria. North American HQ is in Santa Monica, CA, with major US hubs in New York, NY, and various technical hubs globally."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "f5e7cad14e",
+    "df608f03b3",
+    "17f8c9c419"
+   ],
+   "value": "To give wings to people and ideas, pushing the boundaries of human potential and what is possible through high-energy sports, culture, and innovation."
+  },
   "name": "Red Bull",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "f5e7cad14e",
+    "df608f03b3",
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Fast-paced and highly dynamic due to constant event cycles, product launches, and marketing campaigns. It is less bureaucratic than legacy FMCG rivals but can have bursts of high pressure aligning with global sports schedules."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "f5e7cad14e",
+    "df608f03b3",
+    "17f8c9c419"
+   ],
+   "value": "Red Bull Energy Drink and a portfolio of specialized beverage variants (e.g., Sugarfree, Editions). The company also heavily produces digital media, streaming content, and organizes global extreme sports/music events."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "f5e7cad14e",
+    "df608f03b3",
+    "17f8c9c419"
+   ],
+   "value": "Estimated: 20 to 25 days of Paid Time Off annually for US employees, aligning with premium corporate standards."
   },
+  "refresh_after": 1790083544,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -297351,8 +298017,21 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "f5e7cad14e",
+    "df608f03b3",
+    "17f8c9c419"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns known, but major holidays (like Christmas/New Year) typically see reduced operations. Not a standard formal policy."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "f5e7cad14e",
+    "df608f03b3",
+    "17f8c9c419"
+   ],
+   "value": "Mature, massively profitable global private enterprise. The company operates in over 170 countries and employs roughly 15,000+ people globally."
   },
   "sources": [
    {
@@ -297396,14 +298075,53 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "f5e7cad14e",
+    "df608f03b3",
+    "17f8c9c419"
+   ],
+   "value": "Red Bull commonly sponsors tech and data professionals for work visas at its global hubs, though US-specific new-grad tech sponsorship may depend on the exact role and team."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "f5e7cad14e",
+    "df608f03b3",
+    "17f8c9c419"
+   ],
+   "value": "Red Bull is most famous as the global brand that sells the world's leading energy drink, but it operates as an elite media, events, and marketing powerhouse. It makes money by selling its beverages across over 170 countries while using its high-adrenaline sponsored sports, events, and media content to drive brand loyalty and unmatched premium pricing."
+  },
+  "synthesized_evidence_sha": "63fd57f9b84cd692",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "f5e7cad14e",
+    "df608f03b3",
+    "17f8c9c419"
+   ],
+   "value": "AI and Data Science at Red Bull focus on consumer analytics, media optimization, sports performance telemetry, and supply chain logistics. New grads can expect to work on recommendation engines, marketing attribution models, and predictive analytics for retail execution."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680607,
   "web_search_url": "https://duckduckgo.com/?q=Red+Bull+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Red Bull offers a highly premium global brand name (elite prestige) with new-grad pay that often rivals top-tier tech firms, wrapped in a culture of high autonomy and innovation rather than slow FMCG bureaucracy. For someone seeking fast, technical learning applied directly to massive media and consumer datasets, the company provides unique career acceleration and a mission-driven environment that respects personal time to avoid burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "f5e7cad14e",
+    "df608f03b3",
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Good, with standard corporate hours expected for tech roles. However, the lively event-driven culture may require occasional off-hours flexibility for product launches or race weekends."
   }
  },
  "red cat holdings": {
@@ -400837,11 +401555,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -400853,6 +401573,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784899544,
   "last_evidence_at": 1784680707,
   "name": "White Cap Supply Holdings",
   "pace_of_work": {
@@ -400865,6 +401586,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784899664,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -400908,7 +401630,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=d353df0c793330b931987aa92ea03eddf80c0495e2bb3e383877fecfecd60abeJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=04b615d7-10a9-635e-06d5-024911f062cb&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvV2hpdGU&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680707,
   "web_search_url": "https://duckduckgo.com/?q=White+Cap+Supply+Holdings+company+careers+benefits",
