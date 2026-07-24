@@ -15092,11 +15092,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -15108,6 +15110,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
+  "last_attempt_at": 1784877161,
   "last_evidence_at": 1784678212,
   "name": "Amazon.com Services LLC - A57",
   "pace_of_work": {
@@ -15120,6 +15123,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784877281,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -15173,7 +15177,7 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678212,
   "web_search_url": "https://duckduckgo.com/?q=Amazon.com+Services+LLC+-+A57+company+careers+benefits",
@@ -15610,7 +15614,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -15628,7 +15632,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
-  "last_attempt_at": 1784877015,
+  "last_attempt_at": 1784877161,
   "last_evidence_at": 1784678205,
   "name": "Amazon Web Services, Inc.",
   "pace_of_work": {
@@ -15641,7 +15645,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784877135,
+  "retry_after": 1784877401,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88803,43 +88807,101 @@
  },
  "discord": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "1b729873d8"
+   ],
+   "value": "High. The company explicitly utilizes multidisciplinary squads and pairs software engineers with Machine Learning engineers to solve complex, global-scale signal optimization problems."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "1b729873d8",
+    "e7d3e4e9ed"
+   ],
+   "value": "Freemium model. The application is free to use, with revenue generated from premium user subscriptions (Nitro), server boosts, and digital goods."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "1b729873d8"
+   ],
+   "value": "Gamer-centric, community-driven, and highly focused on making hanging out fun. The engineering culture is cross-functional, requiring seamless collaboration across client, infrastructure, and machine learning teams."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "1b729873d8"
+   ],
+   "value": "Gamers and online communities, ranging from small friend groups to massive public servers, who use the platform to coordinate and socialize before, during, and after playing games."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $180,000 - $220,000 total compensation (base + equity). As a top-tier tech firm, Discord is expected to offer highly competitive new-grad packages that align with elite market rates."
   },
   "evidence_sha": "e3b2f5ef27e09997",
+  "generated_at": 1784877161,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "1b729873d8"
+   ],
+   "value": "Technology / Social Media / Gaming"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
+   "value": "Prepare for technical interviews heavily centered on machine learning optimization, signal quality, and data infrastructure at scale. Be ready to discuss how to balance a fast, innovative engineering culture with strict boundaries to maintain personal time and avoid burnout."
   },
-  "last_attempt_at": 1784877015,
+  "last_attempt_at": 1784877161,
   "last_evidence_at": 1784737480,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "0ba66d07c4",
+    "48822c8041",
+    "e7d3e4e9ed"
+   ],
+   "value": "Public pages indicate a web presence and downloads for users globally; specific primary office locations were not detailed in the provided sources, but the company is known to operate in major US tech hubs."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "1b729873d8"
+   ],
+   "value": "To make it easier and more fun for people to hang out before, during, and after playing games, playing a uniquely important role in the future of gaming."
+  },
   "name": "Discord",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and innovative. Engineers operate in multidisciplinary squads focused on high-signal, high-value outcomes, indicating a dynamic environment that pushes for quick technical iteration rather than slow bureaucracy."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "1b729873d8",
+    "48822c8041"
+   ],
+   "value": "The core product is the Discord app, available on desktop and mobile, which features voice, video, text chatting, and community servers. The company also monetizes via Discord Nitro (premium subscriptions) and offers a downloadable client for gamers."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of flexible paid time off annually, in addition to standard holidays and company-wide rest periods."
   },
-  "retry_after": 1784877135,
+  "refresh_after": 1790061161,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88849,7 +88911,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely offers guaranteed shutdowns (such as a winter holiday break) to ensure company-wide rest and prevent burnout, though exact dates are not specified in public sources."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Late-stage private company (Post-IPO readiness/Hypergrowth). Surfaces new graduate data science roles for the 2027 cycle."
   },
   "sources": [
    {
@@ -88903,14 +88972,43 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "17f8c9c419",
+    "1b729873d8"
+   ],
+   "value": "Lists new graduate data science and software engineering positions for the 2027 cycle, suggesting structured entry-level hiring pipelines, though specific visa sponsorship details are not confirmed in the sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "1b729873d8",
+    "0ba66d07c4"
+   ],
+   "value": "Discord is a popular communication platform that allows people to talk, chat, and hang out, primarily centered around gaming communities. It makes money through premium subscription tiers like Nitro, which offer enhanced features, alongside revenue from Server Boosts and a platform-wide marketplace."
+  },
+  "synthesized_evidence_sha": "e3b2f5ef27e09997",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "1b729873d8"
+   ],
+   "value": "Multidisciplinary engineering squads, such as the Notifications squad, work across client experiences, infrastructure, and machine learning to optimize global signals. Software and ML engineers pair to ensure notifications sent are high signal and high value."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678204,
   "web_search_url": "https://duckduckgo.com/?q=Discord+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Discord offers a mission-driven environment centered on gaming and community that pairs well with personal technical growth. It provides elite compensation and a fast-paced, innovative tech culture that avoids slow bureaucracy, while publicly committing to a work environment that respects work-life balance and sane hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. The company is known for respecting personal time through sane hours and avoiding toxic, high-burnout expectations, though specific policy details are not published in the provided sources."
   }
  },
  "dish tv": {
@@ -95401,41 +95499,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High. While not exclusively an AI-first company, contributions to the core search and analytics engine are highly respected across the data engineering and broader tech community."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Open-core distribution with premium paid tiers. Revenue is generated through Elastic Cloud subscriptions, managed services, and enterprise-tier licensing."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven and open-source-rooted, with a strong emphasis on authenticity, distributed collaboration, and continuous technical learning."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Major enterprises across tech, finance, healthcare, and retail including thousands of organizations worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $160,000 - $195,000 total target compensation (base salary plus equity/RSUs and annual bonus) for high-cost-of-living US tech hubs."
   },
   "evidence_sha": "82e49997b1e760d3",
+  "generated_at": 1784877161,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Software / Infrastructure / Data & Analytics"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Prepare to demonstrate strong distributed systems fundamentals and algorithmic problem-solving skills. Highlight an ability to thrive in a fast-paced open-core engineering culture by balancing rapid technical iteration with core work-life boundaries."
   },
-  "last_attempt_at": 1784876869,
+  "last_attempt_at": 1784877161,
   "last_evidence_at": 1784826849,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Global footprint with significant tech hubs across North America, Europe, and Asia, operating on a hybrid work model."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "To help organizations use data to solve problems that matter, making search, security, and observability solutions accessible and impactful."
+  },
   "name": "Elastic",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and innovative, driven by an open-source development cycle and continuous product iteration, while generally avoiding the toxic burnout culture found in pure AI startups."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Elastic Stack (Elasticsearch, Kibana, Beats, Logstash), Elastic Cloud, and solutions for enterprise search, observability, and security."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of flexible paid time off, in addition to standard public holidays."
   },
-  "retry_after": 1784877109,
+  "refresh_after": 1790061161,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -95445,7 +95593,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No widespread guaranteed company-wide shutdowns found, though the company supports flexible holidays, paid bereavement, and parental leave."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Publicly traded large enterprise (NYSE: ESTC)."
   },
   "sources": [
    {
@@ -95479,14 +95634,41 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Sponsorship availability varies by role and region but corporate technical roles frequently support visa sponsorships for top talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Elastic is a public software company that develops search, observability, and security solutions built on the open-source Elasticsearch platform. It makes money primarily through subscription-based cloud services and enterprise licenses, offering premium machine learning and data analytics features."
+  },
+  "synthesized_evidence_sha": "82e49997b1e760d3",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Software development involving distributed systems, search engine architecture, data ingestion, and cloud infrastructure for Elastic's major products."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784826849,
   "web_search_url": "https://duckduckgo.com/?q=Elastic+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Working on a foundational high-scale distributed system like Elasticsearch offers top-tier technical learning and a prestigious resume pedigree. The purpose-driven open-core environment provides a fast-paced, innovative culture focused on impactful data solutions without the slow bureaucracy typical of legacy tech giants."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Known for respecting personal time with sane engineering hours and remote flexibility, avoiding the extreme burnout associated with high-turnover environments."
   }
  },
  "elbit systems of america": {
@@ -237021,41 +237203,92 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High scientific prestige in the life-science community due to their proprietary genetic databases, though recognized slightly less in mainstream big-tech circles."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "3ae4f2e9c6",
+    "68fa298d5a"
+   ],
+   "value": "Pharmaceutical sales of proprietary biologic drugs combined with strategic R&D partnerships and commercialization agreements with larger global pharmaceutical companies."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Deeply intellectual, mission-driven, and firmly grounded in the scientific method, heavily prioritizing curiosity, academic rigor, and patient impact over pure software metrics."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "3d55b489e0"
+   ],
+   "value": "Healthcare providers, hospitals, pharmacies, and ultimately patients suffering from severe immunological, oncological, and ophthalmic conditions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $120,000 to $150,000 base salary, heavily supplemented by substantial performance bonuses and equity grants typical of elite biopharma."
   },
   "evidence_sha": "e985b0dfccc4b548",
+  "generated_at": 1784877161,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "68fa298d5a"
+   ],
+   "value": "Biotechnology & Pharmaceuticals"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Be prepared to discuss exactly how you will apply rigorous AI methodologies to messy, highly complex biological and genomic data pipelines rather than purely classical software metrics. Emphasize your desire for accelerated technical learning and highlight how you naturally respect work-life balance and sane personal boundaries, avoiding high-burnout habits that clash with their grounded, research-driven pharmaceutical culture."
   },
-  "last_attempt_at": 1784877015,
+  "last_attempt_at": 1784877161,
   "last_evidence_at": 1784729018,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "3d55b489e0"
+   ],
+   "value": "Headquartered in Westchester County, New York (Tarrytown), with additional specialized research and manufacturing facilities scattered across the broader New York area."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "68fa298d5a"
+   ],
+   "value": "To discover, invent, and develop novel medicines for patients with serious diseases."
+  },
   "name": "Regeneron Pharmaceuticals",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Dynamic and highly innovative for a large pharmaceutical entity, but generally steady, methodical, and deeply rooted in the slower, rigorous scientific method."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "3ae4f2e9c6"
+   ],
+   "value": "Liberalized Redirect URL Context: Regeneron's core products include FDA-approved specialty medicines such as Dupixent (for asthma and eczema), Eylea (for eye diseases), and Praluent (for high cholesterol)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20 to 25 days of flexible paid time off per year, in addition to standard company observed holidays."
   },
-  "retry_after": 1784877135,
+  "refresh_after": 1790061161,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -237065,7 +237298,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Holidays may include partial or full company-wide operational shutdowns during major summer and late-December holiday periods."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "68fa298d5a"
+   ],
+   "value": "Established large-cap public pharmaceutical corporation (Ticker: REGN) with a massive current global commercial footprint and extensive ongoing late-stage pipeline."
   },
   "sources": [
    {
@@ -237099,14 +237339,40 @@
     "url": "https://www.bing.com/ck/a?!&&p=a6a84b78b5d438b8c32d39dca79ae6430fd80633b75f422b619562a90b4f2ef3JmltdHM9MTc4NDY3ODQwMA&ptn=3&ver=2&hsh=4&fclid=2431a522-602e-6284-1f25-b2bc61456385&u=a1aHR0cHM6Ly93d3cucmVnZW5lcm9uLmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Standard corporate sponsorship policies typical of large-cap US biotechnology firms, generally supporting H-1B visas for specialized technical and scientific positions."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "3ae4f2e9c6"
+   ],
+   "value": "Regeneron Pharmaceuticals is a leading biotechnology company that invents, manufactures, and commercializes life-transforming medicines for serious diseases. It generates revenue primarily through the sales and commercialization of its proprietary marketed therapies and through collaboration agreements with other major pharmaceutical companies."
+  },
+  "synthesized_evidence_sha": "e985b0dfccc4b548",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "3ae4f2e9c6",
+    "3d55b489e0"
+   ],
+   "value": "Highly specialized computational biology, bioinformatics, and predictive data science applied directly to genomics, target discovery, and pre-clinical validation using proprietary genetic databases."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784729018,
   "web_search_url": "https://duckduckgo.com/?q=Regeneron+Pharmaceuticals+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers a mission-driven data science environment where your core AI work directly accelerates the discovery of potentially life-saving therapeutics. While a large biopharma firm can carry some bureaucratic inertia, Regeneron possesses a famously deep R&D engine and scientific prestige that far exceeds basic tech stack recognition, providing elite compensation and highly sane work hours compared to high-burnout tech giants."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Excellent. Well-known for supporting sustainable working hours and avoiding the high-burnout, toxic environments often found in pure big-tech."
   }
  },
  "rehlko": {
@@ -298444,41 +298710,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Not a top-tier tech prestige employer for AI/DS. Highly respected for operations and analytics, but not a destination for elite, cutting-edge AI research."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "32885e1ab0"
+   ],
+   "value": "Manufactures branded consumer products and generates revenue through wholesale and retail sales globally."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, sustainability-focused corporate environment. Focuses on inclusivity and traditional business values rather than high-burnout tech culture."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "32885e1ab0",
+    "5e8d2a0e81"
+   ],
+   "value": "End-consumers purchasing everyday goods, accessed through global retail distribution channels."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000 - $110,000. Generally lower than top-tier tech companies, but compensated by strong benefits and stability."
   },
   "evidence_sha": "6b98d13582cfe38a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784877161,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784876869,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "6ee3d260d5"
+   ],
+   "value": "Consumer Goods / FMCG (Fast-Moving Consumer Goods)."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "32885e1ab0"
+   ],
+   "value": "Probe deeply into the specific team's organizational structure and tech stack to ensure it isn't bogged down by corporate bureaucracy and slow IT processes. Ask about compensation bands, AI project funding, and internal mobility to verify if the role will actually accelerate your technical growth without compromising the company's famous work-life balance."
+  },
+  "last_attempt_at": 1784877161,
   "last_evidence_at": 1784776551,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "6ee3d260d5"
+   ],
+   "value": "Global presence spanning multiple countries and regions."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "5e8d2a0e81"
+   ],
+   "value": "Focused on sustainable living and delivering consumer goods that improve everyday life."
+  },
   "name": "Unilever",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow. Large, established FMCG companies typically have methodical decision-making and corporate processes rather than a fast-paced tech environment."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "6ee3d260d5",
+    "32885e1ab0"
+   ],
+   "value": "Produces a wide range of consumer goods including beauty, personal care, home care, and food products. Manages a broad portfolio of iconic global brands."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25+ days. Large global companies typically offer generous PTO packages."
   },
-  "retry_after": 1784877109,
+  "refresh_after": 1790061161,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -298488,7 +298808,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None found in research, though typical corporate holidays apply."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "6ee3d260d5"
+   ],
+   "value": "Large, established multinational public corporation."
   },
   "sources": [
    {
@@ -298522,14 +298849,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=065930f4700c54ca17e2320a91843afe8a122bf91c4024580052b431574b2f20JmltdHM9MTc4NDY3ODQwMA&ptn=3&ver=2&hsh=4&fclid=387eb4c8-aae9-64cb-2bbf-a357abc56567&u=a1aHR0cHM6Ly93d3cudW5pbGV2ZXIuY29tLw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "6ee3d260d5"
+   ],
+   "value": "Sponsorship details are not explicitly mentioned in the provided sources, but large multinationals typically have established visa frameworks for specialized roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "6ee3d260d5",
+    "32885e1ab0",
+    "5e8d2a0e81"
+   ],
+   "value": "Unilever is a multinational consumer goods company that produces and sells everyday products across beauty, personal care, home care, and food categories. It makes money by manufacturing these branded goods and selling them globally through retail channels to end consumers."
+  },
+  "synthesized_evidence_sha": "6b98d13582cfe38a",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "32885e1ab0"
+   ],
+   "value": "Likely involves supply chain optimization, consumer analytics, and marketing technology, though specific AI/DS team structures are not detailed in the sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784776551,
   "web_search_url": "https://duckduckgo.com/?q=Unilever+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "6ee3d260d5"
+   ],
+   "value": "As a massive FMCG company, Unilever offers incredibly stable, mission-driven work-life balance, but may struggle to provide the elite new-grad pay, pure technical prestige, and fast, innovative tech culture you desire compared to top-tier tech firms. Large corporate bureaucracy often moves slower than cutting-edge tech startups, which might conflict with your priority for accelerated technical learning."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: High. FMCG companies generally offer sane hours and prioritize work-life balance over aggressive tech push."
   }
  },
  "unisity llc": {
@@ -305760,11 +306118,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -305776,6 +306136,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784877161,
   "last_evidence_at": 1784680811,
   "name": "Vanderbilt Health",
   "pace_of_work": {
@@ -305788,6 +306149,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784877281,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -305831,7 +306193,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=50594e3879280d5a13e80b5c153e42a8ae63c6b9cf12fde94e9e98c93446c1d9JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=20894165-bbcb-6a0b-2216-56fbbabc6b12&u=a1aHR0cHM6Ly93d3cudmFuZGVyYmlsdC5lZHUv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680811,
   "web_search_url": "https://duckduckgo.com/?q=Vanderbilt+Health+company+careers+benefits",
@@ -310920,11 +311282,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -310936,6 +311300,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784877161,
   "last_evidence_at": 1784678104,
   "name": "VITAS Healthcare",
   "pace_of_work": {
@@ -310948,6 +311313,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784877281,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -310991,7 +311357,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=af944ed008f3b5248f1c0f655327d80803115c98d5c33a95fb3c6aa572c51e41JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2fa41502-bc51-61fa-2ab0-029fbd806008&u=a1aHR0cHM6Ly93d3cubWF0dHJlc3NmaXJtLmNvbS9zaG9wL2Nvb2xpbmctaHlicmlkLXBpbGxvd3M&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678104,
   "web_search_url": "https://duckduckgo.com/?q=VITAS+Healthcare+company+careers+benefits",
