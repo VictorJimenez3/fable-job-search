@@ -24,7 +24,7 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
-      - name: Apply platform action (track / applied → Notion)
+      - name: Apply platform action (tracking, Notion, or owner-requested company research)
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           TRACKER_BACKEND: ${{ vars.TRACKER_BACKEND }}
@@ -33,6 +33,21 @@ jobs:
           GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
           GOOGLE_SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
           GOOGLE_SHEET_TAB: ${{ vars.GOOGLE_SHEET_TAB }}
+          # The research action is owner-only at the Vercel boundary; hosted
+          # model credentials remain workflow secrets and are never sent to a
+          # visitor's browser.
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+          NVIDIA_API_BASE_URL: ${{ vars.NVIDIA_API_BASE_URL }}
+          NVIDIA_GLM_52_API_KEY: ${{ secrets.NVIDIA_GLM_52_API_KEY }}
+          NVIDIA_GLM_52_MODEL: ${{ vars.NVIDIA_GLM_52_MODEL }}
+          NVIDIA_DEEPSEEK_V4_PRO_API_KEY: ${{ secrets.NVIDIA_DEEPSEEK_V4_PRO_API_KEY }}
+          NVIDIA_DEEPSEEK_V4_PRO_MODEL: ${{ vars.NVIDIA_DEEPSEEK_V4_PRO_MODEL }}
+          NVIDIA_NEMOTRON_3_ULTRA_550B_A55B_API_KEY: ${{ secrets.NVIDIA_NEMOTRON_3_ULTRA_550B_A55B_API_KEY }}
+          NVIDIA_NEMOTRON_3_ULTRA_550B_A55B_MODEL: ${{ vars.NVIDIA_NEMOTRON_3_ULTRA_550B_A55B_MODEL }}
+          NVIDIA_KIMI_K2_6_API_KEY: ${{ secrets.NVIDIA_KIMI_K2_6_API_KEY }}
+          NVIDIA_KIMI_K2_6_MODEL: ${{ vars.NVIDIA_KIMI_K2_6_MODEL }}
         run: python -m radar.main web-action
       - name: Commit state
         run: |

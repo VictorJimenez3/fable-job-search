@@ -153,6 +153,12 @@ Before changing the radar, read these in order:
   Local Ollama (`qwen3:30b`) is supported for synthesis; malformed/truncated
   output is rejected and deterministic crawling continues. Non-public profile
   values are explicitly labeled estimated.
+- **On-demand company research (DECISIONS #65):** The signed-in owner sees
+  **research company now** in a job's Company drawer. It dispatches one job ID
+  to `web-actions.yml`, which receives hosted-provider secrets only in GitHub
+  Actions, forces public source refresh, then synthesizes one dossier. The UI
+  is asynchronous (normally 1–3 minutes including Actions startup) and is not
+  available to visitors, Pages/PAT write paths, or non-owner OAuth sessions.
 - **Tracker selection/readback (DECISIONS #40):** Notion now pulls manual stage
   changes by owned page ID. `TRACKER_BACKEND=google_sheets` selects the
   OAuth-refresh-token Sheets adapter (stable ID upsert + stage readback); setup

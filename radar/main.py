@@ -648,7 +648,7 @@ def web_action() -> int:
     with open(path) as f:
         payload = _json.load(f).get("client_payload") or {}
     action = payload.get("action")
-    if action not in {"track", "applied", "untrack", "manual-add"}:
+    if action not in {"track", "applied", "untrack", "manual-add", "research-company"}:
         print(f"web-action: unknown action {action!r}")
         return 0
     jobs = state.jobs()
@@ -666,6 +666,25 @@ def web_action() -> int:
         state.save("shortlist.json", shortlist)
         state.save("untracked.json", sorted(untracked))
         print(f"web-action: untrack {payload.get('company')} — changed={changed}")
+        return 0
+    if action == "research-company":
+        if job is None:
+            print(f"web-action: research job {payload.get('id')!r} not found")
+            return 0
+        # This action deliberately runs only in the owner-authorized workflow.
+        # The browser dispatches a job ID; provider credentials stay in GitHub
+        # Actions secrets and no public visitor can spend the research budget.
+        from . import company_research, llm
+        records = company_research.load()
+        sources_changed = company_research.prepare_external_sources(
+            records, job["company"], [job.get("url", "")],
+            [job.get("source_url", "")], job.get("sector", ""), force=True)
+        company_research.save(records)
+        synthesized = company_research.enrich(
+            {job["id"]: job}, applied, state.load("web_state.json", {}), limit=1)
+        llm.save_usage()
+        print(f"web-action: research-company {job['company']} — "
+              f"sources_changed={sources_changed}, synthesized={synthesized}")
         return 0
     if action == "manual-add":
         company = str(payload.get("company") or "").strip()[:200]

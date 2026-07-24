@@ -228,7 +228,7 @@ def _profile_defaults(record: dict, sector: str = "") -> None:
 
 def prepare_external_sources(records: dict, company: str, job_urls: list[str],
                              source_urls: list[str] | None = None,
-                             sector: str = "") -> bool:
+                             sector: str = "", force: bool = False) -> bool:
     """Research company/about/careers pages before asking the model to synthesize."""
     record = records.setdefault(norm(company), {
         "schema_v": SCHEMA_V, "name": company, "aliases": [],
@@ -242,7 +242,7 @@ def prepare_external_sources(records: dict, company: str, job_urls: list[str],
                 title=f"Discovery source for {company}",
                 text=f"This company posting was surfaced through the monitored source: {source_url}.",
                 kind="discovery_feed", retrieved_at=now)
-    if record.get("web_researched_at", 0) > now - 30 * 86400:
+    if not force and record.get("web_researched_at", 0) > now - 30 * 86400:
         return False
     links: list[str] = []
     for url in (source_urls or []) + job_urls:

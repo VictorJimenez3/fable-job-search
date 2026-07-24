@@ -890,3 +890,18 @@ records, with per-company exponential backoff capped at six hours. New evidence
 clears that wait immediately. Backfill checkpoints now report ready, pending,
 retry-waiting, and error counts, so a temporary provider outage cannot look
 like finished research or hammer one broken endpoint.
+
+## 65. On-demand company research is owner-only and asynchronous (2026-07-24)
+
+The Company drawer lets Victor, while signed in through the platform's sealed
+owner OAuth session, request a fresh research pass for that employer. The
+Vercel endpoint only dispatches a stable job ID after the existing owner check;
+the GitHub Actions worker receives provider credentials as secrets, captures
+fresh public company/careers/benefits evidence, and synthesizes one dossier.
+Visitors, Pages users, and browser PAT flows have no button and cannot invoke
+the action, so no public page can consume Victor's API quota.
+
+The request returns immediately and the drawer tells the owner to refresh in
+roughly 1–3 minutes. This includes Actions queue/startup plus the normally
+20–75-second hosted synthesis. The workflow records retryable provider failure
+rather than making the browser wait or claiming a result it did not obtain.

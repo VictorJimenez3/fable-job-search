@@ -133,6 +133,12 @@ filtered separately. This is an application-research cue (for example, a
 non-campus AI Engineer role), never an alert or a substitute for verified
 new-grad eligibility.
 
+When signed in as the radar owner, the **Company** tab also offers **research
+company now**. It runs a fresh public-source pass plus one hosted-model
+synthesis for that employer; the usual result time is **1–3 minutes** including
+workflow startup. This control is intentionally unavailable to visitors and
+does not expose or spend provider credentials in the browser.
+
 Scoring is published in three places: the live Vercel dashboard reads
 `state/jobs.json`, the generated [dashboard](docs/DASHBOARD.md) lists the current
 score, and each job's **Why it scored** drawer shows the auditable equation

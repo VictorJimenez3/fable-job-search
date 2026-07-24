@@ -110,6 +110,30 @@ def test_web_action_track_records_saved(tmp_state, tmp_path, monkeypatch):
     assert state.applied()[0]["stage"] == "applied"
 
 
+def test_web_action_company_research_is_one_job_owner_workflow(tmp_state, tmp_path, monkeypatch):
+    from radar.main import web_action
+    state.save("jobs.json", {JOB["id"]: JOB})
+    event = tmp_path / "dispatch.json"
+    event.write_text(json.dumps({"client_payload": {"action": "research-company", "id": JOB["id"]}}))
+    monkeypatch.setenv("GITHUB_EVENT_PATH", str(event))
+    calls = {}
+    monkeypatch.setattr("radar.company_research.load", lambda: {})
+    monkeypatch.setattr("radar.company_research.save", lambda records: calls.setdefault("saved", records))
+    monkeypatch.setattr("radar.company_research.prepare_external_sources",
+                        lambda records, company, urls, source_urls, sector, force=False:
+                        calls.update(company=company, urls=urls, source_urls=source_urls,
+                                     sector=sector, force=force) or True)
+    monkeypatch.setattr("radar.company_research.enrich",
+                        lambda jobs, applied, web, limit: calls.update(jobs=jobs, limit=limit) or 1)
+    monkeypatch.setattr("radar.llm.save_usage", lambda: calls.setdefault("usage", True))
+    assert web_action() == 0
+    assert calls["company"] == JOB["company"]
+    assert calls["force"] is True
+    assert calls["limit"] == 1
+    assert calls["jobs"] == {JOB["id"]: JOB}
+    assert calls["usage"] is True
+
+
 def test_web_action_manual_add_creates_saved_dashboard_record(tmp_state, tmp_path, monkeypatch):
     from radar.main import web_action
     monkeypatch.delenv("NOTION_TOKEN", raising=False)
