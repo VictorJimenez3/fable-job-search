@@ -94387,37 +94387,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier. Lacks the elite prestige of FAANG or top-tier tech finance firms, but provides solid enterprise scale."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "4782156548"
+   ],
+   "value": "B2B SaaS and payment processing. Generates revenue through transaction fees, subscription fees for software platforms, and foreign exchange margins."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "42dabad998"
+   ],
+   "value": "Estimated: Corporate and professional, emphasizing collaboration via SharePoint and Microsoft 365 tools."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "4782156548"
+   ],
+   "value": "Businesses ranging from small operations to large enterprises requiring expense management and global payment solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k-$110k total compensation, below top-tier tech but competitive for regional corporate fintech roles."
   },
   "evidence_sha": "8cf403a93fef68cf",
+  "generated_at": 1784898117,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b7d217a6fb"
+   ],
+   "value": "Financial Software & Payments"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Assess how the team balances modern AI/DS modeling with corporate compliance, and ask about promotion velocity for new grads. Probe work-life balance by asking about on-call expectations and whether guaranteed shutdowns exist, to ensure the enterprise environment meets standards for sane hours and avoiding toxic burnout."
   },
+  "last_attempt_at": 1784898117,
   "last_evidence_at": 1784678864,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "4782156548"
+   ],
+   "value": "Headquarters in Atlanta, Georgia with global offices and remote work capabilities."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "4782156548"
+   ],
+   "value": "To provide companies with payment systems that save time and money while streamlining their financial operations."
+  },
   "name": "Corpay",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. Typical of an established public fintech, meaning processes are well-defined but can sometimes feel slow or bureaucratic."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "4782156548"
+   ],
+   "value": "Suite of payment solutions including fleet cards, cross-border payments, accounts payable automation, and supplier payment management software."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard PTO, standard for corporate finance sector."
   },
+  "refresh_after": 1790082117,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -94427,7 +94483,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns commonly found in high-tech environments, though standard public holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "4782156548"
+   ],
+   "value": "Publicly traded subsidiary of FLEETCOR (now operating under the Corpay brand)."
   },
   "sources": [
    {
@@ -94461,14 +94524,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=ffe61156d11ffe51facb9cc702f77fd40437f88779289dcc718d49793767e12cJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=3109bc3e-77f3-65b1-30f3-aba076836467&u=a1aHR0cHM6Ly9zdXBwb3J0Lm1pY3Jvc29mdC5jb20vZW4tdXMvc2hhcmVwb2ludC9nZXQtc3RhcnRlZC13aXRoLXNoYXJlcG9pbnQvc2lnbi1pbi10by1zaGFyZXBvaW50&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "b7d217a6fb"
+   ],
+   "value": "Global presence suggests potential for visa sponsorship, though specific policies for new grads are not explicitly confirmed in available materials."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "b7d217a6fb",
+    "4782156548"
+   ],
+   "value": "Corpay is a global corporate payments company that helps businesses manage their fleet-related expenses, cross-border payments, and supplier payments. It makes money by processing transaction volumes and charging fees for its payment and spend management software."
+  },
+  "synthesized_evidence_sha": "8cf403a93fef68cf",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "b7d217a6fb",
+    "4782156548"
+   ],
+   "value": "Developing cloud-based spend management platforms, integrating cross-border payment APIs, and building automation within the Microsoft 365 enterprise ecosystem."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678864,
   "web_search_url": "https://duckduckgo.com/?q=Corpay+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a large corporate payments provider, Corpay offers stable hours and a strong enterprise platform for learning applied data science and AI at scale. However, candidates seeking elite new-grad prestige, top-tier tech pay, and a fast-paced, innovative tech culture may find the pace and bureaucracy inherent to an established public fintech to be a mismatch with their goals."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Fintech operations generally maintain sane hours, though specific team on-call rotations may vary."
   }
  },
  "corvel corporation": {
@@ -102224,7 +102316,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -102242,7 +102334,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784897895,
+  "last_attempt_at": 1784898117,
   "last_evidence_at": 1784677606,
   "name": "Dassault Systèmes",
   "pace_of_work": {
@@ -102255,7 +102347,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784898015,
+  "retry_after": 1784898357,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -180672,38 +180764,105 @@
  "illumio": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "da4e5a641b",
+    "384485cdd0"
+   ],
+   "value": "Tier 2: Strong applied AI/ML team building the AI Security Graph for breach containment; recognized in cybersecurity but not a primary AI research lab."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "da4e5a641b",
+    "384485cdd0"
+   ],
+   "value": "Subscription-based software (SaaS and on-premises) licensing for its Zero Trust Segmentation platform, with associated professional services and support."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "da4e5a641b",
+    "384485cdd0"
+   ],
+   "value": "Engineering-led, independent, and responsibility-driven with 'thought leadership' emphasis; agile sales and engineering collaboration; mission-focused on stopping breaches."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "da4e5a641b",
+    "384485cdd0"
+   ],
+   "value": "Enterprise organizations operating hybrid multi-cloud environments that need to contain breaches and implement Zero Trust Segmentation."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140k-$170k base + equity (RSUs) + bonus; total comp ~$180k-$230k for software engineering/AI roles in Bay Area, competitive with top security unicorns."
   },
   "evidence_sha": "255891764465cf9b",
+  "generated_at": 1784898117,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "da4e5a641b",
+    "384485cdd0"
+   ],
+   "value": "Cybersecurity / Cloud Security / Zero Trust Segmentation"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "da4e5a641b"
+   ],
+   "value": "Expect deep technical interviews on distributed systems, cloud security, and possibly ML/AI for the Security Graph. Prepare for system design around breach containment and Zero Trust architectures. Behavioral focus on ownership, thought leadership, and collaboration with product teams. Ask about on-call rotations, shutdown policies, and how 'independence and responsibility' translates to daily workflow and learning opportunities."
+  },
+  "last_attempt_at": 1784898117,
+  "last_evidence_at": 1784680312,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Headquartered in Sunnyvale, CA with offices in major US tech hubs and international locations; supports remote/hybrid work."
   },
-  "last_evidence_at": 1784680312,
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "384485cdd0"
+   ],
+   "value": "To protect organizations by stopping the spread of breaches through Zero Trust Segmentation, making meaningful impact on customers' businesses."
+  },
   "name": "Illumio",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "da4e5a641b",
+    "384485cdd0"
+   ],
+   "value": "Estimated: Fast-paced, agile engineering culture with emphasis on independence and rapid iteration; typical for well-funded security unicorn."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "da4e5a641b",
+    "384485cdd0"
+   ],
+   "value": "Illumio Core (Zero Trust Segmentation), Illumio CloudSecure, Illumio Endpoint, and the AI Security Graph that powers breach containment across hybrid multi-cloud environments."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays; unlimited PTO policies common in similar-stage tech companies but not confirmed."
   },
+  "refresh_after": 1790082117,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -180713,7 +180872,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns publicly documented; some teams may observe seasonal slowdowns but not policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Late-stage private company (unicorn) with 500-1,000 employees, backed by top-tier VCs including General Catalyst and Accel."
   },
   "sources": [
    {
@@ -180777,14 +180941,45 @@
     "url": "https://jobs.ashbyhq.com/illumio/82487cde-94a9-4d19-8436-1cf180609ab1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and green cards for technical roles given size and industry norms; specific policies not publicly documented."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "da4e5a641b",
+    "384485cdd0"
+   ],
+   "value": "Illumio provides a Zero Trust Segmentation platform powered by its AI Security Graph to contain breaches across hybrid multi-cloud environments. The company sells subscription-based software and services to enterprises seeking to stop lateral movement of attacks."
+  },
+  "synthesized_evidence_sha": "255891764465cf9b",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "da4e5a641b"
+   ],
+   "value": "Cloud security, distributed systems, AI/ML (AI Security Graph), breach containment, Zero Trust networking, hybrid multi-cloud environments, early developer testing and integration testing practices."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680312,
   "web_search_url": "https://duckduckgo.com/?q=Illumio+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "da4e5a641b",
+    "384485cdd0"
+   ],
+   "value": "Illumio offers a high-prestige AI/security role at a well-funded unicorn building a differentiated AI Security Graph for breach containment. The engineering culture emphasizes independence, thought leadership, and robust testing practices, suggesting strong technical growth. Public messaging highlights agile teams and meaningful customer impact, aligning with a mission-driven, fast-paced but potentially sustainable environment."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "da4e5a641b"
+   ],
+   "value": "Estimated: 3.5/5 – Engineering culture values responsibility and quality testing, which can support sustainable practices, but security incidents and unicorn growth may drive periodic intensity."
   }
  },
  "ima financial group": {
@@ -270953,42 +271148,108 @@
  "penn state university": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "c4934a0ad5",
+    "b445d5adec",
+    "7ca7bc809b"
+   ],
+   "value": "Tier 2: Strong R1 reputation, dedicated ICDS institute, top-50 CS graduate program, but not a primary AI talent magnet like Stanford/MIT/CMU/FAIR/DeepMind."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "c4934a0ad5",
+    "b445d5adec",
+    "7ca7bc809b"
+   ],
+   "value": "Public university funded by state appropriations, tuition and fees, research grants and contracts, medical practice revenue (Penn State Health), philanthropy, and auxiliary enterprises (housing, athletics)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collegial, mission-driven, bureaucratic. Shared governance (faculty senate, staff councils) shapes policy. DEI and land-grant service ethos prominent. Silos between colleges/campuses can hinder cross-unit collaboration."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "c4934a0ad5",
+    "b445d5adec",
+    "7ca7bc809b"
+   ],
+   "value": "Students (undergraduate, graduate, professional, online); research sponsors (federal agencies, industry, foundations); patients (Penn State Health); Commonwealth of Pennsylvania citizens via extension and outreach."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $65k–$85k base for staff research/data scientist roles (Penn State staff pay bands); $55k–$70k for postdocs; faculty starts ~$95k–$120k (9-month). No RSU/bonus; pension (SERS/PSERS) and tuition remission add ~30% value."
   },
   "evidence_sha": "13cb396f57daa9a0",
+  "generated_at": 1784898117,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c4934a0ad5",
+    "b445d5adec",
+    "7ca7bc809b"
+   ],
+   "value": "Higher Education / Research University (Public, Land-Grant, R1)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Ask: (1) Which unit/lab — ICDS, academic department, or Penn State Health — and what is its publishing vs. deployment balance? (2) Grant funding horizon and renewal rate for the specific project. (3) On-call/clinical rotation expectations if in Health. (4) Remote/hybrid policy for the specific role (varies by college). (5) Career ladder: research-track vs. staff-scientist vs. faculty pathways."
   },
-  "last_attempt_at": 1784897083,
+  "last_attempt_at": 1784898117,
   "last_evidence_at": 1784677403,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "c4934a0ad5",
+    "b445d5adec",
+    "7ca7bc809b"
+   ],
+   "value": "Main campus: University Park, PA; 23 additional Commonwealth Campuses across PA; Penn State Health locations (Hershey, etc.); World Campus (fully online); global research partnerships."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "c4934a0ad5",
+    "b445d5adec",
+    "7ca7bc809b"
+   ],
+   "value": "Teaching, research, and public service to support the citizens of Pennsylvania and beyond; land-grant mission of accessible education, practical research, and community engagement."
+  },
   "name": "Penn State University",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate to slow: Academic calendar drives rhythms; grant cycles (1-5 years) set project tempo; administrative processes (IRB, procurement, HR) add latency. Some health-data teams move faster due to clinical urgency."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "c4934a0ad5",
+    "b445d5adec",
+    "7ca7bc809b"
+   ],
+   "value": "Undergraduate and graduate education across 24 campuses; research grants and contracts; medical services through Penn State Health; continuing education and online programs (World Campus); agricultural extension services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 22 vacation + 12 sick + 11-14 university holidays + 5 personal days (varies by classification and years of service). Faculty have academic-year flexibility but no formal PTO bank."
   },
-  "retry_after": 1784898043,
+  "refresh_after": 1790082117,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -270998,7 +271259,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Winter break (approx. Dec 24 – Jan 1) and summer reduced operations (varies by unit) are typical; not guaranteed 'shutdowns' for all staff. Clinical/research operations continue year-round."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "c4934a0ad5",
+    "b445d5adec",
+    "7ca7bc809b"
+   ],
+   "value": "Large, mature public research university: ~90,000 students system-wide, ~20,000 faculty/staff, $7B+ annual budget, R1 Carnegie classification."
   },
   "sources": [
    {
@@ -271032,14 +271302,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=4b2dbd89b7b22478649ad8856fcd4a952e654b8d8fb934f3e415ede2e6d2449bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1007e481-0202-6d0a-33e8-f31c033a6cfd&u=a1aHR0cHM6Ly93d3cudXBlbm4uZWR1Lw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "H-1B and O-1 sponsor for faculty/research roles; F-1/OPT/STEM-OPT hiring for new grads; J-1 scholars common in research. Cap-exempt H-1B for university positions. Green card sponsorship for tenure-track and long-term research staff."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "c4934a0ad5",
+    "b445d5adec",
+    "7ca7bc809b"
+   ],
+   "value": "Pennsylvania State University is a public, land-grant research university with campuses across Pennsylvania, known for its extensive research enterprise, large undergraduate enrollment, and strong alumni network."
+  },
+  "synthesized_evidence_sha": "13cb396f57daa9a0",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "c4934a0ad5",
+    "b445d5adec",
+    "7ca7bc809b"
+   ],
+   "value": "AI/data science roles exist in research institutes (e.g., ICDS, Institute for Computational and Data Sciences), academic departments (CSE, IST, Statistics), and Penn State Health analytics. Work spans grant-funded research, teaching support, and clinical data science."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677403,
   "web_search_url": "https://duckduckgo.com/?q=Penn+State+University+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Penn State offers R1 research prestige, a dedicated Institute for Computational and Data Sciences, and cap-exempt H-1B sponsorship — rare for AI roles — while maintaining public-sector benefits (pension, generous leave, 37.5-hr workweek norms). However, pay trails top-tier tech, bureaucracy is significant, and 'fast innovative culture' varies by lab/unit; some groups move at academic grant cycles, not startup speed."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 8/10 — Standard 37.5-hour workweek for staff, strong union/HR protections, generous leave, rare weekend/on-call outside clinical roles. Tenure-track faculty self-drive higher hours."
   }
  },
  "pennstate university": {
@@ -293195,47 +293494,118 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (emerging industrial AI player, not widely recognized in top-tier AI research circles)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "c5ce35a568",
+    "61a7e65316",
+    "4fe176a6db"
+   ],
+   "value": "No business model details available from supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-focused, practical innovation culture bridging physical and digital; likely less bureaucracy than pure industrial firms but more constraints than pure software companies"
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "c5ce35a568",
+    "61a7e65316",
+    "4fe176a6db"
+   ],
+   "value": "No customer information available from supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $90k-$130k base + equity/bonus (industrial tech typically pays below top-tier software/AI labs)"
   },
   "evidence_sha": "fddf8fff6d30b4e0",
+  "generated_at": 1784898117,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Advanced Manufacturing / Industrial Technology"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare for manufacturing-domain AI questions: predictive maintenance, quality control via computer vision, process optimization, digital twins. Ask directly about: typical weekly hours, on-call expectations, PTO usage rates, mentorship structure, and how ML models are validated in production environments."
+  },
+  "last_attempt_at": 1784898117,
   "last_evidence_at": 1784680312,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "c5ce35a568",
+    "61a7e65316",
+    "4fe176a6db"
+   ],
+   "value": "No location information available from supplied sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "c5ce35a568",
+    "61a7e65316",
+    "4fe176a6db"
+   ],
+   "value": "No mission statement available from supplied sources."
+  },
   "name": "Re:Build Manufacturing",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-fast (manufacturing deadlines + tech innovation), but highly uncertain without employee insights"
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "c5ce35a568",
+    "61a7e65316",
+    "4fe176a6db"
+   ],
+   "value": "No product information available from supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 8-10 holidays (typical US manufacturing/tech hybrid)"
   },
+  "refresh_after": 1790082117,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "c5ce35a568",
+    "61a7e65316",
+    "4fe176a6db"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely observes standard US federal holidays; possible summer/winter shutdowns common in manufacturing"
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-sized manufacturing technology company (100-1000 employees)"
   },
   "sources": [
    {
@@ -293269,14 +293639,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=3bd325ad6bc7dac844e6325fff9a0b9336e68c0c869350897a0effbd4cc213a6JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0e56f1b4-f4ba-6f6e-35a2-e62af52a6e64&u=a1aHR0cHM6Ly93d3cucmVhbHRvci5jb20vcmVhbGVzdGF0ZWFuZGhvbWVzLXNlYXJjaC9NYXNzYWNodXNldHRzP21zb2NraWQ9MGU1NmYxYjRmNGJhNmY2ZTM1YTJlNjJhZjUyYTZlNjQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "c5ce35a568",
+    "61a7e65316",
+    "4fe176a6db"
+   ],
+   "value": "No visa sponsorship information available from supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "c5ce35a568",
+    "61a7e65316",
+    "4fe176a6db"
+   ],
+   "value": "Re:Build Manufacturing appears to be an advanced manufacturing company, but the provided sources contain only redirect links with no accessible content about the company's operations, products, or business model."
+  },
+  "synthesized_evidence_sha": "fddf8fff6d30b4e0",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely involves advanced manufacturing, automation, robotics, and industrial AI/ML applications based on company name, but no specifics in sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680312,
   "web_search_url": "https://duckduckgo.com/?q=Re%3ABuild+Manufacturing+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "If Re:Build Manufacturing is an advanced manufacturing tech company, it could offer AI/data science roles applying ML to physical production systems — a growing niche with real-world impact. However, without verified data on culture, WLB, or compensation, it's impossible to assess alignment with your priorities for prestige, pay, sane hours, and learning velocity."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 (manufacturing sector often has structured hours, but integration with tech teams can create variability)"
   }
  },
  "re spec inc": {
@@ -332097,41 +332496,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown. No information was available in the supplied sources to determine the prestige tier."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "605ce0d0c8",
+    "c65fc1effc",
+    "af1e09e833"
+   ],
+   "value": "No business model information could be retrieved from the supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown. No public data was available in the supplied sources to determine the culture vibe."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "605ce0d0c8",
+    "c65fc1effc",
+    "af1e09e833"
+   ],
+   "value": "No customer information could be retrieved from the supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown. No pay data was available in the supplied sources."
   },
   "evidence_sha": "db37c66cf66b80dd",
+  "generated_at": 1784898117,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "605ce0d0c8",
+    "c65fc1effc",
+    "af1e09e833"
+   ],
+   "value": "No industry information could be retrieved from the supplied sources."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "The candidate should ask interviewers directly about team pace, expected working hours, and whether there are guaranteed shutdown periods to ensure personal time is respected. It is also critical to confirm if new-grad compensation aligns with elite market rates and if the company's AI projects are genuinely mission-driven and innovative rather than bureaucratic."
   },
-  "last_attempt_at": 1784897683,
+  "last_attempt_at": 1784898117,
   "last_evidence_at": 1784680301,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "605ce0d0c8",
+    "c65fc1effc",
+    "af1e09e833"
+   ],
+   "value": "No office location information could be retrieved from the supplied sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "605ce0d0c8",
+    "c65fc1effc",
+    "af1e09e833"
+   ],
+   "value": "No mission statement could be retrieved from the supplied sources."
+  },
   "name": "SPAICE Technology",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown. No public data was available in the supplied sources to determine the pace of work."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "605ce0d0c8",
+    "c65fc1effc",
+    "af1e09e833"
+   ],
+   "value": "No product information could be retrieved from the supplied sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown. No exact PTO policy was available in the supplied sources."
   },
-  "retry_after": 1784897923,
+  "refresh_after": 1790082117,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -332141,7 +332602,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown. No data on guaranteed shutdowns was available in the supplied sources."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "605ce0d0c8",
+    "c65fc1effc",
+    "af1e09e833"
+   ],
+   "value": "No company size or funding stage information could be retrieved from the supplied sources."
   },
   "sources": [
    {
@@ -332175,14 +332645,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=89f5359e3407e54e0187bcea2c4b9de67a4d365f0dce33fca4824d5e47d6e7afJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0e56f1b4-f4ba-6f6e-35a2-e62af52a6e64&u=a1aHR0cHM6Ly93d3cuemhpaHUuY29tL3RhcmRpcy96bS9hcnQvMjk0MjgzMzg0&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "605ce0d0c8",
+    "c65fc1effc",
+    "af1e09e833"
+   ],
+   "value": "No visa sponsorship information could be retrieved from the supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "605ce0d0c8",
+    "c65fc1effc",
+    "af1e09e833"
+   ],
+   "value": "Specific details on what SPAICE Technology does and how it makes money are not available in the provided sources, as all public pages failed to load and only returned redirect notices."
+  },
+  "synthesized_evidence_sha": "db37c66cf66b80dd",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "605ce0d0c8",
+    "c65fc1effc",
+    "af1e09e833"
+   ],
+   "value": "No specific technical work details could be retrieved from the supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680301,
   "web_search_url": "https://duckduckgo.com/?q=SPAICE+Technology+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Given the candidate's priority for a top-tier AI role with fast tech culture, elite prestige, and strong work-life balance, SPAICE Technology would need to be evaluated carefully. The candidate must verify during interviews if the company can provide guaranteed shutdowns, sane hours, and high new-grad pay without exhibiting toxic or bureaucratic traits."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown. No public data was available in the supplied sources to determine the work-life balance rating."
   }
  },
  "sparks wiz limited": {
@@ -335833,47 +336336,113 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Lower-tier for AI/Data Science compared to FAANG or elite tech firms; tech roles here are viewed as cost-center support rather than prestigious product-driving functions."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "ec218d957d"
+   ],
+   "value": "Manufactures and sells hardware and engineered fastening systems globally to generate revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Traditional, established, hardware-focused, prioritizing physical product reliability over rapid software innovation."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "ec218d957d"
+   ],
+   "value": "Professional tradespeople, industrial manufacturers, and general DIY consumers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 - $110,000 base salary, significantly below elite tech-tier new grad compensation."
   },
   "evidence_sha": "8ac1b47b1dfd4282",
+  "generated_at": 1784898117,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "ec218d957d"
+   ],
+   "value": "Manufacturing, Industrial Tools, and Hardware."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "The candidate should screen interviewers heavily on team agility, actual day-to-day pace, and whether the specific data science group operates like a startup or is bound by legacy corporate processes. It is critical to confirm if the compensation structure and technical learning opportunities meet elite pay and career growth standards."
   },
+  "last_attempt_at": 1784898117,
   "last_evidence_at": 1784679641,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "3e2017c610"
+   ],
+   "value": "Global operations with a significant corporate and historical presence in New Britain, CT."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "3e2017c610"
+   ],
+   "value": "Mission specific details were not captured in the provided sources, but as a legacy industrial leader, it generally focuses on empowering makers and innovators with reliable tools and solutions."
+  },
   "name": "Stanley Black & Decker",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow, process-driven, and bureaucratic typical of legacy industrial manufacturing."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "ec218d957d",
+    "3e2017c610"
+   ],
+   "value": "Hand tools, power tools, outdoor equipment, industrial fastening systems, storage solutions, and automated access doors."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard annual vacation, typical for a legacy corporation."
   },
+  "refresh_after": 1790082117,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "ec218d957d",
+    "a2db05adc0",
+    "3e2017c610"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal guaranteed company-wide tech shutdowns, unlike modern tech firms; standard holidays only."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "ec218d957d"
+   ],
+   "value": "Large-cap, mature public company (Fortune 500)."
   },
   "sources": [
    {
@@ -335907,14 +336476,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=201bd9efebf005ea01b171ba318db5a593f12ceb19a4ea53b891c1c8d5d1d28fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1f750150-5d57-6605-2908-16ce5cf16711&u=a1aHR0cHM6Ly93d3cuc3RhbmxleTE5MTMuY29tLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "ec218d957d"
+   ],
+   "value": "Specific visa sponsorship details not found in provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "ec218d957d",
+    "a2db05adc0",
+    "3e2017c610"
+   ],
+   "value": "Stanley Black & Decker is a Fortune 500 global manufacturer of industrial tools, hand tools, storage solutions, and access technologies. It makes money by designing, manufacturing, and selling these hardware products and engineered solutions to professionals, industrial customers, and consumers worldwide."
+  },
+  "synthesized_evidence_sha": "8ac1b47b1dfd4282",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "ec218d957d"
+   ],
+   "value": "Hardware manufacturing, product design, engineering, and fastening systems development."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679641,
   "web_search_url": "https://duckduckgo.com/?q=Stanley+Black+%26+Decker+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Stanley Black & Decker is a 180-year-old industrial manufacturer, which fundamentally conflicts with a candidate's priority for a fast, innovative tech culture rather than slow bureaucracy. While it offers stable WLB, it lacks the elite AI prestige and top-tier new grad tech pay associated with fast-paced software companies."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Generally good and sane, with standard corporate hours and low burnout, though it lacks the modern tech perks of guaranteed shutdowns."
   }
  },
  "stantec": {
@@ -345867,11 +346465,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -345883,6 +346483,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784898117,
   "last_evidence_at": 1784680311,
   "name": "System Canada Technologies",
   "pace_of_work": {
@@ -345895,6 +346496,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784898237,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -345938,7 +346540,7 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680311,
   "web_search_url": "https://duckduckgo.com/?q=System+Canada+Technologies+company+careers+benefits",
@@ -354313,49 +354915,132 @@
  },
  "the access group": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "low",
+   "source_ids": [
+    "6b15bb098f",
+    "ec38720c70",
+    "f15bdca800"
+   ],
+   "value": "Estimated: Unverified without valid source text."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "6b15bb098f",
+    "ec38720c70",
+    "f15bdca800"
+   ],
+   "value": "Unknown due to inaccessible source content."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unverified without valid source text."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "6b15bb098f",
+    "ec38720c70",
+    "f15bdca800"
+   ],
+   "value": "Unknown due to inaccessible source content."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unverified without valid source text."
   },
   "evidence_sha": "9f6d214fe7f083bc",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784898117,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "6b15bb098f",
+    "ec38720c70",
+    "f15bdca800"
+   ],
+   "value": "Unknown due to inaccessible source content."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "6b15bb098f",
+    "ec38720c70",
+    "f15bdca800"
+   ],
+   "value": "Probe deeply into the actual day-to-day pace of the technical team, asking how often new AI/data initiatives are pushed to production versus stalled by red tape. Determine if the company enforces guaranteed shutdowns or sane hours, and ask new grads about their actual starting pay and technical growth trajectory."
+  },
+  "last_attempt_at": 1784898117,
   "last_evidence_at": 1784680403,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "6b15bb098f",
+    "ec38720c70",
+    "f15bdca800"
+   ],
+   "value": "Unknown due to inaccessible source content."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "6b15bb098f",
+    "ec38720c70",
+    "f15bdca800"
+   ],
+   "value": "Unknown due to inaccessible source content."
+  },
   "name": "The Access Group",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unverified without valid source text."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "6b15bb098f",
+    "ec38720c70",
+    "f15bdca800"
+   ],
+   "value": "Unknown due to inaccessible source content."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unverified without valid source text."
   },
+  "refresh_after": 1790082117,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research"
+   "value": "None found in research due to inaccessible source content."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unverified without valid source text."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "6b15bb098f",
+    "ec38720c70",
+    "f15bdca800"
+   ],
+   "value": "Unknown due to inaccessible source content."
   },
   "sources": [
    {
@@ -354389,14 +355074,51 @@
     "url": "https://www.bing.com/ck/a?!&&p=7ddbd003a12d1669932b3c6480da9e5924781114bbefe7c6b406dc67199af9edJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=30c87310-eb9a-6d6c-3ba9-648eea4a6ca0&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvVGhl&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "6b15bb098f",
+    "ec38720c70",
+    "f15bdca800"
+   ],
+   "value": "Unknown due to inaccessible source content."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "6b15bb098f",
+    "ec38720c70",
+    "f15bdca800"
+   ],
+   "value": "The provided source links do not contain readable excerpts and only display redirect notices, preventing a factual summary of the company's operations and revenue model."
+  },
+  "synthesized_evidence_sha": "9f6d214fe7f083bc",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "6b15bb098f",
+    "ec38720c70",
+    "f15bdca800"
+   ],
+   "value": "Unknown due to inaccessible source content."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680403,
   "web_search_url": "https://duckduckgo.com/?q=The+Access+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "6b15bb098f",
+    "ec38720c70",
+    "f15bdca800"
+   ],
+   "value": "For a candidate prioritizing elite AI prestige, high new-grad pay, and a fast-paced, mission-driven culture with strict work-life balance, this company may be a mismatch if it operates as a slow bureaucracy. You must verify whether the technical environment accelerates learning without causing burnout or demanding excessive hours."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unverified without valid source text."
   }
  },
  "the aerospace corporation": {
@@ -396719,11 +397441,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -396735,6 +397459,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784898117,
   "last_evidence_at": 1784679534,
   "name": "Williams-Sonoma",
   "pace_of_work": {
@@ -396747,6 +397472,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784898237,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -396790,7 +397516,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=c15d5f9bc753c74b9e29407f26819b572b47dc71ecd5ef16a0828c8428ccd3bfJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ec016c9-b21a-6d98-3a21-0157b3d76c8f&u=a1aHR0cHM6Ly93d3cud2lsbGlhbXMtc29ub21hLmNvbS8_bXNvY2tpZD0wZWMwMTZjOWIyMWE2ZDk4M2EyMTAxNTdiM2Q3NmM4Zg&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784679534,
   "web_search_url": "https://duckduckgo.com/?q=Williams-Sonoma+company+careers+benefits",
@@ -401565,37 +402291,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 2 — respected in insurance/actuarial analytics and HR data science; not widely viewed as a top-tier generalist AI research destination."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "3cbcaf6c67",
+    "194a7e268b"
+   ],
+   "value": "Fee-based advisory/consulting, brokerage commissions on insurance placements, and recurring revenue from administration/technology platforms. Publicly traded (NASDAQ: WTW)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Professional, collegial, expertise-driven; strong emphasis on credentials (FSA, CFA, PhD). Collaborative but hierarchical; diversity and inclusion initiatives are visible. Remote/hybrid flexibility has improved post-COVID."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "3cbcaf6c67"
+   ],
+   "value": "Large corporations, insurers, reinsurers, pension funds, governments, and institutional investors worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k–$110k base + 5–15% bonus + RSU (vesting 3–4 yr) for US data science/actuarial technology roles; lower than FAANG/quant firms but competitive for professional services."
   },
   "evidence_sha": "08c107478f08b80f",
+  "generated_at": 1784898117,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "3cbcaf6c67"
+   ],
+   "value": "Insurance brokerage, risk management, actuarial consulting, human capital consulting, and HR technology/services."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect heavy emphasis on domain knowledge (insurance/actuarial/benefits), statistical rigor, SQL/Python case studies, and client-facing communication. Prepare for behavioral questions on stakeholder management and ambiguity. Ask about protected time for upskilling, typical weekly hours in your pod, and whether AI/ML work ships to production or stays in R&D."
   },
+  "last_attempt_at": 1784898117,
   "last_evidence_at": 1784679534,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "3cbcaf6c67",
+    "194a7e268b"
+   ],
+   "value": "Headquartered in London; major hubs in New York, Chicago, Philadelphia, Toronto, Paris, Frankfurt, Singapore, Sydney, and 100+ other offices globally. Hybrid/remote options vary by role and country."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "194a7e268b"
+   ],
+   "value": "To help clients turn risk into a path for growth — delivering perspective that moves people, organizations, and the world forward."
+  },
   "name": "WTW",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate-to-fast; project cycles driven by client renewals, regulatory deadlines, and quarterly deliverables. Less bureaucratic than large insurers, but more process-heavy than tech startups."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "3cbcaf6c67",
+    "194a7e268b"
+   ],
+   "value": "Risk & broking (insurance/reinsurance placement), actuarial & analytics, investment consulting, retirement & benefits administration, HR & talent consulting, and technology/data platforms (e.g., Radar, Global Benefits Attitude Survey)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20–25 days PTO + 10–12 company holidays (varies by country/tenure); unlimited not offered."
   },
+  "refresh_after": 1790082117,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -401605,7 +402388,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; some offices observe reduced hours between Christmas and New Year, but not formalized."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "3cbcaf6c67"
+   ],
+   "value": "Large-cap public company; ~45,000+ employees in 140+ countries; FY2023 revenue ~$9.5B."
   },
   "sources": [
    {
@@ -401639,14 +402429,38 @@
     "url": "https://www.bing.com/ck/a?!&&p=8ef094e9a739333554d73c527cda0ff48b057219ebf215c402584d19c2fd3034JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ec016c9-b21a-6d98-3a21-0157b3d76c8f&u=a1aHR0cHM6Ly93d3cud3R3Y28uY29tL2VuLXVz&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Regularly sponsors H-1B and other work visas for actuarial, analytics, and technology roles in the US; global mobility programs exist for internal transfers."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "3cbcaf6c67",
+    "194a7e268b"
+   ],
+   "value": "WTW (Willis Towers Watson) is a global advisory, broking, and solutions company helping clients manage risk, optimize benefits, cultivate talent, and grow capital. It operates as a professional services firm across insurance, reinsurance, actuarial, and human capital consulting."
+  },
+  "synthesized_evidence_sha": "08c107478f08b80f",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actuarial modeling, predictive analytics, risk pricing, benefits administration platforms, cloud migration, data engineering, and growing AI/ML for claims, underwriting, and workforce analytics. Tech stack includes Python, SQL, Spark, Azure/AWS, and proprietary platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679534,
   "web_search_url": "https://duckduckgo.com/?q=WTW+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "WTW offers elite prestige in actuarial, risk, and HR analytics with compensation competitive for those domains, but it is a professional-services firm — not a product-centric tech company. Work-life balance is generally better than investment banking or Big 4 audit, yet client-driven deadlines can create crunch periods. Learning is deep in domain-specific data science (insurance, pensions, workforce) but may not match the breadth or speed of pure tech firms. Shutdowns are not guaranteed; PTO is "
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 — generally reasonable hours (40–50 typical), but spikes during renewal seasons (Jan–Apr) and major client deliverables. No company-wide guaranteed shutdowns."
   }
  },
  "wvumedicine": {
@@ -406900,11 +407714,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -406916,6 +407732,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784898117,
   "last_evidence_at": 1784680313,
   "name": "Zoetis",
   "pace_of_work": {
@@ -406928,6 +407745,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784898237,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -406981,7 +407799,7 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680313,
   "web_search_url": "https://duckduckgo.com/?q=Zoetis+company+careers+benefits",
