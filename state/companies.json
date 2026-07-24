@@ -1486,6 +1486,19 @@
   "status": "active",
   "token": "gradientrobotics"
  },
+ "ashby:gridcare": {
+  "ats": "ashby",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1784889125,
+  "last_ok": 1784889131,
+  "name": "GridCARE",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "gridcare"
+ },
  "ashby:hadrian-automation": {
   "ats": "ashby",
   "extra": {},
@@ -7278,6 +7291,20 @@
   "status": "invalid",
   "token": "careers-blackhawknetwork"
  },
+ "icims:careers-brightspring": {
+  "ats": "icims",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1784889125,
+  "invalidated_at": 1784889126,
+  "last_ok": 0,
+  "name": "BrightSpring Health Services",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "invalid",
+  "token": "careers-brightspring"
+ },
  "icims:careers-brookings": {
   "ats": "icims",
   "extra": {},
@@ -10503,6 +10530,22 @@
   "sector": "",
   "status": "active",
   "token": "fa-eups-saasfaprod1"
+ },
+ "oracle_orc:fa-evdq-saasfaprod1:CX_2001": {
+  "ats": "oracle_orc",
+  "extra": {
+   "host": "fa-evdq-saasfaprod1.fa.ocs.oraclecloud.com",
+   "site": "CX_2001"
+  },
+  "failures": 0,
+  "first_seen": 1784889125,
+  "last_ok": 1784889132,
+  "name": "Computershare",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "fa-evdq-saasfaprod1"
  },
  "oracle_orc:fa-evmr-saasfaprod1:CX_1": {
   "ats": "oracle_orc",
