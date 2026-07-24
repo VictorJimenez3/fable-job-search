@@ -16738,37 +16738,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3 (Regional Leader) – Respected regionally for data-driven member services; not a national AI research hub but offers production ML impact at scale within a regulated financial institution."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not-for-profit cooperative model: revenue from loan interest, investment income, and fee income covers operating costs; surplus earnings are returned to members via higher deposit rates, lower loan rates, and reduced fees. No outside shareholders."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, purpose-driven, and low-ego. Teams are cross-functional and long-tenured; decision-making values consensus and member impact over speed. Leadership is accessible. Less 'hustle' signaling, more 'steady improvement' mindset."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Individual consumers and small businesses in Central and Northern New York who become members by opening a share (savings) account; membership is open to anyone who lives, works, worships, or attends school in the service area."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $78,000-$95,000 base salary for Data Scientist/ML Engineer new grad in upstate NY; ~5-10% annual bonus; total comp ~$85k-$105k. Below coastal big-tech but competitive for region and mission-driven sector."
   },
   "evidence_sha": "5455f7e2f260ac52",
+  "generated_at": 1784872913,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+   "value": "Technology / technology (estimated)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect questions on applied ML for financial services (fraud, credit risk, churn), SQL/python proficiency, model explainability for regulatory compliance, and cultural fit with a collaborative, member-centric team. Prepare to discuss how you balance innovation with reliability in a regulated environment."
+  },
+  "last_attempt_at": 1784872913,
   "last_evidence_at": 1784776544,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters in Rome, NY; 15+ branch locations across Central and Northern New York (Utica, Syracuse, Watertown, etc.); remote/hybrid options likely available for tech roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To improve members' financial well-being by providing affordable financial services, returning profits to members through better rates and lower fees, and supporting community development."
+  },
   "name": "AmeriCU Credit Union",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate – Steady project cadence with quarterly planning; digital transformation initiatives create bursts of intensity but overall avoids the 'move fast and break things' culture of big tech. Regulatory compliance adds deliberate review cycles."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Consumer and business banking products including checking and savings accounts, mortgages, auto loans, personal loans, credit cards, wealth management, and digital banking services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual PTO (combined vacation/sick) plus 10 paid holidays; accrual starts day one. No public policy details confirmed."
   },
+  "refresh_after": 1790056913,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -16778,7 +16820,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full shutdown between Christmas and New Year (typical for financial institutions); possible summer half-day Fridays. Not guaranteed annually."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established credit union with approximately $2.2 billion in assets, ~105,000 members, and ~300 employees; mature, stable organization with ongoing digital transformation initiatives."
   },
   "sources": [
    {
@@ -16822,14 +16869,37 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely supports H-1B sponsorship for specialized technical roles (data science, software engineering) given difficulty filling niche positions in upstate NY; no public policy details found."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "AmeriCU Credit Union is a member-owned, not-for-profit financial cooperative headquartered in Rome, New York, serving over 100,000 members across Central and Northern New York with a full suite of banking products."
+  },
+  "synthesized_evidence_sha": "5455f7e2f260ac52",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Core banking platform maintenance, digital banking (online/mobile), data analytics and reporting, fraud detection, loan origination systems, payments integration, and emerging AI/ML applications for personalization and risk modeling."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784776544,
   "web_search_url": "https://duckduckgo.com/?q=AmeriCU+Credit+Union+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "AmeriCU offers a mission-driven, member-first culture with the stability of a 70+ year institution and active investment in modern tech (digital banking, data/AI). For a new-grad AI/data scientist, it balances meaningful work, solid pay for the region, and a pace that respects work-life balance—rare in high-pressure fintech or big-bank environments. The credit union structure aligns incentives with member value, not shareholder pressure, reducing burnout drivers."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "8/10 – Credit union culture emphasizes reasonable hours (typically 40-45 hrs/week), limited on-call for non-production roles, and leadership that models boundaries. Seasonal peaks (tax season, year-end) may require occasional extra hours."
   }
  },
  "ameriprise financial": {
@@ -32878,48 +32948,133 @@
  "bae systems inc": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "796aca5989",
+    "3cacecbe1c"
+   ],
+   "value": "Estimated: Mid-tier. High prestige for mission-driven defense AI, but lacks the elite commercial tech prestige of FAANG碾 or top-tier AI labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "3cacecbe1c"
+   ],
+   "value": "Designs and manufactures high-tech defense and security systems for government and commercial buyers."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "796aca5989",
+    "3cacecbe1c"
+   ],
+   "value": "Estimated: Traditional and mission-focused. Emphasizes national security and stability over fast-paced innovation and aggressive technical culture."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "3cacecbe1c"
+   ],
+   "value": "Government and commercial clients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "796aca5989"
+   ],
+   "value": "Estimated: ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢65,000 to $110,000 per year for entry-level Software Engineers."
   },
   "evidence_sha": "3c78868cec576278",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784872913,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "3cacecbe1c"
+   ],
+   "value": "Defense, Aerospace, and Security."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "796aca5989",
+    "3cacecbe1c"
+   ],
+   "value": "Assess your willingness to work within slower bureaucratic constraints and strict security clearance frameworks, which contrast fast-paced startup cultures. Emphasize intellectual curiosity in mission-driven defense AI while probing for the exact learning curve, work-life balance policies (like shutdowns), and 40-hour expectations to ensure it meets your personal time goals."
+  },
+  "last_attempt_at": 1784872913,
   "last_evidence_at": 1784768504,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "796aca5989"
+   ],
+   "value": "Nashua, NH (plus other locations across the US)."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "3cacecbe1c"
+   ],
+   "value": "To protect national security and critical infrastructure through advanced defense, aerospace, and security solutions."
+  },
   "name": "BAE Systems, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "796aca5989",
+    "3cacecbe1c"
+   ],
+   "value": "Estimated: Slow. Defense contractors typically operate at a deliberate pace and slower, standardized development cycles due to security and compliance strictures."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "3cacecbe1c",
+    "796aca5989"
+   ],
+   "value": "Defense electronics, aerospace components, intelligence and security software, and full-stack engineering solutions (utilizing Node.js, Go, Python, and MySQL)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "796aca5989",
+    "3cacecbe1c"
+   ],
+   "value": "Estimated: 15 to 20 days spent vacation per year, plus standard federal holidays (exact policy not public in sources)."
   },
+  "refresh_after": 1790056913,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "796aca5989",
+    "3cacecbe1c"
+   ],
+   "value": "None found in research for rotational program name."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "796aca5989",
+    "3cacecbe1c"
+   ],
+   "value": "Estimated: Guaranteed company-wide shutdowns during major holidays (e.g., week of July 4th, Christmas/New Year). Not explicitly found in the source text, but common in this sector for work-life balance."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "1566bde258"
+   ],
+   "value": "Large-cap public company operating in the United States."
   },
   "sources": [
    {
@@ -32973,14 +33128,49 @@
     "url": "https://jobright.ai/jobs/info/6a20a5caca8f0b365d7a286a?utm_campaign=Software%20Engineering&utm_source=1103"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "3cacecbe1c",
+    "796aca5989"
+   ],
+   "value": "Not explicitly found in the supplied sources, but defense contractors typically require US citizenship due to government security clearance mandates."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "3cacecbe1c"
+   ],
+   "value": "BAE Systems is a leading defense, aerospace, and security company. It makes money by designing, manufacturing, and supporting high-tech military hardware, electronics, and security solutions for government and commercial clients."
+  },
+  "synthesized_evidence_sha": "3c78868cec576278",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "796aca5989",
+    "3cacecbe1c"
+   ],
+   "value": "Involves full-stack software engineering, software architecture, software integration, and automated testing using C#, Python, Node.js, Go, and relational databases."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677045,
   "web_search_url": "https://duckduckgo.com/?q=BAE+Systems%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "796aca5989",
+    "3cacecbe1c"
+   ],
+   "value": "A defense contractor role offers mission-driven work protecting national security, which contrasts with Silicon Valley burnout by typically maintaining traditional 40-hour work weeks with guaranteed holidays and shutdowns. However, the slow bureaucracy inherent to government-contracted work and elite defense-tech salary ceilings may lag behind the fast-paced, highly-compensated culture of top-tier AI roles in Big Tech."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "796aca5989",
+    "3cacecbe1c"
+   ],
+   "value": "Estimated: Very Good. Defense companies often respect traditional 40-hour work week boundaries, avoiding the toxic burnout culture found in elite Big Tech and startups."
   }
  },
  "baggu": {
@@ -87756,49 +87946,124 @@
  },
  "duracell": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "23335a6c00"
+   ],
+   "value": "Not an elite tech-focused prestige name for AI/Data Science; it is a respected legacy manufacturing brand attempting to modernize."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "23335a6c00"
+   ],
+   "value": "Manufacturing and global retail distribution of batteries and power solutions under the umbrella of Berkshire Hathaway."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "23335a6c00"
+   ],
+   "value": "Stable, long-term value-focused corporate environment leveraging its backing by Berkshire Hathaway."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "23335a6c00"
+   ],
+   "value": "Global consumers and industrial clients seeking portable power solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $90,000 - $120,000, competitive for legacy manufacturing but likely below top-tier elite tech firms."
   },
   "evidence_sha": "559bc496dd982fcc",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784872913,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "23335a6c00"
+   ],
+   "value": "Consumer Goods / Manufacturing"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784872913,
   "last_evidence_at": 1784693224,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Global operations with tech roles surfaced through centralized job platforms."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "23335a6c00"
+   ],
+   "value": "To focus on sustainable growth and industry-leading innovation while creating long-term value for customers and consumers."
+  },
   "name": "Duracell",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "23335a6c00"
+   ],
+   "value": "Estimated: Moderate pace typical of a mature manufacturing company, prioritizing stability over rapid disruption."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "23335a6c00"
+   ],
+   "value": "Alkaline batteries, smart power solutions, and battery-powered consumer products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "23335a6c00"
+   ],
+   "value": "Estimated: 15-25 days of PTO based on tenure."
   },
+  "refresh_after": 1790056913,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "23335a6c00"
+   ],
+   "value": "Estimated: Standard public holidays, with no guaranteed corporate-wide tech shutdowns found."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "23335a6c00"
+   ],
+   "value": "Established large-scale enterprise operating as a subsidiary of Berkshire Hathaway (ranked #3 in the Fortune 500)."
   },
   "sources": [
    {
@@ -87852,14 +88117,43 @@
     "url": "https://fa-ewub-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_26/job/1337"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Not explicitly found in research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "23335a6c00"
+   ],
+   "value": "Duracell is a leading manufacturer of alkaline batteries, smart power solutions, and battery-powered products. It makes money by selling these consumer and industrial power products globally, operating as a subsidiary of Berkshire Hathaway since 2016."
+  },
+  "synthesized_evidence_sha": "559bc496dd982fcc",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "23335a6c00"
+   ],
+   "value": "Hands-on engineering roles focused on quickly delivering and iterating on solutions in front of users, requiring familiarity with data environments and cloud platforms like Snowflake."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784693224,
   "web_search_url": "https://duckduckgo.com/?q=Duracell+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "23335a6c00"
+   ],
+   "value": "Estimated: Generally stable and sane hours, though the company's commitment to fast iterative engineering may introduce occasional sprints."
   }
  },
  "dutch": {
@@ -130244,52 +130538,132 @@
  "hub international": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "f4bf9bf1c3"
+   ],
+   "value": "Estimated: Low Tier II / High Tier III. HUB is not recognized as a prominent tech-first employer for AI or data science, serving primarily as an internal IT function for a non-tech services company."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "7995bf7f2d",
+    "f4bf9bf1c3"
+   ],
+   "value": "HUB operates as an insurance brokerage, generating revenue through commissions paid by insurance carriers and consulting fees paid by clients, supplemented by a continuous acquisition strategy of regional brokerages."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "7995bf7f2d"
+   ],
+   "value": "Estimated: Corporate, conventional, and risk-averse. The culture focuses on client service, compliance, and brokerage sales, which may feel slow and bureaucratic to a candidate seeking an innovative tech culture."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "7995bf7f2d",
+    "853bff2992"
+   ],
+   "value": "HUB serves a broad spectrum of clients ranging from private individuals to large commercial corporations, nonprofit organizations, and municipal entities."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "7995bf7f2d"
+   ],
+   "value": "Estimated: $75,000 - $95,000 base salary. Pay is aligned with regional enterprise IT standards rather than elite tech-sector new-grad compensation."
   },
   "evidence_sha": "89992db499be7407",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784872913,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784872621,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "7995bf7f2d",
+    "853bff2992"
+   ],
+   "value": "Insurance Brokerage and Financial Services"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "7995bf7f2d"
+   ],
+   "value": "Candidates should focus on demonstrating how they can apply data science to optimize legacy business processes, rather than expecting elite AI research. It is critical to ask interviewers about the actual pace of tech innovation, specific team work-life balance norms, and how technical career growth is accelerated outside of the traditional corporate structure."
+  },
+  "last_attempt_at": 1784872913,
   "last_evidence_at": 1784676249,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "7995bf7f2d",
+    "853bff2992"
+   ],
+   "value": "Headquartered in Chicago, Illinois, with a large presence across North America and additional offices globally."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "7995bf7f2d",
+    "853bff2992"
+   ],
+   "value": "To protect and support families, businesses, and communities by providing comprehensive risk management and insurance solutions tailored to client needs."
+  },
   "name": "HUB International",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "7995bf7f2d"
+   ],
+   "value": "Estimated: Traditionally bureaucratic and steady. The tech pace is bound by business operations, client compliance, and integration of acquired companies, lacking the fast iteration cycles of innovative tech firms."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "7995bf7f2d",
+    "853bff2992"
+   ],
+   "value": "The company offers commercial and personal property and casualty insurance, employee benefits consulting, wealth management, and risk management services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "7995bf7f2d"
+   ],
+   "value": "Estimated: 15 to 25 days annually depending on tenure, standard for large corporate insurance and financial services firms in North America."
   },
-  "retry_after": 1784872861,
+  "refresh_after": 1790056913,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
+   "source_ids": [
+    "7995bf7f2d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "7995bf7f2d"
+   ],
+   "value": "Estimated: None found in research. Standard corporate insurance brokerages generally operate year-round without company-wide holiday shutdowns, though employees are typically given standard public holidays off."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "7995bf7f2d",
+    "853bff2992"
+   ],
+   "value": "A large, mature global enterprise with over 19,000 employees operating across multiple continents, heavily engaged in active merger and acquisition expansion."
   },
   "sources": [
    {
@@ -130323,14 +130697,49 @@
     "url": "https://www.bing.com/ck/a?!&&p=be018e839dc43ce2008ebd85d281cde3f6440787b766ead55f07fd0dde810b99JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=07787a3d-f61d-629d-242a-6da0f71b63e4&u=a1aHR0cHM6Ly9hcHAuaHVic3BvdC5jb20vbG9naW4&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7995bf7f2d"
+   ],
+   "value": "Estimated: A large, North American-heavy brokerage that may offer selective visa sponsorship for specialized enterprise IT or data roles, though it is not a core focus for standard technical hiring."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "7995bf7f2d",
+    "853bff2992",
+    "f4bf9bf1c3"
+   ],
+   "value": "HUB International is a global insurance and financial services firm that acts as an intermediary between clients and insurance carriers. It makes money by earning commissions and fees from brokering property, casualty, life, health, and employee benefit policies, while expanding aggressively through acquisitions."
+  },
+  "synthesized_evidence_sha": "89992db499be7407",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "7995bf7f2d",
+    "f4bf9bf1c3"
+   ],
+   "value": "Technical teams support large-scale insurance brokerage operations through internal enterprise software development, data analytics for risk modeling, and digital client portals."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676249,
   "web_search_url": "https://duckduckgo.com/?q=HUB+International+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "7995bf7f2d",
+    "f4bf9bf1c3"
+   ],
+   "value": "As a traditional insurance brokerage, HUB does not align with the candidate's priority for a top-tier, prestigious AI/data science role with elite new-grad pay and a fast-paced, innovative tech culture. While it may offer sane hours compared to FAANG, the tech environment is geared toward supporting legacy business operations (bureaucracy) rather than driving cutting-edge AI innovation."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "7995bf7f2d"
+   ],
+   "value": "Estimated: Moderate to Good. Corporate insurance environments generally offer predictable, standard working hours with lower burnout rates than high-tech sectors, though M&A integration can create temporary spikes in workload."
   }
  },
  "hudl": {
@@ -147986,37 +148395,83 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Unknown – no public research, publications, or AI product details found in sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No business model details found in supplied sources. Likely B2B SaaS or platform fees in healthcare."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Likely lean, mission-oriented, and engineering-led given new-grad hiring focus. No public culture signals found."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No customer information found in supplied sources. Presumably healthcare providers, payers, or patients."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $100k–$140k base + equity (typical early-stage health-tech new grad range). No public data in sources."
   },
   "evidence_sha": "2bbb0abfd1989848",
+  "generated_at": 1784872913,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Health Technology / Digital Health"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Ask about: actual engineering culture and hours, guaranteed shutdown policies, mentorship structure for new grads, tech stack and AI/ML scope, compensation breakdown (base/equity), and how mission translates to daily work. Verify WLB claims against team retrospectives."
+  },
+  "last_attempt_at": 1784872913,
   "last_evidence_at": 1784832496,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No location information found in supplied sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No mission statement found in supplied sources."
+  },
   "name": "Judi Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast – typical for early-stage startup hiring new grads into core engineering roles."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No specific product details found in supplied sources. Likely a health-tech platform given the company name."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown – no policy disclosed in sources. US startups often offer 10–15 days + holidays or unlimited PTO."
   },
+  "refresh_after": 1790056913,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -148026,7 +148481,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown – no guaranteed shutdown policy found in sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Early-stage startup (hiring 2026 new grads suggests small team, pre-Series A or Series A)."
   },
   "sources": [
    {
@@ -148070,14 +148532,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=38934f329b08e9ccb13f5e8c5a12cfa0e36cb439d08c57fad7259e00db79f025JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9lbi11cy9taWNyb3NvZnQtY29waWxvdC9mb3ItaW5kaXZpZHVhbHMvP21zb2NraWQ9MTYwOTg2YThjNjdkNmY2ODAyOGQ5MTM0YzcyZTZlNmY&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "No visa sponsorship policy found in supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Judi Health appears to be an early-stage health technology company hiring new graduate software engineers for 2026 roles. Limited public information is available beyond its presence on a monitored new-grad job board."
+  },
+  "synthesized_evidence_sha": "2bbb0abfd1989848",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Software engineering roles for new grads; specific stack/domain not detailed in sources. Health-tech implies data privacy, interoperability, and possibly ML/AI for clinical or operational use cases."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583405,
   "web_search_url": "https://duckduckgo.com/?q=Judi+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Early-stage health-tech startup hiring new grads may offer fast-paced innovation, direct impact on healthcare, and steep learning curves—aligning with desire for elite technical growth and mission-driven work. However, without public data on WLB, pay, or culture, candidate must verify these in interviews."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown – no employee reviews or policy data in sources. Early-stage startups vary widely."
   }
  },
  "julius ai": {
@@ -197213,52 +197702,125 @@
  "omega home health care services inc": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "c546f6058e"
+   ],
+   "value": "Estimated: Not a top-tier AI employer. The role focuses on standard operational and process analytics rather than cutting-edge data science or AI research, placing it outside the elite prestige tier targeted by the candidate."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "c546f6058e"
+   ],
+   "value": "Generates revenue through traditional home health care services, while actively investing in an internal process optimization and analytics division to streamline operations."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "c546f6058e"
+   ],
+   "value": "Estimated: Appears to be a mission-driven healthcare company attempting to modernize through a newly built analytics division, offering entry-level talent direct access to leadership."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "c546f6058e"
+   ],
+   "value": "Patients requiring home health care services, as well as internal healthcare operators and leadership relying on process analytics."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "c546f6058e"
+   ],
+   "value": "$62,000 per year for the Junior Data Analyst role."
   },
   "evidence_sha": "4171d5dcba99505c",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784872913,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784872767,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c546f6058e"
+   ],
+   "value": "Health Care"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c546f6058e"
+   ],
+   "value": "Candidates should focus on clarifying the exact analytical tools and technologies used, the potential for career growth from this entry-level position into more advanced Data Science or AI roles, and whether the work environment offers the work-life balance and guaranteed shutdowns desired by the candidate."
+  },
+  "last_attempt_at": 1784872913,
   "last_evidence_at": 1784719724,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "c546f6058e"
+   ],
+   "value": "San Luis Obispo, CA"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "c546f6058e"
+   ],
+   "value": "Improving healthcare workflows, reporting systems, productivity analytics, and operational efficiency from within their new analytics division."
+  },
   "name": "Omega Home Health Care Services, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "c546f6058e"
+   ],
+   "value": "Estimated: Likely a traditional, slower-paced corporate healthcare environment rather than a fast, innovative tech culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c546f6058e"
+   ],
+   "value": "Home health care services, alongside internal operational analytics, reporting systems, and productivity optimization tools."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "c546f6058e"
+   ],
+   "value": "Estimated: Standard corporate PTO (10-20 days) likely applies, but exact policy is not public."
   },
-  "retry_after": 1784872887,
+  "refresh_after": 1790056913,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "c546f6058e"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "c546f6058e"
+   ],
+   "value": "Estimated: Unknown. There is no evidence of guaranteed company-wide shutdowns; typical healthcare operations do not pause."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "c546f6058e"
+   ],
+   "value": "Unknown overall size, but the analytics division is currently in a building/growth stage and bringing on entry-level talent."
   },
   "sources": [
    {
@@ -197312,14 +197874,45 @@
     "url": "https://jobright.ai/jobs/info/6a54f06e4119652ff3862495?utm_campaign=Data%20Analysis&utm_source=1103"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "c546f6058e"
+   ],
+   "value": "Not explicitly mentioned in available sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c546f6058e"
+   ],
+   "value": "Omega Home Health Care Services, Inc. is a home health care provider that is currently building a modern operational analytics and process optimization division to improve internal healthcare workflows and reporting systems. While its core business is providing health care services, this new division focuses on leveraging data to enhance operational efficiency and productivity analytics, indicating a push toward modernizing its operational technology."
+  },
+  "synthesized_evidence_sha": "4171d5dcba99505c",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "c546f6058e"
+   ],
+   "value": "Junior Data Analysts work directly with leadership to support the Process Optimization & Analytics Division, focusing on healthcare operations, reporting systems, and productivity analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784719724,
   "web_search_url": "https://duckduckgo.com/?q=Omega+Home+Health+Care+Services%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c546f6058e"
+   ],
+   "value": "Based on candidate priorities: This is an entry-level healthcare data role offering direct exposure to operational analytics and leadership, which may provide a strong foundational learning experience. However, at an estimated $62K/yr for an onsite role, the compensation falls significantly below the elite new-grad pay scale sought by the candidate, and it may lack the fast-paced, innovative tech culture typical of top-tier AI companies."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "c546f6058e"
+   ],
+   "value": "Estimated: Potentially stable with standard corporate hours, though specific work-life balance policies are not published."
   }
  },
  "omni design technologies": {
@@ -266394,41 +266987,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3: Applied AI/ML in sensor fusion, imaging analytics, and embedded inference; not a primary AI research destination."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "ee57e3211f",
+    "df19b9ce7b"
+   ],
+   "value": "Acquires and operates specialized technology companies with strong margins and cash flows; generates revenue by selling high-margin engineered products and systems to regulated, high-barrier markets."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Decentralized, engineering-first, acquisition-driven. Each unit operates autonomously; culture ranges from academic/research-like (scientific imaging) to defense-contractor structured. Low bureaucracy at unit level but corporate oversight on finance/HR."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "ee57e3211f",
+    "df19b9ce7b"
+   ],
+   "value": "Aerospace and defense contractors, government agencies, industrial manufacturers, scientific research institutions, medical device companies, and commercial semiconductor/foundry customers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k-$120k base + 5-10% bonus + RSU (vesting 4yrs); total ~$110k-$140k. Lower than top-tier software/AI labs but competitive for hardware/systems."
   },
   "evidence_sha": "be062ef56ce45aa0",
+  "generated_at": 1784872913,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "ee57e3211f"
+   ],
+   "value": "Industrial Conglomerate / Aerospace & Defense / Electronic Instrumentation"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical interviews in your specialty (embedded, signal processing, physics-based modeling, FPGA, C++). Demonstrate ability to work in regulated, hardware-constrained environments. Ask about specific business unit culture, on-call expectations, and how ML is integrated into products. Clarify WLB norms for the exact team."
   },
-  "last_attempt_at": 1784872621,
+  "last_attempt_at": 1784872913,
   "last_evidence_at": 1784676254,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "ee57e3211f"
+   ],
+   "value": "Headquartered in Thousand Oaks, CA; major sites across US (California, Colorado, Florida, Indiana, Michigan, Pennsylvania), UK, Canada, and Europe. Many roles are on-site or hybrid due to hardware/lab requirements."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "31105faf8b",
+    "df19b9ce7b"
+   ],
+   "value": "To provide enabling technologies that solve complex challenges for customers in growth markets through a decentralized portfolio of market-leading businesses."
+  },
   "name": "Teledyne",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate: Engineering cycles tied to hardware programs, regulatory qualification, and long product lifecycles. Not 'move fast and break things.'"
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "ee57e3211f",
+    "df19b9ce7b"
+   ],
+   "value": "Digital imaging sensors/cameras, test and measurement instrumentation, electronic components for aerospace/defense, engineered systems for harsh environments, and scientific instruments."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 company holidays (US), varies by unit and tenure."
   },
-  "retry_after": 1784872861,
+  "refresh_after": 1790056913,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -266438,7 +267085,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No company-wide guaranteed shutdowns; some units may observe winter break but not universal."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "ee57e3211f"
+   ],
+   "value": "Public company (NYSE: TDY), ~$5.5B annual revenue, ~14,000 employees globally, mature conglomerate with decentralized operating units."
   },
   "sources": [
    {
@@ -266472,14 +267126,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=8695e7a0a37d01f8a2e084d9e0f75b7646081b72de19c7a3bdc6c38322cd2028JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=07787a3d-f61d-629d-242a-6da0f71b63e4&u=a1aHR0cHM6Ly93d3cudGVsZWR5bmUuY29tLw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established sponsor for H-1B and green cards across engineering roles; sponsorship likelihood varies by business unit and role criticality."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "ee57e3211f",
+    "31105faf8b",
+    "df19b9ce7b"
+   ],
+   "value": "Teledyne Technologies is a diversified industrial conglomerate that acquires and operates niche technology businesses in digital imaging, instrumentation, engineered systems, and aerospace/defense electronics. It serves specialized markets requiring high-reliability components and systems."
+  },
+  "synthesized_evidence_sha": "be062ef56ce45aa0",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Embedded systems, FPGA/ASIC design, signal processing, sensor fusion, scientific computing, real-time control systems, and domain-specific software for imaging/instrumentation. AI/ML roles exist but are applied to sensor data and hardware optimization rather than core AI research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676254,
   "web_search_url": "https://duckduckgo.com/?q=Teledyne+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Teledyne offers elite engineering prestige in hardware-centric, mission-critical domains (space, defense, scientific) with strong compensation stability, but AI/data science roles are applied and hardware-adjacent rather than pure research. Culture is engineering-driven and decentralized, which can mean sane hours in some units but variable WLB; not a fast-moving software-first tech culture. Good for deep technical growth in specialized fields, less so for cutting-edge AI innovation or guarantee"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5. Varies significantly by business unit; defense/aerospace programs can have crunch periods; instrumentation units often more predictable. No company-wide guaranteed shutdowns."
   }
  },
  "teleskope": {
@@ -289254,43 +289933,101 @@
  },
  "uw health": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "86024e93ec"
+   ],
+   "value": "High – UW Medicine is consistently ranked among the top medical schools and receives substantial NIH funding, attracting elite AI/ML talent for healthcare applications."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "b946b4b587",
+    "86024e93ec"
+   ],
+   "value": "Non-profit academic medical center funded by clinical revenue, research grants, philanthropy, and state support; reinvests surplus into care, research, and education."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Collaborative, intellectually rigorous, mission-oriented, with strong emphasis on mentorship, interdisciplinary teamwork, and public service."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "b946b4b587",
+    "86024e93ec"
+   ],
+   "value": "Patients (local and referral), insurance payers (Medicare, Medicaid, commercial), government research agencies (NIH, etc.), and students/trainees in health professions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $100,000–$130,000 base salary for data science/AI roles, with comprehensive benefits (retirement, tuition remission, health)."
   },
   "evidence_sha": "093cfbbdb88ccdde",
+  "generated_at": 1784872913,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "b946b4b587",
+    "86024e93ec"
+   ],
+   "value": "Academic medicine / integrated healthcare delivery system"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Expect questions on translational healthcare impact, collaborative research practices, handling clinical data privacy, and examples of balancing innovation with regulatory compliance. Emphasize experience with real-world messy health data and cross-functional teamwork."
   },
-  "last_attempt_at": 1784872767,
+  "last_attempt_at": 1784872913,
   "last_evidence_at": 1784583443,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "b946b4b587",
+    "86024e93ec"
+   ],
+   "value": "Primary campus in Seattle, Washington (University District, Montlake, Northwest, etc.); additional clinics and partnerships across the WWAMI region (Washington, Wyoming, Alaska, Montana, Idaho)."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "b946b4b587",
+    "86024e93ec"
+   ],
+   "value": "To improve the health of the public by advancing medical knowledge, providing outstanding primary and specialty care, and preparing the next generation of physicians, scientists, and health professionals."
+  },
   "name": "UW Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate to fast; driven by research grants and clinical deadlines but generally more structured than startup crunch cycles."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "b946b4b587",
+    "86024e93ec"
+   ],
+   "value": "Clinical healthcare services (hospitals, clinics, specialty care), biomedical research, health sciences education, and health information technology solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days annual PTO plus university holidays and sick leave; exact accrual varies by role and tenure."
   },
-  "retry_after": 1784872887,
+  "refresh_after": 1790056913,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -289300,7 +290037,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No formal organization-wide shutdowns, but many departments observe reduced operations during university breaks (e.g., winter break)."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "b946b4b587",
+    "86024e93ec"
+   ],
+   "value": "Large, established organization (thousands of employees, multiple hospitals and clinics) with a mature, stable structure."
   },
   "sources": [
    {
@@ -289334,14 +290079,40 @@
     "url": "https://www.bing.com/ck/a?!&&p=cec4409dec6097786261d16bdf1a9b3adc6b4de9a989575341d7343feef9ce7cJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cudXdtZWRpY2luZS5vcmcv&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a major academic institution, UW Health routinely sponsors H-1B and other work visas for research and clinical faculty, data scientists, and technical staff."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "b946b4b587",
+    "86024e93ec"
+   ],
+   "value": "UW Health (UW Medicine) is an academic medical center that integrates patient care, biomedical research, and health professional education. It generates revenue primarily through clinical services, research grants, and educational programs."
+  },
+  "synthesized_evidence_sha": "093cfbbdb88ccdde",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "b946b4b587"
+   ],
+   "value": "Health data science, AI/ML for clinical decision support, electronic health record optimization, biomedical informatics, imaging analytics, and population health management."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583443,
   "web_search_url": "https://duckduckgo.com/?q=UW+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers a top-tier AI/data science environment within a mission-driven academic medical center that values work-life balance, provides strong technical mentorship, and avoids the burnout culture common in pure tech or hospital corporate settings."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Good – Academic medicine culture emphasizes sustainable hours, protected research time, and institutional policies supporting wellness."
   }
  },
  "v2x inc": {
