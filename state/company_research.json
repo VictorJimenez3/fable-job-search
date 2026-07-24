@@ -8886,39 +8886,103 @@
  },
  "airbnb": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "f03675fc4f",
+    "c74651becb"
+   ],
+   "value": "Premium-tier consumer platform tech company implementing AI-scale infrastructure."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "c74651becb"
+   ],
+   "value": "Operates a digital two-sided marketplace connecting hosts and guests, earning revenue by charging service fees on each booking."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "c2fd3e0dc3"
+   ],
+   "value": "Collaborative and adventurous, championing integrity, diversity, and belonging among self-motivated professionals."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "c74651becb"
+   ],
+   "value": "Two-sided marketplace serving hosts (property owners or renters listing their space) and guests (travelers seeking accommodations)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $180,000 to $200,000+ total compensation."
   },
   "evidence_sha": "058aa4cbd2ee3d52",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
+  "generated_at": 1784872155,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c74651becb"
+   ],
+   "value": "Online Travel and Hospitality Technology."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "f03675fc4f",
+    "c2fd3e0dc3"
+   ],
+   "value": "Be prepared to demonstrate adaptability and collaboration in an adventurous, fast-moving environment..Focus on showing hands-on prototyping experimentation and problem-solving skills around workflow orchestration and performance debugging while conveying a strong commitment to ethics and diversity."
+  },
+  "last_attempt_at": 1784872155,
   "last_evidence_at": 1784660989,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "c2fd3e0dc3"
+   ],
+   "value": "Operates globally with a distributed workforce that includes diverse international colleagues situated around the world."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "c2fd3e0dc3"
+   ],
+   "value": "To foster a workplace that emphasizes diversity and belonging, led by a global team committed to Airbnb's mission and to leading as a 21st-century company."
+  },
   "name": "Airbnb",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "c2fd3e0dc3"
+   ],
+   "value": "Estimated: Adventurous and fast-moving, requiring adaptability and quick iteration from collaborative, self-motivated professionals."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c74651becb"
+   ],
+   "value": "An online platform and mobile application that facilitates peer-to-peer short-term lodging rentals, primarily allowing hosts to list their properties for guests to book."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 25 days total including a standard corporate PTO policy."
   },
+  "refresh_after": 1790056155,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -8928,7 +8992,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely offers standard holiday shutdowns aligned with engineering norms."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "c74651becb"
+   ],
+   "value": "Established, publicly traded global company."
   },
   "sources": [
    {
@@ -8962,14 +9033,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=e93d85dcb7096acea36ef06cb82ce8e6e1e5552ac9614fe4a44ade7ad240b1d5JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0c435ae6-df01-6c4c-2d98-4d7bdea06d36&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQWlyYm5i&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "medium",
+   "source_ids": [
+    "c2fd3e0dc3"
+   ],
+   "value": "Active global hiring presence, though specific details regarding visa sponsorship for distinct roles were not provided in the sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c74651becb"
+   ],
+   "value": "Airbnb operates a global online marketplace for short- and long-term homestays and experiences, connecting hosts with guests. The company makes money primarily by charging service fees to both hosts and guests for each successful booking facilitated through its platform."
+  },
+  "synthesized_evidence_sha": "058aa4cbd2ee3d52",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "f03675fc4f"
+   ],
+   "value": "Engineers build and optimize scalable CI platform infrastructure, reimagining workflow orchestration to handle AI-scale software development, experimenting in remote sandbox environments, and debugging remote execution/cache systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784621994,
   "web_search_url": "https://duckduckgo.com/?q=Airbnb+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "c2fd3e0dc3",
+    "f03675fc4f"
+   ],
+   "value": "Hits the target of elite prestige and top-tier new-grad tech pay through challenging infrastructure work that scales globally, fitting an AI-scale engineering scope. Provides a fast, innovative tech culture led by self-motivated talent, satisfying the need for rapid technical learning and career growth."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "c2fd3e0dc3",
+    "f03675fc4f"
+   ],
+   "value": "Estimated: Generally balanced due to standard software engineering workflows, though the fast and self-motivated culture may require occasional intense pushes."
   }
  },
  "airbus": {
@@ -50415,37 +50519,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "High – recognized for large-scale player data, sportsbook ML, and loyalty-graph analytics; publishes at RecSys/KDD; strong academic partnerships."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Integrated resort model: gaming win (house edge) drives core revenue, amplified by non-gaming spend (rooms, F&B, entertainment) and high-margin digital channels (sportsbook, iGaming). Loyalty program increases lifetime value and cross-property spend."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Data-driven but pragmatic; ‘player-first’ mindset; collaborative across tech/marketing/ops; low politics for a Fortune-500; strong DEI and responsible-gaming commitments."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Leisure travelers, gamblers, sports bettors, convention/group business, and loyalty-program members across the U.S. (with a growing digital audience)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $135k–$160k base + 10–15% target bonus + $20k–$40k RSU vesting over 4 years (varies by role/location)."
   },
   "evidence_sha": "5b0ef223aadc8e8c",
+  "generated_at": 1784872155,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Gaming, Hospitality & Sports Betting (regulated entertainment)"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Expect applied ML/system-design questions tied to real Caesars use cases: real-time recommendation engines, sportsbook risk models, A/B testing at scale, and migrating batch pipelines to streaming. Behavioral rounds emphasize regulatory awareness, cross-functional collaboration with marketing/operations, and balancing innovation with compliance."
+  },
+  "last_attempt_at": 1784872155,
   "last_evidence_at": 1784674824,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in Las Vegas, NV; major tech hubs in Las Vegas, Chicago, New York, and remote-friendly roles. Properties across 17+ states."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To be the most customer-focused, innovative, and responsible gaming-entertainment company, delivering memorable experiences while maintaining regulatory compliance and community commitment."
+  },
   "name": "Caesars Entertainment",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate-fast – digital org moves at tech-company speed (2-week sprints, quarterly OKRs), but regulatory gates and property-level dependencies prevent chaotic crunch."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Casino gaming (slots, table games, poker), sports betting (Caesars Sportsbook), iGaming/online casino, hotel/resort accommodations, dining, entertainment venues, and the Caesars Rewards loyalty ecosystem."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 days PTO + 10 company holidays + 2 floating days (accrual increases with tenure)."
   },
+  "refresh_after": 1790056155,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -50455,7 +50601,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (Dec 24–Jan 2) and summer half-day Fridays (Memorial Day–Labor Day)."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large public company (NYSE: CZR); ~50,000+ employees; $10B+ annual revenue; mature, regulated industry with ongoing digital transformation."
   },
   "sources": [
    {
@@ -50489,14 +50640,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=50371e74e5779eec5de445a33ca7c103e6a9a01d3be173d7cd3d052d0bd9f68dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1652f470-e9a6-6726-1fef-e3ede8396625&u=a1aHR0cHM6Ly93d3cuY2Flc2Fycy5jb20vP21zb2NraWQ9MTY1MmY0NzBlOWE2NjcyNjFmZWZlM2VkZTgzOTY2MjU&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "H-1B sponsor for specialized tech roles (data science, ML engineering, cloud); green-card sponsorship typically for senior/lead positions after 1–2 years."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Caesars Entertainment is a major casino-entertainment company operating dozens of resorts, casinos, and sportsbooks across the U.S. It generates revenue primarily from gaming (slots, table games, sports betting), hotel stays, food & beverage, entertainment, and its loyalty program Caesars Rewards."
+  },
+  "synthesized_evidence_sha": "5b0ef223aadc8e8c",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Data science & AI for player analytics, fraud detection, personalization, dynamic pricing, sportsbook risk modeling, real-time streaming platforms, cloud migration (AWS/Azure), and modernizing legacy mainframe systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674824,
   "web_search_url": "https://duckduckgo.com/?q=Caesars+Entertainment+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers a rare blend of elite-brand prestige (household name in gaming/hospitality) and high new-grad compensation (~$130–160k base + bonus/equity) while investing heavily in a modern data/AI stack. The company’s digital push (sportsbook, iGaming) creates fast-paced, innovative projects without the burnout culture of pure-play tech giants, and regulated-industry cadence enforces reasonable release cycles and predictable shutdown periods."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "7.5/10 – core hours 10am–4pm, no weekend on-call for most DS roles, guaranteed holiday shutdowns (Dec 24–Jan 2), 4-day summer Fridays."
   }
  },
  "cai": {
@@ -72834,52 +73006,128 @@
  "crackajack digital solutions llc": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "eacd0aab7d"
+   ],
+   "value": "Estimated: Tier 3 (Boutique IT consulting). The firm shows active recruiting for Gen-AI roles, indicating modern practices, but lacks the elite brand cachet of top-tier tech labs."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "eacd0aab7d",
+    "163dcb836f"
+   ],
+   "value": "Consulting and IT services; generating revenue by contracting specialized technical professionals for software development and infrastructure projects."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "163dcb836f"
+   ],
+   "value": "Estimated: Startup-style and distributed. The application process involves direct outreach to a Co-Founder, suggesting a leaner, more direct culture."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "eacd0aab7d"
+   ],
+   "value": "Businesses requiring specialized IT and software development resources, likely focused on logistics, shipping, and enterprise operations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "eacd0aab7d"
+   ],
+   "value": "Estimated: $70,000 - $100,000 USD depending on specialization and location."
   },
   "evidence_sha": "a51a9c6f1d88fd6a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784872155,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784871987,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "eacd0aab7d"
+   ],
+   "value": "IT Services and IT Consulting"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "eacd0aab7d",
+    "163dcb836f"
+   ],
+   "value": "Probe for specifics on work-life balance, actual hours expectations, and after-hours on-call requirements. Ask how projects are scoped to avoid burnout, whether AI roles are core to the company or just client-facing billing, and what the definitive path is for technical career growth for a new grad."
+  },
+  "last_attempt_at": 1784872155,
   "last_evidence_at": 1784795725,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "eacd0aab7d",
+    "163dcb836f"
+   ],
+   "value": "Headquartered in Portland, OR. The company operates with a distributed workforce, with open roles in Seattle, Phoenix, San Jose, San Diego, Houston, Jackson, New York, New Jersey, Cypress, and fully Remote."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "163dcb836f"
+   ],
+   "value": "Delivering optimized, secure, and resilient software solutions aligned with client business objectives."
+  },
   "name": "CrackaJack Digital Solutions LLC",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "eacd0aab7d"
+   ],
+   "value": "Estimated: Moderate to Fast. Driven primarily by client deliverables and a wide array of open technical roles."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "eacd0aab7d"
+   ],
+   "value": "Software development, Gen-AI engineering, cloud infrastructure (AWS/GCP), enterprise systems (SAP, AS400), and IT support services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "eacd0aab7d"
+   ],
+   "value": "Estimated: Standard industry average likely ranges between 10-15 days of PTO for new technical hires."
   },
-  "retry_after": 1784872107,
+  "refresh_after": 1790056155,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "medium",
+   "source_ids": [
+    "eacd0aab7d"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "eacd0aab7d"
+   ],
+   "value": "Estimated: None found in research. No formal company-wide shutdowns or guaranteed offline periods are mentioned."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "eacd0aab7d"
+   ],
+   "value": "Small private company with a highly distributed and remote-friendly workforce across multiple US cities."
   },
   "sources": [
    {
@@ -72933,14 +73181,48 @@
     "url": "https://crackajackdigitalsolutionsllc.applytojob.com/apply/KpZktL66FY/Software-Developer-Multiple-Openings"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "eacd0aab7d"
+   ],
+   "value": "Not explicitly mentioned in current sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "eacd0aab7d",
+    "163dcb836f"
+   ],
+   "value": "CrackaJack Digital Solutions LLC is an IT services and consulting firm that provides software engineering, cloud, and infrastructure talent for enterprise platforms. They make money by staffing specialized technical roles for client projects, as evidenced by their diverse active job openings."
+  },
+  "synthesized_evidence_sha": "a51a9c6f1d88fd6a",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "eacd0aab7d",
+    "163dcb836f"
+   ],
+   "value": "Involves software development, Gen-AI engineering, full-stack development (React/Node.js), and cloud architecture (AWS/GCP). The Software Developer role specifically focuses on integrating software components, optimizing system performance, and remediating security vulnerabilities."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784795725,
   "web_search_url": "https://duckduckgo.com/?q=CrackaJack+Digital+Solutions+LLC+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "eacd0aab7d",
+    "163dcb836f"
+   ],
+   "value": "As a consulting firm, CrackaJack provides exposure to diverse enterprise problems and modern tech stacks (Gen-AI, AWS, GCP) which can accelerate technical learning. However, this type of business model often experiences shifting demands and client-driven pressure, making it a potential mismatch for a candidate prioritizing guaranteed shutdowns, sane hours, and a strict avoidance of burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "eacd0aab7d"
+   ],
+   "value": "Estimated: Moderate. IT services and consulting often require adaptability to client schedules, which may challenge strict WLB priorities."
   }
  },
  "crane co": {
@@ -80941,11 +81223,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -80957,6 +81241,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784872155,
   "last_evidence_at": 1784672493,
   "name": "Deloitte",
   "pace_of_work": {
@@ -80969,6 +81254,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784872275,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -81042,7 +81328,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=b52bf80d1c989d90550b5ddbec5329a92e8c4e4d05d04155993260fb32b16562JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=068da0dd-8eee-6028-1b01-b7408fbe61eb&u=a1aHR0cHM6Ly93d3cuZGVsb2l0dGUuY29tL3VzL2VuLmh0bWw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784672493,
   "web_search_url": "https://duckduckgo.com/?q=Deloitte+company+careers+benefits",
@@ -194285,41 +194571,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (Regional/Operational) — Applied analytics and automation within agencies; not a recognized AI research or elite talent destination."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "457c1b4390",
+    "6c59162677"
+   ],
+   "value": "Taxpayer-funded public sector entity; revenue comes from state taxes (income, sales, gross production), federal grants, fees, and bonds. No profit motive; budget allocated by legislature."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Established, process-oriented, risk-averse, hierarchical. Values tenure, compliance, and public accountability over speed or experimentation. Collaborative but siloed across agencies."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "6c59162677"
+   ],
+   "value": "Residents of Oklahoma (approx. 4 million), businesses operating in the state, local governments, federal agencies, and internal state agencies consuming shared services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $55,000–$70,000 base salary for entry-level data/IT roles (GS/state grade equivalent). Significantly below top-tier private sector ($120k–$200k+). Benefits include pension, health insurance, and tuition assistance."
   },
   "evidence_sha": "6d85174235d5a91b",
+  "generated_at": 1784872155,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "457c1b4390",
+    "cc20747826",
+    "6c59162677"
+   ],
+   "value": "Public Administration / State Government"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect structured, competency-based interviews emphasizing public-sector values: equity, transparency, compliance, and stakeholder management. Technical depth assessed but weighted less than ability to navigate bureaucracy, document thoroughly, and work within rigid procurement/security frameworks. Prepare for panel interviews and scenario questions on ethics and process."
   },
-  "last_attempt_at": 1784871987,
+  "last_attempt_at": 1784872155,
   "last_evidence_at": 1784674221,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "cc20747826"
+   ],
+   "value": "Headquartered in Oklahoma City; major agency offices in Tulsa, Norman, Stillwater, and regional field offices statewide. Limited remote/hybrid options vary by agency."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "cc20747826"
+   ],
+   "value": "To serve the people of Oklahoma by delivering effective, accountable, and transparent government services that improve quality of life, ensure public safety, and promote economic opportunity."
+  },
   "name": "Oklahoma State Government",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow to Moderate — Governed by legislative cycles, procurement rules, change management processes, and multi-agency coordination. Innovation requires extensive approval."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "457c1b4390",
+    "cc20747826"
+   ],
+   "value": "Public services including healthcare (Medicaid, state hospitals), education (K-12 oversight, higher ed coordination), transportation (roads, bridges), public safety (law enforcement, corrections), natural resources regulation, licensing, and digital government platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days annual leave + 10–12 paid holidays + sick leave (accrues monthly). Exact accrual depends on tenure and agency."
   },
-  "retry_after": 1784872107,
+  "refresh_after": 1790056155,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -194329,7 +194669,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Observes all federal and state holidays (e.g., Thanksgiving week, Christmas–New Year week, Martin Luther King Jr. Day, etc.). No additional company-wide shutdowns beyond statutory holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "6c59162677"
+   ],
+   "value": "Large, mature public employer: ~35,000–45,000 full-time equivalent employees across 100+ agencies. Stable, non-growth-stage organization."
   },
   "sources": [
    {
@@ -194363,14 +194710,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=152e5101e50cf6b1ff33e24cc05bf8328fd39395c31163ebaaf5b75ddfb1d5e5JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0c53fa42-0d9d-655f-318e-eddf0c8164aa&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9Pa2xhaG9tYQ&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Capable of sponsoring H-1B and other work visas for hard-to-fill technical roles, but process is slower and subject to stricter public-sector rules than private companies. Green card sponsorship possible but rare."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "457c1b4390",
+    "cc20747826",
+    "6c59162677"
+   ],
+   "value": "Oklahoma State Government is the public administrative body governing the state of Oklahoma, providing services across health, education, transportation, public safety, and regulatory functions. It operates through dozens of agencies and employs tens of thousands of civil servants funded by state tax revenue and federal grants."
+  },
+  "synthesized_evidence_sha": "6d85174235d5a91b",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Legacy system modernization, GIS, cybersecurity, data analytics for health/transportation, ERP maintenance, digital services portals. Emerging AI/ML use cases in fraud detection, predictive analytics, and chatbots, but not a primary R&D hub."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674221,
   "web_search_url": "https://duckduckgo.com/?q=Oklahoma+State+Government+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers mission-driven public service impact at scale with strong job stability and predictable hours, but lacks the elite AI prestige, top-tier new-grad compensation, and fast-paced innovative culture the candidate prioritizes. Work-life balance is generally respected with standard government schedules, but technical growth speed and pay are below private-sector leaders."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — Standard 40-hour weeks, rare overtime, generous leave, and strong union/civil service protections. Shutdowns observed for federal/state holidays."
   }
  },
  "oklo": {
@@ -261806,38 +262178,102 @@
  "t rowe price": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "2937de5015"
+   ],
+   "value": "Estimated: Mid-tier. While highly prestigious in finance, it is not primarily recognized for elite, top-tier AI or data science innovation."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "2937de5015"
+   ],
+   "value": "Acts as an investment management firm that focuses on funding technology startups while offering broader investment solutions."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "2937de5015"
+   ],
+   "value": "Estimated: Established and corporate, prioritizing stability and structured processes over rapid tech-culture innovation."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "2937de5015"
+   ],
+   "value": "A diverse clientele ranging from individuals to institutional investors seeking investment solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "confidence": "high",
+   "source_ids": [
+    "2937de5015"
+   ],
+   "value": "$78,000 to $132,000 per year for an Associate Software Engineer role."
   },
   "evidence_sha": "9b6da4e90a1ce4c7",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784872155,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2937de5015"
+   ],
+   "value": "Investment Management / Asset Management."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2937de5015"
+   ],
+   "value": "In the interview, probe deeply into the team's actual day-to-day pace, autonomy, and use of modern AI or data science tooling to ensure it isn't slow bureaucracy. Ask about on-call expectations, weekend work, and actualized hours to verify they respect work-life balance and guarantee personal time. Finally, clarify the technical learning curve and promotion pathway to confirm the role accelerates career growth without becoming a high-burnout environment."
+  },
+  "last_attempt_at": 1784872155,
   "last_evidence_at": 1784791696,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "2937de5015"
+   ],
+   "value": "Baltimore, MD and at least one additional location (hybrid work model)."
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "T. Rowe Price",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "2937de5015"
+   ],
+   "value": "Estimated: Moderate. As an 85-year-old asset management firm, the pace is likely steady and process-oriented rather than fast and highly innovative."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "2937de5015"
+   ],
+   "value": "Investment management services and solutions for a diverse clientele, including funding for technology startups."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "2937de5015"
+   ],
+   "value": "Estimated: 20-25 days of paid time off annually, standard for the financial services industry."
   },
+  "refresh_after": 1790056155,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -261848,6 +262284,13 @@
    "confidence": "estimated",
    "source_ids": [],
    "value": "None found in research (estimated)"
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "2937de5015"
+   ],
+   "value": "A premier global asset management organization with over 85 years of experience."
   },
   "sources": [
    {
@@ -261891,14 +262334,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=78764078c3ef1c096f44ac0c4e3e094966199447442609f0c2ca23cff185d872JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ec016c9-b21a-6d98-3a21-0157b3d76c8f&u=a1aHR0cHM6Ly93d3cudGlrdG9rLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "2937de5015"
+   ],
+   "value": "T. Rowe Price is a premier global asset management organization with over 85 years of experience that provides investment management services and solutions. The firm generates revenue by managing investments and funding technology startups."
+  },
+  "synthesized_evidence_sha": "9b6da4e90a1ce4c7",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "2937de5015"
+   ],
+   "value": "New grad associate software engineers work with Java, JavaScript, Python, SQL, and Git."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679533,
   "web_search_url": "https://duckduckgo.com/?q=T.+Rowe+Price+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2937de5015"
+   ],
+   "value": "T. Rowe Price offers a high starting salary for new grads in a premier, established firm, but as a legacy asset manager, its culture may lean more toward slow bureaucracy rather than the fast, innovative tech environment you are looking for. The hybrid work model helps support work-life balance and sane hours, though it may not deliver the elite AI prestige or accelerated technical learning pace of a dedicated tech startup."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "2937de5015"
+   ],
+   "value": "Estimated: Good. The financial sector typically respects work-life balance with sane hours, and the hybrid model supports flexibility."
   }
  },
  "tactile medical": {
@@ -290083,38 +290555,104 @@
  "verkada": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "de5373d9c0"
+   ],
+   "value": "Estimated: Mid-to-High. Positioned at the center of the 'Physical AI' technology shift, deploying millions of devices globally, offering highly consequential AI and backend data science roles."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "de5373d9c0"
+   ],
+   "value": "Hardware sales coupled with recurring cloud-based software subscriptions for enterprise physical security management."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "de5373d9c0"
+   ],
+   "value": "Estimated: Mission-driven tech culture heavily focused on innovation and scaling world-impacting physical security systems."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "de5373d9c0"
+   ],
+   "value": "Wide-ranging organizations and communities globally, with more than 2 million devices deployed across 170+ countries."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "85ef69a053"
+   ],
+   "value": "Estimated: $150,000 - $180,000 base salary. Top-tier tech pay for elite new-grad engineering talent, aligned with Bay Area standards."
   },
   "evidence_sha": "a675bb34ad5ce856",
+  "generated_at": 1784872155,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "85ef69a053",
+    "de5373d9c0"
+   ],
+   "value": "Physical Security and Enterprise Software"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Assess the true day-to-day pace and schedule expectations of the specific team. Probe whether the engineering culture genuinely protects personal time and guarantees shutdowns, ensuring the elite learning experience does not come at the cost of a high-burnout environment."
   },
+  "last_attempt_at": 1784872155,
   "last_evidence_at": 1784858719,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "85ef69a053"
+   ],
+   "value": "Headquartered in San Mateo, California, USA."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "de5373d9c0"
+   ],
+   "value": "To be at the center of the consequential technology shift of Physical AI by rapidly scaling its impact to secure and monitor real-world environments."
+  },
   "name": "Verkada",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "de5373d9c0"
+   ],
+   "value": "Estimated: Fast-paced and highly innovative. Marketed as rapidly scaling its physical AI impact, typical of a fast-moving tech company avoiding slow bureaucracy."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "85ef69a053",
+    "de5373d9c0"
+   ],
+   "value": "A cloud-based platform encompassing smart security cameras, access control devices, and AI-backed alarm systems that detect, verify, and respond to security threats."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "85ef69a053"
+   ],
+   "value": "Estimated: 15-20 days of standard PTO, typical for a rapidly scaling tech company of this size, though exact policy is not public."
   },
+  "refresh_after": 1790056155,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -290124,7 +290662,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No information on guaranteed company-wide shutdowns found in public sources."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "85ef69a053"
+   ],
+   "value": "Founded in 2016, currently in a rapid scaling stage with 1001-5000 employees."
   },
   "sources": [
    {
@@ -290178,14 +290723,43 @@
     "url": "https://job-boards.greenhouse.io/verkada/jobs/5191604007"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "85ef69a053"
+   ],
+   "value": "Has a demonstrated track record of offering H1B sponsorship, though sponsorship is not guaranteed for every specific role."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "85ef69a053",
+    "de5373d9c0"
+   ],
+   "value": "Verkada is a physical security technology company that develops a unified, cloud-managed platform of security cameras, access control devices, and alarm systems. By combining proprietary hardware with AI-driven software, it sells its products via subscription to enterprise customers, generating recurring revenue from its deployed devices."
+  },
+  "synthesized_evidence_sha": "a675bb34ad5ce856",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "85ef69a053",
+    "de5373d9c0"
+   ],
+   "value": "Software engineering involves building backend alarm systems that utilize sensors, cameras, and AI to detect threats, as well as embedded software development for access control utilizing C, C++, Linux, and Linux device drivers."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784679639,
   "web_search_url": "https://duckduckgo.com/?q=Verkada+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers the elite new-grad pay and fast-paced, innovative tech culture centered around consequential 'Physical AI' shifts, providing top-tier learning opportunities. However, as a rapidly scaling scale-up, candidates should proactively validate whether its promised work-life balance truly respects sane hours and avoids toxic burnout environments."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. The rapid scaling and high-impact framing suggest a demanding environment; true work-life balance metrics require personal validation."
   }
  },
  "versant health": {
@@ -291006,37 +291580,96 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (Traditional Infrastructure). While highly critical to the AI ecosystem, the prestige is rooted in industrial engineering and power systems rather than recognized as an elite software or data science employer."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "1c9d0bcda1",
+    "3c4384875c"
+   ],
+   "value": "Designs, manufactures, and services hardware alongside accompanying software and lifecycle services for large-scale enterprise infrastructure needs."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven and impact-focused. Emphasizes tangible global impact through critical infrastructure, but may feel more corporate and less fast-paced compared to modern software-first tech companies."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "1c9d0bcda1",
+    "3c4384875c"
+   ],
+   "value": "Major data center operators, telecommunication providers, and commercial and industrial businesses that rely on uninterrupted digital infrastructure."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000 - $100,000 base salary for new grad software and data roles, reflecting hardware-manufacturing industry standards rather than top-tier big tech pay."
   },
   "evidence_sha": "cebb3efe215d31a7",
+  "generated_at": 1784872155,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "128315dfe1",
+    "1c9d0bcda1"
+   ],
+   "value": "Data center equipment and critical infrastructure technology."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Ask specific questions about work-life balance to clarify expectations, such as average on-call schedules, weekend work for facility outages, and whether the team enforces hard hours or relies on guaranteed shutdown periods. Gauge the pace of innovation by asking how quickly new monitoring algorithms or automation tools are deployed to production, and whether technical engineers are expected to navigate heavy compliance and safety regulations versus having clean-room software freedom."
   },
+  "last_attempt_at": 1784872155,
   "last_evidence_at": 1784593390,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "128315dfe1"
+   ],
+   "value": "Global company with headquarters in Westerville, Ohio, USA, and operations across the Americas, Asia Pacific, and EMEA."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "128315dfe1",
+    "3c4384875c"
+   ],
+   "value": "To build, power, and protect the critical digital infrastructure that powers the world's most vital technologies."
+  },
   "name": "Vertiv",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Steady and standard large-enterprise pace. Driven by client SLAs and hardware deployment cycles, avoiding the high-burnout, fast-paced tech startup dynamic."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "1c9d0bcda1",
+    "3c4384875c"
+   ],
+   "value": "Power management systems (UPS and power distribution), thermal management solutions (precision cooling for data centers), and IT management software for monitoring and controlling infrastructure."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days of standard PTO per year, typical for a company of its scale and industry, with additional standard paid holidays."
   },
+  "refresh_after": 1790056155,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -291046,7 +291679,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Standard public holidays. No guaranteed company-wide shutdowns beyond typical corporate holidays found."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "128315dfe1"
+   ],
+   "value": "Public company (NYSE: VRT), operating on a global scale with a multi-billion dollar revenue stream."
   },
   "sources": [
    {
@@ -291080,14 +291720,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=abe69e6dff023b88934e8689854478a2e1b45ace953d957b4edc5cec62ed3416JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=0d7479d2-dd10-665e-36fa-6e4fdcff67b5&u=a1aHR0cHM6Ly93d3cudmVydGl2LmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "128315dfe1",
+    "3c4384875c"
+   ],
+   "value": "Context not explicitly available in provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "128315dfe1",
+    "1c9d0bcda1",
+    "3c4384875c"
+   ],
+   "value": "Vertiv is a global provider of critical digital infrastructure solutions, specializing in power management, thermal control, and IT management systems. The company makes money by designing, manufacturing, and servicing hardware and software that ensure the continuous, reliable operation of data centers, communication networks, and commercial environments."
+  },
+  "synthesized_evidence_sha": "cebb3efe215d31a7",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "1c9d0bcda1",
+    "3c4384875c"
+   ],
+   "value": "Involves embedded systems, IoT infrastructure, electrical engineering, mechanical cooling systems, and software platforms for remote monitoring and management of IT hardware."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784593390,
   "web_search_url": "https://duckduckgo.com/?q=Vertiv+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Vertiv positions itself at the center of the AI revolution, but as a hardware-heavy industrial manufacturer, it leans more toward steady, traditional bureaucracy than fast-paced, elite tech culture. While AI infrastructure is an undeniably impactful mission, the everyday environment may lack the rapid new-grad upskilling dynamics of a top-tier software firm, requiring you to navigate a slower pace and more process-heavy management layers."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. As an established industrial company, hours are typically aligned with standard manufacturing and enterprise IT cycles rather than the toxic crunch culture of high-burnout software startups."
   }
  },
  "vestmark": {
