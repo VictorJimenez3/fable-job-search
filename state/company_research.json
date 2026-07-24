@@ -15185,39 +15185,103 @@
  },
  "amazon development center u s inc": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "fb21db7ea2",
+    "17f8c9c419"
+   ],
+   "value": "Tier 1. Recognized globally as a top destination for AI and data science talent, working on industry-defining large-scale machine learning challenges."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "fb21db7ea2"
+   ],
+   "value": "Diversified technology and retail model generating revenue through online product sales, third-party seller services, subscription fees (Prime), and enterprise cloud computing services."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Peculiar culture driven by intense customer focus, data-backed debate, and frugality. Collaboration is high, but can be confrontational and heavily metric-driven."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "fb21db7ea2"
+   ],
+   "value": "Global retail consumers, enterprise clients utilizing cloud infrastructure, and third-party marketplace sellers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $180,000 - $220,000 total compensation (base salary + equity vesting + sign-on bonus) for top-tier AI/Data Science new-grad roles."
   },
   "evidence_sha": "4a7f17745b422009",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Big Tech / technology (estimated)"
+  "generated_at": 1784877015,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "fb21db7ea2"
+   ],
+   "value": "E-commerce, Cloud Computing, and Consumer Technology."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "e6d83815e0",
+    "17f8c9c419"
+   ],
+   "value": "Be prepared to demonstrate 'customer obsession' and 'bold ownership' through behavioral stories using Amazon's Leadership Principles. Because Amazon's culture emphasizes high velocity and data-driven decision-making, expect probing questions on how you handle tight deadlines, navigate ambiguity, and deliver results under intense pressure. To address work-life balance concerns, ask specifically about on-call expectations, pager duty frequency, and team-specific operational load."
+  },
+  "last_attempt_at": 1784877015,
   "last_evidence_at": 1784678104,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "fb21db7ea2"
+   ],
+   "value": "Headquartered in the U.S. with development centers and corporate offices distributed globally across major tech hubs."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "To channel customer obsession into making everyday impact, big and small, through a culture of curiosity, bold ownership, and fearless initiative."
+  },
   "name": "Amazon Development Center U.S., Inc.",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Estimated: Extremely fast-paced and delivery-focused, requiring high throughput and rapid deployment cycles. Environment is often high-stress with demanding performance metrics."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "fb21db7ea2"
+   ],
+   "value": "E-commerce marketplace infrastructure, Amazon Web Services (AWS), consumer electronics, and AI-driven recommendation and logistics systems."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 10-15 days of vacation accruing in the first year, alongside standard paid holidays and company-specific sick leave."
   },
+  "refresh_after": 1790061015,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -15227,7 +15291,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No company-wide guaranteed shutdowns. Paid time off is generally flexible but must be negotiated around operational deliverables and team on-call cycles."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "fb21db7ea2"
+   ],
+   "value": "Large-cap, publicly-traced, mature global enterprise employing hundreds of thousands of corporate and tech workers."
   },
   "sources": [
    {
@@ -15271,14 +15342,46 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Amazon commonly sponsors work visas for highly specialized technical roles, though policies may vary by specific role and location."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "fb21db7ea2",
+    "e6d83815e0"
+   ],
+   "value": "Amazon Development Center U.S., Inc. is a subsidiary of Amazon.com, Inc., focused on software engineering, research, and technical development. It makes money by driving innovations that support Amazon's vast e-commerce retail operations, cloud computing (AWS), and consumer technology ecosystems."
+  },
+  "synthesized_evidence_sha": "4a7f17745b422009",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "e6d83815e0",
+    "17f8c9c419"
+   ],
+   "value": "Large-scale distributed systems, machine learning models, predictive analytics, cloud infrastructure development, and massive data processing pipelines."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678104,
   "web_search_url": "https://duckduckgo.com/?q=Amazon+Development+Center+U.S.%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "e6d83815e0",
+    "17f8c9c419"
+   ],
+   "value": "For a candidate seeking elite prestige and top-tier new-grad pay in AI/Data Science, Amazon offers unparalleled scale and technical learning. However, its notoriously fast-paced, data-driven culture often conflicts with the desire for guaranteed work-life balance and avoidance of burnout. You must determine if the accelerated career growth justizes the intense operational demands, or if the bureaucracy of a massive tech giant outweighs the innovative pace."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "e6d83815e0"
+   ],
+   "value": "Estimated: Below average to variable. Known for demanding hours, high burnout potential, and intensive on-call duties which conflict with sane hours and personal time."
   }
  },
  "amazon web services aws": {
@@ -15507,11 +15610,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -15523,6 +15628,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
+  "last_attempt_at": 1784877015,
   "last_evidence_at": 1784678205,
   "name": "Amazon Web Services, Inc.",
   "pace_of_work": {
@@ -15535,6 +15641,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784877135,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -15588,7 +15695,7 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678205,
   "web_search_url": "https://duckduckgo.com/?q=Amazon+Web+Services%2C+Inc.+company+careers+benefits",
@@ -54904,42 +55011,111 @@
  "candid health": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Similar to a Series B/C startup. Appeared in new-grad data science job monitoring sources."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
+  "attempts": 2,
+  "business_model": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "316260e577",
+    "60f92ebdd3"
+   ],
+   "value": "Likely charges healthcare organizations for its platform, operating as a B2B SaaS company."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "60f92ebdd3",
+    "316260e577"
+   ],
+   "value": "In-person and fast-moving, with high ownership over outcomes. The culture may be demanding due to rapid scaling but rewards proactive problem-solvers."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "316260e577",
+    "60f92ebdd3"
+   ],
+   "value": "Healthcare providers and organizations."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "316260e577",
+    "17f8c9c419"
+   ],
+   "value": "Estimated: New-grad tech pay likely falls in the competitive startup range ($120k-$160k base + equity). Pave benchmark data is used to set scales."
   },
   "evidence_sha": "7cce36cb18944a33",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784877015,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784876869,
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "316260e577",
+    "60f92ebdd3"
+   ],
+   "value": "Healthcare Technology / HealthTech."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "60f92ebdd3",
+    "316260e577"
+   ],
+   "value": "Candidates should focus on demonstrating ability to thrive in a fast-paced, in-person environment and manage competing priorities. It is crucial to ask about work-life balance, sane hours, and burnout prevention, since the company's rapid scaling and in-person culture could pose risks to personal time."
+  },
+  "last_attempt_at": 1784877015,
   "last_evidence_at": 1784742766,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "60f92ebdd3"
+   ],
+   "value": "In-person work environment (specific city not mentioned in research)."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "60f92ebdd3",
+    "316260e577"
+   ],
+   "value": "Not explicitly stated in research, but focuses on hiring top talent and optimizing operations to drive growth in the healthcare sector."
+  },
   "name": "Candid Health",
   "pace_of_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "60f92ebdd3",
+    "316260e577"
+   ],
+   "value": "Estimated: Very fast-paced. The company describes its environment as fast-moving with rapid scaling."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "316260e577",
+    "60f92ebdd3"
+   ],
+   "value": "A digital software platform provided to healthcare organizations."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard startup PTO (10-15 days). PTO policy is not public in the supplied sources."
   },
-  "retry_after": 1784876989,
+  "refresh_after": 1790061015,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -54949,7 +55125,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Standard startup holidays (e.g., continued operations). Guaranteed shutdowns are not mentioned in the supplied sources."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "316260e577"
+   ],
+   "value": "Fast-growing startup stage; the team has more than doubled in the last 18 months and plans to replicate that growth."
   },
   "sources": [
    {
@@ -55013,14 +55196,47 @@
     "url": "https://jobs.ashbyhq.com/candidhealth/f3aaae7e-cab4-42d5-aff4-2448b323dfaa"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "60f92ebdd3",
+    "316260e577"
+   ],
+   "value": "Candid Health is a fast-growing technology company (likely in the healthcare/health-tech sector) that provides a software platform for healthcare providers and organizations. The company operates an in-person, fast-paced work culture and monetizes its services through its digital platform."
+  },
+  "synthesized_evidence_sha": "7cce36cb18944a33",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "60f92ebdd3",
+    "316260e577"
+   ],
+   "value": "Focuses on data-driven operations, optimizing recruiting processes, and software development in a fast-moving digital environment."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784742766,
   "web_search_url": "https://duckduckgo.com/?q=Candid+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "60f92ebdd3",
+    "316260e577"
+   ],
+   "value": "Candid Health aligns well with the candidate's desire for a fast, innovative tech culture over slow bureaucracy. The company has experienced rapid growth and operates in a fast-paced environment, which may accelerate technical learning and career growth; however, candidates should carefully assess work-life balance, as the company explicitly emphasizes an in-person culture and rapid scaling."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "60f92ebdd3",
+    "316260e577"
+   ],
+   "value": "Estimated: Moderate. The fast-paced, in-person, and rapidly scaling environment may require extended hours during critical periods."
   }
  },
  "candidate fyi": {
@@ -88592,11 +88808,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88608,6 +88826,7 @@
    "source_ids": [],
    "value": "Big Tech / technology (estimated)"
   },
+  "last_attempt_at": 1784877015,
   "last_evidence_at": 1784737480,
   "name": "Discord",
   "pace_of_work": {
@@ -88620,6 +88839,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784877135,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88683,7 +88903,7 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678204,
   "web_search_url": "https://duckduckgo.com/?q=Discord+company+careers+benefits",
@@ -184924,42 +185144,105 @@
  "mgm resorts international": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "0fa8a48c39"
+   ],
+   "value": "Estimated: Tier 3 (Enterprise Tech). As a non-tech-first legacy enterprise, data science roles here generally lack the elite industry prestige of FAANG or top quantitative finance firms."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "0fa8a48c39"
+   ],
+   "value": "The company generates revenue through integrated resort operations, capturing spend across lodging, gaming, food and beverage, and entertainment. [Source 0fa8a48c39]"
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "0603ef51ae"
+   ],
+   "value": "Estimated: Customer-obsessed, corporate, and service-oriented, prioritizing stability and scale over disruptive tech innovation."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "0603ef51ae"
+   ],
+   "value": "MGM serves leisure tourists, business convention attendees, and gaming enthusiasts seeking luxury resort and entertainment experiences. [Source 0603ef51ae]"
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "0603ef51ae"
+   ],
+   "value": "Estimated: 90k - 120k. Competitive for the Las Vegas market but lower than top-tier tech hubs."
   },
   "evidence_sha": "f2c549ce72d001ff",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784877015,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784876720,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0fa8a48c39"
+   ],
+   "value": "Hospitality, gaming, and entertainment. [Source 0fa8a48c39]"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "0fa8a48c39",
+    "0603ef51ae"
+   ],
+   "value": "Candidates should probe the actual tech stack innovation and learning opportunities within MGM's Data Science teams. It is also critical to ask about team agility to ensure the role avoids slow bureaucracy and respects work-life balance through guaranteed shutdowns and sane hours."
+  },
+  "last_attempt_at": 1784877015,
   "last_evidence_at": 1784680699,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "0603ef51ae"
+   ],
+   "value": "Headquartered in Las Vegas, Nevada, with operational properties and corporate tech offices located in various domestic and international markets. [Source 0603ef51ae]"
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "6e22908653"
+   ],
+   "value": "MGM focuses on providing world-class entertainment and guest experiences at its premier resort properties. [Source 6e22908653]"
+  },
   "name": "MGM Resorts International",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "0fa8a48c39"
+   ],
+   "value": "Estimated: Moderate. As a massive corporate entity, the pace is likely steady and process-driven rather than fast-moving or highly innovative."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "0fa8a48c39"
+   ],
+   "value": "The company's core offerings include luxury hotel accommodations, casino gaming, live entertainment venues, convention spaces, and fine dining. [Source 0fa8a48c39]"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "0fa8a48c39"
+   ],
+   "value": "Estimated: 20-25 days. Standard for large hospitality corporates, but unlikely to feature unlimited PTO."
   },
-  "retry_after": 1784876960,
+  "refresh_after": 1790061015,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -184969,7 +185252,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None found in research based on provided sources."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "0fa8a48c39"
+   ],
+   "value": "MGM is a large, publicly traded enterprise-scale organization operating numerous flagship properties globally. [Source 0fa8a48c39]"
   },
   "sources": [
    {
@@ -185003,14 +185293,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=e7a6f85de5bc02c3b82e3759f3be3d187fdd61221ac9ca022707a53b08c321ccJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=04b615d7-10a9-635e-06d5-024911f062cb&u=a1aHR0cHM6Ly93d3cubWdtcGx1cy5jb20vYnJvd3Nl&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "6e22908653"
+   ],
+   "value": "Estimated: As a large public enterprise, MGM may offer visa sponsorship for specialized technical roles, but it is not predominantly a tech-first employer known for mass new-grad sponsorship."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "0fa8a48c39"
+   ],
+   "value": "MGM Resorts International is a global hospitality and entertainment company that operates a portfolio of destination resort brands, including Bellagio, MGM Grand, and ARIA. It makes money primarily through room rentals, food and beverage sales, gaming, and entertainment. [Source 0fa8a48c39]"
+  },
+  "synthesized_evidence_sha": "f2c549ce72d001ff",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "0603ef51ae"
+   ],
+   "value": "Tech roles at MGM involve building scalable platforms for hotel management, loyalty programs (MGM Rewards), and enterprise systems. [Source 0603ef51ae]"
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680699,
   "web_search_url": "https://duckduckgo.com/?q=MGM+Resorts+International+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "0fa8a48c39",
+    "0603ef51ae"
+   ],
+   "value": "MGM is a legacy hospitality enterprise, meaning its AI and tech initiatives may lack the elite prestige and fast-paced, innovative culture of top-tier tech firms. Its size suggests some bureaucracy and slower technical velocity, which may conflict with priorities for rapid career growth and cutting-edge data science impact."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "6e22908653"
+   ],
+   "value": "Estimated: Above average. Standard corporate hospitality hours are typical, and the environment is generally not known for the toxic burnout culture of high-end tech startups."
   }
  },
  "michael baker international": {
@@ -188174,37 +188496,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Top-tier within the biotech and life sciences industry; recognized for its high-impact AI applications in computational biology and drug discovery."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "1ccfc4f7c9"
+   ],
+   "value": "Develops proprietary mRNA medicines and vaccines, generating revenue through direct commercial sales to governments and healthcare organizations, alongside strategic collaborations and licensing."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven and highly collaborative, focused on rapidly advancing mRNA science to improve human health."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "1ccfc4f7c9"
+   ],
+   "value": "Governments, healthcare providers, and patients globally who purchase or distribute its vaccines and therapeutics."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Highly competitive for biotech, likely ranging from $110k to $130k base salary for AI/Data Science new grads, with total compensation potentially higher."
   },
   "evidence_sha": "740f1fb1a6cdd765",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+  "generated_at": 1784877015,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "1ccfc4f7c9"
+   ],
+   "value": "Biotechnology and Pharmaceuticals."
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Prepare to discuss how you would apply cutting-edge AI and data science to accelerate mRNA research and optimize clinical trials. Highlight your ability to thrive in a fast, innovative tech culture while maintaining sane hours and strict work-life balance. Emphasize your eagerness for rapid technical learning and career growth without sacrificing personal time."
+  },
+  "last_attempt_at": 1784877015,
   "last_evidence_at": 1784677673,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "6f7f9a0ad4"
+   ],
+   "value": "Headquartered in Cambridge, Massachusetts, with additional facilities and offices globally."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "1ccfc4f7c9"
+   ],
+   "value": "To deliver the greatest possible impact to people through mRNA medicines."
+  },
   "name": "Moderna",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast and innovative, driven by the company's startup-like roots and rapid scaling during the pandemic; generally streamlined compared to traditional slow pharma bureaucracy."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "1ccfc4f7c9"
+   ],
+   "value": "mRNA-based therapeutics and vaccines, including Spikevax (COVID-19 vaccine), and a pipeline of candidates for oncology, rare diseases, and infectious diseases."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard for the industry, approximately 15-20 days of paid time off annually, alongside company holidays."
   },
+  "refresh_after": 1790061015,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -188214,7 +188592,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely offers limited holiday shutdowns or flexible time off to ensure sane hours, but guaranteed firm-wide shutdowns are not prominently publicized."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "af949a1437"
+   ],
+   "value": "Publicly traded, large-cap biopharmaceutical company."
   },
   "sources": [
    {
@@ -188258,14 +188643,42 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely to offer visa sponsorship for specialized AI and data science roles due to the high demand for technical talent in the biotech sector, though subject to role-specific requirements."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "af949a1437",
+    "1ccfc4f7c9"
+   ],
+   "value": "Moderna is a biotechnology company focused on creating transformative medicines based on messenger RNA (mRNA). The company makes money by developing, commercializing, and licensing its mRNA therapeutics and vaccines, such as its COVID-19 vaccine."
+  },
+  "synthesized_evidence_sha": "740f1fb1a6cdd765",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "6f7f9a0ad4"
+   ],
+   "value": "Data science and AI roles focus on bioinformatics, computational biology, and machine learning to accelerate drug discovery and optimize clinical trials. The company leverages large datasets to advance its mRNA platform."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677673,
   "web_search_url": "https://duckduckgo.com/?q=Moderna+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Moderna fits your criteria for a mission-driven company leveraging elite AI and data science to revolutionize healthcare. It offers strong new-grad pay in a fast-paced, innovative tech culture that prioritizes rapid technical learning and career growth within a mission-driven context. While biotech can be demanding, Moderna generally respects work-life balance through sane hours, helping you avoid toxic, high-burnout environments."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. The company is reported to respect work-life balance with generally sane hours, avoiding the toxic burnout culture seen at some tech giants."
   }
  },
  "molina healthcare": {
@@ -234337,37 +234750,81 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Top-tier (research-heavy, publication track, elite investor/advisor network, competitive with FAIR/DeepMind/OpenAI adjacent labs for talent)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "B2B SaaS with API-based pricing tiers (usage-volume) and enterprise contracts; likely offers professional services for custom model tuning and on-prem deployment."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Small, high-trust, intellectually intense team of researchers and engineers; flat hierarchy, strong writing culture, transparency about threats and failures, low ego, high psychological safety."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Enterprises in media, finance, government, social platforms, and identity verification sectors needing to detect AI-generated content at scale."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $170k-$220k base + meaningful equity (0.1-0.3% for ML/research roles), signing bonus $15k-$30k; total comp competitive with top AI labs."
   },
   "evidence_sha": "8e1adc3a9e65e68a",
+  "generated_at": 1784877015,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "AI Safety / Deepfake Detection / Trust & Safety Infrastructure"
   },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Expect deep technical screens on CV/NLP/model robustness, adversarial examples, and real-time systems design. Prepare to discuss detection vs. generation tradeoffs, evaluation metrics for evolving threats, and production ML challenges (latency, drift, explainability). Cultural fit emphasizes mission alignment, intellectual honesty, and sustainable pace."
+  },
+  "last_attempt_at": 1784877015,
   "last_evidence_at": 1784834267,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquartered in New York City; likely remote-friendly with distributed team across US time zones."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To restore trust in digital media by detecting and exposing deepfakes and synthetic content, protecting truth and authenticity in the age of generative AI."
+  },
   "name": "Reality Defender",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Fast, research-driven sprints with production urgency; intensity spikes around threat evolutions and major releases, but culture aims to avoid sustained crunch."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Deepfake detection platform with real-time API, browser extension, and enterprise dashboard for audio, video, image, and text analysis. Offers explainable AI scoring and integration-ready tooling for trust and safety teams."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays; flexible/unlimited policy in practice with encouragement to take real time off."
   },
+  "refresh_after": 1790061015,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -234377,7 +234834,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Annual year-end shutdown (approx. 1 week between Christmas and New Year); possible summer 'recharge' week."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Early-stage startup (Seed/Series A), approximately 20-50 employees, venture-backed by investors focused on AI safety and misinformation."
   },
   "sources": [
    {
@@ -234421,14 +234885,39 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Likely supports H-1B and O-1 visas for exceptional ML talent; early-stage may have limited cap-exempt or green card sponsorship bandwidth."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Reality Defender is a deepfake and AI-generated content detection company that provides real-time multimodal analysis to identify synthetic media. The platform helps organizations defend against fraud, misinformation, and identity threats driven by generative AI."
+  },
+  "synthesized_evidence_sha": "8e1adc3a9e65e68a",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Computer vision, audio signal processing, NLP, multimodal fusion, adversarial ML, model robustness, real-time inference optimization, MLOps for detection pipelines, explainability research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784834267,
   "web_search_url": "https://duckduckgo.com/?q=Reality+Defender+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Reality Defender sits at the intersection of elite AI research (adversarial multimodal detection) and urgent societal mission (truth in media). As a well-funded early-stage company, it offers new grads high ownership, publication-worthy work, and top-of-market compensation without big-tech bureaucracy. The deepfake detection space is technically differentiated and mission-critical, attracting strong investor and academic interest."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — mission-driven team with explicit norms around sustainable hours; early-stage means occasional urgency but leadership prioritizes burnout prevention."
   }
  },
  "realm": {
@@ -236535,11 +237024,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -236551,6 +237042,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784877015,
   "last_evidence_at": 1784729018,
   "name": "Regeneron Pharmaceuticals",
   "pace_of_work": {
@@ -236563,6 +237055,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784877135,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -236606,7 +237099,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=a6a84b78b5d438b8c32d39dca79ae6430fd80633b75f422b619562a90b4f2ef3JmltdHM9MTc4NDY3ODQwMA&ptn=3&ver=2&hsh=4&fclid=2431a522-602e-6284-1f25-b2bc61456385&u=a1aHR0cHM6Ly93d3cucmVnZW5lcm9uLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784729018,
   "web_search_url": "https://duckduckgo.com/?q=Regeneron+Pharmaceuticals+company+careers+benefits",
