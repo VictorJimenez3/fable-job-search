@@ -2487,108 +2487,129 @@
  "abbvie": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "High — recognized as a top pharma employer for data science; publishes at NeurIPS, ICML, AMIA; partners with academic AI labs; but not a pure-play AI company like FAANG."
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Tier 2. Highly impactful domain in healthcare, but not considered an elite tech-first standard like FAANG."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
-   "confidence": "high",
-   "source_ids": [
-    "c39d09143d"
-   ],
-   "value": "Revenue comes from sales of patented prescription drugs; heavy investment in R&D (approx. 20% of revenue) fuels pipeline; post-Humira loss of exclusivity, growth relies on newer immunology/oncology assets and acquisitions."
-  },
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Professional, science-first, collaborative, and risk-aware. Employees value impact on patients. Hierarchy exists but technical expertise is respected. Diversity and inclusion are emphasized. Less 'move fast and break things', more 'move deliberately and validate'."
-  },
-  "customers": {
-   "confidence": "high",
-   "source_ids": [
-    "c39d09143d"
-   ],
-   "value": "Primary customers are healthcare providers, hospitals, pharmacies, patients, and payers (insurers/government health systems) globally."
-  },
-  "error": "",
-  "estimated_new_grad_tech_pay": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $110,000-$135,000 base + 10-15% target bonus + RSU grant ($20k-$40k vesting over 4 years). Total first-year comp ~$140k-$180k."
-  },
-  "evidence_sha": "bf87276cf0b46b8f",
-  "generated_at": 1784871317,
-  "generator": {
-   "endpoint": "nvidia:nemotron",
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
-   "task": "company_research"
-  },
-  "industry": {
-   "confidence": "high",
-   "source_ids": [
-    "c39d09143d"
-   ],
-   "value": "Biopharmaceuticals / Life Sciences"
-  },
-  "interview_focus": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Expect questions on ML fundamentals, statistical rigor, causal inference, and domain adaptation to biology/clinical data. Emphasize experience with messy real-world data, model interpretability, and cross-functional communication. Prepare for behavioral questions on collaboration, compliance awareness, and long-term project ownership."
-  },
-  "last_attempt_at": 1784871317,
-  "last_evidence_at": 1784934042,
-  "locations": {
    "confidence": "high",
    "source_ids": [
     "c39d09143d",
     "01bf04f523"
    ],
-   "value": "Headquarters: North Chicago, Illinois. Major R&D hubs: Lake County (IL), South San Francisco, Boston, Worcester (MA). Global offices in Europe, Asia, Latin America. Hybrid/remote options vary by role."
+   "value": "Patent-protected pharmaceutical sales driven by R&D innovation and clinical trials."
+  },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "01bf04f523"
+   ],
+   "value": "Mission-driven, scientific, collaborative, and process-oriented."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "c39d09143d",
+    "01bf04f523"
+   ],
+   "value": "Healthcare providers, patients, hospitals, and pharmacies globally."
+  },
+  "error": "",
+  "estimated_new_grad_tech_pay": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $90k - $120k base salary. Pharma tech roles pay well but may not match elite big tech total compensation."
+  },
+  "evidence_sha": "bf87276cf0b46b8f",
+  "generated_at": 1784937314,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c39d09143d",
+    "01bf04f523"
+   ],
+   "value": "Pharmaceuticals and Biotechnology"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Be prepared to discuss how you can apply AI/ML in a regulated biopharma environment. Emphasize your ability to navigate large datasets while maintaining compliance, and ask about team-specific work-life balance, as pharma timetables can sometimes offer predictable shutdowns compared to big tech."
+  },
+  "last_attempt_at": 1784937314,
+  "last_evidence_at": 1784934042,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "01bf04f523"
+   ],
+   "value": "North Chicago, IL headquarters; global offices and research hubs worldwide."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
     "01bf04f523"
    ],
-   "value": "To discover and deliver innovative medicines that solve serious health issues today and address the medical challenges of tomorrow."
+   "value": "To take on the toughest health challenges and make a remarkable impact on people's lives."
   },
   "name": "AbbVie",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Measured — regulated drug development imposes stage-gate reviews, documentation, and compliance; slower than consumer tech but faster than traditional pharma due to digital transformation initiatives."
+   "source_ids": [
+    "01bf04f523"
+   ],
+   "value": "Estimated: Moderate to slow. Drug development cycles and regulatory compliance (FDA) enforce a cautious, methodical tech culture rather than a fast-paced迭代 environment."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "c39d09143d"
+    "c39d09143d",
+    "01bf04f523"
    ],
-   "value": "Key products include Humira (adalimumab), Skyrizi (risankizumab), Rinvoq (upadacitinib), Imbruvica (ibrutinib), Venclexta (venetoclax), and a pipeline spanning immunology, oncology, neuroscience, eye care, and virology."
+   "value": "Humira, Skyrizi, Rinvoq, and a Pipeline of Oncology, Immunology, and Neuroscience therapeutics."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: 15-20 days annual PTO + 10-12 company holidays (including year-end shutdown). Accrual increases with tenure."
+   "source_ids": [
+    "01bf04f523"
+   ],
+   "value": "Estimated: 15-20 days of vacation plus company holidays and sick time."
   },
+  "refresh_after": 1790121314,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Yes — annual year-end shutdown (typically Dec 24-Jan 1) where most operations close; employees use PTO or unpaid time if not covered by holiday schedule."
+   "source_ids": [
+    "01bf04f523"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns, but standard public holidays are observed."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
     "c39d09143d"
    ],
-   "value": "Large, mature public company (NYSE: ABBV); ~50,000 employees worldwide; Fortune 500; market cap ~$280B (2024)."
+   "value": "Large-cap, publicly traded enterprise with tens of thousands of employees."
   },
   "sources": [
    {
@@ -2633,9 +2654,12 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Actively sponsors H-1B visas and employment-based green cards for technical and scientific roles; large immigration program given global workforce."
+   "confidence": "medium",
+   "source_ids": [
+    "01bf04f523",
+    "dbc3b9e88f"
+   ],
+   "value": "As a large global pharma company, AbbVie frequently sponsors work visas for specialized technical talent, though policies vary by role."
   },
   "status": "ready",
   "summary": {
@@ -2644,25 +2668,33 @@
     "c39d09143d",
     "01bf04f523"
    ],
-   "value": "AbbVie is a global biopharmaceutical company focused on discovering and delivering innovative medicines for serious health conditions. It was spun off from Abbott Laboratories in 2013 and operates as an independent, research-driven enterprise."
+   "value": "AbbVie is a global biopharmaceutical company that researches, develops, and commercializes advanced therapies. It makes money by selling blockbuster drugs like Humira and Skyrizi, though it is actively investing in data science and artificial intelligence to accelerate drug discovery and development."
   },
+  "synthesized_evidence_sha": "bf87276cf0b46b8f",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "AI/ML applied to drug discovery (molecular design, target identification), clinical trial optimization, real-world evidence, commercial analytics, supply chain, and digital health. Uses cloud platforms, bioinformatics, NLP, computer vision, and causal inference."
+   "confidence": "medium",
+   "source_ids": [
+    "01bf04f523",
+    "dbc3b9e88f"
+   ],
+   "value": "AI and Data Science roles focus on drug discovery, clinical trial optimization, and enterprise data platforms."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784677760,
   "web_search_url": "https://duckduckgo.com/?q=AbbVie+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "AbbVie offers elite pharma prestige and competitive new-grad pay for AI/data science, with a mission-driven focus on patient impact. Its regulated environment means slower pace than pure tech, but provides structured work-life boundaries, generous PTO, and holiday shutdowns that protect personal time. Technical growth is strong in applied ML for drug development, though bureaucracy exists."
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "While AbbVie offers strong mission-driven work and competitive new-grad pay, the tech culture operates within a heavily regulated, slower-paced pharma bureaucracy. The work is high-impact, but the pace may not match the fast, iterative innovation typical of elite tech companies."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Good — typical 40-45 hour weeks for individual contributors; core hours culture; limited on-call; protected vacation; holiday shutdown between Christmas and New Year."
+   "source_ids": [
+    "01bf04f523"
+   ],
+   "value": "Estimated: Good to Moderate. Large pharma generally respects personal time over toxic crunch, but bureaucracy can cause friction."
   }
  },
  "abound": {
@@ -13609,44 +13641,45 @@
  "albertsons companies": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Low"
+   "source_ids": [
+    "6d101fa60b",
+    "28a7fa49d6"
+   ],
+   "value": "Low tier for top tech talent; legacy retail chains generally do not compete with elite tech labs or AI unicorns for new grad talent."
   },
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
    "confidence": "high",
    "source_ids": [
+    "6d101fa60b",
     "28a7fa49d6"
    ],
-   "value": "Mass-market retail sales"
+   "value": "Direct-to-consumer retail sales of food and drug products via physical store locations."
   },
   "culture_vibe": {
    "confidence": "high",
    "source_ids": [
-    "28a7fa49d6",
-    "34c14336d1"
-   ],
-   "value": "Estimate"
-  },
-  "customers": {
-   "confidence": "high",
-   "source_ids": [
     "28a7fa49d6"
    ],
-   "value": "Everyday consumers and local communities seeking food and drug essentials."
+   "value": "Diverse and inclusive, rooted in traditional grocery and drugstore retail."
+  },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Everyday consumers and households nationwide."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
-   "confidence": "high",
+   "confidence": "estimated",
    "source_ids": [
-    "28a7fa49d6",
-    "34c14336d1"
+    "6d101fa60b",
+    "28a7fa49d6"
    ],
-   "value": "Estimated: ~$35,000-$52,000 annualized (based on $16.76-$25.15/hr entry front-end roles)."
+   "value": "Estimated: Corporate tech roles might sit in the $90k-$120k base range, though specific tech data is absent (note: disclosed entry-level retail positions start at $16.76-$25.15/hr)."
   },
   "evidence_sha": "b14c017f794adb06",
-  "generated_at": 1784869681,
+  "generated_at": 1784937314,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -13655,57 +13688,63 @@
   "industry": {
    "confidence": "high",
    "source_ids": [
-    "28a7fa49d6",
-    "34c14336d1"
+    "6d101fa60b",
+    "28a7fa49d6"
    ],
    "value": "Food and Drug Retail"
   },
   "interview_focus": {
    "confidence": "estimated",
    "source_ids": [
+    "6d101fa60b",
     "28a7fa49d6"
    ],
-   "value": "Based on your profile, prepare for: 1) Culture if they value 'innovation' over structure. 2) Growth & Access to learning resources. 3) Boundaries on overtime. Important: Ask rigorous questions to avoid toxic burnout."
+   "value": "Probe heavily into the team's iteration speed and tech stack. Ensure any data science role is focused on impactful engineering rather than internal IT tooling, and seek guarantees on personal time to avoid standard corporate retail burnout."
   },
-  "last_attempt_at": 1784869681,
+  "last_attempt_at": 1784937314,
   "last_evidence_at": 1784933777,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "28a7fa49d6",
-    "34c14336d1"
+    "6d101fa60b",
+    "28a7fa49d6"
    ],
-   "value": "Washington DC; North Bend, WA."
+   "value": "Bellevue, WA and Washington, DC are directly referenced, but operations span across the United States."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "28a7fa49d6",
-    "34c14336d1"
+    "28a7fa49d6"
    ],
    "value": "Committed to innovation and fostering a culture of belonging."
   },
   "name": "Albertsons Companies",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Moderate to fast due to retail operations, but likely leans toward legacy corporate processes rather than agile tech innovation."
+   "source_ids": [
+    "6d101fa60b",
+    "28a7fa49d6"
+   ],
+   "value": "Estimated: Slower corporate retail pace, likely hampered by legacy bureaucracy rather than fast-paced innovative tech culture."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
-    "28a7fa49d6",
-    "34c14336d1"
+    "6d101fa60b",
+    "28a7fa49d6"
    ],
-   "value": "Groceries, household goods, and pharmacy/drug services."
+   "value": "Food, grocery items, and drugstore/pharmacy services."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Standard retail corporate tier"
+   "source_ids": [
+    "6d101fa60b"
+   ],
+   "value": "Estimated: 10-15 days standard for corporate employees, though exact policy is not public."
   },
-  "refresh_after": 1790053681,
+  "refresh_after": 1790121314,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -13714,13 +13753,16 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: None standard"
+   "source_ids": [
+    "6d101fa60b",
+    "28a7fa49d6"
+   ],
+   "value": "Estimated: Core retail operations run continuously, major corporate shutdowns unlikely."
   },
   "size_stage": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Established, large-scale enterprise"
+   "value": "Large established U.S. retail enterprise."
   },
   "sources": [
    {
@@ -13785,46 +13827,46 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "low",
-   "source_ids": [
-    "28a7fa49d6",
-    "34c14336d1"
-   ],
-   "value": "No specific mention of visa sponsorship for technical roles."
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Not specified in the available sources."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "28a7fa49d6",
-    "34c14336d1"
+    "6d101fa60b",
+    "28a7fa49d6"
    ],
-   "value": "Albertsons Companies is a leading food and drug retailer operating across the United States. The company generates revenue through in-person retail sales, operating a vast network of brick-and-mortar store locations."
+   "value": "Albertsons Companies is a leading food and drug retailer in the United States. The company makes money by selling groceries, household items, and pharmacy services directly to consumers through its various retail banners."
   },
-  "synthesized_evidence_sha": "cdeed571d63a923f",
+  "synthesized_evidence_sha": "b14c017f794adb06",
   "technical_work": {
-   "confidence": "high",
+   "confidence": "low",
    "source_ids": [
-    "28a7fa49d6",
-    "34c14336d1"
+    "6d101fa60b",
+    "28a7fa49d6"
    ],
-   "value": "Front-end entry level technical roles involve supporting retail software and applications."
+   "value": "While entry-level retail positions are explicitly advertised, corporate enterprise tech roles likely focus on internal software, e-commerce infrastructure, and supply chain technologies, potentially lacking elite tech prestige."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674490,
   "web_search_url": "https://duckduckgo.com/?q=Albertsons+Companies+company+careers+benefits",
   "why_it_matters": {
-   "confidence": "medium",
+   "confidence": "estimated",
    "source_ids": [
-    "28a7fa49d6",
-    "34c14336d1"
+    "6d101fa60b",
+    "28a7fa49d6"
    ],
-   "value": "Based on your candidate priorities: AI/Data Science Prestige - Low, traditional retailer. Pay - Low; retail entry roles start at $16.76-$25.15/hr. Culture - Fast bureaucracy of a legacy retailer. WLB - Estimated average, likely lacks tech shutdowns. Fit - Poor alignment with elite, top-tier tech criteria."
+   "value": "For an elite AI/data job seeker wanting fast, innovative tech rather than slow bureaucracy, a massive legacy grocery chain will likely lack the prestige, greenfield technical work, and rapid high-tech pace you are targeting."
   },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Average"
+   "source_ids": [
+    "6d101fa60b",
+    "28a7fa49d6"
+   ],
+   "value": "Estimated: Inconsistent; may vary drastically between corporate standard hours and retail operations burnout."
   }
  },
  "aledade": {
@@ -54265,7 +54307,7 @@
    "value": "Estimated: Regional enterprise tier. It does not carry elite, top-tier industry prestige for AI or data science compared to major tech firms."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "low",
    "source_ids": [
@@ -54285,7 +54327,7 @@
    ],
    "value": "Individuals, families, and employer groups residing in Idaho."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -54312,7 +54354,7 @@
    ],
    "value": "Candidates should gauge the specific team's exposure to modern AI tech stacks versus legacy maintenance to ensure there is enough technical learning and growth without sacrificing personal time. Asking about management's stance on sane hours and innovation deadlines will be key."
   },
-  "last_attempt_at": 1784899735,
+  "last_attempt_at": 1784937314,
   "last_evidence_at": 1784933777,
   "locations": {
    "confidence": "low",
@@ -54348,6 +54390,7 @@
    "value": "Estimated: 15 to 25 days of paid time off annually, depending on tenure."
   },
   "refresh_after": 1790083735,
+  "retry_after": 1784937794,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -54415,7 +54458,7 @@
    ],
    "value": "No specific visa sponsorship details were found within the provided research materials."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "low",
    "source_ids": [
@@ -194565,47 +194608,115 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Moderate. Prestige is concentrated within clinical data science and healthcare systems rather than elite general tech AI."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "c604901356",
+    "57dadd6722"
+   ],
+   "value": "Integrated non-profit health system generating revenue through inpatient and outpatient clinical services, supplemented by premiums from SelectHealth insurance."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-focused on patient outcomes and community health, typical of a non-profit healthcare system."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "ae8af57a58"
+   ],
+   "value": "Patients seeking medical care and diagnostic services in the Intermountain West, as well as members of its SelectHealth insurance network."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 to $110,000 base salary, lower than elite tech due to regional cost-of-living adjustments."
   },
   "evidence_sha": "6637de900ef1f737",
+  "generated_at": 1784937314,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "57dadd6722"
+   ],
+   "value": "Hospital and Healthcare Providers"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Investigate the specific tech stack, deployment speed, and learning opportunities for AI projects to ensure they meet your expectations for fast innovation without typical slow-bureaucracy bottlenecks."
   },
+  "last_attempt_at": 1784937314,
   "last_evidence_at": 1784935028,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "57dadd6722"
+   ],
+   "value": "Headquartered in Salt Lake City, Utah, with facilities across Utah, Idaho, Nevada, Colorado, Montana, and Wyoming."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "57dadd6722"
+   ],
+   "value": "Helping people live the healthiest lives possible."
+  },
   "name": "Intermountain Healthcare",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow to moderate. Legacy system integration and healthcare compliance create a more deliberate pace compared to pure tech firms."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c604901356",
+    "57dadd6722"
+   ],
+   "value": "Hospitals, regional clinics, telehealth services, patient portals (MyChart), and SelectHealth insurance plans."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20 to 25 days annually for new technical hires."
   },
+  "refresh_after": 1790121314,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "ae8af57a58",
+    "c604901356",
+    "57dadd6722"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Standard paid holidays observed, with no guaranteed company-wide shutdowns found in public research."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "ae8af57a58",
+    "57dadd6722"
+   ],
+   "value": "Large-scale regional integrated health system with billions in annual operating revenue."
   },
   "sources": [
    {
@@ -194639,14 +194750,44 @@
     "url": "https://www.bing.com/ck/a?!&&p=a8a8747e4239d5d61773dc2daf496a14c13dfee7d7d549638f0c8a8b6539d872JmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=2b17f8f5-f294-65ff-1c70-ef55f3c5643e&u=a1aHR0cHM6Ly9pbnRlcm1vdW50YWluaGVhbHRoY2FyZS5vcmcv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "ae8af57a58",
+    "57dadd6722"
+   ],
+   "value": "Sponsorship for technical roles is not explicitly stated in public landing pages; candidates should verify with recruiters."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "ae8af57a58",
+    "c604901356",
+    "57dadd6722"
+   ],
+   "value": "Intermountain Healthcare is a non-profit health system operating hospitals, clinics, and telehealth services across the Intermountain West region. It generates revenue primarily by charging for patient clinical care, medical services, and health insurance plans."
+  },
+  "synthesized_evidence_sha": "6637de900ef1f737",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "c604901356"
+   ],
+   "value": "Healthcare IT, telehealth platforms, electronic health records (Epic/MyChart) integrations, and enterprise data analytics."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784935028,
   "web_search_url": "https://duckduckgo.com/?q=Intermountain+Healthcare+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers mission-driven healthcare AI and data science work with competitive regional compensation, but may lack the fast-paced, elite startup culture some top-tier tech candidates seek due to inherent healthcare bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. Expected to offer reasonable hours and a mission-driven culture, making it a lower-burnout environment compared to top-tier tech."
   }
  },
  "international": {
@@ -197471,11 +197612,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -197487,6 +197630,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784937314,
   "last_evidence_at": 1784935028,
   "name": "IQVIA",
   "pace_of_work": {
@@ -197499,6 +197643,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784937434,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -197532,7 +197677,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=1d09daf288ae7f8b7fe0fd3e597990891424f851009537a483c38c1b3f73b78cJmltdHM9MTc4NDg1MTIwMA&ptn=3&ver=2&hsh=4&fclid=2b17f8f5-f294-65ff-1c70-ef55f3c5643e&u=a1aHR0cHM6Ly96ZW5vZG8ub3JnL3JlY29yZHMvMTQ4MTQyNjIvZmlsZXMvNC4lMjBSZWdyZXNzaW9uX3dhc2hvdXRfMThNX25vZG9zYWdlY2hhbmdlX3NlbnNpdGl2aXR5XzMwZGF5LlJtZA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784935028,
   "web_search_url": "https://duckduckgo.com/?q=IQVIA+company+careers+benefits",
@@ -277916,7 +278061,7 @@
    "value": "Estimated: Top-tier. Building advanced AI systems for the tactical edge places them in an elite, high-impact category."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "business_model": {
    "confidence": "medium",
    "source_ids": [
@@ -277938,7 +278083,7 @@
    ],
    "value": "Partners across various sectors ranging from organizations developing lifesaving drugs to those forecasting supply chain disruptions and locating missing children."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [
@@ -277967,7 +278112,7 @@
    ],
    "value": "Candidates should probe deeply into the day-to-day realities of the 'tactical edge' deployments, asking about on-call expectations, travel requirements, and average working hours to determine if the fast-paced, innovative environment will actually respect their personal time and WLB priorities."
   },
-  "last_attempt_at": 1784777137,
+  "last_attempt_at": 1784937314,
   "last_evidence_at": 1784933777,
   "locations": {
    "confidence": "low",
@@ -278007,6 +278152,7 @@
    "value": "Estimated: Standard tech industry average of 15-20 days of PTO annually, though exact policy is not specified in sources."
   },
   "refresh_after": 1789961137,
+  "retry_after": 1784937794,
   "rotational_program_name": {
    "confidence": "low",
    "source_ids": [
@@ -278098,7 +278244,7 @@
    ],
    "value": "Estimated: Likely offers employment visa sponsorship for specialized engineering roles similar to other top-tier tech firms, but not explicitly confirmed in sources."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -283965,38 +284111,116 @@
  "performance trust capital partners": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Tier 3 for AI/Data Science. Prestige is primarily finance-oriented rather than recognized by the broader tech or AI community."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "64866c646e",
+    "dc9c86be73",
+    "be7960a456"
+   ],
+   "value": "The firm makes money by charging management fees on Assets Under Management (AUM) and collecting advisory or consulting fees for their financial analytical services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Professional, analytical, and finance-focused. The culture values precision and risk management over move-fast-and-break-things tech innovation."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "64866c646e",
+    "dc9c86be73",
+    "be7960a456"
+   ],
+   "value": "Institutional investors, banks, credit unions, and other financial organizations seeking fixed-income portfolio management and structured finance analytics."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: $120,000 - $160,000 base salary, reflecting the premium typically paid by Chicago-based financial firms for quantitative and software engineering roles."
   },
   "evidence_sha": "0f815e25e65d882a",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Fintech / technology (estimated)"
+  "generated_at": 1784937314,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "64866c646e",
+    "dc9c86be73",
+    "be7960a456"
+   ],
+   "value": "Investment Management and Financial Services."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "During interviews, probe deeply into the engineering culture, the autonomy of the tech team versus the trading floor, and actual schedules to ensure the role isn't a high-burnout finance job. Ask about the specific AI/ML stack used and how the firm balances strict financial regulations with your desire for a fast, innovative tech environment."
+  },
+  "last_attempt_at": 1784937314,
   "last_evidence_at": 1784934042,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "64866c646e",
+    "dc9c86be73",
+    "be7960a456"
+   ],
+   "value": "Chicago, Illinois."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "64866c646e",
+    "dc9c86be73",
+    "be7960a456"
+   ],
+   "value": "The specific company mission was not explicitly captured in the provided research sources, though it is implied to be driven by optimizing fixed-income portfolio performance and client service."
+  },
   "name": "Performance Trust Capital Partners",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Moderate to fast pace driven by financial market hours and client deadlines, but likely lacking the fast, innovative tech agility found in modern tech companies."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "64866c646e",
+    "dc9c86be73",
+    "be7960a456"
+   ],
+   "value": "Fixed-income portfolio management, structured product analytics, and investment advisory services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: 15 to 20 days of standard paid time off, which is typical for mid-sized financial services firms, though public data is unavailable."
   },
+  "refresh_after": 1790121314,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -284005,8 +284229,19 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Unlikely to have guaranteed company-wide shutdowns; the firm generally operates continuously during standard financial market trading days."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "64866c646e",
+    "dc9c86be73",
+    "be7960a456"
+   ],
+   "value": "Mid-sized, established financial services firm operating within the capital markets and asset management sector."
   },
   "sources": [
    {
@@ -284050,14 +284285,47 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: No explicit information found regarding H-1B or OPT sponsorship for technical roles. Candidates requiring visa sponsorship should verify directly with the recruiting team."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "64866c646e",
+    "dc9c86be73",
+    "be7960a456"
+   ],
+   "value": "Performance Trust Capital Partners is an investment management and advisory firm specializing in fixed-income portfolios and structured finance. They generate revenue by managing institutional client assets and providing fee-based analytical and advisory services."
+  },
+  "synthesized_evidence_sha": "0f815e25e65d882a",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Tech roles likely involve developing data-driven financial models, quantitative analytics tools, and software for fixed-income portfolio management and trading systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784934042,
   "web_search_url": "https://duckduckgo.com/?q=Performance+Trust+Capital+Partners+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "This company may not fully align with your priorities for a fast, innovative tech culture and elite AI prestige, as financial firms often operate at a slower, more bureaucratic pace. While tech learning is accelerated through complex domain problems, the environment rarely mirrors top-tier tech companies, and true guaranteed shutdowns are uncommon in capital markets."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "1db9db9c4d"
+   ],
+   "value": "Estimated: Fair to Moderate. Finance roles typically demand standard market hours but can feature spikes in workload, making it unlikely to have 'sane hours' or guaranteed shutdowns compared to pure tech firms."
   }
  },
  "perpay": {
@@ -315619,7 +315887,7 @@
    "value": "Estimated: Tier 2. Recognized tech prestige in fintech, though not exclusively an AI-first company."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
   "business_model": {
    "confidence": "low",
    "source_ids": [
@@ -315643,7 +315911,7 @@
    ],
    "value": "Information not available in provided sources; expected to be retail investors."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -315670,7 +315938,7 @@
    "source_ids": [],
    "value": "Expect rigorous technical interviews focused on scaling data infrastructure, machine learning models for fraud or recommendation systems, and practical coding ability. Prompt enforces informational blackout from current sources; see procedural summary."
   },
-  "last_attempt_at": 1784863366,
+  "last_attempt_at": 1784937314,
   "last_evidence_at": 1784933777,
   "locations": {
    "confidence": "low",
@@ -315712,6 +315980,7 @@
    "value": "Estimated: 15-20 days"
   },
   "refresh_after": 1790047366,
+  "retry_after": 1784938274,
   "rotational_program_name": {
    "confidence": "medium",
    "source_ids": [
@@ -315797,7 +316066,7 @@
    ],
    "value": "Information not available in provided sources."
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "low",
    "source_ids": [
@@ -316370,11 +316639,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -316386,6 +316657,7 @@
    "source_ids": [],
    "value": "Fintech / technology (estimated)"
   },
+  "last_attempt_at": 1784937314,
   "last_evidence_at": 1784934042,
   "name": "Rockefeller Capital Management",
   "pace_of_work": {
@@ -316398,6 +316670,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784937434,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -316451,7 +316724,7 @@
     "url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784934042,
   "web_search_url": "https://duckduckgo.com/?q=Rockefeller+Capital+Management+company+careers+benefits",
