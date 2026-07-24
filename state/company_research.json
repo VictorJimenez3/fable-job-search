@@ -40047,37 +40047,82 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Mid-tier; not an elite FAANG-style AI lab, but higher than vanilla backend due to physical IoT data and hardware challenges."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: B2B and B2C sales of climate-control hardware, software, and IoT-enabled subscription services."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: German engineering culture prioritizing quality and thoroughness over rapid cutting-edge disruption, but aims to avoid toxic burnout cultures."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Homeowners, residential builders, HVAC installers, and property managers requiring heating and cooling solutions."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85,000 - $110,000 base, lower than elite tech but offset by strong benefits and hour boundaries."
   },
   "evidence_sha": "744b27ae92f054e4",
+  "generated_at": 1784865648,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: HVAC, Climate Technology, and IoT Manufacturing."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Assess the team's pace of innovation versus traditional Bosch bureaucracy to ensure it meets your fast-culture requirements. Clarify if sane hours and guaranteed shutdowns are truly honored without penalty, and confirm the availability of technical mentorship that accelerates career growth for new grads."
+  },
+  "last_attempt_at": 1784865648,
   "last_evidence_at": 1784673258,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "b4a165836f",
+    "2cab33bdea"
+   ],
+   "value": "Global presence with US operations and localized manufacturing/support hubs."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Providing energy-efficient, sustainable, and comfortable indoor climate solutions through continuous engineering innovation."
+  },
   "name": "Bosch Home Comfort",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Methodical and structured; slower than a fast-moving startup, reflecting its legacy as a large enterprise."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Heat pumps, water heaters, solar thermal systems, air conditioning units, and connected IoT controls."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 to 25 days of vacation depending on tenure, aligned with standard large manufacturing benefits."
   },
+  "refresh_after": 1790049648,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -40087,7 +40132,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely observes standard public holidays; specific guaranteed company-wide shutdown periods not found in research."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "2cab33bdea"
+   ],
+   "value": "Large, established enterprise operating as a division under the global Bosch Group."
   },
   "sources": [
    {
@@ -40121,14 +40173,38 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a large multinational, likely to sponsor work visas for specialized roles, though policies vary by location."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "b4a165836f",
+    "2cab33bdea"
+   ],
+   "value": "Bosch Home Comfort is a division of the global Bosch Group that manufactures heating, cooling, and hot water systems. It makes money by selling residential and commercial climate appliances, including IoT-enabled heat pumps, and related services."
+  },
+  "synthesized_evidence_sha": "744b27ae92f054e4",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Embedded systems, IoT connectivity, edge computing for appliance efficiency, and data analytics for predictive maintenance."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784673258,
   "web_search_url": "https://duckduckgo.com/?q=Bosch+Home+Comfort+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role offers mission-driven sustainability and strong work-life balance/sane hours, but requires careful evaluation of whether the technical learning pace is fast enough to meet your career growth goals compared to elite tech firms. The corporate structure may lean toward bureaucracy rather than the innovative tech culture you prefer."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Strong; expected to respect personal time with sane hours surpassing typical high-burnout tech environments."
   }
  },
  "bose": {
@@ -99908,48 +99984,125 @@
  "further": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "edfac10f49"
+   ],
+   "value": "Estimated: Likely lower-tier for AI/Data Science prestige due to its nature as a health account administration company."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "edfac10f49"
+   ],
+   "value": "Financial services and health account administration, likely generating revenue through management fees and account maintenance."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "c9c0144954"
+   ],
+   "value": "Specific culture details were not found in the provided research."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "edfac10f49"
+   ],
+   "value": "Employers and individuals seeking health savings account administration and financial planning services."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "e8866d0a4c"
+   ],
+   "value": "Estimated: Likely pays below top-tier tech companies (FAANG) for new-grad roles, with compensation more aligned with standard regional financial services."
   },
   "evidence_sha": "ba816b37eda6a7aa",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784865648,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "edfac10f49"
+   ],
+   "value": "Financial Services and Health Benefits Administration."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e8866d0a4c"
+   ],
+   "value": "Focus on probing the technical learning rate and career growth opportunities available to new-grads to ensure personal time is respected without sacrificing technical acceleration. Ask specific questions about sane working hours, shutdowns, and how the team avoids toxic or high-burnout environments."
+  },
+  "last_attempt_at": 1784865648,
   "last_evidence_at": 1784674182,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "c9c0144954"
+   ],
+   "value": "Specific office locations were not found in the provided research."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "c9c0144954"
+   ],
+   "value": "The specific company mission was not found in the provided research."
+  },
   "name": "Further",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "edfac10f49"
+   ],
+   "value": "Estimated: Likely traditional financial services pace, potentially slower and more bureaucratic than innovative tech companies."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "edfac10f49"
+   ],
+   "value": "Health Savings Accounts (HSAs) and related consumer-directed health benefit products."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "c9c0144954"
+   ],
+   "value": "Estimated: Standard corporate policy likely ranging from 15 to 25 days of paid time off, though exact policy is unknown."
   },
+  "refresh_after": 1790049648,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "c9c0144954"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "c9c0144954"
+   ],
+   "value": "Estimated: Unclear if guaranteed shutdowns exist, though some financial services firms offer limited holiday closures."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "c9c0144954"
+   ],
+   "value": "Specific company size and stage were not found in the provided research."
   },
   "sources": [
    {
@@ -99983,14 +100136,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=133b45dc2110c464b3628b8c10bd516c0a2f6ec4845d5ba867508cb0780c3125JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1d215904-9fd0-65b8-3854-4e999e1b64fa&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2Z1cnRoZXI&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "c9c0144954"
+   ],
+   "value": "Visa sponsorship information was not found in the provided research."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "edfac10f49",
+    "e8866d0a4c"
+   ],
+   "value": "Based on the retrieved page titles, Further is a company that provides health savings accounts (HSAs) and operates a career site for job seekers. They likely make money by administering tax-advantaged health accounts and related financial services for individuals and employers."
+  },
+  "synthesized_evidence_sha": "ba816b37eda6a7aa",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "c9c0144954"
+   ],
+   "value": "Specific technical work details were not found in the provided research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674182,
   "web_search_url": "https://duckduckgo.com/?q=Further+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "edfac10f49"
+   ],
+   "value": "Given that Further is a health savings account administrator rather than a pure-play AI or data science firm, it may lack the elite prestige and cutting-edge tech culture you seek for a top-tier new-grad role. You will need to evaluate if the work-life balance and technical learning opportunities compensate for non-standard AI industry experience."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "edfac10f49"
+   ],
+   "value": "Estimated: Likely standard to good work-life balance typical of financial services administration, though exact policies are unknown."
   }
  },
  "fuse integration": {
@@ -122388,41 +122573,44 @@
  },
  "ibm": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Top-tier legacy prestige that has rebranded to the watsonx AI platform. AI work is highly specialized and respected, but not always viewed as elite, cutting-edge fast-paced tech culture when compared to modern big tech competitors."
+   "confidence": "high",
+   "source_ids": [
+    "0ef9d461a3",
+    "b0b1fcf161"
+   ],
+   "value": "High. IBM is a historic pioneer in AI, though it recently faced stock headwinds following major AI revenue warnings."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "high",
    "source_ids": [
     "0ef9d461a3"
    ],
-   "value": "B2B enterprise solutions involving hybrid cloud computing and artificial intelligence, generating long-term revenue through software subscriptions, hardware infrastructure sales, managed IT services, and large-scale digital transformation consulting."
+   "value": "B2B enterprise sales, subscription-based SaaS, and IT consulting engagements."
   },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [
-    "b0b1fcf161"
-   ],
-   "value": "Estimated: Traditional, structured corporate environment prioritizing enterprise clients and consensus. Often described as slow and process-heavy, though it maintains deep technical expertise and diversity."
+   "source_ids": [],
+   "value": "Corporate, mission-driven around enterprise transformation, but carries a reputation for slow bureaucracy in many divisions."
   },
   "customers": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "0ef9d461a3"
    ],
-   "value": "Large enterprise corporations across highly regulated industries, government agencies, healthcare organizations, and global financial institutions."
+   "value": "Global enterprises, governments, and large institutions."
   },
   "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: $110,000 - $140,000 base salary for technical roles, with total compensation potentially reaching $130,000 - $160,000 depending on performance bonuses and role specifics."
+   "source_ids": [
+    "f3fd08c6f8"
+   ],
+   "value": "Estimated: $133K to $180K per year for entry-level tech roles, aligning with current public hiring posts."
   },
   "evidence_sha": "0c203f806ba50e1c",
-  "generated_at": 1784796165,
+  "generated_at": 1784865648,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -122433,65 +122621,67 @@
    "source_ids": [
     "0ef9d461a3"
    ],
-   "value": "Information Technology, Cloud Computing, Artificial Intelligence, and IT Consulting."
+   "value": "Information Technology and Services."
   },
   "interview_focus": {
    "confidence": "estimated",
-   "source_ids": [
-    "b0b1fcf161"
-   ],
-   "value": "Focus on interrogating the exact product roadmap for your assigned team to ensure it isn't a stagnant legacy system. Clarify new-grad compensation bands upfront and probe the team's velocity to verify it matches a fast, mission-driven pace rather than slow corporate IT consulting."
+   "source_ids": [],
+   "value": "Probe the team's deployment velocity and work-life balance policies. Ask how the specific group avoids legacy bureaucracy, ensures sane hours, and accelerates technical learning without demanding personal time."
   },
-  "last_attempt_at": 1784796165,
+  "last_attempt_at": 1784865648,
   "last_evidence_at": 1784847342,
   "locations": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Global presence with major engineering hubs in the United States (Austin, TX; Armonk, NY; Silicon Valley), India (Bengaluru), and various other worldwide research labs and corporate offices."
+   "confidence": "high",
+   "source_ids": [
+    "f3fd08c6f8"
+   ],
+   "value": "Headquartered in Armonk, New York, USA with major offices globally (e.g., Monroe, MI)."
   },
   "mission": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
     "0ef9d461a3"
    ],
-   "value": "To lead in the creation, development, and manufacture of the industry's most advanced information technologies, including computer systems, software, networking systems, storage devices, and microelectronics."
+   "value": "To lead in the creation, development, and manufacture of information technologies, including computer systems, software, networking systems, storage devices, and microelectronics."
   },
   "name": "IBM",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Generally moderate and slower-moving compared to big tech peers, due to a heavily matrixed corporate bureaucracy. Fast-paced innovation may only be found in isolated divisions or IBM Research."
+   "value": "Estimated: Generally slower-paced and structured due to its legacy enterprise size, though specific AI teams may operate faster."
   },
   "products": {
    "confidence": "high",
    "source_ids": [
     "0ef9d461a3"
    ],
-   "value": "Software and cloud platforms (IBM Cloud, IBM watsonx), enterprise hardware (mainframes, zSystems, Power servers), IT consulting services, and quantum computing systems."
+   "value": "Hybrid cloud computing (Red Hat), AI (watsonx), mainframes, enterprise software, and IT consulting services."
   },
   "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: 15-20+ days of annual paid time off, alongside company holidays, depending on tenure and specific role classification."
+   "value": "Estimated: 15 to 25 days of standard PTO depending on tenure and role."
   },
+  "refresh_after": 1790049648,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research"
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "None found in research."
   },
   "size_stage": {
    "confidence": "high",
    "source_ids": [
-    "5802fabec0"
+    "f3fd08c6f8"
    ],
-   "value": "Established public corporation (NYSE: IBM) with a global footprint and massive workforce. The company has successfully transitioned its legacy business models toward hybrid cloud and AI."
+   "value": "Public, mature enterprise with over 10,000 employees."
   },
   "sources": [
    {
@@ -122546,38 +122736,41 @@
    }
   ],
   "sponsorship_context": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: IBM historically sponsors work visas and offers OPT/CPT support for international tech and consulting hires, subject to the requirements of specific roles."
+   "confidence": "high",
+   "source_ids": [
+    "f3fd08c6f8"
+   ],
+   "value": "IBM has a track record of offering H1B sponsorships, though this is not guaranteed for specific roles."
   },
   "status": "ready",
   "summary": {
    "confidence": "high",
    "source_ids": [
     "0ef9d461a3",
-    "5802fabec0"
+    "f3fd08c6f8"
    ],
-   "value": "International Business Machines (IBM) is a multinational technology corporation that provides enterprise IT hardware, software, cloud computing, and artificial intelligence solutions. The company generates revenue by selling its technology infrastructure, consulting services, and subscription-based software platforms such as IBM Cloud and the AI system IBM watsonx."
+   "value": "IBM is a multinational technology corporation that provides computer hardware, software, and consulting services. It makes money by selling enterprise IT solutions, cloud platforms, and AI software like watsonx to businesses worldwide."
   },
+  "synthesized_evidence_sha": "0c203f806ba50e1c",
   "technical_work": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Estimated: Full-stack software engineering, cloud infrastructure scaling, AI/ML modeling, natural language processing (watsonx), quantum computing research, enterprise systems architecture, mainframe modernization, and large-scale data engineering."
+   "confidence": "high",
+   "source_ids": [
+    "f3fd08c6f8"
+   ],
+   "value": "Full stack development, AI model integration, hybrid cloud architecture, and enterprise software engineering. Current new-grad listings require 1+ years of experience."
   },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583457,
   "web_search_url": "https://duckduckgo.com/?q=IBM+company+careers+benefits",
   "why_it_matters": {
    "confidence": "estimated",
-   "source_ids": [
-    "b0b1fcf161"
-   ],
-   "value": "While IBM offers recognized brand prestige and a strong push into AI, its deeply bureaucratic structure often founders tech candidates seeking fast-paced, highly innovative environments. Sane hours and work-life balance exist, but elite new-grad compensation and rapid technical growth may lag behind flashier big-tech competitors."
+   "source_ids": [],
+   "value": "As a candidate seeking top-tier prestige, high new-grad pay, and a fast-paced, innovative tech culture, IBM's legacy enterprise environment may frustrate you. While roles in watsonx offer strong AI learning, you must carefully screen specific teams to avoid the slow bureaucracy and toxic burnout you want to avoid."
   },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Estimated: Good. Mature corporate processes often result in sane working hours, making it a potentially good fit for candidates prioritizing personal time and avoiding toxic burnout environments."
+   "value": "Estimated: Moderate to good work-life balance typical of mature tech giants, but varies heavily by consulting vs. product team."
   }
  },
  "iboss": {
@@ -139581,41 +139774,84 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Lower prestige in the AI/DS community. Building AI for construction is viewed as a niche industry vertical rather than top-tier elite tech, meaning it will not carry the same resume weight as a FAANG or elite AI lab."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Operates as a general contractor and construction manager, winning large infrastructure bids and earning revenue through project execution, engineering services, and procurement."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Safety-first, pragmatic, and grounded. The culture heavily skews toward traditional civil and mechanical engineers; it values operational discipline and institutional loyalty over fast-paced tech culture."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Public sector clients (departments of transportation, municipal water authorities) and private sector clients (energy utilities, mining companies, railroads)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Highly competitive for the engineering sector but modest compared to elite tech—expect roughly $65,000-$85,000 base salary for new grads depending on the role and field mobility, without large sign-on bonuses."
   },
   "evidence_sha": "79b4f36b02ea6d52",
+  "generated_at": 1784865648,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "3ffb96890a"
+   ],
+   "value": "Construction and Infrastructure Engineering"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1784865648,
+  "last_evidence_at": 1784675407,
+  "locations": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Headquartered in Omaha, Nebraska, with project offices and job sites spread throughout North America. Staff are frequently assigned to on-site field offices based on active projects."
   },
-  "last_attempt_at": 1784865502,
-  "last_evidence_at": 1784675407,
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To build projects that improve the daily lives of communities and clients by delivering essential infrastructure safely and with high quality."
+  },
   "name": "Kiewit",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow and methodical. As a massive construction and engineering enterprise, the culture tends to prioritize safety, standardization, and risk mitigation over rapid, disruptive tech innovation."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "3ffb96890a",
+    "57f0086e5b"
+   ],
+   "value": "Large-scale construction, engineering, procurement, and project management services for infrastructure projects like highways, bridges, power plants, dams, and water treatment facilities."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard corporate leave policy of roughly 15-20 days of PTO annually, plus observed public holidays for salaried office staff."
   },
-  "retry_after": 1784865622,
+  "refresh_after": 1790049648,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -139625,7 +139861,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Yes, guaranteed shutdowns. The construction industry heavily observes the Christmas to New Year period, where major job sites close down and most field staff take guaranteed time off."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Massive, established enterprise. One of the largest contractors in North America with tens of thousands of employees, generating billions in annual revenue."
   },
   "sources": [
    {
@@ -139659,14 +139900,38 @@
     "url": "https://www.bing.com/ck/a?!&&p=301bd6f3ae916b31f8208b9db5bbe13bd5f50a20cb56c07c69cf4009cfc6a2acJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0d747011-3ce6-69c5-21ed-678c3d4e68b0&u=a1aHR0cHM6Ly93d3cua2lld2l0LmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May selectively sponsor H-1B visas for hard-to-fill engineering and specialized roles, though large infrastructure firms typically prioritize domestic hiring for field operations."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "3ffb96890a",
+    "57f0086e5b"
+   ],
+   "value": "Kiewit is one of North America's largest construction and engineering organizations, building major infrastructure across transportation, energy, and water sectors. It generates revenue through large-scale, fixed-price and complex contract projects for both public and private clients."
+  },
+  "synthesized_evidence_sha": "79b4f36b02ea6d52",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Heavy engineering software (AutoCAD, Civil 3D, heavy-lift rigging software) and construction scheduling. For AI/Data Science: optimizing supply chain logistics, heavy equipment telematics, route optimization, and predictive maintenance."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675407,
   "web_search_url": "https://duckduckgo.com/?q=Kiewit+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. Project-based field engineers often work long shifts, but field operations guarantee shutdowns during major holidays. An office-based tech role would have more standard hours, but the legacy corporate culture may not offer the flexibility of a modern tech firm."
   }
  },
  "kimley horn": {
@@ -202466,47 +202731,112 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown / unverified based on provided redirects."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "f81b58e884"
+   ],
+   "value": "Not specified in supplied sources due to page redirects."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "ffabb7db8c"
+   ],
+   "value": "Not specified in supplied sources due to page redirects."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "ffabb7db8c"
+   ],
+   "value": "Not specified in supplied sources due to page redirects."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown; high new-grad pay cannot be confirmed from provided sources."
   },
   "evidence_sha": "3418410e67264a2f",
+  "generated_at": 1784865648,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "b900c844f6"
+   ],
+   "value": "Not specified in supplied sources due to page redirects."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Focus on probing the actual pace of their technical innovation, the day-to-day reality of their work-life balance, and whether their data science roles offer the accelerated learning and high new-grad pay you require without bureaucratic slowdowns."
   },
+  "last_attempt_at": 1784865648,
   "last_evidence_at": 1784674621,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "f81b58e884"
+   ],
+   "value": "Not specified in supplied sources due to page redirects."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "b900c844f6"
+   ],
+   "value": "Not specified in supplied sources due to page redirects."
+  },
   "name": "QTS",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown; requires external research to determine if it is fast and innovative or slow and bureaucratic."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "b900c844f6"
+   ],
+   "value": "Not specified in supplied sources due to page redirects."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown; exact policy not public in provided sources."
   },
+  "refresh_after": 1790049648,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "ffabb7db8c"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown; no information on guaranteed shutdowns in provided sources."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "ffabb7db8c"
+   ],
+   "value": "Not specified in supplied sources due to page redirects."
   },
   "sources": [
    {
@@ -202540,14 +202870,42 @@
     "url": "https://www.bing.com/ck/a?!&&p=9d7fc59c44d0d887c46da775221c48ac82122e03e6b8043b8f7574b6d4e5af04JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=138d2599-a464-646d-0b3c-3204a534656b&u=a1aHR0cHM6Ly9xLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "ffabb7db8c"
+   ],
+   "value": "Not specified in supplied sources due to page redirects."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "f81b58e884",
+    "b900c844f6"
+   ],
+   "value": "Company public pages redirect and do not provide a plain-English description of QTS's operations or revenue model in the supplied sources."
+  },
+  "synthesized_evidence_sha": "3418410e67264a2f",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "ffabb7db8c"
+   ],
+   "value": "Not specified in supplied sources due to page redirects."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674621,
   "web_search_url": "https://duckduckgo.com/?q=QTS+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "You are seeking an elite, fast-paced AI role with high prestige and a mission-driven culture that protects your personal time; you will need to independently verify if QTS offers top-tier data science work and guaranteed shutdowns, as the supplied sources do not confirm their tech culture or compensation."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown; external verification needed to see if hours are sane with shutdowns or prone to burnout."
   }
  },
  "quadax inc": {
@@ -208723,37 +209081,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High-tier regional prestige with massive data scale (over 100 million users), though not as globally elite as FAANG."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "a9e66aabec"
+   ],
+   "value": "Operates as a global portfolio of high-growth companies, supported by a central team that catalyzes operations and growth, with revenue generated through its consumer financial decision and comparison platform."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "a9e66aabec"
+   ],
+   "value": "Community-focused, collaborative, and inclusive, with an emphasis on upskilling, networking, and social impact."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "a9e66aabec"
+   ],
+   "value": "Over 100 million consumers annually who are looking to compare financial rates and understand their options."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $110,000 - $135,000 base salary for elite new-grad tech roles, reflecting high pay expectations balanced with standard market rates."
   },
   "evidence_sha": "287e87e8ab6416cc",
+  "generated_at": 1784865648,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "a9e66aabec"
+   ],
+   "value": "Financial Technology / Digital Media / Internet"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "To match your priorities, emphasize your drive for a fast, innovative tech culture and your desire to build inclusive digital products that leverage decades of data. Be sure to ask the interviewers about sane hours, guaranteed shutdowns, and specific examples of how the team accelerates technical learning without sacrificing personal time."
   },
+  "last_attempt_at": 1784865648,
   "last_evidence_at": 1784674181,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "a9e66aabec"
+   ],
+   "value": "Global operations, with required specific office locations not detailed in available sources."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "a9e66aabec"
+   ],
+   "value": "To help people make confident decisions by building inclusive digital products and providing platforms built on decades of data."
+  },
   "name": "Red Ventures",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced and innovative, driven by a high-growth portfolio model that avoids slow bureaucracy through small, central catalyst teams."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "a9e66aabec"
+   ],
+   "value": "A financial decision platform that helps users compare real rates, understand their options, and make confident financial decisions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20-25 days of standard flexible PTO, though exact year-one accrual policies are not public."
   },
+  "refresh_after": 1790049648,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -208763,7 +209177,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely includes standard holiday shutdowns to ensure guaranteed time off, though exact dates are not public."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "a9e66aabec"
+   ],
+   "value": "A global portfolio of high-growth companies with operations bolstered by a central team."
   },
   "sources": [
    {
@@ -208797,14 +209218,41 @@
     "url": "https://www.redventures.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "a9e66aabec"
+   ],
+   "value": "Information regarding visa sponsorship for technical roles was not found in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "a9e66aabec"
+   ],
+   "value": "Red Ventures is a global portfolio of high-growth companies that operates a major financial decision platform built on decades of data. They make money by helping over 100 million people annually compare real rates, understand financial options, and act with confidence."
+  },
+  "synthesized_evidence_sha": "287e87e8ab6416cc",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "a9e66aabec"
+   ],
+   "value": "Building inclusive digital products and maintaining a financial decision platform heavily reliant on decades of data."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674181,
   "web_search_url": "https://duckduckgo.com/?q=Red+Ventures+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "If you want a top-tier AI or data science role that balances elite prestige and high new-grad pay with a fast, innovative tech culture rather than slow bureaucracy, this portfolio model allows teams to move quickly. The company's mission-driven focus on helping 100 million users make confident decisions supports a purpose-driven environment that respects work-life balance through sane hours and guaranteed shutdowns, avoiding toxic burnout environments while accelerating technical learning."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Respects work-life balance through sane hours and guaranteed shutdowns, aligning with a non-toxic, mission-driven culture."
   }
  },
  "red5": {
@@ -249765,38 +250213,103 @@
  "the aerospace corporation": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "c02a28fa42"
+   ],
+   "value": "High prestige in defense and systems engineering, but not competitive with top-tier commercial AI/tech companies."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "c02a28fa42",
+    "7a8d9f2e85"
+   ],
+   "value": "Non-profit corporation operating as a federally funded research and development center (FFRDC), funded primarily through government contracts rather than commercial sales."
   },
+  "culture_vibe": {
+   "confidence": "low",
+   "source_ids": [
+    "c02a28fa42"
+   ],
+   "value": "Mission-driven, intellectual, and structured. Focuses heavily on public service and technical rigor rather than rapid commercial growth."
+  },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "c02a28fa42"
+   ],
+   "value": "U.S. Department of Defense, the Space Force, the intelligence community, and other civil and commercial space partners."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "c02a28fa42"
+   ],
+   "value": "Estimated: $95k - $120k base salary. High job security and strong benefits, but below commercial tech market."
   },
   "evidence_sha": "6747bfb9edd4712b",
+  "generated_at": 1784865648,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "c02a28fa42"
+   ],
+   "value": "Aerospace and Defense"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe heavily into the pace of innovation within specific teams versus government customer constraints. Ask new grads about actual day-to-day hours, shutdown policies, and whether bureaucratic overhead impedes technical growth."
   },
+  "last_attempt_at": 1784865648,
   "last_evidence_at": 1784674181,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "c02a28fa42"
+   ],
+   "value": "Headquartered in El Segundo, California, with additional facilities and offices in Colorado, Virginia, and other locations."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "c02a28fa42"
+   ],
+   "value": "To serve the nation by objectively solving the hardest technical problems in space for the public benefit."
+  },
   "name": "The Aerospace Corporation",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "c02a28fa42"
+   ],
+   "value": "Estimated: Slow to moderate. Driven by government project cycles and heavily focused on rigorous risk mitigation rather than fast, iterative innovation."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "c02a28fa42"
+   ],
+   "value": "Systems engineering, advanced technology development, launch certification, and space systems architecture analysis for national security space programs."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "c02a28fa42"
+   ],
+   "value": "Estimated: 18-24 days of annual leave, typical for defense FFRDCs."
   },
+  "refresh_after": 1790049648,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -249805,8 +250318,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "c02a28fa42"
+   ],
+   "value": "Estimated: May offer limited holiday shutdowns, but guaranteed exact dates are not consistently documented."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "c02a28fa42"
+   ],
+   "value": "Mature non-profit FFRDC."
   },
   "sources": [
    {
@@ -249840,14 +250362,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=ac15f815a6598fdaf8c21b2c289468c5b9f1747a478906d2992d066b1d70bbbeJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1d215904-9fd0-65b8-3854-4e999e1b64fa&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9UaGU&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "c02a28fa42"
+   ],
+   "value": "Due to the nature of national security work, U.S. citizenship is typically required for employment."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "c02a28fa42",
+    "c0eff9232a",
+    "7a8d9f2e85"
+   ],
+   "value": "The Aerospace Corporation is a federally funded research and development center (FFRDC) that provides independent technical guidance and systems engineering for the U.S. national security space enterprise. It operates as a non-profit constrained by public service regulations rather than traditional market competition."
+  },
+  "synthesized_evidence_sha": "6747bfb9edd4712b",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "c02a28fa42"
+   ],
+   "value": "Systems engineering, space systems architecture, advanced data analytics, orbital mechanics, and software development for various space-based projects."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674181,
   "web_search_url": "https://duckduckgo.com/?q=The+Aerospace+Corporation+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "While this role consolidates your technical learning and places you in a highly mission-driven environment with strong boundaries around work-life balance, it does not meet your desire for a fast-paced, innovative tech culture. As an FFRDC, the company's bureaucratic and heavily structured nature will contrast sharply with your preference for an agile, elite new-grad atmosphere."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "c02a28fa42"
+   ],
+   "value": "Estimated: High. Known for sane hours and a highly respectful culture compared to commercial tech, avoiding toxic or high-burnout environments."
   }
  },
  "the allen institute for ai": {
@@ -252156,37 +252709,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2–3 (respected within govtech/defense niche, but not widely known in commercial AI research rankings)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Revenue from federal contracts (cost-plus, fixed-price, time-and-materials); professional services model with billable hours; no financial details in provided sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Professional, mission-oriented, process-driven; collaborative but hierarchical; values security clearance compliance and long-term client relationships over flashy perks."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Presumed U.S. federal government departments (DoD, intelligence community, civilian agencies); no customer names disclosed in provided sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k–$120k base + modest bonus/RSU (if any); total comp ~$105k–$135k; varies by clearance level and location; below top-tier commercial AI labs."
   },
   "evidence_sha": "71657fe6c3e7785f",
+  "generated_at": 1784865648,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Federal government contracting / defense technology / professional services."
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare for technical depth in ML/AI, software engineering, and domain-specific problems (e.g., signal processing, geospatial analytics). Expect behavioral questions on handling classified environments, team collaboration, and delivering under contract deadlines. Ask about specific program culture, typical hours, shutdown policies, and mentorship for early-career growth."
+  },
+  "last_attempt_at": 1784865648,
   "last_evidence_at": 1784676791,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters likely in Northern Virginia (DC metro area) with offices near major federal clients; remote/hybrid options common in sector; no location data in provided sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mission likely centers on delivering innovative technology solutions for national security or public sector clients; no public mission statement found in provided sources."
+  },
   "name": "The Swift Group, LLC",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast depending on contract phase; surge periods near deliveries, but generally structured around government fiscal cycles; not a 'move fast and break things' startup pace."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely provides IT, engineering, analytics, or consulting services to federal agencies; no specific product details available from provided sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10 federal holidays; some firms offer additional 'flex days' or winter shutdown; policy not publicly documented."
   },
+  "refresh_after": 1790049648,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -252196,7 +252791,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns; some defense contractors observe winter break (Dec 24–Jan 1) but not universal; check specific offer letter."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-sized private company (likely 500–5,000 employees); growth stage typical for government contractors; no headcount or funding data in provided sources."
   },
   "sources": [
    {
@@ -252230,14 +252830,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=8c637811f2a1f1afc48313a00feb9ca74a2c1ec439179b37489b4b6e41f952b5JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=32af1be5-c542-6b6d-2fa1-0c78c4216a69&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9UaGU&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and green cards for STEM roles given defense/contracting nature; clearance requirements may limit sponsorship for non-citizens; no policy details in provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: The Swift Group, LLC appears to be a professional services or government contracting firm; insufficient public information from provided sources to confirm exact business focus."
+  },
+  "synthesized_evidence_sha": "71657fe6c3e7785f",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Work spans software development, data science, AI/ML, cybersecurity, cloud engineering, and systems engineering for government programs; specifics not in provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676791,
   "web_search_url": "https://duckduckgo.com/?q=The+Swift+Group%2C+LLC+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "For a candidate seeking elite AI/data science prestige with high new-grad pay, fast innovation culture, and genuine work-life balance: this firm may offer meaningful mission work in national security with structured hours, but limited public data makes it hard to verify WLB guarantees or pace. The defense sector often provides stability and clearance-backed career acceleration, though bureaucracy can vary by contract."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.5/5 (typical for cleared government contracting: defined hours, limited overtime, but occasional crunch; 'guaranteed shutdowns' not standard industry practice)."
   }
  },
  "the tatitlek corporation": {
