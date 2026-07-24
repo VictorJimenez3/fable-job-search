@@ -80287,52 +80287,132 @@
  "comtech telecommunications corp": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "02d4b128d0"
+   ],
+   "value": "Tier 3: While Comtech is a respected name in mission-critical defense communications, it is known as an RF and networking hardware company rather than an elite AI or pure data science powerhouse."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "02d4b128d0",
+    "4c6984ba53"
+   ],
+   "value": "Comtech operates a B2G (business-to-government) and B2B model, generating revenue through long-term defense contracts, systems integration services, and the sale of specialized telecommunications hardware and software."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "02d4b128d0"
+   ],
+   "value": "Estimated: Traditional, mission-focused, and highly structured. Engineering culture emphasizes stability, security, and deep domain expertise (RF, comms) over fast-paced disruption."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "02d4b128d0",
+    "4c6984ba53"
+   ],
+   "value": "Federal and state government agencies, the U.S. military, allied international defense forces, and large commercial telecommunications providers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "02d4b128d0",
+    "4c6984ba53"
+   ],
+   "value": "Estimated: $85k-$110k. Likely competitive for the defense industry and a Chandler, AZ cost-of-living, but below elite big tech or AI specialist pay bands."
   },
   "evidence_sha": "51c25976001359c9",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784885462,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784885244,
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "02d4b128d0",
+    "4c6984ba53"
+   ],
+   "value": "Telecommunications, Defense Contracting, and Public Safety Technology."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "02d4b128d0",
+    "4c6984ba53"
+   ],
+   "value": "Given your priorities, probe heavily into the specific team's tech stack to ensure data science work is innovative rather than legacy systems maintenance. Ask interviewers about release cadences, work hours, and whether project timelines allow for guaranteed personal time, to confirm the culture is non-toxic and avoids burnout despite defense sector constraints."
+  },
+  "last_attempt_at": 1784885462,
   "last_evidence_at": 1784675228,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "4c6984ba53"
+   ],
+   "value": "Corporate headquarters located in Chandler, Arizona, with global operations and field offices supporting various government and defense contracts."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "02d4b128d0"
+   ],
+   "value": "To provide innovative, mission-critical communication technologies that connect and protect people, military forces, and government agencies globally."
+  },
   "name": "Comtech Telecommunications Corp.",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "02d4b128d0"
+   ],
+   "value": "Estimated: Moderate to slow. As a public defense contractor bound by strict regulatory, compliance, and government contract timelines, the pace is driven by security protocols and methodical deployment cycles rather than fast, iterative tech sector norms."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "02d4b128d0"
+   ],
+   "value": "Satellite and terrestrial communication systems, secure networking equipment, public safety software, and tactical communication technologies."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "02d4b128d0"
+   ],
+   "value": "Estimated: 20-25 days of PTO annually, standard for a public defense contractor, alongside federal holidays."
   },
-  "retry_after": 1784885364,
+  "refresh_after": 1790069462,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
+   "source_ids": [
+    "02d4b128d0",
+    "4c6984ba53"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "02d4b128d0"
+   ],
+   "value": "Estimated: No public mention of guaranteed company-wide shutdowns; standard holiday closures are likely."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "4c6984ba53",
+    "ba11484d19"
+   ],
+   "value": "Comtech is an established, publicly traded mid-cap corporation. It recently relocated its corporate headquarters to Chandler, Arizona, optimizing its operational footprint."
   },
   "sources": [
    {
@@ -80366,14 +80446,50 @@
     "url": "https://www.bing.com/ck/a?!&&p=bed34ae82da9e2d032f671691774476962d979f82d6779a916633bdd7151bfb8JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2d0d59e4-dc7a-6141-0e93-4e79dda76082&u=a1aHR0cHM6Ly9jb210ZWNoLmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "02d4b128d0",
+    "4c6984ba53"
+   ],
+   "value": "Estimated: As a defense contractor working closely with the U.S. military, many engineering roles likely require U.S. citizenship and security clearance; standard H-1B visa sponsorship may be available for commercial tech roles but is often restricted for defense projects."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "02d4b128d0",
+    "4c6984ba53"
+   ],
+   "value": "Comtech Telecommunications Corp. is a technology company that designs, develops, and produces advanced communications solutions. They make money by selling proprietary hardware, software, and secure networking systems to government, military, and commercial enterprise clients worldwide."
+  },
+  "synthesized_evidence_sha": "51c25976001359c9",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "02d4b128d0",
+    "4c6984ba53"
+   ],
+   "value": "Technical roles likely involve RF engineering, satellite communications architecture, secure network protocol development, embedded systems programming, and complex systems integration for tactical environments."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675228,
   "web_search_url": "https://duckduckgo.com/?q=Comtech+Telecommunications+Corp.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "02d4b128d0",
+    "4c6984ba53"
+   ],
+   "value": "Comtech is deeply mission-driven, focusing on communications that protect military forces and first responders, but as a public defense contractor, its tech culture may lean toward slow bureaucracy over the fast, elite AI/data science innovation you are seeking. Sane hours and good WLB are likely, but career growth and new-grad pay may not match top-tier big tech or specialized AI fintech benchmarks."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "02d4b128d0",
+    "4c6984ba53"
+   ],
+   "value": "Estimated: Moderate to High. Defense contracting schedules can provide predictable, 40-hour work weeks with sane hours, though strict deployment deadlines may occasionally cause spikes in workload."
   }
  },
  "concept plus": {
@@ -88478,37 +88594,88 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2-3 (Strong domain-specific prestige in cyber risk analytics; known in security circles but not general AI fame like FAIR/DeepMind)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a4e9036bb7"
+   ],
+   "value": "Estimated: B2B SaaS subscriptions for risk analytics platforms, professional services engagements, and managed detection/response contracts with annual recurring revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-first, mission-driven, low-ego culture valuing technical depth over politics. Security practitioners and ML engineers collaborate closely. Transparency on risk decisions. Remote-friendly with intentional in-person collaboration."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7b93d5d837"
+   ],
+   "value": "Estimated: Enterprise organizations across finance, healthcare, technology, and government sectors requiring cyber risk quantification and regulatory compliance."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140k-$170k base + $20k-$40k equity (4yr) + $10k-$20k sign-on; total comp $170k-$230k. Adjusts for location."
   },
   "evidence_sha": "8a6620ac2058e80e",
+  "generated_at": 1784885462,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "7b93d5d837",
+    "23fcf5d064"
+   ],
+   "value": "Cybersecurity / Risk Analytics / Security Software"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Prepare for: 1) ML system design for risk scoring at scale, 2) Cyber domain knowledge (MITRE ATT&CK, CVSS, threat modeling), 3) Production ML ops for streaming security data, 4) Behavioral questions on balancing speed/quality in regulated environments. Ask directly about: on-call rotation severity, shutdown policy enforcement, mentorship structure for new grads, and how research translates to product."
   },
+  "last_attempt_at": 1784885462,
   "last_evidence_at": 1784675303,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in major US tech hub (likely Bay Area, NYC, or DC metro) with remote-first or hybrid options for engineering roles."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To enable organizations to quantify, prioritize, and mitigate cyber risk through data-driven analysis and automated security intelligence."
+  },
   "name": "Cyber Risk Analysis Group",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Fast-paced but sustainable; sprint cycles driven by customer delivery and threat landscape changes, not arbitrary deadlines. Likely 2-week sprints with quarterly planning."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7b93d5d837"
+   ],
+   "value": "Estimated: Cyber risk assessment platforms, threat intelligence feeds, vulnerability management tools, compliance automation software, and security consulting services."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10-12 company holidays + unlimited sick; mandatory minimum vacation enforcement."
   },
+  "refresh_after": 1790069462,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -88518,7 +88685,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full company shutdown last week of December + 1-2 additional long weekends annually; no-contact policy enforced."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [
+    "a4e9036bb7"
+   ],
+   "value": "Estimated: Growth-stage company (50-500 employees) with established product-market fit in cyber risk analytics, likely Series B or C funded."
   },
   "sources": [
    {
@@ -88552,14 +88726,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=a97c6af5825973dceb6c8bce3248ff15c58c768557a6cba71abdd23e1232b02dJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=11f3d90b-5b5a-6eac-0346-ce965aad6f87&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2N5YmVy&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B and green cards for specialized AI/ML and cybersecurity talent given talent scarcity in niche domain."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "7b93d5d837",
+    "a4e9036bb7",
+    "23fcf5d064"
+   ],
+   "value": "Cyber Risk Analysis Group appears to be a cybersecurity-focused organization specializing in risk analysis services. The company likely provides cyber risk assessment, threat intelligence, and security consulting to enterprise clients."
+  },
+  "synthesized_evidence_sha": "8a6620ac2058e80e",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "7b93d5d837"
+   ],
+   "value": "Estimated: Building ML models for threat scoring, developing real-time risk quantification engines, creating automated compliance mapping, and scaling data pipelines for security telemetry ingestion."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675303,
   "web_search_url": "https://duckduckgo.com/?q=Cyber+Risk+Analysis+Group+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role offers elite cybersecurity + AI intersection work at a growth-stage company where you can own significant technical problems. The mission-driven focus on quantifying cyber risk aligns with high-impact work, while the estimated size suggests faster iteration than big tech bureaucracy. Candidate's priority for prestige, learning velocity, and work-life balance may find a sweet spot here if the culture delivers on sane hours and guaranteed shutdowns."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 - Strong emphasis on sane hours with guaranteed shutdowns; minimal weekend work except critical incident response (rare for individual contributors). On-call likely rotated and compensated."
   }
  },
  "cybernetic labs": {
@@ -145145,51 +145346,114 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown – no research output, conference presence, or team profiles in sources."
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "8796f1d739",
+    "6e6a747006",
+    "c74b8b039a"
+   ],
+   "value": "No business-model details found in the supplied sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown – no culture artifacts (values, handbook, blog) in sources."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "8796f1d739",
+    "6e6a747006",
+    "c74b8b039a"
+   ],
+   "value": "No customer or target-market information found in the supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown – no compensation data, levels.fyi reports, or offer letters in sources."
   },
   "evidence_sha": "af84ea7343b41056",
+  "generated_at": 1784885462,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Consumer technology / wellness / sleep tech (common association with Hatch brand), but unconfirmed by sources."
   },
-  "last_attempt_at": 1784885067,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate should probe for: (1) concrete AI/ML project scope and publication record, (2) compensation benchmarking against top-tier new-grad offers, (3) explicit WLB policies (core hours, shutdown rituals, on-call expectations), (4) mentorship structure and learning budget, (5) mission alignment beyond marketing copy. None of these are documented in the supplied sources."
+  },
+  "last_attempt_at": 1784885462,
   "last_evidence_at": 1784676894,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely US-based (hatch.com / hatch.co domains); remote/hybrid policy unknown."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "8796f1d739",
+    "6e6a747006",
+    "c74b8b039a"
+   ],
+   "value": "No mission statement found in the supplied sources."
+  },
   "name": "Hatch",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown – no employee reviews or process descriptions in sources."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "8796f1d739",
+    "6e6a747006",
+    "c74b8b039a"
+   ],
+   "value": "No product information found in the supplied sources; the excerpts only show redirect landing pages."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown – no benefits documentation in sources."
   },
-  "retry_after": 1784885307,
+  "refresh_after": 1790069462,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "8796f1d739",
+    "6e6a747006",
+    "c74b8b039a"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown – no mention of company-wide shutdowns or mandatory disconnect policies in sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Early-to-growth stage startup (inferred from minimal public footprint in sources); headcount and funding stage unknown."
   },
   "sources": [
    {
@@ -145223,14 +145487,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=038a0f738242200f344c75e000893ba23450f3582d0d7e17f95789e1b8b00678JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01863cb3-ec2d-6271-268c-2b2eedc26349&u=a1aHR0cHM6Ly93d3cuaGF0Y2guY28vcmVzdG9yZQ&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Visa sponsorship policy unknown; no data in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "8796f1d739",
+    "6e6a747006",
+    "c74b8b039a"
+   ],
+   "value": "Hatch appears to operate web properties at hatch.co and hatch.com, but the provided sources contain only redirect notices with no substantive description of the company's products, mission, or business model."
+  },
+  "synthesized_evidence_sha": "af84ea7343b41056",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely involves consumer-facing software, mobile apps, and/or hardware-software integration given web presence; specific stack unknown."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784676894,
   "web_search_url": "https://duckduckgo.com/?q=Hatch+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks a top-tier AI/data-science role with elite prestige, high new-grad pay, fast innovative culture, mission-driven focus, strong work-life balance with sane hours and guaranteed shutdowns, and accelerated technical growth without personal-time sacrifice. This brief cannot confirm whether Hatch meets those criteria due to insufficient source data."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown – no policy documents or employee feedback in sources."
   }
  },
  "hatch it": {
@@ -155245,41 +155534,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 4 (Low prestige) — Community hospital analytics/informatics role. Not a recognized AI research or high-impact ML engineering destination. Limited publication record, conference presence, or elite talent density."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Non-profit hospital revenue from patient services (insurance reimbursements, Medicare/Medicaid, self-pay), supplemented by government grants, philanthropy, and state/federal safety-net funding (DSH, 340B)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-oriented, collaborative, hierarchical, risk-averse. Clinical leadership dominates decision-making. DEI focus strong given community served. Not a 'tech culture' — limited hackathons, open source, or engineering-driven innovation. Values stability and compliance over experimentation."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Patients from Chicago's West Side communities (Humboldt Park, West Town, Logan Square, Garfield Park), including Medicaid, Medicare, uninsured, and commercially insured individuals. Also serves as a safety-net provider for the region."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $75,000-$95,000 base (Data Scientist I / Clinical Analyst). No significant equity/RSU. Modest bonus (2-5%). Total comp ~$80k-$100k. Well below top-tier tech ($150k-$250k+)."
   },
   "evidence_sha": "a2cebdceb3fda881",
+  "generated_at": 1784885462,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Healthcare provider / Safety-net hospital / Non-profit community health system"
   },
-  "last_attempt_at": 1784885244,
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Ask about: 1) Specific AI/ML projects deployed in production (not pilots). 2) Data infrastructure maturity (warehouse, MLOps, governance). 3) Ratio of research vs. operational work. 4) On-call expectations for clinical systems. 5) Career path for data scientists in a non-tech-native org. 6) How clinical leadership partners with technical teams."
+  },
+  "last_attempt_at": 1784885462,
   "last_evidence_at": 1784583413,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Main campus: 1044 N. Francisco Ave, Chicago, IL 60622 (Humboldt Park). Outpatient clinics in surrounding neighborhoods. No remote-first policy; clinical roles on-site, some hybrid for admin/IT."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To provide high-quality, compassionate, and accessible healthcare to the diverse communities we serve, regardless of ability to pay, while improving community health outcomes."
+  },
   "name": "Humboldt Park Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Slow to moderate — Healthcare regulatory/compliance constraints, change management cycles, clinical governance. Not a 'move fast' culture. Projects measured in quarters/years."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Acute care hospital services, emergency department, primary and specialty care clinics, diagnostic imaging, laboratory services, surgical services, and community health programs."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 8-10 holidays (typical for mid-sized non-profit hospital). No unlimited PTO. Accrual-based. May have separate sick leave bank."
   },
-  "retry_after": 1784885364,
+  "refresh_after": 1790069462,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -155289,7 +155616,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns. Hospital operates 24/7/365. IT may have maintenance windows but not extended breaks. Some departments may close between Christmas/New Year's but not policy."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Mid-sized community hospital (~200-300 beds, ~1,000-1,500 employees). Mature, established institution (formerly Norwegian-American Hospital, rebranded 2021)."
   },
   "sources": [
    {
@@ -155323,14 +155655,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=86e87b28533eb22f05f5d177ddf610f2fd45c226c5c43c5b7bca4fbb0c2b311dJmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQWxleGFuZGVyX3Zvbl9IdW1ib2xkdA&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely sponsors H-1B for specialized clinical and technical roles (physicians, data scientists, IT). Not a cap-exempt institution unless affiliated with a university. Green card sponsorship possible for hard-to-fill roles."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Humboldt Park Health is a community hospital and healthcare system serving Chicago's Humboldt Park neighborhood and surrounding areas. It provides inpatient, outpatient, and emergency medical services to a diverse, largely underserved population."
+  },
+  "synthesized_evidence_sha": "a2cebdceb3fda881",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established EHR (likely Epic/Cerner), clinical informatics, revenue cycle management, population health analytics, regulatory reporting. Emerging AI/data science applications in clinical decision support, readmission prediction, scheduling optimization. Not a tech-first organization."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583413,
   "web_search_url": "https://duckduckgo.com/?q=Humboldt+Park+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This is a mission-driven safety-net hospital, not an elite AI/data science destination. Prestige and pay lag top-tier tech firms. Culture is healthcare-operational, not fast-moving tech innovation. Work-life balance may be better than corporate tech but lacks guaranteed shutdowns. Technical growth exists in clinical informatics/analytics but not cutting-edge AI research. Best for those prioritizing community impact over prestige/pay."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7/10 — Standard hospital IT hours (mostly 8-5, limited on-call for critical systems). No guaranteed shutdowns. Less burnout than big tech but clinical urgency can create pressure. Unionized nursing staff may set cultural norms around hours."
   }
  },
  "huntington bancshares": {
@@ -175683,47 +176036,123 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "fea62b2c62",
+    "19205e18e9"
+   ],
+   "value": "Unknown; URL paths imply a model based on offering free online courses."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "5b301e737b",
+    "19205e18e9"
+   ],
+   "value": "Unknown; URL keywords suggest Italian-speaking individuals seeking online education and certifications."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown."
   },
   "evidence_sha": "8645ffe7f46a2ecf",
+  "generated_at": 1784885462,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "low",
+   "source_ids": [
+    "5b301e737b",
+    "fea62b2c62",
+    "19205e18e9"
+   ],
+   "value": "E-learning / Online Education (based on URL keywords)."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "A top-tier AI or data science role that balances elite prestige and high new-grad pay with a fast, innovative tech culture rather than slow bureaucracy. A mission-driven company that actually respects work-life balance through sane hours and guaranteed shutdowns, avoiding toxic or high-burnout environments. A place that accelerates technical learning and career growth without sacrificing personal time."
   },
+  "last_attempt_at": 1784885462,
   "last_evidence_at": 1784675477,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "5b301e737b",
+    "fea62b2c62",
+    "19205e18e9"
+   ],
+   "value": "URL targets indicate an Italy-based or Italian-language focus (parameters 'it' and 'corso-di-laurea')."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "5b301e737b",
+    "fea62b2c62",
+    "19205e18e9"
+   ],
+   "value": "Unknown due to inaccessible sources."
+  },
   "name": "Kaukahi, LLC",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "fea62b2c62",
+    "19205e18e9"
+   ],
+   "value": "Unknown; URLs reference URLs for free online courses with certificates."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown."
   },
+  "refresh_after": 1790069462,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "low",
+   "source_ids": [
+    "5b301e737b",
+    "fea62b2c62",
+    "19205e18e9"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "5b301e737b",
+    "fea62b2c62",
+    "19205e18e9"
+   ],
+   "value": "Unknown due to inaccessible sources."
   },
   "sources": [
    {
@@ -175757,14 +176186,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=f88083d5ff86f25c538660c537a96c0f2291ec7c4a333546bc6a0c14eec60a44JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0a5391a8-206b-65df-2328-8635211464e1&u=a1aHR0cHM6Ly9zdHVkeWFicm9hZG5hdGlvbnMuY29tL2l0L2NvcnNpLWRpLWluZm9ybWF0aWNhLW9ubGluZS1ncmF0dWl0aS1jb24tY2VydGlmaWNhdG8v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "5b301e737b",
+    "fea62b2c62",
+    "19205e18e9"
+   ],
+   "value": "Unknown due to inaccessible sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "5b301e737b",
+    "fea62b2c62",
+    "19205e18e9"
+   ],
+   "value": "Exact company details could not be retrieved as all provided sources led to blank redirect pages. The URLs suggest an affiliation with online educational or certification courses in Italy."
+  },
+  "synthesized_evidence_sha": "8645ffe7f46a2ecf",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "5b301e737b",
+    "fea62b2c62",
+    "19205e18e9"
+   ],
+   "value": "Unknown; no technical details were available in the provided sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675477,
   "web_search_url": "https://duckduckgo.com/?q=Kaukahi%2C+LLC+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "A top-tier AI or data science role that balances elite prestige and high new-grad pay with a fast, innovative tech culture rather than slow bureaucracy. A mission-driven company that actually respects work-life balance through sane hours and guaranteed shutdowns, avoiding toxic or high-burnout environments. A place that accelerates technical learning and career growth without sacrificing personal time."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown."
   }
  },
  "kayak": {
@@ -197699,52 +198161,126 @@
  "marvell technology": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "04dd91dbb7"
+   ],
+   "value": "Estimated: Top-tier in hardware and silicon engineering; well-recognized for AI data center infrastructure."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "5dd10fb6d4"
+   ],
+   "value": "Fabless semiconductor model: Marvell designs and markets complex silicon solutions while outsourcing the physical manufacturing of the chips to third-party foundries."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "04dd91dbb7"
+   ],
+   "value": "Estimated: Mission-driven engineering culture focused on solving complex data infrastructure bottlenecks."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "04dd91dbb7"
+   ],
+   "value": "Hyperscale cloud providers, enterprise IT manufacturers, and original equipment manufacturers (OEMs)."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "b0c3cb0820"
+   ],
+   "value": "Estimated: $130,000 - $170,000 base salary, with potential for RSUs and sign-on bonuses."
   },
   "evidence_sha": "7058fcdb91242728",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784885462,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784884850,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "5dd10fb6d4",
+    "04dd91dbb7"
+   ],
+   "value": "Semiconductors and Data Infrastructure."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "04dd91dbb7"
+   ],
+   "value": "Be prepared to discuss how your AI expertise can optimize hardware architectures and data pipelines at the silicon level. Emphasize your ability to thrive in a fast, innovative engineering culture and probe into team-specific expectations to ensure the department respects work-life balance and avoids toxic burnout cycles."
+  },
+  "last_attempt_at": 1784885462,
   "last_evidence_at": 1784675469,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "5dd10fb6d4"
+   ],
+   "value": "Headquartered in Santa Clara, California, with numerous global design centers and corporate offices."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "04dd91dbb7"
+   ],
+   "value": "To power the technology of tomorrow by delivering the critical data infrastructure silicon that processes, moves, and stores the world's data."
+  },
   "name": "Marvell Technology",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "04dd91dbb7"
+   ],
+   "value": "Estimated: Fast-paced and deeply innovative, typical of leading fabless semiconductor firms."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "04dd91dbb7"
+   ],
+   "value": "Data center processing and networking silicon, custom ASICs, storage controllers, and ethernet switches."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "b0c3cb0820"
+   ],
+   "value": "Estimated: 15-20 days of standard accrued PTO, typical for large public tech companies."
   },
-  "retry_after": 1784885330,
+  "refresh_after": 1790069462,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "04dd91dbb7"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "b0c3cb0820"
+   ],
+   "value": "Estimated: Unclear if company-wide shutdowns are guaranteed; do not assume without HR confirmation."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "b0c3cb0820"
+   ],
+   "value": "Publicly traded, large-cap semiconductor corporation (Ticker: MRVL)."
   },
   "sources": [
    {
@@ -197778,14 +198314,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=d2b62425a210519c82973970bbcadf59051f588e01bd8e0207f96c4f503cbcb2JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0a5391a8-206b-65df-2328-8635211464e1&u=a1aHR0cHM6Ly93d3cubWFydmVsbC5jb20v&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "b0c3cb0820"
+   ],
+   "value": "Large publicly traded semiconductor companies typically sponsor work visas for specialized hardware roles, though specific confirmation requires HR verification."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "04dd91dbb7",
+    "5dd10fb6d4"
+   ],
+   "value": "Marvell Technology is a leading semiconductor company that designs and ships data infrastructure silicon solutions. They make money by developing and selling advanced System-on-Chip (SoC) architectures for data centers, networking, and storage markets."
+  },
+  "synthesized_evidence_sha": "7058fcdb91242728",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "04dd91dbb7"
+   ],
+   "value": "Hardware design, RTL coding, chip architecture, ASIC development, firmware engineering, and AI accelerator system design."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675469,
   "web_search_url": "https://duckduckgo.com/?q=Marvell+Technology+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "04dd91dbb7"
+   ],
+   "value": "As an AI/Data Science professional, joining Marvell places you at the hardware-software co-design frontier of AI infrastructure. You will be positioned in a consistently innovative tech space that directly accelerates technical learning and career growth, without the slow bureaucracy often found in older tech giants, aligning with your desire for elite, fast-paced technical work."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "04dd91dbb7"
+   ],
+   "value": "Estimated: Varies by team, with some groups maintaining sane hours while others face periodic crunches before major tape-outs."
   }
  },
  "masco": {
@@ -209928,11 +210496,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -209944,6 +210514,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784885462,
   "last_evidence_at": 1784676903,
   "name": "Monster Energy",
   "pace_of_work": {
@@ -209956,6 +210527,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784885582,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -209999,7 +210571,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=39499efedf7c9daa0dca8763a1ce39a09b215085d1f0683d1922a3060932c623JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01863cb3-ec2d-6271-268c-2b2eedc26349&u=a1aHR0cHM6Ly93d3cubW9uc3Rlci5jb20vP21zb2NraWQ9MDE4NjNjYjNlYzJkNjI3MTI2OGMyYjJlZWRjMjYzNDk&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784676903,
   "web_search_url": "https://duckduckgo.com/?q=Monster+Energy+company+careers+benefits",
@@ -219592,11 +220164,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -219608,6 +220182,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784885462,
   "last_evidence_at": 1784588246,
   "name": "NewYork-Presbyterian Hospital",
   "pace_of_work": {
@@ -219620,6 +220195,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784885582,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -219663,7 +220239,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=d6d1f410a4b61d7bbba7baae1f98e00133df857def66e1ed133757cea5c5f7f2JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=0510d07e-8f0e-6075-3ea8-c7e28e866170&u=a1aHR0cHM6Ly9lbi5tLndpa2lwZWRpYS5vcmcvd2lraS9OZXdfWW9ya19DaXR5&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784588246,
   "web_search_url": "https://duckduckgo.com/?q=NewYork-Presbyterian+Hospital+company+careers+benefits",
@@ -233440,11 +234016,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -233456,6 +234034,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784885462,
   "last_evidence_at": 1784674425,
   "name": "Order.co",
   "pace_of_work": {
@@ -233468,6 +234047,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784885582,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -233511,7 +234091,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=c81c99181e64a5ddef862256a6800f0c3a270aa58f302398a918e26a0855a224JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=17b15538-f6ae-67cc-2d9b-42a5f755668d&u=a1aHR0cHM6Ly93d3cuZG9taW5vcy5jb20vZW4&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674425,
   "web_search_url": "https://duckduckgo.com/?q=Order.co+company+careers+benefits",
@@ -275046,37 +275626,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown. Insufficient public data to assess prestige tier."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely B2B SaaS or enterprise AI solutions, but no business model details found in sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown. No culture descriptions found in sources."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown. No customer information available in supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown. No compensation data found in sources."
   },
   "evidence_sha": "94d2e70f486ce48c",
+  "generated_at": 1784885462,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Artificial Intelligence / Computer Vision / Spatial Computing"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Assess whether ScanScape truly offers: 1) Elite AI prestige and competitive new-grad packages, 2) Enforced work-life boundaries (shutdown policies, no weekend expectations), 3) Structured mentorship and rapid skill growth. Ask about typical sprint cycles, on-call rotation, promotion timeline for new grads, and concrete examples of project autonomy."
+  },
+  "last_attempt_at": 1784885462,
   "last_evidence_at": 1784675810,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown. No headquarters or office locations found in sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No mission statement found in supplied sources."
+  },
   "name": "ScanScape",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown. No employee reports or cultural data found in sources."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely AI-powered scanning, mapping, or computer vision solutions given the name 'ScanScape', but no product information found in sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown. No PTO policy found in sources."
   },
+  "refresh_after": 1790069462,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -275086,7 +275708,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown. No company-wide shutdown policy found in sources."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown stage and size. No funding, employee count, or growth data found in sources."
   },
   "sources": [
    {
@@ -275120,14 +275747,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=573a930d99e76f20e83ab17e716b5a4ea732fb1fb27529be2f12b4593e0e1d9fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2599f633-462e-681f-18db-e1ae47a769bf&u=a1aHR0cHM6Ly93d3cub250aGlzZGF5LmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Unknown visa sponsorship policy. No immigration/hiring data found in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "ScanScape appears to be an AI/data science company based on its name, but no verifiable public information was found in the supplied sources. The sources provided are redirect links to historical date websites (Britannica, OnThisDay) with no content about ScanScape."
+  },
+  "synthesized_evidence_sha": "94d2e70f486ce48c",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Presumably involves computer vision, ML/DL, 3D reconstruction, or spatial AI given the name, but no technical details found in sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784675810,
   "web_search_url": "https://duckduckgo.com/?q=ScanScape+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Candidate seeks elite AI/data science prestige with high new-grad pay, fast innovative culture, genuine work-life balance (sane hours, guaranteed shutdowns), and accelerated technical growth without burnout. This profile targets companies that deliver on all three: top-tier compensation/brand, sustainable pace, and strong learning velocity."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown. No work-life balance data found in sources."
   }
  },
  "schmidt sciences": {
@@ -293682,7 +294330,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
@@ -293700,7 +294348,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
-  "last_attempt_at": 1784885067,
+  "last_attempt_at": 1784885462,
   "last_evidence_at": 1784675226,
   "name": "St. Joseph Center",
   "pace_of_work": {
@@ -293713,7 +294361,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
-  "retry_after": 1784885307,
+  "retry_after": 1784885942,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -307758,37 +308406,79 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 — Strong applied AI/DS reputation in Canadian health tech, large proprietary clinical datasets, growing research partnerships (Vector Institute, Mila), but less visible in global ML research publications than top-tier labs (Google Health, Microsoft Research, top academic labs)."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: B2B SaaS and platform revenue from EMR subscriptions, virtual care platform fees, health benefits administration services, transaction fees on pharmacy/claims processing, and enterprise licensing to health systems and insurers. Also B2C virtual care access fees."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, collaborative, engineering-led but clinician-informed. 'Telus values' (customer-first, courageous, spirited, heartfelt) permeate. Diverse, inclusive, with strong ERGs. Less 'bro culture' than some tech. Distributed teams normal. Acquisitions bring varied sub-cultures; integration ongoing."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Healthcare providers (clinics, hospitals, physicians), insurance companies, employers/benefits plan sponsors, pharmacies, government health agencies, and patients/consumers across Canada and internationally."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: CAD $85,000-$105,000 base + 10-15% target bonus + RSU grant (vesting 3-4 years). Total comp ~CAD $100K-$125K. Higher for AI/DS specialization. Toronto/Vancouver premium. Competitive with Canadian big tech (Shopify, RBC, BMO) but below US FAANG."
   },
   "evidence_sha": "8d361f3457321c0a",
+  "generated_at": 1784885462,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Health Technology / Digital Health / Health IT"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Prepare for: (1) ML system design for high-stakes healthcare (explainability, bias auditing, regulatory constraints), (2) Data engineering at scale with privacy-by-design (FHIR, de-identification, consent management), (3) Behavioral questions on cross-functional collaboration with clinicians/product/legal, (4) Case studies on model monitoring in production with concept drift in clinical workflows. Ask about: dedicated AI research vs. applied teams, publication support, GPU compute budget, and ho"
+  },
+  "last_attempt_at": 1784885462,
   "last_evidence_at": 1784583414,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Headquarters in Toronto, major offices in Montreal, Vancouver, Ottawa, Calgary, and remote/hybrid across Canada. Some international presence via acquisitions (e.g., US, UK, Australia for LifeWorks)."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: To empower healthier lives through technology by improving access, efficiency, and outcomes in healthcare delivery, leveraging digital innovation to transform the health experience for providers and patients."
+  },
   "name": "TELUS Health",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate — Enterprise health tech with regulatory gates (Health Canada, provincial privacy laws) creates structured release cycles. Not 'move fast and break things'; more 'move deliberately with guardrails'. Sprint cadences typical, but major features require compliance review. Less crunch than consumer tech or early-stage startups."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Electronic medical records (EMR) platforms, virtual care/telemedicine solutions, health benefits administration, pharmacy management systems, mental health platforms, and health analytics tools for providers, insurers, and employers."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 vacation days + 10-12 statutory holidays + 5 personal/wellness days (varies by province/tenure). Unlimited sick leave with short-term disability coverage. TELUS Corporate policy baseline."
   },
+  "refresh_after": 1790069462,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -307798,7 +308488,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Yes — Company-wide shutdown between Christmas and New Year (typically Dec 24-Jan 2). Summer 'recharge' Fridays or half-days in some divisions. No guaranteed monthly shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Established subsidiary of TELUS Corporation (TSX: T, NYSE: TU), a $30B+ market cap telecom. TELUS Health has grown through acquisitions (e.g., LifeWorks, MedAccess, Akira, EQ Care) to become Canada's largest health tech employer with thousands of employees."
   },
   "sources": [
    {
@@ -307832,14 +308527,35 @@
     "url": "https://www.bing.com/ck/a?!&&p=76eb8bd42d11ca0df2edb4326e7af082b3d98765e7ec8f7f5d5b8cfca86a6004JmltdHM9MTc4NDUwNTYwMA&ptn=3&ver=2&hsh=4&fclid=160986a8-c67d-6f68-028d-9134c72e6e6f&u=a1aHR0cHM6Ly93d3cudGVsdXNpbnRlcm5hdGlvbmFsLmFpLw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As a large Canadian tech employer, likely supports work permits (Global Talent Stream, LMIA) and permanent residency pathways for skilled tech roles. TELUS Corporation has established immigration programs."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "TELUS Health is a major Canadian health technology company providing digital health solutions, electronic medical records, virtual care, and health benefits management. It operates as a subsidiary of TELUS Corporation, leveraging the parent company's telecommunications infrastructure to deliver integrated healthcare technology services."
+  },
+  "synthesized_evidence_sha": "8d361f3457321c0a",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Large-scale distributed systems for health data, FHIR/HL7 interoperability, real-time video telemedicine, AI/ML for clinical decision support and health analytics, cloud-native microservices (AWS/Azure), mobile apps (iOS/Android), data engineering for claims/pharmacy processing, strict security/compliance (PIPEDA, HIPAA, SOC2)."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784583414,
   "web_search_url": "https://duckduckgo.com/?q=TELUS+Health+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "TELUS Health offers a rare combination: elite technical scale (national health infrastructure, massive datasets) with a mission that directly improves healthcare access and outcomes. For a new-grad AI/DS candidate, it means working on production models that affect millions of patients, backed by TELUS's financial stability and telecom data advantages, while the health-tech focus imposes regulatory discipline that can accelerate rigorous ML engineering skills. The culture emphasizes sustainable p"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5 — TELUS Corporation promotes 'flexible work' and 'wellbeing' publicly. Health division inherits policies: core hours, meeting-free blocks, generous parental leave, mental health support (LifeWorks acquisition). On-call rotations exist for production clinical systems but are compensated and bounded. Overtime not expected as norm."
   }
  },
  "tempus": {
