@@ -94006,11 +94006,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -94022,6 +94024,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784875793,
   "last_evidence_at": 1784679541,
   "name": "Edwards Lifesciences",
   "pace_of_work": {
@@ -94034,6 +94037,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784875913,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -94077,7 +94081,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=e26f37627478793c6eb80f4a1beb87e5a8b886253d280cbbc8c9755317cba68bJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=0ec016c9-b21a-6d98-3a21-0157b3d76c8f&u=a1aHR0cHM6Ly93d3cuZWR3YXJkcy5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784679541,
   "web_search_url": "https://duckduckgo.com/?q=Edwards+Lifesciences+company+careers+benefits",
@@ -99593,48 +99597,129 @@
  "equifax": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "ccb74507de"
+   ],
+   "value": "Mid-tier prestige. The work is critical and data-heavy but lacks the elite brand recognition of top AI-first tech firms."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "cd4f2dda84",
+    "ccb74507de"
+   ],
+   "value": "B2B and B2C data and analytics services. Generates revenue by charging businesses for credit checks, fraud prevention tools, and data-driven risk assessments, while also selling direct-to-consumer credit monitoring subscriptions."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "ccb74507de"
+   ],
+   "value": "Estimated: Corporate, structured, and mission-driven to protect consumers, but may lack rapid innovation favored by tech-focused new grads."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "cd4f2dda84",
+    "ccb74507de"
+   ],
+   "value": "Banks, mortgage lenders, credit card issuers, retailers, auto dealerships, employers, and government agencies relying on consumer financial data."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "ccb74507de"
+   ],
+   "value": "Estimated: $110,000 to $130,000 base salary, which is competitive but may lack the massive equity multipliers seen at top-tier elite tech firms."
   },
   "evidence_sha": "ed0f1dd94fde7448",
+  "generated_at": 1784875793,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "cd4f2dda84"
+   ],
+   "value": "Financial Services / Consumer Credit Reporting / Data Analytics"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe heavily for team-specific autonomy to determine if you will face bureaucracy or fast-paced innovation. Ask about after-hours expectations and on-call burden to ensure that the role actually respects work-life balance. Clarify the new grad compensation package to see if it meets the high pay requirement."
   },
+  "last_attempt_at": 1784875793,
   "last_evidence_at": 1784674904,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "ccb74507de",
+    "ff8ea6463f"
+   ],
+   "value": "Headquartered in Atlanta, Georgia, with global offices and remote work opportunities across North America."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "ccb74507de",
+    "ff8ea6463f"
+   ],
+   "value": "To drive businesses forward with unique data, analytics, and technology that move people forward."
+  },
   "name": "Equifax",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "ccb74507de"
+   ],
+   "value": "Estimated: Moderate pace with occasional slow bureaucratic approval processes characteristic of legacy financial institutions."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "cd4f2dda84",
+    "ccb74507de"
+   ],
+   "value": "Consumer credit reports, FICO and VantageScore credit scores, identity verification tools, fraud detection software, and workforce analytics solutions."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "ccb74507de"
+   ],
+   "value": "Estimated: 20 to 25 days of PTO plus paid holidays, standard for large financial companies."
   },
+  "refresh_after": 1790059793,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "ccb74507de"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "ccb74507de"
+   ],
+   "value": "Estimated: Likely offers limited paid time off around major holidays, but explicit company-wide guaranteed shutdowns are unclear."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "cd4f2dda84",
+    "ccb74507de"
+   ],
+   "value": "Large-cap public company (NYSE: EFX) with a global footprint and over 10,000 employees."
   },
   "sources": [
    {
@@ -99668,14 +99753,46 @@
     "url": "https://www.bing.com/ck/a?!&&p=8cc5405b2bdeea4dd0d476591e9c70a7b30220eef42bc45e7c831d260eabe8ceJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1fc87c60-4d5f-6869-1fee-6bfd4cab6979&u=a1aHR0cHM6Ly93d3cuZXF1aWZheC5jb20v&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ccb74507de"
+   ],
+   "value": "As a massive global corporation, Equifax provides visa sponsorship for qualified technical roles, though it competes in the broader market for talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "cd4f2dda84",
+    "ff8ea6463f",
+    "ccb74507de"
+   ],
+   "value": "Equifax is a global data, analytics, and technology company that provides consumer credit reporting and risk assessment services. It makes money by collecting and aggregating consumer financial data and selling it as credit reports, scores, and risk assessments to businesses and creditors."
+  },
+  "synthesized_evidence_sha": "ed0f1dd94fde7448",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "ccb74507de",
+    "ff8ea6463f"
+   ],
+   "value": "Large-scale data engineering, cloud infrastructure modernization, machine learning model deployment for risk scoring, and advanced AI/ML for fraud detection."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674904,
   "web_search_url": "https://duckduckgo.com/?q=Equifax+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "As a legacy financial institution, Equifax may struggle to match the fast-paced, elite tech culture and top-tier new grad pay of FAANG companies due to a heavier regulatory environment and potential bureaucratic slowdowns. However, it offers highly-mission-driven data science work at an massive scale, which can provide strong technical learning for new grads seeking a predictable, structured environment over rapid innovation."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "ccb74507de"
+   ],
+   "value": "Estimated: Generally stable, but WLB can vary depending on the specific team and infrastructure modernization deadlines."
   }
  },
  "equipmentshare": {
@@ -148434,48 +148551,129 @@
  "invenergy": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Tier 2/3. Prestige is strong within the renewable energy sector but lacks the elite tech industry recognition associated with top-tier AI or data science institutions."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "85d0e69f49"
+   ],
+   "value": "Develops, finances, constructs, and operates energy generation projects, generating revenue by selling electricity through long-term power purchase agreements or on wholesale markets."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Corporate and mission-oriented. Driven by the clean energy transition and large-scale engineering projects, though not a fast-paced tech innovator culture."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "f4608d52ce",
+    "85d0e69f49"
+   ],
+   "value": "Utilities, municipalities, corporate commercial and industrial clients, and wholesale energy market participants."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: $85,000 to $115,000 base salary for new grad data/tech roles, below elite big tech benchmarks."
   },
   "evidence_sha": "1556da69801877c0",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784875793,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "85d0e69f49",
+    "a3f6075985"
+   ],
+   "value": "Renewable Energy and Power Generation Infrastructure."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Assess whether the team's specific data science and AI projects operate with startup-like agility or are bogged down by legacy infrastructure approvals. Clarify exact new grad compensation structures and confirm if any localized fast-paced tech teams exist before accepting a slow-paced traditional engineering culture."
+  },
+  "last_attempt_at": 1784875793,
   "last_evidence_at": 1784674979,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "85d0e69f49"
+   ],
+   "value": "Headquartered in Chicago, Illinois, with operations and project sites across multiple continents including North America, Europe, and Asia."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "a3f6075985"
+   ],
+   "value": "To power the world sustainably by developing innovative, large-scale clean energy solutions."
+  },
   "name": "Invenergy",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Moderate to slow. Infrastructure and energy project cycles are long and highly regulated, naturally introducing slower innovation cycles compared to pure tech."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "f4608d52ce",
+    "85d0e69f49"
+   ],
+   "value": "Large-scale renewable energy generation and storage assets, including wind farms, solar facilities, natural gas power plants, and green hydrogen infrastructure."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: 15 to 20 days of standard Paid Time Off annually."
   },
+  "refresh_after": 1790059793,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "low",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research, though standard public holidays are observed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "f4608d52ce",
+    "a3f6075985"
+   ],
+   "value": "Private company, mature stage. Employs thousands of professionals globally with over 30,000 megawatts of projects in operation or construction."
   },
   "sources": [
    {
@@ -148519,14 +148717,47 @@
     "url": "https://github.com/SimplifyJobs/New-Grad-Positions"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Not explicitly confirmed for new grad roles; typically, large infrastructure developers evaluate sponsorship on a case-by-case basis."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "f4608d52ce",
+    "85d0e69f49",
+    "a3f6075985"
+   ],
+   "value": "Invenergy is a privately-held global developer of sustainable energy solutions, focusing on wind, solar, natural gas, and energy storage projects. The company makes money by developing, building, owning, and operating these large-scale energy generation facilities and selling the power to utilities and other consumers."
+  },
+  "synthesized_evidence_sha": "1556da69801877c0",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Likely involves data analytics for energy yield optimization, predictive modeling for asset maintenance, geospatial analysis for site selection, and grid integration engineering."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674979,
   "web_search_url": "https://duckduckgo.com/?q=Invenergy+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Invenergy offers a mission-driven clean energy impact, but as a traditional infrastructure and energy developer, its culture leans toward slow, heavy bureaucracy. The pay may not match FAANG-level new-grad compensation, and the pace will likely frustrate candidates seeking a hyper-fast, elite AI/tech culture without organizational friction."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "dbc3b9e88f"
+   ],
+   "value": "Estimated: Good. Traditional power and infrastructure developers often emphasize sustainable working hours over the intense 60+ hour weeks commonly found in FAANG or quantitative finance."
   }
  },
  "inversion space": {
@@ -262393,41 +262624,96 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: High prestige. The applied AI focus, fleet autonomy challenges, and pedigree from Anduril and Tesla suggest technical tier-1 difficulty and strong resume signal."
   },
   "aliases": [],
-  "attempts": 1,
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "ef86a95d21"
+   ],
+   "value": "Hardware and software deployment, likely via B2B or government contracts supplying AI-enabled video sensors and fleet management."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "ef86a95d21"
+   ],
+   "value": "Hands-on and mission-driven, heavily focused on solving hard problems. Team pedigree indicates an intense, high-output culture."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "ef86a95d21"
+   ],
+   "value": "Likely defense, intelligence, or national security entities, given the team's pedigree from Anduril and the U.S. government."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $140k-$180k base. High-growth defense/AI startups with Anduril/Tesla pedigrees typically offer premium new grad compensation packages."
   },
   "evidence_sha": "cd43e6342b752632",
+  "generated_at": 1784875793,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "ef86a95d21"
+   ],
+   "value": "Defense Technology / AI Hardware"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Explore whether the heavy emphasis on 'hands-on' ownership and hard problems in applied AI translates to toxic burnout or sane hours. Ask about the pace of shipping OTA updates and how the team avoids bureaucracy while maintaining a work-life balance."
   },
-  "last_attempt_at": 1784875633,
+  "last_attempt_at": 1784875793,
   "last_evidence_at": 1784768504,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "ef86a95d21",
+    "007c6ab2ba"
+   ],
+   "value": "Exact location not found in sources, but the team hails from Anduril, Tesla, Uber, and the U.S."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "ef86a95d21",
+    "007c6ab2ba"
+   ],
+   "value": "Solving some of the hardest problems in applied AI by building video sensors with AI agents that answer any question, anywhere in their environments."
+  },
   "name": "Specter",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Very fast. The company emphasizes being a small, fast-growing team solving some of the hardest problems in applied AI, typical of early-stage startups."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "ef86a95d21",
+    "007c6ab2ba"
+   ],
+   "value": "Video sensors equipped with state-of-the-art AI agents, alongside fleet orchestration infrastructure featuring automated, observable, and rollback-capable OTA software rollouts."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Standard startup PTO (15-20 days), as no exact policy was found in the research."
   },
-  "retry_after": 1784875753,
+  "refresh_after": 1790059793,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -262437,7 +262723,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found in research."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "ef86a95d21",
+    "007c6ab2ba"
+   ],
+   "value": "Early-stage startup; described as a small, fast-growing team."
   },
   "sources": [
    {
@@ -262491,14 +262785,43 @@
     "url": "https://www.bing.com/ck/a?!&&p=897fb1983f64270c2e0be38955604e4c16d5ba7f67edb915ca8653a8767f2cd8JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=25de6375-e456-6dd3-3c5f-74ebe5226cc9&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L3NwZWN0ZXI&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "ef86a95d21"
+   ],
+   "value": "Mentions hiring exceptional engineers and operators without specifying geographical or visa constraints. Mentions the U.S. among team pedigree."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "ef86a95d21",
+    "007c6ab2ba"
+   ],
+   "value": "Specter builds video sensors integrated with state-of-the-art AI agents that can answer any question about their environment. The company likely makes money through government or enterprise defense/security contracts, leveraging its team's pedigree from Anduril and Tesla."
+  },
+  "synthesized_evidence_sha": "cd43e6342b752632",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "ef86a95d21",
+    "007c6ab2ba"
+   ],
+   "value": "Applied AI agents, CI/CD orchestration rails, hardware-in-loop (HIL) and software-in-loop (SIL) validation environments, device farms, and OTA deployment methodologies across a fleet of sensors."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678790,
   "web_search_url": "https://duckduckgo.com/?q=Specter+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Specter aligns with your priority for a fast, innovative tech culture by operating as a small, fast-growing applied AI team solving hard problems. The AI and infra work directly accelerates technical learning, while the small-team nature limits slow bureaucracy."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate. Founding teams from intense environments like Anduril and Tesla often have demanding work schedules, though small sizes can offer flexibility."
   }
  },
  "spectris": {
@@ -296085,47 +296408,111 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Elite) — University brand is globally top-tier; CS/Statistics departments are highly ranked. However, specific tech roles may be IT/analytics support rather than core AI research."
   },
   "aliases": [],
-  "culture_vibe": {
+  "attempts": 1,
+  "business_model": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Non-profit university model: revenue from tuition and fees, sponsored research grants and contracts, clinical revenue (UChicago Medicine), endowment distributions, and philanthropic gifts. Reinvests surplus into academic mission, facilities, and financial aid."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "349713aa46"
+   ],
+   "value": "Intellectual, collaborative, mission-oriented. Hierarchical but with shared governance traditions. Diverse and inclusive in principle; varies by unit. Less 'hustle culture,' more emphasis on rigor and long-term impact."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "349713aa46"
+   ],
+   "value": "Students (undergraduate, graduate, professional), research sponsors (federal agencies, foundations, industry), patients (through UChicago Medicine), alumni, and academic partners worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000–$95,000 base for Data Science Analyst / entry-level research programmer roles. No equity. Strong benefits (retirement ~10% match, tuition remission for employee/dependents). Lower than industry but competitive for non-profit sector."
   },
   "evidence_sha": "a0f61278b89c8132",
+  "generated_at": 1784875793,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "349713aa46"
+   ],
+   "value": "Higher Education / Research"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "349713aa46"
+   ],
+   "value": "Expect questions on data cleaning/analysis workflows, SQL/Python proficiency, experience with learning management systems or institutional data, and ability to translate technical findings for non-technical stakeholders. Prepare for behavioral questions on collaboration, managing competing priorities in a bureaucratic environment, and commitment to educational mission. Ask about on-call expectations, summer slowdowns, and professional development budgets."
+  },
+  "last_attempt_at": 1784875793,
+  "last_evidence_at": 1784674070,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "349713aa46"
+   ],
+   "value": "Main campus in Hyde Park, Chicago, IL. Additional facilities: UChicago Medicine (South Side), Marine Biological Laboratory (Woods Hole, MA), global centers in Beijing, Delhi, Hong Kong, London, Paris. Hybrid/on-site expectations vary by role."
+  },
+  "mission": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "To develop individuals through rigorous inquiry and free expression, advancing knowledge and serving society through education, research, and clinical care."
   },
-  "last_evidence_at": 1784674070,
   "name": "University of Chicago",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to slow. Academic calendar drives cycles (intense quarters, summer slowdown). Bureaucratic processes for procurement, IRB, and approvals can delay projects. Less 'move fast' pressure than industry."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "349713aa46"
+   ],
+   "value": "Undergraduate and graduate education across arts, sciences, business, law, medicine, and public policy; research output and technology transfer; academic publishing (University of Chicago Press); executive education and continuing education programs."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "349713aa46"
+   ],
+   "value": "Estimated: 22–25 days annual leave + 10–12 university holidays + 12 sick days. Exact accrual depends on role classification and years of service. New hires typically start at ~15–18 vacation days."
   },
+  "refresh_after": 1790059793,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "dbc3b9e88f",
+    "349713aa46"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "No guaranteed company-wide shutdowns. Campus closes for major holidays (Thanksgiving week, Winter break ~Dec 24–Jan 1) but essential services operate. Summer reduced hours in some units."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large, mature institution: ~17,000 faculty and academic staff, ~16,000 staff, ~18,000 students (2023). Annual budget ~$4.5B. Founded 1890."
   },
   "sources": [
    {
@@ -296179,14 +296566,43 @@
     "url": "https://uchicago.wd5.myworkdayjobs.com/External/job/Chicago-IL/Data-Science-Analyst--TCOM_JR33014-1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As a major research university, routinely sponsors H-1B, O-1, and J-1 visas for faculty, researchers, and specialized staff. New-grad tech roles may be eligible depending on department and funding source; verify with hiring unit."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "349713aa46",
+    "dbc3b9e88f"
+   ],
+   "value": "The University of Chicago is a prestigious private research university in Chicago, Illinois, known for rigorous academics and influential research across disciplines. It operates as a non-profit educational institution funded by tuition, research grants, endowment returns, and donations."
+  },
+  "synthesized_evidence_sha": "a0f61278b89c8132",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "349713aa46"
+   ],
+   "value": "Data science and analytics roles supporting learning platforms, institutional research, and administrative systems. Responsibilities include collecting, organizing, and analyzing data from internal university systems and external sources; serving as liaison between end-users and technology platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674070,
   "web_search_url": "https://duckduckgo.com/?q=University+of+Chicago+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "349713aa46",
+    "dbc3b9e88f"
+   ],
+   "value": "Offers elite institutional prestige (top-10 university) with a mission-driven academic environment. The Data Science Analyst role provides exposure to large-scale institutional data and learning platforms. University settings typically offer more predictable hours and strong work-life boundaries than corporate tech, aligning with your priority for sane hours and guaranteed shutdowns. However, pace may be slower and bureaucracy higher than fast-moving tech companies."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5. University staff roles typically offer 37.5–40 hr weeks, strong holiday calendars, and cultural expectation of boundaries. No guaranteed shutdowns, but summer and winter breaks provide natural downtime."
   }
  },
  "university of florida": {
@@ -296789,38 +297205,105 @@
  "university of mississippi medical center": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "5217f4f97e"
+   ],
+   "value": "Estimated: Regional impact tier. High mission-driven prestige within public health, but lacks the elite tech industry prestige or technical research output of top-tier commercial AI labs."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "5217f4f97e"
+   ],
+   "value": "Revenue is generated through hospital and clinic patient fees, academic tuition, and state/federal research grants."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "5217f4f97e"
+   ],
+   "value": "Estimated: Public sector, mission-focused, and academic. Likely emphasizes stability and public service over high-risk innovation or aggressive tech culture."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "5217f4f97e",
+    "12d7fedbb5"
+   ],
+   "value": "Patients seeking healthcare services across Mississippi, medical and allied health students, and research funding agencies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "5217f4f97e"
+   ],
+   "value": "Estimated: $60,000 - $80,000. Likely lower than FAANG/commercial tech standards due to public healthcare and state university compensation bands."
   },
   "evidence_sha": "4b800f3ac30c28fd",
+  "generated_at": 1784875793,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "5217f4f97e"
+   ],
+   "value": "Healthcare and Academic Medicine"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Healthtech / technology (estimated)"
+   "value": "Candidates should probe the specific AI/data science team's velocity, exposure to modern ML stacks versus legacy EHR systems, and on-call expectations. It is critical to verify whether the role's work-life balance matches the candidate's strict requirements for sane hours, avoiding burnout, and protected personal time."
   },
+  "last_attempt_at": 1784875793,
   "last_evidence_at": 1784645371,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "5217f4f97e"
+   ],
+   "value": "Jackson, Mississippi (main campus) with additional satellite clinics and centers throughout the state."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "5217f4f97e",
+    "dd8263f4e9"
+   ],
+   "value": "To improve the health and well-being of Mississippians through clinical care, education, and research."
+  },
   "name": "University of Mississippi Medical Center",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "5217f4f97e"
+   ],
+   "value": "Estimated: Slower, process-oriented pace typical of state universities and academic medical centers, prioritizing compliance and clinical stability over rapid tech iteration."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "5217f4f97e",
+    "12d7fedbb5"
+   ],
+   "value": "Clinical healthcare services, medical and health science degree programs, and biomedical research outputs."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "5217f4f97e"
+   ],
+   "value": "Estimated: Standard state institutional leave, generally 15-20 days of vacation plus state holidays and sick leave, but exact new-grad policy is unspecified."
   },
+  "refresh_after": 1790059793,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -296829,8 +297312,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "5217f4f97e"
+   ],
+   "value": "Estimated: No guaranteed tech shutdowns (like holiday hard-stops). Operations are continuous for clinical environments, though administrative staff may receive state holidays off."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "5217f4f97e"
+   ],
+   "value": "Large academic medical center with multiple hospitals, schools, and a statewide network of clinics."
   },
   "sources": [
    {
@@ -296864,14 +297356,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=6f36a4efd3cfea3943f7730f45dba0d090ce75c8f5b23cf86a80544072985960JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=267941b0-60f6-64bc-2bb9-562d61fb652a&u=a1aHR0cHM6Ly9vbmx5ZmFucy5jb20vbHlyYWN5cnVz&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5217f4f97e"
+   ],
+   "value": "Estimated: Public academic institutions may offer H-1B sponsorship for specialized roles, though standard policy is not explicitly confirmed."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "5217f4f97e",
+    "12d7fedbb5",
+    "dd8263f4e9"
+   ],
+   "value": "The University of Mississippi Medical Center (UMMC) is the state's only academic health science center, dedicated to improving health and well-being for Mississippians. As a non-profit healthcare and research institution, it generates revenue through clinical patient care, academic tuition, and biomedical research grants."
+  },
+  "synthesized_evidence_sha": "4b800f3ac30c28fd",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "12d7fedbb5"
+   ],
+   "value": "Data science, clinical engineering, health informatics, and backend systems supporting electronic health records and research."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784645371,
   "web_search_url": "https://duckduckgo.com/?q=University+of+Mississippi+Medical+Center+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "UMMC offers a deeply mission-driven environment focused on impactful public health outcomes, aligning with candidates who prioritize social good. However, as a large state-affiliated academic medical center, it may not provide the elite new-grad tech pay, fast-paced innovative tech culture, or guaranteed shutdowns characteristic of top-tier AI startups."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "5217f4f97e"
+   ],
+   "value": "Estimated: Moderate to Good. While clinical support roles may face heavy hours, university administrative and technical staff often benefit from standard state institutional schedules and culture."
   }
  },
  "university of nevada reno": {
@@ -297140,53 +297663,132 @@
  },
  "university of pennsylvania": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "medium",
+   "source_ids": [
+    "7d5bc6cad9",
+    "e9262ec192",
+    "058428330b"
+   ],
+   "value": "Elite academic prestige. Penn is highly ranked globally, though AI/DS work here is academic research-centered rather than product-centered like top-tier tech firms."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "7d5bc6cad9",
+    "e9262ec192",
+    "058428330b"
+   ],
+   "value": "Private nonprofit university funded by tuition, government and private research grants, philanthropic endowments, and clinical revenue."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, intellectual, and collaborative. Bureaucracy can occasionally slow down innovation, but the environment strongly respects knowledge creation and education."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "7d5bc6cad9",
+    "e9262ec192",
+    "058428330b"
+   ],
+   "value": "Students, academic researchers, patients, and organizations sponsoring research."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Lower than tier-one tech. Base salaries for university staff or research tech roles likely range from $80k to $110k, though affiliated research institutes might occasionally offer more competitive funding."
   },
   "evidence_sha": "6cfc4d86e464c600",
+  "generated_at": 1784875793,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "7d5bc6cad9",
+    "e9262ec192",
+    "058428330b"
+   ],
+   "value": "Higher Education"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe whether the specific lab or department operates with a modern, fast-paced tech culture or falls into slow academic bureaucracy. Clarify the exact compensation structure to ensure it meets high new-grad pay expectations, and verify the hours, shutdown policies, and technical growth opportunities to ensure it aligns with avoiding high-burnout environments."
   },
-  "last_attempt_at": 1784875633,
+  "last_attempt_at": 1784875793,
   "last_evidence_at": 1784678632,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "7d5bc6cad9",
+    "e9262ec192",
+    "058428330b"
+   ],
+   "value": "Main campus in Philadelphia, PA, with global reach via highly ranked online programs."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "7d5bc6cad9",
+    "e9262ec192",
+    "058428330b"
+   ],
+   "value": "To strengthen the quality of education and to produce leading research, perpetuating Benjamin Franklin's vision of an institution devoted to both traditional academic knowledge and practical professional training."
+  },
   "name": "University of Pennsylvania",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Generally slower-paced and bureaucratic compared to fast-moving tech startups. Cycles are tied to academic semesters, grant review timelines, and research publication schedules."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "7d5bc6cad9",
+    "e9262ec192",
+    "058428330b"
+   ],
+   "value": "Undergraduate, graduate, and professional degree programs; academic research output; executive education; and clinical healthcare services via Penn Medicine."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Generous compared to tech standards. Staff typically receive 15-25+ days of vacation plus personal/sick days, alongside university holidays."
   },
-  "retry_after": 1784875753,
+  "refresh_after": 1790059793,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "7d5bc6cad9",
+    "e9262ec192",
+    "058428330b"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Likely. Universities frequently observe holiday closures (such as a winter break between Christmas and New Year's) allowing staff to use paid time off or enjoy campus-wide downtime."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "7d5bc6cad9",
+    "e9262ec192",
+    "058428330b"
+   ],
+   "value": "Mature, large-scale academic institution."
   },
   "sources": [
    {
@@ -297220,14 +297822,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=00acabf6e434e9dadcc103c0a1272734eafed0586ec25c6bd235f770a06f468eJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=05520e09-9322-6508-1892-199792cb6405&u=a1aHR0cHM6Ly93d3cudWNsYS5lZHUv&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: As an academic institution, visa sponsorship is handled via J-1 visas for researchers and F-1/OPT for international students; cap-subject H-1B sponsorships are technically possible but typically limited to specialized long-term staff roles rather than new tech grad hires."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "7d5bc6cad9",
+    "e9262ec192",
+    "058428330b"
+   ],
+   "value": "The University of Pennsylvania ('Penn') is an Ivy League research university based in Philadelphia. As a private higher-education institution, it generates revenue through tuition, research grants, alumni donations, and its affiliated health system."
+  },
+  "synthesized_evidence_sha": "6cfc4d86e464c600",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "7d5bc6cad9",
+    "e9262ec192",
+    "058428330b"
+   ],
+   "value": "AI, data science, and software engineering roles are distributed across academic research labs, MCIT Online infrastructure, and Penn Medicine. Work varies from theoretical academic research to applied health-tech data projects."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678632,
   "web_search_url": "https://duckduckgo.com/?q=University+of+Pennsylvania+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "7d5bc6cad9",
+    "e9262ec192",
+    "058428330b"
+   ],
+   "value": "While Penn carries Ivy League elite prestige, a new-grad tech role here may struggle to meet the desire for fast, innovative tech culture and high tier-one tech pay. University environments often feature slow bureaucracy and academic pacing, though they can offer strong mission alignment, sane hours, and guaranteed academic holidays that respect work-life balance."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Good. University staff roles generally feature standard 40-hour work weeks without the high-burnout, high-pressure on-call expectations found in big tech."
   }
  },
  "university of portland": {
@@ -297531,37 +298166,91 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 3: Respected university brand with growing data science function, but not a primary AI research hub or top-paying tech employer. Prestige comes from institution, not technical brand."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "0763704080"
+   ],
+   "value": "Non-profit advancement model: raises philanthropic revenue (outright gifts, pledges, planned gifts, grants) to support university strategic priorities. Revenue comes from donor cultivation, fundraising campaigns, and investment returns on endowment gifts."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Mission-driven, collaborative, consensus-oriented, academically adjacent. Values stability and stewardship over speed. Increasingly data-curious but not engineering-first. Diverse, inclusive, long-tenured staff common."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "0763704080"
+   ],
+   "value": "Alumni, parents, foundations, corporations, faculty, students, and other friends of the University of Rochester who make philanthropic investments."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $70,000-$90,000 base + university benefits (tuition remission, retirement 10-12% match, comprehensive health). Below tech industry but competitive for non-profit/higher ed."
   },
   "evidence_sha": "ccb7c6f672e562bb",
+  "generated_at": 1784875793,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "0763704080"
+   ],
+   "value": "Higher Education / Non-Profit Advancement (Fundraising & Alumni Relations)"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Emphasize experience with predictive modeling, donor/customer segmentation, CRM data pipelines, and translating analytics to non-technical stakeholders. Ask about: modern data stack adoption (Snowflake/dbt/Looker), ML model governance, collaboration with prospect research teams, and how technical projects are prioritized vs. operational requests."
   },
+  "last_attempt_at": 1784875793,
   "last_evidence_at": 1784661275,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "0763704080"
+   ],
+   "value": "Primary: Rochester, NY (University of Rochester campus). Hybrid/remote flexibility common in higher ed advancement post-2020."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "0763704080"
+   ],
+   "value": "To inspire lifelong engagement and philanthropic investment in the University of Rochester's mission of 'Meliora' (ever better) through education, research, healthcare, and community impact."
+  },
   "name": "University of Rochester Advancement",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate. Academic calendar drives cycles (fiscal year-end push in June, campaign cycles). Project timelines measured in quarters. Limited crunch culture; bureaucracy and consensus-building can slow decisions."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "0763704080"
+   ],
+   "value": "Donor relationship management, fundraising campaigns, alumni engagement programs, prospect research and analytics, gift processing, stewardship reporting, and advancement communications."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 22-25 vacation days + 12-14 university holidays + winter closure (typically Dec 24-Jan 1) + sick leave. Total ~35-40 paid days off annually."
   },
+  "refresh_after": 1790059793,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -297571,7 +298260,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Yes, annual winter shutdown (typically Christmas Eve through New Year's Day) plus standard federal holidays. Some units observe additional summer Fridays or reduced summer hours."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large established division within a major research university (University of Rochester has ~12,000 faculty/staff; Advancement typically employs 150-300 professionals across development, alumni relations, and operations)."
   },
   "sources": [
    {
@@ -297605,14 +298299,37 @@
     "url": "https://www.bing.com/ck/a?!&&p=c51367b2470952276f7622ce1c5ca8b9a59630e8dc91b43fb814db59021b9d2fJmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=04c514de-9105-6e33-3bee-034390f06f34&u=a1aHR0cHM6Ly93d3cubmhjLm5vYWEuZ292Lw&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As part of a major research university, H-1B cap-exempt sponsorship is available for qualifying roles. Green card sponsorship possible for permanent positions. University has established immigration support infrastructure."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "0763704080"
+   ],
+   "value": "University of Rochester Advancement is the fundraising and alumni relations division of the University of Rochester, a top-tier private research university. It secures philanthropic support from alumni, foundations, corporations, and friends to fund scholarships, research, faculty, and campus initiatives."
+  },
+  "synthesized_evidence_sha": "ccb7c6f672e562bb",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Data science for donor modeling and predictive analytics, prospect research automation, CRM administration (likely Salesforce/Advancement or similar), business intelligence dashboards, data engineering for gift processing pipelines, and digital engagement platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784661275,
   "web_search_url": "https://duckduckgo.com/?q=University+of+Rochester+Advancement+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Offers mission-driven AI/data science work (donor analytics, predictive modeling for philanthropy) at a prestigious R1 university with strong work-life balance norms (academic calendar, generous PTO, 35-40 hr weeks typical). Technical culture is growing but not high-velocity tech-company pace; bureaucracy exists but burnout is rare. Strong learning environment with access to university research community."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 4/5. Standard 35-40 hour weeks, generous university holidays + winter break, strong boundaries culture. On-call rare. Some seasonal peaks during campaign closes."
   }
  },
  "university of southern california": {
