@@ -1839,41 +1839,81 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Tier 1 (Fortune 100 healthcare leader; FDA-cleared AI products; massive clinical datasets; publishes at NeurIPS/ICML/MICCAI; strong academic partnerships)"
   },
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Diversified healthcare revenue: sells medical devices and diagnostics to providers/institutions, nutrition products direct to consumers and through retail, and pharmaceuticals primarily in emerging markets. Generates recurring revenue from consumables, test strips, and formula subscriptions."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Engineering-first within a regulated environment; collaborative, low-ego, long-tenure workforce; strong mentorship; diversity initiatives well-funded; decisions data-driven but process-heavy due to FDA/ISO requirements."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Hospitals, clinics, laboratories, healthcare providers, consumers (for nutrition products), and government health systems worldwide."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $125k-$145k base + 10-15% target bonus + $30k-$50k RSUs over 4 years (total ~$170k-$210k year 1) for AI/ML engineering roles in high-cost hubs."
   },
   "evidence_sha": "cbd345c30238c575",
+  "generated_at": 1784877931,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "40eca6ecec"
+   ],
+   "value": "Healthcare technology / Medical devices / Diagnostics / Nutrition / Pharmaceuticals"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect LeetCode-style algorithms plus domain questions: time-series signal processing, regulated ML validation (IEC 62304), embedded C/C++ for devices, statistical rigor for clinical data, and system design for HIPAA-compliant pipelines. Behavioral rounds probe cross-functional collaboration with R&D, regulatory, and clinical teams. Prepare a project demonstrating end-to-end ownership from data to deployed model."
   },
-  "last_attempt_at": 1784877636,
+  "last_attempt_at": 1784877931,
   "last_evidence_at": 1784678333,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Headquarters: Abbott Park, IL. Major hubs: Bay Area (CA), Minneapolis (MN), Boston (MA), Dallas (TX), Columbus (OH), and global sites in Europe, Asia, Latin America."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "To help people live their healthiest lives through the power of health technology and innovation across the full continuum of care."
+  },
   "name": "Abbott",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Moderate: structured sprints with regulatory gates; predictable release cycles; limited crunch; core-hours culture protects evenings/weekends."
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Medical devices (including cardiovascular, diabetes care, neuromodulation), diagnostic systems and tests, nutritional products (Ensure, Pedialyte, Similac), and branded generic pharmaceuticals."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days PTO + 10 company holidays + 2 volunteer days; accrues from day one; unlimited sick leave; sabbatical after 7 years."
   },
-  "retry_after": 1784877876,
+  "refresh_after": 1790061931,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -1883,7 +1923,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Full company shutdown between Christmas and New Year (5-7 business days); additional summer shutdown week in some divisions."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Large-cap public company (NYSE: ABT); ~115,000 employees globally; $40B+ annual revenue; mature, profitable, dividend-paying."
   },
   "sources": [
    {
@@ -1917,14 +1962,38 @@
     "url": "https://www.bing.com/ck/a?!&&p=3ef04767f90b1af1008f330c411407c93346662078ab4622245e4e6e7971f988JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=14b6883e-03c1-682e-2dc2-9fa3029a6986&u=a1aHR0cHM6Ly93d3cuYWJib3R0LmNvbS9lbi11cy9ob21lcGFnZQ&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Actively sponsors H-1B visas for technical roles; green card support common for advanced-degree hires; university recruiting includes OPT/CPT pathways."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "estimated",
+   "source_ids": [
+    "40eca6ecec",
+    "57b8b3c46d"
+   ],
+   "value": "Abbott is a global healthcare company that develops and manufactures medical devices, diagnostics, nutrition products, and branded generic pharmaceuticals. It operates across multiple healthcare segments to help people live healthier lives."
+  },
+  "synthesized_evidence_sha": "cbd345c30238c575",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Embedded systems, firmware, signal processing, ML for diagnostics/imaging, regulated software (IEC 62304), data platforms, cloud infrastructure, mobile apps for patient engagement, algorithm development for glucose monitoring and cardiac devices."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678333,
   "web_search_url": "https://duckduckgo.com/?q=Abbott+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Abbott offers elite healthcare-tech prestige with top-tier new-grad compensation in AI/data science (medical-device ML, diagnostics algorithms, regulated cloud platforms). Its scale provides massive real-world data and FDA-cleared deployment paths unavailable at startups. Culture emphasizes sustainable pace—core hours, limited on-call, and explicit shutdown policies—so you accelerate technical growth without burnout. Mission-driven work directly impacts patient outcomes globally."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "4.0/5 (Glassdoor/Blind consensus): explicit no-meeting Fridays in many orgs, guaranteed holiday shutdowns, flexible hybrid, on-call rotation capped at 1 week/quarter."
   }
  },
  "abbvie": {
@@ -28538,11 +28607,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -28554,6 +28625,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784877931,
   "last_evidence_at": 1784678734,
   "name": "Astreya",
   "pace_of_work": {
@@ -28566,6 +28638,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784878051,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -28609,7 +28682,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=9c508e7a26c7c892221ee065dafa9af0f688e0843b2114a8a3a3e61c89eeaa20JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=312cdbdf-14cf-64ae-0897-cc411533651d&u=a1aHR0cHM6Ly9hc3RyZXlhLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678734,
   "web_search_url": "https://duckduckgo.com/?q=Astreya+company+careers+benefits",
@@ -105282,42 +105355,102 @@
  "expedia group": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "13aa0293f4"
+   ],
+   "value": "High."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "13aa0293f4"
+   ],
+   "value": "Takes transaction commissions on booked travel and earns advertising revenue from suppliers looking to reach travelers."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "13aa0293f4"
+   ],
+   "value": "Mission-driven and collaborative, focusing on travel."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "13aa0293f4"
+   ],
+   "value": "Leisure and business travelers worldwide, as well as travel suppliers such as airlines, hotels, and car rental companies."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: $150,000 - $180,000 base salary for top AI and data roles."
   },
   "evidence_sha": "eb3795551f3fad08",
+  "generated_at": 1784877931,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "13aa0293f4"
+   ],
+   "value": "Online Travel and Technology."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Ask about the team's tech stack and ML model deployment pace, typical work hours, and how they balance rapid innovation with legacy systems. Ensure career growth does not require sacrificing personal time."
   },
-  "last_attempt_at": 1784877792,
+  "last_attempt_at": 1784877931,
   "last_evidence_at": 1784678568,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [
+    "13aa0293f4"
+   ],
+   "value": "Major tech hubs including Seattle, Austin, and London, with hybrid work models."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "13aa0293f4"
+   ],
+   "value": "To power global travel for everyone, everywhere, making it easier for people to plan and book travel."
+  },
   "name": "Expedia Group",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "13aa0293f4"
+   ],
+   "value": "Estimated: Moderate pace with some legacy system maintenance; culture varies by team."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "13aa0293f4"
+   ],
+   "value": "A portfolio of online travel agencies and booking platforms, including Expedia, Hotels.com, Vrbo, and Hotwire, alongside business-to-business travel APIs."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "13aa0293f4"
+   ],
+   "value": "Estimated: 20-25 days of flexible PTO plus holidays."
   },
-  "retry_after": 1784877912,
+  "refresh_after": 1790061931,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -105326,8 +105459,17 @@
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "13aa0293f4"
+   ],
+   "value": "Estimated: No company-wide shutdowns found, but floating holidays are available."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "13aa0293f4"
+   ],
+   "value": "Publicly traded, global enterprise."
   },
   "sources": [
    {
@@ -105371,14 +105513,43 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [
+    "13aa0293f4"
+   ],
+   "value": "Historically open to sponsoring visas for top talent."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "13aa0293f4"
+   ],
+   "value": "Expedia Group is a global travel technology company that operates an extensive portfolio of consumer travel brands, including Expedia, Hotels.com, and Vrbo. It makes money primarily by taking commissions on travel bookings and charging suppliers for access to its distribution platform."
+  },
+  "synthesized_evidence_sha": "eb3795551f3fad08",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [
+    "13aa0293f4"
+   ],
+   "value": "Building large-scale recommendation engines, natural language processing for search, and pricing algorithms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678568,
   "web_search_url": "https://duckduckgo.com/?q=Expedia+Group+company+careers+benefits",
-  "wlb_rating": {
+  "why_it_matters": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Offers a prestigious tech brand with high new-grad pay and complex AI problems, but you must probe to ensure the specific team avoids slow bureaucracy and maintains a fast, innovative culture. Look for roles guaranteeing sane hours and guaranteed shutdowns to fit your work-life balance requirements."
+  },
+  "wlb_rating": {
+   "confidence": "estimated",
+   "source_ids": [
+    "13aa0293f4"
+   ],
+   "value": "Estimated: Good, with standard tech hours and decent flexibility."
   }
  },
  "exxonmobil": {
@@ -134935,38 +135106,101 @@
  "hightouch": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "c158995eb0"
+   ],
+   "value": "Estimated: High prestige. Recognized as a Leader in the 2026 Gartner Magic Quadrant, placing it at the top of the CDP and AI marketing space with highly technical data engineering challenges."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "c158995eb0"
+   ],
+   "value": "B2B enterprise software sales, providing a composable CDP and agentic marketing platform to large organizations."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "c158995eb0"
+   ],
+   "value": "A high-velocity, high-bar tech culture that values deep care for colleagues and customers. It fosters a collaborative, fast-paced environment rather than slow, corporate bureaucracy."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "c158995eb0"
+   ],
+   "value": "Leading enterprises such as Domino's, Spotify, Aritzia, Cars.com, Ramp, and PetSmart."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "c158995eb0"
+   ],
+   "value": "Estimated: $150,000 - $200,000 base salary. As an elite, recognized leader in AI and data infrastructure, new grad compensation is expected to be highly competitive at the top of the tech market."
   },
   "evidence_sha": "0bdb6b2937551b22",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784877931,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "c158995eb0"
+   ],
+   "value": "Software / Technology / Data Infrastructure & Marketing Automation"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "c158995eb0"
+   ],
+   "value": "Be prepared to demonstrate how you can thrive in a high-velocity environment while maintaining the work-life balance you require. Ask questions about their engineering culture, on-call expectations, and how they protect personal time to ensure their 'obsession with raising the bar' does not lead to burnout."
+  },
+  "last_attempt_at": 1784877931,
   "last_evidence_at": 1784693225,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "c158995eb0",
+    "e92c7ba9f1"
+   ],
+   "value": "To help customers leverage data and AI to grow their businesses."
+  },
   "name": "Hightouch",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "c158995eb0"
+   ],
+   "value": "Estimated: Fast-paced and high velocity. The company explicitly states it is 'energized by velocity,' indicating a dynamic, quick-moving development cycle without slow bureaucracy."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "c158995eb0"
+   ],
+   "value": "Agentic Marketing Platform and Composable CDP"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days. Exact standard PTO is not public, but competitive growth-stage tech companies typically offer flexible unlimited or accrual-based PTO in this range."
   },
+  "refresh_after": 1790061931,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -134976,7 +135210,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Not explicitly confirmed. Standard tech company shutdowns (e.g., winter holidays) are likely but not guaranteed based on available information."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "c158995eb0"
+   ],
+   "value": "Established growth-stage company recognized as a Leader in the 2026 Gartner Magic Quadrant for Customer Data Platforms."
   },
   "sources": [
    {
@@ -135040,14 +135281,44 @@
     "url": "https://job-boards.greenhouse.io/hightouch/jobs/6104620004"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "c158995eb0",
+    "e92c7ba9f1"
+   ],
+   "value": "Hightouch is an Agentic Marketing Platform powered by a Composable Customer Data Platform (CDP) that helps enterprises leverage their data and AI for marketing. The company makes money by selling this platform to large enterprises, enabling them to activate their customer data for business growth."
+  },
+  "synthesized_evidence_sha": "0bdb6b2937551b22",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "c158995eb0"
+   ],
+   "value": "Involves building and scaling data infrastructure, AI agents, and composable CDP components within a high-velocity engineering environment."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784693225,
   "web_search_url": "https://duckduckgo.com/?q=Hightouch+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "c158995eb0"
+   ],
+   "value": "As an AI/Data Science professional, this role offers the opportunity to work on cutting-edge agentic AI and data infrastructure at a recognized industry leader, matching your desire for elite prestige and technical innovation. The company emphasizes a fast-paced 'velocity' culture which aligns with your preference for avoiding slow bureaucracy, enabling rapid learning and career growth."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "c158995eb0"
+   ],
+   "value": "Estimated: Moderate. The company mentions caring deeply about each other, but the high-velocity environment typical of fast-growing SaaS startups requires careful boundary-setting to maintain sane hours."
   }
  },
  "hii": {
@@ -167425,11 +167696,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -167441,6 +167714,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784877931,
   "last_evidence_at": 1784737480,
   "name": "Lendable",
   "pace_of_work": {
@@ -167453,6 +167727,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784878051,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -167506,7 +167781,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=8710f417f6385993832ea3cb284ecfe5e2bed4958934017a1dcde902e4b4fe73JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=312cdbdf-14cf-64ae-0897-cc411533651d&u=a1aHR0cHM6Ly93d3cuY29zdGNvdHJhdmVsLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784678733,
   "web_search_url": "https://duckduckgo.com/?q=Lendable+company+careers+benefits",
@@ -183611,11 +183886,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -183627,6 +183904,7 @@
    "source_ids": [],
    "value": "Healthtech / technology (estimated)"
   },
+  "last_attempt_at": 1784877931,
   "last_evidence_at": 1784677861,
   "name": "Medavie",
   "pace_of_work": {
@@ -183639,6 +183917,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784878051,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -183682,7 +183961,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=8a97a0a2359c1b45c1d878f9dee3cbbb4c979d9823496192cf91e014b14053a6JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=01ec248f-5ad1-6809-0f89-33125b1f693a&u=a1aHR0cHM6Ly93d3cuaWtlYS5jb20vY2gvZGUvY2F0L2F1ZmJld2FocnVuZ3Nib3hlbi0xMDc5Ny8_bXNvY2tpZD0wMWVjMjQ4ZjVhZDE2ODA5MGY4OTMzMTI1YjFmNjkzYQ&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784677861,
   "web_search_url": "https://duckduckgo.com/?q=Medavie+company+careers+benefits",
@@ -274940,37 +275219,95 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2 — Respected automotive AI/autonomy program (EyeSight, EV platform) but not a primary AI research lab; publishes at CVPR/ICRA, collaborates with academia, but prestige lags dedicated AI labs (Tier 1) and top-tier tech cos."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "8de240ded2",
+    "58bb2a7330",
+    "addc59dfc9"
+   ],
+   "value": "Design, engineer, manufacture, and sell vehicles through dealer networks; revenue from vehicle sales, parts/accessories, financing (Subaru Motors Finance), and industrial/aerospace divisions."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Engineering-first, consensus-driven, safety-obsessed, low-politics. Long-tenure employees; 'Subaru family' loyalty. Less flashy than Silicon Valley but high psychological safety. Decision-making via ringi (consensus) can feel slow. Diversity improving but still male-dominated in technical ranks."
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Retail consumers (individuals/families), fleet operators, rental companies, and government/municipal fleets globally, with ~70% of sales in North America."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $85k-$110k base + 5-10% bonus + RSU (vesting 3-4 yrs) for US engineering roles (Camden NJ / Lafayette IN). Japan new-grad ~¥3-4M base. Below FAIR/Google tier but competitive for automotive."
   },
   "evidence_sha": "21db96df82fbce32",
+  "generated_at": 1784877931,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "8de240ded2",
+    "58bb2a7330",
+    "addc59dfc9"
+   ],
+   "value": "Automotive manufacturing / Mobility technology"
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Expect deep technical interviews on ML/CS fundamentals applied to automotive perception, planning, or simulation. Prepare for system-design questions around safety-critical ML pipelines, data quality at scale, and real-time constraints. Behavioral focus on collaboration, kaizen mindset, and long-term project ownership. Ask about EyeSight/e-Subaru platform roadmaps to gauge AI investment depth."
   },
+  "last_attempt_at": 1784877931,
   "last_evidence_at": 1784678728,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "8de240ded2",
+    "58bb2a7330",
+    "addc59dfc9"
+   ],
+   "value": "HQ: Ebisu, Tokyo, Japan. Major sites: Gunma (Japan) manufacturing, Lafayette IN (SIA) plant, Camden NJ (Subaru of America HQ), R&D centers in Japan/US/Europe."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Deliver 'Enjoyment and Peace of Mind' through distinctive all-wheel-drive vehicles that combine safety, capability, and reliability."
+  },
   "name": "Subaru",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Measured / deliberate — Automotive development cycles (3-5 years) and safety certification (ISO 26262) enforce structured, milestone-driven pace. Sprint cadence exists in software groups, but releases are gated by vehicle programs, not continuous deployment."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "8de240ded2",
+    "58bb2a7330",
+    "addc59dfc9"
+   ],
+   "value": "Passenger vehicles (Outback, Forester, Crosstrek, Impreza, WRX, BRZ, Ascent, Legacy), industrial power products (generators, engines), and aerospace components (helicopter/airplane parts)."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15-20 days annual PTO + 10-12 company holidays (US); Japan entities follow statutory minimums (10-20 days by tenure) + Golden Week/Obon/New Year shutdowns."
   },
+  "refresh_after": 1790061931,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -274980,7 +275317,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: US offices typically observe week between Christmas/New Year as additional shutdown; Japan observes Golden Week (late Apr-early May), Obon (mid-Aug), and New Year (Dec 29-Jan 3) as company-wide shutdowns."
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Publicly traded (TSE: 7270), ~35,000 employees globally, ¥4.1T revenue (FY2024), mature multinational automaker."
   },
   "sources": [
    {
@@ -275014,14 +275356,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=f3a5580f41a751dc21da390236517b71ecb6fee9cbc7814ff2a6f29b3d90ad43JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=312cdbdf-14cf-64ae-0897-cc411533651d&u=a1aHR0cHM6Ly93d3cuc3ViYXJ1LmNvbS8_bXNvY2tpZD0zMTJjZGJkZjE0Y2Y2NGFlMDg5N2NjNDExNTMzNjUxZA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Subaru of America sponsors H-1B visas for specialized engineering/IT roles; green card sponsorship typical for senior/technical-track hires. No public cap-exempt status."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "8de240ded2",
+    "58bb2a7330",
+    "addc59dfc9"
+   ],
+   "value": "Subaru Corporation is a Japanese automaker known for its symmetrical all-wheel-drive system and boxer engines across models like the Outback, Forester, and Crosstrek. It operates globally with a strong U.S. presence through Subaru of America."
+  },
+  "synthesized_evidence_sha": "21db96df82fbce32",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Vehicle engineering (AWD, boxer engine, EyeSight driver assist), autonomous driving R&D, EV platform development (e-Subaru Global Platform), connected car/data platforms, manufacturing IT, and aerospace systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678728,
   "web_search_url": "https://duckduckgo.com/?q=Subaru+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Subaru offers a mission-driven engineering culture centered on safety and AWD leadership, with growing investment in EV/autonomy/AI that provides meaningful technical challenges. Its Japanese heritage emphasizes stability and long-term employment, aligning with the candidate's desire for work-life balance and sustainable career growth over burnout-prone 'move fast' cultures. The company's profitable niche and loyal customer base fund serious R&D without the quarterly-pressure volatility of pure-"
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 7.5/10 — Japanese corporate culture + unionized US plant workforce normalize reasonable hours. Corporate/engineering roles typically 40-45 hrs/wk; limited weekend on-call except launch periods. Subaru of America known for stable employment and low attrition."
   }
  },
  "sumitomo electric wiring systems": {
@@ -328928,48 +329295,128 @@
  "zoom": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "78a5008069",
+    "17f8c9c419"
+   ],
+   "value": "Estimated: High. As a major public tech company actively expanding its AI Companion and data science capabilities."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "78a5008069"
+   ],
+   "value": "Subscription-based Software-as-a-Service (SaaS) offering tiered plans for meetings, phone, and chat."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Mission-driven, collaborative, and respectful of personal time. Emphasizes innovation over bureaucracy."
   },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "78a5008069"
+   ],
+   "value": "Enterprises, small-to-medium businesses, and individual consumers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: $120,000 - $160,000 base salary per year."
   },
   "evidence_sha": "596f90968b6f3f2d",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784877931,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "78a5008069",
+    "4b7af7ff1d"
+   ],
+   "value": "Technology / Communications & Information Technology."
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419",
+    "78a5008069"
+   ],
+   "value": "Focus on how you can balance fast, innovative AI/ML deployment with the scale and reliability Zoom requires. Be prepared to discuss how sane hours and scheduled shutdowns actually drive better engineering outcomes, and demonstrate a desire for rapid career growth without sacrificing personal time. Highlight any interest in pushing the boundaries of real-time data science."
+  },
+  "last_attempt_at": 1784877931,
   "last_evidence_at": 1784678639,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "78a5008069"
+   ],
+   "value": "Headquartered in San Jose, California with offices globally (hybrid and remote opportunities)."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "78a5008069"
+   ],
+   "value": "To make communications frictionless and secure, empowering people to do more."
+  },
   "name": "Zoom",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: Moderate to fast. Innovative tech culture focused on agile iteration, though less slow-moving than legacy enterprise tech."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "78a5008069"
+   ],
+   "value": "Zoom Workplace ( Meetings, Team Chat, Phone, Rooms), Zoom Contact Center, Zoom AI Companion."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "78a5008069"
+   ],
+   "value": "Estimated: 15-25 days per year, typical for large public tech companies."
   },
+  "refresh_after": 1790061931,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "78a5008069"
+   ],
+   "value": "Estimated: Company-wide shutdowns or floating holidays for major holidays."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "4b7af7ff1d"
+   ],
+   "value": "Public company (NASDAQ: ZM) operating on a global scale."
   },
   "sources": [
    {
@@ -329013,14 +329460,48 @@
     "url": "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Not explicitly found in sources, but typical for large public tech companies of this scale."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "78a5008069",
+    "6f0753a60f"
+   ],
+   "value": "Zoom is a communications technology company that provides video conferencing, online meetings, chat, and phone services. It generates revenue primarily through subscription-based Software-as-a-Service (SaaS) plans for businesses and individual consumers."
+  },
+  "synthesized_evidence_sha": "596f90968b6f3f2d",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "78a5008069",
+    "17f8c9c419"
+   ],
+   "value": "Distributed systems, real-time audio/video networking, machine learning for AI features, data science, cloud infrastructure."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784678639,
   "web_search_url": "https://duckduckgo.com/?q=Zoom+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "17f8c9c419",
+    "78a5008069"
+   ],
+   "value": "Zoom is actively investing in AI and data science to evolve beyond its video roots, offering new grads a top-tier platform to develop elite learning in real-time distributed systems and ML integrations. It balances this prestige with a well-known culture of sane hours and respect for work-life balance, contrasting with the toxic burnout of high-paced big tech. This mission-driven approach to employee wellbeing mitigates bureaucracy while accelerating career growth."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "17f8c9c419"
+   ],
+   "value": "Estimated: High. Known for respecting work-life balance with sane hours and avoiding toxic, high-burnout environments."
   }
  },
  "zoox": {
