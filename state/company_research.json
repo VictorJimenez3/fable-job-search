@@ -50150,52 +50150,130 @@
  "bge": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "e816480026"
+   ],
+   "value": "Estimated: Low-to-Medium tier. AI work is focused on operational efficiency and grid reliability rather than advanced model development."
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "e816480026",
+    "021a1cd10d"
+   ],
+   "value": "Regulated electric and gas utility model that generates revenue through government-approved, regulated rates for energy delivery and infrastructure maintenance."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "e816480026"
+   ],
+   "value": "Estimated: Traditional corporate utility environment emphasizing safety, reliability, and community service."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "e816480026"
+   ],
+   "value": "Residential, commercial, and industrial customers across central Maryland, including the Greater Baltimore region."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "e816480026"
+   ],
+   "value": "Estimated: $75,000-$90,000 annual salary."
   },
   "evidence_sha": "b84b83f141a9cb6f",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784900144,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
-  "last_attempt_at": 1784899938,
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "e816480026",
+    "021a1cd10d"
+   ],
+   "value": "Public Utility and Energy Distribution"
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e816480026",
+    "021a1cd10d"
+   ],
+   "value": "Interviewers will likely emphasize your fit for enterprise IT and grid analytics rather than cutting-edge AI, so probe whether their innovation teams can satisfy your goals for fast technical growth."
+  },
+  "last_attempt_at": 1784900144,
   "last_evidence_at": 1784680817,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "e816480026"
+   ],
+   "value": "Primary headquarters and operations based in Baltimore, Maryland, with field workforce presence throughout its central Maryland service territory."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "e816480026"
+   ],
+   "value": "To safely provide reliable and affordable energy to customers across central Maryland, focusing on community empowerment and sustainable infrastructure."
+  },
   "name": "BGE",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "e816480026",
+    "021a1cd10d"
+   ],
+   "value": "Estimated: Slow to moderate. Regulated utilities typically operate on traditional technology deployment cycles."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "e816480026",
+    "021a1cd10d"
+   ],
+   "value": "Electricity distribution, natural gas delivery, smart meter data infrastructure, grid modernization services, energy efficiency programs, and digital account management platforms."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "e816480026"
+   ],
+   "value": "Estimated: 15-25 days standard PTO, plus paid holidays."
   },
-  "retry_after": 1784900058,
+  "refresh_after": 1790084144,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
-   "source_ids": [],
+   "source_ids": [
+    "e816480026"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "e816480026"
+   ],
+   "value": "Estimated: No formal company-wide shutdowns, though normal utility operations pause on major holidays."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "e816480026"
+   ],
+   "value": "Established corporate utility subsidiary with thousands of employees, part of a larger parent energy grid."
   },
   "sources": [
    {
@@ -50229,14 +50307,47 @@
     "url": "https://www.bing.com/ck/a?!&&p=4ece8a0896466f6f29f41763997114fda5ee9c2b1d8653d7071936b24abdb924JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=20894165-bbcb-6a0b-2216-56fbbabc6b12&u=a1aHR0cHM6Ly93d3cuYmdlLmNvbS8&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "e816480026"
+   ],
+   "value": "Historically limited H-1B visa sponsorship. Typical hiring for technical roles prioritizes local Maryland/D.C. candidates."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "e816480026",
+    "021a1cd10d"
+   ],
+   "value": "Baltimore Gas and Electric Company (BGE) is Maryland's largest gas and electric utility, serving over 1.3 million electric and 700,000 gas customers. The company makes money by distributing energy and charging regulated rates for electricity and natural gas delivery."
+  },
+  "synthesized_evidence_sha": "b84b83f141a9cb6f",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "e816480026",
+    "021a1cd10d"
+   ],
+   "value": "Smart meter data processing, grid analytics, enterprise software systems support, and digital customer-facing billing portals."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680817,
   "web_search_url": "https://duckduckgo.com/?q=BGE+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "e816480026"
+   ],
+   "value": "BGE is a stable, mission-driven utility company that offers standard benefits and likely sane hours, but probably lacks the fast-paced, innovative tech culture and elite AI prestige you prioritized."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "e816480026"
+   ],
+   "value": "Estimated: Good. Utilities generally offer standard corporate hours (40/week) with high schedule predictability."
   }
  },
  "bhe compression services": {
@@ -171743,38 +171854,101 @@
  "hiive": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "ad8670d31c"
+   ],
+   "value": "Estimated: Emerging — company is a recognized fast-growing Canadian scale-up with U.S. backing, but AI/data science brand not yet established in public sources."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [
+    "2f3bb9df52"
+   ],
+   "value": "Likely transaction, subscription, or SaaS fees from funds and investors using the platform; precise monetization not disclosed in sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "ad8670d31c"
+   ],
+   "value": "Estimated: Innovative, product-led, growth-oriented Canadian scale-up with U.S. investor backing; design and engineering collaboration emphasized in job posting."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "2f3bb9df52"
+   ],
+   "value": "Funds, investors, and likely institutional or accredited participants in private markets; specific segments not disclosed in sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "ad8670d31c"
+   ],
+   "value": "Estimated: CAD 90k–120k base + equity for software/AI roles at Canadian scale-ups with U.S. backing; no public offer data found in sources."
   },
   "evidence_sha": "16ca06b59bda7f59",
+  "generated_at": 1784900144,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "2f3bb9df52"
+   ],
+   "value": "Fintech / Private Markets Technology"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "ad8670d31c"
+   ],
+   "value": "Ask: (1) What are typical working hours and does the company have guaranteed shutdown periods? (2) How is PTO structured and what is actual utilization? (3) What does the AI/data science roadmap look like and how much autonomy do new grads get? (4) How does the team balance speed of shipping with sustainable pace? (5) What mentorship and learning budgets exist for technical growth?"
+  },
+  "last_attempt_at": 1784900144,
+  "last_evidence_at": 1784861699,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "ad8670d31c"
+   ],
+   "value": "Canada-based (explicit in job posting); sponsorship and relocation offered for exceptional candidates. Remote/hybrid policy not detailed in sources."
+  },
+  "mission": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Not explicitly stated in sources; implied mission to modernize access to private markets or investment workflows through technology."
   },
-  "last_evidence_at": 1784861699,
   "name": "Hiive",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "ad8670d31c"
+   ],
+   "value": "Estimated: Fast — 'fastest-growing' recognition and scale-up stage imply high velocity; no public data on sustainable pace guardrails."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "2f3bb9df52",
+    "ad8670d31c"
+   ],
+   "value": "A digital platform for funds and investors (suggested by /funds-investors page) with product design and feature development; exact product scope not detailed in sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Not disclosed — typical Canadian tech offers 15–20 days + statutory holidays; no company-specific policy found in sources."
   },
+  "refresh_after": 1790084144,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -171784,7 +171958,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: None found in research — no mention of guaranteed company-wide shutdown periods in sources."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "ad8670d31c"
+   ],
+   "value": "Fast-growing Canadian scale-up; recognized as one of Canada's fastest-growing companies. Employee count not specified in sources."
   },
   "sources": [
    {
@@ -171828,14 +172009,44 @@
     "url": "https://jobs.ashbyhq.com/hiive/574d0653-6f71-4d82-9f11-05d74c003c07"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "ad8670d31c"
+   ],
+   "value": "Offers sponsorship, immigration, and relocation support for exceptional candidates."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "ad8670d31c",
+    "2f3bb9df52"
+   ],
+   "value": "Hiive is a Canada-based, fast-growing technology company backed by leading U.S. investors. It operates a product-focused platform (likely in fintech or investment given its 'funds-investors' page) and is recognized as one of Canada's fastest-growing companies."
+  },
+  "synthesized_evidence_sha": "16ca06b59bda7f59",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "ad8670d31c"
+   ],
+   "value": "Product design and engineering for a web/platform product; roles include end-to-end feature design, design reviews, stakeholder presentation. AI/data science specifics not mentioned in sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784861699,
   "web_search_url": "https://duckduckgo.com/?q=Hiive+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "ad8670d31c"
+   ],
+   "value": "Hiive matches your priority for a fast-growing, innovative tech culture backed by top U.S. investors without the bureaucracy of big tech. The explicit sponsorship/relocation support and 'fastest-growing' recognition signal elite prestige and high new-grad pay potential. While WLB policies aren't public, the scale-up stage suggests faster pace than mature firms — probe for concrete shutdown norms and PTO in interviews."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown — no public WLB policies, shutdowns, or PTO utilization data found in sources; must be verified in interviews."
   }
  },
  "hilbert": {
@@ -186057,41 +186268,103 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 3 (Industry/Domain challenger). Prestige comes from deep healthcare domain expertise rather than cutting-edge technical AI applications."
   },
   "aliases": [],
-  "attempts": 3,
+  "attempts": 4,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "2d99877388",
+    "fe7766b42c",
+    "ac53df89dc"
+   ],
+   "value": "B2B partnership and fee-for-service model providing advisory, medical, and communications commercialization services to life sciences companies."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Corporate, mission-driven by healthcare outcomes, and professional/domain-focused."
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "2d99877388",
+    "fe7766b42c",
+    "ac53df89dc"
+   ],
+   "value": "Life science, biopharmaceutical, and medical technology companies bringing new therapies to market."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000 to $110,000 USD base salary, varying by specific role and location."
   },
   "evidence_sha": "1581de49a2f322eb",
+  "generated_at": 1784900144,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "2d99877388",
+    "fe7766b42c",
+    "ac53df89dc"
+   ],
+   "value": "Life Sciences, Pharmaceutical Commercialization, and Healthcare Communications."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Probe deeply into the team's actual day-to-day: ask to describe a sprint or a product launch to gauge if the culture is genuinely fast and innovative versus slow and process-heavy. Verify compensation bands directly against your high new-grad pay and elite prestige expectations, and ask how often the team launches entirely new AI features versus maintaining static client dashboards. Finally, ask to define unacceptable working hours and how client emergencies are handled to ensure it avoids the t"
   },
-  "last_attempt_at": 1784899544,
+  "last_attempt_at": 1784900144,
   "last_evidence_at": 1784680509,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "2d99877388",
+    "fe7766b42c",
+    "ac53df89dc"
+   ],
+   "value": "Global presence with operations spanning multiple regions worldwide."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "2d99877388",
+    "fe7766b42c",
+    "ac53df89dc"
+   ],
+   "value": "To advance health and accelerate the commercialization of new life sciences therapies."
+  },
   "name": "Inizio",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast-paced during client deliverable cycles, but heavily driven by client timelines rather than an internal, fast-moving tech culture."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "2d99877388",
+    "fe7766b42c",
+    "ac53df89dc"
+   ],
+   "value": "Evidence generation, commercialization, medical affairs, and communications platforms for pharmaceutical and biotech therapies."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 20 to 25 days of standard Paid Time Off for professional roles, typical of large global services firms."
   },
-  "retry_after": 1784900024,
+  "refresh_after": 1790084144,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -186101,7 +186374,16 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Potentially limited company-wide shutdowns around major holidays, though not guaranteed."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "2d99877388",
+    "fe7766b42c",
+    "ac53df89dc"
+   ],
+   "value": "Established global enterprise with a broad footprint across the healthcare ecosystem."
   },
   "sources": [
    {
@@ -186135,14 +186417,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=48e7bce0ae6cc8ba628170e8246749021d60627c8996a712292ec1814af55b53JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=2c426153-30e1-6263-3808-76cd31e76370&u=a1aHR0cHM6Ly9pbml6aW8uY29tLw&ntb=1"
    }
   ],
-  "status": "retrying",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely provides visa sponsorship for specialized tech and data roles, common for established global enterprises."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "2d99877388",
+    "fe7766b42c",
+    "ac53df89dc"
+   ],
+   "value": "Inizio is a global commercialization partner for the life sciences and pharmaceutical industry, providing advisory, medical, and communications services. They make money by charging biopharma companies to help develop, launch, and market their therapies, though specific company page details could not be extracted from the provided sources."
+  },
+  "synthesized_evidence_sha": "1581de49a2f322eb",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Data engineering, analytics, AI/ML applications for healthcare commercialization, pharmaceutical market modeling, and digital communications platforms."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680509,
   "web_search_url": "https://duckduckgo.com/?q=Inizio+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "As an established commercialization contractor, Inizio is unlikely to offer the elite FAANG-level new-grad pay or fast-paced, boundary-pushing consumer tech culture you seek; it leans heavily toward structured services delivery, which may conflict with your desire to avoid bureaucracy. Additionally, the aggressive client-driven deadlines typical of consulting-style commercialization work frequently contradict the sane hours and guaranteed shutdowns required for your work-life balance priorities."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Moderate and team-dependent. Travel and client deadlines may occasionally disrupt standard hours."
   }
  },
  "innodata": {
@@ -197426,48 +197733,125 @@
  "johnson electric": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "source_ids": [
+    "5cf2dba131"
+   ],
+   "value": "Estimated: Low for standard AI/DS roles, as it is primarily a hardware and manufacturing company."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "5cf2dba131"
+   ],
+   "value": "B2B manufacturing and direct wholesale of electro-mechanical components to large enterprise original equipment manufacturers (OEMs)."
+  },
   "culture_vibe": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "source_ids": [
+    "5cf2dba131"
+   ],
+   "value": "Traditional engineering and manufacturing culture focused on operational excellence and cost-efficiency, rather than a fast-paced, fast-innovating tech startup culture."
   },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "5cf2dba131"
+   ],
+   "value": "Automotive manufacturers, smart building developers, and industrial equipment makers."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "source_ids": [
+    "5cf2dba131"
+   ],
+   "value": "Estimated: Lower than top-tier AI tech companies; likely in the $60k-$90k range for new grad engineering roles depending on location."
   },
   "evidence_sha": "28707563080dfcb5",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784900144,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "5cf2dba131"
+   ],
+   "value": "Industrial Manufacturing and Auto Parts."
+  },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1c60ffb054"
+   ],
+   "value": "Due to the mismatch with the candidate's profile, focus on asking whether they are comfortable pivoting from an elite AI trajectory to an industrial hardware environment, and clarify the actual hours, bureaucracy, and compensation limits before proceeding."
+  },
+  "last_attempt_at": 1784900144,
   "last_evidence_at": 1784680909,
+  "locations": {
+   "confidence": "medium",
+   "source_ids": [
+    "5cf2dba131"
+   ],
+   "value": "Global operations with a presence in multiple countries across Asia, Europe, and the Americas."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "5cf2dba131"
+   ],
+   "value": "Not explicitly retrieved in the provided sources, but the company focuses on delivering innovative motion and thermal management solutions."
+  },
   "name": "Johnson Electric",
   "pace_of_work": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "source_ids": [
+    "5cf2dba131"
+   ],
+   "value": "Estimated: Moderate to slow pace characteristic of traditional manufacturing, differing from the fast, innovative tech culture the candidate desires."
   },
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "5cf2dba131"
+   ],
+   "value": "Electric motors, motion actuators, switches, and smart motion subsystems."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "source_ids": [
+    "5cf2dba131"
+   ],
+   "value": "Estimated: Standard manufacturing company leave, approximately 15-20 days per year."
   },
+  "refresh_after": 1790084144,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research"
+   "confidence": "high",
+   "source_ids": [
+    "1c60ffb054"
+   ],
+   "value": "None found in research."
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "None found in research (estimated)"
+   "source_ids": [
+    "5cf2dba131"
+   ],
+   "value": "Estimated: Likely standard public holidays, but guaranteed corporate-wide shutdowns common in top-tier tech are not typically a feature here."
+  },
+  "size_stage": {
+   "confidence": "medium",
+   "source_ids": [
+    "5cf2dba131"
+   ],
+   "value": "Large, established global enterprise."
   },
   "sources": [
    {
@@ -197501,14 +197885,45 @@
     "url": "https://www.bing.com/ck/a?!&&p=951ad2563e30a14b996e393ef8bf4db1d53dd8ae69bbfa826dc414fb6e003c63JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1270581e-58be-6343-3303-4f8059b56249&u=a1aHR0cHM6Ly93d3cuam5qLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "5cf2dba131"
+   ],
+   "value": "Likely offered for specialized engineering roles given the global footprint, though specific visa sponsorship details were not found in the provided sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "5cf2dba131"
+   ],
+   "value": "Johnson Electric is a global provider of electric motors, motion subsystems, and related components. They generate revenue by designing and manufacturing these electro-mechanical products for automotive, smart building, and industrial customers worldwide."
+  },
+  "synthesized_evidence_sha": "28707563080dfcb5",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "5cf2dba131"
+   ],
+   "value": "Hardware engineering, embedded systems, electro-mechanical design, and supporting manufacturing processes."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680909,
   "web_search_url": "https://duckduckgo.com/?q=Johnson+Electric+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [
+    "1c60ffb054"
+   ],
+   "value": "This candidate desires an elite, fast-paced AI/tech role with high new-grad pay and guaranteed shutdowns. Johnson Electric is a traditional hardware manufacturer, which typically moves slower, lacks the high-end Prestige or fast tech culture of top-tier AI companies, and has a lower new-grad pay scale."
+  },
   "wlb_rating": {
    "confidence": "estimated",
-   "source_ids": [],
-   "value": "3/5 (estimated)"
+   "source_ids": [
+    "5cf2dba131"
+   ],
+   "value": "Estimated: Potentially good work-life balance, but likely includes standard office hours and typical manufacturing schedules rather than guaranteed tech-style shutdowns."
   }
  },
  "johnson johnson": {
@@ -226447,11 +226862,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -226463,6 +226880,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784900144,
   "last_evidence_at": 1784674622,
   "name": "Marsh",
   "pace_of_work": {
@@ -226475,6 +226893,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784900264,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -226518,7 +226937,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=754162f8f71b8ed815604863a533c85d9bb4d77e48dc917fa1318fd329cc98c5JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=138d2599-a464-646d-0b3c-3204a534656b&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L2Fib21pbmFibGU&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784674622,
   "web_search_url": "https://duckduckgo.com/?q=Marsh+company+careers+benefits",
@@ -243289,37 +243708,94 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Low tier for AI/DS. Elite prestige in civil engineering, but lacks the elite tech recognition desired by top data scientists."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "9cd422e467"
+   ],
+   "value": "Operates as a general contractor and design-builder, generating revenue through construction management and contracting fees for large-scale projects."
   },
+  "culture_vibe": {
+   "confidence": "medium",
+   "source_ids": [
+    "a177eb524c"
+   ],
+   "value": "Values safety, collaboration, and building structures, reflecting its foundation as M.A. Mortenson Company."
+  },
+  "customers": {
+   "confidence": "medium",
+   "source_ids": [
+    "9cd422e467"
+   ],
+   "value": "Corporate enterprises seeking commercial real estate, tech companies requiring advanced data centers, and public institutions needing facility construction."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $80,000 to $100,000 for tech roles, considerably lower than elite tech company salaries."
   },
   "evidence_sha": "0f9f7e40e3de6f7e",
+  "generated_at": 1784900144,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
   "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "9cd422e467",
+    "a177eb524c"
+   ],
+   "value": "Construction and Engineering."
+  },
+  "interview_focus": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Assess whether internal IT roles focus on pure AI research or applied enterprise maintenance, and verify if the WLB truly escapes construction industry burnout."
   },
+  "last_attempt_at": 1784900144,
   "last_evidence_at": 1784674193,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "a177eb524c"
+   ],
+   "value": "Headquartered in Minneapolis, Minnesota, with operations and project offices across the United States."
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "9cd422e467"
+   ],
+   "value": "To create a positive impact in the world through building modern infrastructure and capital projects."
+  },
   "name": "Mortenson",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast, driven by project deadlines and an industry known for strict schedules, rather than a rapid tech-startup culture."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "9cd422e467"
+   ],
+   "value": "Commercial and institutional buildings, renewable energy infrastructure, and data centers."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15 to 20 days annually, typical for an established engineering firm."
   },
+  "refresh_after": 1790084144,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -243329,7 +243805,15 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed tech-style shutdowns; construction operations are generally continuous."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "9cd422e467",
+    "a177eb524c"
+   ],
+   "value": "Large, established private firm recognized as a top US contractor."
   },
   "sources": [
    {
@@ -243363,14 +243847,41 @@
     "url": "https://www.bing.com/ck/a?!&&p=bc222bf942db1466204731d17d55f158011256c0cac3f81723c9e531dcfaafe5JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=1d215904-9fd0-65b8-3854-4e999e1b64fa&u=a1aHR0cHM6Ly93d3cubW9ydGVuc29uLmNvbS8&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "768b9eafe1"
+   ],
+   "value": "Career pages indicate open hiring, though specific visa sponsorship details are not explicitly stated."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "9cd422e467"
+   ],
+   "value": "Mortenson is a top-tier construction engineering company that builds large-scale facilities. It makes money by contracting and managing major capital projects across the US."
+  },
+  "synthesized_evidence_sha": "0f9f7e40e3de6f7e",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "768b9eafe1"
+   ],
+   "value": "Information technology and data teams support construction operations, likely focusing on enterprise software and systems."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674193,
   "web_search_url": "https://duckduckgo.com/?q=Mortenson+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Stores cutting-edge AI work within a mission-driven builder of physical infrastructure, but lacks the elite tech prestige and massive new-grad pay of tech giants."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Varies by project phase; generally standard for corporate engineering but may lack the guaranteed shutdowns of tech companies."
   }
  },
  "motorola": {
@@ -252036,7 +252547,7 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "unknown",
    "source_ids": [],
@@ -252054,7 +252565,7 @@
    ],
    "value": "Hospitals and practices across New York State."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -252079,7 +252590,7 @@
    ],
    "value": "Probe whether the role offers accelerated technical learning and career growth without sacrificing personal time, and clarify if compensation and work pace meet your expectations for an elite, fast-moving tech culture."
   },
-  "last_attempt_at": 1784452911,
+  "last_attempt_at": 1784900144,
   "last_evidence_at": 1784583334,
   "locations": {
    "confidence": "medium",
@@ -252114,6 +252625,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784900384,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -252167,7 +252679,7 @@
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "status": "ready",
+  "status": "retrying",
   "summary": {
    "confidence": "high",
    "source_ids": [
@@ -284477,49 +284989,140 @@
  },
  "preference model": {
   "ai_ds_prestige_tier": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "confidence": "high",
+   "source_ids": [
+    "f654ef93a9",
+    "350ae5d9e3",
+    "15aaf35be5"
+   ],
+   "value": "Cannot assess; no company information in sources."
   },
   "aliases": [],
-  "culture_vibe": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "f654ef93a9",
+    "350ae5d9e3",
+    "15aaf35be5"
+   ],
+   "value": "No business model information found in the supplied sources."
   },
+  "culture_vibe": {
+   "confidence": "high",
+   "source_ids": [
+    "f654ef93a9",
+    "350ae5d9e3",
+    "15aaf35be5"
+   ],
+   "value": "Unknown; no culture information in supplied sources."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "f654ef93a9",
+    "350ae5d9e3",
+    "15aaf35be5"
+   ],
+   "value": "No customer information found in the supplied sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown; no compensation data in sources."
   },
   "evidence_sha": "246e393eb5976db1",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784900144,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "high",
+   "source_ids": [
+    "f654ef93a9",
+    "350ae5d9e3",
+    "15aaf35be5"
+   ],
+   "value": "Industry unknown; sources only contain dictionary definitions for 'preference.'"
+  },
+  "interview_focus": {
+   "confidence": "high",
+   "source_ids": [
+    "f654ef93a9",
+    "350ae5d9e3",
+    "15aaf35be5"
+   ],
+   "value": "Cannot determine interview focus areas because no company technical or cultural information exists in the supplied sources."
+  },
+  "last_attempt_at": 1784900144,
   "last_evidence_at": 1784680709,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "f654ef93a9",
+    "350ae5d9e3",
+    "15aaf35be5"
+   ],
+   "value": "No location information found in the supplied sources."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "f654ef93a9",
+    "350ae5d9e3",
+    "15aaf35be5"
+   ],
+   "value": "No mission statement found in the supplied sources."
+  },
   "name": "Preference Model",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown; no company information in sources to estimate work pace."
   },
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "f654ef93a9",
+    "350ae5d9e3",
+    "15aaf35be5"
+   ],
+   "value": "No product information found in the supplied sources; sources only contain dictionary definitions for the term 'preference.'"
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown; no PTO policy information in sources."
   },
+  "refresh_after": 1790084144,
+  "retry_after": 0,
   "rotational_program_name": {
-   "confidence": "estimated",
-   "source_ids": [],
+   "confidence": "high",
+   "source_ids": [
+    "f654ef93a9",
+    "350ae5d9e3",
+    "15aaf35be5"
+   ],
    "value": "None found in research"
   },
   "schema_v": 1,
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown; no shutdown policy information in sources."
+  },
+  "size_stage": {
+   "confidence": "high",
+   "source_ids": [
+    "f654ef93a9",
+    "350ae5d9e3",
+    "15aaf35be5"
+   ],
+   "value": "No company size or stage information found in the supplied sources."
   },
   "sources": [
    {
@@ -284553,14 +285156,51 @@
     "url": "https://www.bing.com/ck/a?!&&p=84a49063fa23cee5d317a257868a0f7c638ebd81f9a5733f5806c99d72946564JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=04b615d7-10a9-635e-06d5-024911f062cb&u=a1aHR0cHM6Ly93d3cubWVycmlhbS13ZWJzdGVyLmNvbS9kaWN0aW9uYXJ5L3ByZWZlcmVuY2U&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "f654ef93a9",
+    "350ae5d9e3",
+    "15aaf35be5"
+   ],
+   "value": "No visa sponsorship information found in the supplied sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "f654ef93a9",
+    "350ae5d9e3",
+    "15aaf35be5"
+   ],
+   "value": "The provided sources do not contain information about a company named 'Preference Model.' All three sources redirect to dictionary definitions of the word 'preference' (Cambridge, dict.cc, Merriam-Webster) rather than a corporate entity."
+  },
+  "synthesized_evidence_sha": "246e393eb5976db1",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "f654ef93a9",
+    "350ae5d9e3",
+    "15aaf35be5"
+   ],
+   "value": "No technical work description found in the supplied sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680709,
   "web_search_url": "https://duckduckgo.com/?q=Preference+Model+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "f654ef93a9",
+    "350ae5d9e3",
+    "15aaf35be5"
+   ],
+   "value": "Cannot assess alignment with candidate priorities (elite AI prestige, high new-grad pay, fast innovative culture, work-life balance, guaranteed shutdowns, technical growth without sacrificing personal time) because no company information exists in the supplied sources."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown; no company information in sources to estimate work-life balance."
   }
  },
  "prelim": {
@@ -339065,11 +339705,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -339081,6 +339723,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784900144,
   "last_evidence_at": 1784680909,
   "name": "Sportradar",
   "pace_of_work": {
@@ -339093,6 +339736,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784900264,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -339136,7 +339780,7 @@
     "url": "https://jobs.smartrecruiters.com/"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680909,
   "web_search_url": "https://duckduckgo.com/?q=Sportradar+company+careers+benefits",
@@ -395680,37 +396324,93 @@
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Unknown tier."
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "low",
+   "source_ids": [
+    "b919d0f0d6"
+   ],
+   "value": "The business model could not be fully verified from the retrieved page contents."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Unknown."
   },
+  "customers": {
+   "confidence": "low",
+   "source_ids": [
+    "b919d0f0d6"
+   ],
+   "value": "Customer details are not specified in the available sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: Unknown."
   },
   "evidence_sha": "b602973f3fd1e38b",
-  "industry": {
-   "confidence": "estimated",
-   "source_ids": [],
-   "value": "Other / technology (estimated)"
+  "generated_at": 1784900144,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
   },
+  "industry": {
+   "confidence": "medium",
+   "source_ids": [
+    "f8250ba8c0"
+   ],
+   "value": "Technology."
+  },
+  "interview_focus": {
+   "confidence": "low",
+   "source_ids": [
+    "f8250ba8c0"
+   ],
+   "value": "Candidates should probe for concrete examples of sane working hours, protected shutdowns, the true pace of technical innovation versus bureaucracy, and real evidence of accelerated learning opportunities."
+  },
+  "last_attempt_at": 1784900144,
   "last_evidence_at": 1784680910,
+  "locations": {
+   "confidence": "low",
+   "source_ids": [
+    "b919d0f0d6"
+   ],
+   "value": "Office location details were not accessible via the retrieved sources."
+  },
+  "mission": {
+   "confidence": "low",
+   "source_ids": [
+    "f8250ba8c0"
+   ],
+   "value": "The company's defined mission was not captured in the provided excerpts."
+  },
   "name": "Visionist",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Unknown pace."
   },
+  "products": {
+   "confidence": "low",
+   "source_ids": [
+    "f8250ba8c0"
+   ],
+   "value": "Specific product details were not available due to redirects on the company's public pages."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: Unknown."
   },
+  "refresh_after": 1790084144,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -395720,7 +396420,14 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: Unknown."
+  },
+  "size_stage": {
+   "confidence": "low",
+   "source_ids": [
+    "f8250ba8c0"
+   ],
+   "value": "Information regarding the company's exact size and funding stage is not present in the sources."
   },
   "sources": [
    {
@@ -395754,51 +396461,123 @@
     "url": "https://www.jobvite.com/"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "low",
+   "source_ids": [
+    "f8250ba8c0"
+   ],
+   "value": "No information found regarding visa sponsorship for candidates."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "b919d0f0d6",
+    "f8250ba8c0"
+   ],
+   "value": "Visionist is a company operating in the technology space. It generates revenue through its core business offerings and services."
+  },
+  "synthesized_evidence_sha": "b602973f3fd1e38b",
+  "technical_work": {
+   "confidence": "low",
+   "source_ids": [
+    "f8250ba8c0"
+   ],
+   "value": "Specifics regarding the engineering, AI, or data science technical stack are not detailed in the available data."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784680910,
   "web_search_url": "https://duckduckgo.com/?q=Visionist+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "low",
+   "source_ids": [
+    "b919d0f0d6"
+   ],
+   "value": "This opportunity could fit a candidate seeking prestigious, well-compensated AI/data science work with fast-paced innovation, guaranteed personal time, and high technical growth, provided the company's culture actively avoids burnout."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: Unknown."
   }
  },
  "visionist inc": {
   "ai_ds_prestige_tier": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
+   "value": "Estimated: Tier 2–3 (solid technical work but not widely known as a top-tier AI research lab)"
   },
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Probably professional services / government contracting (time-and-materials or fixed-price contracts) or SaaS/analytics products, but no revenue model confirmed in sources."
+  },
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Technology team; company-specific culture research pending (estimated)"
+   "value": "Estimated: Mission-driven, engineering-focused, likely low bureaucracy if small, but culture unverified"
   },
+  "customers": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Possibly U.S. federal government agencies or commercial enterprises based on typical 'Inc.' government contractor profiles, but no customer data in sources."
+  },
+  "error": "",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "$85k–$125k base (estimated; US market)"
+   "value": "Estimated: $95k–$120k base + modest bonus/equity (aligned with mid-size GovCon/tech consultancies in DC metro)"
   },
   "evidence_sha": "a519024340a650dd",
+  "generated_at": 1784900144,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
   "industry": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Other / technology (estimated)"
+   "value": "Estimated: Management consulting / federal IT services / AI & analytics"
   },
+  "interview_focus": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Ask about actual project pacing, on-call expectations, PTO usage rates, and whether the company enforces 'shutdown' periods; probe for concrete learning budgets, mentorship structure, and promotion timelines to assess growth vs. burnout trade-offs."
+  },
+  "last_attempt_at": 1784900144,
   "last_evidence_at": 1784674621,
+  "locations": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely headquartered in the Washington, D.C. metro area (common for federal contractors) with possible remote/hybrid options, but no location data in sources."
+  },
+  "mission": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: No mission statement found in supplied sources; likely emphasizes technology innovation and client mission success if a federal contractor."
+  },
   "name": "Visionist, Inc.",
   "pace_of_work": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "Moderate-to-fast (estimated)"
+   "value": "Estimated: Moderate to fast; project-based consulting often has crunch periods near deliverables"
   },
+  "products": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely provides data science, AI/ML consulting, or federal IT services given the company name pattern, but no product information found in sources."
+  },
+  "prompt_v": 2,
   "pto_days": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "15–20 days (estimated)"
+   "value": "Estimated: 15–20 days PTO + 10 federal holidays (common for GovCon firms)"
   },
+  "refresh_after": 1790084144,
+  "retry_after": 0,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -395808,7 +396587,12 @@
   "shutdowns": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "None found in research (estimated)"
+   "value": "Estimated: No guaranteed company-wide shutdowns found; some firms offer winter break but not universal"
+  },
+  "size_stage": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Likely small-to-mid-size (50–500 employees) given limited public web presence; growth stage unclear."
   },
   "sources": [
    {
@@ -395842,14 +396626,39 @@
     "url": "https://www.bing.com/ck/a?!&&p=731969485a6410d39669f0be2c8ce3343f7f515abc3bd17a0b00523307cbf850JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=138d2599-a464-646d-0b3c-3204a534656b&u=a1aHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tL2xvZ2luP3NlcnZpY2U9bWFpbA&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "sponsorship_context": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: May sponsor H-1B visas if a federal contractor with technical roles, but no immigration data found in sources."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "43e90b1c95",
+    "03e96d4f99",
+    "68ccdbf8eb"
+   ],
+   "value": "Visionist, Inc. appears to be a technology or consulting company, but the provided sources only show authentication redirect pages without substantive company information. No verifiable description of products, services, or business model is available from the supplied sources."
+  },
+  "synthesized_evidence_sha": "a519024340a650dd",
+  "technical_work": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "Estimated: Probably involves data engineering, ML model development, cloud architecture, and analytics for government or enterprise clients, but no technical details in sources."
+  },
   "web_research_status": "sources captured",
   "web_researched_at": 1784674621,
   "web_search_url": "https://duckduckgo.com/?q=Visionist%2C+Inc.+company+careers+benefits",
+  "why_it_matters": {
+   "confidence": "estimated",
+   "source_ids": [],
+   "value": "This role could offer elite AI/data science prestige and high new-grad pay in a fast, innovative culture if Visionist is a modern tech consultancy, but the candidate's priorities around work-life balance, guaranteed shutdowns, and low burnout cannot be verified from available sources."
+  },
   "wlb_rating": {
    "confidence": "estimated",
    "source_ids": [],
-   "value": "3/5 (estimated)"
+   "value": "Estimated: 3.0/5 (typical for government consulting; some firms protect weekends but surge near contract deadlines)"
   }
  },
  "vitas healthcare": {
@@ -402492,11 +403301,13 @@
    "value": "Tier 3 — not yet ranked from company-specific data (estimated)"
   },
   "aliases": [],
+  "attempts": 1,
   "culture_vibe": {
    "confidence": "estimated",
    "source_ids": [],
    "value": "Technology team; company-specific culture research pending (estimated)"
   },
+  "error": "provider unavailable or response was not source-grounded",
   "estimated_new_grad_tech_pay": {
    "confidence": "estimated",
    "source_ids": [],
@@ -402508,6 +403319,7 @@
    "source_ids": [],
    "value": "Other / technology (estimated)"
   },
+  "last_attempt_at": 1784900144,
   "last_evidence_at": 1784680817,
   "name": "Westlake",
   "pace_of_work": {
@@ -402520,6 +403332,7 @@
    "source_ids": [],
    "value": "15–20 days (estimated)"
   },
+  "retry_after": 1784900264,
   "rotational_program_name": {
    "confidence": "estimated",
    "source_ids": [],
@@ -402563,7 +403376,7 @@
     "url": "https://www.bing.com/ck/a?!&&p=8cdd9f412c90531776d9759b3ac0b17c6c926e51178fe840de31c1c74a6e3463JmltdHM9MTc4NDU5MjAwMA&ptn=3&ver=2&hsh=4&fclid=20894165-bbcb-6a0b-2216-56fbbabc6b12&u=a1aHR0cHM6Ly9teWFjY291bnQud2VzdGxha2VmaW5hbmNpYWwuY29tL3dmc1dlYnNpdGUv&ntb=1"
    }
   ],
-  "status": "evidence_only",
+  "status": "retrying",
   "web_research_status": "sources captured",
   "web_researched_at": 1784680817,
   "web_search_url": "https://duckduckgo.com/?q=Westlake+company+careers+benefits",
